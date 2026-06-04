@@ -5,160 +5,168 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Cyber Wire — Daily Briefing</title>
 <style>
-:root{--bg:#0b1115;--panel:#121a20;--line:#1f2c35;--text:#d7e3ea;--muted:#8aa0ad;--accent:#22d3a8;--accent2:#36c6ff;--warn:#ffb454;--bad:#ff6b6b;--mono:'SF Mono','Fira Code',Consolas,Menlo,monospace}
+:root{--bg:#0b1117;--panel:#121a23;--line:#1f2b38;--text:#dce6f0;--muted:#8aa0b5;--accent:#22d3a8;--accent2:#36c6ff;--mono:'SF Mono','Fira Code',Consolas,monospace;--warn:#ffb454;--bad:#ff6b6b}
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.6;padding:32px 20px 60px}
-.wrap{max-width:880px;margin:0 auto}
-.nav{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap}
-.nav a{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-decoration:none;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:7px 16px;transition:all .15s}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.6;padding:32px 18px 60px}
+.wrap{max-width:960px;margin:0 auto}
+.nav{display:flex;gap:8px;margin-bottom:22px;flex-wrap:wrap}
+.nav a{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-decoration:none;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:7px 14px;transition:.15s}
 .nav a:hover{color:var(--text);border-color:var(--muted)}
-.nav a.active{color:#04110c;background:var(--accent);border-color:var(--accent);font-weight:700}
-.masthead{margin-bottom:28px}
-h1{font-size:42px;letter-spacing:-.02em;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;display:inline-block}
+.nav a.active{color:var(--accent);border-color:var(--accent)}
+.masthead{border-bottom:2px solid var(--accent);padding-bottom:18px;margin-bottom:28px}
+h1{font-size:42px;letter-spacing:-.5px}
+h1 .glyph{color:var(--accent)}
 .tagline{color:var(--muted);font-size:15px;margin-top:2px}
-.meta{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
-.pill{font-family:var(--mono);font-size:11px;letter-spacing:.1em;border:1px solid var(--line);border-radius:999px;padding:4px 12px;color:var(--muted)}
-.pill.live{color:var(--accent);border-color:var(--accent);display:flex;align-items:center;gap:6px}
-.dot{width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pulse 1.6s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-.label{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:38px 0 14px}
-.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px 24px}
-.top-story{border-left:3px solid var(--accent)}
-.top-story h2{font-size:24px;margin-bottom:8px;line-height:1.3}
-.top-story p{color:var(--muted)}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px;transition:transform .15s,border-color .15s}
+.meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.12em;border:1px solid var(--line);border-radius:999px;padding:4px 12px;color:var(--muted)}
+.pill.live{color:var(--accent);border-color:var(--accent)}
+.pill.live::before{content:"●";margin-right:6px;animation:blink 1.6s infinite}
+@keyframes blink{50%{opacity:.25}}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:36px 0 14px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px}
+.top-story{border-left:4px solid var(--accent)}
+.top-story h2{font-size:24px;margin-bottom:10px}
+.top-story p{color:var(--text);margin-bottom:10px}
+.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--accent2);text-transform:uppercase;margin-bottom:8px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;transition:transform .15s,border-color .15s}
 .card:hover{transform:translateY(-3px);border-color:var(--accent)}
-.card h3{font-size:16px;margin-bottom:6px;line-height:1.35}
-.card p{font-size:13.5px;color:var(--muted)}
-.tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;border-radius:5px;padding:2px 8px;margin-bottom:10px}
-.tag.breach{background:rgba(255,107,107,.12);color:var(--bad)}
+.card h3{font-size:16px;margin-bottom:8px}
+.card p{font-size:14px;color:var(--muted)}
+.tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;border-radius:4px;padding:2px 8px;margin-bottom:10px}
+.tag.leak{background:rgba(255,107,107,.12);color:var(--bad)}
+.tag.supply{background:rgba(54,198,255,.12);color:var(--accent2)}
 .tag.ransom{background:rgba(255,180,84,.12);color:var(--warn)}
-.tag.malware{background:rgba(54,198,255,.12);color:var(--accent2)}
+.tag.malware{background:rgba(34,211,168,.12);color:var(--accent)}
 table{width:100%;border-collapse:collapse;font-size:14px}
-th{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
-td{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
+td{padding:12px;border-bottom:1px solid var(--line);vertical-align:top}
 tr:last-child td{border-bottom:none}
-td.cve{font-family:var(--mono);color:var(--accent2);white-space:nowrap}
-td.cvss{font-family:var(--mono);font-weight:700}
-.crit{color:var(--bad)}.high{color:var(--warn)}
-ul.bullets{list-style:none}
-ul.bullets li{padding:9px 0 9px 22px;position:relative;border-bottom:1px solid var(--line);color:var(--muted);font-size:14.5px}
-ul.bullets li:last-child{border-bottom:none}
-ul.bullets li::before{content:"▸";position:absolute;left:2px;color:var(--accent)}
-ul.bullets li strong{color:var(--text)}
-.sources{margin-top:42px;border-top:1px solid var(--line);padding-top:18px}
-.sources p{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--muted);margin-bottom:10px}
-.sources a{display:block;color:var(--accent2);font-size:13px;text-decoration:none;padding:3px 0;word-break:break-all}
+.cve{font-family:var(--mono);color:var(--accent2);white-space:nowrap}
+.cvss-crit{font-family:var(--mono);color:var(--bad);font-weight:700}
+.cvss-na{font-family:var(--mono);color:var(--muted)}
+ul.kev{list-style:none}
+ul.kev li{padding:10px 0 10px 24px;border-bottom:1px solid var(--line);position:relative;font-size:14.5px}
+ul.kev li:last-child{border-bottom:none}
+ul.kev li::before{content:"▸";position:absolute;left:4px;color:var(--accent)}
+.sources{margin-top:40px;border-top:1px solid var(--line);padding-top:18px}
+.sources h4{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.sources a{color:var(--accent2);text-decoration:none;font-size:13px;display:block;margin-bottom:5px}
 .sources a:hover{text-decoration:underline}
-.disclaimer{margin-top:26px;font-size:12px;color:var(--muted);font-style:italic}
+.disclaimer{margin-top:24px;font-size:12px;color:var(--muted);font-style:italic}
+strong{color:var(--text)}
 </style>
 </head>
 <body>
 <div class="wrap">
+  <nav class="nav">
+    <a href="cyber-briefing.html" class="active">⛨ The Cyber Wire</a>
+    <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
+    <a href="mma-briefing.html">⊘ The Octagon</a>
+  </nav>
 
-<nav class="nav">
-  <a href="cyber-briefing.html" class="active">⛨ The Cyber Wire</a>
-  <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
-  <a href="mma-briefing.html">⊘ The Octagon</a>
-</nav>
+  <header class="masthead">
+    <h1><span class="glyph">⛨</span> The Cyber Wire</h1>
+    <div class="tagline">Your daily cybersecurity briefing — breaches, vulnerabilities &amp; federal deadlines</div>
+    <div class="meta">
+      <span class="pill live">LIVE</span>
+      <span class="pill" id="edition">Edition</span>
+      <span class="pill" id="datestamp">—</span>
+      <span class="pill">Updated <span id="updated">—</span></span>
+    </div>
+  </header>
 
-<header class="masthead">
-  <h1>The Cyber Wire</h1>
-  <div class="tagline">Your daily cybersecurity briefing — breaches, vulnerabilities &amp; federal deadlines</div>
-  <div class="meta">
-    <span class="pill live"><span class="dot"></span>LIVE</span>
-    <span class="pill" id="edition">Edition</span>
-    <span class="pill" id="datestamp">Date</span>
-    <span class="pill">Updated <span id="updated">—</span></span>
+  <div class="label">Top Story</div>
+  <section class="panel top-story">
+    <div class="kicker">Active Exploitation · Domain Controllers</div>
+    <h2>Windows Netlogon RCE (CVE-2026-41089) now exploited in the wild</h2>
+    <p>A critical stack-based buffer overflow in <strong>Windows Netlogon</strong> — the service that handles authentication inside Windows domain environments — is under active exploitation, according to an updated advisory from the Centre for Cybersecurity Belgium (May 29). Microsoft's Security Response Center rates the flaw <strong>CVSS 9.8</strong>, with no sign-in or prior access required: a specially crafted network request to a server acting as a domain controller can lead to remote code execution.</p>
+    <p>The bug was patched on the <strong>May 12 Patch Tuesday</strong> alongside 136 other fixes. With domain controllers in the blast radius, unpatched Windows Server deployments should treat this as a priority-one update.</p>
+  </section>
+
+  <div class="label">Breaches &amp; Incidents</div>
+  <section class="cards">
+    <div class="card">
+      <span class="tag leak">alleged leak</span>
+      <h3>Grindr data leak puts passwords and locations at risk</h3>
+      <p>An alleged Grindr data leak reported June 3 puts user passwords and location data at risk. Reporting so far characterizes the leak as unconfirmed by the company.</p>
+    </div>
+    <div class="card">
+      <span class="tag supply">supply chain</span>
+      <h3>Microsoft dissects "Miasma" npm credential-stealing campaign</h3>
+      <p>Microsoft Security published a June 2 deep dive into the Red Hat npm "Miasma" campaign, tracing how malicious packages move from preinstall scripts to persistence while harvesting credentials.</p>
+    </div>
+    <div class="card">
+      <span class="tag ransom">ransomware</span>
+      <h3>AI-built ransomware toolkit automates EDR evasion</h3>
+      <p>A threat actor is using an AI-assisted ransomware toolkit that automates Active Directory discovery and helps evade EDR. Per BleepingComputer, development was assisted by coding agents across initial coding, analysis, and revision stages.</p>
+    </div>
+    <div class="card">
+      <span class="tag malware">malware-as-a-service</span>
+      <h3>"Weedhack" MaaS targets Minecraft players</h3>
+      <p>McAfee Labs codenamed a Minecraft-focused malware-as-a-service campaign "Weedhack" — active since January 2026, impersonating clients and mods, with 3,820 unique malicious JAR files and 240+ distribution URLs fueled by SEO poisoning and YouTube.</p>
+    </div>
+  </section>
+
+  <div class="label">Vulnerability Watch</div>
+  <section class="panel" style="padding:8px 12px">
+    <table>
+      <thead><tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="cve">CVE-2026-41089</td>
+          <td class="cvss-crit">9.8</td>
+          <td>Windows Netlogon (domain controllers)</td>
+          <td>Stack-based buffer overflow → unauthenticated RCE. Actively exploited; fixed in May 12 Patch Tuesday updates (Microsoft score).</td>
+        </tr>
+        <tr>
+          <td class="cve">CVE-2026-3055</td>
+          <td class="cvss-crit">9.3</td>
+          <td>Citrix NetScaler ADC / Gateway (SAML IDP config)</td>
+          <td>Insufficient input validation → memory overread. Large-scale exploitation confirmed by Fortinet; on CISA KEV since March 30 (Citrix official score; some blogs cite 9.8).</td>
+        </tr>
+        <tr>
+          <td class="cve">CVE-2025-48595</td>
+          <td class="cvss-na">—</td>
+          <td>Android (Framework)</td>
+          <td>Integer overflow exploited in targeted attacks; fixed in Google's June 2026 Android update (124 vulnerabilities patched). Added to CISA KEV June 2.</td>
+        </tr>
+        <tr>
+          <td class="cve">CVE-2026-45247</td>
+          <td class="cvss-na">—</td>
+          <td>Mirasvit Full Page Cache Warmer</td>
+          <td>Deserialization of untrusted data; added to CISA KEV June 3 based on evidence of active exploitation.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <div class="label">CISA KEV &amp; Federal Deadlines</div>
+  <section class="panel">
+    <ul class="kev">
+      <li><strong>June 2:</strong> Two KEV additions — <span class="cve">CVE-2022-0492</span> (Linux kernel) and <span class="cve">CVE-2025-48595</span> (Android Framework integer overflow). Under BOD 22-01's standard three-week window, federal civilian agencies should remediate by approximately <strong>June 23</strong>.</li>
+      <li><strong>June 3:</strong> One KEV addition — <span class="cve">CVE-2026-45247</span> (Mirasvit Full Page Cache Warmer deserialization). Standard three-week window puts the federal deadline at approximately <strong>June 24</strong>.</li>
+      <li><strong>Deadline passed:</strong> The two actively exploited Microsoft Defender flaws (<span class="cve">CVE-2026-41091</span>, <span class="cve">CVE-2026-45498</span>) added to the KEV in May carried a federal remediation deadline of <strong>June 3</strong> — agencies should now be patched.</li>
+    </ul>
+  </section>
+
+  <div class="sources">
+    <h4>Sources</h4>
+    <a href="https://www.helpnetsecurity.com/2026/06/01/windows-netlogon-rce-exploited-cve-2026-41089/">Help Net Security — Windows Netlogon RCE exploited (CVE-2026-41089)</a>
+    <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41089">Microsoft Security Response Center — CVE-2026-41089</a>
+    <a href="https://www.securityweek.com/critical-windows-netlogon-vulnerability-in-attackers-crosshairs/">SecurityWeek — Critical Windows Netlogon vulnerability in attackers' crosshairs</a>
+    <a href="https://thehackernews.com/2026/03/citrix-netscaler-under-active-recon-for.html">The Hacker News — Citrix NetScaler CVE-2026-3055 (CVSS 9.3)</a>
+    <a href="https://www.rapid7.com/blog/post/etr-cve-2026-3055-citrix-netscaler-adc-and-netscaler-gateway-out-of-bounds-read/">Rapid7 — CVE-2026-3055 NetScaler out-of-bounds read</a>
+    <a href="https://www.helpnetsecurity.com/2026/06/02/android-vulnerability-exploited-cve-2025-48595/">Help Net Security — Google fixes exploited Android flaw (CVE-2025-48595)</a>
+    <a href="https://www.cisa.gov/news-events/alerts/2026/06/02/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA — Two KEV additions (June 2, 2026)</a>
+    <a href="https://www.cisa.gov/news-events/alerts/2026/06/03/cisa-adds-one-known-exploited-vulnerability-catalog">CISA — One KEV addition (June 3, 2026)</a>
+    <a href="https://thehackernews.com/2026/05/microsoft-warns-of-two-actively.html">The Hacker News — Two actively exploited Microsoft Defender flaws</a>
+    <a href="https://www.microsoft.com/en-us/security/blog/2026/06/02/preinstall-persistence-inside-red-hat-npm-miasma-credential-stealing-campaign/">Microsoft Security Blog — Inside the Red Hat npm Miasma campaign</a>
+    <a href="https://www.bleepingcomputer.com/news/security/ai-built-ransomware-toolkit-automates-edr-evasion-ad-discovery/">BleepingComputer — AI-built ransomware toolkit</a>
+    <a href="https://cybernews.com/">Cybernews — Grindr alleged data leak reporting</a>
+    <a href="https://thehackernews.com/">The Hacker News — Weedhack Minecraft MaaS campaign (McAfee Labs)</a>
   </div>
-</header>
-
-<div class="label">Top Story</div>
-<div class="panel top-story">
-  <h2>ShinyHunters leaks 13 million Charter Communications customer records</h2>
-  <p>Charter Communications, one of the largest US telecom providers, has suffered a major data breach after the ShinyHunters extortion group leaked more than 13 million customer records on the dark web. Exposed data includes full names, email addresses, physical addresses, and details pulled from customer support tickets — plus records on roughly 27,000 Charter employees. The leak lands amid a wave of early-June incidents hitting healthcare, staffing, technology, and textile firms.</p>
-</div>
-
-<div class="label">Breaches &amp; Incidents</div>
-<div class="cards">
-  <div class="card">
-    <span class="tag breach">Breach</span>
-    <h3>Trump Mobile confirms breach of 27,000+ pre-order customers</h3>
-    <p>The carrier confirmed a data breach affecting more than 27,000 customers who pre-ordered its T1 smartphone.</p>
-  </div>
-  <div class="card">
-    <span class="tag ransom">Ransomware</span>
-    <h3>Abyss group hits German county administration</h3>
-    <p>The Limburg-Weilburg county administration in Germany was struck by the Abyss ransomware group, which claims to have stolen and encrypted around 132 GB of data. Zurich carpentry firm Schneebeli AG was separately hit by the AiLock group.</p>
-  </div>
-  <div class="card">
-    <span class="tag ransom">AI Threat</span>
-    <h3>AI-built ransomware toolkit automates EDR evasion</h3>
-    <p>A threat actor is using an AI-assisted ransomware toolkit that automates Active Directory discovery and endpoint-defense evasion. Payloads were developed with AI coding agents and tested against major EDR products in virtual environments.</p>
-  </div>
-  <div class="card">
-    <span class="tag malware">Malware</span>
-    <h3>"WeedHack" campaign infects 116,000+ Minecraft players</h3>
-    <p>A large-scale malware campaign targeting Minecraft players has infected more than 116,000 systems since January, researchers report.</p>
-  </div>
-</div>
-
-<div class="label">Vulnerability Watch</div>
-<div class="panel" style="padding:10px 12px">
-  <table>
-    <tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr>
-    <tr>
-      <td class="cve">CVE-2026-3055</td>
-      <td class="cvss crit">9.3</td>
-      <td>NetScaler ADC / Gateway (SAML IdP)</td>
-      <td>Memory overread; only exploitable when configured as SAML IdP. Large-scale active exploitation confirmed. Fix: 14.1-66.59 / 13.1-62.23 / 13.1-37.262 (FIPS/NDcPP).</td>
-    </tr>
-    <tr>
-      <td class="cve">CVE-2026-41089</td>
-      <td class="cvss crit">Critical</td>
-      <td>Windows Netlogon (domain controllers)</td>
-      <td>Stack-based buffer overflow RCE, actively exploited via crafted network requests to DCs.</td>
-    </tr>
-    <tr>
-      <td class="cve">CVE-2025-48595</td>
-      <td class="cvss high">High</td>
-      <td>Android 14–16 (Framework)</td>
-      <td>Integer overflow; exploited in limited, targeted attacks. Patched in Google's June update (124 flaws fixed total).</td>
-    </tr>
-    <tr>
-      <td class="cve">CVE-2024-21182</td>
-      <td class="cvss high">7.5</td>
-      <td>Oracle WebLogic Server (Core, T3/IIOP)</td>
-      <td>Unauthenticated remote compromise. Added to CISA KEV June 1 — BOD 22-01 remediation deadline is June 22.</td>
-    </tr>
-  </table>
-</div>
-
-<div class="label">CISA KEV &amp; Federal Deadlines</div>
-<div class="panel">
-  <ul class="bullets">
-    <li><strong>June 3:</strong> CISA added <strong>CVE-2026-45247</strong> — Mirasvit Full Page Cache Warmer deserialization of untrusted data — to the KEV catalog.</li>
-    <li><strong>June 2:</strong> Two additions — <strong>CVE-2022-0492</strong> (Linux kernel cgroups improper authentication, container escape to host) and <strong>CVE-2025-48595</strong> (Android Framework integer overflow).</li>
-    <li><strong>Deadlines (BOD 22-01, standard three-week window):</strong> the Oracle WebLogic flaw added June 1 is due <strong>June 22</strong>; the June 2–3 additions follow in late June.</li>
-    
-  </ul>
-</div>
-
-<footer class="sources">
-  <p>SOURCES</p>
-  <a href="https://sharkstriker.com/blog/june-2026-data-breaches/">SharkStriker — June 2026 Data Breaches</a>
-  <a href="https://techcrunch.com/2026/06/03/the-worst-hacks-and-breaches-of-2026-so-far/">TechCrunch — The worst hacks and breaches of 2026 (so far)</a>
-  <a href="https://www.bleepingcomputer.com/news/security/ai-built-ransomware-toolkit-automates-edr-evasion-ad-discovery/">BleepingComputer — AI-built ransomware toolkit automates EDR evasion</a>
-  <a href="https://www.helpnetsecurity.com/2026/06/02/android-vulnerability-exploited-cve-2025-48595/">Help Net Security — Android vulnerability exploited (CVE-2025-48595)</a>
-  <a href="https://www.helpnetsecurity.com/2026/06/01/windows-netlogon-rce-exploited-cve-2026-41089/">Help Net Security — Windows Netlogon RCE exploited (CVE-2026-41089)</a>
-  <a href="https://threat-modeling.com/vulnerability-intelligence-report-june-2-2026/">Threat-Modeling.com — Vulnerability Intelligence Report, June 2, 2026</a>
-  <a href="https://www.cisa.gov/news-events/alerts/2026/06/02/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA — Two KEV additions, June 2, 2026</a>
-  <a href="https://www.cisa.gov/news-events/alerts/2026/06/03/cisa-adds-one-known-exploited-vulnerability-catalog">CISA — One KEV addition, June 3, 2026</a>
-  <a href="https://securityaffairs.com/193027/security/u-s-cisa-adds-oracle-weblogic-flaw-to-its-known-exploited-vulnerabilities-catalog.html">Security Affairs — CISA adds Oracle WebLogic flaw to KEV</a>
-  <div class="disclaimer">Compiled from public reporting. Details on active incidents may evolve; consult vendor advisories and CISA for authoritative remediation guidance.</div>
-</footer>
-
+  <p class="disclaimer">This briefing is compiled from public reporting and is provided for informational purposes only. Verify patch guidance against official vendor advisories before acting.</p>
 </div>
 <script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition · 8:00 AM ET':(h<15?'Midday Edition · 12:00 PM ET':'Afternoon Edition · 4:00 PM ET');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;}catch(e){}})();</script>
 </body>
