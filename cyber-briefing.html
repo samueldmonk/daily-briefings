@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Cyber Wire — Daily Briefing</title>
+<style>
+:root{
+  --bg:#0b1117;--panel:#111a22;--panel2:#0e161d;--line:#1e2c38;
+  --teal:#22d3a8;--cyan:#36c6ff;--text:#d7e3ec;--dim:#8aa0b2;--faint:#5b7081;
+  --red:#ff6b6b;--amber:#ffc857;
+  --mono:'SF Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.6;padding:32px 20px 60px}
+.wrap{max-width:980px;margin:0 auto}
+.nav{display:flex;gap:10px;margin-bottom:22px}
+.nav a{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:9px 18px;border-radius:999px;border:1px solid var(--line);color:var(--dim);transition:.2s}
+.nav a.active{background:linear-gradient(90deg,rgba(34,211,168,.16),rgba(54,198,255,.12));border-color:var(--teal);color:var(--teal)}
+.nav a:hover{color:var(--text);border-color:var(--faint)}
+.masthead{margin-bottom:30px}
+h1{font-size:42px;font-weight:800;letter-spacing:-.02em;background:linear-gradient(90deg,var(--teal),var(--cyan));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.tagline{color:var(--dim);font-size:15px;margin-top:4px}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.12em;padding:5px 12px;border-radius:999px;border:1px solid var(--line);color:var(--dim);background:var(--panel2)}
+.pill.live{color:var(--teal);border-color:rgba(34,211,168,.4)}
+.pill.live .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--teal);margin-right:6px;animation:pulse 1.6s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.label{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);margin:34px 0 14px;display:flex;align-items:center;gap:10px}
+.label::after{content:"";flex:1;height:1px;background:var(--line)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px 24px}
+.top-story{border-left:3px solid var(--teal)}
+.top-story h2{font-size:23px;margin-bottom:10px;line-height:1.35}
+.top-story p{color:var(--dim);font-size:15px}
+.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--cyan);margin-bottom:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px;transition:transform .18s,border-color .18s}
+.card:hover{transform:translateY(-3px);border-color:var(--faint)}
+.card h3{font-size:16px;margin-bottom:8px;line-height:1.4}
+.card p{font-size:13.5px;color:var(--dim)}
+.tags{margin-top:12px;display:flex;gap:6px;flex-wrap:wrap}
+.tag{font-family:var(--mono);font-size:10px;letter-spacing:.1em;padding:3px 9px;border-radius:999px;text-transform:uppercase}
+.tag.breach{background:rgba(255,107,107,.12);color:var(--red);border:1px solid rgba(255,107,107,.3)}
+.tag.ransom{background:rgba(255,200,87,.1);color:var(--amber);border:1px solid rgba(255,200,87,.3)}
+.tag.malware{background:rgba(54,198,255,.1);color:var(--cyan);border:1px solid rgba(54,198,255,.3)}
+.tag.telecom{background:rgba(34,211,168,.1);color:var(--teal);border:1px solid rgba(34,211,168,.3)}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
+td{padding:12px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--dim)}
+tr:last-child td{border-bottom:none}
+td.cve{font-family:var(--mono);color:var(--cyan);white-space:nowrap}
+td.cvss{font-family:var(--mono);font-weight:700}
+.crit{color:var(--red)}.high{color:var(--amber)}
+ul.kev{list-style:none}
+ul.kev li{padding:10px 0 10px 24px;position:relative;border-bottom:1px solid var(--line);color:var(--dim);font-size:14px}
+ul.kev li:last-child{border-bottom:none}
+ul.kev li::before{content:"▸";position:absolute;left:4px;color:var(--teal)}
+ul.kev b{color:var(--text)}
+.sources{margin-top:36px;border-top:1px solid var(--line);padding-top:18px}
+.sources a{color:var(--cyan);text-decoration:none;font-size:13px;display:inline-block;margin:3px 14px 3px 0}
+.sources a:hover{text-decoration:underline}
+.disclaimer{margin-top:22px;font-size:12px;color:var(--faint);font-style:italic}
+@media(max-width:640px){h1{font-size:32px}.panel{padding:18px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav class="nav">
+  <a class="active" href="cyber-briefing.html">⛨ The Cyber Wire</a>
+  <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
+</nav>
+
+<header class="masthead">
+  <h1>The Cyber Wire</h1>
+  <div class="tagline">Your daily cybersecurity intelligence briefing</div>
+  <div class="meta">
+    <span class="pill live"><span class="dot"></span>LIVE</span>
+    <span class="pill" id="edition">Morning Edition</span>
+    <span class="pill" id="datestamp">Thursday, June 4, 2026</span>
+    <span class="pill">Updated <span id="updated">—</span></span>
+  </div>
+</header>
+
+<div class="label">Top Story</div>
+<section class="panel top-story">
+  <div class="kicker">DATA BREACH · TELECOM</div>
+  <h2>Charter Communications breach: ShinyHunters leaks 13M+ customer records on the dark web</h2>
+  <p>Charter Communications, one of the largest US telecommunications providers, suffered a significant data breach after the ShinyHunters group leaked more than 13 million customer records. Exposed data includes full names, email addresses, company and home addresses, details from nearly 10 million customer support tickets, and records on roughly 27,000 employees including work emails and job titles. The leak adds Charter to a growing list of major telecom targets this year.</p>
+  <div class="tags"><span class="tag breach">Data Breach</span><span class="tag telecom">Telecom</span><span class="tag breach">13M+ Records</span></div>
+</section>
+
+<div class="label">Breaches &amp; Incidents</div>
+<div class="grid">
+  <div class="card">
+    <h3>Crimson Collective claims 1M+ Brightspeed customer records</h3>
+    <p>The new, aggressive extortion group Crimson Collective claims to have stolen data on more than a million customers of telecom provider Brightspeed in a ransomware attack — part of a 2026 trend toward pure-exfiltration extortion without encryption.</p>
+    <div class="tags"><span class="tag ransom">Extortion</span><span class="tag telecom">Telecom</span></div>
+  </div>
+  <div class="card">
+    <h3>Abyss ransomware hits German county administration</h3>
+    <p>Limburg-Weilburg County Administration in Germany was targeted by the Abyss ransomware group, which claims to have stolen and encrypted around 132 GB of data from the local government's systems.</p>
+    <div class="tags"><span class="tag ransom">Ransomware</span><span class="tag breach">Government</span></div>
+  </div>
+  <div class="card">
+    <h3>AI-built ransomware toolkit automates EDR evasion</h3>
+    <p>A threat actor is operating an AI-assisted ransomware toolkit that automates Active Directory discovery and endpoint-defense evasion, with payload development assisted by coding agents — a sign of "EDR killers" becoming standard in attack playbooks.</p>
+    <div class="tags"><span class="tag ransom">Ransomware</span><span class="tag malware">AI Tooling</span></div>
+  </div>
+  <div class="card">
+    <h3>"WeedHack" campaign infects 116,000+ Minecraft players</h3>
+    <p>A large-scale malware campaign dubbed WeedHack is targeting Minecraft players and has infected more than 116,000 systems since January, spreading via trojanized game content.</p>
+    <div class="tags"><span class="tag malware">Malware</span><span class="tag breach">Consumer</span></div>
+  </div>
+</div>
+
+<div class="label">Vulnerability Watch</div>
+<section class="panel" style="padding:10px 14px">
+<table>
+  <thead><tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="cve">CVE-2026-3055</td><td class="cvss crit">9.8</td>
+      <td>Citrix NetScaler ADC / Gateway (SAML IdP)</td>
+      <td>Insufficient input validation leading to memory overread and RCE. Large-scale active exploitation confirmed by Fortinet.</td>
+    </tr>
+    <tr>
+      <td class="cve">CVE-2026-41089</td><td class="cvss crit">Critical</td>
+      <td>Windows Netlogon</td>
+      <td>Stack-based buffer overflow enabling remote code execution; actively exploited in the wild. Domain controllers at risk — patch immediately.</td>
+    </tr>
+    <tr>
+      <td class="cve">CVE-2025-48595</td><td class="cvss high">High</td>
+      <td>Android Framework (v14–16)</td>
+      <td>Integer overflow enabling code execution/privilege escalation; exploited in targeted attacks. Fixed in Google's June patches (124 flaws total).</td>
+    </tr>
+    <tr>
+      <td class="cve">CVE-2026-8206</td><td class="cvss crit">Critical</td>
+      <td>Kirki plugin for WordPress</td>
+      <td>Privilege escalation actively exploited to take over any user account, including administrators.</td>
+    </tr>
+  </tbody>
+</table>
+</section>
+
+<div class="label">CISA KEV &amp; Federal Deadlines</div>
+<section class="panel">
+<ul class="kev">
+  <li><b>June 3:</b> CISA added <b>CVE-2026-45247</b> — Mirasvit Full Page Cache Warmer deserialization flaw allowing unauthenticated RCE via a crafted serialized PHP object in the CacheWarmer cookie.</li>
+  <li><b>June 2:</b> Two KEV additions — <b>CVE-2022-0492</b> (Linux kernel cgroups container-escape/privilege escalation) and <b>CVE-2025-48595</b> (Android Framework integer overflow).</li>
+  <li><b>June 1:</b> <b>CVE-2024-21182</b> — Oracle WebLogic Server (CVSS 7.5), unauthenticated network compromise via T3/IIOP protocols.</li>
+  <li><b>BOD 22-01:</b> Federal Civilian Executive Branch agencies must remediate KEV-listed vulnerabilities by their due dates — the early-June additions carry deadlines in late June 2026.</li>
+</ul>
+</section>
+
+<footer class="sources">
+  <div class="label" style="margin-top:0">Sources</div>
+  <a href="https://techcrunch.com/2026/06/03/the-worst-hacks-and-breaches-of-2026-so-far/">TechCrunch</a>
+  <a href="https://sharkstriker.com/blog/june-2026-data-breaches/">SharkStriker — June 2026 Breaches</a>
+  <a href="https://www.bleepingcomputer.com/news/security/ai-built-ransomware-toolkit-automates-edr-evasion-ad-discovery/">BleepingComputer — AI Ransomware Toolkit</a>
+  <a href="https://www.helpnetsecurity.com/2026/06/01/windows-netlogon-rce-exploited-cve-2026-41089/">Help Net Security — Netlogon RCE</a>
+  <a href="https://www.helpnetsecurity.com/2026/06/02/android-vulnerability-exploited-cve-2025-48595/">Help Net Security — Android 0-day</a>
+  <a href="https://threat-modeling.com/vulnerability-intelligence-report-june-2-2026/">Threat-Modeling.com — Vuln Intelligence</a>
+  <a href="https://www.cisa.gov/news-events/alerts/2026/06/02/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA KEV — June 2</a>
+  <a href="https://www.cisa.gov/news-events/alerts/2026/06/03/cisa-adds-one-known-exploited-vulnerability-catalog">CISA KEV — June 3</a>
+  <a href="https://securityaffairs.com/193027/security/u-s-cisa-adds-oracle-weblogic-flaw-to-its-known-exploited-vulnerabilities-catalog.html">Security Affairs — WebLogic KEV</a>
+  <a href="https://www.cisoplatform.com/profiles/blogs/ciso-platform-breach-report-03-june-2026-key-breach-incidents-ove">CISO Platform Breach Report</a>
+  <div class="disclaimer">This briefing is compiled from public reporting for informational purposes only. Verify details against primary sources before taking action.</div>
+</footer>
+
+</div>
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition · 8:00 AM ET':(h<15?'Midday Edition · 12:00 PM ET':'Afternoon Edition · 4:00 PM ET');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;}catch(e){}})();</script>
+</body>
+</html>
