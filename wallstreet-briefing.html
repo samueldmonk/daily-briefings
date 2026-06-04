@@ -3,67 +3,62 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Closing Bell — Daily Market Briefing</title>
+<title>The Closing Bell — Daily Briefing</title>
 <style>
-:root{
-  --bg:#0d0c0a;--panel:#161410;--panel2:#121009;--line:#2b261c;
-  --gold:#caa64a;--gold2:#e8c766;--text:#e6ddcd;--dim:#a4977e;--faint:#6e6450;
-  --up:#3ddc84;--down:#ff6b6b;
-  --serif:Georgia,'Times New Roman',serif;
-  --mono:'SF Mono',ui-monospace,Menlo,Consolas,monospace;
-}
+:root{--bg:#0e0d0a;--panel:#16140f;--line:#2a261c;--text:#e8e2d4;--muted:#9c937e;--accent:#caa64a;--accent2:#e8c766;--up:#4ade80;--down:#f87171;--mono:'SF Mono','Fira Code',Consolas,Menlo,monospace;--serif:Georgia,'Times New Roman',serif}
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.6;padding:32px 20px 60px}
-.wrap{max-width:980px;margin:0 auto}
-.nav{display:flex;gap:10px;margin-bottom:22px}
-.nav a{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:9px 18px;border-radius:999px;border:1px solid var(--line);color:var(--dim);transition:.2s}
-.nav a.active{background:linear-gradient(90deg,rgba(202,166,74,.18),rgba(232,199,102,.1));border-color:var(--gold);color:var(--gold2)}
-.nav a:hover{color:var(--text);border-color:var(--faint)}
-.masthead{margin-bottom:26px}
-h1{font-family:var(--serif);font-size:44px;font-weight:700;letter-spacing:-.01em;background:linear-gradient(90deg,var(--gold),var(--gold2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-.tagline{color:var(--dim);font-size:15px;margin-top:4px;font-style:italic;font-family:var(--serif)}
-.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
-.pill{font-family:var(--mono);font-size:11px;letter-spacing:.12em;padding:5px 12px;border-radius:999px;border:1px solid var(--line);color:var(--dim);background:var(--panel2)}
-.pill.live{color:var(--up);border-color:rgba(61,220,132,.4)}
-.pill.live .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--up);margin-right:6px;animation:pulse 1.6s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.wrap{max-width:880px;margin:0 auto}
+.nav{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap}
+.nav a{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-decoration:none;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:7px 16px;transition:all .15s}
+.nav a:hover{color:var(--text);border-color:var(--muted)}
+.nav a.active{color:#171204;background:var(--accent);border-color:var(--accent);font-weight:700}
+.masthead{margin-bottom:24px}
+h1{font-family:var(--serif);font-size:44px;letter-spacing:-.01em;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;display:inline-block}
+.tagline{color:var(--muted);font-size:15px;margin-top:2px}
+.meta{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.1em;border:1px solid var(--line);border-radius:999px;padding:4px 12px;color:var(--muted)}
+.pill.live{color:var(--up);border-color:var(--up);display:flex;align-items:center;gap:6px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--up);animation:pulse 1.6s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 .livebar{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 8px 4px;margin-bottom:18px}
 .livebar-label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--up);display:flex;align-items:center;gap:8px;padding:4px 8px 8px}
-.livebar-label .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--up);animation:pulse 1.6s infinite}
-.label{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:34px 0 14px;display:flex;align-items:center;gap:10px}
-.label::after{content:"";flex:1;height:1px;background:var(--line)}
-.tickers{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.tickers{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-bottom:8px}
 .ticker{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
-.ticker .name{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint)}
-.ticker .val{font-family:var(--serif);font-size:30px;font-weight:700;margin:6px 0 2px}
-.ticker .chg{font-family:var(--mono);font-size:13px;font-weight:700}
+.ticker .name{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.ticker .val{font-family:var(--serif);font-size:28px;margin-top:4px}
+.ticker .chg{font-family:var(--mono);font-size:13px;font-weight:700;margin-top:2px}
 .up{color:var(--up)}.down{color:var(--down)}
+.note{font-size:12px;color:var(--muted);font-style:italic;margin-bottom:8px}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:38px 0 14px}
 .panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px 24px}
-.lead{border-left:3px solid var(--gold)}
-.lead h2{font-family:var(--serif);font-size:25px;margin-bottom:10px;line-height:1.35}
-.lead p{color:var(--dim);font-size:15px}
-.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--gold2);margin-bottom:8px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px;transition:transform .18s,border-color .18s}
-.card:hover{transform:translateY(-3px);border-color:var(--faint)}
-.card h3{font-family:var(--serif);font-size:17px;margin-bottom:8px;line-height:1.4}
-.card p{font-size:13.5px;color:var(--dim)}
-.card .move{font-family:var(--mono);font-size:12px;font-weight:700;margin-bottom:6px;display:inline-block}
-table{width:100%;border-collapse:collapse;font-size:13.5px}
-th{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
-td{padding:12px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--dim)}
+.lead{border-left:3px solid var(--accent)}
+.lead h2{font-family:var(--serif);font-size:25px;margin-bottom:8px;line-height:1.3}
+.lead p{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px;transition:transform .15s,border-color .15s}
+.card:hover{transform:translateY(-3px);border-color:var(--accent)}
+.card h3{font-family:var(--serif);font-size:17px;margin-bottom:6px;line-height:1.35}
+.card p{font-size:13.5px;color:var(--muted)}
+.tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;border-radius:5px;padding:2px 8px;margin-bottom:10px}
+.tag.up-t{background:rgba(74,222,128,.1);color:var(--up)}
+.tag.down-t{background:rgba(248,113,113,.1);color:var(--down)}
+.tag.macro{background:rgba(202,166,74,.12);color:var(--accent2)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
+td{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
 tr:last-child td{border-bottom:none}
-td.num{font-family:var(--mono);white-space:nowrap}
-ul.radar{list-style:none}
-ul.radar li{padding:10px 0 10px 24px;position:relative;border-bottom:1px solid var(--line);color:var(--dim);font-size:14px}
-ul.radar li:last-child{border-bottom:none}
-ul.radar li::before{content:"◆";position:absolute;left:2px;color:var(--gold);font-size:11px;top:14px}
-ul.radar b{color:var(--text)}
-.sources{margin-top:36px;border-top:1px solid var(--line);padding-top:18px}
-.sources a{color:var(--gold2);text-decoration:none;font-size:13px;display:inline-block;margin:3px 14px 3px 0}
+td.num{font-family:var(--mono)}
+ul.bullets{list-style:none}
+ul.bullets li{padding:9px 0 9px 22px;position:relative;border-bottom:1px solid var(--line);color:var(--muted);font-size:14.5px}
+ul.bullets li:last-child{border-bottom:none}
+ul.bullets li::before{content:"▸";position:absolute;left:2px;color:var(--accent)}
+ul.bullets li strong{color:var(--text)}
+.sources{margin-top:42px;border-top:1px solid var(--line);padding-top:18px}
+.sources p{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--muted);margin-bottom:10px}
+.sources a{display:block;color:var(--accent2);font-size:13px;text-decoration:none;padding:3px 0;word-break:break-all}
 .sources a:hover{text-decoration:underline}
-.disclaimer{margin-top:22px;font-size:12px;color:var(--faint);font-style:italic}
-@media(max-width:640px){h1{font-size:34px}.panel{padding:18px}}
+.disclaimer{margin-top:26px;font-size:12px;color:var(--muted);font-style:italic}
 </style>
 </head>
 <body>
@@ -71,17 +66,17 @@ ul.radar b{color:var(--text)}
 
 <nav class="nav">
   <a href="cyber-briefing.html">⛨ The Cyber Wire</a>
-  <a class="active" href="wallstreet-briefing.html">▲ The Closing Bell</a>
+  <a href="wallstreet-briefing.html" class="active">▲ The Closing Bell</a>
   <a href="mma-briefing.html">⊘ The Octagon</a>
 </nav>
 
 <header class="masthead">
   <h1>The Closing Bell</h1>
-  <div class="tagline">Your daily Wall Street briefing</div>
+  <div class="tagline">Your daily Wall Street briefing — indices, movers &amp; what's next</div>
   <div class="meta">
     <span class="pill live"><span class="dot"></span>LIVE</span>
-    <span class="pill" id="edition">Morning Edition</span>
-    <span class="pill" id="datestamp">Thursday, June 4, 2026</span>
+    <span class="pill" id="edition">Edition</span>
+    <span class="pill" id="datestamp">Date</span>
     <span class="pill">Updated <span id="updated">—</span></span>
   </div>
 </header>
@@ -91,97 +86,97 @@ ul.radar b{color:var(--text)}
   <div class="tradingview-widget-container">
     <div class="tradingview-widget-container__widget"></div>
     <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-    {"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},{"proName":"FOREXCOM:DJI","title":"Dow 30"},{"proName":"NASDAQ:AVGO","title":"Broadcom"},{"proName":"NASDAQ:CRWD","title":"CrowdStrike"},{"proName":"NASDAQ:MRVL","title":"Marvell"},{"proName":"NYSE:HPE","title":"HPE"},{"proName":"NASDAQ:GOOGL","title":"Alphabet"},{"proName":"TVC:USOIL","title":"WTI Crude"},{"proName":"TVC:US10Y","title":"US 10Y"}],"colorTheme":"dark","isTransparent":true,"showSymbolLogo":true,"displayMode":"adaptive","locale":"en"}
+    {"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},{"proName":"FOREXCOM:DJI","title":"Dow 30"},{"proName":"NASDAQ:AVGO","title":"Broadcom"},{"proName":"NYSE:UNH","title":"UnitedHealth"},{"proName":"NYSE:JPM","title":"JPMorgan"},{"proName":"NYSE:BX","title":"Blackstone"},{"proName":"NYSE:LLY","title":"Eli Lilly"},{"proName":"TVC:USOIL","title":"WTI Crude"},{"proName":"TVC:US10Y","title":"US 10Y"}],"colorTheme":"dark","isTransparent":true,"showSymbolLogo":true,"displayMode":"adaptive","locale":"en"}
     </script>
   </div>
 </div>
 
-<div class="label">Official Close — Wednesday, June 3, 2026</div>
+<div class="label">Midday Snapshot — Thursday, June 4</div>
+<div class="note">Markets are open; figures below are intraday as of midday ET. See the live tape above for real-time quotes.</div>
 <div class="tickers">
-  <div class="ticker"><div class="name">S&amp;P 500</div><div class="val">7,553.68</div><div class="chg down">▼ −0.74%</div></div>
-  <div class="ticker"><div class="name">Nasdaq Composite</div><div class="val">26,853.98</div><div class="chg down">▼ −0.89%</div></div>
-  <div class="ticker"><div class="name">Dow Jones</div><div class="val">50,687.07</div><div class="chg down">▼ −620.72 (−1.21%)</div></div>
+  <div class="ticker">
+    <div class="name">S&amp;P 500</div>
+    <div class="val">~7,575</div>
+    <div class="chg up">▲ +0.3% intraday</div>
+  </div>
+  <div class="ticker">
+    <div class="name">Nasdaq Composite</div>
+    <div class="val">~26,900</div>
+    <div class="chg down">▼ −0.2% intraday</div>
+  </div>
+  <div class="ticker">
+    <div class="name">Dow Jones</div>
+    <div class="val">~51,690</div>
+    <div class="chg up">▲ +911 pts (+1.8%) — record high</div>
+  </div>
 </div>
 
 <div class="label">The Lead</div>
-<section class="panel lead">
-  <div class="kicker">MARKETS · RETREAT FROM RECORDS</div>
-  <h2>Stocks snap nine-day win streak as oil and yields climb on fragile US–Iran talks</h2>
-  <p>US stocks retreated from record levels Wednesday, with the S&amp;P 500 ending a nine-session winning streak as Wall Street weighed shaky US–Iran negotiations against the still-powerful AI trade. Rising oil prices and higher Treasury yields stoked worries that the conflict could keep lifting inflation just as the Fed heads into its June 16–17 meeting. The pullback came a day after the S&amp;P 500's first-ever close above 7,600.</p>
-</section>
+<div class="panel lead">
+  <h2>Great rotation: Dow surges 900+ points to a record as Broadcom's plunge drags AI trade</h2>
+  <p>The Dow rallied roughly 911 points (+1.8%) to a fresh record Thursday while the Nasdaq slipped, as investors rotated out of chip and AI names into banks, healthcare, and retail. The trigger: Broadcom cratered about 14% after a fiscal Q2 revenue miss, prompting a broad paring of AI exposure. Consumer-oriented stocks got an extra lift as oil and Treasury yields eased following a ceasefire agreement between Israel and Lebanon, dialing back the Middle East risk premium that had rattled markets Wednesday.</p>
+</div>
 
 <div class="label">Movers &amp; Drivers</div>
-<div class="grid">
+<div class="cards">
   <div class="card">
-    <span class="move up">HPE ▲ ~30%</span>
-    <h3>HPE posts biggest earnings beat since 2018</h3>
-    <p>Hewlett Packard Enterprise shares surged more than 30% after the company delivered its largest earnings beat in eight years, powered by AI server demand.</p>
+    <span class="tag down-t">▼ −14%</span>
+    <h3>Broadcom (AVGO)</h3>
+    <p>Fiscal Q2 revenue miss snapped the chip rally and sparked the day's rotation out of AI-linked stocks.</p>
   </div>
   <div class="card">
-    <span class="move up">MRVL ▲ ~25%</span>
-    <h3>Marvell rockets on Jensen Huang's trillion-dollar call</h3>
-    <p>Marvell Technology surged about 25% after Nvidia CEO Jensen Huang said Marvell could be "the next trillion-dollar company." Microchip also popped ~12% on data-center revenue disclosures.</p>
+    <span class="tag up-t">▲ +5–8%</span>
+    <h3>UnitedHealth, Eli Lilly, Blackstone</h3>
+    <p>UnitedHealth led the Dow (+5%); Humana +6%, Lilly +5%. Asset managers ripped — Blackstone +8%, Ares and KKR each +6%. JPMorgan +4%, Costco +1%.</p>
   </div>
   <div class="card">
-    <span class="move down">GOOGL ▼ ~4%</span>
-    <h3>Alphabet slides on $80B stock-sale plan for AI buildout</h3>
-    <p>Alphabet weighed on the S&amp;P 500 after announcing it would raise $80 billion from stock sales to fund its AI infrastructure expansion. Credo Technology fell ~12% despite a Q4 beat.</p>
-  </div>
-  <div class="card">
-    <span class="move down">AVGO / CRWD — after hours</span>
-    <h3>Broadcom and CrowdStrike report; chips lead futures lower</h3>
-    <p>Broadcom posted record revenue, operating profit, and free cash flow on accelerating AI semiconductor growth, yet led chip stocks lower in post-earnings trading. CrowdStrike delivered record Q1 net-new ARR of $256M (+32%), revenue of $1.39B (+26%), and announced a 4-for-1 stock split effective July 2.</p>
+    <span class="tag down-t">▼ −12%</span>
+    <h3>Petco (WOOF)</h3>
+    <p>Dropped almost 12% after earnings disappointed investors.</p>
   </div>
 </div>
 
 <div class="label">Weekly Scorecard</div>
-<section class="panel" style="padding:10px 14px">
-<table>
-  <thead><tr><th>Session</th><th>S&amp;P 500</th><th>Nasdaq</th><th>Dow</th><th>Note</th></tr></thead>
-  <tbody>
-    <tr><td>Mon, Jun 1</td><td class="num up">Record close ▲</td><td class="num up">Record ▲</td><td class="num up">Record ▲</td><td>Tech rally overpowers oil spike; Nvidia surges</td></tr>
-    <tr><td>Tue, Jun 2</td><td class="num up">7,609.78 ▲ +0.13%</td><td class="num up">27,093.90 ▲ +0.03%</td><td class="num up">51,307.79 ▲ +0.45%</td><td>First S&amp;P close above 7,600; chip boom continues</td></tr>
-    <tr><td>Wed, Jun 3</td><td class="num down">7,553.68 ▼ −0.74%</td><td class="num down">26,853.98 ▼ −0.89%</td><td class="num down">50,687.07 ▼ −1.21%</td><td>Nine-day win streak snapped; oil &amp; yields rise</td></tr>
-    <tr><td>Month / YTD</td><td class="num up" colspan="3">May closed at record highs · S&amp;P 500 up roughly 8% YTD</td><td>Fourth straight year of gains so far</td></tr>
-  </tbody>
-</table>
-</section>
+<div class="panel" style="padding:10px 12px">
+  <table>
+    <tr><th>Session</th><th>S&amp;P 500</th><th>Nasdaq</th><th>Dow</th></tr>
+    <tr><td>Mon, Jun 1</td><td class="num up">Record close — tech rally beat oil spike</td><td class="num up">Record</td><td class="num">—</td></tr>
+    <tr><td>Tue, Jun 2</td><td class="num up">First close above 7,600</td><td class="num up">27,093 (record)</td><td class="num up">51,308 (+229)</td></tr>
+    <tr><td>Wed, Jun 3</td><td class="num down">−0.7%</td><td class="num down">Nasdaq 100 −0.9%</td><td class="num down">50,776 (−532)</td></tr>
+    <tr><td>Thu, Jun 4 (midday)</td><td class="num up">+0.3%</td><td class="num down">−0.2%</td><td class="num up">+1.8% (record)</td></tr>
+  </table>
+</div>
 
 <div class="label">Rates, Bonds &amp; Commodities</div>
-<section class="panel" style="padding:10px 14px">
-<table>
-  <thead><tr><th>Instrument</th><th>Level</th><th>Note</th></tr></thead>
-  <tbody>
-    <tr><td>10-Year Treasury</td><td class="num">4.49%</td><td>Climbing on strong economic data and oil-driven inflation worries</td></tr>
-    <tr><td>30-Year Treasury</td><td class="num">~5.02%</td><td>Near this year's highs; topped 5.19% in mid-May</td></tr>
-    <tr><td>Fed Funds Target</td><td class="num">3.50%–3.75%</td><td>No change expected at June 16–17 FOMC; ~85% odds of a hike by year-end now priced in</td></tr>
-    <tr><td>WTI Crude</td><td class="num up">$106.42 ▲ +4.39%</td><td>Middle East tensions keep oil elevated</td></tr>
-    <tr><td>Brent Crude</td><td class="num up">$114.44 ▲ +5.8%</td><td>Holding above $100/bbl</td></tr>
-  </tbody>
-</table>
-</section>
+<div class="panel" style="padding:10px 12px">
+  <table>
+    <tr><th>Instrument</th><th>Level</th><th>Note</th></tr>
+    <tr><td>10-yr Treasury</td><td class="num">≈4.49%</td><td>Climbed after ADP showed +122K private-sector jobs in May; easing some Thursday on the ceasefire.</td></tr>
+    <tr><td>30-yr Treasury</td><td class="num">>5%</td><td>Topped 5.19% in mid-May, highest since before the financial crisis; remains elevated.</td></tr>
+    <tr><td>Fed funds rate</td><td class="num">3.50–3.75%</td><td>On hold. FOMC meets June 16–17; futures near-unanimous on no change, but ~85% odds of a quarter-point HIKE by year-end on oil-driven inflation fears.</td></tr>
+    <tr><td>WTI crude</td><td class="num">Elevated, easing</td><td>Spiked above $106 in May on the Middle East conflict; slipped Thursday after the Israel–Lebanon ceasefire.</td></tr>
+  </table>
+</div>
 
 <div class="label">On the Radar</div>
-<section class="panel">
-<ul class="radar">
-  <li><b>Friday, June 5, 8:30 AM ET — May jobs report.</b> Economists expect ~80,000 new jobs with unemployment steady at 4.3%. ADP's private-payroll print came in above expectations at +122,000. A hot number reinforces "higher for longer" ahead of the Fed.</li>
-  <li><b>June 16–17 — FOMC meeting.</b> Futures price near-unanimous odds of no change, but a quarter-point <i>hike</i> by year-end is now an 85% probability, up from 60% a week ago.</li>
-  <li><b>July 2 — CrowdStrike 4-for-1 split.</b> Shares begin trading split-adjusted; watch today's reaction to Broadcom and CrowdStrike results as a tone-setter for the AI trade.</li>
-</ul>
-</section>
+<div class="panel">
+  <ul class="bullets">
+    <li><strong>FOMC meeting, June 16–17</strong> — no change expected, but the statement and projections will be parsed for hike signals as oil keeps inflation expectations sticky.</li>
+    <li><strong>Middle East ceasefire watch</strong> — the Israel–Lebanon agreement eased oil and yields Thursday, but the broader US–Iran exchange and Gulf naval blockades that hit markets Wednesday remain unresolved.</li>
+    <li><strong>AI trade health check</strong> — after Broadcom's miss, watch whether the rotation out of chips (NVIDIA, AMD, Micron) extends or dip-buyers step back in.</li>
+  </ul>
+</div>
 
 <footer class="sources">
-  <div class="label" style="margin-top:0">Sources</div>
-  <a href="https://finance.yahoo.com/markets/live/stock-market-today-wednesday-june-3-dow-sp-500-nasdaq-fall-oil-rises-224803128.html">Yahoo Finance — June 3 close</a>
-  <a href="https://www.cnbc.com/2026/06/03/stock-market-today-live-updates.html">CNBC — Live updates</a>
-  <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-03-2026">TheStreet — June 3 liveblog</a>
-  <a href="https://www.fool.com/coverage/stock-market-today/2026/06/02/stock-market-today-june-2-chipmakers-drive-s-and-p-500-to-another-record-close/">Motley Fool — June 2 record close</a>
-  <a href="https://www.sec.gov/Archives/edgar/data/0001535527/000153552726000022/crwd-20260603xex991.htm">CrowdStrike Q1 FY27 (SEC 8-K)</a>
-  <a href="https://www.sec.gov/Archives/edgar/data/0001730168/000173016826000051/avgo-05032026x8kxex99.htm">Broadcom Q2 FY26 (SEC 8-K)</a>
-  <a href="https://tradingeconomics.com/united-states/government-bond-yield">Trading Economics — US 10Y</a>
-  <a href="https://www.kiplinger.com/investing/economy/jobs-report-may-2026-what-to-expect">Kiplinger — May jobs preview</a>
-  <a href="https://www.prnewswire.com/news-releases/adp-national-employment-report-private-sector-employment-increased-by-122-000-jobs-in-may-annual-pay-was-up-4-4-302790127.html">ADP National Employment Report</a>
-  <div class="disclaimer">For information only — not investment advice. Index levels reflect the most recent official close (June 3, 2026); live quotes above update in real time. Verify figures with primary sources before making financial decisions.</div>
+  <p>SOURCES</p>
+  <a href="https://www.cnbc.com/2026/06/03/stock-market-today-live-updates.html">CNBC — Dow jumps 900 points, Nasdaq slides as investors rotate out of chips (live updates)</a>
+  <a href="https://247wallst.com/investing/2026/06/04/stock-market-live-june-4-2026-sp-500-spy-fall-as-broadcom-sinks/">24/7 Wall St. — Stock Market Live June 4, 2026: Broadcom sinks</a>
+  <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-02-2026">TheStreet — S&amp;P 500 finishes above 7,600 for the first time (June 2)</a>
+  <a href="https://www.schwab.com/learn/story/stock-market-update-open">Charles Schwab — Broadcom's plunge takes a chip out of long rally</a>
+  <a href="https://www.bloomberg.com/news/articles/2026-06-04/us-stock-futures-today-broadcom-netskope-petco-unitedhealth">Bloomberg — US premarket movers for June 4, 2026</a>
+  <a href="https://tradingeconomics.com/united-states/government-bond-yield">Trading Economics — US 10-Year Treasury yield</a>
+  <a href="https://www.cnbc.com/2026/05/19/treasurys-yields-inflation-traders-fed-interest-rates.html">CNBC — 30-year Treasury yield tops 5.19%</a>
+  <div class="disclaimer">For information only — not investment advice. Intraday figures are approximate and move with the market; verify against the live tape or your broker before acting.</div>
 </footer>
 
 </div>
