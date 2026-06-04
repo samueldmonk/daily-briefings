@@ -91,25 +91,34 @@ ul.bullets li strong{color:var(--text)}
   </div>
 </div>
 
-<div class="label">Midday Snapshot — Thursday, June 4</div>
-<div class="note">Markets are open; figures below are intraday as of midday ET. See the live tape above for real-time quotes.</div>
+<div class="label">Live Index Quotes — updates in real time</div>
 <div class="tickers">
   <div class="ticker">
-    <div class="name">S&amp;P 500</div>
-    <div class="val">~7,575</div>
-    <div class="chg up">▲ +0.3% intraday</div>
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+      {"symbol":"FOREXCOM:SPXUSD","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}
+      </script>
+    </div>
   </div>
   <div class="ticker">
-    <div class="name">Nasdaq Composite</div>
-    <div class="val">~26,900</div>
-    <div class="chg down">▼ −0.2% intraday</div>
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+      {"symbol":"FOREXCOM:NSXUSD","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}
+      </script>
+    </div>
   </div>
   <div class="ticker">
-    <div class="name">Dow Jones</div>
-    <div class="val">~51,600</div>
-    <div class="chg up">▲ +900 pts (+1.8%) — record high</div>
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+      {"symbol":"FOREXCOM:DJI","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}
+      </script>
+    </div>
   </div>
 </div>
+<div class="note">Quotes stream live (some feeds ~15-min delayed). Editorial below reflects the latest edition; official closes are in the Weekly Scorecard.</div>
 
 <div class="label">The Lead</div>
 <div class="panel lead">
@@ -133,6 +142,16 @@ ul.bullets li strong{color:var(--text)}
     <span class="tag down-t">▼ −12%</span>
     <h3>Petco (WOOF)</h3>
     <p>Dropped almost 12% after earnings disappointed investors.</p>
+  </div>
+</div>
+
+<div class="label">Live Market Headlines — updates in real time</div>
+<div class="panel" style="padding:8px">
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
+    {"feedMode":"market","market":"stock","colorTheme":"dark","isTransparent":true,"displayMode":"regular","width":"100%","height":420,"locale":"en"}
+    </script>
   </div>
 </div>
 
