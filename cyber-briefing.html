@@ -57,77 +57,86 @@ ul.kev li::before{content:"▸";color:var(--accent);position:absolute;left:0}
 </head>
 <body>
 <div class="wrap">
-  <nav class="nav">
+  <div class="nav">
     <a href="cyber-briefing.html" class="active">⛨ THE CYBER WIRE</a>
     <a href="wallstreet-briefing.html">▲ THE CLOSING BELL</a>
     <a href="mma-briefing.html">⊘ THE OCTAGON</a>
-  </nav>
+  </div>
 
-  <header class="masthead">
+  <div class="masthead">
     <h1><span class="glyph">⛨</span> The Cyber Wire</h1>
-    <div class="tagline">Your daily cybersecurity briefing — breaches, vulnerabilities &amp; federal deadlines</div>
+    <div class="tagline">Your daily security briefing — breaches, vulnerabilities &amp; federal deadlines</div>
     <div class="meta">
       <span class="pill live"><span class="dot"></span>LIVE</span>
       <span class="pill" id="edition">Afternoon Edition</span>
       <span class="pill" id="datestamp">Friday, June 5, 2026</span>
-      <span class="pill">Updated <span id="updated">3 PM ET</span></span>
+      <span class="pill">Updated <span id="updated">5:00 PM ET</span></span>
     </div>
-  </header>
+  </div>
 
   <div class="label">Top Story</div>
   <div class="panel lead">
-    <h2>Windows Netlogon RCE (CVE-2026-41089) under active exploitation — domain controllers at risk</h2>
-    <p>A critical stack-based buffer overflow in Windows Netlogon — the service that handles authentication inside Windows domains — is now being actively exploited in the wild. CVE-2026-41089 (CVSS 9.8) lets an unauthenticated attacker send a crafted network request to a domain controller and execute code without any sign-in or prior access. Microsoft patched the flaw on May 12 as part of its Patch Tuesday updates, crediting its internal WARP research team.</p>
-    <p>The Centre for Cybersecurity Belgium updated its advisory on May 29 to confirm in-the-wild exploitation — notable because Microsoft had originally rated the bug "exploitation less likely." Successful exploitation yields SYSTEM-level code execution on the domain controller itself: in practice, full control of the Active Directory domain, privileged account creation, and lateral movement to everything that authenticates against it. If your DCs aren't patched, treat this as an emergency.</p>
+    <h2>ShinyHunters leaks claimed 234 GB from DentaQuest as breach exposes data on 2.6 million accounts</h2>
+    <p>Dental benefits administrator DentaQuest — which serves 35 million customers across programs in 50 states with a network of 140,000 dentists — confirmed on June 2 that its networks had been breached. The extortion group ShinyHunters, which listed the company on its leak site last month claiming more than 234 GB of stolen data, publicly leaked the trove after what it described as a failure to reach an agreement with the company.</p>
+    <p>The exposed data on roughly 2.6 million accounts includes names, addresses, email addresses, phone numbers, dates of birth, government-issued IDs and health insurance information. Much of it appeared in healthcare enrollment files (ASC X12 transaction sets), some containing Medicaid IDs. DentaQuest said the incident caused "limited disruption" to customer service.</p>
   </div>
 
   <div class="label">Breaches &amp; Incidents</div>
   <div class="cards">
     <div class="card">
-      <span class="tag breach">DATA BREACH</span>
-      <h3>DentaQuest: 2.6M accounts exposed</h3>
-      <p>A breach at dental benefits administrator DentaQuest has reportedly exposed sensitive data tied to roughly 2.6 million accounts, making it one of the larger healthcare-sector incidents disclosed this period.</p>
-    </div>
-    <div class="card">
-      <span class="tag breach">HUMANITARIAN</span>
+      <span class="tag breach">BREACH</span>
       <h3>UN World Food Programme app breached</h3>
-      <p>The UN's World Food Programme — the world's largest humanitarian organization — revealed that its self-registration application (SRA) for Palestine was breached, raising concerns about exposed data of vulnerable beneficiaries.</p>
+      <p>The WFP revealed that its self-registration application (SRA) for Palestine was breached — a sensitive dataset given the population it serves and the humanitarian context.</p>
     </div>
     <div class="card">
       <span class="tag supply">SUPPLY CHAIN</span>
-      <h3>npm "IronWorm" infostealer hits 36 packages</h3>
-      <p>A new supply-chain attack infected 36 packages on the npm registry with infostealer malware dubbed IronWorm. Separately, researchers disclosed a one-click VS Code attack capable of stealing a user's GitHub token.</p>
+      <h3>"IronWorm" infostealer infects 36 npm packages</h3>
+      <p>A new supply-chain attack seeded 36 packages on the npm registry with infostealer malware dubbed IronWorm — the latest in a steady drumbeat of open-source registry compromises targeting developers.</p>
+    </div>
+    <div class="card">
+      <span class="tag breach">CLOUD</span>
+      <h3>"PCPJack" turns hijacked cloud servers into spam relays</h3>
+      <p>A threat actor tracked as PCPJack hijacked cloud servers associated with AWS, Google Cloud and Microsoft Azure to build a covert SMTP email relay network, converting compromised business servers into SMTP proxies.</p>
     </div>
     <div class="card">
       <span class="tag ransom">RANSOMWARE</span>
-      <h3>Abyss hits German county; AI-built tooling spreads</h3>
-      <p>Germany's Limburg-Weilburg county administration was hit by the Abyss ransomware group, which claims ~132 GB stolen and encrypted. Meanwhile BleepingComputer reports a threat actor using an AI-built ransomware toolkit that automates Active Directory discovery and EDR evasion.</p>
+      <h3>AI-built ransomware toolkit automates EDR evasion</h3>
+      <p>On June 2, researchers detected a threat actor using an AI-assisted ransomware toolkit that automates Active Directory discovery and helps evade EDR. Development was reportedly assisted by AI coding agents across initial coding, analysis and revision stages.</p>
+    </div>
+    <div class="card">
+      <span class="tag supply">DEV TOOLS</span>
+      <h3>One-click VS Code attack can steal GitHub tokens</h3>
+      <p>Researchers disclosed a one-click attack via Microsoft Visual Studio Code that lets an attacker steal a user's GitHub token — "just by clicking a link," per the researcher who reported it.</p>
     </div>
   </div>
 
   <div class="label">Vulnerability Watch</div>
-  <div class="panel" style="padding:10px">
+  <div class="panel" style="padding:8px 0">
     <table>
       <tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr>
       <tr>
-        <td class="cve">CVE-2026-41089</td><td class="score score-crit">9.8</td><td>Windows Netlogon (domain controllers)</td>
-        <td>Unauthenticated RCE; patched May 12 Patch Tuesday; actively exploited per Belgian CCB.</td>
+        <td class="cve">CVE-2026-41089</td>
+        <td class="score"><span class="score-crit">9.8</span></td>
+        <td>Windows Netlogon</td>
+        <td>Stack-based buffer overflow, network-exploitable without authentication. Belgium's CCB issued an urgent warning of active exploitation.</td>
       </tr>
       <tr>
-        <td class="cve">CVE-2026-45247</td><td class="score score-crit">9.8*</td><td>Mirasvit Full Page Cache Warmer for Magento 2 (&lt;1.11.12)</td>
-        <td>Unauthenticated PHP deserialization → RCE via CacheWarmer cookie; fixed in 1.11.12 (May 25); now in CISA KEV. *Score as reported by The Hacker News.</td>
+        <td class="cve">CVE-2026-3055</td>
+        <td class="score"><span class="score-crit">9.3</span></td>
+        <td>Citrix NetScaler ADC / Gateway</td>
+        <td>Out-of-bounds read; large-scale exploitation confirmed by Fortinet. Only SAML IdP configurations are exploitable. Citrix's official CVSS is 9.3 (some reports cite 9.8). Fixed builds: 14.1-66.59, 13.1-62.23, 13.1-37.262.</td>
       </tr>
       <tr>
-        <td class="cve">CVE-2026-3055</td><td class="score score-crit">9.3</td><td>Citrix NetScaler ADC / Gateway (SAML IdP configs only)</td>
-        <td>Memory overread → RCE; large-scale exploitation confirmed by Fortinet. Citrix official CVSS is 9.3; fixed builds 14.1-66.59 / 13.1-62.23 / 13.1-37.262.</td>
+        <td class="cve">CVE-2026-8043</td>
+        <td class="score"><span class="score-crit">9.6</span></td>
+        <td>Ivanti Xtraction</td>
+        <td>Critical flaw exposing sensitive data, per Daily CyberSecurity reporting.</td>
       </tr>
       <tr>
-        <td class="cve">CVE-2026-41091</td><td class="score score-high">7.8</td><td>Microsoft Defender</td>
-        <td>One of two Defender flaws under active exploitation; grants SYSTEM privileges.</td>
-      </tr>
-      <tr>
-        <td class="cve">CVE-2025-48595</td><td class="score score-high">—</td><td>Android Framework (Android 14–16-qpr2)</td>
-        <td>Integer overflow exploited in targeted attacks; fixed in Google's June 2026 Android security updates.</td>
+        <td class="cve">CVE-2026-42897</td>
+        <td class="score"><span class="score-high">8.1</span></td>
+        <td>Microsoft Exchange Server (OWA)</td>
+        <td>Spoofing / cross-site scripting issue in Outlook Web Access, exploited in the wild. No patch yet; Microsoft says the Exchange Emergency Mitigation Service applies mitigation automatically and is on by default.</td>
       </tr>
     </table>
   </div>
@@ -135,28 +144,26 @@ ul.kev li::before{content:"▸";color:var(--accent);position:absolute;left:0}
   <div class="label">CISA KEV &amp; Federal Deadlines</div>
   <div class="panel">
     <ul class="kev">
-      <li><strong>June 2:</strong> CISA added two CVEs to the Known Exploited Vulnerabilities catalog — CVE-2022-0492 (Linux kernel improper authentication) and CVE-2025-48595 (Android Framework integer overflow). Under BOD 22-01's standard three-week window, federal remediation is due ~June 23.</li>
-      <li><strong>June 3:</strong> CISA added CVE-2026-45247 (Mirasvit Full Page Cache Warmer deserialization) on evidence of active exploitation. Federal remediation due ~June 24.</li>
-      <li><strong>Reminder:</strong> BOD 22-01 gives federal civilian agencies three weeks from the date of KEV addition to remediate; private-sector teams are strongly encouraged to track the same deadlines.</li>
+      <li><strong>June 2 additions:</strong> CVE-2022-0492 (Linux kernel cgroups flaw allowing container escape and privilege escalation) and CVE-2025-48595 (Android Framework integer overflow affecting Android 14–16, enabling code execution and privilege escalation). Federal remediation due ~June 23 under BOD 22-01's three-week window.</li>
+      <li><strong>June 3 addition:</strong> CVE-2026-45247 — Mirasvit Full Page Cache Warmer deserialization of untrusted data. Federal remediation due ~June 24.</li>
+      <li><strong>Reminder:</strong> BOD 22-01 gives federal civilian agencies a standard three-week remediation window from the date a CVE is added to the KEV catalog.</li>
     </ul>
   </div>
 
   <div class="sources">
     <div class="label" style="margin-top:0">Sources</div>
-    <a href="https://www.helpnetsecurity.com/2026/06/01/windows-netlogon-rce-exploited-cve-2026-41089/">Help Net Security — Windows Netlogon RCE exploited (CVE-2026-41089)</a>
-    <a href="https://www.securityweek.com/critical-windows-netlogon-vulnerability-in-attackers-crosshairs/">SecurityWeek — Critical Windows Netlogon vulnerability in attackers' crosshairs</a>
-    <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41089">Microsoft Security Update Guide — CVE-2026-41089</a>
-    <a href="https://www.cisa.gov/news-events/alerts/2026/06/02/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA — Two KEV additions, June 2, 2026</a>
-    <a href="https://www.cisa.gov/news-events/alerts/2026/06/03/cisa-adds-one-known-exploited-vulnerability-catalog">CISA — One KEV addition, June 3, 2026</a>
-    <a href="https://thehackernews.com/2026/06/cisa-adds-exploited-magento-rce-flaw.html">The Hacker News — CISA adds exploited Magento RCE flaw CVE-2026-45247 to KEV</a>
-    <a href="https://sansec.io/research/mirasvit-cache-warmer-object-injection">Sansec — Critical vulnerability in Mirasvit Cache Warmer for Magento</a>
-    <a href="https://www.helpnetsecurity.com/2026/06/02/android-vulnerability-exploited-cve-2025-48595/">Help Net Security — Google fixes actively exploited Android flaw (CVE-2025-48595)</a>
-    <a href="https://thehackernews.com/2026/05/microsoft-warns-of-two-actively.html">The Hacker News — Microsoft warns of two actively exploited Defender flaws</a>
-    <a href="https://www.bleepingcomputer.com/news/security/ai-built-ransomware-toolkit-automates-edr-evasion-ad-discovery/">BleepingComputer — AI-built ransomware toolkit automates EDR evasion</a>
-    <a href="https://sharkstriker.com/blog/june-2026-data-breaches/">SharkStriker — June 2026 data breaches</a>
-    <a href="https://thehackernews.com/">The Hacker News — front page (WFP, npm IronWorm, VS Code token theft)</a>
+    <a href="https://www.bleepingcomputer.com/news/security/dentaquest-data-breach-exposed-info-of-26-million-accounts/">BleepingComputer — DentaQuest data breach exposed info of 2.6 million accounts</a>
+    <a href="https://www.securityweek.com/hackers-leak-dentaquest-information-impacting-2-6-million/">SecurityWeek — Hackers leak DentaQuest information impacting 2.6 million</a>
+    <a href="https://www.bankinfosecurity.com/shinyhunters-leaks-234gb-dentaquest-data-trove-a-31883">BankInfoSecurity — ShinyHunters leaks alleged 234-GB DentaQuest data trove</a>
+    <a href="https://techcrunch.com/2026/06/03/the-worst-hacks-and-breaches-of-2026-so-far/">TechCrunch — The worst hacks and breaches of 2026 (so far)</a>
+    <a href="https://www.bleepingcomputer.com/news/security/ai-built-ransomware-toolkit-automates-edr-evasion-ad-discovery/">BleepingComputer — AI-built ransomware toolkit automates EDR evasion, AD discovery</a>
+    <a href="https://threat-modeling.com/vulnerability-intelligence-report-june-2-2026/">Threat-Modeling.com — Vulnerability Intelligence Report, June 2, 2026</a>
+    <a href="https://securityonline.info/ivanti-xtraction-vulnerability-cve-2026-8043-critical-flaw/">Daily CyberSecurity — Critical Ivanti Xtraction flaw (CVE-2026-8043)</a>
+    <a href="https://www.cisa.gov/news-events/alerts/2026/06/02/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA — Adds two known exploited vulnerabilities to catalog (June 2)</a>
+    <a href="https://www.cisa.gov/news-events/alerts/2026/06/03/cisa-adds-one-known-exploited-vulnerability-catalog">CISA — Adds one known exploited vulnerability to catalog (June 3)</a>
+    <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA — Known Exploited Vulnerabilities Catalog</a>
   </div>
-  <div class="disclaimer">Compiled from public reporting; details may evolve as incidents are investigated. Verify patch levels against vendor advisories before acting.</div>
+  <div class="disclaimer">This briefing summarizes public reporting as of the time above. Verify CVE details against vendor advisories before acting.</div>
 </div>
 <script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;}catch(e){}})();</script>
 </body>
