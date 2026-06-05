@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Cyber Wire — Daily Security Briefing</title>
 <style>
-:root{--bg:#0c1013;--panel:#131a1f;--line:#23303a;--accent:#22d3a8;--accent2:#36c6ff;--text:#e6edf0;--muted:#8da3ad;--warn:#ffb454;--crit:#ff6b6b;--mono:'SF Mono',ui-monospace,Menlo,Consolas,monospace}
+:root{--bg:#0c1012;--panel:#131a1d;--line:#22323a;--accent:#22d3a8;--accent2:#36c6ff;--text:#e4ecee;--muted:#8fa3aa;--warn:#f5b14c;--crit:#f87171;--mono:'SF Mono',ui-monospace,Menlo,Consolas,monospace}
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;line-height:1.6;padding:32px 20px 60px}
 .wrap{max-width:960px;margin:0 auto}
@@ -26,123 +26,137 @@ h1 .glyph{color:var(--accent)}
 .panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px}
 .lead{border-left:4px solid var(--accent)}
 .lead h2{font-size:24px;line-height:1.35}
-.lead p{margin-top:12px;color:#c2d2da}
+.lead p{margin-top:12px;color:#c4d2d6;font-size:15.5px}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;transition:transform .15s,border-color .15s}
 .card:hover{transform:translateY(-3px);border-color:var(--accent)}
 .card h3{font-size:16.5px;margin-bottom:8px}
-.card p{font-size:14px;color:#b9c9d1}
-.tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;border-radius:5px;padding:2px 8px;display:inline-block;margin-bottom:10px;margin-right:6px}
-.tag.breach{background:rgba(255,107,107,.13);color:var(--crit)}
-.tag.cloud{background:rgba(54,198,255,.13);color:var(--accent2)}
-.tag.supply{background:rgba(255,180,84,.13);color:var(--warn)}
-.tag.hum{background:rgba(34,211,168,.13);color:var(--accent)}
+.card p{font-size:14px;color:#b8c7cc}
+.tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;border-radius:5px;padding:2px 8px;display:inline-block;margin-bottom:10px}
+.tag.breach{background:rgba(248,113,113,.12);color:var(--crit)}
+.tag.ransom{background:rgba(245,177,76,.12);color:var(--warn)}
+.tag.supply{background:rgba(54,198,255,.12);color:var(--accent2)}
 table{width:100%;border-collapse:collapse;font-size:13.5px}
 th{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
 td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
 tr:last-child td{border-bottom:none}
-td.cve{font-family:var(--mono);font-size:12.5px;color:var(--accent2);white-space:nowrap}
-.sev{font-family:var(--mono);font-size:11.5px;font-weight:700}
-.sev.crit{color:var(--crit)}.sev.high{color:var(--warn)}
+td.cve{font-family:var(--mono);font-size:12.5px;color:var(--accent);white-space:nowrap}
+td.score{font-family:var(--mono)}
+.score-crit{color:var(--crit);font-weight:700}
+.score-high{color:var(--warn);font-weight:700}
 ul.kev{list-style:none}
-ul.kev li{padding:10px 0 10px 22px;position:relative;border-bottom:1px solid var(--line);font-size:14.5px;color:#c2d2da}
+ul.kev li{padding:10px 0 10px 22px;border-bottom:1px solid var(--line);position:relative;font-size:14.5px;color:#c4d2d6}
 ul.kev li:last-child{border-bottom:none}
-ul.kev li::before{content:"▣";color:var(--accent);position:absolute;left:0;top:10px;font-size:12px}
-.sources{margin-top:40px;border-top:1px solid var(--line);padding-top:18px}
-.sources a{color:var(--muted);font-size:13px;display:block;margin-bottom:6px;text-decoration:none;word-break:break-all}
+ul.kev li::before{content:"▸";color:var(--accent);position:absolute;left:0}
+.sources{margin-top:40px;border-top:1px solid var(--line);padding-top:16px}
+.sources a{color:var(--muted);font-size:12.5px;display:block;margin-bottom:5px;text-decoration:none;font-family:var(--mono)}
 .sources a:hover{color:var(--accent)}
-.disclaimer{margin-top:24px;font-size:12.5px;color:var(--muted);font-style:italic}
-@media(max-width:700px){h1{font-size:30px}}
+.disclaimer{margin-top:18px;font-size:12px;color:var(--muted);font-style:italic}
+@media(max-width:700px){h1{font-size:32px}}
 </style>
 </head>
 <body>
 <div class="wrap">
+  <nav class="nav">
+    <a href="cyber-briefing.html" class="active">⛨ THE CYBER WIRE</a>
+    <a href="wallstreet-briefing.html">▲ THE CLOSING BELL</a>
+    <a href="mma-briefing.html">⊘ THE OCTAGON</a>
+  </nav>
 
-<nav class="nav">
-  <a href="cyber-briefing.html" class="active">⛨ The Cyber Wire</a>
-  <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
-  <a href="mma-briefing.html">⊘ The Octagon</a>
-</nav>
+  <header class="masthead">
+    <h1><span class="glyph">⛨</span> The Cyber Wire</h1>
+    <div class="tagline">Your daily cybersecurity briefing — breaches, vulnerabilities &amp; federal deadlines</div>
+    <div class="meta">
+      <span class="pill live"><span class="dot"></span>LIVE</span>
+      <span class="pill" id="edition">Afternoon Edition</span>
+      <span class="pill" id="datestamp">Friday, June 5, 2026</span>
+      <span class="pill">Updated <span id="updated">3 PM ET</span></span>
+    </div>
+  </header>
 
-<header class="masthead">
-  <h1><span class="glyph">⛨</span> The Cyber Wire</h1>
-  <div class="tagline">Your daily cybersecurity briefing — breaches, vulnerabilities &amp; federal deadlines</div>
-  <div class="meta">
-    <span class="pill live"><span class="dot"></span>LIVE</span>
-    <span class="pill" id="edition">Midday Edition</span>
-    <span class="pill" id="datestamp">Friday, June 5, 2026</span>
-    <span class="pill">Updated <span id="updated">1 PM ET</span></span>
+  <div class="label">Top Story</div>
+  <div class="panel lead">
+    <h2>Windows Netlogon RCE (CVE-2026-41089) under active exploitation — domain controllers at risk</h2>
+    <p>A critical stack-based buffer overflow in Windows Netlogon — the service that handles authentication inside Windows domains — is now being actively exploited in the wild. CVE-2026-41089 (CVSS 9.8) lets an unauthenticated attacker send a crafted network request to a domain controller and execute code without any sign-in or prior access. Microsoft patched the flaw on May 12 as part of its Patch Tuesday updates, crediting its internal WARP research team.</p>
+    <p>The Centre for Cybersecurity Belgium updated its advisory on May 29 to confirm in-the-wild exploitation — notable because Microsoft had originally rated the bug "exploitation less likely." Successful exploitation yields SYSTEM-level code execution on the domain controller itself: in practice, full control of the Active Directory domain, privileged account creation, and lateral movement to everything that authenticates against it. If your DCs aren't patched, treat this as an emergency.</p>
   </div>
-</header>
 
-<div class="label">Top Story</div>
-<div class="panel lead">
-  <h2>Windows Netlogon RCE (CVE-2026-41089) under active exploitation — unpatched domain controllers face full takeover</h2>
-  <p>Belgium's Centre for Cybersecurity (CCB) warned on May 29 that CVE-2026-41089, a critical pre-authentication stack-based buffer overflow in the Windows Netlogon service (CVSS 9.8), is being actively exploited in the wild against unpatched Windows domain controllers. An unauthenticated attacker can send a crafted network request to a domain controller and gain SYSTEM-level code execution — in practice, full control of the Active Directory domain, the ability to create privileged accounts, and lateral movement across every system that authenticates against that controller.</p>
-  <p>Microsoft patched the flaw in its May 12 Patch Tuesday updates. Organizations that have not yet deployed the May cumulative update for Windows Server should treat it as an emergency change.</p>
-</div>
-
-<div class="label">Breaches &amp; Incidents</div>
-<div class="cards">
-  <div class="card">
-    <span class="tag breach">BREACH</span><span class="tag hum">HEALTHCARE</span>
-    <h3>DentaQuest: 2.6M accounts exposed</h3>
-    <p>The Sun Life–owned dental benefits administrator confirmed June 2 that its network was breached after extortion group ShinyHunters leaked a claimed 234 GB of data. Exposed records include 2.6 million unique email addresses plus names, mailing addresses, dates of birth, phone numbers and health insurance information; Social Security numbers do not appear to have been taken.</p>
+  <div class="label">Breaches &amp; Incidents</div>
+  <div class="cards">
+    <div class="card">
+      <span class="tag breach">DATA BREACH</span>
+      <h3>DentaQuest: 2.6M accounts exposed</h3>
+      <p>A breach at dental benefits administrator DentaQuest has reportedly exposed sensitive data tied to roughly 2.6 million accounts, making it one of the larger healthcare-sector incidents disclosed this period.</p>
+    </div>
+    <div class="card">
+      <span class="tag breach">HUMANITARIAN</span>
+      <h3>UN World Food Programme app breached</h3>
+      <p>The UN's World Food Programme — the world's largest humanitarian organization — revealed that its self-registration application (SRA) for Palestine was breached, raising concerns about exposed data of vulnerable beneficiaries.</p>
+    </div>
+    <div class="card">
+      <span class="tag supply">SUPPLY CHAIN</span>
+      <h3>npm "IronWorm" infostealer hits 36 packages</h3>
+      <p>A new supply-chain attack infected 36 packages on the npm registry with infostealer malware dubbed IronWorm. Separately, researchers disclosed a one-click VS Code attack capable of stealing a user's GitHub token.</p>
+    </div>
+    <div class="card">
+      <span class="tag ransom">RANSOMWARE</span>
+      <h3>Abyss hits German county; AI-built tooling spreads</h3>
+      <p>Germany's Limburg-Weilburg county administration was hit by the Abyss ransomware group, which claims ~132 GB stolen and encrypted. Meanwhile BleepingComputer reports a threat actor using an AI-built ransomware toolkit that automates Active Directory discovery and EDR evasion.</p>
+    </div>
   </div>
-  <div class="card">
-    <span class="tag breach">BREACH</span><span class="tag hum">HUMANITARIAN</span>
-    <h3>UN World Food Programme app breached</h3>
-    <p>The WFP, the world's largest humanitarian organization, revealed that its self-registration application (SRA) for Palestine was breached, exposing data tied to aid registration.</p>
+
+  <div class="label">Vulnerability Watch</div>
+  <div class="panel" style="padding:10px">
+    <table>
+      <tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr>
+      <tr>
+        <td class="cve">CVE-2026-41089</td><td class="score score-crit">9.8</td><td>Windows Netlogon (domain controllers)</td>
+        <td>Unauthenticated RCE; patched May 12 Patch Tuesday; actively exploited per Belgian CCB.</td>
+      </tr>
+      <tr>
+        <td class="cve">CVE-2026-45247</td><td class="score score-crit">9.8*</td><td>Mirasvit Full Page Cache Warmer for Magento 2 (&lt;1.11.12)</td>
+        <td>Unauthenticated PHP deserialization → RCE via CacheWarmer cookie; fixed in 1.11.12 (May 25); now in CISA KEV. *Score as reported by The Hacker News.</td>
+      </tr>
+      <tr>
+        <td class="cve">CVE-2026-3055</td><td class="score score-crit">9.3</td><td>Citrix NetScaler ADC / Gateway (SAML IdP configs only)</td>
+        <td>Memory overread → RCE; large-scale exploitation confirmed by Fortinet. Citrix official CVSS is 9.3; fixed builds 14.1-66.59 / 13.1-62.23 / 13.1-37.262.</td>
+      </tr>
+      <tr>
+        <td class="cve">CVE-2026-41091</td><td class="score score-high">7.8</td><td>Microsoft Defender</td>
+        <td>One of two Defender flaws under active exploitation; grants SYSTEM privileges.</td>
+      </tr>
+      <tr>
+        <td class="cve">CVE-2025-48595</td><td class="score score-high">—</td><td>Android Framework (Android 14–16-qpr2)</td>
+        <td>Integer overflow exploited in targeted attacks; fixed in Google's June 2026 Android security updates.</td>
+      </tr>
+    </table>
   </div>
-  <div class="card">
-    <span class="tag cloud">CLOUD</span><span class="tag breach">HIJACK</span>
-    <h3>"PCPJack" turns hijacked cloud servers into spam relay</h3>
-    <p>A threat actor hijacked cloud servers associated with AWS, Google Cloud, and Microsoft Azure to build a covert SMTP email relay network — compromised business servers across the U.S., Europe, and Asia were quietly converted into SMTP proxies.</p>
+
+  <div class="label">CISA KEV &amp; Federal Deadlines</div>
+  <div class="panel">
+    <ul class="kev">
+      <li><strong>June 2:</strong> CISA added two CVEs to the Known Exploited Vulnerabilities catalog — CVE-2022-0492 (Linux kernel improper authentication) and CVE-2025-48595 (Android Framework integer overflow). Under BOD 22-01's standard three-week window, federal remediation is due ~June 23.</li>
+      <li><strong>June 3:</strong> CISA added CVE-2026-45247 (Mirasvit Full Page Cache Warmer deserialization) on evidence of active exploitation. Federal remediation due ~June 24.</li>
+      <li><strong>Reminder:</strong> BOD 22-01 gives federal civilian agencies three weeks from the date of KEV addition to remediate; private-sector teams are strongly encouraged to track the same deadlines.</li>
+    </ul>
   </div>
-  <div class="card">
-    <span class="tag supply">SUPPLY CHAIN</span>
-    <h3>36 npm packages infected with "IronWorm" infostealer</h3>
-    <p>A new supply-chain attack seeded 36 packages on the npm registry with infostealer malware dubbed IronWorm. Separately, researchers disclosed a one-click VS Code attack that can steal a user's GitHub token — with read/write access to private repos — just by clicking a link.</p>
+
+  <div class="sources">
+    <div class="label" style="margin-top:0">Sources</div>
+    <a href="https://www.helpnetsecurity.com/2026/06/01/windows-netlogon-rce-exploited-cve-2026-41089/">Help Net Security — Windows Netlogon RCE exploited (CVE-2026-41089)</a>
+    <a href="https://www.securityweek.com/critical-windows-netlogon-vulnerability-in-attackers-crosshairs/">SecurityWeek — Critical Windows Netlogon vulnerability in attackers' crosshairs</a>
+    <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41089">Microsoft Security Update Guide — CVE-2026-41089</a>
+    <a href="https://www.cisa.gov/news-events/alerts/2026/06/02/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA — Two KEV additions, June 2, 2026</a>
+    <a href="https://www.cisa.gov/news-events/alerts/2026/06/03/cisa-adds-one-known-exploited-vulnerability-catalog">CISA — One KEV addition, June 3, 2026</a>
+    <a href="https://thehackernews.com/2026/06/cisa-adds-exploited-magento-rce-flaw.html">The Hacker News — CISA adds exploited Magento RCE flaw CVE-2026-45247 to KEV</a>
+    <a href="https://sansec.io/research/mirasvit-cache-warmer-object-injection">Sansec — Critical vulnerability in Mirasvit Cache Warmer for Magento</a>
+    <a href="https://www.helpnetsecurity.com/2026/06/02/android-vulnerability-exploited-cve-2025-48595/">Help Net Security — Google fixes actively exploited Android flaw (CVE-2025-48595)</a>
+    <a href="https://thehackernews.com/2026/05/microsoft-warns-of-two-actively.html">The Hacker News — Microsoft warns of two actively exploited Defender flaws</a>
+    <a href="https://www.bleepingcomputer.com/news/security/ai-built-ransomware-toolkit-automates-edr-evasion-ad-discovery/">BleepingComputer — AI-built ransomware toolkit automates EDR evasion</a>
+    <a href="https://sharkstriker.com/blog/june-2026-data-breaches/">SharkStriker — June 2026 data breaches</a>
+    <a href="https://thehackernews.com/">The Hacker News — front page (WFP, npm IronWorm, VS Code token theft)</a>
   </div>
-</div>
-
-<div class="label">Vulnerability Watch</div>
-<div class="panel" style="padding:8px 0">
-  <table>
-    <thead><tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr></thead>
-    <tbody>
-      <tr><td class="cve">CVE-2026-41089</td><td><span class="sev crit">9.8</span></td><td>Windows Netlogon (domain controllers)</td><td>Pre-auth RCE, actively exploited; fixed in May 12 Patch Tuesday updates</td></tr>
-      <tr><td class="cve">CVE-2026-42897</td><td><span class="sev crit">Critical</span></td><td>Microsoft Exchange Server (Outlook Web Access)</td><td>Spoofing/XSS flaw, exploitation reported; no patch yet — Exchange Emergency Mitigation Service applies mitigation automatically (on by default)</td></tr>
-      <tr><td class="cve">CVE-2026-20245</td><td><span class="sev high">High</span></td><td>Cisco Catalyst SD-WAN Manager</td><td>Unpatched zero-day actively exploited; enables root privilege escalation</td></tr>
-      <tr><td class="cve">CVE-2025-48595</td><td><span class="sev high">8.4</span></td><td>Android Framework (Android 14–16)</td><td>Zero-interaction privilege escalation under active exploitation; fixed in Google's June Android update (124 flaws addressed)</td></tr>
-      <tr><td class="cve">CVE-2026-3055</td><td><span class="sev crit">9.3</span></td><td>Citrix NetScaler (SAML IdP configs only)</td><td>Large-scale exploitation confirmed; Citrix's official CVSS is 9.3 — fixed builds 14.1-66.59 / 13.1-62.23 / 13.1-37.262</td></tr>
-    </tbody>
-  </table>
-</div>
-
-<div class="label">CISA KEV &amp; Federal Deadlines</div>
-<div class="panel">
-  <ul class="kev">
-    <li><strong>June 2:</strong> CISA added CVE-2022-0492 (Linux kernel) and CVE-2025-48595 (Android Framework) to the Known Exploited Vulnerabilities catalog — federal remediation due ~June 23 under BOD 22-01's standard three-week window.</li>
-    <li><strong>June 3:</strong> CISA added CVE-2026-45247, a Mirasvit Full Page Cache Warmer deserialization-of-untrusted-data vulnerability — federal remediation due ~June 24.</li>
-    <li><strong>Context:</strong> CISA warns hackers are actively exploiting flaws in both the Linux kernel and Android; BOD 22-01 gives federal civilian agencies three weeks from a KEV addition to remediate.</li>
-  </ul>
-</div>
-
-<div class="sources">
-  <div class="label" style="margin-top:0">Sources</div>
-  <a href="https://www.securityweek.com/critical-windows-netlogon-vulnerability-in-attackers-crosshairs/">SecurityWeek — Critical Windows Netlogon Vulnerability in Attackers' Crosshairs</a>
-  <a href="https://www.helpnetsecurity.com/2026/06/01/windows-netlogon-rce-exploited-cve-2026-41089/">Help Net Security — Windows Netlogon RCE exploited (CVE-2026-41089)</a>
-  <a href="https://www.bleepingcomputer.com/news/security/dentaquest-data-breach-exposed-info-of-26-million-accounts/">BleepingComputer — DentaQuest data breach exposed info of 2.6 million accounts</a>
-  <a href="https://thehackernews.com/">The Hacker News — WFP breach, PCPJack SMTP relay network, npm IronWorm, VS Code one-click token theft</a>
-  <a href="https://www.helpnetsecurity.com/2026/06/02/android-vulnerability-exploited-cve-2025-48595/">Help Net Security — Google fixes actively exploited Android vulnerability (CVE-2025-48595)</a>
-  <a href="https://www.tenable.com/blog/microsofts-may-2026-patch-tuesday-addresses-118-cves-cve-2026-41103">Tenable — May 2026 Microsoft Patch Tuesday (incl. CVE-2026-42897 Exchange)</a>
-  <a href="https://www.cisa.gov/news-events/alerts/2026/06/02/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA — Adds Two Known Exploited Vulnerabilities to Catalog (June 2)</a>
-  <a href="https://www.cisa.gov/news-events/alerts/2026/06/03/cisa-adds-one-known-exploited-vulnerability-catalog">CISA — Adds One Known Exploited Vulnerability to Catalog (June 3)</a>
-</div>
-
-<div class="disclaimer">This briefing summarizes public reporting at the time noted above. Verify CVE details and patch guidance against vendor advisories before acting.</div>
-
+  <div class="disclaimer">Compiled from public reporting; details may evolve as incidents are investigated. Verify patch levels against vendor advisories before acting.</div>
 </div>
 <script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;}catch(e){}})();</script>
 </body>

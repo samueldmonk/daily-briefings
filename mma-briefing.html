@@ -26,142 +26,135 @@ h1 .glyph{color:var(--accent)}
 .panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px}
 .lead{border-left:4px solid var(--accent)}
 .lead h2{font-size:24px;line-height:1.35}
-.lead p{margin-top:12px;color:#d8c9c2}
+.lead p{margin-top:12px;color:#d8c9c2;font-size:15.5px}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;transition:transform .15s,border-color .15s}
 .card:hover{transform:translateY(-3px);border-color:var(--accent)}
 .card h3{font-size:16.5px;margin-bottom:8px}
-.card p{font-size:14px;color:#cbb9b2}
+.card p{font-size:14px;color:#cbbab3}
 .dateline{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;color:var(--gold);margin-bottom:8px}
-.tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;border-radius:5px;padding:2px 8px;display:inline-block;margin-bottom:10px;margin-right:6px}
-.tag.prospect{background:rgba(90,212,126,.13);color:var(--win)}
-.tag.biz{background:rgba(212,175,90,.13);color:var(--gold)}
-table{width:100%;border-collapse:collapse;font-size:13.5px}
+.tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;border-radius:5px;padding:2px 8px;display:inline-block;margin-bottom:10px}
+.tag.prospect{background:rgba(90,212,126,.12);color:var(--win)}
+table{width:100%;border-collapse:collapse;font-size:14px}
 th{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
 td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
 tr:last-child td{border-bottom:none}
-.win{color:var(--win);font-weight:600}
-.nc{color:var(--gold);font-weight:600}
-ul.news{list-style:none}
-ul.news li{padding:10px 0 10px 22px;position:relative;border-bottom:1px solid var(--line);font-size:14.5px;color:#d8c9c2}
-ul.news li:last-child{border-bottom:none}
-ul.news li::before{content:"⊘";color:var(--accent);position:absolute;left:0;top:10px;font-size:12px}
-.sources{margin-top:40px;border-top:1px solid var(--line);padding-top:18px}
-.sources a{color:var(--muted);font-size:13px;display:block;margin-bottom:6px;text-decoration:none;word-break:break-all}
+td.result{font-family:var(--mono);font-size:12.5px;color:var(--win);white-space:nowrap}
+ul.around{list-style:none}
+ul.around li{padding:10px 0 10px 22px;border-bottom:1px solid var(--line);position:relative;font-size:14.5px;color:#d8c9c2}
+ul.around li:last-child{border-bottom:none}
+ul.around li::before{content:"▸";color:var(--accent);position:absolute;left:0}
+.sources{margin-top:40px;border-top:1px solid var(--line);padding-top:16px}
+.sources a{color:var(--muted);font-size:12.5px;display:block;margin-bottom:5px;text-decoration:none;font-family:var(--mono)}
 .sources a:hover{color:var(--accent2)}
-.disclaimer{margin-top:24px;font-size:12.5px;color:var(--muted);font-style:italic}
-@media(max-width:700px){h1{font-size:30px}}
+.disclaimer{margin-top:18px;font-size:12px;color:var(--muted);font-style:italic}
+@media(max-width:700px){h1{font-size:32px}}
 </style>
 </head>
 <body>
 <div class="wrap">
+  <nav class="nav">
+    <a href="cyber-briefing.html">⛨ THE CYBER WIRE</a>
+    <a href="wallstreet-briefing.html">▲ THE CLOSING BELL</a>
+    <a href="mma-briefing.html" class="active">⊘ THE OCTAGON</a>
+  </nav>
 
-<nav class="nav">
-  <a href="cyber-briefing.html">⛨ The Cyber Wire</a>
-  <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
-  <a href="mma-briefing.html" class="active">⊘ The Octagon</a>
-</nav>
+  <header class="masthead">
+    <h1><span class="glyph">⊘</span> The Octagon</h1>
+    <div class="tagline">Your daily MMA briefing — UFC, prospects &amp; the business of fighting</div>
+    <div class="meta">
+      <span class="pill live"><span class="dot"></span>LIVE</span>
+      <span class="pill" id="edition">Afternoon Edition</span>
+      <span class="pill" id="datestamp">Friday, June 5, 2026</span>
+      <span class="pill">Updated <span id="updated">3 PM ET</span></span>
+    </div>
+  </header>
 
-<header class="masthead">
-  <h1><span class="glyph">⊘</span> The Octagon</h1>
-  <div class="tagline">Your daily MMA briefing — UFC, prospects &amp; the business of fighting</div>
-  <div class="meta">
-    <span class="pill live"><span class="dot"></span>LIVE</span>
-    <span class="pill" id="edition">Midday Edition</span>
-    <span class="pill" id="datestamp">Friday, June 5, 2026</span>
-    <span class="pill">Updated <span id="updated">1 PM ET</span></span>
+  <div class="label">Top Story</div>
+  <div class="panel lead">
+    <h2>Nine days out: UFC Freedom 250 brings Topuria vs. Gaethje to the White House South Lawn</h2>
+    <p>The first professional sporting event ever staged at the presidential residence is almost here. UFC Freedom 250 lands Sunday, June 14 on the White House grounds, headlined by a lightweight title unification bout between reigning champion Ilia Topuria and interim champion Justin Gaethje. In the co-main, former two-division champion Alex Pereira makes his heavyweight debut in pursuit of the interim title.</p>
+    <p>Per CNN, the card is expected to draw more than 90,000 spectators to the South Lawn, coincides with President Trump's 80th birthday and Flag Day, and will feature concerts and ceremonial weigh-ins in the lead-up — with the UFC covering the estimated $60 million cost, including a massive lighting structure called The Claw. First, though: fight night tomorrow at the Apex.</p>
   </div>
-</header>
 
-<div class="label">Top Story</div>
-<div class="panel lead">
-  <h2>Nine days out: UFC Freedom 250 brings Topuria–Gaethje title unification to the White House South Lawn</h2>
-  <p>The first professional sporting event ever staged at the presidential residence is set for Sunday, June 14 — Flag Day and the 250th-anniversary year of the United States. UFC Freedom 250 is headlined by a lightweight title unification bout between champion Ilia Topuria and two-time interim champion Justin Gaethje, with former two-division champion Alex Pereira making his heavyweight debut in pursuit of the interim heavyweight title in the co-main event.</p>
-  <p>Originally announced as a six-fight card, the event now boasts seven bouts after a Josh Hokit–Derrick Lewis heavyweight clash was added. The card airs on Paramount+, with a limited number of preliminary bouts also broadcast on CBS.</p>
-</div>
-
-<div class="label">Fight Week — Upcoming Cards</div>
-<div class="cards">
-  <div class="card">
-    <div class="dateline">SAT JUN 6 · UFC APEX, LAS VEGAS</div>
-    <h3>UFC Fight Night: Muhammad vs Bonfim</h3>
-    <p>No. 5 welterweight Belal Muhammad meets No. 11 Gabriel Bonfim in a ranked headliner. Prelims 5 PM ET, main card 8 PM ET.</p>
+  <div class="label">Fight Week — Upcoming Cards</div>
+  <div class="cards">
+    <div class="card">
+      <div class="dateline">SAT · JUN 6 · META APEX, LAS VEGAS</div>
+      <h3>UFC Fight Night: Muhammad vs. Bonfim</h3>
+      <p>No. 5-ranked Belal Muhammad meets No. 11 Gabriel Bonfim in a welterweight headliner, streaming on Paramount+.</p>
+    </div>
+    <div class="card">
+      <div class="dateline">SUN · JUN 14 · WHITE HOUSE SOUTH LAWN, WASHINGTON DC</div>
+      <h3>UFC Freedom 250: Topuria vs. Gaethje</h3>
+      <p>Champ vs. interim champ for the undisputed lightweight title; Alex Pereira's heavyweight debut for the interim belt in the co-main.</p>
+    </div>
+    <div class="card">
+      <div class="dateline">SAT · JUN 20 · META APEX, LAS VEGAS</div>
+      <h3>UFC Fight Night: Kape vs. Horiguchi 2</h3>
+      <p>Flyweight rematch: No. 2 Manel Kape runs it back with No. 5 Kyoji Horiguchi, who submitted Kape at Rizin in 2017. On Paramount+.</p>
+    </div>
+    <div class="card">
+      <div class="dateline">SAT · JUN 27 · NATIONAL GYMNASTICS ARENA, BAKU</div>
+      <h3>UFC Fight Night: Fiziev vs. Torres</h3>
+      <p>Azerbaijani-born Rafael Fiziev headlines at home against Mexican knockout artist Manuel Torres in a five-round lightweight main event — UFC's first Baku card since 2025.</p>
+    </div>
   </div>
-  <div class="card">
-    <div class="dateline">SUN JUN 14 · WHITE HOUSE SOUTH LAWN, WASHINGTON DC</div>
-    <h3>UFC Freedom 250: Topuria vs Gaethje</h3>
-    <p>Lightweight title unification headliner; Alex Pereira's heavyweight debut for the interim belt in the co-main. Seven bouts, live on Paramount+ with prelims on CBS.</p>
-  </div>
-  <div class="card">
-    <div class="dateline">JUN 26 · BAKU, AZERBAIJAN</div>
-    <h3>UFC Fight Night: Fiziev vs Torres</h3>
-    <p>The promotion's June international stop lands in Azerbaijan with Fiziev vs Torres on top.</p>
-  </div>
-  <div class="card">
-    <div class="dateline">SAT JUL 11 · T-MOBILE ARENA, LAS VEGAS</div>
-    <h3>UFC 329: McGregor vs Holloway 2</h3>
-    <p>Conor McGregor returns against fellow former featherweight champion Max Holloway in a welterweight headliner.</p>
-  </div>
-</div>
 
-<div class="label">Last Event — Results · UFC Macau (Song vs Figueiredo), May 30, Galaxy Arena</div>
-<div class="panel" style="padding:8px 0">
-  <table>
-    <thead><tr><th>Result</th><th>Bout</th><th>Method</th></tr></thead>
-    <tbody>
-      <tr><td><span class="win">Song Yadong</span></td><td>def. Deiveson Figueiredo (bantamweight, main event)</td><td>Submission (guillotine choke), R2 4:42</td></tr>
-      <tr><td><span class="win">Alonzo Menifield</span></td><td>def. Zhang Mingyang</td><td>TKO (strikes), R1</td></tr>
-      <tr><td><span class="win">Sergei Pavlovich</span></td><td>def. Tallison Teixeira</td><td>TKO (strikes), R1 0:39</td></tr>
-      <tr><td><span class="win">Kai Asakura</span></td><td>def. Cameron Smotherman</td><td>KO (strikes), R1 1:50</td></tr>
-      <tr><td><span class="win">Jake Matthews</span></td><td>def. Carlston Harris</td><td>Unanimous decision (30-25, 30-27, 30-27)</td></tr>
-      <tr><td><span class="nc">No Contest</span></td><td>Sumudaerji vs Alex Perez</td><td>Accidental low blow, R2 1:45</td></tr>
-    </tbody>
-  </table>
-</div>
-
-<div class="label">Prospect Watch</div>
-<div class="cards">
-  <div class="card">
-    <span class="tag prospect">PROSPECT</span>
-    <h3>Quillan Salkilld (LW, Australia)</h3>
-    <p>The unbeaten-in-the-UFC lightweight (5-0 in the promotion) entered the rankings by stopping longtime contender Beneil Dariush via first-round TKO (3:29) at UFC Perth on May 2 — the biggest win of his career. His next bout is not yet booked; a ranked matchup before year-end looks likely.</p>
+  <div class="label">Last Event — Results (UFC Fight Night: Song vs. Figueiredo, May 30)</div>
+  <div class="panel" style="padding:10px">
+    <table>
+      <tr><th>Result</th><th>Bout</th><th>Method</th></tr>
+      <tr><td class="result">SONG WINS</td><td>Song Yadong def. Deiveson Figueiredo</td><td>Submission (guillotine choke), R2 4:42</td></tr>
+      <tr><td class="result">MENIFIELD WINS</td><td>Alonzo Menifield def. Zhang Mingyang</td><td>TKO (strikes)</td></tr>
+      <tr><td class="result">PAVLOVICH WINS</td><td>Sergei Pavlovich def. Tallison Teixeira</td><td>TKO (strikes), R1 0:39</td></tr>
+      <tr><td class="result">ASAKURA WINS</td><td>Kai Asakura def. Cameron Smotherman</td><td>KO (strikes), R1 1:50</td></tr>
+      <tr><td class="result">MATTHEWS WINS</td><td>Jake Matthews def. Carlston Harris</td><td>Unanimous decision (30-25, 30-27, 30-27)</td></tr>
+    </table>
   </div>
-  <div class="card">
-    <span class="tag prospect">PROSPECT</span>
-    <h3>Ateba Gautier (MW, Cameroon)</h3>
-    <p>"The Storm" (11-1) is 2-0 in 2026: a decision over Andrey Pulyaev at UFC 324 in January, then a second-round KO (1:06) of Ozzy Diaz at UFC 328 on May 9 — an overhand right to the temple followed by hammerfists for another highlight-reel finish.</p>
+
+  <div class="label">Prospect Watch</div>
+  <div class="cards">
+    <div class="card">
+      <span class="tag prospect">PROSPECT</span>
+      <h3>Quillan Salkilld (12-1) — lightweight, Australia</h3>
+      <p>The unbeaten-in-the-UFC Aussie survived an early knockdown and stormed back to stop contender Beneil Dariush by first-round TKO at UFC Perth on May 2, earning another Performance of the Night. A ranked number should be next.</p>
+    </div>
+    <div class="card">
+      <span class="tag prospect">PROSPECT</span>
+      <h3>Ateba Gautier (11-1) — middleweight, Cameroon</h3>
+      <p>"The Silent Assassin" is 2-0 in 2026: a decision over Andrey Pulyaev at UFC 324 in January, then a second-round TKO of Ozzy Diaz at UFC 328 on May 9 — an overhand right and hammerfists at 1:06 of R2. Nine of his eleven wins are by KO.</p>
+    </div>
+    <div class="card">
+      <span class="tag prospect">FREE AGENT</span>
+      <h3>Salahdine Parnasse — the man everyone wants</h3>
+      <p>The former two-division KSW champion crushed Kenneth Cross by first-round TKO in his US debut at MVP's Rousey vs. Carano card on May 16. UFC, PFL and MVP are all chasing his signature; his manager says a decision is coming within the month.</p>
+    </div>
   </div>
-  <div class="card">
-    <span class="tag prospect">FREE AGENT</span>
-    <h3>Salahdine Parnasse (Europe)</h3>
-    <p>The highly touted European standout impressed with a second-round knockout at Jake Paul's Most Valuable Promotions event — and both the UFC and PFL are reportedly pursuing his signature.</p>
+
+  <div class="label">Around the Sport</div>
+  <div class="panel">
+    <ul class="around">
+      <li><strong>Roster purge continues.</strong> The UFC released another wave of fighters in late May — including veteran Max Griffin — as the promotion clears space for younger, emerging talent.</li>
+      <li><strong>The Paramount+ era rolls on.</strong> The 2026 schedule — including tomorrow's Apex card and the June 20 Kape–Horiguchi rematch — streams on Paramount+ under the UFC's new broadcast home.</li>
+      <li><strong>White House logistics.</strong> The UFC is footing the estimated $60M bill for Freedom 250's outdoor production, per CNN — with concerts and ceremonial weigh-ins planned in the lead-up to the June 14 card.</li>
+    </ul>
   </div>
-</div>
 
-<div class="label">Around the Sport</div>
-<div class="panel">
-  <ul class="news">
-    <li><strong>Paramount era in full swing</strong> — all 2026 UFC events stream on Paramount+ with no pay-per-view requirement, under the seven-year, $7.7 billion media rights deal signed with Paramount Skydance in August 2025. The White House card is one of four big events per year slated for CBS broadcast.</li>
-    <li><strong>Roster purge continues</strong> — the UFC released four more fighters, including an 18-1 standout, as it clears space for emerging talent; veteran Max Griffin and Australian lightweight Jamie Mullarkey (cut after his UFC 325 loss to Quillan Salkilld) are among recent departures.</li>
-    <li><strong>Power rankings churn</strong> — with Topuria–Gaethje unifying the lightweight belts and Pereira moving to heavyweight, June's results will reshuffle multiple divisional pictures heading into UFC 329 in July.</li>
-  </ul>
-</div>
-
-<div class="sources">
-  <div class="label" style="margin-top:0">Sources</div>
-  <a href="https://en.wikipedia.org/wiki/UFC_Freedom_250">Wikipedia — UFC Freedom 250</a>
-  <a href="https://www.ufc.com/event/ufc-fight-night-june-06-2026">UFC — Fight Night: Muhammad vs Bonfim</a>
-  <a href="https://www.cbssports.com/ufc/news/ufc-fight-night-results-song-yadong-deiveson-figueiredo-live-updates-highlights-analysis/live/">CBS Sports — Song Yadong submits Deiveson Figueiredo in Macau</a>
-  <a href="https://www.ufc.com/news/ufc-fight-night-song-vs-figueiredo-results-highlights-main-card-winners-interviews-macau">UFC — Macau main card results</a>
-  <a href="https://bloodyelbow.com/2026/05/02/beneil-dariush-kod-in-one-round-at-ufc-perth-as-12-1-future-star-quillan-salkilld-earns-a-ranking/">Bloody Elbow — Salkilld stops Dariush at UFC Perth</a>
-  <a href="https://www.ufc.com/athlete/ateba-gautier">UFC — Ateba Gautier athlete page</a>
-  <a href="https://en.wikipedia.org/wiki/UFC_329">Wikipedia — UFC 329: McGregor vs Holloway 2</a>
-  <a href="https://www.paramountplus.com/sneak-peak/ufc-schedule-2026/">Paramount+ — UFC Schedule 2026</a>
-  <a href="https://www.mmamania.com/ufc-roster-watch-cuts-tracker-free-agent-aquisitions-mma">MMA Mania — UFC Roster Watch Tracker</a>
-</div>
-
-<div class="disclaimer">Cards and bouts are subject to change. Results and records as reported by the cited sources.</div>
-
+  <div class="sources">
+    <div class="label" style="margin-top:0">Sources</div>
+    <a href="https://www.cnn.com/2026/06/01/politics/what-we-know-ufc-fight-white-house">CNN — What we know about the UFC fight at the White House</a>
+    <a href="https://www.cbssports.com/ufc/news/2026-ufc-event-schedule-ilia-topuria-justin-gaethe-alex-pereira-freedom-250/">CBS Sports — 2026 UFC event schedule</a>
+    <a href="https://www.ufc.com/event/ufc-fight-night-june-06-2026">UFC.com — UFC Fight Night: Muhammad vs Bonfim</a>
+    <a href="https://en.wikipedia.org/wiki/UFC_Fight_Night:_Kape_vs._Horiguchi">Wikipedia — UFC Fight Night: Kape vs. Horiguchi</a>
+    <a href="https://en.wikipedia.org/wiki/UFC_Fight_Night:_Fiziev_vs._Torres">Wikipedia — UFC Fight Night: Fiziev vs. Torres</a>
+    <a href="https://statsfight.com/results/">StatsFight — UFC results (Song vs. Figueiredo, May 30)</a>
+    <a href="https://sports.yahoo.com/articles/ufc-perth-video-quillan-salkilld-133612373.html">Yahoo Sports — Salkilld storms back to KO Dariush at UFC Perth</a>
+    <a href="https://www.ufc.com/news/ateba-gautier-what-to-know-ufc-328">UFC.com — What to know about Ateba Gautier</a>
+    <a href="https://bloodyelbow.com/2026/05/24/ufc-joins-pfl-and-mvp-in-chasing-one-of-the-biggest-winners-on-the-rousey-vs-carano-card/">Bloody Elbow — UFC joins PFL and MVP in chasing Parnasse</a>
+    <a href="https://www.mmamania.com/ufc-roster-watch-cuts-tracker-free-agent-aquisitions-mma">MMA Mania — UFC roster watch tracker</a>
+  </div>
+  <div class="disclaimer">Cards and bouts are subject to change.</div>
 </div>
 <script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;}catch(e){}})();</script>
 </body>
