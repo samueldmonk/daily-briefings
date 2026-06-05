@@ -3,70 +3,64 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Closing Bell — Daily Briefing</title>
+<title>The Closing Bell — Daily Market Briefing</title>
 <style>
-:root{--bg:#0d0c09;--panel:#15130e;--line:#2a2517;--text:#e6e0d2;--muted:#988f78;--accent:#caa64a;--accent2:#e8c766;--up:#4ade80;--down:#f87171;--mono:'SF Mono',ui-monospace,Menlo,Consolas,monospace}
+:root{--bg:#0e0f12;--panel:#16181d;--line:#262931;--accent:#caa64a;--accent2:#e8c766;--text:#e8e6e1;--muted:#9a9890;--up:#4ade80;--down:#f87171;--mono:'SF Mono',ui-monospace,Menlo,Consolas,monospace}
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.6;padding:32px 20px 60px}
-.wrap{max-width:880px;margin:0 auto}
-nav{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap}
-nav a{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-decoration:none;color:var(--muted);border:1px solid var(--line);border-radius:8px;padding:8px 14px;transition:.15s}
-nav a:hover{color:var(--text);border-color:var(--muted)}
-nav a.active{color:var(--accent2);border-color:var(--accent)}
-.masthead{border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:22px}
-h1{font-family:Georgia,'Times New Roman',serif;font-size:36px;letter-spacing:-.01em}
-h1 .glyph{color:var(--accent2)}
-.tagline{color:var(--muted);font-size:14px;margin-top:2px}
-.meta{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
-.pill{font-family:var(--mono);font-size:11px;letter-spacing:.1em;border:1px solid var(--line);border-radius:999px;padding:4px 12px;color:var(--muted)}
-.pill.live{color:var(--up);border-color:var(--up)}
-.pill.live::before{content:'';display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--up);margin-right:7px;animation:pulse 1.6s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
-.label{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:34px 0 14px}
-.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px}
-.lead{border-left:3px solid var(--accent)}
-.lead h2{font-family:Georgia,'Times New Roman',serif;font-size:22px;margin-bottom:10px}
-.lead p{font-size:15px;margin-bottom:8px}
-.up{color:var(--up)}.down{color:var(--down)}
-.note,.src{color:var(--muted);font-size:13px}
+body{background:var(--bg);color:var(--text);font-family:Georgia,'Times New Roman',serif;line-height:1.6;padding:32px 20px 60px}
+.wrap{max-width:960px;margin:0 auto}
+.nav{display:flex;gap:8px;margin-bottom:22px;flex-wrap:wrap}
+.nav a{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-decoration:none;color:var(--muted);border:1px solid var(--line);border-radius:8px;padding:8px 14px;background:var(--panel);transition:all .15s}
+.nav a:hover{color:var(--text);border-color:var(--muted)}
+.nav a.active{color:var(--accent2);border-color:var(--accent)}
 .livebar{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 8px 4px;margin-bottom:18px}
 .livebar-label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--up);display:flex;align-items:center;gap:8px;padding:4px 8px 8px}
-.livebar-label .dot{width:7px;height:7px;border-radius:50%;background:var(--up);animation:pulse 1.6s infinite}
-.tickers{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
-@media(max-width:640px){.tickers{grid-template-columns:1fr}}
-.ticker{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px}
-.cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-@media(max-width:640px){.cards{grid-template-columns:1fr}}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;transition:transform .15s,border-color .15s}
-.card:hover{transform:translateY(-2px);border-color:var(--muted)}
-.card h3{font-size:15px;margin-bottom:6px}
-.card p{font-size:13.5px;color:var(--muted)}
-.tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;border-radius:5px;padding:2px 8px;margin-bottom:8px}
-.tag.up{background:rgba(74,222,128,.12);color:var(--up)}
-.tag.down{background:rgba(248,113,113,.12);color:var(--down)}
-.tag.neutral{background:rgba(232,199,102,.12);color:var(--accent2)}
-table{width:100%;border-collapse:collapse;font-size:13.5px}
-th{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
-td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top}
+.masthead{border-bottom:3px double var(--accent);padding-bottom:18px;margin-bottom:24px}
+h1{font-size:42px;letter-spacing:.01em;color:var(--accent2)}
+.tagline{color:var(--muted);font-style:italic;margin-top:4px}
+.meta{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.1em;border:1px solid var(--line);border-radius:99px;padding:4px 12px;color:var(--muted);background:var(--panel)}
+.pill.live{color:var(--up);border-color:rgba(74,222,128,.35)}
+.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--up);margin-right:6px;animation:pulse 1.6s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:34px 0 14px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px}
+.lead h2{font-size:27px;line-height:1.3;color:var(--text)}
+.lead p{margin-top:12px;color:#cfccc4}
+.tickers{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.ticker{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;transition:transform .15s,border-color .15s}
+.card:hover{transform:translateY(-3px);border-color:var(--accent)}
+.card h3{font-size:17px;margin-bottom:8px}
+.card p{font-size:14.5px;color:#c5c2ba}
+.up{color:var(--up)}.down{color:var(--down)}
+.tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;border-radius:5px;padding:2px 8px;display:inline-block;margin-bottom:10px}
+.tag.dn{background:rgba(248,113,113,.12);color:var(--down)}
+.tag.gn{background:rgba(74,222,128,.12);color:var(--up)}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+th{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
+td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
 tr:last-child td{border-bottom:none}
 ul.radar{list-style:none}
-ul.radar li{padding:8px 0 8px 22px;position:relative;border-bottom:1px solid var(--line);font-size:14px}
+ul.radar li{padding:10px 0 10px 22px;position:relative;border-bottom:1px solid var(--line);font-size:15px;color:#cfccc4}
 ul.radar li:last-child{border-bottom:none}
-ul.radar li::before{content:'▸';position:absolute;left:2px;color:var(--accent2)}
-footer{margin-top:44px;border-top:1px solid var(--line);padding-top:18px}
-footer a{color:var(--accent2);text-decoration:none;font-size:13px}
-footer a:hover{text-decoration:underline}
-footer ul{list-style:none}
-footer li{margin-bottom:5px}
-.disclaimer{margin-top:16px;font-size:12px;color:var(--muted)}
+ul.radar li::before{content:"◆";color:var(--accent);position:absolute;left:0;font-size:11px;top:14px}
+.note{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin-top:10px}
+.sources{margin-top:40px;border-top:1px solid var(--line);padding-top:18px}
+.sources a{color:var(--muted);font-size:13px;display:block;margin-bottom:6px;text-decoration:none;word-break:break-all}
+.sources a:hover{color:var(--accent2)}
+.disclaimer{margin-top:24px;font-size:12.5px;color:var(--muted);font-style:italic}
+@media(max-width:700px){.tickers{grid-template-columns:1fr}h1{font-size:32px}}
 </style>
 </head>
 <body>
 <div class="wrap">
-<nav>
-<a href="cyber-briefing.html">⛨ The Cyber Wire</a>
-<a href="wallstreet-briefing.html" class="active">▲ The Closing Bell</a>
-<a href="mma-briefing.html">⊘ The Octagon</a>
+
+<nav class="nav">
+  <a href="cyber-briefing.html">⛨ The Cyber Wire</a>
+  <a href="wallstreet-briefing.html" class="active">▲ The Closing Bell</a>
+  <a href="mma-briefing.html">⊘ The Octagon</a>
 </nav>
 
 <div class="livebar">
@@ -74,138 +68,136 @@ footer li{margin-bottom:5px}
   <div class="tradingview-widget-container">
     <div class="tradingview-widget-container__widget"></div>
     <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-    {"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},{"proName":"FOREXCOM:DJI","title":"Dow 30"},{"proName":"NASDAQ:LULU","title":"Lululemon"},{"proName":"NASDAQ:MU","title":"Micron"},{"proName":"NASDAQ:ARM","title":"Arm"},{"proName":"NASDAQ:AVGO","title":"Broadcom"},{"proName":"NASDAQ:MRVL","title":"Marvell"},{"proName":"TVC:USOIL","title":"WTI Crude"},{"proName":"TVC:US10Y","title":"US 10Y"}],"colorTheme":"dark","isTransparent":true,"showSymbolLogo":true,"displayMode":"adaptive","locale":"en"}
+    {"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},{"proName":"FOREXCOM:DJI","title":"Dow 30"},{"proName":"NASDAQ:MRVL","title":"Marvell"},{"proName":"NASDAQ:MU","title":"Micron"},{"proName":"NASDAQ:AMD","title":"AMD"},{"proName":"NASDAQ:INTC","title":"Intel"},{"proName":"NASDAQ:LULU","title":"Lululemon"},{"proName":"TVC:USOIL","title":"WTI Crude"},{"proName":"TVC:US10Y","title":"US 10Y"}],"colorTheme":"dark","isTransparent":true,"showSymbolLogo":true,"displayMode":"adaptive","locale":"en"}
     </script>
   </div>
 </div>
 
-<div class="masthead">
-<h1><span class="glyph">▲</span> The Closing Bell</h1>
-<div class="tagline">Your daily Wall Street briefing — markets, movers &amp; what's ahead</div>
-<div class="meta">
-<span class="pill live">LIVE</span>
-<span class="pill" id="edition">Edition</span>
-<span class="pill" id="datestamp">—</span>
-<span class="pill">Updated <span id="updated">—</span></span>
-</div>
-</div>
+<header class="masthead">
+  <h1>The Closing Bell</h1>
+  <div class="tagline">Your daily Wall Street briefing — markets, movers &amp; what's next</div>
+  <div class="meta">
+    <span class="pill live"><span class="dot"></span>LIVE</span>
+    <span class="pill" id="edition">Midday Edition</span>
+    <span class="pill" id="datestamp">Friday, June 5, 2026</span>
+    <span class="pill">Updated <span id="updated">1 PM ET</span></span>
+  </div>
+</header>
 
 <div class="label">Live Index Quotes — updates in real time</div>
 <div class="tickers">
-<div class="ticker">
-<div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
-  {"symbol":"FOREXCOM:SPXUSD","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}
-  </script>
-</div>
-</div>
-<div class="ticker">
-<div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
-  {"symbol":"FOREXCOM:NSXUSD","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}
-  </script>
-</div>
-</div>
-<div class="ticker">
-<div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
-  {"symbol":"FOREXCOM:DJI","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}
-  </script>
-</div>
-</div>
+  <div class="ticker">
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+      {"symbol":"FOREXCOM:SPXUSD","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}
+      </script>
+    </div>
+  </div>
+  <div class="ticker">
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+      {"symbol":"FOREXCOM:NSXUSD","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}
+      </script>
+    </div>
+  </div>
+  <div class="ticker">
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+      {"symbol":"FOREXCOM:DJI","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}
+      </script>
+    </div>
+  </div>
 </div>
 <div class="note">Quotes stream live (some feeds ~15-min delayed). Editorial below reflects the latest edition; official closes are in the Weekly Scorecard.</div>
 
 <div class="label">The Lead</div>
 <div class="panel lead">
-<h2>Hot jobs report jolts yields; chips extend their slide as stocks trade mixed — as of ~11 AM ET</h2>
-<p>May nonfarm payrolls rose by <strong>172,000</strong> — roughly double expectations — with unemployment unchanged at <strong>4.3%</strong>, and the government revised March and April job gains upward. The strong print sent Treasury yields sharply higher, with the 10-year jumping to about <span class="down">4.54%</span>, on concern the Fed may have to tighten against a hot economy.</p>
-<p>By late morning, per TheStreet's liveblog, the S&amp;P 500 was <span class="down">down about 0.6%</span> and the Nasdaq <span class="down">off about 1.1%</span> as the post-Broadcom chip selloff extended, while the Dow was <span class="up">roughly flat (+0.1%)</span> and the small-cap Russell 2000 <span class="up">gained about 1.5%</span> — a continuation of this week's rotation out of AI-linked tech and into the broader market.</p>
-<div class="src">Sources: TheStreet liveblog (Jun 5), CNBC, Trading Economics</div>
+  <h2>Hot jobs report slams tech: Nasdaq on pace for worst day in nearly eight months as rate-hike odds climb — as of ~1 PM ET</h2>
+  <p>A stronger-than-expected May jobs report — nonfarm payrolls up 172,000 with unemployment steady at 4.3% — sent Treasury yields higher Friday and accelerated the week's rout in chip stocks. As of roughly 1 PM ET, the Nasdaq Composite was down nearly 3%, on pace for its biggest single-day drop since October 10, 2025, while the S&amp;P 500 fell about 1.1% and the Dow was modestly lower with all four major benchmarks sagging, per TheStreet's midday update. Bloomberg reported information technology shares plunged 2.9% while defensive sectors — consumer staples, healthcare and utilities — led the index.</p>
+  <p>The selloff puts the S&amp;P 500's nine-week winning streak in serious jeopardy: a tenth straight weekly gain would have been its longest run since 1985, per Bloomberg. Traders now price in an 85% chance of a quarter-point Fed rate hike by year-end, up from 60% a week ago, as elevated oil prices and resilient labor data stoke inflation concerns. Friday's weakness extends Thursday's chip-led rotation sparked by Broadcom, which posted record quarterly revenue but narrowly missed analyst estimates ($22.19B vs. $22.27B expected), with a software miss and unchanged AI outlook.</p>
 </div>
 
 <div class="label">Movers &amp; Drivers</div>
 <div class="cards">
-<div class="card">
-<span class="tag down">LULU · Retail</span>
-<h3>Lululemon plunges ~10%</h3>
-<p>Shares sank about 10% in early trading after the company cut its full-year outlook, citing headwinds.</p>
-</div>
-<div class="card">
-<span class="tag down">MU · ARM · Semis</span>
-<h3>Chip selloff extends post-Broadcom</h3>
-<p>Micron fell more than 4% and Arm slid more than 5% early Friday as investors continued paring AI-chip exposure after Broadcom's earnings disappointment earlier this week.</p>
-</div>
-<div class="card">
-<span class="tag up">RUT · Small Caps</span>
-<h3>Russell 2000 bucks the tape, +1.45%</h3>
-<p>Small caps rallied as the week's rotation away from megacap tech continued, echoing Thursday's record Dow close led by UnitedHealth, Goldman Sachs and Merck.</p>
-</div>
-<div class="card">
-<span class="tag down">BTC · Crypto</span>
-<h3>Bitcoin slides toward worst week since February</h3>
-<p>Bitcoin fell 3.52% to $61,914.50 in premarket trading, extending its decline amid a record streak of ETF outflows.</p>
-</div>
+  <div class="card">
+    <span class="tag dn">CHIP ROUT</span>
+    <h3>Semis lead the slide <span class="down">▼</span></h3>
+    <p>Marvell Technology dropped <span class="down">−12%</span> and Micron <span class="down">−11%</span> midday, with AMD <span class="down">−10%</span> and Intel <span class="down">−9%</span>, as investors pared AI-adjacent exposure for a second day following Broadcom's narrow revenue miss.</p>
+  </div>
+  <div class="card">
+    <span class="tag dn">GUIDANCE CUT</span>
+    <h3>Lululemon (LULU) <span class="down">▼ −11%</span></h3>
+    <p>Shares of the athleisure maker sank about 11% after the company lowered its full-year earnings and revenue guidance, citing headwinds.</p>
+  </div>
+  <div class="card">
+    <span class="tag gn">GUIDANCE RAISE</span>
+    <h3>ServiceTitan (TTAN) <span class="up">▲ +13%</span></h3>
+    <p>The contractor-software platform popped roughly 13% after raising full-year guidance; it now sees adjusted income from operations of $142–147 million.</p>
+  </div>
 </div>
 
 <div class="label">Live Market Headlines — updates in real time</div>
 <div class="panel" style="padding:8px">
-<div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
-  {"feedMode":"market","market":"stock","colorTheme":"dark","isTransparent":true,"displayMode":"regular","width":"100%","height":420,"locale":"en"}
-  </script>
-</div>
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
+    {"feedMode":"market","market":"stock","colorTheme":"dark","isTransparent":true,"displayMode":"regular","width":"100%","height":420,"locale":"en"}
+    </script>
+  </div>
 </div>
 
 <div class="label">Weekly Scorecard — official closes</div>
-<div class="panel" style="padding:8px 12px">
-<table>
-<tr><th>Session</th><th>S&amp;P 500</th><th>Nasdaq Composite</th><th>Dow Jones</th></tr>
-<tr><td>Mon, Jun 1</td><td class="up">Record close, first finish above 7,600</td><td>—</td><td class="up">+200+ pts</td></tr>
-<tr><td>Wed, Jun 3</td><td class="down">7,553.68 (−0.74%)</td><td class="down">26,853.98 (−0.89%)</td><td class="down">50,687.07 (−620.72, −1.21%)</td></tr>
-<tr><td>Thu, Jun 4</td><td class="up">7,584.31 (+0.41%)</td><td class="down">26,830.96 (−0.09%)</td><td class="up">51,561.93 (+874.86, +1.73%) — record</td></tr>
-</table>
+<div class="panel">
+  <table>
+    <thead><tr><th>Index</th><th>Wed Jun 3 Close</th><th>Thu Jun 4 Close</th><th>Context</th></tr></thead>
+    <tbody>
+      <tr><td>S&amp;P 500</td><td>7,553.68 <span class="down">(−0.74%)</span></td><td>7,584.31 <span class="up">(+0.41%)</span></td><td>Nine straight weekly gains; streak at risk Friday</td></tr>
+      <tr><td>Nasdaq Composite</td><td>26,853.98 <span class="down">(−0.89%)</span></td><td>26,830.96 <span class="down">(−0.09%)</span></td><td>Chip-led selloff deepened into Friday</td></tr>
+      <tr><td>Dow Jones</td><td>50,687.07 <span class="down">(−1.21%)</span></td><td>51,561.93 <span class="up">(+1.73%)</span></td><td>Thursday: record close on +874.86-pt rotation out of tech</td></tr>
+    </tbody>
+  </table>
+  <div class="note">Last week the S&amp;P 500 rose 1.6% for its ninth straight weekly gain, matching its longest streak since 2023 (Advisor Perspectives). Monday brought its first close above 7,600 (CNBC).</div>
 </div>
-<div class="note" style="margin-top:8px">The week's defining theme: rotation. Broadcom posted record Q2 revenue of $22.19B but narrowly missed analyst estimates ($22.27B expected) with a software miss and unchanged AI outlook, sparking a semiconductor selloff — while healthcare, financials and small caps caught the outflows. Also notable: Marvell surged 33% in a single session after Nvidia's CEO described it as a potential next trillion-dollar company.</div>
 
 <div class="label">Rates, Bonds &amp; Commodities</div>
-<div class="panel" style="padding:8px 12px">
-<table>
-<tr><th>Instrument</th><th>Level</th><th>Note</th></tr>
-<tr><td>10-yr Treasury</td><td class="down">~4.54%</td><td>Jumped after Friday's strong jobs report (CNBC)</td></tr>
-<tr><td>30-yr Treasury</td><td>~5.02%</td><td>As of June 3 (Trading Economics)</td></tr>
-<tr><td>Fed funds rate</td><td>3.50%–3.75%</td><td>Held at April meeting; futures price ~no change for June 16–17 FOMC</td></tr>
-<tr><td>WTI crude</td><td class="down">$92.63 (−0.44%)</td><td>Eased Friday on Israel–Iran ceasefire hopes; still well above pre-conflict levels</td></tr>
-<tr><td>Brent crude</td><td class="down">$94.71 (−0.34%)</td><td>Slipped alongside WTI</td></tr>
-</table>
+<div class="panel">
+  <table>
+    <thead><tr><th>Instrument</th><th>Level</th><th>Note</th></tr></thead>
+    <tbody>
+      <tr><td>10-yr Treasury</td><td>≈4.5%</td><td>Yields pushed toward 4.5% after the strong May jobs report and rise in oil (CNBC)</td></tr>
+      <tr><td>30-yr Treasury</td><td>&gt;5%</td><td>Topped 5.19% on May 19 — highest since before the financial crisis (CNBC)</td></tr>
+      <tr><td>Fed funds rate</td><td>3.50–3.75%</td><td>FOMC meets June 16–17; futures price essentially no change, but 85% odds of a hike by year-end, up from 60% a week ago</td></tr>
+      <tr><td>WTI crude</td><td>≈$93/bbl</td><td>Down &gt;3% Thursday on US–Iran diplomacy hopes, still up &gt;6% this week on Strait of Hormuz disruption (Trading Economics)</td></tr>
+    </tbody>
+  </table>
 </div>
 
 <div class="label">On the Radar</div>
 <div class="panel">
-<ul class="radar">
-<li><strong>FOMC meets June 16–17</strong> — rate futures traders are nearly unanimous in pricing no change to the 3.50%–3.75% target range.</li>
-<li><strong>A hike before year-end?</strong> Investors continue to price the possibility of a Fed rate <em>hike</em>, potentially as early as October, as elevated energy prices add to inflationary pressure.</li>
-<li><strong>Oil &amp; geopolitics</strong> — markets are watching Israel–Iran ceasefire negotiations; crude remains well above pre-conflict levels and is a key input to the inflation picture.</li>
-</ul>
+  <ul class="radar">
+    <li><strong>FOMC meeting, June 16–17</strong> — futures traders nearly unanimous on no change to the 3.50–3.75% target range, but the post-jobs repricing of year-end hike odds makes the statement and projections the event of the month.</li>
+    <li><strong>US–Iran diplomacy &amp; the Strait of Hormuz</strong> — oil remains well above pre-conflict levels; talks between Washington and Tehran have yet to show meaningful progress, and Israel's operations in Lebanon are a key obstacle (Trading Economics).</li>
+    <li><strong>The streak watch</strong> — whether the S&amp;P 500 closes the week positive decides if its weekly winning streak reaches 10, which would be its longest since 1985 (Bloomberg).</li>
+  </ul>
 </div>
 
-<footer>
-<div class="label" style="margin-top:0">Sources</div>
-<ul>
-<li><a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-05-2026">TheStreet — Stock Market Today, June 5, 2026 (liveblog)</a></li>
-<li><a href="https://www.cnbc.com/2026/06/04/stock-market-today-live-updates.html">CNBC — S&amp;P 500 and Nasdaq fall as chips sell off; yields rise after jobs report</a></li>
-<li><a href="https://www.cnbc.com/2026/06/03/stock-market-today-live-updates.html">CNBC — Dow surges nearly 900 points for record close as investors rotate away from tech</a></li>
-<li><a href="https://www.cnbc.com/2026/06/01/stock-market-today-live-updates.html">CNBC — Dow jumps more than 200 points, S&amp;P 500 posts first close above 7,600</a></li>
-<li><a href="https://tradingeconomics.com/united-states/government-bond-yield">Trading Economics — US 10-Year Treasury yield</a></li>
-<li><a href="https://www.schwab.com/learn/story/stock-market-update-open">Schwab — Broadcom's plunge takes a chip out of long rally</a></li>
-<li><a href="https://money.usnews.com/investing/news/articles/2026-06-04/nasdaq-futures-lead-declines-after-broadcom-drop">US News/Reuters — Dow claims record closing high; chip selloff weighs on Nasdaq</a></li>
-</ul>
-<div class="disclaimer">For information only — not investment advice. Intraday figures are approximate and time-stamped as noted; live widgets above may show more current levels than editorial text.</div>
-</footer>
+<div class="sources">
+  <div class="label" style="margin-top:0">Sources</div>
+  <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-05-2026">TheStreet — Stock Market Today (June 5, 2026)</a>
+  <a href="https://www.bloomberg.com/news/articles/2026-06-05/s-p-500-s-record-win-streak-in-danger-as-ai-selloff-continues">Bloomberg — S&amp;P 500's Record Win Streak in Danger as AI Selloff Continues</a>
+  <a href="https://www.cnbc.com/2026/06/04/stock-market-today-live-updates.html">CNBC — Stock market today: Live updates (June 4–5, 2026)</a>
+  <a href="https://www.cnbc.com/2026/06/03/stock-market-today-live-updates.html">CNBC — Dow surges nearly 900 points for record close</a>
+  <a href="https://www.cnbc.com/2026/06/03/treasury-yields-edge-higher-as-traders-await-economic-data.html">CNBC — 10-year Treasury yield nears 4.5% after strong jobs data</a>
+  <a href="https://www.cnbc.com/2026/05/19/treasurys-yields-inflation-traders-fed-interest-rates.html">CNBC — 30-year Treasury yield tops 5.19%</a>
+  <a href="https://tradingeconomics.com/commodity/crude-oil">Trading Economics — Crude Oil</a>
+  <a href="https://www.advisorperspectives.com/dshort/updates/2026/05/29/s-p-500-snapshot-win-streak-continues-with-multiple-record-highs">Advisor Perspectives — S&amp;P 500 Snapshot: Win Streak Continues</a>
+</div>
+
+<div class="disclaimer">This briefing is for information only and is not investment advice. Figures are as reported by the cited sources at the times noted; intraday data may be delayed.</div>
+
 </div>
 <script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;}catch(e){}})();</script>
 </body>
