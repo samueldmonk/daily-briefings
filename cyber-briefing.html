@@ -70,38 +70,38 @@ ul.kev li::before{content:"▸";color:var(--accent);position:absolute;left:0}
       <span class="pill live"><span class="dot"></span>LIVE</span>
       <span class="pill" id="edition">Afternoon Edition</span>
       <span class="pill" id="datestamp">Saturday, June 6, 2026</span>
-      <span class="pill">Updated <span id="updated">3:15 PM ET</span></span>
+      <span class="pill">Updated <span id="updated">5:10 PM ET</span></span>
     </div>
   </div>
 
   <div class="label">Top Story</div>
   <div class="panel lead">
-    <h2>No patch yet: Cisco warns of an actively exploited root-level flaw in Catalyst SD-WAN Manager</h2>
-    <p>Cisco has disclosed that CVE-2026-20245, a high-severity vulnerability in the CLI of Cisco Catalyst SD-WAN Manager, is being exploited in the wild — and there is no patch or workaround available yet. The flaw (CVSS 7.8) stems from insufficient validation of user-supplied input and lets an authenticated local attacker with netadmin privileges upload a crafted file to execute arbitrary commands as root.</p>
-    <p>Cisco said it has observed limited cases where exploitation resulted in a configuration change being pushed down to edge devices, and noted the bug affects all deployment types — on-prem, Cloud-Pro, Cisco-managed cloud and FedRAMP. The flaw was discovered and reported by Google Mandiant researchers. With a fix still pending, defenders running SD-WAN Manager should tighten access controls and watch for unexpected configuration pushes.</p>
+    <h2>No patch yet: Cisco warns of an actively exploited root-level zero-day in Catalyst SD-WAN Manager</h2>
+    <p>Cisco has disclosed that CVE-2026-20245, a high-severity zero-day (CVSS 7.8) in the Cisco Catalyst SD-WAN Manager, is being exploited in the wild — and there is no patch or workaround available yet. The flaw stems from insufficient validation of user-supplied input and lets a low-privileged local attacker upload a crafted file to perform command injection and execute arbitrary commands as root.</p>
+    <p>Cisco's PSIRT said it became aware of exploitation in June after Google Mandiant reported the bug, and observed limited cases where exploitation resulted in a configuration change being pushed down to edge devices. The flaw affects all deployment types — on-prem, Cloud-Pro, Cisco-managed cloud and FedRAMP (Government). With a fix still pending, defenders should tighten access controls, restrict who can reach the management plane, and watch for unexpected configuration pushes. SecurityWeek notes it is at least the seventh SD-WAN zero-day Cisco has flagged as exploited in 2026.</p>
   </div>
 
   <div class="label">Breaches &amp; Incidents</div>
   <div class="cards">
     <div class="card">
       <span class="tag breach">BREACH</span>
-      <h3>DentaQuest: 2.6M accounts, ShinyHunters leak</h3>
-      <p>Dental benefits administrator DentaQuest confirmed on June 2 that its network was breached. Extortion group ShinyHunters listed the company and claimed to have stolen more than 234 GB of data; reporting puts the exposure at roughly 2.6 million accounts, including names, addresses, dates of birth, government IDs and health-insurance information.</p>
+      <h3>DentaQuest: ~2.6M hit, ShinyHunters leak</h3>
+      <p>Dental and vision benefits administrator DentaQuest was breached, with extortion crew ShinyHunters publishing roughly 234 GB of stolen data. Reporting puts the exposure at about 2.6 million people — one of the largest breaches reported so far in 2026 — including personal and health-insurance information.</p>
     </div>
     <div class="card">
       <span class="tag supply">SUPPLY CHAIN</span>
       <h3>IronWorm worms its way into npm</h3>
-      <p>A Rust-based, self-propagating infostealer dubbed IronWorm infected 36 packages on npm, targeting AWS, OpenAI, Anthropic and npm credentials, vault configs, SSH keys and crypto-wallet files. It abuses npm's Trusted Publishing workflow to spread; researchers say it was caught early before reaching popular packages.</p>
+      <p>A Rust-based, self-propagating infostealer dubbed IronWorm infected 36 npm packages, targeting AWS, OpenAI, Anthropic and npm credentials, vault configs, SSH keys and crypto-wallet files. It abuses npm's Trusted Publishing workflow to spread; researchers say it was caught before reaching more popular packages (~32K combined monthly downloads).</p>
     </div>
     <div class="card">
       <span class="tag ransom">FRAUD</span>
       <h3>World Cup 2026 fraud wave</h3>
-      <p>Researchers and the FBI are warning of a surge of FIFA-themed fraud targeting World Cup 2026 fans — thousands of lookalike FIFA domains, banking malware hidden inside pirate streaming apps, and operations cloning FIFA's login page.</p>
+      <p>Researchers and the FBI warn of a surge of FIFA-themed fraud days before the June 11 kickoff — thousands of lookalike FIFA domains, banking malware hidden inside pirate streaming apps, and operations cloning FIFA's login page to hijack accounts.</p>
     </div>
     <div class="card">
-      <span class="tag breach">BREACH</span>
-      <h3>Aflac: 22.6M notified over 2025 hack</h3>
-      <p>Insurer Aflac is notifying more than 22.6 million customers, beneficiaries, employees and agents that the June 2025 breach by the Scattered Spider group exposed their data — including names, Social Security numbers, dates of birth and health-insurance details. The intrusion relied on social engineering rather than malware.</p>
+      <span class="tag breach">EXTORTION</span>
+      <h3>Fresh leak-site listings (June 5)</h3>
+      <p>Trackers logged a cluster of newly listed victims on June 5, including private-aviation firm Avcon Jet, Corley Manufacturing, the Dallis Law Firm, food maker Don Don, Family Medical Associates of Raleigh and Trican Well Service — a reminder that data-extortion volume remains high across sectors.</p>
     </div>
   </div>
 
@@ -113,19 +113,19 @@ ul.kev li::before{content:"▸";color:var(--accent);position:absolute;left:0}
         <td class="cve">CVE-2026-20245</td>
         <td class="score"><span class="score-high">7.8</span></td>
         <td>Cisco Catalyst SD-WAN Manager</td>
-        <td>Authenticated local attacker with netadmin rights can run commands as root via a crafted file. Actively exploited; no patch available yet.</td>
+        <td>Low-privileged local attacker runs commands as root via a crafted file. Actively exploited; no patch or workaround available yet.</td>
       </tr>
       <tr>
-        <td class="cve">CVE-2026-20182</td>
+        <td class="cve">CVE-2026-20223</td>
         <td class="score"><span class="score-crit">10.0</span></td>
-        <td>Cisco Catalyst SD-WAN Manager</td>
-        <td>Authentication-bypass flaw in the same product; can serve as a prerequisite to chain into CVE-2026-20245. Tighten access controls while patches roll out.</td>
+        <td>Cisco Secure Workload</td>
+        <td>Insufficient validation/authentication on REST API endpoints lets an attacker read sensitive data and make config changes across tenant boundaries as Site Admin. Cisco has released fixes.</td>
       </tr>
       <tr>
-        <td class="cve">CVE-2026-3055</td>
-        <td class="score"><span class="score-crit">9.3</span></td>
-        <td>Citrix NetScaler ADC / Gateway</td>
-        <td>Only SAML IdP configurations are exploitable. Citrix's official CVSS is 9.3 (some blogs cite 9.8). Fixed builds: 14.1-66.59, 13.1-62.23, 13.1-37.262.</td>
+        <td class="cve">CVE-2026-20230</td>
+        <td class="score"><span class="score-high">8.6</span></td>
+        <td>Cisco Unified Communications Manager</td>
+        <td>SSRF flaw Cisco rates Critical; can lead to root privilege escalation. Public proof-of-concept exists; Cisco reported no malicious use detected as of June 3.</td>
       </tr>
     </table>
   </div>
@@ -133,9 +133,9 @@ ul.kev li::before{content:"▸";color:var(--accent);position:absolute;left:0}
   <div class="label">CISA KEV &amp; Federal Deadlines</div>
   <div class="panel">
     <ul class="kev">
-      <li><strong>June 3 addition:</strong> CVE-2026-45247 (Mirasvit Full Page Cache Warmer deserialization of untrusted data) was added on evidence of active exploitation. Federal civilian agencies must remediate by approximately <strong>June 24</strong> under BOD 22-01's three-week window.</li>
-      <li><strong>June 2 additions:</strong> CVE-2022-0492 (Linux kernel improper authentication via the cgroups v1 release_agent feature, enabling privilege escalation / container escape) and CVE-2025-48595 (Android Framework integer overflow allowing code execution). Remediation due by approximately <strong>June 23</strong>.</li>
-      <li><strong>Late-May context:</strong> CISA added three KEVs on May 27 — including CVE-2026-8398 (Daemon Tools Lite embedded malicious code) — all still inside their respective three-week remediation windows.</li>
+      <li><strong>June 3 addition:</strong> CVE-2026-45247 (Mirasvit Full Page Cache Warmer — deserialization of untrusted data) was added on evidence of active exploitation. Federal civilian agencies must remediate by approximately <strong>June 24</strong> under BOD 22-01's three-week window.</li>
+      <li><strong>June 2 additions:</strong> CVE-2022-0492 (Linux kernel improper authentication, enabling privilege escalation / container escape) and CVE-2025-48595 (Android Framework integer overflow allowing code execution). Remediation due by approximately <strong>June 23</strong>.</li>
+      <li><strong>Cisco SD-WAN caveat:</strong> CVE-2026-20245 is actively exploited but has no fix; if added to the KEV catalog, agencies will face the standard three-week clock and should apply interim access-control mitigations now.</li>
       <li><strong>Reminder:</strong> BOD 22-01 gives federal civilian agencies a standard three-week remediation window from the date a CVE is added to the KEV catalog — not a same-week deadline.</li>
     </ul>
   </div>
@@ -143,14 +143,14 @@ ul.kev li::before{content:"▸";color:var(--accent);position:absolute;left:0}
   <div class="sources">
     <div class="label" style="margin-top:0">Sources</div>
     <a href="https://thehackernews.com/2026/06/cisco-catalyst-sd-wan-manager-cve-2026.html">The Hacker News — Cisco Catalyst SD-WAN Manager CVE-2026-20245 actively exploited, no patch</a>
-    <a href="https://www.helpnetsecurity.com/2026/06/05/cisco-sd-wan-cve-2026-20245-0-day-exploited/">Help Net Security — Cisco SD-WAN 0-day exploited, no patch available (CVE-2026-20245)</a>
-    <a href="https://www.bleepingcomputer.com/news/security/dentaquest-data-breach-exposed-info-of-26-million-accounts/">BleepingComputer — DentaQuest data breach exposed info of 2.6 million accounts</a>
+    <a href="https://www.bleepingcomputer.com/news/security/new-cisco-sd-wan-flaw-exploited-in-zero-day-attacks-to-gain-root/">BleepingComputer — Cisco warns of unpatched SD-WAN zero-day exploited to gain root</a>
+    <a href="https://www.securityweek.com/cisco-warns-of-7th-sd-wan-zero-day-exploited-in-2026/">SecurityWeek — Cisco warns of 7th SD-WAN zero-day exploited in 2026</a>
+    <a href="https://thehackernews.com/2026/05/cisco-patches-cvss-100-secure-workload.html">The Hacker News — Cisco patches CVSS 10.0 Secure Workload REST API flaw (CVE-2026-20223)</a>
+    <a href="https://www.techtimes.com/articles/317782/20260604/cisco-unified-cm-ssrf-flaw-cve-2026-20230-public-exploit-code-opens-path-root.htm">TechTimes — Cisco Unified CM SSRF flaw CVE-2026-20230, public exploit code</a>
     <a href="https://www.bleepingcomputer.com/news/security/new-ironworm-malware-hits-36-packages-in-npm-supply-chain-attack/">BleepingComputer — New IronWorm malware hits 36 packages in npm supply-chain attack</a>
-    <a href="https://therecord.media/22-million-impacted-aflac-breach">The Record — More than 22 million Aflac customers impacted by data breach</a>
-    <a href="https://thehackernews.com/">The Hacker News — World Cup 2026 FIFA-themed fraud warnings</a>
-    <a href="https://www.cisa.gov/news-events/alerts/2026/06/03/cisa-adds-one-known-exploited-vulnerability-catalog">CISA — Adds one known exploited vulnerability to catalog (June 3, CVE-2026-45247)</a>
-    <a href="https://www.cisa.gov/news-events/alerts/2026/06/02/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA — Adds two known exploited vulnerabilities to catalog (June 2)</a>
-    <a href="https://www.cisa.gov/news-events/alerts/2026/05/27/cisa-adds-three-known-exploited-vulnerabilities-catalog">CISA — Adds three known exploited vulnerabilities to catalog (May 27)</a>
+    <a href="https://sharkstriker.com/blog/june-2026-data-breaches/">SharkStriker — June 2026 data breaches (DentaQuest, June 5 listings)</a>
+    <a href="https://www.cisa.gov/news-events/alerts/2026/06/03/cisa-adds-one-known-exploited-vulnerability-catalog">CISA — Adds one KEV (June 3, CVE-2026-45247)</a>
+    <a href="https://www.cisa.gov/news-events/alerts/2026/06/02/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA — Adds two KEVs (June 2)</a>
     <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA — Known Exploited Vulnerabilities Catalog</a>
   </div>
   <div class="disclaimer">This briefing summarizes public reporting as of the time above. Verify CVE details against vendor advisories before acting.</div>
