@@ -25,3 +25,8 @@ fought again since), update the entry in the same commit.
   Dow 50,687.07 (-620.72, -1.21%) per CNBC/Yahoo.
 - Broadcom Q2 FY26: record revenue BUT narrow miss vs analyst estimates ($22.19B vs
   $22.27B expected), software miss, unchanged AI outlook — characterize precisely.
+- Fri June 5, 2026 closes: S&P 500 7,383.74 (-2.64%), Nasdaq Composite 25,709.43
+  (-4.18%, worst day since April 2025), Dow 50,866.78 (-695.15, -1.35%) per
+  TheStreet/CNBC. Chip rout erased ~$1T; May payrolls +172k vs ~80k expected.
+- Fri June 5, 2026 WTI crude closed ~$90.20/bbl, down ~3% on Israel-Lebanon ceasefire
+  sentiment — NOT ~$93 (that was the June 3 level).
