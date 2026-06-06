@@ -68,45 +68,40 @@ ul.kev li::before{content:"▸";color:var(--accent);position:absolute;left:0}
     <div class="tagline">Your daily security briefing — breaches, vulnerabilities &amp; federal deadlines</div>
     <div class="meta">
       <span class="pill live"><span class="dot"></span>LIVE</span>
-      <span class="pill" id="edition">Afternoon Edition</span>
-      <span class="pill" id="datestamp">Friday, June 5, 2026</span>
-      <span class="pill">Updated <span id="updated">5:00 PM ET</span></span>
+      <span class="pill" id="edition">Midday Edition</span>
+      <span class="pill" id="datestamp">Saturday, June 6, 2026</span>
+      <span class="pill">Updated <span id="updated">11:30 AM ET</span></span>
     </div>
   </div>
 
   <div class="label">Top Story</div>
   <div class="panel lead">
-    <h2>ShinyHunters leaks claimed 234 GB from DentaQuest as breach exposes data on 2.6 million accounts</h2>
-    <p>Dental benefits administrator DentaQuest — which serves 35 million customers across programs in 50 states with a network of 140,000 dentists — confirmed on June 2 that its networks had been breached. The extortion group ShinyHunters, which listed the company on its leak site last month claiming more than 234 GB of stolen data, publicly leaked the trove after what it described as a failure to reach an agreement with the company.</p>
-    <p>The exposed data on roughly 2.6 million accounts includes names, addresses, email addresses, phone numbers, dates of birth, government-issued IDs and health insurance information. Much of it appeared in healthcare enrollment files (ASC X12 transaction sets), some containing Medicaid IDs. DentaQuest said the incident caused "limited disruption" to customer service.</p>
+    <h2>No patch yet: Cisco warns of an actively exploited root-level flaw in Catalyst SD-WAN Manager</h2>
+    <p>Cisco has disclosed that CVE-2026-20245, a high-severity vulnerability in the CLI of Cisco Catalyst SD-WAN Manager (formerly SD-WAN vManage), is being exploited in the wild — and there is no patch or mitigation available yet. The flaw (CVSS 7.8) stems from insufficient validation of user-supplied input and lets an authenticated local attacker with netadmin privileges upload a crafted file to execute arbitrary commands as root.</p>
+    <p>Cisco said it has observed limited cases where exploitation resulted in a configuration change being pushed down to edge devices. The disclosure follows CVE-2026-20182, a maximum-severity (CVSS 10.0) authentication-bypass bug in the same product that was previously exploited as a zero-day to gain administrative access. Defenders running SD-WAN Manager should tighten access controls and watch for unexpected configuration pushes while a fix is pending.</p>
   </div>
 
   <div class="label">Breaches &amp; Incidents</div>
   <div class="cards">
     <div class="card">
       <span class="tag breach">BREACH</span>
-      <h3>UN World Food Programme app breached</h3>
-      <p>The WFP revealed that its self-registration application (SRA) for Palestine was breached — a sensitive dataset given the population it serves and the humanitarian context.</p>
+      <h3>Aflac: data on 22M+ people stolen</h3>
+      <p>Insurance giant Aflac confirmed a June cyberattack exposed personal information of more than 22 million customers, employees, agents and others — including names, contact details, claims and health information, and Social Security numbers. Affected individuals are being offered two years of identity protection.</p>
+    </div>
+    <div class="card">
+      <span class="tag breach">BREACH</span>
+      <h3>DentaQuest: 2.6M accounts, ShinyHunters leak</h3>
+      <p>Dental benefits administrator DentaQuest confirmed on June 2 that its network was breached. Extortion group ShinyHunters listed the company and claimed more than 234 GB of stolen data; reporting puts the exposure at roughly 2.6 million accounts.</p>
+    </div>
+    <div class="card">
+      <span class="tag ransom">FRAUD</span>
+      <h3>World Cup 2026 fraud wave</h3>
+      <p>Researchers and the FBI are warning of a surge of FIFA-themed fraud targeting World Cup 2026 fans — thousands of lookalike FIFA domains, banking malware hidden inside pirate streaming apps, and operations cloning FIFA's login page.</p>
     </div>
     <div class="card">
       <span class="tag supply">SUPPLY CHAIN</span>
-      <h3>"IronWorm" infostealer infects 36 npm packages</h3>
-      <p>A new supply-chain attack seeded 36 packages on the npm registry with infostealer malware dubbed IronWorm — the latest in a steady drumbeat of open-source registry compromises targeting developers.</p>
-    </div>
-    <div class="card">
-      <span class="tag breach">CLOUD</span>
-      <h3>"PCPJack" turns hijacked cloud servers into spam relays</h3>
-      <p>A threat actor tracked as PCPJack hijacked cloud servers associated with AWS, Google Cloud and Microsoft Azure to build a covert SMTP email relay network, converting compromised business servers into SMTP proxies.</p>
-    </div>
-    <div class="card">
-      <span class="tag ransom">RANSOMWARE</span>
-      <h3>AI-built ransomware toolkit automates EDR evasion</h3>
-      <p>On June 2, researchers detected a threat actor using an AI-assisted ransomware toolkit that automates Active Directory discovery and helps evade EDR. Development was reportedly assisted by AI coding agents across initial coding, analysis and revision stages.</p>
-    </div>
-    <div class="card">
-      <span class="tag supply">DEV TOOLS</span>
-      <h3>One-click VS Code attack can steal GitHub tokens</h3>
-      <p>Researchers disclosed a one-click attack via Microsoft Visual Studio Code that lets an attacker steal a user's GitHub token — "just by clicking a link," per the researcher who reported it.</p>
+      <h3>Hola Browser laced with a crypto miner</h3>
+      <p>The Windows version of the Hola Browser was compromised in a supply-chain attack that delivered an undeclared executable identified by researchers as a cryptocurrency miner — the latest reminder that trusted software updates remain a soft target.</p>
     </div>
   </div>
 
@@ -115,28 +110,22 @@ ul.kev li::before{content:"▸";color:var(--accent);position:absolute;left:0}
     <table>
       <tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr>
       <tr>
-        <td class="cve">CVE-2026-41089</td>
-        <td class="score"><span class="score-crit">9.8</span></td>
-        <td>Windows Netlogon</td>
-        <td>Stack-based buffer overflow, network-exploitable without authentication. Belgium's CCB issued an urgent warning of active exploitation.</td>
+        <td class="cve">CVE-2026-20182</td>
+        <td class="score"><span class="score-crit">10.0</span></td>
+        <td>Cisco Catalyst SD-WAN Manager</td>
+        <td>Authentication bypass allowing unauthenticated, remote attackers to gain administrative privileges. Exploited in the wild as a zero-day.</td>
+      </tr>
+      <tr>
+        <td class="cve">CVE-2026-20245</td>
+        <td class="score"><span class="score-high">7.8</span></td>
+        <td>Cisco Catalyst SD-WAN Manager</td>
+        <td>Authenticated local attacker with netadmin rights can run commands as root via a crafted file. Actively exploited; no patch available yet.</td>
       </tr>
       <tr>
         <td class="cve">CVE-2026-3055</td>
         <td class="score"><span class="score-crit">9.3</span></td>
         <td>Citrix NetScaler ADC / Gateway</td>
-        <td>Out-of-bounds read; large-scale exploitation confirmed by Fortinet. Only SAML IdP configurations are exploitable. Citrix's official CVSS is 9.3 (some reports cite 9.8). Fixed builds: 14.1-66.59, 13.1-62.23, 13.1-37.262.</td>
-      </tr>
-      <tr>
-        <td class="cve">CVE-2026-8043</td>
-        <td class="score"><span class="score-crit">9.6</span></td>
-        <td>Ivanti Xtraction</td>
-        <td>Critical flaw exposing sensitive data, per Daily CyberSecurity reporting.</td>
-      </tr>
-      <tr>
-        <td class="cve">CVE-2026-42897</td>
-        <td class="score"><span class="score-high">8.1</span></td>
-        <td>Microsoft Exchange Server (OWA)</td>
-        <td>Spoofing / cross-site scripting issue in Outlook Web Access, exploited in the wild. No patch yet; Microsoft says the Exchange Emergency Mitigation Service applies mitigation automatically and is on by default.</td>
+        <td>Out-of-bounds read. Only SAML IdP configurations are exploitable. Citrix's official CVSS is 9.3 (some blogs cite 9.8). Fixed builds: 14.1-66.59, 13.1-62.23, 13.1-37.262.</td>
       </tr>
     </table>
   </div>
@@ -144,23 +133,21 @@ ul.kev li::before{content:"▸";color:var(--accent);position:absolute;left:0}
   <div class="label">CISA KEV &amp; Federal Deadlines</div>
   <div class="panel">
     <ul class="kev">
-      <li><strong>June 2 additions:</strong> CVE-2022-0492 (Linux kernel cgroups flaw allowing container escape and privilege escalation) and CVE-2025-48595 (Android Framework integer overflow affecting Android 14–16, enabling code execution and privilege escalation). Federal remediation due ~June 23 under BOD 22-01's three-week window.</li>
-      <li><strong>June 3 addition:</strong> CVE-2026-45247 — Mirasvit Full Page Cache Warmer deserialization of untrusted data. Federal remediation due ~June 24.</li>
-      <li><strong>Reminder:</strong> BOD 22-01 gives federal civilian agencies a standard three-week remediation window from the date a CVE is added to the KEV catalog.</li>
+      <li><strong>June 2 additions:</strong> CVE-2022-0492 (Linux kernel improper authentication — cgroups flaw enabling container escape and privilege escalation) and CVE-2025-48595 (Android Framework integer overflow). Federal civilian agencies must remediate by approximately <strong>June 23</strong> under BOD 22-01's three-week window.</li>
+      <li><strong>Late-May context:</strong> May 27 added three KEVs and May 21 added two, including CVE-2026-34926 (Trend Micro Apex One on-prem directory traversal) and CVE-2025-34291 (Langflow origin-validation error) — all still inside their respective remediation windows.</li>
+      <li><strong>Reminder:</strong> BOD 22-01 gives federal civilian agencies a standard three-week remediation window from the date a CVE is added to the KEV catalog — not a same-week deadline.</li>
     </ul>
   </div>
 
   <div class="sources">
     <div class="label" style="margin-top:0">Sources</div>
+    <a href="https://thehackernews.com/2026/06/cisco-catalyst-sd-wan-manager-cve-2026.html">The Hacker News — Cisco Catalyst SD-WAN Manager CVE-2026-20245 actively exploited, no patch</a>
+    <a href="https://securityaffairs.com/193203/security/cisco-sd-wan-has-a-new-root-level-problem-and-theres-no-fix-yet.html">Security Affairs — Cisco SD-WAN has a new root-level problem, no fix yet</a>
+    <a href="https://securityaffairs.com/186144/data-breach/aflac-confirms-june-data-breach-affecting-over-22-million-customers.html">Security Affairs — Aflac confirms June data breach affecting over 22 million customers</a>
     <a href="https://www.bleepingcomputer.com/news/security/dentaquest-data-breach-exposed-info-of-26-million-accounts/">BleepingComputer — DentaQuest data breach exposed info of 2.6 million accounts</a>
-    <a href="https://www.securityweek.com/hackers-leak-dentaquest-information-impacting-2-6-million/">SecurityWeek — Hackers leak DentaQuest information impacting 2.6 million</a>
-    <a href="https://www.bankinfosecurity.com/shinyhunters-leaks-234gb-dentaquest-data-trove-a-31883">BankInfoSecurity — ShinyHunters leaks alleged 234-GB DentaQuest data trove</a>
-    <a href="https://techcrunch.com/2026/06/03/the-worst-hacks-and-breaches-of-2026-so-far/">TechCrunch — The worst hacks and breaches of 2026 (so far)</a>
-    <a href="https://www.bleepingcomputer.com/news/security/ai-built-ransomware-toolkit-automates-edr-evasion-ad-discovery/">BleepingComputer — AI-built ransomware toolkit automates EDR evasion, AD discovery</a>
-    <a href="https://threat-modeling.com/vulnerability-intelligence-report-june-2-2026/">Threat-Modeling.com — Vulnerability Intelligence Report, June 2, 2026</a>
-    <a href="https://securityonline.info/ivanti-xtraction-vulnerability-cve-2026-8043-critical-flaw/">Daily CyberSecurity — Critical Ivanti Xtraction flaw (CVE-2026-8043)</a>
+    <a href="https://thehackernews.com/">The Hacker News — World Cup 2026 FIFA-themed fraud / Hola Browser supply-chain compromise</a>
     <a href="https://www.cisa.gov/news-events/alerts/2026/06/02/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA — Adds two known exploited vulnerabilities to catalog (June 2)</a>
-    <a href="https://www.cisa.gov/news-events/alerts/2026/06/03/cisa-adds-one-known-exploited-vulnerability-catalog">CISA — Adds one known exploited vulnerability to catalog (June 3)</a>
+    <a href="https://www.cisa.gov/news-events/alerts/2026/05/27/cisa-adds-three-known-exploited-vulnerabilities-catalog">CISA — Adds three known exploited vulnerabilities to catalog (May 27)</a>
     <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA — Known Exploited Vulnerabilities Catalog</a>
   </div>
   <div class="disclaimer">This briefing summarizes public reporting as of the time above. Verify CVE details against vendor advisories before acting.</div>
