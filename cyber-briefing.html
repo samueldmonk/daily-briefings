@@ -68,40 +68,40 @@ ul.kev li::before{content:"▸";color:var(--accent);position:absolute;left:0}
     <div class="tagline">Your daily security briefing — breaches, vulnerabilities &amp; federal deadlines</div>
     <div class="meta">
       <span class="pill live"><span class="dot"></span>LIVE</span>
-      <span class="pill" id="edition">Morning Edition</span>
+      <span class="pill" id="edition">Afternoon Edition</span>
       <span class="pill" id="datestamp">Sunday, June 7, 2026</span>
-      <span class="pill">Updated <span id="updated">9:05 AM ET</span></span>
+      <span class="pill">Updated <span id="updated">4:05 PM ET</span></span>
     </div>
   </div>
 
   <div class="label">Top Story</div>
   <div class="panel lead">
-    <h2>ShinyHunters dumps DentaQuest: 234 GB of data exposing 2.6 million people in one of 2026's largest health-sector leaks</h2>
-    <p>The digital-extortion group ShinyHunters has published roughly 234 gigabytes of data it says was stolen from DentaQuest, a Sun Life subsidiary and one of the largest U.S. dental and vision benefits administrators, serving Medicaid, Medicare Advantage and commercial members across all 50 states. DentaQuest confirmed the breach on June 2; the leak affects approximately 2.6 million individuals and ranks among the largest health-sector incidents reported so far this year.</p>
-    <p>Exposed records reportedly include names, dates of birth, home and email addresses, phone numbers, government-issued IDs, health-insurance information and Medicaid IDs — a potent mix for identity theft and targeted fraud. According to reporting, the data was published after ShinyHunters failed to extort a payment, with the trove posted to the group's dark-web leak site. DentaQuest is now the subject of breach investigations and consumer-notification efforts.</p>
+    <h2>CISA flags actively exploited SolarWinds Serv-U flaw — and an unpatched Cisco SD-WAN root bug — as the leak-site grind rolls on into the weekend</h2>
+    <p>The week closed with two actively exploited enterprise flaws pushed to the front of defenders' to-do lists. On June 5, CISA added SolarWinds Serv-U vulnerability <strong>CVE-2026-28318</strong> to its Known Exploited Vulnerabilities catalog after confirmation that attackers are crashing the widely deployed file-transfer servers in the wild — an unauthenticated denial-of-service that needs only a single crafted HTTP request. Federal civilian agencies were ordered to patch by June 19.</p>
+    <p>At the same time, Cisco's PSIRT disclosed that <strong>CVE-2026-20245</strong> in Catalyst SD-WAN Manager has been exploited in a limited set of real-world environments to run arbitrary commands as root and push unauthorized configuration changes to edge devices — with no patch or workaround yet available. Both land against a backdrop of relentless extortion activity: trackers logged a fresh cluster of leak-site victims on June 5, and the ShinyHunters dump of roughly 234 GB of DentaQuest data affecting about 2.6 million people remains among the year's largest health-sector leaks.</p>
   </div>
 
   <div class="label">Breaches &amp; Incidents</div>
   <div class="cards">
     <div class="card">
-      <span class="tag breach">EXTORTION</span>
-      <h3>Fresh leak-site listings (June 5)</h3>
-      <p>Trackers logged a cluster of newly listed victims on June 5, including private-aviation firm Avcon Jet (Qilin), Corley Manufacturing and the Dallis Law Firm (both Play), food maker Don Don (Qilin) and Family Medical Associates of Raleigh (Genesis) — a reminder that data-extortion volume remains high across sectors.</p>
+      <span class="tag breach">HEALTHCARE</span>
+      <h3>DentaQuest leak hits 2.6 million</h3>
+      <p>ShinyHunters published roughly 234 GB of data stolen from DentaQuest, a Sun Life dental/vision benefits administrator, after a failed extortion attempt. Exposed records reportedly include names, dates of birth, addresses, government IDs, insurance details and Medicaid IDs — fueling phishing and identity-theft risk.</p>
     </div>
     <div class="card">
-      <span class="tag ransom">RANSOMWARE</span>
-      <h3>Abyss hits German county administration</h3>
-      <p>The Limburg-Weilburg county administration in Germany was struck by the Abyss ransomware group, which claims to have stolen and encrypted roughly 132 GB of data — the latest in a steady run of attacks on local-government and public-sector targets.</p>
+      <span class="tag breach">EXTORTION</span>
+      <h3>Fresh leak-site listings (June 5)</h3>
+      <p>Trackers logged a cluster of newly listed victims on June 5, including private-aviation firm Avcon Jet, Corley Manufacturing, the Dallis Law Firm, Slovenian food maker Don Don and Family Medical Associates of Raleigh — attributed to Qilin, Play and Genesis crews. Data-extortion volume remains high across sectors.</p>
+    </div>
+    <div class="card">
+      <span class="tag supply">PRIVACY</span>
+      <h3>Instagram reset-flow logic bug</h3>
+      <p>Reporting on June 6 described a logic flaw in Instagram's web-based password-reset flow that exposed unredacted email addresses and phone numbers tied to user accounts — the latest in a run of 2026 incidents leaking sensitive personal identifiers.</p>
     </div>
     <div class="card">
       <span class="tag supply">FRAUD</span>
       <h3>World Cup 2026 fraud wave</h3>
       <p>Researchers and the FBI are warning of a surge of FIFA-themed fraud targeting World Cup 2026 fans: thousands of lookalike FIFA domains, banking malware hidden inside pirate streaming apps, and phishing kits cloning FIFA's login page ahead of the tournament.</p>
-    </div>
-    <div class="card">
-      <span class="tag breach">HEALTHCARE</span>
-      <h3>DentaQuest fallout widens</h3>
-      <p>Beyond the headline 2.6 million figure, the DentaQuest leak has triggered privacy-alert filings and law-firm investigations. With PII and PHI in the wild, affected members face an elevated phishing and identity-theft risk in the weeks ahead.</p>
     </div>
   </div>
 
@@ -110,10 +110,22 @@ ul.kev li::before{content:"▸";color:var(--accent);position:absolute;left:0}
     <table>
       <tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr>
       <tr>
+        <td class="cve">CVE-2026-28318</td>
+        <td class="score"><span class="score-high">7.5</span></td>
+        <td>SolarWinds Serv-U (file transfer)</td>
+        <td>Unauthenticated denial-of-service (uncontrolled resource consumption). A crafted HTTP POST with a <code>Content-Encoding: deflate</code> header crashes the Serv-U service without credentials. Actively exploited; added to CISA KEV June 5. Fixed in Serv-U 15.5.4 Hotfix 1.</td>
+      </tr>
+      <tr>
+        <td class="cve">CVE-2026-20245</td>
+        <td class="score"><span class="score-high">7.8</span></td>
+        <td>Cisco Catalyst SD-WAN Manager</td>
+        <td>Improper input validation in the CLI lets an authenticated attacker with netadmin rights upload a crafted file and execute arbitrary commands as root. Confirmed exploited in limited attacks; no patch or workaround yet — Cisco plans a future fix.</td>
+      </tr>
+      <tr>
         <td class="cve">CVE-2026-45247</td>
         <td class="score"><span class="score-crit">9.8</span></td>
         <td>Mirasvit Full Page Cache Warmer (Magento)</td>
-        <td>Deserialization of untrusted data allows unauthenticated RCE via a crafted serialized PHP object in the CacheWarmer cookie. Actively exploited (Imperva observed live attacks against gaming and business sites). Affects all versions before 1.11.12; patched May 25. In the CISA KEV catalog.</td>
+        <td>Deserialization of untrusted data allows unauthenticated RCE via a crafted serialized PHP object in the CacheWarmer cookie. Actively exploited; added to CISA KEV June 3. Affects versions before 1.11.12; patched May 25.</td>
       </tr>
       <tr>
         <td class="cve">CVE-2026-3300</td>
@@ -121,34 +133,29 @@ ul.kev li::before{content:"▸";color:var(--accent);position:absolute;left:0}
         <td>Everest Forms Pro (WordPress plugin)</td>
         <td>Remote code-execution flaw under active exploitation, impacting all versions up to and including 1.9.12. Site owners should update immediately and audit for unexpected file writes.</td>
       </tr>
-      <tr>
-        <td class="cve">CVE-2026-42897</td>
-        <td class="score"><span class="score-high">8.1</span></td>
-        <td>Microsoft Exchange Server (on-prem OWA)</td>
-        <td>Cross-site scripting in Outlook Web Access; a crafted email runs JavaScript when opened. Microsoft rates it 8.1 (NVD 6.1). Still no permanent patch — the Exchange Emergency Mitigation Service auto-mitigates. Affects Exchange 2016/2019/Subscription Edition; Exchange Online is not affected.</td>
-      </tr>
     </table>
   </div>
 
   <div class="label">CISA KEV &amp; Federal Deadlines</div>
   <div class="panel">
     <ul class="kev">
-      <li><strong>June 3 addition:</strong> CVE-2026-45247 (Mirasvit Full Page Cache Warmer — deserialization of untrusted data enabling unauthenticated RCE on Magento servers) was added on evidence of active exploitation. Under BOD 22-01's three-week window, federal civilian agencies should remediate by approximately <strong>June 24</strong>.</li>
-      <li><strong>June 2 additions:</strong> CVE-2022-0492 (Linux kernel improper authentication, enabling privilege escalation / container escape) and CVE-2025-48595 (Android Framework integer overflow allowing code execution). Remediation due by approximately <strong>June 23</strong>.</li>
-      <li><strong>Reminder:</strong> BOD 22-01 gives federal civilian agencies a standard three-week remediation window from the date a CVE is added to the KEV catalog — not a same-week deadline.</li>
+      <li><strong>June 5 addition:</strong> CVE-2026-28318 (SolarWinds Serv-U — unauthenticated DoS) was added on evidence of active exploitation; CISA set a remediation deadline of <strong>June 19, 2026</strong> for federal civilian agencies. Fix: upgrade to Serv-U 15.5.4 Hotfix 1.</li>
+      <li><strong>June 3 addition:</strong> CVE-2026-45247 (Mirasvit Full Page Cache Warmer — deserialization enabling unauthenticated RCE on Magento) carries a standard three-week window, due by approximately <strong>June 24</strong>.</li>
+      <li><strong>June 2 additions:</strong> CVE-2022-0492 (Linux kernel improper authentication, enabling privilege escalation / container escape) and CVE-2025-48595 (Android Framework integer overflow allowing code execution), due by approximately <strong>June 23</strong>.</li>
+      <li><strong>Reminder:</strong> BOD 22-01 generally gives federal civilian agencies a three-week remediation window from a CVE's KEV-addition date; CISA sets the specific due date per entry, so always confirm the catalog deadline.</li>
     </ul>
   </div>
 
   <div class="sources">
     <div class="label" style="margin-top:0">Sources</div>
+    <a href="https://www.bleepingcomputer.com/news/security/cisa-hackers-now-exploit-solarwinds-serv-u-flaw-to-crash-servers/">BleepingComputer — CISA: Hackers now exploit SolarWinds Serv-U flaw to crash servers (CVE-2026-28318, due June 19)</a>
+    <a href="https://thehackernews.com/2026/06/cisa-adds-actively-exploited-solarwinds.html">The Hacker News — CISA adds actively exploited SolarWinds Serv-U DoS flaw to KEV</a>
+    <a href="https://thehackernews.com/2026/06/cisco-catalyst-sd-wan-manager-cve-2026.html">The Hacker News — Cisco Catalyst SD-WAN Manager CVE-2026-20245 actively exploited, no patch</a>
     <a href="https://www.securityweek.com/hackers-leak-dentaquest-information-impacting-2-6-million/">SecurityWeek — Hackers leak DentaQuest information impacting 2.6 million</a>
     <a href="https://www.bleepingcomputer.com/news/security/dentaquest-data-breach-exposed-info-of-26-million-accounts/">BleepingComputer — DentaQuest data breach exposed info of 2.6 million accounts</a>
-    <a href="https://www.bankinfosecurity.com/shinyhunters-leaks-234gb-dentaquest-data-trove-a-31883">BankInfoSecurity — ShinyHunters leaks 234 GB DentaQuest data trove</a>
-    <a href="https://sharkstriker.com/blog/june-2026-data-breaches/">SharkStriker — June 2026 data breaches (June 5 leak-site listings, Limburg-Weilburg)</a>
+    <a href="https://www.breachsense.com/breaches/2026/june/">Breachsense — Data breaches in June 2026 (June 5 leak-site listings)</a>
     <a href="https://thehackernews.com/2026/06/cisa-adds-exploited-magento-rce-flaw.html">The Hacker News — CISA adds exploited Magento RCE flaw CVE-2026-45247 to KEV</a>
-    <a href="https://www.securityweek.com/microsoft-warns-of-exchange-server-zero-day-exploited-in-the-wild/">SecurityWeek — Microsoft warns of Exchange Server zero-day exploited in the wild</a>
-    <a href="https://www.cisa.gov/news-events/alerts/2026/06/03/cisa-adds-one-known-exploited-vulnerability-catalog">CISA — Adds one KEV (June 3, CVE-2026-45247)</a>
-    <a href="https://www.cisa.gov/news-events/alerts/2026/06/02/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA — Adds two KEVs (June 2)</a>
+    <a href="https://www.cisa.gov/news-events/alerts/2026/06/02/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA — Adds two KEVs (June 2: CVE-2022-0492, CVE-2025-48595)</a>
   </div>
   <div class="disclaimer">This briefing summarizes public reporting as of the time above. Breach scopes attributed to threat actors are unverified claims. Verify CVE details against vendor advisories before acting.</div>
 </div>
