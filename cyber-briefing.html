@@ -78,50 +78,48 @@ ul.kev li::before{content:"⛨";color:var(--teal);margin-right:10px}
 
   <div class="label">Top Story</div>
   <div class="lead">
-    <h2>CISA keeps stacking the KEV list: a Magento RCE, a public Cisco SSRF exploit and a wave of actively exploited web flaws</h2>
-    <p>Defenders are juggling a busy patch cycle as multiple critical bugs are exploited in the wild. CISA added <strong>CVE-2026-45247</strong>, a deserialization-to-RCE flaw (CVSS 9.8) in the Mirasvit Full Page Cache Warmer extension for Magento, to its Known Exploited Vulnerabilities catalog on June 3 after confirmed in-the-wild abuse; the fix landed in version 1.11.12. Separately, attackers are hammering <strong>CVE-2026-3300</strong> (CVSS 9.8) in the Everest Forms Pro WordPress plugin to reach remote code execution and full site takeover.</p>
-    <p>On the enterprise side, Cisco confirmed that <strong>CVE-2026-20230</strong>, an SSRF-to-root bug in Unified Communications Manager (CVSS 8.6), is exploitable with publicly available exploit code, and warned that a high-severity Catalyst SD-WAN Manager flaw (<strong>CVE-2026-20245</strong>, CVSS 7.8) is under active attack. Google's June Android update, meanwhile, patched 124 issues including an exploited Framework integer-overflow bug (<strong>CVE-2025-48595</strong>, CVSS 8.4) now on the KEV list.</p>
+    <h2>ShinyHunters claims a ~275 million-record haul from the education sector via Canvas instances</h2>
+    <p>The extortion crew <strong>ShinyHunters</strong> says it stole roughly <strong>275 million records</strong> tied to students, teachers and staff in what looks like one of 2026's largest education-sector breaches. The group shared a list of <strong>8,809</strong> school districts, universities and online-learning platforms with BleepingComputer, claiming their Canvas learning-management instances were impacted, with per-institution record counts ranging from tens of thousands to several million.</p>
+    <p>The disclosure lands amid a busy exploitation cycle. Cisco is warning that a Catalyst SD-WAN Manager zero-day (<strong>CVE-2026-20245</strong>) is under active attack with no patch yet available, attackers are hammering a critical WordPress plugin flaw (<strong>CVE-2026-3300</strong>, CVSS 9.8), and CISA added an actively exploited SolarWinds Serv-U denial-of-service bug (<strong>CVE-2026-28318</strong>) to its Known Exploited Vulnerabilities catalog on June 5. The FBI, separately, is flagging a wave of World Cup 2026-themed fraud aimed at fans.</p>
   </div>
 
   <div class="label">Breaches &amp; Incidents</div>
   <div class="cards">
-    <div class="card"><span class="tag breach">Breach</span><h3>Charter / Spectrum — 13M records leaked</h3><p>ShinyHunters published data on ~13 million Spectrum customers (plus ~10M support tickets) after a ransom deadline lapsed; entry traced to a voice-phishing attack pivoting from Entra to Salesforce.</p></div>
-    <div class="card"><span class="tag breach">Fraud Alert</span><h3>World Cup 2026 scam surge</h3><p>FBI and researchers warn of thousands of lookalike FIFA domains, banking malware hidden in pirate streaming apps, and login-page cloning targeting fans.</p></div>
-    <div class="card"><span class="tag ransom">Ransomware</span><h3>Abyss hits German county</h3><p>The Abyss group claimed it stole and encrypted ~132 GB from the Limburg-Weilburg county administration; Swiss carpentry firm Schneebeli AG was hit by the AiLock crew.</p></div>
-    <div class="card"><span class="tag ransom">Ransomware</span><h3>Silent Ransom &amp; "The Gentlemen"</h3><p>Silent Ransom Group is using fake IT-support calls to reach legal and financial data; "The Gentlemen" encryptor disables defenses, kills backups and traverses shares before extorting.</p></div>
+    <div class="card"><span class="tag breach">Breach</span><h3>ShinyHunters — education mega-leak</h3><p>~275M records across 8,809 districts, universities and ed-tech platforms allegedly taken from Canvas LMS instances; per-institution counts run from tens of thousands to millions.</p></div>
+    <div class="card"><span class="tag breach">Fraud Alert</span><h3>World Cup 2026 scam surge</h3><p>FBI and researchers warn of thousands of lookalike FIFA domains, banking malware hidden inside pirate streaming apps, and phishing pages built to hijack fan accounts.</p></div>
+    <div class="card"><span class="tag ransom">Ransomware</span><h3>June 5 breach wave</h3><p>Fresh listings hit private aviation (Avcon Jet), manufacturing (Corley Manufacturing, Don Don), legal (Dallis Law Firm), oilfield services (Trican Well Service) and healthcare (Family Medical Associates of Raleigh) — actors include Qilin, Play and Genesis.</p></div>
+    <div class="card"><span class="tag ransom">Ransomware</span><h3>Qilin lists Sysco</h3><p>Qilin claimed an attack on Sysco, the world's largest food distributor, posting the company to its leak site and setting a ransom-negotiation deadline.</p></div>
   </div>
 
   <div class="label">Vulnerability Watch</div>
   <div class="panel">
     <table>
       <tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr>
-      <tr><td class="cve">CVE-2026-45247</td><td class="cvss c-crit">9.8</td><td>Mirasvit Cache Warmer (Magento), &lt; 1.11.12</td><td>Deserialization RCE; CISA KEV (Jun 3), exploited</td></tr>
-      <tr><td class="cve">CVE-2026-3300</td><td class="cvss c-crit">9.8</td><td>Everest Forms Pro (WordPress)</td><td>RCE; actively exploited, full site takeover</td></tr>
-      <tr><td class="cve">CVE-2026-20230</td><td class="cvss c-high">8.6</td><td>Cisco Unified Communications Manager</td><td>SSRF→root; public exploit code, exploitable</td></tr>
-      <tr><td class="cve">CVE-2025-48595</td><td class="cvss c-high">8.4</td><td>Android Framework</td><td>Integer overflow; exploited, CISA KEV (Jun 2)</td></tr>
-      <tr><td class="cve">CVE-2026-20245</td><td class="cvss c-high">7.8</td><td>Cisco Catalyst SD-WAN Manager</td><td>Under active exploitation</td></tr>
-      <tr><td class="cve">CVE-2026-28318</td><td class="cvss c-high">7.5</td><td>SolarWinds Serv-U file server</td><td>Denial-of-service; CISA KEV (Jun 5)</td></tr>
+      <tr><td class="cve">CVE-2026-3300</td><td class="cvss c-crit">9.8</td><td>Everest Forms Pro (WordPress), &le; 1.9.12</td><td>RCE; actively exploited, full site takeover (~4k installs)</td></tr>
+      <tr><td class="cve">CVE-2026-20245</td><td class="cvss c-high">7.8</td><td>Cisco Catalyst SD-WAN Manager</td><td>Root command execution; zero-day, no patch — upgrade per CVE-2026-20182 advisory</td></tr>
+      <tr><td class="cve">CVE-2026-28318</td><td class="cvss c-high">7.5</td><td>SolarWinds Serv-U file server</td><td>Uncontrolled resource consumption / DoS; CISA KEV (Jun 5); fixed in 15.5.4 Hotfix 1</td></tr>
+      <tr><td class="cve">CVE-2026-41091</td><td class="cvss c-high">7.8</td><td>Microsoft Defender</td><td>Improper link resolution → SYSTEM; CISA KEV (deadline was Jun 3)</td></tr>
     </table>
   </div>
 
   <div class="label">CISA KEV &amp; Federal Deadlines</div>
   <ul class="kev">
-    <li><strong>June 5:</strong> CVE-2026-28318 (SolarWinds Serv-U, uncontrolled resource consumption / DoS) added — BOD 22-01 three-week window puts the federal remediation deadline around June 26.</li>
-    <li><strong>June 3:</strong> CVE-2026-45247 (Mirasvit Cache Warmer, Magento) added — remediation due around June 24.</li>
-    <li><strong>June 2:</strong> CVE-2022-0492 (Linux kernel improper authentication) and CVE-2025-48595 (Android Framework integer overflow) added — due around June 23.</li>
+    <li><strong>June 5:</strong> CVE-2026-28318 (SolarWinds Serv-U, uncontrolled resource consumption / DoS) added to the KEV catalog — the standard BOD 22-01 three-week window puts the federal remediation deadline around <strong>June 26</strong>. Apply Serv-U 15.5.4 Hotfix 1.</li>
+    <li><strong>Active, unpatched:</strong> Cisco Catalyst SD-WAN Manager (CVE-2026-20245) is being exploited for root command execution with no fix yet — follow Cisco's upgrade guidance in the CVE-2026-20182 advisory.</li>
+    <li><strong>Earlier KEV items:</strong> CVE-2026-41091 (Microsoft Defender, SYSTEM privileges) carried a June 3 remediation deadline that has now passed; an actively exploited Android Framework integer-overflow flaw was flagged via the June 1 Android security bulletin.</li>
     <li>BOD 22-01 gives federal civilian agencies a standard three-week window from a CVE's KEV addition date; prioritize patching or mitigating the items above.</li>
   </ul>
 
   <div class="foot">
     <strong>Sources:</strong><br>
-    <a href="https://thehackernews.com/2026/06/cisa-adds-exploited-magento-rce-flaw.html">The Hacker News — CISA adds Magento RCE CVE-2026-45247 to KEV</a><br>
-    <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA Known Exploited Vulnerabilities Catalog</a><br>
-    <a href="https://www.cisa.gov/news-events/alerts/2026/06/03/cisa-adds-one-known-exploited-vulnerability-catalog">CISA — KEV addition (June 3, 2026)</a><br>
-    <a href="https://www.cisa.gov/news-events/alerts/2026/06/02/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA — KEV additions (June 2, 2026)</a><br>
-    <a href="https://threat-modeling.com/cisco-unified-cm-ssrf-root-cve-2026-20230/">Threat-Modeling.com — Cisco Unified CM SSRF→root (CVE-2026-20230)</a><br>
-    <a href="https://cybernews.com/security/charter-spectrum-data-breach-millions-exposed/">Cybernews — Charter/Spectrum breach, 13M+ exposed</a><br>
-    <a href="https://www.bleepingcomputer.com/news/security/charter-confirms-data-breach-after-shinyhunters-extortion-threat/">BleepingComputer — Charter confirms breach after ShinyHunters threat</a><br>
-    <a href="https://www.securityweek.com/critical-vulnerability-exposes-n8n-instances-to-takeover-attacks/">SecurityWeek — June 2026 exploited-CVE coverage</a>
+    <a href="https://www.bleepingcomputer.com/">BleepingComputer — ShinyHunters education-sector breach (~275M records, Canvas)</a><br>
+    <a href="https://techcrunch.com/2026/06/07/the-worst-hacks-and-breaches-of-2026-so-far/">TechCrunch — The worst hacks and breaches of 2026 so far</a><br>
+    <a href="https://thehackernews.com/2026/06/cisco-catalyst-sd-wan-manager-cve-2026.html">The Hacker News — Cisco Catalyst SD-WAN Manager CVE-2026-20245 actively exploited</a><br>
+    <a href="https://www.helpnetsecurity.com/2026/06/05/cisco-sd-wan-cve-2026-20245-0-day-exploited/">Help Net Security — Cisco SD-WAN 0-day exploited (CVE-2026-20245)</a><br>
+    <a href="https://cybersecuritynews.com/cisa-solarwinds-serv-u-vulnerability/">Cybersecurity News — CISA adds exploited SolarWinds Serv-U flaw (CVE-2026-28318)</a><br>
+    <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA — Known Exploited Vulnerabilities Catalog</a><br>
+    <a href="https://thehackernews.com/">The Hacker News — Everest Forms Pro CVE-2026-3300 &amp; World Cup 2026 fraud</a><br>
+    <a href="https://www.breachsense.com/breaches/">Breachsense — Recent data breaches (June 5 listings)</a>
     <div class="disc">For awareness only. Verify CVSS scores and fixed versions against the vendor's official advisory before acting. Deadlines apply to U.S. federal civilian agencies under BOD 22-01.</div>
   </div>
 </div>
