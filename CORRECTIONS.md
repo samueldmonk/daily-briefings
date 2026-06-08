@@ -30,3 +30,7 @@ fought again since), update the entry in the same commit.
   TheStreet/CNBC. Chip rout erased ~$1T; May payrolls +172k vs ~80k expected.
 - Fri June 5, 2026 WTI crude closed ~$90.20/bbl, down ~3% on Israel-Lebanon ceasefire
   sentiment — NOT ~$93 (that was the June 3 level).
+- Mon June 8, 2026 (intraday): the Russell 2000 REBOUNDED with the broad market,
+  up ~1.3–1.7% by midday/afternoon — do NOT describe small caps as down ~3.5% on
+  June 8 (an earlier intraday edition misread this; ~3.5% reflected Friday-style
+  weakness). As of ~2 PM ET: S&P 500 ~+1.0%, Nasdaq Composite ~+1.7%, Dow ~+0.4–0.6%.
