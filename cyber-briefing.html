@@ -5,167 +5,124 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Cyber Wire — Daily Security Briefing</title>
 <style>
-:root{--bg:#0c1012;--panel:#131a1d;--line:#22323a;--accent:#22d3a8;--accent2:#36c6ff;--text:#e4ecee;--muted:#8fa3aa;--warn:#f5b14c;--crit:#f87171;--mono:'SF Mono',ui-monospace,Menlo,Consolas,monospace}
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;line-height:1.6;padding:32px 20px 60px}
-.wrap{max-width:960px;margin:0 auto}
-.nav{display:flex;gap:8px;margin-bottom:22px;flex-wrap:wrap}
-.nav a{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-decoration:none;color:var(--muted);border:1px solid var(--line);border-radius:8px;padding:8px 14px;background:var(--panel);transition:all .15s}
-.nav a:hover{color:var(--text);border-color:var(--muted)}
-.nav a.active{color:var(--accent);border-color:var(--accent)}
-.masthead{border-bottom:2px solid var(--accent);padding-bottom:18px;margin-bottom:24px}
-h1{font-size:40px;letter-spacing:-.01em}
-h1 .glyph{color:var(--accent)}
-.tagline{color:var(--muted);font-style:italic;margin-top:4px}
-.meta{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
-.pill{font-family:var(--mono);font-size:11px;letter-spacing:.1em;border:1px solid var(--line);border-radius:99px;padding:4px 12px;color:var(--muted);background:var(--panel)}
-.pill.live{color:var(--accent);border-color:rgba(34,211,168,.4)}
-.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent);margin-right:6px;animation:pulse 1.6s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
-.label{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent2);margin:34px 0 14px}
-.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px}
-.lead{border-left:4px solid var(--accent)}
-.lead h2{font-size:24px;line-height:1.35}
-.lead p{margin-top:12px;color:#c4d2d6;font-size:15.5px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;transition:transform .15s,border-color .15s}
-.card:hover{transform:translateY(-3px);border-color:var(--accent)}
-.card h3{font-size:16.5px;margin-bottom:8px}
-.card p{font-size:14px;color:#b8c7cc}
-.tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;border-radius:5px;padding:2px 8px;display:inline-block;margin-bottom:10px}
-.tag.breach{background:rgba(248,113,113,.12);color:var(--crit)}
-.tag.ransom{background:rgba(245,177,76,.12);color:var(--warn)}
-.tag.supply{background:rgba(54,198,255,.12);color:var(--accent2)}
-table{width:100%;border-collapse:collapse;font-size:13.5px}
-th{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
-td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+:root{
+  --bg:#0a0f0e; --panel:#0f1716; --line:#1d2b29; --ink:#dceae7; --muted:#7e958f;
+  --teal:#22d3a8; --cyan:#36c6ff; --warn:#f2a93b; --crit:#f2545b;
+  --mono:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.55}
+.wrap{max-width:960px;margin:0 auto;padding:24px 20px 60px}
+.nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.nav a{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-decoration:none;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:7px 14px;transition:.15s}
+.nav a:hover{color:var(--ink);border-color:#2f4a46}
+.nav a.active{color:#04110e;background:var(--teal);border-color:var(--teal);font-weight:600}
+.masthead{border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:22px}
+h1{font-size:40px;margin:0 0 6px;letter-spacing:-.5px;background:linear-gradient(90deg,var(--teal),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.tagline{color:var(--muted);font-size:15px;margin:0 0 14px}
+.meta{display:flex;gap:8px;flex-wrap:wrap}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:4px 10px}
+.pill.live{color:var(--teal);border-color:#1d4a40}
+.pill.live .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--teal);margin-right:6px;animation:pulse 1.6s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin:30px 0 12px;border-left:3px solid var(--teal);padding-left:10px}
+.lead{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px 24px}
+.lead h2{font-size:24px;margin:0 0 10px;line-height:1.3}
+.lead p{margin:0 0 10px;color:#c4d6d2}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;transition:.15s}
+.card:hover{transform:translateY(-3px);border-color:#2f4a46}
+.card h3{margin:0 0 7px;font-size:16px}
+.card p{margin:0;color:var(--muted);font-size:14px}
+.tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:6px;margin-bottom:9px}
+.tag.breach{background:#3a1d1f;color:#ff9a9e}
+.tag.ransom{background:#3a2a14;color:var(--warn)}
+.tag.exploit{background:#13322c;color:var(--teal)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line)}
+th{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500}
+td.cve{font-family:var(--mono);color:var(--cyan)}
+.cvss{font-family:var(--mono);font-weight:600}
+.c-crit{color:var(--crit)} .c-high{color:var(--warn)}
 tr:last-child td{border-bottom:none}
-td.cve{font-family:var(--mono);font-size:12.5px;color:var(--accent);white-space:nowrap}
-td.score{font-family:var(--mono)}
-.score-crit{color:var(--crit);font-weight:700}
-.score-high{color:var(--warn);font-weight:700}
-ul.kev{list-style:none}
-ul.kev li{padding:10px 0 10px 22px;border-bottom:1px solid var(--line);position:relative;font-size:14.5px;color:#c4d2d6}
+ul.kev{list-style:none;padding:0;margin:0}
+ul.kev li{padding:11px 16px;border-bottom:1px solid var(--line);color:#c4d6d2;font-size:14px}
 ul.kev li:last-child{border-bottom:none}
-ul.kev li::before{content:"▸";color:var(--accent);position:absolute;left:0}
-.sources{margin-top:40px;border-top:1px solid var(--line);padding-top:16px}
-.sources a{color:var(--muted);font-size:12.5px;display:block;margin-bottom:5px;text-decoration:none;font-family:var(--mono)}
-.sources a:hover{color:var(--accent)}
-.disclaimer{margin-top:18px;font-size:12px;color:var(--muted);font-style:italic}
-@media(max-width:700px){h1{font-size:32px}}
+ul.kev li::before{content:"⛨";color:var(--teal);margin-right:10px}
+.foot{margin-top:36px;border-top:1px solid var(--line);padding-top:18px;font-size:13px;color:var(--muted)}
+.foot a{color:var(--teal);text-decoration:none;word-break:break-all}
+.foot a:hover{text-decoration:underline}
+.disc{font-size:12px;color:#5f726d;margin-top:14px;font-style:italic}
+@media(max-width:640px){h1{font-size:30px}}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <div class="nav">
-    <a href="cyber-briefing.html" class="active">⛨ THE CYBER WIRE</a>
-    <a href="wallstreet-briefing.html">▲ THE CLOSING BELL</a>
-    <a href="mma-briefing.html">⊘ THE OCTAGON</a>
-  </div>
+  <nav class="nav">
+    <a href="cyber-briefing.html" class="active">⛨ The Cyber Wire</a>
+    <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
+    <a href="mma-briefing.html">⊘ The Octagon</a>
+  </nav>
 
   <div class="masthead">
-    <h1><span class="glyph">⛨</span> The Cyber Wire</h1>
-    <div class="tagline">Your daily security briefing — breaches, vulnerabilities &amp; federal deadlines</div>
+    <h1>The Cyber Wire</h1>
+    <p class="tagline">Your daily cybersecurity briefing — breaches, exploited CVEs & federal deadlines</p>
     <div class="meta">
       <span class="pill live"><span class="dot"></span>LIVE</span>
-      <span class="pill" id="edition">Afternoon Edition</span>
-      <span class="pill" id="datestamp">Sunday, June 7, 2026</span>
-      <span class="pill">Updated <span id="updated">5:10 PM ET</span></span>
+      <span class="pill" id="edition">Edition</span>
+      <span class="pill" id="datestamp">—</span>
+      <span class="pill">Updated <span id="updated">—</span></span>
     </div>
   </div>
 
   <div class="label">Top Story</div>
-  <div class="panel lead">
-    <h2>Three actively exploited enterprise flaws stack up into the weekend — SolarWinds Serv-U, an unpatched Cisco SD-WAN root bug and a Microsoft Exchange OWA zero-day — with June's Patch Tuesday now days away</h2>
-    <p>Defenders head into the new week juggling a cluster of in-the-wild exploits. On June 5, CISA added SolarWinds Serv-U vulnerability <strong>CVE-2026-28318</strong> to its Known Exploited Vulnerabilities catalog after confirmation that attackers are crashing the widely deployed file-transfer servers — an unauthenticated denial-of-service that needs only a single crafted HTTP request. Federal civilian agencies were ordered to patch by June 19. Alongside it, Cisco's PSIRT says <strong>CVE-2026-20245</strong> in Catalyst SD-WAN Manager has been exploited in limited real-world environments to run arbitrary commands as root, with no patch or workaround yet available.</p>
-    <p>Still unresolved from May: Microsoft's on-prem Exchange OWA spoofing zero-day <strong>CVE-2026-42897</strong>, confirmed under active exploitation and added to CISA KEV on May 15, remains without a full fix — defenders are leaning on the auto-on Exchange Emergency Mitigation Service and watching whether Microsoft's <strong>June 9 Patch Tuesday</strong> delivers a permanent patch. All of it lands against relentless extortion activity: trackers logged a fresh cluster of leak-site victims on June 5, and the ShinyHunters dump of roughly 234 GB of DentaQuest data affecting about 2.6 million people remains among the year's largest health-sector leaks.</p>
+  <div class="lead">
+    <h2>Actively exploited critical flaws stack up: Magento cache, WordPress forms and an unpatched Exchange spoofing bug</h2>
+    <p>Defenders face a busy week as multiple critical vulnerabilities are being exploited in the wild. CISA added <strong>CVE-2026-45247</strong>, a deserialization flaw (CVSS 9.8) in the Mirasvit Full Page Cache Warmer extension for Magento, to its Known Exploited Vulnerabilities catalog following confirmed in-the-wild abuse. Separately, attackers are hammering <strong>CVE-2026-3300</strong> (CVSS 9.8) in the Everest Forms Pro WordPress plugin to achieve remote code execution and full site takeover.</p>
+    <p>Microsoft, meanwhile, disclosed exploitation of <strong>CVE-2026-42897</strong>, an Exchange Server spoofing/XSS issue in Outlook Web Access rated 8.1, for which no patch yet exists — the Exchange Emergency Mitigation Service applies automatic mitigation by default. Cisco also warned that a high-severity Catalyst SD-WAN Manager bug is under active attack with no fix available.</p>
   </div>
 
   <div class="label">Breaches &amp; Incidents</div>
   <div class="cards">
-    <div class="card">
-      <span class="tag breach">HEALTHCARE</span>
-      <h3>DentaQuest leak hits 2.6 million</h3>
-      <p>ShinyHunters published roughly 234 GB of data stolen from DentaQuest, a Sun Life dental/vision benefits administrator, after a failed extortion attempt. Exposed records reportedly include names, dates of birth, addresses, government IDs, insurance details and Medicaid IDs — fueling phishing and identity-theft risk.</p>
-    </div>
-    <div class="card">
-      <span class="tag breach">EXTORTION</span>
-      <h3>Fresh leak-site listings (June 5)</h3>
-      <p>Trackers logged a cluster of newly listed victims on June 5, including private-aviation firm Avcon Jet, Corley Manufacturing, the Dallis Law Firm, Slovenian food maker Don Don and Family Medical Associates of Raleigh — attributed to crews including Qilin and Play. Data-extortion volume remains high across sectors.</p>
-    </div>
-    <div class="card">
-      <span class="tag supply">PRIVACY</span>
-      <h3>Instagram reset-flow logic bug</h3>
-      <p>Reporting on June 6 described a logic flaw in Instagram's web-based password-reset flow that exposed unredacted email addresses and phone numbers tied to user accounts — the latest in a run of 2026 incidents leaking sensitive personal identifiers.</p>
-    </div>
-    <div class="card">
-      <span class="tag supply">FRAUD</span>
-      <h3>World Cup 2026 fraud wave</h3>
-      <p>Researchers and the FBI are warning of a surge of FIFA-themed fraud targeting World Cup 2026 fans: thousands of lookalike FIFA domains, banking malware hidden inside pirate streaming apps, and phishing kits cloning FIFA's login page ahead of the tournament.</p>
-    </div>
+    <div class="card"><span class="tag breach">Breach</span><h3>Wave of June 5 disclosures</h3><p>Avcon Jet, Corley Manufacturing, Dallis Law Firm, Family Medical Associates of Raleigh and Trican Well Service among victims posted to leak sites by Qilin, Play and Genesis actors.</p></div>
+    <div class="card"><span class="tag ransom">Ransomware</span><h3>Brain Cipher hits Australian paper</h3><p>The Adviser, a regional Victorian newspaper, was listed on Brain Cipher's leak site with a claimed 350+ GB of stolen data and a ransom deadline.</p></div>
+    <div class="card"><span class="tag ransom">Ransomware</span><h3>"The Gentlemen" group activity</h3><p>Multiple June 4 victims — including MRJS, Anandji Haridas and Smile Siam Printing — attributed to the emerging "The Gentlemen" ransomware crew.</p></div>
+    <div class="card"><span class="tag breach">Fraud Alert</span><h3>World Cup 2026 scam surge</h3><p>FBI and researchers warn of thousands of lookalike FIFA domains, banking malware in pirate streaming apps, and login-page cloning targeting fans.</p></div>
   </div>
 
   <div class="label">Vulnerability Watch</div>
-  <div class="panel" style="padding:8px 0">
+  <div class="panel">
     <table>
       <tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr>
-      <tr>
-        <td class="cve">CVE-2026-28318</td>
-        <td class="score"><span class="score-high">7.5</span></td>
-        <td>SolarWinds Serv-U (file transfer)</td>
-        <td>Unauthenticated denial-of-service (uncontrolled resource consumption, CWE-400). A crafted HTTP POST with a <code>Content-Encoding: deflate</code> header crashes the Serv-U service without credentials. Actively exploited; added to CISA KEV June 5. Fixed in Serv-U 15.5.4 Hotfix 1.</td>
-      </tr>
-      <tr>
-        <td class="cve">CVE-2026-20245</td>
-        <td class="score"><span class="score-high">7.8</span></td>
-        <td>Cisco Catalyst SD-WAN Manager</td>
-        <td>Improper input validation in the CLI lets an authenticated attacker with netadmin rights upload a crafted file and execute arbitrary commands as root. Confirmed exploited in limited attacks; no patch or workaround yet — Cisco plans a future fix.</td>
-      </tr>
-      <tr>
-        <td class="cve">CVE-2026-42897</td>
-        <td class="score"><span class="score-high">8.1</span></td>
-        <td>Microsoft Exchange Server (2016 / 2019 / SE)</td>
-        <td>OWA spoofing flaw rooted in cross-site scripting; a crafted email opened in Outlook Web Access can run arbitrary JavaScript in the browser. Actively exploited; disclosed May 14, added to CISA KEV May 15. No full patch yet — Exchange Emergency Mitigation Service mitigates by default; June 9 Patch Tuesday is expected to address it.</td>
-      </tr>
-      <tr>
-        <td class="cve">CVE-2026-45247</td>
-        <td class="score"><span class="score-crit">9.8</span></td>
-        <td>Mirasvit Full Page Cache Warmer (Magento)</td>
-        <td>Deserialization of untrusted data allows unauthenticated RCE via a crafted serialized PHP object in the CacheWarmer cookie. Actively exploited; added to CISA KEV June 3. Affects versions before 1.11.12; patched May 25.</td>
-      </tr>
-      <tr>
-        <td class="cve">CVE-2026-3300</td>
-        <td class="score"><span class="score-crit">9.8</span></td>
-        <td>Everest Forms Pro (WordPress plugin)</td>
-        <td>Remote code-execution flaw under active exploitation, impacting all versions up to and including 1.9.12. Site owners should update immediately and audit for unexpected file writes.</td>
-      </tr>
+      <tr><td class="cve">CVE-2026-45247</td><td class="cvss c-crit">9.8</td><td>Mirasvit Cache Warmer (Magento)</td><td>Deserialization; added to CISA KEV, exploited</td></tr>
+      <tr><td class="cve">CVE-2026-3300</td><td class="cvss c-crit">9.8</td><td>Everest Forms Pro ≤ 1.9.12 (WordPress)</td><td>RCE; actively exploited, full site takeover</td></tr>
+      <tr><td class="cve">CVE-2026-42897</td><td class="cvss c-high">8.1</td><td>Microsoft Exchange Server (OWA)</td><td>Spoofing/XSS; exploited, no patch — auto-mitigated</td></tr>
+      <tr><td class="cve">CVE-2026-20245</td><td class="cvss c-high">7.8</td><td>Cisco Catalyst SD-WAN Manager</td><td>Under active exploitation; no fix yet</td></tr>
+      <tr><td class="cve">CVE-2026-28318</td><td class="cvss c-high">—</td><td>SolarWinds Serv-U file server</td><td>Denial-of-service; added to CISA KEV</td></tr>
     </table>
   </div>
 
   <div class="label">CISA KEV &amp; Federal Deadlines</div>
-  <div class="panel">
-    <ul class="kev">
-      <li><strong>June 5 addition:</strong> CVE-2026-28318 (SolarWinds Serv-U — unauthenticated DoS) was added on evidence of active exploitation; CISA set a remediation deadline of <strong>June 19, 2026</strong> for federal civilian agencies. Fix: upgrade to Serv-U 15.5.4 Hotfix 1.</li>
-      <li><strong>June 3 addition:</strong> CVE-2026-45247 (Mirasvit Full Page Cache Warmer — deserialization enabling unauthenticated RCE on Magento) carries a standard three-week window, due by approximately <strong>June 24</strong>.</li>
-      <li><strong>June 2 additions:</strong> CVE-2022-0492 (Linux kernel improper authentication, enabling privilege escalation / container escape) and CVE-2025-48595 (Android Framework integer overflow allowing code execution), due by approximately <strong>June 23</strong>.</li>
-      <li><strong>Looking ahead — June 9 Patch Tuesday:</strong> defenders are watching whether Microsoft's June updates finally deliver a full fix for the actively exploited Exchange OWA zero-day (CVE-2026-42897), which still ships only the auto-on Emergency Mitigation Service.</li>
-      <li><strong>Reminder:</strong> BOD 22-01 generally gives federal civilian agencies a three-week remediation window from a CVE's KEV-addition date; CISA sets the specific due date per entry, so always confirm the catalog deadline.</li>
-    </ul>
-  </div>
+  <ul class="kev">
+    <li><strong>June 3:</strong> CVE-2026-45247 (Mirasvit Cache Warmer, Magento) added — BOD 22-01 three-week window puts the federal remediation deadline around June 24.</li>
+    <li><strong>June 2:</strong> CVE-2022-0492 (Linux kernel improper authentication) and CVE-2025-48595 (Android Framework integer overflow) added — remediation due around June 23.</li>
+    <li>BOD 22-01 gives federal agencies a standard three-week window from a CVE's KEV addition date; prioritize patching or mitigating the above.</li>
+  </ul>
 
-  <div class="sources">
-    <div class="label" style="margin-top:0">Sources</div>
-    <a href="https://thehackernews.com/2026/06/cisa-adds-actively-exploited-solarwinds.html">The Hacker News — CISA adds actively exploited SolarWinds Serv-U DoS flaw to KEV (due June 19)</a>
-    <a href="https://www.bleepingcomputer.com/news/security/cisa-hackers-now-exploit-solarwinds-serv-u-flaw-to-crash-servers/">BleepingComputer — CISA: Hackers now exploit SolarWinds Serv-U flaw to crash servers (CVE-2026-28318)</a>
-    <a href="https://thehackernews.com/2026/05/on-prem-microsoft-exchange-server-cve.html">The Hacker News — On-prem Exchange Server CVE-2026-42897 exploited via crafted email (CVSS 8.1)</a>
-    <a href="https://www.helpnetsecurity.com/2026/06/05/june-2026-patch-tuesday-forecast/">Help Net Security — June 2026 Patch Tuesday forecast (June 9; Exchange OWA zero-day still unpatched)</a>
-    <a href="https://www.securityweek.com/hackers-leak-dentaquest-information-impacting-2-6-million/">SecurityWeek — Hackers leak DentaQuest information impacting 2.6 million</a>
-    <a href="https://www.breachsense.com/breaches/2026/june/">Breachsense — Data breaches in June 2026 (June 5 leak-site listings)</a>
-    <a href="https://thehackernews.com/2026/06/cisa-adds-exploited-magento-rce-flaw.html">The Hacker News — CISA adds exploited Magento RCE flaw CVE-2026-45247 to KEV</a>
-    <a href="https://www.cisa.gov/news-events/alerts/2026/06/02/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA — Adds two KEVs (June 2: CVE-2022-0492, CVE-2025-48595)</a>
+  <div class="foot">
+    <strong>Sources:</strong><br>
+    <a href="https://thehackernews.com/">The Hacker News</a><br>
+    <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA Known Exploited Vulnerabilities Catalog</a><br>
+    <a href="https://www.cisa.gov/news-events/alerts/2026/06/03/cisa-adds-one-known-exploited-vulnerability-catalog">CISA — KEV addition (June 3, 2026)</a><br>
+    <a href="https://www.cisa.gov/news-events/alerts/2026/06/02/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA — KEV additions (June 2, 2026)</a><br>
+    <a href="https://www.breachsense.com/breaches/">Breachsense — Recent data breaches</a><br>
+    <a href="https://www.helpnetsecurity.com/2026/06/05/june-2026-patch-tuesday-forecast/">Help Net Security — June 2026 Patch Tuesday forecast</a><br>
+    <a href="https://www.bleepingcomputer.com/">BleepingComputer</a>
+    <div class="disc">For awareness only. Verify CVSS scores and fixed versions against the vendor's official advisory before acting. Deadlines apply to U.S. federal civilian agencies under BOD 22-01.</div>
   </div>
-  <div class="disclaimer">This briefing summarizes public reporting as of the time above. Breach scopes attributed to threat actors are unverified claims. Verify CVE details against vendor advisories before acting.</div>
 </div>
+
 <script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;}catch(e){}})();</script>
 </body>
 </html>
