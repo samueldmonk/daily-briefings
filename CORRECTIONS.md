@@ -34,3 +34,13 @@ fought again since), update the entry in the same commit.
   up ~1.3–1.7% by midday/afternoon — do NOT describe small caps as down ~3.5% on
   June 8 (an earlier intraday edition misread this; ~3.5% reflected Friday-style
   weakness). As of ~2 PM ET: S&P 500 ~+1.0%, Nasdaq Composite ~+1.7%, Dow ~+0.4–0.6%.
+- Mon June 8, 2026 (close): chip-led rebound HELD into the close. Nasdaq Composite
+  closed 25,982.64 (+273.21, +1.06%) per Trading Economics/Nasdaq; S&P 500 ~7,427
+  (~+0.6%, some sources ~0.9%); Dow modestly higher (~+0.5%, precise level not
+  consistently corroborated). Movers at close: Marvell ~+14.7% (S&P 500 inclusion,
+  effective June 22), Intel ~+12% (Alphabet/Google 3M+ TPU order report), Micron
+  ~+10.5%, Corning ~+6.5% (Amazon fiber deal), Nvidia ~+2%.
+- Mon June 8, 2026 OIL REVERSAL: WTI spiked above $94 overnight on Iran-Israel
+  strikes but FADED back to the ~$90-91 level (last ~$91.3) by the close as Iran
+  tensions cooled suddenly. Do NOT present the morning ~$94/+4% spike as the June 8
+  close figure — by the close oil was roughly flat-to-slightly-up near $91.
