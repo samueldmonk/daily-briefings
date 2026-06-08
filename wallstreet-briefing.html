@@ -51,6 +51,12 @@ ul.radar{list-style:none;padding:0;margin:0}
 ul.radar li{padding:11px 16px;border-bottom:1px solid var(--line);color:#d6d0c0;font-size:14px}
 ul.radar li:last-child{border-bottom:none}
 ul.radar li::before{content:"▸";color:var(--gold);margin-right:10px}
+ul.news{list-style:none;padding:0;margin:0}
+ul.news li{padding:13px 16px;border-bottom:1px solid var(--line)}
+ul.news li:last-child{border-bottom:none}
+.news-meta{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+ul.news a{color:#e6ddc8;text-decoration:none;font-size:15px;line-height:1.4}
+ul.news a:hover{color:var(--gold2)}
 .note{font-size:12.5px;color:var(--muted);margin:8px 2px 0}
 .foot{margin-top:36px;border-top:1px solid var(--line);padding-top:18px;font-size:13px;color:var(--muted)}
 .foot a{color:var(--gold);text-decoration:none;word-break:break-all}
@@ -83,7 +89,7 @@ ul.radar li::before{content:"▸";color:var(--gold);margin-right:10px}
     <div class="tradingview-widget-container">
       <div class="tradingview-widget-container__widget"></div>
       <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-      {"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},{"proName":"FOREXCOM:DJI","title":"Dow 30"},{"proName":"NASDAQ:NVDA","title":"NVIDIA"},{"proName":"NASDAQ:MRVL","title":"Marvell"},{"proName":"NASDAQ:MU","title":"Micron"},{"proName":"NASDAQ:FLEX","title":"Flex"},{"proName":"NYSE:GLW","title":"Corning"},{"proName":"TVC:USOIL","title":"WTI Crude"},{"proName":"TVC:US10Y","title":"US 10Y"}],"colorTheme":"dark","isTransparent":true,"showSymbolLogo":true,"displayMode":"adaptive","locale":"en"}
+      {"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},{"proName":"FOREXCOM:DJI","title":"Dow 30"},{"proName":"NASDAQ:MRVL","title":"Marvell"},{"proName":"NYSE:GLW","title":"Corning"},{"proName":"NASDAQ:INTC","title":"Intel"},{"proName":"NASDAQ:MU","title":"Micron"},{"proName":"NASDAQ:NVDA","title":"NVIDIA"},{"proName":"NASDAQ:AAPL","title":"Apple"},{"proName":"TVC:USOIL","title":"WTI Crude"},{"proName":"TVC:US10Y","title":"US 10Y"}],"colorTheme":"dark","isTransparent":true,"showSymbolLogo":true,"displayMode":"adaptive","locale":"en"}
       </script>
     </div>
   </div>
@@ -119,32 +125,57 @@ ul.radar li::before{content:"▸";color:var(--gold);margin-right:10px}
 
   <div class="label">The Lead</div>
   <div class="lead">
-    <h2>Chip-led rebound holds into the afternoon — Wall Street claws back part of Friday's rout even as Mideast strikes keep oil and yields elevated (as of ~3 PM ET)</h2>
-    <p>U.S. stocks extended their bounce into Monday afternoon, recovering some of last week's brutal slide as the semiconductor selloff halted. As of about 3 p.m. ET, the <strong>S&amp;P 500</strong> was up roughly 0.9%, the <strong>Nasdaq Composite</strong> climbed around 1.4%, and the <strong>Dow</strong> added about 0.6%; the small-cap <strong>Russell 2000</strong> joined the advance rather than lagging it. Around half the S&amp;P's members were higher, led by the technology sector, which advanced more than 3%. Stocks firmed on signs of a cautious de-escalation in the Middle East paired with a halt to the chip rout — Iran said it had ended its military operation against Israel after weekend strikes and President Trump signaled optimism on a deal with Tehran, though fresh Iran–Israel missile exchanges left a proposed 60-day ceasefire looking fragile.</p>
-    <p>Semiconductors led the recovery. <strong>Marvell Technology</strong> jumped (roughly 8.8% intraday, after gaining nearly 9% premarket) on confirmation it will join the S&amp;P 500 effective June 22; <strong>Micron</strong> rose about 7%, <strong>Nvidia</strong> added around 2%, and fellow incoming index member <strong>Flex</strong> climbed about 4%. <strong>Corning</strong> surged more than 9% after Amazon announced a multibillion-dollar optical-fiber agreement to power its U.S. data centers. The bounce follows Friday's rout, when the Nasdaq Composite plunged 4.18% — its worst day since April 2025 — and a chip selloff erased roughly $1 trillion in value after a hot May jobs report (+172k vs ~80k expected) fueled Fed-hike bets. Capping the rally, <strong>WTI crude</strong> jumped more than 4% above $94 a barrel on the Iran–Israel strikes, while the 10-year Treasury yield held near 4.57%, a two-week high. Citigroup, meanwhile, lifted its year-end S&amp;P 500 target to 8,100, citing AI-driven earnings strength.</p>
+    <h2>Chip-led rebound holds into the afternoon — small caps join the bounce as Wall Street claws back part of Friday's rout, even with Mideast strikes keeping oil and yields elevated (as of ~2 PM ET)</h2>
+    <p>Wall Street extended its rebound into the afternoon Monday, recovering part of last week's brutal slide as the semiconductor selloff halted. As of about 2 p.m. ET, the <strong>S&P 500</strong> was up roughly 1.0%, the <strong>Nasdaq Composite</strong> climbed around 1.7%, and the <strong>Dow</strong> added about 0.4–0.6%. The bounce broadened through the day: the small-cap <strong>Russell 2000</strong>, which had lagged earlier, joined the advance and was up roughly 1.7%. Stocks firmed on signs of a cautious de-escalation in the Middle East and a halt to the chip rout — Iran said it had ended its military operation against Israel after weekend strikes and President Trump signaled optimism on a deal with Tehran, though fresh Iran–Israel missile exchanges left a proposed 60-day ceasefire looking fragile.</p>
+    <p>Semiconductors led the recovery. <strong>Marvell Technology</strong> jumped (about 9% premarket and roughly 8.8% intraday, to ~$287) after being named a new S&P 500 member effective June 22; <strong>Intel</strong> surged about 10% on reports Alphabet ordered more than three million tensor processing units for 2028; and <strong>Corning</strong> rose more than 9% on a multibillion-dollar Amazon optical-fiber deal for data centers. <strong>Nvidia</strong> added about 2% and <strong>Micron</strong> roughly 4%. The bounce follows Friday's rout, when the Nasdaq Composite plunged 4.18% — its worst day since April 2025 — and a chip selloff erased roughly $1 trillion in value after a hot May jobs report (+172k vs ~80k expected) fueled Fed-hike bets. Capping the rally, <strong>WTI crude</strong> jumped more than 4% above $94 a barrel on the Iran–Israel strikes, while the 10-year Treasury yield held near 4.57%, a two-week high. Apple opened its Worldwide Developers Conference today; among decliners, Salesforce, Disney and Microsoft each slipped around 1%.</p>
   </div>
 
-  <div class="label">Movers &amp; Drivers <span style="color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0">(June 8 — intraday / premarket as noted)</span></div>
+  <div class="label">Movers &amp; Drivers <span style="color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0">(June 8 — premarket / intraday as noted)</span></div>
   <div class="cards">
-    <div class="card"><h3>Corning <span class="chg up">▲ ~9%</span></h3><p>Surged after Amazon announced a multibillion-dollar optical-fiber deal to connect and power its U.S. data centers.</p></div>
-    <div class="card"><h3>Marvell Technology <span class="chg up">▲ ~9%</span></h3><p>Up ~8.8% intraday (nearly 9% premarket) on confirmation it joins the S&amp;P 500 on June 22, fueling index-fund demand.</p></div>
-    <div class="card"><h3>Micron <span class="chg up">▲ ~7%</span></h3><p>One of the session's strongest performers as chip names rebounded sharply from Friday's rout.</p></div>
-    <div class="card"><h3>Flex <span class="chg up">▲ ~4%</span></h3><p>Rose toward ~$158.50; also set to be added to the S&amp;P 500 later this month.</p></div>
+    <div class="card"><h3>Intel <span class="chg up">▲ ~10%</span></h3><p>Surged on reports Alphabet ordered 3M+ tensor processing units from the chipmaker for 2028.</p></div>
+    <div class="card"><h3>Corning <span class="chg up">▲ ~9%</span></h3><p>Jumped after Amazon announced a multibillion-dollar optical-fiber deal for its data centers.</p></div>
+    <div class="card"><h3>Marvell Technology <span class="chg up">▲ ~9%</span></h3><p>Up ~9% premarket and ~8.8% intraday (to ~$287) after being named a new S&P 500 member; joins the index June 22.</p></div>
+    <div class="card"><h3>Micron <span class="chg up">▲ ~4%</span></h3><p>Chip names rebounded broadly after Friday's semiconductor rout dragged the sector lower.</p></div>
     <div class="card"><h3>Nvidia <span class="chg up">▲ ~2%</span></h3><p>Recovered alongside the broader AI-chip complex as buyers returned after the selloff.</p></div>
-    <div class="card"><h3>Tech Sector <span class="chg up">▲ ~3%+</span></h3><p>The S&amp;P's technology group led the tape higher, driving the broad-market rebound.</p></div>
+    <div class="card"><h3>Apple <span class="chg up">▲ ~1.5%</span></h3><p>Firmed as its Worldwide Developers Conference kicked off; investors watching for AI announcements.</p></div>
   </div>
 
-  <div class="label">Live Market Headlines — updates in real time</div>
-  <div class="panel" style="padding:8px">
-    <div class="tradingview-widget-container">
-      <div class="tradingview-widget-container__widget"></div>
-      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
-      {"feedMode":"market","market":"stock","colorTheme":"dark","isTransparent":true,"displayMode":"regular","width":"100%","height":420,"locale":"en"}
-      </script>
-    </div>
+  <div class="label">Latest Market Headlines <span style="color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0">(refreshed each update — June 8, ~2 PM ET)</span></div>
+  <div class="panel">
+    <ul class="news">
+      <li>
+        <span class="news-meta">Jun 8 · Yahoo Finance</span>
+        <a href="https://finance.yahoo.com/markets/live/stock-market-today-monday-june-8-dow-sp-500-nasdaq-jump-085310403.html">Dow, S&amp;P 500 and Nasdaq jump as chip stocks rebound while Iran and Israel exchange strikes</a>
+      </li>
+      <li>
+        <span class="news-meta">Jun 8 · 24/7 Wall St.</span>
+        <a href="https://247wallst.com/investing/2026/06/08/stock-market-live-june-8-2026-sp-500-spy-rebounds-with-chip-stocks/">S&amp;P 500 +1.0%, Nasdaq +1.7% and Russell 2000 +1.7% as semiconductors lead a broad bounce</a>
+      </li>
+      <li>
+        <span class="news-meta">Jun 8 · TheStreet</span>
+        <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-08-2026">Nasdaq and Russell 2000 rebound from steep Friday declines despite Middle East unrest</a>
+      </li>
+      <li>
+        <span class="news-meta">Jun 8 · CNBC</span>
+        <a href="https://www.cnbc.com/2026/06/08/stocks-making-the-biggest-moves-premarket-nvidia-marvell-flex-and-more.html">Marvell jumps ~9% to ~$287 on S&amp;P 500 addition; Intel ~+10% on Alphabet TPU report; Corning ~+9% on Amazon fiber deal</a>
+      </li>
+      <li>
+        <span class="news-meta">Jun 8 · Trading Economics</span>
+        <a href="https://tradingeconomics.com/commodity/crude-oil">WTI crude jumps more than 4% above $94 a barrel on Iran–Israel strikes</a>
+      </li>
+      <li>
+        <span class="news-meta">Jun 7 · CNBC</span>
+        <a href="https://www.cnbc.com/2026/06/07/stock-market-today-live-updates.html">S&amp;P 500 and Nasdaq gain as chipmakers rebound from rout; Iran halts Israel attacks</a>
+      </li>
+      <li>
+        <span class="news-meta">Jun 5 · TheStreet</span>
+        <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-05-2026">Nasdaq plunges 4.18% — worst day since April 2025 — as hot May payrolls fuel Fed-hike bets</a>
+      </li>
+    </ul>
   </div>
+  <div class="note">Headlines are curated and dated at each refresh from this run's market research; click through for the full source story.</div>
 
-  <div class="label">Weekly Scorecard <span style="color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0">(latest official close — Friday, June 5)</span></div>
+  <div class="label">Weekly Scorecard <span style="color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0">(latest close — Friday, June 5)</span></div>
   <div class="panel">
     <table>
       <tr><th>Index</th><th>Close</th><th>Day change</th></tr>
@@ -159,19 +190,19 @@ ul.radar li::before{content:"▸";color:var(--gold);margin-right:10px}
   <div class="panel">
     <table>
       <tr><th>Instrument</th><th>Level</th><th>Note</th></tr>
-      <tr><td>10-Year Treasury</td><td class="num">~4.57%</td><td>Two-week high on strong jobs data &amp; firmer oil</td></tr>
-      <tr><td>30-Year Treasury</td><td class="num">~5%</td><td>Near the 5% area in recent sessions amid inflation concerns</td></tr>
-      <tr><td>Fed Funds Rate</td><td class="num">3.50–3.75%</td><td>FOMC meets June 16–17 under Chair Warsh; futures price a hold</td></tr>
+      <tr><td>10-Year Treasury</td><td class="num">~4.57%</td><td>Two-week high on strong jobs data &amp; oil</td></tr>
+      <tr><td>30-Year Treasury</td><td class="num">~5.0%</td><td>Around 5% amid inflation concerns</td></tr>
+      <tr><td>Fed Funds Rate</td><td class="num">3.50–3.75%</td><td>FOMC meets June 16–17; futures price a hold</td></tr>
       <tr><td>WTI Crude</td><td class="num">~$94</td><td class="up">▲ ~4% (above $94/bbl) on Iran–Israel strikes</td></tr>
     </table>
   </div>
 
   <div class="label">On the Radar</div>
   <ul class="radar">
-    <li>FOMC meeting June 16–17 (under new Chair Kevin Warsh): futures still price a hold at 3.50–3.75%, but odds of a hike later this year jumped to near 70% after the hot May payrolls print (+172k vs ~80k expected).</li>
-    <li>S&amp;P 500 index reshuffle: Marvell and Flex both join the benchmark effective June 22, a magnet for index-fund flows.</li>
-    <li>Middle East: oil and Treasury yields remain sensitive to Iran–Israel developments and the durability of a proposed 60-day ceasefire; the Strait of Hormuz remains a swing factor.</li>
-    <li>Citigroup lifted its year-end S&amp;P 500 target to 8,100 on AI-driven earnings — a gauge for how much of the rebound has staying power.</li>
+    <li>Apple WWDC keynote today — its AI roadmap could move the stock through the session.</li>
+    <li>FOMC meeting June 16–17: futures still price a hold at 3.50–3.75%, but hike odds for later this year rose after the hot May payrolls print (+172k vs ~80k expected).</li>
+    <li>S&amp;P 500 index reshuffle: Marvell joins the benchmark effective June 22.</li>
+    <li>Middle East: oil and Treasury yields remain sensitive to Iran–Israel developments and the durability of a proposed 60-day ceasefire.</li>
     <li>Watch whether the chip-led bounce holds into the close given elevated oil and a two-week-high 10-year yield.</li>
   </ul>
 
@@ -179,12 +210,12 @@ ul.radar li::before{content:"▸";color:var(--gold);margin-right:10px}
     <strong>Sources:</strong><br>
     <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-08-2026">TheStreet — Stock Market Today (June 8, 2026): Nasdaq, Russell 2000 rebound despite Mideast unrest</a><br>
     <a href="https://finance.yahoo.com/markets/live/stock-market-today-monday-june-8-dow-sp-500-nasdaq-jump-085310403.html">Yahoo Finance — Dow, S&amp;P 500, Nasdaq jump as chip stocks rebound (June 8 live)</a><br>
-    <a href="https://247wallst.com/investing/2026/06/08/stock-market-live-june-8-2026-sp-500-spy-rebounds-with-chip-stocks/">24/7 Wall St. — Stock Market Live (June 8): S&amp;P 500 rebounds with chip stocks</a><br>
-    <a href="https://www.tradingkey.com/analysis/stocks/us-stocks/261952866-us-stock-market-pre-market-chip-stocks-rebound-nasdaq-futures-marvell-surge-sp-500-tradingkey">TradingKey — Chip stocks rebound; Marvell surges ~9% on S&amp;P 500 addition</a><br>
+    <a href="https://www.cnbc.com/2026/06/07/stock-market-today-live-updates.html">CNBC — S&amp;P 500 &amp; Nasdaq gain as chipmakers rebound; Iran halts Israel attacks</a><br>
+    <a href="https://247wallst.com/investing/2026/06/08/stock-market-live-june-8-2026-sp-500-spy-rebounds-with-chip-stocks/">24/7 Wall St. — Stock Market Live (June 8): S&amp;P 500 +1.0%, Nasdaq +1.7%, Russell 2000 +1.7%</a><br>
     <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-05-2026">TheStreet — June 5 close (Nasdaq −4.18%, worst day since April 2025)</a><br>
     <a href="https://tradingeconomics.com/commodity/crude-oil">Trading Economics — WTI crude +4% above $94 on Iran–Israel strikes (June 8)</a><br>
     <a href="https://tradingeconomics.com/united-states/government-bond-yield">Trading Economics — US 10-Year Treasury yield (~4.57%, two-week high)</a><br>
-    <a href="https://tradingeconomics.com/united-states/stock-market">Trading Economics — US equities &amp; sector breadth (June 8)</a>
+    <a href="https://www.cnbc.com/2026/06/04/stock-market-today-live-updates.html">CNBC — Nasdaq worst day since April 2025</a>
     <div class="disc">For information only. Not investment advice. Intraday and premarket figures are as-of the times noted and may change.</div>
   </div>
 </div>
