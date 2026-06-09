@@ -102,3 +102,20 @@ fought again since), update the entry in the same commit.
 - June 20 card is **UFC Fight Night: Kape vs. Horiguchi** (flyweight rematch, Meta APEX, Las Vegas).
   June 27 is **Fiziev vs. Torres** (lightweight, Baku) — drop the unverified "Baku deal through 2028"
   and "Shara Magomedov vs Michel Pereira co-feature" claims used in an earlier edition (unconfirmed).
+
+## Added 2026-06-09 (Afternoon ~3pm ET) — intraday RECOVERY
+- June 9 staged an afternoon BOUNCE off a brutal open. Dip buyers stepped in: by ~3 PM ET
+  the Nasdaq Composite had pared a loss of as much as 3.5% to ~-1.7%; the S&P 500 trimmed a
+  loss of as much as 2.7% to ~-0.8%; the Dow was nearly flat (~-0.1%). Do NOT carry the ~1pm
+  "S&P -1.5% / Nasdaq -2.5%" sell-off figures as the 3pm or closing state — the tape recovered
+  into the afternoon. Tech sector was off >5% at its worst before paring. Breadth stayed
+  positive (>1,300 NYSE advancers vs ~550 decliners); Russell 2000 held ~+0.5%.
+- 3pm movers: Apple ~-3% (new "Siri AI" at WWDC won't launch in EU over Brussels antitrust;
+  Cook's last as CEO); Qualcomm ~-4.4%, Marvell ~-4.2%, Workday ~-4%; Nvidia/Oracle/AMD -1% to
+  -3%. Gainers: homebuilders led (XHB ~+2.5%, LGI Homes +5.2%, Century Communities +4.7%),
+  J.M. Smucker up (beat but warned of FY sales decline). WTI ~$89.22 (-2.3%), Brent ~$92.55
+  (-1.8%), Gold ~$4,360. 10-yr ~4.57% (two-week high).
+- SolarWinds Serv-U CVE-2026-28318: official CVSS is 7.5 (uncontrolled resource consumption /
+  DoS), added to CISA KEV June 5 with a standard remediation deadline of June 19, 2026; fixed in
+  Serv-U 15.5.4 HF1. Baker Distributing breach (ShinyHunters, 260k+ Salesforce records) disclosed
+  June 8.

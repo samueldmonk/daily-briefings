@@ -80,28 +80,28 @@ ul.kev li::before{content:"⛨";color:var(--teal);margin-right:10px}
   <div class="lead">
     <h2>Check Point VPN zero-day (CVE-2026-50751) exploited to deploy ransomware — CISA orders federal agencies to patch in just three days</h2>
     <p><strong>CVE-2026-50751</strong>, a critical authentication-bypass flaw in <strong>Check Point Remote Access VPN, Mobile Access / SSL VPN and Spark Firewall</strong> gateways configured to use the deprecated <strong>IKEv1</strong> key exchange, is being actively exploited in the wild. Rated <strong>CVSS 9.3</strong>, the bug lets an unauthenticated remote attacker establish a VPN connection without a valid password — no privileges, no user interaction, just network reach to an exposed gateway. Check Point shipped an emergency hotfix on <strong>Monday, June 8</strong>, flagging exploitation that began on <strong>May 7</strong> and surged over the weekend; in at least one case the access led to post-compromise activity tied to a <strong>Qilin ransomware</strong> affiliate.</p>
-    <p>CISA added the flaw to its <strong>Known Exploited Vulnerabilities</strong> catalog the same day (June 8) and — in a rare departure from the standard three-week window under BOD 22-01 — set an <strong>emergency three-day remediation deadline of June 11, 2026</strong> for federal civilian agencies, reflecting the active ransomware exploitation. Organizations running affected, IKEv1-configured Check Point gateways should treat the hotfix as urgent. The disclosure caps a busy exploitation cycle that also saw a perfect-score Joomla extension flaw and a critical Microsoft Exchange spoofing bug surface in early June.</p>
+    <p>CISA added the flaw to its <strong>Known Exploited Vulnerabilities</strong> catalog the same day (June 8) and — in a rare departure from the standard three-week window under BOD 22-01 — set an <strong>emergency three-day remediation deadline of June 11, 2026</strong> for federal civilian agencies, reflecting the active ransomware exploitation. Organizations running affected, IKEv1-configured Check Point gateways should treat the hotfix as urgent. The disclosure caps a busy exploitation cycle: in the prior days CISA also flagged an actively exploited SolarWinds Serv-U denial-of-service flaw (CVE-2026-28318) and a BerriAI LiteLLM command-injection bug (CVE-2026-42271).</p>
   </div>
 
   <div class="label">Breaches &amp; Incidents</div>
   <div class="cards">
-    <div class="card"><span class="tag breach">Breach</span><h3>Instagram — 20,225 accounts hijacked</h3><p>Meta disclosed that attackers abused its AI-powered support system to trigger password resets, hijacking 20,225 Instagram accounts before the abuse was caught.</p></div>
-    <div class="card"><span class="tag breach">Breach</span><h3>University of Oxford — CareerConnect</h3><p>Oxford disclosed a breach after third-party provider Group GTI reported its CareerConnect careers-services platform had been compromised, exposing student and staff data.</p></div>
-    <div class="card"><span class="tag breach">Gov't breach</span><h3>Tchap — French government messenger</h3><p>Attackers used a hijacked user account to breach Tchap, the French government's encrypted messaging platform.</p></div>
-    <div class="card"><span class="tag ransom">Ransomware</span><h3>Silent Ransom Group — fake IT support</h3><p>Per a June 8 breach report, the crew is using fake IT-support calls and remote-support sessions to reach legal, financial and professional-services data fast.</p></div>
-    <div class="card"><span class="tag ransom">Ransomware</span><h3>"The Gentlemen" — self-propagating</h3><p>The Gentlemen ransomware disables defenses, kills backup and business processes, traverses network shares and preserves just enough function to make extortion work.</p></div>
-    <div class="card"><span class="tag ransom">Leak sites</span><h3>Fresh claims posted June 9</h3><p>New victims surfaced on extortion leak sites, including 3i Infotech (Morpheus), Aegle Aviation (RansomHouse), Asia Strategic Holdings (NightSpire) and Central Arkansas Pediatrics (TheGentlemen).</p></div>
+    <div class="card"><span class="tag exploit">Zero-day</span><h3>Check Point VPN — Qilin ransomware</h3><p>Exploitation of CVE-2026-50751 has been limited to a few dozen targeted organizations globally; in at least one case the post-compromise activity was tied to a Qilin ransomware affiliate. Earliest observed exploitation dates to May 7.</p></div>
+    <div class="card"><span class="tag breach">Breach</span><h3>Baker Distributing — ShinyHunters</h3><p>Disclosed June 8: ShinyHunters compromised over 260,000 Salesforce records plus corporate data across various SharePoint sites at the HVAC/refrigeration distributor.</p></div>
+    <div class="card"><span class="tag breach">Breach</span><h3>Instructure / Canvas — 275M records</h3><p>ShinyHunters claims roughly 275M records (names, emails, student IDs, messages) and 3.65TB across ~8,800 schools tied to the Canvas LMS; Instructure reached a ransom agreement on May 11 after a second intrusion.</p></div>
+    <div class="card"><span class="tag ransom">Ransomware</span><h3>"The Gentlemen" — busy leak site</h3><p>Among June 9 victims posted by the crew: Central Arkansas Pediatrics, Danzo Group, Integrated Distribution, IP Rings (India) and creative studio Empty (Spain).</p></div>
+    <div class="card"><span class="tag ransom">Leak sites</span><h3>Fresh claims posted June 9</h3><p>New victims surfaced across extortion sites: 3i Infotech (Morpheus), Aegle Aviation (RansomHouse), Asia Strategic Holdings and Goldlion (NightSpire), and HRC Sicherheitsdienste (Akira).</p></div>
+    <div class="card"><span class="tag exploit">Exploited CVE</span><h3>SolarWinds Serv-U — DoS</h3><p>CVE-2026-28318 (CVSS 7.5) lets an unauthenticated attacker crash the Serv-U file-transfer service via a crafted HTTP request; CISA added it to KEV (June 5) with 12,000+ servers exposed online per Shodan.</p></div>
   </div>
 
   <div class="label">Vulnerability Watch</div>
   <div class="panel">
     <table>
       <tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr>
-      <tr><td class="cve">CVE-2026-48907</td><td class="cvss c-crit">10.0</td><td>JCE editor extension for Joomla</td><td>Unauthenticated profile creation leading to PHP code upload &amp; execution; published June 5 — no official patch available yet, mitigate/restrict access</td></tr>
-      <tr><td class="cve">CVE-2026-50751</td><td class="cvss c-crit">9.3</td><td>Check Point Remote Access VPN / Mobile Access / Spark Firewall (IKEv1)</td><td>Authentication bypass; exploited in the wild (Qilin ransomware) — hotfix shipped June 8, added to CISA KEV with a 3-day federal deadline</td></tr>
-      <tr><td class="cve">CVE-2026-42897</td><td class="cvss c-crit">8.1</td><td>Microsoft Exchange Server (Outlook Web Access)</td><td>Spoofing / cross-site scripting in OWA rated Critical; Microsoft reported exploitation — apply Exchange updates</td></tr>
-      <tr><td class="cve">CVE-2026-20245</td><td class="cvss c-high">7.8</td><td>Cisco Catalyst SD-WAN Manager</td><td>High-severity flaw under active exploitation per Cisco's advisory — patch managed SD-WAN deployments</td></tr>
+      <tr><td class="cve">CVE-2026-50751</td><td class="cvss c-crit">9.3</td><td>Check Point Remote Access VPN / Mobile Access / Spark Firewall (IKEv1)</td><td>Authentication bypass; exploited in the wild (Qilin ransomware) — hotfix shipped June 8 (sk185033), added to CISA KEV with a 3-day federal deadline</td></tr>
+      <tr><td class="cve">CVE-2026-3055</td><td class="cvss c-crit">9.3</td><td>Citrix NetScaler ADC / Gateway (SAML IdP config)</td><td>Authentication bypass; only SAML IdP configurations are exploitable per Citrix — fixed in builds 14.1-66.59 / 13.1-62.23 / 13.1-37.262</td></tr>
+      <tr><td class="cve">CVE-2026-28318</td><td class="cvss c-high">7.5</td><td>SolarWinds Serv-U file transfer</td><td>Unauthenticated DoS via a crafted Content-Encoding: deflate POST request; exploited in the wild — fixed in Serv-U 15.5.4 HF1; CISA KEV deadline June 19</td></tr>
       <tr><td class="cve">CVE-2026-42271</td><td class="cvss c-high">—</td><td>BerriAI LiteLLM</td><td>Command-injection vulnerability; added to CISA KEV June 8 on evidence of exploitation — update affected LiteLLM deployments</td></tr>
+      <tr><td class="cve">CVE-2026-45247</td><td class="cvss c-high">—</td><td>Mirasvit Full Page Cache Warmer (Magento)</td><td>Deserialization of untrusted data; added to CISA KEV June 3 on evidence of active exploitation</td></tr>
     </table>
   </div>
 
@@ -110,8 +110,8 @@ ul.kev li::before{content:"⛨";color:var(--teal);margin-right:10px}
     <li><strong>June 8 (emergency):</strong> CVE-2026-50751 (Check Point Security Gateway improper authentication) added to the KEV catalog. CISA shortened the usual window to a <strong>three-day deadline of June 11, 2026</strong> given active ransomware exploitation — patch IKEv1-configured gateways immediately.</li>
     <li><strong>June 8:</strong> CVE-2026-42271 (BerriAI LiteLLM command injection) added to the KEV catalog on evidence of active exploitation. Under BOD 22-01's standard three-week window, the federal remediation deadline lands around <strong>June 29, 2026</strong>.</li>
     <li><strong>June 3:</strong> CVE-2026-45247 (Mirasvit Full Page Cache Warmer, deserialization of untrusted data) added to the catalog. The three-week window puts the federal deadline around <strong>June 24, 2026</strong>.</li>
-    <li><strong>Patch available, no KEV yet:</strong> the perfect-score Joomla JCE editor flaw (CVE-2026-48907, CVSS 10.0) had no official fix as of publication — restrict access to affected editor profiles and watch for a vendor patch.</li>
     <li>BOD 22-01 gives federal civilian agencies a <strong>standard three-week window</strong> from a CVE's KEV addition date to remediate or stop using the affected product; CISA can shorten that window for emergencies, as it did for the Check Point flaw.</li>
+    <li><strong>June 5:</strong> CVE-2026-28318 (SolarWinds Serv-U uncontrolled resource consumption / DoS, CVSS 7.5) added to the KEV catalog with a federal remediation deadline of <strong>June 19, 2026</strong>; fixed in Serv-U 15.5.4 HF1, with Shodan showing 12,000+ exposed servers.</li>
   </ul>
 
   <div class="foot">
@@ -121,9 +121,10 @@ ul.kev li::before{content:"⛨";color:var(--teal);margin-right:10px}
     <a href="https://blog.checkpoint.com/security/check-point-releases-important-hotfix-for-vulnerabilities-in-deprecated-ikev1-vpn-protocol/">Check Point — Hotfix for IKEv1 VPN vulnerability (CVE-2026-50751)</a><br>
     <a href="https://www.cisa.gov/news-events/alerts/2026/06/08/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA — Adds two KEV (June 8: CVE-2026-42271, CVE-2026-50751)</a><br>
     <a href="https://www.cisa.gov/news-events/alerts/2026/06/03/cisa-adds-one-known-exploited-vulnerability-catalog">CISA — Adds one KEV (June 3: CVE-2026-45247)</a><br>
-    <a href="https://atlas-cybersecurity.com/critical-cve-2026-48907-cvss-10-0-june-5-2026/">Atlas Cybersecurity — Critical Joomla JCE flaw CVE-2026-48907 (CVSS 10.0)</a><br>
-    <a href="https://thehackernews.com/">The Hacker News — Instagram account-hijacking, Oxford CareerConnect, Tchap breach</a><br>
-    <a href="https://www.cisoplatform.com/profiles/blogs/ciso-platform-breach-report-08-june-2026-silent-ransom-group-fake">CISO Platform — Breach report, June 8, 2026 (Silent Ransom Group, The Gentlemen)</a>
+    <a href="https://thehackernews.com/2026/06/cisa-adds-actively-exploited-solarwinds.html">The Hacker News — CISA adds actively exploited SolarWinds Serv-U DoS flaw (CVE-2026-28318, CVSS 7.5)</a><br>
+    <a href="https://www.helpnetsecurity.com/2026/06/08/cisa-patch-actively-exploited-solarwinds-serv-u-dos-vulnerability-cve-2026-28318/">Help Net Security — Patch actively exploited SolarWinds Serv-U DoS (deadline June 19)</a><br>
+    <a href="https://www.malwarebytes.com/blog/news/2026/05/millions-of-students-personal-data-stolen-in-major-education-cyberattack">Malwarebytes — Instructure/Canvas breach, ~275M records claimed by ShinyHunters</a><br>
+    <a href="https://www.breachsense.com/breaches/">Breachsense — Recent data breaches (Baker Distributing, June 9 leak-site victims)</a>
     <div class="disc">For awareness only. Verify CVSS scores and fixed versions against the vendor's official advisory before acting. Deadlines apply to U.S. federal civilian agencies under BOD 22-01.</div>
   </div>
 </div>
