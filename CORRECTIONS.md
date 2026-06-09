@@ -119,3 +119,16 @@ fought again since), update the entry in the same commit.
   DoS), added to CISA KEV June 5 with a standard remediation deadline of June 19, 2026; fixed in
   Serv-U 15.5.4 HF1. Baker Distributing breach (ShinyHunters, 260k+ Salesforce records) disclosed
   June 8.
+
+## Added 2026-06-09 (Close — verified)
+- **Tue June 9, 2026 (FINAL close — verified):** S&P 500 7,386.46 (-19.27, -0.26%),
+  Nasdaq Composite 25,678.82 (-0.97%), Dow Jones 50,871.13 (+85.12, +0.17% — UP) per
+  TheStreet/Yahoo/CNN/Motley Fool. Stocks closed MIXED after paring an intraday plunge of
+  as much as 3.5% (Nasdaq) / 2.7% (S&P); Dow finished higher. Trigger for the morning rout:
+  Trump said the US "must respond" to Iran's retaliation; chip rotation resumed. iShares
+  Semiconductor ETF (SOXX) shed >3% after Monday's ~6% bounce. Russell 2000 held ~+0.5%;
+  breadth positive (>1,300 NYSE advancers vs ~550 decliners). Movers at/into close: Apple
+  ~-3% (Siri AI won't launch in EU); Micron/Nvidia/Broadcom reversed lower; Qualcomm/Marvell
+  ~-4%, Workday ~-4%; homebuilders led (XHB +2.5%, LGI Homes +5.2%, Century Communities +4.7%);
+  J.M. Smucker up. WTI fell below $90 (~$89.22, -2.3%); 10-yr ~4.57%. May CPI due Wed June 10
+  8:30am ET. Do NOT regress to the intraday "Nasdaq -1.7% / S&P -0.8% / Dow -0.1%" ~3pm figures.
