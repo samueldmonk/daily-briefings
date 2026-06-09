@@ -63,3 +63,17 @@ fought again since), update the entry in the same commit.
   +7%, J.M. Smucker +5.8% (beat but warned of FY sales decline), Nvidia +2.3% (SK Hynix memory deal);
   Qualcomm -4.4%, Marvell -4.2%, Workday -4%. May CPI due Wed June 10 8:30am ET (FactSet ~+4.2% y/y
   headline, +0.5% m/m; core ~2.9%). FOMC June 16-17 under Chair Kevin Warsh.
+
+## Added 2026-06-09 (Midday ~12pm ET) — intraday REVERSAL
+- June 9 was CHOPPY: stocks OPENED higher (chip-led, ~+0.3–0.7% across the indices ~9:30am)
+  but FADED and turned LOWER by midday as the rotation out of heavyweight tech resumed.
+  As of ~12 p.m. ET: S&P 500 ~-1%, Nasdaq Composite ~-2%, Dow ~-0.5% (more defensive). Do NOT
+  present the morning ~+0.6% gains as the current/closing state for June 9 once past midday.
+- Movers midday June 9: Apple ~-3% (revamped "Siri AI" at WWDC, Cook's last as CEO; new Siri
+  reportedly won't launch in EU over Brussels antitrust); Nvidia/Oracle/AMD each -1% to -3%
+  (AI-valuation skepticism); Qualcomm ~-1.8%. Gainers: Applied Digital ~+9–12% ($1.59B notes +
+  $5.2B hyperscaler lease); Blackstone & KKR ~+2% (defensive rotation); J.M. Smucker ~+4% (in-line
+  revenue, slight EPS beat). Oil DOWN: WTI ~$88 (-2.6%), Brent ~$92 (-2%) on Israel-Iran pause.
+  2-year Treasury ~4.15% (1-yr high, pricing a hike as soon as Oct); 10-year easing toward ~4.5%.
+- IPO calendar: SpaceX prices ~June 11, debuts ~June 12 (~$75B, ~$1.8T valuation); OpenAI filed
+  confidential IPO paperwork (after Anthropic).
