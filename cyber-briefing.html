@@ -78,48 +78,50 @@ ul.kev li::before{content:"⛨";color:var(--teal);margin-right:10px}
 
   <div class="label">Top Story</div>
   <div class="lead">
-    <h2>ShinyHunters claims a ~275 million-record haul from the education sector via Canvas instances</h2>
-    <p>The extortion crew <strong>ShinyHunters</strong> says it stole roughly <strong>275 million records</strong> tied to students, teachers and staff in what looks like one of 2026's largest education-sector breaches. The group claims the Canvas learning-management instances run by <strong>Instructure</strong> were impacted; Instructure has confirmed it is investigating a cyber incident affecting its cloud-hosted environment.</p>
-    <p>The disclosure lands amid a busy exploitation cycle. A <strong>Cisco Catalyst SD-WAN Manager</strong> zero-day (<strong>CVE-2026-20245</strong>, CVSS 7.8) is under active attack with <em>no patch yet available</em>; CISA added an actively exploited <strong>SolarWinds Serv-U</strong> denial-of-service bug (<strong>CVE-2026-28318</strong>) to its Known Exploited Vulnerabilities catalog on June 5; insurer <strong>Aflac</strong> disclosed a June intrusion exposing data on roughly 22.7 million people; and the FBI is flagging a wave of World Cup 2026-themed fraud aimed at fans ahead of the June 11 kickoff.</p>
+    <h2>Check Point patches an actively exploited VPN zero-day (CVE-2026-50751) tied to a Qilin ransomware affiliate</h2>
+    <p>On <strong>June 8</strong>, Check Point published an emergency advisory and hotfixes for <strong>CVE-2026-50751</strong>, a critical authentication-bypass flaw (<strong>CVSS 9.3</strong>) in its <strong>Remote Access VPN, Mobile Access and Spark Firewall</strong> products. The bug lives in how gateways validate certificates during the deprecated <strong>IKEv1</strong> key exchange; an unauthenticated attacker can stand up a VPN session without valid credentials. Check Point says it is being exploited in the wild with activity dating back to <strong>May 7</strong> and rising in early June — a campaign it characterizes as limited in scope, hitting several dozen organizations, with at least one incident linked (medium confidence) to a <strong>Qilin</strong> ransomware affiliate.</p>
+    <p>The disclosure caps a heavy exploitation cycle. A critical <strong>Everest Forms Pro</strong> WordPress flaw (<strong>CVE-2026-3300</strong>, CVSS 9.8) is under active attack for unauthenticated remote code execution and full site takeover; a <strong>Microsoft Exchange Server</strong> spoofing bug (<strong>CVE-2026-42897</strong>, CVSS 8.1) has no patch yet and relies on the Exchange Emergency Mitigation Service; the <strong>Cisco Catalyst SD-WAN Manager</strong> zero-day (<strong>CVE-2026-20245</strong>) remains exploited with mitigations only; and insurer <strong>Aflac</strong> is still working through a June intrusion exposing data on roughly 22.7 million people.</p>
   </div>
 
   <div class="label">Breaches &amp; Incidents</div>
   <div class="cards">
-    <div class="card"><span class="tag breach">Breach</span><h3>ShinyHunters — education mega-leak</h3><p>~275M records tied to students, teachers and staff allegedly taken from Instructure's Canvas LMS cloud environment; Instructure has confirmed it is investigating the incident.</p></div>
+    <div class="card"><span class="tag ransom">Zero-Day</span><h3>Check Point VPN — exploited since May</h3><p>CVE-2026-50751 lets attackers bypass auth on IKEv1 Remote Access / Mobile Access / Spark Firewall gateways. Several dozen orgs hit; one case tied to a Qilin ransomware affiliate. Hotfixes out — apply on an emergency basis.</p></div>
     <div class="card"><span class="tag breach">Breach</span><h3>Aflac — ~22.7M affected</h3><p>The U.S. insurer says data on nearly 22.7 million customers, beneficiaries, employees and agents was stolen following a June cyberattack on its network.</p></div>
-    <div class="card"><span class="tag breach">Fraud Alert</span><h3>World Cup 2026 scam surge</h3><p>FBI and researchers warn of thousands of lookalike FIFA domains, banking malware hidden in pirate streaming apps, and phishing pages built to hijack fan accounts — days before the June 11 kickoff.</p></div>
-    <div class="card"><span class="tag ransom">Ransomware</span><h3>June 5 breach wave</h3><p>Fresh listings hit private aviation (Avcon Jet, Austria), manufacturing (Corley Manufacturing) and legal (Dallis Law Firm) among others — claimed actors include Qilin, Play and Genesis.</p></div>
+    <div class="card"><span class="tag breach">Breach</span><h3>ShinyHunters — education mega-leak</h3><p>The extortion crew claims ~275M records tied to students, teachers and staff taken from Instructure's Canvas LMS cloud environment; Instructure has said it is investigating the incident.</p></div>
+    <div class="card"><span class="tag ransom">Ransomware</span><h3>Akira hits Swiss imaging network</h3><p>Akira claimed an attack on Switzerland's Réseau Radiologique Romand, alleging theft of 48 GB of data and disrupting IT across its network of 20 medical-imaging centers.</p></div>
   </div>
 
   <div class="label">Vulnerability Watch</div>
   <div class="panel">
     <table>
       <tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr>
-      <tr><td class="cve">CVE-2026-20245</td><td class="cvss c-high">7.8</td><td>Cisco Catalyst SD-WAN Manager</td><td>Authenticated netadmin can run commands as root via crafted file upload; actively exploited, NO patch yet — restrict access</td></tr>
-      <tr><td class="cve">CVE-2026-28318</td><td class="cvss c-high">7.5</td><td>SolarWinds Serv-U file server</td><td>Uncontrolled resource consumption / DoS via crafted HTTP POST; CISA KEV (Jun 5); fixed in 15.5.4 Hotfix 1</td></tr>
-      <tr><td class="cve">CVE-2026-45247</td><td class="cvss c-high">—</td><td>Mirasvit Full Page Cache Warmer</td><td>Deserialization of untrusted data; added to CISA KEV June 3 on evidence of active exploitation</td></tr>
+      <tr><td class="cve">CVE-2026-50751</td><td class="cvss c-crit">9.3</td><td>Check Point Remote Access VPN / Mobile Access / Spark Firewall</td><td>IKEv1 auth bypass; exploited in the wild since May 7; hotfixes released — or restrict to IKEv2 &amp; require machine certs</td></tr>
+      <tr><td class="cve">CVE-2026-3300</td><td class="cvss c-crit">9.8</td><td>Everest Forms Pro (WordPress) ≤ 1.9.12</td><td>Unauthenticated RCE via PHP eval() injection; actively exploited for full site takeover</td></tr>
+      <tr><td class="cve">CVE-2026-42897</td><td class="cvss c-high">8.1</td><td>Microsoft Exchange Server (OWA)</td><td>Spoofing / XSS in Outlook Web Access; NO patch yet — Exchange Emergency Mitigation Service provides auto-mitigation</td></tr>
+      <tr><td class="cve">CVE-2026-20245</td><td class="cvss c-high">7.8</td><td>Cisco Catalyst SD-WAN Manager</td><td>Authenticated netadmin can run commands as root; actively exploited, mitigate by restricting admin access</td></tr>
       <tr><td class="cve">CVE-2026-3055</td><td class="cvss c-crit">9.3</td><td>Citrix NetScaler ADC &amp; Gateway</td><td>Per Citrix advisory; only SAML IdP configs exploitable; fixed 14.1-66.59 / 13.1-62.23 / 13.1-37.262</td></tr>
     </table>
   </div>
 
   <div class="label">CISA KEV &amp; Federal Deadlines</div>
   <ul class="kev">
-    <li><strong>June 5:</strong> CVE-2026-28318 (SolarWinds Serv-U, uncontrolled resource consumption / DoS) added to the KEV catalog after confirmed active exploitation. CISA set the federal remediation deadline at <strong>June 19, 2026</strong>; apply Serv-U 15.5.4 Hotfix 1.</li>
-    <li><strong>June 3:</strong> CVE-2026-45247 (Mirasvit Full Page Cache Warmer, deserialization of untrusted data) added — the standard BOD 22-01 three-week window puts the federal deadline around <strong>June 24</strong>.</li>
-    <li><strong>Active, no patch:</strong> CVE-2026-20245 (Cisco Catalyst SD-WAN Manager) is being exploited in the wild with no fix available — mitigate by tightly restricting netadmin access and watching for unauthorized configuration pushes.</li>
-    <li><strong>Recently added:</strong> CVE-2025-48595 (Android Framework integer overflow) enables code execution and local privilege escalation; apply current Android security updates.</li>
+    <li><strong>June 3:</strong> CVE-2026-45247 (Mirasvit Full Page Cache Warmer, deserialization of untrusted data) added to the KEV catalog on evidence of active exploitation. Under BOD 22-01's standard three-week window, the federal remediation deadline lands around <strong>June 24, 2026</strong>.</li>
+    <li><strong>June 2:</strong> CISA added CVE-2025-48595 (Android Framework integer overflow, enables code execution &amp; local privilege escalation) and CVE-2022-0492 (Linux Kernel improper authentication). The three-week window puts the federal deadline around <strong>June 23, 2026</strong>; apply current platform updates.</li>
+    <li><strong>Active, hotfix available:</strong> CVE-2026-50751 (Check Point VPN) is being exploited in the wild — patch immediately, audit logs back to May 7, and look for the IOCs in Check Point's advisory even after applying the fix.</li>
+    <li><strong>Active, no patch:</strong> CVE-2026-42897 (Microsoft Exchange OWA spoofing) and CVE-2026-20245 (Cisco Catalyst SD-WAN Manager) are being exploited with no full fix — rely on vendor mitigations and tighten access.</li>
     <li>BOD 22-01 gives federal civilian agencies a standard three-week window from a CVE's KEV addition date to remediate or stop using the affected product.</li>
   </ul>
 
   <div class="foot">
     <strong>Sources:</strong><br>
-    <a href="https://www.malwarebytes.com/blog/news/2026/05/millions-of-students-personal-data-stolen-in-major-education-cyberattack">Malwarebytes — Millions of students' data stolen (Instructure / Canvas)</a><br>
-    <a href="https://techcrunch.com/2026/06/07/the-worst-hacks-and-breaches-of-2026-so-far/">TechCrunch — The worst hacks and breaches of 2026 so far (Aflac, ShinyHunters)</a><br>
-    <a href="https://thehackernews.com/2026/06/cisco-catalyst-sd-wan-manager-cve-2026.html">The Hacker News — Cisco Catalyst SD-WAN Manager CVE-2026-20245 actively exploited, no patch</a><br>
-    <a href="https://www.helpnetsecurity.com/2026/06/05/cisco-sd-wan-cve-2026-20245-0-day-exploited/">Help Net Security — Cisco SD-WAN 0-day exploited (CVE-2026-20245)</a><br>
-    <a href="https://securityaffairs.com/193245/security/u-s-cisa-adds-solarwinds-serv-u-flaw-to-its-known-exploited-vulnerabilities-catalog.html">Security Affairs — CISA adds SolarWinds Serv-U flaw to KEV (CVE-2026-28318)</a><br>
+    <a href="https://www.rapid7.com/blog/post/etr-critical-check-point-vpn-zero-day-exploited-in-the-wild-cve-2026-50751/">Rapid7 — Critical Check Point VPN zero-day exploited in the wild (CVE-2026-50751)</a><br>
+    <a href="https://blog.checkpoint.com/security/check-point-releases-important-hotfix-for-vulnerabilities-in-deprecated-ikev1-vpn-protocol/">Check Point — Hotfix for vulnerabilities in the deprecated IKEv1 VPN protocol</a><br>
+    <a href="https://threat-modeling.com/vulnerability-intelligence-report-june-7-2026/">Threat-Modeling.com — Vulnerability Intelligence Report (June 7, 2026): Exchange CVE-2026-42897, Everest Forms CVE-2026-3300</a><br>
+    <a href="https://thehackernews.com/2026/06/cisco-catalyst-sd-wan-manager-cve-2026.html">The Hacker News — Cisco Catalyst SD-WAN Manager CVE-2026-20245 actively exploited</a><br>
     <a href="https://www.cisa.gov/news-events/alerts/2026/06/03/cisa-adds-one-known-exploited-vulnerability-catalog">CISA — Adds one KEV (June 3, CVE-2026-45247)</a><br>
-    <a href="https://www.breachsense.com/breaches/">Breachsense — Recent data breaches (June 5 listings)</a>
+    <a href="https://www.cisa.gov/news-events/alerts/2026/06/02/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA — Adds two KEV (June 2, CVE-2025-48595, CVE-2022-0492)</a><br>
+    <a href="https://techcrunch.com/2026/06/07/the-worst-hacks-and-breaches-of-2026-so-far/">TechCrunch — The worst hacks and breaches of 2026 so far (Aflac, ShinyHunters)</a><br>
+    <a href="https://www.breachsense.com/breaches/">Breachsense — Recent data breaches (Akira / Réseau Radiologique Romand)</a>
     <div class="disc">For awareness only. Verify CVSS scores and fixed versions against the vendor's official advisory before acting. Deadlines apply to U.S. federal civilian agencies under BOD 22-01.</div>
   </div>
 </div>
