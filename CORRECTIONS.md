@@ -77,3 +77,28 @@ fought again since), update the entry in the same commit.
   2-year Treasury ~4.15% (1-yr high, pricing a hike as soon as Oct); 10-year easing toward ~4.5%.
 - IPO calendar: SpaceX prices ~June 11, debuts ~June 12 (~$75B, ~$1.8T valuation); OpenAI filed
   confidential IPO paperwork (after Anthropic).
+
+## Added 2026-06-09 (Midday ~1pm ET) — afternoon sell-off, Iran tensions
+- June 9 turned into a broad SELL-OFF by early afternoon. As of ~1 PM ET (per TheStreet/24-7
+  Wall St): S&P 500 ~-1.5%, Nasdaq Composite ~-2.5%, Dow ~-0.75% (~-380 pts, held up best).
+  Trigger: Trump said the US "must respond" to Iran's latest retaliation; chip rotation resumed.
+  Micron/Nvidia/Broadcom REVERSED earlier morning gains and turned LOWER. Russell 2000 held a
+  modest GAIN (~+0.5%) — rotation, not wholesale selling (>1,300 NYSE advancers vs ~550 decliners).
+  Homebuilders led: XHB ~+2.5%, LGI Homes +5.2%, Century Communities +4.7%. WTI ~$89.22 (-2.3%),
+  Brent ~$92.55 (-1.8%), Gold ~$4,360 (-0.07%). 10-yr ~4.57% (2-wk high). Note: the morning chip
+  gainers (Lam +7.5%, SanDisk +7%) FADED as chips reversed — do not present them as the 1pm state.
+- **Check Point CVE-2026-50751**: CVSS 9.3 auth bypass in IKEv1-configured Remote Access VPN /
+  Mobile Access / Spark Firewall. Exploited in the wild since ~May 7 (post-compromise tied to a
+  Qilin ransomware affiliate); Check Point hotfix shipped June 8. CISA added it to KEV on June 8
+  with an EXPLICIT, SHORTENED **3-DAY emergency deadline of June 11, 2026** — an exception to the
+  standard 3-week BOD 22-01 window, confirmed by BleepingComputer/Rapid7. Do NOT "correct" this to
+  ~June 29; the 3-day deadline is CISA-stated. (Other June 8 KEV add: CVE-2026-42271 BerriAI
+  LiteLLM command injection — standard window, due ~June 29.)
+- **UFC Freedom 250 full card (June 14, White House)** confirmed: Topuria def.* lightweight-title
+  DEFENSE vs Gaethje (NOT a "unification" despite some outlets' wording — keep per prior correction);
+  co-main Pereira vs Gane interim HW; O'Malley (19-3) vs Aiemann Zahabi (14-2); Bo Nickal (8-1) vs
+  Kyle Daukaus (17-4); Mauricio Ruffy (13-2) vs Michael Chandler (23-10); Diego Lopes (27-8) vs
+  Steve Garcia (19-5); Derrick Lewis (29-13) vs Josh Hokit (9-0). 8 PM ET, Paramount+ / CBS simulcast.
+- June 20 card is **UFC Fight Night: Kape vs. Horiguchi** (flyweight rematch, Meta APEX, Las Vegas).
+  June 27 is **Fiziev vs. Torres** (lightweight, Baku) — drop the unverified "Baku deal through 2028"
+  and "Shara Magomedov vs Michel Pereira co-feature" claims used in an earlier edition (unconfirmed).

@@ -78,49 +78,52 @@ ul.kev li::before{content:"⛨";color:var(--teal);margin-right:10px}
 
   <div class="label">Top Story</div>
   <div class="lead">
-    <h2>Windows Netlogon flaw (CVE-2026-41089) is being exploited in the wild — unpatched domain controllers face credential-free takeover</h2>
-    <p><strong>CVE-2026-41089</strong>, a critical stack-based buffer overflow in the Windows <strong>Netlogon</strong> RPC service rated <strong>CVSS 9.8</strong>, is now under active exploitation. Microsoft's Windows Attack Research and Protection (WARP) team found the bug and Microsoft patched it on <strong>May 12</strong> as part of May Patch Tuesday — but on <strong>June 1</strong>, Belgium's Centre for Cybersecurity (CCB) issued a public warning that it is "now actively exploited in the wild and could lead to RCE." The flaw needs <strong>no authentication and no user interaction</strong>: every supported Windows Server is affected, and exploitation requires only network reachability to a domain controller, leaving unpatched DCs exposed to full SYSTEM-level compromise.</p>
-    <p>As of the latest reporting the vulnerability is <strong>not yet listed in CISA's KEV catalog</strong>, but researchers expect a listing with a federal deadline to follow. The disclosure lands amid a busy exploitation cycle: SAP patched a critical NetWeaver ABAP kernel bug (<strong>CVE-2026-27671</strong>, CVSS 9.8) in its June Security Patch Day, Microsoft addressed a near-perfect Dynamics 365 on-prem RCE (<strong>CVE-2026-42898</strong>, CVSS 9.9), and CISA added Linux Kernel and Android Framework flaws to the KEV catalog in early June.</p>
+    <h2>Check Point VPN zero-day (CVE-2026-50751) exploited to deploy ransomware — CISA orders federal agencies to patch in just three days</h2>
+    <p><strong>CVE-2026-50751</strong>, a critical authentication-bypass flaw in <strong>Check Point Remote Access VPN, Mobile Access / SSL VPN and Spark Firewall</strong> gateways configured to use the deprecated <strong>IKEv1</strong> key exchange, is being actively exploited in the wild. Rated <strong>CVSS 9.3</strong>, the bug lets an unauthenticated remote attacker establish a VPN connection without a valid password — no privileges, no user interaction, just network reach to an exposed gateway. Check Point shipped an emergency hotfix on <strong>Monday, June 8</strong>, flagging exploitation that began on <strong>May 7</strong> and surged over the weekend; in at least one case the access led to post-compromise activity tied to a <strong>Qilin ransomware</strong> affiliate.</p>
+    <p>CISA added the flaw to its <strong>Known Exploited Vulnerabilities</strong> catalog the same day (June 8) and — in a rare departure from the standard three-week window under BOD 22-01 — set an <strong>emergency three-day remediation deadline of June 11, 2026</strong> for federal civilian agencies, reflecting the active ransomware exploitation. Organizations running affected, IKEv1-configured Check Point gateways should treat the hotfix as urgent. The disclosure caps a busy exploitation cycle that also saw a perfect-score Joomla extension flaw and a critical Microsoft Exchange spoofing bug surface in early June.</p>
   </div>
 
   <div class="label">Breaches &amp; Incidents</div>
   <div class="cards">
-    <div class="card"><span class="tag breach">Breach</span><h3>ShinyHunters — education mega-leak</h3><p>The extortion crew claims roughly 275 million records tied to students, teachers and staff taken from Instructure's Canvas learning-management environment; Instructure has said it is investigating.</p></div>
-    <div class="card"><span class="tag ransom">Ransomware</span><h3>Sedgwick — TridentLocker claim</h3><p>The TridentLocker gang claims it stole ~3.4 GB from a government-focused subsidiary of claims-administration firm Sedgwick, posting samples on its dark-web leak site.</p></div>
-    <div class="card"><span class="tag breach">Breach</span><h3>RRCA Accounts Management — ~115.8K</h3><p>The collections agency disclosed a June intrusion in which attackers accessed personal information belonging to 115,837 people.</p></div>
-    <div class="card"><span class="tag ransom">Leak sites</span><h3>Fresh claims posted June 9</h3><p>New victims surfaced on extortion leak sites: 3i Infotech (Morpheus), Aegle Aviation (RansomHouse), Asia Strategic Holdings (NightSpire) and Central Arkansas Pediatrics (TheGentlemen).</p></div>
+    <div class="card"><span class="tag breach">Breach</span><h3>Instagram — 20,225 accounts hijacked</h3><p>Meta disclosed that attackers abused its AI-powered support system to trigger password resets, hijacking 20,225 Instagram accounts before the abuse was caught.</p></div>
+    <div class="card"><span class="tag breach">Breach</span><h3>University of Oxford — CareerConnect</h3><p>Oxford disclosed a breach after third-party provider Group GTI reported its CareerConnect careers-services platform had been compromised, exposing student and staff data.</p></div>
+    <div class="card"><span class="tag breach">Gov't breach</span><h3>Tchap — French government messenger</h3><p>Attackers used a hijacked user account to breach Tchap, the French government's encrypted messaging platform.</p></div>
+    <div class="card"><span class="tag ransom">Ransomware</span><h3>Silent Ransom Group — fake IT support</h3><p>Per a June 8 breach report, the crew is using fake IT-support calls and remote-support sessions to reach legal, financial and professional-services data fast.</p></div>
+    <div class="card"><span class="tag ransom">Ransomware</span><h3>"The Gentlemen" — self-propagating</h3><p>The Gentlemen ransomware disables defenses, kills backup and business processes, traverses network shares and preserves just enough function to make extortion work.</p></div>
+    <div class="card"><span class="tag ransom">Leak sites</span><h3>Fresh claims posted June 9</h3><p>New victims surfaced on extortion leak sites, including 3i Infotech (Morpheus), Aegle Aviation (RansomHouse), Asia Strategic Holdings (NightSpire) and Central Arkansas Pediatrics (TheGentlemen).</p></div>
   </div>
 
   <div class="label">Vulnerability Watch</div>
   <div class="panel">
     <table>
       <tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr>
-      <tr><td class="cve">CVE-2026-41089</td><td class="cvss c-crit">9.8</td><td>Windows Netlogon (all supported Windows Server)</td><td>Stack-based buffer overflow in the Netlogon RPC service; no auth / no click; exploited in the wild — patched May 12, apply immediately</td></tr>
-      <tr><td class="cve">CVE-2026-42898</td><td class="cvss c-crit">9.9</td><td>Microsoft Dynamics 365 (on-premises)</td><td>Remote code execution; among June's highest-severity fixes — patch on-prem deployments</td></tr>
-      <tr><td class="cve">CVE-2026-27671</td><td class="cvss c-crit">9.8</td><td>SAP NetWeaver Application Server ABAP (kernel)</td><td>Unauthenticated memory corruption via improper RFC protocol validation; fixed in SAP's June Security Patch Day</td></tr>
-      <tr><td class="cve">CVE-2026-3055</td><td class="cvss c-crit">9.3</td><td>Citrix NetScaler ADC &amp; Gateway</td><td>Per Citrix advisory; only SAML IdP configs exploitable; fixed 14.1-66.59 / 13.1-62.23 / 13.1-37.262</td></tr>
-      <tr><td class="cve">CVE-2025-48595</td><td class="cvss c-high">7.8</td><td>Android Framework</td><td>Integer overflow enabling code execution &amp; local privilege escalation; added to CISA KEV June 2</td></tr>
+      <tr><td class="cve">CVE-2026-48907</td><td class="cvss c-crit">10.0</td><td>JCE editor extension for Joomla</td><td>Unauthenticated profile creation leading to PHP code upload &amp; execution; published June 5 — no official patch available yet, mitigate/restrict access</td></tr>
+      <tr><td class="cve">CVE-2026-50751</td><td class="cvss c-crit">9.3</td><td>Check Point Remote Access VPN / Mobile Access / Spark Firewall (IKEv1)</td><td>Authentication bypass; exploited in the wild (Qilin ransomware) — hotfix shipped June 8, added to CISA KEV with a 3-day federal deadline</td></tr>
+      <tr><td class="cve">CVE-2026-42897</td><td class="cvss c-crit">8.1</td><td>Microsoft Exchange Server (Outlook Web Access)</td><td>Spoofing / cross-site scripting in OWA rated Critical; Microsoft reported exploitation — apply Exchange updates</td></tr>
+      <tr><td class="cve">CVE-2026-20245</td><td class="cvss c-high">7.8</td><td>Cisco Catalyst SD-WAN Manager</td><td>High-severity flaw under active exploitation per Cisco's advisory — patch managed SD-WAN deployments</td></tr>
+      <tr><td class="cve">CVE-2026-42271</td><td class="cvss c-high">—</td><td>BerriAI LiteLLM</td><td>Command-injection vulnerability; added to CISA KEV June 8 on evidence of exploitation — update affected LiteLLM deployments</td></tr>
     </table>
   </div>
 
   <div class="label">CISA KEV &amp; Federal Deadlines</div>
   <ul class="kev">
-    <li><strong>June 3:</strong> CVE-2026-45247 (Mirasvit Full Page Cache Warmer, deserialization of untrusted data) added to the KEV catalog on evidence of active exploitation. Under BOD 22-01's standard three-week window, the federal remediation deadline lands around <strong>June 24, 2026</strong>.</li>
-    <li><strong>June 2:</strong> CISA added CVE-2025-48595 (Android Framework integer overflow) and CVE-2022-0492 (Linux Kernel improper authentication). The three-week window puts the federal deadline around <strong>June 23, 2026</strong>; apply current platform updates.</li>
-    <li><strong>Active, patch available:</strong> CVE-2026-41089 (Windows Netlogon) is being exploited in the wild — patch domain controllers immediately and watch for a forthcoming KEV listing. Microsoft shipped the fix on May 12.</li>
-    <li><strong>Highest severity this month:</strong> CVE-2026-42898 (Microsoft Dynamics 365 on-prem, CVSS 9.9 RCE) and CVE-2026-27671 (SAP NetWeaver ABAP, CVSS 9.8) — both fixed by vendor advisories; prioritize internet-facing and identity-adjacent systems.</li>
-    <li>BOD 22-01 gives federal civilian agencies a standard three-week window from a CVE's KEV addition date to remediate or stop using the affected product.</li>
+    <li><strong>June 8 (emergency):</strong> CVE-2026-50751 (Check Point Security Gateway improper authentication) added to the KEV catalog. CISA shortened the usual window to a <strong>three-day deadline of June 11, 2026</strong> given active ransomware exploitation — patch IKEv1-configured gateways immediately.</li>
+    <li><strong>June 8:</strong> CVE-2026-42271 (BerriAI LiteLLM command injection) added to the KEV catalog on evidence of active exploitation. Under BOD 22-01's standard three-week window, the federal remediation deadline lands around <strong>June 29, 2026</strong>.</li>
+    <li><strong>June 3:</strong> CVE-2026-45247 (Mirasvit Full Page Cache Warmer, deserialization of untrusted data) added to the catalog. The three-week window puts the federal deadline around <strong>June 24, 2026</strong>.</li>
+    <li><strong>Patch available, no KEV yet:</strong> the perfect-score Joomla JCE editor flaw (CVE-2026-48907, CVSS 10.0) had no official fix as of publication — restrict access to affected editor profiles and watch for a vendor patch.</li>
+    <li>BOD 22-01 gives federal civilian agencies a <strong>standard three-week window</strong> from a CVE's KEV addition date to remediate or stop using the affected product; CISA can shorten that window for emergencies, as it did for the Check Point flaw.</li>
   </ul>
 
   <div class="foot">
     <strong>Sources:</strong><br>
-    <a href="https://www.helpnetsecurity.com/2026/06/01/windows-netlogon-rce-exploited-cve-2026-41089/">Help Net Security — Windows Netlogon RCE exploited, domain controllers at risk (CVE-2026-41089)</a><br>
-    <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41089">Microsoft MSRC — CVE-2026-41089 (Netlogon, CVSS 9.8, patched May 12)</a><br>
-    <a href="https://cybersecuritynews.com/sap-security-patch-day-june/">Cybersecurity News — SAP June Patch Day: critical NetWeaver fixes (CVE-2026-27671)</a><br>
-    <a href="https://www.cisa.gov/news-events/alerts/2026/06/03/cisa-adds-one-known-exploited-vulnerability-catalog">CISA — Adds one KEV (June 3, CVE-2026-45247)</a><br>
-    <a href="https://www.cisa.gov/news-events/alerts/2026/06/02/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA — Adds two KEV (June 2, CVE-2025-48595, CVE-2022-0492)</a><br>
-    <a href="https://techcrunch.com/2026/06/07/the-worst-hacks-and-breaches-of-2026-so-far/">TechCrunch — The worst hacks and breaches of 2026 so far (ShinyHunters / Instructure)</a><br>
-    <a href="https://www.breachsense.com/breaches/2026/june/">Breachsense — Data breaches in June 2026 (Sedgwick, RRCA, leak-site claims)</a>
+    <a href="https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-check-point-flaw-exploited-by-ransomware-gangs/">BleepingComputer — CISA gives feds 3 days to patch Check Point VPN bug exploited as zero-day</a><br>
+    <a href="https://www.rapid7.com/blog/post/etr-critical-check-point-vpn-zero-day-exploited-in-the-wild-cve-2026-50751/">Rapid7 — Critical Check Point VPN zero-day exploited in the wild (CVE-2026-50751, CVSS 9.3)</a><br>
+    <a href="https://blog.checkpoint.com/security/check-point-releases-important-hotfix-for-vulnerabilities-in-deprecated-ikev1-vpn-protocol/">Check Point — Hotfix for IKEv1 VPN vulnerability (CVE-2026-50751)</a><br>
+    <a href="https://www.cisa.gov/news-events/alerts/2026/06/08/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA — Adds two KEV (June 8: CVE-2026-42271, CVE-2026-50751)</a><br>
+    <a href="https://www.cisa.gov/news-events/alerts/2026/06/03/cisa-adds-one-known-exploited-vulnerability-catalog">CISA — Adds one KEV (June 3: CVE-2026-45247)</a><br>
+    <a href="https://atlas-cybersecurity.com/critical-cve-2026-48907-cvss-10-0-june-5-2026/">Atlas Cybersecurity — Critical Joomla JCE flaw CVE-2026-48907 (CVSS 10.0)</a><br>
+    <a href="https://thehackernews.com/">The Hacker News — Instagram account-hijacking, Oxford CareerConnect, Tchap breach</a><br>
+    <a href="https://www.cisoplatform.com/profiles/blogs/ciso-platform-breach-report-08-june-2026-silent-ransom-group-fake">CISO Platform — Breach report, June 8, 2026 (Silent Ransom Group, The Gentlemen)</a>
     <div class="disc">For awareness only. Verify CVSS scores and fixed versions against the vendor's official advisory before acting. Deadlines apply to U.S. federal civilian agencies under BOD 22-01.</div>
   </div>
 </div>
