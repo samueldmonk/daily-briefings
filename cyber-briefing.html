@@ -78,50 +78,49 @@ ul.kev li::before{content:"⛨";color:var(--teal);margin-right:10px}
 
   <div class="label">Top Story</div>
   <div class="lead">
-    <h2>Check Point patches an actively exploited VPN zero-day (CVE-2026-50751) tied to a Qilin ransomware affiliate</h2>
-    <p>On <strong>June 8</strong>, Check Point published an emergency advisory and hotfixes for <strong>CVE-2026-50751</strong>, a critical authentication-bypass flaw (<strong>CVSS 9.3</strong>) in its <strong>Remote Access VPN, Mobile Access and Spark Firewall</strong> products. The bug lives in how gateways validate certificates during the deprecated <strong>IKEv1</strong> key exchange; an unauthenticated attacker can stand up a VPN session without valid credentials. Check Point says it is being exploited in the wild with activity dating back to <strong>May 7</strong> and rising in early June — a campaign it characterizes as limited in scope, hitting several dozen organizations, with at least one incident linked (medium confidence) to a <strong>Qilin</strong> ransomware affiliate.</p>
-    <p>The disclosure caps a heavy exploitation cycle. A critical <strong>Everest Forms Pro</strong> WordPress flaw (<strong>CVE-2026-3300</strong>, CVSS 9.8) is under active attack for unauthenticated remote code execution and full site takeover; a <strong>Microsoft Exchange Server</strong> spoofing bug (<strong>CVE-2026-42897</strong>, CVSS 8.1) has no patch yet and relies on the Exchange Emergency Mitigation Service; the <strong>Cisco Catalyst SD-WAN Manager</strong> zero-day (<strong>CVE-2026-20245</strong>) remains exploited with mitigations only; and insurer <strong>Aflac</strong> is still working through a June intrusion exposing data on roughly 22.7 million people.</p>
+    <h2>Windows Netlogon flaw (CVE-2026-41089) is being exploited in the wild — unpatched domain controllers face credential-free takeover</h2>
+    <p><strong>CVE-2026-41089</strong>, a critical stack-based buffer overflow in the Windows <strong>Netlogon</strong> RPC service rated <strong>CVSS 9.8</strong>, is now under active exploitation. Microsoft's Windows Attack Research and Protection (WARP) team found the bug and Microsoft patched it on <strong>May 12</strong> as part of May Patch Tuesday — but on <strong>June 1</strong>, Belgium's Centre for Cybersecurity (CCB) issued a public warning that it is "now actively exploited in the wild and could lead to RCE." The flaw needs <strong>no authentication and no user interaction</strong>: every supported Windows Server is affected, and exploitation requires only network reachability to a domain controller, leaving unpatched DCs exposed to full SYSTEM-level compromise.</p>
+    <p>As of the latest reporting the vulnerability is <strong>not yet listed in CISA's KEV catalog</strong>, but researchers expect a listing with a federal deadline to follow. The disclosure lands amid a busy exploitation cycle: SAP patched a critical NetWeaver ABAP kernel bug (<strong>CVE-2026-27671</strong>, CVSS 9.8) in its June Security Patch Day, Microsoft addressed a near-perfect Dynamics 365 on-prem RCE (<strong>CVE-2026-42898</strong>, CVSS 9.9), and CISA added Linux Kernel and Android Framework flaws to the KEV catalog in early June.</p>
   </div>
 
   <div class="label">Breaches &amp; Incidents</div>
   <div class="cards">
-    <div class="card"><span class="tag ransom">Zero-Day</span><h3>Check Point VPN — exploited since May</h3><p>CVE-2026-50751 lets attackers bypass auth on IKEv1 Remote Access / Mobile Access / Spark Firewall gateways. Several dozen orgs hit; one case tied to a Qilin ransomware affiliate. Hotfixes out — apply on an emergency basis.</p></div>
-    <div class="card"><span class="tag breach">Breach</span><h3>Aflac — ~22.7M affected</h3><p>The U.S. insurer says data on nearly 22.7 million customers, beneficiaries, employees and agents was stolen following a June cyberattack on its network.</p></div>
-    <div class="card"><span class="tag breach">Breach</span><h3>ShinyHunters — education mega-leak</h3><p>The extortion crew claims ~275M records tied to students, teachers and staff taken from Instructure's Canvas LMS cloud environment; Instructure has said it is investigating the incident.</p></div>
-    <div class="card"><span class="tag ransom">Ransomware</span><h3>Akira hits Swiss imaging network</h3><p>Akira claimed an attack on Switzerland's Réseau Radiologique Romand, alleging theft of 48 GB of data and disrupting IT across its network of 20 medical-imaging centers.</p></div>
+    <div class="card"><span class="tag breach">Breach</span><h3>ShinyHunters — education mega-leak</h3><p>The extortion crew claims roughly 275 million records tied to students, teachers and staff taken from Instructure's Canvas learning-management environment; Instructure has said it is investigating.</p></div>
+    <div class="card"><span class="tag ransom">Ransomware</span><h3>Sedgwick — TridentLocker claim</h3><p>The TridentLocker gang claims it stole ~3.4 GB from a government-focused subsidiary of claims-administration firm Sedgwick, posting samples on its dark-web leak site.</p></div>
+    <div class="card"><span class="tag breach">Breach</span><h3>RRCA Accounts Management — ~115.8K</h3><p>The collections agency disclosed a June intrusion in which attackers accessed personal information belonging to 115,837 people.</p></div>
+    <div class="card"><span class="tag ransom">Leak sites</span><h3>Fresh claims posted June 9</h3><p>New victims surfaced on extortion leak sites: 3i Infotech (Morpheus), Aegle Aviation (RansomHouse), Asia Strategic Holdings (NightSpire) and Central Arkansas Pediatrics (TheGentlemen).</p></div>
   </div>
 
   <div class="label">Vulnerability Watch</div>
   <div class="panel">
     <table>
       <tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr>
-      <tr><td class="cve">CVE-2026-50751</td><td class="cvss c-crit">9.3</td><td>Check Point Remote Access VPN / Mobile Access / Spark Firewall</td><td>IKEv1 auth bypass; exploited in the wild since May 7; hotfixes released — or restrict to IKEv2 &amp; require machine certs</td></tr>
-      <tr><td class="cve">CVE-2026-3300</td><td class="cvss c-crit">9.8</td><td>Everest Forms Pro (WordPress) ≤ 1.9.12</td><td>Unauthenticated RCE via PHP eval() injection; actively exploited for full site takeover</td></tr>
-      <tr><td class="cve">CVE-2026-42897</td><td class="cvss c-high">8.1</td><td>Microsoft Exchange Server (OWA)</td><td>Spoofing / XSS in Outlook Web Access; NO patch yet — Exchange Emergency Mitigation Service provides auto-mitigation</td></tr>
-      <tr><td class="cve">CVE-2026-20245</td><td class="cvss c-high">7.8</td><td>Cisco Catalyst SD-WAN Manager</td><td>Authenticated netadmin can run commands as root; actively exploited, mitigate by restricting admin access</td></tr>
+      <tr><td class="cve">CVE-2026-41089</td><td class="cvss c-crit">9.8</td><td>Windows Netlogon (all supported Windows Server)</td><td>Stack-based buffer overflow in the Netlogon RPC service; no auth / no click; exploited in the wild — patched May 12, apply immediately</td></tr>
+      <tr><td class="cve">CVE-2026-42898</td><td class="cvss c-crit">9.9</td><td>Microsoft Dynamics 365 (on-premises)</td><td>Remote code execution; among June's highest-severity fixes — patch on-prem deployments</td></tr>
+      <tr><td class="cve">CVE-2026-27671</td><td class="cvss c-crit">9.8</td><td>SAP NetWeaver Application Server ABAP (kernel)</td><td>Unauthenticated memory corruption via improper RFC protocol validation; fixed in SAP's June Security Patch Day</td></tr>
       <tr><td class="cve">CVE-2026-3055</td><td class="cvss c-crit">9.3</td><td>Citrix NetScaler ADC &amp; Gateway</td><td>Per Citrix advisory; only SAML IdP configs exploitable; fixed 14.1-66.59 / 13.1-62.23 / 13.1-37.262</td></tr>
+      <tr><td class="cve">CVE-2025-48595</td><td class="cvss c-high">7.8</td><td>Android Framework</td><td>Integer overflow enabling code execution &amp; local privilege escalation; added to CISA KEV June 2</td></tr>
     </table>
   </div>
 
   <div class="label">CISA KEV &amp; Federal Deadlines</div>
   <ul class="kev">
     <li><strong>June 3:</strong> CVE-2026-45247 (Mirasvit Full Page Cache Warmer, deserialization of untrusted data) added to the KEV catalog on evidence of active exploitation. Under BOD 22-01's standard three-week window, the federal remediation deadline lands around <strong>June 24, 2026</strong>.</li>
-    <li><strong>June 2:</strong> CISA added CVE-2025-48595 (Android Framework integer overflow, enables code execution &amp; local privilege escalation) and CVE-2022-0492 (Linux Kernel improper authentication). The three-week window puts the federal deadline around <strong>June 23, 2026</strong>; apply current platform updates.</li>
-    <li><strong>Active, hotfix available:</strong> CVE-2026-50751 (Check Point VPN) is being exploited in the wild — patch immediately, audit logs back to May 7, and look for the IOCs in Check Point's advisory even after applying the fix.</li>
-    <li><strong>Active, no patch:</strong> CVE-2026-42897 (Microsoft Exchange OWA spoofing) and CVE-2026-20245 (Cisco Catalyst SD-WAN Manager) are being exploited with no full fix — rely on vendor mitigations and tighten access.</li>
+    <li><strong>June 2:</strong> CISA added CVE-2025-48595 (Android Framework integer overflow) and CVE-2022-0492 (Linux Kernel improper authentication). The three-week window puts the federal deadline around <strong>June 23, 2026</strong>; apply current platform updates.</li>
+    <li><strong>Active, patch available:</strong> CVE-2026-41089 (Windows Netlogon) is being exploited in the wild — patch domain controllers immediately and watch for a forthcoming KEV listing. Microsoft shipped the fix on May 12.</li>
+    <li><strong>Highest severity this month:</strong> CVE-2026-42898 (Microsoft Dynamics 365 on-prem, CVSS 9.9 RCE) and CVE-2026-27671 (SAP NetWeaver ABAP, CVSS 9.8) — both fixed by vendor advisories; prioritize internet-facing and identity-adjacent systems.</li>
     <li>BOD 22-01 gives federal civilian agencies a standard three-week window from a CVE's KEV addition date to remediate or stop using the affected product.</li>
   </ul>
 
   <div class="foot">
     <strong>Sources:</strong><br>
-    <a href="https://www.rapid7.com/blog/post/etr-critical-check-point-vpn-zero-day-exploited-in-the-wild-cve-2026-50751/">Rapid7 — Critical Check Point VPN zero-day exploited in the wild (CVE-2026-50751)</a><br>
-    <a href="https://blog.checkpoint.com/security/check-point-releases-important-hotfix-for-vulnerabilities-in-deprecated-ikev1-vpn-protocol/">Check Point — Hotfix for vulnerabilities in the deprecated IKEv1 VPN protocol</a><br>
-    <a href="https://threat-modeling.com/vulnerability-intelligence-report-june-7-2026/">Threat-Modeling.com — Vulnerability Intelligence Report (June 7, 2026): Exchange CVE-2026-42897, Everest Forms CVE-2026-3300</a><br>
-    <a href="https://thehackernews.com/2026/06/cisco-catalyst-sd-wan-manager-cve-2026.html">The Hacker News — Cisco Catalyst SD-WAN Manager CVE-2026-20245 actively exploited</a><br>
+    <a href="https://www.helpnetsecurity.com/2026/06/01/windows-netlogon-rce-exploited-cve-2026-41089/">Help Net Security — Windows Netlogon RCE exploited, domain controllers at risk (CVE-2026-41089)</a><br>
+    <a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-41089">Microsoft MSRC — CVE-2026-41089 (Netlogon, CVSS 9.8, patched May 12)</a><br>
+    <a href="https://cybersecuritynews.com/sap-security-patch-day-june/">Cybersecurity News — SAP June Patch Day: critical NetWeaver fixes (CVE-2026-27671)</a><br>
     <a href="https://www.cisa.gov/news-events/alerts/2026/06/03/cisa-adds-one-known-exploited-vulnerability-catalog">CISA — Adds one KEV (June 3, CVE-2026-45247)</a><br>
     <a href="https://www.cisa.gov/news-events/alerts/2026/06/02/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA — Adds two KEV (June 2, CVE-2025-48595, CVE-2022-0492)</a><br>
-    <a href="https://techcrunch.com/2026/06/07/the-worst-hacks-and-breaches-of-2026-so-far/">TechCrunch — The worst hacks and breaches of 2026 so far (Aflac, ShinyHunters)</a><br>
-    <a href="https://www.breachsense.com/breaches/">Breachsense — Recent data breaches (Akira / Réseau Radiologique Romand)</a>
+    <a href="https://techcrunch.com/2026/06/07/the-worst-hacks-and-breaches-of-2026-so-far/">TechCrunch — The worst hacks and breaches of 2026 so far (ShinyHunters / Instructure)</a><br>
+    <a href="https://www.breachsense.com/breaches/2026/june/">Breachsense — Data breaches in June 2026 (Sedgwick, RRCA, leak-site claims)</a>
     <div class="disc">For awareness only. Verify CVSS scores and fixed versions against the vendor's official advisory before acting. Deadlines apply to U.S. federal civilian agencies under BOD 22-01.</div>
   </div>
 </div>

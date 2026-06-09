@@ -47,3 +47,19 @@ fought again since), update the entry in the same commit.
   strikes but FADED back to the ~$90-91 level (last ~$91.3) by the close as Iran
   tensions cooled suddenly. Do NOT present the morning ~$94/+4% spike as the June 8
   close figure — by the close oil was roughly flat-to-slightly-up near $91.
+
+## Added 2026-06-09 (Midday)
+- **Aflac 22.7M breach**: this was the **June 2025** cyber incident (Scattered Spider-linked);
+  notifications to ~22.7M people ran into 2026 (ID-protection enrollment deadline was April 18,
+  2026). Do NOT present Aflac as a fresh June 2026 breach.
+- **UFC Freedom 250 (White House, June 14, 2026)**: the Topuria vs. Gaethje main event is a
+  **LIGHTWEIGHT** title fight — Ilia Topuria DEFENDS the undisputed lightweight title vs former
+  interim lightweight champ Justin Gaethje. It is NOT a light-heavyweight bout and NOT a
+  "unification." Co-main: Alex Pereira vs Ciryl Gane for the INTERIM heavyweight title; a Pereira
+  win would make him the first 3-division UFC champ. Lawsuit to block it filed June 6, 2026 by the
+  Public Integrity Project (U.S. District Court, D.C.).
+- **June 9, 2026 (intraday ~11am ET)**: S&P 500 ~+0.63%, Dow ~+0.67%, Nasdaq Composite ~+0.69%,
+  Russell 2000 ~+0.77%; chip-led rebound, WTI ~$89.22 (-2.3%). Movers: Lam Research +7.5%, SanDisk
+  +7%, J.M. Smucker +5.8% (beat but warned of FY sales decline), Nvidia +2.3% (SK Hynix memory deal);
+  Qualcomm -4.4%, Marvell -4.2%, Workday -4%. May CPI due Wed June 10 8:30am ET (FactSet ~+4.2% y/y
+  headline, +0.5% m/m; core ~2.9%). FOMC June 16-17 under Chair Kevin Warsh.
