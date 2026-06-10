@@ -186,3 +186,26 @@ fought again since), update the entry in the same commit.
   R1 stoppage. Mauricio Ruffy 13-2, #9 LW; LAST FIGHT: TKO R2 of Rafael Fiziev, UFC 325, Feb 1, 2026;
   faces Chandler June 14. UFC 329: McGregor vs Holloway 2, July 11, T-Mobile Arena (welterweight;
   McGregor's first bout since UFC 264 July 2021; Holloway WW debut; McGregor won 2013 meeting by UD).
+
+## Added 2026-06-10 (Close ~4:15pm ET)
+- **Wed June 10, 2026 (close, per CNBC shortly after the bell):** Dow -953.21 pts (-1.87%),
+  closing AT ITS SESSION LOW (~49,919 — level not yet settled/corroborated at publication);
+  S&P 500 -1.62%; Nasdaq Composite -1.98%. The sell-off ACCELERATED sharply into the bell after
+  Trump pledged more Iran strikes ("we're going to be attacking them very hard") — delayed quotes
+  (Motley Fool/Xignite ~3:45-3:50pm) still showed S&P ~-1.0%, Nasdaq ~-1.2/-1.3%, Dow ~-1.2%
+  (~-600 pts). Earlier headlines said "Dow sinks 800 points" (Yahoo) — sequential updates of the
+  same slide, NOT a separate figure. VIX +~12% (TheStreet). Do NOT present midday figures
+  (S&P -1.00% / Nasdaq -1.27% / Dow -1.22% per Motley Fool midday) as the close. Final settled
+  index LEVELS for June 10 still need verification next run before entering the Weekly Scorecard.
+- Wed June 10 midday movers: SMCI -17%+ midday / ~-13.5 to -14% later ($7B equity raise);
+  NVDA ~-2.4%, MU ~-3.6% midday; HOOD +8.1% early / ~+6% midday ("strategic update"); KLA +6.7%,
+  AMAT +5.5% early only. WTI +~3% topping $91 late (CNBC); Brent ~$93. May CPI energy detail (BLS):
+  energy +23.5% y/y, gasoline +40.9%, fuel oil +58.9% (gasoline figure is 40.9% per June 10 BLS
+  liveblog coverage; an earlier entry said 40.5% — use 40.9%).
+- **Gold level conflict:** Bloomberg (June 10) says gold fell as much as 2.1% to ~$4,173/oz after
+  sliding 1.6% Tuesday — implying a Tue close near ~$4,260, NOT ~$4,360 (the ~$4,360 was a June 9
+  ~1pm intraday reading; do not reuse it as current). Gold is ~a fifth below pre-war (late Feb) levels
+  and broke its 200-day MA.
+- Bank of Canada HELD at 2.25% June 10 (5th straight hold); ECB widely expected to HIKE 25bp to
+  2.25% at June 10-11 meeting; BoJ ~25bp hike expected July (to ~1%). Oracle FQ4 consensus
+  (Bloomberg via Yahoo): EPS $1.97 on ~$19B revenue.
