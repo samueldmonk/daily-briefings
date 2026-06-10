@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- build: 2026-06-10 09:05 ET — Morning Edition -->
+<!-- build: 2026-06-10 11:10 ET — Midday Edition -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -80,7 +80,7 @@ ul.kev li::before{content:"⛨";color:var(--teal);margin-right:10px}
   <div class="label">Top Story</div>
   <div class="lead">
     <h2>The clock runs out tomorrow: federal agencies have until June 11 to patch the actively exploited Check Point VPN zero-day (CVE-2026-50751)</h2>
-    <p><strong>CVE-2026-50751</strong>, a critical authentication-bypass flaw in <strong>Check Point Remote Access VPN, Mobile Access / SSL VPN and Spark Firewall</strong> gateways configured to use the deprecated <strong>IKEv1</strong> key exchange, is being actively exploited in the wild. Rated <strong>CVSS 9.3</strong>, the bug lets an unauthenticated remote attacker establish a VPN connection without a valid password — no privileges, no user interaction, just network reach to an exposed gateway. Check Point shipped an emergency hotfix on <strong>Monday, June 8</strong>, flagging exploitation that began on <strong>May 7</strong> and surged over the weekend; in at least one case the access led to post-compromise activity tied to a <strong>Qilin ransomware</strong> affiliate.</p>
+    <p><strong>CVE-2026-50751</strong>, a critical authentication-bypass flaw in <strong>Check Point Remote Access VPN, Mobile Access / SSL VPN and Spark Firewall</strong> gateways configured to use the deprecated <strong>IKEv1</strong> key exchange, is being actively exploited in the wild. Rated <strong>CVSS 9.3</strong>, the bug lets an unauthenticated remote attacker establish a VPN connection without a valid password — no privileges, no user interaction, just network reach to an exposed gateway. Check Point shipped an emergency hotfix on <strong>Monday, June 8</strong>, flagging exploitation that began on <strong>May 7</strong> and surged over the prior weekend; in at least one case the access led to post-compromise activity tied to a <strong>Qilin ransomware</strong> affiliate.</p>
     <p>CISA added the flaw to its <strong>Known Exploited Vulnerabilities</strong> catalog the same day (June 8) and — in a rare departure from the standard three-week window under BOD 22-01 — set an <strong>emergency three-day remediation deadline of June 11, 2026</strong>, which is <strong>tomorrow</strong>. Any federal civilian agency (and prudently, any organization) running affected IKEv1-configured Check Point gateways should treat the hotfix as urgent. The deadline lands amid an unusually heavy patch cycle: Microsoft's June Patch Tuesday fixed a record ~200 flaws on June 9, and separately, an actively exploited Windows Netlogon RCE (CVE-2026-41089, CVSS 9.8) and an unpatched Cisco SD-WAN Manager flaw (CVE-2026-20245) are both under attack.</p>
   </div>
 
@@ -91,7 +91,7 @@ ul.kev li::before{content:"⛨";color:var(--teal);margin-right:10px}
     <div class="card"><span class="tag exploit">Exploited CVE</span><h3>Windows Netlogon — domain-controller RCE</h3><p>CVE-2026-41089 (CVSS 9.8), a stack buffer overflow in Netlogon, is exploited in the wild and grants SYSTEM-level code execution on domain controllers across Windows Server 2012–2025. Belgium's CCB and others have warned DCs are at risk; patch immediately.</p></div>
     <div class="card"><span class="tag exploit">Exploited CVE</span><h3>Cisco Catalyst SD-WAN Manager</h3><p>CVE-2026-20245 (CVSS 7.8), an authenticated privilege-escalation flaw, is being exploited for root-level command execution. Cisco confirmed active exploitation with no patch available as of June 6 — apply the vendor's mitigations.</p></div>
     <div class="card"><span class="tag breach">Breach</span><h3>Baker Distributing — ShinyHunters</h3><p>Disclosed June 8: ShinyHunters compromised over 260,000 Salesforce records plus corporate data at the HVAC/refrigeration distributor — part of the group's broader Salesforce-focused extortion campaign.</p></div>
-    <div class="card"><span class="tag exploit">Exploited CVE</span><h3>SolarWinds Serv-U — DoS</h3><p>CVE-2026-28318 (CVSS 7.5) lets an unauthenticated attacker crash the Serv-U file-transfer service via a crafted request; CISA added it to KEV (June 5) with a federal deadline of June 19. Fixed in Serv-U 15.5.4 HF1.</p></div>
+    <div class="card"><span class="tag exploit">Exploited CVE</span><h3>SolarWinds Serv-U — DoS</h3><p>CVE-2026-28318 (CVSS 7.5) lets an unauthenticated attacker crash the Serv-U file-transfer service via a crafted POST request; CISA added it to KEV (June 5) with a federal deadline of June 19. Fixed in Serv-U 15.5.4 HF1.</p></div>
   </div>
 
   <div class="label">Vulnerability Watch</div>
@@ -101,8 +101,8 @@ ul.kev li::before{content:"⛨";color:var(--teal);margin-right:10px}
       <tr><td class="cve">CVE-2026-50751</td><td class="cvss c-crit">9.3</td><td>Check Point Remote Access VPN / Mobile Access / Spark Firewall (IKEv1)</td><td>Authentication bypass; exploited in the wild (Qilin ransomware) — hotfix shipped June 8; added to CISA KEV with a 3-day federal deadline of June 11</td></tr>
       <tr><td class="cve">CVE-2026-41089</td><td class="cvss c-crit">9.8</td><td>Windows Netlogon (Server 2012–2025)</td><td>Stack buffer overflow; unauthenticated RCE granting SYSTEM on domain controllers; exploited in the wild — addressed in the June Patch Tuesday updates</td></tr>
       <tr><td class="cve">CVE-2026-20245</td><td class="cvss c-high">7.8</td><td>Cisco Catalyst SD-WAN Manager</td><td>Authenticated privilege escalation to root-level command execution; exploited in the wild with no patch available as of June 6 — apply Cisco's mitigations</td></tr>
-      <tr><td class="cve">CVE-2026-28318</td><td class="cvss c-high">7.5</td><td>SolarWinds Serv-U file transfer</td><td>Unauthenticated DoS via a crafted request; exploited in the wild — fixed in Serv-U 15.5.4 HF1; CISA KEV deadline June 19</td></tr>
-      <tr><td class="cve">CVE-2026-42271</td><td class="cvss c-high">—</td><td>BerriAI LiteLLM</td><td>Command-injection flaw; added to CISA KEV June 8 on evidence of exploitation — update affected LiteLLM deployments</td></tr>
+      <tr><td class="cve">CVE-2026-28318</td><td class="cvss c-high">7.5</td><td>SolarWinds Serv-U file transfer</td><td>Unauthenticated DoS via a crafted POST request; exploited in the wild — fixed in Serv-U 15.5.4 HF1; CISA KEV deadline June 19</td></tr>
+      <tr><td class="cve">CVE-2026-42271</td><td class="cvss c-high">—</td><td>BerriAI LiteLLM</td><td>Command-injection flaw; added to CISA KEV June 8 on evidence of exploitation — standard three-week window puts the deadline around June 29</td></tr>
     </table>
   </div>
 
@@ -119,11 +119,10 @@ ul.kev li::before{content:"⛨";color:var(--teal);margin-right:10px}
     <strong>Sources:</strong><br>
     <a href="https://www.rapid7.com/blog/post/etr-critical-check-point-vpn-zero-day-exploited-in-the-wild-cve-2026-50751/">Rapid7 — Critical Check Point VPN zero-day exploited in the wild (CVE-2026-50751, CVSS 9.3)</a><br>
     <a href="https://blog.checkpoint.com/security/check-point-releases-important-hotfix-for-vulnerabilities-in-deprecated-ikev1-vpn-protocol/">Check Point — Hotfix for IKEv1 VPN vulnerability (CVE-2026-50751)</a><br>
-    <a href="https://www.cisa.gov/news-events/alerts/2026/06/08/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA — Adds two KEV (June 8: CVE-2026-42271, CVE-2026-50751)</a><br>
+    <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA — Known Exploited Vulnerabilities Catalog</a><br>
     <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-june-2026-patch-tuesday-fixes-3-zero-day-200-flaws/">BleepingComputer — Microsoft June 2026 Patch Tuesday fixes 3 zero-days, 200 flaws</a><br>
     <a href="https://www.securityweek.com/critical-windows-netlogon-vulnerability-in-attackers-crosshairs/">SecurityWeek — Critical Windows Netlogon vulnerability in attackers' crosshairs (CVE-2026-41089, CVSS 9.8)</a><br>
     <a href="https://thehackernews.com/2026/06/cisco-catalyst-sd-wan-manager-cve-2026.html">The Hacker News — Cisco Catalyst SD-WAN Manager CVE-2026-20245 actively exploited, no patch available</a><br>
-    <a href="https://www.cisa.gov/news-events/alerts/2026/06/03/cisa-adds-one-known-exploited-vulnerability-catalog">CISA — Adds one KEV (June 3: CVE-2026-45247)</a><br>
     <a href="https://thehackernews.com/2026/06/cisa-adds-actively-exploited-solarwinds.html">The Hacker News — CISA adds actively exploited SolarWinds Serv-U DoS flaw (CVE-2026-28318, deadline June 19)</a><br>
     <a href="https://www.breachsense.com/breaches/">Breachsense — Recent data breaches (Baker Distributing, June leak-site victims)</a>
     <div class="disc">For awareness only. Verify CVSS scores and fixed versions against the vendor's official advisory before acting. Deadlines apply to U.S. federal civilian agencies under BOD 22-01.</div>
