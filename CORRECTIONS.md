@@ -196,7 +196,7 @@ fought again since), update the entry in the same commit.
   (~-600 pts). Earlier headlines said "Dow sinks 800 points" (Yahoo) — sequential updates of the
   same slide, NOT a separate figure. VIX +~12% (TheStreet). Do NOT present midday figures
   (S&P -1.00% / Nasdaq -1.27% / Dow -1.22% per Motley Fool midday) as the close. Final settled
-  index LEVELS for June 10 still need verification next run before entering the Weekly Scorecard.
+  index LEVELS for June 10 were VERIFIED by the ~5pm Afternoon run — see the post-close entry below.
 - Wed June 10 midday movers: SMCI -17%+ midday / ~-13.5 to -14% later ($7B equity raise);
   NVDA ~-2.4%, MU ~-3.6% midday; HOOD +8.1% early / ~+6% midday ("strategic update"); KLA +6.7%,
   AMAT +5.5% early only. WTI +~3% topping $91 late (CNBC); Brent ~$93. May CPI energy detail (BLS):
@@ -209,3 +209,44 @@ fought again since), update the entry in the same commit.
 - Bank of Canada HELD at 2.25% June 10 (5th straight hold); ECB widely expected to HIKE 25bp to
   2.25% at June 10-11 meeting; BoJ ~25bp hike expected July (to ~1%). Oracle FQ4 consensus
   (Bloomberg via Yahoo): EPS $1.97 on ~$19B revenue.
+
+## Added 2026-06-10 (Afternoon Edition ~5pm ET — post-close, VERIFIED)
+- **Wed June 10, 2026 FINAL closes (verified; Motley Fool/Xignite EOD quote modules, % corroborated
+  by CNBC):** S&P 500 7,266.99 (-119.66, -1.62%); Nasdaq Composite 25,169.50 (-509.32, -1.98% —
+  reconciles EXACTLY with Tue's 25,678.82 close); Dow 49,918.78 (-953.33, -1.87%), day range
+  49,909.07–50,769.26 → closed NEAR (not exactly at) the session low. CNBC's post-bell figure was
+  -953.21 — sub-point variance vs the Xignite level set; the Xignite set is internally consistent.
+  Week-to-date vs Fri Jun 5 closes: S&P -1.6%, Nasdaq -2.1%, Dow -1.9%.
+- June 10 EOD movers (Fool/Xignite + Yahoo close modules): CAT -6.33% $856.81 (biggest Dow drag;
+  ~331 pts of the drop at midday per Fool; was +50% YTD into the week); NVDA -3.39% $201.14 (~$131B
+  cap); AVGO -4.86% $373.12 (~$86B); TSLA -3.6%; AMZN -2.4%; GOOG/META ~-2.2%; MSFT -1.3%;
+  AAPL +0.6% (rare gainer); SMCI -13.50% $35.16 (-17%+ midday; ~$7B equity financing);
+  CASY +~15% $875-881 (Q4 EPS $4.37 vs $3.31 est; rev $4.57B vs $4.30B est; fuel margin 46.9¢ vs
+  37.6¢; dividend +14%); ORCL closed $201.11 (-2.28%) pre-earnings. Bitcoin: UP ~0.5% midday but
+  EOD modules showed ~-0.6% — do NOT say BTC rose June 10. Gold ~-2 to -3% (~$4,173-4,186).
+  10-yr eased to ~4.52% from 4.55% high. WTI ~$91 (+~3%, CNBC); Brent ~$93. VIX +~12% (TheStreet).
+- **Oracle FQ4 (after the June 10 bell): BEAT-BUT-FELL.** Record Q4 revenue $19.2B (+21%, vs ~$19.1B
+  est); non-GAAP EPS $2.11 (vs $1.97 est); GAAP EPS $1.45; cloud revenue $9.91B (+47%) slightly
+  BELOW expectations; FY26 revenue $67.4B (+17%); FY27 guidance: revenue $90B maintained, adj EPS
+  raised to $8.05. Shares fell >7% after hours, below $200, on big new capital-raise plans (CNBC:
+  "another $20 billion"; TradingKey flagged capex rising to $55.7B; one summary said "$40B debt+equity"
+  — figures conflict, cite CNBC's $20B or stay qualitative) and the cloud miss. Do NOT call the
+  quarter a miss; do NOT present the AH drop as a regular-session move.
+- CPI precision: headline "highest since April 2023" (Fool + Yahoo's data post + BLS context);
+  one Yahoo lede said "fastest since May 2023" — use April 2023. Energy commodities +40.6% y/y;
+  gasoline +40.9%; fuel oil +58.9%; electricity +5.9%; food +4.2% (beef record highs).
+- Veeam CVE-2026-44963: vendor CVSS v4 = 9.4; RCE by AUTHENTICATED domain user (not unauth);
+  affects B&R 12.x ≤12.3.2.4465; FIXED in 12.3.2.4854; v13 NOT affected; watchTowr (Sina Kheirkhah)
+  credited. ServiceNow incident re-confirmed via BleepingComputer/THN: activity June 2-3, hosted-
+  instance fix June 5, Australia release + config-changed older releases; CVE still undecided;
+  data queried from customer instance tables. Baker Distributing: ShinyHunters CLAIMED the attack
+  May 23 (not a June intrusion), leak published early June; HIBP indexed 102,935 accounts; largely
+  corporate contact/support data per Cybernews — don't overstate sensitivity.
+- UFC: most recent event remains June 6 Fight Night — GABRIEL Bonfim (first name verified) def.
+  Belal Muhammad (a FORMER WW champion — descriptor snippet-supported) UD 50-45×3, five straight.
+  Daniel Marcos (bantamweight, Peru, 18-1 1 NC overall; 5-1 1 NC UFC): removed from UFC roster
+  May 29 after his contract COMPLETED (not cut mid-deal), signed with PFL June 1; last fight was a
+  submission win over Miles Johns. White House lawsuit status as of June 10: NO hearing scheduled;
+  plaintiffs asked the judge (an Obama appointee) to rule on the emergency injunction BY THURSDAY
+  June 11; DOJ argued the suit was brought too late. Continue NOT calling Topuria-Gaethje a
+  "unification" (CBS/ESPN still use that wording; the standing correction above governs).

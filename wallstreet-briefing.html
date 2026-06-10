@@ -5,84 +5,91 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Closing Bell — Daily Briefing</title>
 <style>
-:root{--bg:#0e0d0a;--panel:#171511;--line:#2a2620;--text:#e6e0d4;--muted:#a39a88;--accent:#caa64a;--accent2:#e8c766;--up:#4ade80;--down:#f87171;--mono:'SF Mono',ui-monospace,Menlo,Consolas,monospace;--serif:Georgia,'Times New Roman',serif}
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.6;padding:24px 16px 60px}
-.wrap{max-width:980px;margin:0 auto}
-.nav{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap}
-.nav a{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-decoration:none;color:var(--muted);border:1px solid var(--line);border-radius:8px;padding:8px 14px;background:var(--panel);transition:all .15s}
-.nav a:hover{color:var(--text);border-color:var(--accent)}
-.nav a.active{color:var(--accent2);border-color:var(--accent);background:rgba(202,166,74,.08)}
-.masthead{border-bottom:2px solid var(--accent);padding-bottom:18px;margin-bottom:18px}
-h1{font-family:var(--serif);font-size:42px;letter-spacing:-.01em;color:#fff}
-h1 .glyph{color:var(--accent2)}
-.tagline{color:var(--muted);font-size:14px;margin-top:2px}
-.meta{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
-.pill{font-family:var(--mono);font-size:11px;letter-spacing:.12em;border:1px solid var(--line);border-radius:999px;padding:4px 12px;color:var(--muted)}
-.pill.live{color:var(--up);border-color:var(--up)}
-.pill.live::before{content:"●";margin-right:6px;animation:blink 1.6s infinite}
-@keyframes blink{50%{opacity:.3}}
-.livebar{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 8px 4px;margin-bottom:18px}
-.livebar-label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--up);display:flex;align-items:center;gap:8px;padding:4px 8px 8px}
-.livebar-label .dot{width:8px;height:8px;border-radius:50%;background:var(--up);animation:blink 1.6s infinite}
-.label{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:34px 0 14px}
-.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px}
-.tickers{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
-.ticker{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px}
-.note{font-size:12px;color:var(--muted);font-style:italic;margin-top:10px}
-.lead{border-left:4px solid var(--accent)}
-.lead h2{font-family:var(--serif);font-size:26px;color:#fff;margin-bottom:10px}
-.lead p{margin-bottom:10px;font-size:15px}
-.lead p:last-child{margin-bottom:0}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;transition:transform .15s,border-color .15s}
-.card:hover{transform:translateY(-3px);border-color:var(--accent2)}
-.card h3{font-size:16px;color:#fff;margin-bottom:8px}
-.card p{font-size:13.5px;color:var(--muted)}
-.chg{font-family:var(--mono);font-weight:700}
-.chg.up{color:var(--up)}
-.chg.down{color:var(--down)}
-table{width:100%;border-collapse:collapse;font-size:13.5px}
-th{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
-td{padding:12px;border-bottom:1px solid var(--line);vertical-align:top}
-tr:last-child td{border-bottom:none}
-ul.radar{list-style:none}
-ul.radar li{padding:10px 0 10px 22px;border-bottom:1px solid var(--line);position:relative;font-size:14px}
-ul.radar li:last-child{border-bottom:none}
-ul.radar li::before{content:"▸";position:absolute;left:2px;color:var(--accent2)}
-.sources{margin-top:40px;border-top:1px solid var(--line);padding-top:18px}
-.sources h4{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--muted);text-transform:uppercase;margin-bottom:10px}
-.sources a{display:block;color:var(--accent2);font-size:12.5px;text-decoration:none;margin-bottom:5px;word-break:break-all}
-.sources a:hover{text-decoration:underline}
-.disclaimer{margin-top:22px;font-size:12px;color:var(--muted);font-style:italic}
-strong{color:#fff}
+  :root{
+    --bg:#0e0d0a; --panel:#171511; --panel2:#13110d; --line:#2b2618;
+    --text:#e6ddcb; --muted:#a39878; --accent:#caa64a; --accent2:#e8c766;
+    --up:#3ecf8e; --down:#ff6b6b;
+    --serif:Georgia,'Times New Roman',serif;
+    --mono:'SF Mono',ui-monospace,Menlo,Consolas,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);font:16px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;padding:32px 20px 60px}
+  .wrap{max-width:980px;margin:0 auto}
+  .masthead{border-bottom:2px solid var(--accent);padding-bottom:18px;margin-bottom:14px}
+  .masthead h1{font-family:var(--serif);font-size:44px;letter-spacing:-.5px;color:#fff}
+  .masthead h1 .glyph{color:var(--accent)}
+  .tagline{color:var(--muted);font-size:15px;margin-top:2px}
+  .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;font-family:var(--mono);font-size:12px}
+  .pill{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:4px 12px;color:var(--muted)}
+  .pill.live{color:var(--up);border-color:var(--up)}
+  .pill.live .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--up);margin-right:6px;animation:blink 1.6s infinite}
+  @keyframes blink{50%{opacity:.25}}
+  nav.tabs{display:flex;gap:8px;margin:18px 0 18px;flex-wrap:wrap}
+  nav.tabs a{font-family:var(--mono);font-size:13px;text-decoration:none;color:var(--muted);border:1px solid var(--line);background:var(--panel);padding:8px 16px;border-radius:10px;transition:.15s}
+  nav.tabs a:hover{color:var(--text);transform:translateY(-1px)}
+  nav.tabs a.active{color:var(--accent2);border-color:var(--accent);background:rgba(202,166,74,.08)}
+  .livebar{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 8px 4px;margin-bottom:18px}
+  .livebar-label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--up);display:flex;align-items:center;gap:8px;padding:4px 8px 8px}
+  .livebar-label .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--up);animation:blink 1.6s infinite}
+  .label{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:34px 0 14px}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .tickers{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+  .ticker{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:10px}
+  .note{font-size:12.5px;color:var(--muted);font-style:italic;margin-top:10px}
+  .lead{border-left:4px solid var(--accent)}
+  .lead h2{font-family:var(--serif);font-size:27px;color:#fff;margin-bottom:12px;line-height:1.3}
+  .lead p{margin-bottom:10px}
+  .lead .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--accent2);text-transform:uppercase;margin-bottom:8px}
+  .up{color:var(--up)} .down{color:var(--down)}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;transition:.15s}
+  .card:hover{transform:translateY(-3px);border-color:var(--accent)}
+  .card h3{font-family:var(--serif);font-size:17.5px;color:#fff;margin-bottom:8px}
+  .card .move{font-family:var(--mono);font-size:13px;font-weight:700;margin-bottom:8px;display:inline-block}
+  .card p{font-size:14.5px;color:var(--muted)}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
+  td{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  td.num{font-family:var(--mono);font-size:13.5px;white-space:nowrap}
+  ul.radar{list-style:none}
+  ul.radar li{padding:10px 0 10px 26px;border-bottom:1px solid var(--line);position:relative;font-size:14.5px}
+  ul.radar li:last-child{border-bottom:none}
+  ul.radar li::before{content:"◆";position:absolute;left:4px;color:var(--accent);font-size:11px;top:14px}
+  .sources{margin-top:40px;border-top:1px solid var(--line);padding-top:18px}
+  .sources h4{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+  .sources a{display:block;color:var(--accent2);font-size:13px;text-decoration:none;margin-bottom:6px;word-break:break-all}
+  .sources a:hover{text-decoration:underline}
+  .disclaimer{margin-top:22px;font-size:12px;color:var(--muted);font-style:italic}
+  strong{color:#fff}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <nav class="nav">
-    <a href="cyber-briefing.html">⛨ The Cyber Wire</a>
-    <a href="wallstreet-briefing.html" class="active">▲ The Closing Bell</a>
-    <a href="mma-briefing.html">⊘ The Octagon</a>
-  </nav>
 
   <header class="masthead">
     <h1><span class="glyph">▲</span> The Closing Bell</h1>
     <div class="tagline">Your daily Wall Street briefing — markets, movers &amp; what's next</div>
     <div class="meta">
-      <span class="pill live">LIVE</span>
-      <span class="pill" id="edition">Closing Edition</span>
+      <span class="pill live"><span class="dot"></span>LIVE</span>
+      <span class="pill" id="edition">Afternoon Edition</span>
       <span class="pill" id="datestamp">Wednesday, June 10, 2026</span>
-      <span class="pill">Updated <span id="updated">4:15 PM ET</span></span>
+      <span class="pill">Updated <span id="updated">—</span></span>
     </div>
   </header>
+
+  <nav class="tabs">
+    <a href="cyber-briefing.html">⛨ The Cyber Wire</a>
+    <a href="wallstreet-briefing.html" class="active">▲ The Closing Bell</a>
+    <a href="mma-briefing.html">⊘ The Octagon</a>
+  </nav>
 
   <div class="livebar">
     <div class="livebar-label"><span class="dot"></span> LIVE QUOTES</div>
     <div class="tradingview-widget-container">
       <div class="tradingview-widget-container__widget"></div>
       <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-      {"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},{"proName":"FOREXCOM:DJI","title":"Dow 30"},{"proName":"NASDAQ:SMCI","title":"Super Micro"},{"proName":"NASDAQ:NVDA","title":"Nvidia"},{"proName":"NASDAQ:MU","title":"Micron"},{"proName":"NASDAQ:HOOD","title":"Robinhood"},{"proName":"NYSE:ORCL","title":"Oracle"},{"proName":"TVC:USOIL","title":"WTI Crude"},{"proName":"TVC:US10Y","title":"US 10Y"}],"colorTheme":"dark","isTransparent":true,"showSymbolLogo":true,"displayMode":"adaptive","locale":"en"}
+      {"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},{"proName":"FOREXCOM:DJI","title":"Dow 30"},{"proName":"NASDAQ:SMCI","title":"Super Micro"},{"proName":"NYSE:CAT","title":"Caterpillar"},{"proName":"NYSE:ORCL","title":"Oracle"},{"proName":"NASDAQ:CASY","title":"Casey's"},{"proName":"NASDAQ:NVDA","title":"NVIDIA"},{"proName":"NASDAQ:AVGO","title":"Broadcom"},{"proName":"TVC:USOIL","title":"WTI Crude"},{"proName":"TVC:US10Y","title":"US 10Y"}],"colorTheme":"dark","isTransparent":true,"showSymbolLogo":true,"displayMode":"adaptive","locale":"en"}
       </script>
     </div>
   </div>
@@ -117,90 +124,105 @@ strong{color:#fff}
   <div class="note">Quotes stream live (some feeds ~15-min delayed). Editorial below reflects the latest edition; official closes are in the Weekly Scorecard.</div>
 
   <div class="label">The Lead</div>
-  <section class="panel lead">
-    <h2>Dow plunges 953 points to a session low at the close as Trump vows to hit Iran "very hard" — June 10 close</h2>
-    <p>Wall Street sold off hard into Wednesday's closing bell. Per CNBC, the <strong>Dow Jones Industrial Average tumbled 953 points (-1.87%)</strong>, finishing at its low of the session, while the <strong>S&amp;P 500 fell about 1.6%</strong> and the <strong>Nasdaq Composite dropped roughly 2%</strong>. The slide accelerated sharply in the final stretch — delayed quotes still showed the indices down only ~1–1.3% around 3:45 PM ET — after President Trump pledged further strikes on Iran, saying "we're going to be attacking them very hard." TheStreet reported the Cboe Volatility Index surged about 12% on the day.</p>
-    <p>The day began with a double dose of bad news. May CPI rose <strong>+0.5% month-over-month and +4.2% year-over-year</strong> — the fastest annual pace since May 2023 and the first reading above 4% in three years, though in line with expectations. The silver lining: <strong>core CPI rose just 0.2% on the month, below the 0.3% estimate</strong>, and 2.9% annually. Energy did the damage — energy prices jumped 23.5% year-over-year, with gasoline up 40.9% and fuel oil up 58.9%, per the BLS data — as the Iran war and the near-closure of the Strait of Hormuz kept crude elevated. Overnight, the U.S. and Iran traded fresh strikes after the downing of an American Apache helicopter, and Yahoo Finance noted the hot headline reading may boost bets that the Fed <em>hikes</em> rates this year.</p>
-  </section>
+  <div class="panel lead">
+    <div class="kicker">Closing report — Wednesday, June 10</div>
+    <h2>Dow plunges 953 points to close near session lows as 4.2% inflation and fresh Iran strikes slam stocks; Oracle sinks after hours</h2>
+    <p>The sell-off <strong>accelerated sharply into the bell</strong> after President Trump pledged further strikes on Iran ("we're going to be attacking them very hard"). At the close, the <strong>Dow Jones Industrial Average fell 1.87%</strong> (−953 points, finishing near its low of the day), the <strong class="down">S&amp;P 500 lost 1.62%</strong> and the <strong class="down">Nasdaq Composite dropped 1.98%</strong>, per CNBC and Motley Fool/Xignite closing data. The VIX jumped roughly 12%, per TheStreet.</p>
+    <p>The day's twin drivers: <strong>May CPI hit 4.2% year over year</strong> — the hottest annual reading since April 2023, with energy responsible for more than 60% of the monthly rise (gasoline +40.9% y/y) — and a renewed US–Iran exchange of strikes overnight after an Apache helicopter was downed off Oman. Notably, <em>core</em> CPI came in soft at +0.2% m/m, below the 0.3% estimate. Caterpillar (−6.3%) was the Dow's biggest drag; Nvidia (−3.4%) and Broadcom (−4.9%) extended the chip slide.</p>
+    <p>After the close, <strong>Oracle beat estimates</strong> with record Q4 revenue of $19.2B (+21%) and EPS of $2.11 — but the stock <strong class="down">fell more than 7% in late trading</strong> as investors balked at plans to raise tens of billions in new capital (CNBC cited another ~$20B; capex hit $55.7B) and cloud revenue of $9.91B that landed slightly below expectations.</p>
+  </div>
 
   <div class="label">Movers &amp; Drivers</div>
   <div class="cards">
     <div class="card">
-      <h3>Super Micro <span class="chg down">▼ ~-14% to -18% intraday</span></h3>
-      <p>SMCI plunged after announcing a <strong>$7 billion equity raise</strong> — the latest AI infrastructure name tapping markets for capital. The Motley Fool had shares down more than 17% at midday; Yahoo Finance's losers board showed ~-13.5% to -14% later in the session.</p>
+      <h3>Super Micro (SMCI)</h3>
+      <span class="move down">−13.5%</span>
+      <p>Among the day's worst large-cap losers — down 17% at one point — as investors digested its newly announced ~$7B equity financing. Closed at $35.16.</p>
     </div>
     <div class="card">
-      <h3>Chips: Nvidia, Micron <span class="chg down">▼</span></h3>
-      <p>Nvidia fell ~2.4% and Micron ~3.6% at midday per The Motley Fool as the AI rotation deepened. Vanda Research said retail selling in single stocks hit its heaviest level since November 2023, concentrated in semis like Micron and SanDisk — while retail buying of space stocks hit its highest since December 2024 ahead of SpaceX's IPO.</p>
+      <h3>Caterpillar (CAT)</h3>
+      <span class="move down">−6.3%</span>
+      <p>The single biggest drag on the Dow — at midday it alone had subtracted roughly 330 points from the index, per Motley Fool. The AI-datacenter-construction darling (+50% YTD coming into the week) reversed hard on hot inflation and rising yields.</p>
     </div>
     <div class="card">
-      <h3>Robinhood <span class="chg up">▲ +6% to +8%</span></h3>
-      <p>HOOD climbed 8.1% in early trading per TheStreet and was still up ~6% at midday on a strategic update per The Motley Fool — one of the few bright spots in a risk-off tape. KLA (+6.7%) and Applied Materials (+5.5%) also rose early before the broad slide.</p>
+      <h3>Oracle (ORCL) — after hours</h3>
+      <span class="move down">−7% AH</span>
+      <p>Closed at $201.11 (−2.3%), then slid below $200 after results. Record FY26 revenue of $67.4B; FY27 guide held at $90B with adjusted EPS raised to $8.05 — but capital-raise plans and a slight cloud miss overshadowed the beat.</p>
     </div>
     <div class="card">
-      <h3>Oil up, gold down <span class="chg down">◆</span></h3>
-      <p>WTI crude climbed <strong>~3% to top $91</strong> after Trump's threats, per CNBC; Brent traded near $93. Gold went the other way — Bloomberg reported bullion fell as much as 2.1% to ~$4,173/oz, now about a fifth below its pre-war level after breaking its 200-day moving average.</p>
+      <h3>Casey's General Stores (CASY)</h3>
+      <span class="move up">+15%</span>
+      <p>Blowout Q4: EPS of $4.37 crushed the $3.31 consensus on $4.57B revenue (vs. $4.30B expected); fuel margin jumped to 46.9¢/gal and the dividend was raised 14% — a rare bright spot on a red day.</p>
+    </div>
+    <div class="card">
+      <h3>Chips: NVDA −3.4%, AVGO −4.9%</h3>
+      <span class="move down">rotation continues</span>
+      <p>Nvidia shed ~$131B in market cap and Broadcom ~$86B with no company-specific news, per Motley Fool — the rotation out of the AI trade ahead of SpaceX's mega-IPO kept pressure on semis. Apple (+0.6%) was a rare mega-cap gainer.</p>
     </div>
   </div>
 
   <div class="label">Live Market Headlines — updates in real time</div>
-  <section class="panel" style="padding:8px">
+  <div class="panel" style="padding:8px">
     <div class="tradingview-widget-container">
       <div class="tradingview-widget-container__widget"></div>
       <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
       {"feedMode":"market","market":"stock","colorTheme":"dark","isTransparent":true,"displayMode":"regular","width":"100%","height":420,"locale":"en"}
       </script>
     </div>
-  </section>
+  </div>
 
   <div class="label">Weekly Scorecard — official closes</div>
-  <section class="panel" style="padding:8px 0">
+  <div class="panel" style="padding:8px 4px">
     <table>
-      <thead><tr><th>Index</th><th>Mon Jun 8</th><th>Tue Jun 9</th><th>Wed Jun 10</th></tr></thead>
+      <thead><tr><th>Session</th><th>S&amp;P 500</th><th>Nasdaq Composite</th><th>Dow Jones</th></tr></thead>
       <tbody>
-        <tr><td><strong>S&amp;P 500</strong></td><td>7,405.73 <span class="chg up">+0.30%</span></td><td>7,386.46 <span class="chg down">-0.26%</span></td><td><span class="chg down">-1.62%</span>*</td></tr>
-        <tr><td><strong>Nasdaq Composite</strong></td><td>25,929.66 <span class="chg up">+0.86%</span></td><td>25,678.82 <span class="chg down">-0.97%</span></td><td><span class="chg down">-1.98%</span>*</td></tr>
-        <tr><td><strong>Dow Jones</strong></td><td>50,786.01 <span class="chg down">-0.16%</span></td><td>50,871.13 <span class="chg up">+0.17%</span></td><td>-953.21 pts <span class="chg down">-1.87%</span>*</td></tr>
+        <tr><td>Mon, Jun 8</td><td class="num">7,405.73 <span class="up">+0.30%</span></td><td class="num">25,929.66 <span class="up">+0.86%</span></td><td class="num">50,786.01 <span class="down">−0.16%</span></td></tr>
+        <tr><td>Tue, Jun 9</td><td class="num">7,386.46 <span class="down">−0.26%</span></td><td class="num">25,678.82 <span class="down">−0.97%</span></td><td class="num">50,871.13 <span class="up">+0.17%</span></td></tr>
+        <tr><td><strong>Wed, Jun 10</strong></td><td class="num"><strong>7,266.99</strong> <span class="down">−1.62%</span></td><td class="num"><strong>25,169.50</strong> <span class="down">−1.98%</span></td><td class="num"><strong>49,918.78</strong> <span class="down">−1.87%</span></td></tr>
+        <tr><td>Week to date</td><td class="num"><span class="down">−1.6%</span></td><td class="num"><span class="down">−2.1%</span></td><td class="num"><span class="down">−1.9%</span></td></tr>
       </tbody>
     </table>
-  </section>
-  <div class="note">*Wednesday's percent moves are per CNBC shortly after the 4 PM bell; final settled index levels were still being confirmed at publication and will appear in the next edition. The Dow closed at its session low.</div>
+    <div class="note" style="padding:8px 12px 4px">Closing levels per Motley Fool/Xignite end-of-day data, percentage moves corroborated by CNBC. Week-to-date vs. Friday June 5 closes.</div>
+  </div>
 
   <div class="label">Rates, Bonds &amp; Commodities</div>
-  <section class="panel" style="padding:8px 0">
+  <div class="panel" style="padding:8px 4px">
     <table>
       <thead><tr><th>Instrument</th><th>Level</th><th>Note</th></tr></thead>
       <tbody>
-        <tr><td><strong>10-yr Treasury</strong></td><td>~4.52%</td><td>Little changed Wednesday per Trading Economics, even with headline CPI above 4% — the soft core reading helped.</td></tr>
-        <tr><td><strong>2-yr Treasury</strong></td><td>~4.15% (Tue)</td><td>Near a one-year high as markets price a possible hike as soon as October.</td></tr>
-        <tr><td><strong>Fed funds</strong></td><td>FOMC June 16–17</td><td>Yahoo Finance: the hot headline CPI may boost bets the Fed hikes this year; pressure on Chair Kevin Warsh not to cut.</td></tr>
-        <tr><td><strong>WTI crude</strong></td><td>&gt;$91/bbl</td><td>Up ~3% late Wednesday after Trump pledged more strikes on Iran (CNBC). Brent traded near $93 after both benchmarks cooled from near-$100 in recent months.</td></tr>
-        <tr><td><strong>Gold</strong></td><td>~$4,173/oz</td><td>Fell as much as 2.1% Wednesday (Bloomberg) — roughly a fifth below pre-war levels; the break of the 200-day moving average is triggering institutional selling.</td></tr>
+        <tr><td>10-yr Treasury</td><td class="num">~4.52%</td><td>Little changed; eased from a 4.55% intraday high after the soft core-CPI print.</td></tr>
+        <tr><td>WTI crude</td><td class="num">~$91 <span class="up">+~3%</span></td><td>Topped $91 late as US–Iran strikes resumed; Trump's "pay the price" post lit the fuse (CNBC).</td></tr>
+        <tr><td>Brent crude</td><td class="num">~$93 <span class="up">+~2%</span></td><td>Climbed above $93 overnight on the fresh strikes near the Strait of Hormuz (Bloomberg).</td></tr>
+        <tr><td>Gold</td><td class="num">~$4,170–4,190 <span class="down">−2–3%</span></td><td>Fell as much as 2.1% to ~$4,173 and broke its 200-day MA — now about a fifth below pre-war levels; rising yields trumping safe-haven demand (Bloomberg).</td></tr>
+        <tr><td>Fed / central banks</td><td class="num">FOMC Jun 16–17</td><td>Hold widely expected under Chair Kevin Warsh, but the hot headline CPI is feeding bets on a hike later this year. Bank of Canada held at 2.25% today; ECB expected to hike 25bp to 2.25% Thursday.</td></tr>
       </tbody>
     </table>
-  </section>
+  </div>
 
   <div class="label">On the Radar</div>
-  <section class="panel">
+  <div class="panel">
     <ul class="radar">
-      <li><strong>Tonight:</strong> Oracle reports fiscal Q4 after the close — Bloomberg consensus: EPS of $1.97 on ~$19B revenue. Its cloud numbers are a key AI-demand read; OpenAI (a $300B, five-year customer) is the linchpin.</li>
-      <li><strong>Friday:</strong> SpaceX's IPO debut — expected to be the largest public offering in history, with pricing expected Thursday. OpenAI and Anthropic IPO filings have stoked worries that mega-listings will drain cash from the AI trade.</li>
-      <li><strong>Central banks:</strong> The Bank of Canada held at 2.25% Wednesday for a fifth straight meeting; the ECB is widely expected to hike 25bp to 2.25% at its June 10–11 meeting; the FOMC meets June 16–17.</li>
-      <li><strong>June 22:</strong> Marvell officially joins the S&amp;P 500.</li>
+      <li><strong>Thursday 8:30 AM ET — May PPI.</strong> The producer-side check on whether the energy shock is spreading through the pipeline; a hot print would harden rate-hike bets before next week's FOMC.</li>
+      <li><strong>Thursday — ECB decision.</strong> A 25bp hike to 2.25% is widely expected as energy-driven inflation goes global.</li>
+      <li><strong>Friday — SpaceX IPO (expected ticker SPCX).</strong> Pricing expected Thursday, debut Friday — poised to be the largest public offering in history (~$1.8T valuation talk). Vanda data show the heaviest retail single-stock selling since Nov 2023, concentrated in chips, as money makes room; OpenAI has filed confidential IPO paperwork behind it.</li>
+      <li><strong>June 16–17 — FOMC meeting.</strong> First decision since CPI crossed back above 4%; watch the statement language on energy passthrough vs. the soft core trend.</li>
     </ul>
-  </section>
+  </div>
 
-  <footer class="sources">
+  <div class="sources">
     <h4>Sources</h4>
-    <a href="https://www.cnbc.com/2026/06/09/stock-market-today-live-updates.html">CNBC — Dow tumbles nearly 900 points, hitting session low into the close (June 10, 2026)</a>
-    <a href="https://finance.yahoo.com/markets/live/stock-market-today-wednesday-june-10-dow-sp-500-nasdaq-may-cpi-report-215056384.html">Yahoo Finance — Stock market today: CPI lands, US-Iran truce teeters (June 10, 2026)</a>
-    <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-10-2026">TheStreet — Stock Market Today (June 10, 2026)</a>
-    <a href="https://www.fool.com/coverage/stock-market-today/2026/06/10/stock-market-today-june-10-hot-inflation-and-war-escalation-fears-pressure-stocks-at-midday/">The Motley Fool — Stock Market Today, June 10</a>
-    <a href="https://tradingeconomics.com/united-states/government-bond-yield">Trading Economics — US 10-Year Treasury Yield</a>
-    <a href="https://finance.yahoo.com/markets/commodities/articles/gold-extends-drop-renewed-us-001602602.html">Yahoo Finance / Bloomberg — Gold extends drop on renewed US-Iran strikes</a>
-    <a href="https://finance.yahoo.com/sectors/technology/article/oracle-to-report-q4-earnings-amid-ai-trade-jitters-221337653.html">Yahoo Finance — Oracle to report Q4 earnings amid AI trade jitters</a>
-    <div class="disclaimer">For information only — not investment advice. Intraday figures are approximate and time-stamped where possible; live widgets may be ~15 minutes delayed.</div>
-  </footer>
+    <a href="https://finance.yahoo.com/markets/live/stock-market-today-wednesday-june-10-dow-sp-500-nasdaq-may-cpi-report-215056384.html">Yahoo Finance — Stock market today liveblog (June 10, 2026)</a>
+    <a href="https://www.fool.com/investing/2026/06/10/dow-jones-tumbles-over-1-as-energy-driven-inflatio/">Motley Fool — Dow tumbles as energy-driven inflation and Iran conflict rattle markets (incl. closing quote data)</a>
+    <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-10-2026">TheStreet — Stock Market Today, June 10, 2026</a>
+    <a href="https://www.cnbc.com/2026/06/10/oracle-orcl-q4-earnings-report-2026.html">CNBC — Oracle beats on earnings, but stock drops on plans to raise another $20 billion</a>
+    <a href="https://www.prnewswire.com/news-releases/oracle-announces-record-q4-and-fy-2026-results-driven-by-cloud-infrastructure--cloud-applications-302797201.html">Oracle (PR Newswire) — Record Q4 and FY 2026 results</a>
+    <a href="https://www.benzinga.com/trading-ideas/movers/26/06/53111883/caseys-general-stores-stock-jumps-after-q4-earnings-crush-estimates">Benzinga — Casey's jumps after Q4 earnings crush estimates</a>
+    <a href="https://tradingeconomics.com/united-states/government-bond-yield">Trading Economics — US 10-year Treasury yield</a>
+    <a href="https://finance.yahoo.com/markets/commodities/articles/gold-extends-drop-renewed-us-001602602.html">Bloomberg via Yahoo — Gold extends drop on renewed US-Iran strikes</a>
+    <a href="https://finance.yahoo.com/markets/commodities/articles/oil-climbs-fresh-us-strikes-000410367.html">Bloomberg via Yahoo — Oil climbs on fresh US strikes</a>
+  </div>
+  <div class="disclaimer">Information only — not investment advice. Figures reflect reporting available at publication; live widgets above may differ as markets move.</div>
+
 </div>
 <script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;}catch(e){}})();</script>
 </body>

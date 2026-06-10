@@ -5,159 +5,172 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Octagon — Daily MMA Briefing</title>
 <style>
-:root{--bg:#100c0c;--panel:#1a1313;--line:#322020;--text:#e8dcd6;--muted:#a8908a;--accent:#e84545;--accent2:#ff8a5c;--gold:#e8c766;--green:#4ade80;--mono:'SF Mono',ui-monospace,Menlo,Consolas,monospace}
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.6;padding:24px 16px 60px}
-.wrap{max-width:980px;margin:0 auto}
-.nav{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap}
-.nav a{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-decoration:none;color:var(--muted);border:1px solid var(--line);border-radius:8px;padding:8px 14px;background:var(--panel);transition:all .15s}
-.nav a:hover{color:var(--text);border-color:var(--accent)}
-.nav a.active{color:var(--accent2);border-color:var(--accent);background:rgba(232,69,69,.08)}
-.masthead{border-bottom:2px solid var(--accent);padding-bottom:18px;margin-bottom:26px}
-h1{font-size:42px;letter-spacing:-.01em;color:#fff}
-h1 .glyph{color:var(--accent)}
-.tagline{color:var(--muted);font-size:14px;margin-top:2px}
-.meta{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
-.pill{font-family:var(--mono);font-size:11px;letter-spacing:.12em;border:1px solid var(--line);border-radius:999px;padding:4px 12px;color:var(--muted)}
-.pill.live{color:var(--accent2);border-color:var(--accent2)}
-.pill.live::before{content:"●";margin-right:6px;animation:blink 1.6s infinite}
-@keyframes blink{50%{opacity:.3}}
-.label{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:34px 0 14px}
-.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px}
-.top-story{border-left:4px solid var(--accent)}
-.top-story h2{font-size:24px;color:#fff;margin-bottom:10px}
-.top-story p{margin-bottom:10px;font-size:15px}
-.top-story p:last-child{margin-bottom:0}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;transition:transform .15s,border-color .15s}
-.card:hover{transform:translateY(-3px);border-color:var(--accent2)}
-.card h3{font-size:16px;color:#fff;margin-bottom:6px}
-.card p{font-size:13.5px;color:var(--muted)}
-.dateline{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--gold);margin-bottom:8px;text-transform:uppercase}
-.tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;border-radius:5px;padding:2px 8px;margin-bottom:10px;text-transform:uppercase;background:rgba(74,222,128,.12);color:var(--green)}
-table{width:100%;border-collapse:collapse;font-size:13.5px}
-th{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
-td{padding:12px;border-bottom:1px solid var(--line);vertical-align:top}
-tr:last-child td{border-bottom:none}
-.winner{color:var(--green);font-weight:700}
-ul.news{list-style:none}
-ul.news li{padding:10px 0 10px 22px;border-bottom:1px solid var(--line);position:relative;font-size:14px}
-ul.news li:last-child{border-bottom:none}
-ul.news li::before{content:"▸";position:absolute;left:2px;color:var(--accent2)}
-.sources{margin-top:40px;border-top:1px solid var(--line);padding-top:18px}
-.sources h4{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--muted);text-transform:uppercase;margin-bottom:10px}
-.sources a{display:block;color:var(--accent2);font-size:12.5px;text-decoration:none;margin-bottom:5px;word-break:break-all}
-.sources a:hover{text-decoration:underline}
-.disclaimer{margin-top:22px;font-size:12px;color:var(--muted);font-style:italic}
-strong{color:#fff}
+  :root{
+    --bg:#100c0c; --panel:#1a1313; --panel2:#160f0f; --line:#322020;
+    --text:#e8dcd6; --muted:#a8908a; --accent:#e84545; --accent2:#ff8a5c;
+    --gold:#d9b45b; --green:#3ecf8e;
+    --mono:'SF Mono',ui-monospace,Menlo,Consolas,monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);font:16px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;padding:32px 20px 60px}
+  .wrap{max-width:980px;margin:0 auto}
+  .masthead{border-bottom:2px solid var(--accent);padding-bottom:18px;margin-bottom:14px}
+  .masthead h1{font-size:42px;letter-spacing:-.5px;color:#fff}
+  .masthead h1 .glyph{color:var(--accent)}
+  .tagline{color:var(--muted);font-size:15px;margin-top:2px}
+  .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;font-family:var(--mono);font-size:12px}
+  .pill{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:4px 12px;color:var(--muted)}
+  .pill.live{color:var(--accent2);border-color:var(--accent2)}
+  .pill.live .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent2);margin-right:6px;animation:blink 1.6s infinite}
+  @keyframes blink{50%{opacity:.25}}
+  nav.tabs{display:flex;gap:8px;margin:18px 0 28px;flex-wrap:wrap}
+  nav.tabs a{font-family:var(--mono);font-size:13px;text-decoration:none;color:var(--muted);border:1px solid var(--line);background:var(--panel);padding:8px 16px;border-radius:10px;transition:.15s}
+  nav.tabs a:hover{color:var(--text);transform:translateY(-1px)}
+  nav.tabs a.active{color:var(--accent);border-color:var(--accent);background:rgba(232,69,69,.08)}
+  .label{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:34px 0 14px}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .top-story{border-left:4px solid var(--accent)}
+  .top-story h2{font-size:24px;color:#fff;margin-bottom:10px}
+  .top-story p{margin-bottom:10px}
+  .top-story .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--accent2);text-transform:uppercase;margin-bottom:8px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;transition:.15s}
+  .card:hover{transform:translateY(-3px);border-color:var(--accent)}
+  .card h3{font-size:16.5px;color:#fff;margin-bottom:6px}
+  .card .when{font-family:var(--mono);font-size:12px;color:var(--gold);margin-bottom:8px}
+  .card p{font-size:14.5px;color:var(--muted)}
+  .tag{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;border-radius:6px;padding:2px 8px;margin-bottom:10px}
+  .tag.prospect{background:rgba(62,207,142,.12);color:var(--green)}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
+  td{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  td.result{font-weight:700;color:var(--green);white-space:nowrap}
+  td.method{color:var(--muted);font-size:13.5px}
+  ul.news{list-style:none}
+  ul.news li{padding:10px 0 10px 26px;border-bottom:1px solid var(--line);position:relative;font-size:14.5px}
+  ul.news li:last-child{border-bottom:none}
+  ul.news li::before{content:"⊘";position:absolute;left:2px;color:var(--accent)}
+  .sources{margin-top:40px;border-top:1px solid var(--line);padding-top:18px}
+  .sources h4{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+  .sources a{display:block;color:var(--accent2);font-size:13px;text-decoration:none;margin-bottom:6px;word-break:break-all}
+  .sources a:hover{text-decoration:underline}
+  .disclaimer{margin-top:22px;font-size:12px;color:var(--muted);font-style:italic}
+  strong{color:#fff}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <nav class="nav">
-    <a href="cyber-briefing.html">⛨ The Cyber Wire</a>
-    <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
-    <a href="mma-briefing.html" class="active">⊘ The Octagon</a>
-  </nav>
 
   <header class="masthead">
     <h1><span class="glyph">⊘</span> The Octagon</h1>
     <div class="tagline">Your daily MMA briefing — UFC, prospects &amp; the business of fighting</div>
     <div class="meta">
-      <span class="pill live">LIVE</span>
+      <span class="pill live"><span class="dot"></span>LIVE</span>
       <span class="pill" id="edition">Afternoon Edition</span>
       <span class="pill" id="datestamp">Wednesday, June 10, 2026</span>
-      <span class="pill">Updated <span id="updated">3:00 PM ET</span></span>
+      <span class="pill">Updated <span id="updated">—</span></span>
     </div>
   </header>
 
+  <nav class="tabs">
+    <a href="cyber-briefing.html">⛨ The Cyber Wire</a>
+    <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
+    <a href="mma-briefing.html" class="active">⊘ The Octagon</a>
+  </nav>
+
   <div class="label">Top Story</div>
-  <section class="panel top-story">
-    <h2>Four days out: UFC's White House card battles a lawsuit, the heat, and history</h2>
-    <p>UFC Freedom 250 lands Sunday, June 14, on the White House South Lawn — timed to President Trump's 80th birthday and America's 250th-anniversary celebrations — with <strong>Ilia Topuria defending the undisputed lightweight title against former interim champ Justin Gaethje</strong>, and <strong>Alex Pereira vs. Ciryl Gane for the interim heavyweight title</strong> in the co-main. A Pereira win would make him the UFC's first three-division champion. The seven-fight card starts at 8 PM ET on Paramount+ with a CBS simulcast.</p>
-    <p>The run-up is anything but quiet. The Public Integrity Project's federal lawsuit in D.C. — seeking to halt the event over claims the Interior Department and National Park Service unlawfully staged a private sporting event on public property without congressional consent or environmental review — is still pending; legal experts say a judge would have to block the event for it to succeed at this late stage. Meanwhile, the forecast calls for partly cloudy skies with high heat, humidity, and a slight risk of pop-up thunderstorms — the UFC says the show goes on regardless of weather, lightning excepted — and D.C. is bracing for extensive road closures around the White House all weekend.</p>
-  </section>
+  <div class="panel top-story">
+    <div class="kicker">Four days out — and one judge to convince</div>
+    <h2>White House card awaits a court ruling: judge asked to decide by Thursday on bid to halt UFC Freedom 250</h2>
+    <p>UFC Freedom 250 — the first professional sporting event ever staged at the White House — is set for <strong>Sunday, June 14, 8 PM ET</strong> on the South Lawn (Paramount+, with a CBS simulcast), with CNN reporting more than 90,000 people expected on and around the grounds for a card tied to America's 250th-birthday celebrations and President Trump's 80th birthday. One thing stands between fight week and the walkouts: a federal lawsuit.</p>
+    <p>The Public Integrity Project, which sued on June 6 claiming the event was improperly permitted, skipped environmental review and unlawfully erected structures on public land without congressional sign-off, has asked the judge — an Obama appointee — to <strong>rule on its emergency injunction request by Thursday</strong>. The Justice Department fired back this week that the challenge simply came too late. As of the latest reports, no hearing had been scheduled.</p>
+    <p>If the cage door does swing open, the stakes are enormous: <strong>Ilia Topuria defends the undisputed lightweight title</strong> against former interim champ <strong>Justin Gaethje</strong>, who punched his ticket by upsetting Paddy Pimblett. In the co-main, <strong>Alex Pereira meets Ciryl Gane for the interim heavyweight title</strong> — a Pereira win would make him the UFC's first three-division champion.</p>
+  </div>
 
   <div class="label">Fight Week — Upcoming Cards</div>
   <div class="cards">
     <div class="card">
-      <div class="dateline">Jun 14 · White House South Lawn, Washington, D.C.</div>
       <h3>UFC Freedom 250: Topuria vs. Gaethje</h3>
-      <p>Lightweight title defense, plus Pereira–Gane for interim heavyweight gold. Also: O'Malley–Zahabi, Ruffy–Chandler, Lopes–Garcia, Nickal–Daukaus, Lewis–Hokit.</p>
+      <div class="when">SUN JUN 14 · White House South Lawn, Washington, D.C.</div>
+      <p>Topuria's lightweight title defense headlines; Pereira–Gane interim heavyweight co-main. Depth for days: O'Malley–Zahabi, Nickal–Daukaus, Ruffy–Chandler, Lopes–Garcia, Lewis–Hokit. 8 PM ET, Paramount+/CBS.</p>
     </div>
     <div class="card">
-      <div class="dateline">Jun 20 · Meta APEX, Las Vegas</div>
-      <h3>UFC Fight Night: Kape vs. Horiguchi 2</h3>
-      <p>Flyweight rematch headlines the APEX's return after the White House spectacle.</p>
+      <h3>UFC Fight Night: Kape vs. Horiguchi</h3>
+      <div class="when">SAT JUN 20 · Meta APEX, Las Vegas</div>
+      <p>Kape and Horiguchi run back their flyweight rivalry at the APEX. Main card 8 PM ET on Paramount+.</p>
     </div>
     <div class="card">
-      <div class="dateline">Jun 27 · National Gymnastics Arena, Baku</div>
       <h3>UFC Fight Night: Fiziev vs. Torres</h3>
-      <p>Rafael Fiziev headlines a lightweight main event as the UFC visits Azerbaijan.</p>
+      <div class="when">SAT JUN 27 · National Gymnastics Arena, Baku</div>
+      <p>Rafael Fiziev headlines the UFC's stop in Azerbaijan in a lightweight main event vs. Torres — main card at the matinee hour of 12 PM ET.</p>
     </div>
     <div class="card">
-      <div class="dateline">Jul 11 · T-Mobile Arena, Las Vegas</div>
       <h3>UFC 329: McGregor vs. Holloway 2</h3>
-      <p>Conor McGregor's first bout since UFC 264 in July 2021 — a welterweight rematch with Max Holloway (Holloway's 170-lb debut) headlining International Fight Week. McGregor took their 2013 first meeting by decision.</p>
+      <div class="when">SAT JUL 11 · T-Mobile Arena, Las Vegas</div>
+      <p>Conor McGregor's first fight since July 2021, rematching Max Holloway at welterweight nearly 13 years after their 2013 meeting (McGregor by decision). Main card 9 PM ET.</p>
     </div>
   </div>
 
-  <div class="label">Last Event — Results · UFC Vegas 118: Muhammad vs. Bonfim (Jun 6)</div>
-  <section class="panel" style="padding:8px 0">
+  <div class="label">Last Event — Results · UFC Fight Night: Muhammad vs. Bonfim (Jun 6, Meta APEX)</div>
+  <div class="panel" style="padding:8px 4px">
     <table>
       <thead><tr><th>Result</th><th>Bout</th><th>Method</th></tr></thead>
       <tbody>
-        <tr><td><span class="winner">Gabriel Bonfim</span></td><td>def. Belal Muhammad</td><td>Unanimous decision (50-45 ×3)</td></tr>
-        <tr><td><span class="winner">Brendan Allen</span></td><td>def. Edmen Shahbazyan</td><td>Unanimous decision</td></tr>
-        <tr><td><span class="winner">Bryce Mitchell</span></td><td>def. Santiago Luna</td><td>Submission (arm-triangle), R3 4:52</td></tr>
-        <tr><td><span class="winner">Tom Nolan</span></td><td>def. Farès Ziam</td><td>Unanimous decision (29-28 ×3)</td></tr>
-        <tr><td><span class="winner">Iwo Baraniewski</span></td><td>def. Junior Tafa</td><td>TKO, R1 1:25</td></tr>
-        <tr><td><span class="winner">Alessandro Costa</span></td><td>def. Matt Schnell</td><td>TKO, R1 2:32</td></tr>
+        <tr><td class="result">Gabriel Bonfim</td><td>def. Belal Muhammad</td><td class="method">Unanimous decision (50-45 ×3)</td></tr>
+        <tr><td class="result">Brendan Allen</td><td>def. Edmen Shahbazyan</td><td class="method">Unanimous decision</td></tr>
+        <tr><td class="result">Tom Nolan</td><td>def. Farès Ziam</td><td class="method">Unanimous decision (29-28 ×3)</td></tr>
+        <tr><td class="result">Bryce Mitchell</td><td>def. Santiago Luna</td><td class="method">Submission (arm-triangle), R3 4:52</td></tr>
+        <tr><td class="result">Iwo Baraniewski</td><td>def. Junior Tafa</td><td class="method">TKO, R1 1:25</td></tr>
+        <tr><td class="result">Alessandro Costa</td><td>def. Matt Schnell</td><td class="method">TKO, R1 2:32</td></tr>
       </tbody>
     </table>
-  </section>
+  </div>
 
   <div class="label">Prospect Watch</div>
   <div class="cards">
     <div class="card">
-      <span class="tag">Prospect</span>
-      <h3>Iwo Baraniewski — 9-0, all first-round stoppages</h3>
-      <p>The Polish light heavyweight ran his record to 9-0 (3-0 UFC) with Saturday's 85-second TKO of Junior Tafa. Every pro win has come by first-round stoppage.</p>
+      <span class="tag prospect">prospect</span>
+      <h3>Iwo Baraniewski — 9-0, nine first-round finishes</h3>
+      <p>The light heavyweight blitzed Junior Tafa in 85 seconds on Saturday to move to 3-0 in the UFC — every win of his career has come by first-round stoppage. The division's scariest fast-forward button.</p>
     </div>
     <div class="card">
-      <span class="tag">Prospect</span>
+      <span class="tag prospect">prospect</span>
       <h3>Tom Nolan — five straight, calling for Moicano</h3>
-      <p>The Australian lightweight (11-1) ground out a hard-fought decision over Farès Ziam on Saturday, his fifth straight win, leaning on size and clinch wrestling. He's already campaigning for "awesome, scary" Renato Moicano next.</p>
+      <p>The lightweight (11-1) outworked Farès Ziam for a clean 29-28 sweep, extended his win streak to five and immediately asked for Renato Moicano next. One of 155's fastest risers.</p>
     </div>
     <div class="card">
-      <span class="tag">Prospect</span>
-      <h3>Mauricio Ruffy — biggest test Sunday</h3>
-      <p>The #9-ranked lightweight (13-2) faces Michael Chandler on the White House card. Last time out he stopped Rafael Fiziev by second-round TKO at UFC 325 in February.</p>
+      <span class="tag prospect">prospect</span>
+      <h3>Daniel Marcos — 18-1 and out the door to PFL</h3>
+      <p>The Peruvian bantamweight (18-1, 1 NC overall; 5-1, 1 NC in the UFC) was removed from the roster May 29 after his contract ran out, then signed with PFL on June 1. He exits off a submission win over Miles Johns — a head-scratcher of a departure.</p>
     </div>
   </div>
 
   <div class="label">Around the Sport</div>
-  <section class="panel">
+  <div class="panel">
     <ul class="news">
-      <li><strong>GLORY Collision 9 (June 13, Rotterdam):</strong> heavyweight champion Mory Kromah — fresh from sparring duty in Ciryl Gane's Pereira camp — defends his title against Miloš Cvjetićanin. Gane has leaned on multiple GLORY stars to mimic Pereira's kickboxing.</li>
-      <li><strong>Artem Vakhitov walks:</strong> the GLORY light-heavyweight champion earned a UFC contract on Dana White's Contender Series but declined the promotion's entry-level offer.</li>
-      <li><strong>White House logistics:</strong> bookmakers are posting odds on whether weather or the federal lawsuit derails Sunday's card; D.C. has mapped extensive road closures for the weekend.</li>
+      <li><strong>CBS goes big on the UFC:</strong> Dana White says the White House card will be one of <strong>four marquee events per year airing on CBS</strong> alongside the Paramount+ deal — no pay-per-view for Sunday's show.</li>
+      <li><strong>Bonfim arrives:</strong> Gabriel Bonfim's 50-45 sweep of former welterweight champion Belal Muhammad ran his win streak to five and stamped him as a legitimate title threat at 170, per ESPN's event coverage.</li>
+      <li><strong>Eyes on the sky:</strong> with Freedom 250 staged outdoors on the South Lawn, outlets including Bleacher Report are now tracking the D.C. weather forecast for fight night — one more variable for the year's most unusual card.</li>
     </ul>
-  </section>
+  </div>
 
-  <footer class="sources">
+  <div class="sources">
     <h4>Sources</h4>
-    <a href="https://www.cbssports.com/ufc/news/ufc-white-house-fight-card-date-odds-ilia-topuria-justin-gaethje-alex-pereira/">CBS Sports — UFC Freedom 250 complete guide</a>
-    <a href="https://www.pbs.org/newshour/nation/lawsuit-aims-to-block-ufc-fight-on-white-house-south-lawn-for-trumps-birthday">PBS News — Lawsuit aims to block UFC White House fight</a>
-    <a href="https://www.mmamania.com/ufc-white-house-2026-fight-card-start-time-full-results-dana-white-conor-mcgregor-cbs-mma/449277/will-ufc-white-house-get-canceled-bookies-set-odds-on-wonky-weather-federal-lawsuit">MMA Mania — Will UFC White House get canceled?</a>
-    <a href="https://www.ufc.com/news/ufc-fight-night-muhammad-vs-bonfim-main-card-results-highlights-interviews">UFC.com — Muhammad vs. Bonfim main card results</a>
-    <a href="https://cagesidepress.com/2026/06/08/ufc-vegas-118-tom-nolan-moicano/">Cageside Press — Tom Nolan wants Moicano</a>
-    <a href="https://en.wikipedia.org/wiki/UFC_329">Wikipedia — UFC 329: McGregor vs. Holloway 2</a>
-    <a href="https://www.ufc.com/athlete/mauricio-ruffy">UFC.com — Mauricio Ruffy</a>
-    <a href="https://bloodyelbow.com/2026/06/10/ciryl-ganes-training-partner-explains-why-he-has-no-choice-but-to-finish-alex-pereira-at-ufc-white-house/">Bloody Elbow — Gane's training partner on Pereira</a>
-    <a href="https://www.nbcwashington.com/news/local/transportation/extensive-dc-road-closures-planned-for-ufc-fight-at-white-house-heres-a-map/4114210/">NBC Washington — D.C. road closures for UFC fight</a>
-    <div class="disclaimer">Cards and bouts are subject to change.</div>
-  </footer>
+    <a href="https://www.espn.com/mma/story/_/id/48993111/lawsuit-seeks-shut-ufc-white-house">ESPN — Lawsuit aims to halt UFC White House spectacle</a>
+    <a href="https://www.cnn.com/2026/06/09/politics/doj-response-lawsuit-ufc-fight-white-house">CNN — Trump argues lawsuit seeking to halt White House UFC fight was brought too "late"</a>
+    <a href="https://www.cnn.com/2026/06/01/politics/what-we-know-ufc-fight-white-house">CNN — What we know about the UFC fight at the White House</a>
+    <a href="https://www.cbssports.com/ufc/news/ufc-white-house-fight-card-date-odds-ilia-topuria-justin-gaethje-alex-pereira/">CBS Sports — UFC Freedom 250: fight card, date and latest news</a>
+    <a href="https://www.ufc.com/event/ufc-freedom-250">UFC.com — UFC Freedom 250</a>
+    <a href="https://www.ufc.com/news/ufc-fight-night-muhammad-vs-bonfim-main-card-results-highlights-interviews">UFC.com — Fight Night: Muhammad vs Bonfim main card results</a>
+    <a href="https://www.espn.com/mma/fightcenter/_/id/600058949/league/ufc">ESPN — UFC Fight Night: Muhammad vs. Bonfim fight results</a>
+    <a href="https://cagesidepress.com/2026/06/02/daniel-marcos-joins-pfl-days-after-ufc-exit/">Cageside Press — Daniel Marcos joins PFL days after UFC exit</a>
+    <a href="https://www.paramountplus.com/sneak-peak/ufc-schedule-2026/">Paramount+ — UFC schedule 2026</a>
+    <a href="https://www.espn.com/mma/fightcenter/_/id/600059148/league/ufc">ESPN — UFC 329: McGregor vs. Holloway 2</a>
+    <a href="https://bleacherreport.com/articles/25435164-updated-weather-forecast-ufc-white-house-freedom-250-ahead-historic-fight-card">Bleacher Report — Updated weather forecast for UFC White House Freedom 250</a>
+  </div>
+  <div class="disclaimer">Cards and bouts are subject to change. Compiled from public reporting on June 10, 2026.</div>
+
 </div>
 <script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;}catch(e){}})();</script>
 </body>
