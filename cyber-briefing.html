@@ -1,61 +1,64 @@
 <!DOCTYPE html>
-<!-- build: 2026-06-10 13:10 ET — Midday Edition -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Cyber Wire — Daily Security Briefing</title>
+<title>The Cyber Wire — Daily Briefing</title>
 <style>
-:root{
-  --bg:#0a0f0e; --panel:#0f1716; --line:#1d2b29; --ink:#dceae7; --muted:#7e958f;
-  --teal:#22d3a8; --cyan:#36c6ff; --warn:#f2a93b; --crit:#f2545b;
-  --mono:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;
-}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.55}
-.wrap{max-width:960px;margin:0 auto;padding:24px 20px 60px}
-.nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
-.nav a{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-decoration:none;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:7px 14px;transition:.15s}
-.nav a:hover{color:var(--ink);border-color:#2f4a46}
-.nav a.active{color:#04110e;background:var(--teal);border-color:var(--teal);font-weight:600}
-.masthead{border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:22px}
-h1{font-size:40px;margin:0 0 6px;letter-spacing:-.5px;background:linear-gradient(90deg,var(--teal),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
-.tagline{color:var(--muted);font-size:15px;margin:0 0 14px}
-.meta{display:flex;gap:8px;flex-wrap:wrap}
-.pill{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:4px 10px}
-.pill.live{color:var(--teal);border-color:#1d4a40}
-.pill.live .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--teal);margin-right:6px;animation:pulse 1.6s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-.label{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin:30px 0 12px;border-left:3px solid var(--teal);padding-left:10px}
-.lead{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px 24px}
-.lead h2{font-size:24px;margin:0 0 10px;line-height:1.3}
-.lead p{margin:0 0 10px;color:#c4d6d2}
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;transition:.15s}
-.card:hover{transform:translateY(-3px);border-color:#2f4a46}
-.card h3{margin:0 0 7px;font-size:16px}
-.card p{margin:0;color:var(--muted);font-size:14px}
-.tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:6px;margin-bottom:9px}
-.tag.breach{background:#3a1d1f;color:#ff9a9e}
-.tag.ransom{background:#3a2a14;color:var(--warn)}
-.tag.exploit{background:#13322c;color:var(--teal)}
-.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
-table{width:100%;border-collapse:collapse;font-size:14px}
-th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line)}
-th{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500}
-td.cve{font-family:var(--mono);color:var(--cyan)}
-.cvss{font-family:var(--mono);font-weight:600}
-.c-crit{color:var(--crit)} .c-high{color:var(--warn)}
+:root{--bg:#0b1014;--panel:#121a20;--line:#1f2c35;--text:#d7e2e8;--muted:#8aa0ac;--accent:#22d3a8;--accent2:#36c6ff;--warn:#ffb454;--bad:#ff6b6b;--mono:'SF Mono',ui-monospace,Menlo,Consolas,monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.6;padding:24px 16px 60px}
+.wrap{max-width:980px;margin:0 auto}
+.nav{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap}
+.nav a{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-decoration:none;color:var(--muted);border:1px solid var(--line);border-radius:8px;padding:8px 14px;background:var(--panel);transition:all .15s}
+.nav a:hover{color:var(--text);border-color:var(--accent)}
+.nav a.active{color:var(--accent);border-color:var(--accent);background:rgba(34,211,168,.08)}
+.masthead{border-bottom:2px solid var(--accent);padding-bottom:18px;margin-bottom:26px}
+h1{font-size:42px;letter-spacing:-.01em;color:#fff}
+h1 .glyph{color:var(--accent)}
+.tagline{color:var(--muted);font-size:14px;margin-top:2px}
+.meta{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.12em;border:1px solid var(--line);border-radius:999px;padding:4px 12px;color:var(--muted)}
+.pill.live{color:var(--accent);border-color:var(--accent)}
+.pill.live::before{content:"●";margin-right:6px;animation:blink 1.6s infinite}
+@keyframes blink{50%{opacity:.3}}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:34px 0 14px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px}
+.top-story{border-left:4px solid var(--accent)}
+.top-story h2{font-size:24px;color:#fff;margin-bottom:10px}
+.top-story p{color:var(--text);margin-bottom:10px;font-size:15px}
+.top-story p:last-child{margin-bottom:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;transition:transform .15s,border-color .15s}
+.card:hover{transform:translateY(-3px);border-color:var(--accent2)}
+.card h3{font-size:16px;color:#fff;margin-bottom:8px}
+.card p{font-size:13.5px;color:var(--muted)}
+.tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;border-radius:5px;padding:2px 8px;margin-bottom:10px;text-transform:uppercase}
+.tag.breach{background:rgba(255,107,107,.12);color:var(--bad)}
+.tag.ransom{background:rgba(255,180,84,.12);color:var(--warn)}
+.tag.gov{background:rgba(54,198,255,.12);color:var(--accent2)}
+.tag.supply{background:rgba(34,211,168,.12);color:var(--accent)}
+.tag.zeroday{background:rgba(255,107,107,.18);color:var(--bad)}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
+td{padding:12px;border-bottom:1px solid var(--line);vertical-align:top}
 tr:last-child td{border-bottom:none}
-ul.kev{list-style:none;padding:0;margin:0}
-ul.kev li{padding:11px 16px;border-bottom:1px solid var(--line);color:#c4d6d2;font-size:14px}
+.cve{font-family:var(--mono);color:var(--accent2);white-space:nowrap}
+.cvss{font-family:var(--mono);font-weight:700}
+.cvss.crit{color:var(--bad)}
+.cvss.high{color:var(--warn)}
+ul.kev{list-style:none}
+ul.kev li{padding:10px 0 10px 22px;border-bottom:1px solid var(--line);position:relative;font-size:14px}
 ul.kev li:last-child{border-bottom:none}
-ul.kev li::before{content:"⛨";color:var(--teal);margin-right:10px}
-.foot{margin-top:36px;border-top:1px solid var(--line);padding-top:18px;font-size:13px;color:var(--muted)}
-.foot a{color:var(--teal);text-decoration:none;word-break:break-all}
-.foot a:hover{text-decoration:underline}
-.disc{font-size:12px;color:#5f726d;margin-top:14px;font-style:italic}
-@media(max-width:640px){h1{font-size:30px}}
+ul.kev li::before{content:"▸";position:absolute;left:2px;color:var(--accent)}
+.due{font-family:var(--mono);font-size:12px;color:var(--warn)}
+.due.urgent{color:var(--bad);font-weight:700}
+.sources{margin-top:40px;border-top:1px solid var(--line);padding-top:18px}
+.sources h4{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--muted);text-transform:uppercase;margin-bottom:10px}
+.sources a{display:block;color:var(--accent2);font-size:12.5px;text-decoration:none;margin-bottom:5px;word-break:break-all}
+.sources a:hover{text-decoration:underline}
+.disclaimer{margin-top:22px;font-size:12px;color:var(--muted);font-style:italic}
+strong{color:#fff}
 </style>
 </head>
 <body>
@@ -66,70 +69,106 @@ ul.kev li::before{content:"⛨";color:var(--teal);margin-right:10px}
     <a href="mma-briefing.html">⊘ The Octagon</a>
   </nav>
 
-  <div class="masthead">
-    <h1>The Cyber Wire</h1>
-    <p class="tagline">Your daily cybersecurity briefing — breaches, exploited CVEs &amp; federal deadlines</p>
+  <header class="masthead">
+    <h1><span class="glyph">⛨</span> The Cyber Wire</h1>
+    <div class="tagline">Your daily cybersecurity briefing — breaches, vulnerabilities &amp; federal deadlines</div>
     <div class="meta">
-      <span class="pill live"><span class="dot"></span>LIVE</span>
-      <span class="pill" id="edition">Edition</span>
-      <span class="pill" id="datestamp">—</span>
-      <span class="pill">Updated <span id="updated">—</span></span>
+      <span class="pill live">LIVE</span>
+      <span class="pill" id="edition">Afternoon Edition</span>
+      <span class="pill" id="datestamp">Wednesday, June 10, 2026</span>
+      <span class="pill">Updated <span id="updated">3:00 PM ET</span></span>
     </div>
-  </div>
+  </header>
 
   <div class="label">Top Story</div>
-  <div class="lead">
-    <h2>Hours after a record Patch Tuesday, a researcher drops "RoguePlanet" — a working Windows Defender zero-day (CVE-2026-47281) that grants SYSTEM on fully patched machines</h2>
-    <p>A day after Microsoft shipped its largest-ever Patch Tuesday, a security researcher publicly released a fresh, unpatched zero-day exploit dubbed <strong>RoguePlanet</strong> (<strong>CVE-2026-47281</strong>). The proof-of-concept abuses a <strong>race-condition flaw in Microsoft Defender</strong> to spawn a command prompt with <strong>SYSTEM privileges</strong> — full local control — and multiple independent researchers have validated that it works against <strong>fully patched Windows 10 and Windows 11</strong> systems. Because it is a local privilege-escalation bug, an attacker needs an initial foothold first, but once on a box it cleanly elevates to the highest privilege level with no fix yet available.</p>
-    <p>The drop is the latest move in an escalating feud between Microsoft and the researcher "Nightmare Eclipse" (a.k.a. Chaotic Eclipse), who has serially published Windows zero-days — including the BlueHammer, RedSun, GreenPlasma and YellowKey flaws — in protest of Microsoft's vulnerability-disclosure and bug-bounty practices. RoguePlanet landed within hours of Microsoft patching two of the researcher's earlier exploits (GreenPlasma and YellowKey). It caps an extraordinary 24 hours: the <strong>June 9 Patch Tuesday</strong> fixed a record <strong>~200 CVEs</strong> (beating the prior high of 167), including multiple publicly disclosed zero-days, while an actively exploited <strong>Windows Netlogon</strong> RCE (CVE-2026-41089, CVSS 9.8) and the <strong>Check Point VPN</strong> bug (CVE-2026-50751) — whose emergency federal patch deadline is <strong>tomorrow, June 11</strong> — keep defenders stretched thin.</p>
-  </div>
+  <section class="panel top-story">
+    <h2>ServiceNow discloses security incident: unauthenticated API let attackers query customer instance data</h2>
+    <p>ServiceNow is warning customers of a security incident after attackers exploited an <strong>unauthenticated access flaw in a REST API endpoint</strong> to query data from customer instances. The observed malicious activity traces back to <strong>June 2–3</strong>, and the company applied a security update to hosted customer instances on <strong>June 5</strong> that restricts the endpoint to authenticated users only.</p>
+    <p>Administrators discussing the incident say the issue appears tied to the <strong>'/api/now/related_list_edit/create'</strong> endpoint, which was reportedly configured with 'requires_authentication=false'. ServiceNow says the issue primarily impacts customers on the Australia platform release or older releases with certain configuration changes. The company has not said exactly what data was accessed, but affected instances can hold IT support tickets, employee records, internal documentation, asset inventories, and security incident reports. Admins are sharing indicators of compromise — including API requests from IP <strong>51.159.98.241</strong> — and urging log reviews for requests to the vulnerable endpoint.</p>
+    <p>The disclosure hit the company's stock too: ServiceNow shares fell more than 6% in Wednesday's session.</p>
+  </section>
 
   <div class="label">Breaches &amp; Incidents</div>
   <div class="cards">
-    <div class="card"><span class="tag exploit">Zero-day</span><h3>RoguePlanet — Defender LPE</h3><p>A public, unpatched PoC (CVE-2026-47281) exploits a Microsoft Defender race condition to gain SYSTEM on fully patched Windows 10/11. Released June 10 by researcher "Nightmare Eclipse" amid a dispute over Microsoft's bug-bounty practices; no vendor fix yet.</p></div>
-    <div class="card"><span class="tag exploit">Deadline tomorrow</span><h3>Check Point VPN — Qilin ransomware</h3><p>CVE-2026-50751 (CVSS 9.3) is exploited in the wild, in at least one case tied to a Qilin ransomware affiliate. Check Point hotfixed it June 8; CISA's shortened federal patch deadline is June 11 — tomorrow.</p></div>
-    <div class="card"><span class="tag exploit">Patch Tuesday</span><h3>Microsoft fixes a record ~200 flaws</h3><p>June 9's Patch Tuesday was Microsoft's largest ever — ~200 CVEs (beating the prior record of 167), including dozens rated critical and several publicly disclosed zero-days, among them CTFMON EoP (CVE-2026-45586), the HTTP/2 "Bomb" DoS (CVE-2026-49160) and BitLocker "YellowKey" (CVE-2026-50507).</p></div>
-    <div class="card"><span class="tag exploit">Exploited CVE</span><h3>Windows Netlogon — domain-controller RCE</h3><p>CVE-2026-41089 (CVSS 9.8), a stack buffer overflow in Netlogon, is exploited in the wild and grants SYSTEM-level code execution on domain controllers across Windows Server 2012–2025. Belgium's CCB warned DCs are at risk; addressed in the June updates.</p></div>
-    <div class="card"><span class="tag breach">Breach</span><h3>Baker Distributing — ShinyHunters</h3><p>Disclosed June 8: ShinyHunters claimed over 260,000 Salesforce records plus corporate data at the HVAC/refrigeration distributor — part of the group's broader Salesforce-focused extortion campaign.</p></div>
-    <div class="card"><span class="tag ransom">Leak sites</span><h3>Fresh extortion-site victims</h3><p>New victims surfaced June 9 on ransomware leak sites, including 3i Infotech, Aegle Aviation and Asia Strategic Holdings, claimed by crews tracked as Morpheus, RansomHouse and NightSpire — a reminder the extortion pipeline never pauses.</p></div>
+    <div class="card">
+      <span class="tag zeroday">Zero-Day</span>
+      <h3>"RoguePlanet" Defender zero-day exploit dropped hours after Patch Tuesday</h3>
+      <p>Researcher "Nightmare Eclipse" publicly released an unpatched Microsoft Defender exploit that abuses a race condition to spawn a SYSTEM-level command prompt on fully patched Windows 10/11 — hours after Microsoft fixed two of the researcher's previously disclosed flaws. The local privilege-escalation exploit is hit-or-miss (race-condition dependent), and the release continues the researcher's running dispute with Microsoft over disclosure and bug-bounty practices.</p>
+    </div>
+    <div class="card">
+      <span class="tag gov">Government</span>
+      <h3>France's Tchap government messenger breached via hijacked account</h3>
+      <p>French authorities warned that hackers used a hijacked user account to breach Tchap, the French government's encrypted messaging platform used by officials and civil servants.</p>
+    </div>
+    <div class="card">
+      <span class="tag supply">Supply Chain</span>
+      <h3>Open-source compromises ripple downstream to OpenAI and Vercel</h3>
+      <p>TechCrunch's mid-year breach roundup highlights compromises of major open-source projects — including Aqua Security's Trivy, Bitwarden, and Checkmarx — that let hackers steal passwords and credentials from users, enabling downstream compromises at companies including OpenAI and Vercel.</p>
+    </div>
+    <div class="card">
+      <span class="tag ransom">Ransomware</span>
+      <h3>Brain Cipher claims 350+ GB from Australian regional newspaper</h3>
+      <p>The Brain Cipher ransomware group claimed an attack on The Adviser, a regional Victorian newspaper, saying it stole more than 350 GB of data. The episode fits 2026's broader trend: extortion-first operations and "EDR killer" tooling to neutralize endpoint defenses before payload execution.</p>
+    </div>
   </div>
 
   <div class="label">Vulnerability Watch</div>
-  <div class="panel">
+  <section class="panel" style="padding:8px 0">
     <table>
-      <tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr>
-      <tr><td class="cve">CVE-2026-47281</td><td class="cvss c-crit">PoC</td><td>Microsoft Defender (Windows 10 / 11)</td><td>"RoguePlanet" race-condition local privilege escalation to SYSTEM; public exploit validated against fully patched systems — no vendor fix yet as of June 10</td></tr>
-      <tr><td class="cve">CVE-2026-50751</td><td class="cvss c-crit">9.3</td><td>Check Point Remote Access VPN / Mobile Access / Spark Firewall (IKEv1)</td><td>Authentication bypass; exploited in the wild (Qilin ransomware) — hotfix shipped June 8; CISA KEV 3-day federal deadline of June 11</td></tr>
-      <tr><td class="cve">CVE-2026-41089</td><td class="cvss c-crit">9.8</td><td>Windows Netlogon (Server 2012–2025)</td><td>Stack buffer overflow; unauthenticated RCE granting SYSTEM on domain controllers; exploited in the wild — addressed in the June Patch Tuesday updates</td></tr>
-      <tr><td class="cve">CVE-2026-20245</td><td class="cvss c-high">7.8</td><td>Cisco Catalyst SD-WAN Manager</td><td>Authenticated privilege escalation to root-level command execution; exploited in the wild with no patch available as of June 6 — apply Cisco's mitigations</td></tr>
-      <tr><td class="cve">CVE-2026-28318</td><td class="cvss c-high">7.5</td><td>SolarWinds Serv-U file transfer</td><td>Unauthenticated DoS via a crafted POST request; exploited in the wild — fixed in Serv-U 15.5.4 HF1; CISA KEV deadline June 19</td></tr>
-      <tr><td class="cve">CVE-2026-42271</td><td class="cvss c-high">—</td><td>BerriAI LiteLLM</td><td>Command-injection flaw; added to CISA KEV June 8 on evidence of exploitation — standard three-week window puts the deadline around June 29</td></tr>
+      <thead><tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="cve">CVE-2026-41089</td>
+          <td><span class="cvss crit">9.8</span></td>
+          <td>Windows Netlogon (domain controllers, Server 2012–2025)</td>
+          <td>Stack buffer overflow → unauthenticated SYSTEM RCE; exploited in the wild. Fixed in June Patch Tuesday — a record ~200 CVEs incl. 33 critical and three publicly disclosed (not exploited) zero-days.</td>
+        </tr>
+        <tr>
+          <td class="cve">CVE-2026-50751</td>
+          <td><span class="cvss crit">9.3</span></td>
+          <td>Check Point Security Gateway (IKEv1 Remote Access VPN / Mobile Access / Spark Firewall)</td>
+          <td>Auth bypass exploited since ~May 7, tied to a Qilin ransomware affiliate. Hotfix shipped June 8. KEV-listed with an emergency 3-day federal deadline.</td>
+        </tr>
+        <tr>
+          <td class="cve">CVE-2026-11645</td>
+          <td><span class="cvss high">8.8</span></td>
+          <td>Google Chrome (V8 JS/WASM engine)</td>
+          <td>Out-of-bounds read/write; fixed among 74 vulnerabilities in this week's Chrome update; added to CISA KEV June 9.</td>
+        </tr>
+        <tr>
+          <td class="cve">CVE-2026-20245</td>
+          <td><span class="cvss high">7.8</span></td>
+          <td>Cisco Catalyst SD-WAN Manager</td>
+          <td>Authenticated privilege escalation to root-level command execution; exploited in the wild. No patch as of last week — Cisco mitigations only; KEV-listed June 9.</td>
+        </tr>
+      </tbody>
     </table>
-  </div>
+  </section>
 
   <div class="label">CISA KEV &amp; Federal Deadlines</div>
-  <ul class="kev">
-    <li><strong>Tomorrow — June 11 (emergency):</strong> CVE-2026-50751 (Check Point Security Gateway improper authentication) must be remediated by federal civilian agencies under a shortened <strong>three-day deadline</strong> given active ransomware exploitation. Patch IKEv1-configured gateways now.</li>
-    <li><strong>June 8:</strong> CVE-2026-42271 (BerriAI LiteLLM command injection) added on evidence of active exploitation. Under BOD 22-01's standard three-week window, the federal remediation deadline lands around <strong>June 29, 2026</strong>.</li>
-    <li><strong>June 5:</strong> CVE-2026-28318 (SolarWinds Serv-U uncontrolled resource consumption / DoS, CVSS 7.5) added with a federal remediation deadline of <strong>June 19, 2026</strong>; fixed in Serv-U 15.5.4 HF1.</li>
-    <li><strong>June 3:</strong> CVE-2026-45247 (Mirasvit Full Page Cache Warmer, deserialization of untrusted data) added on evidence of active exploitation; the standard three-week window puts the federal deadline around <strong>June 24, 2026</strong>.</li>
-    <li>BOD 22-01 gives federal civilian agencies a <strong>standard three-week window</strong> from a CVE's KEV addition date to remediate or stop using the affected product; CISA can shorten that window for emergencies, as it did for the Check Point flaw (3 days).</li>
-  </ul>
+  <section class="panel">
+    <ul class="kev">
+      <li><strong>Due TOMORROW — June 11:</strong> Check Point CVE-2026-50751 carries an explicit, shortened <span class="due urgent">3-day emergency deadline</span> (added June 8) — an exception to the standard three-week BOD 22-01 window.</li>
+      <li><strong>Added June 9:</strong> Arista EOS CVE-2026-7473, Google Chromium V8 CVE-2026-11645, and Cisco Catalyst SD-WAN Manager CVE-2026-20245 — standard window, <span class="due">due ~June 30</span>.</li>
+      <li><strong>Added June 8:</strong> BerriAI LiteLLM command injection CVE-2026-42271 — standard window, <span class="due">due ~June 29</span>.</li>
+      <li><strong>Due June 19:</strong> SolarWinds Serv-U CVE-2026-28318 (CVSS 7.5, DoS; added June 5; fixed in Serv-U 15.5.4 HF1).</li>
+      <li>Reminder: BOD 22-01 gives federal civilian agencies a standard <strong>three-week</strong> remediation window from a CVE's KEV addition date unless CISA states otherwise.</li>
+    </ul>
+  </section>
 
-  <div class="foot">
-    <strong>Sources:</strong><br>
-    <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-defender-rogueplanet-zero-day-grants-system-privileges/">BleepingComputer — Microsoft Defender "RoguePlanet" zero-day grants SYSTEM privileges</a><br>
-    <a href="https://www.helpnetsecurity.com/2026/06/10/microsoft-patch-tuesday-rogueplanet/">Help Net Security — Record Microsoft Patch Tuesday, fresh zero-day (RoguePlanet)</a><br>
-    <a href="https://www.securityweek.com/new-windows-zero-day-exploit-rogueplanet-released/">SecurityWeek — New Windows zero-day exploit "RoguePlanet" released</a><br>
-    <a href="https://www.rapid7.com/blog/post/etr-critical-check-point-vpn-zero-day-exploited-in-the-wild-cve-2026-50751/">Rapid7 — Critical Check Point VPN zero-day exploited in the wild (CVE-2026-50751, CVSS 9.3)</a><br>
-    <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA — Known Exploited Vulnerabilities Catalog</a><br>
-    <a href="https://www.securityweek.com/critical-windows-netlogon-vulnerability-in-attackers-crosshairs/">SecurityWeek — Critical Windows Netlogon vulnerability in attackers' crosshairs (CVE-2026-41089, CVSS 9.8)</a><br>
-    <a href="https://thehackernews.com/2026/06/cisco-catalyst-sd-wan-manager-cve-2026.html">The Hacker News — Cisco Catalyst SD-WAN Manager CVE-2026-20245 actively exploited, no patch available</a><br>
-    <a href="https://www.breachsense.com/breaches/">Breachsense — Recent data breaches (Baker Distributing; June leak-site victims)</a>
-    <div class="disc">For awareness only. Verify CVSS scores and fixed versions against the vendor's official advisory before acting. Deadlines apply to U.S. federal civilian agencies under BOD 22-01.</div>
-  </div>
+  <footer class="sources">
+    <h4>Sources</h4>
+    <a href="https://www.bleepingcomputer.com/news/security/servicenow-discloses-security-incident-exposing-customer-data/">BleepingComputer — ServiceNow discloses security incident exposing customer data</a>
+    <a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-defender-rogueplanet-zero-day-grants-system-privileges/">BleepingComputer — Microsoft Defender 'RoguePlanet' zero-day grants SYSTEM privileges</a>
+    <a href="https://www.helpnetsecurity.com/2026/06/10/microsoft-patch-tuesday-rogueplanet/">Help Net Security — Record Microsoft Patch Tuesday, fresh zero-day</a>
+    <a href="https://www.cisa.gov/news-events/alerts/2026/06/09/cisa-adds-three-known-exploited-vulnerabilities-catalog">CISA — Adds Three Known Exploited Vulnerabilities to Catalog (June 9)</a>
+    <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA — Known Exploited Vulnerabilities Catalog</a>
+    <a href="https://techcrunch.com/2026/06/07/the-worst-hacks-and-breaches-of-2026-so-far/">TechCrunch — The worst breaches of 2026 so far</a>
+    <a href="https://thehackernews.com/2026/06/microsoft-defender-rogueplanet-zero-day.html">The Hacker News — Defender RoguePlanet zero-day</a>
+    <a href="https://www.breachsense.com/breaches/">Breachsense — Recent data breaches</a>
+    <div class="disclaimer">This briefing summarizes publicly reported information for awareness purposes. Verify CVE details against vendor advisories before acting.</div>
+  </footer>
 </div>
-
 <script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;}catch(e){}})();</script>
 </body>
 </html>

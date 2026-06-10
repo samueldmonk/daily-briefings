@@ -161,3 +161,28 @@ fought again since), update the entry in the same commit.
   Other June 6 results: Bonfim def. Belal Muhammad UD 50-45x3; Brendan Allen def. Edmen Shahbazyan
   UD; Bryce Mitchell def. Santiago Luna sub (arm-triangle) R3 4:52; Iwo Baraniewski def. Junior Tafa
   TKO R1 1:25; Alessandro Costa def. Matt Schnell TKO R1 2:32.
+
+## Added 2026-06-10 (Afternoon ~3pm ET)
+- **June 10 intraday (~3 PM ET):** stocks down ALL session after May CPI (4.2% y/y headline / core soft
+  +0.2% m/m) and fresh US-Iran strikes (Apache helicopter downed; Trump "pay the price"). Per 24/7 Wall
+  St live data ~3 PM: S&P 500 ~-0.9%, Dow ~-0.7%, Nasdaq 100 ~-1.6% (Yahoo: Nasdaq Composite ~-1.2%
+  afternoon). Breadth POSITIVE (~63% of US issues advancing per TheStreet) — selling concentrated in
+  heavyweight tech. Russell 2000 readings conflicted across sources (TheStreet +0.41% vs 24/7 -0.89%) —
+  number dropped from publication. Movers: SMCI -12% early / ~-7.6% mid-afternoon ($7B equity financing);
+  ServiceNow ~-6.3% (security incident disclosure); J.M. Smucker ~+10.4%; early gainers HOOD +8.1%,
+  KLA +6.7%, AMAT +5.5% (labeled early only). WTI choppy ~$89-90 (morning $89.92 +$1.76; some afternoon
+  reports ~$88-89 as Hormuz flows improved). 10-yr ~4.52% (off 4.55% high). Oracle FQ4 results due after
+  the June 10 close.
+- **ServiceNow incident (June 2026):** unauthenticated REST endpoint '/api/now/related_list_edit/create'
+  (reportedly requires_authentication=false) exploited ~June 2-3; fix applied to hosted instances June 5;
+  mainly Australia platform release / older releases with config changes; IoC IP 51.159.98.241.
+- **"RoguePlanet" Defender zero-day:** released ~June 9-10 by researcher "Nightmare Eclipse" AFTER Patch
+  Tuesday; race-condition LPE to SYSTEM on fully patched Win10/11; UNPATCHED; do NOT call it exploited
+  in the wild beyond the public release; no confirmed official CVE in vendor sources seen this run.
+- **CISA KEV June 9 adds:** CVE-2026-7473 (Arista EOS), CVE-2026-11645 (Chromium V8, CVSS 8.8, one of 74
+  Chrome fixes), CVE-2026-20245 (Cisco Catalyst SD-WAN Manager) — standard window, due ~June 30.
+- **UFC Vegas 118 (June 6) = Fight Night: Muhammad vs Bonfim** — results as in June 9 entry (Nolan WON).
+  Nolan now 11-1, five straight, wants Renato Moicano next. Iwo Baraniewski 9-0 (3-0 UFC), all 9 wins by
+  R1 stoppage. Mauricio Ruffy 13-2, #9 LW; LAST FIGHT: TKO R2 of Rafael Fiziev, UFC 325, Feb 1, 2026;
+  faces Chandler June 14. UFC 329: McGregor vs Holloway 2, July 11, T-Mobile Arena (welterweight;
+  McGregor's first bout since UFC 264 July 2021; Holloway WW debut; McGregor won 2013 meeting by UD).

@@ -1,69 +1,61 @@
 <!DOCTYPE html>
-<!-- build: 2026-06-10 14:05 ET — Midday Edition (markets open, post-CPI; losses narrow, oil reverses lower, breadth positive) -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Closing Bell — Daily Market Briefing</title>
+<title>The Closing Bell — Daily Briefing</title>
 <style>
-:root{
-  --bg:#0e0d0a; --panel:#16140f; --line:#2b2820; --ink:#ece7d8; --muted:#9c947f;
-  --gold:#caa64a; --gold2:#e8c766; --up:#3fb950; --down:#f2545b;
-  --mono:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;
-}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.55}
-.wrap{max-width:960px;margin:0 auto;padding:24px 20px 60px}
-.nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
-.nav a{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-decoration:none;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:7px 14px;transition:.15s}
-.nav a:hover{color:var(--ink);border-color:#4a4636}
-.nav a.active{color:#1a1408;background:var(--gold);border-color:var(--gold);font-weight:600}
-.masthead{border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:22px}
-h1{font-family:Georgia,'Times New Roman',serif;font-size:42px;margin:0 0 6px;letter-spacing:-.5px;color:var(--gold2)}
-.tagline{color:var(--muted);font-size:15px;margin:0 0 14px}
-.meta{display:flex;gap:8px;flex-wrap:wrap}
-.pill{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:4px 10px}
-.pill.live{color:var(--up);border-color:#234d2c}
-.pill.live .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--up);margin-right:6px;animation:pulse 1.6s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+:root{--bg:#0e0d0a;--panel:#171511;--line:#2a2620;--text:#e6e0d4;--muted:#a39a88;--accent:#caa64a;--accent2:#e8c766;--up:#4ade80;--down:#f87171;--mono:'SF Mono',ui-monospace,Menlo,Consolas,monospace;--serif:Georgia,'Times New Roman',serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.6;padding:24px 16px 60px}
+.wrap{max-width:980px;margin:0 auto}
+.nav{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap}
+.nav a{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-decoration:none;color:var(--muted);border:1px solid var(--line);border-radius:8px;padding:8px 14px;background:var(--panel);transition:all .15s}
+.nav a:hover{color:var(--text);border-color:var(--accent)}
+.nav a.active{color:var(--accent2);border-color:var(--accent);background:rgba(202,166,74,.08)}
+.masthead{border-bottom:2px solid var(--accent);padding-bottom:18px;margin-bottom:18px}
+h1{font-family:var(--serif);font-size:42px;letter-spacing:-.01em;color:#fff}
+h1 .glyph{color:var(--accent2)}
+.tagline{color:var(--muted);font-size:14px;margin-top:2px}
+.meta{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.12em;border:1px solid var(--line);border-radius:999px;padding:4px 12px;color:var(--muted)}
+.pill.live{color:var(--up);border-color:var(--up)}
+.pill.live::before{content:"●";margin-right:6px;animation:blink 1.6s infinite}
+@keyframes blink{50%{opacity:.3}}
 .livebar{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 8px 4px;margin-bottom:18px}
 .livebar-label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--up);display:flex;align-items:center;gap:8px;padding:4px 8px 8px}
-.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--up);animation:pulse 1.6s infinite}
-.label{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:30px 0 12px;border-left:3px solid var(--gold);padding-left:10px}
-.lead{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px 24px}
-.lead h2{font-family:Georgia,serif;font-size:25px;margin:0 0 10px;line-height:1.25}
-.lead p{margin:0 0 10px;color:#d6d0c0}
-.tickers{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.ticker{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:6px}
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;transition:.15s}
-.card:hover{transform:translateY(-3px);border-color:#4a4636}
-.card h3{margin:0 0 7px;font-size:16px}
-.card p{margin:0;color:var(--muted);font-size:14px}
-.chg{font-family:var(--mono);font-weight:600;font-size:14px}
-.up{color:var(--up)} .down{color:var(--down)}
-.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px}
-table{width:100%;border-collapse:collapse;font-size:14px}
-th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line)}
-th{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500}
-td.num{font-family:var(--mono);text-align:right}
+.livebar-label .dot{width:8px;height:8px;border-radius:50%;background:var(--up);animation:blink 1.6s infinite}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:34px 0 14px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px}
+.tickers{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.ticker{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px}
+.note{font-size:12px;color:var(--muted);font-style:italic;margin-top:10px}
+.lead{border-left:4px solid var(--accent)}
+.lead h2{font-family:var(--serif);font-size:26px;color:#fff;margin-bottom:10px}
+.lead p{margin-bottom:10px;font-size:15px}
+.lead p:last-child{margin-bottom:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;transition:transform .15s,border-color .15s}
+.card:hover{transform:translateY(-3px);border-color:var(--accent2)}
+.card h3{font-size:16px;color:#fff;margin-bottom:8px}
+.card p{font-size:13.5px;color:var(--muted)}
+.chg{font-family:var(--mono);font-weight:700}
+.chg.up{color:var(--up)}
+.chg.down{color:var(--down)}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
+td{padding:12px;border-bottom:1px solid var(--line);vertical-align:top}
 tr:last-child td{border-bottom:none}
-ul.radar{list-style:none;padding:0;margin:0}
-ul.radar li{padding:11px 16px;border-bottom:1px solid var(--line);color:#d6d0c0;font-size:14px}
+ul.radar{list-style:none}
+ul.radar li{padding:10px 0 10px 22px;border-bottom:1px solid var(--line);position:relative;font-size:14px}
 ul.radar li:last-child{border-bottom:none}
-ul.radar li::before{content:"▸";color:var(--gold);margin-right:10px}
-ul.news{list-style:none;padding:0;margin:0}
-ul.news li{padding:13px 16px;border-bottom:1px solid var(--line)}
-ul.news li:last-child{border-bottom:none}
-.news-meta{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
-ul.news a{color:#e6ddc8;text-decoration:none;font-size:15px;line-height:1.4}
-ul.news a:hover{color:var(--gold2)}
-.note{font-size:12.5px;color:var(--muted);margin:8px 2px 0}
-.foot{margin-top:36px;border-top:1px solid var(--line);padding-top:18px;font-size:13px;color:var(--muted)}
-.foot a{color:var(--gold);text-decoration:none;word-break:break-all}
-.foot a:hover{text-decoration:underline}
-.disc{font-size:12px;color:#76705f;margin-top:14px;font-style:italic}
-@media(max-width:640px){.tickers{grid-template-columns:1fr}h1{font-size:32px}}
+ul.radar li::before{content:"▸";position:absolute;left:2px;color:var(--accent2)}
+.sources{margin-top:40px;border-top:1px solid var(--line);padding-top:18px}
+.sources h4{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--muted);text-transform:uppercase;margin-bottom:10px}
+.sources a{display:block;color:var(--accent2);font-size:12.5px;text-decoration:none;margin-bottom:5px;word-break:break-all}
+.sources a:hover{text-decoration:underline}
+.disclaimer{margin-top:22px;font-size:12px;color:var(--muted);font-style:italic}
+strong{color:#fff}
 </style>
 </head>
 <body>
@@ -74,23 +66,23 @@ ul.news a:hover{color:var(--gold2)}
     <a href="mma-briefing.html">⊘ The Octagon</a>
   </nav>
 
-  <div class="masthead">
-    <h1>The Closing Bell</h1>
-    <p class="tagline">Your daily market briefing — indices, movers, rates &amp; what's on the radar</p>
+  <header class="masthead">
+    <h1><span class="glyph">▲</span> The Closing Bell</h1>
+    <div class="tagline">Your daily Wall Street briefing — markets, movers &amp; what's next</div>
     <div class="meta">
-      <span class="pill live"><span class="dot"></span>LIVE</span>
-      <span class="pill" id="edition">Edition</span>
-      <span class="pill" id="datestamp">—</span>
-      <span class="pill">Updated <span id="updated">—</span></span>
+      <span class="pill live">LIVE</span>
+      <span class="pill" id="edition">Afternoon Edition</span>
+      <span class="pill" id="datestamp">Wednesday, June 10, 2026</span>
+      <span class="pill">Updated <span id="updated">3:00 PM ET</span></span>
     </div>
-  </div>
+  </header>
 
   <div class="livebar">
     <div class="livebar-label"><span class="dot"></span> LIVE QUOTES</div>
     <div class="tradingview-widget-container">
       <div class="tradingview-widget-container__widget"></div>
       <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-      {"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},{"proName":"FOREXCOM:DJI","title":"Dow 30"},{"proName":"NASDAQ:NVDA","title":"NVIDIA"},{"proName":"NYSE:ORCL","title":"Oracle"},{"proName":"NASDAQ:SMCI","title":"Super Micro"},{"proName":"NASDAQ:MU","title":"Micron"},{"proName":"NYSE:SJM","title":"Smucker"},{"proName":"TVC:USOIL","title":"WTI Crude"},{"proName":"TVC:US10Y","title":"US 10Y"}],"colorTheme":"dark","isTransparent":true,"showSymbolLogo":true,"displayMode":"adaptive","locale":"en"}
+      {"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},{"proName":"FOREXCOM:DJI","title":"Dow 30"},{"proName":"NASDAQ:SMCI","title":"Super Micro"},{"proName":"NYSE:NOW","title":"ServiceNow"},{"proName":"NYSE:SJM","title":"J.M. Smucker"},{"proName":"NASDAQ:HOOD","title":"Robinhood"},{"proName":"NYSE:ORCL","title":"Oracle"},{"proName":"TVC:USOIL","title":"WTI Crude"},{"proName":"TVC:US10Y","title":"US 10Y"}],"colorTheme":"dark","isTransparent":true,"showSymbolLogo":true,"displayMode":"adaptive","locale":"en"}
       </script>
     </div>
   </div>
@@ -125,81 +117,90 @@ ul.news a:hover{color:var(--gold2)}
   <div class="note">Quotes stream live (some feeds ~15-min delayed). Editorial below reflects the latest edition; official closes are in the Weekly Scorecard.</div>
 
   <div class="label">The Lead</div>
-  <div class="lead">
-    <h2>Stocks trim losses as a soft core CPI and positive breadth offset US–Iran strikes; oil reverses lower, as of ~2 PM ET Wednesday, June 10</h2>
-    <p>U.S. stocks pared their losses through the afternoon Wednesday, holding only modestly lower as buying beneath the surface offset a renewed Middle East flare-up and a 4%-plus headline inflation reading. As of roughly <strong>2 PM ET</strong>, the <strong>S&amp;P 500</strong> was off about <strong>0.5%</strong>, the <strong>Dow Jones Industrial Average</strong> down roughly <strong>0.6%</strong>, and the <strong>Nasdaq</strong> the weakest, lower by about <strong>0.6%</strong>, as another wave of selling hit crowded AI and semiconductor names — though all three had clawed back from steeper morning losses. Breadth was strikingly positive: roughly <strong>63%</strong> of U.S. issues were advancing and the small-cap <strong>Russell 2000</strong> was up about <strong>0.4%</strong>, a sign the rotation out of megacap tech is broadening the market rather than sinking it. The pressure followed an overnight exchange of military strikes between the United States and Iran that raised fears of a wider conflict; President Trump said Tehran had "taken too long" to negotiate and "will have to pay the price." The <strong>VIX</strong> volatility gauge jumped about 10%.</p>
-    <p>The session followed a <strong>May Consumer Price Index</strong> report that ran hot on the headline but offered relief at the core. Headline CPI rose <strong>0.5%</strong> on the month and <strong>4.2%</strong> from a year earlier — above 4% for the first time in three years and the highest annual rate since 2023 — while <strong>core CPI</strong> (ex-food and energy) rose just <strong>0.2%</strong> month over month, below the 0.3% estimate, for a <strong>2.9%</strong> annual rate. Energy did the damage, accounting for the bulk of the monthly increase amid the Iran war and Strait of Hormuz disruption, with gasoline up sharply from a year ago. The hot-headline, soft-core print keeps the <strong>Federal Reserve</strong> squarely in focus before its <strong>June 16–17</strong> meeting under new Chair <strong>Kevin Warsh</strong>. All eyes turn next to <strong>Oracle</strong>, which reports fiscal Q4 results after Wednesday's close. (Closing levels are in the Weekly Scorecard below; live quotes stream in the widgets above.)</p>
-  </div>
+  <section class="panel lead">
+    <h2>Stocks lower as inflation tops 4% and U.S.–Iran strikes escalate — as of ~3 PM ET</h2>
+    <p>Wall Street spent Wednesday in the red after a double dose of bad news: May CPI came in at <strong>+0.5% month-over-month and +4.2% year-over-year</strong> — the first reading above 4% in three years and the highest since April 2023 — while the U.S. and Iran traded fresh military strikes overnight after Iran downed an American Apache helicopter patrolling the Strait of Hormuz. President Trump said Tehran has "taken too long" to negotiate and "will have to pay the price."</p>
+    <p>The inflation print had a silver lining: <strong>core CPI rose just 0.2% on the month — below the 0.3% estimate</strong> — and 2.9% annually, with energy driving more than 60% of the monthly increase. Jim Cramer called the spike "artificial inflation" tied to war-driven oil prices. Still, stocks opened sharply lower (the Nasdaq was off ~1.6% early, per TheStreet) and stayed down all session. As of mid-afternoon, 24/7 Wall St's live data showed the <strong>S&amp;P 500 down ~0.9%, the Dow down ~0.7%, and the Nasdaq 100 down ~1.6%</strong>; Yahoo Finance pegged the Nasdaq Composite around -1.2% in afternoon trade. Notably, breadth was positive — TheStreet reported ~63% of U.S. issues advancing as the selling stayed concentrated in heavyweight tech.</p>
+  </section>
 
-  <div class="label">Movers &amp; Drivers <span style="color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0">(June 10 — intraday, ~2 PM ET)</span></div>
+  <div class="label">Movers &amp; Drivers</div>
   <div class="cards">
-    <div class="card"><h3>Super Micro (SMCI) <span class="chg down">▼ ~12%</span></h3><p>The AI-server maker tumbled about 12% after announcing roughly $7 billion in share-sale financing; investors focused on the dilution, and the drop intensified a broader retreat across Wall Street.</p></div>
-    <div class="card"><h3>Robinhood (HOOD) <span class="chg up">▲ ~8%</span></h3><p>Shares climbed about 8.1% in early trading — among the day's standout gainers, with chip-equipment names KLA (+6.7%) and Applied Materials (+5.5%) also higher as money rotated within the market.</p></div>
-    <div class="card"><h3>Chips &amp; AI <span class="chg down">▼ 2–4%</span></h3><p>Money kept leaving crowded AI and memory names: Micron fell about 3.9%, Arm Holdings about 4% and Nvidia about 2.1%, leading the megacap-chip decline that dragged on the Nasdaq.</p></div>
-    <div class="card"><h3>J.M. Smucker (SJM) <span class="chg up">▲ ~3%</span></h3><p>Up about 2.8% early after better-than-expected EPS and in-line revenue, though the company guided fiscal 2027 revenue below Wall Street's consensus.</p></div>
-    <div class="card"><h3>Oracle (ORCL) <span class="chg">— in focus</span></h3><p>Oracle reports fiscal Q4 results after Wednesday's close — a closely watched read on AI-infrastructure and cloud demand, with Street targets clustered above $240 and shares near $212 going in.</p></div>
-    <div class="card"><h3>Industrial &amp; cyclical laggards <span class="chg down">▼ ~5%</span></h3><p>Generac (-5.2%) and Old Dominion Freight Line (-4.9%) were among the biggest decliners as industrials, tech and cyclicals lagged and the VIX jumped about 10%.</p></div>
+    <div class="card">
+      <h3>Super Micro <span class="chg down">▼ as much as -12%</span></h3>
+      <p>SMCI slid after announcing <strong>$7 billion in equity financing-related deals</strong> — the latest AI infrastructure name raising capital, after Alphabet's $85B stock sale this month and reports Meta may follow. Shares were down ~12% early and around -7.6% by mid-afternoon per 24/7 Wall St.</p>
+    </div>
+    <div class="card">
+      <h3>ServiceNow <span class="chg down">▼ ~-6.3%</span></h3>
+      <p>NOW fell after the company disclosed a <strong>security incident</strong>: attackers exploited an unauthenticated API endpoint to query customer instance data (full story on The Cyber Wire tab).</p>
+    </div>
+    <div class="card">
+      <h3>J.M. Smucker <span class="chg up">▲ ~+10.4%</span></h3>
+      <p>SJM topped the gainers board mid-afternoon per 24/7 Wall St, extending the rally that began with this week's earnings beat. Defensive staples continued to attract rotation flows.</p>
+    </div>
+    <div class="card">
+      <h3>Early risers: Robinhood, chip-equipment <span class="chg up">▲</span></h3>
+      <p>In early trading, TheStreet flagged <strong>Robinhood +8.1%</strong>, <strong>KLA +6.7%</strong>, and <strong>Applied Materials +5.5%</strong>. Energy names outperformed with crude higher; Coca-Cola, Verizon, and Chevron led Dow gainers.</p>
+    </div>
   </div>
 
   <div class="label">Live Market Headlines — updates in real time</div>
-  <div class="panel" style="padding:8px">
+  <section class="panel" style="padding:8px">
     <div class="tradingview-widget-container">
       <div class="tradingview-widget-container__widget"></div>
       <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
       {"feedMode":"market","market":"stock","colorTheme":"dark","isTransparent":true,"displayMode":"regular","width":"100%","height":420,"locale":"en"}
       </script>
     </div>
-  </div>
+  </section>
 
-  <div class="label">Weekly Scorecard <span style="color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0">(latest official close — Tuesday, June 9; Wednesday's session is in progress)</span></div>
-  <div class="panel">
+  <div class="label">Weekly Scorecard — official closes</div>
+  <section class="panel" style="padding:8px 0">
     <table>
-      <tr><th>Index</th><th>Close</th><th>Day change</th></tr>
-      <tr><td>S&amp;P 500</td><td class="num">7,386.46</td><td class="num down">▼ -19.27 / -0.26%</td></tr>
-      <tr><td>Nasdaq Composite</td><td class="num">25,678.82</td><td class="num down">▼ -0.97%</td></tr>
-      <tr><td>Dow Jones</td><td class="num">50,871.13</td><td class="num up">▲ +85.12 / +0.17%</td></tr>
+      <thead><tr><th>Index</th><th>Fri Jun 5</th><th>Mon Jun 8</th><th>Tue Jun 9</th></tr></thead>
+      <tbody>
+        <tr><td><strong>S&amp;P 500</strong></td><td>7,383.74 <span class="chg down">-2.64%</span></td><td>7,405.73 <span class="chg up">+0.30%</span></td><td>7,386.46 <span class="chg down">-0.26%</span></td></tr>
+        <tr><td><strong>Nasdaq Composite</strong></td><td>25,709.43 <span class="chg down">-4.18%</span></td><td>25,929.66 <span class="chg up">+0.86%</span></td><td>25,678.82 <span class="chg down">-0.97%</span></td></tr>
+        <tr><td><strong>Dow Jones</strong></td><td>50,866.78 <span class="chg down">-1.35%</span></td><td>50,786.01 <span class="chg down">-0.16%</span></td><td>50,871.13 <span class="chg up">+0.17%</span></td></tr>
+      </tbody>
     </table>
-  </div>
-  <div class="note">These are Tuesday, June 9 official closes — the most recent close ahead of Wednesday's session, which remains in progress as of this edition. The averages finished mixed Tuesday after clawing back an intraday plunge of as much as 3.5% as the chip rotation resumed and US–Iran tensions flared. Prior close (Monday, June 8): S&amp;P 7,405.73 (+0.30%), Nasdaq Composite 25,929.66 (+0.86%), Dow 50,786.01 (-0.16%). Closes per TheStreet, Yahoo Finance, CNBC and CNN. Live levels stream in the widgets above.</div>
+  </section>
+  <div class="note">Tuesday's session pared an intraday plunge of as much as 3.5% (Nasdaq) to close mixed; Friday June 5 was the Nasdaq's worst day since April 2025 as a chip rout erased roughly $1T in value.</div>
 
-  <div class="label">Rates, Bonds &amp; Commodities <span style="color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0">(intraday, ~2 PM ET June 10)</span></div>
-  <div class="panel">
+  <div class="label">Rates, Bonds &amp; Commodities</div>
+  <section class="panel" style="padding:8px 0">
     <table>
-      <tr><th>Instrument</th><th>Level</th><th>Note</th></tr>
-      <tr><td>10-Year Treasury</td><td class="num">~4.52%</td><td>Little changed, easing from an intraday high near 4.55% (and down from Tuesday's ~4.57% close) as the soft core CPI print tempered inflation angst ahead of the June 16–17 FOMC</td></tr>
-      <tr><td>2-Year Treasury</td><td class="num">~4.1–4.2%</td><td>Elevated, above the Fed's 3.50–3.75% band, as a minority of traders price a possible rate increase later in 2026</td></tr>
-      <tr><td>Fed Funds Rate</td><td class="num">3.50–3.75%</td><td>FOMC meets June 16–17 under Chair Kevin Warsh; a hold is widely expected, and the soft core CPI eases some of the hike pressure</td></tr>
-      <tr><td>WTI Crude</td><td class="num">~$88/bbl</td><td>Reversed lower to about $88, giving back an earlier-session gain even as the US–Iran exchange threatened to undermine peace talks; analysts continue to flag upside risk if the conflict drags on</td></tr>
-      <tr><td>Brent Crude</td><td class="num">~$92</td><td>Eased in tandem with WTI off the morning spike (~$92.55 at Tuesday's close)</td></tr>
-      <tr><td>Gold</td><td class="num">~$4,360/oz</td><td>Near record territory (Tuesday level) as a geopolitical hedge, though Citi warned the metal could fall ~20% by September if the Strait of Hormuz reopens</td></tr>
+      <thead><tr><th>Instrument</th><th>Level</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td><strong>10-yr Treasury</strong></td><td>~4.52%</td><td>Little changed Wednesday, easing from an intraday high of 4.55% (Trading Economics).</td></tr>
+        <tr><td><strong>2-yr Treasury</strong></td><td>~4.15% (Tue)</td><td>Near a one-year high as markets price a possible hike as soon as October.</td></tr>
+        <tr><td><strong>Fed funds</strong></td><td>FOMC June 16–17</td><td>Next decision under Chair Kevin Warsh arrives next week, with headline CPI above 4%.</td></tr>
+        <tr><td><strong>WTI crude</strong></td><td>~$89–90/bbl</td><td>Choppy: up ~2% near $90 in the morning on fresh U.S.–Iran strikes ($89.92 per 24/7 Wall St), with some afternoon reports near $88–89 as Hormuz shipping flows improved. Rystad warns of $150 oil if the conflict drags; Exxon flagged "really, really low" inventory levels ahead.</td></tr>
+        <tr><td><strong>Gold</strong></td><td>~$4,360 (Tue)</td><td>Citi warns gold could fall another 20% by September if the Strait of Hormuz stays closed through summer — a riskier near-term safe haven than usual.</td></tr>
+      </tbody>
     </table>
-  </div>
+  </section>
 
   <div class="label">On the Radar</div>
-  <ul class="radar">
-    <li>Oracle (ORCL) reports fiscal Q4 earnings after Wednesday's close (June 10) — a bellwether for AI-infrastructure and cloud spending, with Street targets clustered above $240 and shares near $212 going in.</li>
-    <li>FOMC meeting June 16–17: futures still price a hold at 3.50–3.75% under new Chair Kevin Warsh; watch how concerned officials sound about the 4%+ headline inflation versus the cooler core.</li>
-    <li>US–Iran conflict: crude and Treasury yields remain highly sensitive after the overnight exchange of strikes and Trump's "pay the price" warning, with Strait of Hormuz supply fears and warnings of $150 oil if the war drags on.</li>
-    <li>IPO calendar: SpaceX is set to price as soon as June 11 and could debut around June 12 in a potentially record offering; OpenAI has confidentially filed to go public, after Anthropic.</li>
-    <li>S&amp;P 500 reshuffle: Marvell joins the benchmark effective June 22.</li>
-    <li>AI-trade fragility: another session of money leaving crowded chip and AI names tests whether 2026's market leadership is durably rotating toward cyclicals and small caps.</li>
-  </ul>
+  <section class="panel">
+    <ul class="radar">
+      <li><strong>Tonight:</strong> Oracle reports fiscal Q4 FY26 after the close — Street price targets clustered above $240 vs. shares around $212 at Tuesday's close.</li>
+      <li><strong>Thursday/Friday:</strong> SpaceX's IPO is expected to price around June 11 and debut around June 12 — a roughly $75B raise at a reported ~$1.8T valuation. OpenAI has also filed confidential IPO paperwork.</li>
+      <li><strong>June 16–17:</strong> FOMC meeting — the first big test of how Chair Kevin Warsh's Fed reads war-driven headline inflation against soft core readings.</li>
+      <li><strong>June 22:</strong> Marvell officially joins the S&amp;P 500.</li>
+    </ul>
+  </section>
 
-  <div class="foot">
-    <strong>Sources:</strong><br>
-    <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-10-2026">TheStreet — Stock Market Today (June 10, 2026): Dow, Nasdaq, S&amp;P 500 decline as oil jumps; inflation rises to highest in a year</a><br>
-    <a href="https://247wallst.com/investing/2026/06/10/stock-market-live-june-10-2026-sp-500-spy-sinks-on-fear-of-war/">24/7 Wall St. — Stock Market Live, June 10, 2026: S&amp;P 500 sinks on fear of war</a><br>
-    <a href="https://www.fool.com/coverage/stock-market-today/2026/06/10/stock-market-today-june-10-hot-inflation-and-war-escalation-fears-pressure-stocks-at-midday/">The Motley Fool — Stock Market Today, June 10: Hot inflation and war-escalation fears pressure stocks at midday</a><br>
-    <a href="https://www.cnbc.com/2026/06/10/cpi-inflation-report-may-2026.html">CNBC — CPI inflation report, May 2026 (headline +4.2% y/y, core +2.9%)</a><br>
-    <a href="https://www.schwab.com/learn/story/stock-market-update-open">Charles Schwab — Market Update</a><br>
-    <a href="https://tradingeconomics.com/united-states/government-bond-yield">Trading Economics — US 10-Year Treasury yield (~4.52%, June 10)</a><br>
-    <a href="https://tradingeconomics.com/commodity/crude-oil">Trading Economics — WTI crude oil price (~$88, reversed lower)</a><br>
-    <a href="https://finance.yahoo.com/markets/live/">Yahoo Finance — Markets live: stocks fall as US strikes Iran, CPI on deck</a><br>
-    <a href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm">Federal Reserve — FOMC calendar (June 16–17 meeting)</a>
-    <div class="disc">For information only. Not investment advice. Intraday, pre-market, closing and commodity figures are as-of the times noted and may be revised.</div>
-  </div>
+  <footer class="sources">
+    <h4>Sources</h4>
+    <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-10-2026">TheStreet — Stock Market Today (June 10, 2026)</a>
+    <a href="https://247wallst.com/investing/2026/06/10/stock-market-live-june-10-2026-sp-500-spy-sinks-on-fear-of-war/">24/7 Wall St — Stock Market Live June 10, 2026</a>
+    <a href="https://finance.yahoo.com/markets/live/stock-market-today-dow-sp-500-nasdaq-futures-sink-as-techs-falter-ahead-of-cpi-inflation-data-215056398.html">Yahoo Finance — Stocks slide as CPI report lands, US-Iran truce teeters</a>
+    <a href="https://tradingeconomics.com/united-states/government-bond-yield">Trading Economics — US 10-Year Treasury Yield</a>
+    <a href="https://invezz.com/news/2026/06/10/heres-why-wti-crude-oil-price-is-falling-amid-us-israel-iran-strikes/">Invezz — WTI crude amid US, Israel, Iran strikes</a>
+    <a href="https://www.bleepingcomputer.com/news/security/servicenow-discloses-security-incident-exposing-customer-data/">BleepingComputer — ServiceNow security incident</a>
+    <div class="disclaimer">For information only — not investment advice. Intraday figures are approximate and time-stamped where possible; live widgets may be ~15 minutes delayed.</div>
+  </footer>
 </div>
-
 <script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;}catch(e){}})();</script>
 </body>
 </html>
