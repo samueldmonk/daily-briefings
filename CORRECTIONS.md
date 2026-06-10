@@ -132,3 +132,32 @@ fought again since), update the entry in the same commit.
   ~-4%, Workday ~-4%; homebuilders led (XHB +2.5%, LGI Homes +5.2%, Century Communities +4.7%);
   J.M. Smucker up. WTI fell below $90 (~$89.22, -2.3%); 10-yr ~4.57%. May CPI due Wed June 10
   8:30am ET. Do NOT regress to the intraday "Nasdaq -1.7% / S&P -0.8% / Dow -0.1%" ~3pm figures.
+
+## Added 2026-06-10 (Morning ~9am ET, pre-open)
+- **May CPI (released June 10, 8:30am ET):** headline +0.5% m/m, +4.2% y/y — above 4% for the first
+  time in 3 years / highest since April 2023; both roughly in line. Core +0.2% m/m (BELOW the 0.3%
+  estimate), +2.9% y/y. Energy drove >60% of the monthly increase; gasoline +40.5% y/y, reflecting
+  the Iran war / Strait of Hormuz supply shock. Do NOT describe core as hot — core came in soft.
+- **June 10 pre-open futures (~9am ET):** S&P 500 futures ~-0.3%, Dow futures ~+0.2%, Nasdaq 100
+  futures ~-1% (had been ~-1.7%) on continued tech/AI rotation. WTI crude ~$90 (+~2%) after the US
+  and Iran traded fresh military strikes; Trump said Iran was "taking too long" and "will have to pay
+  the price." 10-yr ~4.6% (Tue close ~4.57%). Markets had NOT opened at publication — used the June 9
+  closes as the latest official close in the Weekly Scorecard.
+- **Oracle (ORCL):** reports fiscal Q4 FY26 AFTER the close on Wed June 10; Street targets clustered
+  above $240 (shares ~$212 on June 9).
+- **Microsoft June 2026 Patch Tuesday (June 9):** record ~200 CVEs (beat the prior record of 167),
+  incl. 33 critical and THREE publicly disclosed zero-days, NONE known exploited: CTFMON EoP
+  CVE-2026-45586, HTTP/2 "Bomb" DoS CVE-2026-49160, BitLocker "YellowKey" CVE-2026-50507. Do NOT
+  describe these three as exploited.
+- **CVE-2026-41089 (Windows Netlogon):** official MSRC CVSS 9.8; stack buffer overflow ->
+  unauthenticated SYSTEM RCE on domain controllers (Server 2012-2025); exploited in the wild (Belgium
+  CCB warned ~May 29); addressed in the June Patch Tuesday updates.
+- **CVE-2026-20245 (Cisco Catalyst SD-WAN Manager):** Cisco CVSS 7.8; AUTHENTICATED privilege
+  escalation to root-level command execution; exploited in the wild; NO patch as of June 6
+  (mitigations only). Do NOT call it unauthenticated.
+- **UFC June 6 (Muhammad vs Bonfim) — Tom Nolan DEF. Farès Ziam by unanimous decision (29-28 x3)**,
+  extending Nolan's streak to five and snapping Ziam's. A search snippet this run wrongly stated
+  "Nolan lost" — he WON (Cageside Press/LowKick/MMA Decisions/Heavy all confirm). Do not regress.
+  Other June 6 results: Bonfim def. Belal Muhammad UD 50-45x3; Brendan Allen def. Edmen Shahbazyan
+  UD; Bryce Mitchell def. Santiago Luna sub (arm-triangle) R3 4:52; Iwo Baraniewski def. Junior Tafa
+  TKO R1 1:25; Alessandro Costa def. Matt Schnell TKO R1 2:32.
