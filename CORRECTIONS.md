@@ -250,3 +250,30 @@ fought again since), update the entry in the same commit.
   plaintiffs asked the judge (an Obama appointee) to rule on the emergency injunction BY THURSDAY
   June 11; DOJ argued the suit was brought too late. Continue NOT calling Topuria-Gaethje a
   "unification" (CBS/ESPN still use that wording; the standing correction above governs).
+
+## Added 2026-06-12 (Midday ~1:30pm ET)
+- **Thu June 11, 2026 (FINAL close — verified):** S&P 500 7,394.30 (+1.75%), Nasdaq Composite
+  25,809.66 (+2.54%), Dow 50,848.75 (+929.97, +1.86%) per CNBC/Yahoo — best day in two months,
+  triggered by Trump CALLING OFF his threat to bomb Iran Wednesday evening; oil fell; Micron/Intel/
+  Nvidia led (Fool). All three closes reconcile exactly with the verified June 10 levels.
+  Beware conflated search summaries attributing these Thursday closes to Friday June 12.
+- **May PPI (released Thu June 11):** +1.1% m/m; 6.5% y/y — HIGHEST since November 2022; core
+  ex-food/energy/trade +0.8% m/m (biggest since March 2022); final-demand goods +2.8% (biggest in
+  series history to Dec 2009); wholesale energy +10.7%, wholesale gasoline +23.4% (CNBC/BLS).
+  Hot PPI did NOT stop Thursday's rally (Iran headline dominated).
+- **ECB hiked Thu June 11: 2.00% → 2.25%** — its first move in a year (earlier "expected" entries
+  now confirmed). BoC held 2.25% Wed.
+- **SpaceX IPO (June 12 debut, Nasdaq, ticker SPCX):** fixed price $135/share, 555.6M shares,
+  ~$75B raised, ~$1.77T valuation — largest IPO in history. OPENED $150 (+11%); ~$161 (+20%) at
+  midday; $172.24 (+27.58%) by ~1:15pm ET (Fool/Xignite); CNBC headline "pops 30%". Yahoo: Musk
+  becomes world's first trillionaire (SpaceX stake ~$870B at the IPO price). Do NOT report the
+  $150 open as the IPO price ($135 is the price; $150 was the opening trade).
+- **Fri June 12 intraday:** choppy/"gyrating" morning — Fool's 1pm ET text had S&P +0.12%,
+  Nasdaq -0.36%, Dow +0.38%; by ~1:15pm ET quotes showed S&P +0.61% (~7,439), Nasdaq +0.49%
+  (~25,937), Dow +0.84% (+~430, ~51,276). CNBC's "Dow gains 370 points" headline is a sequential
+  snapshot of the same move. Do NOT present the ~1pm dip as the afternoon state (or vice versa).
+  Movers ~1:15pm: AAPL -1.2%, AMZN -1.7%, MSFT -0.5%, NVDA ~flat +0.2%, GOOG +1.2%, TSLA flat,
+  BTC ~$63,858 +2.4%. WTI fell BELOW $85 — first time since mid-April — on US-Iran deal hopes
+  (CNBC: deal "nears"); 10-yr ~4.53% Thu / ~4.47-4.5% Fri (Trading Economics). June UMich consumer
+  sentiment IMPROVED on easing gas prices. 22V Research: fading mega-tech conviction → more
+  tech/value rotation chop.
