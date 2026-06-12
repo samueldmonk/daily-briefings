@@ -16,46 +16,48 @@
   .masthead{text-align:center;padding:18px 0 14px;border-bottom:3px double var(--line);margin-bottom:14px}
   .masthead h1{font-size:42px;letter-spacing:2px;color:var(--red);font-weight:800;text-transform:uppercase}
   .masthead h1 .glyph{color:var(--orange)}
-  .masthead .tagline{color:var(--muted);font-size:14px;margin-top:6px;font-style:italic}
+  .masthead .tagline{color:var(--muted);font-size:14px;margin-top:6px}
   .meta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:14px}
   .pill{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:var(--panel)}
   .pill.live{color:var(--green);border-color:rgba(93,217,124,.35)}
   .pill.live .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green);margin-right:6px;animation:pulse 1.6s infinite}
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
-  .pill.edition{color:var(--orange);border-color:rgba(255,138,92,.35)}
+  .pill.edition{color:var(--orange);border-color:rgba(255,138,92,.4)}
   nav{display:flex;gap:8px;justify-content:center;margin:18px 0 22px;flex-wrap:wrap}
   nav a{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--muted);padding:8px 16px;border:1px solid var(--line);border-radius:8px;background:var(--panel);transition:all .15s}
   nav a:hover{color:var(--ink);border-color:var(--muted)}
   nav a.active{color:var(--red);border-color:var(--red);background:rgba(232,69,69,.08)}
-  .label{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--orange);margin:30px 0 14px;display:flex;align-items:center;gap:10px}
+  .label{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--red);margin:30px 0 14px;display:flex;align-items:center;gap:10px}
   .label::after{content:"";flex:1;height:1px;background:var(--line)}
   .panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px}
   .lead{border-left:3px solid var(--red)}
   .lead h2{font-size:24px;line-height:1.35;margin-bottom:12px}
-  .lead p{color:#cfc0b9;margin-bottom:10px;font-size:15px}
-  .lead .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--red);text-transform:uppercase;margin-bottom:10px}
+  .lead p{color:#d4c4bc;margin-bottom:10px;font-size:15px}
+  .lead .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--orange);text-transform:uppercase;margin-bottom:10px}
   .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
   @media(max-width:720px){.cards{grid-template-columns:1fr}}
   .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;transition:transform .15s,border-color .15s}
   .card:hover{transform:translateY(-3px);border-color:var(--red)}
-  .card h3{font-size:15px;margin-bottom:8px}
+  .card h3{font-size:15px;margin-bottom:8px;color:var(--ink)}
   .card p{font-size:13.5px;color:var(--muted)}
-  .card .when{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--gold);margin-bottom:8px;text-transform:uppercase}
-  .tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:5px;margin:0 6px 8px 0}
-  .tag.prospect{background:rgba(93,217,124,.12);color:var(--green)}
-  .tag.title{background:rgba(212,175,106,.14);color:var(--gold)}
+  .card .when{font-family:var(--mono);font-size:11.5px;color:var(--gold);letter-spacing:.06em;margin-bottom:8px}
+  .tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:5px;margin-bottom:8px;margin-right:6px}
+  .tag.hot{background:rgba(232,69,69,.12);color:var(--red)}
+  .tag.pros{background:rgba(93,217,124,.12);color:var(--green)}
+  .tag.biz{background:rgba(255,138,92,.12);color:var(--orange)}
   table{width:100%;border-collapse:collapse;font-size:13.5px}
   th{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
-  td{padding:10px;border-bottom:1px solid rgba(50,32,32,.7);color:#cfc0b9;vertical-align:top}
-  td.w{color:var(--green);font-weight:600;white-space:nowrap}
+  td{padding:9px 10px;border-bottom:1px solid rgba(50,32,32,.6);color:#d4c4bc;vertical-align:top}
+  td.res{font-family:var(--mono);font-size:12px;color:var(--green);white-space:nowrap}
+  td.method{color:var(--muted);font-size:13px}
   ul.news{list-style:none}
-  ul.news li{padding:10px 0 10px 24px;border-bottom:1px solid rgba(50,32,32,.7);position:relative;color:#cfc0b9;font-size:14px}
+  ul.news li{padding:10px 0 10px 22px;border-bottom:1px solid rgba(50,32,32,.6);position:relative;color:#d4c4bc;font-size:14px}
   ul.news li::before{content:"⊘";position:absolute;left:0;color:var(--red)}
   footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line)}
   footer h4{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
-  footer a{color:#c98f7f;font-size:12.5px;text-decoration:none;display:block;padding:2.5px 0}
+  footer a{color:#c89a8a;font-size:12.5px;text-decoration:none;display:block;padding:2.5px 0}
   footer a:hover{text-decoration:underline}
-  .disclaimer{margin-top:18px;font-size:11.5px;color:#73605a;font-style:italic}
+  .disclaimer{margin-top:18px;font-size:11.5px;color:#73615a;font-style:italic}
 </style>
 </head>
 <body>
@@ -68,7 +70,7 @@
       <span class="pill live"><span class="dot"></span>LIVE</span>
       <span class="pill edition" id="edition">Midday Edition</span>
       <span class="pill" id="datestamp">Friday, June 12, 2026</span>
-      <span class="pill">Updated <span id="updated">~2:00 PM ET</span></span>
+      <span class="pill">Updated <span id="updated">~2:15 PM ET</span></span>
     </div>
   </header>
 
@@ -80,94 +82,98 @@
 
   <div class="label">Top Story</div>
   <div class="panel lead">
-    <div class="kicker">White House · Courtroom Cleared · Fight Week</div>
-    <h2>The White House card is ON: judge lets UFC Freedom 250 proceed as fight week takes over the National Mall</h2>
-    <p>The last legal roadblock is gone — a federal judge declined to halt Sunday's UFC Freedom 250 on the White House South Lawn, rejecting the emergency bid by two Virginia residents (represented by the Public Integrity Project) who argued the event skipped environmental review and congressional approval. U.S. District Judge Amit P. Mehta had been asked to rule by Thursday; the DOJ called the claims "meritless" and argued the suit simply came too late. Per The Hill, the spectacle is costing federal agencies and the UFC at least $60 million.</p>
-    <p>Fight week is now in full Washington bloom: all 14 fighters hit a media day on the South Lawn, and tonight's pre-fight press conference stages in front of the Lincoln Memorial at 8:30 PM ET. About 4,000 invited guests will watch Sunday as Ilia Topuria defends the undisputed lightweight title against former interim champ Justin Gaethje — 8 PM ET on Paramount+, simulcast on CBS, on a card timed to America's 250th anniversary celebrations (and coinciding with President Trump's 80th birthday).</p>
+    <div class="kicker">Freedom 250 · Cleared for Sunday</div>
+    <h2>Green light: federal judge rejects bid to stop the White House card — Freedom 250 is ON</h2>
+    <p>U.S. District Judge Amit Mehta on Friday <strong>rejected the emergency request to block UFC Freedom 250</strong>, the June 14 card on the White House South Lawn. Mehta ruled the two Virginia residents who sued lacked standing, found no showing of irreparable harm, and cited their "unreasonable delay" in filing — agreeing with the government that an eleventh-hour cancellation would cause "substantial harm" given the planning and cost already sunk into the event, which The Hill reports has run federal agencies and the UFC at least $60 million.</p>
+    <p>That clears the stage for Sunday, 8 PM ET: <strong>Ilia Topuria defends the undisputed lightweight title against Justin Gaethje</strong>, the former interim lightweight champ, while <strong>Alex Pereira meets Ciryl Gane for the interim heavyweight title</strong> — a win would make Pereira the first three-division champion in UFC history. Sean O'Malley, Michael Chandler, Diego Lopes, Bo Nickal and Derrick Lewis also feature. The Secret Service says security will be at Super Bowl level.</p>
+    <p>Fight week is already underway downtown — the pre-event press conference takes place in front of the <strong>Lincoln Memorial tonight at 8:30 PM ET</strong>.</p>
   </div>
 
   <div class="label">Fight Week — Upcoming Cards</div>
   <div class="cards">
     <div class="card">
-      <span class="tag title">Two Title Fights</span>
-      <div class="when">Sun, Jun 14 · White House South Lawn, Washington D.C.</div>
-      <h3>UFC Freedom 250: Topuria vs. Gaethje</h3>
-      <p>Topuria defends the lightweight belt vs. Gaethje; co-main is Alex Pereira vs. No. 1-ranked Ciryl Gane for the interim heavyweight title — a Pereira win makes him the UFC's first three-division champion. Plus O'Malley–Zahabi and Ruffy–Chandler. 8 PM ET, CBS &amp; Paramount+.</p>
+      <span class="tag hot">Title ×2</span>
+      <h3>UFC Freedom 250</h3>
+      <div class="when">SUN JUN 14 · White House South Lawn, Washington, D.C.</div>
+      <p>Topuria vs. Gaethje — lightweight title defense; co-main Pereira vs. Gane for the interim heavyweight belt. Streams exclusively on Paramount+ (no pay-per-view), 8 PM ET.</p>
     </div>
     <div class="card">
-      <div class="when">Sat, Jun 20 · Meta APEX, Las Vegas</div>
       <h3>UFC Fight Night: Kape vs. Horiguchi</h3>
-      <p>Flyweight rematch headliner as Manel Kape and Kyoji Horiguchi run it back in the APEX the week after the White House spectacle.</p>
+      <div class="when">SAT JUN 20 · Meta APEX, Las Vegas, NV</div>
+      <p>Flyweight rematch headliner as the promotion returns to the APEX six days after the White House spectacle.</p>
     </div>
     <div class="card">
-      <div class="when">Sat, Jun 27 · National Gymnastics Arena, Baku</div>
       <h3>UFC Fight Night: Fiziev vs. Torres</h3>
-      <p>The promotion's first trip to Azerbaijan headlined by a lightweight bout — hometown-region favorite Rafael Fiziev rebuilding after his February loss to Mauricio Ruffy.</p>
+      <div class="when">SAT JUN 27 · National Gymnastics Arena, Baku, Azerbaijan</div>
+      <p>Rafael Fiziev headlines a lightweight main event as the UFC visits Azerbaijan to close the month.</p>
     </div>
     <div class="card">
-      <span class="tag title">PPV</span>
-      <div class="when">Sat, Jul 11 · T-Mobile Arena, Las Vegas</div>
+      <span class="tag hot">PPV</span>
       <h3>UFC 329: McGregor vs. Holloway 2</h3>
-      <p>Conor McGregor's first bout since July 2021 — a welterweight rematch 13 years in the making against Max Holloway, who makes his 170-lb debut. McGregor won the 2013 meeting by decision.</p>
+      <div class="when">SAT JUL 11 · T-Mobile Arena, Las Vegas, NV</div>
+      <p>Conor McGregor's first fight since July 2021 — a welterweight rematch 13 years after he beat Max Holloway by decision in 2013.</p>
     </div>
   </div>
 
-  <div class="label">Last Event — Results · UFC Fight Night: Muhammad vs. Bonfim (Jun 6, Meta APEX)</div>
-  <div class="panel" style="padding:12px">
+  <div class="label">Last Event — Results · UFC Fight Night: Muhammad vs. Bonfim (Jun 6, Las Vegas)</div>
+  <div class="panel" style="padding:10px 12px">
     <table>
       <tr><th>Result</th><th>Bout</th><th>Method</th></tr>
-      <tr><td class="w">Gabriel Bonfim</td><td>def. Belal Muhammad (welterweight main event)</td><td>Unanimous decision (50-45 ×3)</td></tr>
-      <tr><td class="w">Brendan Allen</td><td>def. Edmen Shahbazyan (middleweight)</td><td>Unanimous decision</td></tr>
-      <tr><td class="w">Bryce Mitchell</td><td>def. Santiago Luna (bantamweight)</td><td>Submission (arm-triangle), R3 4:52</td></tr>
-      <tr><td class="w">Tom Nolan</td><td>def. Farès Ziam (lightweight)</td><td>Unanimous decision (30-27, 30-27, 29-28)</td></tr>
-      <tr><td class="w">Iwo Baraniewski</td><td>def. Junior Tafa (light heavyweight)</td><td>TKO (leg kick), R1 1:25</td></tr>
-      <tr><td class="w">Alessandro Costa</td><td>def. Matt Schnell (flyweight)</td><td>TKO, R1 2:32</td></tr>
+      <tr><td class="res">BONFIM def.</td><td>Gabriel Bonfim vs. Belal Muhammad</td><td class="method">Unanimous decision (50-45 ×3) — handing the former welterweight champ a clear defeat; five straight for Bonfim</td></tr>
+      <tr><td class="res">ALLEN def.</td><td>Brendan Allen vs. Edmen Shahbazyan</td><td class="method">Unanimous decision</td></tr>
+      <tr><td class="res">MITCHELL def.</td><td>Bryce Mitchell vs. Santiago Luna</td><td class="method">Submission (arm-triangle), R3 4:52</td></tr>
+      <tr><td class="res">NOLAN def.</td><td>Tom Nolan vs. Farès Ziam</td><td class="method">Unanimous decision (29-28 ×3)</td></tr>
+      <tr><td class="res">BARANIEWSKI def.</td><td>Iwo Baraniewski vs. Junior Tafa</td><td class="method">TKO, R1 1:25</td></tr>
+      <tr><td class="res">COSTA def.</td><td>Alessandro Costa vs. Matt Schnell</td><td class="method">TKO, R1 2:32</td></tr>
     </table>
-    <p style="font-size:12.5px;color:var(--muted);margin-top:10px">Bonuses: Fight of the Night — Allen vs. Shahbazyan ($100K each); Performance of the Night — Iwo Baraniewski and Édgar Cháirez. Bonfim (now 20-1) outclassed the former champion over five rounds to force his way into the welterweight title conversation.</p>
   </div>
 
   <div class="label">Prospect Watch</div>
   <div class="cards">
     <div class="card">
-      <span class="tag prospect">Prospect</span><span class="tag">LHW · Poland</span>
-      <h3>Iwo Baraniewski — 9-0, all first-round stoppages</h3>
-      <p>"Rudy" smoked Junior Tafa with a leg-kick TKO in 85 seconds on June 6 for a Performance bonus. Now 3-0 in the UFC with every career win inside one round — the scariest fast-starter in the 205 pipeline.</p>
+      <span class="tag pros">Prospect</span>
+      <h3>Iwo Baraniewski — 9-0, nine first-round finishes</h3>
+      <p>The Polish light heavyweight blitzed Junior Tafa in 85 seconds on June 6, moving to 3-0 in the UFC with every career win by first-round stoppage. One of the cleanest finishing résumés on the roster.</p>
     </div>
     <div class="card">
-      <span class="tag prospect">Prospect</span><span class="tag">LW · Australia</span>
-      <h3>Tom Nolan — five straight, into the rankings</h3>
-      <p>"Big Train" (11-1) ground out Farès Ziam on June 6, snapping the Frenchman's six-fight streak and punching his ticket into the lightweight top 15. He's called for Renato Moicano next.</p>
+      <span class="tag pros">Prospect</span>
+      <h3>Tom Nolan — 11-1, five straight, calling for Moicano</h3>
+      <p>The Australian lightweight outpointed Farès Ziam on June 6 and immediately asked for Renato Moicano, calling his skill set "awesome" and "scary." His only regret: not getting the finish.</p>
     </div>
     <div class="card">
-      <span class="tag prospect">Prospect</span><span class="tag">LW · Brazil</span>
-      <h3>Mauricio Ruffy — the breakout test comes Sunday</h3>
-      <p>The Brazilian (13-2, #9 at lightweight) iced Rafael Fiziev with a second-round TKO in February — the biggest win of his career to date. Sunday at the White House he meets former title challenger Michael Chandler, who has vowed to "snatch the soul" of the rising Brazilian.</p>
+      <span class="tag pros">Prospect</span><span class="tag hot">Fights Sunday</span>
+      <h3>Mauricio Ruffy — 13-2, the leap to contention</h3>
+      <p>The #9-ranked lightweight, fresh off a second-round TKO of Rafael Fiziev at UFC 325 on February 1 ($100k Performance of the Night), meets Michael Chandler on Sunday's White House card — a step-up fight with top-five implications.</p>
     </div>
   </div>
 
   <div class="label">Around the Sport</div>
   <div class="panel">
     <ul class="news">
-      <li><strong>Welterweight youth takeover complete:</strong> this week's rankings update sees Gabriel Bonfim supplant Belal Muhammad in the top five — with former champs Kamaru Usman and Leon Edwards also out of the top 5, and Colby Covington and Gilbert Burns retired, the division's old guard has officially turned over.</li>
-      <li><strong>The $60M cage:</strong> The Hill reports staging Freedom 250 is costing federal agencies and the UFC at least $60 million — security, temporary structures and broadcast build-out for ~4,000 guests on the South Lawn.</li>
-      <li><strong>Broadcast plan:</strong> Sunday's card streams on Paramount+ — where UFC fights now live — with a live CBS broadcast simulcast beginning 8 PM ET, putting a lightweight title fight on free network television.</li>
+      <li><strong>Paramount+ exclusive:</strong> Freedom 250 is not a pay-per-view and won't be simulcast — Dana White confirmed the event streams exclusively on Paramount+, after a CBS simulcast had been floated earlier in the planning.</li>
+      <li><strong>The bill:</strong> The Hill reports the White House cage fight has cost federal agencies and the UFC at least $60 million, a figure cited in (and survived by) Friday's court ruling.</li>
+      <li><strong>Super Bowl-level lockdown:</strong> the Secret Service told ABC News that security for Sunday's card will be at Super Bowl level; PBS aired a sneak peek of the UFC's Octagon at the White House this week.</li>
+      <li><strong>Roster move:</strong> bantamweight Daniel Marcos (18-1, 1 NC overall) left the UFC after his contract was completed in late May — not cut mid-deal — and signed with the PFL on June 1, departing on a submission win over Miles Johns after going 5-1 (1 NC) in the promotion.</li>
     </ul>
   </div>
 
   <footer>
-    <h4>Sources</h4>
-    <a href="https://www.forth.news/stories/CbyjE8acTRNVJFj1EopE7">Forth — Judge allows Trump's UFC event on White House grounds amid legal challenge</a>
-    <a href="https://www.cnn.com/2026/06/09/politics/doj-response-lawsuit-ufc-fight-white-house">CNN — Trump administration argues UFC lawsuit was brought too "late"</a>
+    <h4>Sources — this edition</h4>
+    <a href="https://www.cnn.com/2026/06/12/politics/white-house-freedom-250-ufc-fight-lawsuit">CNN — Judge rejects bid to stop UFC fight at White House</a>
+    <a href="https://abcnews.com/US/judge-rejects-legal-effort-cancel-white-houses-ufc/story?id=133790718">ABC News — Judge rejects legal effort to cancel White House's UFC event</a>
+    <a href="https://abcnews.com/Politics/security-ufc-fights-white-house-super-bowl-level/story?id=133785029">ABC News — Secret Service: White House UFC security at Super Bowl level</a>
     <a href="https://thehill.com/homenews/administration/5919806-trump-administration-ufc-60-million-white-house-cage-fight/">The Hill — White House cage fight cost federal agencies, UFC at least $60M</a>
     <a href="https://time.com/article/2026/06/12/how-to-watch-the-ufc-fight-at-the-white-house/">TIME — How to watch the UFC fight at the White House</a>
-    <a href="https://www.mmamania.com/ufc-white-house-2026-fight-card-start-time-full-results-dana-white-conor-mcgregor-cbs-mma/449386/ufc-white-house-media-day-video-live-stream-interviews-freedom-250-mma">MMA Mania — UFC White House media day &amp; Lincoln Memorial press conference</a>
-    <a href="https://www.ufc.com/news/ufc-fight-night-muhammad-vs-bonfim-main-card-results-highlights-interviews">UFC.com — Fight Night: Muhammad vs Bonfim main card results</a>
-    <a href="https://sports.yahoo.com/articles/ufc-fight-night-bonfim-muhammad-052512663.html">Yahoo Sports — Bonfim-Muhammad results and bonus winners</a>
-    <a href="https://www.lowkickmma.com/fares-ziam-vs-tom-nolan-ufc-vegas-118/">LowKick MMA — Tom Nolan stuns Farès Ziam to secure top-15 ranking</a>
-    <a href="https://www.si.com/fannation/mma/news/ex-ufc-champion-bounced-from-top-5-3-new-fighters-debut-ufc-rankings-update">Sports Illustrated — Ex-champion bounced from top 5 in rankings update</a>
-    <a href="https://www.tapology.com/fightcenter/bouts/1109142-ufc-freedom-fights-250-mauricio-ruffy-vs-iron-michael-chandler">Tapology — Ruffy vs. Chandler, UFC Freedom 250</a>
-    <a href="https://www.paramountplus.com/sneak-peak/ufc-schedule-2026/">Paramount+ — UFC schedule 2026</a>
-    <div class="disclaimer">The Octagon is an automated news digest. Cards and bouts are subject to change.</div>
+    <a href="https://www.fanduel.com/research/how-to-watch-ufc-freedom-250-live-stream-tv-channel-and-start-time">FanDuel Research — How to watch UFC Freedom 250</a>
+    <a href="https://sports.yahoo.com/mma/article/ufc-freedom-250-full-fight-card-start-time-odds-where-to-watch-and-everything-to-know-for-white-house-event-223245166.html">Yahoo Sports — UFC Freedom 250: full card &amp; everything to know</a>
+    <a href="https://www.cbssports.com/ufc/news/2026-ufc-event-schedule-ilia-topuria-justin-gaethe-alex-pereira-freedom-250/">CBS Sports — 2026 UFC event schedule</a>
+    <a href="https://www.espn.com/mma/schedule/_/league/ufc">ESPN — UFC schedule, 2026 season</a>
+    <a href="https://cagesidepress.com/2026/06/08/ufc-vegas-118-tom-nolan-moicano/">Cageside Press — Tom Nolan wants "awesome," "scary" Moicano</a>
+    <a href="https://www.ufc.com/video/157445">UFC — Iwo Baraniewski gets Round 1 TKO against Junior Tafa</a>
+    <a href="https://www.tapology.com/fightcenter/bouts/1109142-ufc-freedom-fights-250-mauricio-ruffy-vs-iron-michael-chandler">Tapology — Mauricio Ruffy vs. Michael Chandler, UFC Freedom 250</a>
+    <a href="https://www.pbs.org/newshour/politics/watch-a-sneak-peak-of-ufcs-octagon-at-the-white-house">PBS News — Sneak peek of UFC's Octagon at the White House</a>
+    <a href="https://en.wikipedia.org/wiki/2026_in_UFC">Wikipedia — 2026 in UFC</a>
+    <div class="disclaimer">Cards and bouts are subject to change.</div>
   </footer>
 
 </div>

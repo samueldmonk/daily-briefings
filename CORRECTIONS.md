@@ -98,7 +98,7 @@ fought again since), update the entry in the same commit.
   DEFENSE vs Gaethje (NOT a "unification" despite some outlets' wording — keep per prior correction);
   co-main Pereira vs Gane interim HW; O'Malley (19-3) vs Aiemann Zahabi (14-2); Bo Nickal (8-1) vs
   Kyle Daukaus (17-4); Mauricio Ruffy (13-2) vs Michael Chandler (23-10); Diego Lopes (27-8) vs
-  Steve Garcia (19-5); Derrick Lewis (29-13) vs Josh Hokit (9-0). 8 PM ET, Paramount+ / CBS simulcast.
+  Steve Garcia (19-5); Derrick Lewis (29-13) vs Josh Hokit (9-0). 8 PM ET, Paramount+ (the once-floated CBS simulcast was DROPPED — see 2026-06-12 ~2:15pm entry).
 - June 20 card is **UFC Fight Night: Kape vs. Horiguchi** (flyweight rematch, Meta APEX, Las Vegas).
   June 27 is **Fiziev vs. Torres** (lightweight, Baku) — drop the unverified "Baku deal through 2028"
   and "Shara Magomedov vs Michel Pereira co-feature" claims used in an earlier edition (unconfirmed).
@@ -387,3 +387,29 @@ fought again since), update the entry in the same commit.
 - An Advisor Perspectives/dshort snippet claiming the S&P "rose every day this week, ninth straight
   weekly gain" is STALE boilerplate from another period — it contradicts the verified Mon–Thu closes
   (two down days). Never use that snippet for this week.
+
+## Added 2026-06-12 (Midday run ~2:15pm ET)
+- **Freedom 250 BROADCAST — supersedes the June 9 note:** the event streams EXCLUSIVELY on
+  Paramount+, no pay-per-view and NO CBS simulcast — Dana White confirmed (FanDuel Research;
+  TIME's June 12 how-to-watch: "There is no simulcast"). One outlet still claims CBS access —
+  treat as stale. Do not revive the "CBS simulcast" wording.
+- **June 12 ~2:10pm ET tape** (24/7 Wall St header strip server-rendered at fetch + CNBC liveblog
+  "Dow gains 350 points as SpaceX soars in debut"): S&P 500 ~+0.4% (strip: 7,423.20 +0.37%),
+  Dow ~+0.5-0.7% (+~350 pts; strip: 51,135.10 +0.50%), Nasdaq Composite ~+0.2% (CNBC; strip
+  Nasdaq-100 29,520 +0.31%), Russell 2000 2,932.97 +0.40%. SPCX last ~+26-27% (low $170s),
+  day high $176.52. WTI bounced to ~$85.25 (range $83.23-86.98) after the >4% slide below $84.
+- **Iran deal:** Pakistani PM Shehbaz Sharif said Friday a "final, agreed upon text" has been
+  reached and Pakistan is "working closely with both sides" (CNBC liveblog). Tehran-pushback
+  caveat from earlier entries still applies — deal NOT signed as of this run.
+- **Freedom 250 ruling detail (CNN/ABC, June 12):** Judge Amit Mehta ruled the two Virginia
+  plaintiffs LACKED STANDING, showed no irreparable harm, and cited "unreasonable delay";
+  cancelling last-minute would cause "substantial harm." Secret Service: security at Super Bowl
+  level (ABC). The Hill: cost to federal agencies + UFC at least $60M.
+- **AudiA6 takedown (Cyber top story this run):** Europol-coordinated op executed June 10;
+  laundered EUR 336M (~$389M) since 2021 for ransomware gangs; linked to 15+ investigations;
+  two alleged admins (Ukrainian & Russian nationals) arrested in Georgia — DOJ charged Ruslan
+  Igorevich Tkachuk (37) and Alexander Vladimirovich Ledenev (25), up to 20 years; 25 domains +
+  30 servers seized; 80+ vehicles; EUR 692k frozen / EUR 86k seized; 3-10% commissions; 6,000+
+  KYC mule records. Sources: Europol newsroom, THN, BleepingComputer, Help Net Security (June 12).
+- Daniel Marcos correction note: he was NOT unbeaten in the UFC — 5-1 (1 NC) in the promotion;
+  a draft this run briefly said "unbeaten-in-the-UFC departure" and was fixed pre-publish.

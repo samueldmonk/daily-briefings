@@ -38,27 +38,26 @@
   @media(max-width:720px){.cards{grid-template-columns:1fr}}
   .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;transition:transform .15s,border-color .15s}
   .card:hover{transform:translateY(-3px);border-color:var(--teal)}
-  .card h3{font-size:15px;margin-bottom:8px}
+  .card h3{font-size:15px;margin-bottom:8px;color:var(--ink)}
   .card p{font-size:13.5px;color:var(--muted)}
-  .tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:5px;margin:0 6px 8px 0}
-  .tag.takedown{background:rgba(34,211,168,.12);color:var(--teal)}
-  .tag.breach{background:rgba(255,107,107,.12);color:var(--crit)}
-  .tag.supply{background:rgba(255,180,84,.12);color:var(--warn)}
-  .tag.claim{background:rgba(54,198,255,.12);color:var(--cyan)}
+  .tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:5px;margin-bottom:8px;margin-right:6px}
+  .tag.crit{background:rgba(255,107,107,.12);color:var(--crit)}
+  .tag.warn{background:rgba(255,180,84,.12);color:var(--warn)}
+  .tag.info{background:rgba(54,198,255,.12);color:var(--cyan)}
+  .tag.ok{background:rgba(34,211,168,.12);color:var(--teal)}
   table{width:100%;border-collapse:collapse;font-size:13px}
   th{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
-  td{padding:10px;border-bottom:1px solid rgba(35,51,47,.6);color:#bccdc7;vertical-align:top}
+  td{padding:9px 10px;border-bottom:1px solid rgba(35,51,47,.6);color:#bccdc7;vertical-align:top}
   td.cve{font-family:var(--mono);font-size:12px;color:var(--cyan);white-space:nowrap}
-  .cvss{font-family:var(--mono);font-weight:700}
-  .cvss.crit{color:var(--crit)} .cvss.high{color:var(--warn)}
+  td.score{font-family:var(--mono);font-size:12.5px;color:var(--crit)}
   ul.kev{list-style:none}
-  ul.kev li{padding:10px 0 10px 24px;border-bottom:1px solid rgba(35,51,47,.6);position:relative;color:#bccdc7;font-size:14px}
+  ul.kev li{padding:10px 0 10px 22px;border-bottom:1px solid rgba(35,51,47,.6);position:relative;color:#bccdc7;font-size:14px}
   ul.kev li::before{content:"⛨";position:absolute;left:0;color:var(--teal)}
   footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line)}
   footer h4{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
-  footer a{color:#7fb3d3;font-size:12.5px;text-decoration:none;display:block;padding:2.5px 0}
+  footer a{color:#7fb2d9;font-size:12.5px;text-decoration:none;display:block;padding:2.5px 0}
   footer a:hover{text-decoration:underline}
-  .disclaimer{margin-top:18px;font-size:11.5px;color:#5f706b;font-style:italic}
+  .disclaimer{margin-top:18px;font-size:11.5px;color:#5d716b;font-style:italic}
 </style>
 </head>
 <body>
@@ -71,7 +70,7 @@
       <span class="pill live"><span class="dot"></span>LIVE</span>
       <span class="pill edition" id="edition">Midday Edition</span>
       <span class="pill" id="datestamp">Friday, June 12, 2026</span>
-      <span class="pill">Updated <span id="updated">~2:00 PM ET</span></span>
+      <span class="pill">Updated <span id="updated">~2:15 PM ET</span></span>
     </div>
   </header>
 
@@ -83,57 +82,65 @@
 
   <div class="label">Top Story</div>
   <div class="panel lead">
-    <div class="kicker">Zero-Day · Extortion · Higher Ed</div>
-    <h2>ShinyHunters exploited an Oracle PeopleSoft zero-day for two weeks before anyone knew — universities hit hardest</h2>
-    <p>The extortion crew tracked by Mandiant as UNC6240 (ShinyHunters) exploited CVE-2026-35273, a CVSS 9.8 unauthenticated remote-code-execution flaw in PeopleSoft Enterprise PeopleTools 8.61/8.62, to break into enterprise systems, steal data, and demand payment to keep it private. Activity ran from May 27 to June 9 — Oracle's out-of-band advisory didn't land until June 10, meaning the bug was a zero-day the entire campaign.</p>
-    <p>Roughly 300 instances across 100+ organizations are believed affected, about 68% of them in higher education (mostly US). Exploitation requires no login and no user interaction — just HTTP access to the server. Notably, the flaw had still not appeared in CISA's KEV catalog as of this edition, so no federal remediation clock has started; admins should treat Oracle's June 10 alert as the deadline.</p>
+    <div class="kicker">Law enforcement · Ransomware economics</div>
+    <h2>Europol cuts ransomware gangs off from "AudiA6," a €336M crypto-laundering pipeline</h2>
+    <p>A coordinated international operation executed <strong>June 10</strong> dismantled AudiA6, a professional crypto-mixing service that Europol says laundered more than <strong>€336 million (~$389M)</strong> for ransomware crews and other cybercriminal networks since 2021 — and is linked to more than 15 international cybercrime investigations.</p>
+    <p>Two alleged administrators — of Ukrainian and Russian nationality — were arrested in Georgia, where authorities also seized over 80 vehicles and multiple properties; <strong>25 domains were seized and 30+ servers taken offline</strong>, with €692,000 in crypto frozen and €86,000 seized outright. Marketed on underground forums, the service returned "cleaned" funds within about an hour for a 3–10% commission, and investigators recovered 6,000+ KYC records tied to money-mule accounts.</p>
+    <p>The U.S. DOJ charged the two men arrested — Ruslan Igorevich Tkachuk, 37, and Alexander Vladimirovich Ledenev, 25 — with money-laundering conspiracy counts carrying up to 20 years. Europol called the takedown the loss of "a key financial pipeline used to wash hundreds of millions in illicit profits."</p>
   </div>
 
   <div class="label">Breaches &amp; Incidents</div>
   <div class="cards">
     <div class="card">
-      <span class="tag takedown">Takedown</span><span class="tag">Europol · Jun 10</span>
-      <h3>AudiA6 crypto-laundering service dismantled</h3>
-      <p>European authorities disrupted AudiA6, a cryptocurrency laundering service used by ransomware gangs — cutting off what Europol called a "key financial pipeline" that washed more than €336M (~$389M) in illicit profits since 2021.</p>
+      <span class="tag crit">Active exploitation</span><span class="tag warn">Higher ed</span>
+      <h3>ShinyHunters' PeopleSoft zero-day spree: 100+ orgs hit</h3>
+      <p>Mandiant (tracking the actor as UNC6240) says roughly <strong>300 Oracle PeopleSoft instances across 100+ organizations</strong> were compromised between May 27 and June 9 via CVE-2026-35273 — about 68% of them universities, mostly in the US. Oracle pushed an out-of-band Security Alert on June 10. Details in the Vulnerability Watch below.</p>
     </div>
     <div class="card">
-      <span class="tag supply">Supply Chain</span><span class="tag">Open Source</span>
-      <h3>OSS maintainer attacks cascade to OpenAI, Vercel</h3>
-      <p>Ongoing attacks on open-source developers compromised tooling at security vendors including Aqua Security (Trivy), Bitwarden and Checkmarx; stolen credentials were then used to breach major companies including OpenAI and Vercel, per TechCrunch's mid-year breach roundup.</p>
+      <span class="tag info">Update</span><span class="tag ok">De-escalation</span>
+      <h3>ServiceNow: "breach" now attributed to researcher activity</h3>
+      <p>In a June 12 advisory update, ServiceNow said the suspicious June 2–3 activity against the unauthenticated REST endpoint it patched June 5 is now believed to be <strong>security researchers and customers testing</strong> — two researchers filed a bug-bounty report June 7. Users still allege the flaw was known since April; no confirmed criminal breach.</p>
     </div>
     <div class="card">
-      <span class="tag claim">Attacker Claims</span><span class="tag">Leak Sites · Jun 12</span>
-      <h3>Fresh DragonForce and Qilin victim listings</h3>
-      <p>New dark-web listings today name victims including Areco Steel (Sweden), Astec Valves &amp; Fittings, Bitek System (South Korea), and UK real-estate firm Brian Cox. These are attacker claims tracked by breach monitors — not yet victim-confirmed.</p>
+      <span class="tag warn">Leak-site claims</span>
+      <h3>Friday's extortion roundup — claims, not confirmations</h3>
+      <p>New victims posted June 12 include <strong>Hong Kong Parkview and Sweden's Areco Steel (DragonForce)</strong>, Highwoods Properties ("TheGentlemen"), plus Astec Valves &amp; Fittings, South Korea's Bitek System and Turkey's Çekok Gıda across DragonForce/Qilin-linked sites. All are attacker claims, not victim-confirmed.</p>
     </div>
     <div class="card">
-      <span class="tag breach">Incident Update</span><span class="tag">ServiceNow</span>
-      <h3>ServiceNow incident reframed — researcher activity, angry customers</h3>
-      <p>The June 2–3 probing of an unauthenticated ServiceNow REST endpoint is now attributed largely to researcher activity rather than a confirmed criminal breach, per Cybernews — but customers allege the vendor knew of the flaw since April 7 and deferred the fix. Hosted instances were patched June 5.</p>
+      <span class="tag info">Patch fallout</span>
+      <h3>Record June Patch Tuesday: ~200 CVEs, three public zero-days</h3>
+      <p>Microsoft's June 9 release was its largest ever (~200 CVEs, 33 critical), including three publicly disclosed — <strong>none known exploited</strong> — zero-days: a CTFMON privilege escalation, an HTTP/2 "Bomb" DoS, and a BitLocker "YellowKey" bypass. It also shipped the permanent fix for the May-exploited Exchange OWA flaw (below).</p>
     </div>
   </div>
 
   <div class="label">Vulnerability Watch</div>
-  <div class="panel" style="padding:12px">
+  <div class="panel" style="padding:10px 12px">
     <table>
       <tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr>
       <tr>
-        <td class="cve">CVE-2026-35273</td>
-        <td><span class="cvss crit">9.8</span></td>
+        <td class="cve">CVE-2026-35273</td><td class="score">9.8</td>
         <td>Oracle PeopleSoft PeopleTools 8.61 / 8.62</td>
-        <td>Unauthenticated HTTP → full server takeover. Exploited as a zero-day May 27–Jun 9 (ShinyHunters/UNC6240); Oracle out-of-band alert June 10. Patch immediately.</td>
+        <td>Unauthenticated HTTP → full takeover/RCE. Exploited as a zero-day by ShinyHunters (May 27–Jun 9). Oracle out-of-band alert June 10 — patch/mitigate now. Not yet in CISA KEV as of this writing.</td>
       </tr>
       <tr>
-        <td class="cve">CVE-2026-50751</td>
-        <td><span class="cvss crit">9.3</span></td>
+        <td class="cve">CVE-2026-50751</td><td class="score">9.3</td>
         <td>Check Point Remote Access VPN / Mobile Access / Spark Firewall (IKEv1 configs)</td>
-        <td>Authentication bypass — unauthenticated attackers can establish VPN sessions. Exploited since ~May 7; one incident tied to a Qilin affiliate. Hotfix shipped June 8.</td>
+        <td>Authentication bypass exploited in the wild since ~May 7; one incident tied to a Qilin affiliate. Hotfix shipped June 8 (vendor CVSS 9.3 — not the 9.8 some blogs cite).</td>
       </tr>
       <tr>
-        <td class="cve">CVE-2026-42897</td>
-        <td><span class="cvss high">8.1</span></td>
-        <td>Exchange Server 2016 / 2019 / Subscription Edition (Exchange Online not affected)</td>
-        <td>OWA spoofing via XSS in crafted email; exploited in the wild since May (KEV-listed May 15, federal due date May 29 — passed). Permanent fixes shipped in the June 9 security updates — confirm CUs are applied.</td>
+        <td class="cve">CVE-2026-41089</td><td class="score">9.8</td>
+        <td>Windows Netlogon — domain controllers, Server 2012–2025</td>
+        <td>Unauthenticated stack overflow → SYSTEM RCE; exploited in the wild (Belgium's CCB warned in late May). Fixed in the June 9 Patch Tuesday updates.</td>
+      </tr>
+      <tr>
+        <td class="cve">CVE-2026-44963</td><td class="score">9.4 (v4)</td>
+        <td>Veeam Backup &amp; Replication 12.x ≤ 12.3.2.4465</td>
+        <td>RCE by an <em>authenticated</em> domain user; fixed in 12.3.2.4854; v13 not affected (vendor advisory; watchTowr credited).</td>
+      </tr>
+      <tr>
+        <td class="cve">CVE-2026-42897</td><td class="score">8.1</td>
+        <td>Microsoft Exchange Server (OWA)</td>
+        <td>May-exploited zero-day (spoofing/XSS): emergency mitigation May 14, KEV-listed May 15 (federal due date May 29 — passed). June 9 shipped the permanent Security Updates. Exchange Online unaffected.</td>
       </tr>
     </table>
   </div>
@@ -141,24 +148,30 @@
   <div class="label">CISA KEV &amp; Federal Deadlines</div>
   <div class="panel">
     <ul class="kev">
-      <li><strong>June 8 additions:</strong> CVE-2026-50751 (Check Point Security Gateway improper authentication) carried a rare <strong>emergency 3-day deadline of June 11 — now passed</strong>; agencies not yet remediated are out of compliance. CVE-2026-42271 (BerriAI LiteLLM command injection) follows the standard window, due <strong>~June 29</strong>.</li>
-      <li><strong>June 9 additions:</strong> CVE-2026-7473 (Arista EOS), CVE-2026-11645 (Chromium V8 out-of-bounds read/write — one of 74 fixes in the latest Chrome update), and CVE-2026-20245 (Cisco Catalyst SD-WAN Manager — authenticated privilege escalation, exploited in the wild). Standard BOD 22-01 three-week window: due <strong>~June 30</strong>.</li>
-      <li><strong>Watch item:</strong> Oracle PeopleSoft CVE-2026-35273 is <strong>not yet in the KEV catalog</strong> despite confirmed in-the-wild zero-day exploitation — if added, expect a three-week federal clock (or shorter, as the Check Point 3-day exception showed).</li>
+      <li><strong>June 9 additions</strong> — CVE-2026-7473 (Arista EOS), CVE-2026-11645 (Chromium V8 out-of-bounds R/W, CVSS 8.8 — one of 74 Chrome fixes), and CVE-2026-20245 (Cisco Catalyst SD-WAN Manager, authenticated privilege escalation). Standard BOD 22-01 three-week window: remediation due ~<strong>June 30</strong>.</li>
+      <li><strong>June 8 additions</strong> — CVE-2026-50751 (Check Point) carried an explicit, shortened <strong>emergency 3-day deadline of June 11 — now passed</strong>; agencies still exposed are out of compliance. CVE-2026-42271 (BerriAI LiteLLM command injection) follows the standard window, due ~<strong>June 29</strong>.</li>
+      <li><strong>PeopleSoft watch</strong> — despite active mass exploitation, CVE-2026-35273 had <strong>not</strong> been added to the KEV catalog as of this edition (latest visible additions: June 9). No federal deadline exists yet; treat Oracle's June 10 alert as the action trigger regardless.</li>
+      <li><strong>Reminder</strong> — BOD 22-01 gives federal civilian agencies three weeks from a CVE's KEV addition date unless CISA explicitly states otherwise.</li>
     </ul>
   </div>
 
   <footer>
-    <h4>Sources</h4>
-    <a href="https://thehackernews.com/">The Hacker News — Oracle PeopleSoft zero-day exploited by ShinyHunters (CVE-2026-35273); AudiA6 takedown</a>
-    <a href="https://www.rapid7.com/blog/post/etr-critical-check-point-vpn-zero-day-exploited-in-the-wild-cve-2026-50751/">Rapid7 — Critical Check Point VPN zero-day exploited in the wild (CVE-2026-50751)</a>
-    <a href="https://blog.checkpoint.com/security/check-point-releases-important-hotfix-for-vulnerabilities-in-deprecated-ikev1-vpn-protocol/">Check Point — Hotfix for IKEv1 VPN vulnerability (CVE-2026-50751)</a>
-    <a href="https://securityaffairs.com/192204/security/cve-2026-42897-microsoft-confirms-active-exploitation-of-exchange-server-zero-day.html">Security Affairs — Microsoft confirms active exploitation of Exchange Server CVE-2026-42897</a>
+    <h4>Sources — this edition</h4>
+    <a href="https://www.europol.europa.eu/media-press/newsroom/news/ransomware-gangs-cut-eur-336-million-audia6-crypto-laundering-pipeline">Europol — Ransomware gangs cut off from €336M "AudiA6" laundering pipeline</a>
+    <a href="https://thehackernews.com/2026/06/europol-disrupts-audia6-crypto.html">The Hacker News — Europol disrupts AudiA6 crypto laundering service</a>
+    <a href="https://www.bleepingcomputer.com/news/legal/authorities-dismantle-audia6-ransomware-crypto-laundering-service/">BleepingComputer — Authorities dismantle "AudiA6" service</a>
+    <a href="https://www.helpnetsecurity.com/2026/06/12/europol-audia6-crypto-laundering-service-ransomware-groups/">Help Net Security — Crypto laundering service that moved €336M dismantled</a>
+    <a href="https://www.oracle.com/security-alerts/alert-cve-2026-35273.html">Oracle — Security Alert Advisory CVE-2026-35273</a>
+    <a href="https://www.securityweek.com/oracle-addresses-peoplesoft-vulnerability-amid-reports-of-zero-day-attacks/">SecurityWeek — Oracle addresses PeopleSoft vulnerability amid zero-day attacks</a>
+    <a href="https://www.helpnetsecurity.com/2026/06/11/oracle-peoplesoft-under-attack-cve-2026-35273/">Help Net Security — PeopleSoft servers under attack, out-of-band alert</a>
+    <a href="https://cybernews.com/security/servicenow-confirms-security-incident-data-breach/">Cybernews — ServiceNow "data breach" attributed to researcher activity</a>
+    <a href="https://www.rapid7.com/blog/post/etr-critical-check-point-vpn-zero-day-exploited-in-the-wild-cve-2026-50751/">Rapid7 — Check Point VPN zero-day exploited in the wild (CVE-2026-50751)</a>
+    <a href="https://blog.checkpoint.com/security/check-point-releases-important-hotfix-for-vulnerabilities-in-deprecated-ikev1-vpn-protocol/">Check Point — Hotfix for IKEv1 VPN vulnerability</a>
+    <a href="https://www.zerodayinitiative.com/blog/2026/6/9/the-june-2026-security-update-review">Zero Day Initiative — The June 2026 Security Update Review</a>
+    <a href="https://www.cisa.gov/news-events/alerts/2026/06/09/cisa-adds-three-known-exploited-vulnerabilities-catalog">CISA — Adds three Known Exploited Vulnerabilities (June 9)</a>
     <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA — Known Exploited Vulnerabilities Catalog</a>
-    <a href="https://www.cisa.gov/news-events/alerts/2026/06/09/cisa-adds-three-known-exploited-vulnerabilities-catalog">CISA — Three KEV additions, June 9, 2026</a>
-    <a href="https://techcrunch.com/2026/06/07/the-worst-hacks-and-breaches-of-2026-so-far/">TechCrunch — Hacked, leaked, and held for ransom: the worst breaches of 2026 so far</a>
-    <a href="https://cybernews.com/">Cybernews — ServiceNow incident update; leak-site monitoring</a>
-    <a href="https://www.breachsense.com/breaches/">Breachsense — Recent data breaches (June 12, 2026 listings)</a>
-    <div class="disclaimer">The Cyber Wire is an automated news digest for information only. Severity scores reflect vendor advisories where available; leak-site listings are attacker claims unless stated as victim-confirmed. Verify patch levels against official vendor bulletins before acting.</div>
+    <a href="https://www.breachsense.com/breaches/">Breachsense — Data breach tracker (June 12 leak-site claims)</a>
+    <div class="disclaimer">Compiled from public reporting and vendor advisories; details may evolve as investigations continue. Leak-site listings are attacker claims until victims confirm.</div>
   </footer>
 
 </div>
