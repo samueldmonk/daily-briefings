@@ -477,3 +477,35 @@ fought again since), update the entry in the same commit.
 - Markets CLOSED Fri June 19 (Juneteenth — Fidelity/Kiplinger); Accenture + Kroger earnings
   June 18 (Schwab). A ground.news snippet calling Topuria–Gaethje a "unification" bout is
   wrong per the standing correction — it remains a DEFENSE.
+
+## Added 2026-06-12 (Evening hourly refresh ~5:10pm ET — post-close)
+- Friday closes RE-VERIFIED this run (CNBC): S&P 500 7,431.46 (+0.50%); Nasdaq Composite
+  25,888.84 (+0.31%); Dow 51,202.26 (+353.51, +0.70%); SPCX +19%, "closing near $161"
+  (level $161.11 per CNBC's wrap headline) — all consistent with the 4:45pm verified entry.
+- **DOJ APPROVED Paramount–WBD on June 12** (CNBC "source says" + Variety; TheStreet's June 12
+  liveblog header carries it too): $110B deal cleared with NO divestitures, behavioral remedies
+  or concessions. Remaining risk = STATE AGs: California's Rob Bonta reportedly plans an
+  investigation, New York likely to join. Completion on track by SEPTEMBER, after which a
+  "ticking fee" makes the deal more expensive. No settled June 12 % move for WBD/PSKY appeared
+  in snippets — none published.
+- **Lennar fiscal Q2 (Fool transcript + Yahoo highlights, dated June 12):** deliveries 20,519
+  (+2% y/y); new orders 21,749 (−4% y/y); EPS $1.24 ($1.31 ex-mark-to-market); revenue $7.9B;
+  home-sale gross margin 15.6%; net margin 6.4%. Q3 guide: orders 21,000–22,000, deliveries
+  20,500–21,500, ASP $375–380k, EPS $1.20–1.40. FY26 delivery guidance CUT to 82,000–83,000 on
+  "current pressures on interest rates and continued macro uncertainty." Shares LOWER per
+  TheStreet (order/delivery forecasts trailed) — no settled % move found this run; do not invent one.
+- **Iran/Geneva detail (Reuters via Detroit News/HuffPost):** memorandum could be signed as soon
+  as SUNDAY in Geneva by VP JD Vance and Iran's Parliament Speaker Mohammed Baqer Qalibaf, wording
+  to be finalized by Saturday; draft waives oil sanctions, unfreezes funds, cessation of hostilities
+  on all fronts incl. Lebanon. BUT a source close to Iran's negotiating team told FARS the
+  Sunday-signing reports are FALSE (Athens Times) — do NOT present a signing as scheduled/confirmed.
+- WTI post-settle: TE text this run said "fell 2% to near $85" vs the 4:45pm "below $85, ~−3%" —
+  published "≈$85, −2–3%" with the $83.23–86.98 day range; eight-week low stands.
+- A "10-yr increased to ~4.55% by Friday afternoon" claim surfaced WITHOUT a verifiable source/
+  timestamp (likely a stale/ambiguous gold-news item citing gold "$4260", a Tuesday-area level) —
+  TE's "hovered around 4.47% on Friday" retained.
+- TRAPS this run: btcc.com claimed SPCX "after hours $163.86, decreased 1.81%" — internally
+  inconsistent with the $161.11 close; unreliable, not published. An after-hours-movers summary
+  repeated the STALE "space stocks up (RKLB/SATS/RDW)" morning framing — the verified day-of
+  shakeout (SPCE −24%, ASTS −10%, RKLB −8%) stands. Investing.com shows SPCX "160.95" (last trade)
+  vs CNBC's official close $161.11 — use $161.11.
