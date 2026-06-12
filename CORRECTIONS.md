@@ -53,7 +53,7 @@ fought again since), update the entry in the same commit.
   notifications to ~22.7M people ran into 2026 (ID-protection enrollment deadline was April 18,
   2026). Do NOT present Aflac as a fresh June 2026 breach.
 - **UFC Freedom 250 (White House, June 14, 2026)**: the Topuria vs. Gaethje main event is a
-  **LIGHTWEIGHT** title fight — Ilia Topuria DEFENDS the undisputed lightweight title vs former
+  **LIGHTWEIGHT** title fight — Ilia Topuria DEFENDS the undisputed lightweight title vs reigning
   interim lightweight champ Justin Gaethje. It is NOT a light-heavyweight bout and NOT a
   "unification." Co-main: Alex Pereira vs Ciryl Gane for the INTERIM heavyweight title; a Pereira
   win would make him the first 3-division UFC champ. Lawsuit to block it filed June 6, 2026 by the
@@ -509,3 +509,36 @@ fought again since), update the entry in the same commit.
   repeated the STALE "space stocks up (RKLB/SATS/RDW)" morning framing — the verified day-of
   shakeout (SPCE −24%, ASTS −10%, RKLB −8%) stands. Investing.com shows SPCX "160.95" (last trade)
   vs CNBC's official close $161.11 — use $161.11.
+
+## Added 2026-06-12 (Evening run ~6:15pm ET — post-close refresh)
+- Friday closes RE-verified again (CNBC): S&P 500 7,431.46 (+0.50%), Nasdaq Composite 25,888.84
+  (+0.31%), Dow 51,202.26 (+353.51, +0.70%). SPCX day one re-verified: closed $161.11 (+19%);
+  full-day volume MORE THAN 500M shares (CNBC/Fortune — approaching Facebook's ~580M 2012 record),
+  superseding the intraday "360M+ by 2pm" stat for full-day references; valuation $2T+ (CNBC ~$2.1T).
+- **Gaethje descriptor FIXED:** Justin Gaethje is the REIGNING interim lightweight champion — won
+  the interim belt at UFC 324 (Jan 24, 2026) by UD (49-46, 49-46, 48-47) over Paddy Pimblett, his
+  most recent fight (Al Jazeera/Tapology/khelnow). The June 9 entry said "former interim champ" —
+  wrong; patched in place this run. Billing per the standing correction is unchanged: Topuria
+  DEFENDS the undisputed LW title; still do NOT use "unification" wording. Topuria: 17-0
+  (15 stoppages), unbeaten two-division champ; last fight KO of Charles Oliveira, UFC 317,
+  June 28, 2025 (Yahoo/ESPN).
+- Lewis–Hokit origin (ESPN "Urged by Trump"): at UFC 327 (Miami, Apr 11) Trump asked why Lewis
+  wasn't on the White House card; White made Lewis vs Hokit that night. Consistent with CBS's
+  "personally requested" framing. Hokit beat Blaydes 29-28 x3 (UFC News scorecards).
+- Paramount–WBD extra detail: EU reviews pending — European Commission Foreign Subsidies Regulation
+  probe with provisional July 7 / July 14 deadlines (Variety AU); WBD shares GAINED on the DOJ
+  clearance (GuruFocus headline — direction only, no settled %). Some outlets say $111B; CNBC says
+  $110B — keep $110B.
+- **CarGurus breach (12.4–12.5M records, ShinyHunters vishing) is NOT June news** — disclosure
+  dates to ~early March 2026 (forthepeople.com post dated 3/3/2026); it resurfaces in "2026
+  breaches" roundups. Do not present as fresh.
+- **OnlyFans "340M records"** is a compilation-for-sale CLAIM (0.313 BTC; listing first reported
+  ~May 25, heavy coverage into mid-June). OnlyFans denies a breach; the sellers THEMSELVES say it
+  was built from old leaks/public sources; experts concur (TechRadar/SecurityAffairs/Cybernews).
+  Frame only as a claim/recycled compilation — never a confirmed new breach.
+- FOMC pricing re-sourced this run: Schwab (June 12) — rate-futures traders "nearly unanimous" on
+  no change at 3.50–3.75%, June 16–17. (The "~97% odds" figure remains unverified — keep avoiding.)
+- AudiA6 detail re-verified via fresh sources (Chainalysis/BleepingComputer/cyberpress): ~10,333 BTC
+  (~$389M historic value) laundered since 2021; 11-nation op led by US Secret Service + IRS-CI with
+  Polish police; one outlet (cyberpress) says "2022-2025" for the laundering window — prefer
+  "since 2021" (Chainalysis blockchain analysis + prior Europol-sourced entries).
