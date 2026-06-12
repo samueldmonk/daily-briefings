@@ -278,6 +278,62 @@ fought again since), update the entry in the same commit.
   sentiment IMPROVED on easing gas prices. 22V Research: fading mega-tech conviction → more
   tech/value rotation chop.
 
+## Added 2026-06-12 (Midday Edition ~1:30pm ET) — NOTE: no runs occurred on June 11
+- **Thu June 11, 2026 FINAL closes (verified; Yahoo/CNBC; Dow reconciles EXACTLY with Wed close):**
+  S&P 500 7,394.30 (+1.75%); Nasdaq Composite 25,809.66 (+2.54%); Dow 50,848.75 (+929.97, +1.86%).
+  Best day in two months after Trump called off threatened strikes on Iran (evening June 10/11).
+  Week-to-date through Thu vs Fri Jun 5: S&P +0.14%, Nasdaq +0.39%, Dow -0.04%.
+- Thursday movers (Yahoo close modules): ORCL -8.53% to $184.10 (post-earnings, fell even as market
+  soared); PTC -12.36% $118.39; DAN -15.11%; space rally pre-SpaceX: YSS +22.09%, SPCE +21.66%,
+  VSAT +18.23%, FLY +17.80%, ICHR +16.45%, VOYG +15.96%; SMCI +9.22% $31.97 (bounce); INTC +9.27%;
+  NVDA ~+2.2% $204.87. CAUTION: 24/7 Wall St's June 12 sidebar showed KLA +12.92%, LRCX +12.65%,
+  MU +11.66% ($995.87), AMAT +11.19% — timestamp AMBIGUOUS (their loser module duplicated Thursday
+  data) — was NOT published as a current-day move; verify before using.
+- **May PPI (June 11):** +1.1% m/m vs +0.7% est — largest monthly gain since March 2022; 6.5% y/y,
+  highest since Nov 2022; ~80% of acceleration from goods (energy +10.7% m/m, wholesale gasoline
+  +23.4%). CORE ex-food/energy +0.4% m/m (below 0.5% consensus; the ex-food/energy/TRADE gauge was +0.8% — different measures, both correct); core y/y 4.9% vs 5.4% forecast — like CPI, hot
+  headline / cooler core. ECB HIKED Thursday to 2.25% from 2.00% (held for a year prior) — do not
+  say "from 2.25%"; the +25bp-to-2.25% expectation published earlier was correct.
+- **Fri June 12 — SpaceX IPO (SPCX, Nasdaq):** priced $135 Thursday night; 555.6M shares, record
+  $75B raised; initial valuation ~$1.78T (some coverage rounds to $1.77T); greenshoe ~83M shares
+  (~$11.2B); retail allocation target ~30%, retail orders reportedly >$100B. OPENED at $150 on 58M
+  shares; ~1pm ET traded ~$168.76 (session high $168.75 per data feeds), +25% vs IPO; CNBC headline
+  said "pops 30%". Dollar volume ~$33B > QQQ (~$22B) and SPY (~$18B). Musk = world's first
+  trillionaire (>$1.05T, Yahoo). Oppenheimer Outperform/$190 PT pre-debut. A dozen 2x/-2x SPCX ETFs
+  queued (some live June 12, more through week of June 22).
+- Fri June 12 midday: ~12:50pm ET per 24/7 Wall St: S&P +0.52%, Dow +0.61% (+312 pts), Nasdaq +0.54%;
+  ~1:25pm strip: S&P 7,423.20 +0.37%, Dow 51,135.10 +0.50%, Nasdaq-100 29,520 +0.31%, Russell
+  2,932.97 +0.40%. WTI -$3.50 to $84.21 (~12:50pm; fell through $85.13 overnight, lowest since
+  April 17); Brent fell as much as 5% to lowest since March, then pared. 10-yr ~4.47% (-~10bp Thu).
+  Gold futures ~$4,215 +2.46% at ~8:39am ET (premarket strip) after Wed's ~$4,173. UMich sentiment
+  48.9 (vs 44.8 May all-time low); 1-yr inflation expectations 4.6%, below estimates. Iran: draft
+  MOU = US lifts oil sanctions / Iran reopens Hormuz within 30 days; possible signing in Switzerland
+  (Geneva floated) as soon as SUNDAY June 14; G7 Evian June 15-17; Tehran: "not yet reached a
+  conclusion." ADBE ~-6% (record $6.62B rev, $5.96 EPS beat, FY guide RAISED, but CFO Dan Durn ->
+  Marvell June 15; Stifel/Wolfe/Evercore ISI downgrades) — characterize as beat-and-raise sunk by
+  CFO exit, NOT a bad quarter.
+- **Cyber:** Oracle PeopleSoft CVE-2026-35273 — CVSS 9.8, PeopleTools 8.61/8.62, unauthenticated
+  HTTP -> full takeover; exploited as ZERO-DAY May 27-Jun 9 by ShinyHunters (Mandiant: UNC6240);
+  ~300 instances / 100+ orgs, ~68% higher education (mostly US); Oracle out-of-band alert June 10.
+  NOT in CISA KEV as of June 12 midday (latest visible adds June 9) — do not claim a KEV deadline.
+  ServiceNow UPDATE: Cybernews reports the June 2-3 activity now attributed largely to RESEARCHER
+  activity (not confirmed malicious); users allege ServiceNow knew of the flaw since April 7 and
+  deferred the fix — do not present it as a confirmed criminal breach. "GreatXML" BitLocker bypass
+  released by researcher "Chaotic Eclipse" (Defender Offline Scan vector) — DISTINCT from
+  "RoguePlanet" Defender LPE by "Nightmare Eclipse"; do not conflate the two or the researchers.
+  RoguePlanet still unpatched as of latest seen reporting (June 10). Anthropic May update: ~50
+  partners + Claude Mythos Preview found 10,000+ high/critical vulns in one month (THN). New leak-
+  site claims June 12: Hong Kong Parkview (DragonForce), Highwoods Properties (TheGentlemen) —
+  attacker claims, not victim-confirmed.
+- **UFC:** Federal judge REJECTED the bid to block UFC Freedom 250 (CNN, June 12) — event PROCEEDS
+  Sunday June 14. Case before U.S. District Judge Amit P. Mehta (Obama appointee; Newsweek notes
+  history of ruling against Trump); plaintiffs = two Virginia residents represented by the Public
+  Integrity Project; DOJ called claims "meritless," said Congress need not approve "temporary
+  structures." Event components at the LINCOLN MEMORIAL on Friday June 12 ahead of Sunday (CNN).
+  Cost to federal agencies + UFC: at least $60M (The Hill). Most recent EVENT is still June 6
+  (Muhammad vs Bonfim) until Sunday. Mauricio Ruffy featured as prospect (13-2, #9 LW, last fight
+  TKO R2 of Fiziev Feb 1, faces Chandler Sunday) — was verified against corrections.
+
 ## Added 2026-06-12 (Early afternoon ~1:45pm ET)
 - **June 12 ~1:30pm ET state (tape COOLED from the ~1:15 readings):** Dow ~+0.56–0.61% (+~312 pts),
   S&P 500 ~+0.33–0.52%, Nasdaq Composite ~FLAT (+0.07%, having dipped ~-0.3% around 1pm); Russell 2000
@@ -302,3 +358,14 @@ fought again since), update the entry in the same commit.
   PUSHBACK on parts — don't report the deal as done. WTI fell >4% to BELOW $84 (eight-week low),
   newer than the morning "below $85" level. Yields EDGED HIGHER Friday after Thursday's sharp fall:
   10-yr 4.477%, 2-yr 4.075%, 30-yr 4.971% (CNBC).
+
+## Added 2026-06-12 (Midday Edition, post-merge ~2pm ET)
+- Race-condition note: multiple runs landed within ~30 minutes. The published Midday Edition uses
+  the ~1:30pm state (Dow ~+0.6%, S&P ~+0.3-0.5%, Nasdaq Composite ~flat; SPCX ~$171.56, day range
+  $150-176.52, fully diluted value ~$2.0-2.1T) — NOT the stale ~1:15pm or ~$168 readings.
+- **ADBE's June 12 drop HAS a sourced reason** (Yahoo liveblog + 24/7 Wall St): record-revenue
+  beat-and-RAISE overshadowed by CFO Dan Durn's June 15 exit to Marvell, plus Stifel/Wolfe/Evercore
+  ISI downgrades. The 1:45pm entry's "no reason stated in snippets" reflected only that run's
+  snippets — do not strip the explanation.
+- Space halo REVERSED into a day-of shakeout (SPCE -24%, ASTS -10%, RKLB -8% despite Nasdaq-100
+  inclusion effective before the June 22 open) — supersedes the morning "premarket up" framing.

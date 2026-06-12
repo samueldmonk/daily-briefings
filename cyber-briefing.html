@@ -56,7 +56,7 @@
   ul.kev li:last-child{border-bottom:none}
   ul.kev li::before{content:"▸";position:absolute;left:4px;color:var(--accent)}
   ul.kev .due{font-family:var(--mono);font-size:12px;color:var(--warn)}
-  ul.kev .due.urgent{color:var(--bad);font-weight:700}
+  ul.kev .due.done{color:var(--bad);font-weight:700}
   .sources{margin-top:40px;border-top:1px solid var(--line);padding-top:18px}
   .sources h4{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
   .sources a{display:block;color:var(--accent2);font-size:13px;text-decoration:none;margin-bottom:6px;word-break:break-all}
@@ -73,8 +73,8 @@
     <div class="tagline">Your daily cybersecurity briefing — breaches, vulnerabilities &amp; federal deadlines</div>
     <div class="meta">
       <span class="pill live"><span class="dot"></span>LIVE</span>
-      <span class="pill" id="edition">Afternoon Edition</span>
-      <span class="pill" id="datestamp">Wednesday, June 10, 2026</span>
+      <span class="pill" id="edition">Midday Edition</span>
+      <span class="pill" id="datestamp">Friday, June 12, 2026</span>
       <span class="pill">Updated <span id="updated">—</span></span>
     </div>
   </header>
@@ -87,33 +87,33 @@
 
   <div class="label">Top Story</div>
   <div class="panel top-story">
-    <div class="kicker">Emergency KEV deadline — due tomorrow</div>
-    <h2>Federal clock runs out Thursday on exploited Check Point VPN bypass</h2>
-    <p>CISA's rare <strong>three-day emergency remediation deadline for CVE-2026-50751 expires tomorrow, June 11</strong> — a deliberate exception to the standard three-week BOD 22-01 window. The CVSS 9.3 improper-authentication flaw in Check Point's IKEv1-configured Remote Access VPN, Mobile Access and Spark firewall deployments lets an unauthenticated attacker bypass user authentication and establish a VPN session without a valid password.</p>
-    <p>Exploitation has been traced back to around <strong>May 7</strong>, with post-compromise activity tied to a <strong>Qilin ransomware affiliate</strong>. Check Point shipped hotfixes on June 8, the same day CISA added the bug to the Known Exploited Vulnerabilities catalog. Federal agencies — and any defender treating KEV as a to-do list — have hours, not weeks, to patch or pull IKEv1 remote access.</p>
+    <div class="kicker">Zero-day · extortion campaign</div>
+    <h2>ShinyHunters rode an Oracle PeopleSoft zero-day for two weeks — universities hit hardest</h2>
+    <p>Oracle rushed out an out-of-band security alert for <strong>CVE-2026-35273</strong>, a CVSS <strong>9.8</strong> remote-code-execution flaw in PeopleSoft Enterprise PeopleTools (8.61/8.62) that lets an unauthenticated attacker with HTTP access fully take over the system. Google's Mandiant, which tracks the actors as <strong>UNC6240</strong> (activity linked to ShinyHunters), dates exploitation from <strong>May 27 to June 9</strong> — meaning the bug was a zero-day for the entire campaign, with Oracle's advisory landing June 10.</p>
+    <p>The crew claims to have hit roughly <strong>300 PeopleSoft instances across 100+ organizations</strong>, stealing data and demanding payment to keep it private. <strong>About 68% of victims are in higher education</strong>, most in the US — PeopleSoft remains the back office for university HR and student records. If you run PeopleTools 8.61 or 8.62, apply Oracle's emergency mitigation now and hunt for compromise back to late May.</p>
   </div>
 
   <div class="label">Breaches &amp; Incidents</div>
   <div class="cards">
     <div class="card">
-      <div class="tags"><span class="tag exploit">exploitation</span><span class="tag leak">customer data</span></div>
-      <h3>ServiceNow: unauthenticated API abused to query customer instances</h3>
-      <p>ServiceNow disclosed that attackers exploited an unauthenticated REST endpoint (<span style="font-family:var(--mono);font-size:12px">/api/now/related_list_edit/create</span>) on June 2–3 to query data from customer instance tables. A fix went to hosted instances June 5. Exposure centers on the Australia platform release and older releases with certain config changes; the company is still deciding whether to issue a CVE. Shares fell ~6% Wednesday on the disclosure.</p>
+      <div class="tags"><span class="tag leak">update</span><span class="tag research">attribution</span></div>
+      <h3>ServiceNow walks back breach severity — but faces an awkward timeline</h3>
+      <p>An update to this week's disclosure: ServiceNow now attributes the suspicious June 2–3 queries against customer instances largely to <em>researcher</em> activity, per Cybernews. Less comforting: users allege the company knew about the unauthenticated-endpoint flaw <strong>as far back as April 7</strong> and deferred the fix to later releases before patching hosted instances June 5.</p>
     </div>
     <div class="card">
-      <div class="tags"><span class="tag zeroday">zero-day</span><span class="tag exploit">unpatched</span></div>
-      <h3>"RoguePlanet" Defender zero-day drops right after Patch Tuesday</h3>
-      <p>Researcher "Nightmare Eclipse" publicly released an exploit for an unpatched Microsoft Defender race condition hours after June's record Patch Tuesday. The local privilege-escalation bug yields SYSTEM on fully patched Windows 10/11. No official CVE or fix yet; no confirmed in-the-wild exploitation beyond the public release — but the window is open.</p>
+      <div class="tags"><span class="tag zeroday">zero-day</span></div>
+      <h3>"GreatXML" BitLocker bypass drops — Defender Offline Scan is the way in</h3>
+      <p>Researcher "Chaotic Eclipse" released a new Windows BitLocker bypass dubbed <strong>GreatXML</strong>: "If you ever attempted to use Windows Defender Offline Scan, you're automatically vulnerable to a BitLocker bypass." It lands days after the separate, still-unpatched "RoguePlanet" Defender privilege-escalation zero-day from "Nightmare Eclipse" — a rough week for Windows security tooling.</p>
     </div>
     <div class="card">
-      <div class="tags"><span class="tag leak">data leak</span></div>
-      <h3>ShinyHunters publishes Baker Distributing data</h3>
-      <p>After claiming a May 23 attack on the HVAC/refrigeration distributor and threatening to leak 260,000+ Salesforce records, ShinyHunters published data from Baker's Salesforce and SharePoint environments in early June. Have I Been Pwned indexed <strong>102,935 accounts</strong> — emails, names, addresses, phone numbers and contractor support tickets; largely corporate contact data of limited sensitivity, per Cybernews.</p>
+      <div class="tags"><span class="tag exploit">ransomware</span></div>
+      <h3>Fresh extortion listings: DragonForce, TheGentlemen claim new victims</h3>
+      <p>New entries on leak sites Friday include Hong Kong Parkview (claimed by DragonForce) and Highwoods Properties (claimed by TheGentlemen), per Breachsense's breach tracker — part of a steady drumbeat of June listings from Akira, RansomHouse, NightSpire and others. Claims are the attackers'; victim confirmations may lag.</p>
     </div>
     <div class="card">
       <div class="tags"><span class="tag research">research</span></div>
-      <h3>PoC AI worm navigates networks with a local LLM</h3>
-      <p>Researchers built and tested a proof-of-concept worm that uses a locally hosted large language model to reason its way through a network and replicate. Across 15 isolated runs on a vulnerable 33-host network it found an average of 31.3 vulnerabilities and gained elevated access on 23.1 hosts — a preview of autonomous tradecraft defenders may soon face.</p>
+      <h3>Anthropic: AI found 10,000+ high/critical vulns in a month</h3>
+      <p>In a May update cited by The Hacker News, Anthropic said it and ~50 partners used Claude Mythos Preview to surface more than 10,000 high- or critical-severity vulnerabilities in systemically important software in a single month — the defensive flip side of the AI-worm proof-of-concepts making the rounds.</p>
     </div>
   </div>
 
@@ -123,29 +123,34 @@
       <thead><tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr></thead>
       <tbody>
         <tr>
+          <td class="cve">CVE-2026-35273</td><td class="score crit">9.8</td>
+          <td>Oracle PeopleSoft PeopleTools 8.61 / 8.62</td>
+          <td>Unauthenticated HTTP → full takeover; exploited as a zero-day May 27–Jun 9 (ShinyHunters/UNC6240); Oracle out-of-band alert June 10.</td>
+        </tr>
+        <tr>
           <td class="cve">CVE-2026-41089</td><td class="score crit">9.8</td>
           <td>Windows Netlogon (Server 2012–2025 domain controllers)</td>
-          <td>Stack buffer overflow → unauthenticated SYSTEM RCE on DCs; exploited in the wild; fixed in June Patch Tuesday (official MSRC score).</td>
+          <td>Unauthenticated SYSTEM RCE on DCs; exploited in the wild; fixed in the June 9 Patch Tuesday (official MSRC score).</td>
         </tr>
         <tr>
           <td class="cve">CVE-2026-44963</td><td class="score crit">9.4</td>
           <td>Veeam Backup &amp; Replication 12.x (≤12.3.2.4465)</td>
-          <td>RCE on backup servers by any authenticated domain user (watchTowr find). Fixed in 12.3.2.4854; v13 unaffected (vendor CVSS v4).</td>
+          <td>RCE on backup servers by any authenticated domain user; fixed in 12.3.2.4854; v13 unaffected (vendor CVSS v4).</td>
         </tr>
         <tr>
           <td class="cve">CVE-2026-50751</td><td class="score crit">9.3</td>
           <td>Check Point Remote Access VPN / Mobile Access / Spark firewalls (IKEv1)</td>
-          <td>Auth bypass, exploited since ~May 7 (Qilin-affiliate activity); hotfix June 8. KEV deadline <strong>June 11</strong>.</td>
+          <td>Exploited auth bypass (Qilin-affiliate activity since ~May 7); hotfix June 8; CISA's emergency KEV deadline <strong>expired June 11</strong>.</td>
         </tr>
         <tr>
           <td class="cve">CVE-2026-11645</td><td class="score high">8.8</td>
           <td>Google Chrome (V8 engine)</td>
-          <td>Out-of-bounds memory access; one of 74 fixes in the latest Chrome update; added to KEV June 9.</td>
+          <td>Out-of-bounds memory access, one of 74 fixes in the latest Chrome update; in KEV since June 9.</td>
         </tr>
         <tr>
           <td class="cve">CVE-2026-20245</td><td class="score high">7.8</td>
           <td>Cisco Catalyst SD-WAN Manager</td>
-          <td><em>Authenticated</em> privilege escalation to root-level command execution; exploited in the wild; mitigations only as of Cisco's June 6 advisory.</td>
+          <td><em>Authenticated</em> privilege escalation to root, exploited in the wild; mitigations only as of Cisco's June 6 advisory; in KEV since June 9.</td>
         </tr>
       </tbody>
     </table>
@@ -154,27 +159,27 @@
   <div class="label">CISA KEV &amp; Federal Deadlines</div>
   <div class="panel">
     <ul class="kev">
-      <li><strong>Due TOMORROW — June 11:</strong> Check Point CVE-2026-50751 (added June 8 with an explicit, CISA-stated 3-day emergency window — an exception to the normal schedule). <span class="due urgent">⚠ remediate by Jun 11, 2026</span></li>
-      <li><strong>Added June 8:</strong> BerriAI LiteLLM command injection, CVE-2026-42271 — standard window. <span class="due">due ~Jun 29, 2026</span></li>
-      <li><strong>Added June 9 (three):</strong> Arista EOS CVE-2026-7473 · Chromium V8 CVE-2026-11645 · Cisco Catalyst SD-WAN Manager CVE-2026-20245. <span class="due">due ~Jun 30, 2026</span></li>
-      <li><strong>Context:</strong> Under BOD 22-01, federal civilian agencies normally get a <strong>three-week</strong> remediation window from the date a CVE is added to the KEV catalog. June's Microsoft Patch Tuesday (June 9) was a record ~200 CVEs, including 33 critical and several publicly disclosed zero-days — none of the publicly disclosed batch known exploited — plus a fix for the actively exploited Netlogon flaw (CVE-2026-41089, above).</li>
+      <li><strong>Deadline passed yesterday:</strong> Check Point CVE-2026-50751's rare 3-day emergency window (added June 8) <strong>expired June 11</strong> — federal agencies should now have remediated or pulled IKEv1 remote access. <span class="due done">⚠ past due as of Jun 11</span></li>
+      <li><strong>Coming due:</strong> BerriAI LiteLLM CVE-2026-42271 (added June 8) <span class="due">due ~Jun 29</span> · Arista EOS CVE-2026-7473, Chromium V8 CVE-2026-11645 and Cisco CVE-2026-20245 (added June 9) <span class="due">due ~Jun 30</span></li>
+      <li><strong>Not yet in KEV:</strong> the actively exploited PeopleSoft zero-day CVE-2026-35273 had not appeared in a CISA KEV alert as of publication (latest visible adds: June 9) — treat it as KEV-grade anyway given confirmed in-the-wild exploitation.</li>
+      <li><strong>Context:</strong> BOD 22-01 gives federal civilian agencies a standard <strong>three-week</strong> window from KEV addition. June's record ~200-CVE Microsoft Patch Tuesday (33 critical) remains the patching backdrop.</li>
     </ul>
   </div>
 
   <div class="sources">
     <h4>Sources</h4>
+    <a href="https://thehackernews.com/2026/06/shinyhunters-exploits-oracle-peoplesoft.html">The Hacker News — ShinyHunters exploits Oracle PeopleSoft zero-day (CVE-2026-35273)</a>
+    <a href="https://www.securityweek.com/oracle-addresses-peoplesoft-vulnerability-amid-reports-of-zero-day-attacks/">SecurityWeek — Oracle addresses PeopleSoft vulnerability amid zero-day attacks</a>
+    <a href="https://www.bleepingcomputer.com/news/security/oracle-mitigates-peoplesoft-zero-day-exploited-in-data-theft-attacks/">BleepingComputer — Oracle mitigates PeopleSoft zero-day exploited in data theft attacks</a>
+    <a href="https://www.helpnetsecurity.com/2026/06/11/oracle-peoplesoft-under-attack-cve-2026-35273/">Help Net Security — Oracle pushes out-of-band security alert</a>
+    <a href="https://cybernews.com/security/servicenow-confirms-security-incident-data-breach/">Cybernews — ServiceNow "data breach" attributed to researcher activity</a>
+    <a href="https://www.breachsense.com/breaches/">Breachsense — Recent data breaches (June 2026 tracker)</a>
+    <a href="https://thehackernews.com/">The Hacker News — GreatXML BitLocker bypass; Anthropic vulnerability-discovery update</a>
     <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA — Known Exploited Vulnerabilities Catalog</a>
-    <a href="https://www.cisa.gov/news-events/alerts/2026/06/09/cisa-adds-three-known-exploited-vulnerabilities-catalog">CISA — Adds Three Known Exploited Vulnerabilities to Catalog (Jun 9, 2026)</a>
-    <a href="https://www.bleepingcomputer.com/news/security/servicenow-discloses-security-incident-exposing-customer-data/">BleepingComputer — ServiceNow discloses security incident exposing customer data</a>
-    <a href="https://thehackernews.com/2026/06/servicenow-flaw-exploited-to-gain.html">The Hacker News — ServiceNow flaw exploited to gain unauthorized access</a>
-    <a href="https://thehackernews.com/2026/06/veeam-backup-replication-rce-flaw-lets.html">The Hacker News — Veeam Backup &amp; Replication RCE flaw (CVE-2026-44963)</a>
-    <a href="https://www.veeam.com/kb4696">Veeam KB4696 — Release information for Backup &amp; Replication 12.3</a>
-    <a href="https://cybernews.com/security/baker-distributing-ransomware-salesforce-sharepoint-leak/">Cybernews — ShinyHunters leak 260,000 Salesforce records in Baker Distributing attack</a>
-    <a href="https://haveibeenpwned.com/Breach/BakerDistributing">Have I Been Pwned — Baker Distributing (102,935 accounts)</a>
-    <a href="https://www.bleepingcomputer.com/">BleepingComputer — June 2026 Patch Tuesday &amp; "RoguePlanet" Defender zero-day coverage</a>
-    <a href="https://thehackernews.com/">The Hacker News — AI-driven worm proof-of-concept research</a>
+    <a href="https://www.cisa.gov/news-events/alerts/2026/06/09/cisa-adds-three-known-exploited-vulnerabilities-catalog">CISA — Adds Three Known Exploited Vulnerabilities (Jun 9, 2026)</a>
+    <a href="https://www.veeam.com/kb4696">Veeam KB4696 — Backup &amp; Replication 12.3 release information</a>
   </div>
-  <div class="disclaimer">Compiled from public reporting on June 10, 2026. Verify patch levels against vendor advisories before acting. CVSS scores reflect vendor/official figures where available.</div>
+  <div class="disclaimer">Compiled from public reporting on June 12, 2026. Verify patch levels against vendor advisories before acting. CVSS scores reflect vendor/official figures where available; leak-site claims are unverified until confirmed by victims.</div>
 
 </div>
 <script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;}catch(e){}})();</script>
