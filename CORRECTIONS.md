@@ -413,3 +413,29 @@ fought again since), update the entry in the same commit.
   KYC mule records. Sources: Europol newsroom, THN, BleepingComputer, Help Net Security (June 12).
 - Daniel Marcos correction note: he was NOT unbeaten in the UFC — 5-1 (1 NC) in the promotion;
   a draft this run briefly said "unbeaten-in-the-UFC departure" and was fixed pre-publish.
+
+## Added 2026-06-12 (Afternoon hourly refresh ~3:10pm ET)
+- **June 12 ~2:55–3:10pm ET tape (Fool/Xignite fetch-time modules, ~15-min delayed):** Dow ~+0.8%
+  (+~410–430 pts), S&P 500 ~+0.4–0.5%, Nasdaq Composite ~+0.2–0.3% — the tape FIRMED through the
+  afternoon (CNBC's sequential headline reached "Dow gains 400 points"). Mega-cap fade capped the
+  Nasdaq: AAPL −1.7%, AMZN −1.5%, MSFT −0.3–0.4%, META −0.4%, GOOG +0.7%, NVDA ~flat, TSLA +0.4%.
+  Fool's attributed thesis: AMZN/MSFT fell on above-average volume as investors made room for SPCX
+  (~$55B off AMZN's cap, ~$21B off MSFT's).
+- **SPCX ~3pm:** ~$169–170 (+~25%); 360M+ shares traded by shortly after 2pm ET (CNBC); Reuters/
+  MarketScreener 12:15pm snapshot was Dow +385.41 (+0.76%) / SPCX $163 (+22%). TRAP: Fool's Bylund
+  market-wrap says SPCX "opened at $168" — WRONG/loose; the opening trade was $150 (Fool's own other
+  coverage, Yahoo, CNBC all confirm). Day-range feeds differ slightly (Fool $149.80–176.50 vs
+  TradingView $150.00–176.52) — kept the TradingView range.
+- TheStreet search snippet bundling "S&P flat / Dow +0.57% / Nasdaq −0.30%" with "AMD/QCOM/SanDisk
+  +5%" and "hyperscalers incl. Oracle −2%" has an unclear timestamp and mixes Thursday chip data —
+  do NOT use the hyperscaler/Oracle bits as June 12 afternoon state; Fool fetch-time modules
+  contradict it (MSFT −0.3%, not −2%).
+- Bitcoin ~$63.8k at ~3pm; Fool module said +0.6% vs the earlier +2.4% reading (different change
+  basis) — published the PRICE and explicitly omitted the conflicting % .
+- 24/7 Wall St header strip was CACHED at the ~1:25pm values (S&P 7,423.20 +0.37% etc.) on a
+  ~3:05pm fetch — identical three runs in a row; do not treat that strip as fresh without change.
+- USO −2.5% afternoon; WTI ~$85 after the sub-$84 eight-week low (range $83.23–86.98). CNBC yields
+  article headline said "yields slide further" but body figures matched the morning state (10-yr
+  4.477% / 2-yr 4.075% / 30-yr 4.971%) — timing ambiguous, kept ~4.47–4.48% with morning attribution.
+- The "~97% odds of a hold" FOMC figure was NOT re-verified this run — softened to "futures heavily
+  favor a hold" in the published page.
