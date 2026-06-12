@@ -439,3 +439,41 @@ fought again since), update the entry in the same commit.
   4.477% / 2-yr 4.075% / 30-yr 4.971%) — timing ambiguous, kept ~4.47–4.48% with morning attribution.
 - The "~97% odds of a hold" FOMC figure was NOT re-verified this run — softened to "futures heavily
   favor a hold" in the published page.
+
+## Added 2026-06-12 (Afternoon Edition ~4:45pm ET — post-close, VERIFIED)
+- **Fri June 12, 2026 FINAL closes (CNBC market wrap; all three reconcile EXACTLY with Thu's
+  verified closes):** S&P 500 7,431.46 (+0.50%); Nasdaq Composite 25,888.84 (+0.31%);
+  Dow 51,202.26 (+353.51, +0.70%). Week vs Fri Jun 5 closes: S&P +0.65%, Nasdaq +0.70%,
+  Dow +0.66% — a positive week despite Wednesday's 953-point Dow rout.
+- **SPCX day one (June 12):** closed $161.11 (+19% vs the $135 IPO price); opened $150,
+  day high $176.52; ~$2.1T valuation at the close (CNBC headline: "SpaceX stock closes at
+  $161.11, jumping 19% after record IPO"; NPR corroborates). Near-close S&P heavyweight
+  decliners (TheStreet, final half hour): AMZN −2.17%, AAPL −1.95%. Do NOT use
+  "AMD/QCOM/SanDisk +5%" (Thursday chip data) or the unverified "hyperscalers −2%" bundle
+  (MSFT −2% never corroborated) as June 12 close movers.
+- **WTI June 12:** ended below $85, ~−3%, eight-week low (Trading Economics) after the
+  intraday slide under $84; Brent dropped below $90, lowest since March intraday (Fool).
+  10-yr hovered ~4.47% Friday (TE).
+- **TRAP:** a Trading Economics item "The Dow Jones Index Closes 0.44% Higher ... close at
+  49612 / Amazon +2.60% / Apple +1.54%" surfaced in June 12 close searches — STALE, from a
+  different date (level ~1,600 pts below the real close; movers contradict the session).
+  Never use undated TE "Closes X% Higher" items without reconciling the level.
+- **CVE-2026-35273 (Oracle PeopleSoft) WAS ADDED to CISA KEV on FRIDAY JUNE 12, 2026** with a
+  federal due date of **JULY 3, 2026** (standard 3-week window) — SUPERSEDES the earlier
+  "not in KEV as of June 12 midday" entries. The "Ivanti Sentry" pairing with this CVE in one
+  June 12 search summary was a summarizer artifact — the CVE is PeopleSoft only.
+- **Josh Hokit (heavyweight) VERIFIED:** 9-0 overall, 3-0 UFC; LAST FIGHT: unanimous decision
+  over Curtis Blaydes at UFC 327, April 11, 2026 (354 combined significant strikes — 3-round
+  HW record); faces Derrick Lewis June 14. CBS: his Blaydes performance led Trump to personally
+  request him for the card.
+- **"The Claw" (Freedom 250 venue) VERIFIED (ESPN/TIME/CNN):** 600-ton, four-pronged steel
+  arena; 154 ft wide, 92 ft tall (22 ft taller than the White House), over a 13-ton cage;
+  ~5,000 in-person spectators (CNN); ~85,000 free Ellipse watch-party tickets made available
+  (TIME/White); White rejected designs lacking sight lines to the WH/Washington Monument
+  (ESPN); UFC to spend $700,000 restoring South Lawn grass (CBS Sports). Pre-event press
+  conference Fri June 12, 8:30 PM ET at the Lincoln Memorial (TIME; AOL said 8 PM — attribute
+  the time if citing one); official weigh-ins Sat June 13, 11 AM ET; ceremonial weigh-ins
+  Saturday evening at the Ellipse fan park.
+- Markets CLOSED Fri June 19 (Juneteenth — Fidelity/Kiplinger); Accenture + Kroger earnings
+  June 18 (Schwab). A ground.news snippet calling Topuria–Gaethje a "unification" bout is
+  wrong per the standing correction — it remains a DEFENSE.

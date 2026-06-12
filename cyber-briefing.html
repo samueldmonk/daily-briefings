@@ -68,9 +68,9 @@
     <div class="tagline">Your daily security briefing — breaches, vulnerabilities &amp; federal deadlines</div>
     <div class="meta">
       <span class="pill live"><span class="dot"></span>LIVE</span>
-      <span class="pill edition" id="edition">Midday Edition</span>
+      <span class="pill edition" id="edition">Afternoon Edition</span>
       <span class="pill" id="datestamp">Friday, June 12, 2026</span>
-      <span class="pill">Updated <span id="updated">~2:15 PM ET</span></span>
+      <span class="pill">Updated <span id="updated">~4:45 PM ET</span></span>
     </div>
   </header>
 
@@ -82,19 +82,19 @@
 
   <div class="label">Top Story</div>
   <div class="panel lead">
-    <div class="kicker">Law enforcement · Ransomware economics</div>
-    <h2>Europol cuts ransomware gangs off from "AudiA6," a €336M crypto-laundering pipeline</h2>
-    <p>A coordinated international operation executed <strong>June 10</strong> dismantled AudiA6, a professional crypto-mixing service that Europol says laundered more than <strong>€336 million (~$389M)</strong> for ransomware crews and other cybercriminal networks since 2021 — and is linked to more than 15 international cybercrime investigations.</p>
-    <p>Two alleged administrators — of Ukrainian and Russian nationality — were arrested in Georgia, where authorities also seized over 80 vehicles and multiple properties; <strong>25 domains were seized and 30+ servers taken offline</strong>, with €692,000 in crypto frozen and €86,000 seized outright. Marketed on underground forums, the service returned "cleaned" funds within about an hour for a 3–10% commission, and investigators recovered 6,000+ KYC records tied to money-mule accounts.</p>
-    <p>The U.S. DOJ charged the two men arrested — Ruslan Igorevich Tkachuk, 37, and Alexander Vladimirovich Ledenev, 25 — with money-laundering conspiracy counts carrying up to 20 years. Europol called the takedown the loss of "a key financial pipeline used to wash hundreds of millions in illicit profits."</p>
+    <div class="kicker">KEV addition · Zero-day fallout</div>
+    <h2>CISA adds the PeopleSoft zero-day to its exploited-vulnerabilities catalog — federal agencies have until July 3</h2>
+    <p>CISA on Friday added <strong>CVE-2026-35273</strong> — the critical (CVSS 9.8) Oracle PeopleSoft PeopleTools flaw exploited en masse as a zero-day — to the Known Exploited Vulnerabilities catalog, putting federal civilian agencies on a <strong>July 3 remediation deadline</strong> under the standard three-week window. The unauthenticated HTTP-to-full-takeover bug had been the biggest hole in the catalog all week.</p>
+    <p>The scale is what makes this one urgent: Mandiant and Google Threat Intelligence (tracking the actor as <strong>UNC6240, linked to ShinyHunters</strong>) say roughly <strong>300 PeopleSoft instances across 100+ organizations</strong> were compromised between May 27 and June 9 — about 68% of them higher-education institutions, mostly in the US. It's the same crew tied to this spring's Canvas/Instructure incident, in which Instructure disclosed that student names, emails, ID numbers and user messages were involved.</p>
+    <p>Oracle shipped an out-of-band Security Alert on June 10 for PeopleTools 8.61 and 8.62. If you run PeopleSoft anywhere — federal or not — the KEV listing is the formal confirmation that "patch now" stopped being optional two weeks ago.</p>
   </div>
 
   <div class="label">Breaches &amp; Incidents</div>
   <div class="cards">
     <div class="card">
-      <span class="tag crit">Active exploitation</span><span class="tag warn">Higher ed</span>
-      <h3>ShinyHunters' PeopleSoft zero-day spree: 100+ orgs hit</h3>
-      <p>Mandiant (tracking the actor as UNC6240) says roughly <strong>300 Oracle PeopleSoft instances across 100+ organizations</strong> were compromised between May 27 and June 9 via CVE-2026-35273 — about 68% of them universities, mostly in the US. Oracle pushed an out-of-band Security Alert on June 10. Details in the Vulnerability Watch below.</p>
+      <span class="tag ok">Takedown</span><span class="tag info">Follow-the-money</span>
+      <h3>Europol dismantles "AudiA6," ransomware's €336M laundromat</h3>
+      <p>The June 10 operation seized 25 domains and 30+ servers behind a crypto-mixing service that laundered <strong>€336M (~$389M)</strong> for ransomware crews since 2021. Two alleged admins were arrested in Georgia; the DOJ charged Ruslan Igorevich Tkachuk, 37, and Alexander Vladimirovich Ledenev, 25, with counts carrying up to 20 years.</p>
     </div>
     <div class="card">
       <span class="tag info">Update</span><span class="tag ok">De-escalation</span>
@@ -104,7 +104,7 @@
     <div class="card">
       <span class="tag warn">Leak-site claims</span>
       <h3>Friday's extortion roundup — claims, not confirmations</h3>
-      <p>New victims posted June 12 include <strong>Hong Kong Parkview and Sweden's Areco Steel (DragonForce)</strong>, Highwoods Properties ("TheGentlemen"), plus Astec Valves &amp; Fittings, South Korea's Bitek System and Turkey's Çekok Gıda across DragonForce/Qilin-linked sites. All are attacker claims, not victim-confirmed.</p>
+      <p>New victims posted June 12 include <strong>Hong Kong Parkview and Sweden's Areco Steel (DragonForce)</strong> and Highwoods Properties ("TheGentlemen"), plus Astec Valves &amp; Fittings and South Korea's Bitek System across DragonForce/Qilin-linked sites. All are attacker claims until victims confirm.</p>
     </div>
     <div class="card">
       <span class="tag info">Patch fallout</span>
@@ -120,12 +120,12 @@
       <tr>
         <td class="cve">CVE-2026-35273</td><td class="score">9.8</td>
         <td>Oracle PeopleSoft PeopleTools 8.61 / 8.62</td>
-        <td>Unauthenticated HTTP → full takeover/RCE. Exploited as a zero-day by ShinyHunters (May 27–Jun 9). Oracle out-of-band alert June 10 — patch/mitigate now. Not yet in CISA KEV as of this writing.</td>
+        <td>Unauthenticated HTTP → full takeover/RCE. Exploited as a zero-day by ShinyHunters/UNC6240 (May 27–Jun 9). Oracle out-of-band alert June 10; <strong>added to CISA KEV June 12 — federal deadline July 3</strong>.</td>
       </tr>
       <tr>
         <td class="cve">CVE-2026-50751</td><td class="score">9.3</td>
         <td>Check Point Remote Access VPN / Mobile Access / Spark Firewall (IKEv1 configs)</td>
-        <td>Authentication bypass exploited in the wild since ~May 7; one incident tied to a Qilin affiliate. Hotfix shipped June 8 (vendor CVSS 9.3 — not the 9.8 some blogs cite).</td>
+        <td>Authentication bypass exploited in the wild since ~May 7; one incident tied to a Qilin affiliate. Hotfix shipped June 8 (vendor CVSS 9.3 — not the 9.8 some blogs cite). KEV emergency deadline was June 11.</td>
       </tr>
       <tr>
         <td class="cve">CVE-2026-41089</td><td class="score">9.8</td>
@@ -148,28 +148,29 @@
   <div class="label">CISA KEV &amp; Federal Deadlines</div>
   <div class="panel">
     <ul class="kev">
-      <li><strong>June 9 additions</strong> — CVE-2026-7473 (Arista EOS), CVE-2026-11645 (Chromium V8 out-of-bounds R/W, CVSS 8.8 — one of 74 Chrome fixes), and CVE-2026-20245 (Cisco Catalyst SD-WAN Manager, authenticated privilege escalation). Standard BOD 22-01 three-week window: remediation due ~<strong>June 30</strong>.</li>
+      <li><strong>June 12 addition</strong> — CVE-2026-35273 (Oracle PeopleSoft PeopleTools, unauthenticated RCE) enters the catalog with a standard three-week window: federal remediation due <strong>July 3</strong>. Apply Oracle's June 10 out-of-band fix.</li>
+      <li><strong>June 9 additions</strong> — CVE-2026-7473 (Arista EOS), CVE-2026-11645 (Chromium V8 out-of-bounds R/W, CVSS 8.8 — one of 74 Chrome fixes), and CVE-2026-20245 (Cisco Catalyst SD-WAN Manager, authenticated privilege escalation). Remediation due ~<strong>June 30</strong>.</li>
       <li><strong>June 8 additions</strong> — CVE-2026-50751 (Check Point) carried an explicit, shortened <strong>emergency 3-day deadline of June 11 — now passed</strong>; agencies still exposed are out of compliance. CVE-2026-42271 (BerriAI LiteLLM command injection) follows the standard window, due ~<strong>June 29</strong>.</li>
-      <li><strong>PeopleSoft watch</strong> — despite active mass exploitation, CVE-2026-35273 had <strong>not</strong> been added to the KEV catalog as of this edition (latest visible additions: June 9). No federal deadline exists yet; treat Oracle's June 10 alert as the action trigger regardless.</li>
       <li><strong>Reminder</strong> — BOD 22-01 gives federal civilian agencies three weeks from a CVE's KEV addition date unless CISA explicitly states otherwise.</li>
     </ul>
   </div>
 
   <footer>
     <h4>Sources — this edition</h4>
-    <a href="https://www.europol.europa.eu/media-press/newsroom/news/ransomware-gangs-cut-eur-336-million-audia6-crypto-laundering-pipeline">Europol — Ransomware gangs cut off from €336M "AudiA6" laundering pipeline</a>
-    <a href="https://thehackernews.com/2026/06/europol-disrupts-audia6-crypto.html">The Hacker News — Europol disrupts AudiA6 crypto laundering service</a>
-    <a href="https://www.bleepingcomputer.com/news/legal/authorities-dismantle-audia6-ransomware-crypto-laundering-service/">BleepingComputer — Authorities dismantle "AudiA6" service</a>
-    <a href="https://www.helpnetsecurity.com/2026/06/12/europol-audia6-crypto-laundering-service-ransomware-groups/">Help Net Security — Crypto laundering service that moved €336M dismantled</a>
+    <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA — Known Exploited Vulnerabilities Catalog</a>
     <a href="https://www.oracle.com/security-alerts/alert-cve-2026-35273.html">Oracle — Security Alert Advisory CVE-2026-35273</a>
+    <a href="https://dailysecurityreview.com/resources/oracle-peoplesoft-cve-2026-35273-shinyhunters-breaches-100-orgs/">Daily Security Review — PeopleSoft CVE-2026-35273: KEV addition &amp; July 3 federal deadline</a>
     <a href="https://www.securityweek.com/oracle-addresses-peoplesoft-vulnerability-amid-reports-of-zero-day-attacks/">SecurityWeek — Oracle addresses PeopleSoft vulnerability amid zero-day attacks</a>
     <a href="https://www.helpnetsecurity.com/2026/06/11/oracle-peoplesoft-under-attack-cve-2026-35273/">Help Net Security — PeopleSoft servers under attack, out-of-band alert</a>
+    <a href="https://en.wikipedia.org/wiki/2026_Canvas_data_breach">Wikipedia — 2026 Canvas data breach (ShinyHunters background)</a>
+    <a href="https://www.europol.europa.eu/media-press/newsroom/news/ransomware-gangs-cut-eur-336-million-audia6-crypto-laundering-pipeline">Europol — Ransomware gangs cut off from €336M "AudiA6" laundering pipeline</a>
+    <a href="https://thehackernews.com/2026/06/europol-disrupts-audia6-crypto.html">The Hacker News — Europol disrupts AudiA6 crypto laundering service</a>
     <a href="https://cybernews.com/security/servicenow-confirms-security-incident-data-breach/">Cybernews — ServiceNow "data breach" attributed to researcher activity</a>
     <a href="https://www.rapid7.com/blog/post/etr-critical-check-point-vpn-zero-day-exploited-in-the-wild-cve-2026-50751/">Rapid7 — Check Point VPN zero-day exploited in the wild (CVE-2026-50751)</a>
     <a href="https://blog.checkpoint.com/security/check-point-releases-important-hotfix-for-vulnerabilities-in-deprecated-ikev1-vpn-protocol/">Check Point — Hotfix for IKEv1 VPN vulnerability</a>
+    <a href="https://techcrunch.com/2026/06/09/cisa-gives-us-federal-agencies-three-days-to-fix-a-vpn-bug-under-attack-by-a-ransomware-gang/">TechCrunch — CISA's three-day deadline for the Check Point VPN bug</a>
     <a href="https://www.zerodayinitiative.com/blog/2026/6/9/the-june-2026-security-update-review">Zero Day Initiative — The June 2026 Security Update Review</a>
     <a href="https://www.cisa.gov/news-events/alerts/2026/06/09/cisa-adds-three-known-exploited-vulnerabilities-catalog">CISA — Adds three Known Exploited Vulnerabilities (June 9)</a>
-    <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA — Known Exploited Vulnerabilities Catalog</a>
     <a href="https://www.breachsense.com/breaches/">Breachsense — Data breach tracker (June 12 leak-site claims)</a>
     <div class="disclaimer">Compiled from public reporting and vendor advisories; details may evolve as investigations continue. Leak-site listings are attacker claims until victims confirm.</div>
   </footer>
