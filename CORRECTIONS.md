@@ -277,3 +277,28 @@ fought again since), update the entry in the same commit.
   (CNBC: deal "nears"); 10-yr ~4.53% Thu / ~4.47-4.5% Fri (Trading Economics). June UMich consumer
   sentiment IMPROVED on easing gas prices. 22V Research: fading mega-tech conviction → more
   tech/value rotation chop.
+
+## Added 2026-06-12 (Early afternoon ~1:45pm ET)
+- **June 12 ~1:30pm ET state (tape COOLED from the ~1:15 readings):** Dow ~+0.56–0.61% (+~312 pts),
+  S&P 500 ~+0.33–0.52%, Nasdaq Composite ~FLAT (+0.07%, having dipped ~-0.3% around 1pm); Russell 2000
+  readings conflicted (+0.3% vs +1%) — direction up, number dropped. Do NOT present the ~1:15pm
+  readings (S&P +0.61% / Nasdaq +0.49% / Dow +0.84%) as the later-afternoon state.
+- **SpaceX ~1:30pm:** $171.56 (~+27% vs $135 IPO price), day range $150.00–$176.52 (TradingView);
+  market cap ~$2.0–2.1T fully diluted — day-one $2T club member (24/7: "north of $2.1T" at 12:30pm;
+  TradingView ~$2.05T; figures vary — stay in the $2.0–2.1T range). An earlier "session high $168.75"
+  snippet was a stale snapshot; the verified range high this run is $176.52.
+- **Space-stock SHAKEOUT June 12 (24/7 Wall St/Yahoo):** Virgin Galactic −24% (had surged into the
+  debut), Rocket Lab −8% DESPITE its Nasdaq-100 inclusion news (effective before the June 22 open;
+  RKLB was +4.5% on that news earlier in the session), AST SpaceMobile −10%. An earlier "SPCE −10%"
+  reading was a sequential snapshot of the same slide — do not mix the two as separate moves.
+- **"AMD/Qualcomm/SanDisk +5%"** appearing in June 12 recap articles refers to THURSDAY June 11's
+  chip rally — NOT a June 12 move.
+- **Adobe −7% on June 12** — no reason stated in snippets this run; do not invent one (e.g. earnings)
+  without a source. Other ~midday movers (Morningstar): PLTK +5.43%; DV −4.2%; OLLI −3.3%; Dow:
+  SHW +1.86%, GS +1.81%, CAT +1.31% / CRM −2.35%, TRV −1.98%, IBM −1.96%.
+- **Iran deal detail (CNBC/24-7):** 14-POINT draft — lift oil sanctions, release frozen Iranian funds,
+  US force withdrawal from the region, Tehran reopens Strait of Hormuz within 30 days. Trump: signing
+  possible THIS WEEKEND in Europe (Iranian state media: as soon as SUNDAY); CNBC flags Tehran
+  PUSHBACK on parts — don't report the deal as done. WTI fell >4% to BELOW $84 (eight-week low),
+  newer than the morning "below $85" level. Yields EDGED HIGHER Friday after Thursday's sharp fall:
+  10-yr 4.477%, 2-yr 4.075%, 30-yr 4.971% (CNBC).
