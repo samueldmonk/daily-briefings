@@ -3,82 +3,80 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Closing Bell — Daily Briefing</title>
+<title>The Closing Bell — Daily Wall Street Briefing</title>
 <style>
   :root{
-    --bg:#0e0d0a; --panel:#171511; --panel2:#13110d; --line:#2b2618;
-    --text:#e6ddcb; --muted:#a39878; --accent:#caa64a; --accent2:#e8c766;
-    --up:#3ecf8e; --down:#ff6b6b;
-    --serif:Georgia,'Times New Roman',serif;
-    --mono:'SF Mono',ui-monospace,Menlo,Consolas,monospace;
+    --bg:#0d0e12; --panel:#15171e; --line:#262a35; --ink:#e8e6df; --muted:#9a978c;
+    --gold:#caa64a; --gold2:#e8c766; --up:#4ade80; --down:#f87171;
+    --mono:"SF Mono","Cascadia Code",Consolas,monospace; --serif:Georgia,"Times New Roman",serif;
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  body{background:var(--bg);color:var(--text);font:16px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;padding:32px 20px 60px}
-  .wrap{max-width:980px;margin:0 auto}
-  .masthead{border-bottom:2px solid var(--accent);padding-bottom:18px;margin-bottom:14px}
-  .masthead h1{font-family:var(--serif);font-size:44px;letter-spacing:-.5px;color:#fff}
-  .masthead h1 .glyph{color:var(--accent)}
-  .tagline{color:var(--muted);font-size:15px;margin-top:2px}
-  .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;font-family:var(--mono);font-size:12px}
-  .pill{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:4px 12px;color:var(--muted)}
-  .pill.live{color:var(--up);border-color:var(--up)}
-  .pill.live .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--up);margin-right:6px;animation:blink 1.6s infinite}
-  @keyframes blink{50%{opacity:.25}}
-  nav.tabs{display:flex;gap:8px;margin:18px 0 18px;flex-wrap:wrap}
-  nav.tabs a{font-family:var(--mono);font-size:13px;text-decoration:none;color:var(--muted);border:1px solid var(--line);background:var(--panel);padding:8px 16px;border-radius:10px;transition:.15s}
-  nav.tabs a:hover{color:var(--text);transform:translateY(-1px)}
-  nav.tabs a.active{color:var(--accent2);border-color:var(--accent);background:rgba(202,166,74,.08)}
+  body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.55}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 60px}
+  .masthead{text-align:center;padding:18px 0 14px;border-bottom:3px double var(--line);margin-bottom:14px}
+  .masthead h1{font-family:var(--serif);font-size:44px;letter-spacing:.5px;color:var(--gold2)}
+  .masthead .tagline{color:var(--muted);font-size:14px;margin-top:6px;font-style:italic}
+  .meta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+  .pill{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:var(--panel)}
+  .pill.live{color:var(--up);border-color:rgba(74,222,128,.35)}
+  .pill.live .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--up);margin-right:6px;animation:pulse 1.6s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+  .pill.edition{color:var(--gold2);border-color:rgba(202,166,74,.4)}
+  nav{display:flex;gap:8px;justify-content:center;margin:18px 0 22px;flex-wrap:wrap}
+  nav a{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--muted);padding:8px 16px;border:1px solid var(--line);border-radius:8px;background:var(--panel);transition:all .15s}
+  nav a:hover{color:var(--ink);border-color:var(--muted)}
+  nav a.active{color:var(--gold2);border-color:var(--gold);background:rgba(202,166,74,.08)}
   .livebar{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 8px 4px;margin-bottom:18px}
   .livebar-label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--up);display:flex;align-items:center;gap:8px;padding:4px 8px 8px}
-  .livebar-label .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--up);animation:blink 1.6s infinite}
-  .label{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:34px 0 14px}
-  .panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}
-  .tickers{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
-  .ticker{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:10px}
-  .note{font-size:12.5px;color:var(--muted);font-style:italic;margin-top:10px}
-  .lead{border-left:4px solid var(--accent)}
-  .lead h2{font-family:var(--serif);font-size:27px;color:#fff;margin-bottom:12px;line-height:1.3}
-  .lead p{margin-bottom:10px}
-  .lead .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--accent2);text-transform:uppercase;margin-bottom:8px}
+  .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--up);animation:pulse 1.6s infinite}
+  .label{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:30px 0 14px;display:flex;align-items:center;gap:10px}
+  .label::after{content:"";flex:1;height:1px;background:var(--line)}
+  .tickers{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  @media(max-width:720px){.tickers{grid-template-columns:1fr}}
+  .ticker{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px}
+  .note{color:var(--muted);font-size:12px;margin-top:10px;font-style:italic}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .lead h2{font-family:var(--serif);font-size:27px;line-height:1.3;color:var(--ink);margin-bottom:12px}
+  .lead p{color:#c8c5ba;margin-bottom:10px;font-size:15px}
+  .lead .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--gold2);text-transform:uppercase;margin-bottom:10px}
+  .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+  @media(max-width:720px){.cards{grid-template-columns:1fr}}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;transition:transform .15s,border-color .15s}
+  .card:hover{transform:translateY(-3px);border-color:var(--gold)}
+  .card h3{font-size:15px;margin-bottom:8px;color:var(--ink)}
+  .card p{font-size:13.5px;color:var(--muted)}
   .up{color:var(--up)} .down{color:var(--down)}
-  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
-  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;transition:.15s}
-  .card:hover{transform:translateY(-3px);border-color:var(--accent)}
-  .card h3{font-family:var(--serif);font-size:17.5px;color:#fff;margin-bottom:8px}
-  .card .move{font-family:var(--mono);font-size:13px;font-weight:700;margin-bottom:8px;display:inline-block}
-  .card p{font-size:14.5px;color:var(--muted)}
-  table{width:100%;border-collapse:collapse;font-size:14px}
-  th{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
-  td{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
-  tr:last-child td{border-bottom:none}
-  td.num{font-family:var(--mono);font-size:13.5px;white-space:nowrap}
+  .tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:5px;margin-bottom:8px}
+  .tag.g{background:rgba(74,222,128,.12);color:var(--up)} .tag.r{background:rgba(248,113,113,.12);color:var(--down)} .tag.n{background:rgba(202,166,74,.12);color:var(--gold2)}
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
+  td{padding:9px 10px;border-bottom:1px solid rgba(38,42,53,.6);color:#c8c5ba}
+  td.num{font-family:var(--mono);font-size:12.5px}
   ul.radar{list-style:none}
-  ul.radar li{padding:10px 0 10px 26px;border-bottom:1px solid var(--line);position:relative;font-size:14.5px}
-  ul.radar li:last-child{border-bottom:none}
-  ul.radar li::before{content:"◆";position:absolute;left:4px;color:var(--accent);font-size:11px;top:14px}
-  .sources{margin-top:40px;border-top:1px solid var(--line);padding-top:18px}
-  .sources h4{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
-  .sources a{display:block;color:var(--accent2);font-size:13px;text-decoration:none;margin-bottom:6px;word-break:break-all}
-  .sources a:hover{text-decoration:underline}
-  .disclaimer{margin-top:22px;font-size:12px;color:var(--muted);font-style:italic}
-  strong{color:#fff}
+  ul.radar li{padding:10px 0 10px 22px;border-bottom:1px solid rgba(38,42,53,.6);position:relative;color:#c8c5ba;font-size:14px}
+  ul.radar li::before{content:"▸";position:absolute;left:2px;color:var(--gold)}
+  footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line)}
+  footer h4{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+  footer a{color:#8fa8c8;font-size:12.5px;text-decoration:none;display:block;padding:2.5px 0}
+  footer a:hover{text-decoration:underline}
+  .disclaimer{margin-top:18px;font-size:11.5px;color:#6b6960;font-style:italic}
 </style>
 </head>
 <body>
 <div class="wrap">
 
   <header class="masthead">
-    <h1><span class="glyph">▲</span> The Closing Bell</h1>
+    <h1>The Closing Bell</h1>
     <div class="tagline">Your daily Wall Street briefing — markets, movers &amp; what's next</div>
     <div class="meta">
       <span class="pill live"><span class="dot"></span>LIVE</span>
-      <span class="pill" id="edition">Midday Edition</span>
+      <span class="pill edition" id="edition">Midday Edition</span>
       <span class="pill" id="datestamp">Friday, June 12, 2026</span>
-      <span class="pill">Updated <span id="updated">—</span></span>
+      <span class="pill">Updated <span id="updated">~2:00 PM ET</span></span>
     </div>
   </header>
 
-  <nav class="tabs">
+  <nav>
     <a href="cyber-briefing.html">⛨ The Cyber Wire</a>
     <a href="wallstreet-briefing.html" class="active">▲ The Closing Bell</a>
     <a href="mma-briefing.html">⊘ The Octagon</a>
@@ -89,7 +87,7 @@
     <div class="tradingview-widget-container">
       <div class="tradingview-widget-container__widget"></div>
       <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-      {"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},{"proName":"FOREXCOM:DJI","title":"Dow 30"},{"proName":"NASDAQ:SPCX","title":"SpaceX"},{"proName":"NASDAQ:ADBE","title":"Adobe"},{"proName":"NYSE:ORCL","title":"Oracle"},{"proName":"NASDAQ:AMD","title":"AMD"},{"proName":"NASDAQ:RKLB","title":"Rocket Lab"},{"proName":"NASDAQ:TSLA","title":"Tesla"},{"proName":"TVC:USOIL","title":"WTI Crude"},{"proName":"TVC:US10Y","title":"US 10Y"}],"colorTheme":"dark","isTransparent":true,"showSymbolLogo":true,"displayMode":"adaptive","locale":"en"}
+      {"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},{"proName":"FOREXCOM:DJI","title":"Dow 30"},{"proName":"NASDAQ:SPCX","title":"SpaceX"},{"proName":"NASDAQ:ADBE","title":"Adobe"},{"proName":"NASDAQ:RKLB","title":"Rocket Lab"},{"proName":"NASDAQ:NVDA","title":"NVIDIA"},{"proName":"NASDAQ:GOOG","title":"Alphabet"},{"proName":"TVC:USOIL","title":"WTI Crude"},{"proName":"TVC:US10Y","title":"US 10Y"}],"colorTheme":"dark","isTransparent":true,"showSymbolLogo":true,"displayMode":"adaptive","locale":"en"}
       </script>
     </div>
   </div>
@@ -125,39 +123,33 @@
 
   <div class="label">The Lead</div>
   <div class="panel lead">
-    <div class="kicker">Midday report — Friday, June 12</div>
-    <h2>SpaceX leaps 25% in the biggest debut in market history as peace hopes lift stocks — possible US–Iran signing Sunday</h2>
-    <p><strong>SpaceX (SPCX) opened at $150</strong> on a first trade of 58 million shares — the IPO itself priced at $135 — and traded around <strong class="up">$171.56 as of ~1:30 PM ET, up ~27%</strong>, after stretching as high as $176.52 (TradingView data; CNBC's banner flagged a 30% pop). That puts its fully diluted market value in the <strong>$2.0–2.1 trillion range — a $2 trillion company on day one</strong>. The offering raised a record <strong>$75 billion</strong> (555.6 million shares, ~$1.78 trillion initial valuation, with a greenshoe of ~83 million more), and the tape noticed: SPCX dollar volume of roughly $33 billion outran QQQ and SPY on the day. At these prices, Yahoo Finance reports Elon Musk becomes the world's first trillionaire.</p>
-    <p>The broad market is higher in a <strong>choppy, SpaceX-distracted tape</strong> that cooled into early afternoon: as of ~1:30 PM ET the <strong>Dow held ~+0.6% (+~312 points), the S&amp;P 500 ~+0.3–0.5%, and the Nasdaq Composite was roughly flat</strong> after briefly dipping red around 1 PM — still consolidating Thursday's surge (the best session in two months) after President Trump called off threatened strikes on Iran. A <strong>14-point draft US–Iran memorandum</strong> — lifting oil sanctions, releasing frozen Iranian funds, withdrawing US forces from the region and reopening the Strait of Hormuz within 30 days — could be <strong>signed in Europe as soon as this weekend</strong> (Bloomberg: Geneva floated for Sunday), though CNBC notes Tehran is pushing back on parts of the text. <strong class="down">WTI crude fell more than 4% below $84</strong>, an eight-week low; Brent fell as much as 5% to its lowest since March before paring.</p>
-    <p>The inflation picture stays two-faced: Thursday's <strong>May PPI jumped 1.1% on the month</strong> (vs. +0.7% expected — the largest rise since March 2022, 6.5% y/y) on a 10.7% energy surge, while <em>core</em> PPI (ex-food and energy) rose a cooler 0.4% — the broader ex-trade core gauge ran hotter at +0.8% — with the annual core rate at 4.9% vs. 5.4% forecast. June's University of Michigan sentiment rebounded to 48.9 from May's all-time-low 44.8, with 1-year inflation expectations of 4.6% below estimates.</p>
+    <div class="kicker">Record IPO · Iran Deal Hopes · As of ~2 PM ET</div>
+    <h2>SpaceX pops nearly 30% in the biggest IPO ever as stocks drift higher on hopes a US–Iran deal is days away — as of ~2 PM ET</h2>
+    <p>History landed on the Nasdaq Friday: SpaceX priced the largest IPO of all time at $135 a share Thursday night — raising roughly $75 billion at an initial valuation near $1.78 trillion — then opened at $150 and ran as high as $176.52, trading around $172 (up ~27% from the IPO price) in the early afternoon under ticker SPCX. The debut briefly pushed its market value above $2 trillion on a fully diluted basis (NBC News pegged the peak at more than $2.25 trillion) and made Elon Musk, on paper, the world's first trillionaire.</p>
+    <p>The broader tape gyrated around the spectacle and tilted modestly higher: as of roughly 2 PM ET the Dow was up about 0.5%, the S&amp;P 500 up about 0.3%, and the Nasdaq Composite roughly flat to slightly higher after dipping around midday, with small caps outperforming and more than 60% of issues advancing. The other engine: reports that the US and Iran are nearing an interim peace deal — Iranian media described a 14-point draft (sanctions relief, a Hormuz reopening within 30 days), and Pakistan's prime minister said a "final, agreed upon text" had been reached — though Tehran has pushed back on parts, and no deal is signed. WTI crude fell more than 4% to below $84 intraday, an eight-week low. June consumer sentiment (UMich) improved to 48.9, well above the 46.0 expected.</p>
   </div>
 
   <div class="label">Movers &amp; Drivers</div>
   <div class="cards">
     <div class="card">
-      <h3>SpaceX (SPCX)</h3>
-      <span class="move up">~$171.56, +27% (day range $150–$176.52)</span>
-      <p>Priced $135, opened $150, tagged $176.52 at the highs. Oppenheimer started coverage at Outperform with a $190 target (~$2.5T value); retail orders reportedly topped $100B against a ~30% retail allocation target. A dozen 2x/−2x SPCX ETFs are queued, some live as soon as today.</p>
+      <span class="tag g">IPO · +27–30%</span>
+      <h3>SpaceX (SPCX) <span class="up">▲ ~27% vs $135 IPO price</span></h3>
+      <p>Priced at $135, opened at $150, day high $176.52, ~$172 early afternoon. Dollar volume (~$33B) outran QQQ and SPY; a wave of 2x/-2x SPCX ETFs is queued. Oppenheimer started coverage Outperform, $190 target.</p>
     </div>
     <div class="card">
-      <h3>Adobe (ADBE)</h3>
-      <span class="move down">~−6%</span>
-      <p>Beat-and-raise quarter — record $6.62B revenue, $5.96 EPS, FY guidance lifted — buried by news that CFO Dan Durn leaves June 15 to become Marvell's CFO. Stifel, Wolfe Research and Evercore ISI all downgraded the stock.</p>
+      <span class="tag r">Space shakeout</span>
+      <h3>The SpaceX halo reversed <span class="down">▼ SPCE −24% · ASTS −10% · RKLB −8%</span></h3>
+      <p>The speculative space names that surged into the debut sold off hard as money rotated to the real thing — Rocket Lab fell even after news it joins the Nasdaq-100 before the June 22 open (it was up 4.5% on that news earlier in the session).</p>
     </div>
     <div class="card">
-      <h3>Oracle (ORCL) — Thursday</h3>
-      <span class="move down">−8.5% post-earnings</span>
-      <p>Fell to $184.10 in Thursday's session — even as the broad market soared — extending the post-earnings slide driven by capital-raise plans and a slight cloud miss despite record FY26 results.</p>
+      <span class="tag r">Earnings · CFO exit</span>
+      <h3>Adobe (ADBE) <span class="down">▼ ~6–7%</span></h3>
+      <p>A record $6.62B quarter, EPS beat and a raised full-year guide were overshadowed by CFO Dan Durn's surprise exit to Marvell (June 15) and downgrades from Stifel, Wolfe and Evercore ISI. A beat-and-raise sunk by the C-suite, not the numbers.</p>
     </div>
     <div class="card">
-      <h3>AMD</h3>
-      <span class="move up">Citi: Buy, $575 PT</span>
-      <p>Citi says AMD is the likely "second source" for GPUs behind Nvidia and believes Meta will become "a significantly larger customer of AMD's AI products… than the street is expecting," seeing earnings power above $20/share by 2028.</p>
-    </div>
-    <div class="card">
-      <h3>Space halo reverses</h3>
-      <span class="move down">SPCE −24%, ASTS −10%, RKLB −8%</span>
-      <p>The pre-debut sector rip (Virgin Galactic +21.7%, Viasat +18.2%, Firefly +17.8% Thursday) violently unwound once SPCX was tradable — by early afternoon Virgin Galactic was down ~24% and Rocket Lab ~8% <em>despite</em> news of its Nasdaq-100 inclusion effective before the June 22 open (it was +4.5% on that earlier), per 24/7 Wall St and Yahoo data.</p>
+      <span class="tag n">Breadth · Rotation</span>
+      <h3>Value leads a broad tape</h3>
+      <p>Dow leaders: Sherwin-Williams +1.9%, Goldman Sachs +1.8%, Caterpillar +1.3%; laggards Salesforce −2.4%, Travelers −2.0%, IBM −2.0%. Elsewhere Playtika +5.4%, DoubleVerify −4.2%, Ollie's −3.3%. Mega-cap tech lagged (Apple −1.2%, Amazon −1.7% at ~1:15 PM ET readings).</p>
     </div>
   </div>
 
@@ -172,58 +164,54 @@
   </div>
 
   <div class="label">Weekly Scorecard — official closes</div>
-  <div class="panel" style="padding:8px 4px">
+  <div class="panel" style="padding:12px">
     <table>
-      <thead><tr><th>Session</th><th>S&amp;P 500</th><th>Nasdaq Composite</th><th>Dow Jones</th></tr></thead>
-      <tbody>
-        <tr><td>Mon, Jun 8</td><td class="num">7,405.73 <span class="up">+0.30%</span></td><td class="num">25,929.66 <span class="up">+0.86%</span></td><td class="num">50,786.01 <span class="down">−0.16%</span></td></tr>
-        <tr><td>Tue, Jun 9</td><td class="num">7,386.46 <span class="down">−0.26%</span></td><td class="num">25,678.82 <span class="down">−0.97%</span></td><td class="num">50,871.13 <span class="up">+0.17%</span></td></tr>
-        <tr><td>Wed, Jun 10</td><td class="num">7,266.99 <span class="down">−1.62%</span></td><td class="num">25,169.50 <span class="down">−1.98%</span></td><td class="num">49,918.78 <span class="down">−1.87%</span></td></tr>
-        <tr><td><strong>Thu, Jun 11</strong></td><td class="num"><strong>7,394.30</strong> <span class="up">+1.75%</span></td><td class="num"><strong>25,809.66</strong> <span class="up">+2.54%</span></td><td class="num"><strong>50,848.75</strong> <span class="up">+1.86%</span></td></tr>
-        <tr><td>Week through Thu</td><td class="num"><span class="up">+0.1%</span></td><td class="num"><span class="up">+0.4%</span></td><td class="num"><span class="down">−0.0%</span></td></tr>
-      </tbody>
+      <tr><th>Session</th><th>S&amp;P 500</th><th>Nasdaq Composite</th><th>Dow Jones</th></tr>
+      <tr><td>Mon, Jun 8</td><td class="num">7,405.73 <span class="up">+0.30%</span></td><td class="num">25,929.66 <span class="up">+0.86%</span></td><td class="num">50,786.01 <span class="down">−0.16%</span></td></tr>
+      <tr><td>Tue, Jun 9</td><td class="num">7,386.46 <span class="down">−0.26%</span></td><td class="num">25,678.82 <span class="down">−0.97%</span></td><td class="num">50,871.13 <span class="up">+0.17%</span></td></tr>
+      <tr><td>Wed, Jun 10</td><td class="num">7,266.99 <span class="down">−1.62%</span></td><td class="num">25,169.50 <span class="down">−1.98%</span></td><td class="num">49,918.78 <span class="down">−1.87%</span></td></tr>
+      <tr><td>Thu, Jun 11</td><td class="num">7,394.30 <span class="up">+1.75%</span></td><td class="num">25,809.66 <span class="up">+2.54%</span></td><td class="num">50,848.75 <span class="up">+1.86%</span></td></tr>
+      <tr><td>Week-to-date (thru Thu)</td><td class="num"><span class="up">+0.14%</span></td><td class="num"><span class="up">+0.39%</span></td><td class="num"><span class="down">−0.04%</span></td></tr>
     </table>
-    <div class="note" style="padding:8px 12px 4px">Thursday was Wall Street's best day in two months (Dow +929.97 points) after Trump called off strikes on Iran. Week-to-date vs. Friday June 5 closes; Friday's session is live above. Closing data per Yahoo Finance/CNBC liveblogs.</div>
+    <div class="note">Thursday was the best session in two months after President Trump called off threatened strikes on Iran. Friday's session was in progress at publication — live levels in the widgets above.</div>
   </div>
 
   <div class="label">Rates, Bonds &amp; Commodities</div>
-  <div class="panel" style="padding:8px 4px">
+  <div class="panel" style="padding:12px">
     <table>
-      <thead><tr><th>Instrument</th><th>Level</th><th>Note</th></tr></thead>
-      <tbody>
-        <tr><td>Treasuries</td><td class="num">10-yr 4.477%</td><td>Edged higher Friday after Thursday's sharp drop; 2-yr 4.075%, 30-yr 4.971% (CNBC).</td></tr>
-        <tr><td>WTI crude</td><td class="num">&lt;$84 <span class="down">−4%+</span></td><td>Eight-week low by early afternoon — broke below $85.13 overnight and kept sliding as the 14-point draft deal would reopen Hormuz within 30 days.</td></tr>
-        <tr><td>Brent crude</td><td class="num">lowest since March <span class="down">−as much as 5%</span></td><td>Tumbled as much as 5% in early trading before recovering somewhat (Bloomberg).</td></tr>
-        <tr><td>Gold</td><td class="num">~$4,215 <span class="up">+~2.5% early</span></td><td>Futures rebounded in early-Friday trading per Yahoo data after Wednesday's slide to ~$4,173 — still about a fifth below pre-war levels.</td></tr>
-        <tr><td>Fed / central banks</td><td class="num">FOMC Jun 16–17</td><td>Hold expected under Chair Kevin Warsh; hot headline CPI/PPI vs. soft cores frames the debate. ECB hiked Thursday to 2.25% from 2% — its first move in a year; Bank of Canada held at 2.25% Wednesday.</td></tr>
-      </tbody>
+      <tr><th>Instrument</th><th>Latest</th><th>Note</th></tr>
+      <tr><td>10-yr Treasury</td><td class="num">~4.47%</td><td>Hovering near 4.47% Friday after a ~10bp slide Thursday on Iran-deal hopes (Trading Economics)</td></tr>
+      <tr><td>30-yr Treasury</td><td class="num">~4.97%</td><td>Edged higher Friday per CNBC after Thursday's sharp fall; 2-yr ~4.08%</td></tr>
+      <tr><td>Fed funds target</td><td class="num">3.50–3.75%</td><td>FOMC meets June 16–17 under Chair Kevin Warsh; market still leans toward one hike this year, possibly October</td></tr>
+      <tr><td>WTI crude</td><td class="num">&lt; $84 intraday</td><td>Fell 4%+ to an eight-week low on US–Iran deal hopes; recently quoted ~$85 in a choppy $83–87 day range</td></tr>
     </table>
+    <div class="note">Context: May PPI (released Thursday) ran hot on the headline — +1.1% m/m, 6.5% y/y (highest since Nov 2022) — but core ex-food/energy rose just +0.4%, below consensus. The ECB hiked Thursday to 2.25%, its first move in a year.</div>
   </div>
 
   <div class="label">On the Radar</div>
   <div class="panel">
     <ul class="radar">
-      <li><strong>Sunday — possible US–Iran signing.</strong> A memorandum of understanding could be signed in Switzerland as soon as Sunday (Bloomberg), with the G7 summit following in Evian June 15–17. Tehran has not confirmed; prior "deals close" have slipped before.</li>
-      <li><strong>June 16–17 — FOMC meeting.</strong> First decision since CPI crossed back above 4%; a hold is widely expected, but watch how the statement weighs the energy shock against two straight soft core prints.</li>
-      <li><strong>SpaceX aftermarket.</strong> The ~83M-share greenshoe, a wave of 2x/−2x single-stock ETFs (more launches indicated through the week of June 22), and whether the heaviest retail single-stock selling since 2023 keeps draining the chip trade.</li>
-      <li><strong>June 22 — Marvell joins the S&amp;P 500</strong>, now with Adobe's Dan Durn inbound as CFO — index and management catalysts landing the same month.</li>
+      <li><strong>US–Iran signing watch:</strong> Iranian state media floats a signing as soon as Sunday, June 14 (Switzerland mentioned); the G7 meets in Evian June 15–17. Tehran says talks have "not yet reached a conclusion" — headline risk cuts both ways, as oil's slide shows.</li>
+      <li><strong>FOMC, June 16–17:</strong> the first post-CPI/PPI read on whether hot headline inflation (4.2% CPI y/y) outweighs soft cores. Fed funds futures still price a possible October hike.</li>
+      <li><strong>Index reshuffles, June 22:</strong> Marvell joins the S&amp;P 500 and Rocket Lab joins the Nasdaq-100 before the open — passive flows in focus into the rebalance.</li>
+      <li><strong>SPCX aftermarket:</strong> a dozen leveraged single-stock ETFs are queued (some live now, more through the week of June 22) — expect outsized retail volume to keep distorting space-sector tape.</li>
     </ul>
   </div>
 
-  <div class="sources">
+  <footer>
     <h4>Sources</h4>
-    <a href="https://finance.yahoo.com/markets/live/stock-market-today-friday-june-12-dow-sp-500-nasdaq-spacex-ipo-230015001.html">Yahoo Finance — Stock market today liveblog (June 12, 2026)</a>
-    <a href="https://www.cnbc.com/2026/06/12/spacex-ipo-spcx-live-updates.html">CNBC — SpaceX IPO live updates: SPCX pops after biggest IPO ever</a>
-    <a href="https://finance.yahoo.com/markets/article/spacex-set-for-market-debut-following-largest-ipo-ever-101955363.html">Yahoo Finance — SpaceX stock opens at $150 following largest IPO ever</a>
-    <a href="https://247wallst.com/investing/2026/06/12/stock-market-live-june-12-2026-sp-500-spy-green-on-end-of-war-hopes/">24/7 Wall St — Stock Market Live June 12, 2026 (midday data)</a>
-    <a href="https://finance.yahoo.com/markets/live/stock-market-today-thursday-june-11-dow-sp-500-nasdaq-222511784.html">Yahoo Finance — Thursday June 11 liveblog: Dow surges 900+ points</a>
-    <a href="https://www.cnbc.com/2026/06/11/producer-price-index-may-2026-.html">CNBC — Producer Price Index, May 2026</a>
-    <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-12-2026">TheStreet — Stock Market Today, June 12, 2026</a>
-    <a href="https://finance.yahoo.com/sectors/energy/articles/us-iran-nearing-peace-deal-091642417.html">Bloomberg via Yahoo — US and Iran nearing peace deal around G7 meeting</a>
-    <a href="https://finance.yahoo.com/sectors/energy/articles/oil-drops-two-month-low-225105615.html">Bloomberg via Yahoo — Oil slumps to two-month low</a>
-    <a href="https://tradingeconomics.com/united-states/government-bond-yield">Trading Economics — US 10-year Treasury yield</a>
-  </div>
-  <div class="disclaimer">Information only — not investment advice. Intraday figures are timestamped where shown and will move; live widgets above reflect the current market.</div>
+    <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-12-2026">TheStreet — Stock Market Today (June 12, 2026): SpaceX jumps in its debut; Nasdaq, S&amp;P 500 gyrate</a>
+    <a href="https://finance.yahoo.com/markets/live/stock-market-today-friday-june-12-dow-sp-500-nasdaq-spacex-ipo-230015001.html">Yahoo Finance — Live: SpaceX opens at $150 in record debut as Dow, S&amp;P 500, Nasdaq rise</a>
+    <a href="https://www.cnbc.com/2026/06/12/spacex-ipo-spcx-live-updates.html">CNBC — SpaceX IPO live updates: SPCX pops 30% after biggest IPO ever</a>
+    <a href="https://www.nbcnews.com/business/markets/spacex-ipo-stock-price-rcna349760">NBC News — SpaceX stock surges, making Elon Musk a trillionaire</a>
+    <a href="https://www.cnbc.com/2026/06/11/stock-market-today-live-updates.html">CNBC — Dow gains as SpaceX soars in debut, U.S.-Iran deal nears: Live updates</a>
+    <a href="https://www.morningstar.com/markets/movers">Morningstar — Today's biggest market movers</a>
+    <a href="https://tradingeconomics.com/united-states/government-bond-yield">Trading Economics — US 10-Year Treasury yield</a>
+    <a href="https://tradingeconomics.com/commodity/crude-oil">Trading Economics — WTI crude oil</a>
+    <a href="https://www.investing.com/commodities/crude-oil">Investing.com — Crude Oil WTI futures</a>
+    <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-11-2026">TheStreet — Stock Market Today (June 11, 2026): best day in two months</a>
+    <div class="disclaimer">The Closing Bell is an automated news digest for information only — it is not investment advice, an offer, or a recommendation to buy or sell any security. Intraday figures are approximate, time-stamped as noted, and may be superseded by official closing data. Live widget quotes are provided by TradingView and may be delayed ~15 minutes.</div>
+  </footer>
 
 </div>
 <script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;}catch(e){}})();</script>

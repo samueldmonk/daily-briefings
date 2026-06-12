@@ -369,3 +369,21 @@ fought again since), update the entry in the same commit.
   snippets — do not strip the explanation.
 - Space halo REVERSED into a day-of shakeout (SPCE -24%, ASTS -10%, RKLB -8% despite Nasdaq-100
   inclusion effective before the June 22 open) — supersedes the morning "premarket up" framing.
+
+## Added 2026-06-12 (Midday refresh ~2pm ET)
+- **CVE-2026-42897 (Exchange Server OWA spoofing/XSS, CVSS 8.1) is a MAY 2026 zero-day**, not a
+  June one: Microsoft emergency mitigation May 14, CISA KEV-listed May 15 with federal due date
+  May 29 (PASSED); the June 9 Patch Tuesday shipped the permanent Security Updates (Exchange SE RTM,
+  2019 CU14/CU15, 2016 CU23); Exchange Online not affected. Frame as "fix shipped June 9 for a
+  May-exploited flaw" — do NOT present it as a fresh June KEV add or new zero-day.
+- Freedom 250 ruling re-confirmed this run via a second outlet (Forth News: "Judge Allows Trump's
+  UFC Event on White House Grounds Amid Legal Challenge"); most search snippets still showed
+  pre-ruling coverage (DOJ "too late"/"meritless") — don't let those older items override the ruling.
+- June 12 ~2pm ET tape (Yahoo/TheStreet): Dow ~+0.5%, S&P 500 ~+0.3%, Nasdaq Composite flat-to-
+  slightly-up after a midday dip; >60% of issues advancing; Russell 2000 figures STILL conflicted
+  (+0.3% vs +1%) — direction up, number dropped. SPCX ~$172 (~+27% vs $135), day high $176.52;
+  NBC: cap briefly >$2.25T. WTI recent quote ~$85.25 (day range $83.23–86.98) AFTER the >4% slide
+  below $84 (eight-week low) — tape choppy, both true at different moments.
+- An Advisor Perspectives/dshort snippet claiming the S&P "rose every day this week, ninth straight
+  weekly gain" is STALE boilerplate from another period — it contradicts the verified Mon–Thu closes
+  (two down days). Never use that snippet for this week.
