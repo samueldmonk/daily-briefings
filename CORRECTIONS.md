@@ -557,3 +557,16 @@ fought again since), update the entry in the same commit.
   cessation of hostilities incl. Lebanon. BUT a source close to Iran's team told Fars the Sunday-
   signing reports are "completely false." Do NOT present a signing as scheduled/confirmed. June 11
   saw fresh US strikes in southern Iran; both sides say ceasefire/talks continue.
+
+## Added 2026-06-13 (Saturday ~6:20pm ET — weekend refresh)
+- Re-verified all three pages; nothing changed since the ~5:05pm run. Markets CLOSED
+  (weekend) — Fri June 12 closes stand (S&P 7,431.46 +0.50%, Nasdaq 25,888.84 +0.31%,
+  Dow 51,202.26 +0.70%; WTI $84.76 −3.4%, Brent $87.44 −3.3%).
+- **UFC Freedom 250 weigh-ins (Sat June 13) CONFIRMED:** all 14 fighters made weight.
+  Topuria & Gaethje both 155 (LW title); Pereira 251 / Gane 248 (interim HW); O'Malley
+  135.5 / Zahabi 135; Ruffy 155 / Chandler 156; Nickal 186 / Daukaus 186; Lopes weighed
+  twice (146 FW bout, then 154 as main-event standby alternate); Hokit 231 / Lewis 265.
+  Event still PROCEEDS Sunday June 14, 8 PM ET, Paramount+ exclusive. Most recent EVENT
+  remains June 6 (Muhammad vs Bonfim) until Sunday.
+- Cyber unchanged: PeopleSoft CVE-2026-35273 KEV add June 12 / due July 3 stands;
+  AudiA6 takedown, ServiceNow researcher-activity reclassification, June 9 KEV adds all hold.
