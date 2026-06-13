@@ -542,3 +542,18 @@ fought again since), update the entry in the same commit.
   (~$389M historic value) laundered since 2021; 11-nation op led by US Secret Service + IRS-CI with
   Polish police; one outlet (cyberpress) says "2022-2025" for the laundering window — prefer
   "since 2021" (Chainalysis blockchain analysis + prior Europol-sourced entries).
+
+## Added 2026-06-13 (Saturday ~5:05pm ET — weekend refresh)
+- Markets CLOSED (weekend); Fri June 12 closes stand as the latest official close (S&P 500
+  7,431.46 +0.50%, Nasdaq Composite 25,888.84 +0.31%, Dow 51,202.26 +353.51 +0.70%). No new
+  market session.
+- **Fri June 12 oil close, more precise (CNBC, "Oil prices fall even as U.S. and Iran give
+  conflicting accounts"):** WTI −3.4% to $84.76; Brent −3.3% to $87.44. This refines the earlier
+  "≈$85, −2–3%" framing — use $84.76/−3.4% and $87.44/−3.3% for the Friday close; eight-week low
+  / lowest Brent since March stand; day range $83.23–86.98.
+- **U.S.–Iran (as of Sat June 13):** still UNSIGNED. Western source (Reuters/TBS) says a memorandum
+  could be signed as soon as Sunday June 14 in Geneva (Vance + Qalibaf, wording finalized Saturday);
+  draft waives oil sanctions, unfreezes funds, opens Strait of Hormuz (60-day window, mine-clearing),
+  cessation of hostilities incl. Lebanon. BUT a source close to Iran's team told Fars the Sunday-
+  signing reports are "completely false." Do NOT present a signing as scheduled/confirmed. June 11
+  saw fresh US strikes in southern Iran; both sides say ceasefire/talks continue.
