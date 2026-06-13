@@ -558,7 +558,6 @@ fought again since), update the entry in the same commit.
   signing reports are "completely false." Do NOT present a signing as scheduled/confirmed. June 11
   saw fresh US strikes in southern Iran; both sides say ceasefire/talks continue.
 
-<<<<<<< Updated upstream
 ## Added 2026-06-13 (Saturday ~6:20pm ET — weekend refresh)
 - Re-verified all three pages; nothing changed since the ~5:05pm run. Markets CLOSED
   (weekend) — Fri June 12 closes stand (S&P 7,431.46 +0.50%, Nasdaq 25,888.84 +0.31%,
@@ -571,7 +570,7 @@ fought again since), update the entry in the same commit.
   remains June 6 (Muhammad vs Bonfim) until Sunday.
 - Cyber unchanged: PeopleSoft CVE-2026-35273 KEV add June 12 / due July 3 stands;
   AudiA6 takedown, ServiceNow researcher-activity reclassification, June 9 KEV adds all hold.
-=======
+
 ## Added 2026-06-13 (Saturday ~6:30pm ET — weekend hourly refresh)
 - Markets still CLOSED (weekend); Fri June 12 closes stand unchanged (S&P 500 7,431.46
   +0.50%, Nasdaq Composite 25,888.84 +0.31%, Dow 51,202.26 +353.51 +0.70%; WTI close
@@ -587,4 +586,28 @@ fought again since), update the entry in the same commit.
   Draft terms unchanged: waive oil sanctions, unfreeze frozen Iranian assets, reopen Strait of
   Hormuz, nuclear program addressed over a ~60-day talks window. Deal NOT signed as of this run.
 - Do NOT report a signing as confirmed/scheduled — the two sides openly disagree on timing/venue.
->>>>>>> Stashed changes
+
+## Added 2026-06-13 (Saturday ~7:10pm ET — weekend hourly refresh)
+- Re-verified all three pages; nothing material changed since the ~6:20/6:30pm runs.
+  RESOLVED a committed git merge conflict (Updated-upstream vs Stashed-changes markers
+  present in CORRECTIONS.md and wallstreet-briefing.html from two overlapping ~6:20/6:30pm
+  runs) by KEEPING BOTH Saturday entries (the 6:20pm weigh-ins entry and the 6:30pm Iran-
+  timeline entry) and cleaning the markers out of the HTML.
+- Markets CLOSED (weekend); Fri June 12 closes stand (S&P 500 7,431.46 +0.50%, Nasdaq
+  Composite 25,888.84 +0.31%, Dow 51,202.26 +353.51 +0.70%; WTI $84.76 -3.4%, Brent
+  $87.44 -3.3%). No new session.
+- **U.S.–Iran (Sat June 13, evening):** still UNSIGNED, timetable DISPUTED. Trump (Sat)
+  says the deal is "scheduled to be signed Sunday [June 14]," Strait of Hormuz to reopen
+  immediately after; Iran's FM spokesman Esmaeil Baghaei says it will NOT be signed Sunday
+  but possibly in the "coming days" (CNBC/Al Jazeera/CBS/CNN, June 13). A "remote" signing
+  was floated; an admin official put odds ~80% (per prior NBC). Do NOT present a signing as
+  confirmed/scheduled.
+- **UFC Freedom 250 (Sun June 14, White House):** weigh-ins complete Sat June 13, all 14 on
+  weight (Topuria/Gaethje 155 LW title; Pereira 251/Gane 248 interim HW). Full card re-
+  confirmed (Yahoo/CBS/UFC.com). KEEP framing as a lightweight title DEFENSE — multiple
+  outlets (Yahoo/CBS) again call it a "unification"; the standing correction governs: it is
+  a DEFENSE, not a unification. Most recent EVENT remains June 6 (Muhammad vs Bonfim) until
+  Sunday. Paramount+ exclusive, 8 PM ET.
+- Cyber unchanged: PeopleSoft CVE-2026-35273 KEV add June 12 / due July 3 stands; June 9 KEV
+  adds (Arista/Chromium V8/Cisco SD-WAN) hold; AudiA6 takedown and ServiceNow researcher-
+  activity reclassification hold.
