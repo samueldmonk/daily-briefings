@@ -558,6 +558,7 @@ fought again since), update the entry in the same commit.
   signing reports are "completely false." Do NOT present a signing as scheduled/confirmed. June 11
   saw fresh US strikes in southern Iran; both sides say ceasefire/talks continue.
 
+<<<<<<< Updated upstream
 ## Added 2026-06-13 (Saturday ~6:20pm ET — weekend refresh)
 - Re-verified all three pages; nothing changed since the ~5:05pm run. Markets CLOSED
   (weekend) — Fri June 12 closes stand (S&P 7,431.46 +0.50%, Nasdaq 25,888.84 +0.31%,
@@ -570,3 +571,20 @@ fought again since), update the entry in the same commit.
   remains June 6 (Muhammad vs Bonfim) until Sunday.
 - Cyber unchanged: PeopleSoft CVE-2026-35273 KEV add June 12 / due July 3 stands;
   AudiA6 takedown, ServiceNow researcher-activity reclassification, June 9 KEV adds all hold.
+=======
+## Added 2026-06-13 (Saturday ~6:30pm ET — weekend hourly refresh)
+- Markets still CLOSED (weekend); Fri June 12 closes stand unchanged (S&P 500 7,431.46
+  +0.50%, Nasdaq Composite 25,888.84 +0.31%, Dow 51,202.26 +353.51 +0.70%; WTI close
+  $84.76 -3.4%, Brent $87.44 -3.3%). No new session.
+- **U.S.–Iran timeline DISPUTE sharpened Sat June 13:** President Trump said the deal is
+  "scheduled to get signed tomorrow" (Sunday June 14, his 80th birthday). Iran's foreign
+  ministry spokesman **Esmaeil Baghaei** said it will "NOT be tomorrow," with "no plans for
+  travel to Geneva or anywhere else within the next couple of days" — though he did not rule
+  out a signing in the coming days (Al Jazeera/CNN/ABC, June 13). A "REMOTE" signing (possibly
+  followed by an in-person ceremony) was floated by both sides. A Trump administration official
+  put the odds at ~80% (NBC). This SUPERSEDES the earlier Reuters "Vance + Qalibaf sign Sunday in
+  Geneva" / Fars-denial framing as the current state — keep it as the disputed-timetable note.
+  Draft terms unchanged: waive oil sanctions, unfreeze frozen Iranian assets, reopen Strait of
+  Hormuz, nuclear program addressed over a ~60-day talks window. Deal NOT signed as of this run.
+- Do NOT report a signing as confirmed/scheduled — the two sides openly disagree on timing/venue.
+>>>>>>> Stashed changes
