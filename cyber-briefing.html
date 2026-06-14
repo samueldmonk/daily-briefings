@@ -69,8 +69,8 @@
     <div class="meta">
       <span class="pill live"><span class="dot"></span>LIVE</span>
       <span class="pill edition" id="edition">Afternoon Edition</span>
-      <span class="pill" id="datestamp">Saturday, June 13, 2026</span>
-      <span class="pill">Updated <span id="updated">~7:10 PM ET</span></span>
+      <span class="pill" id="datestamp">Sunday, June 14, 2026</span>
+      <span class="pill">Updated <span id="updated">~5:05 PM ET</span></span>
     </div>
   </header>
 
@@ -133,6 +133,11 @@
         <td>Unauthenticated stack overflow → SYSTEM RCE; exploited in the wild (Belgium's CCB warned in late May). Fixed in the June 9 Patch Tuesday updates.</td>
       </tr>
       <tr>
+        <td class="cve">CVE-2026-20253</td><td class="score">9.8</td>
+        <td>Splunk Enterprise 10+ (PostgreSQL sidecar)</td>
+        <td>Pre-auth chain → unauthenticated file write and remote code execution via an unauthenticated sidecar endpoint; default-on for Splunk Enterprise on AWS. Disclosed June 10; fixed in 10.0.7 / 10.2.4. No public PoC or in-the-wild exploitation reported as of this run (watchTowr/Orca).</td>
+      </tr>
+      <tr>
         <td class="cve">CVE-2026-44963</td><td class="score">9.4 (v4)</td>
         <td>Veeam Backup &amp; Replication 12.x ≤ 12.3.2.4465</td>
         <td>RCE by an <em>authenticated</em> domain user; fixed in 12.3.2.4854; v13 not affected (vendor advisory; watchTowr credited).</td>
@@ -174,6 +179,8 @@
     <a href="https://blog.checkpoint.com/security/check-point-releases-important-hotfix-for-vulnerabilities-in-deprecated-ikev1-vpn-protocol/">Check Point — Hotfix for IKEv1 VPN vulnerability</a>
     <a href="https://techcrunch.com/2026/06/09/cisa-gives-us-federal-agencies-three-days-to-fix-a-vpn-bug-under-attack-by-a-ransomware-gang/">TechCrunch — CISA's three-day deadline for the Check Point VPN bug</a>
     <a href="https://www.zerodayinitiative.com/blog/2026/6/9/the-june-2026-security-update-review">Zero Day Initiative — The June 2026 Security Update Review</a>
+    <a href="https://orca.security/resources/blog/cve-2026-20253-splunk-enterprise-rce-unauthenticated-file-operations/">Orca Security — CVE-2026-20253: Splunk Enterprise pre-auth RCE &amp; file-operation flaws</a>
+    <a href="https://labs.watchtowr.com/why-use-app-level-auth-when-every-database-has-auth-splunk-enterprise-cve-2026-20253-pre-auth-rce/">watchTowr Labs — Splunk Enterprise CVE-2026-20253 pre-auth RCE</a>
     <a href="https://www.cisa.gov/news-events/alerts/2026/06/09/cisa-adds-three-known-exploited-vulnerabilities-catalog">CISA — Adds three Known Exploited Vulnerabilities (June 9)</a>
     <a href="https://www.breachsense.com/breaches/">Breachsense — Data breach tracker (June 12 leak-site claims)</a>
     <div class="disclaimer">Compiled from public reporting and vendor advisories; details may evolve as investigations continue. Leak-site listings are attacker claims until victims confirm.</div>

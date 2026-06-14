@@ -651,3 +651,28 @@ fought again since), update the entry in the same commit.
   June 17, Warsh's first as Chair, hold at 3.50–3.75% widely expected); housing starts + May retail
   sales June 17; BoJ decision; Accenture + Kroger earnings June 18; Juneteenth closure Fri June 19.
   S&P holding above its 50-day MA (~7,230); June historically weakest month in a midterm year.
+## Added 2026-06-14 (Sunday ~5:05pm ET — Afternoon Edition)
+- Markets CLOSED (weekend); Fri June 12 closes stand unchanged (S&P 500 7,431.46 +0.50%,
+  Nasdaq Composite 25,888.84 +0.31%, Dow 51,202.26 +353.51 +0.70%; WTI close $84.76 -3.4%,
+  Brent $87.44 -3.3%; week vs Fri Jun 5: S&P +0.65%, Nasdaq +0.70%, Dow +0.66%). A fresh CNBC
+  snippet this run gave WTI "$84.88 -3.2% / Brent $87.33 -3.4%" — kept the standing $84.76/-3.4%,
+  $87.44/-3.3% per the prior verified entry; the gap is sub-cent/rounding.
+- **UFC Freedom 250 (Sun June 14, White House): the card is UNDERWAY — prelims began 4 PM ET,
+  main card 8 PM ET on Paramount+ (no PPV).** As of ~5:05pm ET NO results were final/verified in
+  search snippets, so NONE were published; the most recent COMPLETED event remains June 6
+  (Muhammad vs Bonfim). MMA top story reframed from "fight eve/weigh-ins" (Saturday) to "fight day/
+  underway." Billing unchanged per standing correction: Topuria (17-0) DEFENDS undisputed LW title
+  vs interim champ Gaethje — a DEFENSE, NOT a unification. Co-main Pereira vs Gane interim HW.
+- **U.S.–Iran (Sun June 14): still UNSIGNED, timetable softened to "so close."** Trump says the
+  two sides are "so close"/deal to be signed and urged Israel not to strike Lebanon; Tehran urges
+  caution (could slip to "coming days"); Pakistan PM flagged finalization within ~24h + electronic
+  signing; NBC: Qatari negotiators flew to Tehran; fresh Israeli strikes on Beirut's Dahiyeh suburb
+  rattled the talks. Do NOT present a signing as confirmed/scheduled.
+- **Splunk CVE-2026-20253 (CVSS 9.8, Splunk Enterprise 10+, PostgreSQL sidecar):** unauthenticated
+  file write → pre-auth RCE; disclosed June 10; fixed in 10.0.7 / 10.2.4; default-on for Splunk
+  Enterprise on AWS. As of this run there is NO public PoC, NO confirmed in-the-wild exploitation,
+  and it is NOT in CISA KEV (watchTowr/Orca) — added to the Cyber page's Vulnerability Watch only,
+  explicitly labeled "disclosed, not exploited." Do NOT present it as exploited or KEV-listed.
+- FOMC June 16-17 (decision Wed June 17), Warsh's first meeting as Chair; hold at 3.50-3.75% expected;
+  futures lean toward a HIKE (not a cut) as the year-end directional move. Juneteenth closure Fri
+  June 19 stands; Accenture + Kroger earnings June 18.
