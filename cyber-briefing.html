@@ -70,7 +70,7 @@
       <span class="pill live"><span class="dot"></span>LIVE</span>
       <span class="pill edition" id="edition">Afternoon Edition</span>
       <span class="pill" id="datestamp">Sunday, June 14, 2026</span>
-      <span class="pill">Updated <span id="updated">~5:05 PM ET</span></span>
+      <span class="pill">Updated <span id="updated">~7:05 PM ET</span></span>
     </div>
   </header>
 
@@ -82,11 +82,11 @@
 
   <div class="label">Top Story</div>
   <div class="panel lead">
-    <div class="kicker">KEV addition · Zero-day fallout</div>
-    <h2>CISA adds the PeopleSoft zero-day to its exploited-vulnerabilities catalog — federal agencies have until July 3</h2>
-    <p>CISA on Friday added <strong>CVE-2026-35273</strong> — the critical (CVSS 9.8) Oracle PeopleSoft PeopleTools flaw exploited en masse as a zero-day — to the Known Exploited Vulnerabilities catalog, putting federal civilian agencies on a <strong>July 3 remediation deadline</strong> under the standard three-week window. The unauthenticated HTTP-to-full-takeover bug had been the biggest hole in the catalog all week.</p>
-    <p>The scale is what makes this one urgent: Mandiant and Google Threat Intelligence (tracking the actor as <strong>UNC6240, linked to ShinyHunters</strong>) say roughly <strong>300 PeopleSoft instances across 100+ organizations</strong> were compromised between May 27 and June 9 — about 68% of them higher-education institutions, mostly in the US. It's the same crew tied to this spring's Canvas/Instructure incident, in which Instructure disclosed that student names, emails, ID numbers and user messages were involved.</p>
-    <p>Oracle shipped an out-of-band Security Alert on June 10 for PeopleTools 8.61 and 8.62. If you run PeopleSoft anywhere — federal or not — the KEV listing is the formal confirmation that "patch now" stopped being optional two weeks ago.</p>
+    <div class="kicker">Emerging threat · AI supply chain</div>
+    <h2>"Agentjacking": a fake bug report can hijack your AI coding agent — and nothing in the stack catches it</h2>
+    <p>Researchers at Tenet Security disclosed a new attack class they call <strong>Agentjacking</strong> that turns a public error-tracking credential into remote code execution on developer machines — with <strong>no malware, no stolen password, and no breach of the target</strong>. The trick: an attacker submits a crafted error event to a project's Sentry instance (anyone holding the DSN can post events), and when an AI coding agent such as <strong>Claude Code or Cursor</strong> reads that error through the Sentry MCP server, it treats the attacker-controlled payload as trusted diagnostic output and follows the embedded "remediation steps," executing the attacker's code.</p>
+    <p>What makes it dangerous is that every step is technically authorized. Tenet calls it the <strong>"Authorized Intent Chain"</strong>: because the prevailing security model is built to flag <em>unauthorized</em> behavior, an attack containing none sails past EDR, WAF, IAM, VPN, Cloudflare and firewalls. The Cloud Security Alliance published a corroborating research note on June 12 framing it as MCP-injection.</p>
+    <p>Tenet says it reported the issue to Sentry on June 3; Sentry acknowledged it the same day but declined to fix it at the root, describing the attack class as <strong>"technically not defensible"</strong> at the platform level. The practical takeaway: treat third-party data surfaced to AI agents (error reports, tickets, issues) as untrusted input, and don't let agents act on it without a human in the loop.</p>
   </div>
 
   <div class="label">Breaches &amp; Incidents</div>
@@ -102,14 +102,14 @@
       <p>In a June 12 advisory update, ServiceNow said the suspicious June 2–3 activity against the unauthenticated REST endpoint it patched June 5 is now believed to be <strong>security researchers and customers testing</strong> — two researchers filed a bug-bounty report June 7. Users still allege the flaw was known since April; no confirmed criminal breach.</p>
     </div>
     <div class="card">
-      <span class="tag warn">Leak-site claims</span>
-      <h3>Friday's extortion roundup — claims, not confirmations</h3>
-      <p>New victims posted June 12 include <strong>Hong Kong Parkview and Sweden's Areco Steel (DragonForce)</strong> and Highwoods Properties ("TheGentlemen"), plus Astec Valves &amp; Fittings and South Korea's Bitek System across DragonForce/Qilin-linked sites. All are attacker claims until victims confirm.</p>
+      <span class="tag crit">Zero-day</span><span class="tag info">KEV</span>
+      <h3>PeopleSoft zero-day: ShinyHunters hit 100+ orgs, now on the KEV clock</h3>
+      <p>Mandiant and Google Threat Intelligence (tracking the actor as <strong>UNC6240, linked to ShinyHunters</strong>) say roughly <strong>300 PeopleSoft instances across 100+ organizations</strong> were compromised between May 27 and June 9 via CVE-2026-35273 — about 68% higher-education, mostly US. Oracle shipped an out-of-band alert June 10; CISA added the bug to KEV June 12 with a <strong>July 3 federal deadline</strong>.</p>
     </div>
     <div class="card">
-      <span class="tag warn">Mega-claim</span><span class="tag info">Denied</span>
-      <h3>"340M OnlyFans records" — a leak that everyone, including the seller, says isn't a hack</h3>
-      <p>A threat actor is hawking an alleged 340-million-record OnlyFans database (emails, names, phone numbers, last-4 card digits, linked social accounts) for 0.313 BTC. <strong>OnlyFans calls the reports false</strong> — and the sellers themselves say it was assembled from old leaks and public sources, not an intrusion. Researchers agree it looks like recycled compilation; treat it as phishing and credential-stuffing fuel rather than a new breach.</p>
+      <span class="tag ok">Law enforcement</span><span class="tag warn">Process</span>
+      <h3>Conti guilty plea; Maine pulls its breach portal offline</h3>
+      <p>A Ukrainian national extradited to the U.S. last year <strong>pleaded guilty to conspiracy charges tied to the Conti ransomware operation</strong>. Separately, <strong>Maine took its public data-breach reporting portal offline</strong> on June 13 after fraudulent breach disclosures were published to the state site, and is reviewing its submission procedures to prevent abuse.</p>
     </div>
   </div>
 
@@ -171,8 +171,12 @@
     <a href="https://www.europol.europa.eu/media-press/newsroom/news/ransomware-gangs-cut-eur-336-million-audia6-crypto-laundering-pipeline">Europol — Ransomware gangs cut off from €336M "AudiA6" laundering pipeline</a>
     <a href="https://thehackernews.com/2026/06/europol-disrupts-audia6-crypto.html">The Hacker News — Europol disrupts AudiA6 crypto laundering service</a>
     <a href="https://cybernews.com/security/servicenow-confirms-security-incident-data-breach/">Cybernews — ServiceNow "data breach" attributed to researcher activity</a>
-    <a href="https://cybernews.com/security/onlyfans-mega-data-leak-hackers-claim/">Cybernews — OnlyFans mega leak claim: 340M user records</a>
-    <a href="https://www.techradar.com/pro/security/hackers-claim-to-be-selling-340-million-stolen-onlyfans-records-but-experts-are-already-skeptical-on-how-serious-hack-is">TechRadar — Experts skeptical of the 340M OnlyFans records claim</a>
+    <a href="https://thehackernews.com/2026/06/agentjacking-attack-tricks-ai-coding.html">The Hacker News — Agentjacking attack tricks AI coding agents into running malicious code</a>
+    <a href="https://tenetsecurity.ai/blog/agentjacking-coding-agents-with-fake-sentry-errors/">Tenet Security — Agentjacking: a fake bug report can hijack your AI coding agent</a>
+    <a href="https://labs.cloudsecurityalliance.org/research/csa-research-note-agentjacking-mcp-sentry-injection-20260612/">Cloud Security Alliance — Research note: Agentjacking MCP/Sentry injection (June 12)</a>
+    <a href="https://www.infosecurity-magazine.com/news/agentjacking-attacks-hijack-ai/">Infosecurity Magazine — New "Agentjacking" attacks could hijack AI coding agents</a>
+    <a href="https://thehackernews.com/2026/06/critical-splunk-enterprise-flaw-lets.html">The Hacker News — Critical Splunk Enterprise flaw lets attackers run code without authentication</a>
+    <a href="https://advisory.splunk.com/advisories/SVD-2026-0603">Splunk — SVD-2026-0603 advisory (CVE-2026-20253, CVSS 9.8)</a>
     <a href="https://www.chainalysis.com/blog/law-enforcement-dismantles-audia6-laundering-network-june-2026/">Chainalysis — Law enforcement dismantles AudiA6 laundering network</a>
     <a href="https://www.bleepingcomputer.com/news/legal/authorities-dismantle-audia6-ransomware-crypto-laundering-service/">BleepingComputer — Authorities dismantle "AudiA6" crypto-laundering service</a>
     <a href="https://www.rapid7.com/blog/post/etr-critical-check-point-vpn-zero-day-exploited-in-the-wild-cve-2026-50751/">Rapid7 — Check Point VPN zero-day exploited in the wild (CVE-2026-50751)</a>

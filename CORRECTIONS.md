@@ -695,3 +695,37 @@ fought again since), update the entry in the same commit.
   SAY (attributed) a deal is complete with a ceremony reportedly June 19, Iran unconfirmed.
   Supersedes the 5:25pm "so close / electronic signing / differing MOU texts" framing as the
   current state.
+
+## Added 2026-06-14 (Sunday ~7:05pm ET — Afternoon Edition refresh)
+- Markets CLOSED (weekend); Fri June 12 closes stand unchanged (S&P 500 7,431.46 +0.50%,
+  Nasdaq Composite 25,888.84 +0.31%, Dow 51,202.26 +353.51 +0.70%; WTI close $84.76 -3.4%,
+  Brent $87.44 -3.3%; week vs Fri Jun 5: S&P +0.65%, Nasdaq +0.70%, Dow +0.66%). No new session.
+- **U.S.-Iran (Sun June 14, ~7pm ET):** holds the 6:05pm state — Trump SAYS the deal is
+  "complete" and authorized lifting the U.S. naval blockade of the Strait of Hormuz; Pakistan PM
+  Sharif SAYS both sides reached a deal ending operations "on all fronts" (Lebanon included), with a
+  signing ceremony reportedly Friday June 19 in Switzerland (CNBC/PBS/CBS/NBC re-confirmed this run).
+  CAVEATS stand: Iran did NOT confirm / Bloomberg "still reviewing"; fresh Israeli strikes on Beirut's
+  Dahiyeh killed >=3; CNBC headline calls the deal "in question." Do NOT present the signing as
+  confirmed/scheduled — frame as attributed (Trump/Pakistan say; Iran unconfirmed).
+- **UFC Freedom 250 (Sun June 14, White House):** as of ~7:05pm ET the 7-fight card (all main card,
+  8 PM ET, Paramount+ exclusive — NO PPV/CBS simulcast) had NOT produced any verified results in
+  search snippets (Tapology/Wikipedia/ESPN/Yahoo/MMA Mania live pages all still pre-results). NONE
+  published. Most recent COMPLETED event remains June 6 (Muhammad vs Bonfim). Billing per standing
+  correction: Topuria (17-0) DEFENDS undisputed LW title vs interim champ Gaethje (27-5) — a DEFENSE,
+  NOT a unification (Wikipedia/Yahoo/CBS still say "unification"; correction governs). Co-main
+  Pereira (251) vs Gane (248) interim HW. Next cards verified: June 20 Kape vs Horiguchi 2 (Meta APEX,
+  Enterprise NV), June 27 Fiziev vs Torres (Baku), July 11 UFC 329 McGregor vs Holloway 2 (T-Mobile).
+- **Cyber TOP STORY this run = "Agentjacking"** (Tenet Security; CSA research note June 12; THN/
+  Infosecurity June 12-13): crafted Sentry error events read by AI coding agents (Claude Code, Cursor)
+  via the Sentry MCP server are treated as trusted output -> attacker code execution. No malware/creds/
+  breach ("Authorized Intent Chain" bypasses EDR/WAF/IAM). Disclosed to Sentry June 3; Sentry calls it
+  "technically not defensible" at the platform level and declined a root fix. Frame as an emerging
+  attack class / supply-chain risk, not a confirmed mass-exploitation campaign.
+- **Splunk CVE-2026-20253:** CVSS 9.8, Splunk Enterprise 10+ PostgreSQL sidecar, unauth file
+  create/truncate -> pre-auth RCE; fixed 10.0.7 / 10.2.4 / 10.4.0 (also 9.4.12 / 9.3.13); default-on
+  on AWS. Disclosed June 10; NO public PoC / NOT in-the-wild / NOT in KEV as of this run (Splunk
+  SVD-2026-0603, watchTowr, Orca). Keep labeled "disclosed, not exploited."
+- New incidents this run: Maine took its public data-breach reporting portal OFFLINE June 13 after
+  fraudulent disclosures were posted; a Ukrainian national extradited to the US pleaded guilty to
+  conspiracy charges tied to the Conti ransomware operation. CISA KEV latest adds unchanged
+  (PeopleSoft CVE-2026-35273 June 12 / due July 3; June 9 Arista/Chromium V8/Cisco SD-WAN / due ~June 30).
