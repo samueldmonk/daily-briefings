@@ -611,3 +611,24 @@ fought again since), update the entry in the same commit.
 - Cyber unchanged: PeopleSoft CVE-2026-35273 KEV add June 12 / due July 3 stands; June 9 KEV
   adds (Arista/Chromium V8/Cisco SD-WAN) hold; AudiA6 takedown and ServiceNow researcher-
   activity reclassification hold.
+
+## Added 2026-06-14 (Sunday ~2:15pm ET — weekend hourly refresh)
+- Markets CLOSED (weekend); Fri June 12 closes stand unchanged and RE-confirmed via search
+  (S&P 500 7,431.46 +0.50%, Nasdaq Composite 25,888.84 +0.31%, Dow 51,202.26 +353.51 +0.70%;
+  WTI close $84.76 −3.4%, Brent $87.44 −3.3%). Week vs Fri Jun 5: S&P +0.65%, Nasdaq +0.70%,
+  Dow +0.66%. No new session.
+- **U.S.–Iran (Sun June 14): still UNSIGNED; timetable softened from "Sunday" to "so close."**
+  Trump now says the two sides are "so close" / deal to be signed (Al Jazeera/CNN June 14
+  liveblogs) and publicly URGED Israel not to strike Lebanon; Tehran URGES CAUTION and says a
+  signing could slip to the "coming days." Pakistani PM Shehbaz Sharif (Sat) said finalization
+  expected within ~24 hours with an "electronic signing" to follow + technical talks next week;
+  NBC: Qatari negotiators flew to Tehran to finalize. NEW complication: fresh Israeli strikes on
+  Beirut's southern Dahiyeh suburb rattled the talks — Iran negotiator Mohammad Bagher Ghalibaf
+  said the attack shows the US "either lacks the will to fulfil its commitments or the ability to
+  do so." MOU would extend the ceasefire 60 days, waive oil sanctions, unfreeze assets, reopen
+  Strait of Hormuz. Do NOT present a signing as confirmed/scheduled — supersedes the Sat "Trump
+  says signed Sunday vs Iran says not Sunday" framing as the current state.
+- FOMC June 16–17 (decision Wed June 17), Kevin Warsh's first meeting as Chair; hold at 3.50–3.75%
+  widely expected; futures now lean toward a HIKE (not a cut) as the year-end move; Warsh may
+  scrap the dot plot (Schwab/Kraken/FXStreet, June 2026). Juneteenth closure Fri June 19 stands;
+  Accenture + Kroger earnings June 18.
