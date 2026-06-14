@@ -632,3 +632,22 @@ fought again since), update the entry in the same commit.
   widely expected; futures now lean toward a HIKE (not a cut) as the year-end move; Warsh may
   scrap the dot plot (Schwab/Kraken/FXStreet, June 2026). Juneteenth closure Fri June 19 stands;
   Accenture + Kroger earnings June 18.
+
+## Added 2026-06-14 (Sunday ~5:25pm ET — weekend hourly refresh)
+- Markets CLOSED (weekend); Fri June 12 closes stand unchanged (S&P 500 7,431.46 +0.50%,
+  Nasdaq Composite 25,888.84 +0.31%, Dow 51,202.26 +353.51 +0.70%; WTI close $84.76 −3.4%,
+  Brent $87.44 −3.3%). Week vs Fri Jun 5: S&P +0.65%, Nasdaq +0.70%, Dow +0.66%. No new session.
+- **U.S.–Iran (Sun June 14, evening): still UNSIGNED; new wrinkle — Iran circulating DIFFERING
+  VERSIONS of the MOU text** (Fortune, June 14): drafts seen by Bloomberg/Reuters variously floated
+  a $300B reconstruction-and-development program for Iran and the release of ~$25B in frozen assets;
+  all versions share a quick Strait of Hormuz reopening + oil-sanctions relief. Pakistan's PM Sharif
+  now says the deal is "in place," with mediators hosting a series of meetings this week and an
+  "electronic signing" to follow (Express Tribune/Axios/CNBC). Trump says the sides are "so close";
+  Iran's FM spokesman Esmaeil Baghaei says it will NOT be signed Sunday but "coming days" likelihood
+  is "high." Fresh Israeli strikes on Beirut's Dahiyeh suburb still rattling the talks; Trump urged
+  Israel not to strike Lebanon. Do NOT present a signing as confirmed/scheduled — sides disagree on
+  timing and Iran is pushing conflicting texts. Supersedes the 2:15pm framing as the current state.
+- Week-ahead calendar (Schwab): May industrial production June 15; FOMC June 16–17 (decision Wed
+  June 17, Warsh's first as Chair, hold at 3.50–3.75% widely expected); housing starts + May retail
+  sales June 17; BoJ decision; Accenture + Kroger earnings June 18; Juneteenth closure Fri June 19.
+  S&P holding above its 50-day MA (~7,230); June historically weakest month in a midterm year.
