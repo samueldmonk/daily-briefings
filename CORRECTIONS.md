@@ -676,3 +676,22 @@ fought again since), update the entry in the same commit.
 - FOMC June 16-17 (decision Wed June 17), Warsh's first meeting as Chair; hold at 3.50-3.75% expected;
   futures lean toward a HIKE (not a cut) as the year-end directional move. Juneteenth closure Fri
   June 19 stands; Accenture + Kroger earnings June 18.
+
+## Added 2026-06-14 (Sunday ~6:05pm ET — weekend hourly refresh)
+- Markets CLOSED (weekend); Fri June 12 closes stand unchanged and re-confirmed via search
+  (S&P 500 7,431.46 +0.50%, Nasdaq Composite 25,888.84 +0.31%, Dow 51,202.26 +353.51 +0.70%;
+  WTI close $84.76 -3.4%, Brent $87.44 -3.3%; week vs Fri Jun 5: S&P +0.65%, Nasdaq +0.70%,
+  Dow +0.66%). No new session.
+- **U.S.-Iran (Sun June 14, ~6pm ET): MATERIAL UPDATE — Trump declares deal "now complete"
+  and authorizes immediate removal of the U.S. naval blockade of the Strait of Hormuz**
+  (CBS News, NBC News). Pakistan's PM Shehbaz Sharif says both sides reached a deal ending
+  military operations "on all fronts" incl. Lebanon, with an official SIGNING CEREMONY reportedly
+  set for Friday, June 19, in Switzerland. Terms: Iran reopens Strait of Hormuz immediately /
+  U.S. lifts blockade, ~$25B frozen assets released, no new sanctions, oil-sanctions waived.
+  CAVEATS (keep prominent): Iranian officials did NOT immediately confirm; Bloomberg says Tehran
+  "still reviewing" the text; fresh Israeli strikes on Beirut's southern suburbs killed >=3 and
+  Trump warned both sides not to "blow it" — CNBC headline calls the deal "in question." Per the
+  standing correction, do NOT present the signing as confirmed/scheduled: frame as Trump/Pakistan
+  SAY (attributed) a deal is complete with a ceremony reportedly June 19, Iran unconfirmed.
+  Supersedes the 5:25pm "so close / electronic signing / differing MOU texts" framing as the
+  current state.
