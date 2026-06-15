@@ -785,3 +785,48 @@ fought again since), update the entry in the same commit.
   Dow 51,202.26 +0.70%); no June 15 close yet (session in progress). FOMC June 16-17 (Warsh's first as
   Chair), hold 3.50-3.75% expected, futures lean hike not cut. Juneteenth closure Fri June 19;
   Accenture + Kroger earnings June 18; Marvell -> S&P 500 / Rocket Lab -> Nasdaq-100 effective June 22.
+
+## Added 2026-06-15 (Monday ~1:10pm ET — Midday Edition, markets OPEN)
+- **UFC Freedom 250 RESULTS (Sun June 14, White House South Lawn) — Topuria LOST.** In the greatest
+  upset of the night, **Justin Gaethje def. Ilia Topuria via TKO (corner stoppage / retirement after
+  Round 4)** to win the UNDISPUTED lightweight title; Topuria suffers his FIRST pro loss and falls to
+  **17-1**. Gaethje (a two-time former interim LW champ) finally has the undisputed belt. Do NOT regress
+  to "Topuria DEFENDS / undefeated champion" framing — that was the pre-fight billing; he was beaten.
+  The standing "not a unification" note governed the PRE-FIGHT billing; post-fight, describe the RESULT
+  (Gaethje won the undisputed title). Co-main: **Ciryl Gane def. Alex Pereira via KO, Round 2 (ref Herb
+  Dean)** for the interim HEAVYWEIGHT title — Pereira's bid to be the first 3-division UFC champ FAILED.
+  Full main card: **Sean O'Malley def. Aiemann Zahabi** TKO (punches) R2 4:02 (walk-off KO, snapped
+  Zahabi's 7-fight streak); **Josh Hokit def. Derrick Lewis** TKO (punches) R2 4:09 (Hokit now 10-0,
+  4-0 UFC, flagged as a possible HW title contender); **Mauricio Ruffy def. Michael Chandler** TKO
+  (spinning wheel kick & punches) R1 4:29 (Chandler's 4th straight loss, 2-6 UFC); **Bo Nickal def.
+  Kyle Daukaus** TKO (punches) R1 4:34 (Nickal now 9-1, most dominant career win); **Diego Lopes def.
+  Steve Garcia** KO (punches) R2 2:42. Sources: ESPN/Yahoo/CBS Sports/NESN/MMA Mania/UFC.com/theScore/
+  Bleacher Report (June 14-15). Most recent COMPLETED event is now Freedom 250 (supersedes June 6
+  Muhammad vs Bonfim). Next cards: June 20 Kape vs Horiguchi (Meta APEX, Enterprise NV), June 27
+  Fiziev vs Torres (Baku), July 11 UFC 329 McGregor vs Holloway 2 (T-Mobile).
+- **June 15 ~1 PM ET intraday (markets OPEN):** strong, chip-led rally on the US-Iran Hormuz deal.
+  Source figures CONFLICT — TheStreet had S&P 500 +1.74% / Nasdaq Composite +2.07% intraday; Yahoo's
+  live blog ran higher at S&P +1.94% (7,575.35) / Dow +1.43% (51,931.97) / Nasdaq +3.05% (26,677.54).
+  Published the move as a RANGE with attribution (S&P +1.7-1.9%, Dow ~+1.4%, Nasdaq ~+2-3%) rather than
+  a single precise figure. Editorial uses % moves only; current levels come from the live widgets.
+- **Fox–Roku $22B deal (announced June 15):** Fox Corp agreed to acquire Roku for **$160.00/share** in
+  cash + FOX Class A stock (~$22B enterprise value); creates the 3rd-largest US TV company; $12B Morgan
+  Stanley bridge; boards approved; expected to CLOSE H1 2027; Fox holders ~73% of combined co. **Fox
+  shares sank ~15%** (also reported ~11% earlier); Roku had jumped ~20% Friday on the reports and set a
+  one-year high before paring (one snippet said Roku "edged down 1%" intraday — conflicting, so Roku %
+  was NOT published, only the deal terms + direction). Sources: CNBC/Bloomberg/Fox Business/TechCrunch.
+- Oil tumbled on the Hormuz-reopening deal: **WTI ~$80, −5.5%** (below $80 first time since March; CNBC
+  mid-morning ~$79.90 −5.9%), Brent ~$82.80 −5.2%; Gold ~$4,357.70 +2.8%, Silver ~$70.81 +4.2%; 10-yr
+  ~4.42% (down from Fri ~4.49%). SpaceX (SPCX) +~8% to ~$174 on WSJ report Gina Rinehart took a >$1B
+  stake + ARK $529.7M buy. Fri June 12 closes stand in the Weekly Scorecard (S&P 7,431.46, Nasdaq
+  25,888.84, Dow 51,202.26); no June 15 close yet (session in progress).
+- **U.S.–Iran:** Trump SAYS the deal is "now complete" and ordered the Strait of Hormuz reopened
+  toll-free + the US naval blockade lifted; signing ceremony reportedly Fri June 19 in Switzerland
+  (Trump + Pakistan PM Sharif). CAVEATS stand: NOT signed; Iran not confirmed; Iranian state media
+  frames the Strait as toll-free for only 60 days then Iran+Oman administer; Israel not a party. Do NOT
+  present the signing as confirmed/scheduled. FOMC June 16-17 (Warsh's first as Chair), hold 3.50-3.75%
+  expected, futures lean hike not cut. Juneteenth closure Fri June 19; Accenture + Kroger earnings
+  June 18; Marvell -> S&P 500 / Rocket Lab -> Nasdaq-100 effective June 22.
+- Cyber unchanged this run: Agentjacking (Sentry MCP/AI coding agents) remains the top story; PeopleSoft
+  CVE-2026-35273 KEV add June 12 / due July 3 stands; Splunk CVE-2026-20253 (9.8) disclosed-not-exploited;
+  Check Point CVE-2026-50751 (9.3) 3-day KEV deadline June 11 PASSED; June 9 KEV adds due ~June 30.
