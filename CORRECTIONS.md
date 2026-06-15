@@ -755,3 +755,33 @@ fought again since), update the entry in the same commit.
   Rocket Lab -> Nasdaq-100 effective June 22.
 - Fri June 12 closes UNCHANGED in the Weekly Scorecard (S&P 7,431.46 +0.50%, Nasdaq 25,888.84 +0.31%,
   Dow 51,202.26 +0.70%); no June 15 close yet (session in progress).
+
+## Added 2026-06-15 (Monday ~12:10pm ET — Midday Edition, markets OPEN)
+- **June 15 ~12 PM ET (midday) intraday (TheStreet live):** S&P 500 ~+1.49%, Nasdaq Composite
+  ~+2.38%, Dow ~+1.20%, Russell 2000 ~+0.79% — small caps PARED a larger morning gain (~+1.6% at
+  10:15am) as the rally narrowed toward big-cap tech/chips. Do NOT carry the 10:15am Morning figures
+  (S&P +1.3% / Dow +1% / Nasdaq +2% / Russell +1.6%) as the midday state. Risk-on, chip-led; global
+  echo overnight (Nikkei +5.5%, Kospi +5.7% per Al Jazeera).
+- Driver unchanged: Sun night Trump declared the US-Iran deal "now complete," ordered Strait of
+  Hormuz reopened toll-free + US naval blockade lifted. Signing ceremony reportedly Fri June 19 in
+  Switzerland (Trump + Pakistan PM Sharif). CAVEATS per standing correction: NOT signed; Iran not
+  confirmed; Iranian state media frames Strait as toll-free 60 days then Iran+Oman administer; Israel
+  not a party; fresh Israeli strikes on Beirut's Dahiyeh rattled talks. Do NOT present signing as
+  confirmed/scheduled.
+- Midday movers (24/7 Wall St): GAINERS 3M +3.70% $148.62 (top Dow), Nvidia +1.77% $225.005 (Goldman
+  reiterated Buy, CY27 est >30% above Street), JNJ +1.61% $227.63, Cisco +1.33% $100.48; memory/storage
+  surging. LOSERS IBM -2.42% $213.40 (cautious enterprise-software note), Home Depot -2.14% $303.85
+  (mortgage-rate worries). Morning movers (~10:11am, retained as labeled): Intel ~+6.5% $124.57, WDC
+  ~+6.4% $562.93, Seagate ~+7.3% $931.04, Mosaic +7.59% $22.69, Albemarle +7.14% $170.42; Coterra
+  -8.62% $32.56 (oil tumble); Adobe -6.76% $204.02 (CFO Durn exit; starts at Marvell today).
+- **SPCX June 15:** rose ~8% in early trading to ~$173.95; last ~$171.72 per Investing.com, market cap
+  ~$2.11T, inside the $150.00–176.52 debut range. Driver: WSJ — Gina Rinehart took a >$1B stake;
+  ARK/Cathie Wood bought $529.7M. Friday debut close $161.11 (+19% vs $135 IPO price). Premarket was
+  +5.3% $169.48 (per Morning entry) — superseded by the in-session ~+8% reading.
+- Oil/commodities (~6:33-6:53am, retained as labeled): WTI ~$80.20 -5.51% (below $80, first since
+  March; CNBC mid-morning ~$79.90 -5.9%), Brent ~$82.80 -5.19% (NewsX ~$83.82), Gold $4,357.70 +2.81%,
+  Silver $70.81 +4.16%. 10-yr ~4.42% (down from Fri ~4.49%).
+- Fri June 12 closes UNCHANGED in the Weekly Scorecard (S&P 7,431.46 +0.50%, Nasdaq 25,888.84 +0.31%,
+  Dow 51,202.26 +0.70%); no June 15 close yet (session in progress). FOMC June 16-17 (Warsh's first as
+  Chair), hold 3.50-3.75% expected, futures lean hike not cut. Juneteenth closure Fri June 19;
+  Accenture + Kroger earnings June 18; Marvell -> S&P 500 / Rocket Lab -> Nasdaq-100 effective June 22.
