@@ -729,3 +729,29 @@ fought again since), update the entry in the same commit.
   fraudulent disclosures were posted; a Ukrainian national extradited to the US pleaded guilty to
   conspiracy charges tied to the Conti ransomware operation. CISA KEV latest adds unchanged
   (PeopleSoft CVE-2026-35273 June 12 / due July 3; June 9 Arista/Chromium V8/Cisco SD-WAN / due ~June 30).
+
+## Added 2026-06-15 (Monday ~10:15am ET — Morning Edition, markets OPEN)
+- First session of the week. As of ~10:11-10:15am ET (24/7 Wall St header strip): S&P 500 ~+1.3% (7,531),
+  Dow ~+0.9-1.0% (51,692, ~+500 pts), Nasdaq-100 +2.09% (30,290) / Nasdaq Composite ~+2.3% (search),
+  Russell 2000 +1.64%. Risk-on, chip-led. Earlier 8:11am futures read S&P +1.36% (+101) / Dow +1.05%
+  (+530) / Nasdaq +2.17% (+644) — do not present the 8am futures figures as the mid-morning cash state.
+- Driver: Sun night Trump declared the US-Iran deal "now complete," authorized toll-free reopening of the
+  Strait of Hormuz + removal of the US naval blockade ("Ships of the World, start your engines. Let the oil
+  flow!"). Signing ceremony reportedly Fri June 19 in Switzerland/Geneva (Trump + Pakistan PM Sharif).
+  CAVEATS per standing correction: NOT signed; Iranian state media frames the Strait as toll-free for only
+  60 days, after which Iran + Oman administer it; Israel is NOT a party. Do NOT present the signing as
+  confirmed/scheduled.
+- Oil tumbled: WTI ~-5.5% to ~$80, under $80 intraday first time since March (TheStreet 6:33am $80.20
+  -5.51%; CNBC mid-morning ~$79.90 -5.9%; 24/7 $80.20 -$4.64). Brent ~-5.2% ~$82.80 (NewsX $83.82).
+  Gold +2.81% $4,357.70; Silver +4.16% $70.81 (TheStreet 6:53am). 10-yr ~4.42% (down from Fri ~4.49%).
+- Movers (24/7 ~10:11am, real-time): Gainers Mosaic +7.59% $22.69, Seagate +7.25% $931.04, Albemarle
+  +7.14% $170.42, Intel +6.51% $124.57, Western Digital +6.35% $562.93; Nvidia higher (Goldman reiterated
+  Buy, CY27 est >30% above Street). Losers Coterra -8.62% $32.56 (oil tumble), Adobe -6.76% $204.02
+  (continued CFO-exit slide; Dan Durn starts at Marvell today), Lennar -4.90% $90.30, TKO -4.84% $203.36,
+  SMCI -4.72% $30.46. SpaceX (SPCX) +5.3% premarket to $169.48 on WSJ report Gina Rinehart took a >$1B
+  stake; Cathie Wood/ARK bought $529.7M SPCX.
+- FOMC June 16-17 (Warsh's first as Chair): hold at 3.50-3.75% widely expected; futures lean toward a HIKE,
+  not a cut. Juneteenth closure Fri June 19; Accenture + Kroger earnings June 18. Marvell -> S&P 500 /
+  Rocket Lab -> Nasdaq-100 effective June 22.
+- Fri June 12 closes UNCHANGED in the Weekly Scorecard (S&P 7,431.46 +0.50%, Nasdaq 25,888.84 +0.31%,
+  Dow 51,202.26 +0.70%); no June 15 close yet (session in progress).
