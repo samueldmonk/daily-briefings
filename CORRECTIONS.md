@@ -914,3 +914,16 @@ fought again since), update the entry in the same commit.
   formal ceremony still reported Fri June 19 Switzerland, Iran has NOT confirmed final terms — keep
   attributed/not-fully-confirmed. May housing starts (released June 16) fell 15.4% to 1.177M, lowest
   since 2020 (vs ~1.43M expected).
+
+## Added 2026-06-16 (Tuesday ~2:05pm ET — Midday/Afternoon hourly refresh, markets OPEN)
+- **June 16 midday intraday (per Yahoo/Zacks "Stock Market News for Jun 16" + TheStreet):** Dow
+  ~+0.96% (only major index green), S&P 500 ~-0.08%, Nasdaq Composite ~-0.52%, Russell 2000 ~-0.25%.
+  Tech/megacap led lower in a rotation away from Monday's leaders; most other sectors held firmer.
+  Do NOT carry as a close — session in progress. Mon June 15 closes stand in the Weekly Scorecard
+  (S&P 7,554.29 +1.65%, Nasdaq 26,683.94 +3.07%, Dow 51,671.03 +0.92%); prior column Fri June 12.
+- **SpaceX (SPCX) ~+20% intraday** (TheStreet headline "SpaceX jumps 20%") on the confirmed $60B
+  ALL-STOCK Anysphere/Cursor deal (close Q3 pending regulatory approval; do NOT call it closed).
+- **Robinhood (HOOD) ~-1.5%** early trading after announcing a ~10% workforce cut (~290 jobs).
+- WTI ~$80.47/bbl (-0.35%), two-month low on the US-Iran/Strait of Hormuz framework. 10-yr ~4.43-4.46%,
+  around a one-month low. FOMC decision + Warsh's first presser Wed June 17 (hold 3.50-3.75% near-certain,
+  ~97% per Schwab, new dot plot). May housing starts (released June 16) -15.4% to 1.177M, lowest since 2020.
