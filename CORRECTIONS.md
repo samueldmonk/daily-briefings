@@ -953,3 +953,28 @@ fought again since), update the entry in the same commit.
   now confirms it. ShinyHunters PeopleSoft CVE-2026-35273 (9.8, KEV June 12 / due July 3, 100+ orgs)
   remains the top story; ShinyHunters' 61M Sysco Salesforce-records claim featured. New this run: a
   Conti ransomware operator pleaded guilty (wire-fraud conspiracy + cyber-extortion).
+
+## Added 2026-06-16 (Tuesday ~4:05pm ET — Closing Bell, markets CLOSED)
+- **June 16 OFFICIAL CLOSE (percent moves verified; precise levels NOT corroborated across sources at
+  publish time):** SPLIT TAPE — Dow Jones notched a FRESH RECORD, up ~0.74% (only major index green),
+  while the S&P 500 -0.40%, Nasdaq Composite -0.81% and Russell 2000 -0.63% all CLOSED at session lows
+  on a tech/megacap pullback ("opposite of yesterday"). Dow leaders: Caterpillar ~+2.2%, American Express
+  ~+1.7%, Goldman Sachs ~+1.3%. Per TheStreet "Dow notches record high as Nasdaq, Russell 2000 backslide"
+  + TS2/TechStock². Intraday at 11:02am ET (TS2): Dow +354.56 to 52,025.59 (+0.69%), S&P -14.16 to
+  7,540.13 (-0.19%), Nasdaq Composite -109.15 to 26,574.79 (-0.41%); these are 11am INTRADAY, not the close.
+  DO NOT publish June 16 closing LEVELS as fact until corroborated; show percent moves. Mon Jun 15 closes
+  remain the last fully-verified official-close LEVELS (S&P 7,554.29 +1.65%, Nasdaq 26,683.94 +3.07%,
+  Dow 51,671.03 +0.92%); prior column Fri Jun 12 (S&P 7,431.46, Nasdaq 25,888.84, Dow 51,202.26).
+- **SpaceX (SPCX) ~+20%** — biggest mover; market value topped $2.8T and OVERTOOK AMAZON on the confirmed
+  $60B ALL-STOCK Anysphere/Cursor deal (close Q3 pending regulatory approval; NOT closed).
+- **Yum! Brands (YUM):** agreed to sell Pizza Hut for ~$2.7B total — ~$1.5B ex-China to LongRange Capital
+  (+$75M earn-out by 2030) and ~$1.2B Pizza Hut China to Yum China; ~$2.3B net proceeds; close expected Q3,
+  pending regulatory approval (CNBC/Yum! investor release/QSR, June 16). YUM stock % move not corroborated — omit number.
+- **CoreWeave (CRWV) ~+9.6% to ~$116.95** on confirmed Nasdaq-100 inclusion effective June 22 (TS2, June 16
+  11:44am ET); near-$100B revenue backlog, elevated leverage after $3.5B high-yield note sale.
+- **Fox (FOXA) ~-15%** on the $22B Roku deal ($160/share = $96 cash + Fox stock; Fox holders ~73%; close 1H 2027).
+- Travel/fuel-sensitive up on cheap oil: United ~+3.9%, Norwegian Cruise ~+3.7%, Carnival ~+3.2%. Robinhood
+  (HOOD) ~-1.5% on ~10% workforce cut (~290 jobs).
+- WTI ~$80/bbl (ICMarkets $80.65 AM; ~two-month low), Brent ~$83. 10-yr ~4.45-4.47% (ICMarkets 4.474), near
+  one-month low. FOMC decision + dot plot + Warsh's first presser Wed June 17 (hold 3.50-3.75% near-certain);
+  May advance retail sales Wed 8:30am ET. After-hours quiet at the 4pm bell; no major earnings Tue (Accenture/Kroger Thu Jun 18).
