@@ -830,3 +830,32 @@ fought again since), update the entry in the same commit.
 - Cyber unchanged this run: Agentjacking (Sentry MCP/AI coding agents) remains the top story; PeopleSoft
   CVE-2026-35273 KEV add June 12 / due July 3 stands; Splunk CVE-2026-20253 (9.8) disclosed-not-exploited;
   Check Point CVE-2026-50751 (9.3) 3-day KEV deadline June 11 PASSED; June 9 KEV adds due ~June 30.
+
+## Added 2026-06-16 (Tuesday ~9:00am ET — Morning Edition, markets PRE-OPEN)
+- Markets pre-open (~9am, cash opens 9:30). Led with the most recent CLOSE per freshness rule.
+  Mon June 15 CLOSE (verified TheStreet): S&P 500 7,554.29 (+1.65%), Nasdaq Composite 26,683.94
+  (+3.07%), Dow 51,671.03 (+468.77, +0.92%). Risk-on, chip/tech-led on the US-Iran framework + SpaceX.
+  Fri June 12 closes carried as the prior-week column (S&P 7,431.46, Nasdaq 25,888.84, Dow 51,202.26).
+- June 16 premarket: futures little changed ahead of the FOMC (Barchart: ES ~-0.01% / NQ ~+0.01%;
+  TheStreet "S&P 500 holds steady"). SpaceX (SPCX) +~8.9% premarket on an acquisition announcement
+  (closed +19.6% its first full trading day). Oil EXTENDING losses, WTI ~$80 (two-month low, off >5%
+  Mon) on US-Iran/Strait of Hormuz framework. 10-yr ~4.42-4.49% (down ~5bp on week), 30-yr ~4.98%,
+  2-yr ~4.085%. Iran deal STILL unsigned/unconfirmed; ceremony reported Fri June 19 Switzerland.
+- FOMC June 16-17 (Warsh's first as Chair): hold at 3.50-3.75% near-certain (~99.6% CME), no cuts
+  priced for the year; decision + presser Wed June 17. Accenture + Kroger earnings June 18; Juneteenth
+  market closure Fri June 19; Marvell -> S&P 500 / Rocket Lab -> Nasdaq-100 effective June 22.
+- MMA: Top story now the Freedom 250 AFTERMATH. CONFIRMED main-event method: Gaethje def. Topuria via
+  TKO (corner stoppage) between R4 and R5 — Topuria's FIRST pro loss; Gaethje takes the undisputed LW
+  title. (Bleacher Report/ESPN/Yahoo/CBS, June 14.) Rest of card unchanged from June 15 entry. Upcoming:
+  June 20 Kape vs Horiguchi 2 (Meta APEX), June 27 Fiziev vs Torres (Baku), July 11 UFC 329 McGregor
+  (22-6) vs Holloway 2 (T-Mobile, WELTERWEIGHT, McGregor's first since UFC 264/2021, Holloway's WW debut).
+- Cyber TOP STORY this run = ShinyHunters (UNC6240) Oracle PeopleSoft zero-day CVE-2026-35273 (CVSS 9.8,
+  unauth RCE): 100+ orgs / ~300 instances, 68% universities; U. of Nottingham ~40GB student data;
+  exploited May 27-June 9, Oracle out-of-band advisory June 10, CISA KEV add June 12 / due July 3.
+  New KEV June 16: LiteSpeed cPanel CVE-2026-48172 (9.8) + CVE-2026-54420 (8.5), root priv-esc on
+  CloudLinux/CageFS, fix WHM Plugin v5.3.2.1 / cPanel plugin v2.4.8; reporting cites an EXPEDITED ~June 18
+  deadline (sources conflict June 16 vs 18 — published with attribution, not as CISA-confirmed). Also:
+  Palo Alto PAN-OS GlobalProtect CVE-2026-0257 (7.8) exploited since ~May 17; Fortinet FortiSandbox
+  CVE-2026-39813 (9.1) reported exploited; Splunk CVE-2026-20253 (9.8) still disclosed-not-exploited
+  (fixed 10.0.7/10.2.4/10.4.0). Europol "AudiA6" laundering takedown (~$389M); Council of Europe probing
+  ShinyHunters claim; "The Gentlemen" ransomware RaaS-affiliate analysis.

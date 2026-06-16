@@ -3,80 +3,75 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Closing Bell — Daily Wall Street Briefing</title>
+<title>The Closing Bell — Daily Market Briefing</title>
 <style>
-  :root{
-    --bg:#0d0e12; --panel:#15171e; --line:#262a35; --ink:#e8e6df; --muted:#9a978c;
-    --gold:#caa64a; --gold2:#e8c766; --up:#4ade80; --down:#f87171;
-    --mono:"SF Mono","Cascadia Code",Consolas,monospace; --serif:Georgia,"Times New Roman",serif;
-  }
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.55}
-  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 60px}
-  .masthead{text-align:center;padding:18px 0 14px;border-bottom:3px double var(--line);margin-bottom:14px}
-  .masthead h1{font-family:var(--serif);font-size:44px;letter-spacing:.5px;color:var(--gold2)}
-  .masthead .tagline{color:var(--muted);font-size:14px;margin-top:6px;font-style:italic}
-  .meta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:14px}
-  .pill{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:var(--panel)}
-  .pill.live{color:var(--up);border-color:rgba(74,222,128,.35)}
-  .pill.live .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--up);margin-right:6px;animation:pulse 1.6s infinite}
-  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
-  .pill.edition{color:var(--gold2);border-color:rgba(202,166,74,.4)}
-  nav{display:flex;gap:8px;justify-content:center;margin:18px 0 22px;flex-wrap:wrap}
-  nav a{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--muted);padding:8px 16px;border:1px solid var(--line);border-radius:8px;background:var(--panel);transition:all .15s}
-  nav a:hover{color:var(--ink);border-color:var(--muted)}
-  nav a.active{color:var(--gold2);border-color:var(--gold);background:rgba(202,166,74,.08)}
-  .livebar{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 8px 4px;margin-bottom:18px}
-  .livebar-label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--up);display:flex;align-items:center;gap:8px;padding:4px 8px 8px}
-  .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--up);animation:pulse 1.6s infinite}
-  .label{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:30px 0 14px;display:flex;align-items:center;gap:10px}
-  .label::after{content:"";flex:1;height:1px;background:var(--line)}
-  .tickers{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-  @media(max-width:720px){.tickers{grid-template-columns:1fr}}
-  .ticker{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px}
-  .note{color:var(--muted);font-size:12px;margin-top:10px;font-style:italic}
-  .panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px}
-  .lead h2{font-family:var(--serif);font-size:27px;line-height:1.3;color:var(--ink);margin-bottom:12px}
-  .lead p{color:#c8c5ba;margin-bottom:10px;font-size:15px}
-  .lead .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--gold2);text-transform:uppercase;margin-bottom:10px}
-  .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-  @media(max-width:720px){.cards{grid-template-columns:1fr}}
-  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;transition:transform .15s,border-color .15s}
-  .card:hover{transform:translateY(-3px);border-color:var(--gold)}
-  .card h3{font-size:15px;margin-bottom:8px;color:var(--ink)}
-  .card p{font-size:13.5px;color:var(--muted)}
-  .up{color:var(--up)} .down{color:var(--down)}
-  .tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:5px;margin-bottom:8px}
-  .tag.g{background:rgba(74,222,128,.12);color:var(--up)} .tag.r{background:rgba(248,113,113,.12);color:var(--down)} .tag.n{background:rgba(202,166,74,.12);color:var(--gold2)}
-  table{width:100%;border-collapse:collapse;font-size:13.5px}
-  th{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
-  td{padding:9px 10px;border-bottom:1px solid rgba(38,42,53,.6);color:#c8c5ba}
-  td.num{font-family:var(--mono);font-size:12.5px}
-  ul.radar{list-style:none}
-  ul.radar li{padding:10px 0 10px 22px;border-bottom:1px solid rgba(38,42,53,.6);position:relative;color:#c8c5ba;font-size:14px}
-  ul.radar li::before{content:"▸";position:absolute;left:2px;color:var(--gold)}
-  footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line)}
-  footer h4{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
-  footer a{color:#8fa8c8;font-size:12.5px;text-decoration:none;display:block;padding:2.5px 0}
-  footer a:hover{text-decoration:underline}
-  .disclaimer{margin-top:18px;font-size:11.5px;color:#6b6960;font-style:italic}
+:root{
+  --bg:#0c0d10; --panel:#15171c; --line:#262a33; --ink:#e9e7e0; --muted:#9aa0ab;
+  --gold:#caa64a; --gold2:#e8c766; --up:#3fbf6a; --down:#e5564b;
+  --mono:'SF Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.6}
+a{color:var(--gold2);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1000px;margin:0 auto;padding:22px 20px 60px}
+header.mast{border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:18px}
+.brand{font-size:34px;letter-spacing:.5px;margin:0;color:var(--gold2)}
+.tagline{color:var(--muted);font-style:italic;margin:4px 0 0;font-size:15px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:5px 11px;color:var(--muted)}
+.pill.live{color:var(--up);border-color:#23402e}
+.pill.live .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--up);margin-right:6px;animation:bl 1.6s infinite}
+@keyframes bl{50%{opacity:.25}}
+nav.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 18px}
+nav.tabs a{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:9px 14px;border:1px solid var(--line);border-radius:9px;background:var(--panel);color:var(--muted)}
+nav.tabs a.active{color:var(--gold2);border-color:var(--gold);box-shadow:inset 0 0 0 1px rgba(202,166,74,.35)}
+nav.tabs a:hover{text-decoration:none;color:var(--ink)}
+.livebar{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 8px 4px;margin-bottom:18px}
+.livebar-label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--up);display:flex;align-items:center;gap:8px;padding:4px 8px 8px}
+.livebar-label .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--up);animation:bl 1.6s infinite}
+.label{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:30px 0 12px;border-bottom:1px solid var(--line);padding-bottom:7px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:14px}
+.lead h2{font-size:26px;line-height:1.25;margin:0 0 8px;color:var(--ink)}
+.lead p{margin:8px 0;color:#d4d1c8}
+.tickers{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.ticker{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:6px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 16px;transition:transform .15s,border-color .15s}
+.card:hover{transform:translateY(-3px);border-color:var(--gold)}
+.card h3{margin:0 0 6px;font-size:17px;color:var(--gold2)}
+.card p{margin:0;color:#cfccc3;font-size:14.5px}
+.chg-up{color:var(--up);font-family:var(--mono);font-weight:bold}
+.chg-dn{color:var(--down);font-family:var(--mono);font-weight:bold}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+th,td{text-align:left;padding:10px 10px;border-bottom:1px solid var(--line)}
+th{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+td.num{font-family:var(--mono);text-align:right}
+ul.radar{margin:0;padding-left:0;list-style:none}
+ul.radar li{padding:9px 0 9px 22px;border-bottom:1px solid var(--line);position:relative;color:#d4d1c8}
+ul.radar li:before{content:'▸';position:absolute;left:0;color:var(--gold)}
+ul.radar li:last-child{border-bottom:none}
+.note{color:var(--muted);font-size:12.5px;font-style:italic;margin:8px 2px 0}
+footer{margin-top:34px;border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:13px}
+footer a{color:var(--muted)}
+.disclaimer{font-size:12px;color:#6d727c;margin-top:14px;font-style:italic}
+@media(max-width:680px){.tickers{grid-template-columns:1fr}.brand{font-size:27px}}
 </style>
 </head>
 <body>
 <div class="wrap">
-
-  <header class="masthead">
-    <h1>The Closing Bell</h1>
-    <div class="tagline">Your daily Wall Street briefing — markets, movers &amp; what's next</div>
+  <header class="mast">
+    <h1 class="brand">▲ The Closing Bell</h1>
+    <p class="tagline">Your daily markets briefing — Wall Street, rates &amp; the macro tape</p>
     <div class="meta">
-      <span class="pill live"><span class="dot"></span>LIVE</span>
-      <span class="pill edition" id="edition">Midday Edition</span>
-      <span class="pill" id="datestamp">Monday, June 15, 2026</span>
-      <span class="pill">Updated <span id="updated">~1:10 PM ET</span></span>
+      <span class="pill live"><span class="dot"></span>Live</span>
+      <span class="pill" id="edition">Morning Edition</span>
+      <span class="pill" id="datestamp">—</span>
+      <span class="pill">Updated <span id="updated">—</span></span>
     </div>
   </header>
 
-  <nav>
+  <nav class="tabs">
     <a href="cyber-briefing.html">⛨ The Cyber Wire</a>
     <a href="wallstreet-briefing.html" class="active">▲ The Closing Bell</a>
     <a href="mma-briefing.html">⊘ The Octagon</a>
@@ -87,7 +82,7 @@
     <div class="tradingview-widget-container">
       <div class="tradingview-widget-container__widget"></div>
       <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-      {"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},{"proName":"FOREXCOM:DJI","title":"Dow 30"},{"proName":"NASDAQ:SPCX","title":"SpaceX"},{"proName":"NASDAQ:INTC","title":"Intel"},{"proName":"NASDAQ:NVDA","title":"Nvidia"},{"proName":"NYSE:MOS","title":"Mosaic"},{"proName":"NYSE:CTRA","title":"Coterra"},{"proName":"TVC:USOIL","title":"WTI Crude"},{"proName":"TVC:US10Y","title":"US 10Y"}],"colorTheme":"dark","isTransparent":true,"showSymbolLogo":true,"displayMode":"adaptive","locale":"en"}
+      {"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},{"proName":"FOREXCOM:DJI","title":"Dow 30"},{"proName":"NASDAQ:NVDA","title":"NVIDIA"},{"proName":"NASDAQ:MRVL","title":"Marvell"},{"proName":"NASDAQ:MU","title":"Micron"},{"proName":"NASDAQ:AMD","title":"AMD"},{"proName":"NASDAQ:INTC","title":"Intel"},{"proName":"TVC:USOIL","title":"WTI Crude"},{"proName":"TVC:US10Y","title":"US 10Y"}],"colorTheme":"dark","isTransparent":true,"showSymbolLogo":true,"displayMode":"adaptive","locale":"en"}
       </script>
     </div>
   </div>
@@ -123,51 +118,25 @@
 
   <div class="label">The Lead</div>
   <div class="panel lead">
-    <div class="kicker">Markets open · As of ~1 PM ET, Monday June 15</div>
-    <h2>"Ships of the World, start your engines": stocks rip higher and oil dives under $80 as Trump declares the U.S.–Iran deal "complete" and orders the Strait of Hormuz reopened</h2>
-    <p>Wall Street came back from the weekend in full risk-on mode and held the gains into the afternoon. As of about <strong>1 PM ET</strong>, the <strong>S&amp;P 500 was up roughly 1.7–1.9%</strong>, the <strong>Dow up about 1.4%</strong> and the tech-heavy <strong>Nasdaq Composite up around 2–3%</strong>, with beaten-down technology and semiconductor names out front (TheStreet had the S&amp;P +1.74% and Nasdaq +2.07% intraday; Yahoo's live blog ran higher at S&amp;P +1.94% / Dow +1.43% / Nasdaq +3.05%). The trigger was a weekend leap toward ending the U.S.–Iran war: late Sunday President Trump declared on Truth Social that "the Deal with the Islamic Republic of Iran is now complete," authorized the "toll-free opening of the Strait of Hormuz" and the "immediate removal of the United States Naval blockade," and added: "Ships of the World, start your engines. Let the oil flow!" The move rippled worldwide — Japan's Nikkei surged about 5.5% and South Korea's Kospi jumped as much as 5.7% overnight.</p>
-    <p>The other headline of the morning was a blockbuster media deal: <strong>Fox Corporation agreed to buy Roku for about $22 billion</strong> ($160.00 a share in cash and FOX Class A stock), pairing Fox's sports, news and Tubi with Roku's connected-TV platform and its 100 million-plus streaming households to create what Fox calls the third-largest U.S. television company. The Street balked at the price tag and the debt: <strong>Fox shares sank roughly 15%</strong>, while Roku — which had already jumped about 20% Friday on the reports — set a fresh one-year high before paring. The deal, already cleared by both boards, is expected to close in the first half of 2027, with Fox holders owning ~73% of the combined company.</p>
-    <p>The clearest market tell was in crude. With traders pricing in the return of Hormuz shipping after months of disruption, <strong>WTI crude tumbled about 5.5% to roughly $80 a barrel</strong> — dipping below $80 for the first time since March — while <strong>Brent fell around 5% to about $82–83</strong>. That fed the equity rally on two fronts: relief that a historic supply shock is unwinding, and hope that cooler energy prices feed through to inflation. The flip side hit energy producers hard: oil-and-gas names led the decliners, with <strong>Coterra Energy down about 8.6%</strong> at mid-morning. Gold climbed about 2.8% to roughly $4,358 and silver jumped over 4% as the dollar and yields eased.</p>
-    <p>Keep the caveats in view: <strong>this is an announcement, not a signed treaty.</strong> Trump and Pakistan's prime minister, Shehbaz Sharif — whose government has mediated alongside Qatar — say a signing ceremony is reportedly set for <strong>Friday, June 19, in Switzerland</strong>, but the two sides still describe the terms differently. Iranian officials have not confirmed the deal is "complete"; Iranian state media frames the Strait as toll-free for only 60 days, after which Iran and Oman would administer it, and Israel is not a party to the agreement. Fresh Israeli strikes on Beirut's southern suburbs over the weekend rattled the talks. The market is trading the relief; the paperwork and the ground situation are the risks.</p>
-    <p>The backdrop is otherwise constructive. Friday sealed a winning week: the <strong>Dow closed at 51,202.26 (+0.70%)</strong>, the <strong>S&amp;P 500 at 7,431.46 (+0.50%)</strong> and the <strong>Nasdaq Composite at 25,888.84 (+0.31%)</strong>, each up about 0.65–0.70% on the week. SpaceX, fresh off the biggest IPO in history, kept running — shares rose roughly 8% in early trading to near $174 (last around $171–172, a market cap above $2.1 trillion) after the Wall Street Journal reported Australian mining billionaire <strong>Gina Rinehart took a stake of more than $1 billion</strong> in the company, and Cathie Wood's ARK disclosed buying $529.7 million of SPCX. All eyes now turn to <strong>Kevin Warsh's first FOMC meeting as Fed chair, June 16–17</strong>, where a hold at 3.50–3.75% is widely expected but the new bias — after hot May CPI and PPI — is the real watch item.</p>
+    <h2>Stocks idle near record highs pre-bell as the Fed convenes — markets coast off Monday's chip-led surge</h2>
+    <p>U.S. equity futures were little changed early Tuesday, holding steady as Wall Street paused after a three-day rally and turned its attention to the start of the two-day Federal Open Market Committee meeting. Investors continued to digest the U.S.–Iran ceasefire framework that has driven oil sharply lower and eased the inflation worries hanging over the rate path.</p>
+    <p>The calm follows a roaring start to the holiday-shortened week. On Monday, the <strong>S&amp;P 500 jumped 1.65%</strong>, the <strong>Nasdaq Composite surged 3.07%</strong> and the <strong>Dow climbed 0.92%</strong> (+468.77 points), as SpaceX extended its post-IPO rally and President Trump announced an agreement to end the U.S.–Iran conflict and reopen the Strait of Hormuz. Seven of the 11 S&amp;P sectors finished higher, led by technology, communication services and consumer discretionary.</p>
+    <p>The Iran framework remains unsigned — a reported signing ceremony is slated for Friday in Switzerland, Iran has not confirmed terms, and Israel is not a party — but the prospect of freer oil flows has done the heavy lifting for risk appetite. With a Fed decision and new Chair Kevin Warsh's first press conference landing Wednesday, traders are largely sitting on their hands.</p>
   </div>
 
   <div class="label">Movers &amp; Drivers</div>
   <div class="cards">
     <div class="card">
-      <span class="tag g">Chip Rally</span>
-      <h3>Chips and memory lead: NVDA <span class="up">+1.8%</span> · INTC <span class="up">~+6.5%</span> · STX <span class="up">~+7.3%</span></h3>
-      <p>Semiconductors and storage paced the advance as the peace deal revived appetite for growth. Nvidia traded up about 1.77% to ~$225.00 after Goldman Sachs reiterated its Buy (CY27 estimates "over 30% above the Street"). At ~10:11 a.m. ET (24/7 Wall St): Intel ~$124.57, Western Digital ~$562.93, Seagate ~$931.04; Micron, AMD and Intel all higher (GuruFocus). Intel is up roughly 190% year-to-date.</p>
+      <h3>SpaceX (SPCX) <span class="chg-up">▲ ~8.9% pre-mkt</span></h3>
+      <p>The newly public rocket maker was up roughly 8.9% in premarket trading on an acquisition announcement, after closing up about 19.6% in its first full day of trading. The post-IPO momentum has been a key prop under the tape.</p>
     </div>
     <div class="card">
-      <span class="tag r">Oil Tumble</span>
-      <h3>Energy sells off: Coterra (CTRA) <span class="down">−8.6%</span></h3>
-      <p>With WTI sliding about 5.5% under $80 on the prospect of Hormuz reopening, oil-and-gas producers led the decliners — Coterra around $32.56 at mid-morning (24/7 Wall St). The same supply-relief move that lifts the broad tape is a direct hit to E&amp;P names.</p>
+      <h3>Oil &amp; the Iran deal <span class="chg-dn">▼ WTI ~$80</span></h3>
+      <p>Crude extended losses toward a two-month low after the U.S. and Iran reached a framework to end their conflict and reopen the Strait of Hormuz. WTI tumbled more than 5% Monday to around $80 a barrel, cooling inflation fears across the curve.</p>
     </div>
     <div class="card">
-      <span class="tag g">IPO Aftermath</span>
-      <h3>SpaceX (SPCX) <span class="up">~+8%</span></h3>
-      <p>Shares climbed about 8% in early trading to ~$173.95, last around $171.72 — a market cap near $2.1 trillion, inside the $150.00–$176.52 debut range — after the Wall Street Journal reported mining billionaire Gina Rinehart took a stake of more than $1 billion; Cathie Wood's ARK separately bought $529.7M of SPCX. SpaceX closed its Friday debut at $161.11 (+19% vs the $135 IPO price).</p>
-    </div>
-    <div class="card">
-      <span class="tag r">M&amp;A — Media</span>
-      <h3>Fox (FOXA) <span class="down">~−15%</span> buys Roku (ROKU) in $22B deal</h3>
-      <p>Fox agreed to acquire Roku for $160.00 a share — about $22 billion in cash and FOX Class A stock — to pair its sports, news and Tubi with Roku's connected-TV platform and 100M+ streaming households. Investors punished the buyer: Fox sank roughly 15% on the price and new debt (a $12B Morgan Stanley bridge), while Roku, up ~20% Friday on the reports, hit a one-year high before paring. Targeted to close in H1 2027 (CNBC/Bloomberg/Fox Business).</p>
-    </div>
-    <div class="card">
-      <span class="tag g">Materials &amp; Industrials</span>
-      <h3>3M <span class="up">+3.7%</span> · Mosaic <span class="up">+7.6%</span> · Albemarle <span class="up">+7.1%</span></h3>
-      <p>Cyclicals jumped on the risk-on, lower-energy backdrop. 3M led the Dow at ~$148.62 (+3.70%); fertilizer and lithium names surged (24/7 Wall St, ~10:11 a.m. ET): Mosaic ~$22.69, Albemarle ~$170.42. Easing geopolitical risk gave materials and industrials a lift.</p>
-    </div>
-    <div class="card">
-      <span class="tag r">Post-Earnings</span>
-      <h3>Adobe (ADBE) <span class="down">~−6.8%</span></h3>
-      <p>Adobe extended Friday's slide, down to ~$204.02 (24/7 Wall St). Last week's record quarter ($6.62B revenue, $5.96 EPS beat, FY guidance raised) was overshadowed by CFO Dan Durn's exit to Marvell — which takes effect today, June 15 — plus Stifel, Wolfe and Evercore ISI downgrades. A beat-and-raise the Street keeps selling.</p>
-    </div>
-    <div class="card">
-      <span class="tag r">Laggards</span>
-      <h3>IBM <span class="down">−2.4%</span> · Home Depot <span class="down">−2.1%</span></h3>
-      <p>Not everything joined the party. IBM was the biggest Dow laggard at ~$213.40 (−2.42%) on a cautious enterprise-software note, and Home Depot slipped to ~$303.85 (−2.14%) on mortgage-rate worries (24/7 Wall St). Defensive and rate-sensitive corners lagged the chip-led charge.</p>
+      <h3>The Fed in focus</h3>
+      <p>Futures markets price a ~99.6% chance the FOMC holds the target at 3.50–3.75% Wednesday, with traders pricing no cuts this year. The market's attention is squarely on Warsh's debut press conference and any shift in tone.</p>
     </div>
   </div>
 
@@ -181,73 +150,60 @@
     </div>
   </div>
 
-  <div class="label">Weekly Scorecard — official closes</div>
-  <div class="panel" style="padding:10px 12px">
+  <div class="label">Weekly Scorecard — Official Closes</div>
+  <div class="panel" style="padding:6px 8px">
     <table>
-      <tr><th>Session</th><th>S&amp;P 500</th><th>Nasdaq Composite</th><th>Dow Jones</th></tr>
-      <tr><td>Fri Jun 5 (prior week)</td><td class="num">7,383.74 <span class="down">−2.64%</span></td><td class="num">25,709.43 <span class="down">−4.18%</span></td><td class="num">50,866.78 <span class="down">−1.35%</span></td></tr>
-      <tr><td>Mon Jun 8</td><td class="num">7,405.73 <span class="up">+0.30%</span></td><td class="num">25,929.66 <span class="up">+0.86%</span></td><td class="num">50,786.01 <span class="down">−0.16%</span></td></tr>
-      <tr><td>Tue Jun 9</td><td class="num">7,386.46 <span class="down">−0.26%</span></td><td class="num">25,678.82 <span class="down">−0.97%</span></td><td class="num">50,871.13 <span class="up">+0.17%</span></td></tr>
-      <tr><td>Wed Jun 10</td><td class="num">7,266.99 <span class="down">−1.62%</span></td><td class="num">25,169.50 <span class="down">−1.98%</span></td><td class="num">49,918.78 <span class="down">−1.87%</span></td></tr>
-      <tr><td>Thu Jun 11</td><td class="num">7,394.30 <span class="up">+1.75%</span></td><td class="num">25,809.66 <span class="up">+2.54%</span></td><td class="num">50,848.75 <span class="up">+1.86%</span></td></tr>
-      <tr><td>Fri Jun 12</td><td class="num">7,431.46 <span class="up">+0.50%</span></td><td class="num">25,888.84 <span class="up">+0.31%</span></td><td class="num">51,202.26 <span class="up">+0.70%</span></td></tr>
+      <thead><tr><th>Index</th><th class="num">Mon Jun 15 Close</th><th class="num">Change</th><th class="num">Fri Jun 12 Close</th></tr></thead>
+      <tbody>
+        <tr><td>S&amp;P 500</td><td class="num">7,554.29</td><td class="num chg-up">+1.65%</td><td class="num">7,431.46</td></tr>
+        <tr><td>Nasdaq Composite</td><td class="num">26,683.94</td><td class="num chg-up">+3.07%</td><td class="num">25,888.84</td></tr>
+        <tr><td>Dow Jones</td><td class="num">51,671.03</td><td class="num chg-up">+0.92%</td><td class="num">51,202.26</td></tr>
+      </tbody>
     </table>
-    <div class="note">Week over week (vs. the June 5 close): S&amp;P 500 +0.65%, Nasdaq Composite +0.70%, Dow +0.66% — gains despite Wednesday's CPI-and-Iran rout, rescued by Thursday's best day in two months and Friday's SpaceX-fueled finish. Monday June 15 is in progress; no official close yet — live levels are in the quotes above.</div>
   </div>
+  <div class="note">Most recent official close: Monday, June 15, 2026. Markets are pre-open at this edition; live levels appear in the widgets above.</div>
 
   <div class="label">Rates, Bonds &amp; Commodities</div>
-  <div class="panel" style="padding:10px 12px">
+  <div class="panel" style="padding:6px 8px">
     <table>
-      <tr><th>Instrument</th><th>Level</th><th>Note</th></tr>
-      <tr><td>10-yr Treasury</td><td class="num">~4.42%</td><td>Eased from Friday's ~4.49% as oil fell and the war premium drained (intraday, Jun 15)</td></tr>
-      <tr><td>2-yr Treasury</td><td class="num">~4.05%</td><td>Friday level ~4.075%; still pricing a possible hike later this year after hot May CPI/PPI</td></tr>
-      <tr><td>30-yr Treasury</td><td class="num">~4.95%</td><td>Hovering just below the 5% line (Friday: 4.971%)</td></tr>
-      <tr><td>Fed funds target</td><td class="num">3.50–3.75%</td><td>On hold; FOMC meets June 16–17 — Kevin Warsh's first meeting as Chair. A hold is widely expected; futures lean toward a hike, not a cut, as the next move (Schwab/TheStreet)</td></tr>
-      <tr><td>WTI crude</td><td class="num">~$80 <span class="down">−5.5%</span></td><td>Tumbled below $80 — first time since March — as Trump ordered Hormuz reopened (TheStreet ~6:33 AM: $80.20 −5.51%; CNBC mid-morning ~$79.90 −5.9%)</td></tr>
-      <tr><td>Brent crude</td><td class="num">~$82.80 <span class="down">−5.2%</span></td><td>Down about 5% toward $82–83 (TheStreet ~6:33 AM: $82.80 −5.19%; NewsX ~$83.82)</td></tr>
-      <tr><td>Gold futures</td><td class="num">~$4,357 <span class="up">+2.8%</span></td><td>Climbed as yields and the dollar eased (TheStreet ~6:53 AM: $4,357.70 +2.81%)</td></tr>
-      <tr><td>Silver futures</td><td class="num">~$70.81 <span class="up">+4.2%</span></td><td>Outran gold on the risk-on, industrial-demand bid (TheStreet ~6:53 AM: $70.81 +4.16%)</td></tr>
+      <thead><tr><th>Instrument</th><th class="num">Latest</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td>10-Yr Treasury Yield</td><td class="num">~4.42–4.49%</td><td>Down ~5 bp on the week as oil retreated</td></tr>
+        <tr><td>30-Yr Treasury Yield</td><td class="num">~4.98%</td><td>Eased ~3 bp on the week</td></tr>
+        <tr><td>2-Yr Treasury Yield</td><td class="num">~4.09%</td><td>Down ~8 bp on the week</td></tr>
+        <tr><td>Fed Funds Target</td><td class="num">3.50–3.75%</td><td>Hold widely expected at June 16–17 FOMC</td></tr>
+        <tr><td>WTI Crude</td><td class="num">~$80 / bbl</td><td>Two-month low; off &gt;5% Monday on Iran deal</td></tr>
+      </tbody>
     </table>
   </div>
 
   <div class="label">On the Radar</div>
   <div class="panel">
     <ul class="radar">
-      <li><strong>U.S.–Iran — "complete," but not yet signed</strong> — Trump says the deal is done and ordered the Strait of Hormuz reopened toll-free with the U.S. naval blockade lifted; a signing ceremony is reportedly set for Friday, June 19, in Switzerland. But the two sides describe the terms differently — Iran has not confirmed, and Iranian state media casts the toll-free Strait as a 60-day arrangement, after which Iran and Oman would administer it, with Israel not a party. With oil's drop already pricing in relief, the risk is a reversal if the signing slips or fighting flares (TheStreet/24-7 Wall St/CNBC/Al Jazeera). Watch crude and the long end of the curve.</li>
-      <li><strong>FOMC, June 16–17 — Warsh's first meeting</strong> — Kevin Warsh chairs his first decision, with a Summary of Economic Projections. A hold at 3.50–3.75% is widely expected, but the bias is the story: after hot May CPI (4.2% y/y) and PPI (6.5% y/y) headlines, rate-futures traders lean toward a hike, not a cut, as the next move (Schwab/TheStreet).</li>
-      <li><strong>A data-heavy, holiday-shortened week</strong> — May industrial production (June 15), housing starts/building permits and May retail sales (June 17), plus the BoJ rate decision land around the FOMC; Accenture and Kroger report June 18; NYSE and Nasdaq are closed Friday, June 19, for Juneteenth.</li>
-      <li><strong>SpaceX aftermath</strong> — the post-IPO scramble continues: Gina Rinehart's reported $1B-plus stake and Cathie Wood's $529.7M ARK purchase add to demand, while leveraged 2x/−2x SPCX ETFs roll out through the week of June 22 and the greenshoe is the supply overhang to watch.</li>
-      <li><strong>Fox–Roku, $22B — a new streaming heavyweight</strong> — Fox's $160-a-share cash-and-stock takeover of Roku (announced June 15) would create the third-largest U.S. TV company and fold Roku's connected-TV platform into Tubi. Boards are on board; watch for the antitrust review and a first-half-2027 close, plus how Fox digests the ~$12B bridge financing (CNBC/Bloomberg/Fox Business).</li>
-      <li><strong>Index reshuffles, June 22</strong> — Marvell joins the S&amp;P 500 and Rocket Lab joins the Nasdaq-100 before the open; Adobe's departing CFO Dan Durn starts at Marvell today, June 15.</li>
-      <li><strong>Paramount–WBD: the states' (and Brussels') turn</strong> — after Friday's DOJ clearance of the $110B tie-up, the remaining risk shifts to state attorneys general (California reportedly preparing, New York likely) plus EU and UK reviews — the European Commission's Foreign Subsidies Regulation probe carries provisional July deadlines (Variety). Completion targeted by September, when a "ticking fee" starts raising the price.</li>
+      <li><strong>FOMC decision &amp; Warsh press conference</strong> — Wednesday, June 17. A hold is near-certain; the market is trading the tone, not the level.</li>
+      <li><strong>Earnings:</strong> Accenture and Kroger report Thursday, June 18.</li>
+      <li><strong>Juneteenth holiday</strong> — U.S. stock, bond and futures markets are closed Friday, June 19.</li>
+      <li><strong>Index reshuffle:</strong> Marvell joins the S&amp;P 500 and Rocket Lab joins the Nasdaq-100, effective June 22.</li>
+      <li><strong>Iran framework:</strong> a signing ceremony is reported for Friday in Switzerland — still unsigned and unconfirmed by Iran.</li>
     </ul>
   </div>
 
   <footer>
-    <h4>Sources — this edition</h4>
-    <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-15-2026">TheStreet — Stock Market Today (June 15, 2026): Nasdaq, S&amp;P 500 jump on U.S.–Iran peace deal (live updates; S&amp;P +1.49%, Nasdaq +2.38%, Dow +1.20%, Russell +0.79%; oil, gold, silver, SpaceX/Rinehart)</a>
-    <a href="https://247wallst.com/investing/2026/06/15/stock-market-live-june-15-2026-sp-500-spy-rocketing-on-end-of-war-news/">24/7 Wall St — Stock Market Live (June 15, 2026): index levels, top gainers/losers (3M, NVDA, IBM, HD), Goldman on Nvidia</a>
-    <a href="https://www.aljazeera.com/economy/2026/6/15/stock-markets-soar-oil-falls-as-us-iran-confirm-deal-to-end-war">Al Jazeera — Stock markets soar, oil falls as US and Iran announce framework to end war (Nikkei +5.5%, Kospi +5.7%)</a>
-    <a href="https://finance.yahoo.com/markets/stocks/live/stock-market-today-monday-june-15-224751171.html">Yahoo Finance — Dow, S&amp;P 500, Nasdaq soar on U.S.–Iran pact to reopen Hormuz (June 15; S&amp;P +1.94% 7,575.35, Dow +1.43% 51,931.97, Nasdaq +3.05% 26,677.54 intraday)</a>
-    <a href="https://www.cnbc.com/2026/06/15/fox-to-buy-roku.html">CNBC — Fox to buy streaming device maker Roku for $22 billion (June 15)</a>
-    <a href="https://www.foxbusiness.com/markets/fox-corporation-announces-22b-acquisition-roku-landmark-streaming-live-tv-deal">Fox Business — Fox Corporation to acquire Roku for $22 billion in cash-and-stock deal ($160/share, H1 2027 close, $12B bridge)</a>
-    <a href="https://www.bloomberg.com/news/articles/2026-06-15/fox-to-buy-roku-at-22-billion-value-in-streaming-video-push">Bloomberg — Fox to buy Roku at $22 billion value in streaming-video push</a>
-    <a href="https://www.cnbc.com/2026/06/14/oil-price-iran-war-strait-hormuz-peace-deal.html">CNBC — U.S. crude drops below $80 for the first time since March as Iran deal set to open Hormuz</a>
-    <a href="https://www.newsx.com/business/crude-oil-price-today-june-15-2026-brent-falls-to-8382-per-barrel-wti-near-80-as-us-iran-peace-deal-lifts-sensex-and-nifty-234531/">NewsX — Crude oil price today (June 15, 2026): Brent ~$83.82, WTI near $80</a>
-    <a href="https://www.gurufocus.com/news/8916148/nvidia-micron-intel-lead-chip-stock-rally-after-breakthrough-usiran-agreement">GuruFocus — Nvidia, Micron, Intel lead chip-stock rally after U.S.–Iran agreement</a>
-    <a href="https://www.investing.com/equities/spacex">Investing.com — SPCX last ~$171.72, market cap ~$2.11T, day range $150.00–$176.52</a>
-    <a href="https://www.wsj.com/business/mining-tycoon-gina-rinehart-buys-over-1-billion-spacex-stake-d79ec3ba">The Wall Street Journal — Mining tycoon Gina Rinehart buys over $1 billion SpaceX stake</a>
-    <a href="https://www.reuters.com/business/media-telecom/australias-richest-person-rinehart-takes-1-billion-stake-spacex-ipo-wsj-reports-2026-06-15/">Reuters — Australia's richest person Rinehart takes $1 billion SpaceX stake, WSJ reports</a>
-    <a href="https://www.thestreet.com/fed/warshs-first-fed-meeting-resets-interest-rate-cut-bets">TheStreet — Warsh's first Fed meeting resets interest-rate-cut bets</a>
-    <a href="https://www.cbsnews.com/news/us-iran-deal-reached-trump-strait-of-hormuz/">CBS News — Trump says U.S. deal with Iran "is now complete," authorizes removal of Navy blockade of Strait of Hormuz (June 14)</a>
-    <a href="https://www.cnbc.com/2026/06/14/stock-market-today-live-updates.html">CNBC — Trump says deal with Iran "now complete"; signing ceremony reportedly Friday in Switzerland (June 14)</a>
-    <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-12-2026">TheStreet — Stock Market Today (June 12, 2026): Friday's close (S&amp;P 7,431.46, Nasdaq 25,888.84, Dow 51,202.26)</a>
-    <a href="https://www.fidelity.com/learning-center/smart-money/stock-market-holidays">Fidelity — 2026 stock market holidays (Juneteenth closure June 19)</a>
-    <a href="https://www.tradingview.com/symbols/NASDAQ-SPCX/">TradingView — SPCX quote &amp; day range</a>
-    <div class="disclaimer">Information only — not investment advice. Intraday figures are time-stamped where possible (index moves as of ~1 PM ET June 15 and vary by source; some movers/commodity marks ~10–11 AM ET) and may differ from final marks; the Weekly Scorecard shows official closes only. Live widgets above update in real time and may differ from editorial text written at publication.</div>
+    <div class="label" style="margin-top:6px">Sources</div>
+    <p>
+      <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-15-2026">TheStreet — Market June 15, 2026</a> ·
+      <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-16-2026">TheStreet — Market June 16, 2026</a> ·
+      <a href="https://www.cnbc.com/2026/06/14/stock-market-today-live-updates.html">CNBC — Markets</a> ·
+      <a href="https://www.barchart.com/story/news/2487808/stock-index-futures-muted-after-three-day-rally-fomc-meeting-in-focus">Barchart — Futures &amp; FOMC</a> ·
+      <a href="https://finance.yahoo.com/markets/stocks/articles/70-stock-market-warning-signals-143409069.html">Yahoo Finance — FOMC June 16–17</a> ·
+      <a href="https://www.schwab.com/learn/story/weekly-traders-outlook">Charles Schwab — Treasury yields</a> ·
+      <a href="https://tradingeconomics.com/united-states/government-bond-yield">Trading Economics — 10-Yr yield</a> ·
+      <a href="https://tradingeconomics.com/commodity/crude-oil">Trading Economics — WTI crude</a>
+    </p>
+    <p class="disclaimer">For information only — not investment advice. Figures are sourced from live reporting at the time of this edition; intraday quotes in the widgets above may be delayed. Verify before trading.</p>
   </footer>
-
 </div>
+
 <script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;}catch(e){}})();</script>
 </body>
 </html>

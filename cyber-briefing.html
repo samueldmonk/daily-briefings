@@ -5,76 +5,72 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Cyber Wire — Daily Security Briefing</title>
 <style>
-  :root{
-    --bg:#0a0f0e; --panel:#121a18; --line:#23332f; --ink:#e4ece9; --muted:#8fa39d;
-    --teal:#22d3a8; --cyan:#36c6ff; --warn:#ffb454; --crit:#ff6b6b;
-    --mono:"SF Mono","Cascadia Code",Consolas,monospace;
-  }
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.55}
-  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 60px}
-  .masthead{text-align:center;padding:18px 0 14px;border-bottom:3px double var(--line);margin-bottom:14px}
-  .masthead h1{font-size:40px;letter-spacing:1px;color:var(--teal);font-weight:800}
-  .masthead h1 .glyph{color:var(--cyan)}
-  .masthead .tagline{color:var(--muted);font-size:14px;margin-top:6px}
-  .meta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:14px}
-  .pill{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:var(--panel)}
-  .pill.live{color:var(--teal);border-color:rgba(34,211,168,.35)}
-  .pill.live .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--teal);margin-right:6px;animation:pulse 1.6s infinite}
-  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
-  .pill.edition{color:var(--cyan);border-color:rgba(54,198,255,.35)}
-  nav{display:flex;gap:8px;justify-content:center;margin:18px 0 22px;flex-wrap:wrap}
-  nav a{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--muted);padding:8px 16px;border:1px solid var(--line);border-radius:8px;background:var(--panel);transition:all .15s}
-  nav a:hover{color:var(--ink);border-color:var(--muted)}
-  nav a.active{color:var(--teal);border-color:var(--teal);background:rgba(34,211,168,.07)}
-  .label{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);margin:30px 0 14px;display:flex;align-items:center;gap:10px}
-  .label::after{content:"";flex:1;height:1px;background:var(--line)}
-  .panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px}
-  .lead{border-left:3px solid var(--teal)}
-  .lead h2{font-size:24px;line-height:1.35;margin-bottom:12px}
-  .lead p{color:#bccdc7;margin-bottom:10px;font-size:15px}
-  .lead .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--cyan);text-transform:uppercase;margin-bottom:10px}
-  .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-  @media(max-width:720px){.cards{grid-template-columns:1fr}}
-  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;transition:transform .15s,border-color .15s}
-  .card:hover{transform:translateY(-3px);border-color:var(--teal)}
-  .card h3{font-size:15px;margin-bottom:8px;color:var(--ink)}
-  .card p{font-size:13.5px;color:var(--muted)}
-  .tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:5px;margin-bottom:8px;margin-right:6px}
-  .tag.crit{background:rgba(255,107,107,.12);color:var(--crit)}
-  .tag.warn{background:rgba(255,180,84,.12);color:var(--warn)}
-  .tag.info{background:rgba(54,198,255,.12);color:var(--cyan)}
-  .tag.ok{background:rgba(34,211,168,.12);color:var(--teal)}
-  table{width:100%;border-collapse:collapse;font-size:13px}
-  th{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
-  td{padding:9px 10px;border-bottom:1px solid rgba(35,51,47,.6);color:#bccdc7;vertical-align:top}
-  td.cve{font-family:var(--mono);font-size:12px;color:var(--cyan);white-space:nowrap}
-  td.score{font-family:var(--mono);font-size:12.5px;color:var(--crit)}
-  ul.kev{list-style:none}
-  ul.kev li{padding:10px 0 10px 22px;border-bottom:1px solid rgba(35,51,47,.6);position:relative;color:#bccdc7;font-size:14px}
-  ul.kev li::before{content:"⛨";position:absolute;left:0;color:var(--teal)}
-  footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line)}
-  footer h4{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
-  footer a{color:#7fb2d9;font-size:12.5px;text-decoration:none;display:block;padding:2.5px 0}
-  footer a:hover{text-decoration:underline}
-  .disclaimer{margin-top:18px;font-size:11.5px;color:#5d716b;font-style:italic}
+:root{
+  --bg:#0a0f12; --panel:#101a1e; --line:#1d2e33; --ink:#e6f0ef; --muted:#8aa0a3;
+  --teal:#22d3a8; --cyan:#36c6ff; --warn:#e5a13a; --crit:#e5564b;
+  --mono:'SF Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
+a{color:var(--cyan);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1000px;margin:0 auto;padding:22px 20px 60px}
+header.mast{border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:18px}
+.brand{font-size:32px;letter-spacing:.5px;margin:0;color:var(--teal)}
+.tagline{color:var(--muted);margin:4px 0 0;font-size:15px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:5px 11px;color:var(--muted)}
+.pill.live{color:var(--teal);border-color:#1c3d35}
+.pill.live .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--teal);margin-right:6px;animation:bl 1.6s infinite}
+@keyframes bl{50%{opacity:.25}}
+nav.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 18px}
+nav.tabs a{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:9px 14px;border:1px solid var(--line);border-radius:9px;background:var(--panel);color:var(--muted)}
+nav.tabs a.active{color:var(--teal);border-color:var(--teal);box-shadow:inset 0 0 0 1px rgba(34,211,168,.35)}
+nav.tabs a:hover{text-decoration:none;color:var(--ink)}
+.label{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin:30px 0 12px;border-bottom:1px solid var(--line);padding-bottom:7px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:14px}
+.lead h2{font-size:24px;line-height:1.3;margin:0 0 8px;color:var(--ink)}
+.lead p{margin:8px 0;color:#cfdedb}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 16px;transition:transform .15s,border-color .15s}
+.card:hover{transform:translateY(-3px);border-color:var(--teal)}
+.card h3{margin:0 0 6px;font-size:16.5px;color:var(--cyan)}
+.card p{margin:0;color:#c6d6d3;font-size:14.5px}
+.tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:5px;margin:0 6px 8px 0;border:1px solid var(--line);color:var(--muted)}
+.tag.breach{color:var(--crit);border-color:#4a2522}
+.tag.ransom{color:var(--warn);border-color:#4a3a1f}
+.tag.law{color:var(--teal);border-color:#1c3d35}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:10px 9px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+td.cve{font-family:var(--mono);color:var(--cyan);white-space:nowrap}
+.cvss{font-family:var(--mono);font-weight:bold}
+.cvss.crit{color:var(--crit)}
+.cvss.high{color:var(--warn)}
+ul.kev{margin:0;padding-left:0;list-style:none}
+ul.kev li{padding:9px 0 9px 22px;border-bottom:1px solid var(--line);position:relative;color:#cfdedb}
+ul.kev li:before{content:'▸';position:absolute;left:0;color:var(--teal)}
+ul.kev li:last-child{border-bottom:none}
+footer{margin-top:34px;border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:13px}
+footer a{color:var(--muted)}
+.disclaimer{font-size:12px;color:#5e7174;margin-top:14px;font-style:italic}
+@media(max-width:680px){.brand{font-size:26px}}
 </style>
 </head>
 <body>
 <div class="wrap">
-
-  <header class="masthead">
-    <h1><span class="glyph">⛨</span> The Cyber Wire</h1>
-    <div class="tagline">Your daily security briefing — breaches, vulnerabilities &amp; federal deadlines</div>
+  <header class="mast">
+    <h1 class="brand">⛨ The Cyber Wire</h1>
+    <p class="tagline">Your daily cybersecurity briefing — breaches, exploits &amp; federal deadlines</p>
     <div class="meta">
-      <span class="pill live"><span class="dot"></span>LIVE</span>
-      <span class="pill edition" id="edition">Midday Edition</span>
-      <span class="pill" id="datestamp">Monday, June 15, 2026</span>
-      <span class="pill">Updated <span id="updated">~1:10 PM ET</span></span>
+      <span class="pill live"><span class="dot"></span>Live</span>
+      <span class="pill" id="edition">Morning Edition</span>
+      <span class="pill" id="datestamp">—</span>
+      <span class="pill">Updated <span id="updated">—</span></span>
     </div>
   </header>
 
-  <nav>
+  <nav class="tabs">
     <a href="cyber-briefing.html" class="active">⛨ The Cyber Wire</a>
     <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
     <a href="mma-briefing.html">⊘ The Octagon</a>
@@ -82,115 +78,101 @@
 
   <div class="label">Top Story</div>
   <div class="panel lead">
-    <div class="kicker">Emerging threat · AI supply chain</div>
-    <h2>"Agentjacking": a fake bug report can hijack your AI coding agent — and nothing in the stack catches it</h2>
-    <p>Researchers at Tenet Security disclosed a new attack class they call <strong>Agentjacking</strong> that turns a public error-tracking credential into remote code execution on developer machines — with <strong>no malware, no stolen password, and no breach of the target</strong>. The trick: an attacker submits a crafted error event to a project's Sentry instance (anyone holding the DSN can post events), and when an AI coding agent such as <strong>Claude Code or Cursor</strong> reads that error through the Sentry MCP server, it treats the attacker-controlled payload as trusted diagnostic output and follows the embedded "remediation steps," executing the attacker's code.</p>
-    <p>What makes it dangerous is that every step is technically authorized. Tenet calls it the <strong>"Authorized Intent Chain"</strong>: because the prevailing security model is built to flag <em>unauthorized</em> behavior, an attack containing none sails past EDR, WAF, IAM, VPN, Cloudflare and firewalls. The Cloud Security Alliance published a corroborating research note on June 12 framing it as MCP-injection.</p>
-    <p>Tenet says it reported the issue to Sentry on June 3; Sentry acknowledged it the same day but declined to fix it at the root, describing the attack class as <strong>"technically not defensible"</strong> at the platform level. The practical takeaway: treat third-party data surfaced to AI agents (error reports, tickets, issues) as untrusted input, and don't let agents act on it without a human in the loop.</p>
+    <h2>ShinyHunters burns an Oracle PeopleSoft zero-day to breach 100+ organizations — universities hit hardest</h2>
+    <p>The extortion crew ShinyHunters (tracked as UNC6240) exploited <strong>CVE-2026-35273</strong>, a critical, unauthenticated remote-code-execution flaw in Oracle PeopleSoft Enterprise PeopleTools (CVSS 9.8), as a zero-day to compromise more than 100 organizations across roughly 300 exposed instances. About two-thirds (68%) of the victims are universities and colleges, predominantly in the United States.</p>
+    <p>Among the named victims, the University of Nottingham had roughly 40 GB of personal data and billing records — belonging to hundreds of thousands of current and former students — stolen. Researchers tracked exploitation between May 27 and June 9; Oracle did not publish its out-of-band advisory until June 10, meaning the bug was a true zero-day for the duration of the campaign. CISA added it to the Known Exploited Vulnerabilities catalog on June 12 with a federal remediation deadline of <strong>July 3</strong>.</p>
   </div>
 
   <div class="label">Breaches &amp; Incidents</div>
   <div class="cards">
     <div class="card">
-      <span class="tag ok">Takedown</span><span class="tag info">Follow-the-money</span>
-      <h3>Europol dismantles "AudiA6," ransomware's €336M laundromat</h3>
-      <p>An 11-nation operation executed June 10 — led by the U.S. Secret Service and IRS Criminal Investigation with Polish police — seized 25 domains and 30+ servers behind a laundering service that washed <strong>~10,333 BTC (€336M / ~$389M historically) for ransomware crews since 2021</strong>, charging 3–10% commissions. Two alleged admins were arrested in Georgia; the DOJ charged Ruslan Igorevich Tkachuk, 37, and Alexander Vladimirovich Ledenev, 25, with counts carrying up to 20 years. 80+ vehicles confiscated; €692k in crypto frozen.</p>
+      <span class="tag law">Takedown</span>
+      <h3>Europol disrupts "AudiA6" laundering service</h3>
+      <p>Europol cut off AudiA6, a cryptocurrency-laundering service used by ransomware gangs and cybercrime networks, calling it a key financial pipeline. The service is estimated to have washed more than €336 million (~$389 million) in illicit profits.</p>
     </div>
     <div class="card">
-      <span class="tag info">Update</span><span class="tag ok">De-escalation</span>
-      <h3>ServiceNow: "breach" now attributed to researcher activity</h3>
-      <p>In a June 12 advisory update, ServiceNow said the suspicious June 2–3 activity against the unauthenticated REST endpoint it patched June 5 is now believed to be <strong>security researchers and customers testing</strong> — two researchers filed a bug-bounty report June 7. Users still allege the flaw was known since April; no confirmed criminal breach.</p>
+      <span class="tag breach">Breach</span>
+      <h3>Council of Europe investigates breach claim</h3>
+      <p>The continent's oldest intergovernmental body is probing claims of a data breach made by the ShinyHunters extortion group, the same crew behind the PeopleSoft campaign.</p>
     </div>
     <div class="card">
-      <span class="tag crit">Zero-day</span><span class="tag info">KEV</span>
-      <h3>PeopleSoft zero-day: ShinyHunters hit 100+ orgs, now on the KEV clock</h3>
-      <p>Mandiant and Google Threat Intelligence (tracking the actor as <strong>UNC6240, linked to ShinyHunters</strong>) say roughly <strong>300 PeopleSoft instances across 100+ organizations</strong> were compromised between May 27 and June 9 via CVE-2026-35273 — about 68% higher-education, mostly US. Oracle shipped an out-of-band alert June 10; CISA added the bug to KEV June 12 with a <strong>July 3 federal deadline</strong>.</p>
+      <span class="tag ransom">Ransomware</span>
+      <h3>"The Gentlemen" tied to RaaS ecosystem</h3>
+      <p>New analysis indicates The Gentlemen operation began as an affiliate running double-extortion attacks while leveraging resources from ransomware-as-a-service schemes including LockBit, Qilin and Medusa.</p>
     </div>
     <div class="card">
-      <span class="tag ok">Law enforcement</span><span class="tag warn">Process</span>
-      <h3>Conti guilty plea; Maine pulls its breach portal offline</h3>
-      <p>A Ukrainian national extradited to the U.S. last year <strong>pleaded guilty to conspiracy charges tied to the Conti ransomware operation</strong>. Separately, <strong>Maine took its public data-breach reporting portal offline</strong> on June 13 after fraudulent breach disclosures were published to the state site, and is reviewing its submission procedures to prevent abuse.</p>
+      <span class="tag breach">Exploit</span>
+      <h3>Palo Alto PAN-OS portals targeted</h3>
+      <p>Palo Alto Networks confirmed active exploitation of CVE-2026-0257, an authentication-bypass flaw in PAN-OS GlobalProtect, by an unknown actor to gain unauthorized access. Initial activity was observed back on May 17.</p>
     </div>
   </div>
 
   <div class="label">Vulnerability Watch</div>
-  <div class="panel" style="padding:10px 12px">
+  <div class="panel" style="padding:6px 8px">
     <table>
-      <tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr>
-      <tr>
-        <td class="cve">CVE-2026-35273</td><td class="score">9.8</td>
-        <td>Oracle PeopleSoft PeopleTools 8.61 / 8.62</td>
-        <td>Unauthenticated HTTP → full takeover/RCE. Exploited as a zero-day by ShinyHunters/UNC6240 (May 27–Jun 9). Oracle out-of-band alert June 10; <strong>added to CISA KEV June 12 — federal deadline July 3</strong>.</td>
-      </tr>
-      <tr>
-        <td class="cve">CVE-2026-50751</td><td class="score">9.3</td>
-        <td>Check Point Remote Access VPN / Mobile Access / Spark Firewall (IKEv1 configs)</td>
-        <td>Authentication bypass exploited in the wild since ~May 7; one incident tied to a Qilin affiliate. Hotfix shipped June 8 (vendor CVSS 9.3 — not the 9.8 some blogs cite). KEV emergency deadline was June 11.</td>
-      </tr>
-      <tr>
-        <td class="cve">CVE-2026-41089</td><td class="score">9.8</td>
-        <td>Windows Netlogon — domain controllers, Server 2012–2025</td>
-        <td>Unauthenticated stack overflow → SYSTEM RCE; exploited in the wild (Belgium's CCB warned in late May). Fixed in the June 9 Patch Tuesday updates.</td>
-      </tr>
-      <tr>
-        <td class="cve">CVE-2026-20253</td><td class="score">9.8</td>
-        <td>Splunk Enterprise 10+ (PostgreSQL sidecar)</td>
-        <td>Pre-auth chain → unauthenticated file write and remote code execution via an unauthenticated sidecar endpoint; default-on for Splunk Enterprise on AWS. Disclosed June 10; fixed in 10.0.7 / 10.2.4. No public PoC or in-the-wild exploitation reported as of this run (watchTowr/Orca).</td>
-      </tr>
-      <tr>
-        <td class="cve">CVE-2026-44963</td><td class="score">9.4 (v4)</td>
-        <td>Veeam Backup &amp; Replication 12.x ≤ 12.3.2.4465</td>
-        <td>RCE by an <em>authenticated</em> domain user; fixed in 12.3.2.4854; v13 not affected (vendor advisory; watchTowr credited).</td>
-      </tr>
-      <tr>
-        <td class="cve">CVE-2026-42897</td><td class="score">8.1</td>
-        <td>Microsoft Exchange Server (OWA)</td>
-        <td>May-exploited zero-day (spoofing/XSS): emergency mitigation May 14, KEV-listed May 15 (federal due date May 29 — passed). June 9 shipped the permanent Security Updates. Exchange Online unaffected.</td>
-      </tr>
+      <thead><tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="cve">CVE-2026-35273</td>
+          <td><span class="cvss crit">9.8</span></td>
+          <td>Oracle PeopleSoft Enterprise PeopleTools</td>
+          <td>Unauthenticated RCE; exploited as a zero-day by ShinyHunters. KEV-listed; fed deadline July 3.</td>
+        </tr>
+        <tr>
+          <td class="cve">CVE-2026-48172</td>
+          <td><span class="cvss crit">9.8</span></td>
+          <td>LiteSpeed cPanel / WHM Plugin</td>
+          <td>Root privilege escalation on CloudLinux/CageFS shared hosting. Patch: WHM Plugin v5.3.2.1 (cPanel plugin v2.4.8) or later.</td>
+        </tr>
+        <tr>
+          <td class="cve">CVE-2026-39813</td>
+          <td><span class="cvss crit">9.1</span></td>
+          <td>Fortinet FortiSandbox (JRPC API)</td>
+          <td>Path-traversal flaw reported under active exploitation alongside CVE-2026-39808 and CVE-2026-25089.</td>
+        </tr>
+        <tr>
+          <td class="cve">CVE-2026-20253</td>
+          <td><span class="cvss crit">9.8</span></td>
+          <td>Splunk Enterprise (PostgreSQL sidecar)</td>
+          <td>Unauthenticated file operations &rarr; pre-auth RCE. Disclosed, not yet seen in the wild. Fixed in 10.0.7 / 10.2.4 / 10.4.0.</td>
+        </tr>
+        <tr>
+          <td class="cve">CVE-2026-0257</td>
+          <td><span class="cvss high">7.8</span></td>
+          <td>Palo Alto PAN-OS GlobalProtect</td>
+          <td>Authentication bypass on portal/gateway components; exploited in limited attacks since mid-May.</td>
+        </tr>
+      </tbody>
     </table>
   </div>
 
   <div class="label">CISA KEV &amp; Federal Deadlines</div>
   <div class="panel">
     <ul class="kev">
-      <li><strong>June 12 addition</strong> — CVE-2026-35273 (Oracle PeopleSoft PeopleTools, unauthenticated RCE) enters the catalog with a standard three-week window: federal remediation due <strong>July 3</strong>. Apply Oracle's June 10 out-of-band fix.</li>
-      <li><strong>June 9 additions</strong> — CVE-2026-7473 (Arista EOS), CVE-2026-11645 (Chromium V8 out-of-bounds R/W, CVSS 8.8 — one of 74 Chrome fixes), and CVE-2026-20245 (Cisco Catalyst SD-WAN Manager, authenticated privilege escalation). Remediation due ~<strong>June 30</strong>.</li>
-      <li><strong>June 8 additions</strong> — CVE-2026-50751 (Check Point) carried an explicit, shortened <strong>emergency 3-day deadline of June 11 — now passed</strong>; agencies still exposed are out of compliance. CVE-2026-42271 (BerriAI LiteLLM command injection) follows the standard window, due ~<strong>June 29</strong>.</li>
-      <li><strong>Reminder</strong> — BOD 22-01 gives federal civilian agencies three weeks from a CVE's KEV addition date unless CISA explicitly states otherwise.</li>
+      <li><strong>June 16</strong> — LiteSpeed cPanel Plugin flaws (<span style="font-family:var(--mono)">CVE-2026-48172</span>, CVSS 9.8, and <span style="font-family:var(--mono)">CVE-2026-54420</span>, CVSS 8.5) added for root privilege escalation; reporting cites an expedited remediation deadline of ~June 18.</li>
+      <li><strong>June 12</strong> — <span style="font-family:var(--mono)">CVE-2026-35273</span> (Oracle PeopleSoft) added; FCEB remediation due <strong>July 3</strong>.</li>
+      <li><strong>June 9</strong> — three flaws added: <span style="font-family:var(--mono)">CVE-2026-7473</span> (Arista EOS), <span style="font-family:var(--mono)">CVE-2026-11645</span> (Google Chromium V8) and <span style="font-family:var(--mono)">CVE-2026-20245</span> (Cisco Catalyst SD-WAN Manager); due ~June 30.</li>
+      <li>Per BOD 22-01, federal civilian agencies generally get a three-week window from a KEV addition; exact dates are set on each CISA advisory page.</li>
     </ul>
   </div>
 
   <footer>
-    <h4>Sources — this edition</h4>
-    <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA — Known Exploited Vulnerabilities Catalog</a>
-    <a href="https://www.oracle.com/security-alerts/alert-cve-2026-35273.html">Oracle — Security Alert Advisory CVE-2026-35273</a>
-    <a href="https://dailysecurityreview.com/resources/oracle-peoplesoft-cve-2026-35273-shinyhunters-breaches-100-orgs/">Daily Security Review — PeopleSoft CVE-2026-35273: KEV addition &amp; July 3 federal deadline</a>
-    <a href="https://www.securityweek.com/oracle-addresses-peoplesoft-vulnerability-amid-reports-of-zero-day-attacks/">SecurityWeek — Oracle addresses PeopleSoft vulnerability amid zero-day attacks</a>
-    <a href="https://www.helpnetsecurity.com/2026/06/11/oracle-peoplesoft-under-attack-cve-2026-35273/">Help Net Security — PeopleSoft servers under attack, out-of-band alert</a>
-    <a href="https://en.wikipedia.org/wiki/2026_Canvas_data_breach">Wikipedia — 2026 Canvas data breach (ShinyHunters background)</a>
-    <a href="https://www.europol.europa.eu/media-press/newsroom/news/ransomware-gangs-cut-eur-336-million-audia6-crypto-laundering-pipeline">Europol — Ransomware gangs cut off from €336M "AudiA6" laundering pipeline</a>
-    <a href="https://thehackernews.com/2026/06/europol-disrupts-audia6-crypto.html">The Hacker News — Europol disrupts AudiA6 crypto laundering service</a>
-    <a href="https://cybernews.com/security/servicenow-confirms-security-incident-data-breach/">Cybernews — ServiceNow "data breach" attributed to researcher activity</a>
-    <a href="https://thehackernews.com/2026/06/agentjacking-attack-tricks-ai-coding.html">The Hacker News — Agentjacking attack tricks AI coding agents into running malicious code</a>
-    <a href="https://tenetsecurity.ai/blog/agentjacking-coding-agents-with-fake-sentry-errors/">Tenet Security — Agentjacking: a fake bug report can hijack your AI coding agent</a>
-    <a href="https://labs.cloudsecurityalliance.org/research/csa-research-note-agentjacking-mcp-sentry-injection-20260612/">Cloud Security Alliance — Research note: Agentjacking MCP/Sentry injection (June 12)</a>
-    <a href="https://www.infosecurity-magazine.com/news/agentjacking-attacks-hijack-ai/">Infosecurity Magazine — New "Agentjacking" attacks could hijack AI coding agents</a>
-    <a href="https://thehackernews.com/2026/06/critical-splunk-enterprise-flaw-lets.html">The Hacker News — Critical Splunk Enterprise flaw lets attackers run code without authentication</a>
-    <a href="https://advisory.splunk.com/advisories/SVD-2026-0603">Splunk — SVD-2026-0603 advisory (CVE-2026-20253, CVSS 9.8)</a>
-    <a href="https://www.chainalysis.com/blog/law-enforcement-dismantles-audia6-laundering-network-june-2026/">Chainalysis — Law enforcement dismantles AudiA6 laundering network</a>
-    <a href="https://www.bleepingcomputer.com/news/legal/authorities-dismantle-audia6-ransomware-crypto-laundering-service/">BleepingComputer — Authorities dismantle "AudiA6" crypto-laundering service</a>
-    <a href="https://www.rapid7.com/blog/post/etr-critical-check-point-vpn-zero-day-exploited-in-the-wild-cve-2026-50751/">Rapid7 — Check Point VPN zero-day exploited in the wild (CVE-2026-50751)</a>
-    <a href="https://blog.checkpoint.com/security/check-point-releases-important-hotfix-for-vulnerabilities-in-deprecated-ikev1-vpn-protocol/">Check Point — Hotfix for IKEv1 VPN vulnerability</a>
-    <a href="https://techcrunch.com/2026/06/09/cisa-gives-us-federal-agencies-three-days-to-fix-a-vpn-bug-under-attack-by-a-ransomware-gang/">TechCrunch — CISA's three-day deadline for the Check Point VPN bug</a>
-    <a href="https://www.zerodayinitiative.com/blog/2026/6/9/the-june-2026-security-update-review">Zero Day Initiative — The June 2026 Security Update Review</a>
-    <a href="https://orca.security/resources/blog/cve-2026-20253-splunk-enterprise-rce-unauthenticated-file-operations/">Orca Security — CVE-2026-20253: Splunk Enterprise pre-auth RCE &amp; file-operation flaws</a>
-    <a href="https://labs.watchtowr.com/why-use-app-level-auth-when-every-database-has-auth-splunk-enterprise-cve-2026-20253-pre-auth-rce/">watchTowr Labs — Splunk Enterprise CVE-2026-20253 pre-auth RCE</a>
-    <a href="https://www.cisa.gov/news-events/alerts/2026/06/09/cisa-adds-three-known-exploited-vulnerabilities-catalog">CISA — Adds three Known Exploited Vulnerabilities (June 9)</a>
-    <a href="https://www.breachsense.com/breaches/">Breachsense — Data breach tracker (June 12 leak-site claims)</a>
-    <div class="disclaimer">Compiled from public reporting and vendor advisories; details may evolve as investigations continue. Leak-site listings are attacker claims until victims confirm.</div>
+    <div class="label" style="margin-top:6px">Sources</div>
+    <p>
+      <a href="https://thehackernews.com/2026/06/shinyhunters-exploits-oracle-peoplesoft.html">The Hacker News — ShinyHunters / PeopleSoft</a> ·
+      <a href="https://www.theregister.com/cyber-crime/2026/06/11/shinyhunters-claims-oracle-peoplesoft-0-day-hit-100-orgs/5254443">The Register — PeopleSoft 0-day, 100+ orgs</a> ·
+      <a href="https://www.helpnetsecurity.com/2026/06/11/oracle-peoplesoft-under-attack-cve-2026-35273/">Help Net Security — Oracle advisory</a> ·
+      <a href="https://thehackernews.com/2026/06/cisa-flags-litespeed-cpanel-plugin-flaw.html">The Hacker News — LiteSpeed cPanel KEV</a> ·
+      <a href="https://www.cisa.gov/news-events/alerts/2026/06/12/cisa-adds-one-known-exploited-vulnerability-catalog">CISA — KEV add June 12</a> ·
+      <a href="https://www.cisa.gov/news-events/alerts/2026/06/09/cisa-adds-three-known-exploited-vulnerabilities-catalog">CISA — KEV adds June 9</a> ·
+      <a href="https://www.securityweek.com/">SecurityWeek</a> ·
+      <a href="https://cybersecuritynews.com/">Cyber Security News — PAN-OS &amp; FortiSandbox</a> ·
+      <a href="https://techcrunch.com/2026/06/07/the-worst-hacks-and-breaches-of-2026-so-far/">TechCrunch — 2026 breaches</a>
+    </p>
+    <p class="disclaimer">For situational awareness only. CVSS scores reflect vendor or CISA figures available at publication; confirm severity, affected versions and remediation deadlines against official vendor and CISA advisories before acting.</p>
   </footer>
-
 </div>
+
 <script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;}catch(e){}})();</script>
 </body>
 </html>

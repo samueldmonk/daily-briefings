@@ -5,76 +5,69 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Octagon — Daily MMA Briefing</title>
 <style>
-  :root{
-    --bg:#100c0c; --panel:#1a1313; --line:#322020; --ink:#ece4e0; --muted:#a18d86;
-    --red:#e84545; --orange:#ff8a5c; --gold:#d4af6a; --green:#5dd97c;
-    --mono:"SF Mono","Cascadia Code",Consolas,monospace;
-  }
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.55}
-  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 60px}
-  .masthead{text-align:center;padding:18px 0 14px;border-bottom:3px double var(--line);margin-bottom:14px}
-  .masthead h1{font-size:42px;letter-spacing:2px;color:var(--red);font-weight:800;text-transform:uppercase}
-  .masthead h1 .glyph{color:var(--orange)}
-  .masthead .tagline{color:var(--muted);font-size:14px;margin-top:6px}
-  .meta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:14px}
-  .pill{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:var(--panel)}
-  .pill.live{color:var(--green);border-color:rgba(93,217,124,.35)}
-  .pill.live .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green);margin-right:6px;animation:pulse 1.6s infinite}
-  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
-  .pill.edition{color:var(--orange);border-color:rgba(255,138,92,.4)}
-  nav{display:flex;gap:8px;justify-content:center;margin:18px 0 22px;flex-wrap:wrap}
-  nav a{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--muted);padding:8px 16px;border:1px solid var(--line);border-radius:8px;background:var(--panel);transition:all .15s}
-  nav a:hover{color:var(--ink);border-color:var(--muted)}
-  nav a.active{color:var(--red);border-color:var(--red);background:rgba(232,69,69,.08)}
-  .label{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--red);margin:30px 0 14px;display:flex;align-items:center;gap:10px}
-  .label::after{content:"";flex:1;height:1px;background:var(--line)}
-  .panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px}
-  .lead{border-left:3px solid var(--red)}
-  .lead h2{font-size:24px;line-height:1.35;margin-bottom:12px}
-  .lead p{color:#d4c4bc;margin-bottom:10px;font-size:15px}
-  .lead .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--orange);text-transform:uppercase;margin-bottom:10px}
-  .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-  @media(max-width:720px){.cards{grid-template-columns:1fr}}
-  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;transition:transform .15s,border-color .15s}
-  .card:hover{transform:translateY(-3px);border-color:var(--red)}
-  .card h3{font-size:15px;margin-bottom:8px;color:var(--ink)}
-  .card p{font-size:13.5px;color:var(--muted)}
-  .card .when{font-family:var(--mono);font-size:11.5px;color:var(--gold);letter-spacing:.06em;margin-bottom:8px}
-  .tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:5px;margin-bottom:8px;margin-right:6px}
-  .tag.hot{background:rgba(232,69,69,.12);color:var(--red)}
-  .tag.pros{background:rgba(93,217,124,.12);color:var(--green)}
-  .tag.biz{background:rgba(255,138,92,.12);color:var(--orange)}
-  table{width:100%;border-collapse:collapse;font-size:13.5px}
-  th{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
-  td{padding:9px 10px;border-bottom:1px solid rgba(50,32,32,.6);color:#d4c4bc;vertical-align:top}
-  td.res{font-family:var(--mono);font-size:12px;color:var(--green);white-space:nowrap}
-  td.method{color:var(--muted);font-size:13px}
-  ul.news{list-style:none}
-  ul.news li{padding:10px 0 10px 22px;border-bottom:1px solid rgba(50,32,32,.6);position:relative;color:#d4c4bc;font-size:14px}
-  ul.news li::before{content:"⊘";position:absolute;left:0;color:var(--red)}
-  footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line)}
-  footer h4{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
-  footer a{color:#c89a8a;font-size:12.5px;text-decoration:none;display:block;padding:2.5px 0}
-  footer a:hover{text-decoration:underline}
-  .disclaimer{margin-top:18px;font-size:11.5px;color:#73615a;font-style:italic}
+:root{
+  --bg:#100c0c; --panel:#1a1313; --line:#322020; --ink:#f0e8e6; --muted:#a89090;
+  --red:#e84545; --orange:#ff8a5c; --gold:#d6b25a; --up:#4ec06e;
+  --mono:'SF Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
+a{color:var(--orange);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1000px;margin:0 auto;padding:22px 20px 60px}
+header.mast{border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:18px}
+.brand{font-size:34px;letter-spacing:1px;margin:0;color:var(--red);text-transform:uppercase}
+.tagline{color:var(--muted);margin:4px 0 0;font-size:15px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:5px 11px;color:var(--muted)}
+.pill.live{color:var(--red);border-color:#4a2424}
+.pill.live .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--red);margin-right:6px;animation:bl 1.6s infinite}
+@keyframes bl{50%{opacity:.25}}
+nav.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 18px}
+nav.tabs a{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:9px 14px;border:1px solid var(--line);border-radius:9px;background:var(--panel);color:var(--muted)}
+nav.tabs a.active{color:var(--red);border-color:var(--red);box-shadow:inset 0 0 0 1px rgba(232,69,69,.35)}
+nav.tabs a:hover{text-decoration:none;color:var(--ink)}
+.label{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--orange);margin:30px 0 12px;border-bottom:1px solid var(--line);padding-bottom:7px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:14px}
+.lead{border-left:4px solid var(--red)}
+.lead h2{font-size:24px;line-height:1.3;margin:0 0 8px;color:var(--ink)}
+.lead p{margin:8px 0;color:#e0d2cf}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 16px;transition:transform .15s,border-color .15s}
+.card:hover{transform:translateY(-3px);border-color:var(--red)}
+.card h3{margin:0 0 6px;font-size:16.5px;color:var(--ink)}
+.card p{margin:0;color:#d8c8c5;font-size:14.5px}
+.datebar{font-family:var(--mono);font-size:12px;color:var(--gold);letter-spacing:.05em;margin-bottom:6px}
+.tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:5px;margin-bottom:8px;border:1px solid #234a2f;color:var(--up)}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+th,td{text-align:left;padding:10px 9px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.win{color:var(--up);font-weight:bold}
+.nc{color:var(--gold);font-weight:bold}
+ul.around{margin:0;padding-left:0;list-style:none}
+ul.around li{padding:9px 0 9px 22px;border-bottom:1px solid var(--line);position:relative;color:#e0d2cf}
+ul.around li:before{content:'▸';position:absolute;left:0;color:var(--red)}
+ul.around li:last-child{border-bottom:none}
+footer{margin-top:34px;border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:13px}
+footer a{color:var(--muted)}
+.disclaimer{font-size:12px;color:#6e5a5a;margin-top:14px;font-style:italic}
+@media(max-width:680px){.brand{font-size:27px}}
 </style>
 </head>
 <body>
 <div class="wrap">
-
-  <header class="masthead">
-    <h1><span class="glyph">⊘</span> The Octagon</h1>
-    <div class="tagline">Your daily MMA briefing — UFC, prospects &amp; the business of fighting</div>
+  <header class="mast">
+    <h1 class="brand">⊘ The Octagon</h1>
+    <p class="tagline">Your daily MMA briefing — UFC, prospects &amp; the business of fighting</p>
     <div class="meta">
-      <span class="pill live"><span class="dot"></span>LIVE</span>
-      <span class="pill edition" id="edition">Midday Edition</span>
-      <span class="pill" id="datestamp">Monday, June 15, 2026</span>
-      <span class="pill">Updated <span id="updated">~1:10 PM ET</span></span>
+      <span class="pill live"><span class="dot"></span>Live</span>
+      <span class="pill" id="edition">Morning Edition</span>
+      <span class="pill" id="datestamp">—</span>
+      <span class="pill">Updated <span id="updated">—</span></span>
     </div>
   </header>
 
-  <nav>
+  <nav class="tabs">
     <a href="cyber-briefing.html">⛨ The Cyber Wire</a>
     <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
     <a href="mma-briefing.html" class="active">⊘ The Octagon</a>
@@ -82,98 +75,90 @@
 
   <div class="label">Top Story</div>
   <div class="panel lead">
-    <div class="kicker">UFC Freedom 250 · White House South Lawn · Sun Jun 14</div>
-    <h2>The greatest upset in UFC history: Justin Gaethje breaks unbeaten Ilia Topuria to claim the undisputed lightweight crown on the White House lawn</h2>
-    <p>It actually happened — and the favorite fell. In the main event of UFC Freedom 250, the first card ever staged on the South Lawn of the White House, a heavy underdog <strong>Justin Gaethje outslugged and outlasted Ilia Topuria, forcing the previously unbeaten champion to retire on his stool after the fourth round</strong> to capture the undisputed UFC lightweight championship. Topuria, 17-0 coming in and one of the sport's biggest stars, gave Gaethje hell in the second round, but Gaethje refused to fade and piled on the punishment until Topuria — battered and out of answers — could not continue. The two-time former interim lightweight champion finally has the undisputed belt that long eluded him, in front of President Trump and a crowd ESPN put at over 4,000, with an estimated 80,000 more on the Ellipse.</p>
-    <p>The co-main delivered a second stunner: <strong>Ciryl Gane knocked out Alex Pereira in the second round</strong> — dropping the kickboxing icon and swarming with strikes until referee Herb Dean stepped in — to win the interim heavyweight title and end Pereira's bid to become the first three-division champion in UFC history. Up and down the seven-fight main card, the finishes kept coming: <strong>Sean O'Malley</strong> walked off Aiemann Zahabi with a second-round knockout, <strong>Josh Hokit</strong> brutalized knockout king Derrick Lewis to move to 10-0, <strong>Mauricio Ruffy</strong> spun a wheel kick through Michael Chandler, and <strong>Bo Nickal</strong> blew out Kyle Daukaus in the first.</p>
-    <p>The spectacle matched the violence. Fights took place under <strong>"The Claw,"</strong> a 600-ton, four-pronged steel arena 154 feet wide and 92 feet tall — 22 feet taller than the White House — suspended over a 13-ton cage; per CBS Sports, the UFC will spend $700,000 restoring the South Lawn grass. The event streamed exclusively on Paramount+ (no pay-per-view) after U.S. District Judge Amit Mehta's Friday ruling cleared away a last-minute legal challenge. Full results below.</p>
+    <h2>Gaethje shocks the White House lawn — dethrones Topuria to claim the undisputed lightweight title</h2>
+    <p>At UFC Freedom 250 on June 14 — the promotion's first card on the South Lawn of the White House — <strong>Justin Gaethje pulled off a stunning upset of Ilia Topuria</strong>, battering and bloodying the previously unbeaten champion until his corner stopped the fight between the fourth and fifth rounds (TKO, corner stoppage). Gaethje, a two-time former interim lightweight champion, finally has the undisputed belt; it is Topuria's first professional loss.</p>
+    <p>The historic card delivered more drama in the co-main, where <strong>Ciryl Gane knocked out Alex Pereira in the second round</strong> for the interim heavyweight title — ending Pereira's bid to become the first three-division UFC champion. Sean O'Malley, Bo Nickal and Diego Lopes all scored finishes on a stacked main card.</p>
   </div>
 
   <div class="label">Fight Week — Upcoming Cards</div>
   <div class="cards">
     <div class="card">
-      <span class="tag hot">Next up</span>
-      <h3>UFC Fight Night: Kape vs. Horiguchi</h3>
-      <div class="when">SAT JUN 20 · Meta APEX, Enterprise, NV</div>
-      <p>Manel Kape and Kyoji Horiguchi run back their flyweight rivalry as the promotion returns to the APEX six days after the White House spectacle.</p>
+      <div class="datebar">SAT JUN 20 · Meta APEX, Enterprise NV</div>
+      <h3>UFC Fight Night: Kape vs. Horiguchi 2</h3>
+      <p>Flyweight rematch: #2 Manel Kape (22-7) faces #5 Kyoji Horiguchi (36-5), nine years after Horiguchi's arm-triangle win over Kape at bantamweight. Streams on Paramount+, no pay-per-view.</p>
     </div>
     <div class="card">
+      <div class="datebar">SAT JUN 27 · Natl. Gymnastics Arena, Baku</div>
       <h3>UFC Fight Night: Fiziev vs. Torres</h3>
-      <div class="when">SAT JUN 27 · National Gymnastics Arena, Baku, Azerbaijan</div>
-      <p>Rafael Fiziev meets Manuel Torres in a lightweight main event as the UFC visits Azerbaijan to close the month.</p>
+      <p>The UFC heads to Azerbaijan for a lightweight headliner pairing Rafael Fiziev with Manuel Torres in front of a home-region crowd.</p>
     </div>
     <div class="card">
-      <span class="tag hot">PPV-scale</span>
+      <div class="datebar">SAT JUL 11 · T-Mobile Arena, Las Vegas</div>
       <h3>UFC 329: McGregor vs. Holloway 2</h3>
-      <div class="when">SAT JUL 11 · T-Mobile Arena, Las Vegas, NV</div>
-      <p>Conor McGregor's first fight since July 2021 — a welterweight rematch 13 years after he beat Max Holloway by decision in 2013. Streams on Paramount+, main card 9 PM ET.</p>
+      <p>Conor McGregor (22-6) returns for the first time since breaking his leg at UFC 264 in 2021, meeting Max Holloway in a welterweight main event — Holloway's debut at 170. Live on Paramount+.</p>
     </div>
   </div>
 
-  <div class="label">Last Event — Results · UFC Freedom 250 (Jun 14, White House South Lawn)</div>
-  <div class="panel" style="padding:10px 12px">
+  <div class="label">Last Event — UFC Freedom 250 Results</div>
+  <div class="panel" style="padding:6px 8px">
     <table>
-      <tr><th>Result</th><th>Bout</th><th>Method</th></tr>
-      <tr><td class="res">GAETHJE def.</td><td>Justin Gaethje vs. Ilia Topuria</td><td class="method">TKO (corner stoppage / retirement after R4) — wins the undisputed lightweight title; hands Topuria his first pro loss (17-1)</td></tr>
-      <tr><td class="res">GANE def.</td><td>Ciryl Gane vs. Alex Pereira</td><td class="method">KO, R2 (ref Herb Dean) — wins the interim heavyweight title; ends Pereira's three-division bid</td></tr>
-      <tr><td class="res">O'MALLEY def.</td><td>Sean O'Malley vs. Aiemann Zahabi</td><td class="method">TKO (punches), R2 4:02 — walk-off knockout snaps Zahabi's seven-fight win streak</td></tr>
-      <tr><td class="res">HOKIT def.</td><td>Josh Hokit vs. Derrick Lewis</td><td class="method">TKO (punches), R2 4:09 — undefeated Hokit (10-0) stops the knockout king</td></tr>
-      <tr><td class="res">RUFFY def.</td><td>Mauricio Ruffy vs. Michael Chandler</td><td class="method">TKO (spinning wheel kick &amp; punches), R1 4:29 — Chandler drops to a fourth straight loss</td></tr>
-      <tr><td class="res">NICKAL def.</td><td>Bo Nickal vs. Kyle Daukaus</td><td class="method">TKO (punches), R1 4:34 — most dominant outing of Nickal's career (now 9-1)</td></tr>
-      <tr><td class="res">LOPES def.</td><td>Diego Lopes vs. Steve Garcia</td><td class="method">KO (punches), R2 2:42</td></tr>
+      <thead><tr><th>Result</th><th>Bout</th><th>Method</th></tr></thead>
+      <tbody>
+        <tr><td><span class="win">Justin Gaethje</span></td><td>def. Ilia Topuria (undisputed LW title)</td><td>TKO (corner stoppage), btwn R4–R5</td></tr>
+        <tr><td><span class="win">Ciryl Gane</span></td><td>def. Alex Pereira (interim HW title)</td><td>KO, R2 (ref Herb Dean)</td></tr>
+        <tr><td><span class="win">Sean O'Malley</span></td><td>def. Aiemann Zahabi</td><td>TKO (punches), R2 4:02</td></tr>
+        <tr><td><span class="win">Josh Hokit</span></td><td>def. Derrick Lewis</td><td>TKO (punches), R2 4:09</td></tr>
+        <tr><td><span class="win">Mauricio Ruffy</span></td><td>def. Michael Chandler</td><td>TKO (spinning wheel kick &amp; punches), R1 4:29</td></tr>
+        <tr><td><span class="win">Bo Nickal</span></td><td>def. Kyle Daukaus</td><td>TKO (punches), R1 4:34</td></tr>
+        <tr><td><span class="win">Diego Lopes</span></td><td>def. Steve Garcia</td><td>KO (punches), R2 2:42</td></tr>
+      </tbody>
     </table>
   </div>
 
   <div class="label">Prospect Watch</div>
   <div class="cards">
     <div class="card">
-      <span class="tag pros">Prospect</span><span class="tag hot">Title contender?</span>
-      <h3>Josh Hokit — 10-0, the heavyweight wrecking ball</h3>
-      <p>Still undefeated and now 4-0 in the UFC, Hokit followed his record-setting April win over Curtis Blaydes by brutalizing knockout king Derrick Lewis on the White House lawn (TKO, R2). MMA Mania flagged the loud-mouthed heavyweight as a possible next contender for the title. Trump personally pushed for the booking after watching the Blaydes fight.</p>
+      <span class="tag">Prospect</span>
+      <h3>Josh Hokit</h3>
+      <p>The undefeated heavyweight ran his record to 10-0 (4-0 in the UFC) with a second-round TKO of veteran Derrick Lewis at Freedom 250 — instantly thrusting him into the heavyweight title-contender conversation.</p>
     </div>
     <div class="card">
-      <span class="tag pros">Prospect</span><span class="tag hot">Statement win</span>
-      <h3>Mauricio Ruffy — 14-2, a problem at lightweight</h3>
-      <p>The #9-ranked Brazilian proved the hype, fighting with his hands down before spinning a wheel kick through Michael Chandler for a first-round TKO at Freedom 250 — his second straight highlight-reel finish after stopping Rafael Fiziev in February. The win pushes him toward the top five.</p>
+      <span class="tag">Prospect</span>
+      <h3>Bo Nickal</h3>
+      <p>The decorated wrestler bounced back to 9-1 with what was called the most dominant win of his career, a first-round TKO of Kyle Daukaus, steadying his middleweight trajectory after a setback.</p>
     </div>
     <div class="card">
-      <span class="tag pros">Prospect</span><span class="tag hot">Career-best</span>
-      <h3>Bo Nickal — 9-1, back in the win column in style</h3>
-      <p>After his first pro loss, the former NCAA wrestling champion answered with the most dominant performance of his career, slamming and then stopping Kyle Daukaus late in the first round (TKO) at the White House. The finish reasserts Nickal as a middleweight to watch.</p>
+      <span class="tag">Prospect</span>
+      <h3>Mauricio Ruffy</h3>
+      <p>The rangy Brazilian striker delivered the night's most spectacular finish — a spinning wheel kick and follow-up punches to stop Michael Chandler in round one, a highlight-reel statement at lightweight.</p>
     </div>
   </div>
 
   <div class="label">Around the Sport</div>
   <div class="panel">
-    <ul class="news">
-      <li><strong>Topuria's aura, gone:</strong> the loss is the first of Ilia Topuria's professional career, dropping the two-division star to 17-1 and stripping him of the lightweight belt he won by knocking out Charles Oliveira a year ago. The man billed as the sport's next pound-for-pound king was retired on his stool — the defining result of the Freedom 250 night.</li>
-      <li><strong>Pereira's history bid falls short:</strong> Alex Pereira's attempt to become the UFC's first-ever three-division champion ended with Ciryl Gane's second-round knockout. Gane, twice a heavyweight title challenger before, finally has gold around his waist as interim champ and a unification fight with the division's kingpin to chase.</li>
-      <li><strong>McGregor is next on the marquee:</strong> attention now turns to UFC 329 on July 11 at T-Mobile Arena, where Conor McGregor returns for the first time since July 2021 in a welterweight rematch with Max Holloway — 13 years after McGregor won their 2013 meeting by decision.</li>
-      <li><strong>The grass bill:</strong> per CBS Sports, the UFC will spend <strong>$700,000</strong> restoring the South Lawn after the event — a line item inside what The Hill reported was an at-least-$60M combined cost to federal agencies and the promotion for the historic card.</li>
-      <li><strong>Chandler's skid deepens:</strong> Michael Chandler's first-round loss to Ruffy is his fourth straight inside the Octagon, leaving the former Bellator champ at 2-6 in the UFC and raising fresh questions about his future at the top of the lightweight division.</li>
+    <ul class="around">
+      <li><strong>McGregor's comeback is official:</strong> UFC 329 on July 11 marks his first walk to the Octagon in nearly five years, in a welterweight rematch with Max Holloway whom he beat by decision at featherweight back in 2013.</li>
+      <li><strong>A new lightweight king:</strong> Gaethje's upset reshuffles the 155-pound division and hands Topuria the first loss of his pro career, reopening the title picture.</li>
+      <li><strong>Pereira's three-division dream stalls:</strong> Gane's knockout denies "Poatan" history and stakes the Frenchman's own claim atop the heavyweight ranks.</li>
+      <li><strong>Chandler's slide deepens:</strong> the loss to Ruffy was Michael Chandler's fourth straight defeat, dropping him to 2-6 inside the UFC.</li>
     </ul>
   </div>
 
   <footer>
-    <h4>Sources — this edition</h4>
-    <a href="https://www.espn.com/mma/story/_/id/49068660/gaethje-bucks-odds-topples-topuria-ufc-lightweight-title">ESPN — Gaethje bucks the odds, topples Topuria for UFC lightweight title</a>
-    <a href="https://sports.yahoo.com/mma/live/ufc-freedom-250-results-justin-gaethje-shocks-ilia-topuria-pulls-off-ultimate-us-upset-on-white-house-lawn-060000480.html">Yahoo Sports — Justin Gaethje shocks Ilia Topuria, pulls off ultimate U.S. upset on White House lawn</a>
-    <a href="https://www.cbssports.com/ufc/news/ufc-white-house-live-updates-results-freedom-250-highlights-ilia-topuria-justin-gaethje/live/">CBS Sports — UFC White House results, highlights: Gaethje scores stunning upset of Topuria</a>
-    <a href="https://nesn.com/ufc/news/ufc-freedom-250-results-updates-highlights-white-house-mma/ef5dc0f4ecb7fdc39daa2198">NESN — UFC Freedom 250 results: Justin Gaethje, Ciryl Gane win gold at White House event</a>
-    <a href="https://www.mmamania.com/ufc-white-house-2026-fight-card-start-time-full-results-dana-white-conor-mcgregor-cbs-mma/450979/ufc-white-house-results-biggest-winner-losers-from-topuria-vs-gaethje-last-night">MMA Mania — Biggest winners, losers from UFC Freedom 250 (O'Malley KO, Hokit over Lewis, Ruffy over Chandler)</a>
-    <a href="https://www.ufc.com/news/ufc-freedom-250-results-highlights-interviews">UFC — UFC Freedom 250 live results, highlights and post-fight interviews</a>
-    <a href="https://sports.yahoo.com/articles/ufc-freedom-250-live-results-184500151.html">Yahoo Sports — UFC Freedom 250 live results and play-by-play (Nickal def. Daukaus TKO R1 4:34; Ruffy def. Chandler TKO R1 4:29)</a>
-    <a href="https://www.thescore.com/mma/news/3553991/gaethje-beats-topuria-by-corner-stoppage-to-win-ufc-title-at-white-house">theScore — Gaethje beats Topuria by corner stoppage to win UFC title at White House</a>
-    <a href="https://bleacherreport.com/articles/25440461-gaethje-beats-topuria-tko-stats-prize-money-highlights-ufc-white-house-freedom-250">Bleacher Report — Gaethje beats Topuria via TKO: stats, prize money, highlights</a>
-    <a href="https://www.cbssports.com/mma/news/dana-white-says-ufc-will-spend-700000-on-grass-to-fix-the-south-lawn-after-event-at-white-house">CBS Sports — White: UFC will spend $700,000 on grass to fix the South Lawn</a>
-    <a href="https://thehill.com/homenews/administration/5919806-trump-administration-ufc-60-million-white-house-cage-fight/">The Hill — White House cage fight cost federal agencies, UFC at least $60M</a>
-    <a href="https://www.ufc.com/event/ufc-329">UFC — UFC 329: McGregor vs. Holloway 2 (July 11)</a>
-    <a href="https://en.wikipedia.org/wiki/UFC_Fight_Night:_Kape_vs._Horiguchi">Wikipedia — UFC Fight Night: Kape vs. Horiguchi (June 20)</a>
-    <a href="https://en.wikipedia.org/wiki/UFC_Fight_Night:_Fiziev_vs._Torres">Wikipedia — UFC Fight Night: Fiziev vs. Torres (June 27)</a>
-    <div class="disclaimer">Cards and bouts are subject to change.</div>
+    <div class="label" style="margin-top:6px">Sources</div>
+    <p>
+      <a href="https://www.espn.com/mma/story/_/id/49015148/ufc-white-house-freedom-250-live-results-analysis-ilia-topuria-justin-gaethje-alex-pereira-ciryl-gane">ESPN — UFC White House results</a> ·
+      <a href="https://sports.yahoo.com/mma/live/ufc-freedom-250-results-justin-gaethje-shocks-ilia-topuria-pulls-off-ultimate-us-upset-on-white-house-lawn-060000480.html">Yahoo Sports — Freedom 250 results</a> ·
+      <a href="https://bleacherreport.com/articles/25440461-gaethje-beats-topuria-tko-injury-update-stats-prize-money-highlights-ufc-white-house">Bleacher Report — Gaethje TKO</a> ·
+      <a href="https://www.cbssports.com/ufc/news/2026-ufc-event-schedule-khamzat-chimaev-sean-strickland-ufc-328/">CBS Sports — 2026 UFC schedule</a> ·
+      <a href="https://en.wikipedia.org/wiki/UFC_Fight_Night:_Kape_vs._Horiguchi">UFC Fight Night: Kape vs. Horiguchi</a> ·
+      <a href="https://www.ufc.com/news/conor-mcgregor-rematches-max-holloway-welterweight-main-event-ufc-329-live-paramount">UFC.com — McGregor vs. Holloway 2</a> ·
+      <a href="https://sports.yahoo.com/articles/ufc-power-rankings-entering-june-134800498.html">Yahoo Sports — UFC power rankings</a>
+    </p>
+    <p class="disclaimer">Cards and bouts are subject to change. Results and records reflect reporting available at publication; verify against official UFC listings.</p>
   </footer>
-
 </div>
+
 <script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;}catch(e){}})();</script>
 </body>
 </html>
