@@ -859,3 +859,29 @@ fought again since), update the entry in the same commit.
   CVE-2026-39813 (9.1) reported exploited; Splunk CVE-2026-20253 (9.8) still disclosed-not-exploited
   (fixed 10.0.7/10.2.4/10.4.0). Europol "AudiA6" laundering takedown (~$389M); Council of Europe probing
   ShinyHunters claim; "The Gentlemen" ransomware RaaS-affiliate analysis.
+
+## Added 2026-06-16 (Tuesday ~10:15am ET — Midday/Morning hourly refresh, markets OPEN)
+- **June 16 intraday (~10:15am ET, per Yahoo/Zacks "Stock Market News for Jun 16"):** S&P 500 ~+0.13%,
+  Dow ~+0.78%, Nasdaq Composite ~+0.02% (roughly flat), Russell 2000 ~+0.72% — stocks idled/cyclical-led
+  after Monday's surge as the two-day FOMC began (decision + Warsh's first presser Wed June 17; hold at
+  3.50-3.75% near-certain, no cuts priced). Do NOT carry these as a close — session in progress.
+- **Mon June 15 closes carried in the Weekly Scorecard (verified, unchanged):** S&P 500 7,554.29 (+1.65%),
+  Nasdaq Composite 26,683.94 (+3.07%), Dow 51,671.03 (+468.77, +0.92%). Prior column Fri June 12
+  (S&P 7,431.46, Nasdaq 25,888.84, Dow 51,202.26).
+- **DO NOT present June 15 movers as June 16 movers:** Boeing +4.5% (top Dow gainer), Snap +8.7% close
+  (S&P debt upgrade), Energy SPDR XLE -3.6% etc. were MONDAY June 15 session figures (Yahoo's June 16
+  recap article restates them) — they are NOT today's intraday moves.
+- **SpaceX (SPCX) to acquire Anysphere (maker of the Cursor AI coding tool) for $60B — ALL-STOCK**,
+  expected to close Q3 pending regulatory approvals (SpaceX sub X67 Inc. merges with Anysphere; shares
+  convert to SpaceX Class A). Follows an April option (~$10B partnership OR $60B buyout). Cursor ~$2.6B
+  annualized revenue. SPCX +~8.9% premarket June 16; follows the record Nasdaq debut (>$2T valuation,
+  first full day +19.6%). Do NOT call the deal closed — it is pending regulatory approval.
+- **U.S.-Iran:** reports June 16 say the two sides SIGNED a memorandum of understanding to solidify the
+  ceasefire and frame further talks (incl. reopening the Strait of Hormuz). A formal signing ceremony is
+  still reported for Fri June 19 in Switzerland and Iran has not publicly confirmed final terms — continue
+  framing as attributed/not-fully-confirmed per the standing correction; do NOT present a final ceremony
+  as confirmed/scheduled.
+- **May housing starts (released June 16):** fell 15.4% to a 1.177M annualized pace — lowest since May
+  2020, well below the ~1.43M expected.
+- Oil: WTI ~$80/bbl June 16 (~-0.4% on the day after Monday's >5% plunge), holding a two-month low on the
+  US-Iran Strait of Hormuz framework. 10-yr ~4.43% (around a one-month low).
