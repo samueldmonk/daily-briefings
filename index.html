@@ -1,1 +1,92 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><meta http-equiv="refresh" content="0; url=cyber-briefing.html"><title>Daily Briefings</title></head><body><a href="cyber-briefing.html">The Cyber Wire</a> · <a href="wallstreet-briefing.html">The Closing Bell</a> · <a href="mma-briefing.html">The Octagon</a></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Briefings — Your Front Page</title>
+<style>
+:root{--bg:#0b0c0f;--panel:#15171c;--line:#262a33;--ink:#e9e7e0;--muted:#9aa0ab;
+--cyber:#22d3a8;--gold:#e8c766;--red:#ff8a5c;--mono:'SF Mono',ui-monospace,Menlo,Consolas,monospace;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
+a{text-decoration:none}
+.wrap{max-width:1000px;margin:0 auto;padding:24px 20px 60px}
+header.mast{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:6px}
+.brand{font-size:34px;letter-spacing:.5px;margin:0;color:var(--ink)}
+.tagline{color:var(--muted);margin:5px 0 0;font-size:15px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:5px 11px;color:var(--muted)}
+.pill.live{color:var(--cyber);border-color:#1c3d35}
+.pill.live .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--cyber);margin-right:6px;animation:bl 1.6s infinite}
+@keyframes bl{50%{opacity:.25}}
+.freshline{font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--muted);margin:6px 2px 0;text-transform:uppercase}
+nav.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 22px}
+nav.tabs a{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:9px 14px;border:1px solid var(--line);border-radius:9px;background:var(--panel);color:var(--muted)}
+nav.tabs a.active{color:var(--ink);border-color:#5b6270;box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}
+nav.tabs a:hover{color:var(--ink)}
+.feeds{display:grid;grid-template-columns:1fr;gap:14px}
+.feed{display:block;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px;transition:transform .15s,border-color .15s;color:var(--ink)}
+.feed:hover{transform:translateY(-3px)}
+.feed .k{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;display:block;margin-bottom:6px}
+.feed h2{margin:0 0 8px;font-size:22px}
+.feed p{margin:0;color:#cfccc3;font-size:15px}
+.feed .go{display:inline-block;margin-top:12px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.cyber{border-left:4px solid var(--cyber)} .cyber .k,.cyber .go{color:var(--cyber)} .cyber:hover{border-color:var(--cyber)}
+.gold{border-left:4px solid var(--gold)} .gold .k,.gold .go{color:var(--gold)} .gold:hover{border-color:var(--gold)} .gold h2{font-family:Georgia,serif}
+.red{border-left:4px solid var(--red)} .red .k,.red .go{color:var(--red)} .red:hover{border-color:var(--red)}
+footer{margin-top:30px;border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:12.5px}
+.disclaimer{font-size:12px;color:#6d727c;margin-top:10px;font-style:italic}
+@media(min-width:760px){.feeds{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="mast">
+    <h1 class="brand">Daily Briefings</h1>
+    <p class="tagline">Your front page — security, markets &amp; the fight game, refreshed through the day</p>
+    <div class="meta">
+      <span class="pill live"><span class="dot"></span>Live</span>
+      <span class="pill" id="edition">Edition</span>
+      <span class="pill" id="datestamp">—</span>
+      <span class="pill">Updated <span id="updated">—</span></span>
+    </div>
+    <div class="freshline" id="freshline"></div>
+  </header>
+
+  <nav class="tabs">
+    <a href="index.html" class="active">★ Front Page</a>
+    <a href="cyber-briefing.html">⛨ The Cyber Wire</a>
+    <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
+    <a href="mma-briefing.html">⊘ The Octagon</a>
+    <a href="archive.html">🗄 Archive</a>
+  </nav>
+
+  <div class="feeds">
+    <a class="feed cyber" href="cyber-briefing.html">
+      <span class="k">⛨ The Cyber Wire · The Wire</span>
+      <h2>Security</h2>
+      <p>ShinyHunters is on a tear — a PeopleSoft zero-day has hit 100+ organizations and the crew now claims 61M Sysco records — while the max-severity LiteSpeed cPanel flaw (CVE-2026-48172) reaches its federal patch deadline today.</p>
+      <span class="go">Read the briefing →</span>
+    </a>
+    <a class="feed gold" href="wallstreet-briefing.html">
+      <span class="k">▲ The Closing Bell · The Tape</span>
+      <h2>Markets</h2>
+      <p>Stocks turned lower as the Fed's two-day meeting opened, with the S&amp;P 500 and Nasdaq slipping; SpaceX bucked the tape — soaring about 20% on its $60B deal to buy Cursor-maker Anysphere — while oil held near a two-month low.</p>
+      <span class="go">Read the briefing →</span>
+    </a>
+    <a class="feed red" href="mma-briefing.html">
+      <span class="k">⊘ The Octagon · Tale of the Tape</span>
+      <h2>MMA</h2>
+      <p>Justin Gaethje shocked Ilia Topuria at the White House's UFC Freedom 250 to take the undisputed lightweight title — Topuria's first pro loss (now 17-1) — as the UFC heads to Baku and toward McGregor vs. Holloway 2 in July.</p>
+      <span class="go">Read the briefing →</span>
+    </a>
+  </div>
+
+  <footer>
+    Three briefings, refreshed every couple of hours from 8 AM to 6 PM ET. Each page self-stamps its edition and links to a dated archive of past editions.
+    <p class="disclaimer">Automated summaries from live web reporting. Markets content is informational only and not investment advice; verify before acting.</p>
+  </footer>
+</div>
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh hourly, 8 AM–6 PM ET';}catch(e){}})();</script>
+</body>
+</html>
