@@ -2,32 +2,32 @@
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Archive — Daily Briefings</title>
 <style>
-:root{--bg:#0c0d10;--panel:#15171c;--line:#262a33;--ink:#e9e7e0;--muted:#9aa0ab;--accent:#9fb4c9;--mono:'SF Mono',ui-monospace,Menlo,Consolas,monospace;}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
-a{color:#cdd7e2;text-decoration:none}a:hover{text-decoration:underline}
-.wrap{max-width:1000px;margin:0 auto;padding:22px 20px 60px}
+:root{--bg:#0b0c0f;--panel:#15171c;--line:#262a33;--ink:#e9e7e0;--muted:#9aa0ab;--mono:'SF Mono',ui-monospace,Menlo,Consolas,monospace;}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
+a{color:#e8c766;text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1000px;margin:0 auto;padding:24px 20px 60px}
 header.mast{border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:6px}
-.brand{font-size:30px;letter-spacing:.5px;margin:0;color:var(--accent)}
-.tagline{color:var(--muted);margin:4px 0 0;font-size:15px}
+.brand{font-size:32px;margin:0;color:var(--ink)}.tagline{color:var(--muted);margin:5px 0 0;font-size:15px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:5px 11px;color:var(--muted)}
+.pill.live{color:#22d3a8;border-color:#1c3d35}.pill.live .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#22d3a8;margin-right:6px;animation:bl 1.6s infinite}
+@keyframes bl{50%{opacity:.25}}
 nav.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 18px}
 nav.tabs a{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:9px 14px;border:1px solid var(--line);border-radius:9px;background:var(--panel);color:var(--muted)}
-nav.tabs a.active{color:var(--accent);border-color:var(--accent);box-shadow:inset 0 0 0 1px rgba(159,180,201,.35)}
+nav.tabs a.active{color:var(--ink);border-color:#5b6270;box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}
 nav.tabs a:hover{color:var(--ink)}
-.label{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:26px 0 10px;border-bottom:1px solid var(--line);padding-bottom:7px}
+.dayhead{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#e8c766;margin:26px 0 10px;border-bottom:1px solid var(--line);padding-bottom:7px}
 .panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;margin-bottom:14px}
-table{width:100%;border-collapse:collapse;font-size:14px}
-td{text-align:left;padding:10px 10px;border-bottom:1px solid var(--line);vertical-align:middle}
-tr:last-child td{border-bottom:none}
-td.t{font-family:var(--mono);color:var(--ink);white-space:nowrap;width:120px}
-td.e{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);white-space:nowrap;width:90px}
-.lk a{margin-right:4px}
-.missing{color:#5a606b}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+th,td{text-align:left;padding:10px 10px;border-bottom:1px solid var(--line)}
+th{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+td.tm{font-family:var(--mono);color:var(--ink);white-space:nowrap}
+.na{color:#555}
 .note{color:var(--muted);font-size:12.5px;font-style:italic;margin:8px 2px 0}
-footer{margin-top:30px;border-top:1px solid var(--line);padding-top:14px;color:var(--muted);font-size:12px}
-</style></head>
-<body><div class="wrap">
-<header class="mast"><h1 class="brand">🗄 Archive</h1><p class="tagline">Past editions of The Cyber Wire, The Closing Bell &amp; The Octagon</p></header>
+footer{margin-top:30px;border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:12.5px}
+</style></head><body><div class="wrap">
+<header class="mast"><h1 class="brand">🗄 Archive</h1><p class="tagline">Point-in-time snapshots of past Daily Briefings editions</p>
+<div class="meta"><span class="pill live"><span class="dot"></span>Live</span><span class="pill" id="datestamp">—</span></div></header>
 <nav class="tabs">
 <a href="index.html">★ Front Page</a>
 <a href="cyber-briefing.html">⛨ The Cyber Wire</a>
@@ -35,8 +35,15 @@ footer{margin-top:30px;border-top:1px solid var(--line);padding-top:14px;color:v
 <a href="mma-briefing.html">⊘ The Octagon</a>
 <a href="archive.html" class="active">🗄 Archive</a>
 </nav>
-<div class="note">Snapshots are point-in-time captures of each edition as it was published. The three tabs above always show the current live edition. Snapshots are retained for ~21 days.</div>
-<div class="label">Tuesday, June 16, 2026</div>
-<div class="panel" style="padding:6px 8px"><table><tr><td class="t">2:54 PM ET</td><td class="e">Midday</td><td class="lk"><a href="archive/cyber-2026-06-16-1454.html">⛨ The Cyber Wire</a> · <a href="archive/wallstreet-2026-06-16-1454.html">▲ The Closing Bell</a> · <a href="archive/mma-2026-06-16-1454.html">⊘ The Octagon</a></td></tr><tr><td class="t">2:05 PM ET</td><td class="e">Midday</td><td class="lk"><span class="missing">⛨ The Cyber Wire</span> · <a href="archive/wallstreet-2026-06-16-1405.html">▲ The Closing Bell</a> · <span class="missing">⊘ The Octagon</span></td></tr><tr><td class="t">1:57 PM ET</td><td class="e">Midday</td><td class="lk"><a href="archive/cyber-2026-06-16-1357.html">⛨ The Cyber Wire</a> · <a href="archive/wallstreet-2026-06-16-1357.html">▲ The Closing Bell</a> · <a href="archive/mma-2026-06-16-1357.html">⊘ The Octagon</a></td></tr></table></div>
-<footer>Generated automatically with each briefing run.</footer>
-</div></body></html>
+<div class="note">Snapshots are point-in-time captures of each edition as published; live widgets are disabled in archived pages and figures reflect the moment of capture.</div>
+<div class="dayhead">Tuesday, June 16, 2026</div>
+<div class="panel" style="padding:6px 8px"><table><thead><tr><th>Time</th><th>The Cyber Wire</th><th>The Closing Bell</th><th>The Octagon</th></tr></thead><tbody>
+<tr><td class="tm">3:42 PM ET</td><td><a href="archive/cyber-2026-06-16-1542.html">view →</a></td><td><a href="archive/wallstreet-2026-06-16-1542.html">view →</a></td><td><a href="archive/mma-2026-06-16-1542.html">view →</a></td></tr>
+<tr><td class="tm">2:54 PM ET</td><td><a href="archive/cyber-2026-06-16-1454.html">view →</a></td><td><a href="archive/wallstreet-2026-06-16-1454.html">view →</a></td><td><a href="archive/mma-2026-06-16-1454.html">view →</a></td></tr>
+<tr><td class="tm">2:05 PM ET</td><td><span class="na">—</span></td><td><a href="archive/wallstreet-2026-06-16-1405.html">view →</a></td><td><span class="na">—</span></td></tr>
+<tr><td class="tm">1:57 PM ET</td><td><a href="archive/cyber-2026-06-16-1357.html">view →</a></td><td><a href="archive/wallstreet-2026-06-16-1357.html">view →</a></td><td><a href="archive/mma-2026-06-16-1357.html">view →</a></td></tr>
+</tbody></table></div>
+<footer>Archived editions are pruned after 21 days. Generated automatically each run.</footer>
+</div>
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);document.getElementById('datestamp').textContent=et;}catch(e){}})();</script>
+</body></html>

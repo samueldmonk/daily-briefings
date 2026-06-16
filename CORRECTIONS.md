@@ -927,3 +927,29 @@ fought again since), update the entry in the same commit.
 - WTI ~$80.47/bbl (-0.35%), two-month low on the US-Iran/Strait of Hormuz framework. 10-yr ~4.43-4.46%,
   around a one-month low. FOMC decision + Warsh's first presser Wed June 17 (hold 3.50-3.75% near-certain,
   ~97% per Schwab, new dot plot). May housing starts (released June 16) -15.4% to 1.177M, lowest since 2020.
+
+## Added 2026-06-16 (Tuesday ~3:10pm ET — Afternoon Edition, markets OPEN)
+- **June 16 afternoon intraday (~3pm ET, TheStreet/Motley Fool/Yahoo):** SPLIT TAPE — Dow ~+0.7%
+  to a FRESH RECORD (only major index green) while S&P 500 ~-0.4%, Nasdaq Composite ~-0.8%, Russell
+  2000 ~-0.6% all sank to SESSION LOWS as a tech/megacap selloff deepened ("opposite of yesterday";
+  virtually every non-tech sector higher). Do NOT carry as a close — session in progress. Mon Jun 15
+  closes stand in the Weekly Scorecard (S&P 7,554.29 +1.65%, Nasdaq 26,683.94 +3.07%, Dow 51,671.03
+  +0.92%); prior column Fri Jun 12.
+- **SpaceX (SPCX) ~+20% intraday — market value topped $2.8T and OVERTOOK AMAZON** (Motley Fool
+  "SpaceX Overtakes Amazon as Valuation Tops $2.8 Trillion") on the confirmed $60B ALL-STOCK
+  Anysphere/Cursor deal (close Q3 pending regulatory approval; do NOT call it closed).
+- **Fox (FOXA) ~-15%** after announcing a **$22B cash-and-stock deal to acquire Roku** (ROKU):
+  Roku holders get $160/share ($96 cash + Fox stock); Fox holders own ~73% of the combined company.
+  Deal NOT expected to close until 1H 2027, needs regulatory + shareholder approval. Roku ~100M+
+  households; combines with Tubi/Fox live sports+news.
+- Travel/fuel-sensitive names rallied on cheap oil: United Airlines ~+3.9%, Norwegian Cruise ~+3.7%,
+  Carnival ~+3.2%. Robinhood (HOOD) ~-1.5% on ~10% workforce cut (~290 jobs). WTI ~$80, 10-yr ~4.43%.
+- **Cyber KEV update:** CISA added TWO KEV on **June 15, 2026** — CVE-2026-20262 (Cisco Catalyst
+  SD-WAN Manager file create/overwrite, CVSS 6.5, FCEB due **June 29**) and **CVE-2026-54420**
+  (LiteSpeed cPanel Plugin symlink-following, CWE-61, CVSS **8.5**, exploited since May, reported by
+  Namecheap, fix plugin 2.4.8 / WHM 5.3.2.0, due ~July 6). NOTE: 54420 is a SEPARATE CVE from the
+  max-severity CVE-2026-48172 (CVSS 10.0, fix WHM v5.3.1.0/plugin v2.4.7, KEV-add May 26, due TODAY
+  June 16) — earlier this morning 54420 was dropped as uncorroborated, but CISA's June 15 KEV alert
+  now confirms it. ShinyHunters PeopleSoft CVE-2026-35273 (9.8, KEV June 12 / due July 3, 100+ orgs)
+  remains the top story; ShinyHunters' 61M Sysco Salesforce-records claim featured. New this run: a
+  Conti ransomware operator pleaded guilty (wire-fraud conspiracy + cyber-extortion).
