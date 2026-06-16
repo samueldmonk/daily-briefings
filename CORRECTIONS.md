@@ -978,3 +978,23 @@ fought again since), update the entry in the same commit.
 - WTI ~$80/bbl (ICMarkets $80.65 AM; ~two-month low), Brent ~$83. 10-yr ~4.45-4.47% (ICMarkets 4.474), near
   one-month low. FOMC decision + dot plot + Warsh's first presser Wed June 17 (hold 3.50-3.75% near-certain);
   May advance retail sales Wed 8:30am ET. After-hours quiet at the 4pm bell; no major earnings Tue (Accenture/Kroger Thu Jun 18).
+
+## Added 2026-06-16 (Tuesday ~5:10pm ET — Afternoon Edition, markets CLOSED)
+- Re-affirmed the June 16 OFFICIAL CLOSE (percent moves verified; precise index LEVELS still not
+  corroborated across sources at publish): SPLIT TAPE — Dow ~+0.74% to a FRESH RECORD (only major
+  index green); S&P 500 -0.40%, Nasdaq Composite -0.81%, Russell 2000 -0.63% closed at session lows
+  on a tech/megacap pullback ("opposite of yesterday"). Dow leaders Caterpillar ~+2.2%, Amex ~+1.7%,
+  Goldman ~+1.3% (per TheStreet/TS2/Yahoo "Stock Market News for Jun 16"). Mon Jun 15 closes remain
+  the last fully-verified official-close LEVELS (S&P 7,554.29 +1.65%, Nasdaq 26,683.94 +3.07%,
+  Dow 51,671.03 +0.92%); prior column Fri Jun 12. After-hours quiet at the 4pm bell; no major Tue
+  earnings (Accenture/Kroger Thu Jun 18). SpaceX ~+20% (biggest mover, >$2.8T, overtook Amazon) on
+  the confirmed $60B all-stock Anysphere/Cursor deal (close Q3, pending approval — NOT closed).
+- RENDER FIX (not a fact change): the MMA page's Kape odds and Freedom-250 bonus line had carried
+  literal "−"/"—" escape text in the HTML body; replaced with the actual − / — glyphs.
+  Future runs: never emit JS-style \uXXXX escapes in HTML body text.
+- Cyber unchanged: ShinyHunters PeopleSoft CVE-2026-35273 (9.8, KEV add Jun 12 / due Jul 3, 100+ orgs)
+  top story; ShinyHunters 61M Sysco Salesforce-records claim featured. CVE-2026-48172 (LiteSpeed
+  cPanel, CVSS 10.0, fix WHM v5.3.1.0 / plugin v2.4.7) FCEB deadline = TODAY Jun 16. June 15 KEV adds
+  stand: CVE-2026-20262 (Cisco Catalyst SD-WAN, 6.5, due Jun 29), CVE-2026-54420 (LiteSpeed symlink,
+  8.5, due ~Jul 6). MMA unchanged: Gaethje undisputed LW champ (def. Topuria, now 17-1, Jun 14),
+  Gane interim HW; next card Jun 20 Kape (−162) vs Horiguchi (+136) at Meta APEX.
