@@ -885,3 +885,32 @@ fought again since), update the entry in the same commit.
   2020, well below the ~1.43M expected.
 - Oil: WTI ~$80/bbl June 16 (~-0.4% on the day after Monday's >5% plunge), holding a two-month low on the
   US-Iran Strait of Hormuz framework. 10-yr ~4.43% (around a one-month low).
+
+## Added 2026-06-16 (Tuesday ~11:10am ET — Midday Edition, markets OPEN)
+- **CORRECTION to LiteSpeed CVE-2026-48172:** authoritative sources (The Hacker News May 2026;
+  SecurityWeek; CISA KEV page) give CVSS **10.0** (max severity), NOT 9.8; affects LiteSpeed
+  User-End cPanel Plugin **2.3–2.4.4**; any cPanel user can run scripts as root via lsws.redisAble;
+  actively exploited. Fix = **WHM Plugin v5.3.1.0 (cPanel plugin v2.4.7+)**, NOT v5.3.2.1/v2.4.8.
+  It was **added to KEV on May 26, 2026** (NOT June 16) with the standard 21-day BOD 22-01 window,
+  so the FCEB remediation **deadline is today, June 16, 2026** (NOT ~June 18). The paired
+  "CVE-2026-54420 (8.5)" cited in the June 16 morning entry was NOT corroborated this run — dropped.
+- **June 16 intraday (~10:15-11am ET, Yahoo/Zacks + TheStreet):** S&P 500 ~+0.13%, Dow ~+0.78%,
+  Nasdaq Composite ~+0.02% (flat), Russell 2000 ~+0.72% — stocks idled/cyclical-led as the two-day
+  FOMC opened (decision + Warsh's first presser Wed June 17; hold 3.50-3.75% near-certain). Do NOT
+  carry as a close — session in progress. Mon June 15 closes stand in the Weekly Scorecard
+  (S&P 7,554.29 +1.65%, Nasdaq 26,683.94 +3.07%, Dow 51,671.03 +0.92%); prior column Fri June 12.
+- **SpaceX–Anysphere CONFIRMED June 16:** SpaceX (SPCX) signed an Agreement & Plan of Merger to
+  acquire Anysphere (maker of Cursor) for **$60B ALL-STOCK** via subsidiary X67 Inc.; expected to
+  close **Q3 pending regulatory approval** (do NOT call it closed). Cursor ~$2.6B annualized revenue.
+  SPCX +~9% premarket / +~8% intraday; market cap ~$2.53T. IPO priced $135 June 11; opened June 12,
+  closed +19% at $161.
+- **WTI** ~$80/bbl June 16 (TradingEconomics $80.47, -0.35%; ~flat after Mon's >5% plunge), two-month
+  low on the US-Iran/Strait of Hormuz framework. 10-yr ~4.43% (around a one-month low). One TheStreet
+  snippet read WTI ~$76 (-4%) early — used the corroborated ~$80 figure with attribution.
+- **Cyber fresh this run:** ShinyHunters claims **61M Salesforce records** from **Sysco** (2nd
+  extortion threat in weeks, after a Qilin claim) — featured as a breach item. Oracle PeopleSoft
+  zero-day CVE-2026-35273 (CVSS 9.8, KEV add June 12 / due July 3, 100+ orgs) remains the top story.
+- **US-Iran:** reports June 16 say the sides signed an MOU to solidify the ceasefire/frame talks;
+  formal ceremony still reported Fri June 19 Switzerland, Iran has NOT confirmed final terms — keep
+  attributed/not-fully-confirmed. May housing starts (released June 16) fell 15.4% to 1.177M, lowest
+  since 2020 (vs ~1.43M expected).

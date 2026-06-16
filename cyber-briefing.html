@@ -86,6 +86,11 @@ footer a{color:var(--muted)}
   <div class="label">Breaches &amp; Incidents</div>
   <div class="cards">
     <div class="card">
+      <span class="tag breach">Extortion</span>
+      <h3>ShinyHunters targets Sysco — 61M records claimed</h3>
+      <p>The extortion crew ShinyHunters claims to have stolen more than 61 million Salesforce records from Sysco, the world's largest food distributor — said to include customer information, employee records and internal corporate data. It marks a second cyber-extortion threat against Sysco in weeks, following a Qilin ransomware claim.</p>
+    </div>
+    <div class="card">
       <span class="tag law">Takedown</span>
       <h3>Europol disrupts "AudiA6" laundering service</h3>
       <p>Europol cut off AudiA6, a cryptocurrency-laundering service used by ransomware gangs and cybercrime networks, calling it a key financial pipeline. The service is estimated to have washed more than €336 million (~$389 million) in illicit profits.</p>
@@ -120,9 +125,9 @@ footer a{color:var(--muted)}
         </tr>
         <tr>
           <td class="cve">CVE-2026-48172</td>
-          <td><span class="cvss crit">9.8</span></td>
-          <td>LiteSpeed cPanel / WHM Plugin</td>
-          <td>Root privilege escalation on CloudLinux/CageFS shared hosting. Patch: WHM Plugin v5.3.2.1 (cPanel plugin v2.4.8) or later.</td>
+          <td><span class="cvss crit">10.0</span></td>
+          <td>LiteSpeed User-End cPanel Plugin (2.3–2.4.4)</td>
+          <td>Max-severity privilege escalation: any cPanel user can run arbitrary scripts as root via the lsws.redisAble function. Actively exploited. Patch: WHM Plugin v5.3.1.0 (cPanel plugin v2.4.7+).</td>
         </tr>
         <tr>
           <td class="cve">CVE-2026-39813</td>
@@ -149,7 +154,7 @@ footer a{color:var(--muted)}
   <div class="label">CISA KEV &amp; Federal Deadlines</div>
   <div class="panel">
     <ul class="kev">
-      <li><strong>June 16</strong> — LiteSpeed cPanel Plugin flaws (<span style="font-family:var(--mono)">CVE-2026-48172</span>, CVSS 9.8, and <span style="font-family:var(--mono)">CVE-2026-54420</span>, CVSS 8.5) added for root privilege escalation; reporting cites an expedited remediation deadline of ~June 18.</li>
+      <li><strong>Due today, June 16</strong> — <span style="font-family:var(--mono)">CVE-2026-48172</span> (LiteSpeed User-End cPanel Plugin, CVSS 10.0) was added to the KEV catalog on May 26; per BOD 22-01's three-week window, the FCEB remediation deadline lands today.</li>
       <li><strong>June 12</strong> — <span style="font-family:var(--mono)">CVE-2026-35273</span> (Oracle PeopleSoft) added; FCEB remediation due <strong>July 3</strong>.</li>
       <li><strong>June 9</strong> — three flaws added: <span style="font-family:var(--mono)">CVE-2026-7473</span> (Arista EOS), <span style="font-family:var(--mono)">CVE-2026-11645</span> (Google Chromium V8) and <span style="font-family:var(--mono)">CVE-2026-20245</span> (Cisco Catalyst SD-WAN Manager); due ~June 30.</li>
       <li>Per BOD 22-01, federal civilian agencies generally get a three-week window from a KEV addition; exact dates are set on each CISA advisory page.</li>
@@ -162,7 +167,8 @@ footer a{color:var(--muted)}
       <a href="https://thehackernews.com/2026/06/shinyhunters-exploits-oracle-peoplesoft.html">The Hacker News — ShinyHunters / PeopleSoft</a> ·
       <a href="https://www.theregister.com/cyber-crime/2026/06/11/shinyhunters-claims-oracle-peoplesoft-0-day-hit-100-orgs/5254443">The Register — PeopleSoft 0-day, 100+ orgs</a> ·
       <a href="https://www.helpnetsecurity.com/2026/06/11/oracle-peoplesoft-under-attack-cve-2026-35273/">Help Net Security — Oracle advisory</a> ·
-      <a href="https://thehackernews.com/2026/06/cisa-flags-litespeed-cpanel-plugin-flaw.html">The Hacker News — LiteSpeed cPanel KEV</a> ·
+      <a href="https://thehackernews.com/2026/05/litespeed-cpanel-plugin-cve-2026-48172.html">The Hacker News — LiteSpeed cPanel CVE-2026-48172</a> ·
+      <a href="https://cybernews.com/news/sysco-shinyhunters-61-million-salesforce-records/">Cybernews — Sysco / ShinyHunters 61M records</a> ·
       <a href="https://www.cisa.gov/news-events/alerts/2026/06/12/cisa-adds-one-known-exploited-vulnerability-catalog">CISA — KEV add June 12</a> ·
       <a href="https://www.cisa.gov/news-events/alerts/2026/06/09/cisa-adds-three-known-exploited-vulnerabilities-catalog">CISA — KEV adds June 9</a> ·
       <a href="https://www.securityweek.com/">SecurityWeek</a> ·
