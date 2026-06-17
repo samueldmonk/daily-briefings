@@ -1116,3 +1116,22 @@ fought again since), update the entry in the same commit.
 - **MMA UNCHANGED:** Gaethje undisputed LW champ (def. Topuria Jun 14, now P4P #4; Topuria 17-1), Gane
   interim HW; Chandler dropped from LW top 15. Champions board per the June 17 morning correction. Next
   card Jun 20 UFC Vegas 119 Kape (−162) vs Horiguchi (+136), Meta APEX.
+
+## Added 2026-06-17 (Wednesday ~4:05pm ET — Afternoon/Close Edition, markets CLOSED)
+- **June 17 close (post-FOMC selloff):** stocks finished sharply lower after the hawkish hold. Reported
+  moves: S&P 500 and Nasdaq Composite each off roughly 1% (intraday/near-close prints ranged S&P -1.1% to
+  -1.4%, Nasdaq -1.0% to -1.5%); Dow down ~500 pts (~1%, one source -544 pts/-1.1%, another -0.93% at the
+  lows). **Did NOT publish a precise June 17 S&P/Nasdaq/Dow CLOSING LEVEL this run** — the only S&P level
+  seen (7,471.99) came tagged "-0.52%" which is internally inconsistent (7,471.99 vs prior 7,548.60 = -1.0%,
+  not -0.52%) and was uncorroborated. Per verify rule, published % moves and held levels for next run.
+  Weekly Scorecard Tue Jun 16 (Dow 51,999.67 +0.64% record, S&P 7,548.60 -0.08%, Nasdaq 26,376.34 -1.15%)
+  and Mon Jun 15 levels carried unchanged as the verified columns.
+- **RATES REVERSED UP (key change):** the hawkish dot plot sent yields HIGHER, not lower. 2-yr rose ~11bp
+  to ~4.153%; 10-yr rose ~4bp to ~4.469% (CNBC "bond yields surge"). SUPERSEDES the prior "10-yr ~4.44%
+  near a one-month low / yields eased" framing — do NOT carry "yields near a low" forward; the June 17
+  move was a hawkish repricing UP. Nvidia closed $204.49, -1.41% (refines the earlier intraday ~-2.4%).
+- FOMC verified: held 3.50-3.75% unanimously (4th straight hold), 9 of 18 see a 2026 hike, median year-end
+  fed funds ~3.8% (from 3.4% March), lone projected cut removed, easing bias dropped; Warsh abstained from
+  his own dot and said the Fed "dropped" forward guidance. May retail sales +0.9% m/m / +6.9% y/y. WTI ~$75
+  (three-month-low area). Added an After-Hours Movers section (markets closed): quiet, no major Wed earnings;
+  Accenture & Kroger report Thu Jun 18; Juneteenth market closure Fri Jun 19.
