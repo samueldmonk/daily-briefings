@@ -1067,3 +1067,30 @@ fought again since), update the entry in the same commit.
 - **June 20 card detail added (UFC Vegas 119, Kape vs Horiguchi 2, Meta Apex, Las Vegas, Paramount+):**
   Kape (22-7, #2 FLW) vs Horiguchi (36-5 1 NC, #5); co-main Ion Cutelaba (20-11-1) vs unbeaten Navajo
   Stirling (9-0) at LHW. Odds Kape −162 / Horiguchi +136 (FanDuel) retained from prior verification.
+
+## Added 2026-06-17 (Wednesday ~2:45pm ET — Midday Edition, markets OPEN, post-FOMC)
+- **FOMC DECISION (June 17, VERIFIED):** the Fed HELD the target range at 3.50–3.75% in a UNANIMOUS
+  vote at Warsh's first meeting (as priced, CME FedWatch >96%). HAWKISH dot plot: 9 of 18 officials now
+  project a 2026 rate HIKE; the single rate cut from March's projections was REMOVED; the easing/cutting
+  bias was DROPPED from the statement. (Yahoo Finance/NPR/CNBC/StockTitan). Do NOT describe the June 17
+  outcome as a cut or a dovish hold.
+- **Post-decision market reaction (~2:30–2:45pm ET):** stocks PULLED BACK on the hawkish tilt — S&P 500
+  ~-0.5%, Nasdaq Composite ~-0.7%, Dow ~-160 pts (~-0.3%) (StockTitan/CNBC). Earlier the tape had gyrated
+  little-changed midday (S&P ~+0.1%, Dow ~+0.15%, Nasdaq ~+0.3% as of ~1:20pm per TheStreet/Yahoo) before
+  the decision; do NOT carry the pre-2pm slightly-green intraday as the post-FOMC state.
+- **May retail sales (released June 17, 8:30am):** +0.9% m/m (vs +0.5% expected), +6.9% y/y; online +1.5%,
+  core control group +0.7% (Census/TTNews/Yahoo). Strong consumer beat.
+- **OIL:** WTI ~$75 / below $76 (TradingEconomics ~$75.47), lowest since early March, FIFTH straight down
+  session as tankers transit the Strait of Hormuz. Carries forward the morning correction; do NOT revert to ~$80.
+- Tue June 16 OFFICIAL CLOSE unchanged in Weekly Scorecard (Dow 51,999.67 +0.64% record, S&P 7,548.60
+  -0.08%, Nasdaq 26,376.34 -1.15%); prior column Mon June 15 (S&P 7,554.29, Nasdaq 26,683.94, Dow 51,671.03).
+- **CYBER new this run:** JetBrains Marketplace — coordinated campaign published ≥15 malicious plugins that
+  exfiltrate AI-provider API keys (tagged New); SOCRadar reported ~30,000 exposed/compromised Fortinet
+  firewalls (tagged New); Oracle shipped its June 2026 Critical Patch Update (tagged New). npm "ehindero"
+  140+ malicious Mastra packages kept but New tag removed (was new in the 9:16am edition). Top story
+  UNCHANGED: ShinyHunters (UNC6240) PeopleSoft CVE-2026-35273 (9.8, KEV Jun 12 / due Jul 3, 100+ orgs) +
+  61M Sysco Salesforce-records claim. Patch Priority: CVE-2026-48172 (LiteSpeed cPanel, 10.0) OVERDUE
+  (deadline Jun 16) and CVE-2026-48907 (Joomla JCE, 10.0, KEV add Jun 16 / due Jul 7). Threat level HIGH.
+- **MMA UNCHANGED:** Gaethje undisputed LW champ (def. Topuria Jun 14, now P4P #4; Topuria 17-1, fell 3
+  spots); Chandler dropped from LW top 15 (lost to Mauricio Ruffy). Champions board per the June 17 morning
+  correction. Next card Jun 20 UFC Vegas 119 Kape (−162) vs Horiguchi (+136), Meta APEX.
