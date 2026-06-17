@@ -1175,3 +1175,18 @@ fought again since), update the entry in the same commit.
   Chart of the Day = Intel (~-8.5%). After-hours quiet — no major Wed earnings; Accenture & Kroger report
   Thu Jun 18; Juneteenth market closure Fri Jun 19. Nvidia closed $204.49 (-1.41%). No editorial change
   vs the 5:05pm edition; this run is a confirming hourly refresh (last of the 8am-6pm cycle).
+
+## Added 2026-06-17 (Wednesday ~7:05pm ET — Evening confirming refresh, markets CLOSED)
+- Post-cycle confirming run (the 8am-6pm cadence ended at the 6:05pm edition). Fresh searches found NO
+  new material developments since 6:05pm. State carried forward unchanged across all three pages:
+  - MARKETS: June 17 close (hawkish FOMC selloff) — Dow 51,492.55 (-507.12, -0.98%) and Nasdaq Composite
+    26,021.66 (-1.34%) LOCKED; S&P 500 shown as the -1.21% MOVE with the 7,420.10 level still WITHHELD
+    (does not reconcile with the verified Tue Jun 16 close of 7,548.60). Rates repriced UP (2-yr ~4.15%
+    +~11bp, 10-yr ~4.47%); WTI ~$75 (three-month-low area); Nvidia closed $204.49 (-1.41%); Chart of the
+    Day = Intel (~-8.5%). After-hours quiet; Accenture & Kroger report Thu Jun 18; Juneteenth closure Fri Jun 19.
+  - CYBER: UNCHANGED — top story ShinyHunters PeopleSoft CVE-2026-35273 (9.8, KEV Jun 12/due Jul 3, 100+
+    orgs) + 61M Sysco claim; Patch Priority CVE-2026-48172 (LiteSpeed cPanel 10.0) OVERDUE (Jun 16) +
+    CVE-2026-48907 (Joomla JCE 10.0, KEV Jun 16/due Jul 7); threat level HIGH. No New tags this run.
+  - MMA: UNCHANGED — Gaethje undisputed LW champ (def. Topuria Jun 14; Topuria 17-1, P4P slid; Gaethje
+    into P4P top), Gane interim HW, Chandler dropped from LW top 15. Next card Jun 20 UFC Vegas 119
+    Kape (−162) vs Horiguchi (+136), Meta APEX (co-main Cutelaba vs unbeaten Navajo Stirling 9-0, LH).
