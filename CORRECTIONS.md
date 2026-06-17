@@ -1094,3 +1094,25 @@ fought again since), update the entry in the same commit.
 - **MMA UNCHANGED:** Gaethje undisputed LW champ (def. Topuria Jun 14, now P4P #4; Topuria 17-1, fell 3
   spots); Chandler dropped from LW top 15 (lost to Mauricio Ruffy). Champions board per the June 17 morning
   correction. Next card Jun 20 UFC Vegas 119 Kape (−162) vs Horiguchi (+136), Meta APEX.
+
+## Added 2026-06-17 (Wednesday ~3:45pm ET — Afternoon Edition, markets OPEN, ~20 min to close)
+- **June 17 post-FOMC selloff DEEPENED into the afternoon:** as of ~3:40pm ET S&P 500 ~-1.2%, Nasdaq
+  Composite ~-1.2%, Dow ~-500 pts (~-1%) (TheStreet/Yahoo/StockTitan). Traders fully priced one
+  quarter-point HIKE by year-end on the hawkish dot plot (median year-end fed funds ~3.8% vs 3.4% March);
+  Warsh said the Fed "dropped" forward guidance. Megacaps red (MSFT/META/GOOGL/AMZN); chips took profits
+  (Intel ~-8.5%, AMD ~-7.3%, Micron ~-6.2%, Broadcom ~-4.4%, Nvidia ~-2.4%); SpaceX (SPCX) ~+4.8% on the
+  ~$60B Anysphere/Cursor deal; Russell 2000 the relative standout. Chart of the Day = Intel. Do NOT carry
+  the earlier 2:45pm "S&P ~-0.5% / Nasdaq ~-0.7% / Dow ~-160" figures as the late-afternoon state.
+- 10-yr ~4.44%; WTI ~$75 (lowest since early March, 5th straight down session); Brent toward $78. Weekly
+  Scorecard unchanged (Tue Jun 16 close: Dow 51,999.67 +0.64% record, S&P 7,548.60 -0.08%, Nasdaq
+  26,376.34 -1.15%; no June 17 final close yet — session in progress at publish).
+- **CYBER new this run:** Europol disrupted **"AudiA6"**, a crypto-laundering service used by ransomware
+  gangs (hundreds of millions washed) — tagged New. JetBrains/Fortinet/Oracle-CPU New tags removed (new
+  in the prior edition, not this one). Top story, Patch Priority, threat level (HIGH) UNCHANGED:
+  ShinyHunters PeopleSoft CVE-2026-35273 (9.8, KEV Jun 12/due Jul 3, 100+ orgs) + 61M Sysco claim;
+  CVE-2026-48172 (LiteSpeed cPanel 10.0) OVERDUE (Jun 16); CVE-2026-48907 (Joomla JCE 10.0, KEV Jun 16/
+  due Jul 7). Note: a THN aggregation again showed a Jun 18 deadline for CVE-2026-54420 (LiteSpeed symlink
+  8.5) — kept conservatively at ~Jul 6 (no CISA page confirming a same-week date this run).
+- **MMA UNCHANGED:** Gaethje undisputed LW champ (def. Topuria Jun 14, now P4P #4; Topuria 17-1), Gane
+  interim HW; Chandler dropped from LW top 15. Champions board per the June 17 morning correction. Next
+  card Jun 20 UFC Vegas 119 Kape (−162) vs Horiguchi (+136), Meta APEX.
