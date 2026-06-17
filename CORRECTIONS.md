@@ -1135,3 +1135,27 @@ fought again since), update the entry in the same commit.
   his own dot and said the Fed "dropped" forward guidance. May retail sales +0.9% m/m / +6.9% y/y. WTI ~$75
   (three-month-low area). Added an After-Hours Movers section (markets closed): quiet, no major Wed earnings;
   Accenture & Kroger report Thu Jun 18; Juneteenth market closure Fri Jun 19.
+
+## Added 2026-06-17 (Wednesday ~5:05pm ET — Afternoon/Close Edition, markets CLOSED)
+- **June 17 close — Dow & Nasdaq levels now LOCKED (CNBC, internally consistent):** Dow Jones fell
+  507.12 pts (-0.98%) to **51,492.55**; Nasdaq Composite -1.34% to **26,021.66**. Both reconcile with
+  Tue Jun 16 closes (Dow 51,999.67; Nasdaq 26,376.34). Published these levels in the Weekly Scorecard
+  this run (supersedes the prior "level finalizing" placeholder).
+- **S&P 500 level STILL withheld:** CNBC stated "-1.21% ... ended at 7,420.10", but 7,420.10 vs the
+  verified Tue close 7,548.60 = -1.70%, not -1.21% (7,420.10 only reconciles with a ~7,511 prior, which
+  contradicts CORRECTIONS' 7,548.60). Per verify rule, published the -1.21% % move and WITHHELD the S&P
+  closing level pending corroboration. Do NOT publish 7,420.10 as the S&P close unless a later source
+  reconciles it with the 7,548.60 prior.
+- RATES carried from the 4:05pm entry (hawkish repricing UP): 2-yr ~4.15% (+~11bp), 10-yr ~4.47% (+~4bp).
+  Nvidia closed $204.49 (-1.41%). WTI ~$75 (three-month-low area). FOMC held 3.50-3.75% unanimously (4th
+  straight hold), 9 of 18 see a 2026 hike, median year-end ~3.8%, easing bias dropped. May retail sales
+  +0.9% m/m / +6.9% y/y. Chart of the Day = Intel (~-8.5%). Accenture & Kroger report Thu Jun 18;
+  Juneteenth closure Fri Jun 19.
+- **CYBER UNCHANGED** (no genuinely-new item in the last hour): top story ShinyHunters PeopleSoft
+  CVE-2026-35273 (9.8, KEV Jun 12/due Jul 3, 100+ orgs) + 61M Sysco claim; Patch Priority CVE-2026-48172
+  (LiteSpeed cPanel 10.0) OVERDUE (Jun 16) + CVE-2026-48907 (Joomla JCE 10.0, KEV Jun 16/due Jul 7);
+  threat level HIGH. Removed the Europol "AudiA6" New tag (was new in the prior edition). No New tags
+  this run.
+- **MMA UNCHANGED:** Gaethje undisputed LW champ (def. Topuria Jun 14, now P4P #4; Topuria 17-1), Gane
+  interim HW; Chandler dropped from LW top 15. Next card Jun 20 UFC Vegas 119 Kape (−162) vs Horiguchi
+  (+136), Meta APEX (co-main Cutelaba vs unbeaten Navajo Stirling 9-0, LH).
