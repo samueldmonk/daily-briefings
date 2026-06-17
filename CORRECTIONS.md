@@ -1020,3 +1020,50 @@ fought again since), update the entry in the same commit.
   rule and was NOT confirmed on a CISA page this run — kept conservatively at "~July 6" per standing
   policy (never publish a same-week KEV deadline without a CISA page). MMA: Gaethje undisputed LW champ
   (def. Topuria Jun 14, Topuria 17-1), Gane interim HW; next card Jun 20 Kape (−162) vs Horiguchi (+136).
+
+## Added 2026-06-17 (Wednesday ~9:10am ET — Morning Edition, markets PRE-OPEN, FOMC DAY)
+- Led with the most recent CLOSE per freshness rule (cash opens 9:30am). **Tue June 16 OFFICIAL CLOSE
+  (verified levels, carried unchanged):** Dow 51,999.67 (+0.64%, FRESH RECORD, only major index green),
+  S&P 500 7,548.60 (-0.08%), Nasdaq Composite 26,376.34 (-1.15%), Russell 2000 -0.63%. Mon June 15 prior
+  column (S&P 7,554.29 +1.65%, Nasdaq 26,683.94 +3.07%, Dow 51,671.03 +0.92%); Fri June 12 before that.
+- **June 17 premarket (~9am ET):** Nasdaq-100 futures ~+0.5%, S&P 500 / Dow futures ~flat ahead of the
+  FOMC. **FOMC decision 2:00pm ET + Warsh's FIRST press conference 2:30pm ET;** hold at 3.50-3.75%
+  near-certain (CME FedWatch >96%), no cuts priced; Warsh expected to withhold his own dot; BofA flags
+  3+ members projecting 2026 HIKES. May advance retail sales 8:30am ET. SpaceX-Anysphere/Cursor $60B
+  all-stock deal confirmed June 16 (close Q3, NOT closed); SPCX ~+8.9% premarket. Iran MOU reportedly
+  signed; formal ceremony reported Fri June 19 Switzerland, Iran NOT confirmed — keep attributed.
+- **OIL UPDATE:** WTI slid to ~$75-76 June 17 (TradingEconomics $76.25 +0.27% intraday; "fell toward $75,
+  fifth straight down session, lowest since early March"). SUPERSEDES the ~$80 June 16 figure — do NOT
+  carry ~$80 as the current oil level this run. Brent slid in tandem toward the high-$70s (no fresh precise
+  Brent number this run — published qualitatively). 10-yr ~4.43-4.45% (one-month low area), 2-yr eased ~8bp
+  on the week. Removed the After-Hours Movers section (Morning Edition, not after 4pm).
+- **CYBER — new this run:** **CVE-2026-48907 (Joomla Content Editor / JCE "Widget Factory"), CVSS v4 10.0**,
+  improper access control -> unauthenticated attacker creates editor profiles and uploads/executes arbitrary
+  PHP (RCE). Actively exploited. **CISA KEV add June 16, 2026; FCEB deadline July 7, 2026** (standard 3-week
+  BOD 22-01 window; one search snippet said "June 17 add" but the CISA alert page + detailed coverage say
+  June 16 / due July 7 — use June 16 / July 7). Fixed in JCE 2.9.99.5 (hardening 2.9.99.6). Made the new
+  Patch Priority alongside the now-OVERDUE LiteSpeed cPanel CVE-2026-48172 (CVSS 10.0, KEV add May 26,
+  deadline June 16 NOW LAPSED). Threat level raised to HIGH (two separate 10.0 actively-exploited flaws).
+  Also new: **npm supply-chain — account "ehindero" mass-published 140+ malicious packages across the
+  Mastra scope on June 17** (added as a breach/incident card, tagged New). Conti-guilty-plea card kept but
+  its "New" tag removed (it was new last edition, not this one). Top story unchanged: ShinyHunters (UNC6240)
+  Oracle PeopleSoft zero-day CVE-2026-35273 (9.8, 100+ orgs / 68% universities, KEV add Jun 12 / due Jul 3)
+  + 61M Sysco Salesforce-records claim. KEV countdowns recomputed from June 17.
+- **MMA — VERIFIED CHAMPIONS BOARD (June 17, cross-checked against the latest events):** HW Tom Aspinall
+  (undisputed) / Ciryl Gane (interim, won at Freedom 250 Jun 14 — Aspinall-Gane unification targeted for
+  UFC Paris ~September); LHW Alex Pereira (still LHW champ; LOST his interim-HW bid at Freedom 250 but
+  retains the 205 belt); MW Khamzat Chimaev; WW Islam Makhachev; **LW Justin Gaethje (NEW undisputed,
+  def. Topuria Jun 14, Topuria now 17-1);** FW Alexander Volkanovski (NOT Topuria — Topuria vacated FW to
+  move to LW; aggregator lists still showing "Topuria FW champ" are STALE); BW Petr Yan (def. Dvalishvili,
+  UFC 323, Dec 6 2025); FLW Joshua Van (def. Pantoja, UFC 323, Dec 6 2025); W-BW Kayla Harrison; W-FLW
+  Valentina Shevchenko; W-SW Mackenzie Dern. Do NOT regress FW to Topuria or LW to Topuria.
+- **Freedom 250 bonuses VERIFIED (CBS Sports/MMA Mania/Bloody Elbow):** the UFC raised the White House
+  purse to a **$400K Fight of the Night** and **$425K Performance of the Night**. **Gaethje banked a
+  record $825K** (FOTN + POTN — main-event double-dip); **Topuria $400K** (FOTN); **Gane $425K** (the
+  other POTN). Every fight on the card ended in a KNOCKOUT (a first). Dropped the earlier unverified
+  "(funded by World Liberty Financial and Crypto.com)" sponsor attribution (not corroborated this run).
+- **Post-White House RANKINGS update (MMA Mania):** Gaethje crashed into the men's pound-for-pound
+  rankings; Michael Chandler was dropped from the lightweight top 15 after a 4th straight loss.
+- **June 20 card detail added (UFC Vegas 119, Kape vs Horiguchi 2, Meta Apex, Las Vegas, Paramount+):**
+  Kape (22-7, #2 FLW) vs Horiguchi (36-5 1 NC, #5); co-main Ion Cutelaba (20-11-1) vs unbeaten Navajo
+  Stirling (9-0) at LHW. Odds Kape −162 / Horiguchi +136 (FanDuel) retained from prior verification.
