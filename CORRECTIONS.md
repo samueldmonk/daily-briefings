@@ -998,3 +998,25 @@ fought again since), update the entry in the same commit.
   stand: CVE-2026-20262 (Cisco Catalyst SD-WAN, 6.5, due Jun 29), CVE-2026-54420 (LiteSpeed symlink,
   8.5, due ~Jul 6). MMA unchanged: Gaethje undisputed LW champ (def. Topuria, now 17-1, Jun 14),
   Gane interim HW; next card Jun 20 Kape (−162) vs Horiguchi (+136) at Meta APEX.
+
+## Added 2026-06-16 (Tuesday ~7:40pm ET — Afternoon Edition, markets CLOSED)
+- **June 16 OFFICIAL CLOSE — now CORROBORATED with LEVELS** (TheStreet + Yahoo Finance; internally
+  consistent vs the verified Jun 15 closes): Dow Jones 51,999.67 (+~329 pts, **+0.64%**, FRESH RECORD,
+  only major index green); S&P 500 7,548.60 (**-0.08%**, essentially flat); Nasdaq Composite 26,376.34
+  (**-1.15%**); Russell 2000 -0.63%. This SUPERSEDES the earlier percent-only 4:05/5:10pm estimates
+  (which read Dow +0.74% / S&P -0.40% / Nasdaq -0.81%) — the corroborated S&P move is ~flat (-0.08%)
+  and the Nasdaq fell MORE (-1.15%). Split-tape narrative unchanged: Dow record, tech/megacap pullback
+  dragged S&P/Nasdaq/Russell lower. Dow leaders Caterpillar ~+2.2%, Amex ~+1.7%, Goldman ~+1.3%.
+  Math check: 51,999.67-51,671.03=+328.64=+0.64%; 7,548.60-7,554.29=-5.69=-0.08%; 26,376.34-26,683.94=-307.60=-1.15% (all verify).
+- Jun 15 closes remain the prior-column reference (S&P 7,554.29 +1.65%, Nasdaq 26,683.94 +3.07%,
+  Dow 51,671.03 +0.92%); Fri Jun 12 before that (S&P 7,431.46, Nasdaq 25,888.84, Dow 51,202.26).
+- After-hours quiet at the 4pm bell; no major Tue earnings (Accenture/Kroger Thu Jun 18). FOMC decision +
+  dot plot + Warsh's first presser Wed Jun 17 (hold 3.50-3.75% near-certain); May retail sales Wed 8:30am.
+  WTI ~$80/bbl (two-month low), 10-yr ~4.45%. Juneteenth market closure Fri Jun 19.
+- Cyber/MMA UNCHANGED from the 5:10pm edition. Cyber TOP STORY = ShinyHunters PeopleSoft CVE-2026-35273
+  (9.8, KEV Jun 12 / due Jul 3, 100+ orgs); Patch Priority = CVE-2026-48172 (LiteSpeed cPanel, CVSS 10.0,
+  FCEB due TODAY Jun 16 / overdue). NOTE on CVE-2026-54420 (LiteSpeed symlink, CVSS 8.5): a Jun 16
+  THN aggregation reported a Jun 18 FCEB deadline, but this conflicts with the BOD 22-01 three-week
+  rule and was NOT confirmed on a CISA page this run — kept conservatively at "~July 6" per standing
+  policy (never publish a same-week KEV deadline without a CISA page). MMA: Gaethje undisputed LW champ
+  (def. Topuria Jun 14, Topuria 17-1), Gane interim HW; next card Jun 20 Kape (−162) vs Horiguchi (+136).
