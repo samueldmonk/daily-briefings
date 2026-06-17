@@ -1159,3 +1159,19 @@ fought again since), update the entry in the same commit.
 - **MMA UNCHANGED:** Gaethje undisputed LW champ (def. Topuria Jun 14, now P4P #4; Topuria 17-1), Gane
   interim HW; Chandler dropped from LW top 15. Next card Jun 20 UFC Vegas 119 Kape (−162) vs Horiguchi
   (+136), Meta APEX (co-main Cutelaba vs unbeaten Navajo Stirling 9-0, LH).
+
+## Added 2026-06-17 (Wednesday ~6:05pm ET — Closing/Evening refresh, markets CLOSED)
+- **S&P 500 close level STILL withheld (4th confirmation of the inconsistency):** a 6pm-run source
+  gave S&P 500 7,420.10, -91.25 pts, -1.21%. Those three are INTERNALLY consistent (91.25/7,511.35 =
+  1.215%), but they imply a ~7,511.35 PRIOR close — which contradicts the verified Tue Jun 16 S&P close
+  of 7,548.60 (7,548.60 - 7,420.10 = 128.50 = -1.70%, not -1.21%). Per the standing rule, kept the S&P
+  as the -1.21% MOVE and continued to WITHHOLD the 7,420.10 level (it does NOT reconcile with 7,548.60).
+  Dow 51,492.55 (-507.12, -0.98%) and Nasdaq Composite 26,021.66 (-1.34%) remain LOCKED (CNBC, reconcile
+  with Tue closes). One outlier feed (TradingEconomics US500 "7536, +0.33%") is a different contract/stale
+  and was disregarded.
+- Rates carried (hawkish repricing UP): 10-yr ~4.46-4.47% (erased losses post-decision), 2-yr ~4.15%
+  (+~11bp). WTI ~$75 (three-month-low area). FOMC held 3.50-3.75% unanimously (4th straight hold), 9 of 18
+  see a 2026 hike, median year-end ~3.8%, easing bias dropped. May retail sales +0.9% m/m / +6.9% y/y.
+  Chart of the Day = Intel (~-8.5%). After-hours quiet — no major Wed earnings; Accenture & Kroger report
+  Thu Jun 18; Juneteenth market closure Fri Jun 19. Nvidia closed $204.49 (-1.41%). No editorial change
+  vs the 5:05pm edition; this run is a confirming hourly refresh (last of the 8am-6pm cycle).
