@@ -1324,3 +1324,22 @@ fought again since), update the entry in the same commit.
   Featherweight VACANT (Evloev leads). Next: Jun 20 UFC Vegas 119 Kape (-162) vs Horiguchi (+136) Meta APEX
   (co-main Cutelaba vs Navajo Stirling 9-0); Jun 27 Baku Fiziev vs Torres; Jul 11 UFC 329 McGregor vs
   Holloway 2 (T-Mobile; "Jul 18" listing WRONG). Champions board verified vs latest results.
+
+## Added 2026-06-18 (Thursday ~4:05pm ET — Afternoon Edition, AFTER THE CLOSE)
+- **MARKETS (official close, TheStreet/Bloomberg/CNBC/Schwab):** rebound from Wed's hawkish-Fed selloff
+  HELD into the close — S&P 500 +1.15%, Nasdaq Composite +1.5%, Dow +0.80%; Russell 2000 -0.72% (narrow
+  megacap-chip rally, not broad). LEAD = Intel ~+9% to a RECORD on Trump's Truth Social claim Apple will
+  design/build chips with Intel in the US; NEITHER company confirmed, Apple ~+0.6%. Philadelphia Semiconductor
+  Index (SOX) ~+6% to a record high; Micron & Broadcom among top S&P 500 gainers. Did NOT publish a precise
+  Jun 18 index LEVEL (% moves only — point/level feeds not corroborated this run).
+- **ACCENTURE CORRECTION:** prior pages' radar said "Accenture reports earnings AFTER Thursday's close." That
+  is WRONG — Accenture reported Q3 FY26 on Jun 18 (8-K dated 2026-06-18) and the stock fell ~16% (some reports
+  ~19%, among its worst days on record) DURING the regular session. Q3 beat EPS ($3.80, +9%) but missed revenue
+  ($18.7B vs ~$18.8B), softer bookings ($19.3B, -2%/-3% LC), and CUT FY revenue-growth guide to 3-4% (from 3-5%).
+  Chart of the Day this edition = Accenture (the day's biggest single-stock move).
+- After 4pm: ADDED an After-Hours Movers section (quiet — no major earnings scheduled after the bell; next
+  regular session Mon Jun 22 after Juneteenth closure Fri Jun 19). Weekly Scorecard rolled to the Jun 18 close
+  (% moves; levels withheld). S&P 7,420 level STILL WITHHELD (does not reconcile with verified Jun 16 close
+  7,548.60). Rates: 10-yr ~4.45-4.50%, 2-yr ~4.08-4.15%, 30-yr ~4.97%, Fed funds 3.50-3.75% (held Jun 17, 4th).
+  WTI ~$73.77 (-~4%, below $75, lowest since early March) on US-Iran deal; Brent ~$78; IEA flagged supply surplus.
+  PPI hot +6.5% y/y (hottest since 2022). Jobless claims fell 4k to 226k.
