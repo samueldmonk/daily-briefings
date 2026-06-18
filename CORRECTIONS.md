@@ -1343,3 +1343,24 @@ fought again since), update the entry in the same commit.
   7,548.60). Rates: 10-yr ~4.45-4.50%, 2-yr ~4.08-4.15%, 30-yr ~4.97%, Fed funds 3.50-3.75% (held Jun 17, 4th).
   WTI ~$73.77 (-~4%, below $75, lowest since early March) on US-Iran deal; Brent ~$78; IEA flagged supply surplus.
   PPI hot +6.5% y/y (hottest since 2022). Jobless claims fell 4k to 226k.
+
+## Added 2026-06-18 (Thursday ~5:05pm ET — Afternoon Edition, AFTER THE CLOSE)
+- **MARKETS UNCHANGED from the 4:05pm close edition** (TheStreet/Yahoo/CNBC/Schwab confirm): Jun 18
+  official close S&P 500 +1.15%, Nasdaq Composite +1.5%, Dow +0.80%, Russell 2000 -0.72% (narrow
+  megacap-chip rally). LEAD = Intel ~+9% to a RECORD (early +10.5%/$133.82, last ~+9%) on Trump's Truth
+  Social claim Apple will design/build chips with Intel in the US; NEITHER company confirmed (Intel "won't
+  comment"), Apple ~+0.6%. SOX ~+6% to a record. Chart of the Day = Accenture (-~16%, reported as steep as
+  ~19% — day's biggest single-stock move; Q3 EPS beat $3.80 but revenue miss $18.7B + FY guide cut to 3-4%).
+  After-hours QUIET (no major earnings after the bell). NO precise Jun 18 index LEVEL published (% moves only).
+  Juneteenth closure Fri Jun 19; next regular session Mon Jun 22; Marvell -> S&P 500 Jun 22. WTI ~$73.77 (3-mo
+  low) / Brent ~$78 on signed US-Iran deal. PPI hot +6.5% y/y. Jobless claims 226k (-4k). S&P 7,420 level STILL
+  WITHHELD (does not reconcile w/ verified Jun 16 close 7,548.60).
+- **CYBER UNCHANGED:** top story ShinyHunters/Oracle PeopleSoft CVE-2026-35273 (9.8, KEV Jun 12/due Jul 3 =
+  15 left). Kodak New item (confirmed Jun 17-18, 2.2M claim, Jun 18 deadline; "limited" data per Kodak, scope
+  unverified). Added (now sourced) to Threat Actor Spotlight: ShinyHunters 2026 spree also claims Instructure
+  Canvas (up to ~9,000 institutions) + Charter Communications (~42M records) per CybersecurityNews. RoguePlanet
+  CVE-2026-50656 (7.8, not KEV) + ClickFix carried. Patch Priority = LiteSpeed CVE-2026-48172 OVERDUE (due Jun
+  16); Joomla JCE CVE-2026-48907 (10.0, KEV Jun 16/due Jul 7, 19 left). Threat HIGH.
+- **MMA UNCHANGED** (no event since Jun 14 Freedom 250): Gaethje undisputed LW champ, Gane interim HW, FW VACANT
+  (Evloev leads). Next: Jun 20 UFC Vegas 119 Kape (-162) vs Horiguchi (+136) Meta APEX; Jun 27 Baku Fiziev vs
+  Torres; Jul 11 UFC 329 McGregor vs Holloway 2 (T-Mobile; "Jul 18" WRONG). Champions board verified.
