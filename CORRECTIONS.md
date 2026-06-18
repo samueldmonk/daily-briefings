@@ -1274,3 +1274,23 @@ fought again since), update the entry in the same commit.
   Topuria hospitalized, no rebook soon. Next: Jun 20 UFC Vegas 119 Kape (-162) vs Horiguchi (+136) Meta APEX
   (co-main Cutelaba vs Navajo Stirling 9-0); Jun 27 Baku Fiziev vs Torres; Jul 11 UFC 329 McGregor vs Holloway 2
   (T-Mobile; "Jul 18" listing is WRONG). Champions board verified vs latest results.
+
+## Added 2026-06-18 (Thursday ~2:05pm ET — Midday/Afternoon refresh, markets OPEN)
+- **MARKETS (~2pm ET, TheStreet/Motley Fool/Schwab/investingLive):** chip-led rebound HELD into early
+  afternoon — S&P 500 ~+1.15%, Nasdaq Composite ~+1.5%, Dow ~+0.8%; Russell 2000 LAGGED ~-0.72% (narrow
+  megacap-chip rally, not broad). LEAD UNCHANGED = Intel ~+9% to an intraday RECORD (~$133) on Trump's
+  Truth Social claim Apple will design/build chips with Intel (18A); NEITHER company confirmed, Apple moved
+  only modestly. Chart of the Day = Intel. SECTORS now verified this run: tech/semiconductors LED, ENERGY
+  LAGGED (Exxon ~-3.1%, Chevron ~-2.23%) as oil slid. Chip movers: Micron ~+7% (investingLive/Yahoo +7.15%),
+  KLA ~+6.7%, Lam ~+5%, Nvidia ~+2%, Marvell ~+6-7% (KeyBanc PT hike; ->S&P 500 Jun 22). Did NOT publish a
+  precise S&P/Nasdaq/Dow intraday LEVEL (% moves only). DROPPED a premarket "Accenture -14.3%" snippet as a
+  mover (Accenture reports AFTER the close; not a verified intraday move).
+- **PPI hot +6.5% y/y** (Schwab, hottest since 2022) carried. Rates: 10-yr ~4.43-4.45% (roughly flat
+  post-FOMC; FRED Jun 16 4.43%), 2-yr ~4.08-4.15%, 30-yr ~4.97%, Fed funds 3.50-3.75% (held Jun 17, 4th).
+  US-Iran interim deal SIGNED & in effect (14-pt MOU, extends April ceasefire 60 days, reopens Strait of
+  Hormuz, lifts sanctions on Iranian oil exports) -> WTI ~$75 (~-4%, 3-mo low), Brent ~$78; IEA flagged
+  supply surplus. Kroger Q1 rev beat $46.12B / adj EPS miss $1.58 vs $1.59; Accenture after close. Juneteenth
+  closure Fri Jun 19. Marvell -> S&P 500 Jun 22.
+- **Weekly Scorecard UNCHANGED** (Jun 17 close): Dow 51,492.55 (-0.98%) and Nasdaq 26,021.66 (-1.34%) LOCKED;
+  S&P shown as -1.21% MOVE with the ~7,420 level STILL WITHHELD (does not reconcile with verified Tue Jun 16
+  close 7,548.60). No Jun 18 close yet (before 4pm; NO after-hours section this run).
