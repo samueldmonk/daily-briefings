@@ -4,6 +4,20 @@ Every run MUST check this file after cloning. Nothing published may contradict a
 entry below. If fresh search results prove an entry outdated (e.g. the fighter has
 fought again since), update the entry in the same commit.
 
+## ⚠ CHAMPIONS BOARD — AUTHORITATIVE (verified 2026-06-18 vs ESPN + UFC.com; SUPERSEDES every earlier champion claim in this file)
+Three belts were published WRONG for weeks (Pereira at LHW, Chimaev at MW, featherweight "vacant"). The CURRENT verified UFC champions are:
+- **Heavyweight:** Tom Aspinall (undisputed, inherited Jun 21 2025). **Interim HW:** Ciryl Gane (KO2 Pereira, Freedom 250, Jun 14 2026).
+- **Light Heavyweight:** CARLOS ULBERG — won the VACANT belt KO1 over Jiří Procházka at UFC 327 (Miami, Apr 11 2026); had ACL surgery after. Alex PEREIRA is NO LONGER LHW champ — he vacated to campaign at heavyweight and LOST the interim-HW bid to Gane. Do NOT list Pereira as LHW champ.
+- **Middleweight:** SEAN STRICKLAND — split-decision upset of Khamzat Chimaev at UFC 328 (Newark, May 9 2026); two-time champ. Khamzat CHIMAEV is NO LONGER MW champ. Do NOT list Chimaev as MW champ.
+- **Welterweight:** Islam Makhachev (UD over Jack Della Maddalena, UFC 322, Nov 15 2025; two-division champ, vacated LW).
+- **Lightweight:** Justin Gaethje (TKO4 Topuria, Freedom 250, Jun 14 2026).
+- **Featherweight:** ALEXANDER VOLKANOVSKI — NOT vacant. Reclaimed the belt Topuria vacated (UD over Diego Lopes, UFC 314, Apr 12 2025) and DEFENDED it (UD over Lopes, UFC 325, Jan 31 2026; ties José Aldo at 8 FW title defenses). Movsar Evloev is the #1 contender (beat Lerone Murphy, UFC London, Mar 2026); title fight targeted late summer. Do NOT list featherweight as vacant.
+- **Bantamweight:** Petr Yan (UD over Merab Dvalishvili, UFC 323, Dec 6 2025).
+- **Flyweight:** Joshua Van (TKO1 Alexandre Pantoja, UFC 323, Dec 6 2025).
+- **Women's Flyweight:** Valentina Shevchenko. **Women's Bantamweight:** Kayla Harrison. **Women's Strawweight:** Mackenzie Dern (UD over Virna Jandiroba, UFC 321, Oct 25 2025).
+Sources: ESPN "Current and all-time UFC champions" (living article, reflects the Jun 14 result); UFC.com UFC 327 & UFC 328 official pages; Al Jazeera (UFC 325).
+NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Khamzat Chimaev", "Featherweight VACANT", or "Champions board verified" with the OLD names is OUTDATED — THIS BLOCK WINS.
+
 ## Fighters
 - **Quillan Salkilld** (lightweight, Australia): UFC record 5-0 as of 2026-05-02.
   Most recent fight: TKO win over Beneil Dariush, Round 1, UFC Perth, May 2, 2026.
@@ -1364,3 +1378,13 @@ fought again since), update the entry in the same commit.
 - **MMA UNCHANGED** (no event since Jun 14 Freedom 250): Gaethje undisputed LW champ, Gane interim HW, FW VACANT
   (Evloev leads). Next: Jun 20 UFC Vegas 119 Kape (-162) vs Horiguchi (+136) Meta APEX; Jun 27 Baku Fiziev vs
   Torres; Jul 11 UFC 329 McGregor vs Holloway 2 (T-Mobile; "Jul 18" WRONG). Champions board verified.
+
+## Added 2026-06-18 (Thursday ~5:30pm ET — CHAMPIONS BOARD CORRECTION, user-flagged)
+- User flagged the Octagon champions board as wrong. Deep re-verification vs ESPN's living "Current and
+  all-time UFC champions" article + UFC.com official pages found THREE errors that had persisted for weeks:
+  (1) Light Heavyweight was listed as Alex PEREIRA — WRONG; **Carlos ULBERG** is champ (KO1 Procházka, UFC 327,
+  Apr 11 2026, vacant belt; Pereira moved to HW and lost the interim bid to Gane). (2) Middleweight was listed
+  as Khamzat CHIMAEV — WRONG; **Sean STRICKLAND** is champ (split decision over Chimaev, UFC 328, May 9 2026,
+  two-time champ). (3) Featherweight was listed as VACANT — WRONG; **Alexander VOLKANOVSKI** holds it (reclaimed
+  UFC 314 Apr 2025, defended UFC 325 Jan 31 2026; Evloev is #1 contender). All three fixed on the page and a
+  standing AUTHORITATIVE champions block added at the TOP of this file. See that block before any future publish.
