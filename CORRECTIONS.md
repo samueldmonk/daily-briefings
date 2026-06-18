@@ -1190,3 +1190,35 @@ fought again since), update the entry in the same commit.
   - MMA: UNCHANGED — Gaethje undisputed LW champ (def. Topuria Jun 14; Topuria 17-1, P4P slid; Gaethje
     into P4P top), Gane interim HW, Chandler dropped from LW top 15. Next card Jun 20 UFC Vegas 119
     Kape (−162) vs Horiguchi (+136), Meta APEX (co-main Cutelaba vs unbeaten Navajo Stirling 9-0, LH).
+
+## Added 2026-06-18 (Thursday ~9:45am ET — Morning Edition, markets OPEN)
+- **MARKETS (June 18 ~9:45am intraday, TheStreet/CNBC):** chip-led REBOUND after Wed's hawkish-Fed selloff.
+  S&P 500 ~+1.2%, Nasdaq Composite ~+1.5%, Dow ~+0.8%; Russell 2000 LAGGED ~-0.7% (narrow, megacap-chip rally,
+  NOT broad). LEAD = Intel +~9% to an intraday RECORD (~$129.84) after Trump's Truth Social claim that Intel
+  struck a deal with APPLE to design/build chips in the US — NEITHER company has confirmed; present as reported,
+  not signed. Chip rally: Marvell ~+7%, Micron ~+4.8%, AMD ~+3.9%, Broadcom ~+3%, Lam/Applied Materials ~+5%,
+  SOXX ~+4.6%. Chart of the Day = Intel. Kroger Q1 beat revenue ($46.12B vs ~$45.5B) but MISSED adj EPS by a
+  penny ($1.58 vs $1.59 est); identical sales ex-fuel +1%, e-comm +19%, gross margin 22.7% (from 23%), FY guide
+  maintained ($5.10-5.30). Accenture reports AFTER the close. 10-yr ~4.45% (stayed firm post-FOMC), 2-yr ~4.15%;
+  WTI ~$75 (three-month-low area) sliding on US-Iran framework (Trump reportedly signed a copy of a 14-point MOU
+  re: ceasefire extension + Strait of Hormuz reopening; talks continue ~60 days — do NOT call it a final signed
+  deal). Juneteenth market closure Fri Jun 19. Marvell -> S&P 500 effective Jun 22.
+- **Weekly Scorecard UNCHANGED** from Jun 17 close: Dow 51,492.55 (-0.98%) and Nasdaq 26,021.66 (-1.34%) LOCKED;
+  S&P shown as -1.21% MOVE with the ~7,420 level STILL WITHHELD (does not reconcile with verified Tue Jun 16 close
+  7,548.60). No Jun 18 close yet (session in progress; before-4pm so NO after-hours section this run).
+- **CYBER new item this run = KODAK breach** (BleepingComputer/SecurityWeek/Cybernews, Jun 17-18): Eastman Kodak
+  CONFIRMED an incident after ShinyHunters listed it (Jun 15) with a "final warning" deadline of Jun 18 and a claim
+  of 2.2M records; Kodak says an unauthorized third party briefly accessed "a limited amount" of data, scope not
+  verified, no proof samples posted. Tagged New. Also disclosed: Microsoft Defender zero-day "RoguePlanet"
+  CVE-2026-50656 (CVSS 7.8, priv-esc, patch pending, NOT in KEV); ClickFix loaders (BabaDeda/Lorem Ipsum/Potemkin).
+  Top story UNCHANGED = ShinyHunters PeopleSoft CVE-2026-35273 (9.8, KEV Jun 12/due Jul 3, 100+ orgs; Nottingham
+  454,600 records published). Patch Priority UNCHANGED: CVE-2026-48172 (LiteSpeed cPanel 10.0) OVERDUE (due Jun 16,
+  now 2 days past) + Joomla JCE CVE-2026-48907 (10.0, KEV Jun 16/due Jul 7, 19 days left). Threat level HIGH.
+  KEV countdowns recomputed to Jun 18 (PeopleSoft 15 left, Cisco SD-WAN Jun 29 11 left, Jun 9 adds ~12 left).
+- **MMA UNCHANGED** (no event since Jun 14 Freedom 250): Gaethje undisputed LW champ (def. Topuria; Topuria 17-1),
+  Gane interim HW. Fresh post-fight item added: Topuria said he lost vision in both eyes and wants a rematch, but
+  Dana White said Topuria was hospitalized after the fight and has NO plans to rebook him soon. Next card Jun 20
+  UFC Vegas 119 Kape (-162) vs Horiguchi (+136), Meta APEX (co-main Cutelaba vs Navajo Stirling 9-0). Then Jun 27
+  Baku Fiziev vs Torres (adds Shara Magomedov vs Michel Pereira, Vettori vs Naurdiev). UFC 329 McGregor vs
+  Holloway 2 CONFIRMED **July 11** (Wikipedia/UFC.com), T-Mobile Arena — a stray Paramount+ schedule listing said
+  "July 18"; that is WRONG, keep July 11.
