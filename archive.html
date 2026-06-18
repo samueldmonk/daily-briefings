@@ -8,50 +8,50 @@
 :root{
   --bg:#0b0e13; --panel:#131820; --line:#222b38; --txt:#e6edf3; --muted:#8b97a7;
   --mono:'SF Mono',ui-monospace,Menlo,Consolas,monospace;
-  --teal:#22d3a8; --cyan:#36c6ff; --gold:#caa64a; --goldlt:#e8c766;
-  --red:#e84545; --orange:#ff8a5c; --up:#3fb950; --down:#f85149;
+  --teal:#22d3a8; --gold:#caa64a; --red:#e84545; --orange:#ff8a5c;
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.55}
-.wrap{max-width:1080px;margin:0 auto;padding:22px 18px 60px}
-.masthead{display:flex;flex-direction:column;gap:10px;border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:14px}
-.title{font-size:34px;font-weight:800;letter-spacing:-.02em;margin:0}
+.wrap{max-width:1000px;margin:0 auto;padding:22px 18px 60px}
+.masthead{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:14px}
+.title{font-size:32px;font-weight:800;letter-spacing:-.02em;margin:0}
 .title .accent{background:linear-gradient(90deg,var(--teal),var(--gold),var(--orange));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-.meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.tagline{color:var(--muted);font-size:13.5px;margin-top:3px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:11px}
 .pill{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:4px 11px;color:var(--muted)}
-.pill.live{color:var(--up);border-color:#1f3b2a}
-.pill.live .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--up);margin-right:6px;animation:pulse 1.8s infinite}
+.pill.live{color:var(--orange);border-color:#4a2424}
+.pill.live .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--orange);margin-right:6px;animation:pulse 1.8s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-.freshline{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin:2px 0 16px}
+.freshline{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin:8px 0 16px}
 nav{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
 nav a{font-family:var(--mono);font-size:12px;letter-spacing:.05em;text-decoration:none;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:8px 13px;transition:.15s}
 nav a:hover{transform:translateY(-2px);color:var(--txt)}
 nav a.active{color:var(--bg);background:var(--txt);font-weight:700}
-.note{font-size:12.5px;color:var(--muted);font-style:italic;margin:0 0 20px}
-.day{font-family:var(--mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--goldlt);margin:26px 0 10px;border-bottom:1px solid var(--line);padding-bottom:7px}
-.tbl{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:6px 14px;margin-bottom:8px}
-.hdr{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:10px 2px;border-bottom:1px solid var(--line)}
-.row{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding:11px 2px;border-bottom:1px solid var(--line)}
-.row:last-child{border-bottom:none}
-.row .t{font-family:var(--mono);font-size:13px;color:var(--txt);min-width:96px}
-.lk{display:flex;flex-wrap:wrap;gap:8px}
-.lk a{font-family:var(--mono);font-size:11.5px;text-decoration:none;border:1px solid var(--line);border-radius:8px;padding:5px 10px;transition:.15s}
-.lk a:hover{transform:translateY(-2px)}
-.lk .na{font-family:var(--mono);font-size:11.5px;color:#43505f;border:1px dashed var(--line);border-radius:8px;padding:5px 10px}
+.note{font-size:12.5px;color:var(--muted);font-style:italic;margin-bottom:18px}
+.dayhead{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin:24px 0 8px}
+.daypanel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:6px 12px;margin-bottom:6px}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line)}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+td.tm{font-family:var(--mono);color:var(--txt)}
+td a{text-decoration:none;font-weight:600}
+td a:hover{text-decoration:underline}
+td.na{color:#41506180}
 footer{margin-top:34px;border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:12px}
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="masthead">
-    <h1 class="title">Daily <span class="accent">Briefings</span> — Archive</h1>
+    <h1 class="title">🗄 <span class="accent">Archive</span></h1>
+    <div class="tagline">Point-in-time snapshots of past Daily Briefings editions</div>
     <div class="meta">
       <span class="pill live"><span class="dot"></span>Archive</span>
-      <span class="pill">23 editions</span>
-      <span class="pill" id="datestamp">Thursday, June 18, 2026</span>
+      <span class="pill">58 snapshots</span>
+      <span class="pill">3 days</span>
     </div>
   </div>
-  <div class="freshline" id="freshline">Point-in-time snapshots · briefings refresh every 30 minutes, 8 AM–6 PM ET</div>
+  <div class="freshline">Snapshots captured every 30 minutes, 8 AM–6 PM ET · most recent first</div>
 
   <nav>
     <a href="index.html">★ Front Page</a>
@@ -61,48 +61,48 @@ footer{margin-top:34px;border-top:1px solid var(--line);padding-top:16px;color:v
     <a href="archive.html" class="active">🗄 Archive</a>
   </nav>
 
-  <p class="note">Each link opens a point-in-time snapshot of that briefing as published at the listed Eastern time. Snapshots are static (no live widgets) and reflect what was known at that moment; the live briefings above always show the latest edition. Snapshots older than 21 days are pruned.</p>
+  <div class="note">Each link opens the exact briefing as published at that time. Snapshots are point-in-time and are not updated after capture — figures, deadlines and countdowns reflect the moment of publication. The live editions are linked in the nav above.</div>
 
-  <h2 class="day">Thursday, June 18, 2026</h2>
-<div class="tbl">
-<div class="hdr"><span>Edition time</span><span>Snapshots</span></div>
-<div class="row"><span class="t">6:20 PM ET</span><span class="lk"><a href="archive/cyber-2026-06-18-1820.html" style="color:#22d3a8;border-color:#22d3a855">The Cyber Wire</a><a href="archive/wallstreet-2026-06-18-1820.html" style="color:#caa64a;border-color:#caa64a55">The Closing Bell</a><a href="archive/mma-2026-06-18-1820.html" style="color:#ff8a5c;border-color:#ff8a5c55">The Octagon</a></span></div>
-<div class="row"><span class="t">5:08 PM ET</span><span class="lk"><a href="archive/cyber-2026-06-18-1708.html" style="color:#22d3a8;border-color:#22d3a855">The Cyber Wire</a><a href="archive/wallstreet-2026-06-18-1708.html" style="color:#caa64a;border-color:#caa64a55">The Closing Bell</a><a href="archive/mma-2026-06-18-1708.html" style="color:#ff8a5c;border-color:#ff8a5c55">The Octagon</a></span></div>
-<div class="row"><span class="t">4:07 PM ET</span><span class="lk"><span class="na">The Cyber Wire</span><a href="archive/wallstreet-2026-06-18-1607.html" style="color:#caa64a;border-color:#caa64a55">The Closing Bell</a><span class="na">The Octagon</span></span></div>
-<div class="row"><span class="t">3:09 PM ET</span><span class="lk"><a href="archive/cyber-2026-06-18-1509.html" style="color:#22d3a8;border-color:#22d3a855">The Cyber Wire</a><a href="archive/wallstreet-2026-06-18-1509.html" style="color:#caa64a;border-color:#caa64a55">The Closing Bell</a><a href="archive/mma-2026-06-18-1509.html" style="color:#ff8a5c;border-color:#ff8a5c55">The Octagon</a></span></div>
-<div class="row"><span class="t">2:08 PM ET</span><span class="lk"><span class="na">The Cyber Wire</span><a href="archive/wallstreet-2026-06-18-1408.html" style="color:#caa64a;border-color:#caa64a55">The Closing Bell</a><span class="na">The Octagon</span></span></div>
-<div class="row"><span class="t">1:13 PM ET</span><span class="lk"><a href="archive/cyber-2026-06-18-1313.html" style="color:#22d3a8;border-color:#22d3a855">The Cyber Wire</a><a href="archive/wallstreet-2026-06-18-1313.html" style="color:#caa64a;border-color:#caa64a55">The Closing Bell</a><a href="archive/mma-2026-06-18-1313.html" style="color:#ff8a5c;border-color:#ff8a5c55">The Octagon</a></span></div>
-<div class="row"><span class="t">12:07 PM ET</span><span class="lk"><span class="na">The Cyber Wire</span><a href="archive/wallstreet-2026-06-18-1207.html" style="color:#caa64a;border-color:#caa64a55">The Closing Bell</a><span class="na">The Octagon</span></span></div>
-<div class="row"><span class="t">11:10 AM ET</span><span class="lk"><a href="archive/cyber-2026-06-18-1110.html" style="color:#22d3a8;border-color:#22d3a855">The Cyber Wire</a><a href="archive/wallstreet-2026-06-18-1110.html" style="color:#caa64a;border-color:#caa64a55">The Closing Bell</a><a href="archive/mma-2026-06-18-1110.html" style="color:#ff8a5c;border-color:#ff8a5c55">The Octagon</a></span></div>
-<div class="row"><span class="t">9:44 AM ET</span><span class="lk"><a href="archive/cyber-2026-06-18-0944.html" style="color:#22d3a8;border-color:#22d3a855">The Cyber Wire</a><a href="archive/wallstreet-2026-06-18-0944.html" style="color:#caa64a;border-color:#caa64a55">The Closing Bell</a><a href="archive/mma-2026-06-18-0944.html" style="color:#ff8a5c;border-color:#ff8a5c55">The Octagon</a></span></div>
-</div>
-<h2 class="day">Wednesday, June 17, 2026</h2>
-<div class="tbl">
-<div class="hdr"><span>Edition time</span><span>Snapshots</span></div>
-<div class="row"><span class="t">7:08 PM ET</span><span class="lk"><a href="archive/cyber-2026-06-17-1908.html" style="color:#22d3a8;border-color:#22d3a855">The Cyber Wire</a><a href="archive/wallstreet-2026-06-17-1908.html" style="color:#caa64a;border-color:#caa64a55">The Closing Bell</a><a href="archive/mma-2026-06-17-1908.html" style="color:#ff8a5c;border-color:#ff8a5c55">The Octagon</a></span></div>
-<div class="row"><span class="t">6:04 PM ET</span><span class="lk"><span class="na">The Cyber Wire</span><a href="archive/wallstreet-2026-06-17-1804.html" style="color:#caa64a;border-color:#caa64a55">The Closing Bell</a><span class="na">The Octagon</span></span></div>
-<div class="row"><span class="t">5:11 PM ET</span><span class="lk"><a href="archive/cyber-2026-06-17-1711.html" style="color:#22d3a8;border-color:#22d3a855">The Cyber Wire</a><a href="archive/wallstreet-2026-06-17-1711.html" style="color:#caa64a;border-color:#caa64a55">The Closing Bell</a><a href="archive/mma-2026-06-17-1711.html" style="color:#ff8a5c;border-color:#ff8a5c55">The Octagon</a></span></div>
-<div class="row"><span class="t">4:08 PM ET</span><span class="lk"><span class="na">The Cyber Wire</span><a href="archive/wallstreet-2026-06-17-1608.html" style="color:#caa64a;border-color:#caa64a55">The Closing Bell</a><span class="na">The Octagon</span></span></div>
-<div class="row"><span class="t">3:46 PM ET</span><span class="lk"><a href="archive/cyber-2026-06-17-1546.html" style="color:#22d3a8;border-color:#22d3a855">The Cyber Wire</a><a href="archive/wallstreet-2026-06-17-1546.html" style="color:#caa64a;border-color:#caa64a55">The Closing Bell</a><a href="archive/mma-2026-06-17-1546.html" style="color:#ff8a5c;border-color:#ff8a5c55">The Octagon</a></span></div>
-<div class="row"><span class="t">2:43 PM ET</span><span class="lk"><a href="archive/cyber-2026-06-17-1443.html" style="color:#22d3a8;border-color:#22d3a855">The Cyber Wire</a><a href="archive/wallstreet-2026-06-17-1443.html" style="color:#caa64a;border-color:#caa64a55">The Closing Bell</a><a href="archive/mma-2026-06-17-1443.html" style="color:#ff8a5c;border-color:#ff8a5c55">The Octagon</a></span></div>
-<div class="row"><span class="t">9:16 AM ET</span><span class="lk"><a href="archive/cyber-2026-06-17-0916.html" style="color:#22d3a8;border-color:#22d3a855">The Cyber Wire</a><a href="archive/wallstreet-2026-06-17-0916.html" style="color:#caa64a;border-color:#caa64a55">The Closing Bell</a><a href="archive/mma-2026-06-17-0916.html" style="color:#ff8a5c;border-color:#ff8a5c55">The Octagon</a></span></div>
-</div>
-<h2 class="day">Tuesday, June 16, 2026</h2>
-<div class="tbl">
-<div class="hdr"><span>Edition time</span><span>Snapshots</span></div>
-<div class="row"><span class="t">11:23 PM ET</span><span class="lk"><a href="archive/cyber-2026-06-16-2323.html" style="color:#22d3a8;border-color:#22d3a855">The Cyber Wire</a><a href="archive/wallstreet-2026-06-16-2323.html" style="color:#caa64a;border-color:#caa64a55">The Closing Bell</a><a href="archive/mma-2026-06-16-2323.html" style="color:#ff8a5c;border-color:#ff8a5c55">The Octagon</a></span></div>
-<div class="row"><span class="t">5:08 PM ET</span><span class="lk"><a href="archive/cyber-2026-06-16-1708.html" style="color:#22d3a8;border-color:#22d3a855">The Cyber Wire</a><a href="archive/wallstreet-2026-06-16-1708.html" style="color:#caa64a;border-color:#caa64a55">The Closing Bell</a><a href="archive/mma-2026-06-16-1708.html" style="color:#ff8a5c;border-color:#ff8a5c55">The Octagon</a></span></div>
-<div class="row"><span class="t">4:09 PM ET</span><span class="lk"><span class="na">The Cyber Wire</span><a href="archive/wallstreet-2026-06-16-1609.html" style="color:#caa64a;border-color:#caa64a55">The Closing Bell</a><span class="na">The Octagon</span></span></div>
-<div class="row"><span class="t">3:42 PM ET</span><span class="lk"><a href="archive/cyber-2026-06-16-1542.html" style="color:#22d3a8;border-color:#22d3a855">The Cyber Wire</a><a href="archive/wallstreet-2026-06-16-1542.html" style="color:#caa64a;border-color:#caa64a55">The Closing Bell</a><a href="archive/mma-2026-06-16-1542.html" style="color:#ff8a5c;border-color:#ff8a5c55">The Octagon</a></span></div>
-<div class="row"><span class="t">2:54 PM ET</span><span class="lk"><a href="archive/cyber-2026-06-16-1454.html" style="color:#22d3a8;border-color:#22d3a855">The Cyber Wire</a><a href="archive/wallstreet-2026-06-16-1454.html" style="color:#caa64a;border-color:#caa64a55">The Closing Bell</a><a href="archive/mma-2026-06-16-1454.html" style="color:#ff8a5c;border-color:#ff8a5c55">The Octagon</a></span></div>
-<div class="row"><span class="t">2:05 PM ET</span><span class="lk"><span class="na">The Cyber Wire</span><a href="archive/wallstreet-2026-06-16-1405.html" style="color:#caa64a;border-color:#caa64a55">The Closing Bell</a><span class="na">The Octagon</span></span></div>
-<div class="row"><span class="t">1:57 PM ET</span><span class="lk"><a href="archive/cyber-2026-06-16-1357.html" style="color:#22d3a8;border-color:#22d3a855">The Cyber Wire</a><a href="archive/wallstreet-2026-06-16-1357.html" style="color:#caa64a;border-color:#caa64a55">The Closing Bell</a><a href="archive/mma-2026-06-16-1357.html" style="color:#ff8a5c;border-color:#ff8a5c55">The Octagon</a></span></div>
-</div>
+<div class="dayhead">Thursday, June 18, 2026</div>
+<div class="daypanel"><table>
+<tr><th>Time</th><th>The Cyber Wire</th><th>The Closing Bell</th><th>The Octagon</th></tr>
+<tr><td class="tm">6:50 PM ET</td><td><a style="color:#22d3a8" href="archive/cyber-2026-06-18-1850.html">⛨ View</a></td><td><a style="color:#caa64a" href="archive/wallstreet-2026-06-18-1850.html">▲ View</a></td><td><a style="color:#e84545" href="archive/mma-2026-06-18-1850.html">⊘ View</a></td></tr>
+<tr><td class="tm">6:20 PM ET</td><td><a style="color:#22d3a8" href="archive/cyber-2026-06-18-1820.html">⛨ View</a></td><td><a style="color:#caa64a" href="archive/wallstreet-2026-06-18-1820.html">▲ View</a></td><td><a style="color:#e84545" href="archive/mma-2026-06-18-1820.html">⊘ View</a></td></tr>
+<tr><td class="tm">5:08 PM ET</td><td><a style="color:#22d3a8" href="archive/cyber-2026-06-18-1708.html">⛨ View</a></td><td><a style="color:#caa64a" href="archive/wallstreet-2026-06-18-1708.html">▲ View</a></td><td><a style="color:#e84545" href="archive/mma-2026-06-18-1708.html">⊘ View</a></td></tr>
+<tr><td class="tm">4:07 PM ET</td><td class="na">—</td><td><a style="color:#caa64a" href="archive/wallstreet-2026-06-18-1607.html">▲ View</a></td><td class="na">—</td></tr>
+<tr><td class="tm">3:09 PM ET</td><td><a style="color:#22d3a8" href="archive/cyber-2026-06-18-1509.html">⛨ View</a></td><td><a style="color:#caa64a" href="archive/wallstreet-2026-06-18-1509.html">▲ View</a></td><td><a style="color:#e84545" href="archive/mma-2026-06-18-1509.html">⊘ View</a></td></tr>
+<tr><td class="tm">2:08 PM ET</td><td class="na">—</td><td><a style="color:#caa64a" href="archive/wallstreet-2026-06-18-1408.html">▲ View</a></td><td class="na">—</td></tr>
+<tr><td class="tm">1:13 PM ET</td><td><a style="color:#22d3a8" href="archive/cyber-2026-06-18-1313.html">⛨ View</a></td><td><a style="color:#caa64a" href="archive/wallstreet-2026-06-18-1313.html">▲ View</a></td><td><a style="color:#e84545" href="archive/mma-2026-06-18-1313.html">⊘ View</a></td></tr>
+<tr><td class="tm">12:07 PM ET</td><td class="na">—</td><td><a style="color:#caa64a" href="archive/wallstreet-2026-06-18-1207.html">▲ View</a></td><td class="na">—</td></tr>
+<tr><td class="tm">11:10 AM ET</td><td><a style="color:#22d3a8" href="archive/cyber-2026-06-18-1110.html">⛨ View</a></td><td><a style="color:#caa64a" href="archive/wallstreet-2026-06-18-1110.html">▲ View</a></td><td><a style="color:#e84545" href="archive/mma-2026-06-18-1110.html">⊘ View</a></td></tr>
+<tr><td class="tm">9:44 AM ET</td><td><a style="color:#22d3a8" href="archive/cyber-2026-06-18-0944.html">⛨ View</a></td><td><a style="color:#caa64a" href="archive/wallstreet-2026-06-18-0944.html">▲ View</a></td><td><a style="color:#e84545" href="archive/mma-2026-06-18-0944.html">⊘ View</a></td></tr>
+</table></div>
+<div class="dayhead">Wednesday, June 17, 2026</div>
+<div class="daypanel"><table>
+<tr><th>Time</th><th>The Cyber Wire</th><th>The Closing Bell</th><th>The Octagon</th></tr>
+<tr><td class="tm">7:08 PM ET</td><td><a style="color:#22d3a8" href="archive/cyber-2026-06-17-1908.html">⛨ View</a></td><td><a style="color:#caa64a" href="archive/wallstreet-2026-06-17-1908.html">▲ View</a></td><td><a style="color:#e84545" href="archive/mma-2026-06-17-1908.html">⊘ View</a></td></tr>
+<tr><td class="tm">6:04 PM ET</td><td class="na">—</td><td><a style="color:#caa64a" href="archive/wallstreet-2026-06-17-1804.html">▲ View</a></td><td class="na">—</td></tr>
+<tr><td class="tm">5:11 PM ET</td><td><a style="color:#22d3a8" href="archive/cyber-2026-06-17-1711.html">⛨ View</a></td><td><a style="color:#caa64a" href="archive/wallstreet-2026-06-17-1711.html">▲ View</a></td><td><a style="color:#e84545" href="archive/mma-2026-06-17-1711.html">⊘ View</a></td></tr>
+<tr><td class="tm">4:08 PM ET</td><td class="na">—</td><td><a style="color:#caa64a" href="archive/wallstreet-2026-06-17-1608.html">▲ View</a></td><td class="na">—</td></tr>
+<tr><td class="tm">3:46 PM ET</td><td><a style="color:#22d3a8" href="archive/cyber-2026-06-17-1546.html">⛨ View</a></td><td><a style="color:#caa64a" href="archive/wallstreet-2026-06-17-1546.html">▲ View</a></td><td><a style="color:#e84545" href="archive/mma-2026-06-17-1546.html">⊘ View</a></td></tr>
+<tr><td class="tm">2:43 PM ET</td><td><a style="color:#22d3a8" href="archive/cyber-2026-06-17-1443.html">⛨ View</a></td><td><a style="color:#caa64a" href="archive/wallstreet-2026-06-17-1443.html">▲ View</a></td><td><a style="color:#e84545" href="archive/mma-2026-06-17-1443.html">⊘ View</a></td></tr>
+<tr><td class="tm">9:16 AM ET</td><td><a style="color:#22d3a8" href="archive/cyber-2026-06-17-0916.html">⛨ View</a></td><td><a style="color:#caa64a" href="archive/wallstreet-2026-06-17-0916.html">▲ View</a></td><td><a style="color:#e84545" href="archive/mma-2026-06-17-0916.html">⊘ View</a></td></tr>
+</table></div>
+<div class="dayhead">Tuesday, June 16, 2026</div>
+<div class="daypanel"><table>
+<tr><th>Time</th><th>The Cyber Wire</th><th>The Closing Bell</th><th>The Octagon</th></tr>
+<tr><td class="tm">11:23 PM ET</td><td><a style="color:#22d3a8" href="archive/cyber-2026-06-16-2323.html">⛨ View</a></td><td><a style="color:#caa64a" href="archive/wallstreet-2026-06-16-2323.html">▲ View</a></td><td><a style="color:#e84545" href="archive/mma-2026-06-16-2323.html">⊘ View</a></td></tr>
+<tr><td class="tm">5:08 PM ET</td><td><a style="color:#22d3a8" href="archive/cyber-2026-06-16-1708.html">⛨ View</a></td><td><a style="color:#caa64a" href="archive/wallstreet-2026-06-16-1708.html">▲ View</a></td><td><a style="color:#e84545" href="archive/mma-2026-06-16-1708.html">⊘ View</a></td></tr>
+<tr><td class="tm">4:09 PM ET</td><td class="na">—</td><td><a style="color:#caa64a" href="archive/wallstreet-2026-06-16-1609.html">▲ View</a></td><td class="na">—</td></tr>
+<tr><td class="tm">3:42 PM ET</td><td><a style="color:#22d3a8" href="archive/cyber-2026-06-16-1542.html">⛨ View</a></td><td><a style="color:#caa64a" href="archive/wallstreet-2026-06-16-1542.html">▲ View</a></td><td><a style="color:#e84545" href="archive/mma-2026-06-16-1542.html">⊘ View</a></td></tr>
+<tr><td class="tm">2:54 PM ET</td><td><a style="color:#22d3a8" href="archive/cyber-2026-06-16-1454.html">⛨ View</a></td><td><a style="color:#caa64a" href="archive/wallstreet-2026-06-16-1454.html">▲ View</a></td><td><a style="color:#e84545" href="archive/mma-2026-06-16-1454.html">⊘ View</a></td></tr>
+<tr><td class="tm">2:05 PM ET</td><td class="na">—</td><td><a style="color:#caa64a" href="archive/wallstreet-2026-06-16-1405.html">▲ View</a></td><td class="na">—</td></tr>
+<tr><td class="tm">1:57 PM ET</td><td><a style="color:#22d3a8" href="archive/cyber-2026-06-16-1357.html">⛨ View</a></td><td><a style="color:#caa64a" href="archive/wallstreet-2026-06-16-1357.html">▲ View</a></td><td><a style="color:#e84545" href="archive/mma-2026-06-16-1357.html">⊘ View</a></td></tr>
+</table></div>
 
   <footer>
-    Daily Briefings archive · snapshots captured every 30 minutes during publishing hours (8 AM–6 PM ET). Information only — not investment advice.
+    Daily Briefings archive · snapshots retained for 21 days · regenerated automatically each run.
   </footer>
 </div>
-<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);document.getElementById('datestamp').textContent=et;}catch(e){}})();</script>
 </body>
 </html>
