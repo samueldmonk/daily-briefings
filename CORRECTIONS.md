@@ -1222,3 +1222,23 @@ fought again since), update the entry in the same commit.
   Baku Fiziev vs Torres (adds Shara Magomedov vs Michel Pereira, Vettori vs Naurdiev). UFC 329 McGregor vs
   Holloway 2 CONFIRMED **July 11** (Wikipedia/UFC.com), T-Mobile Arena — a stray Paramount+ schedule listing said
   "July 18"; that is WRONG, keep July 11.
+
+## Added 2026-06-18 (Thursday ~12:05pm ET — Midday Edition, markets OPEN)
+- **MARKETS (June 18 ~midday, TheStreet/Yahoo/Schwab):** chip-led rebound HELD through midday after Wed's
+  hawkish-Fed selloff. S&P 500 ~+1.15-1.2%, Nasdaq Composite ~+1.5%, Dow ~+0.8%; Russell 2000 LAGGED ~-0.72%
+  (narrow megacap-chip rally). LEAD unchanged = Intel ~+9% to an intraday RECORD (~$131.96) on Trump's Truth
+  Social claim of an Apple chip design/build deal — NEITHER company confirmed; Apple moved only ~+0.6%. Chart
+  of the Day = Intel. Chip movers: Micron >+4%, Applied Materials >+4%, Lam Research >+5%; Marvell lifted by a
+  KeyBanc price-target hike. Did NOT publish a precise S&P/Nasdaq/Dow intraday level (only % moves).
+- **NEW this run — IRAN DEAL SIGNED & IN EFFECT:** the U.S.–Iran interim peace deal was signed (Trump + Iranian
+  counterpart, Wed) and TEXT RELEASED — a 14-point agreement extending the April ceasefire by 60 days for final
+  truce talks; it took effect Thursday, raising Strait of Hormuz reopening hopes. SUPERSEDES the morning's "Trump
+  signed a copy / talks continue" framing. Oil eased: Brent ~$78 (one source $78.66 -1.1%), WTI mid-$70s
+  (~$74-76, one source $75.81 -1.3%), around a three-month low.
+- **NEW this run — PPI:** headline producer prices rose +6.5% y/y in May (Schwab), hottest annual wholesale
+  reading since 2022, driven by elevated energy costs. 10-yr ~4.45% roughly FLAT Thursday; 2-yr ~4.15%.
+- Kroger Q1 (carried): revenue beat $46.12B vs ~$45.5B, adj EPS MISS $1.58 vs $1.59. Accenture reports AFTER close.
+  Juneteenth market closure Fri Jun 19. Marvell -> S&P 500 effective Jun 22.
+- **Weekly Scorecard UNCHANGED** from Jun 17 close: Dow 51,492.55 (-0.98%) and Nasdaq 26,021.66 (-1.34%) LOCKED;
+  S&P shown as -1.21% MOVE with the ~7,420.10 level STILL WITHHELD (does not reconcile with verified Tue Jun 16
+  close 7,548.60). No Jun 18 close yet (before 4pm; NO after-hours section this run).
