@@ -1476,3 +1476,49 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
 - **MARKETS (Jun 18 official close, re-verified TheStreet/Yahoo/CNBC/Bloomberg/Schwab):** S&P 500 +1.08% (7,500.58, provisional — does not fully reconcile w/ verified Jun 16 close 7,548.60), Nasdaq Composite +1.91% (26,517.93), Dow +0.14% (51,564.70), Russell 2000 +2.12% (2,979.77) — broad rebound from Wed's hawkish-Fed selloff; small caps & chips led, Dow lagged. LEAD = Intel ~+10% (early >12%/ATH ~$135.48) to a RECORD on Trump's Truth Social claim Apple will design/build chips with Intel in the US; NEITHER confirmed, Apple ~+0.6%. SOX record. Chart of the Day = Accenture -16% (Q3 EPS beat $3.80 vs $3.72, revenue miss $18.7B vs $18.78B, bookings $19.3B, FY rev-growth guide cut to 3-4% from 3-5%, Morgan Stanley to Equal-Weight). WTI ~$74.85 (3-mo low) / Brent ~$78 on signed US-Iran deal. PPI +6.5% y/y; jobless claims 226k (-4k). Rates 10-yr ~4.47%, Fed funds 3.50-3.75% (held Jun 17). After-hours quiet. Juneteenth closure Fri Jun 19; next session Mon Jun 22; Marvell -> S&P 500 Jun 22.
 - **CYBER (re-verified this run):** Top story ShinyHunters/Oracle PeopleSoft CVE-2026-35273 (CVSS 9.8, PeopleTools 8.61/8.62, zero-day May 27-Jun 9, 100+ orgs/300+ instances, 68% higher-ed, Mandiant/UNC6240/Google, Nottingham 454,600 + Sysco 61M claim, KEV Jun 12 / due Jul 3 = 15 left) confirmed THN/Google Cloud. FortiBleed (~73,932-75,000 Fortinet FortiGate firewalls, 194 countries, 21,000+ domains, ~half internet-facing on Shodan, plaintext creds cracked from config files, Diachenko/SOCRadar/Hudson Rock/Beaumont, Russian-speaking actors) confirmed CSO/Arctic Wolf/Hackread/BleepingComputer — tagged New. Patch Priority = LiteSpeed cPanel CVE-2026-54420 (CVSS 8.5, symlink priv-esc to root, <2.4.8, fix WHM Plugin v5.3.2.1, KEV due Jun 18 = TODAY/0 left) confirmed THN/SecurityWeek. Joomla JCE CVE-2026-48907 (CVSS 10.0, unauth file upload->PHP RCE, JCE <2.9.99.5 fixed Jun 3, KEV due Jun 19 = 1 left; one outlet says Jul 7, SecurityWeek/THN say Jun 19 -> Jun 19 governs). RoguePlanet CVE-2026-50656 (7.8, not KEV) + Cisco SD-WAN CVE-2026-20262 + Kodak (2.2M, Jun 18 deadline, "limited") carried. Threat HIGH.
 - **MMA (re-verified this run):** Champions board verified vs ESPN/UFC.com per the authoritative top block (stale ESPN cache STILL surfaces wrong Pereira/LHW, Chimaev/MW, Topuria/LW — ignored): Gaethje undisputed LW, Gane interim HW, Ulberg LHW, Strickland MW, Volkanovski FW, Aspinall HW, Makhachev WW, Yan BW, Van FLW, Shevchenko/Harrison/Dern women's. EXPANDED the Freedom 250 results table to the full verified main card this run (Yahoo Sports full-card list): Gaethje def. Topuria TKO (corner stoppage) after R4; Gane def. Pereira TKO (punches) R2; O'Malley def. Zahabi TKO R2; Ruffy def. Chandler TKO R1; Nickal def. Daukaus TKO R1; Lopes def. Garcia KO R2; Hokit def. Lewis TKO R2 — ALL SEVEN main-card bouts finished inside the distance. Did NOT assert undercard weight classes (not stated in this run's sources) — labeled them "Main card." Bonuses: Gaethje $825K (FOTN $400K + POTN $425K), Gane POTN $425K, Topuria FOTN $400K. Next: Jun 20 UFC Vegas 119 Kape (-162) vs Horiguchi (+136, refreshed this run from +135) Meta APEX (co-main Cutelaba +240 vs Stirling -330); Jun 27 Baku Fiziev vs Torres; Jul 11 UFC 329 McGregor vs Holloway 2 (T-Mobile).
+
+## Added 2026-06-19 (Friday ~9:19am ET — Morning Edition, JUNETEENTH; U.S. markets CLOSED)
+- **MARKETS CLOSED for Juneteenth** (NYSE/Nasdaq/bond market shut; next regular session Mon Jun 22) — verified
+  this run (Yahoo Finance/Fidelity/AOL). Most recent session remains the **Jun 18 close** (locked, carried):
+  S&P 500 +1.08% (7,500.58, provisional — still doesn't fully reconcile w/ verified Jun 16 close 7,548.60),
+  Nasdaq Composite +1.91% (26,517.93), Dow +0.14% (51,564.70), Russell 2000 +2.12% (2,979.77). LEAD = Intel
+  ~+10% (intraday >12%/ATH ~$135) to a record on Trump's unconfirmed Apple-chip claim; Chart of the Day =
+  Accenture -~16% (FY rev-growth guide cut to 3-4%). Rates carried from Jun 18 (10-yr ~4.47%, 2-yr ~4.08-4.15%,
+  30-yr ~4.97%, Fed funds 3.50-3.75% held Jun 17). PPI +6.5% y/y; jobless claims 226k; Marvell -> S&P 500 Jun 22.
+- **OIL (fresh this run, Fri Jun 19, holiday-thinned):** WTI ticked back **above $77** (range ~74.60-79.93) and
+  Brent ~**$79.95** (+0.12%), but BOTH remain down ~**10% on the week** as the US-Iran interim deal reopened the
+  Strait of Hormuz (TradingEconomics/OilPrice this run). NOTE this is UP from the Jun 18 close (~$74.85 WTI) — a
+  new-day move, not a contradiction.
+- **US-IRAN (attributed, hedged per standing rule):** a formal signing ceremony was scheduled for TODAY Fri Jun 19
+  in Switzerland (Burgenstock/Geneva); the preliminary 14-point agreement was already signed earlier in the week
+  and is in effect (Strait reopened). Caveat carried this run: VP JD Vance reportedly DELAYED his Switzerland trip
+  (NPR/Al Jazeera Jun 19). Keep framed as scheduled/attributed, not confirmed-completed.
+- **CYBER — PATCH PRIORITY ROTATED + new KEV state (verified this run):**
+  - **Joomla JCE CVE-2026-48907 (CVSS 10.0)** is now the Patch Priority — KEV deadline **TODAY Jun 19 (0 days left)**;
+    unauth file upload -> PHP RCE; JCE <2.9.99.5 (fixed 2.9.99.5 Jun 3); public exploit/automated scans. Confirmed
+    THN/SecurityAffairs/SecurityWeek this run.
+  - **LiteSpeed cPanel CVE-2026-54420 (8.5)** is now **OVERDUE** (was due Jun 18; 1 day past as of Jun 19).
+  - **NEW — Splunk Enterprise CVE-2026-20253 (CVSS 9.8):** now **ACTIVELY EXPLOITED** and **added to CISA KEV on
+    Jun 18, due Jun 21** (missing auth in a PostgreSQL sidecar -> unauth file create/truncate -> pre-auth RCE;
+    Splunk Enterprise 10.0<10.0.7 / 10.2<10.2.4; patched Jun 10). **SUPERSEDES** the 2026-06-14 entry that labeled
+    Splunk "disclosed, not exploited / NOT in KEV" — that is now OUTDATED. Confirmed SecurityWeek/CyberPress/
+    Windows News this run.
+  - **NEW — Check Point Security Gateway CVE-2026-50751 (CVSS 9.3):** improper-auth VPN bypass (IKEv1), exploited
+    by **Qilin ransomware** since ~May 7, several dozen orgs; CISA KEV added Jun 8. Confirmed Rapid7/SecurityWeek.
+  - Top story UNCHANGED = ShinyHunters/Oracle PeopleSoft CVE-2026-35273 (9.8, ~300 instances/100+ orgs, education
+    sector, KEV Jun 12 / due Jul 3 = 14 days left) — confirmed Arctic Wolf this run. FortiBleed (~75,000 Fortinet
+    firewalls, access now being sold) + Kodak (2.2M claim, "limited" data) carried but NO LONGER "New"-tagged
+    (were New in the Jun 18 snapshots). Also surfaced this run (in a note, not a card): SocGholish/Evil Corp
+    takedown (~15,000 WordPress sites / 100+ servers). Threat level HIGH.
+- **MMA — champions UNCHANGED & re-verified** (no event since Jun 14 Freedom 250; next card Jun 20). The stale-cache
+  trap PERSISTS: an ESPN champions search this run STILL surfaced Chimaev at MW and Gaethje as only "interim" LW —
+  IGNORED per the authoritative top block (Gaethje undisputed LW, Strickland MW, Ulberg LHW, Volkanovski FW,
+  Aspinall HW, Gane interim HW, Makhachev WW, Yan BW, Van FLW, Shevchenko/Harrison/Dern women's).
+  - **NEW this run:** Ilia Topuria suffered **orbital fractures in BOTH eyes** in the White House loss and, per
+    reports, will **NOT return in 2026**; Gaethje, Pereira and Topuria each received **180-day medical suspensions**
+    (rematch late 2026 earliest). Topuria insists "we will have our rematch." Confirmed MMA Mania/Bleacher Report/
+    Boxing News this run.
+  - Next card Jun 20 UFC Vegas 119 (Fight Night 279) Kape **−162** vs Horiguchi **+140** (REFRESHED this run from
+    +136; VSiN/RotoWire) at Meta APEX; co-main Cutelaba vs unbeaten Navajo Stirling (9-0). Jun 27 UFC Baku Fiziev
+    (13-5) vs Torres (17-3), co-main Magomedov (16-1) vs Michel Pereira. Jul 11 UFC 329 McGregor vs Holloway 2
+    (T-Mobile). Freedom 250 full results & bonuses carried (Gaethje $825K = FOTN $400K + POTN $425K; Gane POTN $425K).
