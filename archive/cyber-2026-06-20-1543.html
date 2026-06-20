@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Cyber Wire · Daily Briefings</title>
+<style>
+:root{
+  --bg:#080c10; --panel:#0f161d; --panel2:#121b23; --line:#1d2a33;
+  --ink:#e7f0f3; --mut:#8aa0ab; --accent:#22d3a8; --accent2:#36c6ff;
+  --crit:#ff5470; --warn:#f5a524; --mono:ui-monospace,'SF Mono','Cascadia Code',Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(1200px 600px at 80% -10%,#0d2029 0,var(--bg) 55%);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.55;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:1060px;margin:0 auto;padding:22px 20px 60px}
+a{color:inherit}
+.masthead{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:14px}
+.brand{font-size:13px;font-family:var(--mono);letter-spacing:.34em;color:var(--mut);text-transform:uppercase}
+.brand b{color:var(--accent)}
+.title{font-size:30px;font-weight:800;letter-spacing:.02em;margin:2px 0 0}
+.title .ic{color:var(--accent)}
+.meta{margin-left:auto;display:flex;gap:7px;flex-wrap:wrap}
+.pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);
+  border:1px solid var(--line);border-radius:999px;padding:4px 10px;background:var(--panel)}
+.pill.live{color:#06231c;background:var(--accent);border-color:var(--accent);font-weight:700}
+.pill.live .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#06231c;margin-right:6px;
+  animation:bl 1.4s infinite}
+@keyframes bl{50%{opacity:.25}}
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;
+  padding:11px 15px;margin:14px 0 2px;font-size:14.5px;line-height:1.5}
+.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-right:9px}
+.freshline{font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--mut);margin:8px 2px 0}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 6px}
+nav a{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-decoration:none;color:var(--mut);
+  border:1px solid var(--line);border-radius:9px;padding:8px 12px;background:var(--panel);transition:.15s}
+nav a:hover{transform:translateY(-1px);color:var(--ink);border-color:#2c3f4a}
+nav a.active{color:#06231c;background:var(--accent);border-color:var(--accent);font-weight:700}
+section{margin-top:24px}
+.lab{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.banner{display:flex;align-items:center;gap:14px;border:1px solid var(--line);border-left:4px solid var(--crit);
+  border-radius:12px;padding:13px 16px;background:linear-gradient(90deg,rgba(255,84,112,.08),transparent)}
+.banner .lvl{font-family:var(--mono);font-weight:800;font-size:15px;letter-spacing:.12em;color:var(--crit)}
+.banner .why{font-size:13.5px;color:var(--mut)}
+.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 14px}
+.stat .n{font-size:23px;font-weight:800;color:var(--accent2)}
+.stat .l{font-family:var(--mono);font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--mut);margin-top:3px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.panel h2{margin:.1em 0 .35em;font-size:21px;letter-spacing:.01em}
+.panel p{margin:.4em 0;color:#d3e0e5;font-size:14.5px}
+.callout{border:1px solid var(--line);border-left:4px solid var(--crit);border-radius:12px;padding:15px 18px;
+  background:linear-gradient(90deg,rgba(255,84,112,.07),transparent)}
+.callout .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--crit);font-weight:700}
+.callout h3{margin:6px 0 4px;font-size:18px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;transition:.15s}
+.card:hover{transform:translateY(-2px);border-color:#2c4a44}
+.card h4{margin:0 0 5px;font-size:15.5px}
+.card p{margin:0;color:var(--mut);font-size:13.5px}
+.tags{margin-top:9px;display:flex;gap:6px;flex-wrap:wrap}
+.t{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;padding:3px 7px;border-radius:6px;
+  border:1px solid var(--line);color:var(--mut)}
+.t.crit{color:var(--crit);border-color:rgba(255,84,112,.4)}
+.t.warn{color:var(--warn);border-color:rgba(245,165,36,.4)}
+.t.tl{color:var(--accent);border-color:rgba(34,211,168,.4)}
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:4px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+td .cvss{font-family:var(--mono);font-weight:700}
+.c10{color:var(--crit)}.c9{color:#ff8a5c}.c8{color:var(--warn)}
+ul.kev{list-style:none;padding:0;margin:6px 0 0}
+ul.kev li{padding:9px 0;border-bottom:1px solid var(--line);font-size:14px;display:flex;justify-content:space-between;gap:12px}
+ul.kev li:last-child{border-bottom:0}
+.cd{font-family:var(--mono);font-size:12px;white-space:nowrap}
+.cd.ok{color:var(--accent)}.cd.warn{color:var(--warn)}.cd.crit{color:var(--crit);font-weight:700}
+.radar{margin:0;padding-left:18px}.radar li{margin:6px 0;font-size:14px;color:#d3e0e5}
+.foot{margin-top:30px;border-top:1px solid var(--line);padding-top:16px;font-size:12px;color:var(--mut)}
+.foot a{color:var(--accent2);word-break:break-all}
+.disc{margin-top:12px;font-size:11.5px;color:#63757f;font-style:italic}
+@media(max-width:720px){.cards{grid-template-columns:1fr}.strip{grid-template-columns:1fr 1fr}.meta{margin-left:0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="brand"><b>Daily</b> Briefings</div>
+      <h1 class="title"><span class="ic">⛨</span> The Cyber Wire</h1>
+    </div>
+    <div class="meta">
+      <span class="pill live"><span class="dot"></span>Live</span>
+      <span class="pill" id="edition">Afternoon Edition</span>
+      <span class="pill" id="datestamp">June 20, 2026</span>
+      <span class="pill">Updated <span id="updated">—</span></span>
+    </div>
+  </div>
+
+  <div class="tldr"><b>The Wire</b> <span>CISA is racing the clock on an actively-exploited Splunk Enterprise RCE — federal agencies must patch by Sunday — while the ShinyHunters PeopleSoft zero-day campaign keeps spreading across universities and a newly-profiled ransomware crew, The Gentlemen, shows off a homegrown tool that disables 400+ security processes.</span></div>
+  <div class="freshline" id="freshline">Data as of — ET · briefings refresh every 30 minutes, 8 AM–6 PM ET</div>
+
+  <nav>
+    <a href="index.html">★ Front Page</a>
+    <a href="cyber-briefing.html" class="active">⛨ The Cyber Wire</a>
+    <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
+    <a href="mma-briefing.html">⊘ The Octagon</a>
+    <a href="archive.html">🗄 Archive</a>
+  </nav>
+
+  <section>
+    <div class="banner">
+      <span class="lvl">THREAT: HIGH</span>
+      <span class="why">Two actively-exploited pre-auth RCEs in the wild — Splunk Enterprise (federal deadline Sunday) and Oracle PeopleSoft (100+ organisations breached) — with two further KEV deadlines already overdue.</span>
+    </div>
+    <div class="strip">
+      <div class="stat"><div class="n">9.8</div><div class="l">CVSS · Splunk RCE (KEV)</div></div>
+      <div class="stat"><div class="n">100+</div><div class="l">Orgs hit · PeopleSoft</div></div>
+      <div class="stat"><div class="n">478</div><div class="l">Victims · The Gentlemen</div></div>
+      <div class="stat"><div class="n">86,644</div><div class="l">Fortinet creds · FortiBleed</div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="lab">Top Story</div>
+    <div class="panel">
+      <h2>ShinyHunters' PeopleSoft zero-day keeps tearing through higher education</h2>
+      <p>Google's Mandiant has tied a sprawling extortion campaign to <b>UNC6240 (ShinyHunters)</b> exploiting <b>CVE-2026-35273</b>, a critical (CVSS <b>9.8</b>) flaw in <b>Oracle PeopleSoft</b> that requires no login and no user interaction. The bug was a true zero-day — abused between <b>May 27 and June 9</b>, before Oracle published its advisory on June 10.</p>
+      <p>The group claims more than <b>100 organisations</b> compromised across roughly <b>300 PeopleSoft instances</b>, with about <b>two-thirds being universities and colleges</b>, predominantly in the U.S. The <b>University of Nottingham</b> has acknowledged a breach, and the group has already published <b>454,600</b> current and former students' records to its leak site. CISA added the CVE to its Known Exploited Vulnerabilities catalog on <b>June 12</b>, with a federal remediation deadline of <b>July 3</b>.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="lab">Patch Priority</div>
+    <div class="callout">
+      <div class="tag">⚠ Patch by Sunday · actively exploited</div>
+      <h3>Splunk Enterprise — CVE-2026-20253 (CVSS 9.8)</h3>
+      <p>A missing-authentication flaw in a PostgreSQL sidecar service lets an unauthenticated, remote attacker create or truncate files — chainable to <b>pre-auth remote code execution</b>. It is <b>actively exploited</b> (the first Splunk bug ever added to CISA's KEV) and the federal remediation deadline is <b>Sunday, June 21</b>. Affected: Splunk Enterprise <b>10.0.0–10.0.6</b> and <b>10.2.0–10.2.3</b>; patch to <b>10.0.7 / 10.2.4 / 10.4.0</b>. The gap from public proof-of-concept (June 12) to confirmed exploitation was under a week. (Joomla JCE and LiteSpeed cPanel deadlines, below, are already overdue.)</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="lab">Threat Actor Spotlight</div>
+    <div class="panel">
+      <h2>The Gentlemen (RaaS) — a homegrown EDR-killing arsenal</h2>
+      <p>New ESET research details <b>The Gentlemen</b>, a ransomware-as-a-service crew that emerged in late 2025 and became one of 2026's most active gangs. Its centerpiece is <b>GentleKiller</b>, an in-house framework with at least eight variants that abuse vulnerable or malicious drivers (BYOVD) to blind security software — targeting <b>more than 400 processes across roughly 48 security products</b> (Microsoft, CrowdStrike, SentinelOne, Sophos, ESET, Kaspersky and more). It also bundles three external EDR killers: <b>HexKiller</b> (abuses a Baidu Antivirus driver), <b>ThrottleBlood</b> (a TechPowerUp driver) and <b>HavocKiller</b>.</p>
+      <p>The crew has been tied to roughly <b>478 victims across 70+ countries</b>, with a globally distributed victimology rather than the usual U.S.-heavy targeting, and runs an aggressive affiliate model.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="lab">Breaches &amp; Incidents</div>
+    <div class="cards">
+      <div class="card">
+        <h4>Malicious JetBrains Marketplace plugins steal AI keys</h4>
+        <p>Aikido Security flagged <b>15 plugins across 7 vendor accounts</b> — posing as AI coding assistants and Git tools — that exfiltrate developers' AI provider API keys over HTTP. Downloaded close to <b>70,000 times</b> since October 2025 and pushed as recently as June 10; JetBrains has since pulled all 15 and terminated the seven vendor accounts.</p>
+        <div class="tags"><span class="t">Supply chain</span><span class="t">Dev tooling</span></div>
+      </div>
+      <div class="card">
+        <h4>Klue OAuth breach → "Icarus" Salesforce theft</h4>
+        <p>Competitive-intelligence platform <b>Klue</b> was breached via a long-dormant API credential; the actor tracked as <b>Icarus</b> abused OAuth tokens from Klue's Battlecards integration to pull customers' Salesforce CRM data. <b>Huntress</b> is among the victims; Salesforce disabled the Klue integration.</p>
+        <div class="tags"><span class="t warn">OAuth abuse</span><span class="t">Salesforce</span></div>
+      </div>
+      <div class="card">
+        <h4>ShinyHunters extortion: Kodak listed, Nottingham data dumped</h4>
+        <p>Beyond the PeopleSoft campaign, ShinyHunters' leak site lists <b>Kodak</b> among extortion targets — a claimed <b>2.2M+ records</b>, which Kodak characterizes as limited data — while the group has already published <b>454,600</b> University of Nottingham student records from the PeopleSoft breach.</p>
+        <div class="tags"><span class="t">Data extortion</span><span class="t">ShinyHunters</span></div>
+      </div>
+      <div class="card">
+        <h4>"FortiBleed" exposes Fortinet credentials at scale</h4>
+        <p>Researchers tallied roughly <b>86,644 working FortiGate credentials across 194 countries</b>, recoverable from configuration files; CISA issued an advisory (~74,000 devices) on June 18, warning that Russian-speaking actors are using the access to move laterally into Windows domains. A large share are internet-facing.</p>
+        <div class="tags"><span class="t warn">Credential exposure</span><span class="t">Fortinet</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="lab">Vulnerability Watch</div>
+    <div class="panel" style="padding:8px 14px">
+      <table>
+        <thead><tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td>CVE-2026-20253</td><td><span class="cvss c9">9.8</span></td><td>Splunk Enterprise 10.0.0–10.0.6 / 10.2.0–10.2.3</td><td>Missing auth → pre-auth RCE; actively exploited; KEV (due Jun 21); fix 10.0.7 / 10.2.4 / 10.4.0</td></tr>
+          <tr><td>CVE-2026-35273</td><td><span class="cvss c9">9.8</span></td><td>Oracle PeopleSoft (PeopleTools 8.61 / 8.62)</td><td>Unauth pre-auth RCE; exploited as zero-day; KEV (due Jul 3)</td></tr>
+          <tr><td>CVE-2026-48907</td><td><span class="cvss c10">10.0</span></td><td>Joomla JCE &lt; 2.9.99.5</td><td>Unauth file upload → PHP RCE; KEV deadline overdue (Jun 19); fix 2.9.99.5</td></tr>
+          <tr><td>CVE-2026-50751</td><td><span class="cvss c9">9.3</span></td><td>Check Point Security Gateway (IKEv1 VPN)</td><td>Improper-auth VPN bypass; exploited by Qilin ransomware</td></tr>
+          <tr><td>CVE-2026-3055</td><td><span class="cvss c9">9.3</span></td><td>Citrix NetScaler (SAML IdP configs only)</td><td>Official Citrix CVSS 9.3; fix 14.1-66.59 / 13.1-62.23 / 13.1-37.262</td></tr>
+          <tr><td>CVE-2026-54420</td><td><span class="cvss c8">8.5</span></td><td>LiteSpeed cPanel &lt; 2.4.8</td><td>Symlink priv-esc to root; KEV deadline overdue (Jun 18); fix 2.4.8 (released Jun 1)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="lab">CISA KEV &amp; Federal Deadlines</div>
+    <div class="panel">
+      <ul class="kev">
+        <li><span><b>CVE-2026-20253</b> — Splunk Enterprise (added Jun 18; due <b>Jun 21</b>)</span><span class="cd" data-due="2026-06-21">—</span></li>
+        <li><span><b>CVE-2026-35273</b> — Oracle PeopleSoft (added Jun 12; due <b>Jul 3</b>)</span><span class="cd" data-due="2026-07-03">—</span></li>
+        <li><span><b>CVE-2026-48907</b> — Joomla JCE (added Jun 16; due <b>Jun 19</b>)</span><span class="cd" data-due="2026-06-19">—</span></li>
+        <li><span><b>CVE-2026-54420</b> — LiteSpeed cPanel (due <b>Jun 18</b>)</span><span class="cd" data-due="2026-06-18">—</span></li>
+      </ul>
+      <p style="font-size:12px;color:var(--mut);margin-top:10px">Deadlines are CISA-stated obligations for federal civilian agencies under the risk-based Binding Operational Directive 26-04, which assigns shortened, per-CVE windows rather than a fixed interval. Countdowns are computed live from today to each verified due date.</p>
+    </div>
+  </section>
+
+  <div class="foot">
+    <b>Sources (fetched this run):</b>
+    <a href="https://thehackernews.com/2026/06/shinyhunters-exploits-oracle-peoplesoft.html">The Hacker News — ShinyHunters / PeopleSoft</a> ·
+    <a href="https://www.rescana.com/post/shinyhunters-exploits-oracle-peoplesoft-zero-day-cve-2026-35273-in-widespread-higher-education-cyberattack">Rescana — PeopleSoft campaign</a> ·
+    <a href="https://socradar.io/blog/cve-2026-20253-cisa-splunk-enterprise-rce/">SOCRadar — Splunk CVE-2026-20253</a> ·
+    <a href="https://www.helpnetsecurity.com/2026/06/19/splunk-vulnerability-cve-2026-20253-exploited/">Help Net Security — Splunk CVE-2026-20253 exploited</a> ·
+    <a href="https://www.welivesecurity.com/en/eset-research/killing-me-gently-inside-gentlemens-edr-killer-framework/">ESET WeLiveSecurity — The Gentlemen / GentleKiller</a> ·
+    <a href="https://thehackernews.com/2026/06/the-gentlemen-raas-uses-gentlekiller.html">The Hacker News — The Gentlemen / GentleKiller</a> ·
+    <a href="https://www.bleepingcomputer.com/news/security/klue-oauth-breach-victim-list-grows-as-icarus-hackers-claim-attack/">BleepingComputer — Klue / Icarus</a> ·
+    <a href="https://www.securityweek.com/cybersecurity-firms-impacted-by-klue-supply-chain-attack/">SecurityWeek — Klue supply-chain attack</a> ·
+    <a href="https://www.securityweek.com/fortibleed-86000-fortinet-device-credentials-compromised/">SecurityWeek — FortiBleed</a> ·
+    <a href="https://www.bleepingcomputer.com/news/security/cisa-warns-fortinet-users-to-secure-devices-after-fortibleed-leak/">BleepingComputer — CISA / FortiBleed</a> ·
+    <a href="https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure">CISA — Fortinet hardening alert</a>
+    <div class="disc">Defensive information only. CVSS scores and fixed versions reflect vendor/CISA advisories; KEV deadlines reflect the CISA KEV catalog as read this run. Verify against your own asset inventory before acting.</div>
+  </div>
+</div>
+
+<script>
+(function(){
+  function ymdET(d){return new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).format(d);}
+  var t0=Date.parse(ymdET(new Date())+'T12:00:00Z');
+  document.querySelectorAll('.cd').forEach(function(el){
+    var days=Math.round((Date.parse(el.getAttribute('data-due')+'T12:00:00Z')-t0)/86400000);
+    if(days>3){el.textContent='('+days+' days left)';el.className='cd ok';}
+    else if(days>=1){el.textContent='('+days+' day'+(days===1?'':'s')+' left)';el.className='cd warn';}
+    else if(days===0){el.textContent='(due today)';el.className='cd crit';}
+    else{el.textContent='(overdue)';el.className='cd crit';}
+  });
+})();
+</script>
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
+</body>
+</html>
