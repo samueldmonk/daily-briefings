@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Closing Bell · Daily Briefings</title>
+<style>
+:root{
+  --bg:#0b0a07; --panel:#15130d; --panel2:#1a1710; --line:#2b2516;
+  --ink:#f1ead8; --mut:#a99e82; --accent:#caa64a; --accent2:#e8c766;
+  --up:#34d27b; --down:#ef5350; --mono:ui-monospace,'SF Mono','Cascadia Code',Menlo,Consolas,monospace;
+  --serif:Georgia,'Times New Roman',serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(1200px 600px at 82% -10%,#1c1708 0,var(--bg) 55%);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1060px;margin:0 auto;padding:22px 20px 60px}
+a{color:inherit}
+.masthead{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:14px}
+.brand{font-size:13px;font-family:var(--mono);letter-spacing:.34em;color:var(--mut);text-transform:uppercase}
+.brand b{color:var(--accent)}
+.title{font-size:30px;font-weight:700;letter-spacing:.01em;margin:2px 0 0;font-family:var(--serif)}
+.title .ic{color:var(--accent)}
+.meta{margin-left:auto;display:flex;gap:7px;flex-wrap:wrap}
+.pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);
+  border:1px solid var(--line);border-radius:999px;padding:4px 10px;background:var(--panel)}
+.pill.live{color:#241a04;background:var(--accent);border-color:var(--accent);font-weight:700}
+.pill.live .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#241a04;margin-right:6px;animation:bl 1.4s infinite}
+@keyframes bl{50%{opacity:.25}}
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;
+  padding:11px 15px;margin:14px 0 2px;font-size:14.5px;line-height:1.5}
+.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-right:9px}
+.freshline{font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--mut);margin:8px 2px 0}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 6px}
+nav a{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-decoration:none;color:var(--mut);
+  border:1px solid var(--line);border-radius:9px;padding:8px 12px;background:var(--panel);transition:.15s}
+nav a:hover{transform:translateY(-1px);color:var(--ink);border-color:#3a3220}
+nav a.active{color:#241a04;background:var(--accent);border-color:var(--accent);font-weight:700}
+section{margin-top:24px}
+.lab{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.livebar{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 8px 4px;margin-bottom:18px}
+.livebar-label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--up);display:flex;align-items:center;gap:8px;padding:4px 8px 8px}
+.livebar-label .dot{width:7px;height:7px;border-radius:50%;background:var(--up);animation:bl 1.4s infinite}
+.tickers{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.ticker{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:6px}
+.note{font-size:12px;color:var(--mut);margin-top:10px;font-style:italic}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.panel h2{margin:.1em 0 .35em;font-size:23px;letter-spacing:.01em;font-family:var(--serif)}
+.panel p{margin:.4em 0;color:#e2dac6;font-size:14.5px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;transition:.15s}
+.card:hover{transform:translateY(-2px);border-color:#4a3f22}
+.card h4{margin:0 0 5px;font-size:15.5px;font-family:var(--serif)}
+.card .mv{font-family:var(--mono);font-weight:700;font-size:13px}
+.up{color:var(--up)}.down{color:var(--down)}
+.card p{margin:6px 0 0;color:var(--mut);font-size:13.5px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:4px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line)}
+th{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+td.num{font-family:var(--mono);text-align:right}
+.radar{margin:0;padding-left:18px}.radar li{margin:7px 0;font-size:14px;color:#e2dac6}
+.foot{margin-top:30px;border-top:1px solid var(--line);padding-top:16px;font-size:12px;color:var(--mut)}
+.foot a{color:var(--accent2);word-break:break-all}
+.disc{margin-top:12px;font-size:11.5px;color:#6f6650;font-style:italic}
+.closednote{border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:11px 15px;background:linear-gradient(90deg,rgba(202,166,74,.08),transparent);font-size:13.5px;color:#e2dac6;margin-top:12px}
+@media(max-width:720px){.cards{grid-template-columns:1fr}.tickers{grid-template-columns:1fr}.meta{margin-left:0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="brand"><b>Daily</b> Briefings</div>
+      <h1 class="title"><span class="ic">▲</span> The Closing Bell</h1>
+    </div>
+    <div class="meta">
+      <span class="pill live"><span class="dot"></span>Live</span>
+      <span class="pill" id="edition">Afternoon Edition</span>
+      <span class="pill" id="datestamp">June 20, 2026</span>
+      <span class="pill">Updated <span id="updated">—</span></span>
+    </div>
+  </div>
+
+  <div class="tldr"><b>The Tape</b> <span>U.S. markets are closed for the weekend — and were dark Friday for Juneteenth — so the tape rests on Thursday's broad, chip-led rally, when Intel surged to a record on an unconfirmed Apple chip claim while Accenture suffered its worst day in years; oil ticked higher Friday after U.S.–Iran talks in Switzerland were abruptly postponed, and regular trading resumes Monday, June 22.</span></div>
+  <div class="freshline" id="freshline">Data as of — ET · briefings refresh every 30 minutes, 8 AM–6 PM ET</div>
+
+  <nav>
+    <a href="index.html">★ Front Page</a>
+    <a href="cyber-briefing.html">⛨ The Cyber Wire</a>
+    <a href="wallstreet-briefing.html" class="active">▲ The Closing Bell</a>
+    <a href="mma-briefing.html">⊘ The Octagon</a>
+    <a href="archive.html">🗄 Archive</a>
+  </nav>
+
+  <!-- BLOCK A: ticker tape -->
+  <div class="livebar">
+    <div class="livebar-label"><span class="dot"></span> LIVE QUOTES</div>
+    <script src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>{"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},{"proName":"FOREXCOM:DJI","title":"Dow 30"},{"proName":"NASDAQ:INTC","title":"Intel"},{"proName":"NYSE:ACN","title":"Accenture"},{"proName":"NASDAQ:NVDA","title":"NVIDIA"},{"proName":"NASDAQ:AMD","title":"AMD"},{"proName":"NASDAQ:MU","title":"Micron"},{"proName":"TVC:USOIL","title":"WTI Crude"},{"proName":"TVC:US10Y","title":"US 10Y"}],"colorTheme":"dark","isTransparent":true,"showSymbolLogo":true,"displayMode":"adaptive","locale":"en"}</script>
+  </div>
+
+  <div class="closednote"><b>Markets closed — weekend.</b> It is Saturday, June 20; the NYSE, Nasdaq and U.S. bond markets were also shut all day Friday, June 19 for Juneteenth. There has been no regular or after-hours equity session since; figures below reflect the most recent session, <b>Thursday, June 18</b>. Next regular session: Monday, June 22.</div>
+
+  <!-- BLOCK B: three single quotes -->
+  <section>
+    <div class="lab">Live Index Quotes — updates in real time</div>
+    <div class="tickers">
+      <div class="ticker"><script src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"FOREXCOM:SPXUSD","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div>
+      <div class="ticker"><script src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"FOREXCOM:NSXUSD","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div>
+      <div class="ticker"><script src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"FOREXCOM:DJI","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div>
+    </div>
+    <div class="note">Quotes stream live (some feeds ~15-min delayed). Editorial below reflects the latest edition; official closes are in the Weekly Scorecard.</div>
+  </section>
+
+  <section>
+    <div class="lab">The Lead</div>
+    <div class="panel">
+      <h2>A holiday pause after Thursday's chip-led rebound</h2>
+      <p>With Wall Street dark for Juneteenth on Friday and closed this weekend, the standing read is Thursday's broad advance. The <b>S&amp;P 500 closed +1.08% at 7,500.58</b>, the <b>Nasdaq Composite +1.91% at 26,517.93</b>, the <b>Dow +0.14% (+72) at 51,564.70</b>, and the small-cap <b>Russell 2000 led, +2.12% at 2,979.77</b> — a rebound from Wednesday's slide after Kevin Warsh's first Fed meeting landed hawkish, with the dot plot now pointing to higher rates by year-end.</p>
+      <p>The session's headline was <b>Intel, up roughly 10% to a record close near $134</b> (an intraday high around $135.48), after President Trump posted on Truth Social that Apple had agreed to design and build chips with Intel in the U.S. — a claim <b>neither company has confirmed</b> (Intel declined to comment). The note lifted the broader semiconductor complex and helped power the Nasdaq, and technology was the best-performing sector on the holiday-shortened week. Cutting the other way, <b>Accenture cratered about 18%</b> — its worst single-day drop in years — after cutting full-year revenue-growth guidance to 3–4%.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="lab">Movers &amp; Drivers</div>
+    <div class="cards">
+      <div class="card">
+        <h4>Intel <span class="mv up">≈ +10% · record close</span></h4>
+        <p>Surged ~10% to a record $133.99 close (intraday high ~$135.48) after Trump claimed on Truth Social that Apple will design and build chips with Intel in the U.S. Neither Apple nor Intel confirmed the arrangement; the rally still lifted the broader chip complex.</p>
+      </div>
+      <div class="card">
+        <h4>Accenture <span class="mv down">≈ −18%</span></h4>
+        <p>Worst single-day drop in years (down ~17–18%, the day's worst-performing large-cap) after cutting FY26 revenue-growth guidance to 3–4% from 3–5% and guiding Q4 revenue ($17.75–18.40B) below the ~$18.47B consensus, citing weak discretionary demand and a U.S. federal slowdown.</p>
+      </div>
+      <div class="card">
+        <h4>Chips &amp; small caps <span class="mv up">broad bid</span></h4>
+        <p>The Russell 2000 (+2.12%) led the majors and semiconductors were broadly bid alongside Intel — a risk-on, chip-and-cyclical rebound from Wednesday's hawkish-Fed selloff.</p>
+      </div>
+      <div class="card">
+        <h4>Energy <span class="mv down">week's laggard</span></h4>
+        <p>Energy was the soft spot as crude slid on the reopening of the Strait of Hormuz; oil fell roughly 9% on the week even after Friday's modest bounce, leaving the sector trailing the broad rally.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="lab">Chart of the Day — Accenture (NYSE:ACN)</div>
+    <div class="panel" style="padding:8px 14px">
+      <script src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>{"symbol":"NYSE:ACN","width":"100%","height":240,"locale":"en","dateRange":"1D","colorTheme":"dark","isTransparent":true,"autosize":false}</script>
+    </div>
+    <p class="note">Thursday's single biggest mover: Accenture's worst-in-years ~18% slide (it opened down ~19%) on a cut to full-year revenue-growth guidance to 3–4% and soft Q4 guidance ($17.75–18.40B vs ~$18.47B consensus) — even as the firm unveiled roughly $4.18B in cybersecurity acquisitions (three deals).</p>
+  </section>
+
+  <section>
+    <div class="lab">Sector Heat — live</div>
+    <div class="panel" style="padding:8px">
+      <script src="https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js" async>{"dataSource":"SPX500","blockSize":"market_cap_basic","blockColor":"change","grouping":"sector","locale":"en","colorTheme":"dark","hasTopBar":false,"isDataSetEnabled":false,"isZoomEnabled":true,"hasSymbolTooltip":true,"isMonoSize":false,"width":"100%","height":420}</script>
+    </div>
+    <p class="note">On the holiday-shortened week, technology led the gains while energy lagged as crude retreated. Live heatmap reflects the latest available session.</p>
+  </section>
+
+  <section>
+    <div class="lab">The Calendar — live</div>
+    <div class="panel" style="padding:8px">
+      <script src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>{"colorTheme":"dark","isTransparent":true,"width":"100%","height":420,"locale":"en","importanceFilter":"0,1","countryFilter":"us"}</script>
+    </div>
+  </section>
+
+  <section>
+    <div class="lab">Live Market Headlines — updates in real time</div>
+    <div class="panel" style="padding:8px">
+      <script src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>{"feedMode":"market","market":"stock","colorTheme":"dark","isTransparent":true,"displayMode":"regular","width":"100%","height":420,"locale":"en"}</script>
+    </div>
+  </section>
+
+  <section>
+    <div class="lab">Weekly Scorecard — official closes (Thu, June 18)</div>
+    <div class="panel" style="padding:8px 14px">
+      <table>
+        <thead><tr><th>Index</th><th>Close</th><th>Change</th></tr></thead>
+        <tbody>
+          <tr><td>S&amp;P 500</td><td class="num">7,500.58</td><td class="num up">+1.08%</td></tr>
+          <tr><td>Nasdaq Composite</td><td class="num">26,517.93</td><td class="num up">+1.91%</td></tr>
+          <tr><td>Dow Jones Industrial Average</td><td class="num">51,564.70</td><td class="num up">+0.14% (+72)</td></tr>
+          <tr><td>Russell 2000</td><td class="num">2,979.77</td><td class="num up">+2.12%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Most recent closing session. Markets were shut Friday, June 19 (Juneteenth) and are closed this weekend; next regular session is Monday, June 22.</p>
+  </section>
+
+  <section>
+    <div class="lab">Rates, Bonds &amp; Commodities</div>
+    <div class="panel" style="padding:8px 14px">
+      <table>
+        <thead><tr><th>Instrument</th><th>Level</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td>10-yr Treasury</td><td class="num">≈ 4.47%</td><td>Eased after Wed's hawkish-Fed jump</td></tr>
+          <tr><td>2-yr Treasury</td><td class="num">≈ 4.10%</td><td>Elevated on rate-hike signals</td></tr>
+          <tr><td>30-yr Treasury</td><td class="num">≈ 4.97%</td><td>—</td></tr>
+          <tr><td>Fed funds target</td><td class="num">3.50–3.75%</td><td>Held June 17 (Warsh's first meeting); dots point to a hike by year-end</td></tr>
+          <tr><td>WTI crude</td><td class="num">≈ $77.3</td><td>Rose ~1% Fri to ~$77.33; down ~9% on the week</td></tr>
+          <tr><td>Brent crude</td><td class="num">≈ $80.6</td><td>+0.9% Fri to ~$80.57 as Strait of Hormuz reopened</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="lab">On the Radar</div>
+    <div class="panel">
+      <ul class="radar">
+        <li><b>Monday, June 22:</b> regular trading resumes; <b>Marvell</b> joins the S&amp;P 500.</li>
+        <li><b>Earnings ahead:</b> FedEx and Carnival (Jun 23); Micron, Paychex and Jefferies (Jun 24); Darden (Jun 25).</li>
+        <li><b>Data ahead:</b> May PCE inflation, the final Q1 GDP read and durable-goods orders all land Thursday, June 25 — the week's key macro tests after the Fed's hawkish turn.</li>
+        <li><b>Geopolitics:</b> planned U.S.–Iran technical talks in Switzerland were abruptly postponed Friday; the interim deal that reopened the Strait of Hormuz remains in effect, but a broader nuclear agreement is not concluded — a swing factor for crude.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="foot">
+    <b>Sources (fetched this run):</b>
+    <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-18-2026">TheStreet — Stock Market Today (June 18, 2026)</a> ·
+    <a href="https://finance.yahoo.com/markets/stocks/articles/intel-shares-soar-trump-says-093534172.html">Yahoo Finance — Intel rallies to record on Trump's Apple chip claim (+10.6%, $133.99)</a> ·
+    <a href="https://www.indmoney.com/blog/us-stocks/why-is-accenture-stock-falling-q3-fy2026-earnings-acn-outlook-analysis">INDmoney — Accenture −18%, Q3 FY2026 guidance cut</a> ·
+    <a href="https://www.investorideas.com/news/2026/technology/06182-accenture-cyber-outlook-drop.asp">InvestorIdeas — Accenture $4.18B cybersecurity acquisitions</a> ·
+    <a href="https://www.investing.com/rates-bonds/u.s.-10-year-bond-yield-historical-data">Investing.com — U.S. 10-Year Treasury yield</a> ·
+    <a href="https://tradingeconomics.com/commodity/crude-oil">TradingEconomics — WTI crude $77.33 (+0.96%, Jun 19)</a> ·
+    <a href="https://www.kiplinger.com/investing/stocks/17494/next-week-earnings-calendar-stocks">Kiplinger — Week ahead (Jun 22–26): PCE, GDP, FedEx, Micron</a>
+    <div class="disc">For information only; not investment advice. Live widgets are provided by TradingView and may be delayed; figures in the editorial reflect the most recent verified session (Thursday, June 18, 2026).</div>
+  </div>
+</div>
+
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
+</body>
+</html>
