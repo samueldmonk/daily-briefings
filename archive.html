@@ -5,11 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Archive — Daily Briefings</title>
 <style>
-:root{
-  --bg:#0b0e13; --panel:#131820; --line:#222b38; --txt:#e6edf3; --muted:#8b97a7;
-  --mono:'SF Mono',ui-monospace,Menlo,Consolas,monospace;
-  --teal:#22d3a8; --gold:#caa64a; --red:#e84545;
-}
+:root{ --bg:#0b0e13; --panel:#131820; --line:#222b38; --txt:#e6edf3; --muted:#8b97a7;
+  --mono:'SF Mono',ui-monospace,Menlo,Consolas,monospace; --teal:#22d3a8; --gold:#caa64a; --red:#e84545; }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.55}
 .wrap{max-width:1000px;margin:0 auto;padding:22px 18px 60px}
@@ -44,13 +41,12 @@ footer{margin-top:30px;border-top:1px solid var(--line);padding-top:14px;color:v
     <h1 class="title">🗄 <span class="accent">Archive</span></h1>
     <div class="tagline">Point-in-time snapshots of every Daily Briefings edition</div>
     <div class="meta">
-      <span class="pill">190 snapshots</span>
-      <span class="pill">5 days</span>
-      <span class="pill" id="datestamp">June 20, 2026</span>
+      <span class="pill">193 snapshots</span>
+      <span class="pill">6 days</span>
+      <span class="pill" id="datestamp">June 22, 2026</span>
     </div>
   </div>
   <div class="freshline" id="freshline">Snapshots are point-in-time captures — live widgets and "as of" times reflect the moment each edition was published.</div>
-
   <nav>
     <a href="index.html">★ Front Page</a>
     <a href="cyber-briefing.html">⛨ The Cyber Wire</a>
@@ -58,7 +54,11 @@ footer{margin-top:30px;border-top:1px solid var(--line);padding-top:14px;color:v
     <a href="mma-briefing.html">⊘ The Octagon</a>
     <a href="archive.html" class="active">🗄 Archive</a>
   </nav>
-
+  <div class="label">Monday, June 22, 2026 · 1 edition</div>
+  <div class="panel"><table>
+      <tr><th>Time</th><th>Snapshots</th></tr>
+      <tr><td class="tm">11:15 AM ET</td><td><a class="snap" href="archive/cyber-2026-06-22-1115.html">⛨ The Cyber Wire</a><a class="snap" href="archive/wallstreet-2026-06-22-1115.html">▲ The Closing Bell</a><a class="snap" href="archive/mma-2026-06-22-1115.html">⊘ The Octagon</a></td></tr>
+  </table></div>
   <div class="label">Saturday, June 20, 2026 · 20 editions</div>
   <div class="panel"><table>
       <tr><th>Time</th><th>Snapshots</th></tr>
@@ -147,12 +147,11 @@ footer{margin-top:30px;border-top:1px solid var(--line);padding-top:14px;color:v
       <tr><td class="tm">2:05 PM ET</td><td><span class="snap none">⛨ The Cyber Wire</span><a class="snap" href="archive/wallstreet-2026-06-16-1405.html">▲ The Closing Bell</a><span class="snap none">⊘ The Octagon</span></td></tr>
       <tr><td class="tm">1:57 PM ET</td><td><a class="snap" href="archive/cyber-2026-06-16-1357.html">⛨ The Cyber Wire</a><a class="snap" href="archive/wallstreet-2026-06-16-1357.html">▲ The Closing Bell</a><a class="snap" href="archive/mma-2026-06-16-1357.html">⊘ The Octagon</a></td></tr>
   </table></div>
-
   <footer>
-    Snapshots are point-in-time captures and are not updated after publication; live widgets and "as of" times reflect the moment each edition was generated.
-    <div class="disc">Daily Briefings is an automated, fact-checked news digest. Informational only — not investment, security, or wagering advice.</div>
+    Daily Briefings keeps point-in-time snapshots of each edition (pruned after 21 days). Snapshots capture the page as published; live widgets inside older snapshots still load current data, but the editorial text and "as of" times are frozen to that moment.
+    <div class="disc">Generated automatically from the snapshot archive. Times shown in U.S. Eastern.</div>
   </footer>
 </div>
-<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);document.getElementById('datestamp').textContent=et;}catch(e){}})();</script>
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',year:'numeric',month:'long',day:'numeric'}).format(n);var d=document.getElementById('datestamp');if(d)d.textContent=et;}catch(e){}})();</script>
 </body>
 </html>
