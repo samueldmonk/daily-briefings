@@ -41,7 +41,7 @@ footer{margin-top:30px;border-top:1px solid var(--line);padding-top:14px;color:v
     <h1 class="title">🗄 <span class="accent">Archive</span></h1>
     <div class="tagline">Point-in-time snapshots of every Daily Briefings edition</div>
     <div class="meta">
-      <span class="pill">196 snapshots</span>
+      <span class="pill">199 snapshots</span>
       <span class="pill">6 days</span>
       <span class="pill" id="datestamp">June 22, 2026</span>
     </div>
@@ -54,9 +54,10 @@ footer{margin-top:30px;border-top:1px solid var(--line);padding-top:14px;color:v
     <a href="mma-briefing.html">⊘ The Octagon</a>
     <a href="archive.html" class="active">🗄 Archive</a>
   </nav>
-  <div class="label">Monday, June 22, 2026 · 2 editions</div>
+  <div class="label">Monday, June 22, 2026 · 3 editions</div>
   <div class="panel"><table>
       <tr><th>Time</th><th>Snapshots</th></tr>
+      <tr><td class="tm">11:41 AM ET</td><td><a class="snap" href="archive/cyber-2026-06-22-1141.html">⛨ The Cyber Wire</a><a class="snap" href="archive/wallstreet-2026-06-22-1141.html">▲ The Closing Bell</a><a class="snap" href="archive/mma-2026-06-22-1141.html">⊘ The Octagon</a></td></tr>
       <tr><td class="tm">11:29 AM ET</td><td><a class="snap" href="archive/cyber-2026-06-22-1129.html">⛨ The Cyber Wire</a><a class="snap" href="archive/wallstreet-2026-06-22-1129.html">▲ The Closing Bell</a><a class="snap" href="archive/mma-2026-06-22-1129.html">⊘ The Octagon</a></td></tr>
       <tr><td class="tm">11:15 AM ET</td><td><a class="snap" href="archive/cyber-2026-06-22-1115.html">⛨ The Cyber Wire</a><a class="snap" href="archive/wallstreet-2026-06-22-1115.html">▲ The Closing Bell</a><a class="snap" href="archive/mma-2026-06-22-1115.html">⊘ The Octagon</a></td></tr>
   </table></div>
@@ -149,10 +150,10 @@ footer{margin-top:30px;border-top:1px solid var(--line);padding-top:14px;color:v
       <tr><td class="tm">1:57 PM ET</td><td><a class="snap" href="archive/cyber-2026-06-16-1357.html">⛨ The Cyber Wire</a><a class="snap" href="archive/wallstreet-2026-06-16-1357.html">▲ The Closing Bell</a><a class="snap" href="archive/mma-2026-06-16-1357.html">⊘ The Octagon</a></td></tr>
   </table></div>
   <footer>
-    Daily Briefings keeps point-in-time snapshots of each edition (pruned after 21 days). Snapshots capture the page as published; live widgets inside older snapshots still load current data, but the editorial text and "as of" times are frozen to that moment.
-    <div class="disc">Generated automatically from the snapshot archive. Times shown in U.S. Eastern.</div>
+    Daily Briefings archive · 199 point-in-time snapshots across 6 days · regenerated automatically each edition.
+    <div class="disc">Snapshots preserve each edition exactly as published; live widgets in archived market pages may show current rather than historical data.</div>
   </footer>
+  <script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',year:'numeric',month:'long',day:'numeric'}).format(n);document.getElementById('datestamp').textContent=et;}catch(e){}})();</script>
 </div>
-<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',year:'numeric',month:'long',day:'numeric'}).format(n);var d=document.getElementById('datestamp');if(d)d.textContent=et;}catch(e){}})();</script>
 </body>
 </html>
