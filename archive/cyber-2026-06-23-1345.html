@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Cyber Wire · Daily Briefings</title>
+<style>
+:root{
+  --bg:#080c10; --panel:#0f161d; --panel2:#121b23; --line:#1d2a33;
+  --ink:#e7f0f3; --mut:#8aa0ab; --accent:#22d3a8; --accent2:#36c6ff;
+  --crit:#ff5470; --warn:#f5a524; --mono:ui-monospace,'SF Mono','Cascadia Code',Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(1200px 600px at 82% -10%,#0c1822 0,var(--bg) 55%);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1060px;margin:0 auto;padding:22px 20px 60px}
+a{color:inherit}
+.masthead{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:14px}
+.brand{font-size:13px;font-family:var(--mono);letter-spacing:.34em;color:var(--mut);text-transform:uppercase}
+.brand b{color:var(--accent)}
+.title{font-size:30px;font-weight:700;letter-spacing:.01em;margin:2px 0 0}
+.title .ic{color:var(--accent)}
+.meta{margin-left:auto;display:flex;gap:7px;flex-wrap:wrap}
+.pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);
+  border:1px solid var(--line);border-radius:999px;padding:4px 10px;background:var(--panel)}
+.pill.live{color:#04211a;background:var(--accent);border-color:var(--accent);font-weight:700}
+.pill.live .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#04211a;margin-right:6px;animation:bl 1.4s infinite}
+@keyframes bl{50%{opacity:.25}}
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;
+  padding:11px 15px;margin:14px 0 2px;font-size:14.5px;line-height:1.5}
+.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-right:9px}
+.freshline{font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--mut);margin:8px 2px 0}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 6px}
+nav a{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-decoration:none;color:var(--mut);
+  border:1px solid var(--line);border-radius:9px;padding:8px 12px;background:var(--panel);transition:.15s}
+nav a:hover{transform:translateY(-1px);color:var(--ink);border-color:#2a3d49}
+nav a.active{color:#04211a;background:var(--accent);border-color:var(--accent);font-weight:700}
+section{margin-top:24px}
+.lab{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.threatbar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;border:1px solid var(--line);border-left:4px solid var(--crit);
+  border-radius:12px;padding:12px 16px;background:linear-gradient(90deg,rgba(255,84,112,.10),transparent);margin-top:16px}
+.threatbar .k{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.threatbar .lvl{font-family:var(--mono);font-weight:800;font-size:16px;letter-spacing:.06em;color:var(--crit)}
+.threatbar .why{font-size:13px;color:#cfe0e6}
+.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:12px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 14px}
+.stat .n{font-family:var(--mono);font-weight:800;font-size:22px;color:var(--accent2)}
+.stat .l{font-size:12px;color:var(--mut);margin-top:3px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.panel h2{margin:.1em 0 .35em;font-size:22px;letter-spacing:.01em}
+.panel p{margin:.4em 0;color:#d7e3e8;font-size:14.5px}
+.callout{border:1px solid var(--line);border-left:4px solid var(--crit);border-radius:12px;padding:14px 18px;
+  background:linear-gradient(90deg,rgba(255,84,112,.10),transparent)}
+.callout h3{margin:0 0 6px;font-size:17px}
+.callout p{margin:5px 0 0;font-size:14px;color:#d7e3e8}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;transition:.15s}
+.card:hover{transform:translateY(-2px);border-color:#2a3d49}
+.card h4{margin:0 0 5px;font-size:15.5px}
+.card p{margin:6px 0 0;color:var(--mut);font-size:13.5px}
+.tag{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;padding:2px 7px;border-radius:6px;margin-left:6px;vertical-align:middle;background:#10303a;color:var(--accent2);border:1px solid #1d4250}
+.tag.new{background:#3a1020;color:#ff8aa0;border-color:#5a1d30}
+.tag.crit{background:#3a1020;color:#ff8aa0;border-color:#5a1d30}
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:4px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line)}
+th{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+td.cve{font-family:var(--mono);color:var(--accent2)}
+td.cvss{font-family:var(--mono);font-weight:700}
+.kev{list-style:none;padding:0;margin:6px 0 0}
+.kev li{padding:10px 0;border-bottom:1px solid var(--line);font-size:14px;color:#d7e3e8}
+.kev .cve{font-family:var(--mono);color:var(--accent2)}
+.cd{font-family:var(--mono);font-weight:700}
+.warn{color:var(--warn)}
+.crit{color:var(--crit);font-weight:700}
+.foot{margin-top:30px;border-top:1px solid var(--line);padding-top:16px;font-size:12px;color:var(--mut)}
+.foot a{color:var(--accent2);word-break:break-all}
+.disc{margin-top:12px;font-size:11.5px;color:#5f7480;font-style:italic}
+@media(max-width:720px){.cards{grid-template-columns:1fr}.strip{grid-template-columns:1fr 1fr}.meta{margin-left:0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="brand"><b>Daily</b> Briefings</div>
+      <h1 class="title"><span class="ic">⛨</span> The Cyber Wire</h1>
+    </div>
+    <div class="meta">
+      <span class="pill live"><span class="dot"></span>Live</span>
+      <span class="pill" id="edition">Morning Edition</span>
+      <span class="pill" id="datestamp">June 23, 2026</span>
+      <span class="pill">Updated <span id="updated">—</span></span>
+    </div>
+  </div>
+
+  <div class="tldr"><b>The Wire</b> <span>An automated "FortiBleed" campaign has harvested working credentials from roughly 86,600 internet-facing Fortinet firewalls across 194 countries — about half the FortiGates online — even as the Klue/Icarus Salesforce extortion widens and Tata Electronics confirms a breach; the most urgent fix remains the actively-exploited, now-overdue Splunk RCE (CVE-2026-20253, CVSS 9.8), with a CISA KEV trio (Chromium V8, Cisco SD-WAN, Arista EOS) due today.</span></div>
+  <div class="freshline" id="freshline">Data as of — ET · briefings refresh every 30 minutes, 8 AM–6 PM ET</div>
+
+  <nav>
+    <a href="index.html">★ Front Page</a>
+    <a href="cyber-briefing.html" class="active">⛨ The Cyber Wire</a>
+    <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
+    <a href="mma-briefing.html">⊘ The Octagon</a>
+    <a href="archive.html">🗄 Archive</a>
+  </nav>
+
+  <div class="threatbar">
+    <span class="k">Threat Level</span>
+    <span class="lvl">HIGH</span>
+    <span class="why">An automated "FortiBleed" campaign has compromised tens of thousands of Fortinet firewalls worldwide, an actively-exploited Splunk RCE is past its federal deadline, a CISA KEV trio is due today, and the Klue/Icarus Salesforce extortion campaign keeps widening.</span>
+  </div>
+
+  <div class="strip">
+    <div class="stat"><div class="n">86,644</div><div class="l">Internet-facing Fortinet firewalls with leaked credentials (FortiBleed)</div></div>
+    <div class="stat"><div class="n">194</div><div class="l">Countries hit by the FortiBleed credential-harvesting campaign</div></div>
+    <div class="stat"><div class="n">200,000+</div><div class="l">Files leaked from Tata Electronics by the World Leaks group</div></div>
+    <div class="stat"><div class="n">9.8</div><div class="l">CVSS of the overdue, actively-exploited Splunk KEV (CVE-2026-20253)</div></div>
+  </div>
+
+  <section>
+    <div class="lab">Top Story</div>
+    <div class="panel">
+      <h2>"FortiBleed" campaign compromises ~86,600 Fortinet firewalls across 194 countries</h2>
+      <p>Researchers are tracking a large-scale, fully automated campaign — dubbed <b>FortiBleed</b> by SOCRadar — that has harvested working login credentials from internet-facing <b>Fortinet FortiGate</b> firewall and SSL-VPN devices worldwide. An attacker-controlled database holds valid credentials for <b>more than 86,600 FortiGate devices</b> (SOCRadar's count; Recorded Future and other firms tally roughly 74,000–80,000) spanning <b>194 countries</b> — roughly <b>half of all Fortinet firewalls reachable on the internet</b>, based on Shodan polling — belonging to companies and government organizations, including (per Hudson Rock) major government entities and critical-infrastructure providers.</p>
+      <p>The operation runs on automation: attackers scan the internet for FortiGate devices, try curated lists of known passwords, and log every success; a compromised firewall is then used as a listening post to skim further credentials from SSL-VPN traffic, which are fed back into the scanner. SOCRadar estimates roughly <b>1.16 billion credential attempts against 320,000+ FortiGate targets</b> (plus 2.1 billion brute-force attempts against 160,000+ MSSQL servers). Attribution is ongoing, but SOCRadar says the tooling and targeting are consistent with <b>Russian-speaking threat actors</b>, and the campaign remains active. Defenders should assume exposure: rotate FortiGate and VPN credentials, enforce MFA, and check leaked-credential exposure now.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="lab">Patch Priority</div>
+    <div class="callout">
+      <h3>Patch Splunk Enterprise now — CVE-2026-20253 (CVSS 9.8) is exploited and past its federal deadline</h3>
+      <p>The single most urgent action for defenders today is the <b>unauthenticated remote-code-execution / arbitrary file create-or-truncate flaw in Splunk Enterprise</b> (CVE-2026-20253, CVSS <b>9.8</b>) — the first Splunk bug ever added to CISA's KEV catalog. It is <b>actively exploited</b>, and its federal remediation deadline of <b>June 21</b> has already passed (overdue). Affected: Splunk Enterprise 10.2.0–10.2.3 and 10.0.0–10.0.6. <b>Upgrade to 10.4.0, 10.2.4, 10.0.7 or later</b> immediately. Splunk Cloud and Enterprise 9.4 and earlier are not affected.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="lab">Threat Actor Spotlight</div>
+    <div class="card" style="grid-column:1/-1">
+      <h4>Icarus — emerging data-theft &amp; extortion crew</h4>
+      <p>A newly emerged extortion group, <b>Icarus</b>, has publicly claimed the Klue/Salesforce data-theft campaign, pressuring victims through extortion emails and a leak site. By its own account it has been active since <b>April 28, 2026</b> and initially listed only a couple of victims. It runs a pure <b>data-theft-and-leak model</b> — no file-encrypting ransomware — and set a <b>June 22</b> deadline to negotiate; with that deadline lapsed, stolen data has begun appearing on its leak site.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="lab">Breaches &amp; Incidents</div>
+    <div class="cards">
+      <div class="card">
+        <h4>Tata Electronics — Apple/Tesla data</h4>
+        <p>The Indian Apple/Tesla supplier confirmed a "cybersecurity incident" on June 22 after the World Leaks group published 200,000+ files (~630GB) — including documents purportedly tied to iPhone and Tesla Model 3 designs plus employee passport scans. Tata says operations are unaffected; a ransom was demanded.</p>
+      </div>
+      <div class="card">
+        <h4>10+ firms hit via Klue → Salesforce</h4>
+        <p>HackerOne, Huntress, Jamf, Recorded Future, Tanium, Snyk, OneTrust, Sprout Social, Insurity and Gong have confirmed business data was exfiltrated through the compromised Klue integration; LastPass also disclosed exposure (vaults and products unaffected).</p>
+      </div>
+      <div class="card">
+        <h4>Splunk Enterprise exploited in days</h4>
+        <p>Splunk shipped fixes for CVE-2026-20253 on June 10; CISA confirmed active exploitation on June 18 — about eight days later — and added it to the KEV catalog as the first-ever Splunk entry.</p>
+      </div>
+      <div class="card">
+        <h4>Microsoft June Patch Tuesday — record</h4>
+        <p>Microsoft patched a record ~208 CVEs this month, including an actively-exploited Microsoft Defender elevation-of-privilege zero-day (CVE-2026-41091) and a wormable, unauthenticated Windows kernel RCE (CVE-2026-45657, CVSS 9.8).</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="lab">Vulnerability Watch</div>
+    <div class="panel" style="padding:8px 14px">
+      <table>
+        <tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr>
+        <tr><td class="cve">CVE-2026-20253</td><td class="cvss crit">9.8</td><td>Splunk Enterprise 10.0.x / 10.2.x</td><td>Unauth RCE / file create-truncate; actively exploited; fix 10.4.0 / 10.2.4 / 10.0.7</td></tr>
+        <tr><td class="cve">CVE-2026-11645</td><td class="cvss warn">8.8</td><td>Google Chromium V8</td><td>Out-of-bounds read/write; exploited zero-day; update Chrome/Chromium now</td></tr>
+        <tr><td class="cve">CVE-2026-20245</td><td class="cvss warn">7.8</td><td>Cisco Catalyst SD-WAN Manager</td><td>Improper output encoding → command execution as root; actively exploited</td></tr>
+        <tr><td class="cve">CVE-2026-7473</td><td class="cvss warn">6.9</td><td>Arista EOS</td><td>Incomplete comparison → processes non-configured tunnel traffic; exploited; Arista plans no patch (mitigations only); KEV due Jun 23</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="lab">CISA KEV &amp; Federal Deadlines</div>
+    <div class="panel">
+      <ul class="kev">
+        <li><span class="cve">CVE-2026-20253</span> — Splunk Enterprise. Due <b>Jun 21, 2026</b>. <span class="cd" data-due="2026-06-21"></span></li>
+        <li><span class="cve">CVE-2026-11645</span> — Google Chromium V8. Due <b>Jun 23, 2026</b>. <span class="cd" data-due="2026-06-23"></span></li>
+        <li><span class="cve">CVE-2026-20245</span> — Cisco Catalyst SD-WAN Manager. Due <b>Jun 23, 2026</b>. <span class="cd" data-due="2026-06-23"></span></li>
+        <li><span class="cve">CVE-2026-7473</span> — Arista EOS. Due <b>Jun 23, 2026</b>. <span class="cd" data-due="2026-06-23"></span></li>
+        <li><span class="cve">CVE-2026-48907</span> — Joomla / Widget Factory Content Editor (JCE). Due <b>Jun 19, 2026</b>. <span class="cd" data-due="2026-06-19"></span></li>
+      </ul>
+      <div class="disc">Remediation deadlines are now assigned per-CVE on a risk basis under <b>BOD 26-04</b> — not the old flat three-week BOD 22-01 window. Each due date above is the CISA-stated deadline for that CVE.</div>
+    </div>
+  </section>
+
+  <div class="foot">
+    <b>Sources:</b>
+    <a href="https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-urges-hardening-fortinet-devices-after-reports-credential-exposure">CISA — Urges hardening Fortinet devices (Jun 18)</a> ·
+    <a href="https://www.recordedfuture.com/blog/critical-fortibleed-campaign">Recorded Future — FortiBleed (73,932 systems)</a> ·
+    <a href="https://socradar.io/blog/fortibleed-fortinet-firewalls-compromised/">SOCRadar — FortiBleed: 86,644 Fortinet firewalls compromised</a> ·
+    <a href="https://www.csoonline.com/article/4186790/fortibleed-campaign-exposes-75000-fortinet-firewalls-worldwide.html">CSO Online — FortiBleed campaign</a> ·
+    <a href="https://arcticwolf.com/resources/blog/active-fortibleed-campaign-impacting-fortinet-devices-across-194-countries/">Arctic Wolf — FortiBleed across 194 countries</a> ·
+    <a href="https://techcrunch.com/2026/06/22/tata-electronics-a-major-tech-supplier-to-apple-and-tesla-confirms-data-breach/">TechCrunch — Tata Electronics breach</a> ·
+    <a href="https://techcrunch.com/2026/06/22/klue-hack-results-in-data-breach-at-several-cybersecurity-firms/">TechCrunch — Klue hack</a> ·
+    <a href="https://www.bleepingcomputer.com/news/security/klue-oauth-breach-linked-to-icarus-salesforce-data-theft-attacks/">BleepingComputer — Klue OAuth → Icarus</a> ·
+    <a href="https://thehackernews.com/2026/06/cisa-adds-cisco-chrome-and-arista-flaws.html">The Hacker News — CISA adds Cisco, Chrome, Arista to KEV</a> ·
+    <a href="https://www.bleepingcomputer.com/news/security/cisa-splunk-enterprise-flaw-actively-exploited-patch-by-sunday/">BleepingComputer — Splunk CVE-2026-20253 (KEV)</a> ·
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-20253">NVD — CVE-2026-20253</a>
+    <div class="disc">For situational awareness only. Verify advisories against vendor and CISA sources before acting. CVSS scores and deadlines reflect vendor / CISA figures as reported this run.</div>
+  </div>
+</div>
+
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();
+(function(){try{var now=new Date();var today=new Date(Date.UTC(now.getUTCFullYear(),now.getUTCMonth(),now.getUTCDate()));document.querySelectorAll('.cd').forEach(function(s){var d=s.getAttribute('data-due');if(!d)return;var p=d.split('-');var due=new Date(Date.UTC(+p[0],+p[1]-1,+p[2]));var days=Math.round((due-today)/86400000);var txt,cls;if(days>1){txt='('+days+' days left)';cls='warn';}else if(days===1){txt='(1 day left)';cls='warn';}else if(days===0){txt='(due today — 0 days left)';cls='crit';}else{txt='('+Math.abs(days)+(Math.abs(days)===1?' day':' days')+' overdue)';cls='crit';}s.textContent=txt;s.className='cd '+cls;});}catch(e){}})();</script>
+</body>
+</html>
