@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Octagon · Daily Briefings</title>
+<style>
+:root{
+  --bg:#100c0c; --panel:#1a1313; --panel2:#201717; --line:#322020;
+  --ink:#f4e9e6; --mut:#b59a93; --accent:#e84545; --accent2:#ff8a5c; --gold:#d8b06a;
+  --win:#34d27b; --mono:ui-monospace,'SF Mono','Cascadia Code',Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(1100px 560px at 82% -10%,#241010 0,var(--bg) 55%);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1060px;margin:0 auto;padding:22px 20px 60px}
+a{color:inherit}
+.masthead{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:14px}
+.brand{font-size:13px;font-family:var(--mono);letter-spacing:.34em;color:var(--mut);text-transform:uppercase}
+.brand b{color:var(--accent)}
+.title{font-size:30px;font-weight:800;letter-spacing:.02em;margin:2px 0 0}
+.title .ic{color:var(--accent)}
+.tagline{font-size:12.5px;color:var(--mut);margin-top:3px}
+.meta{margin-left:auto;display:flex;gap:7px;flex-wrap:wrap}
+.pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);
+  border:1px solid var(--line);border-radius:999px;padding:4px 10px;background:var(--panel)}
+.pill.live{color:#2a0c0c;background:var(--accent);border-color:var(--accent);font-weight:700}
+.pill.live .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#2a0c0c;margin-right:6px;animation:bl 1.4s infinite}
+@keyframes bl{50%{opacity:.25}}
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;
+  padding:11px 15px;margin:14px 0 2px;font-size:14.5px;line-height:1.5}
+.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-right:9px}
+.freshline{font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--mut);margin:8px 2px 0}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 6px}
+nav a{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-decoration:none;color:var(--mut);
+  border:1px solid var(--line);border-radius:9px;padding:8px 12px;background:var(--panel);transition:.15s}
+nav a:hover{transform:translateY(-1px);color:var(--ink);border-color:#4a2e2e}
+nav a.active{color:#2a0c0c;background:var(--accent);border-color:var(--accent);font-weight:700}
+.cdbar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;border:1px solid var(--line);border-radius:12px;
+  padding:13px 16px;margin-top:8px;background:linear-gradient(90deg,rgba(232,69,69,.10),transparent)}
+.cdbar .k{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent2)}
+.cdbar .ev{font-weight:700;font-size:15px}
+.cdbar .cd{margin-left:auto;font-family:var(--mono);font-weight:800;font-size:17px;color:var(--gold);letter-spacing:.04em}
+section{margin-top:24px}
+.lab{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.topstory{border-left:4px solid var(--accent)}
+.panel h2{margin:.1em 0 .35em;font-size:22px;letter-spacing:.01em}
+.panel p{margin:.4em 0;color:#ead9d4;font-size:14.5px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;transition:.15s}
+.card:hover{transform:translateY(-2px);border-color:#5a3636}
+.card .dv{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;color:var(--gold);text-transform:uppercase}
+.card h4{margin:6px 0 5px;font-size:16px}
+.card p{margin:0;color:var(--mut);font-size:13.5px}
+.card .odds{margin-top:8px;font-family:var(--mono);font-size:12px;color:var(--accent2)}
+.tags{margin-top:9px;display:flex;gap:6px;flex-wrap:wrap}
+.t{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;padding:3px 7px;border-radius:6px;border:1px solid var(--line);color:var(--mut)}
+.t.prospect{color:var(--win);border-color:rgba(52,210,123,.4)}
+.t.title{color:var(--gold);border-color:rgba(216,176,106,.45)}
+.t.new{color:#2a0c0c;background:var(--accent2);border-color:var(--accent2);font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:4px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+.res{font-weight:700;color:var(--win)}
+.res.nc{color:var(--gold)}
+.radar{margin:0;padding-left:18px}.radar li{margin:7px 0;font-size:14px;color:#ead9d4}
+.foot{margin-top:30px;border-top:1px solid var(--line);padding-top:16px;font-size:12px;color:var(--mut)}
+.foot a{color:var(--accent2);word-break:break-all}
+.disc{margin-top:12px;font-size:11.5px;color:#7d635d;font-style:italic}
+@media(max-width:720px){.cards{grid-template-columns:1fr}.meta{margin-left:0}.cdbar .cd{margin-left:0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <div class="brand"><b>Daily</b> Briefings</div>
+      <h1 class="title"><span class="ic">⊘</span> The Octagon</h1>
+      <div class="tagline">Your daily MMA briefing — UFC, prospects &amp; the business of fighting</div>
+    </div>
+    <div class="meta">
+      <span class="pill live"><span class="dot"></span>Live</span>
+      <span class="pill" id="edition">Afternoon Edition</span>
+      <span class="pill" id="datestamp">June 22, 2026</span>
+      <span class="pill">Updated <span id="updated">—</span></span>
+    </div>
+  </div>
+
+  <div class="tldr"><b>Tale of the Tape</b> <span>Manel Kape avenged a nine-year-old loss with a third-round TKO of Kyoji Horiguchi at UFC Vegas 119 on Saturday — his fourth straight win — and is angling for a flyweight title shot against champion Joshua Van, as the UFC turns to Baku next weekend for Fiziev vs. Torres.</span></div>
+  <div class="freshline" id="freshline">Data as of — ET · briefings refresh every 30 minutes, 8 AM–6 PM ET</div>
+
+  <nav>
+    <a href="index.html">★ Front Page</a>
+    <a href="cyber-briefing.html">⛨ The Cyber Wire</a>
+    <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
+    <a href="mma-briefing.html" class="active">⊘ The Octagon</a>
+    <a href="archive.html">🗄 Archive</a>
+  </nav>
+
+  <div class="cdbar">
+    <span class="k">Next Card</span>
+    <span class="ev">UFC Baku · Fiziev vs. Torres — Sat, Jun 27 · National Gymnastics Arena, Baku (Paramount+)</span>
+    <span class="cd" id="ufccdn">—</span>
+  </div>
+
+  <section>
+    <div class="lab">Top Story</div>
+    <div class="panel topstory">
+      <h2>Kape avenges a nine-year-old loss — and calls for the belt</h2>
+      <p>At <b>UFC Vegas 119</b> on Saturday (June 20, Meta APEX), <b>Manel Kape</b> weathered two competitive rounds against <b>Kyoji Horiguchi</b> before uncorking a flush counter right and closing the show with ground-and-pound for a <b>third-round TKO at 2:42</b>. The win avenges a 2017 RIZIN loss to Horiguchi from their first meeting and runs Kape's streak to <b>four straight</b> in a five-round flyweight contender eliminator.</p>
+      <p>Afterward, Kape argued he has done enough to challenge flyweight champion <b>Joshua Van</b>, while signalling he would wait if Van first runs back a rematch with former champ <b>Alexandre Pantoja</b>. Kape also banked a <b>$100,000 Performance of the Night</b> bonus, one of four six-figure awards on a finish-heavy card.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="lab">Fight Week — Upcoming Cards</div>
+    <div class="cards">
+      <div class="card">
+        <div class="dv">Sat, Jun 27 · National Gymnastics Arena, Baku</div>
+        <h4>UFC Baku — Fiziev vs. Torres</h4>
+        <p>The UFC returns to Baku, Azerbaijan, with a five-round lightweight headliner pitting home favorite Rafael Fiziev (13-4) against Mexico's Manuel Torres (17-3). Featured bouts include Shara Magomedov vs. Michel Pereira at middleweight and Asu Almabayev vs. Charles Johnson at flyweight. Paramount+ (prelims noon ET / main card 3 PM ET).</p>
+        <div class="odds">Odds: Fiziev ≈ −145 / Torres ≈ +125 (SportsLine, indicative; DraftKings −115)</div>
+        <div class="tags"><span class="t new">Next up</span><span class="t">Lightweight</span></div>
+      </div>
+      <div class="card">
+        <div class="dv">Sat, Jul 11 · T-Mobile Arena, Las Vegas</div>
+        <h4>UFC 329 — McGregor vs. Holloway 2</h4>
+        <p>The marquee International Fight Week return: Conor McGregor fights for the first time since UFC 264 in July 2021, meeting Max Holloway in a welterweight bout — Holloway's debut at 170. The pair first met back in 2013. Atop a stacked Fight Week lineup; main card 9 PM ET.</p>
+        <div class="tags"><span class="t title">Headliner</span></div>
+      </div>
+      <div class="card">
+        <div class="dv">Sat, Jul 18 · Paycom Center, Oklahoma City</div>
+        <h4>UFC Fight Night — Du Plessis vs. Usman</h4>
+        <p>Former middleweight champion Dricus du Plessis meets former welterweight champion Kamaru Usman, who moves up to 185 pounds, in a five-round main event. Paramount+.</p>
+        <div class="tags"><span class="t">Middleweight</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="lab">Last Event — Results · UFC Vegas 119 (Jun 20, Meta APEX)</div>
+    <div class="panel" style="padding:8px 14px">
+      <table>
+        <thead><tr><th>Result</th><th>Bout</th><th>Method</th></tr></thead>
+        <tbody>
+          <tr><td class="res">Kape def. Horiguchi</td><td>Main event · flyweight</td><td>TKO (punches), R3 (2:42)</td></tr>
+          <tr><td class="res">Stirling def. Cutelaba</td><td>Co-main · light heavyweight</td><td>TKO (punches &amp; elbows), R2 (3:23)</td></tr>
+          <tr><td class="res">Oliveira def. Fili</td><td>Main card</td><td>TKO (elbows &amp; punches), R2 (4:56)</td></tr>
+          <tr><td class="res">Magomedov def. Baghdasaryan</td><td>Main card</td><td>Submission (twister), R1 (1:17)</td></tr>
+          <tr><td class="res">Rodriguez def. Amil</td><td>Main card</td><td>Submission (guillotine), R1 (3:43)</td></tr>
+          <tr><td class="res">Borjas def. Lima</td><td>Catchweight (129 lb)</td><td>Decision (unanimous)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:13.5px;color:var(--mut);margin-top:10px"><b>Performance bonuses ($100,000 each):</b> Performance of the Night — <b>Manel Kape</b> and <b>Murtazali Magomedov</b> (for a rare twister finish, only the fourth in UFC history); Fight of the Night — <b>Vinicius Oliveira</b> and <b>Andre Fili</b>, after Oliveira closed the show late in the second round.</p>
+  </section>
+
+  <section>
+    <div class="lab">Prospect Watch</div>
+    <div class="cards">
+      <div class="card">
+        <h4>Murtazali Magomedov</h4>
+        <p>The featherweight made history in his featured bout, submitting Melsik Baghdasaryan with a rarely-seen <b>twister</b> in the first round — only the fourth such finish in UFC history — and pocketed a $100,000 Performance of the Night bonus.</p>
+        <div class="tags"><span class="t prospect">Prospect</span><span class="t">Featherweight</span></div>
+      </div>
+      <div class="card">
+        <h4>Navajo Stirling</h4>
+        <p>The City Kickboxing light heavyweight kept his unbeaten run going in the co-main event, stopping veteran Ion Cutelaba by second-round TKO — a poised, powerful showing from one of 205's most-watched young talents.</p>
+        <div class="tags"><span class="t prospect">Prospect</span><span class="t">Light Heavyweight</span></div>
+      </div>
+      <div class="card">
+        <h4>Ateba Gautier</h4>
+        <p>The Cameroonian middleweight (11-1) is 2-0 in 2026 — a decision over Andrey Pulyaev (UFC 324) and a second-round TKO of Ozzy Diaz (UFC 328) — building momentum as one of 185's brightest young finishers.</p>
+        <div class="tags"><span class="t prospect">Prospect</span><span class="t">Middleweight</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="lab">Around the Sport</div>
+    <div class="panel">
+      <ul class="radar">
+        <li><b>Kape eyes the belt:</b> after his revenge KO, Manel Kape says he's earned a shot at flyweight champion Joshua Van — but is open to waiting if Van runs back a rematch with Alexandre Pantoja first.</li>
+        <li><b>Baku homecoming:</b> the UFC returns to Azerbaijan next Saturday — its second trip to Baku, after Hill vs. Rountree Jr. in June 2025 — with hometown favorite Rafael Fiziev headlining against Mexico's Manuel Torres at the National Gymnastics Arena.</li>
+        <li><b>McGregor's return looms:</b> Conor McGregor headlines UFC 329 on July 11 against Max Holloway — his first bout since breaking his leg at UFC 264 in 2021 — during International Fight Week.</li>
+        <li><b>Title picture:</b> Justin Gaethje took the undisputed lightweight belt and Ciryl Gane the interim heavyweight crown at the June 14 Freedom 250 card on the White House grounds; no belts have changed hands since.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="lab">Rankings &amp; Business</div>
+    <div class="panel">
+      <p><b>Business &amp; broadcast.</b> UFC Vegas 119 paid out <b>four $100,000 bonuses</b> — Performance nods to Kape and Magomedov, plus a Fight of the Night split between Oliveira and Fili — on a card streamed on <b>Paramount+</b>, now the UFC's exclusive U.S. home under the TKO–Paramount deal that began in 2026 (the ESPN run ended at the close of 2025). The summer slate builds toward <b>International Fight Week</b> and McGregor's return at UFC 329 (July 11).</p>
+      <p><b>Title picture.</b> No belts changed hands at UFC Vegas 119 — the main event was a flyweight contender eliminator and the co-main a light-heavyweight bout — so the Champions Board below stands unchanged from the June 14 Freedom 250 results, where Justin Gaethje took the undisputed lightweight title and Ciryl Gane the interim heavyweight crown.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="lab">Champions Board — current titleholders</div>
+    <div class="panel" style="padding:8px 14px">
+      <table>
+        <thead><tr><th>Division</th><th>Champion</th><th>Last title bout</th></tr></thead>
+        <tbody>
+          <tr><td>Heavyweight</td><td><b>Tom Aspinall</b></td><td>Undisputed (since Jun 2025)</td></tr>
+          <tr><td>Heavyweight (interim)</td><td><b>Ciryl Gane</b></td><td>KO2 Pereira · Freedom 250, Jun 14 2026</td></tr>
+          <tr><td>Light Heavyweight</td><td><b>Carlos Ulberg</b></td><td>KO1 Procházka · UFC 327, Apr 11 2026</td></tr>
+          <tr><td>Middleweight</td><td><b>Sean Strickland</b></td><td>SD over Chimaev · UFC 328, May 9 2026</td></tr>
+          <tr><td>Welterweight</td><td><b>Islam Makhachev</b></td><td>UD Della Maddalena · UFC 322, Nov 15 2025</td></tr>
+          <tr><td>Lightweight</td><td><b>Justin Gaethje</b></td><td>TKO4 Topuria · Freedom 250, Jun 14 2026</td></tr>
+          <tr><td>Featherweight</td><td><b>Alexander Volkanovski</b></td><td>Def. UD Lopes · UFC 325, Jan 31 2026</td></tr>
+          <tr><td>Bantamweight</td><td><b>Petr Yan</b></td><td>UD Dvalishvili · UFC 323, Dec 6 2025</td></tr>
+          <tr><td>Flyweight</td><td><b>Joshua Van</b></td><td>TKO1 Pantoja · UFC 323, Dec 6 2025</td></tr>
+          <tr><td>Women's Bantamweight</td><td><b>Kayla Harrison</b></td><td>Reigning champion</td></tr>
+          <tr><td>Women's Flyweight</td><td><b>Valentina Shevchenko</b></td><td>Reigning champion</td></tr>
+          <tr><td>Women's Strawweight</td><td><b>Mackenzie Dern</b></td><td>UD Jandiroba · UFC 321, Oct 25 2025</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12px;color:var(--mut);margin-top:8px">Verified this run against FIGHTMAG's current-champions list (updated June 15) and ESPN's champions reference, cross-checked with the latest results. Note: cached "current champions" listings still surfacing today show pre–UFC 328 names (Chimaev at middleweight, Topuria at lightweight, Pereira at light heavyweight) — all superseded by the April 11 (UFC 327), May 9 (UFC 328) and June 14 (Freedom 250) results above.</p>
+  </section>
+
+  <div class="foot">
+    <b>Sources (fetched this run):</b>
+    <a href="https://sports.yahoo.com/mma/article/ufc-vegas-119-results-manel-kape-stuns-kyoji-horiguchi-with-revenge-knockout-newcomer-scores-fastest-twister-in-ufc-history-025716839.html">Yahoo Sports — UFC Vegas 119 results: Kape stuns Horiguchi; newcomer scores fastest twister in UFC history</a> ·
+    <a href="https://www.fightmag.com/ufc-vegas-119-kape-vs-horiguchi-live-results/">FIGHTMAG — UFC Vegas 119 live results (Kape TKOs Horiguchi; Stirling, Magomedov twister)</a> ·
+    <a href="https://www.mmamania.com/ufc-paramount-plus-news-hub-fight-cards-schedule/452088/official-ufc-vegas-119-post-fight-bonus-winners-results-paramount-kape-magomedov-oliveira-fili">MMA Mania — UFC Vegas 119 post-fight $100K bonuses (Kape, Magomedov, Oliveira, Fili)</a> ·
+    <a href="https://www.ufc.com/news/bonus-coverage-ufc-fight-night-kape-vs-horiguchi">UFC.com — Bonus coverage: UFC Fight Night Kape vs. Horiguchi</a> ·
+    <a href="https://en.wikipedia.org/wiki/UFC_Fight_Night:_Kape_vs._Horiguchi">Wikipedia — UFC Fight Night: Kape vs. Horiguchi (full results, Baku second-visit note)</a> ·
+    <a href="https://www.sportsline.com/insiders/ufc-fight-night-odds-picks-seasoned-mma-analyst-reveals-selections-for-fiziev-vs-torres-and-other-matchups-at-baku-azerbaijan-june-27/">SportsLine — UFC Baku odds/picks: Fiziev vs. Torres (indicative Fiziev ≈ −145 / Torres ≈ +125; DraftKings −115)</a> ·
+    <a href="https://www.ufc.com/event/ufc-fight-night-june-27-2026">UFC.com — UFC Fight Night: Fiziev vs. Torres (Baku, Jun 27 · card)</a> ·
+    <a href="https://www.fightmag.com/ufc-champions/">FIGHTMAG — List of current UFC champions (updated Jun 15; full Champions Board cross-check)</a> ·
+    <a href="https://www.espn.com/mma/story/_/id/14947566/current-all-ufc-champions">ESPN — Current and all-time UFC champions</a>
+    <div class="disc">Cards and bouts are subject to change. Odds reflect lines cited by the sources above at the time of reading and will move. July card details (UFC 329 on Jul 11; Du Plessis vs. Usman on Jul 18) are carried per the standing CORRECTIONS record.</div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var target=new Date('2026-06-27T12:00:00-04:00');
+  var el=document.getElementById('ufccdn');
+  function tick(){
+    var now=new Date();var d=target-now;
+    if(d<=0){el.textContent='Fight week — live / completed';return;}
+    var days=Math.floor(d/86400000);var h=Math.floor(d%86400000/3600000);var m=Math.floor(d%3600000/60000);
+    el.textContent=days+'d '+h+'h '+m+'m';
+  }
+  tick();setInterval(tick,60000);
+})();
+</script>
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
+</body>
+</html>
