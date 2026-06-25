@@ -6,59 +6,58 @@
 <title>Daily Briefings</title>
 <style>
 :root{
-  --bg:#080a0e; --panel:#10151b; --line:#1f2730; --ink:#eef3f6; --mut:#8fa1ad;
-  --teal:#22d3a8; --gold:#caa64a; --red:#e84545;
-  --mono:ui-monospace,'SF Mono','Cascadia Code',Menlo,Consolas,monospace;
-  --serif:Georgia,'Times New Roman',serif;
+  --bg:#0a0a0c; --panel:#141418; --line:#262630; --ink:#eceaf2; --mut:#9b97ab;
+  --teal:#22d3a8; --teal2:#36c6ff; --gold:#caa64a; --gold2:#e8c766; --red:#e84545; --red2:#ff8a5c;
+  --mono:ui-monospace,'SF Mono','Cascadia Code',Menlo,Consolas,monospace; --serif:Georgia,'Times New Roman',serif;
 }
 *{box-sizing:border-box}
-body{margin:0;background:radial-gradient(1200px 640px at 50% -12%,#121a22 0,var(--bg) 60%);color:var(--ink);
+body{margin:0;background:radial-gradient(1100px 560px at 80% -12%,#16161e 0,var(--bg) 55%);color:var(--ink);
   font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1080px;margin:0 auto;padding:30px 20px 60px}
-a{color:inherit;text-decoration:none}
-.masthead{text-align:center;border-bottom:1px solid var(--line);padding-bottom:20px}
-.brand{font-size:13px;font-family:var(--mono);letter-spacing:.4em;color:var(--mut);text-transform:uppercase}
-.title{font-size:46px;font-weight:800;letter-spacing:.01em;margin:8px 0 0;
-  background:linear-gradient(90deg,var(--teal),var(--gold),var(--red));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-.sub{font-size:14px;color:var(--mut);margin-top:8px}
-.meta{margin:14px 0 0;display:flex;gap:7px;flex-wrap:wrap;justify-content:center}
+.wrap{max-width:1060px;margin:0 auto;padding:22px 20px 60px}
+a{color:inherit}
+.masthead{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:14px}
+.brand{font-size:13px;font-family:var(--mono);letter-spacing:.34em;color:var(--mut);text-transform:uppercase}
+.title{font-size:34px;font-weight:800;letter-spacing:.01em;margin:3px 0 0}
+.title .a1{color:var(--teal)}.title .a2{color:var(--gold)}.title .a3{color:var(--red)}
+.meta{margin-left:auto;display:flex;gap:7px;flex-wrap:wrap}
 .pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);
-  border:1px solid var(--line);border-radius:999px;padding:4px 11px;background:var(--panel)}
-.pill.live{color:#06231c;background:var(--teal);border-color:var(--teal);font-weight:700}
-.pill.live .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#06231c;margin-right:6px;animation:bl 1.4s infinite}
+  border:1px solid var(--line);border-radius:999px;padding:4px 10px;background:var(--panel)}
+.pill.live{color:#08121a;background:var(--teal);border-color:var(--teal);font-weight:700}
+.pill.live .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#08121a;margin-right:6px;animation:bl 1.4s infinite}
 @keyframes bl{50%{opacity:.25}}
-.freshline{font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--mut);margin:14px 0 0;text-align:center}
-nav{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 6px;justify-content:center}
-nav a{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--mut);
-  border:1px solid var(--line);border-radius:9px;padding:8px 13px;background:var(--panel);transition:.15s}
-nav a:hover{transform:translateY(-1px);color:var(--ink);border-color:#2c3a45}
-nav a.active{color:#06231c;background:var(--teal);border-color:var(--teal);font-weight:700}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
-.bcard{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-direction:column;
-  transition:.18s;border-top:3px solid var(--line);min-height:250px}
-.bcard:hover{transform:translateY(-4px)}
-.bcard .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase}
-.bcard h2{margin:10px 0 2px;font-size:24px}
-.bcard .desk{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--mut);text-transform:uppercase}
-.bcard p{color:#d4dee4;font-size:14.5px;margin:14px 0 0;flex:1}
-.bcard .more{margin-top:16px;font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;font-weight:700}
-.sec{border-top-color:var(--teal)} .sec .kicker,.sec .more,.sec h2{color:var(--teal)}
-.mkt{border-top-color:var(--gold)} .mkt .kicker,.mkt .more{color:var(--gold)} .mkt h2{color:var(--gold);font-family:var(--serif);font-weight:700}
-.mma{border-top-color:var(--red)} .mma .kicker,.mma .more,.mma h2{color:var(--red)}
-.foot{margin-top:34px;border-top:1px solid var(--line);padding-top:16px;font-size:12px;color:var(--mut);text-align:center}
-.disc{margin-top:8px;font-size:11.5px;color:#5d6b74;font-style:italic}
-@media(max-width:760px){.cards{grid-template-columns:1fr}.title{font-size:36px}}
+.freshline{font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--mut);margin:12px 2px 0}
+nav{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 6px}
+nav a{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-decoration:none;color:var(--mut);
+  border:1px solid var(--line);border-radius:9px;padding:8px 12px;background:var(--panel);transition:.15s}
+nav a:hover{transform:translateY(-1px);color:var(--ink);border-color:#3a3a48}
+nav a.active{color:#0a0a0c;background:var(--ink);border-color:var(--ink);font-weight:700}
+.intro{font-size:14.5px;color:#cfccdb;margin:18px 2px 0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+.bigcard{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;flex-direction:column;min-height:230px;transition:.16s;text-decoration:none}
+.bigcard:hover{transform:translateY(-3px)}
+.bigcard .kick{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;display:flex;align-items:center;gap:8px}
+.bigcard h2{margin:10px 0 4px;font-size:22px}
+.bigcard .sub{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+.bigcard p{color:#d4d1e0;font-size:14px;margin:12px 0 0;flex:1}
+.bigcard .read{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;margin-top:14px;font-weight:700}
+.c-teal{border-top:3px solid var(--teal)} .c-teal .kick,.c-teal .read{color:var(--teal)} .c-teal:hover{border-color:var(--teal)}
+.c-gold{border-top:3px solid var(--gold)} .c-gold .kick,.c-gold .read{color:var(--gold)} .c-gold h2{font-family:var(--serif)} .c-gold:hover{border-color:var(--gold)}
+.c-red{border-top:3px solid var(--red)} .c-red .kick,.c-red .read{color:var(--red2)} .c-red:hover{border-color:var(--red)}
+.foot{margin-top:34px;border-top:1px solid var(--line);padding-top:16px;font-size:12px;color:var(--mut)}
+.disc{margin-top:10px;font-size:11.5px;color:#6c6880;font-style:italic}
+@media(max-width:720px){.grid{grid-template-columns:1fr}.meta{margin-left:0}}
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="masthead">
-    <div class="brand">Daily Briefings</div>
-    <div class="title">Daily Briefings</div>
-    <div class="sub">Cyber · Markets · MMA — fact-checked every edition from live sources</div>
+    <div>
+      <div class="brand">Daily Briefings</div>
+      <div class="title"><span class="a1">Daily</span> <span class="a2">Briefings</span></div>
+    </div>
     <div class="meta">
       <span class="pill live"><span class="dot"></span>Live</span>
-      <span class="pill" id="edition">Morning Edition</span>
+      <span class="pill" id="edition">Midday Edition</span>
       <span class="pill" id="datestamp">June 25, 2026</span>
       <span class="pill">Updated <span id="updated">—</span></span>
     </div>
@@ -74,35 +73,35 @@ nav a.active{color:#06231c;background:var(--teal);border-color:var(--teal);font-
     <a href="archive.html">🗄 Archive</a>
   </nav>
 
-  <div class="cards">
-    <a class="bcard sec" href="cyber-briefing.html">
-      <div class="kicker">⛨ The Cyber Wire · The Wire</div>
-      <h2>Security</h2>
-      <div class="desk">Threat level: High</div>
-      <p>Operation Endgame &mdash; a global law-enforcement and Microsoft-led strike &mdash; dismantled the Amadey, StealC and SocGholish malware networks, seizing 326 servers and 142 domains, recovering 27 million stolen credentials and freezing €41M ($46.5M). Today's top defensive priority remains a CVSS 10.0 Ubiquiti UniFi OS flaw (CVE-2026-34910) under active attack, with its federal patch deadline now one day out. Researchers also disclosed Cordyceps, a new CI/CD supply-chain weakness that could compromise repositories at major providers, alongside an exposed trove of 24 billion stolen credential records.</p>
-      <div class="more">Read the briefing →</div>
-    </a>
+  <div class="intro">Three desks, one front page — refreshed through the trading day. Today's leads:</div>
 
-    <a class="bcard mkt" href="wallstreet-briefing.html">
-      <div class="kicker">▲ The Closing Bell · The Tape</div>
-      <h2>Markets</h2>
-      <div class="desk">Dow record intraday high · value rotation</div>
-      <p>The Dow Jones Industrial Average hit a fresh all-time intraday high around midday Thursday as money rotated into industrials, health care and financials, offsetting sliding megacap tech &mdash; the S&amp;P 500 up about 0.5%, the Dow about 0.6% and the Russell 2000 about 0.4%, while the Nasdaq lagged near +0.2%. Micron's blowout quarter (record ~$41.5B revenue, $25.11 adjusted EPS, an 84.9% gross margin, HBM sold out through 2026) sent its shares up about 12% to a record high and lifted chips, with Qualcomm up about 10%. May PCE inflation ran hot at a three-year-high 4.1% (3.4% core), and durable-goods orders fell 4.5%, but the broad rally held. The prior session closed mixed: the Dow rose 0.35% to 51,848.90 while the S&amp;P 500 (&minus;0.10%) and Nasdaq (&minus;0.43%) slipped.</p>
-      <div class="more">Read the briefing →</div>
+  <div class="grid">
+    <a class="bigcard c-teal" href="cyber-briefing.html">
+      <div class="kick">⛨ The Cyber Wire</div>
+      <h2>The Wire</h2>
+      <div class="sub">Security · Threat Level High</div>
+      <p>Operation Endgame seized 326 servers and 142 domains and froze about €41M ($46.5M) tied to the StealC and Amadey infostealers — as defenders race a June 26 federal deadline to patch a CVSS 10.0 Ubiquiti UniFi OS flaw already under active exploitation.</p>
+      <div class="read">Read the briefing →</div>
     </a>
-
-    <a class="bcard mma" href="mma-briefing.html">
-      <div class="kicker">⊘ The Octagon · Tale of the Tape</div>
-      <h2>MMA</h2>
-      <div class="desk">New rankings · Baku Saturday</div>
-      <p>The UFC and Meta's new Elo-based rankings &mdash; which scrapped the media panel and the pound-for-pound list &mdash; remain the talk of the sport as fight week builds toward UFC Baku on Saturday, where Rafael Fiziev meets Manuel Torres in a near pick'em (Fiziev &minus;115, DraftKings). Conor McGregor's return against Max Holloway looms at UFC 329 on July 11, days after Manel Kape's fourth straight finish headlined UFC Vegas 119.</p>
-      <div class="more">Read the briefing →</div>
+    <a class="bigcard c-gold" href="wallstreet-briefing.html">
+      <div class="kick">▲ The Closing Bell</div>
+      <h2>The Tape</h2>
+      <div class="sub">Markets · Midday</div>
+      <p>The Dow stormed to a fresh all-time high near 52,650 on a rotation into industrials and financials, even as Apple's ~5% drop pulled the Nasdaq lower — while Micron's record quarter lifted chips and a hot 4.1% PCE print revived inflation worries.</p>
+      <div class="read">Read the briefing →</div>
+    </a>
+    <a class="bigcard c-red" href="mma-briefing.html">
+      <div class="kick">⊘ The Octagon</div>
+      <h2>Tale of the Tape</h2>
+      <div class="sub">MMA · Fight Week</div>
+      <p>Conor McGregor's first fight in nearly five years headlines UFC 329 on July 11 during International Fight Week, while Rafael Fiziev and Manuel Torres meet in a pick-'em lightweight main event in Baku this Saturday.</p>
+      <div class="read">Read the briefing →</div>
     </a>
   </div>
 
   <div class="foot">
-    Three desks, one page · Updated continuously through the trading day. Every claim is checked against live sources each edition.
-    <div class="disc">Informational only — not investment, security, or wagering advice. See each briefing for sources and disclaimers.</div>
+    Daily Briefings aggregates verified, sourced reporting across security, markets and MMA. Each desk page lists the sources fetched for that edition; figures are point-in-time and refresh through the day.
+    <div class="disc">For information and situational awareness only; not investment, legal or security advice.</div>
   </div>
 </div>
 
