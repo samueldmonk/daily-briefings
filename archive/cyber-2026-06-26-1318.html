@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Cyber Wire — Daily Briefing</title>
+<style>
+:root{
+  --bg:#080d12;--panel:#0f1820;--panel2:#0c141b;--line:#1d2c36;--text:#e6f1f4;--muted:#8397a2;
+  --mono:'SF Mono',ui-monospace,'Cascadia Code',Menlo,Consolas,monospace;
+  --teal:#22d3a8;--cyan:#36c6ff;--crit:#ff5470;--warn:#ffb547;
+}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(1100px 560px at 82% -8%,#0f2530 0,var(--bg) 60%);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin:0 auto;padding:24px 18px 60px}
+.masthead{text-align:center;padding:8px 0 4px}
+.masthead h1{font-size:38px;margin:0;letter-spacing:.5px;color:var(--teal)}
+.masthead h1 .ic{color:var(--cyan)}
+.masthead .sub{color:var(--muted);font-family:var(--mono);font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;margin-top:5px}
+.meta{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:13px 0 4px}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:5px 11px}
+.pill.live{color:#04210f;background:var(--teal);border-color:var(--teal);font-weight:700}
+.pill .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#04210f;margin-right:6px;animation:bl 1.6s infinite}
+@keyframes bl{50%{opacity:.35}}
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:10px;padding:11px 15px;margin:14px 0 2px;font-size:14.5px;line-height:1.5}
+.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-right:9px}
+.freshline{color:var(--muted);font-family:var(--mono);font-size:11px;letter-spacing:.04em;margin:8px 2px 2px}
+nav{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;margin:16px 0 22px;padding:10px;background:var(--panel2);border:1px solid var(--line);border-radius:14px}
+nav a{font-family:var(--mono);font-size:12px;letter-spacing:.05em;text-decoration:none;color:var(--muted);padding:8px 13px;border-radius:9px;border:1px solid transparent;transition:.15s;white-space:nowrap}
+nav a:hover{color:var(--text);background:#13202a}
+nav a.active{color:#04210f;background:var(--teal);border-color:var(--teal);font-weight:700}
+.banner{display:flex;align-items:center;gap:14px;background:linear-gradient(90deg,rgba(255,84,112,.14),rgba(255,84,112,.03));border:1px solid var(--crit);border-radius:13px;padding:13px 16px;margin-bottom:14px}
+.banner .lvl{font-family:var(--mono);font-weight:700;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--crit);white-space:nowrap}
+.banner .why{font-size:13.5px;color:#d6e2e8}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;margin-bottom:22px}
+@media(max-width:720px){.stats{grid-template-columns:1fr 1fr}}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 14px}
+.stat .n{font-size:23px;font-weight:700;color:var(--cyan);font-family:var(--mono)}
+.stat .l{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-top:3px}
+section{margin:26px 0}
+.lab{font-family:var(--mono);font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--teal);margin:0 0 12px;display:flex;align-items:center;gap:10px}
+.lab::after{content:"";flex:1;height:1px;background:var(--line)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.top h2{margin:0 0 8px;font-size:23px}
+.top p{margin:8px 0 0;color:#d3dee4;font-size:14.5px}
+.tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:6px;margin-right:6px;margin-bottom:4px}
+.tag.new{background:var(--crit);color:#2a0008;font-weight:700}
+.tag.t{background:rgba(54,198,255,.13);color:var(--cyan);border:1px solid rgba(54,198,255,.3)}
+.tag.r{background:rgba(255,84,112,.13);color:var(--crit);border:1px solid rgba(255,84,112,.3)}
+.callout{border-radius:14px;padding:16px 18px;border:1px solid var(--crit);border-left:5px solid var(--crit);background:linear-gradient(90deg,rgba(255,84,112,.1),transparent)}
+.callout .h{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--crit);margin-bottom:7px}
+.callout h3{margin:0 0 6px;font-size:18px}
+.callout p{margin:6px 0 0;font-size:14px;color:#dbe6ea}
+.cardgrid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+@media(max-width:720px){.cardgrid{grid-template-columns:1fr}}
+.icard{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 16px;transition:.16s}
+.icard:hover{transform:translateY(-3px);border-color:#2c4250}
+.icard h4{margin:0 0 7px;font-size:15.5px}
+.icard p{margin:0;font-size:13px;color:#c3d0d7}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+td .cve{font-family:var(--mono);color:var(--cyan)}
+.sev{font-family:var(--mono);font-weight:700}
+.sev.c{color:var(--crit)} .sev.h{color:var(--warn)}
+.kev{list-style:none;padding:0;margin:0}
+.kev li{padding:11px 0;border-bottom:1px solid var(--line);font-size:14px;display:flex;justify-content:space-between;gap:12px;align-items:baseline;flex-wrap:wrap}
+.kev .cd{font-family:var(--mono);font-size:12px;white-space:nowrap}
+.kev .cd.ok{color:var(--teal)} .kev .cd.warn{color:var(--warn)} .kev .cd.crit{color:var(--crit);font-weight:700}
+footer{margin-top:34px;border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:12px;line-height:1.85}
+footer a{color:var(--cyan);text-decoration:none;word-break:break-word}
+.disc{margin-top:12px;font-size:11px;color:#5d6e78}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <h1><span class="ic">⛨</span> The Cyber Wire</h1>
+    <div class="sub">Daily Cybersecurity Briefing</div>
+    <div class="meta">
+      <span class="pill live"><span class="dot"></span>Live</span>
+      <span class="pill" id="edition">Morning Edition</span>
+      <span class="pill" id="datestamp">June 26, 2026</span>
+      <span class="pill">Updated <span id="updated">—</span></span>
+    </div>
+  </div>
+
+  <div class="tldr"><b>The Wire</b> <span>A global law-enforcement takedown (Operation Endgame) gutted the StealC, Amadey and SocGholish malware-loader and infostealer networks — and today, June 26, is the federal deadline to patch three actively-exploited, CVSS-10.0 Ubiquiti UniFi flaws.</span></div>
+  <div class="freshline" id="freshline">Data refreshes every 30 minutes, 8 AM–6 PM ET.</div>
+
+  <nav>
+    <a href="index.html">★ Front Page</a>
+    <a href="cyber-briefing.html" class="active">⛨ The Cyber Wire</a>
+    <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
+    <a href="mma-briefing.html">⊘ The Octagon</a>
+    <a href="archive.html">🗄 Archive</a>
+  </nav>
+
+  <div class="banner">
+    <div class="lvl">Threat&nbsp;Level: High</div>
+    <div class="why">Three actively-exploited maximum-severity (CVSS 10.0) Ubiquiti UniFi flaws hit their federal patch deadline today (June 26), and a Splunk fix is already overdue.</div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="n">326</div><div class="l">Servers seized (Endgame)</div></div>
+    <div class="stat"><div class="n">~27M</div><div class="l">Credentials recovered</div></div>
+    <div class="stat"><div class="n">$46.5M</div><div class="l">Criminal assets frozen</div></div>
+    <div class="stat"><div class="n">10.0</div><div class="l">Max UniFi CVSS · due today</div></div>
+  </div>
+
+  <section class="top">
+    <div class="lab">Top Story</div>
+    <div class="panel">
+      <h2>Operation Endgame strikes again — StealC, Amadey and SocGholish networks dismantled</h2>
+      <div style="margin:6px 0 2px"><span class="tag t">Law Enforcement</span><span class="tag t">Malware Takedown</span><span class="tag t">Europol</span></div>
+      <p>Europol and Eurojust announced on June 24 that the latest phase of Operation Endgame neutralized <b>326 servers and 142 domains</b> behind three of the world's most prolific malware loaders and infostealers — <b>StealC</b>, <b>Amadey</b> and <b>SocGholish</b>. Investigators recovered roughly <b>27 million stolen credentials</b> (about 25.6 million unique) from more than 385,000 compromised systems and froze over <b>€41 million (about $46.5 million)</b> in criminal crypto assets.</p>
+      <p>Law-enforcement agencies from Canada, Denmark, Germany, the Netherlands, the UK and the US took part, alongside private partners including Microsoft, Bitdefender, BitSight, ESET, IBM X-Force, Lumen, Proofpoint and Mitsui Bussan Secure Directions. Amadey and StealC — which work in tandem, with Amadey gaining initial access and StealC harvesting passwords — were linked to more than <b>140,000 infected computers</b> in the first two weeks of May alone. The action also struck the infrastructure behind SocGholish, the long-running "fake browser update" operation.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="lab">Patch Priority</div>
+    <div class="callout">
+      <div class="h">⚠ Patch by today's federal deadline</div>
+      <h3>Ubiquiti UniFi OS — CVE-2026-34910 (CVSS 10.0)</h3>
+      <p>An improper-input-validation flaw lets an attacker inject and run arbitrary OS commands. Security researchers showed it chains with two other max-severity bugs — CVE-2026-34908 (access-control bypass) and CVE-2026-34909 (path traversal) — so a network-based attacker can reach unauthenticated, root-level remote code execution on UniFi OS devices. All three are being actively exploited in the wild. <b>Fix: update to UniFi OS Server 5.0.8.</b> CISA added all three to the KEV catalog on June 23 with a <b>federal remediation deadline of June 26, 2026</b> under BOD 26-04 — that deadline is today; patch now.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="lab">Threat Actor Spotlight</div>
+    <div class="panel">
+      <h4 style="margin:0 0 7px;font-size:17px;color:var(--cyan)">KongTuke — the ransomware access broker behind ‘Mistic’</h4>
+      <p style="margin:0;font-size:14px;color:#d3dee4">Researchers at Symantec and Carbon Black's Threat Hunter Team tied the stealthy <b>Mistic</b> backdoor — which Zscaler ThreatLabz first documented as <b>MLTBackdoor</b> — to <b>KongTuke</b>, an initial-access broker active since at least 2024 and also tracked as Woodgnat. KongTuke compromises corporate networks and sells that foothold to ransomware crews, with access reportedly funneled to <b>Qilin, Interlock, Rhysida, Akira, 8Base and Black Basta</b>. Mistic has been delivered through multi-stage "ClickFix" lures and dropped alongside ModeloRAT, a Python RAT KongTuke spreads via Microsoft Teams social engineering — a reminder that today's quiet intrusion is often tomorrow's ransomware deployment.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="lab">Breaches &amp; Incidents</div>
+    <div class="cardgrid">
+      <div class="icard"><h4>Cisco Unified CM exploited in the wild</h4><p>CISA added <b>CVE-2026-20230</b>, a server-side request forgery flaw in <b>Cisco Unified Communications Manager</b>, to its KEV catalog on June 25 after confirmed exploitation. Attackers chain it to write arbitrary files to the underlying OS and escalate to <b>root</b>, with researchers reporting web shells dropped on compromised call-manager servers weeks after Cisco's patch shipped. Federal agencies must remediate by <b>June 28</b>. CISA added a critical PTC Windchill/FlexPLM RCE (CVE-2026-12569, deserialization of untrusted data) the same day.</p></div>
+      <div class="icard"><h4>Madison Square Garden / ShinyHunters data dump</h4><p>The extortion group <b>ShinyHunters</b> published roughly <b>45&nbsp;GB</b> of data stolen from <b>Madison Square Garden</b> after the company missed a June&nbsp;15 ransom deadline &mdash; a &ldquo;pay-or-leak&rdquo; campaign timed to the Knicks&rsquo; Finals run. The haul includes facial-recognition surveillance records, internal threat assessments and what the group claims are <b>~26&nbsp;million</b> customer and corporate records (roughly 9.8M email addresses, plus millions of names, addresses and phone numbers). The breach began with a <b>vishing</b> (voice-phishing) call that tricked a low-level employee into granting access to MSG&rsquo;s Microsoft Entra identity environment; a class action (Avalo v. MSG Entertainment) was filed June&nbsp;16.</p></div>
+      <div class="icard"><h4>‘The Gentlemen’ ransomware claims Thai tech firm</h4><p>CYFIRMA reported that <b>The Gentlemen</b> ransomware operation listed a leading Bangkok-based technology provider (founded 1971) on its dark-web leak site. The crew runs a dual-extortion, self-propagating Go encryptor (ChaCha20-Poly1305) detailed by Microsoft, recruits affiliates through BreachForums on a 90/10 split, and has been hitting critical-sector targets across multiple regions.</p></div>
+      <div class="icard"><h4>Klue — Salesforce supply-chain theft</h4><p>A threat actor calling itself <b>Icarus</b> used a compromised legacy credential at competitive-intelligence platform Klue to mint OAuth tokens and siphon Salesforce CRM data from Klue's customers. <b>LastPass</b> confirmed support-case data was accessed (products, infrastructure and vaults unaffected); BeyondTrust, 8x8 and Pendo also disclosed exposure, and security vendors including HackerOne, Huntress and Tanium were in the blast radius. Klue disclosed the June 11–12 intrusion on June 19; tokens have been rotated.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="lab">Vulnerability Watch</div>
+    <div class="panel" style="padding:6px 8px">
+      <table>
+        <thead><tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td class="cve">CVE-2026-34910</td><td class="sev c">10.0</td><td>Ubiquiti UniFi OS</td><td>Improper input validation → OS command injection; anchors the unauth RCE chain. Exploited; on KEV (due today).</td></tr>
+          <tr><td class="cve">CVE-2026-34909</td><td class="sev c">10.0</td><td>Ubiquiti UniFi OS</td><td>Directory/path traversal exposing config files and credentials; chains to the RCE. Exploited; on KEV.</td></tr>
+          <tr><td class="cve">CVE-2026-34908</td><td class="sev c">10.0</td><td>Ubiquiti UniFi OS</td><td>Access-control bypass enabling unauthorized changes; chains to full compromise. Exploited; on KEV.</td></tr>
+          <tr><td class="cve">CVE-2025-67038</td><td class="sev c">9.8</td><td>Lantronix EDS5000</td><td>HTTP RPC username-sanitization flaw enabling OS command execution as root; added to KEV with the UniFi bugs (June 23), same June 26 deadline.</td></tr>
+          <tr><td class="cve">CVE-2026-20253</td><td class="sev c">9.8</td><td>Splunk Enterprise</td><td>Pre-auth flaw enabling remote code execution; KEV remediation deadline has already passed (June 21).</td></tr>
+          <tr><td class="cve">CVE-2026-20230</td><td class="sev c">KEV</td><td>Cisco Unified CM</td><td>SSRF chained to arbitrary file write and root escalation; web shells observed. Added to KEV June 25 (due June 28).</td></tr>
+          <tr><td class="cve">CVE-2026-35273</td><td class="sev c">9.8</td><td>Oracle PeopleSoft</td><td>PeopleTools remote code execution exploited as a zero-day. On KEV (due July 3).</td></tr>
+          <tr><td class="cve">CVE-2026-50751</td><td class="sev c">9.3</td><td>Check Point Remote Access VPN</td><td>Authentication-bypass logic flaw in the deprecated IKEv1 protocol lets an attacker open a VPN session without a valid password; hotfix available.</td></tr>
+          <tr><td class="cve">CVE-2026-11645</td><td class="sev h">8.8</td><td>Google Chrome (V8 engine)</td><td>Out-of-bounds memory access exploited as a zero-day; fixed in Chrome 149.0.7827.103 — update now.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="lab">CISA KEV &amp; Federal Deadlines</div>
+    <div class="panel">
+      <ul class="kev">
+        <li><span>Ubiquiti UniFi OS (CVE-2026-34908 / -34909 / -34910) + Lantronix EDS5000 (CVE-2025-67038) — added June 23</span><span class="cd" data-due="2026-06-26">due Jun 26</span></li>
+        <li><span>Splunk Enterprise (CVE-2026-20253, CVSS 9.8)</span><span class="cd" data-due="2026-06-21">due Jun 21</span></li>
+        <li><span>Oracle PeopleSoft (CVE-2026-35273, CVSS 9.8)</span><span class="cd" data-due="2026-07-03">due Jul 3</span></li>
+        <li><span>Cisco Unified Communications Manager (CVE-2026-20230) — added June 25</span><span class="cd" data-due="2026-06-28">due Jun 28</span></li>
+      </ul>
+      <div style="font-size:11.5px;color:var(--muted);margin-top:10px;font-family:var(--mono)">BOD 26-04 assigns risk-based, per-CVE deadlines — countdowns above are computed from today to each CISA-stated due date.</div>
+    </div>
+  </section>
+
+  <footer>
+    <div><b>Sources (fetched this run):</b></div>
+    <div>
+      <a href="https://www.europol.europa.eu/media-press/newsroom/news/global-cyber-strike-disrupts-socgholish-amadey-and-stealc-malware-networks">Europol — Operation Endgame</a> ·
+      <a href="https://www.infosecurity-magazine.com/news/operation-endgame-stealc-amadey/">Infosecurity — Operation Endgame</a> ·
+      <a href="https://hackread.com/operation-endgame-stealc-amadey-socgholish-malware/">Hackread — Operation Endgame</a> ·
+      <a href="https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog">CISA — Four KEV additions (Jun 23)</a> ·
+      <a href="https://cybersecuritynews.com/cisa-ubiquiti-unifi-os-vulnerability/">CyberSecurityNews — Ubiquiti UniFi OS exploited</a> ·
+      <a href="https://www.bleepingcomputer.com/news/security/cisa-warns-of-max-severity-ubiquiti-flaws-exploited-in-attacks/">BleepingComputer — Ubiquiti UniFi flaws</a> ·
+      <a href="https://securityaffairs.com/194142/security/u-s-cisa-adds-ubiquiti-unifi-os-and-lantronix-eds5000-plugin-flaws-to-its-known-exploited-vulnerabilities-catalog.html">SecurityAffairs — CISA adds Ubiquiti UniFi OS &amp; Lantronix EDS5000</a> ·
+      <a href="https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA — Two KEV additions (Jun 25): Cisco Unified CM &amp; PTC Windchill</a> ·
+      <a href="https://www.bleepingcomputer.com/news/security/cisco-unified-cm-sme-flaw-cve-2026-20230-now-exploited-in-attacks/">BleepingComputer — Cisco Unified CM CVE-2026-20230 exploited</a> ·
+      <a href="https://www.cyfirma.com/news/weekly-intelligence-report-26-jun-2026/">CYFIRMA — Weekly Intelligence Report (Jun 26): The Gentlemen ransomware</a> ·
+      <a href="https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/">Microsoft — The Gentlemen ransomware analysis</a> ·
+      <a href="https://sharkstriker.com/blog/june-2026-data-breaches/">SharkStriker — June 2026 data breaches</a> ·
+      <a href="https://www.kaseya.com/blog/the-week-in-breach-news-06-24-26/">Kaseya — Week in Breach (Jun 24)</a> ·
+      <a href="https://www.bleepingcomputer.com/news/security/stealthy-mistic-backdoor-linked-to-ransomware-access-broker-kongtuke/">BleepingComputer — Mistic backdoor linked to KongTuke</a> ·
+      <a href="https://www.securityweek.com/new-mistic-rat-opens-door-to-several-ransomware-families/">SecurityWeek — Mistic RAT opens door to ransomware</a> ·
+      <a href="https://www.secureworld.io/industry-news/shinyhunters-dumps-msg-data-knicks">SecureWorld — ShinyHunters dumps MSG Sports data</a> ·
+      <a href="https://techcrunch.com/2026/06/07/the-worst-hacks-and-breaches-of-2026-so-far/">TechCrunch — Worst breaches of 2026 so far</a> ·
+      <a href="https://www.bleepingcomputer.com/news/security/lastpass-confirms-data-breach-in-klue-supply-chain-attack/">BleepingComputer — LastPass confirms Klue breach</a>
+    </div>
+    <div class="disc">Threat assessment is editorial. CVSS scores and fixed versions reflect vendor/CISA advisories; KEV deadlines are CISA-stated and risk-based under BOD 26-04. Verify against primary advisories before acting.</div>
+  </footer>
+</div>
+
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
+<script>(function(){try{var today=new Date();var t0=new Date(Date.UTC(today.getUTCFullYear(),today.getUTCMonth(),today.getUTCDate()));document.querySelectorAll('.cd[data-due]').forEach(function(el){var p=el.getAttribute('data-due').split('-');var due=new Date(Date.UTC(+p[0],+p[1]-1,+p[2]));var d=Math.round((due-t0)/86400000);var lab;if(d<0){lab='OVERDUE '+(-d)+'d';el.className='cd crit';}else if(d===0){lab='DUE TODAY';el.className='cd crit';}else if(d<=2){lab=d+' day'+(d>1?'s':'')+' left';el.className='cd warn';}else{lab=d+' days left';el.className='cd ok';}var base=el.textContent;el.textContent=base+' · '+lab;});}catch(e){}})();</script>
+</body>
+</html>
