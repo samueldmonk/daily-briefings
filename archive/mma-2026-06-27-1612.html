@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Octagon — Daily MMA Briefing</title>
+<style>
+:root{
+  --bg:#100c0c;--panel:#1a1313;--panel2:#150f0f;--line:#322020;--text:#f3e9e6;--muted:#a98e87;
+  --mono:'SF Mono',ui-monospace,'Cascadia Code',Menlo,Consolas,monospace;
+  --red:#e84545;--orange:#ff8a5c;--green:#3fb950;--gold:#e8c766;
+}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(1100px 560px at 82% -8%,#2a1414 0,var(--bg) 60%);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin:0 auto;padding:24px 18px 60px}
+.masthead{text-align:center;padding:8px 0 4px}
+.masthead h1{font-size:40px;margin:0;letter-spacing:.5px;color:var(--red)}
+.masthead h1 .ic{color:var(--orange)}
+.masthead .sub{color:var(--muted);font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;margin-top:5px}
+.meta{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:13px 0 4px}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:5px 11px}
+.pill.live{color:#2a0808;background:var(--red);border-color:var(--red);font-weight:700}
+.pill .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#2a0808;margin-right:6px;animation:bl 1.6s infinite}
+@keyframes bl{50%{opacity:.35}}
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--red);border-radius:10px;padding:11px 15px;margin:14px 0 2px;font-size:14.5px;line-height:1.5}
+.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);margin-right:9px}
+.freshline{color:var(--muted);font-family:var(--mono);font-size:11px;letter-spacing:.04em;margin:8px 2px 2px}
+nav{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;margin:16px 0 18px;padding:10px;background:var(--panel2);border:1px solid var(--line);border-radius:14px}
+nav a{font-family:var(--mono);font-size:12px;letter-spacing:.05em;text-decoration:none;color:var(--muted);padding:8px 13px;border-radius:9px;border:1px solid transparent;transition:.15s;white-space:nowrap}
+nav a:hover{color:var(--text);background:#231717}
+nav a.active{color:#2a0808;background:var(--red);border-color:var(--red);font-weight:700}
+.cdbar{display:flex;align-items:center;justify-content:center;gap:14px;background:linear-gradient(90deg,rgba(232,69,69,.16),rgba(255,138,92,.05));border:1px solid var(--line);border-radius:13px;padding:13px 16px;margin-bottom:22px;flex-wrap:wrap}
+.cdbar .nm{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--orange)}
+.cdbar .ev{font-weight:700;font-size:15px}
+.cdbar .cd{font-family:var(--mono);font-size:15px;font-weight:700;color:var(--gold)}
+section{margin:26px 0}
+.lab{font-family:var(--mono);font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin:0 0 12px;display:flex;align-items:center;gap:10px}
+.lab::after{content:"";flex:1;height:1px;background:var(--line)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.top{border-left:4px solid var(--red)}
+.top h2{margin:0 0 8px;font-size:23px}
+.top p{margin:8px 0 0;color:#e7dad6;font-size:14.5px}
+.cardgrid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+@media(max-width:720px){.cardgrid{grid-template-columns:1fr}}
+.fcard{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 16px;transition:.16s}
+.fcard:hover{transform:translateY(-3px);border-color:#4a2c2c}
+.fcard .dv{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;color:var(--gold);margin-bottom:6px}
+.fcard h4{margin:0 0 5px;font-size:16px}
+.fcard p{margin:0;font-size:13px;color:#d8c8c3}
+.fcard .odds{margin-top:8px;font-family:var(--mono);font-size:12px;color:var(--orange)}
+.tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:6px;margin-right:6px}
+.tag.prospect{background:rgba(63,185,80,.14);color:var(--green);border:1px solid rgba(63,185,80,.34)}
+.tag.live{background:rgba(232,69,69,.16);color:var(--red);border:1px solid rgba(232,69,69,.4)}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.win{color:var(--green);font-weight:600}
+.champ td{padding:9px 12px}
+.champ .div{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.04em}
+.champ .nm{font-weight:600}
+.note{font-size:11.5px;color:var(--muted);font-style:italic;margin-top:8px}
+ul.list{margin:0;padding-left:18px}
+ul.list li{margin:7px 0;font-size:14px;color:#e4d6d2}
+footer{margin-top:34px;border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:12px;line-height:1.85}
+footer a{color:var(--orange);text-decoration:none;word-break:break-word}
+.disc{margin-top:12px;font-size:11px;color:#7a605a}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <h1><span class="ic">⊘</span> The Octagon</h1>
+    <div class="sub">Your daily MMA briefing — UFC, prospects &amp; the business of fighting</div>
+    <div class="meta">
+      <span class="pill live"><span class="dot"></span>Live</span>
+      <span class="pill" id="edition">Afternoon Edition</span>
+      <span class="pill" id="datestamp">June 27, 2026</span>
+      <span class="pill">Updated <span id="updated">—</span></span>
+    </div>
+  </div>
+
+  <div class="tldr"><b>Tale of the Tape</b> <span>Rafael Fiziev lit up his Baku homecoming, stopping Mexico's Manuel Torres with a second-round spinning wheel kick and follow-up punches to win the lightweight main event, capping a finish-filled UFC Fight Night that featured an eight-second knockout — while Conor McGregor's long-awaited return to rematch Max Holloway looms two weeks out at UFC 329.</span></div>
+  <div class="freshline" id="freshline">Data refreshes every 30 minutes, 8 AM–6 PM ET.</div>
+
+  <nav>
+    <a href="index.html">★ Front Page</a>
+    <a href="cyber-briefing.html">⛨ The Cyber Wire</a>
+    <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
+    <a href="mma-briefing.html" class="active">⊘ The Octagon</a>
+    <a href="archive.html">🗄 Archive</a>
+  </nav>
+
+  <div class="cdbar">
+    <span class="nm">Next Card · UFC 329</span>
+    <span class="ev">McGregor vs. Holloway 2 · Jul 11, Las Vegas</span>
+    <span class="cd" id="ufccdn">—</span>
+  </div>
+
+  <section>
+    <div class="lab">Top Story</div>
+    <div class="panel top">
+      <h2>Fiziev finishes Torres in Baku homecoming: a second-round wheel kick caps a finish-filled night</h2>
+      <div style="margin:4px 0 2px"><span class="tag prospect">Main Event · Result</span></div>
+      <p>It was a homecoming to remember for <b>Rafael Fiziev</b>. The No. 11 ranked lightweight headlined the National Gymnastics Arena in <b>Baku</b> on <b>Saturday, June 27</b> and stopped Mexico's surging finisher <b>Manuel Torres</b> by <b>second-round TKO</b>: Fiziev landed a spinning <b>wheel kick</b> seconds into the round, dropped Torres, and finished with follow-up punches just <b>15 seconds</b> into the second (referee Marc Goddard waving it off). The win snaps a rough stretch for the Baku-born contender and sends the home crowd home happy in a bout the books had lined as a near pick-'em.</p>
+      <p>The card delivered finishes early and often. On the prelims, <b>Abdul-Rakhman Yakhyaev</b> needed just <b>eight seconds</b> to flatten <b>Julius Walker</b> with a right hand, and <b>Daniil Donchenko</b> halted short-notice newcomer <b>Theodor Berggren</b> by second-round TKO (1:35). The main card opened with more of the same: <b>Abus Magomedov</b> submitted <b>Michał Oleksiejczuk</b> with a first-round guillotine (3:29), <b>Matheus Camilo</b> stopped <b>Nazim Sadykhov</b> by first-round TKO (1:31), No. 9 flyweight <b>Asu Almabayev</b> tapped No. 14 <b>Charles Johnson</b> with a third-round Suloev stretch (3:33), and middleweight <b>Ikram Aliskerov</b> outworked <b>Brunno Ferreira</b> for a unanimous decision (30-27 ×3). In the co-main, fan-favorite <b>Shara Magomedov</b> survived a chaotic, foul-marred fight — eye pokes and ponytail grabs forcing referee breaks — to edge <b>Michel Pereira</b> by unanimous decision (29-28 ×3), improving to 17-1.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="lab">Fight Week — Upcoming Cards</div>
+    <div class="cardgrid">
+      <div class="fcard">
+        <div class="dv">Sat Jul 11 · T-Mobile Arena, Las Vegas</div>
+        <h4>UFC 329: McGregor vs. Holloway 2 <span class="tag live">Headliner</span></h4>
+        <p>Conor McGregor makes his first walk since breaking his leg at UFC 264 in July 2021, rematching Max Holloway in a welterweight headliner (Holloway's 170-pound debut) during International Fight Week. Paddy Pimblett vs. Benoît Saint Denis co-features.</p>
+        <div class="odds">Odds: to be lined closer to fight week</div>
+      </div>
+      <div class="fcard">
+        <div class="dv">Sat Jul 18 · Paycom Center, Oklahoma City</div>
+        <h4>UFC Fight Night: du Plessis vs. Usman</h4>
+        <p>Former champions collide: former middleweight champion Dricus du Plessis meets former welterweight king Kamaru Usman — moving up to 185 pounds — in a middleweight main event (main card 8 p.m. ET, Paramount+).</p>
+        <div class="odds">Odds: to be lined closer to fight week</div>
+      </div>
+      <div class="fcard">
+        <div class="dv">Sat Jul 25 · UFC APEX, Las Vegas</div>
+        <h4>UFC Fight Night: Ankalaev vs. Rountree</h4>
+        <p>A light-heavyweight main event between Magomed Ankalaev and Khalil Rountree Jr. anchors a Fight Night, with Aug. 1 (Medic vs. Rodriguez) bridging toward the next numbered card.</p>
+        <div class="odds">Odds: to be lined closer to fight week</div>
+      </div>
+      <div class="fcard">
+        <div class="dv">Sat Aug 15 · Xfinity Mobile Arena, Philadelphia</div>
+        <h4>UFC 330: Makhachev vs. Machado Garry</h4>
+        <p>Welterweight champion Islam Makhachev headlines against Ian Machado Garry on a marquee summer numbered card in Philadelphia.</p>
+        <div class="odds">Odds: to be lined closer to fight week</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="lab">Last Event — UFC Baku Results</div>
+    <div class="panel" style="padding:6px 8px">
+      <table>
+        <thead><tr><th>Result</th><th>Bout</th><th>Method</th></tr></thead>
+        <tbody>
+          <tr><td class="win">Fiziev def.</td><td>Rafael Fiziev vs. Manuel Torres (LW) · <b>main event</b></td><td>TKO (wheel kick &amp; punches), R2 (0:15)</td></tr>
+          <tr><td class="win">Sh. Magomedov def.</td><td>Shara Magomedov vs. Michel Pereira (MW) · co-main</td><td>Decision (unanimous, 29-28 ×3)</td></tr>
+          <tr><td class="win">Camilo def.</td><td>Matheus Camilo vs. Nazim Sadykhov (LW) · main card</td><td>TKO (punches), R1 (1:31)</td></tr>
+          <tr><td class="win">Almabayev def.</td><td>Asu Almabayev vs. Charles Johnson (FLW) · main card</td><td>Submission (Suloev stretch), R3 (3:33)</td></tr>
+          <tr><td class="win">Aliskerov def.</td><td>Ikram Aliskerov vs. Brunno Ferreira (MW) · main card</td><td>Decision (unanimous, 30-27 ×3)</td></tr>
+          <tr><td class="win">Abus Magomedov def.</td><td>Abus Magomedov vs. Michał Oleksiejczuk (MW) · main card</td><td>Submission (guillotine), R1 (3:29)</td></tr>
+          <tr><td class="win">Yakhyaev def.</td><td>Abdul-Rakhman Yakhyaev vs. Julius Walker (LHW) · prelim</td><td>KO (punches), R1 (0:08)</td></tr>
+          <tr><td class="win">Donchenko def.</td><td>Daniil Donchenko vs. Theodor Berggren (WW) · prelim</td><td>TKO (head kick), R2 (1:35)</td></tr>
+          <tr><td class="win">Hasanov def.</td><td>Farman Hasanov vs. Eric Nolan · prelim</td><td>Decision (unanimous, 30-27 ×3)</td></tr>
+        </tbody>
+      </table>
+      <div class="note">UFC Fight Night: Fiziev vs. Torres — National Gymnastics Arena, Baku, June 27, 2026. Results verified this run (UFC.com main-card/prelim coverage and live wires); the card streamed on Paramount+ (prelims 9 a.m. ET, main card noon ET). Performance bonuses had not been published in any source fetched at the time stamped above.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="lab">Prospect Watch</div>
+    <div class="cardgrid">
+      <div class="fcard">
+        <span class="tag prospect">Prospect</span>
+        <h4 style="margin-top:8px">Abdul-Rakhman Yakhyaev · Light Heavyweight</h4>
+        <p>Stole the show on the Baku prelims, starching Julius Walker with a right hand just eight seconds into the first round — an instant highlight-reel calling card.</p>
+      </div>
+      <div class="fcard">
+        <span class="tag prospect">Prospect</span>
+        <h4 style="margin-top:8px">Ikram Aliskerov · Middleweight</h4>
+        <p>The Dana White's Contender Series graduate outworked fellow heavy-hitter Brunno Ferreira for a clean unanimous decision (30-27 ×3) on the Baku main card — a name to track at 185 pounds.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="lab">Around the Sport</div>
+    <div class="panel">
+      <ul class="list">
+        <li>Undisputed heavyweight champion <b>Tom Aspinall</b> said he'll meet interim champ <b>Ciryl Gane</b> to unify the title — "I'll be there" — after Gane stopped Alex Pereira at Freedom 250 to claim the interim belt.</li>
+        <li>The FBI arrested suspects who allegedly planned attacks on the White House UFC event (Freedom 250); per ESPN, a tip from one suspect's mother led investigators to the arrests.</li>
+        <li>Ilia Topuria congratulated Justin Gaethje after losing the lightweight title at Freedom 250, saying he has "no excuses"; Dana White called the White House show "great" but said the promotion would "never again" stage one there.</li>
+        <li>In ESPN's latest divisional rankings, new lightweight champion <b>Justin Gaethje</b> and interim heavyweight champ <b>Ciryl Gane</b> are the big risers after their Freedom 250 wins — ESPN headlined the pair as "second to none."</li>
+        <li>Lightweight <b>Rafael Fiziev</b> stopped <b>Manuel Torres</b> with a second-round spinning wheel-kick TKO in his Baku homecoming main event — a statement finish for the No. 11-ranked contender on home soil.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="lab">Rankings &amp; Business</div>
+    <div class="panel">
+      <ul class="list">
+        <li><b>Broadcast model:</b> UFC events now stream on <b>Paramount+</b> with no traditional pay-per-view — today's Baku card aired entirely on the service (prelims 9 a.m. ET, main card noon ET), and the summer's numbered cards (UFC 329, UFC 330) follow the same streaming model.</li>
+        <li><b>Rankings:</b> ESPN's latest divisional rankings have new lightweight champion <b>Justin Gaethje</b> and interim heavyweight champ <b>Ciryl Gane</b> as the headline risers after Freedom 250 — ESPN billed the pair as "second to none."</li>
+        <li><b>Title picture:</b> undisputed heavyweight champ <b>Tom Aspinall</b> has accepted a unification bout with interim champ Gane, while featherweight champ <b>Alexander Volkanovski</b> sits on one title defense — both storylines headed into the back half of the year.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="lab">Champions Board</div>
+    <div class="panel" style="padding:6px 8px">
+      <table class="champ">
+        <thead><tr><th>Division</th><th>Champion</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td class="div">Heavyweight</td><td class="nm">Tom Aspinall</td><td>Interim: Ciryl Gane (KO2 Pereira, Freedom 250)</td></tr>
+          <tr><td class="div">Light Heavyweight</td><td class="nm">Carlos Ulberg</td><td>KO1 Procházka, UFC 327</td></tr>
+          <tr><td class="div">Middleweight</td><td class="nm">Sean Strickland</td><td>SD over Chimaev, UFC 328</td></tr>
+          <tr><td class="div">Welterweight</td><td class="nm">Islam Makhachev</td><td>UD over Della Maddalena, UFC 322</td></tr>
+          <tr><td class="div">Lightweight</td><td class="nm">Justin Gaethje</td><td>TKO4 Topuria, Freedom 250</td></tr>
+          <tr><td class="div">Featherweight</td><td class="nm">Alexander Volkanovski</td><td>One title defense (vs. Lopes, UFC 325)</td></tr>
+          <tr><td class="div">Bantamweight</td><td class="nm">Petr Yan</td><td>UD over Dvalishvili, UFC 323</td></tr>
+          <tr><td class="div">Flyweight</td><td class="nm">Joshua Van</td><td>TKO1 Pantoja, UFC 323</td></tr>
+          <tr><td class="div">Women's Flyweight</td><td class="nm">Valentina Shevchenko</td><td>Two title defenses</td></tr>
+          <tr><td class="div">Women's Bantamweight</td><td class="nm">Kayla Harrison</td><td>Sub2 over Peña, UFC 316</td></tr>
+          <tr><td class="div">Women's Strawweight</td><td class="nm">Mackenzie Dern</td><td>UD over Jandiroba, UFC 321</td></tr>
+        </tbody>
+      </table>
+      <div class="note">Every belt cross-checked against ESPN's "Current and all-time UFC champions" (fetched this run — exact match across all 11 divisions; ESPN's stale meta-summary still says "strawweight vacancy," but its article body lists Mackenzie Dern). No title changed hands at today's UFC Baku card — a Fight Night with no championship bouts — so the board stands unchanged. Ciryl Gane holds the interim heavyweight belt after stopping Alex Pereira at Freedom 250.</div>
+    </div>
+  </section>
+
+  <footer>
+    <div><b>Sources:</b></div>
+    <div>
+      <a href="https://www.espn.com/mma/story/_/id/14947566/current-all-ufc-champions">ESPN — Current and all-time UFC champions (fetched this run; all 11 belts verified)</a> ·
+      <a href="https://www.ufc.com/news/ufc-fight-night-fiziev-vs-torres-results-highlights-interviews-prelims-baku">UFC.com — UFC Baku prelim results (Yakhyaev KO 0:08, Donchenko TKO R2, Hasanov UD)</a> ·
+      <a href="https://www.ufc.com/news/ufc-fight-night-fiziev-vs-torres-results-highlights-interviews-main-card-baku">UFC.com — UFC Baku main-card results (Fiziev TKO2 Torres; Sh. Magomedov UD Pereira co-main; Camilo TKO1 Sadykhov; Almabayev sub R3; Aliskerov UD; Abus Magomedov sub R1) — fetched this run</a> ·
+      <a href="https://sports.yahoo.com/mma/articles/ufc-baku-live-results-rafael-fiziev-vs-manuel-torres-updates-round-by-round-scoring-highlights-053000749.html">Yahoo Sports — UFC Baku results: Rafael Fiziev KOs Manuel Torres (wheel kick &amp; punches, R2 0:15) in homecoming win (fetched this run)</a> ·
+      <a href="https://www.espn.com/mma/story/_/id/49131516/usman-moving-middleweight-face-du-plessis-july-18">ESPN — Usman moving up to middleweight to face du Plessis (Jul 18, Oklahoma City) — fetched this run</a> ·
+      <a href="https://www.si.com/fannation/mma/news/ufc-baku-rafael-fiziev-vs-manuel-torres-free-live-stream-results-highlights">Sports Illustrated — UFC Baku live results &amp; highlights</a> ·
+      <a href="https://www.cbssports.com/ufc/news/ufc-fight-night-start-time-rafael-fiziev-manuel-torres-where-to-watch-paramount/">CBS Sports — UFC Baku start time (prelims 9 a.m. ET / main card noon ET, Paramount+)</a> ·
+      <a href="https://www.cbssports.com/mma/news/ufc-fight-night-odds-lines-predictions-time-rafael-fiziev-vs-manuel-torres-picks-best-bets/">CBS Sports — Fiziev vs. Torres preview &amp; odds (near pick-'em)</a> ·
+      <a href="https://en.wikipedia.org/wiki/UFC_329">Wikipedia — UFC 329: McGregor vs. Holloway 2 (Jul 11, T-Mobile Arena; McGregor's first since UFC 264; Holloway's WW debut; co-main Pimblett vs. Saint Denis)</a> ·
+      <a href="https://www.cbssports.com/ufc/news/2026-ufc-event-schedule-conor-mcgregor-return-max-holloway/">CBS Sports — 2026 UFC schedule (McGregor return; du Plessis vs. Usman, OKC Jul 18)</a> ·
+      <a href="https://www.espn.com/ufc/story/_/id/49075259/ufc-heavyweight-champ-tom-aspinall-accepts-ciryl-gane-challenge-there">ESPN — Aspinall accepts Gane challenge ('I'll be there')</a> ·
+      <a href="https://www.espn.com/mma/story/_/id/21807736/mma-divisional-rankings-ufc-pfl-rankings-weight-class">ESPN — MMA divisional rankings (Gaethje, Gane 'second to none')</a> ·
+      <a href="https://www.espn.com/mma/story/_/id/49081439/fbi-arrests-suspects-planned-attacks-white-house-ufc-event">ESPN — FBI arrests over White House UFC event plot</a> ·
+      <a href="https://www.cbssports.com/ufc/news/2026-ufc-event-schedule-fight-night-numbered-events/">CBS Sports — 2026 UFC schedule (Jul 18 du Plessis vs. Usman; Jul 25 Ankalaev vs. Rountree; Aug 1 Medic vs. Rodriguez; Aug 15 UFC 330 Makhachev vs. Machado Garry)</a>
+    </div>
+    <div class="disc">Cards and bouts are subject to change. UFC Baku results reflect sources fetched at the time stamped above; performance bonuses and any official corrections may post afterward.</div>
+  </footer>
+</div>
+
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
+<script>(function(){try{var target=new Date("2026-07-11T21:00:00-04:00").getTime();function tick(){var now=Date.now();var d=target-now;var el=document.getElementById('ufccdn');if(!el)return;if(d<=0){el.textContent='Fight week — live / completed';return;}var days=Math.floor(d/86400000),hrs=Math.floor(d%86400000/3600000),mins=Math.floor(d%3600000/60000);el.textContent=days+'d '+hrs+'h '+mins+'m';}tick();setInterval(tick,30000);}catch(e){}})();</script>
+</body>
+</html>
