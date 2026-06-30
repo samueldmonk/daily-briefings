@@ -1,192 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Daily Briefings</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    :root {
-      --bg: #0f0f0f;
-      --panel: #1a1a1a;
-      --line: #333;
-      --text: #e8e8e8;
-      --muted: #888;
-      --mono: 'Menlo', 'Monaco', monospace;
-      --up: #4ade80;
-      --down: #ef4444;
-      --warn: #f97316;
-      --crit: #dc2626;
-      --teal: #22d3a8;
-      --gold: #caa64a;
-      --red: #e84545;
-    }
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      font-size: 15px;
-      line-height: 1.6;
-    }
-    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-    .masthead {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
-    }
-    .masthead h1 { font-size: 28px; font-weight: 600; margin: 0; }
-    .pill {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      padding: 6px 12px;
-      font-size: 12px;
-      font-family: var(--mono);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-    .pill.live { color: var(--up); border-color: var(--up); }
-    #datestamp, #edition, #updated { color: var(--text); }
-    .nav {
-      display: flex;
-      gap: 2px;
-      margin-bottom: 20px;
-      border-bottom: 1px solid var(--line);
-      padding-bottom: 12px;
-      flex-wrap: wrap;
-    }
-    .nav a {
-      padding: 8px 14px;
-      text-decoration: none;
-      color: var(--muted);
-      border-bottom: 2px solid transparent;
-      transition: all 0.2s;
-      font-size: 13px;
-    }
-    .nav a:hover { color: var(--text); }
-    .nav a.active { color: var(--text); border-bottom-color: var(--gold); }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 16px;
-      margin-top: 20px;
-    }
-    .card {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 18px;
-      transition: all 0.2s;
-    }
-    .card:hover { transform: translateY(-2px); box-shadow: 0 8px 16px rgba(0,0,0,0.3); }
-    .card.teal { border-top: 3px solid var(--teal); }
-    .card.gold { border-top: 3px solid var(--gold); }
-    .card.red { border-top: 3px solid var(--red); }
-    .card h3 {
-      font-size: 13px;
-      font-family: var(--mono);
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-      color: var(--muted);
-    }
-    .card .icon { font-size: 18px; margin-right: 4px; }
-    .card .title { font-size: 16px; font-weight: 600; margin-bottom: 10px; }
-    .card .summary { font-size: 14px; line-height: 1.5; color: var(--text); margin-bottom: 12px; }
-    .card a {
-      display: inline-block;
-      color: var(--gold);
-      text-decoration: none;
-      font-size: 13px;
-      margin-top: 8px;
-    }
-    .card a:hover { text-decoration: underline; }
-    .freshline {
-      font-family: var(--mono);
-      font-size: 11px;
-      color: var(--muted);
-      letter-spacing: 0.08em;
-      margin-top: 12px;
-    }
-  </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Daily Briefings</title>
+	<style>
+		* { margin: 0; padding: 0; box-sizing: border-box; }
+		:root {
+			--bg: #0a0a0a;
+			--fg: #e0e0e0;
+			--panel: #161616;
+			--line: #2a2a2a;
+			--mono: 'Monaco', 'Courier New', monospace;
+			--accent-teal: #22d3a8;
+			--accent-gold: #e8c766;
+			--accent-red: #ff8a5c;
+			--up: #22c55e;
+			--down: #ef4444;
+			--warn: #f59e0b;
+			--crit: #dc2626;
+		}
+		body {
+			background: var(--bg);
+			color: var(--fg);
+			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+			line-height: 1.5;
+			padding: 20px;
+		}
+		.container { max-width: 1200px; margin: 0 auto; }
+		.masthead {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			margin-bottom: 20px;
+			flex-wrap: wrap;
+		}
+		.masthead h1 {
+			font-size: 28px;
+			font-weight: 300;
+			letter-spacing: 0.5px;
+		}
+		.pill {
+			background: var(--panel);
+			border: 1px solid var(--line);
+			border-radius: 20px;
+			padding: 6px 12px;
+			font-family: var(--mono);
+			font-size: 11px;
+			letter-spacing: 0.12em;
+			text-transform: uppercase;
+			color: #999;
+			display: inline-block;
+		}
+		.pill.live { color: var(--down); border-color: var(--down); }
+		.nav {
+			display: flex;
+			gap: 8px;
+			margin-bottom: 20px;
+			border-bottom: 1px solid var(--line);
+			padding-bottom: 12px;
+			overflow-x: auto;
+		}
+		.nav a {
+			font-family: var(--mono);
+			font-size: 12px;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			text-decoration: none;
+			color: #666;
+			padding: 8px 12px;
+			border-radius: 6px;
+			transition: all 0.2s;
+			white-space: nowrap;
+		}
+		.nav a:hover { color: var(--fg); }
+		.nav a.active {
+			color: var(--fg);
+			background: var(--panel);
+		}
+		.summary-strip {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+			gap: 16px;
+			margin-bottom: 30px;
+		}
+		.summary-card {
+			background: var(--panel);
+			border: 1px solid var(--line);
+			border-radius: 12px;
+			padding: 20px;
+			cursor: pointer;
+			transition: all 0.2s;
+			text-decoration: none;
+			color: inherit;
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+		}
+		.summary-card:hover {
+			transform: translateY(-2px);
+			border-color: currentColor;
+		}
+		.summary-card.teal { border-left: 4px solid var(--accent-teal); }
+		.summary-card.gold { border-left: 4px solid var(--accent-gold); }
+		.summary-card.red { border-left: 4px solid var(--accent-red); }
+		.summary-label {
+			font-family: var(--mono);
+			font-size: 11px;
+			letter-spacing: 0.16em;
+			text-transform: uppercase;
+			font-weight: 600;
+		}
+		.summary-card.teal .summary-label { color: var(--accent-teal); }
+		.summary-card.gold .summary-label { color: var(--accent-gold); }
+		.summary-card.red .summary-label { color: var(--accent-red); }
+		.summary-text {
+			font-size: 15px;
+			line-height: 1.6;
+		}
+		.summary-cta {
+			font-size: 13px;
+			color: #666;
+			margin-top: auto;
+			transition: color 0.2s;
+		}
+		.summary-card:hover .summary-cta { color: var(--fg); }
+		footer {
+			margin-top: 40px;
+			padding-top: 20px;
+			border-top: 1px solid var(--line);
+			font-size: 12px;
+			color: #666;
+			text-align: center;
+		}
+		.disclaimer {
+			font-size: 11px;
+			color: #555;
+			margin-top: 12px;
+			font-style: italic;
+		}
+	</style>
 </head>
 <body>
-  <div class="container">
-    <div class="masthead">
-      <h1>Daily Briefings</h1>
-      <div class="pill live"><span class="dot">●</span> LIVE</div>
-      <div class="pill" id="edition">Morning Edition</div>
-      <div class="pill" id="datestamp">—</div>
-      <div class="pill">Updated <span id="updated">—</span></div>
-    </div>
+	<div class="container">
+		<div class="masthead">
+			<h1>Daily Briefings</h1>
+			<span class="pill live">● LIVE</span>
+			<span class="pill" id="edition">Midday Edition</span>
+			<span class="pill" id="datestamp">June 30, 2026</span>
+			<span class="pill">Updated <span id="updated">11:44 AM</span></span>
+		</div>
 
-    <div class="nav">
-      <a href="index.html" class="active">★ Front Page</a>
-      <a href="cyber-briefing.html">⛨ The Cyber Wire</a>
-      <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
-      <a href="mma-briefing.html">⊘ The Octagon</a>
-      <a href="archive.html">🗄 Archive</a>
-    </div>
+		<div class="nav">
+			<a href="index.html" class="active">★ Front Page</a>
+			<a href="cyber-briefing.html">⛨ The Cyber Wire</a>
+			<a href="wallstreet-briefing.html">▲ The Closing Bell</a>
+			<a href="mma-briefing.html">⊘ The Octagon</a>
+			<a href="archive.html">🗄 Archive</a>
+		</div>
 
-    <div class="cards">
-      <div class="card teal">
-        <h3><span class="icon">⛨</span> The Cyber Wire</h3>
-        <div class="title">Security Threats in Focus</div>
-        <div class="summary">Critical vulnerabilities including DirtyClone and libssh2 surface as ransomware groups escalate OAuth-based attacks, prompting urgent federal patching deadlines.</div>
-        <div class="freshline" id="freshline">Data as of — ET · briefings refresh every 30 minutes, 8 AM–6 PM ET</div>
-        <a href="cyber-briefing.html">Read the briefing →</a>
-      </div>
+		<div class="summary-strip">
+			<a href="cyber-briefing.html" class="summary-card teal">
+				<div class="summary-label">⛨ The Cyber Wire</div>
+				<div class="summary-text">Linux kernel privilege escalation joins critical libssh2 and widespread Salesforce data theft via Klue OAuth compromise; patch DirtyClone and verify Klue access logs.</div>
+				<div class="summary-cta">Read the briefing →</div>
+			</a>
 
-      <div class="card gold">
-        <h3><span class="icon">▲</span> The Closing Bell</h3>
-        <div class="title">Markets Tread Lightly</div>
-        <div class="summary">Dow edges lower while S&P 500 and Nasdaq post modest gains; oil climbs on Middle East tensions; Fed rate-cut narrative under pressure.</div>
-        <div class="freshline">Data as of — ET · briefings refresh every 30 minutes, 8 AM–6 PM ET</div>
-        <a href="wallstreet-briefing.html">Read the briefing →</a>
-      </div>
+			<a href="wallstreet-briefing.html" class="summary-card gold">
+				<div class="summary-label">▲ The Closing Bell</div>
+				<div class="summary-text">Mixed open on June 30: S&P +0.03%, Dow -0.24%, Nasdaq +0.29%; AeroVironment and Air Products lead; WTI crude at $70.55 on US-Iran peace talks.</div>
+				<div class="summary-cta">Read the briefing →</div>
+			</a>
 
-      <div class="card red">
-        <h3><span class="icon">⊘</span> The Octagon</h3>
-        <div class="title">Post-Freedom 250 Realignment</div>
-        <div class="summary">Gaethje's stunning upset of Topuria reshapes the lightweight division; Fiziev claims emotional homecoming victory in Baku as next card approaches.</div>
-        <div class="freshline">Data as of — ET · briefings refresh every 30 minutes, 8 AM–6 PM ET</div>
-        <a href="mma-briefing.html">Read the briefing →</a>
-      </div>
-    </div>
-  </div>
+			<a href="mma-briefing.html" class="summary-card red">
+				<div class="summary-label">⊘ The Octagon</div>
+				<div class="summary-text">Fiziev and Kape shine in recent victories; Gaethje claims the lightweight belt at Freedom 250; UFC 329 McGregor vs. Holloway 2 July 11 in Las Vegas.</div>
+				<div class="summary-cta">Read the briefing →</div>
+			</a>
+		</div>
 
-  <script>
-    (function(){
-      try {
-        var n = new Date();
-        var et = new Intl.DateTimeFormat('en-US', {
-          timeZone: 'America/New_York',
-          weekday: 'long',
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric'
-        }).format(n);
-        var t = new Intl.DateTimeFormat('en-US', {
-          timeZone: 'America/New_York',
-          hour: 'numeric',
-          minute: '2-digit'
-        }).format(n);
-        var h = parseInt(new Intl.DateTimeFormat('en-US', {
-          timeZone: 'America/New_York',
-          hour: 'numeric',
-          hour12: false
-        }).format(n), 10);
-        var ed = h < 11 ? 'Morning Edition' : (h < 15 ? 'Midday Edition' : 'Afternoon Edition');
-        document.getElementById('datestamp').textContent = et;
-        document.getElementById('updated').textContent = t + ' ET';
-        document.getElementById('edition').textContent = ed;
-        var fl = document.getElementById('freshline');
-        if (fl) fl.textContent = 'Data as of ' + t + ' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';
-      } catch (e) {}
-    })();
-  </script>
+		<footer>
+			<p>&copy; 2026 Daily Briefings. Refreshed every 30 minutes, 8 AM–6 PM ET.</p>
+			<p class="disclaimer">Markets information is for reference only, not investment advice. UFC cards subject to change.</p>
+		</footer>
+	</div>
+
+	<script>
+		(function(){
+			try{
+				var n=new Date();
+				var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);
+				var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);
+				var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);
+				var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');
+				document.getElementById('datestamp').textContent=et;
+				document.getElementById('updated').textContent=t+' ET';
+				document.getElementById('edition').textContent=ed;
+			}catch(e){}
+		})();
+	</script>
 </body>
 </html>
