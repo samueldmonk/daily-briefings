@@ -1,224 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daily Briefings</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Briefings</title>
+<style>
+:root {
+  --bg: #0a0a0a;
+  --fg: #e0e0e0;
+  --panel: #151515;
+  --line: #2a2a2a;
+  --accent: #888;
+  --teal: #22d3a8;
+  --gold: #e8c766;
+  --orange: #ff8a5c;
+  --up: #10b981;
+  --down: #ef4444;
+  --mono: 'SF Mono', monospace;
+}
 
-    :root {
-      --bg: #0a0a0a;
-      --surface: #1a1a1a;
-      --panel: #242424;
-      --line: #3a3a3a;
-      --text: #e0e0e0;
-      --muted: #999;
-      --mono: 'IBM Plex Mono', monospace;
-      --accent-teal: #22d3a8;
-      --accent-gold: #caa64a;
-      --accent-red: #e84545;
-    }
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-      line-height: 1.6;
-      padding: 0;
-    }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  padding: 20px;
+}
 
-    .container { max-width: 1200px; margin: 0 auto; padding: 24px; }
+.container { max-width: 1200px; margin: 0 auto; }
 
-    .masthead {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-bottom: 24px;
-      flex-wrap: wrap;
-    }
+.masthead {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
 
-    .masthead h1 {
-      font-size: 32px;
-      font-weight: 600;
-      letter-spacing: -0.5px;
-    }
+h1 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-right: auto;
+  letter-spacing: -0.5px;
+}
 
-    .pill {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      padding: 7px 14px;
-      font-size: 12px;
-      font-family: var(--mono);
-      color: var(--muted);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
+.pill {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  white-space: nowrap;
+}
 
-    .pill.live {
-      background: rgba(34, 211, 168, 0.1);
-      border-color: var(--accent-teal);
-      color: var(--accent-teal);
-    }
+#edition { color: var(--gold); }
+#datestamp { color: var(--fg); }
+#updated { color: var(--fg); }
 
-    .nav {
-      display: flex;
-      gap: 2px;
-      margin: 20px 0 24px;
-      border-bottom: 1px solid var(--line);
-      padding-bottom: 12px;
-    }
+nav {
+  display: flex;
+  gap: 2px;
+  margin: 20px 0 24px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0;
+  flex-wrap: wrap;
+}
 
-    .nav a {
-      padding: 8px 16px;
-      font-size: 13px;
-      font-family: var(--mono);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: var(--muted);
-      border-bottom: 2px solid transparent;
-      transition: all 0.2s;
-    }
+nav a {
+  flex-shrink: 0;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: var(--accent);
+  border-bottom: 2px solid transparent;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
 
-    .nav a:hover { color: var(--text); }
-    .nav a.active { color: var(--text); border-bottom-color: var(--accent-teal); }
+nav a:hover { color: var(--fg); }
+nav a.active { border-bottom-color: var(--fg); color: var(--fg); }
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 20px;
-      margin: 30px 0;
-    }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
 
-    .card {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 24px;
-      transition: all 0.3s;
-      cursor: pointer;
-    }
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
 
-    .card:hover {
-      border-color: var(--accent-teal);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-    }
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+}
 
-    .card.cyber { border-left: 4px solid var(--accent-teal); }
-    .card.markets { border-left: 4px solid var(--accent-gold); }
-    .card.mma { border-left: 4px solid var(--accent-red); }
+.card h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 
-    .card-label {
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
+.card.teal-card { --accent-color: var(--teal); }
+.card.gold-card { --accent-color: var(--gold); }
+.card.orange-card { --accent-color: var(--orange); }
 
-    .card-label.cyber { color: var(--accent-teal); }
-    .card-label.markets { color: var(--accent-gold); }
-    .card-label.mma { color: var(--accent-red); }
+.card h2 { color: var(--accent-color); }
 
-    .card h2 {
-      font-size: 14px;
-      font-weight: 400;
-      margin-bottom: 12px;
-      color: var(--muted);
-      line-height: 1.5;
-    }
+.card-summary {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--fg);
+  margin: 4px 0;
+  flex-grow: 1;
+}
 
-    .card-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      margin-top: 16px;
-      color: var(--accent-teal);
-      text-decoration: none;
-      font-size: 12px;
-      font-family: var(--mono);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
+.card-link {
+  font-size: 12px;
+  color: var(--accent-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 8px;
+}
 
-    .card.markets .card-link { color: var(--accent-gold); }
-    .card.mma .card-link { color: var(--accent-red); }
-
-    .card-link:hover { gap: 12px; }
-
-    .freshline {
-      font-size: 11px;
-      color: var(--muted);
-      font-family: var(--mono);
-      letter-spacing: 0.08em;
-      margin-top: 6px;
-    }
-  </style>
+footer {
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  font-size: 12px;
+  color: var(--accent);
+  text-align: center;
+}
+</style>
 </head>
 <body>
-  <div class="container">
-    <div class="masthead">
-      <h1>Daily Briefings</h1>
-      <div class="pill live"><span class="dot">●</span> LIVE</div>
-      <div class="pill" id="edition">Morning Edition</div>
-      <div class="pill" id="datestamp">—</div>
-      <div class="pill">Updated <span id="updated">—</span></div>
-    </div>
 
-    <div class="nav">
-      <a href="index.html" class="active">★ Front Page</a>
-      <a href="cyber-briefing.html">⛨ The Cyber Wire</a>
-      <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
-      <a href="mma-briefing.html">⊘ The Octagon</a>
-      <a href="archive.html">🗄 Archive</a>
-    </div>
-
-    <div class="cards">
-      <div class="card cyber">
-        <div class="card-label cyber">⛨ The Cyber Wire</div>
-        <h2>Critical vulnerabilities in Windows and Microsoft Exchange alongside ongoing supply-chain attacks and June data breaches require immediate patching attention.</h2>
-        <a href="cyber-briefing.html" class="card-link">Read the briefing →</a>
-      </div>
-
-      <div class="card markets">
-        <div class="card-label markets">▲ The Closing Bell</div>
-        <h2>Tech-led rally continues with Nasdaq surging 2.07% and Dow breaking above 52,000 for the first time on Middle East de-escalation and Fed stability.</h2>
-        <a href="wallstreet-briefing.html" class="card-link">Read the briefing →</a>
-      </div>
-
-      <div class="card mma">
-        <div class="card-label mma">⊘ The Octagon</div>
-        <h2>Justin Gaethje claims undisputed lightweight title over Ilia Topuria at UFC Freedom 250; Ciryl Gane defeats Pereira for interim heavyweight crown.</h2>
-        <a href="mma-briefing.html" class="card-link">Read the briefing →</a>
-      </div>
-    </div>
-
-    <div class="freshline" id="freshline">Data as of — ET · briefings refresh every 30 minutes, 8 AM–6 PM ET</div>
+<div class="container">
+  <div class="masthead">
+    <h1>Daily Briefings</h1>
+    <span class="pill" style="display:flex;align-items:center;gap:6px;">
+      <span style="width:6px;height:6px;background:var(--orange);border-radius:50%;"></span>
+      LIVE
+    </span>
+    <span class="pill" id="edition">Morning Edition</span>
+    <span class="pill" id="datestamp">June 30, 2026</span>
+    <span class="pill">Updated <span id="updated">10:05 AM</span></span>
   </div>
 
-  <script>
-    (function(){
-      try{
-        var n=new Date();
-        var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);
-        var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);
-        var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);
-        var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');
-        document.getElementById('datestamp').textContent=et;
-        document.getElementById('updated').textContent=t+' ET';
-        document.getElementById('edition').textContent=ed;
-        var fl=document.getElementById('freshline');
-        if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';
-      }catch(e){}
-    })();
-  </script>
+  <nav>
+    <a href="index.html" class="active">★ Front Page</a>
+    <a href="cyber-briefing.html">⛨ The Cyber Wire</a>
+    <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
+    <a href="mma-briefing.html">⊘ The Octagon</a>
+    <a href="archive.html">🗄 Archive</a>
+  </nav>
+
+  <div class="cards">
+    <a href="wallstreet-briefing.html" class="card gold-card">
+      <h2>▲ The Closing Bell</h2>
+      <div class="card-summary">S&P 500 edges up 0.03% as markets digest steady economic data; energy rallies on Middle East accord; rates hold near 4.4% on the decade.</div>
+      <div class="card-link">Read the briefing →</div>
+    </a>
+
+    <a href="cyber-briefing.html" class="card teal-card">
+      <h2>⛨ The Cyber Wire</h2>
+      <div class="card-summary">Klue supply chain breach hits ~200 organizations via stolen OAuth tokens; Icarus extortion group claims access to Salesforce data at Huntress, Tanium, and others.</div>
+      <div class="card-link">Read the briefing →</div>
+    </a>
+
+    <a href="mma-briefing.html" class="card orange-card">
+      <h2>⊘ The Octagon</h2>
+      <div class="card-summary">Gaethje stuns Topuria at White House Freedom 250; next up McGregor–Holloway rematch July 11 in Las Vegas as Conor preps his comeback.</div>
+      <div class="card-link">Read the briefing →</div>
+    </a>
+  </div>
+
+  <footer>
+    Briefings refresh every 30 minutes, 8 AM–6 PM ET · <a href="https://samueldmonk.github.io/daily-briefings/" style="color:var(--accent);text-decoration:none;">Published daily at GitHub Pages</a>
+  </footer>
+</div>
+
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;}catch(e){}})();</script>
+
 </body>
 </html>
