@@ -1,220 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daily Briefings — Front Page</title>
-  <style>
-    :root {
-      --bg: #0f0f0f;
-      --text: #e4e4e4;
-      --panel: #1a1a1a;
-      --line: #333;
-      --accent: #666;
-      --accent-teal: #22d3a8;
-      --accent-gold: #caa64a;
-      --accent-red: #e84545;
-      --up: #10b981;
-      --down: #ef4444;
-      --mono: 'JetBrains Mono', 'Courier New', monospace;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      padding: 20px;
-    }
-    .container { max-width: 1200px; margin: 0 auto; }
-    .masthead {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .masthead h1 {
-      font-size: 28px;
-      font-weight: 600;
-      letter-spacing: -0.5px;
-    }
-    .meta-pills {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-    .pill {
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 0.08em;
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      padding: 6px 12px;
-      color: var(--accent);
-      text-transform: uppercase;
-    }
-    .pill.live { border-color: var(--up); color: var(--up); }
-    nav {
-      display: flex;
-      gap: 0;
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      margin-bottom: 30px;
-      background: var(--panel);
-      overflow: hidden;
-    }
-    nav a {
-      flex: 1;
-      padding: 12px;
-      text-align: center;
-      color: var(--accent);
-      text-decoration: none;
-      border-right: 1px solid var(--line);
-      font-family: var(--mono);
-      font-size: 12px;
-      letter-spacing: 0.08em;
-      transition: background 0.2s, color 0.2s;
-    }
-    nav a:last-child { border-right: none; }
-    nav a:hover { background: #252525; color: var(--text); }
-    nav a.active { background: var(--line); color: var(--text); }
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 16px;
-      margin-top: 20px;
-    }
-    .card {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-left: 4px solid var(--line);
-      border-radius: 12px;
-      padding: 20px;
-      transition: all 0.2s;
-      cursor: pointer;
-    }
-    .card:hover { transform: translateY(-4px); border-color: var(--text); }
-    .card.teal { border-left-color: var(--accent-teal); }
-    .card.gold { border-left-color: var(--accent-gold); }
-    .card.red { border-left-color: var(--accent-red); }
-    .card-title {
-      font-family: var(--mono);
-      font-size: 12px;
-      letter-spacing: 0.1em;
-      color: var(--accent);
-      margin-bottom: 8px;
-      text-transform: uppercase;
-    }
-    .card.teal .card-title { color: var(--accent-teal); }
-    .card.gold .card-title { color: var(--accent-gold); }
-    .card.red .card-title { color: var(--accent-red); }
-    .card-icon {
-      display: inline-block;
-      margin-right: 6px;
-      font-size: 16px;
-    }
-    .card-summary {
-      font-size: 15px;
-      line-height: 1.6;
-      margin: 12px 0 14px;
-      color: var(--text);
-    }
-    .card-link {
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 0.08em;
-      color: var(--accent);
-      text-decoration: none;
-      text-transform: uppercase;
-      transition: color 0.2s;
-    }
-    .card:hover .card-link { color: var(--text); }
-    .freshline {
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 0.08em;
-      color: var(--accent);
-      text-align: center;
-      margin-bottom: 30px;
-      padding: 4px 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Briefings — Front Page</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg: #0a0a0a;
+            --panel: #151515;
+            --line: #2a2a2a;
+            --text: #e0e0e0;
+            --muted: #888;
+            --accent-teal: #22d3a8;
+            --accent-gold: #caa64a;
+            --accent-red: #e84545;
+            --mono: 'Courier New', monospace;
+            --up: #10b981;
+            --down: #ef4444;
+            --warn: #f59e0b;
+            --crit: #dc2626;
+        }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        .masthead {
+            display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;
+            padding: 12px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px;
+        }
+        .masthead h1 { font-size: 20px; font-weight: 600; }
+        .pills { display: flex; gap: 8px; }
+        .pill {
+            font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em;
+            background: var(--line); border: 1px solid var(--line); padding: 6px 10px; border-radius: 4px;
+            color: var(--muted); text-transform: uppercase;
+        }
+        .pill.live { background: rgba(16, 185, 129, 0.1); border-color: var(--up); color: var(--up); }
+        .nav { display: flex; gap: 2px; margin: 12px 0 18px; border-bottom: 1px solid var(--line); padding-bottom: 8px; }
+        .nav a {
+            text-decoration: none; color: var(--muted); padding: 8px 12px; border-radius: 4px 4px 0 0;
+            font-size: 13px; border: 1px solid var(--line); border-bottom: none; transition: all 0.2s;
+        }
+        .nav a:hover { background: var(--panel); color: var(--text); }
+        .nav a.active { background: var(--panel); color: var(--text); border-color: var(--line); }
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+        .card {
+            background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 18px;
+            border-left: 4px solid var(--accent-teal); transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover { transform: translateY(-2px); box-shadow: 0 8px 16px rgba(0,0,0,0.3); }
+        .card.markets { border-left-color: var(--accent-gold); }
+        .card.mma { border-left-color: var(--accent-red); }
+        .card-label { font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 6px; }
+        .card.cyber .card-label { color: var(--accent-teal); }
+        .card.markets .card-label { color: var(--accent-gold); }
+        .card.mma .card-label { color: var(--accent-red); }
+        .card h3 { font-size: 14px; margin-bottom: 8px; line-height: 1.4; }
+        .card-summary { color: var(--muted); font-size: 13px; margin-bottom: 12px; }
+        .card-link {
+            display: inline-block; color: var(--accent-teal); text-decoration: none; font-size: 12px;
+            font-family: var(--mono); letter-spacing: 0.1em; text-transform: uppercase;
+        }
+        .card.markets .card-link { color: var(--accent-gold); }
+        .card.mma .card-link { color: var(--accent-red); }
+        .card-link:hover { text-decoration: underline; }
+        .footer {
+            margin-top: 30px; padding: 12px; border-top: 1px solid var(--line);
+            font-size: 11px; color: var(--muted); text-align: center;
+        }
+        .freshline { font-family: var(--mono); font-size: 11px; color: var(--muted); margin-top: 8px; text-align: right; }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <div class="masthead">
-      <h1>Daily Briefings</h1>
-      <div class="meta-pills">
-        <div class="pill live">● LIVE</div>
-        <div class="pill" id="edition">Midday Edition</div>
-        <div class="pill" id="datestamp">Jun 30, 2026</div>
-        <div class="pill">Updated <span id="updated">12:35 PM</span></div>
-      </div>
+    <div class="container">
+        <div class="masthead">
+            <h1>Daily Briefings</h1>
+            <div class="pills">
+                <div class="pill live">🔴 LIVE</div>
+                <div class="pill" id="edition">Morning Edition</div>
+                <div class="pill" id="datestamp">loading...</div>
+                <div class="pill">Updated <span id="updated">--:--</span></div>
+            </div>
+        </div>
+        <div class="freshline" id="freshline">Data as of — ET</div>
+
+        <div class="nav">
+            <a href="index.html" class="active">★ Front Page</a>
+            <a href="cyber-briefing.html">⛨ The Cyber Wire</a>
+            <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
+            <a href="mma-briefing.html">⊘ The Octagon</a>
+            <a href="archive.html">🗄 Archive</a>
+        </div>
+
+        <div class="card-grid">
+            <div class="card cyber">
+                <div class="card-label">⛨ The Wire</div>
+                <h3>Cybersecurity threat landscape elevated as critical deadlines pass and major breaches mount.</h3>
+                <div class="card-summary">Active exploitation of Cisco and PTC flaws; Kodak breach confirmed; record Windows patch cycle.</div>
+                <a href="cyber-briefing.html" class="card-link">Read the briefing →</a>
+            </div>
+
+            <div class="card markets">
+                <div class="card-label">▲ The Tape</div>
+                <h3>Tech-led rebound powers mixed close as Musk's trillion-dollar restoration and FSD rollout drive Tesla higher.</h3>
+                <div class="card-summary">S&P edging higher; Dow slight negative; Tesla +8.6%, SpaceX +7.6%; oil near $70.</div>
+                <a href="wallstreet-briefing.html" class="card-link">Read the briefing →</a>
+            </div>
+
+            <div class="card mma">
+                <div class="card-label">⊘ Tale of the Tape</div>
+                <h3>McGregor's return headline for next week's International Fight Week; champions board updated post-Freedom 250.</h3>
+                <div class="card-summary">UFC 329: McGregor vs. Holloway 2 (Jul 11); Gaethje now lightweight champ after defeating Topuria.</div>
+                <a href="mma-briefing.html" class="card-link">Read the briefing →</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            Built for Samuel D. Monk · Refreshing every 30 minutes, 8 AM–6 PM ET
+        </div>
     </div>
 
-    <div class="freshline" id="freshline">Data as of 12:35 PM ET · briefings refresh every 30 minutes, 8 AM–6 PM ET</div>
-
-    <nav>
-      <a href="index.html" class="active">★ Front Page</a>
-      <a href="cyber-briefing.html">⛨ The Cyber Wire</a>
-      <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
-      <a href="mma-briefing.html">⊘ The Octagon</a>
-      <a href="archive.html">🗄 Archive</a>
-    </nav>
-
-    <div class="cards-grid">
-      <div class="card teal">
-        <div class="card-title"><span class="card-icon">⛨</span> The Cyber Wire</div>
-        <div class="card-summary">Critical client-side SSH flaw (CVE-2026-55200, CVSS 9.2) in libssh2 now has a public PoC; Linux kernel DirtyClone LPE threatens millions of default-config systems.</div>
-        <a href="cyber-briefing.html" class="card-link">Read the briefing →</a>
-      </div>
-
-      <div class="card gold">
-        <div class="card-title"><span class="card-icon">▲</span> The Closing Bell</div>
-        <div class="card-summary">Tech rally pushes S&P 500 up 1.2% and Nasdaq up 2.1% on Middle East peace hopes and chip sector strength; AeroVironment surges 20%.</div>
-        <a href="wallstreet-briefing.html" class="card-link">Read the briefing →</a>
-      </div>
-
-      <div class="card red">
-        <div class="card-title"><span class="card-icon">⊘</span> The Octagon</div>
-        <div class="card-summary">UFC International Fight Week opens July 9 in Las Vegas; McGregor returns for UFC 329 vs. Holloway 2 on July 11 after five-year absence.</div>
-        <a href="mma-briefing.html" class="card-link">Read the briefing →</a>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    (function(){
-      try {
-        var n = new Date();
-        var et = new Intl.DateTimeFormat('en-US', {
-          timeZone: 'America/New_York',
-          weekday: 'long',
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric'
-        }).format(n);
-        var t = new Intl.DateTimeFormat('en-US', {
-          timeZone: 'America/New_York',
-          hour: 'numeric',
-          minute: '2-digit'
-        }).format(n);
-        var h = parseInt(new Intl.DateTimeFormat('en-US', {
-          timeZone: 'America/New_York',
-          hour: 'numeric',
-          hour12: false
-        }).format(n), 10);
-        var ed = h < 11 ? 'Morning Edition' : (h < 15 ? 'Midday Edition' : 'Afternoon Edition');
-        document.getElementById('datestamp').textContent = et;
-        document.getElementById('updated').textContent = t + ' ET';
-        document.getElementById('edition').textContent = ed;
-        var fl = document.getElementById('freshline');
-        if(fl) fl.textContent = 'Data as of ' + t + ' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';
-      } catch(e) {}
-    })();
-  </script>
+    <script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
 </body>
 </html>
