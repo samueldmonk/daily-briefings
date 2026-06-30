@@ -1,109 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Archive — Daily Briefings</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --bg: #0a0a0a;
-            --panel: #151515;
-            --line: #2a2a2a;
-            --text: #e0e0e0;
-            --muted: #888;
-            --mono: 'Courier New', monospace;
-        }
-        body {
-            background: var(--bg);
-            color: var(--text);
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            padding: 20px;
-        }
-        .container { max-width: 900px; margin: 0 auto; }
-        .masthead {
-            display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;
-            padding: 12px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px;
-        }
-        .masthead h1 { font-size: 20px; font-weight: 600; }
-        .pills { display: flex; gap: 8px; }
-        .pill {
-            font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em;
-            background: var(--line); border: 1px solid var(--line); padding: 6px 10px; border-radius: 4px;
-            color: var(--muted); text-transform: uppercase;
-        }
-        .nav { display: flex; gap: 2px; margin: 12px 0 18px; border-bottom: 1px solid var(--line); padding-bottom: 8px; }
-        .nav a {
-            text-decoration: none; color: var(--muted); padding: 8px 12px; border-radius: 4px 4px 0 0;
-            font-size: 13px; border: 1px solid var(--line); border-bottom: none; transition: all 0.2s;
-        }
-        .nav a:hover { background: var(--panel); color: var(--text); }
-        .nav a.active { background: var(--panel); color: var(--text); border-color: var(--line); }
-        .notice {
-            background: var(--panel); border: 1px solid var(--line); border-radius: 8px;
-            padding: 12px; margin-bottom: 16px; font-size: 13px; color: var(--muted);
-        }
-        .date-section { margin: 24px 0; }
-        .date-heading {
-            font-family: var(--mono); font-size: 13px; letter-spacing: 0.1em;
-            text-transform: uppercase; color: var(--muted); padding: 8px 0;
-            border-bottom: 1px solid var(--line); margin-bottom: 8px;
-        }
-        .archive-row {
-            display: flex; gap: 16px; padding: 10px; background: var(--panel);
-            border: 1px solid var(--line); border-radius: 6px; margin-bottom: 6px;
-            font-size: 12px;
-        }
-        .archive-time { font-family: var(--mono); min-width: 60px; color: var(--muted); }
-        .archive-links { display: flex; gap: 12px; flex-wrap: wrap; flex: 1; }
-        .archive-link {
-            color: #22d3a8; text-decoration: none; font-family: var(--mono);
-            font-size: 11px; letter-spacing: 0.05em;
-        }
-        .archive-link:hover { text-decoration: underline; }
-        .footer {
-            margin-top: 30px; padding: 12px; border-top: 1px solid var(--line);
-            font-size: 11px; color: var(--muted);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archive — Daily Briefings</title>
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --panel: #1a1a1a;
+      --text: #e8e8e8;
+      --line: #333;
+      --accent: #22d3a8;
+      --mono: 'Courier New', monospace;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; }
+    a { color: #36c6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+    .masthead { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; flex-wrap: wrap; }
+    .masthead h1 { font-size: 32px; font-weight: bold; margin-right: auto; }
+    .pill { background: var(--panel); border: 1px solid var(--line); border-radius: 20px; padding: 6px 14px; font-size: 12px; font-family: var(--mono); letter-spacing: 0.1em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 6px; }
+    .nav { display: flex; gap: 8px; border-bottom: 1px solid var(--line); margin-bottom: 32px; padding-bottom: 12px; flex-wrap: wrap; }
+    .nav a { font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; padding: 8px 14px; border-radius: 6px; transition: all 0.2s; }
+    .nav a:hover { background: var(--panel); }
+    .nav a.active { background: var(--panel); color: var(--accent); border-bottom: 2px solid var(--accent); }
+    .archive-note { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px; margin-bottom: 24px; font-size: 13px; line-height: 1.6; color: #b0b0b0; }
+    .day-section { margin-bottom: 32px; }
+    .day-heading { font-size: 18px; font-weight: bold; margin-bottom: 12px; color: var(--accent); font-family: var(--mono); }
+    .snapshot-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px; }
+    .snapshot-link { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 12px; text-align: center; transition: all 0.2s; }
+    .snapshot-link:hover { background: rgba(34, 211, 168, 0.1); border-color: var(--accent); }
+    .snapshot-link a { display: block; color: #36c6ff; font-size: 13px; font-weight: 500; margin-bottom: 4px; }
+    .snapshot-link .time { font-family: var(--mono); font-size: 11px; color: #888; }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="masthead">
-            <h1>Archive — Daily Briefings</h1>
-            <div class="pills">
-                <div class="pill">🗄 Archive</div>
-            </div>
-        </div>
-
-        <div class="nav">
-            <a href="index.html">★ Front Page</a>
-            <a href="cyber-briefing.html">⛨ The Cyber Wire</a>
-            <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
-            <a href="mma-briefing.html">⊘ The Octagon</a>
-            <a href="archive.html" class="active">🗄 Archive</a>
-        </div>
-
-        <div class="notice">
-            <strong>Archive Note:</strong> Snapshots below are point-in-time editions captured throughout the day. Data is frozen as of the snapshot timestamp. For current information, visit the <a href="index.html" style="color: #22d3a8;">Front Page</a>.
-        </div>
-
-        <div class="date-section">
-            <div class="date-heading">Tuesday, June 30, 2026</div>
-            <div class="archive-row">
-                <div class="archive-time">1:35 PM ET</div>
-                <div class="archive-links">
-                    <a href="archive/cyber-2026-06-30-1335.html" class="archive-link">The Cyber Wire</a>
-                    <a href="archive/wallstreet-2026-06-30-1335.html" class="archive-link">The Closing Bell</a>
-                    <a href="archive/mma-2026-06-30-1335.html" class="archive-link">The Octagon</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer">
-            Built for Samuel D. Monk · Archives refresh with each briefing cycle
-        </div>
+  <div class="container">
+    <div class="masthead">
+      <h1>Daily Briefings</h1>
+      <div class="pill">Archive</div>
     </div>
+
+    <div class="nav">
+      <a href="index.html">★ Front Page</a>
+      <a href="cyber-briefing.html">⛨ The Cyber Wire</a>
+      <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
+      <a href="mma-briefing.html">⊘ The Octagon</a>
+      <a href="archive.html" class="active">🗄 Archive</a>
+    </div>
+
+    <div class="archive-note">
+      <strong>About this Archive:</strong> Snapshots below represent point-in-time editions of The Cyber Wire, The Closing Bell, and The Octagon. Each is timestamped with its publication date and time (Eastern Time). Market data, threat landscapes, and sporting events are captured as they appeared at that moment; they do not update. To view the latest briefings, return to the <a href="index.html">Front Page</a>.
+    </div>
+
+    <div class="day-section">
+      <div class="day-heading">Tuesday, June 30, 2026</div>
+      <div class="snapshot-row">
+        <div class="snapshot-link">
+          <a href="archive/cyber-2026-06-30-1437.html">⛨ The Cyber Wire</a>
+          <div class="time">2:37 PM ET (Midday)</div>
+        </div>
+        <div class="snapshot-link">
+          <a href="archive/wallstreet-2026-06-30-1437.html">▲ The Closing Bell</a>
+          <div class="time">2:37 PM ET (Midday)</div>
+        </div>
+        <div class="snapshot-link">
+          <a href="archive/mma-2026-06-30-1437.html">⊘ The Octagon</a>
+          <div class="time">2:37 PM ET (Midday)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-section">
+      <div class="day-heading">Monday, June 29, 2026</div>
+      <div class="snapshot-row">
+        <div class="snapshot-link">
+          <a href="archive/cyber-2026-06-29-2102.html">⛨ The Cyber Wire</a>
+          <div class="time">9:02 PM ET (Afternoon)</div>
+        </div>
+        <div class="snapshot-link">
+          <a href="archive/wallstreet-2026-06-29-2102.html">▲ The Closing Bell</a>
+          <div class="time">9:02 PM ET (Afternoon)</div>
+        </div>
+        <div class="snapshot-link">
+          <a href="archive/mma-2026-06-29-2102.html">⊘ The Octagon</a>
+          <div class="time">9:02 PM ET (Afternoon)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-section">
+      <div class="day-heading">Saturday, June 27, 2026</div>
+      <div class="snapshot-row">
+        <div class="snapshot-link">
+          <a href="archive/cyber-2026-06-27-1612.html">⛨ The Cyber Wire</a>
+          <div class="time">4:12 PM ET (Afternoon)</div>
+        </div>
+        <div class="snapshot-link">
+          <a href="archive/wallstreet-2026-06-27-1612.html">▲ The Closing Bell</a>
+          <div class="time">4:12 PM ET (Afternoon)</div>
+        </div>
+        <div class="snapshot-link">
+          <a href="archive/mma-2026-06-27-1612.html">⊘ The Octagon</a>
+          <div class="time">4:12 PM ET (Afternoon)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-section">
+      <div class="day-heading">Friday, June 26, 2026</div>
+      <div class="snapshot-row">
+        <div class="snapshot-link">
+          <a href="archive/cyber-2026-06-26-1923.html">⛨ The Cyber Wire</a>
+          <div class="time">7:23 PM ET (Afternoon)</div>
+        </div>
+        <div class="snapshot-link">
+          <a href="archive/wallstreet-2026-06-26-1923.html">▲ The Closing Bell</a>
+          <div class="time">7:23 PM ET (Afternoon)</div>
+        </div>
+        <div class="snapshot-link">
+          <a href="archive/mma-2026-06-26-1923.html">⊘ The Octagon</a>
+          <div class="time">7:23 PM ET (Afternoon)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-section">
+      <div class="day-heading">Thursday, June 25, 2026</div>
+      <div class="snapshot-row">
+        <div class="snapshot-link">
+          <a href="archive/cyber-2026-06-25-1953.html">⛨ The Cyber Wire</a>
+          <div class="time">7:53 PM ET (Afternoon)</div>
+        </div>
+        <div class="snapshot-link">
+          <a href="archive/wallstreet-2026-06-25-1953.html">▲ The Closing Bell</a>
+          <div class="time">7:53 PM ET (Afternoon)</div>
+        </div>
+        <div class="snapshot-link">
+          <a href="archive/mma-2026-06-25-1953.html">⊘ The Octagon</a>
+          <div class="time">7:53 PM ET (Afternoon)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-section">
+      <div class="day-heading">Wednesday, June 24, 2026</div>
+      <div class="snapshot-row">
+        <div class="snapshot-link">
+          <a href="archive/cyber-2026-06-24-1943.html">⛨ The Cyber Wire</a>
+          <div class="time">7:43 PM ET (Afternoon)</div>
+        </div>
+        <div class="snapshot-link">
+          <a href="archive/wallstreet-2026-06-24-1943.html">▲ The Closing Bell</a>
+          <div class="time">7:43 PM ET (Afternoon)</div>
+        </div>
+        <div class="snapshot-link">
+          <a href="archive/mma-2026-06-24-1943.html">⊘ The Octagon</a>
+          <div class="time">7:43 PM ET (Afternoon)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-section">
+      <div class="day-heading">Tuesday, June 23, 2026</div>
+      <div class="snapshot-row">
+        <div class="snapshot-link">
+          <a href="archive/cyber-2026-06-23-1940.html">⛨ The Cyber Wire</a>
+          <div class="time">7:40 PM ET (Afternoon)</div>
+        </div>
+        <div class="snapshot-link">
+          <a href="archive/wallstreet-2026-06-23-1940.html">▲ The Closing Bell</a>
+          <div class="time">7:40 PM ET (Afternoon)</div>
+        </div>
+        <div class="snapshot-link">
+          <a href="archive/mma-2026-06-23-1940.html">⊘ The Octagon</a>
+          <div class="time">7:40 PM ET (Afternoon)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-section">
+      <div class="day-heading">Monday, June 22, 2026</div>
+      <div class="snapshot-row">
+        <div class="snapshot-link">
+          <a href="archive/cyber-2026-06-22-2109.html">⛨ The Cyber Wire</a>
+          <div class="time">9:09 PM ET (Afternoon)</div>
+        </div>
+        <div class="snapshot-link">
+          <a href="archive/wallstreet-2026-06-22-2109.html">▲ The Closing Bell</a>
+          <div class="time">9:09 PM ET (Afternoon)</div>
+        </div>
+        <div class="snapshot-link">
+          <a href="archive/mma-2026-06-22-2109.html">⊘ The Octagon</a>
+          <div class="time">9:09 PM ET (Afternoon)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-section">
+      <div class="day-heading">Saturday, June 20, 2026</div>
+      <div class="snapshot-row">
+        <div class="snapshot-link">
+          <a href="archive/cyber-2026-06-20-1845.html">⛨ The Cyber Wire</a>
+          <div class="time">6:45 PM ET (Afternoon)</div>
+        </div>
+        <div class="snapshot-link">
+          <a href="archive/wallstreet-2026-06-20-1845.html">▲ The Closing Bell</a>
+          <div class="time">6:45 PM ET (Afternoon)</div>
+        </div>
+        <div class="snapshot-link">
+          <a href="archive/mma-2026-06-20-1845.html">⊘ The Octagon</a>
+          <div class="time">6:45 PM ET (Afternoon)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-section">
+      <div class="day-heading">Friday, June 19, 2026</div>
+      <div class="snapshot-row">
+        <div class="snapshot-link">
+          <a href="archive/cyber-2026-06-19-1947.html">⛨ The Cyber Wire</a>
+          <div class="time">7:47 PM ET (Afternoon)</div>
+        </div>
+        <div class="snapshot-link">
+          <a href="archive/wallstreet-2026-06-19-1947.html">▲ The Closing Bell</a>
+          <div class="time">7:47 PM ET (Afternoon)</div>
+        </div>
+        <div class="snapshot-link">
+          <a href="archive/mma-2026-06-19-1947.html">⊘ The Octagon</a>
+          <div class="time">7:47 PM ET (Afternoon)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-section">
+      <div class="day-heading">Thursday, June 18, 2026</div>
+      <div class="snapshot-row">
+        <div class="snapshot-link">
+          <a href="archive/cyber-2026-06-18-1942.html">⛨ The Cyber Wire</a>
+          <div class="time">7:42 PM ET (Afternoon)</div>
+        </div>
+        <div class="snapshot-link">
+          <a href="archive/wallstreet-2026-06-18-1942.html">▲ The Closing Bell</a>
+          <div class="time">7:42 PM ET (Afternoon)</div>
+        </div>
+        <div class="snapshot-link">
+          <a href="archive/mma-2026-06-18-1942.html">⊘ The Octagon</a>
+          <div class="time">7:42 PM ET (Afternoon)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-section">
+      <div class="day-heading">Wednesday, June 17, 2026</div>
+      <div class="snapshot-row">
+        <div class="snapshot-link">
+          <a href="archive/cyber-2026-06-17-1908.html">⛨ The Cyber Wire</a>
+          <div class="time">7:08 PM ET (Afternoon)</div>
+        </div>
+        <div class="snapshot-link">
+          <a href="archive/wallstreet-2026-06-17-1908.html">▲ The Closing Bell</a>
+          <div class="time">7:08 PM ET (Afternoon)</div>
+        </div>
+        <div class="snapshot-link">
+          <a href="archive/mma-2026-06-17-1908.html">⊘ The Octagon</a>
+          <div class="time">7:08 PM ET (Afternoon)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-section">
+      <div class="day-heading">Tuesday, June 16, 2026</div>
+      <div class="snapshot-row">
+        <div class="snapshot-link">
+          <a href="archive/cyber-2026-06-16-2323.html">⛨ The Cyber Wire</a>
+          <div class="time">11:23 PM ET (Afternoon)</div>
+        </div>
+        <div class="snapshot-link">
+          <a href="archive/wallstreet-2026-06-16-2323.html">▲ The Closing Bell</a>
+          <div class="time">11:23 PM ET (Afternoon)</div>
+        </div>
+        <div class="snapshot-link">
+          <a href="archive/mma-2026-06-16-2323.html">⊘ The Octagon</a>
+          <div class="time">11:23 PM ET (Afternoon)</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </body>
 </html>
