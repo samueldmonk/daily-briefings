@@ -4,7 +4,7 @@ import re
 from datetime import datetime
 from collections import defaultdict
 
-archive_dir = '/tmp/db_1782834746/archive'
+archive_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'archive')
 
 # Collect files by date
 files_by_date = defaultdict(lambda: defaultdict(list))
@@ -255,7 +255,7 @@ html += '''
 </html>
 '''
 
-with open('/tmp/db_1782834746/archive.html', 'w') as f:
+with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'archive.html'), 'w') as f:
     f.write(html)
 
 print("✓ archive.html regenerated")
