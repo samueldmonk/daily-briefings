@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Cyber Wire — Daily Briefings</title>
+<style>
+:root{
+  --bg:#0a0f0d; --panel:#111a17; --panel2:#0e1613; --line:#1e2d28;
+  --ink:#e8f2ee; --muted:#8aa39b; --mono:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;
+  --accent:#22d3a8; --accent2:#36c6ff; --crit:#ff5470; --warn:#f5b544; --up:#22d3a8;
+}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(1200px 600px at 80% -10%,#0f1c18 0,var(--bg) 55%);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.55}
+.wrap{max-width:1040px;margin:0 auto;padding:20px 18px 60px}
+a{color:var(--accent2);text-decoration:none}
+a:hover{text-decoration:underline}
+/* masthead */
+.mast{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 16px;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+.brand{font-size:13px;letter-spacing:.34em;text-transform:uppercase;color:var(--muted);font-family:var(--mono)}
+.title{font-size:30px;font-weight:800;letter-spacing:.01em;margin:0}
+.title .ac{color:var(--accent)}
+.meta{display:flex;flex-wrap:wrap;gap:7px;margin-left:auto}
+.pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);
+  border:1px solid var(--line);border-radius:999px;padding:4px 9px;background:var(--panel)}
+.pill.live{color:var(--accent);border-color:#1c4a3f}
+.pill.live::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);margin-right:6px;vertical-align:middle;box-shadow:0 0 0 0 rgba(34,211,168,.7);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(34,211,168,.55)}70%{box-shadow:0 0 0 7px rgba(34,211,168,0)}100%{box-shadow:0 0 0 0 rgba(34,211,168,0)}}
+/* nav */
+.nav{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 6px}
+.nav a{font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--muted);border:1px solid var(--line);
+  border-radius:9px;padding:8px 12px;background:var(--panel);transition:.15s}
+.nav a:hover{color:var(--ink);border-color:#2c4239;text-decoration:none;transform:translateY(-1px)}
+.nav a.active{color:#04120e;background:linear-gradient(180deg,var(--accent),#17b892);border-color:var(--accent);font-weight:700}
+/* tldr + fresh */
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;padding:11px 15px;margin:14px 0 2px;font-size:14.5px;line-height:1.5}
+.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-right:9px}
+.freshline{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.03em;margin:9px 2px 20px}
+/* sections */
+.slabel{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:26px 0 11px;display:flex;align-items:center;gap:9px}
+.slabel::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.lead h2{margin:.1em 0 .35em;font-size:22px}
+.lead p{margin:.4em 0;color:#d3e2dc}
+/* banner */
+.banner{display:flex;flex-wrap:wrap;align-items:center;gap:12px;border-radius:14px;padding:13px 17px;
+  background:linear-gradient(90deg,rgba(255,84,112,.14),rgba(245,181,68,.06));border:1px solid #43222c}
+.banner .lvl{font-family:var(--mono);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:13px;
+  color:#fff;background:var(--crit);border-radius:8px;padding:6px 12px}
+.banner .why{font-size:13.5px;color:#f6d9de}
+/* stat strip */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:12px 0 4px}
+.stat{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:12px 13px}
+.stat .n{font-size:21px;font-weight:800;color:var(--accent);font-family:var(--mono)}
+.stat .l{font-size:11.5px;color:var(--muted);margin-top:3px;line-height:1.35}
+/* cards */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:14px 15px;transition:.16s}
+.card:hover{transform:translateY(-2px);border-color:#2f463d;box-shadow:0 10px 26px -18px rgba(0,0,0,.8)}
+.card h3{margin:0 0 6px;font-size:15.5px}
+.card p{margin:0;font-size:13.5px;color:#c7d7d0}
+.tags{margin-top:9px;display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:var(--panel2)}
+.tag.new{color:#04120e;background:var(--accent);border-color:var(--accent);font-weight:700}
+.tag.ransom{color:#ffd0d8;border-color:#5a2a35}
+.tag.breach{color:#bfe9ff;border-color:#204558}
+/* callout */
+.callout{border:1px solid var(--line);border-left:4px solid var(--crit);border-radius:12px;background:linear-gradient(90deg,rgba(255,84,112,.09),transparent);padding:14px 17px}
+.callout .k{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--crit);font-weight:700}
+.callout h3{margin:5px 0 6px;font-size:17px}
+.callout p{margin:0;font-size:13.5px;color:#dfe9e5}
+/* table */
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:10px 11px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+td .cve{font-family:var(--mono);color:var(--accent2)}
+.cvss{font-family:var(--mono);font-weight:700}
+.cvss.c10{color:var(--crit)} .cvss.c9{color:#ff8a5c} .cvss.c8{color:var(--warn)}
+tr:hover td{background:var(--panel2)}
+/* kev list */
+.kev{list-style:none;padding:0;margin:0}
+.kev li{padding:10px 0;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:8px;align-items:baseline;font-size:13.5px}
+.kev li:last-child{border-bottom:0}
+.kev .cd{font-family:var(--mono);font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;border:1px solid var(--line);white-space:nowrap}
+.kev .ok{color:var(--warn);border-color:#4a3a1c}
+.kev .bad{color:#fff;background:var(--crit);border-color:var(--crit)}
+footer{margin-top:34px;border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:12px}
+footer .slabel{color:var(--muted)}
+.src{word-break:break-word;line-height:1.9}
+.disc{margin-top:14px;font-size:11.5px;color:#6f8880;font-style:italic}
+@media(max-width:720px){.grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.title{font-size:24px}.meta{margin-left:0;width:100%}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="mast">
+    <div>
+      <div class="brand">Daily Briefings</div>
+      <h1 class="title">⛨ The <span class="ac">Cyber Wire</span></h1>
+    </div>
+    <div class="meta">
+      <span class="pill live">Live</span>
+      <span class="pill" id="edition">Midday Edition</span>
+      <span class="pill" id="datestamp">July 1, 2026</span>
+      <span class="pill">Updated <span id="updated">—</span></span>
+    </div>
+  </div>
+
+  <div class="tldr"><b>The Wire</b> <span>A max-severity SimpleHelp authentication-bypass flaw (CVE-2026-48558, CVSS 10.0) is under active exploitation with a federal patch deadline of tomorrow, July 2 — while ShinyHunters mass-exploits an Oracle PeopleSoft zero-day (CVE-2026-35273) in a widening data-extortion spree.</span></div>
+  <div class="freshline" id="freshline">Data as of — ET · briefings refresh every 30 minutes, 8 AM–6 PM ET</div>
+
+  <nav class="nav">
+    <a href="index.html">★ Front Page</a>
+    <a href="cyber-briefing.html" class="active">⛨ The Cyber Wire</a>
+    <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
+    <a href="mma-briefing.html">⊘ The Octagon</a>
+    <a href="archive.html">🗄 Archive</a>
+  </nav>
+
+  <div class="banner">
+    <span class="lvl">Threat: High</span>
+    <span class="why">A max-severity (CVSS 10.0) SimpleHelp flaw is being exploited in the wild with a federal deadline of tomorrow (July 2), and ShinyHunters is mass-exploiting an Oracle PeopleSoft zero-day (CVSS 9.8) across 100+ organizations.</span>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="n">10.0</div><div class="l">CVSS of the exploited SimpleHelp auth-bypass flaw</div></div>
+    <div class="stat"><div class="n">Jul 2</div><div class="l">CISA federal deadline to patch SimpleHelp</div></div>
+    <div class="stat"><div class="n">~14K</div><div class="l">Internet-exposed SimpleHelp servers (up from ~3,400)</div></div>
+    <div class="stat"><div class="n">300+</div><div class="l">PeopleSoft instances hit by ShinyHunters (100+ orgs)</div></div>
+  </div>
+
+  <div class="slabel">Top Story</div>
+  <div class="panel lead">
+    <h2>CISA flags a 10.0 SimpleHelp flaw as attackers weaponize remote-support servers</h2>
+    <p>CISA has added <b>CVE-2026-48558</b>, a critical authentication-bypass vulnerability in the <b>SimpleHelp</b> remote-support platform, to its Known Exploited Vulnerabilities catalog. The flaw (CVSS v3.1 <b>10.0</b>) affects SimpleHelp 5.5.15 and earlier and 6.0 pre-release builds: when OIDC authentication is enabled, the server accepts identity tokens without verifying their cryptographic signature, letting a remote, unauthenticated attacker forge a token and log in as a fully privileged "Technician" — and, in some configurations, bypass multi-factor authentication entirely.</p>
+    <p>Because SimpleHelp is widely deployed by IT departments, managed service providers and help desks, a compromised server hands attackers the same reach as a legitimate technician across every managed endpoint. Blackpoint Cyber observed in-the-wild intrusions that began with confirmed exploitation of this flaw and then abused SimpleHelp's own file-transfer and remote-execution features to mass-deploy two previously unreported malware families — the <b>TaskWeaver</b> loader and <b>Djinn Stealer</b> — using an obfuscated file disguised as jQuery, pulled from a temporary Cloudflare address and run via Node.js. SimpleHelp fixed the bug in late May in versions 5.5.16 and 6.0 RC2; exposed SimpleHelp servers have grown from roughly 3,400 in January 2025 to nearly 14,000.</p>
+  </div>
+
+  <div class="slabel">Patch Priority</div>
+  <div class="callout">
+    <div class="k">Do this first · deadline tomorrow</div>
+    <h3>Patch SimpleHelp to 5.5.16 / 6.0 RC2 now — CVE-2026-48558 (CVSS 10.0)</h3>
+    <p>A max-severity flaw is being actively exploited, and CISA orders federal civilian agencies to remediate by <b>July 2, 2026</b> (tomorrow). If you run SimpleHelp with OIDC enabled, upgrade immediately, then hunt for rogue Technician accounts and TaskWeaver / Djinn Stealer artifacts.</p>
+  </div>
+
+  <div class="slabel">Threat Actor Spotlight</div>
+  <div class="panel lead">
+    <h2>ShinyHunters — data-extortion crew running an automated PeopleSoft campaign</h2>
+    <p>The prolific <b>ShinyHunters</b> extortion group is exploiting a critical <b>Oracle PeopleSoft</b> zero-day, <b>CVE-2026-35273</b> (CVSS <b>9.8</b>, in the Environment Management Hub), to execute code on servers with no authentication required. Per Arctic Wolf's analysis, the crew has been quietly scanning the internet and compromising vulnerable PeopleSoft deployments since at least <b>May 27, 2026</b>, and claims to have hit more than <b>300 instances across 100+ organizations</b> using automated attack scripts rather than hand-crafted exploits. The campaign exemplifies the shift away from encryption toward pure data-theft extortion: ShinyHunters published <b>297 GB</b> of Council of Europe employee data after the body missed a June 16 ransom deadline. CISA added CVE-2026-35273 to its KEV catalog in mid-June.</p>
+  </div>
+
+  <div class="slabel">Breaches &amp; Incidents</div>
+  <div class="grid">
+    <div class="card">
+      <h3>Nidec — $2M ransom demand</h3>
+      <p>The Blackfield ransomware gang is demanding a $2 million ransom from Nidec Corporation, the large Japanese maker of electronic components and motors.</p>
+      <div class="tags"><span class="tag ransom">Ransomware</span></div>
+    </div>
+    <div class="card">
+      <h3>Tata Electronics — 200k+ files leaked</h3>
+      <p>Tata Electronics confirmed a June 2026 cybersecurity incident after the World Leaks group published more than 200,000 alleged company files online on June 12.</p>
+      <div class="tags"><span class="tag ransom">Data-leak</span></div>
+    </div>
+    <div class="card">
+      <h3>Council of Europe — 297 GB dumped</h3>
+      <p>ShinyHunters published 297 GB of Council of Europe employee data after the intergovernmental body failed to meet a June 16 ransom deadline in the PeopleSoft extortion campaign.</p>
+      <div class="tags"><span class="tag breach">Data breach</span></div>
+    </div>
+    <div class="card">
+      <h3>Cisco SD-WAN Manager exploited</h3>
+      <p>Cisco warns that Catalyst SD-WAN Manager flaw CVE-2026-20245 (CVSS 7.8) is under active exploitation; fixes shipped June 12 and admins are urged to patch and hunt for compromise.</p>
+      <div class="tags"><span class="tag breach">Exploited</span></div>
+    </div>
+  </div>
+
+  <div class="slabel">Vulnerability Watch</div>
+  <div class="panel" style="padding:4px 6px">
+  <table>
+    <thead><tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr></thead>
+    <tbody>
+      <tr><td class="cve">CVE-2026-48558</td><td class="cvss c10">10.0</td><td>SimpleHelp ≤5.5.15 / 6.0 pre-RC</td><td>OIDC auth bypass; exploited (TaskWeaver / Djinn Stealer). Fix: 5.5.16 / 6.0 RC2. KEV due Jul 2.</td></tr>
+      <tr><td class="cve">CVE-2026-35273</td><td class="cvss c9">9.8</td><td>Oracle PeopleSoft (Env. Mgmt Hub)</td><td>Unauth RCE zero-day; ShinyHunters mass-exploitation across 100+ orgs. In CISA KEV.</td></tr>
+      <tr><td class="cve">CVE-2026-47281</td><td class="cvss c9">9.6</td><td>Microsoft Defender / VS Code ("RoguePlanet")</td><td>SYSTEM privilege escalation; actively exploited zero-day, patched in June Patch Tuesday.</td></tr>
+      <tr><td class="cve">CVE-2026-20245</td><td class="cvss c8">7.8</td><td>Cisco Catalyst SD-WAN Manager</td><td>Actively exploited in the wild; fixed June 12. Hunt for compromise.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="slabel">CISA KEV &amp; Federal Deadlines</div>
+  <div class="panel">
+    <ul class="kev">
+      <li data-due="2026-07-02"><span class="cd" data-cd>—</span> <span><b>SimpleHelp CVE-2026-48558</b> (CVSS 10.0) — added Jun 29; CISA remediation due <b>Jul 2, 2026</b>. OIDC auth bypass, actively exploited.</span></li>
+      <li data-due="2026-06-15"><span class="cd" data-cd>—</span> <span><b>Oracle PeopleSoft CVE-2026-35273</b> (CVSS 9.8) — added mid-June; ShinyHunters actively exploiting the Environment Management Hub zero-day.</span></li>
+      <li data-due="2026-06-26"><span class="cd" data-cd>—</span> <span><b>Ubiquiti UniFi OS CVE-2026-34910</b> (CVSS 10.0) &amp; <b>Lantronix EDS5000 CVE-2025-67038</b> — added Jun 23; risk-based federal deadline.</span></li>
+    </ul>
+    <div style="font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.03em;margin-top:11px">CISA KEV remediation dates are now risk-based per-CVE (BOD 26-04), not a flat window — each countdown reflects that CVE's own assigned due date.</div>
+  </div>
+
+  <footer>
+    <div class="slabel">Sources</div>
+    <div class="src">
+      Security Affairs — <a href="https://securityaffairs.com/194503/security/u-s-cisa-adds-simplehelp-flaw-to-its-known-exploited-vulnerabilities-catalog.html">SimpleHelp added to KEV</a> ·
+      The Hacker News — <a href="https://thehackernews.com/2026/06/attackers-exploit-simplehelp-cve-2026.html">Attackers exploit SimpleHelp (TaskWeaver / Djinn Stealer)</a>, <a href="https://thehackernews.com/2026/06/cisco-catalyst-sd-wan-manager-cve-2026.html">Cisco Catalyst SD-WAN Manager CVE-2026-20245</a> ·
+      <a href="https://www.helpnetsecurity.com/2026/06/30/simplehelp-vulnerability-exploited-cve-2026-48558/">Help Net Security — SimpleHelp / Djinn Stealer</a> ·
+      <a href="https://www.infosecurity-magazine.com/news/simplehelp-rmm-vulnerability/">Infosecurity Magazine — SimpleHelp exploited</a> ·
+      <a href="https://cybersecuritynews.com/simplehelp-vulnerabilities-exploited/">Cybersecurity News — SimpleHelp</a> ·
+      CISA — <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">KEV Catalog</a>, <a href="https://www.cisa.gov/news-events/alerts/2026/06/29/cisa-adds-one-known-exploited-vulnerability-catalog">Jun 29 add</a> ·
+      <a href="https://tech-insider.org/shinyhunters-oracle-peoplesoft-breach-2026/">Tech-Insider — ShinyHunters / PeopleSoft CVE-2026-35273</a> · <a href="https://www.techtimes.com/articles/318714/20260621/council-europe-data-breach-shinyhunters-makes-10000-employees-records-permanent.htm">TechTimes — ShinyHunters / Council of Europe</a> · <a href="https://threat-modeling.com/windows-defender-rogueplanet-zero-day-cve-2026-47281/">Threat-Modeling — RoguePlanet CVE-2026-47281</a> · <a href="https://www.brightdefense.com/resources/recent-data-breaches/">Bright Defense — recent breaches (Nidec, Tata)</a>
+    </div>
+    <div class="disc">Informational security briefing compiled from public reporting. Verify advisories and patch levels against vendor bulletins before acting. Not professional security advice.</div>
+  </footer>
+</div>
+
+<script>
+(function(){try{
+  var n=new Date();
+  var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);
+  var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);
+  var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);
+  var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');
+  document.getElementById('datestamp').textContent=et;
+  document.getElementById('updated').textContent=t+' ET';
+  document.getElementById('edition').textContent=ed;
+  var fl=document.getElementById('freshline');
+  if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';
+}catch(e){}})();
+(function(){try{
+  var today=new Date(); today.setHours(0,0,0,0);
+  document.querySelectorAll('.kev li[data-due]').forEach(function(li){
+    var due=new Date(li.getAttribute('data-due')+'T00:00:00');
+    var days=Math.round((due-today)/86400000);
+    var b=li.querySelector('[data-cd]');
+    if(days>1){b.textContent='('+days+' days left)';b.className='cd ok';}
+    else if(days===1){b.textContent='(1 day left)';b.className='cd ok';}
+    else if(days===0){b.textContent='(due today)';b.className='cd bad';}
+    else{b.textContent='(overdue '+Math.abs(days)+'d)';b.className='cd bad';}
+  });
+}catch(e){}})();
+</script>
+</body>
+</html>
