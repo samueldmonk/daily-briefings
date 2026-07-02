@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Closing Bell — Daily Briefings</title>
+<style>
+:root{
+  --bg:#0c0a06; --panel:#16130c; --panel2:#120f09; --line:#2b2515;
+  --ink:#f2ecdd; --muted:#a99e82; --mono:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;
+  --serif:Georgia,'Times New Roman',serif;
+  --accent:#caa64a; --accent2:#e8c766; --up:#3fce8f; --down:#ff6b6b;
+}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(1200px 620px at 82% -10%,#1a1509 0,var(--bg) 55%);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.55}
+.wrap{max-width:1040px;margin:0 auto;padding:20px 18px 60px}
+a{color:var(--accent2);text-decoration:none}a:hover{text-decoration:underline}
+.mast{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 16px;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+.brand{font-size:13px;letter-spacing:.34em;text-transform:uppercase;color:var(--muted);font-family:var(--mono)}
+.title{font-family:var(--serif);font-size:31px;font-weight:700;margin:0}
+.title .ac{color:var(--accent)}
+.meta{display:flex;flex-wrap:wrap;gap:7px;margin-left:auto}
+.pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:4px 9px;background:var(--panel)}
+.pill.live{color:var(--accent)}
+.pill.live::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);margin-right:6px;vertical-align:middle;animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(202,166,74,.55)}70%{box-shadow:0 0 0 7px rgba(202,166,74,0)}100%{box-shadow:0 0 0 0 rgba(202,166,74,0)}}
+.nav{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 6px}
+.nav a{font-family:var(--mono);font-size:12px;color:var(--muted);border:1px solid var(--line);border-radius:9px;padding:8px 12px;background:var(--panel);transition:.15s}
+.nav a:hover{color:var(--ink);border-color:#3d331c;text-decoration:none;transform:translateY(-1px)}
+.nav a.active{color:#1a1405;background:linear-gradient(180deg,var(--accent2),var(--accent));border-color:var(--accent);font-weight:700}
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;padding:11px 15px;margin:14px 0 2px;font-size:14.5px;line-height:1.5}
+.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-right:9px}
+.freshline{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.03em;margin:9px 2px 18px}
+.slabel{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:24px 0 11px;display:flex;align-items:center;gap:9px}
+.slabel::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.lead h2{font-family:var(--serif);margin:.1em 0 .4em;font-size:24px;line-height:1.25}
+.lead p{margin:.4em 0;color:#e4dcc7}
+.livebar{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 8px 4px;margin-bottom:18px}
+.livebar-label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--up);display:flex;align-items:center;gap:8px;padding:4px 8px 8px}
+.livebar-label .dot{width:7px;height:7px;border-radius:50%;background:var(--up);animation:pulse 2s infinite}
+.tickers{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.ticker{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:6px 8px;min-height:118px}
+.note{font-size:12px;color:var(--muted);margin:10px 2px 0;line-height:1.5}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:14px 15px;transition:.16s}
+.card:hover{transform:translateY(-2px);border-color:#42381f;box-shadow:0 10px 26px -18px rgba(0,0,0,.8)}
+.card h3{margin:0 0 5px;font-size:15.5px;font-family:var(--serif);display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.card h3 .mv{font-family:var(--mono);font-size:13px;font-weight:700}
+.up{color:var(--up)} .down{color:var(--down)}
+.card p{margin:0;font-size:13.5px;color:#d8cfb8}
+.tags{margin-top:9px;display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:var(--panel2)}
+.tag.new{color:#1a1405;background:var(--accent2);border-color:var(--accent2);font-weight:700}
+.wpanel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:8px}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+td.r,th.r{text-align:right;font-family:var(--mono)}
+tr:hover td{background:var(--panel2)}
+.radar{list-style:none;padding:0;margin:0}
+.radar li{padding:9px 0 9px 20px;border-bottom:1px solid var(--line);font-size:13.8px;position:relative;color:#e4dcc7}
+.radar li:last-child{border-bottom:0}
+.radar li::before{content:"▸";position:absolute;left:2px;color:var(--accent)}
+footer{margin-top:32px;border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:12px}
+.src{word-break:break-word;line-height:1.9}
+.disc{margin-top:14px;font-size:11.5px;color:#8a7f66;font-style:italic}
+@media(max-width:720px){.grid{grid-template-columns:1fr}.tickers{grid-template-columns:1fr}.title{font-size:25px}.meta{margin-left:0;width:100%}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="mast">
+    <div>
+      <div class="brand">Daily Briefings</div>
+      <h1 class="title">▲ The <span class="ac">Closing Bell</span></h1>
+    </div>
+    <div class="meta">
+      <span class="pill live">Live</span>
+      <span class="pill" id="edition">Afternoon Edition</span>
+      <span class="pill" id="datestamp">July 2, 2026</span>
+      <span class="pill">Updated <span id="updated">—</span></span>
+    </div>
+  </div>
+
+  <div class="tldr"><b>The Tape</b> <span>The Dow closed at a <b>record high</b> Thursday — up 1.14% to 52,900.07 — even as a second straight day of semiconductor selling pulled the Nasdaq Composite down 0.80% to 25,832.67 and left the S&amp;P 500 essentially flat (7,483.24), after a soft June jobs report (+57,000 vs. ~113,000 expected; unemployment 4.2%) eased fears of another Fed rate hike. Markets are closed Friday, July 3 for Independence Day.</span></div>
+  <div class="freshline" id="freshline">Data as of — ET · briefings refresh every 30 minutes, 8 AM–6 PM ET</div>
+
+  <nav class="nav">
+    <a href="index.html">★ Front Page</a>
+    <a href="cyber-briefing.html">⛨ The Cyber Wire</a>
+    <a href="wallstreet-briefing.html" class="active">▲ The Closing Bell</a>
+    <a href="mma-briefing.html">⊘ The Octagon</a>
+    <a href="archive.html">🗄 Archive</a>
+  </nav>
+
+  <!-- BLOCK A: ticker tape -->
+  <div class="livebar">
+    <div class="livebar-label"><span class="dot"></span> LIVE QUOTES</div>
+    <script src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>{"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},{"proName":"FOREXCOM:DJI","title":"Dow 30"},{"proName":"NASDAQ:RIVN","title":"Rivian"},{"proName":"NASDAQ:PLTR","title":"Palantir"},{"proName":"NASDAQ:MU","title":"Micron"},{"proName":"NYSE:GLW","title":"Corning"},{"proName":"NASDAQ:SMH","title":"Semis ETF"},{"proName":"TVC:USOIL","title":"WTI Crude"},{"proName":"TVC:US10Y","title":"US 10Y"}],"colorTheme":"dark","isTransparent":true,"showSymbolLogo":true,"displayMode":"adaptive","locale":"en"}</script>
+  </div>
+
+  <!-- BLOCK B: single-quote widgets -->
+  <div class="slabel">Live Index Quotes — updates in real time</div>
+  <div class="tickers">
+    <div class="ticker"><script src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"FOREXCOM:SPXUSD","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div>
+    <div class="ticker"><script src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"FOREXCOM:NSXUSD","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div>
+    <div class="ticker"><script src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"FOREXCOM:DJI","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div>
+  </div>
+  <div class="note">Quotes stream live (some feeds ~15-min delayed). Editorial below reflects the latest edition; official closes are in the Weekly Scorecard.</div>
+
+  <div class="slabel">The Lead</div>
+  <div class="panel lead">
+    <h2>Dow closes at a record high as jobs miss; a second chip selloff drags the Nasdaq lower</h2>
+    <p>Wall Street split on Thursday. The <b>Dow Jones Industrial Average</b> closed at a <b>record high</b>, jumping <b>594.83 points</b> (<b>1.14%</b>) to <b>52,900.07</b> — its first all-time closing high of the summer — while a second straight session of semiconductor selling dragged the tech-heavy <b>Nasdaq Composite</b> down <b>0.80%</b> (−207.36) to <b>25,832.67</b>. The <b>S&amp;P 500</b> finished essentially flat at <b>7,483.24</b>, as strength in financials and other blue-chip sectors offset the slide in technology. The divide told the story: information technology — semiconductors in particular — lagged for a second straight session, while non-tech blue chips powered the Dow to its record close.</p>
+    <p>The catalyst was a cooler-than-expected June jobs report that Wall Street read as easing pressure for another Fed rate hike. U.S. employers added just <b>57,000</b> positions in June — well short of the roughly <b>113,000</b> economists expected — and April and May were revised down by a combined <b>74,000</b>. The <b>unemployment rate</b> ticked down to <b>4.2%</b> (from 4.3%), average hourly earnings rose <b>0.3%</b> on the month (<b>3.5%</b> year over year), and labor-force participation slipped to <b>61.5%</b>. Under Fed Chair <b>Kevin Warsh</b> — who has urged investors to follow the data rather than Fed guidance — the soft print revived hopes that policy could stay on hold.</p>
+    <p>The drag again came from the AI-hardware trade: chip, memory and semiconductor-equipment names sold off for a second straight session on overseas weakness and fresh analyst caution, with <b>Citi</b> warning on semiconductor and hyperscaler stocks. Money kept rotating toward blue chips, financials and communication services — powering the Dow to its record close and capping its best first half since 2021. U.S. markets are closed Friday, July 3 for the Independence Day holiday.</p>
+  </div>
+
+  <div class="slabel">Movers &amp; Drivers</div>
+  <div class="grid">
+    <div class="card">
+      <h3>Rivian <span class="mv up">▲ Top gainer</span></h3>
+      <p>The session's standout gainer: Rivian surged after the EV maker raised its 2026 delivery guidance to <b>65,000–70,000</b> vehicles (from 62,000–67,000), citing <b>12,194</b> second-quarter deliveries and the ramp of its R2 SUV. It is today's Chart of the Day.</p>
+      <div class="tags"><span class="tag">Autos / EV</span><span class="tag">Guidance</span></div>
+    </div>
+    <div class="card">
+      <h3>Palantir <span class="mv up">▲ ~3%</span></h3>
+      <p>Palantir rose about <b>3%</b> after <b>D.A. Davidson</b> upgraded the stock to <b>Buy</b> from Neutral on AI-orchestration demand, saying its valuation "looks increasingly attractive" — giving the AI-software name a lift on a day when much of the rest of the tech complex was under pressure.</p>
+      <div class="tags"><span class="tag">Analyst upgrade</span></div>
+    </div>
+    <div class="card">
+      <h3>Semiconductors <span class="mv down">▼ 2nd day</span></h3>
+      <p>The dominant drag: chip, memory and AI-hardware names sold off for a second straight session on overseas weakness and fresh analyst caution. The <b>VanEck Semiconductor ETF (SMH)</b> fell about <b>4.5%</b>, with chip-equipment makers <b>Teradyne</b> (~−13.6%) and <b>KLA</b> (~−11.5%) the hardest hit. <b>Citi</b> warned on semiconductor and hyperscaler stocks, and the group's slide kept the Nasdaq in the red even as the Dow set a record close.</p>
+      <div class="tags"><span class="tag">Semiconductors</span><span class="tag">AI hardware</span></div>
+    </div>
+    <div class="card">
+      <h3>Bitcoin <span class="mv up">▲ ~5%</span></h3>
+      <p>The world's largest cryptocurrency climbed back <b>above $61,000</b> — its highest in roughly 10 days — as the soft jobs data eased inflation fears, after Fed Chair Kevin Warsh said "inflation risks have come down."</p>
+      <div class="tags"><span class="tag">Crypto</span></div>
+    </div>
+  </div>
+
+  <div class="slabel">Chart of the Day — Rivian (RIVN), the session's biggest single-stock move</div>
+  <!-- BLOCK E: mini symbol overview for the day's biggest mover -->
+  <div class="panel" style="padding:8px">
+    <script src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>{"symbol":"NASDAQ:RIVN","width":"100%","height":240,"locale":"en","dateRange":"1D","colorTheme":"dark","isTransparent":true,"autosize":false}</script>
+  </div>
+
+  <div class="slabel">Sector Heat — live</div>
+  <!-- BLOCK D: sector heatmap -->
+  <div class="panel" style="padding:8px">
+    <script src="https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js" async>{"dataSource":"SPX500","blockSize":"market_cap_basic","blockColor":"change","grouping":"sector","locale":"en","colorTheme":"dark","hasTopBar":false,"isDataSetEnabled":false,"isZoomEnabled":true,"hasSymbolTooltip":true,"isMonoSize":false,"width":"100%","height":420}</script>
+  </div>
+  <div class="note">Editorial read: technology — semiconductors in particular — lagged for a second straight day, keeping the Nasdaq in the red, while financials and other blue chips carried the Dow to a record close.</div>
+
+  <div class="slabel">The Calendar — live</div>
+  <!-- BLOCK F: economic events -->
+  <div class="panel" style="padding:8px">
+    <script src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>{"colorTheme":"dark","isTransparent":true,"width":"100%","height":420,"locale":"en","importanceFilter":"0,1","countryFilter":"us"}</script>
+  </div>
+
+  <div class="slabel">Live Market Headlines — updates in real time</div>
+  <!-- BLOCK C: market news timeline -->
+  <div class="panel" style="padding:8px">
+    <script src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>{"feedMode":"market","market":"stock","colorTheme":"dark","isTransparent":true,"displayMode":"regular","width":"100%","height":420,"locale":"en"}</script>
+  </div>
+
+  <div class="slabel">After-Hours Movers</div>
+  <div class="panel">
+    <p style="margin:0;color:#e4dcc7;font-size:13.8px">With the July 4 holiday shutting markets on Friday, the after-hours session was quiet and light on catalysts — <b>no marquee earnings</b> were on Thursday evening's calendar. No individual post-close move met this edition's sourcing bar, so none are listed. The next scheduled catalysts arrive after the long weekend, with inflation data and the ramp of second-quarter earnings.</p>
+  </div>
+
+  <div class="slabel">Weekly Scorecard — Official Closes (Thu, July 2, 2026)</div>
+  <div class="wpanel">
+    <table>
+      <thead><tr><th>Index</th><th class="r">Close</th><th class="r">Change</th><th class="r">%</th></tr></thead>
+      <tbody>
+        <tr><td>Dow Jones Industrial Average <span class="tag" style="margin-left:6px">Record</span></td><td class="r">52,900.07</td><td class="r up">+594.83</td><td class="r up">+1.14%</td></tr>
+        <tr><td>S&amp;P 500</td><td class="r">7,483.24</td><td class="r">+0.01</td><td class="r">≈ flat</td></tr>
+        <tr><td>Nasdaq Composite</td><td class="r">25,832.67</td><td class="r down">−207.36</td><td class="r down">−0.80%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">The Dow set a fresh record close, fully corroborated and self-consistent off Wednesday's level. The Nasdaq Composite's close (25,832.67, −207.36, −0.80%) is now corroborated across multiple post-close reports and consistent off Wednesday's 26,040.03; the S&amp;P 500 finished essentially unchanged, rising less than a point to 7,483.24. Thursday's closes build on Wednesday's official levels (Dow 52,305.24 / S&amp;P 7,483.23 / Nasdaq 26,040.03). Markets are closed Friday, July 3 for Independence Day.</div>
+
+  <div class="slabel">Rates, Bonds &amp; Commodities</div>
+  <div class="wpanel">
+    <table>
+      <thead><tr><th>Instrument</th><th class="r">Level</th><th class="r">Note</th></tr></thead>
+      <tbody>
+        <tr><td>10-Year Treasury yield</td><td class="r">~4.48%</td><td class="r">Eased on soft jobs</td></tr>
+        <tr><td>2-Year Treasury yield</td><td class="r">~4.11%</td><td class="r">Rate-path sensitive</td></tr>
+        <tr><td>Fed funds target</td><td class="r">3.50–3.75%</td><td class="r">Held Jun 17 (Warsh)</td></tr>
+        <tr><td>WTI crude</td><td class="r">$67.59</td><td class="r down">−1.44%</td></tr>
+        <tr><td>Brent crude</td><td class="r">$70.60</td><td class="r down">−1.36%</td></tr>
+        <tr><td>Gold</td><td class="r">$4,079</td><td class="r down">−0.07%</td></tr>
+        <tr><td>Silver</td><td class="r">$60.31</td><td class="r down">−0.33%</td></tr>
+        <tr><td>Bitcoin</td><td class="r">&gt;$61,000</td><td class="r up">+~5%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">Commodity and yield figures are as reported Thursday; oil eased on reported progress in U.S.–Iran peace negotiations.</div>
+
+  <div class="slabel">On the Radar</div>
+  <div class="panel">
+    <ul class="radar">
+      <li><b>Markets closed Friday, July 3</b> — the NYSE and Nasdaq observe Independence Day (July 4 falls on a Saturday); trading resumes Monday, July 6.</li>
+      <li>With June payrolls soft (+57,000), attention turns to whether the Fed's higher-for-longer stance under Chair Warsh softens — Warsh said this week that "inflation risks have come down."</li>
+      <li>Citi cautioned on semiconductor and hyperscaler stocks as the AI-hardware trade wobbled into a second down day before recovering.</li>
+      <li>Oil stays keyed to U.S.–Iran peace negotiations; WTI slipped below $68 on de-escalation signals.</li>
+      <li>Second-quarter earnings season ramps up over the coming weeks — the next major catalyst after the long weekend.</li>
+    </ul>
+  </div>
+
+  <footer>
+    <div class="slabel" style="margin-top:6px">Sources</div>
+    <div class="src">
+      TheStreet — <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-july-2-2026">Stock Market Today, July 2, 2026</a> ·
+      24/7 Wall St. — <a href="https://247wallst.com/investing/2026/07/02/stock-market-live-july-2-2026-sp-500-spy-flat-with-new-jobs-data/">Live, July 2, 2026</a> ·
+      The Globe and Mail — <a href="https://www.theglobeandmail.com/investing/markets/stocks/AMAT/pressreleases/3100601/stock-market-news-for-july-2-2026/">Stock Market News for July 2, 2026</a> ·
+      Yahoo Finance — <a href="https://finance.yahoo.com/markets/stocks/articles/stock-market-news-july-2-132600808.html">Stock Market News, July 2, 2026</a> ·
+      NBC News — <a href="https://www.nbcnews.com/business/economy/fed-chairman-warsh-inflation-ai-jobs-rcna352550">Warsh: inflation risks have come down</a> ·
+      CNBC — <a href="https://www.cnbc.com/2026/07/01/stock-market-today-live-updates.html">Markets, July 1, 2026 (prior close)</a>
+    </div>
+    <div class="disc">For information only — not investment advice. Figures are approximate and as of the stated time; markets move continuously and official closing levels are confirmed after the bell.</div>
+  </footer>
+
+</div>
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
+</body>
+</html>
