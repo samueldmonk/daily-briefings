@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Octagon — Daily Briefings</title>
+<style>
+:root{
+  --bg:#100c0c; --panel:#1a1313; --panel2:#150f0f; --line:#322020;
+  --ink:#f4e9e6; --muted:#b39b95; --mono:'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace;
+  --accent:#e84545; --accent2:#ff8a5c; --gold:#e8c766; --win:#3fce8f; --nc:#e8c766;
+}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(1200px 620px at 82% -10%,#241111 0,var(--bg) 55%);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.55}
+.wrap{max-width:1040px;margin:0 auto;padding:20px 18px 60px}
+a{color:var(--accent2);text-decoration:none}a:hover{text-decoration:underline}
+.mast{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 16px;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+.brand{font-size:13px;letter-spacing:.34em;text-transform:uppercase;color:var(--muted);font-family:var(--mono)}
+.title{font-family:var(--mono);font-size:29px;font-weight:700;margin:0}
+.title .ac{color:var(--accent)}
+.meta{display:flex;flex-wrap:wrap;gap:7px;margin-left:auto}
+.pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:4px 9px;background:var(--panel)}
+.pill.live{color:var(--accent)}
+.pill.live::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);margin-right:6px;vertical-align:middle;animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(232,69,69,.55)}70%{box-shadow:0 0 0 7px rgba(232,69,69,0)}100%{box-shadow:0 0 0 0 rgba(232,69,69,0)}}
+.nav{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 6px}
+.nav a{font-family:var(--mono);font-size:12px;color:var(--muted);border:1px solid var(--line);border-radius:9px;padding:8px 12px;background:var(--panel);transition:.15s}
+.nav a:hover{color:var(--ink);border-color:#4a2f2f;text-decoration:none;transform:translateY(-1px)}
+.nav a.active{color:#2a0d0d;background:linear-gradient(180deg,var(--accent2),var(--accent));border-color:var(--accent);font-weight:700}
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;padding:11px 15px;margin:14px 0 2px;font-size:14.5px;line-height:1.5}
+.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-right:9px}
+.freshline{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.03em;margin:9px 2px 14px}
+.cdbar{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;border:1px solid var(--line);border-radius:12px;padding:12px 15px;margin:6px 0 4px;background:linear-gradient(90deg,rgba(232,69,69,.12),transparent)}
+.cdbar .k{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.cdbar .ev{font-weight:700;font-size:15px}
+.cdbar .cd{font-family:var(--mono);font-weight:700;color:var(--gold);margin-left:auto;font-size:15px}
+.slabel{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:24px 0 11px;display:flex;align-items:center;gap:9px}
+.slabel::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.lead{border-left:5px solid var(--accent)}
+.lead h2{margin:.1em 0 .4em;font-size:22px;line-height:1.28}
+.lead p{margin:.4em 0;color:#ecdedb}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:14px 15px;transition:.16s}
+.card:hover{transform:translateY(-2px);border-color:#4a2f2f;box-shadow:0 10px 26px -18px rgba(0,0,0,.85)}
+.card .dv{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--gold);margin-bottom:5px}
+.card h3{margin:0 0 5px;font-size:15.5px}
+.card p{margin:0;font-size:13.5px;color:#e3d3cf}
+.odds{font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:8px}
+.tags{margin-top:9px;display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:var(--panel2)}
+.tag.new{color:#2a0d0d;background:var(--accent2);border-color:var(--accent2);font-weight:700}
+.tag.prospect{color:#0c2a1c;background:var(--win);border-color:var(--win);font-weight:700}
+.wpanel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:8px}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+tr:hover td{background:var(--panel2)}
+.win{color:var(--win);font-weight:700} .nc{color:var(--nc);font-weight:700}
+.mono{font-family:var(--mono)}
+.radar{list-style:none;padding:0;margin:0}
+.radar li{padding:9px 0 9px 20px;border-bottom:1px solid var(--line);font-size:13.8px;position:relative;color:#ecdedb}
+.radar li:last-child{border-bottom:0}
+.radar li::before{content:"\25B8";position:absolute;left:2px;color:var(--accent)}
+.champ td:first-child{font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;color:var(--muted)}
+.champ td b{color:var(--ink)}
+footer{margin-top:32px;border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:12px}
+.src{word-break:break-word;line-height:1.9}
+.disc{margin-top:14px;font-size:11.5px;color:#94807b;font-style:italic}
+@media(max-width:720px){.grid{grid-template-columns:1fr}.title{font-size:23px}.meta{margin-left:0;width:100%}.cdbar .cd{margin-left:0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="mast">
+    <div>
+      <div class="brand">Daily Briefings</div>
+      <h1 class="title">&#9216; The <span class="ac">Octagon</span></h1>
+    </div>
+    <div class="meta">
+      <span class="pill live">Live</span>
+      <span class="pill" id="edition">Morning Edition</span>
+      <span class="pill" id="datestamp">July 4, 2026</span>
+      <span class="pill">Updated <span id="updated">—</span></span>
+    </div>
+  </div>
+
+  <div class="tldr"><b>Tale of the Tape</b> <span>Conor McGregor returns July 11 at UFC 329 as a significant underdog against a heavily favored Max Holloway, while interim heavyweight champ Ciryl Gane's unification challenge to Tom Aspinall headlines the post-White House title picture.</span></div>
+  <div class="freshline" id="freshline">Data as of — ET · briefings refresh every 30 minutes, 8 AM–6 PM ET</div>
+
+  <nav class="nav">
+    <a href="index.html">&#9733; Front Page</a>
+    <a href="cyber-briefing.html">&#9096; The Cyber Wire</a>
+    <a href="wallstreet-briefing.html">&#9650; The Closing Bell</a>
+    <a href="mma-briefing.html" class="active">&#9216; The Octagon</a>
+    <a href="archive.html">&#128452; Archive</a>
+  </nav>
+
+  <!-- NEXT CARD COUNTDOWN -->
+  <div class="cdbar">
+    <span class="k">Next Card</span>
+    <span class="ev">UFC 329 · McGregor vs. Holloway 2 · T-Mobile Arena, Las Vegas</span>
+    <span class="cd" id="ufccdn">—</span>
+  </div>
+
+  <!-- TOP STORY -->
+  <div class="slabel">Top Story</div>
+  <div class="panel lead">
+    <h2>McGregor returns at UFC 329 as a heavy underdog</h2>
+    <p>Conor McGregor makes his return from a multi-year layoff, headlining <strong>UFC 329 on July 11</strong> at T-Mobile Arena during International Fight Week — a welterweight rematch with <strong>Max Holloway</strong>, more than a decade after McGregor won their first meeting. Sportsbooks have nonetheless installed Holloway as a clear favorite &#8212; around <strong>-210</strong> with McGregor near <strong>+160</strong> as of July 2, in from an opening <strong>-400 / -298</strong> &#8212; making McGregor the longest-priced underdog of his UFC career.</p>
+    <p>Holloway has stayed active while McGregor was away from the Octagon, and the line has drifted from an opening -400 toward -210 as money pours in on McGregor. The card streams on Paramount+ with no pay-per-view; Paddy Pimblett vs. Benoit Saint-Denis is the lightweight co-main event, and the card also features Olympic gold medalist Gable Steveson's UFC debut. UFC 329 anchors International Fight Week. (Covers, OddsShark, Yahoo Sports)</p>
+  </div>
+
+  <!-- FIGHT WEEK -->
+  <div class="slabel">Fight Week — Upcoming Cards</div>
+  <div class="grid">
+    <div class="card">
+      <div class="dv">Sat Jul 11 · T-Mobile Arena, Las Vegas</div>
+      <h3>UFC 329 — McGregor vs. Holloway 2</h3>
+      <p>Welterweight main event; International Fight Week. Co-main: Pimblett vs. Saint-Denis. Streams on Paramount+, no PPV.</p>
+      <div class="odds">Odds: Holloway -210 / McGregor +160 (as of Jul 2; opened -400 / -298) — McGregor the longest-priced underdog of his UFC career (Covers/OddsShark/Yahoo)</div>
+    </div>
+    <div class="card">
+      <div class="dv">Sat Jul 18 · Paycom Center, Oklahoma City</div>
+      <h3>UFC Fight Night — Du Plessis vs. Usman</h3>
+      <p>The first card after International Fight Week, headlined by Dricus du Plessis vs. Usman. Streams on Paramount+. (ESPN schedule)</p>
+    </div>
+    <div class="card">
+      <div class="dv">Sat Jul 25 · UFC Fight Night</div>
+      <h3>UFC Fight Night — Ankalaev vs. Rountree Jr.</h3>
+      <p>Light-heavyweight headliner (UFC Fight Night 282) the week after International Fight Week. (ESPN schedule)</p>
+    </div>
+    <div class="card">
+      <div class="dv">Sat Aug 15 · Xfinity Mobile Arena, Philadelphia</div>
+      <h3>UFC 330 — Makhachev vs. Machado Garry</h3>
+      <p>Welterweight champ Islam Makhachev is slated to defend against contender Ian Machado Garry — his first title defense at 170 since winning the belt at UFC 322. (UFC.com)</p>
+    </div>
+  </div>
+
+  <!-- LAST EVENT -->
+  <div class="slabel">Last Event — UFC Baku: Fiziev vs. Torres (Jun 27)</div>
+  <div class="wpanel">
+    <table>
+      <thead><tr><th>Result</th><th>Bout</th><th>Method</th></tr></thead>
+      <tbody>
+        <tr><td class="win">Fiziev def.</td><td>Rafael Fiziev vs. Manuel Torres</td><td class="mono">KO (wheel kick &amp; punches) — R2, 0:15</td></tr>
+        <tr><td class="win">Yakhyaev def.</td><td>Abdul-Rakhman Yakhyaev vs. Julius Walker</td><td class="mono">KO (punch) — R1, 0:08</td></tr>
+        <tr><td class="win">Almabayev def.</td><td>Asu Almabayev vs. Charles Johnson</td><td class="mono">Submission &#8212; R3, 3:33</td></tr>
+        <tr><td class="win">Donchenko def.</td><td>Daniil Donchenko vs. Theodor Berggren</td><td class="mono">TKO (head kick &amp; punches) — R2, 1:35</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="odds" style="margin:10px 2px 0">Performance of the Night ($100,000 each): Rafael Fiziev, Asu Almabayev, Abdul-Rakhman Yakhyaev, Daniil Donchenko. Nine of the card's thirteen bouts ended in a finish; Yakhyaev needed just eight seconds to knock out Julius Walker. (UFC.com, Forbes)</div>
+
+  <!-- PROSPECT WATCH -->
+  <div class="slabel">Prospect Watch</div>
+  <div class="grid">
+    <div class="card">
+      <h3>Abdul-Rakhman Yakhyaev</h3>
+      <p>Lit up UFC Baku with an eight-second knockout of Julius Walker and banked a $100K performance bonus. (Forbes)</p>
+      <div class="tags"><span class="tag prospect">Prospect</span><span class="tag">Light Heavyweight</span></div>
+    </div>
+    <div class="card">
+      <h3>Quillan Salkilld</h3>
+      <p>Undefeated Australian lightweight, now 5-0 in the UFC, whose most recent win was a first-round TKO of veteran Beneil Dariush at UFC Perth (May 2). (UFC records)</p>
+      <div class="tags"><span class="tag prospect">Prospect</span><span class="tag">Lightweight</span></div>
+    </div>
+    <div class="card">
+      <h3>Ateba Gautier</h3>
+      <p>Cameroonian middleweight at 11-1 and a perfect 2-0 in 2026 — a decision over Andrey Pulyaev (UFC 324) and a second-round TKO of Ozzy Diaz (UFC 328). (UFC records)</p>
+      <div class="tags"><span class="tag prospect">Prospect</span><span class="tag">Middleweight</span></div>
+    </div>
+    <div class="card">
+      <h3>Daniil Donchenko</h3>
+      <p>Added another highlight-reel finish in Baku — a second-round head-kick KO of Theodor Berggren — and a performance bonus to match. (UFC.com)</p>
+      <div class="tags"><span class="tag prospect">Prospect</span><span class="tag">Bonus winner</span></div>
+    </div>
+  </div>
+
+  <!-- AROUND THE SPORT -->
+  <div class="slabel">Around the Sport</div>
+  <div class="panel">
+    <ul class="radar">
+      <li>The <strong>UFC 329</strong> prelims feature former middleweight champ <strong>Robert Whittaker</strong> against light heavyweight <strong>Nikita Krylov</strong>, and Olympic wrestling gold medalist <strong>Gable Steveson</strong>'s UFC debut against Elisha Ellison (moved from the main card). (Yahoo Sports, MMA Mania)</li>
+      <li>Undisputed heavyweight champ <strong>Tom Aspinall accepted interim champ Ciryl Gane's unification challenge</strong> — &#8220;I'll be there.&#8221; (ESPN)</li>
+      <li>Ilia Topuria congratulated Justin Gaethje after losing the lightweight title at UFC Freedom 250, saying &#8220;no excuses.&#8221; (ESPN)</li>
+      <li>The FBI arrested suspects who allegedly planned attacks at the White House UFC event; a mother's tip led investigators to them. (ESPN)</li>
+      <li>Dana White called the White House card &#8220;great&#8221; but insisted the UFC will &#8220;never again&#8221; stage an event there. (ESPN)</li>
+      <li>ESPN's updated divisional rankings peg new champs Gaethje and Gane as the sport's biggest risers. (ESPN)</li>
+    </ul>
+  </div>
+
+  <!-- RANKINGS & BUSINESS -->
+  <div class="slabel">Rankings &amp; Business</div>
+  <div class="grid">
+    <div class="card">
+      <h3>Rankings movement</h3>
+      <p>Justin Gaethje (new lightweight champ) and Ciryl Gane (interim heavyweight champ) headline ESPN's latest pound-for-pound and divisional shuffles following UFC Freedom 250. (ESPN)</p>
+    </div>
+    <div class="card">
+      <h3>Business &amp; broadcast</h3>
+      <p>UFC 329 anchors International Fight Week and streams on Paramount+, part of the promotion's 2026 broadcast slate; the upcoming July and August cards run on the same platform. (Paramount+ schedule)</p>
+    </div>
+  </div>
+
+  <!-- CHAMPIONS BOARD -->
+  <div class="slabel">Champions Board <span style="color:var(--muted);font-size:10px">· verified vs ESPN, Jul 4</span></div>
+  <div class="wpanel">
+    <table class="champ">
+      <thead><tr><th>Division</th><th>Champion</th><th>Since / Note</th></tr></thead>
+      <tbody>
+        <tr><td>Heavyweight</td><td><b>Tom Aspinall</b></td><td>since Jun 21, 2025 · interim: <b>Ciryl Gane</b> (KO2 Pereira, Freedom 250)</td></tr>
+        <tr><td>Light Heavyweight</td><td><b>Carlos Ulberg</b></td><td>KO1 Procházka, UFC 327 (Apr 11, 2026)</td></tr>
+        <tr><td>Middleweight</td><td><b>Sean Strickland</b></td><td>SD over Chimaev, UFC 328 (May 9, 2026)</td></tr>
+        <tr><td>Welterweight</td><td><b>Islam Makhachev</b></td><td>UD over Della Maddalena, UFC 322 (Nov 15, 2025)</td></tr>
+        <tr><td>Lightweight</td><td><b>Justin Gaethje</b></td><td>TKO4 Topuria, UFC Freedom 250 (Jun 14, 2026)</td></tr>
+        <tr><td>Featherweight</td><td><b>Alexander Volkanovski</b></td><td>UD over Diego Lopes, UFC 314 · 1 defense</td></tr>
+        <tr><td>Bantamweight</td><td><b>Petr Yan</b></td><td>UD over Dvalishvili, UFC 323 (Dec 6, 2025)</td></tr>
+        <tr><td>Flyweight</td><td><b>Joshua Van</b></td><td>champ since UFC 323 · 1 defense (TKO5 Taira, UFC 328)</td></tr>
+        <tr><td>Women's Flyweight</td><td><b>Valentina Shevchenko</b></td><td>UD over Grasso, UFC 306 · 2 defenses</td></tr>
+        <tr><td>Women's Bantamweight</td><td><b>Kayla Harrison</b></td><td>Sub2 Peña, UFC 316 · 0 defenses (Nunes bout scrapped)</td></tr>
+        <tr><td>Women's Strawweight</td><td><b>Mackenzie Dern</b></td><td>UD over Jandiroba, UFC 321 (Oct 25, 2025)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <div class="src"><strong>Sources (fetched July 4, 2026):</strong>
+      ESPN (<a href="https://www.espn.com/mma/story/_/id/14947566/current-all-ufc-champions">Current UFC champions</a>) ·
+      ESPN (<a href="https://www.espn.com/ufc/story/_/id/49075259/ufc-heavyweight-champ-tom-aspinall-accepts-ciryl-gane-challenge-there">Aspinall accepts Gane</a>) ·
+      ESPN (<a href="https://www.espn.com/mma/story/_/id/21807736/mma-divisional-rankings-ufc-pfl-rankings-weight-class">divisional rankings</a>) ·
+      Covers (<a href="https://www.covers.com/ufc/holloway-vs-mcgregor-2-odds-july-11-2026">UFC 329 odds</a>) ·
+      OddsShark (<a href="https://www.oddsshark.com/ufc/ufc-329-holloway-vs-mcgregor-odds-picks">McGregor vs Holloway 2</a>) ·
+      UFC.com (<a href="https://www.ufc.com/news/bonus-coverage-ufc-fight-night-baku-2026">UFC Baku bonuses</a>) ·
+      Forbes (<a href="https://www.forbes.com/sites/brianmazique/2026/06/27/ufc-baku-results-9-crazy-finishes-4-performance-bonuses-and-highlights/">Baku results</a>) ·
+      CBS Sports (<a href="https://www.cbssports.com/ufc/news/2026-ufc-event-schedule-conor-mcgregor-return-max-holloway/">2026 schedule; UFC 330</a>) ·
+      Paramount+ (<a href="https://www.paramountplus.com/sneak-peak/ufc-schedule-2026/">2026 UFC schedule; debuts</a>) ·
+      ESPN (<a href="https://www.espn.com/mma/schedule/_/league/ufc">UFC schedule — Jul 18 &amp; Jul 25 cards</a>) ·
+      MMA Mania (<a href="https://www.mmamania.com/ufc-fight-cards/444863/ufc-329-fight-card-start-time-date-location-conor-mcgregor-max-holloway-2">UFC 329 full card — Whittaker, Steveson on prelims</a>) ·
+      Yahoo Sports (<a href="https://sports.yahoo.com/mma/betting/article/conor-mcgregor-vs-max-holloway-fight-odds-mcgregor-is-huge-underdog-in-ufc-329-return-bout-165254239.html">McGregor huge underdog</a>)
+    </div>
+    <div class="disc">The Octagon is an automated MMA digest compiled from public reporting. Cards, bouts, odds and start times are subject to change — confirm with official UFC channels before making plans.</div>
+  </footer>
+
+</div>
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';
+// UFC 329 countdown -> Jul 11 2026 10:00 PM ET (EDT, UTC-4)
+var tgt=new Date('2026-07-11T22:00:00-04:00');var el=document.getElementById('ufccdn');function tick(){var d=tgt-new Date();if(d<=0){el.textContent='Fight week — live/completed';return;}var days=Math.floor(d/86400000),hrs=Math.floor(d%86400000/3600000),mins=Math.floor(d%3600000/60000);el.textContent=days+'d '+hrs+'h '+mins+'m';}tick();setInterval(tick,60000);
+}catch(e){}})();</script>
+</body>
+</html>
