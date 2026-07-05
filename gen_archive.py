@@ -1,111 +1,79 @@
-import os,re,html
-from collections import defaultdict
-_BASE=os.path.dirname(os.path.abspath(__file__))
-ARCH=os.path.join(_BASE,"archive")
-OUT=os.path.join(_BASE,"archive.html")
-SEC={"cyber":("The Cyber Wire","cy"),"wallstreet":("The Closing Bell","mk"),"mma":("The Octagon","mm")}
-rx=re.compile(r'^(cyber|wallstreet|mma)-(\d{4})-(\d{2})-(\d{2})-(\d{4})\.html$')
-data=defaultdict(lambda:defaultdict(dict))
-for f in os.listdir(ARCH):
-    m=rx.match(f)
-    if not m:continue
-    sec,y,mo,d,hm=m.groups()
-    data[f"{y}-{mo}-{d}"][hm][sec]=f
-def t12(hm):
-    h=int(hm[:2]);mi=hm[2:];ap="AM" if h<12 else "PM";h12=h%12 or 12
+import os, re, glob, html
+from datetime import datetime
+root="."
+files=glob.glob(os.path.join(root,"archive","*.html"))
+pat=re.compile(r'^(cyber|wallstreet|mma)-(\d{4})-(\d{2})-(\d{2})-(\d{2})(\d{2})\.html$')
+secmap={"cyber":("The Cyber Wire","#22d3a8"),"wallstreet":("The Closing Bell","#e8c766"),"mma":("The Octagon","#ff6a4d")}
+data={}  # date -> hhmm -> {section:filename}
+for f in files:
+    b=os.path.basename(f); m=pat.match(b)
+    if not m: continue
+    sec,Y,Mo,D2,H,Mi=m.groups()
+    date=f"{Y}-{Mo}-{D2}"; hhmm=H+Mi
+    data.setdefault(date,{}).setdefault(hhmm,{})[sec]=b
+def fmt_time(hhmm):
+    h=int(hhmm[:2]); mi=hhmm[2:]; ap="AM" if h<12 else "PM"; h12=h%12 or 12
     return f"{h12}:{mi} {ap} ET"
-def dhead(ds):
-    import datetime
-    dt=datetime.date(*map(int,ds.split("-")))
-    return dt.strftime("%A, %B %-d, %Y")
+def fmt_date(d):
+    return datetime.strptime(d,"%Y-%m-%d").strftime("%A, %B %-d, %Y")
 dates=sorted(data.keys(),reverse=True)
 rows=[]
-for ds in dates:
-    rows.append(f'<div class="day"><div class="dh">{dhead(ds)}</div><div class="ed">')
-    for hm in sorted(data[ds].keys(),reverse=True):
-        secs=data[ds][hm]
+for d in dates:
+    rows.append(f'<div class="dayhead">{fmt_date(d)}</div>')
+    rows.append('<div class="daypanel">')
+    for hhmm in sorted(data[d].keys(),reverse=True):
+        secs=data[d][hhmm]
         links=[]
-        for key in ("cyber","wallstreet","mma"):
-            if key in secs:
-                nm,cl=SEC[key]
-                links.append(f'<a class="s {cl}" href="archive/{html.escape(secs[key])}">{nm}</a>')
+        for sec in ("cyber","wallstreet","mma"):
+            if sec in secs:
+                nm,col=secmap[sec]
+                links.append(f'<a class="slink" style="color:{col};border-color:{col}55" href="archive/{secs[sec]}">{nm}</a>')
             else:
-                links.append('<span class="s off">—</span>')
-        rows.append(f'<div class="row"><span class="tm">{t12(hm)}</span><div class="lk">{"".join(links)}</div></div>')
-    rows.append('</div></div>')
+                nm,col=secmap[sec]
+                links.append(f'<span class="slink off">{nm}</span>')
+        rows.append(f'<div class="trow"><span class="ttime">{fmt_time(hhmm)}</span><span class="tlinks">{"".join(links)}</span></div>')
+    rows.append('</div>')
 body="\n".join(rows)
 total=sum(len(v) for v in data.values())
-doc=f'''<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Daily Briefings — Archive</title>
+tpl=f'''<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Archive — Daily Briefings</title>
 <style>
-:root{{--bg:#0a0d13;--panel:#12161f;--panel2:#151b26;--line:#232a36;--text:#e6e9ef;--muted:#8a94a6;
---mono:'SF Mono',ui-monospace,'Cascadia Code',Menlo,Consolas,monospace;--teal:#22d3a8;--gold:#e8c766;--orange:#ff8a5c;--up:#3ad07f;}}
+:root{{--bg:#0a0b0d;--panel:#14161a;--line:#252a31;--text:#e9edf2;--muted:#8b95a3;--mono:'SF Mono',ui-monospace,Menlo,Consolas,monospace}}
 *{{box-sizing:border-box}}
-body{{margin:0;background:radial-gradient(1200px 600px at 50% -200px,#141a26 0,var(--bg) 60%);color:var(--text);
-font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.55;padding:26px 18px 60px}}
-.wrap{{max-width:1080px;margin:0 auto}}
-.masthead{{text-align:center;margin-bottom:14px}}
-.masthead h1{{font-size:40px;letter-spacing:.02em;margin:0 0 4px;font-weight:800}}
-.masthead .sub{{color:var(--muted);font-family:var(--mono);font-size:12px;letter-spacing:.26em;text-transform:uppercase}}
-.meta{{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0 2px}}
-.pill{{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-family:var(--mono);
-font-size:11px;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}}
-.pill.live{{color:var(--up);border-color:#1f5d3f}}
-.dot{{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--up);margin-right:5px;animation:pulse 1.8s infinite}}
-@keyframes pulse{{0%{{box-shadow:0 0 0 0 rgba(58,208,127,.55)}}70%{{box-shadow:0 0 0 7px rgba(58,208,127,0)}}100%{{box-shadow:0 0 0 0 rgba(58,208,127,0)}}}}
-.freshline{{text-align:center;color:var(--muted);font-family:var(--mono);font-size:11px;letter-spacing:.04em;margin:10px 0 18px}}
-nav.tabs{{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0 0 26px}}
-nav.tabs a{{display:flex;align-items:center;gap:7px;text-decoration:none;color:var(--muted);background:var(--panel);
-border:1px solid var(--line);border-radius:10px;padding:9px 14px;font-size:13.5px;font-weight:600;transition:.15s}}
-nav.tabs a:hover{{color:var(--text);border-color:#313a4a;transform:translateY(-1px)}}
-nav.tabs a.active{{color:#fff;border-color:#3a4557;background:linear-gradient(180deg,#1a212e,#12161f)}}
-.intro{{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:10px;
-padding:11px 15px;margin:0 0 20px;font-size:14px;color:#d3d8e2}}
-.day{{margin-bottom:22px}}
-.dh{{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);
-margin:0 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line)}}
-.ed{{display:flex;flex-direction:column;gap:7px}}
-.row{{display:flex;flex-wrap:wrap;align-items:center;gap:12px;background:var(--panel);border:1px solid var(--line);
-border-radius:11px;padding:9px 14px}}
-.tm{{font-family:var(--mono);font-size:12px;color:var(--muted);min-width:78px}}
-.lk{{display:flex;flex-wrap:wrap;gap:8px}}
-.s{{text-decoration:none;font-size:12.5px;font-weight:600;border:1px solid var(--line);border-radius:8px;padding:5px 11px;transition:.15s}}
-.s:hover{{transform:translateY(-1px)}}
-.s.cy{{color:var(--teal);border-color:#1d4a44}}
-.s.mk{{color:var(--gold);border-color:#4a4020}}
-.s.mm{{color:var(--orange);border-color:#4a2c22}}
-.s.off{{color:#39424f;border-style:dashed;pointer-events:none}}
-footer{{max-width:1080px;margin:30px auto 0;color:var(--muted);font-size:12px;text-align:center;line-height:1.7}}
-</style>
-</head>
-<body>
-<div class="wrap">
-  <div class="masthead">
-    <h1>Daily Briefings — Archive</h1>
-    <div class="sub">Point-in-time editions</div>
-    <div class="meta">
-      <span class="pill live"><span class="dot"></span> ARCHIVE</span>
-      <span class="pill">{total} editions</span>
-      <span class="pill">{len(dates)} days</span>
-    </div>
-    <div class="freshline">Snapshots are captured every 30 minutes, 8 AM–6 PM ET · each is frozen at its timestamp</div>
-  </div>
-  <nav class="tabs">
-    <a href="index.html">★ <span>Front Page</span></a>
-    <a href="cyber-briefing.html">⛨ <span>The Cyber Wire</span></a>
-    <a href="wallstreet-briefing.html">▲ <span>The Closing Bell</span></a>
-    <a href="mma-briefing.html">⊘ <span>The Octagon</span></a>
-    <a href="archive.html" class="active">🗄 <span>Archive</span></a>
-  </nav>
-  <div class="intro">Each row is one refresh. Links open that edition exactly as it was published — a point-in-time snapshot, not live data. Live widgets are omitted from archived pages.</div>
-  {body}
-  <footer>Daily Briefings aggregates public reporting for information only. Archived editions are historical snapshots and may contain figures that were later updated.</footer>
-</div>
-</body>
-</html>'''
-open(OUT,"w",encoding="utf-8").write(doc)
-print("archive.html written:",len(doc),"bytes;",total,"editions across",len(dates),"days")
+body{{margin:0;background:radial-gradient(1200px 520px at 50% -240px,#161a20 0,var(--bg) 60%);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.55}}
+.wrap{{max-width:1000px;margin:0 auto;padding:24px 18px 60px}}
+.masthead{{text-align:center;padding:10px 0 2px}}
+.masthead h1{{font-family:Georgia,serif;font-size:34px;margin:0}}
+.masthead .sub{{color:var(--muted);font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;margin-top:8px}}
+nav.tabs{{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:16px 0 22px}}
+.tab{{font-family:var(--mono);font-size:12.5px;text-decoration:none;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:9px 13px;transition:.15s}}
+.tab:hover{{color:var(--text);transform:translateY(-1px)}}
+.tab.active{{color:var(--text);border-color:#3a424d}}
+.note{{color:var(--muted);font-size:12px;font-style:italic;text-align:center;margin-bottom:20px}}
+.dayhead{{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:22px 0 8px}}
+.daypanel{{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}}
+.trow{{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:11px 15px;border-bottom:1px solid var(--line)}}
+.trow:last-child{{border-bottom:0}}
+.ttime{{font-family:var(--mono);font-size:12.5px;color:var(--text);min-width:92px}}
+.tlinks{{display:flex;flex-wrap:wrap;gap:8px}}
+.slink{{font-family:var(--mono);font-size:11.5px;text-decoration:none;border:1px solid var(--line);border-radius:8px;padding:4px 9px;transition:.15s}}
+.slink:hover{{transform:translateY(-1px)}}
+.slink.off{{color:#4d545e;border-color:var(--line);opacity:.5}}
+.foot{{margin-top:28px;color:var(--muted);font-size:12px;text-align:center}}
+</style></head>
+<body><div class="wrap">
+<div class="masthead"><h1>🗄 Archive</h1><div class="sub">Point-in-time briefing snapshots</div></div>
+<nav class="tabs">
+<a href="index.html" class="tab">★ Front Page</a>
+<a href="cyber-briefing.html" class="tab">⛨ The Cyber Wire</a>
+<a href="wallstreet-briefing.html" class="tab">▲ The Closing Bell</a>
+<a href="mma-briefing.html" class="tab">⊘ The Octagon</a>
+<a href="archive.html" class="tab active">🗄 Archive</a>
+</nav>
+<div class="note">Each snapshot is a point-in-time capture of a briefing as it was published; live widgets and countdowns are not preserved. {total} editions across {len(dates)} days.</div>
+{body}
+<div class="foot">Snapshots are retained for 21 days.</div>
+</div></body></html>'''
+open(os.path.join(root,"archive.html"),"w").write(tpl)
+print("archive.html written:",os.path.getsize(os.path.join(root,"archive.html")),"bytes;",total,"editions across",len(dates),"days")

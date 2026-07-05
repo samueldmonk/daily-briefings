@@ -6,59 +6,53 @@
 <title>Daily Briefings — Front Page</title>
 <style>
 :root{
-  --bg:#0a0d12; --panel:#141922; --panel2:#10151d; --line:#232c39;
-  --text:#e7ebf2; --muted:#8a94a6;
+  --bg:#0a0b0d; --panel:#14161a; --panel2:#101216; --line:#252a31;
+  --text:#e9edf2; --muted:#8b95a3;
   --mono:'SF Mono',ui-monospace,'Cascadia Code',Menlo,Consolas,monospace;
-  --teal:#22d3a8; --cyan:#36c6ff; --gold:#caa64a; --gold2:#e8c766;
-  --red:#e84545; --orange:#ff8a5c; --front:#8ab4f8;
-  --up:#22c55e; --down:#ef4444;
+  --teal:#22d3a8; --gold:#e8c766; --red:#ff6a4d;
 }
 *{box-sizing:border-box}
-body{margin:0;background:radial-gradient(1200px 600px at 50% -200px,#121826 0,var(--bg) 60%);color:var(--text);
-  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.55;
-  -webkit-font-smoothing:antialiased}
-.wrap{max-width:1080px;margin:0 auto;padding:26px 20px 60px}
-.masthead{text-align:center;padding:18px 0 8px}
-.masthead h1{font-family:Georgia,'Times New Roman',serif;font-size:44px;letter-spacing:.5px;margin:0;
-  background:linear-gradient(90deg,var(--teal),var(--gold2),var(--orange));-webkit-background-clip:text;background-clip:text;color:transparent}
-.masthead .sub{color:var(--muted);font-family:var(--mono);font-size:12px;letter-spacing:.28em;text-transform:uppercase;margin-top:8px}
-.meta{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0 6px}
-.pill{font-family:var(--mono);font-size:11px;letter-spacing:.09em;color:var(--muted);background:var(--panel);
-  border:1px solid var(--line);border-radius:999px;padding:5px 11px;text-transform:uppercase}
-.pill.live{color:#0a0d12;background:var(--up);border-color:transparent;font-weight:700;display:inline-flex;align-items:center;gap:6px}
-.pill.live .dot{width:7px;height:7px;border-radius:50%;background:#0a0d12;animation:pulse 1.6s infinite}
+body{margin:0;background:radial-gradient(1200px 520px at 50% -240px,#161a20 0,var(--bg) 60%);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin:0 auto;padding:24px 18px 60px}
+.masthead{text-align:center;padding:10px 0 2px}
+.masthead h1{font-family:Georgia,'Times New Roman',serif;font-size:40px;margin:0;letter-spacing:.5px}
+.masthead h1 .a{color:var(--teal)} .masthead h1 .b{color:var(--gold)} .masthead h1 .c{color:var(--red)}
+.masthead .sub{color:var(--muted);font-family:var(--mono);font-size:11px;letter-spacing:.26em;text-transform:uppercase;margin-top:8px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0 4px}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.09em;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:5px 11px;text-transform:uppercase}
+.pill.live{color:#0a0b0d;background:#e9edf2;border-color:transparent;font-weight:700;display:inline-flex;align-items:center;gap:6px}
+.pill.live .dot{width:7px;height:7px;border-radius:50%;background:#0a0b0d;animation:pulse 1.6s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-.freshline{text-align:center;color:var(--muted);font-family:var(--mono);font-size:11.5px;margin:2px 0 14px}
-nav.tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:12px 0 26px}
-.tab{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;text-decoration:none;color:var(--muted);
-  background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:9px 14px;transition:.15s}
+.freshline{color:var(--muted);font-family:var(--mono);font-size:11.5px;margin:10px 2px 4px;text-align:center}
+nav.tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:16px 0 24px}
+.tab{font-family:var(--mono);font-size:12.5px;text-decoration:none;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:9px 13px;transition:.15s}
 .tab:hover{color:var(--text);transform:translateY(-1px)}
-.tab.active{color:var(--front);border-color:var(--front)}
+.tab.active{color:var(--text);border-color:#3a424d}
 .cards{display:grid;grid-template-columns:1fr;gap:16px}
 @media(min-width:820px){.cards{grid-template-columns:1fr 1fr 1fr}}
-.card{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:16px;
-  padding:20px 18px;text-decoration:none;color:var(--text);display:flex;flex-direction:column;gap:11px;transition:.18s;position:relative;overflow:hidden}
-.card:hover{transform:translateY(-4px);border-color:var(--ac)}
-.card:before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--ac)}
-.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ac);display:flex;align-items:center;gap:8px}
-.card h2{margin:0;font-size:21px}
-.card.markets h2{font-family:Georgia,serif}
-.card .lede{font-size:14px;color:#cfd6e2;margin:0}
-.card .go{margin-top:auto;font-family:var(--mono);font-size:12px;color:var(--ac);letter-spacing:.04em}
-.sec{--ac:var(--teal)} .markets{--ac:var(--gold2)} .octagon{--ac:var(--orange)}
-.foot{margin-top:34px;color:var(--muted);font-size:12px;text-align:center;line-height:1.7}
-.foot a{color:var(--muted)}
-.disc{margin-top:12px;font-size:11px;color:#66707f;text-align:center;font-style:italic}
+.bcard{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px;transition:.16s;text-decoration:none;color:inherit}
+.bcard:hover{transform:translateY(-4px)}
+.bcard .kick{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+.bcard h2{margin:0 0 6px;font-size:22px}
+.bcard .col{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.bcard p{margin:0 0 18px;font-size:14px;color:#cfd6df;flex:1}
+.bcard .go{font-family:var(--mono);font-size:12.5px;font-weight:700}
+.sec{border-top:3px solid var(--teal)} .sec .kick,.sec .go{color:var(--teal)}
+.mkt{border-top:3px solid var(--gold)} .mkt .kick,.mkt .go{color:var(--gold)} .mkt h2{font-family:Georgia,serif}
+.mma{border-top:3px solid var(--red)} .mma .kick,.mma .go{color:var(--red)}
+.foot{margin-top:30px;color:var(--muted);font-size:12px;line-height:1.7;text-align:center}
+.disc{margin-top:10px;font-size:11px;color:#5f6773;font-style:italic}
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="masthead">
-    <h1>Daily Briefings</h1>
-    <div class="sub">Cyber · Markets · MMA — verified live each run</div>
+    <h1><span class="a">Daily</span> <span class="b">Brief</span><span class="c">ings</span></h1>
+    <div class="sub">Security · Markets · MMA — refreshed through the day</div>
     <div class="meta">
       <span class="pill live"><span class="dot"></span> LIVE</span>
-      <span class="pill" id="edition">Morning Edition</span>
+      <span class="pill" id="edition">Afternoon Edition</span>
       <span class="pill" id="datestamp">—</span>
       <span class="pill">Updated <span id="updated">—</span></span>
     </div>
@@ -74,32 +68,34 @@ nav.tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:12px 
   </nav>
 
   <div class="cards">
-    <a class="card sec" href="cyber-briefing.html">
-      <div class="kicker">⛨ The Cyber Wire · The Wire</div>
+    <a class="bcard sec" href="cyber-briefing.html">
+      <div class="kick">⛨ The Cyber Wire · The Wire</div>
       <h2>Security</h2>
-      <p class="lede">Threat level <b>HIGH</b>: SimpleHelp's CVSS&nbsp;10.0 flaw (CVE-2026-48558) is under active attack with a now-overdue federal deadline, while the FortiBleed campaign ties 430,000 targeted FortiGate firewalls and 110M+ stolen credentials to INC and Lynx ransomware.</p>
-      <span class="go">Read the briefing →</span>
+      <div class="col">Threat Level: High</div>
+      <p>The FortiBleed campaign has been tied directly to INC and Lynx ransomware — the first confirmed pipeline from mass FortiGate compromise to encryption — while an actively exploited SharePoint RCE (CVE-2026-45659) sits past its federal patch deadline.</p>
+      <div class="go">Read the briefing →</div>
     </a>
 
-    <a class="card markets" href="wallstreet-briefing.html">
-      <div class="kicker">▲ The Closing Bell · The Tape</div>
+    <a class="bcard mkt" href="wallstreet-briefing.html">
+      <div class="kick">▲ The Closing Bell · The Tape</div>
       <h2>Markets</h2>
-      <p class="lede">Markets are shut for the long Fourth of July weekend, so Thursday's finish stands as the last word — a record Dow close of 52,900 (+1.14%) even as soft June jobs and a tech slide left the S&amp;P&nbsp;500 flat and the Nasdaq down ~0.8%. Trading resumes Monday.</p>
-      <span class="go">Read the briefing →</span>
+      <div class="col">Closed · Reopens Monday</div>
+      <p>Markets are shut for the Independence Day weekend, so Thursday's record Dow close (52,900.07, +1.14%) stands as the last word — beside a flat S&amp;P 500 and a ~0.8% Nasdaq slide after a soft June jobs report. All three still rose on the week.</p>
+      <div class="go">Read the briefing →</div>
     </a>
 
-    <a class="card octagon" href="mma-briefing.html">
-      <div class="kicker">⊘ The Octagon · Tale of the Tape</div>
+    <a class="bcard mma" href="mma-briefing.html">
+      <div class="kick">⊘ The Octagon · Tale of the Tape</div>
       <h2>MMA</h2>
-      <p class="lede">Conor McGregor returns July&nbsp;11 at UFC&nbsp;329 in Las Vegas — his first fight since 2021 — as a +190 underdog to Max Holloway, headlining International Fight Week with Justin Gaethje newly crowned lightweight champion.</p>
-      <span class="go">Read the briefing →</span>
+      <div class="col">UFC 329 · July 11</div>
+      <p>Fight week looms: Conor McGregor returns at UFC 329 on July 11 to face Max Holloway in a welterweight main event, with Holloway favored but the odds tightening on heavy McGregor money.</p>
+      <div class="go">Read the briefing →</div>
     </a>
   </div>
 
   <div class="foot">
-    Front page of the Daily Briefings. Each briefing is rebuilt from live web search and fact-checked every run.<br>
-    Sources on each briefing page · Published to samueldmonk.github.io/daily-briefings
-    <div class="disc">Information only. Not investment advice. Sports odds and cards are subject to change. Security guidance is general and not a substitute for your own patch process.</div>
+    Three briefings, fact-checked and rebuilt from live web search every 30 minutes, 8 AM–6 PM ET.
+    <div class="disc">For information and awareness only — not investment, security, or betting advice.</div>
   </div>
 </div>
 
