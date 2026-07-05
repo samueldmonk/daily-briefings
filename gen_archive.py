@@ -1,7 +1,7 @@
 import os,re,html
 from collections import defaultdict
-ARCH="/tmp/db_1783258574/archive"
-OUT="/tmp/db_1783258574/archive.html"
+ARCH="/tmp/db_1783267558/archive"
+OUT="/tmp/db_1783267558/archive.html"
 SEC={"cyber":("The Cyber Wire","cy"),"wallstreet":("The Closing Bell","mk"),"mma":("The Octagon","mm")}
 rx=re.compile(r'^(cyber|wallstreet|mma)-(\d{4})-(\d{2})-(\d{2})-(\d{4})\.html$')
 data=defaultdict(lambda:defaultdict(dict))
