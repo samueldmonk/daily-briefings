@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Closing Bell — Daily Markets Briefing</title>
+<style>
+:root{
+  --bg:#0b0a07; --panel:#161309; --panel2:#12100a; --line:#2c2513;
+  --text:#efe9dc; --muted:#9a917c;
+  --mono:'SF Mono',ui-monospace,'Cascadia Code',Menlo,Consolas,monospace;
+  --gold:#caa64a; --gold2:#e8c766; --ac:#caa64a;
+  --up:#3fbf6a; --down:#e5544b;
+}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(1100px 500px at 50% -220px,#1a1608 0,var(--bg) 60%);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin:0 auto;padding:24px 18px 60px}
+.masthead{text-align:center;padding:8px 0}
+.masthead h1{font-family:Georgia,'Times New Roman',serif;font-size:36px;margin:0;letter-spacing:.5px;color:var(--gold2)}
+.masthead .sub{color:var(--muted);font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;margin-top:6px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:13px 0 4px}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.09em;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:5px 11px;text-transform:uppercase}
+.pill.live{color:#12100a;background:var(--gold2);border-color:transparent;font-weight:700;display:inline-flex;align-items:center;gap:6px}
+.pill.live .dot{width:7px;height:7px;border-radius:50%;background:#12100a;animation:pulse 1.6s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:10px;padding:11px 15px;margin:12px 0 2px;font-size:14.5px;line-height:1.5}
+.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-right:9px}
+.freshline{color:var(--muted);font-family:var(--mono);font-size:11.5px;margin:8px 2px 4px}
+nav.tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0 20px}
+.tab{font-family:var(--mono);font-size:12.5px;text-decoration:none;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:9px 13px;transition:.15s}
+.tab:hover{color:var(--text);transform:translateY(-1px)}
+.tab.active{color:var(--gold2);border-color:var(--gold)}
+.livebar{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 8px 4px;margin-bottom:18px}
+.livebar-label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--up);display:flex;align-items:center;gap:8px;padding:4px 8px 8px}
+.livebar-label .dot{width:7px;height:7px;border-radius:50%;background:var(--up);animation:pulse 1.6s infinite}
+.tickers{display:grid;grid-template-columns:1fr;gap:12px;margin-bottom:8px}
+@media(min-width:720px){.tickers{grid-template-columns:1fr 1fr 1fr}}
+.ticker{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:6px}
+.note{color:var(--muted);font-size:11.5px;font-style:italic;margin:2px 2px 20px}
+section{margin:26px 0}
+.lbl{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:11px;display:flex;align-items:center;gap:9px}
+.lbl:after{content:"";flex:1;height:1px;background:var(--line)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px}
+.lead h2{font-family:Georgia,serif;margin:0 0 10px;font-size:25px;line-height:1.25}
+.lead p{margin:0 0 8px;color:#e0d8c6;font-size:14.5px}
+.grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:720px){.grid{grid-template-columns:1fr 1fr}}
+.mv{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:14px 15px;transition:.15s}
+.mv:hover{transform:translateY(-3px);border-color:var(--gold)}
+.mv .row{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.mv h3{margin:0;font-size:15.5px}
+.mv .chg{font-family:var(--mono);font-weight:700;font-size:15px}
+.mv p{margin:7px 0 0;color:#c9c1b0;font-size:13px}
+.up{color:var(--up)} .down{color:var(--down)}
+.tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:6px;background:var(--gold2);color:#12100a;font-weight:700;margin-left:7px;vertical-align:middle}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+td.num{font-family:var(--mono);text-align:right}
+.widget-panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:8px}
+ul.radar{list-style:none;padding:0;margin:0}
+ul.radar li{padding:10px 0 10px 20px;border-bottom:1px solid var(--line);font-size:14px;position:relative}
+ul.radar li:last-child{border-bottom:0}
+ul.radar li:before{content:"▸";position:absolute;left:0;color:var(--gold)}
+.foot{margin-top:30px;color:var(--muted);font-size:12px;line-height:1.8}
+.foot a{color:#c9a94a;word-break:break-all}
+.disc{margin-top:12px;font-size:11px;color:#6b6455;font-style:italic}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <h1>The Closing Bell</h1>
+    <div class="sub">Your daily Wall Street briefing</div>
+    <div class="meta">
+      <span class="pill live"><span class="dot"></span> LIVE</span>
+      <span class="pill" id="edition">Afternoon Edition</span>
+      <span class="pill" id="datestamp">—</span>
+      <span class="pill">Updated <span id="updated">—</span></span>
+    </div>
+  </div>
+
+  <div class="tldr"><b>The Tape</b> <span>Stocks closed higher Thursday as a semiconductor surge overpowered renewed U.S.–Iran jitters: the Nasdaq Composite rose 1.30% to 26,206.89, the S&amp;P 500 gained 0.81% to 7,543.64 and the Dow added 139 points (+0.27%) to 52,487.41, with Micron up about 7.5% on a new $3B U.S. investment while oil prices slipped after a two-session surge.</span></div>
+  <div class="freshline" id="freshline">Data as of — ET · briefings refresh every 30 minutes, 8 AM–6 PM ET</div>
+
+  <nav class="tabs">
+    <a href="index.html" class="tab">★ Front Page</a>
+    <a href="cyber-briefing.html" class="tab">⛨ The Cyber Wire</a>
+    <a href="wallstreet-briefing.html" class="tab active">▲ The Closing Bell</a>
+    <a href="mma-briefing.html" class="tab">⊘ The Octagon</a>
+    <a href="archive.html" class="tab">🗄 Archive</a>
+  </nav>
+
+  <!-- BLOCK A: ticker tape -->
+  <div class="livebar">
+    <div class="livebar-label"><span class="dot"></span> LIVE QUOTES</div>
+    <script src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>{"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},{"proName":"FOREXCOM:DJI","title":"Dow 30"},{"proName":"NASDAQ:MU","title":"Micron"},{"proName":"NASDAQ:AMD","title":"AMD"},{"proName":"NASDAQ:SNDK","title":"Sandisk"},{"proName":"NASDAQ:MRVL","title":"Marvell"},{"proName":"NASDAQ:AVGO","title":"Broadcom"},{"proName":"TVC:USOIL","title":"WTI Crude"},{"proName":"TVC:US10Y","title":"US 10Y"}],"colorTheme":"dark","isTransparent":true,"showSymbolLogo":true,"displayMode":"adaptive","locale":"en"}</script>
+  </div>
+
+  <!-- BLOCK B: three single quotes -->
+  <div class="tickers">
+    <div class="ticker"><script src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"FOREXCOM:SPXUSD","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div>
+    <div class="ticker"><script src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"FOREXCOM:NSXUSD","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div>
+    <div class="ticker"><script src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"FOREXCOM:DJI","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div>
+  </div>
+  <div class="note">Quotes stream live (some feeds ~15-min delayed). Editorial below reflects the latest edition; official closes are in the Weekly Scorecard.</div>
+
+  <!-- THE LEAD -->
+  <section class="lead">
+    <div class="lbl">The Lead</div>
+    <div class="panel">
+      <h2>Chips power stocks to a higher close as oil slips — Nasdaq +1.30%, S&amp;P 500 +0.81%, Dow +0.27%</h2>
+      <p><em>Markets closed, Thursday, July 9.</em> A semiconductor surge carried the major averages higher, shrugging off a second day of U.S.–Iran tensions. The Nasdaq Composite rose 1.30% to 26,206.89, the S&amp;P 500 added 0.81% to 7,543.64, and the Dow Jones Industrial Average gained 139.02 points, or 0.27%, to 52,487.41 — as chip stocks jumped and crude eased.</p>
+      <p>The chip complex led broadly: a gauge of semiconductor firms climbed roughly 4–5%, the iShares Semiconductor ETF gained more than 5% and the VanEck Semiconductor ETF rose 2.5%. Micron jumped about 7.5% after announcing a $3 billion investment in the U.S. semiconductor supply chain — part of a plan to spend "more than $250 billion" over the next decade — while AMD gained about 7.1% and Sandisk popped 7.6%. Marvell (+6.5%) and Broadcom (+3.3%) rode the same memory- and AI-hardware bid.</p>
+      <p>Oil, the other big story, went the other way: crude slipped after a two-session surge, with WTI holding near $73.50 after settling $73.52 (+4.4%) Wednesday — easing some of the geopolitical premium — even as U.S.–Iran fighting continued. The 10-year Treasury yield hovered near a two-month high (about 4.57%, after touching ~4.59% Wednesday as firmer oil revived inflation worries), and investors leaned back into the AI trade ahead of SK Hynix's U.S. trading debut Friday.</p>
+    </div>
+  </section>
+
+  <!-- MOVERS -->
+  <section>
+    <div class="lbl">Movers &amp; Drivers</div>
+    <div class="grid">
+      <div class="mv">
+        <div class="row"><h3>Micron (MU)</h3><span class="chg up">≈ +7.5%</span></div>
+        <p>The day's headline chip mover. Shares jumped after Micron said it will invest $3 billion in the U.S. semiconductor supply chain — on top of Texas and New York fabs and a plan to spend "more than $250 billion" over the next decade.</p>
+      </div>
+      <div class="mv">
+        <div class="row"><h3>Sandisk (SNDK)</h3><span class="chg up">≈ +7.6%</span></div>
+        <p>The memory-storage name was one of the biggest single-stock chip movers, popping about 7.6% (some reads near +9%) as memory caught a bid on persistent AI-data-center demand.</p>
+      </div>
+      <div class="mv">
+        <div class="row"><h3>AMD (AMD)</h3><span class="chg up">≈ +7.1%</span></div>
+        <p>The AI-accelerator maker rose about 7.1% as the semiconductor sector extended its recovery; the iShares Semiconductor ETF gained more than 5% on the session.</p>
+      </div>
+      <div class="mv">
+        <div class="row"><h3>Marvell (MRVL)</h3><span class="chg up">≈ +6.5%</span></div>
+        <p>The data-center silicon maker added about 6.5%, riding the same memory- and AI-hardware bid that lifted the group.</p>
+      </div>
+      <div class="mv">
+        <div class="row"><h3>Broadcom (AVGO)</h3><span class="chg up">≈ +3.3%</span></div>
+        <p>The AI-networking heavyweight gained about 3.3%, a steadier advance among the mega-cap chip names as the sector rallied.</p>
+      </div>
+      <div class="mv">
+        <div class="row"><h3>Chip Complex</h3><span class="chg up">Semis ≈ +5%</span></div>
+        <p>A broad advance: the semiconductor gauge rose roughly 4–5%, led by memory names, as Micron's capex pledge and Friday's SK Hynix U.S. debut fueled AI-chip demand.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOCK E: Chart of the Day -->
+  <section>
+    <div class="lbl">Chart of the Day · Micron (MU)</div>
+    <div class="widget-panel">
+      <script src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>{"symbol":"NASDAQ:MU","width":"100%","height":240,"locale":"en","dateRange":"1D","colorTheme":"dark","isTransparent":true,"autosize":false}</script>
+    </div>
+    <div class="note">Micron was the session's standout chip mover, up about 7.5% after pledging $3 billion toward the U.S. semiconductor supply chain — the sharp end of a roughly 4–5% rally in the semiconductor gauge ahead of SK Hynix's U.S. debut Friday.</div>
+  </section>
+
+  <!-- BLOCK D: Sector heatmap -->
+  <section>
+    <div class="lbl">Sector Heat — Live</div>
+    <div class="widget-panel">
+      <script src="https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js" async>{"dataSource":"SPX500","blockSize":"market_cap_basic","blockColor":"change","grouping":"sector","locale":"en","colorTheme":"dark","hasTopBar":false,"isDataSetEnabled":false,"isZoomEnabled":true,"hasSymbolTooltip":true,"isMonoSize":false,"width":"100%","height":420}</script>
+    </div>
+    <div class="note">Technology and semiconductors led Thursday's advance — the chip gauge jumped roughly 5% — while crude's pullback eased the energy-driven inflation trade that had pressured stocks earlier in the week.</div>
+  </section>
+
+  <!-- BLOCK F: economic calendar -->
+  <section>
+    <div class="lbl">The Calendar — Live</div>
+    <div class="widget-panel">
+      <script src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>{"colorTheme":"dark","isTransparent":true,"width":"100%","height":420,"locale":"en","importanceFilter":"0,1","countryFilter":"us"}</script>
+    </div>
+  </section>
+
+  <!-- BLOCK C: market headlines -->
+  <section>
+    <div class="lbl">Live Market Headlines — updates in real time</div>
+    <div class="panel" style="padding:8px">
+      <script src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>{"feedMode":"market","market":"stock","colorTheme":"dark","isTransparent":true,"displayMode":"regular","width":"100%","height":420,"locale":"en"}</script>
+    </div>
+  </section>
+
+  <!-- AFTER-HOURS MOVERS -->
+  <section>
+    <div class="lbl">After-Hours Movers</div>
+    <div class="grid">
+      <div class="mv">
+        <div class="row"><h3>SK Hynix (SKHY)</h3><span class="chg">Debut Fri</span></div>
+        <p>The Korean memory-chip maker priced its U.S. listing — reported at roughly $29 billion, the second-biggest first-time share sale on record after SpaceX — ahead of a Friday Nasdaq debut; orders ran near seven times the stock on offer.</p>
+      </div>
+      <div class="mv">
+        <div class="row"><h3>PepsiCo (PEP)</h3><span class="chg">Q2 report</span></div>
+        <p>PepsiCo opened earnings season before the bell with a revenue beat near $24 billion — strong overseas demand offsetting soft North American volumes — and held its full-year guidance.</p>
+      </div>
+    </div>
+    <div class="note">Individual post-close equity moves were limited. The marquee overnight item is SK Hynix's ~$29B U.S. IPO pricing (Nasdaq debut Friday under SKHY); Delta Air Lines' Friday-morning Q2 report and the start of big-bank earnings next week headline the flow.</div>
+  </section>
+
+  <!-- WEEKLY SCORECARD -->
+  <section>
+    <div class="lbl">Weekly Scorecard — Official Closes</div>
+    <div class="panel" style="padding:6px 4px">
+      <table>
+        <tr><th>Index</th><th class="num">Close (Thu Jul 9)</th><th class="num">Change</th></tr>
+        <tr><td>S&amp;P 500</td><td class="num">7,543.64</td><td class="num up">+0.81%</td></tr>
+        <tr><td>Nasdaq Composite</td><td class="num">26,206.89</td><td class="num up">+1.30%</td></tr>
+        <tr><td>Dow Jones Industrial Avg</td><td class="num">52,487.41</td><td class="num up">+139.02 · +0.27%</td></tr>
+      </table>
+    </div>
+    <div class="note">Official close, Thursday July 9, when a semiconductor rally lifted all three major averages and crude eased. The prior session (Wed July 8) closed S&amp;P 500 7,482.71 (−0.28%), Nasdaq 25,870.65 (+0.20%), Dow 52,348.39 (−1.09%).</div>
+  </section>
+
+  <!-- RATES / BONDS / COMMODITIES -->
+  <section>
+    <div class="lbl">Rates, Bonds &amp; Commodities</div>
+    <div class="panel" style="padding:6px 4px">
+      <table>
+        <tr><th>Instrument</th><th class="num">Level</th><th>Note</th></tr>
+        <tr><td>10-yr Treasury</td><td class="num">~4.57%</td><td>Near a two-month high; touched ~4.59% Wednesday as firmer oil revived inflation worries</td></tr>
+        <tr><td>30-yr Treasury</td><td class="num">&gt;5.0%</td><td>Held above the 5% mark earlier in the week (as of Jul 7) amid the yield backup</td></tr>
+        <tr><td>Fed funds (target)</td><td class="num">3.50–3.75%</td><td>Effective ~3.63%; June FOMC minutes showed a divided committee on the year-end path</td></tr>
+        <tr><td>WTI crude</td><td class="num">≈ $73.5</td><td>Held near $73.50 Thursday after settling $73.52 (+4.4%) Wednesday on Hormuz supply fears; slipped from intraday highs</td></tr>
+        <tr><td>Brent crude</td><td class="num">≈ $78</td><td>Settled $78.19 (+5.4%) Wednesday; eased Thursday alongside WTI</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- ON THE RADAR -->
+  <section>
+    <div class="lbl">On the Radar</div>
+    <div class="panel">
+      <ul class="radar">
+        <li><b>Friday —</b> SK Hynix makes its U.S. trading debut (ticker SKHY); the ~$28.2 billion ADR offering was reported to be more than seven times oversubscribed — a fresh read on appetite for the AI-memory trade.</li>
+        <li><b>Friday —</b> Delta Air Lines reports Q2 before the open (Zacks consensus $1.44, about a 31% year-over-year decline), kicking off airline earnings; big banks follow next week as Q2 season ramps.</li>
+        <li><b>Fed —</b> The June FOMC minutes showed a divided committee on the year-end path; the funds target is held at 3.50–3.75%, with markets weighing whether the next move is a hold or a hike rather than a cut.</li>
+        <li><b>Watch —</b> Oil and the Strait of Hormuz: crude slipped from its two-day surge, but continued U.S.–Iran fighting keeps a risk premium in play for both energy and yields.</li>
+        <li><b>AI trade —</b> Memory scarcity (HBM) keeps memory names bid; watch whether Micron's capex pledge and SK Hynix's debut extend the chip rally or invite another rotation.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="foot">
+    <b>Sources (fetched this run):</b><br>
+    <a href="https://finance.yahoo.com/markets/live/stock-market-today-thursday-july-9-us-strikes-iran-223149196.html">Yahoo Finance — Dow, S&amp;P 500, Nasdaq rise as chip stocks rebound, oil prices fall (Jul 9 close: S&amp;P 7,543.64 +0.81%, Nasdaq 26,206.89 +1.30%, Dow 52,487.41 +139.02 +0.27%)</a> · <a href="https://www.cnbc.com/2026/07/08/stock-market-today-live-updates.html">CNBC — S&amp;P 500 closes higher as chip stocks rise and oil prices slide (Jul 9)</a><br>
+    <a href="https://www.fool.com/investing/2026/07/09/nasdaq-composite-jumps-09-as-semiconductors-rise/">Motley Fool — Nasdaq jumps as semiconductors stage a comeback (Sandisk +9.11%, Micron +7.33%, AMD +7.07%, Marvell +6.53%, Broadcom +3.3%)</a> · <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-july-9-2026">TheStreet — Jul 9 session (SMH +2.5%, Micron +4.5%, Sandisk +7.6%; Micron $3B U.S. investment)</a><br>
+    <a href="https://www.cnbc.com/2026/07/08/treasury-yields-trump-iran-ceasefire.html">CNBC — 10-yr yield climbs to ~4.57% (4.59% Wed high) as oil jumps; WTI $73.52 +4.37%, Brent $78.19 +5.43% Wed</a> · <a href="https://tradingeconomics.com/commodity/crude-oil">Trading Economics — WTI held near $73.5 on Jul 9</a> · <a href="https://tradingeconomics.com/united-states/government-bond-yield">Trading Economics — US 10-yr yield</a><br>
+    <a href="https://www.benzinga.com/Opinion/26/07/60369943/sk-hynix-7x-oversubscription-boosts-semi-stocks-earnings-season-ahead-oil-pulls-back-after-iran-attacks">Benzinga — SK Hynix ~7x oversubscription boosts semis; oil pulls back after Iran attacks (Nasdaq debut Fri, SKHY)</a> · <a href="https://www.fool.com/investing/breakfast-news/2026/07/06/breakfast-news-sk-hynix-squares-up-against-micron/">Motley Fool — SK Hynix ~$29B U.S. listing (2nd-biggest ever after SpaceX)</a> · <a href="https://www.tradingkey.com/analysis/stocks/us-stocks/262012922-pepsico-pep-earnings-preview-july-9-2026-q2-tradingkey">TradingKey — PepsiCo Q2 (Jul 9): ~$24B revenue beat, guidance held; Delta Q2 Fri</a>
+    <div class="disc">For information only — not investment advice. Live widgets stream third-party market data that may be delayed; verify prices with your broker before trading.</div>
+  </div>
+</div>
+
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
+</body>
+</html>
