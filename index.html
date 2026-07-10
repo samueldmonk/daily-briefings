@@ -48,57 +48,54 @@ nav.tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:16px 
 <body>
 <div class="wrap">
   <div class="masthead">
-    <h1><span class="a">Daily</span> <span class="b">Brief</span><span class="c">ings</span></h1>
-    <div class="sub">Security · Markets · MMA — refreshed through the day</div>
+    <h1><span class="a">Daily</span> <span class="b">Brie</span><span class="c">fings</span></h1>
+    <div class="sub">Security · Markets · MMA — three desks, one front page</div>
     <div class="meta">
-      <span class="pill live"><span class="dot"></span> LIVE</span>
+      <span class="pill live"><span class="dot"></span> Live</span>
       <span class="pill" id="edition">Afternoon Edition</span>
-      <span class="pill" id="datestamp">—</span>
-      <span class="pill">Updated <span id="updated">—</span></span>
+      <span class="pill" id="datestamp">Friday, July 10, 2026</span>
+      <span class="pill">Updated <span id="updated">…</span></span>
     </div>
-    <div class="freshline" id="freshline">Data as of — ET · briefings refresh every 30 minutes, 8 AM–6 PM ET</div>
+    <div class="freshline" id="freshline">Data as of this edition · briefings refresh every 30 minutes, 8 AM–6 PM ET</div>
   </div>
 
   <nav class="tabs">
-    <a href="index.html" class="tab active">★ Front Page</a>
-    <a href="cyber-briefing.html" class="tab">⛨ The Cyber Wire</a>
-    <a href="wallstreet-briefing.html" class="tab">▲ The Closing Bell</a>
-    <a href="mma-briefing.html" class="tab">⊘ The Octagon</a>
-    <a href="archive.html" class="tab">🗄 Archive</a>
+    <a class="tab active" href="index.html">★ Front Page</a>
+    <a class="tab" href="cyber-briefing.html">⛨ The Cyber Wire</a>
+    <a class="tab" href="wallstreet-briefing.html">▲ The Closing Bell</a>
+    <a class="tab" href="mma-briefing.html">⊘ The Octagon</a>
+    <a class="tab" href="archive.html">🗄 Archive</a>
   </nav>
 
   <div class="cards">
     <a class="bcard sec" href="cyber-briefing.html">
       <div class="kick">⛨ The Cyber Wire · The Wire</div>
-      <h2>Security</h2>
-      <div class="col">Threat Level: High</div>
-      <p>The FortiBleed campaign — 110M+ credentials harvested from Fortinet firewalls, 86,644 confirmed compromised — is now a confirmed pipeline into INC and Lynx ransomware, with SOCRadar tying the harvested access directly to both crews. A max-severity Adobe ColdFusion flaw (CVE-2026-48282, CVSS 10.0) exploited within hours of disclosure carries a CISA federal patch deadline of July 10 — tomorrow — while ShinyHunters exploits an unauthenticated Oracle PeopleSoft RCE (CVE-2026-35273, CVSS 9.8) to steal HR and payroll data.</p>
-      <div class="go">Read the briefing →</div>
+      <h2>Insider on the inside</h2>
+      <div class="col">Security briefing</div>
+      <p>A Florida ransomware negotiator drew 70 months in prison for secretly helping BlackCat squeeze his own clients — while defenders stare down a due-today federal deadline on the max-severity ColdFusion flaw and FortiBleed's 86,644 compromised firewalls.</p>
+      <span class="go">Read the briefing →</span>
     </a>
-
     <a class="bcard mkt" href="wallstreet-briefing.html">
       <div class="kick">▲ The Closing Bell · The Tape</div>
-      <h2>Markets</h2>
-      <div class="col">Closed · chips lead a higher close</div>
-      <p>Stocks closed higher Thursday as a semiconductor surge overpowered renewed U.S.–Iran jitters: the Nasdaq Composite rose 1.30% to 26,206.89, the S&amp;P 500 gained 0.81% to 7,543.64 and the Dow added 139 points (+0.27%) to 52,487.41. Micron jumped about 7.5% on a new $3B U.S. investment while oil prices slid even as Middle East tensions simmered.</p>
-      <div class="go">Read the briefing →</div>
+      <h2>SK Hynix pops, week saved</h2>
+      <div class="col">Markets briefing</div>
+      <p>Stocks closed higher Friday to cap a choppy week — the S&amp;P 500 rose 0.42% (+1.2% on the week) as Nvidia and Meta led and SK Hynix jumped 13% in the largest-ever U.S. listing by a foreign company.</p>
+      <span class="go">Read the briefing →</span>
     </a>
-
     <a class="bcard mma" href="mma-briefing.html">
       <div class="kick">⊘ The Octagon · Tale of the Tape</div>
-      <h2>MMA</h2>
-      <div class="col">UFC 329 · July 11</div>
-      <p>Fight week is here: Conor McGregor makes his long-awaited UFC return Saturday to headline UFC 329 against former featherweight champion Max Holloway — a rematch of their 2013 featherweight bout — with Holloway a −240 favorite and McGregor a +180 underdog on a stacked Las Vegas card featuring Paddy Pimblett vs Benoît Saint Denis and Cory Sandhagen vs Mario Bautista.</p>
-      <div class="go">Read the briefing →</div>
+      <h2>McGregor–Holloway is official</h2>
+      <div class="col">MMA briefing</div>
+      <p>McGregor (170.5) and Holloway (170) both made weight Friday in Las Vegas — UFC 329 is official for Saturday night at T-Mobile Arena, with Holloway a −225 favorite and the line still moving.</p>
+      <span class="go">Read the briefing →</span>
     </a>
   </div>
 
   <div class="foot">
-    Three briefings, fact-checked and rebuilt from live web search every 30 minutes, 8 AM–6 PM ET.
-    <div class="disc">For information and awareness only — not investment, security, or betting advice.</div>
+    Three desks, refreshed together every 30 minutes from 8 AM to 6 PM ET. Open a briefing for full sources.
+    <div class="disc">Automated editorial product. Each briefing carries its own sources and disclaimer.</div>
   </div>
 </div>
-
 <script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
 </body>
 </html>
