@@ -4001,3 +4001,77 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
 - MARKETS CLOSED (weekend). Fri Jul 10 closes RE-CONFIRMED this run (WTOP + Yahoo live-blog + Fool: S&P 7,575.39 +31.75 +0.42% / Nasdaq 26,281.61 +74.72 +0.29% / Dow 52,637.01 +149.60 +0.29%). **INVESTRADE FULL RECAP FETCHED DIRECTLY THIS RUN** — verifies: S&P ~40 pts from Jun 2 record 7,620.90 (added to Lead + Scorecard note, REPLACING "Dow record 52,900.07 not reclaimed" — Dow level not restated this run); tech XLK ~+3% wk / energy XLE +3.1% wk / Nasdaq +29% YTD / energy +23% YTD (Sector-Heat note REWRITTEN to these; **"nine of eleven sectors higher" + "early strength in comms/materials/staples" DROPPED — not restated this run**); WTI settle $71.41 −0.93% Fri / Brent $76.01 −0.38% / oil +4% wk; 10-yr 4.568% (+9bps wk, highest since May 22) / 2-yr 4.208% / 30-yr 5.071%; gold $4,113.70 −0.65%; CRCL OCC national-trust-bank approval; SK Hynix priced $149 / raised $26.51B / opened $170 / largest-ever foreign US debut; **Fed monetary-policy report to Congress released Friday: inflation "stepped up further this spring" on tariffs/energy/AI — ADDED to Warsh radar bullet (hawkish-June-minutes clause swapped out)**; **VOD +12% on Emirates Telecom stake sale to Xavier Niel's Vega $5.95B — NEW mover card added (tag New; CNBC midday-movers headline also lists VOD)**; **IONS card REFRAMED: Investrade this run says the −24% plunge was THURSDAY on CARDIO-TTRansform failure and Friday IONS reiterated 2026 guidance $875M–$900M; SA Friday −7.6% recap kept per standing entry — do NOT present the trial announcement as a Friday event.** Weekly moves re-verified this run (T. Rowe/FXLeaders: Nasdaq +1.74% / S&P +1.23% / Dow −0.50%; scorecard note now cites T. Rowe). Meta +6% Fri / 15% wk best since early 2024 re-verified this run (CNBC article fetched in results; footer link added); NVDA "around 4%" this run — ~3–4% hedge kept. WDFC EPS $2.33 adj vs $1.56 FactSet re-verified this run (Fool); intraday prints this run CONFLICT (Fool "rallied 10%", "23.3% early", ">15%") — standing +14–21% header + SA +14 / Benzinga +20.7 to $289.18 close KEPT per sourced entries (this-run prints bracket it). NOTE Investrade states "Q3 EPS $2.24" (GAAP) vs $2.33 ADJ — keep "adjusted" qualifier always. FRMI re-verified this run (upsized $375M 5.00% converts due 2031 priced; intraday prints 14.75%–18%; −17.3% close kept per SA sourced entry). FOMC Jul 28–29 + hold-expected + Sept/Dec hike lean re-verified this run (fedratecalc/Forbes-derived summary); FactSet Q2 +23.3% y/y S&P earnings growth ADDED to banks bullet (Schwab weekly outlook this run; footer link added). CPI Tue 8:30 + Warsh House Tue 10am (CPI 90 min prior) + Senate Wed + JPM/GS/C/WFC/BAC Tue + PPI Wed + NFLX Thu re-verified this run; CPI consensus hedges (−0.1 to −0.2% m/m / 3.7–3.8% from 4.2% / core +0.3% / WTI June −20.4% Kiplinger) carried per sourced entries. Chart of the Day NASDAQ:WDFC (5D) unchanged.
 - CYBER (Threat High): Accenture top story re-verified this run (BleepingComputer/HelpNet/TechRadar/cybernews/CybersecurityDive/SOCRadar/teiss/cyberpress: actor 888, PwnForums Jul 6, 35GB source-code + RSA/SSH keys + Azure PATs/storage keys/configs as SELLER'S claims; "isolated matter"/"remediated its source"; scope unverified; 2024 precedent 32,826-employee claim ≈ only 3 names per Accenture; Decathlon/Credit Suisse/Shell/Heineken/UNICEF links carried per sourced entry). ColdFusion CVE-2026-48282 re-verified this run (HelpNet/Orca/Akamai/SecurityWeek/Adobe APSB26-68 in results: CVSS 10.0, RDS FILEIO path traversal → unauth RCE, exploited ITW per Adobe "limited attacks", <2h public-analysis-to-exploitation, fixes 2023u21/2025u10 shipped Jun 30, KEV due Jul 10 explicitly stated — OVERDUE on page; RDS-enabled-required nuance seen, not added). KEV verified this run: Jul-10 "Adds Two" via CISA alert page in results + windowsnews (iCagenda 48939 + Balbooa 56291, **due Jul 13 stated in this-run summary** → countdown 2 days); iCagenda CVSS 10.0 (CVSS 4.0) + ≤4.0.7 affected + 2 public GitHub PoCs + fixes 4.0.8 (Jun 15)/3.9.15 + /images/icagenda/frontend/attachments/ webroot path re-verified this run (IONIX/vuln.today/cvefeed/mysites.guru); Jul-7 "Adds Three" 48908/55255/56290 + Jul-7 "Adds One" 48282 re-verified (CISA alerts + THN "Adds 4" + threat-modeling "Deadline Friday July 10" title; techtimes "first AI agent platform" supports Langflow claim; its "Thursday deadline" title-claim IGNORED — Friday Jul 10 wins per BleepingComputer+threat-modeling); SharePoint 45659 added Jul 1 re-verified (THN title; due Jul 4 carried per sourced chain). SimpleHelp CVE-2026-48558 re-verified this run (threat-modeling/ArcticWolf/SOCRadar/securityaffairs: CVSS 10.0 CISA-assigned, unsigned-OIDC-token auth bypass incl. MFA bypass, KEV due Jul 2 under BOD 26-04, exploited for TaskWeaver/infostealers, ≤5.5.15, fixes 5.5.16/6.0 RC2). Odido re-verified this run (dutchnews/NLTimes/BleepingComputer/theRecord/SC: 6.2M affected, Feb 7 access, ShinyHunters vishing fake-login, Dutch-speaking caller voice deemed genuine, police threaten to publish recording, "come forward in the next few weeks"; €1M refusal + dark-web publication + bank details/BSNs carried per sourced entries). PeopleSoft CVE-2026-35273 re-verified this run (THN/Google Cloud/CyberScoop/theregister/Rapid7: 9.8, 100+ orgs / 300+ instances, 68% higher ed, Mandiant UNC6240, May 27–Jun 9, Oracle advisory Jun 10; Nottingham 40GB seen, not published). **Martino card REWRITTEN: "$1.2M bitcoin from one victim" DROPPED (not restated this run); DOJ PR this run confirms 70 months / 41 / Florida / five victims / conspiring w/ two other cyber professionals (Martin & Goldberg, 48 months each — not published) / $10M seized incl. food truck + fishing boat; DOJ footer link added.** **One Medical card ENRICHED this run (HIPAA Journal/fiercehealthcare/classaction): legacy Iora Health data + ShinyHunters-attributed dark-web post claiming 8.8TB (Jun 17) added; same 8.8TB clause added to Spotlight; sharkstriker footer link replaced with hipaajournal + theregister PeopleSoft.** JadePuffer re-verified this run (Sysdig/BleepingComputer/hngn: human picked target + framework, AI agent drove full lifecycle ~600 payloads, 31-second failed-login-to-fix; page's human-in-the-loop framing consistent). Injective re-verified this run (THN/BleepingComputer/Socket: GitHub compromise → @injectivelabs/sdk-ts 1.20.21 live Jul 8, deprecated, steals private keys + mnemonics; 17 pinned packages / 310 downloads / fix 1.20.23 seen, not published). FortiBleed re-verified this run (SOCRadar/SecurityWeek/ArcticWolf: 86,644 / 194 countries / 105M+ credentials harvested / still active; 409 admin + 354 chains + INC Ransom/Lynx + half-of-internet-facing carried per sourced entries). Qilin re-verified this run (Infosecurity: 1,496 victims 12mo Sophos X-Ops; ~16% share via Check Point cited in same piece; The Gentlemen topped June 115 vs 78 — seen, not published).
 - ARCHIVE: snapshots cyber/wallstreet/mma-2026-07-11-1623 added; archive.html regenerated by gen_archive.py (308 editions / 21 days). Publishing as Afternoon Edition, July 11, 2026.
+
+## Added 2026-07-11 (Saturday ~4:55PM ET — Afternoon Edition refresh; markets CLOSED weekend; UFC 329 fight night)
+- 30-min refresh of the 4:20PM edition. All four pages HTMLParser-balanced (0 leftover / 0 errors); regression greps
+  (vacant / Shamil / Abdul-Rakhman-hyphen / unification / Renato / 27-9 / 430,000 / 73,932 / 110M / +12.5% /
+  internal-memo / BofA / three-week / FanDuel / DraftKings / −550 / $1.2M / 168.01 / 2.2.3 / "first AI-agent platform")
+  all 0 ("three weeks" appears once, in the WP-SHELLSTORM card, quoting THN's exposed-server duration — unrelated to KEV).
+  Chimaev & Pereira only as defeated opponents. New tags this run: EquipmentShare mover (markets), WP-SHELLSTORM +
+  Ryuk-plea cards (cyber) — all absent from the 1623 snapshot; VOD's New tag removed (present in 1623).
+- **CYBER FIX — Balbooa CVE-2026-56291: affected/fix corrected.** Earlier editions said "before 2.2.3" — that came from
+  an AI-generated windowsnews.ai summary whose body also hallucinated dates (Apr 16 2025 / Mar 26 2025 / BOD 22-01) and
+  CVSS 9.8. Verified this run (mySites.guru + vuln DBs): CVSS 4.0 = **10.0**, **fixed in Balbooa Forms 2.4.1, released
+  Jul 9 2026**. Do NOT cite "2.2.3" again and do NOT source KEV facts from windowsnews.ai.
+- **CYBER FIX — Langflow CVE-2026-55255: CVSS is 6.1** (THN "CISA Adds 4" fetched this run), added to the table. The
+  "first AI-agent platform ever added to KEV" claim (techtimes) was DROPPED — contradicted by Langflow CVE-2025-3248
+  being in KEV since 2025 (THN archive). Do not repeat it. Note replaced with Sysdig/THN campaign detail (IDOR chained
+  with CVE-2026-33017, Jun 22–25, LLM/AWS key theft).
+- KEV verified this run: CVE-2026-48939 due **2026-07-13** explicitly (cvefeed/IONIX/OpenCVE chain; PoC GitHub repo in
+  results; CVSS 4.0 10.0; ≤4.0.7 affected; fixes 4.0.8 Jun 15 / 3.9.15) → countdown 2 days; 56291 due Jul 13 kept per
+  Jul-10 paired addition + prior sourced entry; all four Jul-7 adds "fix by July 10, 2026" per THN this run (48282
+  CVSS 10.0 / 48908 10.0 zero-day via uploadCustomIcon, fix SP Page Builder 6.6.2 / 56290 10.0 Page Builder CK, fix
+  3.6.0, exploited since Jun 27 / 55255 6.1) — ColdFusion deadline now PASSED (overdue on page). JadePuffer re-verified
+  via THN this run (first known agentic ransomware, human operator deployed the agent, CVE-2025-3248 exploited).
+- Accenture top story re-verified this run (HelpNet/BleepingComputer/cybernews/CyberSecurityDive/TechRadar chain: 888,
+  PwnForums Jul 6, 35GB source code + RSA/SSH keys + Azure PATs/storage keys/configs as SELLER's claims, Azure DevOps
+  screenshot, "isolated matter"/"remediated its source"/"no impact to operations", 2024 precedent 32,826→3 names, 2021
+  LockBit). PeopleSoft re-verified this run (Google Cloud/ArcticWolf/Rapid7/THN: CVSS 9.8, UNC6240, May 27–Jun 9,
+  zero-day predating Oracle's Jun 10 advisory, 100+ orgs notified, 68% universities, 300 instances claimed, gadget
+  chain). Odido re-verified this run (NLTimes 6.2M official figure — shattered.io's "6.5M" NOT used; €1M ransom;
+  Dutch police "strong indications" of Dutch hackers per THN digest). One Medical 8.8TB claim re-verified (HIPAA
+  Journal + others; company hasn't confirmed). FortiBleed re-verified this run (SOCRadar: 86,644 / 194 countries /
+  354 completed intrusions / INC+Lynx / still active; 105M+ creds + 409 admin + half-of-fleet carried per sourced
+  entries — securityaffairs' 430K-targeted/110M framing again NOT used per standing grep).
+- **Qilin strip stat SWAPPED OUT** (1,496 / ~16% not restated this run) for WP-SHELLSTORM "1.4M websites" (THN this
+  run). New cyber items this run: WP-SHELLSTORM webshell brokerage (server exposed three weeks, tools/logs/1.4M-site
+  target list), Ryuk guilty plea (34-year-old Armenian man; name not given in snippets — not published). Pakistan
+  law-enforcement espionage (China/India-aligned, Feb 2024–Apr 2026) seen this run, not published (space).
+- MMA — CHAMPIONS BOARD 11/11 re-verified by DIRECT ESPN fetch this run (all dates/methods/defense counts match the
+  board incl. Volk 1 def, Shevchenko 2, Van no-count per standing note; Gane-interim + "Aspinall accepts" + "Gaethje,
+  Gane second to none" rankings + Topuria-congratulates + White-never-again all in ESPN sidebar this run). **ODDS
+  RANGE NARROWED: "Holloway −220 to −250 / McGregor +165 to +205"** — this run's snippets: Yahoo −220/+165 (as of
+  Jul 10) + DK −250/+205 (book not named on page per standing grep) + CBS −225/+185 + Covers −400 opener + 68.8%
+  implied; SportsLine −265/+215 NOT restated → dropped, footer link swapped for SportsBettingDime. **Steveson card
+  updated:** fight-week −4000 high (MyMMANews) + post-weigh-in ~−2500 (SportsBettingDime this run) + weights 241/236;
+  Bo Nickal −2500 prior-record clause still unpublished. Weigh-ins re-verified this run (Al Jazeera 170.5 / Yahoo-UFC
+  170; "all 28 fighters" count NOT restated → softened to "every fighter on the card"). Baku fully re-verified this
+  run (Forbes 9 finishes + UFC.com/MMA Mania 4×$100K Fiziev/Almabayev/Yakhyaev/Donchenko + five $25K finishes seen,
+  unpublished; **"seventh-fastest KO in UFC history" ADDED** to Yakhyaev card per MMA Mania). WH viewership re-verified
+  via UFC.com PR DIRECTLY this run: 17M total P+ viewers (biggest exclusive live event in P+ history), avg 8.2M
+  US+LatAm, 34M global est, **126B social views ADDED**. UFC 330 re-verified (UFC.com official headline bills Machado
+  Garry "(#1)" — CBS-derived summary said No. 2; UFC.com wins, "No. 1-ranked" kept; **"(28-1)" for Makhachev and
+  "(ranked No. 2)" for du Plessis DROPPED — not restated this run**; Dern–Robertson + Xfinity Mobile Arena + first
+  numbered since UFC 133 Aug 2011 + Robertson women's-submission-record seen). du Plessis–Usman re-verified (Paycom
+  Jul 18, Cannonier–Duncan, prelims 5 / main 8 ET, Usman up at 185 chasing two-division history, first OKC card since
+  2017 seen). Ankalaev–Rountree Etihad Jul 25 re-verified.
+- MARKETS CLOSED (weekend). Fri Jul 10 closes re-confirmed this run (WTOP/Yahoo/Fool/Investrade full recap fetched
+  again: S&P 7,575.39 +31.75 +0.42% — Fool quote widget states +$31.75, Investrade table 31.62, WTOP/Fool figure kept;
+  Nasdaq 26,281.61 +74.72 +0.29%; Dow 52,637.01 +149.60 +0.29%; Russell −0.49% Investrade / −0.61% wk T. Rowe). Weekly
+  moves re-verified this run (T. Rowe: Nasdaq +1.74% / S&P +1.23% / Dow −0.50%). **SK Hynix "$168.01 close" DROPPED
+  (not restated this run) → "priced $149, opened $170, finished first session up 13%" (Investrade opened-at-170 + Fool
+  "soared 13%"; +14%-from-pricing open also seen); Kwak Noh-Jung shortages-beyond-2030 quote ADDED (Fool).** **WDFC
+  header WIDENED to +11–21%** (Fool 11% this run outside old 14–21 bracket; SA 14 / Benzinga 20.7 to $289.18 kept per
+  sourced entries; EPS now "reported $2.24 — $2.33 adjusted — vs ~$1.56" per Investrade this run + standing adjusted
+  note). **CRCL card REWRITTEN: +5–14% range** (this run: +14% early to $71.93 fading, Benzinga +12%, Stocktwits late
+  ~+5%, SA recap +8.2% kept; "First National Digital Currency Bank" name ADDED). **EquipmentShare +17% New card ADDED
+  (Fool this run; also in Benzinga movers URL).** VOD/IONS/Meta/FRMI cards carried (VOD +12% & IONS Thursday −24% +
+  guidance re-confirmed via Investrade this run; Meta +6.2%/15% wk via Fool this run; FRMI per SA sourced entry).
+  Sector-Heat note: Fool session detail ADDED (comms + financials led Friday; industrials + health care slid). Gold
+  $4,113.70 −0.65% Aug futures (Investrade) — Fool spot $4,112.62 −0.47% seen, futures figure kept. 10-yr 4.568%
+  +9bps wk highest since May 22 / 30-yr 5.071% / 2-yr 4.208% re-verified (Investrade/ETF Trends 4.56%). CPI Tue
+  consensus (−0.1 to −0.2% m/m, 3.7–3.8% from 4.2%, core +0.3%) + banks Tue + Warsh first semiannual testimony Tue
+  10am + PPI Wed + retail sales Thu + TSMC Jul 16 + NFLX Thu ALL re-verified this run (CNBC/CMC/Kiplinger/Morningstar/
+  intellectia chain); Fed report "stepped up further this spring" re-verified via Investrade full text this run.
+- ARCHIVE: snapshots cyber/wallstreet/mma-2026-07-11-1655 added; archive.html regenerated by gen_archive.py.
+  Publishing as Afternoon Edition, July 11, 2026.
