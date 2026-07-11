@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Closing Bell — Daily Wall Street Briefing</title>
+<style>
+:root{
+  --bg:#12100b; --panel:#1a1712; --panel2:#161310; --line:#322c20;
+  --text:#f0ede6; --muted:#a49b8a;
+  --mono:'SF Mono',ui-monospace,'Cascadia Code',Menlo,Consolas,monospace;
+  --serif:Georgia,'Times New Roman',serif;
+  --acc:#caa64a; --acc2:#e8c766; --up:#3ecf8e; --down:#e85454;
+}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(1200px 520px at 50% -240px,#1e1a12 0,var(--bg) 60%);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding:24px 18px 60px}
+.masthead{text-align:center;padding:8px 0 2px}
+.masthead h1{font-family:var(--serif);font-size:38px;margin:0;letter-spacing:.5px;font-weight:700}
+.masthead h1 .glyph{color:var(--acc2)}
+.masthead .sub{color:var(--muted);font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;margin-top:7px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0 4px}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.09em;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:5px 11px;text-transform:uppercase}
+.pill.live{color:#12100b;background:var(--acc2);border-color:transparent;font-weight:700;display:inline-flex;align-items:center;gap:6px}
+.pill.live .dot{width:7px;height:7px;border-radius:50%;background:#12100b;animation:pulse 1.6s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:10px;padding:11px 15px;margin:14px 0 2px;font-size:14.5px;line-height:1.5}
+.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc2);margin-right:9px}
+.freshline{color:var(--muted);font-family:var(--mono);font-size:11.5px;margin:10px 2px 4px;text-align:center}
+nav.tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:16px 0 20px}
+.tab{font-family:var(--mono);font-size:12.5px;text-decoration:none;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:9px 13px;transition:.15s}
+.tab:hover{color:var(--text);transform:translateY(-1px)}
+.tab.active{color:#12100b;background:var(--acc2);border-color:transparent;font-weight:700}
+.livebar{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 8px 4px;margin-bottom:18px}
+.livebar-label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--up);display:flex;align-items:center;gap:8px;padding:4px 8px 8px}
+.livebar-label .dot{width:7px;height:7px;border-radius:50%;background:var(--up);animation:pulse 1.6s infinite}
+h2.label{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--acc2);margin:30px 0 12px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.top{border-left:4px solid var(--acc)}
+.top h3{font-family:var(--serif);margin:0 0 8px;font-size:22px}
+.top p{margin:0 0 10px;font-size:14.5px;color:#e6e0d4}
+.top .src{font-size:12px;color:var(--muted)}
+.tickers{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:8px}
+@media(min-width:760px){.tickers{grid-template-columns:1fr 1fr 1fr}}
+.ticker{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:6px}
+.note{color:var(--muted);font-size:12px;font-family:var(--mono);margin:6px 2px 0;text-align:center}
+.cards{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:760px){.cards{grid-template-columns:1fr 1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;transition:.16s}
+.card:hover{transform:translateY(-3px)}
+.card h4{margin:0 0 7px;font-size:15.5px}
+.card p{margin:0;font-size:13.5px;color:#ded7c8}
+.card .mv{font-family:var(--mono);font-size:12px;font-weight:800;margin-bottom:6px}
+.mv.up{color:var(--up)} .mv.down{color:var(--down)}
+.tag{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;border-radius:6px;padding:2px 8px;margin-left:8px;vertical-align:1px;background:rgba(232,199,102,.12);color:var(--acc2);border:1px solid rgba(232,199,102,.35)}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
+td{padding:9px 10px;border-bottom:1px solid #241f15;vertical-align:top}
+td.up{color:var(--up);font-family:var(--mono);font-weight:800}
+td.down{color:var(--down);font-family:var(--mono);font-weight:800}
+td.lvl{font-family:var(--mono)}
+ul.radar{margin:0;padding-left:20px}
+ul.radar li{margin:9px 0;font-size:14px;color:#e2dbcd}
+.srcs{font-size:12.5px;color:var(--muted);line-height:1.9;word-break:break-all}
+.srcs a{color:#d9bd6e;text-decoration:none}
+.disc{color:var(--muted);font-size:12px;margin-top:18px;border-top:1px solid var(--line);padding-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <h1><span class="glyph">▲</span> The Closing Bell</h1>
+    <div class="sub">Your daily Wall Street briefing — stocks, rates &amp; what moves them</div>
+    <div class="meta">
+      <span class="pill live"><span class="dot"></span>Live</span>
+      <span class="pill" id="edition">Edition</span>
+      <span class="pill" id="datestamp">Date</span>
+      <span class="pill">Updated <span id="updated">—</span></span>
+    </div>
+  </div>
+
+  <div class="tldr"><b>The Tape</b> <span>Markets are closed for the weekend after Friday's gains capped a choppy week — S&amp;P 500 +0.42% to 7,575.39, Nasdaq +0.29%, Dow +0.29% — with June CPI and the big banks' earnings due Tuesday.</span></div>
+  <div class="freshline" id="freshline">Data as of — · briefings refresh every 30 minutes, 8 AM–6 PM ET</div>
+
+  <nav class="tabs">
+    <a class="tab" href="index.html">★ Front Page</a>
+    <a class="tab" href="cyber-briefing.html">⛨ The Cyber Wire</a>
+    <a class="tab active" href="wallstreet-briefing.html">▲ The Closing Bell</a>
+    <a class="tab" href="mma-briefing.html">⊘ The Octagon</a>
+    <a class="tab" href="archive.html">🗄 Archive</a>
+  </nav>
+
+  <div class="livebar">
+    <div class="livebar-label"><span class="dot"></span> LIVE QUOTES</div>
+    <script src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>{"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},{"proName":"FOREXCOM:DJI","title":"Dow 30"},{"proName":"NASDAQ:WDFC","title":"WD-40"},{"proName":"NASDAQ:META","title":"Meta"},{"proName":"NASDAQ:NVDA","title":"NVIDIA"},{"proName":"NASDAQ:MU","title":"Micron"},{"proName":"NASDAQ:AMD","title":"AMD"},{"proName":"TVC:USOIL","title":"WTI Crude"},{"proName":"TVC:US10Y","title":"US 10Y"}],"colorTheme":"dark","isTransparent":true,"showSymbolLogo":true,"displayMode":"adaptive","locale":"en"}</script>
+  </div>
+
+  <h2 class="label">Live Index Quotes — updates in real time</h2>
+  <div class="tickers">
+    <div class="ticker"><script src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"FOREXCOM:SPXUSD","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div>
+    <div class="ticker"><script src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"FOREXCOM:NSXUSD","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div>
+    <div class="ticker"><script src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"FOREXCOM:DJI","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div>
+  </div>
+  <div class="note">Quotes stream live (some feeds ~15-min delayed). Editorial below reflects the latest edition; official closes are in the Weekly Scorecard.</div>
+
+  <h2 class="label">The Lead</h2>
+  <div class="panel top">
+    <h3>Weekend edition: Friday's rise caps a choppy week, with CPI and the banks up next</h3>
+    <p>U.S. markets are closed for the weekend. In Friday's session — the most recent close — the S&amp;P 500 rose 31.75 points (+0.42%) to 7,575.39, the Nasdaq Composite added 74.72 (+0.29%) to 26,281.61, and the Dow gained 149.60 (+0.29%) to 52,637.01, with the S&amp;P ending near its session highs as investors monitored U.S.–Iran ceasefire talks (Yahoo Finance). Nine of eleven S&amp;P sectors finished higher.</p>
+    <p>The day belonged to SK Hynix: the Korean chipmaker's $26.5 billion U.S. share sale — the largest-ever American listing by a foreign company — priced at $149 and closed its Nasdaq debut at $168.01, up 13%. Meta climbed about 6%, capping a roughly 15% week — its best since early 2024, per CNBC — and Nvidia rose roughly 3–4%. For the week, the S&amp;P 500 gained about 1.2% and the Nasdaq 1.7%, while the Dow slipped about 0.5%. The next test comes Tuesday: June CPI at 8:30 AM ET and Q2 kickoff earnings from the biggest banks.</p>
+    <p class="src">Sources: WTOP/AP, Yahoo Finance, CNBC, Investrade — figures are Friday, July 10 official closes</p>
+  </div>
+
+  <h2 class="label">Movers &amp; Drivers</h2>
+  <div class="cards">
+    <div class="card"><div class="mv up">WD-40 (WDFC) +14–21%</div><h4>FQ3 beat plus raised FY2026 guidance</h4><p>WD-40 surged after posting FQ3 adjusted EPS of $2.33 — well above the $1.56 analysts expected — and raising its full-year guidance; Friday's standout gainer. Seeking Alpha's recap put the move at +14%; Benzinga's tally had it up 20.7% to $289.18.</p></div>
+    <div class="card"><div class="mv up">Meta (META) ~+6%</div><h4>The week's megacap standout</h4><p>Meta jumped about 6% Friday and roughly 15% on the week — its best weekly gain since early 2024, per CNBC.</p></div>
+    <div class="card"><div class="mv up">Circle (CRCL) +8–13%</div><h4>OCC clears stablecoin issuer as a trust bank</h4><p>Circle gained after the Office of the Comptroller of the Currency granted the stablecoin issuer approval Friday to operate as a trust bank — +8.2% per Seeking Alpha's recap, while Benzinga tallied a rise of more than 13%.</p></div>
+    <div class="card"><div class="mv down">Fermi (FRMI) −17.3%</div><h4>Convertible offering dilutes the story</h4><p>Fermi tumbled 17.3% after pricing an upsized $375 million offering of 5.00% convertible senior notes due 2031 (Seeking Alpha).</p></div>
+    <div class="card"><div class="mv down">Ionis (IONS) −7.6%</div><h4>Wainua heart-drug trial misses</h4><p>Ionis sank 7.6% after it and partner AstraZeneca said the Phase 3 CARDIO-TTRansform trial for Wainua failed to meet its primary efficacy endpoint (Seeking Alpha).</p></div>
+    <div class="card"><div class="mv up">SK Hynix (ADR) +13%</div><h4>Record foreign debut pops</h4><p>SK Hynix closed its first Nasdaq session at $168.01, up 13% from the $149 pricing, after raising $26.5 billion — the largest-ever U.S. listing by a foreign company (Yahoo Finance/CNBC).</p></div>
+  </div>
+
+  <h2 class="label">Chart of the Day — WD-40 (WDFC)</h2>
+  <div class="panel" style="padding:8px">
+    <script src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>{"symbol":"NASDAQ:WDFC","width":"100%","height":240,"locale":"en","dateRange":"5D","colorTheme":"dark","isTransparent":true,"autosize":false}</script>
+    <div class="note">Friday's standout gainer: up double digits (+14% per Seeking Alpha, +20.7% per Benzinga) on an FQ3 beat and raised FY2026 guidance.</div>
+  </div>
+  <h2 class="label">Sector Heat — live</h2>
+  <div class="panel" style="padding:8px">
+    <script src="https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js" async>{"dataSource":"SPX500","blockSize":"market_cap_basic","blockColor":"change","grouping":"sector","locale":"en","colorTheme":"dark","hasTopBar":false,"isDataSetEnabled":false,"isZoomEnabled":true,"hasSymbolTooltip":true,"isMonoSize":false,"width":"100%","height":420}</script>
+    <div class="note">Friday: nine of eleven S&amp;P sectors closed higher, with early strength in communications, materials and consumer staples; tech (~+3%) and energy (+3.1%) led the week (Investrade).</div>
+  </div>
+
+  <h2 class="label">The Calendar — live</h2>
+  <div class="panel" style="padding:8px">
+    <script src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>{"colorTheme":"dark","isTransparent":true,"width":"100%","height":420,"locale":"en","importanceFilter":"0,1","countryFilter":"us"}</script>
+  </div>
+
+  <h2 class="label">Live Market Headlines — updates in real time</h2>
+  <div class="panel" style="padding:8px">
+    <script src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>{"feedMode":"market","market":"stock","colorTheme":"dark","isTransparent":true,"displayMode":"regular","width":"100%","height":420,"locale":"en"}</script>
+  </div>
+
+  <h2 class="label">Weekly Scorecard</h2>
+  <div class="panel" style="padding:10px 12px">
+    <table>
+      <tr><th>Index</th><th>Friday close (Jul 10)</th><th>Day</th><th>Week</th></tr>
+      <tr><td>S&amp;P 500</td><td class="lvl">7,575.39</td><td class="up">+0.42%</td><td class="up">+1.2%</td></tr>
+      <tr><td>Nasdaq Composite</td><td class="lvl">26,281.61</td><td class="up">+0.29%</td><td class="up">+1.7%</td></tr>
+      <tr><td>Dow Jones Industrial Average</td><td class="lvl">52,637.01</td><td class="up">+0.29%</td><td class="down">−0.5%</td></tr>
+    </table>
+    <div class="note" style="text-align:left">Official closes per WTOP/AP and Yahoo Finance. Weekly moves measured vs. Thursday, July 2 (markets were closed Friday, July 3); the Dow's July 2 record of 52,900.07 was not reclaimed.</div>
+  </div>
+
+  <h2 class="label">Rates, Bonds &amp; Commodities</h2>
+  <div class="panel" style="padding:10px 12px">
+    <table>
+      <tr><th>Instrument</th><th>Level</th><th>Note</th></tr>
+      <tr><td>10-yr Treasury yield</td><td class="lvl">4.56%</td><td>Friday finish per ETF Trends' July 10 snapshot; AP had it edging up to 4.55% from 4.54% late Thursday.</td></tr>
+      <tr><td>2-yr Treasury yield</td><td class="lvl">4.21%</td><td>ETF Trends July 10 snapshot.</td></tr>
+      <tr><td>Fed funds target</td><td class="lvl">3.50–3.75%</td><td>Next FOMC decision July 28–29; CNBC notes markets have priced a possible quarter-point hike as soon as September.</td></tr>
+      <tr><td>WTI crude</td><td class="lvl">~$71.4–71.5</td><td>Trading Economics' Friday print was $71.51 (−0.8%); other settlement recaps had $71.41 (−0.9%). Up roughly 3.5–4% on the week on U.S.–Iran supply concerns.</td></tr>
+      <tr><td>Brent crude</td><td class="lvl">~$76.0</td><td>Settled $76.01 Friday, −0.4% (Friday settlement recaps/Investrade).</td></tr>
+    </table>
+  </div>
+
+  <h2 class="label">On the Radar</h2>
+  <div class="panel">
+    <ul class="radar">
+      <li><b>Tuesday, Jul 14 — June CPI (8:30 AM ET):</b> consensus surveys range from −0.1% to −0.2% m/m, with annual inflation easing to roughly 3.7–3.8% from 4.2%; core is expected to stay firmer at +0.3% m/m (Kiplinger/IG/CMC Markets).</li>
+      <li><b>Tuesday, Jul 14 — big banks kick off Q2 earnings:</b> JPMorgan, Goldman Sachs, Citigroup, Wells Fargo and Bank of America report; Morgan Stanley and BlackRock follow Wednesday (CNBC/Seeking Alpha).</li>
+      <li><b>Tuesday–Wednesday — Fed Chair Warsh's first monetary-policy testimony:</b> House Financial Services Tuesday, Senate Wednesday, with the hike-vs-hold debate front and center — minutes of the hawkish June meeting, released this week, showed policymakers' mounting concern about inflation (CNBC/ActionForex/Reuters).</li>
+      <li><b>Rest of week:</b> PPI Wednesday, retail sales Thursday; ASML Wednesday, TSMC and Netflix Thursday test the AI-and-streaming trade (Kiplinger/CMC/Seeking Alpha).</li>
+    </ul>
+  </div>
+
+  <h2 class="label">Sources</h2>
+  <div class="panel srcs">
+    <a href="https://wtop.com/news/2026/07/how-major-us-stock-indexes-fared-friday-7-10-2026/">wtop.com — how major US stock indexes fared Friday 7/10/2026</a><br>
+    <a href="https://finance.yahoo.com/news/live/stock-market-today-friday-july-10-dow-sp-nasdaq-113921604.html">finance.yahoo.com — Dow, S&amp;P 500, Nasdaq rise to cap choppy week as SK Hynix pops</a><br>
+    <a href="https://www.cnbc.com/2026/07/10/stock-market-next-week-outlook-for-july-13-17-2026.html">cnbc.com — stock market next week: outlook for July 13–17</a><br>
+    <a href="https://seekingalpha.com/news/4612825-biggest-stock-movers-wdfc-frmi-and-more">seekingalpha.com — biggest stock movers: WDFC, VOD, META and more</a><br>
+    <a href="https://investrade.com/market-review-july-10-2026/">investrade.com — market review: July 10, 2026</a><br>
+    <a href="https://www.benzinga.com/trading-ideas/movers/26/07/60384230/equipmentshare-vodafone-circle-internet-group-and-other-big-stocks-moving-higher-on-friday">benzinga.com — big stocks moving higher on Friday (WDFC, CRCL and more)</a><br>
+    <a href="https://tradingeconomics.com/commodity/crude-oil">tradingeconomics.com — crude oil price (July 10 print)</a><br>
+    <a href="https://www.etftrends.com/fixed-income-content-hub/treasury-yields-snapshot-july-10-2026/">etftrends.com — Treasury yields snapshot: July 10, 2026</a><br>
+    <a href="https://www.kiplinger.com/investing/economy/this-weeks-economic-calendar">kiplinger.com — this week's economic calendar (July 13–17)</a><br>
+    <a href="https://www.cmcmarkets.com/en-ie/news-and-analysis/the-week-ahead-us-cpi-uk-gdp-netflix-earnings">cmcmarkets.com — the week ahead: US CPI, Netflix earnings</a><br>
+    <a href="https://seekingalpha.com/news/4612725-catalyst-watch-bank-earnings-netflix-results-alzheimers-conference">seekingalpha.com — catalyst watch: bank earnings, Netflix results</a><br>
+    <a href="https://finance.yahoo.com/markets/stocks/articles/investors-grapple-packed-week-earnings-100437280.html">finance.yahoo.com/Reuters — investors to grapple with packed week of earnings, CPI, Iran headlines</a><br>
+    <a href="https://finance.yahoo.com/markets/stocks/articles/stock-market-today-july-10-212505206.html">finance.yahoo.com — stock market today, July 10: SK Hynix soars on debut (WD-40 EPS detail)</a>
+  </div>
+
+  <div class="disc">The Closing Bell is an automated daily briefing for information only — it is not investment advice or a recommendation to buy or sell any security. Live widgets stream independently of the editorial content and may be delayed. Verify all figures with your broker or a primary data source before acting.</div>
+</div>
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
+</body>
+</html>
