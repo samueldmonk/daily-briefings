@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Closing Bell — Daily Wall Street Briefing</title>
+<style>
+:root{
+  --bg:#0a0b0d; --panel:#14161a; --panel2:#101216; --line:#252a31;
+  --text:#e9edf2; --muted:#8b95a3;
+  --mono:'SF Mono',ui-monospace,'Cascadia Code',Menlo,Consolas,monospace;
+  --acc:#caa64a; --acc2:#e8c766; --up:#3ecf8e; --down:#ff6a6a;
+}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(1200px 520px at 50% -240px,#17150f 0,var(--bg) 60%);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding:24px 18px 60px}
+.masthead{text-align:center;padding:8px 0 2px}
+.masthead h1{font-family:Georgia,'Times New Roman',serif;font-size:36px;margin:0;letter-spacing:.5px}
+.masthead h1 .glyph{color:var(--acc2)}
+.masthead .sub{color:var(--muted);font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;margin-top:7px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0 4px}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.09em;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:5px 11px;text-transform:uppercase}
+.pill.live{color:#0a0b0d;background:var(--acc2);border-color:transparent;font-weight:700;display:inline-flex;align-items:center;gap:6px}
+.pill.live .dot{width:7px;height:7px;border-radius:50%;background:#0a0b0d;animation:pulse 1.6s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc2);border-radius:10px;padding:11px 15px;margin:14px 0 2px;font-size:14.5px;line-height:1.5}
+.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc2);margin-right:9px}
+.freshline{color:var(--muted);font-family:var(--mono);font-size:11.5px;margin:10px 2px 4px;text-align:center}
+nav.tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:16px 0 20px}
+.tab{font-family:var(--mono);font-size:12.5px;text-decoration:none;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:9px 13px;transition:.15s}
+.tab:hover{color:var(--text);transform:translateY(-1px)}
+.tab.active{color:#0a0b0d;background:var(--acc2);border-color:transparent;font-weight:700}
+.livebar{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 8px 4px;margin-bottom:18px}
+.livebar-label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--up);display:flex;align-items:center;gap:8px;padding:4px 8px 8px}
+.livebar-label .dot{width:7px;height:7px;border-radius:50%;background:var(--up);animation:pulse 1.6s infinite}
+.tickers{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:6px}
+@media(min-width:720px){.tickers{grid-template-columns:1fr 1fr 1fr}}
+.ticker{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:6px}
+.note{color:var(--muted);font-size:12px;font-family:var(--mono);margin:6px 2px 0;text-align:center}
+h2.label{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--acc2);margin:30px 0 12px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.top h3{margin:0 0 8px;font-size:22px;font-family:Georgia,serif}
+.top p{margin:0 0 10px;font-size:14.5px;color:#d7dde5}
+.top .src{font-size:12px;color:var(--muted)}
+.cards{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:760px){.cards{grid-template-columns:1fr 1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;transition:.16s}
+.card:hover{transform:translateY(-3px)}
+.card h4{margin:0 0 7px;font-size:15.5px}
+.card p{margin:0;font-size:13.5px;color:#c9d1da}
+.up{color:var(--up);font-weight:700} .down{color:var(--down);font-weight:700}
+.tag{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;border-radius:6px;padding:2px 8px;margin-left:8px;vertical-align:1px}
+.tag.new{background:rgba(232,199,102,.13);color:var(--acc2);border:1px solid rgba(232,199,102,.35)}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
+td{padding:9px 10px;border-bottom:1px solid #1d2229;vertical-align:top}
+td.mono{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
+ul.radar{margin:0;padding-left:20px}
+ul.radar li{margin:9px 0;font-size:14px;color:#d3dae2}
+.foot{margin-top:34px;color:var(--muted);font-size:12px;line-height:1.8}
+.foot a{color:var(--acc2);text-decoration:none;word-break:break-all}
+.disc{margin-top:12px;font-size:11px;color:#5f6773;font-style:italic}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <h1><span class="glyph">▲</span> The Closing Bell</h1>
+    <div class="sub">Your daily Wall Street briefing — stocks, rates &amp; what moved</div>
+    <div class="meta">
+      <span class="pill live"><span class="dot"></span> Live</span>
+      <span class="pill" id="edition">Morning Edition</span>
+      <span class="pill" id="datestamp">Saturday, July 11, 2026</span>
+      <span class="pill">Updated <span id="updated">…</span></span>
+    </div>
+  </div>
+
+  <div class="tldr"><b>The Tape</b> <span>Markets are closed for the weekend after Friday's gains capped a winning week — S&amp;P 500 +0.42% Friday and +1.2% on the week as chips led and SK Hynix popped 13% in its record debut; June CPI and five big-bank earnings hit Tuesday.</span></div>
+  <div class="freshline" id="freshline">Data as of this edition · briefings refresh every 30 minutes, 8 AM–6 PM ET</div>
+
+  <nav class="tabs">
+    <a class="tab" href="index.html">★ Front Page</a>
+    <a class="tab" href="cyber-briefing.html">⛨ The Cyber Wire</a>
+    <a class="tab active" href="wallstreet-briefing.html">▲ The Closing Bell</a>
+    <a class="tab" href="mma-briefing.html">⊘ The Octagon</a>
+    <a class="tab" href="archive.html">🗄 Archive</a>
+  </nav>
+
+  <div class="livebar">
+    <div class="livebar-label"><span class="dot"></span> LIVE QUOTES</div>
+    <script src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>{"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},{"proName":"FOREXCOM:DJI","title":"Dow 30"},{"proName":"NASDAQ:NVDA","title":"NVIDIA"},{"proName":"NASDAQ:META","title":"Meta"},{"proName":"NYSE:CRCL","title":"Circle"},{"proName":"NASDAQ:MU","title":"Micron"},{"proName":"NASDAQ:AMD","title":"AMD"},{"proName":"TVC:USOIL","title":"WTI Crude"},{"proName":"TVC:US10Y","title":"US 10Y"}],"colorTheme":"dark","isTransparent":true,"showSymbolLogo":true,"displayMode":"adaptive","locale":"en"}</script>
+  </div>
+
+  <h2 class="label" style="margin-top:6px">Live Index Quotes — updates in real time</h2>
+  <div class="tickers">
+    <div class="ticker"><script src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"FOREXCOM:SPXUSD","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div>
+    <div class="ticker"><script src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"FOREXCOM:NSXUSD","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div>
+    <div class="ticker"><script src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"FOREXCOM:DJI","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div>
+  </div>
+  <div class="note">Quotes stream live (some feeds ~15-min delayed). Editorial below reflects the latest edition; official closes are in the Weekly Scorecard.</div>
+
+  <h2 class="label">The Lead</h2>
+  <div class="panel top">
+    <h3>Weekend edition: chips carried a choppy week home — S&amp;P 500 +0.42% Friday, +1.2% for the week</h3>
+    <p><b>U.S. markets are closed for the weekend;</b> the figures below reflect Friday's official close, the most recent session. At that closing bell the <b>S&amp;P 500</b> rose <span class="up">+0.42%</span> to 7,575.39, the <b>Nasdaq Composite</b> added <span class="up">+0.29%</span> to 26,281.61, and the <b>Dow</b> gained 149.60 points (<span class="up">+0.29%</span>) to 52,637.01 — leaving the S&amp;P up 1.2% for the week while the Dow, despite the prior week's record close, finished the week slightly lower.</p>
+    <p>Big Tech did the carrying: <b>Nvidia</b> rose roughly <span class="up">3–4%</span> and <b>Meta</b> jumped about <span class="up">6%</span>, capping a ~15% week — its best weekly performance since early 2024, per CNBC. The other story of the session was <b>SK Hynix</b>, whose American depositary shares opened at $170 — a 14% pop over the $149 pricing — and closed their first day up 13% at $168.01 after the memory-chip maker raised $26.5 billion in the largest-ever U.S. listing by a foreign company. Chip stocks stayed the market's biggest source of strength, with the VanEck Semiconductor ETF up 2.5%, Micron up 4.5% and Sandisk up 7.6% Friday. In the bond market, the 10-year Treasury yield ended the week around 4.55&ndash;4.57%, up roughly 9 basis points over five sessions to its highest level since late May (Investrade weekly review; AP marked Friday at 4.55%).</p>
+    <p class="src">Sources: WTOP/AP, CNBC, Yahoo Finance, Investrade (July 10 close, reviewed July 11)</p>
+  </div>
+
+  <h2 class="label">Movers &amp; Drivers</h2>
+  <div class="cards">
+    <div class="card">
+      <h4>SK Hynix (SKHYV) <span class="up">+13%</span> — record foreign debut</h4>
+      <p>Priced at $149, opened at $170, closed its first Nasdaq session at $168.01. The $26.5B raise is the largest-ever U.S. listing by a foreign company, and the debut doubled as a live test of the AI memory trade. The chipmaker trades as SKHYV before switching to its permanent SKHY ticker.</p>
+    </div>
+    <div class="card">
+      <h4>Meta (META) <span class="up">~+6%</span> — best week since early 2024</h4>
+      <p>Jumped about 6% Friday and roughly 15% on the week, its strongest weekly run since early 2024 per CNBC — one of the two Big Tech names that powered the S&amp;P 500's Friday gain.</p>
+    </div>
+    <div class="card">
+      <h4>Nvidia (NVDA) <span class="up">~+3–4%</span> — AI trade stays hot</h4>
+      <p>Rose roughly 3–4% Friday (sources' session marks ranged from about 3% to 4%), extending the chip-led rally that began Thursday on Micron's U.S. investment news and fresh AI optimism into the SK Hynix listing.</p>
+    </div>
+    <div class="card">
+      <h4>Circle (CRCL) <span class="up">+12.5%</span> — a bank charter for stablecoins <span class="tag new">New</span></h4>
+      <p>Circle Internet Group surged 12.5% Friday after the stablecoin issuer received approval from the Office of the Comptroller of the Currency to establish a national trust bank — a regulatory milestone that puts its reserve management under a federal charter.</p>
+    </div>
+    <div class="card">
+      <h4>Delta (DAL) <span class="down">−0.6%</span> — beat, but fuel bites</h4>
+      <p>Q2 adjusted EPS of $1.56 beat the $1.48 consensus on adjusted revenue of $17.67B (vs $17.53B expected) despite what Delta called the highest quarterly fuel expense in its history; net income still fell 25% y/y to $1.6B. Q3 guide: $2.00–$2.50 EPS; full-year $6.50–$7.50 reaffirmed. Shares slipped about 0.6% to $88.50 Friday.</p>
+    </div>
+  </div>
+
+  <h2 class="label">Chart of the Day — Circle's trust-bank pop</h2>
+  <div class="panel" style="padding:8px">
+    <script src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>{"symbol":"NYSE:CRCL","width":"100%","height":240,"locale":"en","dateRange":"5D","colorTheme":"dark","isTransparent":true,"autosize":false}</script>
+  </div>
+  <div class="note">Friday's biggest verified mover outside SK Hynix's debut: +12.5% on OCC trust-bank approval.</div>
+
+  <h2 class="label">Sector Heat — live</h2>
+  <div class="panel" style="padding:8px">
+    <script src="https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js" async>{"dataSource":"SPX500","blockSize":"market_cap_basic","blockColor":"change","grouping":"sector","locale":"en","colorTheme":"dark","hasTopBar":false,"isDataSetEnabled":false,"isZoomEnabled":true,"hasSymbolTooltip":true,"isMonoSize":false,"width":"100%","height":420}</script>
+  </div>
+
+  <h2 class="label">The Calendar — live</h2>
+  <div class="panel" style="padding:8px">
+    <script src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>{"colorTheme":"dark","isTransparent":true,"width":"100%","height":420,"locale":"en","importanceFilter":"0,1","countryFilter":"us"}</script>
+  </div>
+
+  <h2 class="label">Live Market Headlines — updates in real time</h2>
+  <div class="panel" style="padding:8px">
+    <script src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>{"feedMode":"market","market":"stock","colorTheme":"dark","isTransparent":true,"displayMode":"regular","width":"100%","height":420,"locale":"en"}</script>
+  </div>
+
+  <h2 class="label">Weekly Scorecard — official closes</h2>
+  <div class="panel" style="padding:8px 10px">
+    <table>
+      <tr><th>Session</th><th>S&amp;P 500</th><th>Nasdaq Composite</th><th>Dow Jones</th></tr>
+      <tr><td class="mono">Fri Jul 10</td><td>7,575.39 <span class="up">(+0.42%)</span></td><td>26,281.61 <span class="up">(+0.29%)</span></td><td>52,637.01 <span class="up">(+149.60, +0.29%)</span></td></tr>
+      <tr><td class="mono">Thu Jul 9</td><td>7,543.64 <span class="up">(+0.81%)</span></td><td>26,206.89 <span class="up">(+1.30%)</span></td><td>52,487.41 <span class="up">(+139.02, +0.27%)</span></td></tr>
+      <tr><td class="mono">Wed Jul 8</td><td>7,482.71 <span class="down">(−0.28%)</span></td><td>25,870.65 <span class="up">(+0.20%)</span></td><td>52,348.39 <span class="down">(−576.76, −1.09%)</span></td></tr>
+      <tr><td class="mono">Tue Jul 7</td><td>7,503.85</td><td>25,818.69</td><td>52,925.15</td></tr>
+      <tr><td class="mono">Thu Jul 2 (prior wk)</td><td>7,483.24 <span style="color:var(--muted)">(flat)</span></td><td>25,832.67 <span class="down">(−0.80%)</span></td><td>52,900.07 <span class="up">(+1.14%, record)</span></td></tr>
+    </table>
+    <p style="margin:10px 2px 2px;font-size:12.5px;color:var(--muted)">Week ended Jul 10 (T. Rowe Price weekly update): S&amp;P 500 <span class="up">+1.23%</span> · Nasdaq <span class="up">+1.74%</span> · Dow <span class="down">−0.50%</span> · Russell 2000 <span class="down">−0.61%</span>. U.S. markets were closed Fri Jul 3 for Independence Day and are closed this weekend.</p>
+  </div>
+
+  <h2 class="label">Rates, Bonds &amp; Commodities</h2>
+  <div class="panel" style="padding:8px 10px">
+    <table>
+      <tr><th>Instrument</th><th>Latest</th><th>Note</th></tr>
+      <tr><td>10-yr Treasury</td><td class="mono">~4.55&ndash;4.57%</td><td>Friday marks ranged from 4.55% (AP) to 4.568% (Investrade's weekly review) — up roughly 9 bps on the week, rising in 8 of the last 9 sessions to its highest level since late May.</td></tr>
+      <tr><td>2-yr Treasury</td><td class="mono">4.21%</td><td>Finished Friday at 4.21% (ETF Trends end-of-day snapshot).</td></tr>
+      <tr><td>Fed funds</td><td class="mono">3.50–3.75%</td><td>Next FOMC decision lands July 28–29; Tuesday's CPI is the Committee's last full inflation read before it.</td></tr>
+      <tr><td>WTI crude</td><td class="mono">$71.41</td><td>Settled Friday at $71.41, down 0.93% on the day, but still posted a roughly 4% weekly rise on supply concerns tied to the U.S.–Iran strikes earlier in the week (Investrade).</td></tr>
+      <tr><td>Brent crude</td><td class="mono">~$76.2&ndash;76.6</td><td>Mixed Friday reads: AP reported Brent easing 0.1% to $76.23, while Forbes Advisor's rolling 24-hour tracker showed +0.69% to $76.56.</td></tr>
+    </table>
+  </div>
+
+  <h2 class="label">On the Radar</h2>
+  <div class="panel">
+    <ul class="radar">
+      <li><b>Tuesday, Jul 14 — banks kick off earnings season:</b> JPMorgan Chase (est. $48.7B revenue / $5.52 EPS, TipRanks), Goldman Sachs, Citigroup, Wells Fargo and Bank of America all report; S&amp;P 500 Q2 earnings are expected to jump 23.4% year over year (Yahoo Finance week-ahead).</li>
+      <li><b>Tuesday, Jul 14 — June CPI (8:30 AM ET):</b> forecasters see annual inflation easing to roughly 3.7&ndash;3.8% from May's 4.2% (FactSet consensus 3.8% with core at 2.9%; other surveys 3.7% on a &minus;0.1% monthly dip) — the Fed's last full inflation read before the July 28&ndash;29 FOMC meeting.</li>
+      <li><b>Tuesday&ndash;Wednesday — Fed Chair Warsh's first semi-annual testimony:</b> Warsh makes his first trip to the Capitol as Chair, appearing before the House Financial Services Committee on Tuesday and Senate lawmakers on Wednesday.</li>
+      <li><b>Later in the week — Netflix and more:</b> Netflix is expected to report Q2 EPS of $0.79 (+9.7%) on revenue up 13.7% to $12.6B, with the options market pricing a ~7.3% post-earnings move (CMC Markets); BlackRock and Johnson &amp; Johnson also report, and PPI, retail sales and jobless claims round out the data slate.</li>
+    </ul>
+  </div>
+
+  <h2 class="label">Sources</h2>
+  <div class="foot">
+    <a href="https://finance.yahoo.com/markets/live/stock-market-today-friday-july-10-dow-sp-nasdaq-113921604.html">finance.yahoo.com — Stock market today: choppy week capped, SK Hynix pops</a><br>
+    <a href="https://www.cnbc.com/2026/07/09/stock-market-today-live-updates.html">cnbc.com — Stock market news for July 10, 2026</a><br>
+    <a href="https://www.cnbc.com/2026/07/10/sk-hynix-skhy-stock-nasdaq.html">cnbc.com — SK Hynix rises 13% in Nasdaq debut</a><br>
+    <a href="https://finance.yahoo.com/markets/stocks/articles/sk-hynix-nasdaq-debut-26-113118390.html">finance.yahoo.com — SK Hynix $26.5B ADR listing sets record</a><br>
+    <a href="https://www.cnbc.com/2026/07/10/delta-air-lines-dal-q2-2026-earnings.html">cnbc.com — Delta Q2 2026 earnings</a><br>
+    <a href="https://www.gurufocus.com/news/8953737/delta-air-lines-dal-reports-strong-q2-earnings-despite-high-fuel-costs">gurufocus.com — Delta beats despite record fuel costs</a><br>
+    <a href="https://wtop.com/news/2026/07/how-major-us-stock-indexes-fared-friday-7-10-2026/">wtop.com (AP) — How major U.S. stock indexes fared Friday 7/10</a><br>
+    <a href="https://www.troweprice.com/personal-investing/resources/insights/global-markets-weekly-update.html">troweprice.com — Global markets weekly update (week ended Jul 10)</a><br>
+    <a href="https://investrade.com/market-review-july-10-2026/">investrade.com — Market review Jul 10: 10-yr +9bps to 4.568%; WTI settles $71.41; oil +4% weekly</a><br>
+    <a href="https://www.investing.com/news/stock-market-news/meta-moderna-among-market-cap-stock-movers-on-friday-93CH-4786652">investing.com — Meta among Friday's market-cap movers; Circle +12.5% on OCC approval</a><br>
+    <a href="https://www.columbian.com/news/2026/jul/10/stocks-and-oil-prices-drift-as-global-markets-continue-to-calm/">columbian.com (AP) — Stocks and oil drift; 10-yr at 4.55%, Brent $76.23</a><br>
+    <a href="https://www.etftrends.com/fixed-income-content-hub/treasury-yields-snapshot-july-10-2026/">etftrends.com — Treasury yields snapshot Jul 10: 2-yr 4.21%</a><br>
+    <a href="https://www.forbes.com/advisor/investing/oil-prices-today/">forbes.com/advisor — Oil prices today (Jul 10): Brent $76.56 on the rolling tracker</a><br>
+    <a href="https://www.cnbc.com/2026/07/10/stock-market-next-week-outlook-for-july-13-17-2026.html">cnbc.com — Stock market next week: outlook for July 13–17</a><br>
+    <a href="https://www.cmcmarkets.com/en-ie/news-and-analysis/the-week-ahead-us-cpi-uk-gdp-netflix-earnings">cmcmarkets.com — Week ahead: US CPI (est. 3.7% y/y, −0.1% m/m), Netflix earnings</a><br>
+    <a href="https://seekingalpha.com/news/4612725-catalyst-watch-bank-earnings-netflix-results-alzheimers-conference">seekingalpha.com — Catalyst watch: JPM, WFC, BAC, C, GS report Tuesday</a><br>
+    <a href="https://blog.kraken.com/economic-brief/july-8-2026">blog.kraken.com — CPI Jul 14 8:30 AM ET; FactSet 3.8% y/y consensus; FOMC Jul 28–29</a><br>
+    <a href="https://www.actionforex.com/contributors/fundamental-analysis/646852-week-ahead-us-cpi-and-warsh-testimony-to-take-centre-stage-boc-eyed-too/">actionforex.com — Warsh testimony: House Tuesday, Senate Wednesday</a><br>
+    <a href="https://www.tipranks.com/news/jpmorgan-q2-earnings-preview-analysts-raise-jpm-stock-price-targets">tipranks.com — JPMorgan Q2 preview ($48.7B / $5.52 est.)</a><br>
+    <a href="https://www.fool.com/coverage/stock-market-today/2026/07/10/stock-market-today-july-10-markets-edge-higher-and-sk-hynix-soars-on-debut/">fool.com — Markets edge higher; SK Hynix soars on debut</a>
+    <div class="disc">Information only — not investment advice. Levels are official closes from the cited sources; live widgets stream independently and may differ from editorial figures.</div>
+  </div>
+</div>
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
+</body>
+</html>

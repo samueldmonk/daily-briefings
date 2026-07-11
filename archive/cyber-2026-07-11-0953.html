@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Cyber Wire — Daily Security Briefing</title>
+<style>
+:root{
+  --bg:#0a0b0d; --panel:#14161a; --panel2:#101216; --line:#252a31;
+  --text:#e9edf2; --muted:#8b95a3;
+  --mono:'SF Mono',ui-monospace,'Cascadia Code',Menlo,Consolas,monospace;
+  --acc:#22d3a8; --acc2:#36c6ff; --crit:#ff5d5d; --warn:#e8c766;
+}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(1200px 520px at 50% -240px,#12181a 0,var(--bg) 60%);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding:24px 18px 60px}
+.masthead{text-align:center;padding:8px 0 2px}
+.masthead h1{font-size:34px;margin:0;letter-spacing:.5px}
+.masthead h1 .glyph{color:var(--acc)}
+.masthead .sub{color:var(--muted);font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;margin-top:7px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0 4px}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.09em;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:5px 11px;text-transform:uppercase}
+.pill.live{color:#0a0b0d;background:var(--acc);border-color:transparent;font-weight:700;display:inline-flex;align-items:center;gap:6px}
+.pill.live .dot{width:7px;height:7px;border-radius:50%;background:#0a0b0d;animation:pulse 1.6s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:10px;padding:11px 15px;margin:14px 0 2px;font-size:14.5px;line-height:1.5}
+.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);margin-right:9px}
+.freshline{color:var(--muted);font-family:var(--mono);font-size:11.5px;margin:10px 2px 4px;text-align:center}
+nav.tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:16px 0 20px}
+.tab{font-family:var(--mono);font-size:12.5px;text-decoration:none;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:9px 13px;transition:.15s}
+.tab:hover{color:var(--text);transform:translateY(-1px)}
+.tab.active{color:#0a0b0d;background:var(--acc);border-color:transparent;font-weight:700}
+.threat{display:flex;align-items:center;gap:12px;background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--crit);border-radius:12px;padding:13px 16px;margin-bottom:14px}
+.threat .lvl{font-family:var(--mono);font-weight:800;font-size:13px;letter-spacing:.14em;color:var(--crit);text-transform:uppercase;white-space:nowrap}
+.threat p{margin:0;font-size:13.5px;color:#cfd6df}
+.numstrip{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:22px}
+@media(min-width:720px){.numstrip{grid-template-columns:repeat(4,1fr)}}
+.num{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;text-align:center}
+.num .v{font-family:var(--mono);font-size:20px;font-weight:800;color:var(--acc)}
+.num .k{font-size:11px;color:var(--muted);margin-top:3px;line-height:1.35}
+h2.label{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--acc);margin:30px 0 12px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.top h3{margin:0 0 8px;font-size:21px}
+.top p{margin:0 0 10px;font-size:14.5px;color:#d7dde5}
+.top .src{font-size:12px;color:var(--muted)}
+.patch{border-left:4px solid var(--crit);background:linear-gradient(90deg,rgba(255,93,93,.07),transparent 55%),var(--panel);border-radius:12px;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:15px 18px;margin:10px 0 0}
+.patch .k{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--crit);text-transform:uppercase;font-weight:800}
+.patch p{margin:7px 0 0;font-size:14px;color:#e3e8ee}
+.cards{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:760px){.cards{grid-template-columns:1fr 1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;transition:.16s}
+.card:hover{transform:translateY(-3px)}
+.card h4{margin:0 0 7px;font-size:15.5px}
+.card p{margin:0;font-size:13.5px;color:#c9d1da}
+.tag{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;border-radius:6px;padding:2px 8px;margin-left:8px;vertical-align:1px}
+.tag.new{background:rgba(54,198,255,.14);color:var(--acc2);border:1px solid rgba(54,198,255,.35)}
+.tag.camp{background:rgba(34,211,168,.12);color:var(--acc);border:1px solid rgba(34,211,168,.3)}
+.tag.claim{background:rgba(232,199,102,.12);color:var(--warn);border:1px solid rgba(232,199,102,.3)}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
+td{padding:9px 10px;border-bottom:1px solid #1d2229;vertical-align:top}
+td.cve{font-family:var(--mono);font-size:12.5px;color:var(--acc2);white-space:nowrap}
+td.score{font-family:var(--mono);font-weight:800;color:var(--crit)}
+ul.kev{margin:0;padding-left:20px}
+ul.kev li{margin:9px 0;font-size:14px;color:#d3dae2}
+.days{font-family:var(--mono);font-weight:800}
+.days.crit{color:var(--crit)}
+.days.ok{color:var(--acc)}
+.foot{margin-top:34px;color:var(--muted);font-size:12px;line-height:1.8}
+.foot a{color:var(--acc2);text-decoration:none;word-break:break-all}
+.disc{margin-top:12px;font-size:11px;color:#5f6773;font-style:italic}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="masthead">
+    <h1><span class="glyph">⛨</span> The Cyber Wire</h1>
+    <div class="sub">Your daily security briefing — threats, breaches &amp; patches</div>
+    <div class="meta">
+      <span class="pill live"><span class="dot"></span> Live</span>
+      <span class="pill" id="edition">Morning Edition</span>
+      <span class="pill" id="datestamp">Saturday, July 11, 2026</span>
+      <span class="pill">Updated <span id="updated">…</span></span>
+    </div>
+  </div>
+
+  <div class="tldr"><b>The Wire</b> <span>Dutch police say home-grown criminals helped ShinyHunters breach telecom Odido — 6.2 million people exposed by one fake IT phone call — and may release the caller's voice, while the max-severity ColdFusion flaw is now past its federal patch deadline.</span></div>
+  <div class="freshline" id="freshline">Data as of this edition · briefings refresh every 30 minutes, 8 AM–6 PM ET</div>
+
+  <nav class="tabs">
+    <a class="tab" href="index.html">★ Front Page</a>
+    <a class="tab active" href="cyber-briefing.html">⛨ The Cyber Wire</a>
+    <a class="tab" href="wallstreet-briefing.html">▲ The Closing Bell</a>
+    <a class="tab" href="mma-briefing.html">⊘ The Octagon</a>
+    <a class="tab" href="archive.html">🗄 Archive</a>
+  </nav>
+
+  <div class="threat">
+    <span class="lvl">Threat: High</span>
+    <p>The actively exploited CVSS 10.0 Adobe ColdFusion flaw is now <b>past</b> its federal remediation deadline (July 10), and the FortiBleed campaign remains a live operation exposing admin credentials for tens of thousands of edge firewalls.</p>
+  </div>
+
+  <div class="numstrip">
+    <div class="num"><div class="v">6.2M</div><div class="k">People in the Odido breach — roughly a third of the Netherlands</div></div>
+    <div class="num"><div class="v">86,644</div><div class="k">FortiGate firewalls compromised in FortiBleed (SOCRadar)</div></div>
+    <div class="num"><div class="v">10.0</div><div class="k">CVSS of ColdFusion CVE-2026-48282 — KEV deadline now passed</div></div>
+    <div class="num"><div class="v">70 mo.</div><div class="k">Prison term for the BlackCat-linked ransomware negotiator</div></div>
+  </div>
+
+  <h2 class="label">Top Story</h2>
+  <div class="panel top">
+    <h3>One phone call, 6.2 million records: Dutch police close in on the Odido hackers</h3>
+    <p>Dutch police say they have "strong indications" that Dutch criminals were behind February's breach of telecom operator Odido, which exposed personal data of roughly 6.2 million people — about a third of the Netherlands. The pivotal evidence is a recorded phone call: before the attack, a Dutch-speaking man posing as an Odido IT employee called the company's customer service desk and helped trick staff into granting the access that let the hackers in. Investigators have analyzed the recording, believe the voice is genuine, and say they may release it publicly to identify the caller.</p>
+    <p>The ShinyHunters extortion group claimed the hack and published the stolen data on the dark web after Odido refused to pay. Police suspect the perpetrators have talked about the breach online or in their social circles and are urging tipsters to come forward — an unusually public turn in the hunt.</p>
+    <p class="src">Sources: NL Times (Jul 9); The Record; DutchNews.nl; BleepingComputer</p>
+  </div>
+
+  <div class="patch">
+    <div class="k">⚠ Patch Priority — deadline passed</div>
+    <p><b>Adobe ColdFusion — CVE-2026-48282 (CVSS 10.0):</b> path traversal in the RDS FILEIO handler enabling unauthenticated remote code execution on ColdFusion 2025.9, 2023.20 and earlier. In-the-wild exploitation was captured within two hours of public details. Adobe's fix shipped June 30 in bulletin APSB26-68; CISA added the flaw to the KEV catalog July 7 with a federal remediation deadline of <b>July 10 — that deadline has now passed</b>. If you haven't patched, treat the system as exposed and hunt for compromise.</p>
+  </div>
+
+  <h2 class="label">Threat Actor Spotlight</h2>
+  <div class="cards">
+    <div class="card" style="grid-column:1/-1">
+      <h4>ShinyHunters (UNC6240) — from Odido's dark-web dump to PeopleSoft zero-days</h4>
+      <p>The group at the center of the Odido investigation has had a busy 2026. Beyond claiming the 6.2M-record Dutch telecom breach and dumping the data when the ransom wasn't paid, ShinyHunters exploited Oracle PeopleSoft flaw CVE-2026-35273 (CVSS 9.8) as a zero-day between late May and early June — Google's Mandiant notified more than 100 exposed organizations, roughly 68% of them in higher education, and CISA added the flaw to the KEV catalog June 12. The common thread is data theft and extortion over encryption: help desks, HR systems and payroll PII are the targets of choice.</p>
+    </div>
+  </div>
+
+  <h2 class="label">Breaches &amp; Incidents</h2>
+  <div class="cards">
+    <div class="card">
+      <h4>FortiBleed: 86,644 firewalls compromised across 194 countries <span class="tag camp">Campaign</span></h4>
+      <p>The credential-compromise campaign against Fortinet FortiGate devices counts 86,644 compromised firewalls across 194 countries — roughly half of all internet-facing FortiGates, per SOCRadar, which attributes the operation to the Lynx/INC ransomware group. Attackers scanned 59.3 million hosts, fingerprinted more than 437,000 FortiGate devices and harvested over 105 million credentials with automated tooling; victims span banks, telecoms, hospitals and government agencies. SOCRadar calls it a live, ongoing operation; CISA's June 18 alert urges credential resets, session termination and phishing-resistant MFA.</p>
+    </div>
+    <div class="card">
+      <h4>Accenture confirms breach; hacker "888" shops 35GB of source code <span class="tag new">New</span></h4>
+      <p>Consulting giant Accenture confirmed a security incident after a threat actor using the handle "888" offered stolen company data for sale — reporting puts the haul at just over 35GB of source code. The company acknowledges the breach while the full scope, and whether client-related material is included, is still being assessed.</p>
+    </div>
+    <div class="card">
+      <h4>Ransomware negotiator gets 70 months for working with BlackCat</h4>
+      <p>A 41-year-old former professional ransomware negotiator was sentenced to 70 months — nearly six years — for conspiring with operators of the now-defunct ALPHV/BlackCat group: he negotiated for victims while secretly leaking their confidential positions, including insurance limits, so attackers could maximize demands, and helped deploy BlackCat against U.S. victims in 2023.</p>
+    </div>
+    <div class="card">
+      <h4>"Hyadina" rebrand deploys GodDamn locker with a Microsoft-approved driver <span class="tag new">New</span></h4>
+      <p>A rebranded ransomware crew tracked as Hyadina is hitting U.S. companies with a new locker called "GodDamn" that abuses a malicious — but officially Microsoft-signed — kernel driver to kill security tooling before encryption. Initial access reportedly comes through legitimate remote-access software such as AnyDesk, a reminder to inventory and restrict remote-admin tools.</p>
+    </div>
+    <div class="card">
+      <h4>Weekend leak-site roundup: healthcare and manufacturing hit <span class="tag claim">Attacker claims</span></h4>
+      <p>Leak-site postings logged July 10 include Krybit claiming Shanghai Xuerong Biotechnology, TheGentlemen claiming Chinese solar maker Xiamen Mibet, AiLock claiming Mexican paint manufacturer Pinturas Prisa, Doommageddon claiming Brazil's Hospital Di Camp, and CRPxO claiming both Creative Smiles Pediatric Dentistry (2.5GB) and biopharma firm AMHWA (37GB). All are attacker claims until the victims confirm.</p>
+    </div>
+  </div>
+
+  <h2 class="label">Vulnerability Watch</h2>
+  <div class="panel" style="padding:8px 10px">
+    <table>
+      <tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr>
+      <tr><td class="cve">CVE-2026-48282</td><td class="score">10.0</td><td>Adobe ColdFusion 2025.9 / 2023.20 &amp; earlier</td><td>RDS FILEIO path traversal → unauth RCE; exploited within ~2 hours of disclosure; fixed in APSB26-68 (Jun 30); KEV deadline July 10 — <b>now passed</b>. Adobe's latest bulletin cycle patched seven CVSS 10.0 flaws across ColdFusion and Campaign Classic.</td></tr>
+      <tr><td class="cve">CVE-2026-48558</td><td class="score">10.0</td><td>SimpleHelp remote support</td><td>OIDC authentication bypass; KEV deadline July 2 — now overdue for federal agencies.</td></tr>
+      <tr><td class="cve">CVE-2026-35273</td><td class="score">9.8</td><td>Oracle PeopleSoft (PeopleTools Environment Management)</td><td>Unauthenticated RCE exploited as a zero-day by ShinyHunters (UNC6240) May 27–Jun 9; Mandiant notified 100+ exposed orgs, 68% in higher education; added to KEV June 12.</td></tr>
+      <tr><td class="cve">CVE-2026-45659</td><td class="score">8.8</td><td>Microsoft SharePoint Server</td><td>Deserialization of untrusted data → RCE; added to KEV July 1 on active exploitation; deadline July 4 — overdue.</td></tr>
+    </table>
+  </div>
+
+  <h2 class="label">CISA KEV &amp; Federal Deadlines</h2>
+  <div class="panel">
+    <ul class="kev">
+      <li><b>CVE-2026-48282</b> — Adobe ColdFusion (added Jul 7, due <b>Jul 10</b>) <span class="days crit" data-due="2026-07-10">(overdue)</span></li>
+      <li><b>CVE-2026-55255</b> — Langflow authorization bypass, the first AI-agent platform ever added to the KEV (added Jul 7, due <b>Jul 10</b>) <span class="days crit" data-due="2026-07-10">(overdue)</span></li>
+      <li><b>CVE-2026-48908</b> — JoomShaper SP Page Builder unrestricted file upload (added Jul 7, due <b>Jul 10</b>) <span class="days crit" data-due="2026-07-10">(overdue)</span></li>
+      <li><b>CVE-2026-56290</b> — Joomlack Page Builder improper access control (added Jul 7, due <b>Jul 10</b>) <span class="days crit" data-due="2026-07-10">(overdue)</span></li>
+      <li><b>CVE-2026-45659</b> — Microsoft SharePoint Server (added Jul 1, due Jul 4) <span class="days crit" data-due="2026-07-04">(overdue)</span></li>
+      <li><b>CVE-2026-48558</b> — SimpleHelp (due Jul 2) <span class="days crit" data-due="2026-07-02">(overdue)</span></li>
+    </ul>
+    <p style="margin:12px 0 0;font-size:12.5px;color:var(--muted)">Deadlines under BOD 26-04 are risk-based and set per-CVE — the July 7 additions carried an expedited three-day window that expired Friday. All six entries above are now past deadline for federal agencies. Verify each date against the CISA KEV catalog.</p>
+  </div>
+
+  <h2 class="label">Sources</h2>
+  <div class="foot">
+    <a href="https://nltimes.nl/2026/07/09/voice-fake-employee-links-dutch-criminals-odido-hack">nltimes.nl — Voice of fake IT employee links Dutch criminals to Odido hack</a><br>
+    <a href="https://therecord.media/dutch-police-suspect-dutch-accomplice-in-odido-cyberattack">therecord.media — Dutch police trace Odido attack to suspected local accomplice</a><br>
+    <a href="https://www.dutchnews.nl/2026/07/police-believe-dutch-gang-was-behind-odido-mass-data-hack/">dutchnews.nl — Police believe Dutch gang was behind Odido hack</a><br>
+    <a href="https://www.bleepingcomputer.com/news/security/police-suspects-dutch-hackers-were-involved-in-odido-breach/">bleepingcomputer.com — Police suspect Dutch hackers in Odido breach</a><br>
+    <a href="https://www.bleepingcomputer.com/news/security/accenture-confirms-breach-after-hacker-offers-stolen-data-for-sale/">bleepingcomputer.com — Accenture confirms breach after hacker offers data for sale</a><br>
+    <a href="https://sharkstriker.com/blog/july-2026-data-breaches/">sharkstriker.com — July 2026 data breaches (Accenture 35GB)</a><br>
+    <a href="https://socradar.io/blog/fortibleed-fortinet-firewalls-compromised/">socradar.io — FortiBleed: 86,644 Fortinet firewalls compromised</a><br>
+    <a href="https://www.securityweek.com/fortibleed-86000-fortinet-device-credentials-compromised/">securityweek.com — FortiBleed: 86,000+ Fortinet device credentials</a><br>
+    <a href="https://thehackernews.com/2026/06/cisa-warns-fortinet-customers-as.html">thehackernews.com — CISA warns Fortinet customers as FortiBleed hits 86,644 devices</a><br>
+    <a href="https://www.dexpose.io/category/ransomware-attacks/">dexpose.io — Ransomware attack tracker (negotiator sentencing; GodDamn/Hyadina; Jul 10 leak-site claims)</a><br>
+    <a href="https://www.cisa.gov/news-events/alerts/2026/07/07/cisa-adds-three-known-exploited-vulnerabilities-catalog">cisa.gov — CISA adds KEV entries (Jul 7)</a><br>
+    <a href="https://www.techtimes.com/articles/319918/20260708/cisa-adds-first-ai-agent-platform-kev-sets-thursday-deadline-4-cves.htm">techtimes.com — First AI-agent platform added to KEV; 4 CVEs on expedited deadline</a><br>
+    <a href="https://thehackernews.com/2026/07/sharepoint-rce-cve-2026-45659-added-to.html">thehackernews.com — SharePoint RCE CVE-2026-45659 added to KEV</a><br>
+    <a href="https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog">cisa.gov — SharePoint CVE-2026-45659 KEV addition (Jul 1)</a><br>
+    <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">cisa.gov — Known Exploited Vulnerabilities catalog</a><br>
+    <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-48558">nvd.nist.gov — CVE-2026-48558 (SimpleHelp) detail</a><br>
+    <a href="https://cloud.google.com/blog/topics/threat-intelligence/shinyhunters-targets-education-sector-oracle-exploit">cloud.google.com — ShinyHunters targets education via PeopleSoft zero-day</a>
+    <div class="disc">Automated security briefing compiled from public reporting; verify patch guidance against vendor advisories before acting. Leak-site postings are attacker claims until victims confirm.</div>
+  </div>
+</div>
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();
+(function(){try{var els=document.querySelectorAll('.days[data-due]');var now=new Date();var etParts=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(now);var o={};etParts.forEach(function(p){o[p.type]=p.value});var today=new Date(o.year+'-'+o.month+'-'+o.day+'T00:00:00');els.forEach(function(el){var due=new Date(el.getAttribute('data-due')+'T00:00:00');var d=Math.round((due-today)/86400000);if(d>1){el.textContent='('+d+' days left)';el.classList.remove('crit');el.classList.add('ok');}else if(d===1){el.textContent='(1 day left)';}else if(d===0){el.textContent='(due today)';}else{el.textContent='(overdue '+Math.abs(d)+'d)';}});}catch(e){}})();</script>
+</body>
+</html>
