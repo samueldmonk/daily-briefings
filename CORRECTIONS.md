@@ -4170,3 +4170,59 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   CNBC/Kraken/Mitrade: CPI Tue Jul 14 8:30am with Warsh's House hearing 90 min later, Senate Wed per standing chain;
   JPM/BAC/GS/WFC/C Tue; PPI + Empire Wed; Philly Fed + retail sales + pending home sales Thu; industrial production +
   UMich prelim Fri; Kiplinger restates WTI front-month −20.4% in June).
+
+## Added 2026-07-11 (Saturday ~7:55PM ET — Afternoon Edition refresh; UFC 329 early prelims complete, prelims underway; markets closed)
+- All four pages HTMLParser-balanced (0 leftover / 0 errors); regression greps (vacant / Shamil / Abdul-Rakhman-hyphen /
+  unification / Renato / 27-9 / 430,000 / 73,932 / 110M / +12.5% / internal-memo / BofA / FanDuel / DraftKings / −550 /
+  $1.2M / 168.01 / 2.2.3 / "first AI-agent platform" / Stevenson / "Ryan Garza" / 30-27) all 0; "three weeks" once
+  (WP-SHELLSTORM, allowed). Chimaev & Pereira only as defeated opponents.
+- **MMA — FIRST UFC 329 RESULTS PUBLISHED (3 bouts), per the gate:** SI/MMA Knockout live-results page fetched
+  DIRECTLY (modified 22:04Z) posts verbatim: **Alessandro Costa def. Cody Durden — Submission (RNC) R2 2:19;
+  Ryan Gandra def. Zach Reese — TKO R1 1:15; Farid Basharat def. John Garza — Unanimous Decision** (SI prints
+  scorecards as "30-27x, 29-28" — ambiguous, so scorecards NOT published, method only). Yahoo/SB Nation live blog
+  fetched DIRECTLY corroborates Costa + Gandra with identical method/round/time ("Zach Reese" there; page keeps
+  UFC.com's "Zachary Reese"; Gandra "2-0 to start his UFC career" seen). Garza = short-notice replacement for
+  injured Ethyn Ewing (SI) — published in the results note. Results table added ABOVE the Baku table under
+  "Last Event — Results" with a New tag (not in the 1751 snapshot).
+- **Cortez–Wang, Pinas–Almeida and Riley–Kamaka results appeared ONLY in AI search summaries this run (which AGAIN
+  garbled a name: "Ryan Garza" for John Garza, twice) — NOT published.** UFC.com prelim-results + scorecards pages
+  fetched DIRECTLY still served the 02:32AM preview-only cache; Forbes tracker fetched DIRECTLY — every "Result:"
+  field empty; Yahoo/Uncrowned live page cache was 4PM ET pre-results. RULE upheld: fight results only from fetched
+  major-outlet postings, never AI summaries.
+- **GATE RECORD ADDED (TLDR / top story / UFC 329 card / Business):** Heavy.com fetched DIRECTLY — Dana White on
+  SportsCenter: "Our biggest gate ever was the Sphere, $22 million. This gate beat it at $25 million, so it's the
+  biggest gate in UFC history for his return." Previous record = UFC 306 Riyadh Season Noche UFC (Sphere, Sept 2024)
+  $22M; McGregor involved in three of the UFC's five biggest gates (Heavy body). MMA Mania headline restates
+  "Record-breaking $25 million". (A tweet embedded in Heavy says "previous highest was $21.8M" — White's own $22M
+  quote kept; do not mix figures.)
+- **Holloway BMF note now TWO-source → PUBLISHED in top story:** SI ("relinquished the 'BMF' belt to Charles Oliveira
+  in his most recent outing in March") + Yahoo/Uncrowned ("suffered a decision setback to Charles Oliveira in March
+  to lose his ceremonial BMF title"). Supersedes the 5:50PM single-source (FIGHTMAG) ban for THIS claim; the
+  single-source rule itself stands. Wording used: "dropping the ceremonial BMF title to Charles Oliveira by decision
+  in March."
+- CHAMPIONS BOARD 11/11 re-verified by DIRECT ESPN fetch this run (all belts/dates/methods/defense counts exact;
+  meta-description "strawweight vacancy" stale — body governs; Van published w/o count per standing note). ESPN
+  sidebar re-confirms Aspinall-accepts / Topuria-congratulates / rankings "second to none" / mom's-tip FBI /
+  White never-again / what's-next. UFC.com prelims preview fetch re-confirms Krylov #14 (31-11 with page typo
+  "31-11."), Whittaker LHW debut, Steveson (3-0)–Ellison (5-2, Army vet), Garbrandt (15-7)–Yanez (17-6-1),
+  Riley (13-0)–Kamaka (18-7-1), Cortez (12-3, #8)–Wang Cong (9-1), Pinas (9-1)–Almeida (7-2), Basharat (15-0,
+  #15)–Garza (6-1), Gandra (9-1)–Reese (10-3 1NC), Costa (16-5)–Durden (18-10-1), 5/7/9PM ET, Paramount+
+  ("Gable Stevenson" typo ignored again; Whittaker "27-9" seen on UFC.com AND Yahoo/Uncrowned prints Holloway
+  "27-9" — BOTH kept off page per standing grep).
+- MARKETS CLOSED (weekend); Wall Street page UNCHANGED. Fri Jul 10 closes re-confirmed this run (Yahoo live-blog +
+  WTOP + CNBC in results: S&P 7,575.39 +0.42% / Nasdaq 26,281.61 +0.29% / Dow 52,637.01 +149.60 +0.29%; SK Hynix
+  $26.5B raise / largest-ever US listing by a foreign company / opened $170 = +14% from IPO price re-stated this
+  run, and ADRs "jumped 12.8% above their offering price" also seen — page's "up 13%" Fool figure kept per sourced
+  entry, consistent; Meta ~+6% Friday / ~15% week and Nvidia ~+4% re-stated). All other movers/rates/oil/sector/
+  scorecard/calendar figures carried unchanged per today's sourced entries.
+- CYBER page UNCHANGED (Threat High). Accenture top story re-verified this run (BleepingComputer/TechRadar/
+  cybernews/HelpNet/teiss/cyberpress/sqmagazine/securityaffairs/cybersecuritynews in results: 888, 35GB seller
+  claims incl. source code + RSA/SSH keys + Azure PATs, "isolated matter"/"remediated its source", forum listing
+  Jul 6 → confirmation Jul 8, 2024 32,826-employee precedent, Decathlon/Credit Suisse/Shell/Heineken/UNICEF links).
+  KEV re-verified: CISA Jul-10 "Adds Two" alert page in results (CVE-2026-48939 iCagenda + CVE-2026-56291 Balbooa,
+  unrestricted-upload class; BOD 26-04 risk-based language confirmed; due Jul 13 carried per sourced chain →
+  countdown auto-computes 2 days); THN "Adds 4" Jul-7 page + threat-modeling "deadline Friday July 10" in results
+  re-confirm the passed Jul-10 deadlines; windowsforum/windowsnews AGAIN in results — their fixed-version claims
+  IGNORED per standing ban (verified fixes 4.0.8/3.9.15 + Balbooa 2.4.1 kept).
+- ARCHIVE: snapshots cyber/wallstreet/mma-2026-07-11-1951 added; archive.html regenerated by gen_archive.py.
+  Publishing as Afternoon Edition, July 11, 2026.
