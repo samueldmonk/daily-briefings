@@ -6,57 +6,55 @@
 <title>Daily Briefings — Front Page</title>
 <style>
 :root{
-  --bg:#0a0b0d; --panel:#14161a; --panel2:#101216; --line:#252a31;
-  --text:#e9edf2; --muted:#8b95a3;
+  --bg:#0e0f12; --panel:#16181d; --line:#272b33; --text:#edeef2; --muted:#9aa1ad;
   --mono:'SF Mono',ui-monospace,'Cascadia Code',Menlo,Consolas,monospace;
-  --teal:#22d3a8; --gold:#e8c766; --red:#ff6a4d;
+  --teal:#22d3a8; --teal2:#36c6ff; --gold:#caa64a; --gold2:#e8c766; --red:#e84545; --red2:#ff8a5c;
 }
 *{box-sizing:border-box}
-body{margin:0;background:radial-gradient(1200px 520px at 50% -240px,#161a20 0,var(--bg) 60%);color:var(--text);
+body{margin:0;background:radial-gradient(1200px 520px at 50% -240px,#181a20 0,var(--bg) 60%);color:var(--text);
   font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1000px;margin:0 auto;padding:24px 18px 60px}
-.masthead{text-align:center;padding:10px 0 2px}
-.masthead h1{font-family:Georgia,'Times New Roman',serif;font-size:40px;margin:0;letter-spacing:.5px}
-.masthead h1 .a{color:var(--teal)} .masthead h1 .b{color:var(--gold)} .masthead h1 .c{color:var(--red)}
-.masthead .sub{color:var(--muted);font-family:var(--mono);font-size:11px;letter-spacing:.26em;text-transform:uppercase;margin-top:8px}
+.wrap{max-width:960px;margin:0 auto;padding:24px 18px 60px}
+.masthead{text-align:center;padding:8px 0 2px}
+.masthead h1{font-size:40px;margin:0;letter-spacing:.5px;font-weight:800}
+.masthead .sub{color:var(--muted);font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;margin-top:7px}
 .meta{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0 4px}
 .pill{font-family:var(--mono);font-size:11px;letter-spacing:.09em;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:5px 11px;text-transform:uppercase}
-.pill.live{color:#0a0b0d;background:#e9edf2;border-color:transparent;font-weight:700;display:inline-flex;align-items:center;gap:6px}
-.pill.live .dot{width:7px;height:7px;border-radius:50%;background:#0a0b0d;animation:pulse 1.6s infinite}
+.pill.live{color:#0e0f12;background:var(--teal);border-color:transparent;font-weight:700;display:inline-flex;align-items:center;gap:6px}
+.pill.live .dot{width:7px;height:7px;border-radius:50%;background:#0e0f12;animation:pulse 1.6s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-.freshline{color:var(--muted);font-family:var(--mono);font-size:11.5px;margin:10px 2px 4px;text-align:center}
-nav.tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:16px 0 24px}
+.freshline{color:var(--muted);font-family:var(--mono);font-size:11.5px;margin:12px 2px 4px;text-align:center}
+nav.tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:16px 0 26px}
 .tab{font-family:var(--mono);font-size:12.5px;text-decoration:none;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:9px 13px;transition:.15s}
 .tab:hover{color:var(--text);transform:translateY(-1px)}
-.tab.active{color:var(--text);border-color:#3a424d}
-.cards{display:grid;grid-template-columns:1fr;gap:16px}
-@media(min-width:820px){.cards{grid-template-columns:1fr 1fr 1fr}}
-.bcard{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px;transition:.16s;text-decoration:none;color:inherit}
-.bcard:hover{transform:translateY(-4px)}
-.bcard .kick{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
-.bcard h2{margin:0 0 6px;font-size:22px}
-.bcard .col{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
-.bcard p{margin:0 0 18px;font-size:14px;color:#cfd6df;flex:1}
-.bcard .go{font-family:var(--mono);font-size:12.5px;font-weight:700}
-.sec{border-top:3px solid var(--teal)} .sec .kick,.sec .go{color:var(--teal)}
-.mkt{border-top:3px solid var(--gold)} .mkt .kick,.mkt .go{color:var(--gold)} .mkt h2{font-family:Georgia,serif}
-.mma{border-top:3px solid var(--red)} .mma .kick,.mma .go{color:var(--red)}
-.foot{margin-top:30px;color:var(--muted);font-size:12px;line-height:1.7;text-align:center}
-.disc{margin-top:10px;font-size:11px;color:#5f6773;font-style:italic}
+.tab.active{color:#0e0f12;background:#e6e8ee;border-color:transparent;font-weight:700}
+.bigcards{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:760px){.bigcards{grid-template-columns:1fr 1fr 1fr}}
+.bigcard{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px;transition:.16s;display:flex;flex-direction:column}
+.bigcard:hover{transform:translateY(-4px)}
+.bigcard .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:10px;font-weight:800}
+.bigcard h2{margin:0 0 6px;font-size:21px}
+.bigcard .strap{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.bigcard p{margin:0 0 16px;font-size:14px;color:#ccd1da;flex:1}
+.bigcard a.go{font-family:var(--mono);font-size:13px;text-decoration:none;font-weight:700}
+.sec .kicker,.sec a.go{color:var(--teal)} .sec{border-top:3px solid var(--teal)}
+.mkt .kicker,.mkt a.go{color:var(--gold2)} .mkt{border-top:3px solid var(--gold)}
+.mkt h2{font-family:Georgia,'Times New Roman',serif}
+.mma .kicker,.mma a.go{color:var(--red2)} .mma{border-top:3px solid var(--red)}
+.note{color:var(--muted);font-size:12.5px;text-align:center;margin-top:26px;font-family:var(--mono)}
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="masthead">
-    <h1><span class="a">Daily</span> <span class="b">Brie</span><span class="c">fings</span></h1>
+    <h1>Daily Briefings</h1>
     <div class="sub">Security · Markets · MMA — three desks, one front page</div>
     <div class="meta">
-      <span class="pill live"><span class="dot"></span> Live</span>
-      <span class="pill" id="edition">Afternoon Edition</span>
-      <span class="pill" id="datestamp">Friday, July 10, 2026</span>
-      <span class="pill">Updated <span id="updated">…</span></span>
+      <span class="pill live"><span class="dot"></span>Live</span>
+      <span class="pill" id="edition">Edition</span>
+      <span class="pill" id="datestamp">Date</span>
+      <span class="pill">Updated <span id="updated">—</span></span>
     </div>
-    <div class="freshline" id="freshline">Data as of this edition · briefings refresh every 30 minutes, 8 AM–6 PM ET</div>
+    <div class="freshline" id="freshline">Data as of — · briefings refresh every 30 minutes, 8 AM–6 PM ET</div>
   </div>
 
   <nav class="tabs">
@@ -67,34 +65,31 @@ nav.tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:16px 
     <a class="tab" href="archive.html">🗄 Archive</a>
   </nav>
 
-  <div class="cards">
-    <a class="bcard sec" href="cyber-briefing.html">
-      <div class="kick">⛨ The Cyber Wire · The Wire</div>
-      <h2>Insider on the inside</h2>
-      <div class="col">Security briefing</div>
-      <p>A Florida ransomware negotiator drew 70 months in prison for secretly helping BlackCat squeeze his own clients — while defenders stare down a due-today federal deadline on the max-severity ColdFusion flaw and FortiBleed's 86,644 compromised firewalls.</p>
-      <span class="go">Read the briefing →</span>
-    </a>
-    <a class="bcard mkt" href="wallstreet-briefing.html">
-      <div class="kick">▲ The Closing Bell · The Tape</div>
-      <h2>SK Hynix pops, week saved</h2>
-      <div class="col">Markets briefing</div>
-      <p>Stocks closed higher Friday to cap a choppy week — the S&amp;P 500 rose 0.42% (+1.2% on the week) as Nvidia and Meta led and SK Hynix jumped 13% in the largest-ever U.S. listing by a foreign company.</p>
-      <span class="go">Read the briefing →</span>
-    </a>
-    <a class="bcard mma" href="mma-briefing.html">
-      <div class="kick">⊘ The Octagon · Tale of the Tape</div>
-      <h2>McGregor–Holloway is official</h2>
-      <div class="col">MMA briefing</div>
-      <p>McGregor (170.5) and Holloway (170) both made weight Friday in Las Vegas — UFC 329 is official for Saturday night at T-Mobile Arena, with Holloway a −225 favorite and the line still moving.</p>
-      <span class="go">Read the briefing →</span>
-    </a>
+  <div class="bigcards">
+    <div class="bigcard sec">
+      <div class="kicker">⛨ The Cyber Wire</div>
+      <h2>The Wire</h2>
+      <div class="strap">Threat level: High</div>
+      <p>Accenture confirms a breach after a hacker offered stolen data for sale — roughly 35GB of claimed source code and keys — while the max-severity ColdFusion flaw's federal patch deadline has now passed amid active exploitation.</p>
+      <a class="go" href="cyber-briefing.html">Read the briefing →</a>
+    </div>
+    <div class="bigcard mkt">
+      <div class="kicker">▲ The Closing Bell</div>
+      <h2>The Tape</h2>
+      <div class="strap">Markets closed — weekend</div>
+      <p>Friday's gains capped a choppy week — S&amp;P 500 +0.42% to 7,575.39, Nasdaq +0.29%, Dow +0.29% — as SK Hynix popped 13% in the largest-ever U.S. listing by a foreign company; June CPI and big-bank earnings land Tuesday.</p>
+      <a class="go" href="wallstreet-briefing.html">Read the briefing →</a>
+    </div>
+    <div class="bigcard mma">
+      <div class="kicker">⊘ The Octagon</div>
+      <h2>Tale of the Tape</h2>
+      <div class="strap">Fight night — UFC 329</div>
+      <p>Conor McGregor returns after five years to meet Max Holloway at welterweight tonight in Las Vegas — main card 9 PM ET on Paramount+, with Holloway the −225 favorite and McGregor +185.</p>
+      <a class="go" href="mma-briefing.html">Read the briefing →</a>
+    </div>
   </div>
 
-  <div class="foot">
-    Three desks, refreshed together every 30 minutes from 8 AM to 6 PM ET. Open a briefing for full sources.
-    <div class="disc">Automated editorial product. Each briefing carries its own sources and disclaimer.</div>
-  </div>
+  <div class="note">Front page summaries reflect each desk's verified lead for this edition. Open a briefing for sources.</div>
 </div>
 <script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
 </body>
