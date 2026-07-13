@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Closing Bell — Daily Wall Street Briefing</title>
+<style>
+:root{--bg:#0d0e12;--panel:#15171e;--line:#262a35;--ink:#e8e6df;--muted:#9a978d;--gold:#caa64a;--gold2:#e8c766;--up:#4fc27a;--down:#e05252;--mono:'SF Mono','Cascadia Code',Menlo,Consolas,monospace;--crit:#e05252;--warn:#e8a33d}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.6;padding:24px 16px 60px}
+.wrap{max-width:980px;margin:0 auto}
+header.masthead{text-align:center;padding:18px 0 10px;border-bottom:3px double var(--gold);margin-bottom:14px}
+.masthead h1{font-size:44px;letter-spacing:.02em;color:var(--gold2);font-weight:700}
+.masthead .tagline{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+.meta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:14px 0 4px}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.08em;padding:4px 12px;border:1px solid var(--line);border-radius:999px;color:var(--muted);background:var(--panel)}
+.pill.live{color:#7ee0a3;border-color:#2c4636}.pill.live::before{content:"● ";color:#4fc27a}
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:10px;padding:11px 15px;margin:10px 0 2px;font-size:14.5px;line-height:1.5}
+.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-right:9px}
+.freshline{font-family:var(--mono);font-size:10.5px;color:var(--muted);text-align:center;margin:8px 0 14px;letter-spacing:.06em}
+nav.tabs{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin:6px 0 20px}
+nav.tabs a{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-decoration:none;color:var(--muted);padding:7px 14px;border:1px solid var(--line);border-radius:8px;background:var(--panel);transition:all .15s}
+nav.tabs a:hover{color:var(--ink);transform:translateY(-1px)}
+nav.tabs a.active{color:#141414;background:var(--gold);border-color:var(--gold);font-weight:700}
+.livebar{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 8px 4px;margin-bottom:18px}
+.livebar-label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--up);display:flex;align-items:center;gap:8px;padding:4px 8px 8px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--up);display:inline-block;animation:blink 1.6s infinite}
+@keyframes blink{50%{opacity:.25}}
+h2.sec{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:30px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:14px}
+.lead h3{font-size:25px;color:var(--gold2);line-height:1.3;margin-bottom:10px}
+.lead p{font-size:15.5px;margin-bottom:10px;color:#d6d3c8}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 17px;transition:transform .15s,border-color .15s}
+.card:hover{transform:translateY(-3px);border-color:var(--gold)}
+.card h4{font-size:16.5px;color:var(--ink);margin-bottom:6px}
+.card p{font-size:13.5px;color:var(--muted)}
+.tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:2px 8px;border-radius:5px;margin-bottom:8px;margin-right:6px}
+.tag.up{background:#15321f;color:#7ee0a3}.tag.down{background:#3a1717;color:#f09c9c}.tag.new{background:#3a3117;color:#e8c766}.tag.neutral{background:#22262f;color:#a8b3c4}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
+td{padding:9px 10px;border-bottom:1px solid #1d212b}
+tr:last-child td{border-bottom:none}
+.upc{color:var(--up);font-weight:700}.downc{color:var(--down);font-weight:700}
+.note{font-family:var(--mono);font-size:10.5px;color:var(--muted);margin:8px 2px 0;line-height:1.5}
+ul.radar{list-style:none}
+ul.radar li{padding:9px 0 9px 22px;border-bottom:1px solid #1d212b;font-size:14.5px;position:relative}
+ul.radar li::before{content:"▸";position:absolute;left:2px;color:var(--gold)}
+ul.radar li:last-child{border-bottom:none}
+.tickers{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:6px}
+.ticker{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px}
+footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+footer a{color:#b8a86a;text-decoration:none}
+.disclaimer{font-family:var(--mono);font-size:10.5px;color:#6b695f;margin-top:14px;line-height:1.6}
+@media(max-width:640px){.masthead h1{font-size:32px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <h1>The Closing Bell</h1>
+  <div class="tagline">Your daily Wall Street briefing — markets, movers &amp; what's next</div>
+  <div class="meta">
+    <span class="pill live">LIVE</span>
+    <span class="pill" id="edition">Edition</span>
+    <span class="pill" id="datestamp">—</span>
+    <span class="pill">Updated <span id="updated">—</span></span>
+  </div>
+</header>
+
+<div class="tldr"><b>The Tape</b> <span>Wall Street closed lower Monday as chip and memory stocks slid on SK Hynix's record Seoul plunge and oil settled up more than 9% after Trump reimposed the Hormuz blockade and floated a 20% cargo toll: the S&amp;P 500 fell 0.79% to 7,515.34, the Nasdaq Composite dropped 1.55% to 25,873.18, and the Dow held up best, off 0.26% to 52,498.64 — with the blockade taking effect Tuesday at 4 PM ET alongside June CPI and big-bank earnings.</span></div>
+<div class="freshline" id="freshline">Data as of — · briefings refresh every 30 minutes, 8 AM–6 PM ET</div>
+
+<nav class="tabs">
+  <a href="index.html">★ Front Page</a>
+  <a href="cyber-briefing.html">⛨ The Cyber Wire</a>
+  <a href="wallstreet-briefing.html" class="active">▲ The Closing Bell</a>
+  <a href="mma-briefing.html">⊘ The Octagon</a>
+  <a href="archive.html">🗄 Archive</a>
+</nav>
+
+<div class="livebar">
+  <div class="livebar-label"><span class="dot"></span> LIVE QUOTES</div>
+  <script src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>{"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},{"proName":"FOREXCOM:DJI","title":"Dow 30"},{"proName":"NASDAQ:MU","title":"Micron"},{"proName":"NYSE:TSM","title":"TSMC"},{"proName":"NASDAQ:AAPL","title":"Apple"},{"proName":"NYSE:AXP","title":"AmEx"},{"proName":"NYSE:HUM","title":"Humana"},{"proName":"TVC:USOIL","title":"WTI Crude"},{"proName":"TVC:US10Y","title":"US 10Y"}],"colorTheme":"dark","isTransparent":true,"showSymbolLogo":true,"displayMode":"adaptive","locale":"en"}</script>
+</div>
+
+<h2 class="sec">Live Index Quotes — updates in real time</h2>
+<div class="tickers">
+  <div class="ticker"><script src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"FOREXCOM:SPXUSD","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div>
+  <div class="ticker"><script src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"FOREXCOM:NSXUSD","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div>
+  <div class="ticker"><script src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"FOREXCOM:DJI","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div>
+</div>
+<div class="note">Quotes stream live (some feeds ~15-min delayed). Editorial below reflects the latest edition; official closes are in the Weekly Scorecard.</div>
+
+<h2 class="sec">The Lead</h2>
+<div class="panel lead">
+  <h3>Chips buckle, oil settles up more than 9% as the Hormuz blockade returns — S&amp;P 500 closes down 0.79%, Nasdaq off 1.55%, Dow holds up best at −0.26%</h3>
+  <p>Wall Street closed lower Monday after President Trump declared the U.S. is reinstating its naval blockade on Iranian shipping through the Strait of Hormuz and demanding a 20% "reimbursement" on all other cargo moving through the waterway, sending oil sharply higher and rattling chip and memory stocks worldwide (CNBC/Yahoo Finance/Axios). The S&amp;P 500 fell 0.79% to finish at 7,515.34, the Nasdaq Composite dropped 1.55% to 25,873.18, and the Dow Jones Industrial Average slipped 138.37 points, or 0.26%, to 52,498.64 — cushioned by a jump in energy shares even as tech led the market lower (Motley Fool). Crude settled sharply higher on the reimposed blockade and fresh U.S.–Iran strikes: WTI futures climbed 9.4% to settle at $78.14 a barrel, the highest in nearly a month, while Brent rose 9.6% to settle at $83.30 (Bloomberg via Rigzone). The Joint Maritime Information Center said U.S. Central Command will begin enforcing the blockade of Iranian ports and coastal areas at 4 PM ET Tuesday (Rigzone/Axios).</p>
+  <p>Tech carried the pain: SK Hynix fell roughly 15% in Seoul — one of its largest single-day drops on record — after Korean brokerage KIS published a Q2 profit estimate 8% below consensus on slower HBM4 shipments, dragging the Kospi down about 9% and triggering a market-wide trading halt (24/7 Wall St/Al Jazeera). U.S.-listed chip and storage names followed: Nvidia fell 3.5% to $203.57, SK Hynix's U.S.-listed shares dropped 8.4%, and Micron declined 4.3% (CNBC/Motley Fool), while SpaceX slid more than 5% to a fresh post-IPO low. The weekend also brought a rare direct hit on energy infrastructure — Kuwait said an offshore drilling platform was struck and damaged — plus fresh Houthi missile and drone attacks on a Saudi airport (Rigzone/Bloomberg). The inflation stakes are immediate: oil's climb lands the day before Tuesday's June CPI print, Fed Chair Kevin Warsh's first congressional testimony, and the unofficial kickoff of Q2 earnings season led by JPMorgan, Goldman Sachs, Bank of America, Citigroup and Wells Fargo (Yahoo Finance/Schwab).</p>
+</div>
+
+<h2 class="sec">Movers &amp; Drivers</h2>
+<div class="cards">
+  <div class="card"><span class="tag down">memory rout</span>
+    <h4>SK Hynix's record plunge resets the memory trade</h4>
+    <p>Days after its record U.S. ADR debut, SK Hynix fell roughly 15% in Seoul (its largest single-day drop on record) after brokerage KIS published a Q2 profit estimate 8% below consensus, citing slower HBM4 shipments; U.S.-listed shares fell 8.4% and the Kospi dropped roughly 9% with a market-wide trading halt (CNBC/24/7 Wall St/Al Jazeera). Nvidia closed down 3.5% at $203.57; Micron fell 4.3% on the day (Motley Fool/CNBC).</p></div>
+  <div class="card"><span class="tag down">legal</span>    <h4>Apple sues OpenAI over alleged trade-secret theft</h4>
+    <p>Apple filed suit in the Northern District of California alleging the AI lab attempted to steal confidential information, naming two former Apple employees — Chang Liu and Tang Yew Tan — as defendants alongside OpenAI (Investrade/Hammerstone).</p></div>
+  <div class="card"><span class="tag up">AI demand</span>    <h4>TSMC Q2 revenue tops estimates on AI chips</h4>
+    <p>Taiwan Semiconductor's Q2 revenue reached NT$1.27T (~$39.63B), up 36% year over year and ahead of the ~$39.31B consensus — with June sales alone at $13.8 billion, up 67.9% from a year ago — a fresh signal on AI demand ahead of its full report Thursday (Investrade/Hammerstone; 24/7 Wall St).</p></div>
+  <div class="card"><span class="tag up">upgrades</span>    <h4>American Express, Humana catch big upgrades</h4>
+    <p>JPMorgan lifted American Express to Overweight with a $400 target, calling its premium warranted given defensive revenues; Wells Fargo raised Humana to Overweight with a $502 target ahead of managed-care Q2 reports (Investrade/Hammerstone).</p></div>
+  <div class="card"><span class="tag up">AI buildout</span>
+    <h4>Meta supersizes Louisiana AI campus to $50B</h4>
+    <p>Meta now plans to invest as much as $50 billion in its Richland Parish, Louisiana data-center campus — targeting up to 5 gigawatts of compute — and is committing more than $1 billion for local roads, water and wastewater upgrades (24/7 Wall St). Morgan Stanley, meanwhile, now sees hyperscaler capex reaching $1.4 trillion in 2028.</p></div>
+  <div class="card"><span class="tag down">movers</span>
+    <h4>Growth names lead the close lower; energy and megacap software hold up</h4>
+    <p>SpaceX fell more than 5% to a fresh post-IPO low ($137.54) and Tesla declined 3.7%; on the upside, Biogen rose about 3% on bullish analyst calls, Microsoft gained 1.7% and Amazon added 1.2% even as the broader tape sold off (Motley Fool). Energy shares were the session's standout, cushioning the Dow while technology was the day's worst-performing sector (Benzinga/Motley Fool).</p></div>
+</div>
+
+<h2 class="sec">Chart of the Day</h2>
+<div class="panel" style="padding:8px">
+  <script src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>{"symbol":"NASDAQ:MU","width":"100%","height":240,"locale":"en","dateRange":"1D","colorTheme":"dark","isTransparent":true,"autosize":false}</script>
+  <div class="note">Micron (MU) — one of the session's biggest decliners as SK Hynix's record Seoul plunge rippled through memory names; Micron fell 4.3% and U.S.-listed chip and storage stocks broadly declined on the day (Motley Fool/CNBC).</div>
+</div>
+
+<h2 class="sec">Sector Heat — live</h2>
+<div class="panel" style="padding:8px">
+  <script src="https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js" async>{"dataSource":"SPX500","blockSize":"market_cap_basic","blockColor":"change","grouping":"sector","locale":"en","colorTheme":"dark","hasTopBar":false,"isDataSetEnabled":false,"isZoomEnabled":true,"hasSymbolTooltip":true,"isMonoSize":false,"width":"100%","height":420}</script>
+<div class="note" style="margin:6px 8px 4px">Energy was Monday's standout sector, cushioning the Dow as oil jumped on the Hormuz blockade, while technology closed as the day's worst-performing sector as chip and memory names sold off broadly — tech alone fell 2.42% even as the equal-weighted S&amp;P 500 slipped just 0.03%, underscoring the rotation out of mega-cap tech (Benzinga/Motley Fool).</div></div>
+
+<h2 class="sec">The Calendar — live</h2>
+<div class="panel" style="padding:8px">
+  <script src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>{"colorTheme":"dark","isTransparent":true,"width":"100%","height":420,"locale":"en","importanceFilter":"0,1","countryFilter":"us"}</script>
+</div>
+
+<h2 class="sec">Live Market Headlines — updates in real time</h2>
+<div class="panel" style="padding:8px">
+  <script src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>{"feedMode":"market","market":"stock","colorTheme":"dark","isTransparent":true,"displayMode":"regular","width":"100%","height":420,"locale":"en"}</script>
+</div>
+
+<h2 class="sec">After-Hours Movers</h2>
+<div class="cards">
+  <div class="card"><span class="tag down">earnings/guidance</span>
+    <h4>Small-caps swing on scattered after-hours news</h4>
+    <p>Among after-hours movers tracked by stockanalysis.com: Q32 Bio (QTTB) jumped about 35%, while TOP Financial and Global Mofy AI each fell more than 12%; House of Doge rose about 11%. Mega-cap names were comparatively quiet — Nvidia and Meta were little changed after the bell (stockanalysis.com).</p></div>
+  <div class="card"><span class="tag neutral">leadership</span>
+    <h4>Brown-Forman CEO to step down</h4>
+    <p>The Jack Daniel's parent's chief executive will step down; the stock was little changed after hours, up roughly 0.1 percentage points on the news (TheStreet/TS2.tech aggregation).</p></div>
+</div>
+
+<h2 class="sec">Weekly Scorecard</h2>
+<div class="panel">
+  <table>
+    <thead><tr><th>Index</th><th>Friday close (Jul 10)</th><th>Friday move</th><th>Last week</th></tr></thead>
+    <tbody>
+      <tr><td>S&amp;P 500</td><td>7,575.39</td><td class="upc">+0.42%</td><td class="upc">+1.23%</td></tr>
+      <tr><td>Nasdaq Composite</td><td>26,281.61</td><td class="upc">+0.29%</td><td class="upc">+1.74%</td></tr>
+      <tr><td>Dow Jones Industrial Average</td><td>52,637.01</td><td class="upc">+0.29%</td><td class="downc">−0.50%</td></tr>
+      <tr><td>Russell 2000</td><td>2,977.81</td><td class="downc">−0.49%</td><td class="downc">−0.61%</td></tr>
+    </tbody>
+  </table>
+  <div class="note">Table reflects Friday, Jul 10 official closes and last week's move. Monday, Jul 13 closes: S&amp;P 500 7,515.34 (−0.79%); Nasdaq Composite 25,873.18 (−1.55%); Dow 52,498.64 (−0.26%, −138.37 points) — CNBC/Yahoo Finance/Washington Post.</div>
+</div>
+
+<h2 class="sec">Rates, Bonds &amp; Commodities</h2>
+<div class="panel">
+  <table>
+    <thead><tr><th>Instrument</th><th>Level</th><th>Note</th></tr></thead>
+    <tbody>
+      <tr><td>10-yr Treasury yield</td><td>~4.60%</td><td class="upc">rose about 3 bps Monday to its highest since May (Bloomberg)</td></tr>
+      <tr><td>2-yr Treasury yield</td><td>~4.25%</td><td class="upc">highest since February 2025 as oil's jump reshuffled rate expectations (Bloomberg)</td></tr>
+      <tr><td>5-yr Treasury yield</td><td>~4.35%</td><td>Monday level (Bloomberg)</td></tr>
+      <tr><td>Fed funds target</td><td>3.50–3.75%</td><td>held at the June FOMC meeting — Chair Warsh testifies to Congress Tuesday</td></tr>
+      <tr><td>WTI crude</td><td>$78.14</td><td class="upc">settled +9.4%, highest in nearly a month, after Trump reimposed the Hormuz blockade (Bloomberg via Rigzone)</td></tr>
+      <tr><td>Brent crude</td><td>$83.30</td><td class="upc">settled +9.6% on the same blockade news and fresh U.S.–Iran strikes (Bloomberg via Rigzone)</td></tr>
+      <tr><td>Gold (futures)</td><td>$4,073.70</td><td class="downc">−$40.00 early Monday</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 class="sec">On the Radar</h2>
+<div class="panel">
+  <ul class="radar">
+    <li><b>Tuesday:</b> June CPI at 8:30 AM ET — consensus looks for headline CPI down about 0.1% month over month, with the annual rate easing to roughly 3.9% from May's 4.2%; core CPI is expected to hold near 2.9% year over year. Falling gasoline prices tied to the mid-June Hormuz ceasefire are the main disinflationary driver (IG UK/Kiplinger).</li>
+    <li><b>Tuesday:</b> Fed Chair Kevin Warsh delivers his first semiannual Monetary Policy Report testimony to the House Financial Services Committee at 10 AM ET, with a Senate Banking Committee appearance following Wednesday, July 15 (Yahoo Finance).</li>
+    <li><b>Tuesday:</b> Big banks kick off Q2 earnings before the open — JPMorgan, Goldman Sachs, Citigroup, Wells Fargo and Bank of America all report (Investing.com/Schwab).</li>
+    <li><b>Midweek:</b> PPI and the Fed's Beige Book land Wednesday; Thursday brings Netflix, TSMC's full Q2 report and UnitedHealth; Friday closes the week with June housing starts, industrial production and preliminary Michigan sentiment (Schwab).</li>
+    <li><b>Tuesday, 4 PM ET:</b> U.S. Central Command begins enforcing the reimposed blockade on Iranian ports and coastal areas; Trump has also floated a 20% "reimbursement" fee on other cargo transiting Hormuz, which the International Maritime Organization says it opposes (Rigzone/Axios).</li>
+    <li><b>Ongoing:</b> Any turn in the U.S.–Iran confrontation around the Strait of Hormuz remains the market's biggest swing factor for oil, yields and risk appetite — one analyst warned crude could approach $100 if the conflict broadens to key energy facilities (Rigzone/CNBC/Al Jazeera).</li>
+  </ul>
+</div>
+
+<footer>
+  <b>Sources this edition:</b>
+  <a href="https://finance.yahoo.com/markets/live/stock-market-today-monday-july-13-dow-sp-nasdaq-113249278.html">Yahoo Finance live blog (Jul 13)</a> ·
+  <a href="https://www.fool.com/coverage/stock-market-today/2026/07/13/stock-market-today-july-13-energy-stocks-cushion-dow-as-tech-slides-on-geopolitical-tensions/">Motley Fool — closing recap, energy cushions Dow (Jul 13)</a> ·
+  <a href="https://www.fool.com/investing/2026/07/13/stock-indexes-split-as-chip-stocks-fall-oil-surges/">Motley Fool — sector split, tech vs. equal-weight S&amp;P (Jul 13)</a> ·
+  <a href="https://www.cnbc.com/2026/07/13/stock-market-today-live-updates.html">CNBC — stock market live updates (Jul 13)</a> ·
+  <a href="https://www.cnbc.com/2026/07/13/stocks-making-the-biggest-moves-midday-nio-brai-app-spcx-skhy.html">CNBC — biggest movers, SK Hynix/Micron detail (Jul 13)</a> ·
+  <a href="https://www.washingtonpost.com/business/2026/07/13/wall-street-stocks-dow-nasdaq/49dc49f8-7ef8-11f1-8a16-393bd03340b0_story.html">Washington Post/AP — how major indexes fared (Jul 13)</a> ·
+  <a href="https://www.thestreet.com/stock-market-today/stock-market-today-july-13-2026-trump-resumes-iran-blockade-as-ceasefire-mou-fall-apart">TheStreet — after-hours movers &amp; oil spike (Jul 13)</a> ·
+  <a href="https://www.benzinga.com/etfs/sector-etfs/26/07/60413185/leading-and-lagging-sectors-july-13-2026">Benzinga — leading/lagging sectors (Jul 13)</a> ·
+  <a href="https://www.rigzone.com/news/wire/oil_soars_on_hormuz_blockade-13-jul-2026-184124-article/">Rigzone/Bloomberg — oil settle prices &amp; blockade detail (Jul 13)</a> ·
+  <a href="https://www.axios.com/2026/07/13/trump-iran-blockade-strait-hormuz">Axios — blockade &amp; 20% cargo toll (Jul 13)</a> ·
+  <a href="https://www.npr.org/2026/07/13/nx-s1-5891746/us-iran-strait-of-hormuz-updates">NPR — blockade &amp; toll, re-confirmed (Jul 13)</a> ·
+  <a href="https://stockanalysis.com/markets/afterhours/">stockanalysis.com — after-hours movers</a> ·
+  <a href="https://www.ig.com/uk/trading-strategies/us-cpi-june-2026-preview-what-to-expect-tomorrow-260713">IG UK — June CPI preview (Jul 13)</a> ·
+  <a href="https://finance.yahoo.com/economy/policy/articles/fed-chair-warsh-testify-lawmakers-204340412.html">Yahoo Finance — Warsh testimony schedule</a> ·
+  <a href="https://www.investing.com/news/stock-market-news/cpi-report-and-adp-employment-data-highlight-tuesdays-economic-calendar-93CH-4789053">Investing.com — Tuesday earnings/economic calendar</a> ·
+  <a href="https://www.schwab.com/learn/story/stock-market-update-open">Schwab Market Update (week-ahead calendar)</a>
+  <div class="disclaimer">The Closing Bell is an automated daily briefing compiled from public reporting. It is provided for information only and is not investment advice. Figures reflect the sources and times cited; live widgets update independently of the editorial text.</div>
+</footer>
+
+</div>
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
+</body>
+</html>
