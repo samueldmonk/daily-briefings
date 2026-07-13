@@ -4310,3 +4310,49 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   14-bout table + bonuses + $25M gate carried per the Jul-13 11:25AM UFC.com-fetch entry. Yahoo UFC 329 live page served a STALE
   pre-event cache (only the "Welcome to fight day" post) -> Holloway "trilogy" quote seen ONLY in an AI summary, NOT published.
   Yahoo body restates "Holloway (27-9)" — stays OFF per standing grep. Jul 18 OKC main card kept 8 PM ET per sourced entry.
+
+## Added 2026-07-13 (Monday ~12:40PM ET — Midday Edition 30-min refresh; markets OPEN, memory rout + Hormuz)
+- All four pages HTMLParser-balanced (0 leftover / 0 errors); regression greps (vacant / Shamil / Abdul-Rakhman /
+  unification / Renato / 27-9 / 430,000 / 73,932 / 110M / BofA / FanDuel / DraftKings / -550 / 168.01 / 2.2.3 /
+  "first AI-agent platform" / Stevenson / "Ryan Garza" / 30-27 / three-week(s) / Sub2 Virna / guillotine / Jordan /
+  5.3% / $75.18) all 0; Pereira/Chimaev/Topuria each appear ONCE (defeated opponents on the champions board).
+- INTRADAY % PUBLISHED this run — from 24/7 Wall St's server-rendered index strips on two DIRECT fetches minutes apart
+  (~12:20 PM ET), NOT from AI summaries: S&P 500 7,564.80 -0.31% / 7,568.80 -0.26%; Nasdaq-100 29,539.70 -1.16% /
+  29,448.20 -1.46%; Dow 52,665.90 -0.18% vs 52,830.40 +0.14% (CONFLICT between fetches -> published as "straddling the
+  flat line, readings between -0.2% and +0.1% minutes apart" — consistent with dueling CNBC "S&P 500 drops" vs Yahoo
+  "Dow rises" headlines re-seen this run); Russell ~2,975 -0.25%. Levels kept OFF editorial (percent language only).
+  TRAP: 24/7's 9:13AM body strip mislabels "Nasdaq Composite: 29,739" (that is Nasdaq-100 territory) — body index
+  levels NOT used, only the header strip and explicitly-labeled figures.
+- 24/7 Wall St fetched DIRECTLY (live-Nasdaq + memory articles): KIS (Korean brokerage) PUBLISHED a Q2 profit estimate
+  8% below consensus (slower HBM4 shipments) -> SK Hynix -15% in Seoul = LARGEST single-day drop ever; Kospi -9% with
+  a 20-MINUTE halt (duration new this run); US-listed SKH -10% early; MU/SNDK/WDC each ~-6% at the open; movers module
+  (identical across both fetches — labeled "late-morning module", may lag): MU -5.74% $923.11, WDC -6.12% $546.96,
+  STX -5.30% $862.11, CTRA -8.62% (no reason sourced — NOT published), gainers ACN +4.33% $141.09 / EPAM +4.18% /
+  CTSH +3.91%; DRAM ETF -9% $57.52 (top-3 holdings = 73% of assets); YTD-through-Friday runs MU +243% / SNDK +707% /
+  WDC +238% / STX +231% (Fri close $910.34). Headline-stated: "Intel, AMD, and Applied Materials Drop 4%". Meta
+  Richland Parish UPSIZED to as much as $50B / up to 5 GW / >$1B local infrastructure (live update ~12pm) — page now
+  uses $50B framing; prior "$1.6B contracts to local businesses" figure is a DIFFERENT metric (both true, not mixed).
+  TSMC June sales $13.8B +67.9% y/y ADDED; Morgan Stanley hyperscaler-capex $1.4T-in-2028 ADDED; Intel $5.7B Leixlip
+  ADDED (new movers card, tag New: "IT services buck the tape; Intel spends in Ireland"). Bernstein SpaceX-China note
+  + SPCX -1.1% premarket + Micron/SanDisk earnings recaps + Polymarket/Reddit sentiment seen, NOT published (space).
+- Al Jazeera oil piece fetched DIRECTLY (pub Jul 13 02:58 GMT, John Power): Brent rose MORE THAN 4% Monday; September
+  contract $79.26 as of 05:00 GMT = highest since June 22; CENTCOM "dozens of strikes" Sunday (hours after striking
+  hundreds of targets) after Iranian forces attacked the Cyprus-flagged MV GFS Galaxy; Iran launched missile/drone
+  attacks on the UAE, QATAR, KUWAIT, OMAN and BAHRAIN — SUPERSEDES the earlier Yahoo-derived "Kuwait, Jordan and
+  Qatar" list (Jordan DROPPED from the page); Windward: 6 transits in the Thu 18:00-Fri 06:00 GMT window vs 18-22
+  daily earlier this month vs ~130/day pre-war; strait = one-fifth of global oil trade in peacetime; prices ~9% above
+  pre-war (late-Feb) levels; US-Iran MOU signed JUNE 17 (per AJ; prior entries said Geneva talks — keep Jun 17 as the
+  MOU date per AJ + Jul-9 sourced entries); Nikkei -2%+ / Kospi -8%+ (24/7 says 9% — page uses 9% + halt) / Hang Seng
+  -0.2%. Brent table row now "~$79-80, up >4%"; WTI row keeps CNBC "above $75" headline (re-seen this run).
+- CHAMPIONS BOARD 11/11 re-verified by DIRECT ESPN fetch this run (body exact: Aspinall 0def / Ulberg / Strickland /
+  Makhachev / Gaethje / Volkanovski 1def / Yan / Van "Defenses: 0" body — count kept OFF page per standing note /
+  Harrison 0def / Shevchenko 2def / Dern UD Jandiroba). CAUTION: ESPN's sidebar this fetch was the White-House-
+  aftermath set with NO UFC 329 items — treated as stale cache, not used for recency or new stories. UFC 329 full
+  results/bonuses/$25M gate + Jul 18 / Jul 25 / UFC 330 cards carried per the Jul-13 11:25AM sourced entries; rankings:
+  NO post-UFC-329 update found in snippets this run; "Meta UFC Rankings" Elo-system item (sportbible/AI summary) NOT
+  published. MMA page UNCHANGED this edition.
+- CYBER: ShareFile top story re-verified via fresh headline chain this run (THN/BleepingComputer/The Register/
+  HelpNet/SecurityWeek/cybernews/BankInfoSecurity); "cloud access restored ~5pm ET Jul 12, controllers stay off" seen
+  in AI summary only -> page keeps the sourced "gradually restored / keep offline" wording. Huntress card's New tag
+  REMOVED (present in prior 1147 snapshot); KEV pair 48939/56291 renders "due today" (Jul 13); Jul-7 quartet overdue.
+  No other cyber changes.
