@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Octagon — Daily MMA Briefing</title>
+<style>
+:root{--bg:#100c0c;--panel:#1a1313;--line:#322020;--ink:#ede5e0;--muted:#a89a92;--red:#e84545;--orange:#ff8a5c;--gold:#d9b45b;--green:#5fce8a;--mono:'SF Mono','Cascadia Code',Menlo,Consolas,monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.6;padding:24px 16px 60px}
+.wrap{max-width:980px;margin:0 auto}
+header.masthead{text-align:center;padding:18px 0 10px;border-bottom:2px solid var(--red);margin-bottom:14px}
+.masthead h1{font-size:40px;letter-spacing:.06em;color:var(--red);font-weight:800;text-transform:uppercase}
+.masthead h1 .glyph{color:var(--orange)}
+.masthead .tagline{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+.meta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:14px 0 4px}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.08em;padding:4px 12px;border:1px solid var(--line);border-radius:999px;color:var(--muted);background:var(--panel)}
+.pill.live{color:#f0a58a;border-color:#54322a}.pill.live::before{content:"● ";color:var(--red)}
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--red);border-radius:10px;padding:11px 15px;margin:10px 0 2px;font-size:14.5px;line-height:1.5}
+.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin-right:9px}
+.freshline{font-family:var(--mono);font-size:10.5px;color:var(--muted);text-align:center;margin:8px 0 14px;letter-spacing:.06em}
+nav.tabs{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin:6px 0 20px}
+nav.tabs a{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-decoration:none;color:var(--muted);padding:7px 14px;border:1px solid var(--line);border-radius:8px;background:var(--panel);transition:all .15s}
+nav.tabs a:hover{color:var(--ink);transform:translateY(-1px)}
+nav.tabs a.active{color:#1c0d0d;background:var(--red);border-color:var(--red);font-weight:700}
+.cdbar{display:flex;align-items:center;gap:14px;background:linear-gradient(90deg,#2a1414,#1a1313);border:1px solid #54322a;border-radius:12px;padding:13px 18px;margin-bottom:20px;flex-wrap:wrap}
+.cdbar .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--orange);text-transform:uppercase}
+.cdbar .evt{font-size:14.5px;color:var(--ink)}
+.cdbar #ufccdn{font-family:var(--mono);font-size:16px;color:var(--gold);font-weight:700;margin-left:auto}
+h2.sec{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--red);margin:30px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:14px}
+.lead{border-left:4px solid var(--red)}
+.lead h3{font-size:24px;color:#f5ece6;line-height:1.35;margin-bottom:10px}
+.lead p{font-size:15px;margin-bottom:10px;color:#d9ccc4}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 17px;transition:transform .15s,border-color .15s}
+.card:hover{transform:translateY(-3px);border-color:var(--red)}
+.card .when{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--gold);text-transform:uppercase;margin-bottom:7px}
+.card h4{font-size:16.5px;color:var(--ink);margin-bottom:6px}
+.card p{font-size:13.5px;color:var(--muted)}
+.tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:2px 8px;border-radius:5px;margin-bottom:8px;margin-right:6px}
+.tag.prospect{background:#14301e;color:#7ee0a3}.tag.new{background:#3a2a14;color:#f0c987}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
+td{padding:9px 10px;border-bottom:1px solid #241818;vertical-align:top}
+tr:last-child td{border-bottom:none}
+td.res{color:var(--green);font-weight:700;white-space:nowrap}
+ul.around{list-style:none}
+ul.around li{padding:9px 0 9px 22px;border-bottom:1px solid #241818;font-size:14.5px;position:relative}
+ul.around li::before{content:"▸";position:absolute;left:2px;color:var(--red)}
+ul.around li:last-child{border-bottom:none}
+.champ td:first-child{font-family:var(--mono);font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.champ td:nth-child(2){font-weight:700;color:#f5ece6}
+footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+footer a{color:#d98a6a;text-decoration:none}
+.disclaimer{font-family:var(--mono);font-size:10.5px;color:#7a6a62;margin-top:14px;line-height:1.6}
+@media(max-width:640px){.masthead h1{font-size:30px}.cdbar #ufccdn{margin-left:0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <h1><span class="glyph">⊘</span> The Octagon</h1>
+  <div class="tagline">Your daily MMA briefing — UFC, prospects &amp; the business of fighting</div>
+  <div class="meta">
+    <span class="pill live">LIVE</span>
+    <span class="pill" id="edition">Edition</span>
+    <span class="pill" id="datestamp">—</span>
+    <span class="pill">Updated <span id="updated">—</span></span>
+  </div>
+</header>
+
+<div class="tldr"><b>Tale of the Tape</b> <span>Max Holloway TKO'd Conor McGregor just 1:09 into UFC 329 after McGregor's knee gave out on his opening jumping kick — an anticlimactic end to a record $25 million-gate night that saw eleven finishes in Las Vegas.</span></div>
+<div class="freshline" id="freshline">Data as of — · briefings refresh every 30 minutes, 8 AM–6 PM ET</div>
+
+<nav class="tabs">
+  <a href="index.html">★ Front Page</a>
+  <a href="cyber-briefing.html">⛨ The Cyber Wire</a>
+  <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
+  <a href="mma-briefing.html" class="active">⊘ The Octagon</a>
+  <a href="archive.html">🗄 Archive</a>
+</nav>
+
+<div class="cdbar">
+  <span class="lbl">Next Card</span>
+  <span class="evt">UFC Fight Night: du Plessis vs Usman — Sat, Jul 18 · Paycom Center, Oklahoma City (main card 8 PM ET)</span>
+  <span id="ufccdn">—</span>
+</div>
+
+<h2 class="sec">Top Story</h2>
+<div class="panel lead">
+  <h3>Holloway–McGregor 2 ends in 69 heartbreaking seconds: McGregor's knee gives out, Holloway takes the TKO at UFC 329</h3>
+  <p>Nearly thirteen years after their first meeting, the rematch lasted barely a minute. Conor McGregor opened UFC 329's main event Saturday at T-Mobile Arena with a jumping kick — and his knee gave way on the landing. The returning Irishman slipped to the canvas twice as Max Holloway measured him; when they stood, Holloway landed one kick, McGregor took an unsteady step back, and referee Mike Beltran waved it off at 1:09 of Round 1 — a TKO via knee injury (UFC.com). "A wild night of action was working to a perfect crescendo but instead ended in unexpected fashion," is how UFC.com's recap put it, with the arena shifting from raucous excitement to stunned disbelief.</p>
+  <p>The anticlimax capped an otherwise violent card: eleven of fourteen bouts ended inside the distance, and Dana White said the event's $25 million gate beat the Sphere's $22 million as the biggest in UFC history. As for what's next — UFC.com's E. Spencer Kyte writes that a matchup between Holloway and newly crowned lightweight champion Justin Gaethje "is top of mind right now," though nothing is booked.</p>
+</div>
+
+<h2 class="sec">Fight Week — Upcoming Cards</h2>
+<div class="cards">
+  <div class="card">    <div class="when">Sat, Jul 18 · Paycom Center, Oklahoma City</div>
+    <h4>UFC Fight Night: Dricus du Plessis vs Kamaru Usman</h4>
+    <p>Kamaru Usman moves up to 185 chasing two-division history against former middleweight champion du Plessis, who opened as a massive betting favorite (MMA Mania/Yahoo) — the first UFC card in Oklahoma City since 2017. Jared Cannonier vs Christian Leroy Duncan co-headlines; prelims 5 PM ET, main card 8 PM ET on Paramount+.</p></div>
+  <div class="card">
+    <div class="when">Sat, Jul 25 · Etihad Arena, Abu Dhabi</div>
+    <h4>UFC Fight Night: Magomed Ankalaev vs Khalil Rountree Jr</h4>
+    <p>Light heavyweight contenders headline Abu Dhabi's summer stop as Magomed Ankalaev meets Khalil Rountree Jr at Etihad Arena.</p></div>
+  <div class="card">
+    <div class="when">Sat, Aug 15 · Xfinity Mobile Arena, Philadelphia</div>
+    <h4>UFC 330: Islam Makhachev vs Ian Machado Garry</h4>
+    <p>The welterweight champion defends against No. 1-ranked Machado Garry in Philadelphia's first numbered UFC event since UFC 133 in August 2011, with Mackenzie Dern's strawweight title defense against Gillian Robertson also on the card.</p></div>
+</div>
+
+<h2 class="sec">Last Event — Results · UFC 329: McGregor vs Holloway 2 (Jul 11, T-Mobile Arena, Las Vegas)</h2>
+<div class="panel">
+  <table>
+    <thead><tr><th>Result</th><th>Bout</th><th>Method</th></tr></thead>
+    <tbody>
+      <tr><td class="res">Holloway</td><td>Max Holloway def. Conor McGregor (WW, main)</td><td>TKO (knee injury) — R1, 1:09</td></tr>
+      <tr><td class="res">Pimblett</td><td>Paddy Pimblett def. Benoît Saint Denis (LW, co-main)</td><td>Technical submission (D'arce choke) — R1, 0:52</td></tr>
+      <tr><td class="res">Bautista</td><td>Mario Bautista def. Cory Sandhagen (BW)</td><td>Unanimous decision (29-28 ×3)</td></tr>
+      <tr><td class="res">Royval</td><td>Brandon Royval def. Lone'er Kavanagh (FLW)</td><td>Submission (rear-naked choke) — R3, 3:39</td></tr>
+      <tr><td class="res">Green</td><td>King Green def. Terrance McKinney (LW)</td><td>TKO (strikes) — R1, 4:59</td></tr>
+      <tr><td class="res">Whittaker</td><td>Robert Whittaker def. Nikita Krylov (LHW debut)</td><td>TKO (punches) — R3, 1:01</td></tr>
+      <tr><td class="res">Steveson</td><td>Gable Steveson def. Elisha Ellison (HW, UFC debut)</td><td>KO (punches) — R1, 2:31</td></tr>
+      <tr><td class="res">Yanez</td><td>Adrian Yanez def. Cody Garbrandt (BW)</td><td>TKO (punches) — R1, 2:47</td></tr>
+      <tr><td class="res">Riley</td><td>Luke Riley def. Kai Kamaka III (FW)</td><td>TKO (punches) — R1, 3:03</td></tr>
+      <tr><td class="res">Wang</td><td>Wang Cong def. Tracy Cortez (W-FLW)</td><td>Unanimous decision</td></tr>
+      <tr><td class="res">Pinas</td><td>Damian Pinas def. Cesar Almeida (MW)</td><td>KO (straight right) — R1, 4:44</td></tr>
+      <tr><td class="res">Basharat</td><td>Farid Basharat def. John Garza (BW)</td><td>Unanimous decision</td></tr>
+      <tr><td class="res">Gandra</td><td>Ryan Gandra def. Zachary Reese (MW)</td><td>TKO — R1, 1:15</td></tr>
+      <tr><td class="res">Costa</td><td>Alessandro Costa def. Cody Durden (FLW)</td><td>Submission (rear-naked choke) — R2, 2:19</td></tr>
+    </tbody>
+  </table>
+  <div style="font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:10px"><b style="color:var(--gold)">Bonuses:</b> Fight of the Night ($100K each) — Royval vs Kavanagh · Performance of the Night ($100K each) — Pimblett, Green · $25K finish bonuses — Holloway, Whittaker, Steveson, Yanez, Riley, Pinas, Gandra, Costa (per UFC bonus announcement via Heavy). Garza was a short-notice replacement for the injured Ethyn Ewing.</div>
+</div>
+
+<h2 class="sec">Prospect Watch</h2>
+<div class="cards">
+  <div class="card"><span class="tag prospect">prospect</span>    <h4>Gable Steveson — HW · Olympic gold medalist</h4>
+    <p>The Olympic wrestling champion delivered in his long-awaited UFC debut, knocking out U.S. Army veteran Elisha Ellison in Round 1 and banking a $25K finish bonus. Heavy's post-fight write-up called him one of the best heavyweight prospects in years, with championship potential.</p></div>
+  <div class="card"><span class="tag prospect">prospect</span>    <h4>Luke Riley — FW · undefeated Liverpool striker</h4>
+    <p>The unbeaten featherweight blitzed Kai Kamaka III with a first-round standing TKO for his third Octagon win, though observers noted the stoppage looked early. Another $25K bonus for the Liverpool prospect.</p></div>
+  <div class="card"><span class="tag prospect">prospect</span>    <h4>Damian Pinas — MW · 100% finish rate intact</h4>
+    <p>The Aruban knockout artist flattened Contender Series grad Cesar Almeida with a straight right in Round 1 — his second UFC win by KO, keeping his perfect finish rate and adding a $25K bonus.</p></div>
+</div>
+
+<h2 class="sec">Around the Sport</h2>
+<div class="panel">
+  <ul class="around">
+    <li><b>Bautista gets his revenge:</b> Mario Bautista out-pointed recent title challenger Cory Sandhagen in their rematch (29-28 ×3), avenging his UFC-debut loss — UFC.com's recap says he should crack the bantamweight Top 5 when rankings update this week.</li>
+    <li><b>Pimblett makes a statement:</b> Paddy Pimblett's 52-second D'arce of Benoît Saint Denis — called "easily the best performance of his career" by UFC.com — cements him as a Top-5 lightweight with big options next.</li>
+    <li><b>Whittaker's new home at 205:</b> The former middleweight champion broke Nikita Krylov's jaw en route to a third-round TKO in his light heavyweight debut (Heavy).</li>
+    <li><b>King Green rolls on:</b> The 39-year-old's buzzer-beating TKO of Terrance McKinney makes it four straight wins and three straight finishes, matching his longest UFC run — and he wants Los Angeles next (UFC.com).</li>
+  </ul>
+</div>
+
+<h2 class="sec">Rankings &amp; Business</h2>
+<div class="panel">
+  <ul class="around">
+    <li><b>Record gate:</b> Dana White said UFC 329 drew a $25 million gate — the biggest in UFC history, beating the $22 million Sphere record from September 2024. McGregor has now featured in three of the UFC's five biggest gates (Heavy).</li>
+    <li><b>Rankings movement expected:</b> Bautista (win over Sandhagen) and Pimblett (finish of Saint Denis) both made Top-5 cases, per UFC.com's post-fight analysis; official rankings update this week.</li>
+    <li><b>Broadcast:</b> UFC 329 streamed exclusively on Paramount+ in the U.S., continuing the promotion's Paramount era; Royval–Kavanagh instantly entered Fight of the Year conversations (UFC.com/MMA Vivisection).</li>
+  </ul>
+</div>
+
+<h2 class="sec">Champions Board</h2>
+<div class="panel">
+  <table class="champ">
+    <thead><tr><th>Division</th><th>Champion</th><th>Note</th></tr></thead>
+    <tbody>
+      <tr><td>Heavyweight</td><td>Tom Aspinall</td><td>Ciryl Gane holds the interim belt (KO2 Pereira, Jun 14)</td></tr>
+      <tr><td>Light Heavyweight</td><td>Carlos Ulberg</td><td>Won the belt at UFC 327 (KO1 Procházka); recovering from ACL surgery</td></tr>
+      <tr><td>Middleweight</td><td>Sean Strickland</td><td>Two-time champ; split-decision upset of Chimaev at UFC 328</td></tr>
+      <tr><td>Welterweight</td><td>Islam Makhachev</td><td>Two-division champ; defends vs Machado Garry at UFC 330 (Aug 15)</td></tr>
+      <tr><td>Lightweight</td><td>Justin Gaethje</td><td>TKO4 of Topuria at UFC Freedom 250 (Jun 14)</td></tr>
+      <tr><td>Featherweight</td><td>Alexander Volkanovski</td><td>1 defense this reign; Evloev is the No. 1 contender</td></tr>
+      <tr><td>Bantamweight</td><td>Petr Yan</td><td>UD over Dvalishvili at UFC 323 (Dec 2025)</td></tr>
+      <tr><td>Flyweight</td><td>Joshua Van</td><td>Defended vs Taira at UFC 328 (May 9)</td></tr>
+      <tr><td>Women's Bantamweight</td><td>Kayla Harrison</td><td>Nunes bout targeted for September, unconfirmed</td></tr>
+      <tr><td>Women's Flyweight</td><td>Valentina Shevchenko</td><td>2 defenses this reign</td></tr>
+      <tr><td>Women's Strawweight</td><td>Mackenzie Dern</td><td>Defends vs Robertson at UFC 330 (Aug 15)</td></tr>
+    </tbody>
+  </table>
+  <div style="font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:10px">No titles were contested at UFC 329; every belt re-verified against ESPN's champions page (fetched this edition) and UFC.com official results.</div>
+</div>
+
+<footer>
+  <b>Sources this edition:</b>
+  <a href="https://www.ufc.com/news/ufc-329-mcgregor-vs-holloway-2-results">UFC.com — UFC 329 main card results</a> ·
+  <a href="https://heavy.com/sports/ufc/ufc-329-bonuses-revealed-violent-card/">Heavy — UFC 329 bonuses</a> ·
+  <a href="https://themmadrawpodcast.substack.com/p/ufc-329-results-and-bonuses">MMA Vivisection — full results &amp; bonuses</a> ·
+  <a href="https://www.espn.com/mma/story/_/id/14947566/current-all-ufc-champions">ESPN — current UFC champions</a> ·
+  <a href="https://www.mmamania.com/ufc-mma-schedule">MMA Mania — UFC schedule</a> ·
+  <a href="https://www.ufc.com/news/ufc-329-mcgregor-vs-holloway-2-prelim-results">UFC.com — prelims</a>
+  <div class="disclaimer">The Octagon is an automated daily briefing compiled from public reporting. Cards and bouts are subject to change.</div>
+</footer>
+
+</div>
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
+<script>(function(){try{var tgt=new Date('2026-07-18T20:00:00-04:00').getTime();var el=document.getElementById('ufccdn');function tick(){var ms=tgt-Date.now();if(ms<=0){el.textContent='Fight week — live/completed';return;}var d=Math.floor(ms/86400000),h=Math.floor(ms%86400000/3600000),m=Math.floor(ms%3600000/60000);el.textContent=d+'d '+h+'h '+m+'m';setTimeout(tick,30000);}tick();}catch(e){}})();</script>
+</body>
+</html>

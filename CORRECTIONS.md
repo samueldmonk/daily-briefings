@@ -4281,3 +4281,32 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
 - CALENDAR CORRECTION vs Schwab Market Update (Jul 10 open report, fetched DIRECTLY this run): NO retail sales on Schwab's week-ahead — prior "retail sales Thursday" REMOVED from On the Radar. Verified week: Jul 14 CPI + Warsh testimony + JPM/BAC/GS/WFC/C; Jul 15 PPI + Beige Book + ASML/JNJ/MS/BLK/UAL/JBHT; Jul 16 TSM/GE/UNH/ABT/NFLX/ISRG; Jul 17 housing starts/permits/industrial production/UMich prelim + TRV/TFC/FITB. NEW radar item (Schwab-sourced): FINRA margin debt record $1.42T in May, +53.7% y/y, Peterson "speculative excess"; ~61% September HIKE odds per CME FedWatch as of Friday.
 - Weekly Scorecard arithmetic CROSS-VERIFIED via Schwab's Friday-open table (Thu closes 7,543.64 +0.81% / 52,487.41 +0.27% / 26,206.89 +1.30% → Fri closes 7,575.39 +0.42% / 52,637.01 +0.29% / 26,281.61 +0.29% mutually consistent).
 - CYBER: ShareFile top story re-verified this run (THN + BleepingComputer + SecurityWeek + TechTimes + The Register Jul-13 piece in results); ADDED sourced nuance "cloud services gradually restored, keep Storage Zone Controllers offline" + Register footer link. KEV pair 48939/56291 due TODAY Jul 13 (countdown renders "due today"); Jul-7 quartet overdue since Jul 10. Moody Bible Institute (2.3M records, ShinyHunters) and DHS HSIN breach claims seen ONLY in AI summaries this run → NOT published; verify directly before any future use.
+
+## Added 2026-07-13 (Monday ~12:00PM ET — Midday Edition 30-min refresh; markets OPEN, choppy Hormuz-headline tape)
+- Pages carried from the 11:55AM edition with full re-verification; HTMLParser 0 leftover / 0 errors on all four; regression greps
+  (vacant / Shamil / Abdul-Rakhman-hyphen / unification / Renato / 27-9 / 430,000 / 73,932 / 110M / BofA / FanDuel / DraftKings /
+  -550 / 168.01 / "first AI-agent platform" / Stevenson / "Ryan Garza" / 30-27 / three-week / Sub2 Virna) all 0; Pereira/Chimaev/
+  Topuria each appear ONCE (defeated opponents on the champions board).
+- CHAMPIONS BOARD 11/11 re-verified by DIRECT ESPN fetch THIS run (Aspinall 0def / Ulberg / Strickland / Makhachev / Gaethje /
+  Volkanovski 1def / Yan / Van "Defenses: 0" — page keeps Taira note w/o count per standing note / Harrison 0def / Shevchenko 2def /
+  Dern UD Jandiroba; meta-description "strawweight vacancy" still stale, body governs).
+- MARKETS OPEN, intraday QUALITATIVE with DUELING live headlines published attributed in sequence: CNBC "S&P 500 drops after Trump
+  reimposes Strait of Hormuz blockade, SK Hynix leads chip stocks lower" vs newer Yahoo "Dow, S&P 500, Nasdaq edge higher as Trump
+  says Iran wants to talk, US blockades Hormuz". NO intraday % published (AI-summary figures S&P -0.4 then +0.4 / Dow -56 -0.1% /
+  Nasdaq -1% NOT used). OIL headline-verified this run: CNBC "U.S. oil jumps above $75 a barrel after Trump reinstates Strait of
+  Hormuz blockade on Iranian ships" + Yahoo "Brent crosses $80 per barrel as Trump says US-Iran deal is over" -> table rows now
+  WTI "above $75" / Brent "crossed $80" with the $73.67 / $78.12 prints kept as "early". Oil "+5.3% / $75.18 / Brent 5.3%" and
+  Trump "reinstating THE IRANIAN BLOCKADE" quote + 20% cargo-fee figure seen ONLY in AI summaries -> NOT published. Yahoo live URL
+  113249278 AGAIN served the stale 7:40AM pre-open body (used as pre-market context only); URL 145712025 headline seen fresh but
+  body is the known April-content trap -> headline only. Seeking Alpha movers fetch returned EMPTY -> Oracle -2.9%/$136.52/$260B
+  lease/S&P-cut-BBB- and SKHYV -7.9%/$154.7 claims NOT published.
+- CYBER: entire page re-verified via DIRECT THN homepage fetch this run (ShareFile top story verbatim; iCagenda 48939 + Balbooa
+  56291 KEV pair due TODAY Jul 13; MemGhost arXiv Jul 6; Forg365 $400/mo ZeroBAC; jscrambler 6-min Socket flag; Evilginx trio
+  Lexfo; Balochistan SentinelOne; Zimbra CVE-pending; U-Boot Binarly; NetNut 2M headline). NEW card added (tag New): Huntress
+  suspected-AI-generated PowerShell AD enumeration (THN Jul 13 — vibe-coded script, RDP with pre-compromised creds onto
+  domain-joined Windows Server, staged in C:\ProgramData\, AD_Report.html, early-June incident, researchers Jevon Ang + Dray Agha)
+  + THN footer link. Jul-7 KEV quartet still overdue (due Jul 10).
+- MMA: UFC 329 headline results re-confirmed via fresh search (Holloway TKO knee-injury R1 1:09 / 69 seconds; McGregor 37); full
+  14-bout table + bonuses + $25M gate carried per the Jul-13 11:25AM UFC.com-fetch entry. Yahoo UFC 329 live page served a STALE
+  pre-event cache (only the "Welcome to fight day" post) -> Holloway "trilogy" quote seen ONLY in an AI summary, NOT published.
+  Yahoo body restates "Holloway (27-9)" — stays OFF per standing grep. Jul 18 OKC main card kept 8 PM ET per sourced entry.
