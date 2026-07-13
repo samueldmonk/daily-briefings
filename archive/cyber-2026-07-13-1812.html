@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Cyber Wire — Daily Security Briefing</title>
+<style>
+:root{--bg:#0b0f10;--panel:#131a1c;--line:#233034;--ink:#e2e8e6;--muted:#8fa3a0;--teal:#22d3a8;--cyan:#36c6ff;--crit:#ff5c5c;--warn:#e8a33d;--mono:'SF Mono','Cascadia Code',Menlo,Consolas,monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.6;padding:24px 16px 60px}
+.wrap{max-width:980px;margin:0 auto}
+header.masthead{text-align:center;padding:18px 0 10px;border-bottom:2px solid var(--teal);margin-bottom:14px}
+.masthead h1{font-size:38px;letter-spacing:.04em;color:var(--teal);font-weight:800}
+.masthead h1 .glyph{color:var(--cyan)}
+.masthead .tagline{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+.meta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:14px 0 4px}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.08em;padding:4px 12px;border:1px solid var(--line);border-radius:999px;color:var(--muted);background:var(--panel)}
+.pill.live{color:#7ee0c3;border-color:#234639}.pill.live::before{content:"● ";color:var(--teal)}
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:10px;padding:11px 15px;margin:10px 0 2px;font-size:14.5px;line-height:1.5}
+.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-right:9px}
+.freshline{font-family:var(--mono);font-size:10.5px;color:var(--muted);text-align:center;margin:8px 0 14px;letter-spacing:.06em}
+nav.tabs{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin:6px 0 20px}
+nav.tabs a{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-decoration:none;color:var(--muted);padding:7px 14px;border:1px solid var(--line);border-radius:8px;background:var(--panel);transition:all .15s}
+nav.tabs a:hover{color:var(--ink);transform:translateY(-1px)}
+nav.tabs a.active{color:#06211a;background:var(--teal);border-color:var(--teal);font-weight:700}
+.threat{display:flex;align-items:center;gap:14px;background:linear-gradient(90deg,#2a1416,#131a1c);border:1px solid #4b2326;border-radius:12px;padding:14px 18px;margin-bottom:12px}
+.threat .lvl{font-family:var(--mono);font-size:13px;letter-spacing:.2em;color:var(--crit);font-weight:800;white-space:nowrap}
+.threat p{font-size:13.5px;color:#d8cfc9}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-bottom:20px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;text-align:center}
+.stat .n{font-family:var(--mono);font-size:22px;color:var(--cyan);font-weight:700}
+.stat .l{font-size:11px;color:var(--muted);margin-top:4px;line-height:1.4}
+h2.sec{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);margin:30px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:14px}
+.lead h3{font-size:23px;color:#eaf6f2;line-height:1.35;margin-bottom:10px}
+.lead p{font-size:15px;margin-bottom:10px;color:#c9d6d2}
+.patch{border-left:4px solid var(--crit)}
+.patch h3{font-size:17px;color:#ffd9d9;margin-bottom:8px}
+.patch p{font-size:14px;color:#d8cfc9}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 17px;transition:transform .15s,border-color .15s}
+.card:hover{transform:translateY(-3px);border-color:var(--teal)}
+.card h4{font-size:16px;color:var(--ink);margin-bottom:6px}
+.card p{font-size:13.5px;color:var(--muted)}
+.tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:2px 8px;border-radius:5px;margin-bottom:8px;margin-right:6px}
+.tag.breach{background:#3a1717;color:#f09c9c}.tag.supply{background:#2c1f3a;color:#c9a6f0}.tag.research{background:#16303a;color:#7ecbe8}.tag.espionage{background:#332514;color:#e8b87e}.tag.new{background:#123528;color:#7ee0c3}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
+td{padding:9px 10px;border-bottom:1px solid #1a2427;vertical-align:top}
+tr:last-child td{border-bottom:none}
+td.cve{font-family:var(--mono);font-size:12.5px;color:var(--cyan);white-space:nowrap}
+td.score{font-family:var(--mono);font-weight:700;color:var(--crit)}
+ul.kev{list-style:none}
+ul.kev li{padding:9px 0 9px 22px;border-bottom:1px solid #1a2427;font-size:14px;position:relative}
+ul.kev li::before{content:"▸";position:absolute;left:2px;color:var(--teal)}
+ul.kev li:last-child{border-bottom:none}
+.cd{font-family:var(--mono);font-weight:700}
+footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+footer a{color:#5fc0a8;text-decoration:none}
+.disclaimer{font-family:var(--mono);font-size:10.5px;color:#5f6f6c;margin-top:14px;line-height:1.6}
+@media(max-width:640px){.masthead h1{font-size:28px}.threat{flex-direction:column;align-items:flex-start;gap:6px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <h1><span class="glyph">⛨</span> The Cyber Wire</h1>
+  <div class="tagline">Your daily security briefing — threats, breaches &amp; patches</div>
+  <div class="meta">
+    <span class="pill live">LIVE</span>
+    <span class="pill" id="edition">Edition</span>
+    <span class="pill" id="datestamp">—</span>
+    <span class="pill">Updated <span id="updated">—</span></span>
+  </div>
+</header>
+
+<div class="tldr"><b>The Wire</b> <span>The federal patch deadline for two max-severity Joomla zero-days lands today, Progress's ShareFile Storage Zone Controllers remain ordered offline, and fresh breach disclosures hit Lidl and insurer AssuranceAmerica.</span></div>
+<div class="freshline" id="freshline">Data as of — · briefings refresh every 30 minutes, 8 AM–6 PM ET</div>
+
+<nav class="tabs">
+  <a href="index.html">★ Front Page</a>
+  <a href="cyber-briefing.html" class="active">⛨ The Cyber Wire</a>
+  <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
+  <a href="mma-briefing.html">⊘ The Octagon</a>
+  <a href="archive.html">🗄 Archive</a>
+</nav>
+
+<div class="threat">
+  <div class="lvl">THREAT LEVEL: HIGH</div>
+  <p>Two CVSS-10.0 Joomla extension zero-days hit their CISA remediation deadline <b>today</b> amid active exploitation, and Progress has ordered ShareFile Storage Zone Controllers powered down while it investigates a credible threat.</p>
+</div>
+
+<div class="stats">
+  <div class="stat"><div class="n">2 × 10.0</div><div class="l">max-severity Joomla zero-days due for federal remediation today (CISA KEV)</div></div>
+  <div class="stat"><div class="n">6 min</div><div class="l">time for Socket to flag the poisoned jscrambler 8.14.0 npm release</div></div>
+  <div class="stat"><div class="n">$400/mo</div><div class="l">going rate for the Forg365 Microsoft 365 phishing kit (ZeroBAC)</div></div>
+  <div class="stat"><div class="n">2M</div><div class="l">home devices in the NetNut residential proxy network Google disrupted</div></div>
+</div>
+
+<h2 class="sec">Top Story</h2>
+<div class="panel lead">
+  <h3>Progress tells ShareFile customers: shut down your Storage Zone Controllers</h3>
+  <p>Progress Software has told ShareFile customers to shut down the Windows servers running their Storage Zone Controllers, confirming to The Hacker News that it is responding to a "credible external security threat." The company temporarily disabled access to affected accounts "out of an abundance of caution" while internal and external security experts investigate, and says it has no indication of unauthorized access to any ShareFile accounts or data.</p>
+  <p>What Progress has not said is what the threat is or who is behind it. The order became public when a customer posted the company's email to Reddit's r/sysadmin on July 10; Progress confirmed the disruption on its status page, listing Storage Zone Controller customers as "not operational" with the incident under investigation. Cloud services have since been gradually restored, but Progress is telling customers to keep Storage Zone Controllers offline (SecurityWeek/The Register). Only the Storage Zone Controller component is affected — but for file-transfer infrastructure, an emergency power-down order is the kind of signal defenders shouldn't wait to act on.</p>
+</div>
+
+<h2 class="sec">Patch Priority</h2>
+<div class="panel patch">
+  <h3>Due TODAY: CVE-2026-48939 (Joomla iCagenda) and CVE-2026-56291 (Balbooa Joomla Forms) — both CVSS 10.0, both exploited as zero-days</h3>
+  <p>CISA's risk-based remediation date for both Joomla-extension flaws is <b>today, July 13</b> <span class="cd" data-due="2026-07-13">(0 days left)</span>. Both allow arbitrary file upload leading to remote code execution; iCagenda exploitation has been underway since June 15 in automated attacks (mySites.guru via The Hacker News). Verified fixes: iCagenda 4.0.8 (or 3.9.15 for the legacy branch) and Balbooa Forms 2.4.1. If you run Joomla with either extension and can't patch now, take the site offline — exploitation is active and trivial.</p>
+</div>
+
+<h2 class="sec">Threat Actor Spotlight</h2>
+<div class="panel">
+  <h4 style="font-size:17px;margin-bottom:8px;color:#eaf6f2">Forg365 — phishing-as-a-service with an enterprise feature list</h4>
+  <p style="font-size:14px;color:#c9d6d2">A new PhaaS operation dubbed <b>Forg365</b> is targeting Microsoft 365 accounts with a blend of device-code phishing, adversary-in-the-middle session theft, antibot evasion, AI-assisted lure creation and post-compromise mailbox operations. Sold via Telegram for $400 a month (or $3,800 a year), its lures ride legitimate email infrastructure such as Amazon SES and Twilio SendGrid before landing on operator-controlled domains. Researchers at ZeroBAC describe a mature operator panel — OAuth app configuration, SMTP rotation, AI email generation, token vaulting and keyword alerts — a reminder that commodity phishing now ships with product-grade tooling (The Hacker News, Jul 13).</p>
+</div>
+
+<h2 class="sec">Breaches &amp; Incidents</h2>
+<div class="cards">
+  <div class="card"><span class="tag research">AI tradecraft</span>    <h4>Attacker maps Active Directory with suspected AI-written script</h4>
+    <p>Huntress flagged an intrusion in which a threat actor used a "vibe-coded" PowerShell script to enumerate Active Directory — finding the domain controller, mapping users, computers and domains, then generating an AD_Report.html to measure its own success. The attacker RDP'd into a domain-joined Windows Server with pre-compromised credentials and staged tools in C:\ProgramData\ in the early-June incident; telltale AI signs included a prompt-iteration title, placeholder strings and over-engineered code (Huntress' Jevon Ang and Dray Agha via The Hacker News, Jul 13).</p></div>
+  <div class="card"><span class="tag research">AI security</span>    <h4>MemGhost: one email plants false memories in AI agents</h4>
+    <p>Researchers demonstrated a "stealth memory injection" attack in which a single crafted email tricks a memory-enabled AI assistant into saving a false "fact" about its user, hiding the change, and steering later sessions — with a tool that writes the attack emails automatically. The paper landed on arXiv July 6 (The Hacker News, Jul 13).</p></div>
+  <div class="card"><span class="tag supply">supply chain</span>    <h4>jscrambler npm release drops infostealer on install</h4>
+    <p>The compromised jscrambler 8.14.0 npm release, published July 11, carries a preinstall hook that drops a native infostealer binary for Windows, macOS or Linux. Socket flagged it six minutes after publication; anything that pulled it in that window ran the payload with the install process's access. Version 8.13.0 is clean (The Hacker News).</p></div>
+  <div class="card"><span class="tag breach">phishing ops</span>    <h4>Misconfigured server exposes three Evilginx phishing operations</h4>
+    <p>A phishing operator left a Python web server with directory listing open on a public port; French firm Lexfo lifted the entire toolkit and pivoted to two more operators — three Microsoft 365 campaigns in all, each running a custom Evilginx fork, the largest active for over a year against corporate mailboxes (The Hacker News, Jul 13).</p></div>
+  <div class="card"><span class="tag espionage">espionage</span>    <h4>Pakistani police portals hit in multi-group espionage</h4>
+    <p>SentinelOne detailed sustained espionage against Pakistani law-enforcement bodies by suspected China- and India-aligned actors from February 2024 to April 2026 — including compromise of Balochistan Police servers holding criminal, biometric and personnel records, with a custom implant disguised as a portal update (The Hacker News).</p></div>
+  <div class="card"><span class="tag breach">breach</span>
+    <h4>Accenture breach claims: "888" hawks 35GB haul</h4>
+    <p>Accenture has acknowledged a security incident after threat actor "888" offered roughly 35GB of claimed loot — source code, with SSH keys and Azure tokens also claimed by the seller — while disputing the scale and calling it an isolated, remediated matter. The same handle previously touted Accenture employee data in 2024 (BleepingComputer and others; key/token claims are the seller's, unconfirmed).</p></div>
+  <div class="card"><span class="tag breach">breach</span>
+    <h4>Lidl discloses online-shop breach at a service provider</h4>
+    <p>Lidl notified customers in Germany, Belgium and the Netherlands that attackers stole personal data — name, phone number, email, date of birth and customer number — from a file held by a third-party service provider; the online shop's own systems were not affected. Lidl says it cannot yet rule out exposure of passwords or payment details and has notified the Dutch Data Protection Authority (BleepingComputer, Jul 13).</p></div>
+  <div class="card"><span class="tag breach">breach</span>
+    <h4>AssuranceAmerica breach exposes 6.9 million drivers' records</h4>
+    <p>Insurance provider AssuranceAmerica disclosed a breach exposing records on roughly 6.9 million people, including driver's license numbers and insurance/claims data, after a compromised employee credential gave attackers initial access in March; the company's investigation concluded in mid-June (BleepingComputer).</p></div>
+</div>
+
+<h2 class="sec">Vulnerability Watch</h2>
+<div class="panel">
+  <table>
+    <thead><tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr></thead>
+    <tbody>
+      <tr><td class="cve">CVE-2026-48939</td><td class="score">10.0</td><td>Joomla iCagenda ≤ 4.0.7</td><td>Arbitrary file upload → PHP code execution; exploited as a zero-day since June 15; fixed in 4.0.8 / 3.9.15. In CISA KEV, due today.</td></tr>
+      <tr><td class="cve">CVE-2026-56291</td><td class="score">10.0</td><td>Balbooa Joomla Forms</td><td>Arbitrary file upload → RCE; exploited in the wild; fixed in Forms 2.4.1 (released Jul 9). In CISA KEV, due today.</td></tr>
+      <tr><td class="cve">pending</td><td class="score">crit.</td><td>Zimbra Classic Web Client</td><td>Stored XSS — a crafted email can run malicious code in the user's session on open; no CVE assigned yet; Zimbra urges immediate update (vendor advisory via THN).</td></tr>
+      <tr><td class="cve">6 flaws</td><td class="score">n/a</td><td>U-Boot bootloader (FIT image parsing)</td><td>Binarly found six pre-signature-check flaws: four crash devices, two allow code execution before boot verification. Affects routers, cameras, server BMCs.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 class="sec">CISA KEV &amp; Federal Deadlines</h2>
+<div class="panel">
+  <ul class="kev">
+    <li><b>CVE-2026-48939 (iCagenda, Joomla)</b> — added Jul 10, due <b>Jul 13</b> <span class="cd" data-due="2026-07-13">…</span></li>
+    <li><b>CVE-2026-56291 (Balbooa Forms, Joomla)</b> — added Jul 10, due <b>Jul 13</b> <span class="cd" data-due="2026-07-13">…</span></li>
+    <li><b>CVE-2026-48282 (Adobe ColdFusion)</b> — added Jul 7, due <b>Jul 10</b> <span class="cd" data-due="2026-07-10">…</span></li>
+    <li><b>CVE-2026-55255 (Langflow), CVE-2026-48908 (JoomShaper SP Page Builder), CVE-2026-56290 (Joomlack Page Builder CK)</b> — added Jul 7, due <b>Jul 10</b> <span class="cd" data-due="2026-07-10">…</span></li>
+  </ul>
+  <div style="font-family:var(--mono);font-size:10.5px;color:var(--muted);margin-top:10px">Under BOD 26-04, KEV remediation windows are risk-based and assigned per CVE — dates above are CISA's stated due dates.</div>
+</div>
+
+<footer>
+  <b>Sources this edition:</b>
+  <a href="https://thehackernews.com/2026/07/urgent-progress-tells-sharefile.html">THN — ShareFile shutdown order</a> ·
+  <a href="https://www.theregister.com/security/2026/07/13/progress-orders-emergency-sharefile-server-shutdown-over-mystery-security-threat/5270281">The Register — ShareFile shutdown (Jul 13)</a> ·
+  <a href="https://thehackernews.com/2026/07/icagenda-and-balbooa-forms-joomla-flaws.html">THN — iCagenda/Balbooa KEV zero-days</a> ·
+  <a href="https://thehackernews.com/2026/07/attacker-uses-suspected-ai-generated.html">THN — AI-generated AD enumeration (Huntress)</a> ·
+  <a href="https://thehackernews.com/2026/07/new-memghost-attack-plants-persistent.html">THN — MemGhost</a> ·
+  <a href="https://thehackernews.com/2026/07/forg365-phaas-targets-microsoft-365.html">THN — Forg365 PhaaS</a> ·
+  <a href="https://thehackernews.com/2026/07/compromised-jscrambler-8140-npm-release.html">THN — jscrambler npm</a> ·
+  <a href="https://thehackernews.com/2026/07/misconfigured-server-reveals-three.html">THN — Evilginx operations</a> ·
+  <a href="https://thehackernews.com/2026/07/hackers-weaponize-balochistan-police.html">THN — Balochistan espionage</a> ·
+  <a href="https://www.bleepingcomputer.com/news/security/lidl-discloses-online-shop-breach-after-service-provider-hack/">BleepingComputer — Lidl breach (Jul 13)</a> ·
+  <a href="https://www.bleepingcomputer.com/news/security/assuranceamerica-data-breach-exposes-records-of-69-million-drivers/">BleepingComputer — AssuranceAmerica breach</a> ·
+  <a href="https://thehackernews.com/2026/07/cisa-adds-4-actively-exploited-adobe.html">THN — CISA KEV quartet (ColdFusion/Joomla/Langflow), due Jul 10</a> ·
+  <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV catalog</a>
+  <div class="disclaimer">The Cyber Wire is an automated daily briefing compiled from public reporting. It is provided for situational awareness only and is not security advice; validate all CVEs, versions and deadlines against vendor advisories and the CISA KEV catalog before acting.</div>
+</footer>
+
+</div>
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
+<script>(function(){try{var now=Date.now();document.querySelectorAll('.cd[data-due]').forEach(function(el){var end=new Date(el.getAttribute('data-due')+'T23:59:59-04:00').getTime();var ms=end-now;var d=Math.floor(ms/86400000);var txt,color;if(ms<0){txt='(overdue)';color='var(--crit)';}else if(d<1){txt='(due today)';color='var(--crit)';}else{txt='('+d+' day'+(d===1?'':'s')+' left)';color=d<=3?'var(--warn)':'inherit';}el.textContent=txt;el.style.color=color;});}catch(e){}})();</script>
+</body>
+</html>
