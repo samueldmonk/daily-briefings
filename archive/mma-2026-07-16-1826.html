@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Octagon — Daily MMA Briefing</title>
+<style>
+:root{--bg:#100c0c;--panel:#1a1313;--line:#322020;--ink:#ede5e0;--muted:#a89a92;--red:#e84545;--orange:#ff8a5c;--gold:#d9b45b;--green:#5fce8a;--mono:'SF Mono','Cascadia Code',Menlo,Consolas,monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.6;padding:24px 16px 60px}
+.wrap{max-width:980px;margin:0 auto}
+header.masthead{text-align:center;padding:18px 0 10px;border-bottom:2px solid var(--red);margin-bottom:14px}
+.masthead h1{font-size:40px;letter-spacing:.06em;color:var(--red);font-weight:800;text-transform:uppercase}
+.masthead h1 .glyph{color:var(--orange)}
+.masthead .tagline{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+.meta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:14px 0 4px}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.08em;padding:4px 12px;border:1px solid var(--line);border-radius:999px;color:var(--muted);background:var(--panel)}
+.pill.live{color:#f0a58a;border-color:#54322a}.pill.live::before{content:"● ";color:var(--red)}
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--red);border-radius:10px;padding:11px 15px;margin:10px 0 2px;font-size:14.5px;line-height:1.5}
+.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin-right:9px}
+.freshline{font-family:var(--mono);font-size:10.5px;color:var(--muted);text-align:center;margin:8px 0 14px;letter-spacing:.06em}
+nav.tabs{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin:6px 0 20px}
+nav.tabs a{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-decoration:none;color:var(--muted);padding:7px 14px;border:1px solid var(--line);border-radius:8px;background:var(--panel);transition:all .15s}
+nav.tabs a:hover{color:var(--ink);transform:translateY(-1px)}
+nav.tabs a.active{color:#1c0d0d;background:var(--red);border-color:var(--red);font-weight:700}
+.cdbar{display:flex;align-items:center;gap:14px;background:linear-gradient(90deg,#2a1414,#1a1313);border:1px solid #54322a;border-radius:12px;padding:13px 18px;margin-bottom:20px;flex-wrap:wrap}
+.cdbar .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--orange);text-transform:uppercase}
+.cdbar .evt{font-size:14.5px;color:var(--ink)}
+.cdbar #ufccdn{font-family:var(--mono);font-size:16px;color:var(--gold);font-weight:700;margin-left:auto}
+h2.sec{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--red);margin:30px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:14px}
+.lead{border-left:4px solid var(--red)}
+.lead h3{font-size:24px;color:#f5ece6;line-height:1.35;margin-bottom:10px}
+.lead p{font-size:15px;margin-bottom:10px;color:#d9ccc4}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 17px;transition:transform .15s,border-color .15s}
+.card:hover{transform:translateY(-3px);border-color:var(--red)}
+.card .when{font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--gold);text-transform:uppercase;margin-bottom:7px}
+.card h4{font-size:16.5px;color:var(--ink);margin-bottom:6px}
+.card p{font-size:13.5px;color:var(--muted)}
+.tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:2px 8px;border-radius:5px;margin-bottom:8px;margin-right:6px}
+.tag.prospect{background:#14301e;color:#7ee0a3}.tag.new{background:#3a2a14;color:#f0c987}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
+td{padding:9px 10px;border-bottom:1px solid #241818;vertical-align:top}
+tr:last-child td{border-bottom:none}
+td.res{color:var(--green);font-weight:700;white-space:nowrap}
+ul.around{list-style:none}
+ul.around li{padding:9px 0 9px 22px;border-bottom:1px solid #241818;font-size:14.5px;position:relative}
+ul.around li::before{content:"▸";position:absolute;left:2px;color:var(--red)}
+ul.around li:last-child{border-bottom:none}
+.champ td:first-child{font-family:var(--mono);font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.champ td:nth-child(2){font-weight:700;color:#f5ece6}
+footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+footer a{color:#d98a6a;text-decoration:none}
+.disclaimer{font-family:var(--mono);font-size:10.5px;color:#7a6a62;margin-top:14px;line-height:1.6}
+@media(max-width:640px){.masthead h1{font-size:30px}.cdbar #ufccdn{margin-left:0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <h1><span class="glyph">⊘</span> The Octagon</h1>
+  <div class="tagline">Your daily MMA briefing — UFC, prospects &amp; the business of fighting</div>
+  <div class="meta">
+    <span class="pill live">LIVE</span>
+    <span class="pill" id="edition">Edition</span>
+    <span class="pill" id="datestamp">—</span>
+    <span class="pill">Updated <span id="updated">—</span></span>
+  </div>
+</header>
+
+<div class="tldr"><b>Tale of the Tape</b> <span>It's fight week: Saturday's Oklahoma City card has former welterweight king Kamaru Usman — out 13 months — moving up to middleweight to face former champ Dricus du Plessis, who returns for the first time since losing his belt to Khamzat Chimaev; the champions board is unchanged with no title bout since UFC 329, whose record $26.4M-gate night (Holloway's 69-second TKO of McGregor) is still the sport's biggest recent story.</span></div>
+<div class="freshline" id="freshline">Data as of — · briefings refresh every 30 minutes, 8 AM–6 PM ET</div>
+
+<nav class="tabs">
+  <a href="index.html">★ Front Page</a>
+  <a href="cyber-briefing.html">⛨ The Cyber Wire</a>
+  <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
+  <a href="mma-briefing.html" class="active">⊘ The Octagon</a>
+  <a href="archive.html">🗄 Archive</a>
+</nav>
+
+<div class="cdbar">
+  <span class="lbl">Next Card</span>
+  <span class="evt">UFC Fight Night: du Plessis vs Usman — Sat, Jul 18 · Paycom Center, Oklahoma City (main card 8 PM ET)</span>
+  <span id="ufccdn">—</span>
+</div>
+
+<h2 class="sec">Top Story</h2>
+<div class="panel lead">
+  <h3>Fight week in Oklahoma City: du Plessis returns to face a middleweight Usman, with the winner in the title mix</h3>
+  <p>The Octagon returns to Oklahoma City on Saturday for a 12-fight card headlined by two former champions. Dricus du Plessis fights for the first time since dropping the middleweight title to Khamzat Chimaev at UFC 319 last August — his first bout of 2026 — while Kamaru Usman makes his first appearance in 13 months in a full-time move up to 185 pounds, chasing a piece of two-division history. Du Plessis opened as a −340 favorite on DraftKings Sportsbook (Usman +270) and has stayed a heavy favorite (DraftKings Network/UFC.com/Forbes).</p>
+  <p>Ahead of the fight, du Plessis has been his usual blunt self — telling UFC.com "I hate being a loser" as he looks to reset after the Chimaev defeat, and waving off talk of a Sean Strickland–Chimaev rematch as "senseless" (UFC.com/Yahoo Sports, Jul 16). Meanwhile the biggest recent story in the sport still belongs to UFC 329: Max Holloway's 69-second TKO of Conor McGregor headlined a card that drew a record $26.4 million gate, and lightweight champion Justin Gaethje's next move remains an open question after his manager teased a first defense "against someone he's never fought before" (see Around the Sport).</p>
+</div>
+
+<h2 class="sec">Fight Week — Upcoming Cards</h2>
+<div class="cards">
+  <div class="card">    <div class="when">Sat, Jul 18 · Paycom Center, Oklahoma City</div>
+    <h4>UFC Fight Night: Dricus du Plessis vs Kamaru Usman</h4>
+    <p>Usman moves up to 185 (his first bout in 13 months) against former middleweight champion du Plessis, who opened as a −340 favorite on DraftKings Sportsbook (Usman +270). A 12-fight card; Jared Cannonier vs Christian Leroy Duncan co-headlines. Prelims 5 PM ET, main card 8 PM ET on Paramount+. Odds: du Plessis −340 / Usman +270 (DraftKings opening).</p></div>
+  <div class="card">
+    <div class="when">Sat, Jul 25 · Etihad Arena, Abu Dhabi</div>
+    <h4>UFC Fight Night: Magomed Ankalaev vs Bogdan Guskov</h4>
+    <p>Khalil Rountree Jr withdrew from the light-heavyweight headliner with an injury; No. 1-ranked former champion Magomed Ankalaev now meets No. 10-ranked Bogdan Guskov, who accepted the short-notice bout — his first UFC main event (UFC.com/Tapology).</p></div>
+  <div class="card">
+    <div class="when">Sat, Aug 15 · Xfinity Mobile Arena, Philadelphia</div>
+    <h4>UFC 330: Islam Makhachev vs Ian Machado Garry</h4>
+    <p>The welterweight champion defends against Machado Garry in Philadelphia, with Mackenzie Dern's strawweight title defense against Gillian Robertson also booked (UFC.com/MMA Mania).</p></div>
+</div>
+
+<h2 class="sec">Last Event — Results · UFC 329: McGregor vs Holloway 2 (Jul 11, T-Mobile Arena, Las Vegas)</h2>
+<div class="panel">
+  <table>
+    <thead><tr><th>Result</th><th>Bout</th><th>Method</th></tr></thead>
+    <tbody>
+      <tr><td class="res">Holloway</td><td>Max Holloway def. Conor McGregor (main event)</td><td>TKO (knee injury) — R1, 1:09</td></tr>
+      <tr><td class="res">Pimblett</td><td>Paddy Pimblett def. Benoît Saint Denis (LW, co-main)</td><td>Submission (D'arce choke) — R1</td></tr>
+      <tr><td class="res">Green</td><td>King Green def. Terrance McKinney (LW)</td><td>TKO (strikes) — R1 (buzzer-beater)</td></tr>
+    </tbody>
+  </table>
+  <div style="font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:10px">Headline results shown above; the card was capped by finishes across the board. <b style="color:var(--gold)">Bonuses:</b> Performance of the Night ($100K each) — Paddy Pimblett, King Green · Fight of the Night ($100K each) — Brandon Royval vs Lone'er Kavanagh · $25K finish bonuses — Max Holloway, Robert Whittaker, Gable Steveson, Adrian Yanez, Luke Riley, Damian Pinas, Ryan Gandra, Alessandro Costa (SI/Yahoo Sports/Heavy). <b style="color:var(--gold)">Gate:</b> a sold-out crowd of 20,000+ produced $26,430,566 — a record UFC live gate, surpassing the previous mark set at UFC 306 (Sept 2024).</div>
+</div>
+
+<h2 class="sec">Prospect Watch</h2>
+<div class="cards">
+  <div class="card"><span class="tag prospect">prospect</span>    <h4>Gable Steveson — HW · Olympic gold medalist</h4>
+    <p>The Olympic wrestling champion delivered a first-round knockout in his long-awaited UFC debut at UFC 329 and banked a $25K finish bonus — one of the most-hyped heavyweight prospects in years (SI/Heavy).</p></div>
+  <div class="card"><span class="tag prospect">prospect</span><span class="tag new">New</span>    <h4>Ezra Elliott &amp; Damien Anderson — undefeated newcomers</h4>
+    <p>The UFC signed unbeaten finishers Ezra Elliott (7-0, MMA Lab Arizona) and Damien Anderson (5-0, Texas/Fury FC) for a late-notice featherweight bout at Saturday's Oklahoma City card — both have stopped every opponent they've faced (MMA News/SI/Yahoo Sports).</p></div>
+  <div class="card"><span class="tag prospect">prospect</span>    <h4>Luke Riley — FW · undefeated Liverpool striker</h4>
+    <p>The unbeaten featherweight blitzed his way to another first-round finish at UFC 329 for his third Octagon win, adding a $25K bonus and building a case as one of the division's rising strikers.</p></div>
+</div>
+
+<h2 class="sec">Around the Sport</h2>
+<div class="panel">
+  <ul class="around">
+    <li><b>Du Plessis resets for fight week:</b> "I hate being a loser," du Plessis told UFC.com ahead of Saturday's return — his first fight since losing the middleweight belt to Khamzat Chimaev at UFC 319. He also dismissed talk of a Sean Strickland–Chimaev rematch as "senseless" (UFC.com/Yahoo Sports, Jul 16).</li>
+    <li><b>Gaethje's manager teases a new opponent:</b> Ali Abdelaziz posted on July 13 that the lightweight champion's "next fight will be against someone he's never fought before," without naming a target — fueling speculation (from writers, not Abdelaziz) that Arman Tsarukyan could get the shot, alongside rematch options like Topuria, Holloway, Pimblett or Oliveira. Nothing is booked (Sports Illustrated).</li>
+    <li><b>Michael Page books Paris:</b> Michael "Venom" Page is among the latest additions to the UFC's upcoming card in Paris (Sherdog, Jul 16).</li>
+    <li><b>Roster move:</b> Sedriques Dumas' UFC run has ended after a three-year stint, per roster reporting this week (Sherdog, Jul 16).</li>
+    <li><b>King Green rolls on:</b> the veteran's buzzer-beating first-round TKO of Terrance McKinney at UFC 329 extended his win streak and earned a $100K Performance of the Night bonus (SI/UFC.com).</li>
+  </ul>
+</div>
+
+<h2 class="sec">Rankings &amp; Business</h2>
+<div class="panel">
+  <ul class="around">
+    <li><b>Record gate:</b> UFC 329 generated $26,430,566 (about $26.4 million) from a sold-out 20,000-plus crowd at T-Mobile Arena — a record UFC live gate, surpassing the previous mark set at UFC 306 in September 2024 (SI/Yahoo Sports).</li>
+    <li><b>Rankings movement:</b> Holloway's finish of McGregor and Pimblett's submission of Saint Denis reshuffle the lightweight picture; official rankings updates are expected to follow this week's card (UFC 329 results).</li>
+    <li><b>Broadcast:</b> UFC 329 streamed exclusively on Paramount+ in the U.S., and Saturday's Oklahoma City card (prelims 5 PM ET / main 8 PM ET) streams on Paramount+ as well (UFC.com).</li>
+  </ul>
+</div>
+
+<h2 class="sec">Champions Board</h2>
+<div class="panel">
+  <table class="champ">
+    <thead><tr><th>Division</th><th>Champion</th><th>Note</th></tr></thead>
+    <tbody>
+      <tr><td>Heavyweight</td><td>Tom Aspinall</td><td>Undisputed; Ciryl Gane holds the interim belt (KO2 Pereira, Jun 14)</td></tr>
+      <tr><td>Light Heavyweight</td><td>Carlos Ulberg</td><td>Won the vacant belt at UFC 327 (KO1 Procházka, Apr 11); recovering from ACL surgery</td></tr>
+      <tr><td>Middleweight</td><td>Sean Strickland</td><td>Two-time champ; split-decision upset of Chimaev at UFC 328 (May 9)</td></tr>
+      <tr><td>Welterweight</td><td>Islam Makhachev</td><td>Two-division champ; defends vs Machado Garry at UFC 330 (Aug 15)</td></tr>
+      <tr><td>Lightweight</td><td>Justin Gaethje</td><td>TKO4 of Topuria at UFC Freedom 250 (Jun 14); manager teases a first defense vs. someone he hasn't fought</td></tr>
+      <tr><td>Featherweight</td><td>Alexander Volkanovski</td><td>1 defense this reign (UD Lopes, UFC 325); Evloev is the No. 1 contender</td></tr>
+      <tr><td>Bantamweight</td><td>Petr Yan</td><td>UD over Dvalishvili at UFC 323 (Dec 6, 2025)</td></tr>
+      <tr><td>Flyweight</td><td>Joshua Van</td><td>Defended vs Taira at UFC 328 (May 9)</td></tr>
+      <tr><td>Women's Bantamweight</td><td>Kayla Harrison</td><td>0 defenses; a Nunes bout has been targeted but is unconfirmed</td></tr>
+      <tr><td>Women's Flyweight</td><td>Valentina Shevchenko</td><td>2 defenses this reign</td></tr>
+      <tr><td>Women's Strawweight</td><td>Mackenzie Dern</td><td>Defends vs Robertson at UFC 330 (Aug 15)</td></tr>
+    </tbody>
+  </table>
+  <div style="font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:10px">No titles have been contested since UFC 329 (Jul 11); every belt matches the authoritative ESPN champions page and UFC.com official results, cross-checked this run.</div>
+</div>
+
+<footer>
+  <b>Sources this edition:</b>
+  <a href="https://www.ufc.com/event/ufc-fight-night-july-18-2026">UFC.com — du Plessis vs Usman (Jul 18) event page</a> ·
+  <a href="https://www.forbes.com/sites/brianmazique/2026/06/24/ufc-dricus-du-plessis-vs-kamaru-usman-full-card-date-and-location-announced/">Forbes — du Plessis vs Usman card/date/location</a> ·
+  <a href="https://sports.yahoo.com/mma/live/ufc-329-live-results-conor-mcgregor-vs-max-holloway-2-updates-round-by-round-scoring-highlights-060000798.html">Yahoo Sports — UFC 329 results (Holloway TKO McGregor)</a> ·
+  <a href="https://www.si.com/fannation/mma/news/ufc-329-bonus-payouts-after-max-holloway-paddy-pimblett-victories">Sports Illustrated — UFC 329 bonuses &amp; record gate</a> ·
+  <a href="https://www.ufc.com/news/new-ufc-abu-dhabi-main-event-ankalaev-guskov-fight-night">UFC.com — Ankalaev vs Guskov (Jul 25)</a> ·
+  <a href="https://www.mmanews.com/article/two-undefeated-prospects-finalize-ufc-oklahoma-city">MMA News — Elliott &amp; Anderson undefeated newcomers</a> ·
+  <a href="https://dknetwork.draftkings.com/2026/06/20/opening-odds-for-dricus-du-plessis-vs-kamaru-usman-at-ufc-okc/">DraftKings Network — du Plessis vs Usman opening odds</a> ·
+  <a href="https://www.espn.com/mma/story/_/id/14947566/current-all-ufc-champions">ESPN — current UFC champions</a> ·
+  <a href="https://www.sherdog.com/news/news/list">Sherdog — UFC news (Page to Paris, Dumas)</a>
+  <div class="disclaimer">The Octagon is an automated daily briefing compiled from public reporting. Cards and bouts are subject to change.</div>
+</footer>
+
+</div>
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
+<script>(function(){try{var tgt=new Date('2026-07-18T20:00:00-04:00').getTime();var el=document.getElementById('ufccdn');function tick(){var ms=tgt-Date.now();if(ms<=0){el.textContent='Fight week — live/completed';return;}var d=Math.floor(ms/86400000),h=Math.floor(ms%86400000/3600000),m=Math.floor(ms%3600000/60000);el.textContent=d+'d '+h+'h '+m+'m';setTimeout(tick,30000);}tick();}catch(e){}})();</script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Cyber Wire — Daily Security Briefing</title>
+<style>
+:root{--bg:#0b0f10;--panel:#131a1c;--line:#233034;--ink:#e2e8e6;--muted:#8fa3a0;--teal:#22d3a8;--cyan:#36c6ff;--crit:#ff5c5c;--warn:#e8a33d;--mono:'SF Mono','Cascadia Code',Menlo,Consolas,monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.6;padding:24px 16px 60px}
+.wrap{max-width:980px;margin:0 auto}
+header.masthead{text-align:center;padding:18px 0 10px;border-bottom:2px solid var(--teal);margin-bottom:14px}
+.masthead h1{font-size:38px;letter-spacing:.04em;color:var(--teal);font-weight:800}
+.masthead h1 .glyph{color:var(--cyan)}
+.masthead .tagline{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+.meta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:14px 0 4px}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.08em;padding:4px 12px;border:1px solid var(--line);border-radius:999px;color:var(--muted);background:var(--panel)}
+.pill.live{color:#7ee0c3;border-color:#234639}.pill.live::before{content:"● ";color:var(--teal)}
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:10px;padding:11px 15px;margin:10px 0 2px;font-size:14.5px;line-height:1.5}
+.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-right:9px}
+.freshline{font-family:var(--mono);font-size:10.5px;color:var(--muted);text-align:center;margin:8px 0 14px;letter-spacing:.06em}
+nav.tabs{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin:6px 0 20px}
+nav.tabs a{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-decoration:none;color:var(--muted);padding:7px 14px;border:1px solid var(--line);border-radius:8px;background:var(--panel);transition:all .15s}
+nav.tabs a:hover{color:var(--ink);transform:translateY(-1px)}
+nav.tabs a.active{color:#06211a;background:var(--teal);border-color:var(--teal);font-weight:700}
+.threat{display:flex;align-items:center;gap:14px;background:linear-gradient(90deg,#2a1416,#131a1c);border:1px solid #4b2326;border-radius:12px;padding:14px 18px;margin-bottom:12px}
+.threat .lvl{font-family:var(--mono);font-size:13px;letter-spacing:.2em;color:var(--crit);font-weight:800;white-space:nowrap}
+.threat p{font-size:13.5px;color:#d8cfc9}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-bottom:20px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;text-align:center}
+.stat .n{font-family:var(--mono);font-size:22px;color:var(--cyan);font-weight:700}
+.stat .l{font-size:11px;color:var(--muted);margin-top:4px;line-height:1.4}
+h2.sec{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);margin:30px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:14px}
+.lead h3{font-size:23px;color:#eaf6f2;line-height:1.35;margin-bottom:10px}
+.lead p{font-size:15px;margin-bottom:10px;color:#c9d6d2}
+.patch{border-left:4px solid var(--crit)}
+.patch h3{font-size:17px;color:#ffd9d9;margin-bottom:8px}
+.patch p{font-size:14px;color:#d8cfc9}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 17px;transition:transform .15s,border-color .15s}
+.card:hover{transform:translateY(-3px);border-color:var(--teal)}
+.card h4{font-size:16px;color:var(--ink);margin-bottom:6px}
+.card p{font-size:13.5px;color:var(--muted)}
+.tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:2px 8px;border-radius:5px;margin-bottom:8px;margin-right:6px}
+.tag.breach{background:#3a1717;color:#f09c9c}.tag.supply{background:#2c1f3a;color:#c9a6f0}.tag.research{background:#16303a;color:#7ecbe8}.tag.espionage{background:#332514;color:#e8b87e}.tag.new{background:#123528;color:#7ee0c3}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
+td{padding:9px 10px;border-bottom:1px solid #1a2427;vertical-align:top}
+tr:last-child td{border-bottom:none}
+td.cve{font-family:var(--mono);font-size:12.5px;color:var(--cyan);white-space:nowrap}
+td.score{font-family:var(--mono);font-weight:700;color:var(--crit)}
+ul.kev{list-style:none}
+ul.kev li{padding:9px 0 9px 22px;border-bottom:1px solid #1a2427;font-size:14px;position:relative}
+ul.kev li::before{content:"▸";position:absolute;left:2px;color:var(--teal)}
+ul.kev li:last-child{border-bottom:none}
+.cd{font-family:var(--mono);font-weight:700}
+footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+footer a{color:#5fc0a8;text-decoration:none}
+.disclaimer{font-family:var(--mono);font-size:10.5px;color:#5f6f6c;margin-top:14px;line-height:1.6}
+@media(max-width:640px){.masthead h1{font-size:28px}.threat{flex-direction:column;align-items:flex-start;gap:6px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <h1><span class="glyph">⛨</span> The Cyber Wire</h1>
+  <div class="tagline">Your daily security briefing — threats, breaches &amp; patches</div>
+  <div class="meta">
+    <span class="pill live">LIVE</span>
+    <span class="pill" id="edition">Edition</span>
+    <span class="pill" id="datestamp">—</span>
+    <span class="pill">Updated <span id="updated">—</span></span>
+  </div>
+</header>
+
+<div class="tldr"><b>The Wire</b> <span>Two actively exploited zero-days carry a federal patch deadline of tomorrow, Friday Jul 17 — Microsoft's on-prem SharePoint Server bug (CVE-2026-56164, part of a record 622-CVE Patch Tuesday) and SonicWall's CVSS-10.0 SMA 1000 SSRF flaw (CVE-2026-15409) — while CISA's newly KEV-listed Oracle E-Business Suite takeover flaw is due Saturday.</span></div>
+<div class="freshline" id="freshline">Data as of — · briefings refresh every 30 minutes, 8 AM–6 PM ET</div>
+
+<nav class="tabs">
+  <a href="index.html">★ Front Page</a>
+  <a href="cyber-briefing.html" class="active">⛨ The Cyber Wire</a>
+  <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
+  <a href="mma-briefing.html">⊘ The Octagon</a>
+  <a href="archive.html">🗄 Archive</a>
+</nav>
+
+<div class="threat">
+  <div class="lvl">THREAT LEVEL: HIGH</div>
+  <p>A record Microsoft Patch Tuesday shipped two zero-days already under attack (one due for federal remediation tomorrow), SonicWall's SMA 1000 appliances are being exploited via a CVSS-10.0 flaw with no workaround, and CISA has flagged an actively exploited Oracle E-Business Suite bug that can hijack Oracle Payments — three separate exploited-in-the-wild threats with deadlines this week.</p>
+</div>
+
+<div class="stats">
+  <div class="stat"><div class="n">622</div><div class="l">Microsoft CVEs fixed in the largest Patch Tuesday on record (more than 3× June)</div></div>
+  <div class="stat"><div class="n">2</div><div class="l">Microsoft zero-days already under active attack (SharePoint, AD FS)</div></div>
+  <div class="stat"><div class="n">10.0</div><div class="l">CVSS of the exploited SonicWall SMA 1000 SSRF zero-day (CVE-2026-15409)</div></div>
+  <div class="stat"><div class="n">6.9M</div><div class="l">individuals exposed in the AssuranceAmerica auto-insurer breach</div></div>
+</div>
+
+<h2 class="sec">Top Story</h2>
+<div class="panel lead">
+  <h3>Microsoft patches a record 622 flaws — and two are already being exploited</h3>
+  <p>Microsoft shipped its largest Patch Tuesday on record on July 14, fixing 622 CVEs — more than triple June's previous high of around 200. Two of the fixes close holes attackers are already using: <b>CVE-2026-56164</b>, an elevation-of-privilege flaw in on-premises SharePoint Server that lets an unauthenticated attacker escalate privileges over the network, and <b>CVE-2026-56155</b>, an elevation-of-privilege flaw in Active Directory Federation Services (The Hacker News/SecurityWeek, Jul 14–16).</p>
+  <p>Neither is a splashy remote-code-execution critical, but both sit in systems that matter more than their scores suggest — the corporate document store and the box that signs the organization's logins. Microsoft says attackers are chaining the SharePoint flaw with older SharePoint weaknesses to steal IIS machine keys, establish persistence and deploy malware. CISA has set a federal remediation deadline of <b>Friday, July 17</b> for the SharePoint bug and July 28 for the AD FS bug — the first of those is tomorrow (TechTimes/Orca).</p>
+</div>
+
+<h2 class="sec">Patch Priority</h2>
+<div class="panel patch">
+  <h3>Patch by tomorrow (Fri Jul 17): SonicWall SMA 1000 CVE-2026-15409 and Microsoft SharePoint CVE-2026-56164 — both exploited zero-days</h3>
+  <p>Two actively exploited zero-days share a federal remediation deadline of <b>Friday, July 17</b>. The most severe is <b>SonicWall SMA 1000 CVE-2026-15409</b> (CVSS 10.0), an unauthenticated server-side request forgery flaw in the appliance's Work Place interface with <b>no workaround</b> — SonicWall confirmed multiple exploitation cases, with attackers extracting credentials, active-session databases and TOTP MFA seeds for long-term access. Alongside it, patch Microsoft's on-premises <b>SharePoint Server CVE-2026-56164</b>, an unauthenticated privilege-escalation zero-day being chained to steal IIS machine keys. Right behind them, CISA's newly KEV-listed <b>Oracle E-Business Suite CVE-2026-46817</b> (CVSS 9.8) is due Saturday, July 18. Treat internet-facing SMA 1000, SharePoint and Oracle EBS as priority targets today (SonicWall/BleepingComputer/The Hacker News/CISA).</p>
+</div>
+
+<h2 class="sec">Threat Actor Spotlight</h2>
+<div class="panel">
+  <h4 style="font-size:17px;margin-bottom:8px;color:#eaf6f2">Scattered LAPSUS$ Hunters — the vishing-first extortion collective behind 40+ breaches in 2026</h4>
+  <p style="font-size:14px;color:#c9d6d2">Researchers describe <b>Scattered LAPSUS$ Hunters</b> as a joint operation of <b>Scattered Spider</b>, <b>ShinyHunters</b> and <b>LAPSUS$</b> coordinating through a public Telegram channel, with a division of labor: Scattered Spider provides initial access, ShinyHunters handles data theft and publication, and LAPSUS$ members amplify extortion. The crew has sustained 40+ claimed breaches in 2026 via social-engineering (vishing) and SaaS/cloud-credential abuse rather than endpoint exploits. 2026 victims include Canvas/Instructure (~275M student records), ADT (~5.5M records), Carnival, Charter, Rockstar Games, Telus and the European Commission; in June the group was linked to an Oracle PeopleSoft data-theft campaign hitting 100+ organizations, and it is now marketing a "shinysp1d3r" ransomware-as-a-service (Resecurity/EclecticIQ/Infosecurity Magazine).</p>
+</div>
+
+<h2 class="sec">Breaches &amp; Incidents</h2>
+<div class="cards">
+  <div class="card"><span class="tag breach">zero-day</span>
+    <h4>SonicWall SMA 1000 zero-days exploited in the wild</h4>
+    <p>SonicWall warned of active exploitation of two zero-days in its Secure Mobile Access 1000 appliances (SMA6210/7210/8200v): CVE-2026-15409 (CVSS 10.0), an unauthenticated server-side request forgery flaw, and CVE-2026-15410, which can enable administrator-level commands. Attackers used them for stealthy initial access, then extracted credentials, session databases and TOTP MFA seeds; there is no workaround (BleepingComputer/Help Net Security/The Hacker News).</p></div>
+  <div class="card"><span class="tag breach">KEV</span>
+    <h4>CISA adds exploited Oracle E-Business Suite flaw</h4>
+    <p>CISA added CVE-2026-46817 (CVSS 9.8), an improper-privilege-management flaw in Oracle E-Business Suite's Payments module, to its Known Exploited Vulnerabilities catalog on July 15 after confirming active exploitation that can fully take over Oracle Payments; the remediation deadline is Saturday, July 18 (CISA/cyberpress/BleepingComputer).</p></div>
+  <div class="card"><span class="tag breach">healthcare</span><span class="tag new">New</span>
+    <h4>TriWest notifies ~11,844 TRICARE beneficiaries</h4>
+    <p>TriWest Healthcare Alliance notified 11,844 military TRICARE beneficiaries of an April 16 breach in which an unauthorized party downloaded names, Department of Defense Benefits Numbers and ZIP codes; in fewer than five cases the data also included Social Security numbers, addresses and dates of birth. TriWest is offering 24 months of Experian monitoring (Military Times/TechRadar).</p></div>
+  <div class="card"><span class="tag research">vulnerability</span><span class="tag new">New</span>
+    <h4>Zoom patches critical Windows account-takeover flaw</h4>
+    <p>Zoom disclosed CVE-2026-53412 (CVSS 9.8), an improper-input-validation flaw in the Zoom Desktop, VDI and Meeting SDK clients for Windows that could let an unauthenticated attacker take over an account over the network. It is fixed in version 7.0.0; users should update now (The Hacker News/SecurityAffairs/BleepingComputer).</p></div>
+  <div class="card"><span class="tag supply">supply chain</span><span class="tag new">New</span>
+    <h4>Critical JetBrains flaws span its on-prem ecosystem</h4>
+    <p>JetBrains released fixes for a cluster of critical vulnerabilities enabling authentication bypass, account takeover and remote code execution across Hub, YouTrack, its IntelliJ-based IDEs, Kotlin, GoLand and TeamCity. A TeamCity RCE via Perforce connection settings is a notable software-supply-chain risk; on-prem administrators should patch promptly (cybersecuritynews/JetBrains security advisories).</p></div>
+  <div class="card"><span class="tag breach">breach</span>
+    <h4>AssuranceAmerica exposes up to 6.9M records</h4>
+    <p>Auto insurer AssuranceAmerica disclosed a breach affecting up to 6.9 million individuals, with attackers accessing names, contact information, driver's-license numbers, and insurance-policy and account data (SecurityWeek/breach trackers).</p></div>
+  <div class="card"><span class="tag research">AI tradecraft</span>
+    <h4>TuxBot v3: an IoT botnet built with an LLM's help</h4>
+    <p>A new TuxBot v3 IoT botnet framework shows signs of LLM-assisted development — using AI-generated code to hijack devices and launch DDoS attacks — the latest example of criminals leaning on large language models to speed up malware creation (Unit 42/search, this run).</p></div>
+</div>
+
+<h2 class="sec">Vulnerability Watch</h2>
+<div class="panel">
+  <table>
+    <thead><tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr></thead>
+    <tbody>
+      <tr><td class="cve">CVE-2026-15409</td><td class="score">10.0</td><td>SonicWall SMA 1000 (6210/7210/8200v)</td><td>Unauthenticated SSRF, actively exploited zero-day; no workaround; paired with CVE-2026-15410; federal deadline Jul 17.</td></tr>
+      <tr><td class="cve">CVE-2026-46817</td><td class="score">9.8</td><td>Oracle E-Business Suite Payments (12.2.3–12.2.15)</td><td>Unauthenticated HTTP → full Oracle Payments takeover; exploited; CISA KEV, due Jul 18.</td></tr>
+      <tr><td class="cve">CVE-2026-53412</td><td class="score">9.8</td><td>Zoom for Windows (Desktop/VDI/SDK, &lt;7.0.0)</td><td>Improper input validation enabling unauthenticated account takeover; patched in 7.0.0.</td></tr>
+      <tr><td class="cve">CVE-2026-56164</td><td class="score">EoP</td><td>Microsoft SharePoint Server (on-prem)</td><td>Exploited zero-day; unauthenticated privilege escalation over the network; chained to steal IIS machine keys; federal deadline Jul 17.</td></tr>
+      <tr><td class="cve">CVE-2026-56155</td><td class="score">EoP</td><td>Microsoft AD FS</td><td>Exploited zero-day; local elevation of privilege in the federated-login service; federal deadline Jul 28.</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 class="sec">CISA KEV &amp; Federal Deadlines</h2>
+<div class="panel">
+  <ul class="kev">
+    <li><b>CVE-2026-56164 (Microsoft SharePoint Server, on-prem)</b> — actively exploited; federal remediation due <b>Jul 17</b> <span class="cd" data-due="2026-07-17">…</span>.</li>
+    <li><b>CVE-2026-15409 &amp; CVE-2026-15410 (SonicWall SMA 1000)</b> — exploited zero-days; due <b>Jul 17</b> under BOD 26-04 <span class="cd" data-due="2026-07-17">…</span> — patch or discontinue use.</li>
+    <li><b>CVE-2026-46817 (Oracle E-Business Suite)</b> — added Jul 15; actively exploited (Oracle Payments takeover); due <b>Jul 18</b> <span class="cd" data-due="2026-07-18">…</span>.</li>
+    <li><b>CVE-2026-56155 (Microsoft AD FS)</b> — exploited zero-day; due <b>Jul 28</b> <span class="cd" data-due="2026-07-28">…</span>.</li>
+    <li><b>CVE-2026-45659 (Microsoft SharePoint Server, on-prem)</b> — added Jul 1, due <b>Jul 4</b> <span class="cd" data-due="2026-07-04">…</span> — remediation window elapsed.</li>
+    <li><b>CVE-2026-48939 (iCagenda) &amp; CVE-2026-56291 (Balbooa Forms), Joomla</b> — added Jul 10, due <b>Jul 13</b> <span class="cd" data-due="2026-07-13">…</span> — both CVSS 10.0, exploited as zero-days.</li>
+  </ul>
+  <div style="font-family:var(--mono);font-size:10.5px;color:var(--muted);margin-top:10px">Under BOD 26-04, KEV remediation windows are risk-based and assigned per CVE — several this week are far shorter than the old flat three-week rule. Deadlines shown are the CISA-stated due dates verified this run; countdowns are computed from today's date.</div>
+</div>
+
+<footer>
+  <b>Sources this edition:</b>
+  <a href="https://thehackernews.com/2026/07/microsoft-patches-record-622-flaws.html">THN — Microsoft patches record 622 flaws, two zero-days (Jul 14)</a> ·
+  <a href="https://www.securityweek.com/microsoft-patches-record-622-vulnerabilities-including-two-exploited-zero-days/">SecurityWeek — Microsoft's record 622-CVE Patch Tuesday</a> ·
+  <a href="https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-sma1000-flaws-exploited-in-zero-day-attacks-patch-now/">BleepingComputer — SonicWall SMA 1000 zero-days exploited</a> ·
+  <a href="https://thehackernews.com/2026/07/two-sonicwall-sma-1000-zero-days.html">THN — Two SonicWall SMA 1000 zero-days exploited</a> ·
+  <a href="https://www.cisa.gov/news-events/alerts/2026/07/15/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA — Adds two KEV entries (Jul 15)</a> ·
+  <a href="https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-actively-exploited-oracle-flaw-by-saturday/">BleepingComputer — Oracle EBS KEV, due Saturday</a> ·
+  <a href="https://thehackernews.com/2026/07/zoom-patches-critical-windows-flaw-that.html">THN — Zoom patches critical Windows account-takeover flaw</a> ·
+  <a href="https://cybersecuritynews.com/jetbrains-vulnerabilities/">Cybersecurity News — critical JetBrains vulnerabilities</a> ·
+  <a href="https://www.militarytimes.com/pay-benefits/military-benefits/health-care/2026/07/13/nearly-12000-military-tricare-beneficiaries-warned-of-data-breach/">Military Times — TriWest/TRICARE breach</a> ·
+  <a href="https://www.resecurity.com/blog/article/trinity-of-chaos-the-lapsus-shinyhunters-and-scattered-spider-alliance-embarks-on-global-cybercrime-spree">Resecurity — Scattered LAPSUS$ Hunters</a> ·
+  <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA KEV catalog</a>
+  <div class="disclaimer">The Cyber Wire is an automated daily briefing compiled from public reporting. It is provided for situational awareness only and is not security advice; validate all CVEs, versions and deadlines against vendor advisories and the CISA KEV catalog before acting.</div>
+</footer>
+
+</div>
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
+<script>(function(){try{var now=Date.now();document.querySelectorAll('.cd[data-due]').forEach(function(el){var end=new Date(el.getAttribute('data-due')+'T23:59:59-04:00').getTime();var ms=end-now;var d=Math.floor(ms/86400000);var txt,color;if(ms<0){txt='(overdue)';color='var(--crit)';}else if(d<1){txt='(due today)';color='var(--crit)';}else{txt='('+d+' day'+(d===1?'':'s')+' left)';color=d<=3?'var(--warn)':'inherit';}el.textContent=txt;el.style.color=color;});}catch(e){}})();</script>
+</body>
+</html>
