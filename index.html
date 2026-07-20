@@ -6,47 +6,44 @@
 <title>Daily Briefings</title>
 <style>
 :root{
-  --bg:#0a0b0d; --panel:#14161a; --line:#242830; --text:#eceef2; --muted:#8b939f;
+  --bg:#0b0c0d; --panel:#14161a; --line:#242830; --text:#eceef2; --muted:#8b93a1;
   --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-  --teal:#22d3a8; --gold:#caa64a; --red:#e84545; --acc:#7c8aa0;
+  --cyber:#22d3a8; --gold:#caa64a; --mma:#e84545;
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
 .wrap{max-width:1000px;margin:0 auto;padding:26px 20px 60px}
 .masthead{border-bottom:1px solid var(--line);padding-bottom:16px}
-h1{margin:0 0 6px;font-size:36px;letter-spacing:-.8px}
+h1{margin:0 0 6px;font-size:36px;letter-spacing:-.7px}
 .sub{color:var(--muted);font-size:14.5px;margin:0}
 .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 .pill{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:4px 11px}
-.pill.live{color:var(--teal);border-color:rgba(34,211,168,.35)}
-.dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--teal);margin-right:6px;vertical-align:middle}
+.pill.live{color:var(--cyber);border-color:rgba(34,211,168,.35)}
+.dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--cyber);margin-right:6px;vertical-align:middle}
 .freshline{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.06em;margin:14px 0 4px}
 nav{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 26px}
 nav a{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 13px;transition:.15s}
 nav a:hover{color:var(--text);border-color:#343a45}
-nav a.active{color:#0a0b0d;background:var(--acc);border-color:var(--acc);font-weight:600}
+nav a.active{color:#0b0c0d;background:var(--text);border-color:var(--text);font-weight:600}
 .cards{display:grid;grid-template-columns:1fr;gap:16px}
-@media(min-width:820px){.cards{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:840px){.cards{grid-template-columns:repeat(3,1fr)}}
 .big{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;transition:transform .16s,border-color .16s}
 .big:hover{transform:translateY(-4px)}
-.big.sec:hover{border-color:rgba(34,211,168,.5)}
-.big.mkt:hover{border-color:rgba(202,166,74,.5)}
-.big.mma:hover{border-color:rgba(232,69,69,.5)}
-.big .kick{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:10px}
-.big.sec .kick{color:var(--teal)}
-.big.mkt .kick{color:var(--gold)}
-.big.mma .kick{color:var(--red)}
-.big h2{margin:0 0 12px;font-size:24px;letter-spacing:-.4px}
-.big.mkt h2{font-family:Georgia,'Times New Roman',serif}
-.big p{margin:0 0 18px;font-size:14.4px;color:#c3c9d3;flex:1}
-.big a.go{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;align-self:flex-start;padding:8px 14px;border-radius:8px;border:1px solid;transition:.15s}
-.big.sec a.go{color:var(--teal);border-color:rgba(34,211,168,.4)}
-.big.sec a.go:hover{background:var(--teal);color:#0a0b0d}
-.big.mkt a.go{color:var(--gold);border-color:rgba(202,166,74,.4)}
-.big.mkt a.go:hover{background:var(--gold);color:#0a0b0d}
-.big.mma a.go{color:var(--red);border-color:rgba(232,69,69,.4)}
-.big.mma a.go:hover{background:var(--red);color:#0a0b0d}
-footer{margin-top:40px;border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:12.5px}
+.big.cy{border-top:3px solid var(--cyber)} .big.cy:hover{border-color:rgba(34,211,168,.45);border-top-color:var(--cyber)}
+.big.mk{border-top:3px solid var(--gold)} .big.mk:hover{border-color:rgba(202,166,74,.45);border-top-color:var(--gold)}
+.big.mm{border-top:3px solid var(--mma)} .big.mm:hover{border-color:rgba(232,69,69,.45);border-top-color:var(--mma)}
+.kicker{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:10px}
+.big.cy .kicker{color:var(--cyber)} .big.mk .kicker{color:var(--gold)} .big.mm .kicker{color:var(--mma)}
+.big h2{margin:0 0 4px;font-size:23px;letter-spacing:-.3px}
+.big.mk h2{font-family:Georgia,'Times New Roman',serif}
+.big .tag{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:13px}
+.big p{margin:0 0 18px;font-size:14.6px;color:#c3cad6;flex:1}
+.big a.read{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;font-weight:600}
+.big.cy a.read{color:var(--cyber)} .big.mk a.read{color:var(--gold)} .big.mm a.read{color:var(--mma)}
+.big a.read:hover{text-decoration:underline}
+footer{margin-top:42px;border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:12.5px}
+footer a{color:#9fb0c9;text-decoration:none}
+footer a:hover{text-decoration:underline}
 </style>
 </head>
 <body>
@@ -54,7 +51,7 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:16px;color:v
 
 <div class="masthead">
   <h1>Daily Briefings</h1>
-  <p class="sub">Three desks, refreshed through the day — security, markets and MMA</p>
+  <p class="sub">Security, markets and the fight game — rebuilt from live sources every half hour</p>
   <div class="meta">
     <span class="pill live"><span class="dot"></span>Live</span>
     <span class="pill" id="edition">—</span>
@@ -75,31 +72,34 @@ footer{margin-top:40px;border-top:1px solid var(--line);padding-top:16px;color:v
 
 <div class="cards">
 
-  <div class="big sec">
-    <div class="kick">⛨ The Cyber Wire · The Wire</div>
-    <h2>An AI agent ran the whole break-in</h2>
-    <p>Hugging Face has disclosed an intrusion its own investigators say was driven end to end by an autonomous AI agent — and had to run the forensics on an open-weight model because commercial APIs refused the work.</p>
-    <a class="go" href="cyber-briefing.html">Read the briefing →</a>
+  <div class="big cy">
+    <div class="kicker">⛨ The Cyber Wire</div>
+    <h2>The Wire</h2>
+    <div class="tag">Security</div>
+    <p>Hugging Face confirmed today that its AI-agent-driven intrusion reached a limited set of internal datasets and several service credentials, and is urging users to act — while federal patch deadlines for an actively exploited SharePoint zero-day remain overdue.</p>
+    <a class="read" href="cyber-briefing.html">Read the briefing →</a>
   </div>
 
-  <div class="big mkt">
-    <div class="kick">▲ The Closing Bell · The Tape</div>
-    <h2>Chips lead, oil hands back $90</h2>
-    <p>Stocks extended their opening gains through the morning, led by chips after AMD launched its Helios rack system with Microsoft as a new buyer, while oil gave back a move that had briefly carried Brent above $90 following a ninth straight day of U.S. strikes on Iran.</p>
-    <a class="go" href="wallstreet-briefing.html">Read the briefing →</a>
+  <div class="big mk">
+    <div class="kicker">▲ The Closing Bell</div>
+    <h2>The Tape</h2>
+    <div class="tag">Markets</div>
+    <p>Alphabet leads a chip-driven advance after a report that it is building a new "Frozen v2" server chip to make its Gemini models run more efficiently, with Big Tech earnings starting Wednesday and oil giving back a move that had briefly carried Brent above $90.</p>
+    <a class="read" href="wallstreet-briefing.html">Read the briefing →</a>
   </div>
 
-  <div class="big mma">
-    <div class="kick">⊘ The Octagon · Tale of the Tape</div>
-    <h2>Du Plessis is back in the queue</h2>
-    <p>Dricus Du Plessis swept Kamaru Usman in Oklahoma City and put himself back in the middleweight title queue — but Dana White says the matchmakers still haven't decided who Sean Strickland defends against.</p>
-    <a class="go" href="mma-briefing.html">Read the briefing →</a>
+  <div class="big mm">
+    <div class="kicker">⊘ The Octagon</div>
+    <h2>Tale of the Tape</h2>
+    <div class="tag">MMA</div>
+    <p>Dricus du Plessis has taken himself out of the middleweight title queue and pointed Sean Strickland at Nassourdine Imavov instead, leaving the champion's next fight a two-name argument between Imavov and a Khamzat Chimaev rematch that du Plessis calls senseless.</p>
+    <a class="read" href="mma-briefing.html">Read the briefing →</a>
   </div>
 
 </div>
 
 <footer>
-  Every figure on these pages is checked against a source fetched in the same run it is published in. Where a number could not be verified, it is left off rather than estimated — and the pages say so where it matters. Information only; not investment advice.
+  Every figure on these pages traces to a source fetched in the run that produced them; anything that could not be verified is left off rather than estimated. Point-in-time market data carries the as-of time its source stated. Past editions are kept in the <a href="archive.html">archive</a>.
 </footer>
 
 </div>
