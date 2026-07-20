@@ -6,39 +6,47 @@
 <title>Daily Briefings</title>
 <style>
 :root{
-  --bg:#0c0e12; --panel:#14171d; --line:#232830; --text:#e6e9ef; --muted:#8b93a1;
+  --bg:#0a0b0d; --panel:#14161a; --line:#242830; --text:#eceef2; --muted:#8b939f;
   --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-  --teal:#22d3a8; --cyan:#36c6ff; --gold:#caa64a; --gold2:#e8c766; --red:#e84545; --orange:#ff8a5c;
-  --up:#2fbf71; --down:#ef4d4d;
+  --teal:#22d3a8; --gold:#caa64a; --red:#e84545; --acc:#7c8aa0;
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1080px;margin:0 auto;padding:26px 20px 60px}
-.masthead{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:14px}
-h1{margin:0 0 6px;font-size:34px;letter-spacing:-.5px}
+.wrap{max-width:1000px;margin:0 auto;padding:26px 20px 60px}
+.masthead{border-bottom:1px solid var(--line);padding-bottom:16px}
+h1{margin:0 0 6px;font-size:36px;letter-spacing:-.8px}
 .sub{color:var(--muted);font-size:14.5px;margin:0}
 .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 .pill{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:4px 11px}
-.pill.live{color:var(--up);border-color:rgba(47,191,113,.35)}
-.dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--up);margin-right:6px;vertical-align:middle}
-.freshline{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.06em;margin:10px 0 4px}
-nav{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 24px}
+.pill.live{color:var(--teal);border-color:rgba(34,211,168,.35)}
+.dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--teal);margin-right:6px;vertical-align:middle}
+.freshline{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.06em;margin:14px 0 4px}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 26px}
 nav a{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 13px;transition:.15s}
-nav a:hover{color:var(--text);border-color:#39404c}
-nav a.active{color:#0c0e12;background:var(--text);border-color:var(--text);font-weight:600}
+nav a:hover{color:var(--text);border-color:#343a45}
+nav a.active{color:#0a0b0d;background:var(--acc);border-color:var(--acc);font-weight:600}
 .cards{display:grid;grid-template-columns:1fr;gap:16px}
-@media(min-width:800px){.cards{grid-template-columns:repeat(3,1fr)}}
-.bigcard{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;transition:transform .16s,border-color .16s}
-.bigcard:hover{transform:translateY(-3px)}
-.bigcard .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:9px}
-.bigcard h2{margin:0 0 4px;font-size:22px;letter-spacing:-.2px}
-.bigcard .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
-.bigcard p{margin:0 0 18px;font-size:14.5px;color:#cfd5df;flex:1}
-.bigcard a.read{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none}
-.c-sec{border-left:3px solid var(--teal)} .c-sec .kicker,.c-sec a.read{color:var(--teal)} .c-sec:hover{border-color:var(--teal)}
-.c-mkt{border-left:3px solid var(--gold)} .c-mkt .kicker,.c-mkt a.read{color:var(--gold2)} .c-mkt h2{font-family:Georgia,'Times New Roman',serif} .c-mkt:hover{border-color:var(--gold)}
-.c-mma{border-left:3px solid var(--red)} .c-mma .kicker,.c-mma a.read{color:var(--orange)} .c-mma:hover{border-color:var(--red)}
-footer{margin-top:34px;border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:12.5px}
+@media(min-width:820px){.cards{grid-template-columns:repeat(3,1fr)}}
+.big{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;transition:transform .16s,border-color .16s}
+.big:hover{transform:translateY(-4px)}
+.big.sec:hover{border-color:rgba(34,211,168,.5)}
+.big.mkt:hover{border-color:rgba(202,166,74,.5)}
+.big.mma:hover{border-color:rgba(232,69,69,.5)}
+.big .kick{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:10px}
+.big.sec .kick{color:var(--teal)}
+.big.mkt .kick{color:var(--gold)}
+.big.mma .kick{color:var(--red)}
+.big h2{margin:0 0 12px;font-size:24px;letter-spacing:-.4px}
+.big.mkt h2{font-family:Georgia,'Times New Roman',serif}
+.big p{margin:0 0 18px;font-size:14.4px;color:#c3c9d3;flex:1}
+.big a.go{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;align-self:flex-start;padding:8px 14px;border-radius:8px;border:1px solid;transition:.15s}
+.big.sec a.go{color:var(--teal);border-color:rgba(34,211,168,.4)}
+.big.sec a.go:hover{background:var(--teal);color:#0a0b0d}
+.big.mkt a.go{color:var(--gold);border-color:rgba(202,166,74,.4)}
+.big.mkt a.go:hover{background:var(--gold);color:#0a0b0d}
+.big.mma a.go{color:var(--red);border-color:rgba(232,69,69,.4)}
+.big.mma a.go:hover{background:var(--red);color:#0a0b0d}
+footer{margin-top:40px;border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:12.5px}
 </style>
 </head>
 <body>
@@ -46,15 +54,16 @@ footer{margin-top:34px;border-top:1px solid var(--line);padding-top:16px;color:v
 
 <div class="masthead">
   <h1>Daily Briefings</h1>
-  <p class="sub">Security, markets and the fight game — rebuilt from live sources every 30 minutes.</p>
+  <p class="sub">Three desks, refreshed through the day — security, markets and MMA</p>
   <div class="meta">
     <span class="pill live"><span class="dot"></span>Live</span>
     <span class="pill" id="edition">—</span>
     <span class="pill" id="datestamp">—</span>
     <span class="pill">Updated <span id="updated">—</span></span>
   </div>
-  <div class="freshline" id="freshline">Data as of — ET · briefings refresh every 30 minutes, 8 AM–6 PM ET</div>
 </div>
+
+<div class="freshline" id="freshline">Data as of — ET · briefings refresh every 30 minutes, 8 AM–6 PM ET</div>
 
 <nav>
   <a href="index.html" class="active">★ Front Page</a>
@@ -66,34 +75,31 @@ footer{margin-top:34px;border-top:1px solid var(--line);padding-top:16px;color:v
 
 <div class="cards">
 
-  <div class="bigcard c-sec">
-    <div class="kicker">⛨ The Cyber Wire</div>
-    <h2>The Wire</h2>
-    <div class="tag">Security</div>
-    <p>Hugging Face disclosed that an intrusion into part of its production infrastructure was driven end to end by an autonomous AI agent system that executed more than 17,000 logged actions before it was contained.</p>
-    <a class="read" href="cyber-briefing.html">Read the briefing →</a>
+  <div class="big sec">
+    <div class="kick">⛨ The Cyber Wire · The Wire</div>
+    <h2>An AI agent ran the whole break-in</h2>
+    <p>Hugging Face has disclosed an intrusion its own investigators say was driven end to end by an autonomous AI agent — and had to run the forensics on an open-weight model because commercial APIs refused the work.</p>
+    <a class="go" href="cyber-briefing.html">Read the briefing →</a>
   </div>
 
-  <div class="bigcard c-mkt">
-    <div class="kicker">▲ The Closing Bell</div>
-    <h2>The Tape</h2>
-    <div class="tag">Markets</div>
-    <p>Stocks opened higher Monday with chip names advancing ahead of Alphabet, Tesla, Intel and IBM earnings, while oil reversed gains that had briefly carried Brent above $90 after a ninth straight day of U.S. strikes on Iran.</p>
-    <a class="read" href="wallstreet-briefing.html">Read the briefing →</a>
+  <div class="big mkt">
+    <div class="kick">▲ The Closing Bell · The Tape</div>
+    <h2>Chips lead, oil hands back $90</h2>
+    <p>Stocks extended their opening gains through the morning, led by chips after AMD launched its Helios rack system with Microsoft as a new buyer, while oil gave back a move that had briefly carried Brent above $90 following a ninth straight day of U.S. strikes on Iran.</p>
+    <a class="go" href="wallstreet-briefing.html">Read the briefing →</a>
   </div>
 
-  <div class="bigcard c-mma">
-    <div class="kicker">⊘ The Octagon</div>
-    <h2>Tale of the Tape</h2>
-    <div class="tag">MMA</div>
-    <p>Dricus Du Plessis's decision win over Kamaru Usman has reopened the middleweight title queue, with Nassourdine Imavov pushing back on talk of being leapfrogged as UFC Abu Dhabi lands Saturday.</p>
-    <a class="read" href="mma-briefing.html">Read the briefing →</a>
+  <div class="big mma">
+    <div class="kick">⊘ The Octagon · Tale of the Tape</div>
+    <h2>Du Plessis is back in the queue</h2>
+    <p>Dricus Du Plessis swept Kamaru Usman in Oklahoma City and put himself back in the middleweight title queue — but Dana White says the matchmakers still haven't decided who Sean Strickland defends against.</p>
+    <a class="go" href="mma-briefing.html">Read the briefing →</a>
   </div>
 
 </div>
 
 <footer>
-  Every item on the three briefings is checked against a source fetched during that edition's run. Market content is information only, not investment advice.
+  Every figure on these pages is checked against a source fetched in the same run it is published in. Where a number could not be verified, it is left off rather than estimated — and the pages say so where it matters. Information only; not investment advice.
 </footer>
 
 </div>
