@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Octagon — Daily Briefings</title>
+<style>
+:root{
+  --bg:#100c0c; --panel:#1a1313; --line:#322020; --text:#f2e9e7; --muted:#9c8582;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+  --acc:#e84545; --acc2:#ff8a5c; --gold:#e0b458; --win:#3ecf8e;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.62}
+.wrap{max-width:1000px;margin:0 auto;padding:26px 20px 60px}
+.masthead{border-bottom:1px solid var(--line);padding-bottom:16px}
+h1.title{font-size:39px;letter-spacing:-.02em;margin:0 0 4px;font-weight:800}
+h1.title span{color:var(--acc)}
+.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:9px}
+.tagline{color:var(--muted);font-size:14px;margin:0}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:var(--panel);border:1px solid var(--line);border-radius:99px;padding:5px 11px;color:var(--muted)}
+.pill.live{color:var(--win);border-color:#264a34}
+.pill.live .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--win);margin-right:6px;vertical-align:middle}
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:10px;padding:11px 15px;margin:6px 0 2px;font-size:14.5px;line-height:1.5}
+.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);margin-right:9px}
+.freshline{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.04em;margin:10px 0 4px}
+nav.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 18px}
+nav.tabs a{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:9px 13px;transition:.15s}
+nav.tabs a:hover{color:var(--text);border-color:#4a2f2f}
+nav.tabs a.active{color:#100c0c;background:var(--acc2);border-color:var(--acc2);font-weight:700}
+.cdbar{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--acc);border-radius:12px;padding:13px 17px;margin-bottom:8px;display:flex;flex-wrap:wrap;align-items:baseline;gap:10px}
+.cdbar .lab{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--acc2)}
+.cdbar .ev{font-size:14.5px;color:#e6d8d5}
+.cdbar #ufccdn{font-family:var(--mono);font-size:15px;font-weight:700;color:var(--gold);letter-spacing:.03em}
+h2.sec{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:34px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:19px}
+.top{border-left:4px solid var(--acc)}
+.top .h{font-size:22px;font-weight:700;margin:0 0 8px;letter-spacing:-.01em}
+.top p{margin:0 0 11px;font-size:15px;color:#e6d8d5}
+.top p:last-child{margin-bottom:0}
+.grid{display:grid;grid-template-columns:1fr;gap:13px}
+@media(min-width:740px){.grid{grid-template-columns:1fr 1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;transition:.18s}
+.card:hover{transform:translateY(-3px);border-color:#4a2f2f}
+.card .dv{font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);margin-bottom:7px}
+.card h3{margin:0 0 7px;font-size:16.5px;letter-spacing:-.01em}
+.card p{margin:0 0 9px;font-size:14px;color:#ddcecb}
+.card p:last-child{margin:0}
+.odds{font-family:var(--mono);font-size:12.5px;color:var(--acc2);background:rgba(232,69,69,.09);border:1px solid #4a2626;border-radius:6px;padding:5px 9px;display:inline-block}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:9px}
+.tag{font-family:var(--mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase;border-radius:5px;padding:3px 7px;border:1px solid}
+.t-pro{color:var(--win);border-color:#264a34;background:rgba(62,207,142,.09)}
+.t-new{color:#100c0c;background:var(--acc2);border-color:var(--acc2);font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);font-weight:600}
+td{padding:10px 11px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+.w{color:var(--win);font-weight:700}
+.nc{color:var(--gold);font-weight:700}
+.div{font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+ul.bul{list-style:none;padding:0;margin:0}
+ul.bul li{padding:11px 0;border-bottom:1px solid var(--line);font-size:14px;color:#e6d8d5}
+ul.bul li:last-child{border-bottom:none}
+ul.bul li b{color:var(--acc2)}
+.note{font-size:12.5px;color:var(--muted);margin-top:11px;line-height:1.55}
+footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+footer a{color:#8a7370}
+.disc{margin-top:12px;font-size:11.5px;color:#6d5a58}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="masthead">
+  <div class="kicker">⊘ Daily Briefings · Fight Desk</div>
+  <h1 class="title">The <span>Octagon</span></h1>
+  <p class="tagline">Your daily MMA briefing — UFC, prospects &amp; the business of fighting</p>
+  <div class="meta">
+    <span class="pill live"><span class="dot"></span>Live</span>
+    <span class="pill" id="edition">—</span>
+    <span class="pill" id="datestamp">—</span>
+    <span class="pill">Updated <span id="updated">—</span></span>
+  </div>
+</div>
+
+<div class="tldr"><b>Tale of the Tape</b> <span>UFC Abu Dhabi lands Saturday with Magomed Ankalaev headlining against Bogdan Guskov, in on under two weeks' notice after Khalil Rountree Jr. withdrew injured.</span></div>
+<div class="freshline" id="freshline">—</div>
+
+<nav class="tabs">
+  <a href="index.html">★ Front Page</a>
+  <a href="cyber-briefing.html">⛨ The Cyber Wire</a>
+  <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
+  <a href="mma-briefing.html" class="active">⊘ The Octagon</a>
+  <a href="archive.html">🗄 Archive</a>
+</nav>
+
+<div class="cdbar">
+  <span class="lab">Next Card</span>
+  <span class="ev">UFC Fight Night: Ankalaev vs. Guskov · Etihad Arena, Abu Dhabi · Sat July 25</span>
+  <span id="ufccdn">—</span>
+</div>
+
+<h2 class="sec">Top Story</h2>
+<div class="panel top">
+  <div class="h">Ankalaev headlines Abu Dhabi against a short-notice Guskov — and a heavy favourite's price says everything</div>
+  <p>UFC Fight Night: Ankalaev vs. Guskov lands Saturday at the <b>Etihad Arena in Abu Dhabi</b>, the promotion's <b>23rd visit</b> to the city and its first since UFC 321 in October 2025. The main event was booked as former light heavyweight champion <b>Magomed Ankalaev</b> against <b>Khalil Rountree Jr.</b> — but Rountree withdrew injured with under two weeks to go, and <b>Bogdan Guskov</b> stepped in.</p>
+  <p>Guskov is a live replacement rather than a body. He is ranked <b>10th</b>, has <b>18 wins all by finish</b> including <b>13 first-round stoppages</b>, and is unbeaten in his last five. The books still make it lopsided: Ankalaev opened at <b>−500</b> with Guskov <b>+340</b> at DraftKings and the line has since moved further toward the champion, to roughly <b>−535 / +400</b> — implied odds of about 85% to 15%.</p>
+  <p>Ankalaev arrives with something to answer for. He was knocked out by <b>Alex Pereira in 80 seconds at UFC 320</b> last October — the loss that cost him the light heavyweight title. Against a finisher who does nearly all of his work in round one, that is the fight's whole question.</p>
+  <p><b>A scheduling note that will catch people out:</b> this card runs on Abu Dhabi time. Prelims start at <b>9 AM ET / 6 AM PT</b> and the main card at <b>12 PM ET / 9 AM PT</b>.</p>
+  <p><b>A sourcing note:</b> the Wikipedia event page for this card still carried the superseded Rountree booking in its main-event line when checked. UFC.com's own announcement and event page govern here.</p>
+</div>
+
+<h2 class="sec">Fight Week — Upcoming Cards</h2>
+<div class="grid">
+  <div class="card">
+    <div class="dv">Sat July 25 · Etihad Arena, Abu Dhabi</div>
+    <h3>UFC Fight Night: Ankalaev vs. Guskov</h3>
+    <p>Light heavyweight main event. Guskov replaced Khalil Rountree Jr. on under two weeks' notice after Rountree withdrew injured — the UFC's first Abu Dhabi card since UFC 321 in October 2025. Full undercard on UFC.com. Prelims 9 AM ET, main card 12 PM ET.</p>
+    <p><span class="odds">Odds: Ankalaev −535 / Guskov +400 · opened −500 / +340 (DraftKings)</span></p>
+  </div>
+</div>
+<div class="note">Only one upcoming card is published this edition — the only event for which a date, venue, headliner and current bout order could all be verified against UFC.com this run. Cards without a confirmed current lineup are left off rather than carried forward from a previous edition.</div>
+
+<h2 class="sec">Last Event — Results</h2>
+<div class="panel" style="padding:6px 4px">
+<table>
+<thead><tr><th>Result</th><th>Bout</th><th>Method</th></tr></thead>
+<tbody>
+<tr><td class="w">Dricus Du Plessis</td><td>def. Kamaru Usman <span class="div">· MW main event</span></td><td>Unanimous decision (50–45, 49–46, 49–46)</td></tr>
+<tr><td class="w">Tommy McMillen</td><td>def. Alberto Montes <span class="div">· FW</span></td><td>TKO, Round 3</td></tr>
+<tr><td class="w">Felipe Franco</td><td>def. Levi Rodrigues Jr. <span class="div">· LHW</span></td><td>TKO, Round 2</td></tr>
+</tbody>
+</table>
+</div>
+<div class="note"><b>UFC Fight Night: du Plessis vs. Usman</b> — Saturday July 18, Paycom Center, Oklahoma City. <b>Performance bonuses ($100,000 each, four fighters):</b> Fight of the Night to <b>Du Plessis and Usman</b>; Performance of the Night to <b>Tommy McMillen</b> and <b>Felipe Franco</b>. Bonuses verified against UFC.com's own bonus coverage page; UFC.com styles the champion's name "Du Plessis" and that spelling is followed here. Usman is a former welterweight champion — that descriptor is UFC/ESPN-confirmed, not inferred.</div>
+
+<h2 class="sec">Prospect Watch</h2>
+<div class="grid">
+  <div class="card">
+    <div class="tags"><span class="tag t-pro">Prospect</span></div>
+    <h3>Felipe Franco</h3>
+    <p>Took a <b>$100,000 Performance of the Night</b> bonus for a second-round stoppage of Levi Rodrigues Jr. in Oklahoma City — his <b>first UFC win</b>. UFC.com's own write-up calls him "a prospect to keep an eye on at 205."</p>
+  </div>
+  <div class="card">
+    <div class="tags"><span class="tag t-pro">Prospect</span></div>
+    <h3>Tommy McMillen</h3>
+    <p>The <b>unbeaten</b> featherweight banked <b>$100,000</b> for what UFC.com described as a "record-setting performance" — a third-round TKO of Alberto Montes.</p>
+  </div>
+  <div class="card">
+    <div class="tags"><span class="tag t-new">New</span><span class="tag t-pro">Prospect</span></div>
+    <h3>Bella Mir</h3>
+    <p>The bluechip prospect and daughter of UFC Hall of Famer Frank Mir is expected to make her <b>Dana White's Contender Series</b> debut this summer, per mid-July reporting. She carries wrestling and jiu-jitsu credentials; no signing is confirmed yet and none is claimed here.</p>
+  </div>
+  <div class="card">
+    <div class="tags"><span class="tag t-pro">Prospect</span></div>
+    <h3>Abdul Rakhman Yakhyaev</h3>
+    <p>The Contender Series signee who set the UFC light-heavyweight record with a <b>33-second submission</b> of Rafael Cerqueira on debut, then scored an <b>8-second KO</b> and a <b>$100,000</b> Performance bonus at UFC Baku on June 27. Name spelled per UFC.com — no hyphen.</p>
+  </div>
+</div>
+
+<h2 class="sec">Around the Sport</h2>
+<div class="panel">
+<ul class="bul">
+  <li><b>Rountree out, Guskov in.</b> Jan Błachowicz was approached first but was already booked against Guskov the following week and said he could not make the weight limit with a week's notice.</li>
+  <li><b>Abu Dhabi returns.</b> Saturday marks the UFC's 23rd event in Abu Dhabi and its first there since UFC 321 in October 2025.</li>
+  <li><b>Interim heavyweight picture.</b> Ciryl Gane holds the interim heavyweight title after stopping Alex Pereira in round two at Freedom 250 on June 14; undisputed champion Tom Aspinall has publicly accepted the challenge — "I'll be there."</li>
+  <li><b>Rankings refreshed.</b> UFC pound-for-pound and divisional rankings were updated on July 20.</li>
+  <li><b>Quillan Salkilld standing note.</b> His most recent bout remains the <b>round-one TKO of Beneil Dariush at UFC Perth on May 2, 2026</b> — search results continue to re-surface the earlier Jamie Mullarkey submission as if it were his latest. It is not.</li>
+</ul>
+</div>
+
+<h2 class="sec">Rankings &amp; Business</h2>
+<div class="panel">
+<ul class="bul">
+  <li><b>Rankings movement.</b> The UFC began transitioning its official rankings away from the traditional media panel toward <b>Meta UFC Rankings</b> as of June 22, 2026 — an approach determined entirely by fight data. Divisional and P4P rankings were last updated July 20.</li>
+  <li><b>Freedom 250 viewership.</b> The White House event delivered <b>34 million total global viewers</b>, per TKO Group: <b>17 million</b> on Paramount+ across the US and Latin America and <b>17 million</b> from Australia, China, India, South Korea, New Zealand and the UK. Figures from Spain and France were expected later.</li>
+  <li><b>Fight week social.</b> Across June 8–14, UFC social channels recorded <b>126 billion total views</b>, <b>5 billion engagements</b> and <b>536,000 new followers</b>.</li>
+  <li><b>TKO Group.</b> Trailing-twelve-month revenue of <b>$5.06 billion</b>. TKO shares rose <b>8.6%</b> following the Freedom 250 viewership announcement.</li>
+</ul>
+</div>
+
+<h2 class="sec">Champions Board</h2>
+<div class="panel" style="padding:6px 4px">
+<table>
+<thead><tr><th>Division</th><th>Champion</th><th>Won title</th><th>Note</th></tr></thead>
+<tbody>
+<tr><td class="div">Heavyweight</td><td><b>Tom Aspinall</b></td><td>Jun 21, 2025</td><td>Inherited from Jon Jones (retirement) · 0 defenses</td></tr>
+<tr><td class="div">Interim HW</td><td><b>Ciryl Gane</b></td><td>Jun 14, 2026</td><td>KO2 Alex Pereira, Freedom 250</td></tr>
+<tr><td class="div">Light Heavyweight</td><td><b>Carlos Ulberg</b></td><td>Apr 11, 2026</td><td>KO1 Jiří Procházka, UFC 327 · 0 defenses</td></tr>
+<tr><td class="div">Middleweight</td><td><b>Sean Strickland</b></td><td>May 9, 2026</td><td>SD over Khamzat Chimaev, UFC 328 · two-time champ</td></tr>
+<tr><td class="div">Welterweight</td><td><b>Islam Makhachev</b></td><td>Nov 15, 2025</td><td>UD over Jack Della Maddalena, UFC 322 · two-division champ</td></tr>
+<tr><td class="div">Lightweight</td><td><b>Justin Gaethje</b></td><td>Jun 14, 2026</td><td>TKO4 Ilia Topuria, Freedom 250 · 0 defenses</td></tr>
+<tr><td class="div">Featherweight</td><td><b>Alexander Volkanovski</b></td><td>Apr 12, 2025</td><td>UD over Diego Lopes, UFC 314 · 1 defense</td></tr>
+<tr><td class="div">Bantamweight</td><td><b>Petr Yan</b></td><td>Dec 6, 2025</td><td>UD over Merab Dvalishvili, UFC 323</td></tr>
+<tr><td class="div">Flyweight</td><td><b>Joshua Van</b></td><td>Dec 6, 2025</td><td>TKO1 Alexandre Pantoja, UFC 323</td></tr>
+<tr><td class="div">Women's Bantamweight</td><td><b>Kayla Harrison</b></td><td>Jun 7, 2025</td><td>Sub2 Julianna Peña, UFC 316 · 0 defenses</td></tr>
+<tr><td class="div">Women's Flyweight</td><td><b>Valentina Shevchenko</b></td><td>Sep 14, 2024</td><td>UD over Alexa Grasso, UFC 306 · 2 defenses</td></tr>
+<tr><td class="div">Women's Strawweight</td><td><b>Mackenzie Dern</b></td><td>Oct 25, 2025</td><td>UD over Virna Jandiroba, UFC 321 · 0 defenses</td></tr>
+</tbody>
+</table>
+</div>
+<div class="note"><b>Verification note.</b> Every belt above matches ESPN's "Current and all-time UFC champions" page as verified earlier today, and no title has changed hands since — the most recent completed event, <b>UFC Oklahoma City on July 18</b>, had no title bout, so the board reflects the latest card. One standing trap still worth naming: general web searches for "current champions" keep returning a stale list with Alex Pereira at light heavyweight and Khamzat Chimaev at middleweight — both are wrong and are rejected here. Pereira and Chimaev appear above only as beaten opponents.</div>
+
+<footer>
+<b>Sources —</b>
+<a href="https://www.espn.com/mma/story/_/id/14947566/current-all-ufc-champions">ESPN · Current UFC champions (fetched this run)</a> ·
+<a href="https://www.ufc.com/event/ufc-fight-night-july-25-2026">UFC.com · Ankalaev vs Guskov event page</a> ·
+<a href="https://www.ufc.com/news/fight-fight-preview-ufc-abu-dhabi-ankalaev-guskov">UFC.com · Abu Dhabi fight-by-fight preview</a> ·
+<a href="https://www.ufc.com/news/bonus-coverage-ufc-oklahoma-city">UFC.com · Oklahoma City bonuses</a> ·
+<a href="https://www.ufc.com/news/ufc-oklahoma-city-official-scorecards">UFC.com · Official scorecards</a> ·
+<a href="https://sports.yahoo.com/articles/ufc-oklahoma-city-bonuses-dricus-235822837.html">Yahoo Sports · OKC bonuses</a> ·
+<a href="https://www.mmamania.com/ufc-bonuses-and-awards/458121/official-ufc-oklahoma-bonus-winners-results-paramount-du-plessis-usman">MMA Mania · Bonus winners</a> ·
+<a href="https://www.oddsshark.com/ufc/ufc-abu-dhabi-ankalaev-vs-guskov-odds-picks-july-25-2026">Odds Shark · Ankalaev/Guskov</a> ·
+<a href="https://sports.yahoo.com/articles/ufc-abu-dhabi-magomed-ankalaev-120244698.html">Yahoo Sports · Ankalaev/Guskov odds</a> ·
+<a href="https://www.mmaoddsbreaker.com/fight-odds/opening-odds/161069-opening-betting-odds-for-ufc-abu-dhabi-ankalaev-vs-guskov/">MMAOddsBreaker · Opening odds</a> ·
+<a href="https://investor.tkogrp.com/news/news-details/2026/UFC-Freedom-250-Delivers-34-Million-Total-Global-Viewers/default.aspx">TKO Group · Freedom 250 viewership</a> ·
+<a href="https://www.ufc.com/news/ufc-and-meta-unveil-meta-ufc-rankings">UFC.com · Meta UFC Rankings</a> ·
+<a href="https://www.mmamania.com/ufc-news/455957/bluechip-prospect-and-frank-mirs-daughter-bella-mir-will-most-likely-debut-on-contender-series-this-summer">MMA Mania · Bella Mir</a> ·
+<a href="https://en.wikipedia.org/wiki/UFC_Fight_Night:_Ankalaev_vs._Guskov">Wikipedia · UFC Fight Night: Ankalaev vs. Guskov (bout listing only — main-event line is stale)</a>
+<div class="disc">Cards and bouts are subject to change. Odds move constantly and are shown as reported by the cited book at the time of the source.</div>
+</footer>
+
+</div>
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
+<script>(function(){var el=document.getElementById('ufccdn');if(!el)return;var target=new Date('2026-07-25T09:00:00-04:00').getTime();function tick(){var d=target-Date.now();if(d<=0){el.textContent='Fight week — live/completed';return;}var days=Math.floor(d/864e5),h=Math.floor(d%864e5/36e5),m=Math.floor(d%36e5/6e4);el.textContent=days+'d '+h+'h '+m+'m';}tick();setInterval(tick,30000);})();</script>
+</body>
+</html>
