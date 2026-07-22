@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Cyber Wire — Daily Briefings</title>
+<style>
+:root{
+  --bg:#0b0f0e; --panel:#131a19; --line:#1f2b29; --text:#e6f0ee; --muted:#87999a;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+  --acc:#22d3a8; --acc2:#36c6ff; --crit:#ff5f56; --warn:#e8b339; --ok:#22d3a8;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.62}
+.wrap{max-width:1000px;margin:0 auto;padding:26px 20px 60px}
+.masthead{border-bottom:1px solid var(--line);padding-bottom:16px}
+h1.title{font-size:38px;letter-spacing:-.02em;margin:0 0 4px;font-weight:800}
+h1.title span{color:var(--acc)}
+.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:9px}
+.tagline{color:var(--muted);font-size:14px;margin:0}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:var(--panel);border:1px solid var(--line);border-radius:99px;padding:5px 11px;color:var(--muted)}
+.pill.live{color:var(--acc);border-color:#1e4c3f}
+.pill.live .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--acc);margin-right:6px;vertical-align:middle}
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:10px;padding:11px 15px;margin:6px 0 2px;font-size:14.5px;line-height:1.5}
+.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);margin-right:9px}
+.freshline{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.04em;margin:10px 0 4px}
+nav.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 22px}
+nav.tabs a{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:9px 13px;transition:.15s}
+nav.tabs a:hover{color:var(--text);border-color:#2f4340}
+nav.tabs a.active{color:#08100e;background:var(--acc);border-color:var(--acc);font-weight:700}
+.threat{border-radius:12px;border:1px solid var(--line);border-left:4px solid var(--crit);background:linear-gradient(90deg,rgba(255,95,86,.10),rgba(255,95,86,0));padding:14px 17px;margin-bottom:14px}
+.threat .lv{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--crit);margin-bottom:3px}
+.threat .why{font-size:14.5px;color:#d6e2e0}
+.strip{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:6px}
+@media(min-width:720px){.strip{grid-template-columns:repeat(4,1fr)}}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:13px 14px}
+.stat .n{font-family:var(--mono);font-size:23px;font-weight:700;color:var(--acc2);letter-spacing:-.02em}
+.stat .l{font-size:11.5px;color:var(--muted);margin-top:3px;line-height:1.35}
+h2.sec{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:34px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:19px}
+.top .h{font-size:22px;font-weight:700;margin:0 0 8px;letter-spacing:-.01em}
+.top p{margin:0 0 11px;font-size:15px;color:#d6e2e0}
+.top p:last-child{margin-bottom:0}
+.priority{border-radius:12px;border:1px solid var(--line);border-left:4px solid var(--crit);background:var(--panel);padding:16px 18px;margin-bottom:6px}
+.priority .lab{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--crit);margin-bottom:6px}
+.priority p{margin:0 0 8px;font-size:14.5px;color:#d6e2e0}
+.priority p:last-child{margin:0}
+.grid{display:grid;grid-template-columns:1fr;gap:13px}
+@media(min-width:740px){.grid{grid-template-columns:1fr 1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;transition:.18s}
+.card:hover{transform:translateY(-3px);border-color:#2f4340}
+.card h3{margin:0 0 7px;font-size:16.5px;letter-spacing:-.01em}
+.card p{margin:0;font-size:14px;color:#c6d3d1}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:9px}
+.tag{font-family:var(--mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase;border-radius:5px;padding:3px 7px;border:1px solid}
+.t-new{color:#08100e;background:var(--acc);border-color:var(--acc);font-weight:700}
+.t-ransom{color:var(--crit);border-color:#4a2725;background:rgba(255,95,86,.09)}
+.t-supply{color:var(--acc2);border-color:#1f3f4d;background:rgba(54,198,255,.09)}
+.t-breach{color:var(--warn);border-color:#4a3d1c;background:rgba(232,179,57,.09)}
+.t-gov{color:#b9a6ff;border-color:#332a52;background:rgba(185,166,255,.09)}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);font-weight:600}
+td{padding:10px 11px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+td.cve{font-family:var(--mono);font-size:12.5px;color:var(--acc2);white-space:nowrap}
+td.cvss{font-family:var(--mono);font-weight:700}
+.s-crit{color:var(--crit)} .s-high{color:var(--warn)} .s-med{color:var(--muted)}
+ul.kev{list-style:none;padding:0;margin:0}
+ul.kev li{padding:11px 0;border-bottom:1px solid var(--line);font-size:14px;color:#d6e2e0}
+ul.kev li:last-child{border-bottom:none}
+.cd{font-family:var(--mono);font-size:11px;letter-spacing:.06em;border-radius:5px;padding:2px 7px;margin-left:6px;white-space:nowrap;border:1px solid}
+.cd-over{color:var(--crit);border-color:#4a2725;background:rgba(255,95,86,.11);font-weight:700}
+.cd-soon{color:var(--warn);border-color:#4a3d1c;background:rgba(232,179,57,.11)}
+.vnote{font-size:12.5px;color:var(--muted);margin-top:11px;line-height:1.55}
+footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+footer a{color:#6f8785}
+.disc{margin-top:12px;font-size:11.5px;color:#5f7270}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="masthead">
+  <div class="kicker">⛨ Daily Briefings · Security Desk</div>
+  <h1 class="title">The Cyber <span>Wire</span></h1>
+  <p class="tagline">Breaches, exploited vulnerabilities and federal deadlines — checked before they're printed.</p>
+  <div class="meta">
+    <span class="pill live"><span class="dot"></span>Live</span>
+    <span class="pill" id="edition">—</span>
+    <span class="pill" id="datestamp">—</span>
+    <span class="pill">Updated <span id="updated">—</span></span>
+  </div>
+</div>
+
+<div class="tldr"><b>The Wire</b> <span>A pre-authentication RCE chain in WordPress Core — wp2shell — remains under in-the-wild exploitation, both halves now in CISA's KEV catalog; meanwhile a third SharePoint Server RCE (CVE-2026-50522, CVSS 9.8) has come under active exploitation after a public proof-of-concept dropped.</span></div>
+<div class="freshline" id="freshline">—</div>
+
+<nav class="tabs">
+  <a href="index.html">★ Front Page</a>
+  <a href="cyber-briefing.html" class="active">⛨ The Cyber Wire</a>
+  <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
+  <a href="mma-briefing.html">⊘ The Octagon</a>
+  <a href="archive.html">🗄 Archive</a>
+</nav>
+
+<div class="threat">
+  <div class="lv">Threat Level — High</div>
+  <div class="why">Two unauthenticated RCE chains — wp2shell in WordPress Core and a third SharePoint Server flaw (CVE-2026-50522) — are both confirmed exploited with public PoC code circulating, and three separate CISA KEV remediation deadlines have now lapsed by three to five days without a published extension.</div>
+</div>
+
+<div class="strip">
+  <div class="stat"><div class="n">9.8</div><div class="l">CVSSv3 for CVE-2026-63030 in Tenable's advisory table — CISA's own enrichment scores it 7.5</div></div>
+  <div class="stat"><div class="n">17,000+</div><div class="l">Logged actions the autonomous AI agent ran inside Hugging Face before it was evicted</div></div>
+  <div class="stat"><div class="n">62.2M</div><div class="l">People affected by the Conduent breach — third-largest US healthcare breach on record</div></div>
+  <div class="stat"><div class="n">3rd</div><div class="l">CVE-2026-50522 is the third SharePoint Server flaw to be actively exploited — CVSS 9.8, weaponized after a public PoC</div></div>
+</div>
+
+<h2 class="sec">Top Story</h2>
+<div class="panel top">
+  <div class="h">wp2shell: WordPress Core falls to a pre-auth RCE chain, and the exploits arrived first</div>
+  <p>Two WordPress Core flaws chained together give an anonymous, unauthenticated attacker remote code execution against a default installation — no plugins, no login, no preconditions. <b>CVE-2026-63030</b> is a REST API batch-route confusion weakness introduced in WordPress 6.9; <b>CVE-2026-60137</b> is a SQL injection in the <i>author__not_in</i> parameter of <i>WP_Query</i>, present since 6.8. Chained on 6.9.0 through 7.0.1, they let an attacker reach the batch endpoint at <i>/wp-json/batch/v1</i> and execute code.</p>
+  <p>WordPress shipped patches on <b>July 17</b>. Public proof-of-concept exploits appeared on GitHub <b>within hours</b> of disclosure, and Tenable reports that multiple security firms have since confirmed in-the-wild exploitation — Hexastrike saw honeypot attempts over the weekend and has assisted on confirmed incident response; Patchstack has also confirmed exploitation. WordPress.org has enabled <b>forced automatic updates</b> for supported installations on affected versions.</p>
+  <p>Two details make this unusual. First, the target is Core, not a plugin: Tenable notes all four prior WordPress entries in the CISA KEV catalog were plugin flaws. Second, the discovery is openly credited to AI tooling — Adam Kues of Searchlight Cyber, who found CVE-2026-63030, stated in the technical write-up that "no security researcher could have found and completed this exploit chain in 10 hours without AI." The same tooling advantage is being cited for how fast the public PoCs followed the patch.</p>
+  <p>Both halves of the chain — <b>CVE-2026-63030</b> and <b>CVE-2026-60137</b> — were added to CISA's <b>Known Exploited Vulnerabilities catalog on July 21</b>, formally confirming active exploitation. Fixed versions: <b>7.0.2</b>, <b>6.9.5</b>, <b>6.8.6</b> (SQL injection only) and 7.1 beta2. Where patching must wait, Searchlight Cyber's interim options are blocking <i>/wp-json/batch/v1</i> and <i>?rest_route=/batch/v1</i> at the WAF, restricting unauthenticated REST API access, or deploying its batch-endpoint plugin; Cloudflare has pushed WAF rules covering both CVEs to all plans including free. As of the latest advisory updates, no threat actor has been publicly attributed and no IoCs have been released.</p>
+</div>
+
+<h2 class="sec">Patch Priority</h2>
+<div class="priority">
+  <div class="lab">⚠ Do this first</div>
+  <p><b>Patch WordPress to 7.0.2 / 6.9.5 / 6.8.6 and verify the update actually landed.</b> This combines maximum severity, a default-configuration attack path, confirmed in-the-wild exploitation and publicly circulating exploit code. Forced auto-updates cover supported hosted installations; self-managed instances and anything with auto-update disabled will not be covered.</p>
+  <p><b>Run a close second for any on-prem SharePoint farm:</b> <b>CVE-2026-50522</b> (CVSS 9.8), a deserialization-driven unauthenticated RCE disclosed with Microsoft's July 14 updates, is now <b>under active exploitation after a public proof-of-concept</b> — the third SharePoint Server flaw to be weaponized this month (watchTowr). Treat the July SharePoint updates as an emergency change for any internet-facing farm.</p>
+  <p><b>The hardest verified federal deadline on this page has already passed:</b> the SonicWall SMA1000 zero-day <b>CVE-2026-15409</b> (CVSS 10.0, actively exploited) carried a CISA remediation date of <b>July 17, 2026</b> — <span class="cd cd-over">5 days overdue</span> — with further KEV deadlines lapsing July 18 and 19. The wp2shell CVEs are in KEV as of July 21, but no specific FCEB due date for them could be confirmed from a CISA source this run, so none is printed below.</p>
+</div>
+
+<h2 class="sec">Threat Actor Spotlight</h2>
+<div class="panel">
+  <div class="tags"><span class="tag t-new">New</span><span class="tag t-ransom">Ransomware</span><span class="tag t-supply">AI-operated</span></div>
+  <h3 style="margin:0 0 7px;font-size:18px">JADEPUFFER — the first documented end-to-end LLM-driven ransomware operation</h3>
+  <p style="margin:0;font-size:14.5px;color:#d6e2e0">Researchers have captured what they describe as the first complete extortion operation driven end to end by a large language model. The operator, dubbed <b>JADEPUFFER</b>, obtained initial access to an internet-facing <b>Langflow</b> instance through <b>CVE-2025-3248</b> and then ran an adaptive, fully automated campaign — reconnaissance, escalation, data theft and extortion — without a human driving each step. The significance is less the payload than the operating model: agentic tooling collapses the skill floor for running a full intrusion, and the same automation advantage that produced same-day wp2shell exploits is now visible on the intrusion side. Researchers tie the operator to <b>ENCFORGE</b>, a newly compiled Go ransomware that targets roughly <b>180 file types</b> — model weights, Hugging Face SafeTensors, PyTorch and TensorFlow artifacts, GGUF/GGML weights and FAISS vector indexes — and in the documented Langflow intrusion the agent encrypted <b>1,300+ configuration records</b> and wrote its own ransom note carrying a Bitcoin address. No confirmed link ties JADEPUFFER to the separate Hugging Face intrusion. Sources: Dark Reading, Sysdig, GBHackers.</p>
+</div>
+
+<h2 class="sec">Breaches &amp; Incidents</h2>
+<div class="grid">
+
+  <div class="card">
+    <div class="tags"><span class="tag t-new">New</span><span class="tag t-breach">Third-party</span></div>
+    <h3>Ernst &amp; Young discloses a breach via a third-party IT platform</h3>
+    <p>Big Four accounting firm <b>Ernst &amp; Young (EY)</b> has disclosed a data breach after an unauthorized party accessed a <b>third-party IT support platform</b>. EY detected anomalous activity on <b>April 23, 2026</b> and determined that, between <b>March 28 and April 12</b>, the intruder downloaded documents relating to a number of EY clients. Exposed data may include <b>Social Security numbers, financial account codes and credit/debit account information</b>. EY began mailing notification letters dated <b>July 13</b> and filed with several state attorneys general through mid-July; state filings so far cite relatively small resident counts (873 in Texas, 480 in Massachusetts, 13 in Vermont). Affected clients are offered 24 months of Experian monitoring. Sources: BleepingComputer, SecurityAffairs, state AG filings.</p>
+  </div>
+
+  <div class="card">
+    <div class="tags"><span class="tag t-new">New</span><span class="tag t-breach">AI infrastructure</span></div>
+    <h3>Hugging Face breached by an autonomous AI agent</h3>
+    <p>In <b>mid-July</b> Hugging Face disclosed that an unauthorized party used an <b>autonomous AI agent</b> to breach its production infrastructure — an intrusion whose <b>17,000+ logged agent actions</b> became its own forensic record. Entry was a <b>malicious dataset</b> in the processing pipeline that chained two code-execution flaws &mdash; a remote-code dataset loader and a template-injection bug &mdash; enabling RCE, privilege escalation, credential harvesting and lateral movement across internal clusters. A <b>limited set of internal datasets and service credentials</b> was accessed, but Hugging Face says it found <b>no evidence</b> that public models, datasets, Spaces or its software supply chain were tampered with. It closed the flaws, evicted the agent, rotated exposed credentials and urged users to rotate any stored keys. Sources: Hugging Face disclosure, BleepingComputer, TechCrunch, The Hacker News.</p>
+  </div>
+
+  <div class="card">
+    <div class="tags"><span class="tag t-supply">Supply chain</span></div>
+    <h3>SleeperGem backdoors three RubyGems packages</h3>
+    <p>Between <b>July 18 and 19</b>, malicious versions of three gems were published to RubyGems.org: <b>git_credential_manager</b> (impersonating Microsoft's Git Credential Manager), <b>Dendreo</b>, and <b>fastlane-plugin-run_tests_firebase_testlab</b>. Each release is a loader that pulls a second stage from an attacker-controlled Forgejo host, checks for CI/CD environment variables from platforms like GitHub Actions and GitLab, and <b>skips execution inside build systems</b> — running only on developer machines, where it drops a native daemon and persists via cron and systemd. Two of the accounts had been dormant for years. Aikido Security's Charlie Eriksen: "A RubyGems account that has gone quiet for six or seven years doesn't look risky to anyone." Sources: The Hacker News, StepSecurity, SC Media.</p>
+  </div>
+
+  <div class="card">
+    <div class="tags"><span class="tag t-supply">Supply chain</span><span class="tag t-gov">npm</span></div>
+    <h3>@asyncapi npm compromise — the "--ignore-scripts won't save you" pattern</h3>
+    <p>Per Microsoft's Security Blog (July 15), five package versions across four <b>@asyncapi</b> package names were republished inside roughly 90 minutes on July 14. The payload executes at <b>module-load time</b> and the packages declare no lifecycle hooks at all, so <code>npm install --ignore-scripts</code> does not neutralise it. Root cause was a GitHub Actions "pwn request" — a <i>pull_request_target</i> workflow checking out an untrusted PR head while privileged — which exposed a bot PAT; the attacker then rode legitimate release workflows, so all five malicious versions carry <b>valid provenance attestations</b>. Pin specs 6.11.1, generator 3.3.0, components 0.7.0, helpers 1.1.0. SleeperGem shares the same property from a different angle: build-system checks are not a safety net.</p>
+  </div>
+
+  <div class="card">
+    <div class="tags"><span class="tag t-ransom">Ransomware</span><span class="tag t-breach">Healthcare</span></div>
+    <h3>Conduent breach total reaches 62.2 million</h3>
+    <p>The <b>SafePay</b> ransomware incident at Conduent now stands at <b>62.2 million individuals</b>, making it the <b>third-largest US healthcare breach</b> on record behind Change Healthcare (192.7M, 2024) and Anthem (78.8M, 2015). Discovered January 13, 2025, with attacker access dating to October 21, 2024. The count escalated from 10.5M to 25.5M in February and to 62.2M in June 2026. Conduent booked <b>$25M</b> in direct response costs in Q1 2025 with a further <b>$16M</b> anticipated through Q1 2026. Sources: HIPAA Journal, BankInfoSecurity, Paubox.</p>
+  </div>
+
+  <div class="card">
+    <div class="tags"><span class="tag t-new">New</span><span class="tag t-breach">Healthcare</span></div>
+    <h3>Craneware confirms a data-theft incident</h3>
+    <p>Healthcare financial-software provider <b>Craneware</b> confirmed a cybersecurity incident in which threat actors <b>viewed and exfiltrated</b> a substantial volume of file names along with some employee data and customer and partner records. The company says it is investigating scope and notifying affected parties. It lands in a crowded July for healthcare-adjacent targets &mdash; the same stretch that saw the Conduent total climb to 62.2 million. Sources: Cybersecurity News, this run's reporting.</p>
+  </div>
+
+</div>
+
+<h2 class="sec">Vulnerability Watch</h2>
+<div class="panel" style="padding:6px 4px">
+<table>
+<thead><tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr></thead>
+<tbody>
+<tr><td class="cve">CVE-2026-63030</td><td class="cvss s-crit">9.8</td><td>WordPress Core 6.9.0–7.0.1</td><td>REST API batch-route confusion; half of the wp2shell chain. 9.8 per Tenable's table and WPScan as CNA; <b>CISA's enrichment scores it 7.5</b> — the dispute is whether the route confusion is scored alone or with the chained impact. Exploited; in KEV. Fix 7.0.2 / 6.9.5.</td></tr>
+<tr><td class="cve">CVE-2026-60137</td><td class="cvss s-med">5.9</td><td>WordPress Core 6.8.0+</td><td>SQL injection in <i>author__not_in</i> (WP_Query). Low on its own; the other half of wp2shell. Fix 6.8.6 / 6.9.5 / 7.0.2.</td></tr>
+<tr><td class="cve">CVE-2026-15409</td><td class="cvss s-crit">10.0</td><td>SonicWall SMA1000 12.4.3, 12.5.0</td><td>SSRF, vendor-scored 10.0 in SonicWall's product notice. Chained with 15410 for full appliance takeover. Fix 12.4.3-03453 / 12.5.0-02835 or later.</td></tr>
+<tr><td class="cve">CVE-2026-15410</td><td class="cvss s-high">7.2</td><td>SonicWall SMA1000 Mgmt Console</td><td>Post-auth code injection; the second link in the SonicWall chain (Rapid7 MDR).</td></tr>
+<tr><td class="cve">CVE-2026-50522</td><td class="cvss s-crit">9.8</td><td>SharePoint Server SE, 2019, 2016</td><td>Deserialization of untrusted data → unauthenticated RCE; disclosed with Microsoft's July 14 updates. The <b>third</b> SharePoint Server flaw under active exploitation, weaponized after a public PoC (watchTowr). Treat July SharePoint updates as emergency.</td></tr>
+<tr><td class="cve">CVE-2026-58644</td><td class="cvss s-crit">9.8</td><td>SharePoint Server SE, 2019, 2016</td><td>Deserialization of untrusted data → unauthenticated RCE. Exploited as a zero-day before patches; Microsoft revised its bulletin to confirm. KEV July 16, due July 19.</td></tr>
+<tr><td class="cve">CVE-2026-56164</td><td class="cvss s-med">—</td><td>Microsoft SharePoint Server</td><td>Part of the July SharePoint exploitation cluster covered in Tenable's July 16 FAQ. No vendor CVSS confirmed this run — none printed.</td></tr>
+<tr><td class="cve">CVE-2026-25089</td><td class="cvss s-med">—</td><td>Fortinet FortiSandbox</td><td>OS command injection; added to KEV July 16 on evidence of active exploitation.</td></tr>
+<tr><td class="cve">CVE-2026-39808</td><td class="cvss s-med">—</td><td>Fortinet FortiSandbox</td><td>OS command injection; added to KEV July 16 alongside 25089.</td></tr>
+<tr><td class="cve">CVE-2026-56155</td><td class="cvss s-high">7.8</td><td>Microsoft AD FS</td><td>Insufficient granularity of access control &rarr; privilege escalation; actively-exploited zero-day credited to Microsoft DART. KEV-listed with the latest live federal deadline on this page &mdash; July 28.</td></tr>
+<tr><td class="cve">CVE-2026-48282</td><td class="cvss s-med">—</td><td>Adobe ColdFusion</td><td>Path traversal; added to KEV July 7 on evidence of active exploitation.</td></tr>
+<tr><td class="cve">CVE-2025-3248</td><td class="cvss s-med">—</td><td>Langflow</td><td>The initial-access vector in the JADEPUFFER agentic ransomware campaign.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="vnote"><b>On the CVSS dispute:</b> where a vendor or CNA score and an enrichment score disagree, both are printed rather than one being chosen. Blank CVSS cells mean no authoritative vendor or CISA score was confirmed during this run — a blog figure alone is not enough to publish.</div>
+
+<h2 class="sec">CISA KEV &amp; Federal Deadlines</h2>
+<div class="panel">
+<ul class="kev">
+  <li><b>CVE-2026-15409 / CVE-2026-15410 (SonicWall SMA1000) and CVE-2026-56164 (SharePoint)</b> — remediation due <b>July 17, 2026</b> <span class="cd cd-over">5 days overdue</span></li>
+  <li><b>CVE-2026-46817 (Oracle E-Business Suite) and CVE-2023-4346 (KNX)</b> — remediation due <b>July 18, 2026</b> <span class="cd cd-over">4 days overdue</span></li>
+  <li><b>CVE-2026-58644 (SharePoint), CVE-2026-25089 and CVE-2026-39808 (Fortinet FortiSandbox)</b> — added July 16, remediation due <b>July 19, 2026</b> <span class="cd cd-over">3 days overdue</span></li>
+  <li><b>CVE-2026-56155 (Microsoft AD FS)</b> — remediation due <b>July 28, 2026</b> <span class="cd cd-soon">6 days left</span></li>
+  <li><b>CVE-2026-63030 and CVE-2026-60137 (WordPress Core / wp2shell)</b> — both confirmed added to KEV on <b>July 21</b> on evidence of active exploitation. <b>No due date printed:</b> no CISA-published FCEB deadline for these CVEs could be verified this run.</li>
+</ul>
+<div class="vnote"><b>Method:</b> deadlines under <b>BOD 26-04</b> are risk-based and assigned per CVE — the older BOD 22-01 flat three-week window no longer applies and is not used to infer any date here. Every countdown above is computed against today's date from the CISA-stated due date; the Patch Priority box and this section use identical dates. Recent KEV additions also logged this month include CVE-2026-48939 (iCagenda), CVE-2026-56291 (Balbooa Forms), CVE-2026-48908 (JoomShaper SP Page Builder), CVE-2026-55255 (Langflow) and CVE-2026-56290 (Joomlack Page Builder).</div>
+</div>
+
+<footer>
+<b>Sources —</b>
+<a href="https://www.rapid7.com/blog/post/etr-cve-2026-63030-wp2shell-a-critical-remote-code-execution-vulnerability-in-wordpress-core/">Rapid7 · wp2shell / KEV added July 21 (fetched this run)</a> ·
+<a href="https://www.securityweek.com/wp2shell-wordpress-vulnerabilities-exploited-in-the-wild/">SecurityWeek · wp2shell exploited</a> ·
+<a href="https://www.tenable.com/blog/wp2shell-cve-2026-63030-cve-2026-60137-frequently-asked-questions-about-remote-code-execution">Tenable · wp2shell FAQ</a> ·
+<a href="https://thehackernews.com/2026/07/critical-sharepoint-rce-cve-2026-50522.html">THN · CVE-2026-50522 SharePoint exploited</a> ·
+<a href="https://securityaffairs.com/195760/security/public-poc-triggers-active-exploitation-of-critical-sharepoint-rce-vulnerability-cve-2026-50522.html">SecurityAffairs · CVE-2026-50522 PoC exploitation</a> ·
+<a href="https://www.bleepingcomputer.com/news/security/ernst-and-young-discloses-data-breach-after-support-system-hack/">BleepingComputer · EY breach</a> ·
+<a href="https://thehackernews.com/2026/07/sleepergem-uses-three-malicious.html">The Hacker News · SleeperGem</a> ·
+<a href="https://www.stepsecurity.io/blog/sleepergem-compromised-rubygems-drop-persistent-backdoor">StepSecurity · SleeperGem</a> ·
+<a href="https://www.scworld.com/brief/sleepergem-attack-targets-ruby-ecosystem-with-malicious-gems">SC Media · SleeperGem</a> ·
+<a href="https://www.darkreading.com/cyberattacks-data-breaches/jadepuffer-first-complete-llm-driven-ransomware-attack">Dark Reading · JADEPUFFER</a> ·
+<a href="https://www.sysdig.com/blog/jadepuffer-agentic-ransomware-for-automated-database-extortion">Sysdig · JADEPUFFER</a> ·
+<a href="https://thehackernews.com/2026/07/cisa-adds-exploited-sharepoint-rce-zero.html">THN · CVE-2026-58644 KEV</a> ·
+<a href="https://www.cisa.gov/news-events/alerts/2026/07/16/cisa-adds-three-known-exploited-vulnerabilities-catalog">CISA · KEV additions July 16</a> ·
+<a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA · KEV catalog</a> ·
+<a href="https://www.infosecurity-magazine.com/news/new-ransomware-weekly/">Infosecurity · New ransomware groups</a> ·
+<a href="https://cybernews.com/">Cybernews</a>
+<div class="disc">Informational only. Verify every CVE, score and remediation date against your vendor's advisory and the CISA KEV catalog before acting on it operationally.</div>
+</footer>
+
+</div>
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
+</body>
+</html>
