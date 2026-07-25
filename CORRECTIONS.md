@@ -5138,3 +5138,38 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   champion cells/static 'Midday Edition'/'2:55 PM' all x0 — the only 'Midday Edition' hits are the 4
   legitimate self-stamp JS ternaries); 12569-with-9.8 lines x0; New tags: MMA x2, cyber x0, WS x0. Statics
   restamped 3:55 PM ET/Afternoon; clock cross-checked EDT vs UTC pre-publish.
+
+## Added 2026-07-25 (Saturday ~4:12pm ET — Afternoon Edition)
+- Carried the verified 3:55 set with EVERY lead re-verified via fresh fetch/search this run: Ankalaev
+  TKO5 (2:41, Goddard) via Bloody Elbow/UFC.com video/Cageside/Yahoo results; bonuses via search snippets
+  naming Temirov+Walker POTN $100K and Kuniev–Fortune FOTN $100K (Walker's calf-slicer opponent Thomas
+  Petersen re-stated); champions 12/12 via DIRECT ESPN champions-page fetch (Aspinall/Ulberg/Strickland/
+  Makhachev/Gaethje/Volkanovski 1 def/Yan/Van 0 def/Harrison/Shevchenko 2/Dern + sidebar "Gane crushes
+  Pereira" for interim); Fri Jul 24 closes via CNBC headline + AP/king5 "How major US stock indexes fared
+  Friday 7/24/2026" + Yahoo close blog (S&P 7,411.98 +0.05% / Dow 51,947.25 +235.60 +0.46% / Nasdaq
+  24,975.82 −0.64%; AP: all three lower for week, Nasdaq −2% weekly per CNBC snippet); Cl0p–Windchill/
+  FlexPLM via BleepingComputer/cyberinsider/gbhackers/cyberpress/Ransom-ISAC/Techzine — synthesis AGAIN
+  claimed "CVSS 9.8" → REJECTED, vendor 9.3 kept per standing correction (KEV Jun 25 → due Jun 28
+  re-stated in snippets); Origin Energy via BleepingComputer/SecurityWeek/energynews (4.8M, Jul 22→23,
+  AFP/ACSC/OAIC, attacker 2M claim as CLAIMS); Fairlife/Anubis (8-K Jul 16, listing Jul 20) + GitLab
+  depthfirst drop re-confirmed in SWK/weekly-recap snippets. August schedule re-confirmed (Belgrade Aug 1 /
+  Gamrot–Salkilld Aug 8 / UFC 330 Aug 15 Philly / Hernandez–Rodrigues Aug 22 / Nurmagomedov–Song Aug 29).
+- ★ ADDED THIS RUN: (1) Belgrade headliner odds — Medić −315 / Rodriguez +265, published as OPENING LINES
+  attributed to FightBook MMA ("Rakic, Medic and Rebecki lead opening lines"; UFC.com shows −330/+260 —
+  not published, one book only per freshness rule). (2) Salahdine Parnasse signs with UFC — former
+  two-division KSW champion, 23-2, five-round MAIN-EVENT debut vs Dan Hooker at UFC Paris Sept 5
+  (Yahoo/MMA Mania/Cageside/Heavy/MMA News all in results this run) — Around the Sport, tagged New.
+  Spelling "Salahdine Parnasse" per all outlets. Hooker 24-14 per synthesis — NOT published (single
+  synthesis source for record).
+- New-tags removed (present in prior 15:46 snapshot): bonuses box, Patterson callout. New tags now:
+  MMA x1 (Parnasse), cyber x0, WS x0. ShinyHunters/Abbott STILL listicle-synthesis-only → skipped.
+  NEW skip: D1R "Synopsys and Bosch" theft claims — synthesis-only, no direct article fetched → NOT
+  published. UFC 333 Oct 24 Abu Dhabi kept (corrections-backed Jul 25 Cageside direct fetch); a
+  ticket-site result claiming "UFC 333 = Nov 7" DISREGARDED as junk/stale — do not regress.
+- VALIDATION (programmatic): 4 pages HTMLParser-balanced 0/0; 5-tab nav + edition/datestamp/updated/
+  freshline IDs on all 4; 8 TradingView widgets on WS; tldr labels correct; index 3 summary cards;
+  champions 12/12 incl. Gane; KEV countdowns re-unit-tested vs 2026-07-25 (Jun 28→27d overdue /
+  Jul 17→8d / Jul 19→6d / Jul 28→3d left) MATCH page strings; scorecard cents +3.68/+235.60/−161.87
+  present; trap greps CLEAN (Cody Salkilld/Shamil Yakhyaev/Abdul-Rakhman/Ramazonbek/'vacant'/'Awaiting
+  official'/'pending at press time'/FanDuel/Adrian Franco x0; 12569-with-9.8 x0). Clock cross-checked
+  16:12 EDT / 20:12 UTC before restamping statics to 4:12 PM ET / Afternoon Edition.
