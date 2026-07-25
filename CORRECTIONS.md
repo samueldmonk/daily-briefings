@@ -5250,3 +5250,35 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   Yakhyaev/Abdul-Rakhman/Ramazonbek/Muhammad Said</'vacant'/'Awaiting official'/'pending at press
   time'/FanDuel/−7.89 all x0). Statics restamped 6:46 PM ET/Afternoon; clock cross-checked
   18:46 EDT / 22:46 UTC.
+
+## Added 2026-07-25 (Saturday ~7:07pm ET — Afternoon Edition, second post-6PM extra run)
+- Carried the verified 6:46 set with every lead RE-verified via fresh search/fetch this run: Fri Jul 24
+  closes (Yahoo/TheStreet/Fool/WaPo-AP/CNBC: S&P 7,411.98 +0.05% / Dow 51,947.25 +235.60 +0.46% /
+  Nasdaq 24,975.82 −0.64%; all three lower on week, Nasdaq −2% — synthesis also re-stated Thu closes
+  7,408.30/51,711.65/25,137.69 consistent with the scorecard); Ankalaev TKO5 over Guskov (ESPN's own
+  article id 49448560 "dominates ... in bounce-back win" now in results + Yahoo/The National — ESPN
+  link ADDED to MMA sources footer); Ankalaev→Ulberg callout + Ulberg ACL re-confirmed (Bettors
+  Insider + search synthesis "out indefinitely ... torn ACL"); champions 12/12 via DIRECT ESPN
+  champions-page fetch (Aspinall 0/Ulberg 0/Strickland 0/Makhachev 0/Gaethje 0/Volkanovski 1/Yan 0/
+  Van 0/Harrison 0/Shevchenko 2/Dern 0; interim Gane via sidebar "Gane crushes Pereira"; meta
+  "strawweight vacancy" again STALE boilerplate — ignored); KEV due-today top story (THN "by July 25"
+  + securityaffairs + CISA Jul 22 alert in results; Rapid7 headline confirms 16232 exploited; a
+  synthesis stated 16232 "CVSS 9.1" — page keeps the "9.1–9.3, check the vendor advisory" range,
+  no single number until vendor/NVD fetched); Cl0p–Windchill (BleepingComputer/THN/gbhackers/
+  cyberpress/Ransom-ISAC — synthesis AGAIN said CVSS 9.8/"before 11.0 M030", REJECTED, vendor 9.3
+  kept per standing correction); Origin Energy (BleepingComputer/SecurityWeek/SC Media/
+  TheConversation: 4.8M, fired ex-employee logon, last-4 card/last-3 bank, AFP/ACSC/OAIC, attacker
+  settlement line kept as CLAIMS); ServiceNow 6875 (SecurityWeek/Help Net/THN/BleepingComputer:
+  CVSS 9.5, ITW Jul 18 five days post-patch, second gadget chain beyond public PoC); Fairlife/Anubis
+  (SWK recap: 8-K Jul 16, listing Jul 20).
+- CHANGES this run: New tag REMOVED from the KEV due-today bullet (present in prior 18:47 snapshot);
+  ESPN Ankalaev article added to MMA footer. New tags now: x0 all pages. SKIPPED again as
+  synthesis/listicle-only: ShinyHunters/Abbott, and NEW skip "Ford listed by Krybit ransomware
+  group" (SharkStriker listicle synthesis only — no direct article fetched; do not publish without
+  a primary source).
+- VALIDATION (programmatic): 4 pages HTMLParser-balanced 0/0; edition/datestamp/updated/freshline
+  IDs + 5-tab nav on all 4; 8 TV widgets on WS; scorecard cents present; champions 12/12 incl.
+  Gane; KEV countdown strings unit-tested vs 2026-07-25 (TODAY 0d/27d/8d/6d/3d) MATCH; trap greps
+  CLEAN (Cody Salkilld/Shamil Yakhyaev/Abdul-Rakhman/Ramazonbek/'vacant'/'Awaiting official'/
+  'pending at press time'/FanDuel/'6:46 PM'/−7.89 all x0); tldr labels correct; index 3 cards.
+  Statics restamped 7:10 PM ET/Afternoon Edition; clock cross-checked 19:07 EDT.
