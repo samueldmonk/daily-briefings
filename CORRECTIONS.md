@@ -5092,3 +5092,49 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   x0); champion surnames 12/12 incl. Gane; KEV countdown strings unit-tested MATCH vs 2026-07-25; scorecard
   closes + point-changes verified present to the cent (+3.68/+235.60/−161.87). Clock cross-checked 15:15 EDT /
   19:15 UTC before stamping.
+
+## Added 2026-07-25 (Saturday ~3:55pm ET — Afternoon Edition)
+- ★ BONUSES ADDED THIS RUN (the prior edition's carry-over TODO) via DIRECT FETCH of Heavy "UFC Abu Dhabi
+  Bonuses Revealed" (published 3:24 PM ET Jul 25, Adam Martin): **FOTN Kuniev vs Fortune ($100K each); POTN
+  Ramazan Temirov and Valter Walker ($100K each); $25K finish bonuses to Ankalaev, Saidov, Patterson, Sola,
+  Hussein** (five). The unusual $25K "finish bonus" tier is published exactly as Heavy states it, attributed.
+  Heavy independently re-confirms: Ankalaev R5 finish by strikes; Kuniev TKO3 Fortune WITH STRIKES ("with
+  knees" from the prior edition was NOT re-verified → dropped); Temirov KO of Erceg; Walker calf-slicer sub1;
+  Saidov KO2 Jacoby in debut; Patterson KO2 Ponzinibbio + CALLOUT of the Belgrade Medić–Rodriguez winner
+  (added to Around the Sport, tagged New); Sola D'Arce R1; Hussein arm-triangle R3; 12 fights fought.
+- Main event re-confirmed THIS run via fresh search (Bloody Elbow slug / theScore "Ankalaev TKOs Guskov" /
+  Cageside "Secures Fifth-Round Finish" / UFC.com video "Fifth Round Finish"; 2:41 + Goddard per synthesis,
+  consistent with the 3:20pm corrections entry). Ankalaev/Guskov updated records NOT published (no source
+  stated them — per the do-not-derive rule). Champions 12/12 verified via DIRECT ESPN champions-page fetch
+  this run (Volkanovski 1 def NOT vacant; Van 0; Shevchenko 2; Harrison 0; interim Gane via sidebar
+  "Gane crushes Pereira"). ESPN sidebar re-confirms: what's-next (5h), rankings "second to none" (8h), FBI
+  arrests (7h), Aspinall "I'll be there" (1d), Topuria "no excuses" (1d), White "never again" (1d).
+  DROPPED as not re-verified this run: Dulatov "12-1" record (→ "first-round KO in his lone UFC appearance
+  last year"), Temirov "the Uzbek" descriptor (Guskov is the corrections-verified Uzbek — avoid mixups).
+  Kuniev "#8"/Fortune "#9"/Erceg "#10" retained (corrections-backed via the Jul 24 direct UFC.com event-page
+  fetch). New-tag removed from Namajunas; New tags this edition = bonuses box + Patterson callout only.
+- MARKETS: weekend, page carried; Fri Jul 24 closes RE-confirmed this run (CNBC close headline + AP/WaPo
+  "How major US stock indexes fared Friday 7/24/2026" + TheStreet + Fool + Yahoo): S&P 7,411.98 +0.05% /
+  Dow 51,947.25 +235.60 +0.46% / Nasdaq 24,975.82 −0.64%; AP: all three lower on week. RADAR ENRICHED with
+  this-run sourcing: FactSet-consensus HOLD at 3.50–3.75% would be the FIFTH straight unchanged meeting
+  (CBS News) and fixed-income markets price ~ONE-THIRD odds of a HIKE (Forbes, Jul 23) — added to the FOMC
+  bullet with both sources in the footer; decision Wed Jul 29 2 PM ET / non-SEP re-confirmed (CME).
+- CYBER: full 3:20 set carried and re-confirmed via fresh searches this run: Cl0p–Windchill/FlexPLM
+  (BleepingComputer/THN/gbhackers/Techzine/cyberpress/Ransom-ISAC in results; a search synthesis AGAIN said
+  "CVSS 9.8 deserialization ... before 11.0 M030" — REJECTED, vendor 9.3 kept per standing correction, no
+  fixed-version claims added); Origin Energy (BleepingComputer/SecurityWeek/TheConversation/The Nightly:
+  4.8M, Jul 22 investigation → Jul 23 confirmation, AFP/ACSC/OAIC, attacker's 2M claim as CLAIMS); Fairlife/
+  Anubis re-surfaced via SWK recap (New tag removed); GitLab depthfirst exploit-drop re-confirmed
+  (cybersecuritynews weekly bulletin: "runs commands as git on any self-managed 18.11.3 server" — detail NOT
+  added to the card, headline-level kept). ShinyHunters/Abbott Labs vishing seen ONLY in listicle synthesis
+  → SKIPPED. KEV countdowns re-unit-tested vs Jul 25: Jun 28→27d overdue / Jul 17→8d / Jul 19→6d / Jul 28→3d
+  left — MATCH, page strings verified programmatically.
+- VALIDATION (programmatic): 4 pages HTMLParser-balanced 0/0; 5-tab nav + edition/datestamp/updated/freshline
+  IDs on all 4; 8 TradingView widgets on WS; tldr labels correct (The Wire/The Tape/Tale of the Tape); index
+  3 summary cards; champions 12/12 incl. Gane; KEV countdown strings unit-tested MATCH vs 2026-07-25;
+  scorecard closes + point/percent changes re-verified arithmetically to the cent (+3.68/+235.60/−161.87);
+  trap greps CLEAN (Cody Salkilld/Shamil Yakhyaev/Abdul-Rakhman/Adrian Franco/Joselyne/Bella Mir/FanDuel/
+  +10.24/Ramazonbek/'vacant'/'Awaiting official'/'pending at press time'/'had not been announced'/dethroned-
+  champion cells/static 'Midday Edition'/'2:55 PM' all x0 — the only 'Midday Edition' hits are the 4
+  legitimate self-stamp JS ternaries); 12569-with-9.8 lines x0; New tags: MMA x2, cyber x0, WS x0. Statics
+  restamped 3:55 PM ET/Afternoon; clock cross-checked EDT vs UTC pre-publish.
