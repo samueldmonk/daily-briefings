@@ -5055,3 +5055,40 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
 - MAIN EVENT status at publish: see the addendum below this entry (result added pre-publish if it landed; otherwise "Awaiting official result" row + press-time note published, and the NEXT RUN MUST add the verdict + bonuses + rankings fallout).
 - VALIDATION (programmatic): 4 pages HTMLParser-balanced 0/0; 5-tab nav + edition/datestamp/updated/freshline IDs on all 4; 8 TradingView widgets on WS; tldr labels correct (The Wire/The Tape/Tale of the Tape); index 3 summary cards; 12/12 champion surnames incl. Gane; dethroned-champion cells x0; 'vacant' x0; trap greps CLEAN (Cody Salkilld/Shamil Yakhyaev/Abdul-Rakhman/Adrian Franco/Joselyne/Bella Mir/+10.24/FanDuel all x0); KEV countdown strings unit-tested MATCH vs 2026-07-25; scorecard close math exact (+3.68/+235.60/−161.87).
 - MAIN-EVENT ADDENDUM (published ~2:55PM ET; clock 14:54 at snapshot): verdict STILL unpublished across UFC.com results+scorecards pages, Yahoo/Uncrowned, CBS, BR, Sportsnaut, LowKick, MyMMANews, Combat Press, FightBook, Sherdog and 10+ searches (all caches hours old; clock cross-checked 14:51/18:51 and 14:52 pre-publish). Published with the pend row + press-time note. Live round-scoring (Ankalaev up 2-0 thru two) seen ONLY in a synthesized search summary — NOT published, per the never-from-synthesis rule.
+
+## Added 2026-07-25 (Saturday ~3:20pm ET — Afternoon Edition)
+- ★ MAIN EVENT RESOLVED THIS RUN: **Magomed Ankalaev def. Bogdan Guskov — TKO (punches), Round 5, 2:41**,
+  referee Marc Goddard stoppage; slow early rounds (boos), Ankalaev shot a takedown to open R4 and finished
+  with ground-and-pound in R5. Verified via Bloody Elbow headline/slug "former champion bounces back with
+  TKO win" + Yahoo results headline "Ankalaev manhandles Guskov" + three consistent search-result statements
+  across different queries (incl. exact-phrase "2:41"). UFC.com results page, Sherdog PBP, CBS, MMA Mania,
+  Tapology and Wikipedia fetches were ALL still pre-result caches hours after the finish — same trap as the
+  midday run; do not treat their fetch-time state as current. Bonuses NOT announced at press time (searched;
+  none found) → NEXT RUN: add bonuses, any rankings fallout, and Ankalaev/Guskov updated records ONLY from a
+  source (do not derive +1).
+- Champions 12/12 re-verified via DIRECT ESPN champions-page fetch this run (Volkanovski 1 def; Van 0 def per
+  ESPN; interim Gane via ESPN sidebar "Gane crushes Pereira, captures UFC's interim title"). Non-title main
+  event → board unchanged. Around-the-Sport re-confirmed via ESPN sidebar (FBI arrests / Aspinall accepts Gane
+  / Topuria congratulates Gaethje / White "never again" / rankings refresh) and Sherdog sidebar (Gamrot deal,
+  Blanchfield withdrawal, Elkins farewell, Belgrade debutant). NEW item added: Namajunas comeback-questions
+  (Sherdog headline). New-tags REMOVED from UFC 333 / Gamrot / Blanchfield / Aug-8-card (present in prior
+  edition). Countdown re-targeted to Belgrade fight day 2026-08-01T00:00:00-04:00, label "to fight day".
+- MARKETS: closed (weekend); WS page carried unchanged. Fri Jul 24 closes RE-confirmed this run (CNBC live-blog
+  headline, WaPo/AP "How major US stock indexes fared Friday 7/24/2026", TheStreet, Yahoo close blog, Fool):
+  S&P 7,411.98 +0.05% / Dow 51,947.25 +235.60 +0.46% / Nasdaq 24,975.82 −0.64%; AP: all three lower on week;
+  Apple +3.5% supported the Dow; chip/memory weakness persisted.
+- CYBER: Cl0p–Windchill/FlexPLM CVE-2026-12569 re-confirmed this run (BleepingComputer/cyberinsider/Techzine/
+  cyberpress/Ransom-ISAC); vendor CVSS 9.3 kept per standing correction. ADDED fresh detail: Ransom-ISAC —
+  extortion emails from ~Jul 20, subject "Windchill PDMLink module serious data leak"; timeline zero-day since
+  early June, PTC patches Jun 17, KEV added Jun 25 (due Jun 28 consistent with page). Origin Energy re-confirmed
+  (BleepingComputer/SecurityWeek/SC Media/The Nightly: 4.8M customers, investigation Jul 22 → confirmed Jul 23,
+  CEO Frank Calabria apology, AFP/ACSC/OAIC notified). NEW breach card: Coca-Cola's Fairlife — 8-K Jul 16,
+  Anubis leak-site listing Jul 20 (SWK July 2026 recap) — REPLACES the EY card. GitLab exploit-drop (depthfirst,
+  Jul 24, flaw patched Jun 10) re-confirmed this run. New-tags removed from Origin/Dolphin X/exploit-drops.
+  KEV countdowns same-day unchanged: Jun 28→27d overdue / Jul 17→8d / Jul 19→6d overdue / Jul 28→3d left.
+- VALIDATION (programmatic): 4 pages HTMLParser-balanced 0/0; 5-tab nav + edition/datestamp/updated/freshline
+  on all 4; 8 TradingView widgets on WS; trap greps CLEAN (Cody Salkilld/Shamil Yakhyaev/Abdul-Rakhman/Adrian
+  Franco/Joselyne/Bella Mir/FanDuel/+10.24/'vacant'/'Awaiting official'/'pending at press time'/Ramazonbek all
+  x0); champion surnames 12/12 incl. Gane; KEV countdown strings unit-tested MATCH vs 2026-07-25; scorecard
+  closes + point-changes verified present to the cent (+3.68/+235.60/−161.87). Clock cross-checked 15:15 EDT /
+  19:15 UTC before stamping.
