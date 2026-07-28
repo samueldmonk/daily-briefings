@@ -5834,3 +5834,35 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   champions 12/12; KEV countdown strings all MATCH vs 2026-07-28; trap greps CLEAN (Cody Salkilld/
   Shamil Yakhyaev/Abdul-Rakhman/vacant/FanDuel/'7:55 PM'/stale date-pills all x0); no 'due tomorrow'/
   'launches today' residue. Statics stamped 10:05 AM ET / Morning Edition.
+
+## Added 2026-07-28 (Tuesday ~10:20am ET — Morning Edition; second run of the Tuesday session)
+- MARKETS refreshed to MID-MORNING (~10:10 AM ET, 24/7 Wall St live blog fetched this run): Dow +0.77%
+  (~+400 pts) / S&P 500 +0.03% ("struggling to stay green") / Nasdaq −0.8% (~−225 pts) / Russell +0.13%.
+  NOTE: the "Dow +400 / Nasdaq −225" line REJECTED at 10:05 as a Monday synthesis is in fact TUESDAY
+  intraday per 24/7 Wall St's live blog — published now, attributed. Movers boards (24/7 Wall St
+  mid-morning): losers CTRA −8.62%, CHRW −6.46%, TPL −5.44%, AMD −5.17%, NVDA −4.99%; gainers WDAY
+  +9.01%, ADSK +7.70%, LW +7.12%, EXPE +7.09%, PLTR +7.00%. CNBC (via search): AMD −5% and Teradyne −4%
+  led decliners, MU ~−2%. ADDED (tagged New): AMD/NVDA card; rotation-winners card (WDAY/ADSK/PLTR);
+  Elevance insider-buy card (CEO Gail Boudreaux bought 2,725 shares/$1M; EPS $7.45 beat by $1.24, rev
+  $49.83B beat by $1.2B, guidance raised — 24/7 Wall St). Yahoo live blog: Nvidia reportedly exploring
+  a $250B funding backstop for OpenAI (circular-financing worries — kept attributed as reports);
+  SK Hynix results ~8 PM ET added to Radar. Prior New tags retired (semis/Kospi/KO/BA/UPS). 9:45 AM
+  TheStreet figures kept as earlier-session context. Chart of the Day stays NASDAQ:SMH. Statics
+  stamped 10:20 AM ET / Morning Edition. July consumer-confidence figure searched but NOT found in
+  results this run → not published (calendar widget covers it).
+- CYBER: no new items found this run; 10:05 content re-confirmed via fresh search (Abbott/ShinyHunters,
+  VeloCloud CVE-2026-16812 CVSS 10.0 actively exploited, TeamCity critical flaw, DentaQuest 23M+,
+  Fairlife/Anubis Jul 20 listing). KEV countdowns machine-checked vs 2026-07-28 — all MATCH (Jul 30=2
+  left; Aug 10=13 left; Jul 25=3 overdue; Jun 28=30; Jul 17=11; Jul 19=9; AD FS due TODAY). 10:05
+  New tags retired.
+- MMA: champions 12/12 RE-VERIFIED by DIRECT ESPN champions-page fetch this run (Aspinall/Ulberg/
+  Strickland/Makhachev/Gaethje/Volkanovski 1 def/Yan/Van 0 def per ESPN/Harrison 0 def/Shevchenko/
+  Dern; interim HW Gane via "Gane crushes Pereira" sidebar; White House stories' fresh relative
+  stamps again treated as re-surfaced coverage — champions page itself dates Gaethje's win Jun 14).
+  Belgrade Aug 1 Medić vs Rodriguez re-confirmed this run (UFC.com/Tapology/ESPN fightcenter in
+  results; Medić −315 with some books −330, Rodriguez +260/+265 — gambling911/MMAOddsBreaker/
+  FightBook). Last event Jul 25 Ankalaev vs Guskov re-seen in results. No content changes.
+- VALIDATION (programmatic): 4 pages HTMLParser-balanced 0/0; 5-tab nav + 4 stamp IDs on all 4; 8 TV
+  widgets on WS; champions rows 11 + interim note; KEV countdown strings all MATCH vs 2026-07-28;
+  trap greps CLEAN (Cody Salkilld/Shamil Yakhyaev/Abdul-Rakhman/vacant/FanDuel/Pereira-as-LHW/
+  Chimaev-as-MW all x0); no stale 10:05 statics.
