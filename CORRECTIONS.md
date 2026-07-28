@@ -5866,3 +5866,35 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   widgets on WS; champions rows 11 + interim note; KEV countdown strings all MATCH vs 2026-07-28;
   trap greps CLEAN (Cody Salkilld/Shamil Yakhyaev/Abdul-Rakhman/vacant/FanDuel/Pereira-as-LHW/
   Chimaev-as-MW all x0); no stale 10:05 statics.
+
+## Added 2026-07-28 (Tuesday ~10:40am ET — Morning Edition; third run of the Tuesday session)
+- MARKETS refreshed to ~10:35 AM ET via direct 24/7 Wall St live-blog fetch (index board): Dow +0.84% /
+  S&P 500 +0.03% (7,427.60 board reading; levels NOT published in editorial) / Nasdaq 100 −0.75% /
+  Russell +0.13%. Yahoo (via search): Nasdaq Composite ~−1%, S&P −0.1%, Dow +0.7%; Bloomberg (via search):
+  semiconductor gauge −6%, Nasdaq 100 heading toward technical correction — both added attributed.
+  Movers boards re-seen unchanged (WDAY +9.01/ADSK +7.70/LW +7.12/EXPE +7.09/PLTR +7.00; CTRA −8.62/
+  CHRW −6.46/TPL −5.44/AMD −5.17/NVDA −4.99). Lead h3 + index card switched "roughly 400 points" →
+  "about 0.8%" (Dow board implies ~+438 pts; 400-pt figure kept only as the attributed 10:10 reading).
+  Rates: 10-yr updated to ~4.64% easing toward 4.62% (TradingEconomics/CNBC Jul 28 "yields edge lower");
+  Brent updated to $86.58 −1.5% late morning, third straight down session, Trump "good talks" with Iran
+  (TradingEconomics). 10:20 New tags retired (AMD/NVDA, rotation winners, ELV). Chart of Day stays SMH.
+  NOT published: 24/7 headline "Micron, SK Hynix, Sandisk Plunge 30%" (timeframe ambiguous); Verizon
+  premarket line (weak attribution).
+- CYBER: ADDED (tagged New) Vulnerability Watch row CVE-2026-53264 — Linux kernel traffic-control
+  use-after-free race, CVSS 7.8, LPE to root; STAR Labs exploit published (researcher Lee Jia Jie, AI-
+  assisted); upstream fix Jun 1, backported; NOT in KEV, no official in-the-wild reports as of Jul 28
+  (THN, fetched-in-search this run). Everything else re-confirmed via fresh search (VeloCloud CVSS 10.0
+  KEV/exploited; Abbott/ShinyHunters). NOTE: a Security Affairs search synthesis this run said VeloCloud
+  "due July 20" — rejected as garbled; the Jul 30 date verified against the CISA alert at 10:05 stands.
+  KEV countdowns machine-checked vs 2026-07-28 — all MATCH.
+- MMA: champions 12/12 RE-VERIFIED by DIRECT ESPN champions-page fetch this run (Aspinall/Ulberg/
+  Strickland/Makhachev/Gaethje Jun 14/Volkanovski 1 def/Yan/Van 0 def/Harrison 0 def/Shevchenko/Dern;
+  interim HW Gane via "Gane crushes Pereira" sidebar; White House stories' fresh "5h/7h/1d" stamps again
+  treated as re-surfaced coverage — champions page itself dates Gaethje Jun 14). Belgrade Aug 1 re-
+  confirmed (UFC.com event page/Wikipedia/MMAOddsBreaker/Gambling911 in results; Medić −315, books vary
+  −330/−190). Last event Jul 25 Ankalaev vs Guskov re-seen (Walker calf-slicer item re-surfaced). No
+  content changes; statics only.
+- VALIDATION (programmatic): 4 pages HTMLParser-balanced OK; 5-tab nav + 4 stamp IDs on all 4; 8 TV
+  widgets on WS incl. NASDAQ:SMH; champions rows 11 + interim note; KEV countdown strings all MATCH vs
+  2026-07-28; trap greps CLEAN (Cody Salkilld/Shamil Yakhyaev/Abdul-Rakhman/vacant/FanDuel/'10:20 AM'
+  all x0). Statics stamped 10:40 AM ET / Morning Edition.
