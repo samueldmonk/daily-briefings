@@ -5898,3 +5898,34 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   widgets on WS incl. NASDAQ:SMH; champions rows 11 + interim note; KEV countdown strings all MATCH vs
   2026-07-28; trap greps CLEAN (Cody Salkilld/Shamil Yakhyaev/Abdul-Rakhman/vacant/FanDuel/'10:20 AM'
   all x0). Statics stamped 10:40 AM ET / Morning Edition.
+
+## Added 2026-07-28 (Tuesday ~11:10am ET — Midday Edition; fourth run of the Tuesday session)
+- MARKETS refreshed to ~11:10 AM ET via direct 24/7 Wall St live-blog fetch (index board unchanged from
+  10:35: Dow +0.84% / S&P 500 +0.03% (7,427.60 board) / Nasdaq 100 −0.75% / Russell +0.13%); Yahoo via
+  search: Composite ~−1%, S&P −0.1%, Dow +0.7%. ADDED (tagged New): Conference Board consumer
+  confidence fell to 90.8 in July from 92.2 in June (stated verbatim in search results; gas prices
+  resumed climb post U.S.–Iran escalation) — searched-and-missing at 10:20, found this run; and
+  Sherwin-Williams +8% on Q2 beat (Investrade Mid-Morning Look, in search results). KO card updated:
+  +3% premkt → up more than 7% mid-morning (Investrade). 10-yr row updated: third straight session
+  down to 4.62%, lowest in ~a week (TradingEconomics). REJECTED again: "~35% probability of a rate
+  cut" line in one search synthesis — contradicts the verified 72–73% hold / ~27% hike framing that
+  stands from Kiplinger/CBS coverage. 10:40 statics → 11:10 AM ET / Midday Edition.
+- CYBER: Origin Energy card UPDATED (tagged New): Origin confirms ~900,000 current and former
+  customers affected (Bloomberg Jul 28/Insurance Business/Capital Brief/Cyber Express) — below the
+  hacker's claimed millions; early-July threat first judged not credible, new info Jul 22; fired
+  former employee's still-active Kraken logon vector re-confirmed this run (Insurance Business/
+  gbhackers); partial payment digits unusable for purchases; criminal investigation with AFP/ACSC/
+  OAIC. tldr + index card extended accordingly. 10:40 New tag on Linux CVE-2026-53264 retired. KEV
+  countdowns machine-checked vs 2026-07-28 — all MATCH (Jul 30=2 left; Aug 10=13; Jul 25=3 overdue;
+  Jun 28=30; Jul 17=11; Jul 19=9; AD FS due TODAY). Microsoft "MAI-Cyber-1-Flash" search item NOT
+  published (weak/garbled attribution).
+- MMA: champions 12/12 RE-VERIFIED by DIRECT ESPN champions-page fetch this run (Aspinall/Ulberg/
+  Strickland/Makhachev/Gaethje Jun 14/Volkanovski 1 def/Yan/Van 0 def/Harrison 0 def/Shevchenko/Dern;
+  interim HW Gane via "Gane crushes Pereira" sidebar). Belgrade Aug 1 Medić vs Rodriguez re-confirmed
+  (UFC.com event page/Wikipedia/Gambling911/MMAOddsBreaker/vegasodds in results; Medić −315, books
+  vary −330/−190). Last event Jul 25 Ankalaev vs Guskov re-seen; FBI/White House-plot arrests item
+  re-seen on ESPN sidebar ("Mom's tip", 7h stamp = re-surfaced coverage). No content changes; statics only.
+- VALIDATION (programmatic): 4 pages HTMLParser-balanced 0/0; 5-tab nav + 4 stamp IDs on all 4; 8 TV
+  widgets on WS incl. NASDAQ:SMH; champions rows 11 + interim note; KEV countdown strings all MATCH vs
+  2026-07-28; trap greps CLEAN (Cody Salkilld/Shamil Yakhyaev/Abdul-Rakhman/FanDuel/'10:40 AM'/stale
+  Morning-Edition pills all x0). New tags: WS 2 (consumer confidence, SHW), cyber 1 (Origin), MMA 0.
