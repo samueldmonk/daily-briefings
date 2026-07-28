@@ -5785,3 +5785,52 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   widgets on WS incl. NASDAQ:SNDK; KEV countdown strings all MATCH vs 2026-07-27; trap greps CLEAN
   (Cody Salkilld/Shamil Yakhyaev/Abdul-Rakhman/'vacant'/'Awaiting official'/FanDuel/Pereira-as-LHW/
   Chimaev-as-MW all x0); no stale '7:30 PM' statics. Statics stamped 7:55 PM ET / Afternoon Edition.
+
+## Added 2026-07-28 (Tuesday ~10:05am ET — Morning Edition; first run of the Tuesday session)
+- TUESDAY EARLY SESSION published with as-of framing (~9:45 AM ET, TheStreet live blog): Dow +0.93% /
+  S&P 500 +0.13% / Nasdaq −0.63% / Russell 2000 +0.19%; chip sell-off vs blue-chip earnings rotation.
+  Kospi −10%+ overnight, SK Hynix −14%+, Samsung −13%+ (Yahoo); chip ETF −3.6% premarket (TipRanks);
+  MU/AMD/MRVL lower premarket (TheStreet). Chart of the Day switched SNDK → SMH (sector is the story;
+  no single-stock % confirmed intraday). Earnings: KO +3% premkt beat-and-raise; Boeing loss $428M/67c
+  vs $612M/92c, rev beat, 171 deliveries, $280M AF1 charge, higher premkt; UPS beat+raise; JetBlue
+  narrowed losses (TheStreet/Bloomberg/TipRanks/Benzinga). Oil early: WTI −1.80% $81.12 / Brent −2.14%
+  $86.47; gold $4,087 −1.19%, silver $57.45 −2.15% (TheStreet ~7 AM). FOMC opened today, decision Wed
+  Jul 29 2 PM ET + Warsh presser 2:30; Adams/Fifth Third expects hold (5th straight since Dec 2025 cut);
+  prediction markets ~72–73% hold / ~27% hike, ~80% cumulative ≥1 hike by/through September
+  (Kiplinger/CBS/tracker coverage). REJECTED: an unattributed search synthesis giving Monday as
+  "Dow +0.77%/+400 pts, Nasdaq −0.8%/−225" — contradicts the AP/CNBC/Motley Fool-verified Monday closes
+  (S&P 7,413.18 +0.02% / Nasdaq 24,932.08 −0.18% / Dow 52,210.08 +262.83 +0.51%), which stand.
+  After-Hours section removed (morning edition per spec); Monday after-hours facts retired.
+- CYBER: **CISA DID add two KEVs on Jul 27** (CISA alert page "Adds Two" dated Jul 27, corroborated by
+  SecurityWeek/Security Affairs/heise/windowsforum): CVE-2026-16812 Arista VeloCloud Orchestrator
+  On-Prem OS command injection, **CVSS 10.0, exploited as zero-day, FCEB due Jul 30** (3-day window);
+  CVE-2025-68686 Fortinet FortiOS SSL-VPN info exposure (symlink-fix bypass), **CVSS 5.3, due Aug 10**.
+  This SUPERSEDES the Jul 27 evening entry's "no CISA primary dated Jul 27 → NOT published" — the alert
+  now exists/was found this run. Patch Priority = VeloCloud (2 days left) + AD FS 56155 due TODAY Jul 28.
+  New top story: **Abbott Laboratories** two incidents — ShinyHunters claims Exact Sciences legacy
+  systems (Cancer Diagnostics) via mid-June vishing → Entra SSO compromise, claiming 22M+ doctor-patient
+  notes + 20M+ medical orders, deadlines Jul 18→Jul 21 passed with NO confirmed publication; separate
+  ShadowByt3$ LabCentral claim (Abbott: public docs only); patient lawsuit filed (BleepingComputer/
+  SC Media/Cybernews/HIPAA Journal/Law360/GovInfoSecurity). All claims framed unverified. TeamCity
+  CVE-2026-63077 CVSS 9.8 unauth RCE (agent polling deserialization) verified against the JETBRAINS
+  VENDOR BLOG: fixed 2025.11.7/2026.1.3, patch plugin 2017.1+, Cloud unaffected; NOT KEV-listed in this
+  run's sources — labeled accordingly. Spotlight switched Anubis → ShinyHunters. Vuln table: dropped
+  ServiceNow 6875 / SharePoint 58644 / SonicWall 15409 rows to fit the three new rows. KEV countdowns
+  recomputed vs 2026-07-28 and machine-checked (Jul 25=3 overdue; Jun 28=30; Jul 17=11; Jul 19=9;
+  AD FS Jul 28=due TODAY; Jul 30=2 left; Aug 10=13 left).
+- MMA: champions 12/12 RE-VERIFIED by DIRECT ESPN champions-page fetch this run (Aspinall/Ulberg/
+  Strickland/Makhachev/Gaethje/Volkanovski 1 def/Yan/Van/Harrison 0 def/Shevchenko/Dern; interim HW
+  Gane via "Gane crushes Pereira" sidebar; ESPN meta "strawweight vacancy" again stale boilerplate —
+  ignored; "1d/2d" stamps on White House stories again treated as re-surfaced coverage, Freedom 250
+  stays Jun 14 per the champions page itself). tldr now leads with Aspinall accepting Gane ("I'll be
+  there", ESPN — re-seen on ESPN MMA front this run; NO date/venue announced, page says so). Belgrade
+  Aug 1 re-verified (UFC.com event page/Wikipedia/bet365/MMAOddsBreaker/Gambling911 in results; Medić
+  −315 favorite re-seen, "odds vary across books −330/−190"); UFC 330 Aug 15 Philadelphia Makhachev vs
+  Machado Garry re-verified (CBS Sports/Wikipedia). Eyewear line flipped to past tense ("launched
+  Monday, July 27"). New tags retired on Ankalaev-13-wins and De Ridder items. Abu Dhabi results/bonuses
+  kept per standing entries (re-seen: "most recent UFC event was Ankalaev vs Guskov Jul 25" in results).
+- VALIDATION (programmatic): 4 pages HTMLParser-balanced 0/0; 5-tab nav + 4 stamp IDs on all 4; 8 TV
+  widgets on WS incl. NASDAQ:SMH chart-of-day + refreshed tape (indices/NVDA/MRVL/AMD/MU/KO/oil/10Y);
+  champions 12/12; KEV countdown strings all MATCH vs 2026-07-28; trap greps CLEAN (Cody Salkilld/
+  Shamil Yakhyaev/Abdul-Rakhman/vacant/FanDuel/'7:55 PM'/stale date-pills all x0); no 'due tomorrow'/
+  'launches today' residue. Statics stamped 10:05 AM ET / Morning Edition.
