@@ -6017,3 +6017,45 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   strings machine-checked vs 2026-07-28 — all MATCH; trap greps CLEAN (Cody Salkilld/Shamil Yakhyaev/
   Abdul-Rakhman/FanDuel/vacant/'3:20 PM ET'/'2:30 PM ET' leads all x0). New tags: WS 1 (DELL), cyber 1 (BMC),
   MMA 1 (Road to UFC). Statics stamped 3:55 PM ET / Afternoon Edition.
+
+## Added 2026-07-28 (Tuesday ~4:25pm ET — Afternoon Edition; seventh run of the Tuesday session; FIRST POST-CLOSE run)
+- TUESDAY OFFICIAL CLOSES published: S&P 500 7,429.22 (+16.04, +0.22%) / Nasdaq Composite 24,876.91
+  (−55.17, −0.22%) / Dow 52,747.53 (+537.45, +1.03%) — Yahoo Finance closed-market board (DIRECT FETCH,
+  "U.S. markets closed" header) corroborated by CNBC-sourced copy in results ("Dow climbed 537 points,
+  or 1%, S&P last up 0.2%, Nasdaq edged down 0.2%"); all three reconcile EXACTLY with Monday's verified
+  closes. Russell 2000 2,949.33 +0.04%; VIX 18.29 −2.04%; gold $4,025.60 −1.26% (same Yahoo board).
+  Close movers: KO "popped nearly 5%" = best earnings day since 2009 (CNBC/Yahoo); MU ~−10%, AMD −8%,
+  SMH >−3% for a 4th straight down day (CNBC wrap via results); UPS −6.49% $105.62 and GLW −12.08%
+  $126.04 (Yahoo closing trending board; GLW cause STILL unverified — caveat kept); BA/F/PYPL "rose
+  after results" kept qualitative (Yahoo live blog). SNDK kept as Chart of the Day with the ~3:30 PM
+  −14.6% attribution (NO close % found this run; CNBC wrap omitted SNDK — do not invent one). Oil
+  SETTLES (CNBC Jul 28 oil article): WTI −4% at $79.26; Brent −4.8% at $84.09. 10-yr eased to ~4.62%,
+  third straight decline (TradingEconomics). ADDED (tagged New): "After Hours — On Deck" section (Visa
+  fiscal Q3 after the bell, consensus EPS $3.23 / rev ~$11.4B per Benzinga; SK Hynix ~8 PM ET per
+  Yahoo) — NO after-hours price moves published: stockanalysis.com's AH board fetched STALE (Jun 18
+  cache — rejected) and nothing else was sourced by ~4:25 PM. Scorecard: Tue Jul 28 row added; "Week"
+  row relabeled "Last week (vs Fri Jul 17)". NOT published: LCID +21.54% / BE −11.29% (Yahoo board
+  readings with no verified cause); proactive's "Nasdaq 100 enters correction" headline (close state
+  unverified — the NDX-off-record line was DROPPED from the lead, not carried).
+- CYBER: no content changes. KEV re-searched this run — CISA alerts page in results, latest remains
+  the Jul 27 "Adds Two" (VeloCloud 16812 / FortiOS 68686); countdowns machine-checked vs 2026-07-28,
+  all MATCH (Jul 30=2 left; Aug 10=13; Jul 25=3 over; Jun 28=30; Jul 17=11; Jul 19=9; AD FS due
+  TODAY). ShinyHunters/Abbott, Anubis/Fairlife, VeloCloud CVSS 10.0 exploited, Cl0p/PTC Windchill all
+  re-seen in fresh results; MCBS/PEAR and the rest carried per today's sourced standing entries. BMC
+  card's New tag retired.
+- MMA: champions 12/12 RE-VERIFIED by DIRECT ESPN champions-page fetch this run (Aspinall/Ulberg/
+  Strickland/Makhachev/Gaethje Jun 14/Volkanovski 1 def/Yan 0/Van 0/Harrison 0/Shevchenko 2/Dern;
+  interim HW Gane via "Gane crushes Pereira" sidebar; ESPN meta "strawweight vacancy" = stale
+  boilerplate ignored again; White House stories' fresh "5h/7h/8h/1d/2d" stamps = re-surfaced
+  coverage, Freedom 250 stays Jun 14 per the champions page itself). Belgrade Aug 1 re-verified
+  (UFC.com event page/Wikipedia/Tapology/VSiN/Gambling911/MMAOddsBreaker in results; Medić 13-3,
+  −315 with books varying −330/+260; Rodriguez 20-5). Last event Jul 25 Ankalaev vs Guskov +
+  Walker calf-slicer re-seen (Sherdog news list); Till–Romero BKFC 94 and Berlanga Zuffa Boxing 9
+  re-seen. Road to UFC Shanghai Jul 31 New tag retired. No content changes; statics only.
+- VALIDATION (programmatic): 4 pages HTMLParser-balanced 0/0; 5-tab nav + 4 stamp IDs on all 4;
+  8 TV widgets on WS (SNDK chart-of-day kept), every widget JSON parses; champions rows 11 + interim
+  note; KEV countdown strings machine-checked vs 2026-07-28 — all MATCH; trap greps CLEAN (Cody
+  Salkilld/Shamil Yakhyaev/Abdul-Rakhman/FanDuel/vacant/'3:55 PM'/'Into the final hour'/'roughly
+  3:30 PM' all x0; MMA 'unification' hits are the legitimate Aspinall–Gane HW usage, not
+  Topuria–Gaethje). New tags: WS 3 (After-Hours section, Tue close row, closing-board card),
+  cyber 0, MMA 0. Statics stamped 4:25 PM ET / Afternoon Edition.
