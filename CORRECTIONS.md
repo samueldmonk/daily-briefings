@@ -5929,3 +5929,48 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   widgets on WS incl. NASDAQ:SMH; champions rows 11 + interim note; KEV countdown strings all MATCH vs
   2026-07-28; trap greps CLEAN (Cody Salkilld/Shamil Yakhyaev/Abdul-Rakhman/FanDuel/'10:40 AM'/stale
   Morning-Edition pills all x0). New tags: WS 2 (consumer confidence, SHW), cyber 1 (Origin), MMA 0.
+
+## Added 2026-07-28 (Tuesday ~3:20pm ET — Afternoon Edition; fifth run of the Tuesday session; research ~2:35–2:40pm, market data as-of ~2:30pm)
+- MARKETS refreshed to the AFTERNOON state (~2:30 PM ET, Motley Fool live boards + Yahoo boards, both fetched this run):
+  Dow +1.2% (~650 pts; Fool boards +1.27%/+649), S&P +0.3–0.4% (Fool +0.35 / Yahoo +0.43), Nasdaq Composite
+  roughly flat (Fool −0.01%; article: "down 1.3% in the morning session"); RSP +1.1%; Nasdaq-100 ~10% off record.
+  Memory bust: SNDK −14.6% (−50% from June peak, still best S&P YTD at +360%), MU −8.9%, SKHY −7.7%, AMD −7.2%,
+  INTC −4.9%; NVDA ROUND-TRIPPED to +0.7% after −5% mid-morning. KO +5.9%, on track for BEST EARNINGS DAY SINCE
+  FEB 2009 (Yahoo video headline; guidance rev ~+5%, EPS 9–10%; CFO "Diet Coke is having a moment"; America 250/
+  World Cup). SHW +8.6–8.9% beat; CAT −4.2% biggest Dow drag ~200 pts (AI data-center tie) — both Fool. Yahoo
+  trending board: BA +3.90, PYPL +3.92, UPS −5.07 (REVERSED its beat-and-raise morning; no cause published — none
+  asserted), GLW −15.89 (no company news verified — published explicitly as a board reading with that caveat).
+  VIX 18.08 −3.16% and gold ~4,035 −1.04% (Yahoo board, late morning). Brent ~$84 −2.2% (Fool ~12:45 PM), WTI
+  $81.12 −1.8% early (TheStreet); 10-yr held ~4.62–4.64% (TradingEconomics). Chart of Day switched SMH → SNDK;
+  tape refreshed (indices/NVDA/SNDK/MU/KO/SHW/oil/10Y). Radar adds: Trump hosting Zelenskiy (Fool's spelling) &
+  Netanyahu separately today; Iran–Oman oil-shipping talks (Fool); megacaps specified MSFT/META Wed, AAPL/AMZN Thu.
+  NOTE: 24/7 Wall St's index board showed the SAME numbers at ~2:37 PM as at 10:35/11:10 (S&P 7,427.60 +0.03 /
+  Dow +0.84) — treated as STALE/CACHED, not published as current. Fed-odds syntheses ("~35% cut", "Sept cut ~80%")
+  REJECTED again; the dated Kiplinger/CBS 72–73% hold / ~27% hike framing stands.
+- STATICS/EDITION: build initially stamped 2:55 PM Midday, but publish crossed 3 PM ET → re-stamped 3:20 PM ET /
+  Afternoon Edition before snapshot+publish. Lead keeps explicit "as of roughly 2:30 PM ET" framing throughout.
+- CYBER: TOP STORY switched Abbott → **MCBS** (Medical Computer Business Services, Augusta GA medical-billing firm):
+  2025 breach (access Sept 22–26, 2025; forensic investigation completed late May) hit **1.26M people**
+  (BleepingComputer/HIPAA Journal headline figure; SecurityWeek "1.2M+"); names/addresses/SSNs/DOB/health-insurance/
+  medical data; **PEAR (Pure Extraction and Ransom)** claimed the hit, alleges 3.3 TB, and has PUBLISHED the entire
+  cache online; MCBS offering identity protection. Abbott keeps its full breach card. ADDED (New): PEAR spotlight
+  card; Dysphoria botnet card (200K IoT devices, claimed 4 Tbps, jackskid/fbot lineage, Ethereum ENS/Solana SNS
+  blockchain C2, C2 in fake IPv6 strings, 155 UPnP port-forward rules, first spotted late March — BleepingComputer/
+  gbhackers/CybersecurityNews); FastJson **CVE-2026-16723** vuln-table row + Patch Priority item (CVSS 9.0 per the
+  maintainers' Jul 21 advisory via Imperva; unauth RCE under stock default configs in Spring Boot fat-JAR deploys;
+  ThreatBook+Imperva confirmed active exploitation by Jul 25; NO patched 1.x — SafeMode + migrate to 2.x). DROPPED:
+  Dolphin X card; WordPress 63030 table row (its KEV bullet kept). Origin card's New tag retired. Stats strip now
+  1.26M / 9.0 / 10.0 / 200K. KEV re-searched — NO adds after the Jul 27 pair; countdowns re-machine-checked vs
+  2026-07-28, all MATCH (Jul 30=2 left; Aug 10=13; Jul 25=3 over; Jun 28=30; Jul 17=11; Jul 19=9; AD FS due TODAY).
+- MMA: champions 12/12 RE-VERIFIED by DIRECT ESPN champions-page fetch this run (all 11 belts + interim Gane via
+  "Gane crushes Pereira" sidebar; ESPN meta "strawweight vacancy" again stale boilerplate — ignored; White House
+  stories' fresh "5h/7h/8h/1d/2d" stamps again treated as re-surfaced coverage — the champions page itself dates
+  Gaethje's win Jun 14). Belgrade Aug 1 re-verified (UFC.com/Wikipedia/Gambling911/MMAOddsBreaker/VegasOdds in
+  results); the card's odds line now states books vary: FightBook −315/+265 opening, UFC.com −330/+260, VegasOdds
+  −190. ADDED (New, from Sherdog's news list seen this run): Darren Till vs Yoel Romero set for BKFC 94; Edgar
+  Berlanga won at Zuffa Boxing 9 (Sat Jul 26). Last event (Abu Dhabi Jul 25) + bonuses + champions board unchanged.
+- VALIDATION (programmatic): 4 pages HTMLParser-balanced 0/0; 5-tab nav + 4 stamp IDs on all 4; 8 TV widgets on WS
+  incl. NASDAQ:SNDK chart-of-day + refreshed tape; every TradingView widget JSON parses; champions rows 11 + interim
+  note; KEV countdown strings all MATCH vs 2026-07-28; trap greps CLEAN (Cody Salkilld/Shamil Yakhyaev/Abdul-Rakhman/
+  FanDuel/vacant/'11:10 AM'/'10:40 AM' all x0). New tags: WS 5, cyber 2, MMA 2. Archive snapshot 2026-07-28-1515;
+  archive.html regenerated by script → 224 editions across 24 days.
