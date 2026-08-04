@@ -6229,3 +6229,52 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
 - CYBER: no page changes. N-able CVE-2026-18577 top story re-confirmed via fresh search (THN/Rapid7/securityaffairs/CISA alert URL /2026/08/03/ + The Register "3 days to patch"; CVSS 8.2, incomplete patch of CVE-2026-18556, fix 2026.3 HF1 build 2026.3.1.7, Take Control + cloudflared persistence, "limited number of customers", 55.6% of reachable cloud servers unpatched, FCEB due Aug 6). Feedly "8.1" ignored again (CISA/THN 8.2 governs). INC Ransom 885 victims / latest Aug 2 / SonicWall SMA 1000 CVE-2026-15409+15410 acceleration re-confirmed. Tracker-only items (Freedom Claims/Qilin, TUI China/Dragonforce, Kronenberg/Payload — dexpose) again NOT published. KEV countdowns machine-checked 4/4 vs 2026-08-04 (N-able 2 left / Fortinet 6 left / Cisco 3 over / Arista 5 over). Threat level High.
 - MMA: no page changes. Champions 11/11 RE-VERIFIED by DIRECT ESPN champions-page fetch this run (Aspinall 0 def / Ulberg Apr 11 / Strickland May 9 / Makhachev Nov 15 / Gaethje Jun 14 / Volkanovski 1 def / Yan / Van (ESPN prints 0 def, body dated May 10 — corrections block governs) / Harrison 0 def / Shevchenko 2 def / Dern; interim HW Gane via "Gane crushes Pereira" sidebar; meta "strawweight vacancy" boilerplate ignored again; sidebar WH stories = headline-only/re-surfaced, NOT published). Aug 8 Gamrot vs Salkilld re-confirmed (Wikipedia/UFC.com/Sherdog: UFC FN 284/Vegas 120, Meta Apex, Enterprise NV; Gamrot 26-4 former KSW FW+LW champ billing re-seen; Salkilld 12 straight wins, unbeaten in five UFC, first main event; UFC.com "Fighters On The Rise" re-seen). Countdown target 2026-08-08T20:00 ET stands.
 - VALIDATION (programmatic): 4 pages HTMLParser-balanced 0/0; 5-tab nav + stamp IDs on all 4; 8 TV widgets on WS, all JSON parses; Dow close exact-anchor + SPX 1.79% / Nasdaq 2.59% machine-checked; KEV countdowns 4/4; champions 12 names present; New tags 0; trap greps CLEAN (Cody Salkilld/Shamil Yakhyaev/Abdul-Rakhman/54,215/1,036.66/54,124/7,720.01/3:45 PM/unification x0; sole "vacant" = Ulberg history line).
+
+## Added 2026-08-04 (Evening ~7:40pm ET — post-close)
+- **Tue Aug 4, 2026 FINAL closes (verified — Motley Fool post-close wrap + CNBC/CNN):** S&P 500
+  7,736.52 (+136.02, +1.79%) — FIRST close above 7,700, record, first record in two months;
+  Nasdaq Composite 26,584.99 (+671.10, +2.59%); Dow 54,085.88 (+907.47, +1.71%) — FIRST close
+  above 54,000. Mon Aug 3 closes: S&P 7,600.50 (+1.48%), Nasdaq 25,913.90 (+2.1%), Dow 53,178.41
+  (+693.38, +1.32%, record; Amazon topped $3T cap first time). Fri Jul 31: S&P 7,489.72 (+0.7%),
+  Nasdaq 25,373.85 (+1%), Dow 52,485.03 (+276.97, +0.53%); July was the Dow's 4th straight
+  winning month (CNBC). All three Tuesday levels reconcile to Monday close + change.
+- Aug 4 session detail (Fool): sectors tech +4.20% / industrials +3.42%, only energy & utilities
+  lagged; PLTR closed +29.45% at $162.66 ("otherworldly" growth, raised FY outlook); CAT +5.60%
+  (record quarterly revenue, biggest Dow gainer per Zacks); Marvell ~+13%, Micron >+7%, NVDA +2.6%
+  $211.94; AdaptHealth ~-40% (miss + cut guidance); SPCX +9.4% $125.33 into first earnings.
+  WTI: Fool close read $75.32 (down >6%) vs Trading Economics $76.14 (-5.23%), $80.00 open
+  (Forbes) — cite both, don't mix. Gold $4,075.26 +1.01% at close. **10-yr CONFLICT:** Fool
+  "slipped to 4.61%" at close vs TE "held ~4.69%" — publish as ~4.6-4.7% range, not one number.
+  2-yr 4.241% / 30-yr 5.226% are MONDAY closes (CNBC Aug 3).
+- Aug 4 AFTER HOURS (TS2/TheStreet/Fool): AMD ~-8% (TheStreet: "mixed results"; Fool: fell
+  "despite solid results"); SpaceX -7% (Q2 revenue $7.81B TOPPED forecasts); Arista +11% (beat
+  both lines); Wynn +7%; Booking +5% (gross bookings beat); Pinterest -8% (light Q3 rev guide).
+- **TRAP:** a Zacks/Yahoo summary said Zebra (ZBRA) "surged 28%" Aug 4 while the prior edition's
+  Benzinga source said 18.6% — conflicted, DROPPED from publication; verify before using either.
+- July jobs report: Fri Aug 7, 8:30am ET; consensus ~+85k vs +57k June (FinanceCalendar).
+- **Cyber (all verified this run):** CVE-2026-18577 (N-able N-central auth bypass, CVSS 8.2,
+  incomplete patch of CVE-2026-18556) added to KEV Aug 3, **federal due date Aug 6, 2026**
+  (3-day risk-based window; CISA via GBHackers); fix = build 2026.3.1.7 (shipped Aug 2); exploited
+  in the wild since Aug 1 — Take Control pivot + Cloudflare Tunnel persistence; N-able published
+  IoC IPs. SonicWall SMA1000: CVE-2026-15409 = CVSS **10.0** unauth SSRF (WorkPlace interface),
+  CVE-2026-15410 = CVSS **7.2** post-auth AMC code injection (root via remove_hotfix path
+  traversal); zero-days since June 22, disclosed July 14, fixed mid-July; INC Ransomware is the
+  dominant exploiter (Resecurity), 885 victims claimed to date per Ransomware.Live (leak-site
+  claims). Adobe Campaign Classic CVE-2026-48449 CVSS 10.0 + CVE-2026-48448 8.6 — NOT known
+  exploited; fixed 7.4.3 build 9398. Coldcard/Coinkite PRNG flaw: 1,082.65 BTC (~$70.2M) drained
+  from 1,196 addresses in 41 min on Jul 30; emergency firmware Jul 31; patching does NOT fix an
+  exposed seed.
+- **MMA (verified this run):** UFC Belgrade (Aug 1, Belgrade Arena, first UFC event in Serbia):
+  Medić TKO1 (punches) 0:30 of D. Rodriguez — his 4th straight first-round KO win; Stirling
+  (short-notice replacement, <2 weeks) TKO1 2:56 of former titleholder Błachowicz (co-main;
+  Stirling now 11-0 — NOTE: one Yahoo piece gave both "6-0" and "5-0" for his UFC record, so the
+  UFC-only split was DROPPED); Rakić UD Tybura. Card set UFC single-card records: 12 finishes /
+  10 first-round finishes. Bonuses: $100K PotN to Medić, Urbina, Stirling, Nina Milošević; other
+  stoppage winners $25K. UFC 329 (Jul 11): Holloway TKO1 1:09 of McGregor (knee gave out on
+  opening jumping kick; first fight since 2021). Upcoming: Aug 8 Gamrot (#8) vs Salkilld (#12),
+  Meta APEX, prelims 5pm/main 8pm ET (Salkilld −142 / Gamrot +120; Salkilld 12-1, 5-0 UFC);
+  Aug 15 UFC 330 Philadelphia (Xfinity Mobile Arena) Makhachev–Machado Garry WW title (UFC.com
+  −360/+280, DK opened −325; co-main Dern vs Robertson strawweight title; Garry earned shot via
+  Prates + Belal Muhammad wins; Makhachev 28-1, says he won't retire); Aug 22 Hernandez vs
+  Rodrigues; Aug 29 Nurmagomedov vs Song (Oriental Sports Center, Pudong, Shanghai). CHAMPIONS:
+  re-verified against ESPN champions page fetch — UNCHANGED from the June 18 authoritative block.
