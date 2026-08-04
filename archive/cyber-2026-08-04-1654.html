@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Cyber Wire — Daily Briefings</title>
+<style>
+:root{
+  --bg:#0b1114; --panel:#111a1e; --line:#1e2c32; --text:#dbe7ea; --muted:#7d949b;
+  --accent:#22d3a8; --accent2:#36c6ff; --crit:#ff5a5f; --warn:#f0b429; --ok:#22d3a8;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1040px;margin:0 auto;padding:28px 20px 64px}
+.masthead{border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:14px}
+.brand{font-size:34px;font-weight:800;letter-spacing:-.5px;margin:0;color:var(--accent)}
+.brand span{color:var(--accent2)}
+.tagline{color:var(--muted);font-size:14px;margin:5px 0 12px}
+.meta{display:flex;flex-wrap:wrap;gap:8px}
+.pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:5px 11px;color:var(--muted)}
+.pill.live{color:var(--accent);border-color:rgba(34,211,168,.4)}
+.dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);margin-right:6px;vertical-align:middle}
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;padding:11px 15px;margin:6px 0 2px;font-size:14.5px;line-height:1.5}
+.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-right:9px}
+.freshline{font-family:var(--mono);font-size:11px;color:var(--muted);margin:9px 0 16px;letter-spacing:.04em}
+nav{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 22px}
+nav a{font-family:var(--mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;text-decoration:none;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 13px;transition:.15s}
+nav a:hover{color:var(--text);border-color:var(--accent)}
+nav a.active{color:#07120f;background:var(--accent);border-color:var(--accent);font-weight:700}
+h2.sec{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:34px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:17px 19px;margin-bottom:14px}
+.banner{border-radius:12px;padding:14px 18px;margin-bottom:14px;border:1px solid var(--line);background:var(--panel);border-left:4px solid var(--crit)}
+.banner .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--crit);margin-bottom:5px}
+.banner .lvl{font-size:20px;font-weight:800;margin-bottom:3px}
+.banner p{margin:0;color:var(--muted);font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:11px;margin-bottom:14px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:13px 15px}
+.stat .n{font-size:24px;font-weight:800;color:var(--accent);letter-spacing:-.5px}
+.stat .l{font-size:12px;color:var(--muted);line-height:1.4;margin-top:3px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(292px,1fr));gap:13px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;transition:.16s}
+.card:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.card h3{margin:0 0 7px;font-size:16.5px;line-height:1.35}
+.card p{margin:0;color:var(--muted);font-size:14px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:9px}
+.tag{font-family:var(--mono);font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;padding:3px 8px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.tag.new{color:var(--accent);border-color:rgba(34,211,168,.45);background:rgba(34,211,168,.09)}
+.tag.crit{color:var(--crit);border-color:rgba(255,90,95,.45);background:rgba(255,90,95,.09)}
+.tag.warn{color:var(--warn);border-color:rgba(240,180,41,.45);background:rgba(240,180,41,.09)}
+.tag.info{color:var(--accent2);border-color:rgba(54,198,255,.4);background:rgba(54,198,255,.08)}
+.callout{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--warn);border-radius:12px;padding:16px 19px;margin-bottom:14px}
+.callout .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--warn);margin-bottom:6px}
+.callout h3{margin:0 0 6px;font-size:17px}
+.callout p{margin:0 0 6px;font-size:14.5px;color:var(--muted)}
+.callout p:last-child{margin-bottom:0}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);text-align:left;padding:9px 10px;border-bottom:1px solid var(--line)}
+td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+td.cve{font-family:var(--mono);font-size:12.5px;color:var(--accent2);white-space:nowrap}
+td.cvss{font-family:var(--mono);font-weight:700}
+ul.bul{list-style:none;padding:0;margin:0}
+ul.bul li{padding:9px 0 9px 17px;border-bottom:1px solid var(--line);position:relative;font-size:14.5px;color:var(--muted)}
+ul.bul li:last-child{border-bottom:none}
+ul.bul li:before{content:"▸";position:absolute;left:0;color:var(--accent)}
+ul.bul li b{color:var(--text)}
+.cd{font-family:var(--mono);font-size:11.5px;padding:2px 7px;border-radius:5px;margin-left:5px;white-space:nowrap}
+.cd.ok{color:var(--accent);background:rgba(34,211,168,.1)}
+.cd.warn{color:var(--warn);background:rgba(240,180,41,.1)}
+.cd.crit{color:var(--crit);background:rgba(255,90,95,.12)}
+footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px}
+footer h4{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:0 0 9px}
+footer a{color:var(--accent2);text-decoration:none;word-break:break-all}
+footer a:hover{text-decoration:underline}
+footer li{margin-bottom:5px;line-height:1.5}
+.disc{margin-top:16px;font-size:11.5px;color:#5f747a;font-style:italic}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <h1 class="brand">⛨ The Cyber <span>Wire</span></h1>
+  <div class="tagline">Your daily security briefing — breaches, vulnerabilities &amp; what to patch first</div>
+  <div class="meta">
+    <span class="pill live"><span class="dot"></span>Live</span>
+    <span class="pill" id="edition">—</span>
+    <span class="pill" id="datestamp">—</span>
+    <span class="pill">Updated <span id="updated">—</span></span>
+  </div>
+</header>
+
+<div class="tldr"><b>The Wire</b> <span>An actively exploited zero-day in N-able's N-central RMM platform — the product of an incomplete earlier patch — landed in CISA's KEV catalog Monday with a two-day federal deadline, while INC Ransom keeps converting SonicWall's CVSS-10 SMA1000 flaws into new victims.</span></div>
+<div class="freshline" id="freshline">Data as of — ET</div>
+
+<nav>
+  <a href="index.html">★ Front Page</a>
+  <a href="cyber-briefing.html" class="active">⛨ The Cyber Wire</a>
+  <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
+  <a href="mma-briefing.html">⊘ The Octagon</a>
+  <a href="archive.html">🗄 Archive</a>
+</nav>
+
+<div class="banner">
+  <div class="lbl">Threat Level</div>
+  <div class="lvl">High</div>
+  <p>An exploited RMM-platform zero-day with a two-day federal remediation window, a CVSS-10 VPN appliance chain feeding an accelerating ransomware campaign, and an exploited pre-auth RCE in ServiceNow's AI Platform are all live at once.</p>
+</div>
+
+<div class="stats">
+  <div class="stat"><div class="n">Aug 6</div><div class="l">Federal deadline for the exploited N-able N-central flaw — two days out (CISA KEV, added Aug 3)</div></div>
+  <div class="stat"><div class="n">885</div><div class="l">Victims claimed to date by INC Ransomware, the dominant exploiter of the SonicWall SMA1000 flaws (The Hacker News)</div></div>
+  <div class="stat"><div class="n">10.0</div><div class="l">CVSS of CVE-2026-15409, the unauthenticated SonicWall SMA1000 SSRF exploited as a zero-day (Tenable)</div></div>
+  <div class="stat"><div class="n">200,000+</div><div class="l">Alleged Tata Electronics files published by the World Leaks extortion group (breach roundups)</div></div>
+</div>
+
+<h2 class="sec">Top Story</h2>
+<div class="panel" style="border-left:4px solid var(--accent)">
+  <h3 style="margin:0 0 8px;font-size:19px">Second time unlucky: N-able's incomplete N-central patch becomes an exploited zero-day with MSP supply-chain reach</h3>
+  <p style="color:var(--muted);font-size:14.5px;margin:0 0 8px">CISA on Monday added <b>CVE-2026-18577</b> — an authentication-bypass-via-alternate-path flaw in N-able's N-central remote monitoring and management platform — to the Known Exploited Vulnerabilities catalog after attackers took over customer servers. The bug (CVSS <b>8.2</b>) exists because the fix for an earlier flaw, CVE-2026-18556, proved incomplete: threat actors found a patch bypass and resumed exploitation in the wild (The Hacker News, Help Net Security).</p>
+  <p style="color:var(--muted);font-size:14.5px;margin:0 0 8px">The stakes are bigger than one server. N-central is the console MSPs use to manage fleets of customer endpoints — successful exploitation yields administrative access, and attackers have abused the built-in <b>Take Control</b> remote-access feature to pivot from compromised servers into managed endpoints and plant persistence (Help Net Security). N-able says in-the-wild exploitation has been observed since <b>August 1</b>, with attackers deploying Cloudflare Tunnel (cloudflared) on compromised hosts for persistent access (Rapid7). N-able shipped build <b>2026.3.1.7</b> on August 2 as the first unaffected version.</p>
+  <p style="color:var(--muted);font-size:14.5px;margin:0">Federal civilian agencies have until <b>Wednesday, August 6</b> to remediate under the risk-based BOD 26-04 regime — one of the shortest windows CISA assigns, reflecting the supply-chain blast radius.</p>
+</div>
+
+<h2 class="sec">Patch Priority</h2>
+<div class="callout">
+  <div class="lbl">Most urgent action today</div>
+  <h3>Upgrade N-able N-central to 2026.3.1.7 — federal deadline Wednesday (2 days left)</h3>
+  <p><b>CVE-2026-18577</b> (CVSS 8.2, actively exploited, KEV-listed Aug 3) affects all N-central builds prior to 2026.3.1.7. It is a bypass of a prior fix, so systems patched against CVE-2026-18556 are still vulnerable. Upgrade, then review admin accounts and Take Control session history for signs of pivot into managed endpoints.</p>
+  <p>Also overdue: the exploited Cisco Secure FMC static-credential flaw (CVE-2026-20316) went past its federal deadline on Aug 1, and Arista VeloCloud (CVE-2026-16812) on Jul 30 — see the KEV board below.</p>
+</div>
+
+<h2 class="sec">Threat Actor Spotlight</h2>
+<div class="panel" style="border-left:4px solid var(--accent2)">
+  <h3 style="margin:0 0 8px;font-size:17px">INC Ransom — the SMA1000 landlord</h3>
+  <p style="color:var(--muted);font-size:14.5px;margin:0">The INC Ransomware operation has emerged as the dominant actor exploiting SonicWall's recently disclosed SMA 1000 VPN flaws (CVE-2026-15409/15410), and its activity has accelerated since the beginning of August (The Hacker News). The group has claimed <b>885 victims to date</b>, with the most recent listed on <b>August 2</b>. The two flaws were exploited as zero-days since at least <b>June 22</b> before SonicWall shipped fixes in mid-July — meaning any appliance patched late should be treated as potentially already compromised and hunted, not just updated.</p>
+</div>
+
+<h2 class="sec">Breaches &amp; Incidents</h2>
+<div class="cards">
+
+  <div class="card">
+    <div class="tags"><span class="tag crit">Extortion</span><span class="tag">Manufacturing</span></div>
+    <h3>Tata Electronics confirms June incident</h3>
+    <p>The Indian electronics manufacturer confirmed a June 2026 cybersecurity incident after the <b>World Leaks</b> ransomware group published more than <b>200,000</b> alleged company files online (2026 breach trackers). The confirmation-after-leak pattern is now the standard extortion playbook.</p>
+  </div>
+
+  <div class="card">
+    <div class="tags"><span class="tag warn">Ransomware</span><span class="tag">Pharma</span></div>
+    <h3>Inotiv notifies 9,542 people</h3>
+    <p>The pharmaceutical research firm is notifying <b>9,542 individuals</b> that their data was exposed in a ransomware attack, per 2026 breach roundups tracking the disclosure. Inotiv's notifications land amid a run of life-sciences sector incidents this year.</p>
+  </div>
+
+  <div class="card">
+    <div class="tags"><span class="tag warn">Third party</span><span class="tag">Finance</span></div>
+    <h3>Deutsche Bank confirms third-party breach</h3>
+    <p>A Deutsche Bank spokesperson confirmed a breach at a third-party provider after a ransomware gang claimed access to internal bank data (Cybernews). The bank characterizes the impact as limited to the external provider; the claim itself remains attacker-asserted.</p>
+  </div>
+
+  <div class="card">
+    <div class="tags"><span class="tag crit">Leak site</span><span class="tag">Food &amp; beverage</span></div>
+    <h3>Fairlife listed by Anubis</h3>
+    <p>The Anubis ransomware group listed Coca-Cola dairy subsidiary <b>Fairlife</b> on its leak site on July 20, and Coca-Cola had notified the SEC of the initial breach (2026 breach trackers). A leak-site listing is an attacker claim; the SEC notification is the confirmed part.</p>
+  </div>
+
+</div>
+
+<h2 class="sec">Vulnerability Watch</h2>
+<div class="panel" style="padding:6px 10px">
+<table>
+<thead><tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr></thead>
+<tbody>
+<tr><td class="cve">CVE-2026-18577</td><td class="cvss" style="color:var(--crit)">8.2</td><td>N-able N-central &lt; 2026.3.1.7</td><td>Auth bypass via alternate path; incomplete patch of CVE-2026-18556; <b>actively exploited</b>, KEV-listed Aug 3, federal due date Aug 6. Fix: 2026.3.1.7 (shipped Aug 2).</td></tr>
+<tr><td class="cve">CVE-2026-15409</td><td class="cvss" style="color:var(--crit)">10.0</td><td>SonicWall SMA 1000 series</td><td>Unauthenticated SSRF, exploited as a <b>zero-day since at least June 22</b>; chained with CVE-2026-15410 for takeover. Fixed mid-July; in CISA KEV.</td></tr>
+<tr><td class="cve">CVE-2026-15410</td><td class="cvss" style="color:var(--warn)">7.2</td><td>SonicWall SMA 1000 (AMC)</td><td>OS command injection in the Appliance Management Console; the execution half of the chain INC Ransom is running.</td></tr>
+<tr><td class="cve">CVE-2026-6875</td><td class="cvss" style="color:var(--crit)">9.5</td><td>ServiceNow AI Platform</td><td>Unauthenticated code injection / script-sandbox escape → RCE. First in-the-wild exploitation observed <b>July 18</b> (Defused), now via multiple escape routes; hosted instances patched, self-hosted updates shipped through June.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2 class="sec">CISA KEV &amp; Federal Deadlines</h2>
+<div class="panel">
+<ul class="bul">
+  <li><b>CVE-2026-18577 — N-able N-central</b> (auth bypass, exploited): added <b>Aug 3</b>, federal due date <b>Aug 6</b> <span class="cd warn">2 days left</span></li>
+  <li><b>CVE-2025-68686 — Fortinet FortiOS</b> (sensitive-information exposure): due <b>Aug 10</b> <span class="cd ok">6 days left</span></li>
+  <li><b>CVE-2026-20316 — Cisco Secure FMC</b> (static credential, exploited; vendor CVSS 5.3, rated High for chaining): was due <b>Aug 1</b> <span class="cd crit">3 days overdue</span></li>
+  <li><b>CVE-2026-16812 — Arista VeloCloud Orchestrator</b> (OS command injection): was due <b>Jul 30</b> <span class="cd crit">5 days overdue</span></li>
+  <li>Deadlines are per-CVE and risk-based under <b>BOD 26-04</b> (which replaced BOD 22-01's flat three-week window in June) — the N-central and Cisco windows were both just three days.</li>
+</ul>
+</div>
+
+<footer>
+  <h4>Sources — all fetched this edition</h4>
+  <ul style="list-style:none;padding:0;margin:0">
+    <li>CISA — Adds One Known Exploited Vulnerability to Catalog (Aug 3): <a href="https://www.cisa.gov/news-events/alerts/2026/08/03/cisa-adds-one-known-exploited-vulnerability-catalog">cisa.gov/news-events/alerts/2026/08/03/…</a></li>
+    <li>Rapid7 — CVE-2026-18577: N-able N-central Authentication Bypass Exploited in the Wild: <a href="https://www.rapid7.com/blog/post/etr-cve-2026-18577-n-able-n-central-authentication-bypass-exploited-in-the-wild/">rapid7.com/blog/post/etr-cve-2026-18577-…</a></li>
+    <li>The Hacker News — CISA Adds Exploited N-able N-central Flaw to KEV After Customer Compromises: <a href="https://thehackernews.com/2026/08/cisa-adds-exploited-n-able-n-central.html">thehackernews.com/2026/08/cisa-adds-exploited-n-able-n-central.html</a></li>
+    <li>The Hacker News — N-able Says Attackers Take Over N-central Servers After Initial Fix Proves Incomplete: <a href="https://thehackernews.com/2026/08/n-able-says-attackers-take-over-n.html">thehackernews.com/2026/08/n-able-says-attackers-take-over-n.html</a></li>
+    <li>Help Net Security — Attackers exploit N-able N-central flaw to reach managed endpoints: <a href="https://www.helpnetsecurity.com/2026/08/03/cve-2026-18577-n-able-n-central-vulnerability/">helpnetsecurity.com/2026/08/03/cve-2026-18577-…</a></li>
+    <li>N-able — N-central Security Update, August 2, 2026 (build 2026.3.1.7): <a href="https://www.n-able.com/blog/n-central-security-update-august-2-2026">n-able.com/blog/n-central-security-update-august-2-2026</a></li>
+    <li>Tenable — SonicWall CVE-2026-15409 / CVE-2026-15410 zero-days exploited: <a href="https://www.tenable.com/blog/cve-2026-15409-cve-2026-15410-sonicwall-sma-1000-zero-day-vulnerabilities-exploited-in-the">tenable.com/blog/cve-2026-15409-cve-2026-15410-sonicwall-sma-1000-…</a></li>
+    <li>SecurityWeek — Recent SonicWall Vulnerabilities Exploited in Ransomware Attacks (INC attribution): <a href="https://www.securityweek.com/recent-sonicwall-vulnerabilities-exploited-in-ransomware-attacks/">securityweek.com/recent-sonicwall-vulnerabilities-exploited-in-ransomware-attacks/</a></li>
+    <li>Help Net Security — ServiceNow pre-auth RCE exploited in the wild (CVE-2026-6875): <a href="https://www.helpnetsecurity.com/2026/07/20/servicenow-cve-2026-6875-exploited/">helpnetsecurity.com/2026/07/20/servicenow-cve-2026-6875-exploited/</a></li>
+    <li>BleepingComputer — Critical ServiceNow code execution flaw now exploited in attacks: <a href="https://www.bleepingcomputer.com/news/security/critical-servicenow-code-execution-flaw-now-exploited-in-attacks/">bleepingcomputer.com/news/security/critical-servicenow-code-execution-flaw-…</a></li>
+    <li>Cybernews — Deutsche Bank confirms third-party breach: <a href="https://cybernews.com/security/deutsche-bank-ransomware-data-breach/">cybernews.com/security/deutsche-bank-ransomware-data-breach/</a></li>
+    <li>Bright Defense — List of Recent Data Breaches in 2026 (Tata Electronics, Fairlife): <a href="https://www.brightdefense.com/resources/recent-data-breaches/">brightdefense.com/resources/recent-data-breaches/</a></li>
+    <li>Tech.co — Data Breaches That Have Happened This Year, 2026 Update (Inotiv): <a href="https://tech.co/news/data-breaches-updated-list">tech.co/news/data-breaches-updated-list</a></li>
+  </ul>
+  <div class="disc">This briefing summarizes public reporting for situational awareness and is not a substitute for your organization's own vulnerability management. Leak-site listings are attacker claims unless the victim confirms.</div>
+</footer>
+
+</div>
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
+</body>
+</html>
