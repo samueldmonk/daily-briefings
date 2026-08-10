@@ -6350,3 +6350,30 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
 - **UFC 330 (Sat Aug 15, Xfinity Mobile Arena, Philadelphia, main card 9 PM ET Paramount+ — Yahoo/UFC.com):** Makhachev–Machado Garry WW title, **DK −340 / +270 (opened −350/+255 per Covers/MMAOddsBreaker)** — supersedes the older −360/+280 UFC.com line on the record; co-main Dern–Robertson SW title **Dern −250 / Robertson +190**; Ochoa −380 / Johnson +280 (Covers/SportsLine). Countdown target now **2026-08-15T21:00 ET**. Aug 22 Sacramento + Aug 29 Shanghai + Sept 5 Paris (Hooker vs SALAHDINE Parnasse — caught a near-miss this run: a draft said "Baptiste Parnasse"; standing correction spelling enforced) all carried per record + this run's schedule listings.
 - CHAMPIONS: ESPN page direct fetch returned EMPTY again (client-rendered precedent). Fresh champions search this run independently re-confirmed ALL EIGHT men's belts w/ matching dates (Surprise Sports/UFC Fan Hub/ITN WWE; ESPN in result set). No title bout since the last verification (Vegas 120 was non-title). Board carried per the authoritative block; footnote states the chain honestly. Prospect card added: Bella Mir (daughter of Frank Mir) vs Alex Apodaca, Contender Series Aug 25.
 - VALIDATION (programmatic): 4 pages HTMLParser-balanced 0/0; 5-tab nav + 4 stamp IDs on all 4; 8 TV widget JSON blocks parse (ACHR chart of day); Mon/Fri/Wed/Tue scorecard anchors reconcile to the penny; champions 12 names present; KEV countdown 0 days machine-checked vs 2026-08-10; New tags WS 6 / cyber 4 / MMA 2 / index 0; trap greps CLEAN (Cody Salkilld / Shamil Yakhyaev / Joshua Vance / Baptiste / unification / held steady at 4.1 / TPC −82.8% all x0).
+
+## Added 2026-08-10 (Monday ~7:45pm ET — Afternoon Edition; second post-close run of the evening)
+- CLOCK: TZ date = Mon Aug 10 19:35 EDT at run start; ~20 min after the 19:18 snapshot. Fresh searches this run
+  corroborated the entire 7:25pm record: AP/WaPo close directions (S&P −0.1% / Dow −0.1% / Nasdaq −0.3%, oil up on
+  Hormuz uncertainty) match the Fool closes to the rounding; BW +29.1% / PLBY +28.7% / UPWK −18.2% re-seen; TPC
+  "−82.8%" resurfaced on the AH board and was again REJECTED as implausible/low-volume per the standing trap.
+- WS ADDED (New card): **QMCO +14.4% to $13.48** Monday after-market (Benzinga IT-movers article, explicit figure);
+  **SCKT −14%** despite a 3Eye Technologies distribution deal (same Benzinga piece); **BCPC +6.4%** on record quarterly
+  revenue + $650M credit-facility expansion (AH boards summary). Prior edition's WS New tags retired.
+- CYBER ADDED (New card): **Head Mare trojanizes TrueConf installers** — Kaspersky (discovered July): unauth access via
+  default-open TCP 4307 on unpatched TrueConf servers → web shell → server-hosted client installer replaced with
+  unsigned build carrying PhantomCore (DLL backdoor: recon, LSASS cred theft, C2); PhantomGraph hides C2 in OneDrive;
+  victims Russian orgs across instrumentation/electronics/transport/energy/IT/software (THN
+  /2026/08/head-mare-exploits-trueconf-flaws-to.html + BleepingComputer). Prior cyber New tags retired. KEV countdown
+  re-checked: Kemp 8037 still due TODAY Aug 10 (0 days, crit); TeamCity/trio/18577 passed. Metabase top story stands.
+- MMA: champions independently re-confirmed AGAIN this run (Surprise Sports/UFC Fan Hub/ESPN result set: Aspinall,
+  Ulberg Apr 11, Strickland May 9, Makhachev Nov 15, Gaethje Jun 14, Volkanovski 1 defense, Yan, Van — matching dates);
+  ⚠ a summary line claimed "women's strawweight inactive since 2023 / Nunes retirement" — stale aggregator garbage,
+  REJECTED (Dern won SW Oct 25, 2025 per authoritative block). ADDED Around-the-Sport bullet: **Zuffa Boxing 10:
+  McKenna vs. Oliha, Sat Aug 8, 3Arena Dublin** (UFC.com results page in schedule search). FIXED unsupported phrase:
+  "UFC 330 pay-per-view" → "UFC 330 card" (record says main card 9 PM ET Paramount+; PPV status not verified). Prior
+  MMA New tags retired. UFC 330 Aug 15 Philadelphia re-confirmed (Wikipedia); countdown 2026-08-15T21:00 ET stands.
+- VALIDATION (programmatic): 4 pages HTMLParser-balanced 0/0; 5-tab nav + 4 stamp IDs on all 4; 8 TV widget JSON blocks
+  parse (ACHR chart of day); Mon closes reconcile to the penny vs Fri; champions 12/12; KEV 0-days machine-checked vs
+  2026-08-10; New tags WS 1 (QMCO card) / cyber 1 (Head Mare) / MMA 0 / index 0; trap greps CLEAN (Cody Salkilld /
+  Shamil Yakhyaev / Joshua Vance / Baptiste / unification / 82.8 / pay-per-view / held steady at 4.1 all x0; sole
+  "vacant" = Ulberg history line).
