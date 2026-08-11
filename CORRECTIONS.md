@@ -6427,3 +6427,65 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   parse; traps CLEAN (Cody Salkilld / Shamil Yakhyaev / Joshua Vance / Baptiste / unification / 82.8 / 92.54 / −278 /
   opened −350 / pay-per-view / MacKenzie / After-Hours Movers all x0); KEV labels all "deadline passed"; champions
   12/12; New tags WS 4 / cyber 2 / MMA 1 / index 0; scorecard anchors intact (7,753.11 / 7,757.64 / 53,975.98).
+
+## Added 2026-08-11 (Tuesday ~12:30pm ET — Midday Edition; second run of Tuesday; markets OPEN)
+- CLOCK: TZ date = Tue Aug 11 12:28 EDT at run start. INTRADAY (attributed): Yahoo live summary — stocks slipped into
+  the red as the U.S.–Iran standoff grew more entrenched (S&P −0.19% / Dow −0.14% / Nasdaq −0.49%); TE CFD board
+  direct fetch ~12:31pm: US500 fell to 7,743, −0.13%; NDTV mid-morning (~10:43) had Dow up / "Nasdaq in red despite
+  Nvidia surge" — lead framed "tape slips just under the records, as of ~12:30 PM ET." Monday/Friday closes unchanged.
+- Lead drivers verified via Yahoo Tuesday live blog (fetched: cached 6:28am premarket TEXT used only for attributed
+  quotes): Trump told Axios "only semi-negotiating," rebuked reparations; Araghchi "no possibility of restarting
+  negotiations" until compensation; September rate-HIKE bets post-jobs-miss; Hammack (Yahoo): more than one hike may
+  be needed; CRWV + SMCI report after the bell TODAY. ⚠ Yahoo page's trending-ticker sidebar was MONDAY-close cache —
+  proven by ACHR 6.26 +11.99% matching Monday's +12% close — so RIOT "−5.46% $19.40", FSLY +20.86%, DJT −8.03% were
+  REJECTED as today's data. Movers published: RIOT +16% premarket (Cramer/CNBC) on 20-yr $9.1B Anthropic data-center
+  lease (Seeking Alpha/qz), ~+7% mid-morning (aggregator boards); INTC fell premkt after UPSIZING Monday's $15B
+  offering to $20B (CNBC movers headline); NVDA ~+1.5% mid-morning (Yahoo). MMM/IBM/HD carried on the 11:50am
+  live-board record, attributed "~11 AM read." Chart of Day → NASDAQ:RIOT. ⚠ REJECTED mover sets: ts2/SA blend
+  (DDOG +11.48 / COHR −14.24 / LITE −8.61 / GFS −7.19 / BSP / P / TER / KLAC) — day-unverifiable and COHR/LITE
+  conflict with same-morning MarketWatch "optical trade clawing back" + COHR reports Wed; SMW gainers board TPC
+  "+473%" on 1k volume (standing trap, x2 now); SION −91.2% (ts2 9:33am) vs −90.4% in SMW's MONDAY article — day
+  ambiguity, omitted; PLUG +13.3% day-unverified, omitted. Oil: TE news line "climbed above $83 Tuesday, fourth
+  straight session" published; ⚠ TE commodity meta simultaneously read "81.99 −0.17%" — precise level DROPPED from
+  the table ("Above $83" qualitative). Gold: Yahoo GC=F premarket board 4,436.60 +0.38% published w/ Monday close
+  4,390.85 (Fool); TE 4,363 spot series not reused. 10Y 4.69% (−1bp) + 2Y 4.23% per CNBC yields piece; Cramer's
+  "above 4.7%" noted but CNBC figure governs. BTC: no fresh read — table shows Monday 64,048 labeled as such.
+- CYBER: TOP STORY switched to the POLAND CHP / PRIVATE-APN OT intrusion (CERT Polska disclosure Aug 8; Help Net
+  Aug 11): Dec 29 attack, plant heats ~50,000 residents; first observed OT access via private APN; chain = Fortinet/
+  FortiGate VPN at a wind farm → Teltonika router SSH tunnel → DSO private APN → OT → Wago PLC; steam turbine +
+  water treatment shut down, recovery ~7:30am with intruders still inside, no customer outage; APN misconfiguration
+  cited; same-day coordinated hits on ~30 renewables + a 2nd CHP; ESET ties the late-2025 wave to Russia-aligned
+  SANDWORM, medium confidence ("strong overlap with numerous previous Sandworm wiper activity") — verified across
+  BleepingComputer/THN/HelpNet/SC Media/SecurityAffairs/The Record ("second heat plant attack hidden for months").
+  Spotlight → Sandworm; Kimsuky rotated out (pointer kept). NEW cards: n8n disclosed 136 customer records taken via
+  the Metabase flaw (BleepingComputer, Aug 8) — folded Framework/Tally/Kilo Code into it; GUNRA ransomware joint CSA
+  AA26-222a (CISA+FBI+NSA+DC3+USSS+South Korean police; Conti-derived RaaS since Apr 2025; healthcare/financial/govt/
+  professional services; initial access via CVE-2024-5559 + CVE-2025-24472; "patch exposed VPNs, segment networks"
+  per GBHackers; March-reported Linux-variant weakness = keys reconstructable from file timestamps). Head Mare card
+  rotated out (TrueConf table row kept). Stat strip now 10.0 / 50,000 / 30 / EPSS 99% (Senserva KEV tracker updated
+  Aug 11, direct fetch — also confirmed NO KEV additions since Aug 7; ⚠ Senserva shows 8037 at CVSS 9.8 — standing
+  vendor-9.6 correction enforced). Kemp table note "(today)" → "(passed)". ⚠ "DeadLock ransomware" appeared only in
+  an aggregator hourly summary — uncorroborated, NOT published. Metabase story re-verified fresh (BC/SecurityWeek/
+  DarkReading result set) and stays in Patch Priority + n8n card.
+- MMA: UFC 330 re-verified (ESPN/UFC.com/Tapology/Forbes; Makhachev 28-1 vs Machado Garry 17-1; 12 fights); DK odds
+  re-confirmed −340/+270 (SportsLine "risk $340…"); phrasing updated to "held firm through fight week as the
+  challenger draws late money" per this run's summary; ⚠ opener conflict UNRESOLVED (DK Network −278→−310 vs Covers
+  −350) — openers still not published. NEW: Dana White's Contender Series SEASON 10 premieres TONIGHT Tue Aug 11,
+  7 PM ET Paramount+ (UFC.com preview + MMA Mania + Cageside Press): week 1 = HW Anthony Wint (Fury FC champ) vs
+  Matt Adams headliner, flyweight Bilal Hasan vs Mridul Saikia, all made weight Monday; 300+ contracts, 4 champions
+  incl. Ulberg — added to Top Story + new Prospect card. Card details added: Aug 22 Sacramento = Anthony Hernandez
+  vs Gregory Rodrigues (MW 5-rounder), co-main de Ridder–Dolidze, 5/8pm ET (Wikipedia/MMA Mania/UFC.com); Aug 29
+  Shanghai = #3 Umar Nurmagomedov (20-1) vs #5 Song Yadong, Umar's 2nd main event, wins over Figueiredo + Bautista
+  since the UFC 311 Dvalishvili title loss, 3/6am ET, SPD Bank Oriental Sports Center. NEW card: Noche UFC Sat
+  Sep 12 — Rodriguez vs. Silva (ESPN/CBS schedule listings; venue not stated → not published). Champions: fresh
+  listings AGAIN corroborate all eight men's belts w/ matching dates (Surprise Sports/UFC Fan Hub/ESPN result set);
+  ⚠ trap: same aggregator called Makhachev a "two-division champion holding lightweight and welterweight" while
+  listing Gaethje at LW — REJECTED (Makhachev vacated LW per authoritative block). ⚠ Stale CBS rolling-schedule
+  variant ("Gaethje vs. Pimblett / Volkanovski vs. Lopes 2 on tap") predates UFC 325 — REJECTED. UFC 331 New tag
+  retired (in 11:43 snapshot); countdown 2026-08-15T21:00 ET stands.
+- VALIDATION (programmatic): 4 pages HTMLParser-balanced 0/0; 5-tab nav + 4 stamp IDs on all 4; 8/8 TV widget JSON
+  blocks parse (RIOT chart of day); champions 12/12; KEV labels all "deadline passed," zero "(today)" remnants;
+  New tags WS 2 (RIOT, INTC) / cyber 2 (n8n, Gunra) / MMA 2 (Noche card, DWCS prospect card) / index 0; scorecard
+  anchors intact (7,753.11 / 7,757.64 / 53,975.98); trap greps CLEAN (Cody Salkilld / Shamil Yakhyaev / Joshua
+  Vance / Baptiste / unification / 82.8 / 92.54 / −278 / opened −350 / pay-per-view / MacKenzie / held steady at
+  4.1 / After-Hours Movers / DeadLock / two-division champion all x0).
