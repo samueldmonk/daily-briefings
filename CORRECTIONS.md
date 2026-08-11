@@ -6377,3 +6377,53 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   2026-08-10; New tags WS 1 (QMCO card) / cyber 1 (Head Mare) / MMA 0 / index 0; trap greps CLEAN (Cody Salkilld /
   Shamil Yakhyaev / Joshua Vance / Baptiste / unification / 82.8 / pay-per-view / held steady at 4.1 all x0; sole
   "vacant" = Ulberg history line).
+
+## Added 2026-08-11 (Tuesday ~11:50am ET — Midday Edition; first run of Tuesday; markets OPEN)
+- CLOCK: TZ date = Tue Aug 11 11:33 EDT at run start. INTRADAY STATE (all attributed): TheStreet Aug 11 headline "Dow
+  edges higher amid U.S.-Iran concerns"; Yahoo morning read Dow +0.2% / S&P +0.1% / Nasdaq +0.2%; TE CFD board direct
+  fetch ~11:34am: US500 7,750.12→7,749.37 (−0.05%/−0.06%, meta "fell to 7751, −0.03%"), US30 53,905/−0.14%, VIX 15.46
+  (dated Aug/10, NOT published); Bloomberg-derived board text "S&P little changed, ~300 members gaining." Lead framed
+  "holding pattern near records, as of ~11:30 AM ET." Monday's closes/scorecard unchanged.
+- OIL (⚠ conflicting series, handled by attribution): overnight rally on entrenched-standoff fears eased after Pakistan
+  signaled a potential agreement; "US crude hovered near $82 late morning" (Bloomberg via boards); TE commodities board
+  $83.325 +1.45% (~midday); Monday Sep WTI settle $78.83 (CNBC) retained in table. ⚠ Fortune oil tracker read "Brent
+  $92.54 at 6:20am, +$4.99 vs yesterday morning" — IRRECONCILABLE with Monday's $84.42 Oct settle; NOT published
+  (only Fortune's qualitative "Brent premium over WTI widened during Hormuz crisis" used). TE gold 4,363.51 −0.63%,
+  BTC 63,908 ≈flat published as board reads. TE headline "US 10Y Yield Nears 7-Month High" published; Monday 4.71% kept.
+- WS MOVERS (~11am, stockmarketwatch Dow live board): MMM +3.70% $148.62 top Dow performer; IBM −2.42% $213.40;
+  HD −2.14% $303.85; CRM −1.64%; MSFT −0.95%; NVDA +1.77% $225.01 (bounce off Monday's −2.9%); ACHR +4.9% $6.56
+  (extends Boeing pop). All six published w/ "live board" attribution; 4 New cards. After-Hours section REMOVED
+  (pre-4pm edition; Mon AH facts stand on the record). Chart of Day stays NYSE:ACHR (+4.9% biggest sourced % this
+  session). Tape symbols now NVDA/MMM/IBM/HD/ACHR + indices/oil/10Y. Radar: CPI tomorrow Wed Aug 12; COHR reports Wed.
+- CYBER (THN homepage DIRECT FETCH this run; top items still Aug 10): Metabase top story + Framework/Iran-water cards
+  stand. Kemp 8037 deadline Aug 10 now PASSED — Patch Priority reordered to Metabase-first with Kemp as "overdue";
+  banner updated; all KEV bullets now "deadline passed." NEW: Spotlight swapped Storm-1175 → **Kimsuky offline AI stack**
+  (Genians via THN Aug 10: RGB unit running AI offline on own servers, doc-search over held files, collecting parts to
+  build AI into malware; "research and knowledge acquisition" stage, no own-trained model found; Storm-1175 pointer kept
+  in spotlight + 18577 row). NEW cards: **Solidity Pro VS Code extensions** (helper-beeps/web3devtoolsx.solidity-pro;
+  Cloudflare Workers beacon → v3 full infostealer: browser profiles/wallets/SCM tokens/API+SSH keys/Telegram bot tokens,
+  Telegram-bot exfil; off Open VSX, GitHub repo still live — Yeeth Security via THN) and **Atlassian Rovo exfil**
+  (PromptArmor uploaded-file route working as of Aug 5 report even w/ web search off; Varonis rovoChatPrompt one-click
+  route; THN: "only one of those routes is confirmed closed" — page mirrors that without saying which). Astra + Passkey
+  cards ROTATED OUT (not contradicted; sources removed). Stat swap: Chrome 1,072 → **≈800 malicious npm packages**
+  (OpenSourceMalware/McCarty via THN "Nearly 800"; WEL1DROPPER require()-loader campaign). Vuln table: added
+  **KLCERT-26-057/058 TrueConf ≤5.3.9/≤5.4.9/≤5.5.5** row (no CVE/CVSS published — Kaspersky via THN; versions from
+  THN text) + 18577 note "N-able Hotfix 2 supersedes Hotfix 1, required even if Hotfix 1 applied." No KEV additions
+  since Aug 7 (CISA alerts list re-checked this run).
+- MMA: TOP STORY → UFC 330 fight week ("fight week kicks off Aug 11" per UFC.com search text; DK −340/+270
+  re-confirmed via SportsLine/CBS "risk $340…+270"; Dern first defense; 9pm ET Paramount+ exclusive, NO CBS simulcast —
+  CBS). ⚠ ODDS-OPENER CONFLICT: DK Network (Jun 17) says Makhachev "opened around −278, bet up to −310" vs the record's
+  Covers/MMAOddsBreaker "−350/+255" opener — parenthetical opener DROPPED from the 330 card ("DraftKings, fight week"
+  only); do not publish either opener until reconciled. NEW verified: **UFC 331, Sat Sep 19, Crypto.com Arena, Los
+  Angeles — Van vs. Pantoja 2 flyweight title rematch headlines; Tsarukyan returns** (UFC.com announcement + ESPN +
+  MMA Weekly + SI + Al Jazeera + Yahoo). UFC 323 first meeting framed "cut short by an arm injury, Van TKO1" (SI
+  "arm break" headline + Yahoo "controversial injury"; arm's owner NOT stated — page doesn't attribute it). New card
+  added (New tag); Van champions-row + board footnote updated to today's honest chain (UFC.com/ESPN/CBS corroborate
+  Makhachev/Dern/Van; rest on standing record); Salkilld result moved from Top Story to an Around-the-Sport bullet.
+  ⚠ TRAP rejected: stale aggregator line "women's strawweight inactive since 2023/Nunes retirement" (Dern is champ per
+  authoritative block). ⚠ "MacKenzie" capitalization in CBS text NOT copied (standing spelling Mackenzie). Countdown
+  2026-08-15T21:00 ET stands.
+- VALIDATION (programmatic): 4 pages HTMLParser-balanced 0/0; 5-tab nav + 4 stamp IDs on all 4; 8 TV widget JSON blocks
+  parse; traps CLEAN (Cody Salkilld / Shamil Yakhyaev / Joshua Vance / Baptiste / unification / 82.8 / 92.54 / −278 /
+  opened −350 / pay-per-view / MacKenzie / After-Hours Movers all x0); KEV labels all "deadline passed"; champions
+  12/12; New tags WS 4 / cyber 2 / MMA 1 / index 0; scorecard anchors intact (7,753.11 / 7,757.64 / 53,975.98).
