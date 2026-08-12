@@ -6786,3 +6786,42 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   "14.7 billion"/$0.99/73.33 all x0; sole "vacant" = Ulberg history line; residual "7,742" only in superseded-snapshot clause +
   Tuesday-correction note). New tags WS 2 (late boards, Cisco AH) / cyber 0 / MMA 0 / index 0. Archive: 234 snapshots, 78
   editions (16 days).
+
+## Added 2026-08-12 (Wednesday ~5:15pm ET — Afternoon Edition; ninth run of Wednesday; research ~4:35–5:10pm; post-close)
+- CLOCK: TZ date = Wed Aug 12 16:33 EDT at run start. Refresh of the ~4:35pm edition.
+- MARKETS: TE DIRECT RE-FETCH ~4:55pm — stats line & Actual/Previous table UNCHANGED (7,748.21 / 7,728.20, +0.26%);
+  board rows identical (10Y 4.671 −0.03 / WTI 82.870 −0.40% / Brent 88.674 / gold 4,433.77 +1.45% / silver 66.276
+  +2.48% / BTC 63,729 / VIX 14.77; US30 CFD 53,865.78 +0.14%; ATH 7,793.68 Aug 2026) — rows re-stamped "~4:55 PM".
+  Wednesday OFFICIAL closes REMAIN DEFERRED: a Stock Market Watch closing tally surfaced this run (S&P 7,745.19 /
+  Nasdaq 26,568.09 +122.64 +0.46% / Dow 53,807.41 +0.03%) — the NASDAQ figure reconciles EXACTLY vs Zacks' corrected
+  Tuesday 26,445.45, but S&P (off 0.25) and Dow (off 2.00) do NOT square with the Zacks baseline → levels kept OUT of
+  the scorecard, noted inside the correction note only. smw direct fetch serves the stale Aug 11 article (its
+  live mover boards are current: CRWV +14% $102.80, HRB +16%, CAVA +10%, HYLN +24%; NVDA AH 217.81, AAPL 305.00).
+  **CISCO POST-REPORT UPDATE (Seeking Alpha "Cisco perks up as Q4 results, guidance top estimates"): shares +2.5%
+  in EXTENDED trading; FY27 EPS guided $4.80–$5.00 vs ~$4.80 consensus; Q4 AI orders >$4B vs ~$3.7B needed for the
+  $9B FY26 target; product orders +35% y/y (StreetInsider PR).** The prior "up ~3% in first prints" framing is
+  SUPERSEDED by SA's +2.5% extended read. **COHERENT REPORTED (StockTitan PR): Q4 rev $2.05B +33.8% y/y, non-GAAP
+  EPS $1.74 (GAAP $1.19; non-GAAP GM 40.2%); FY26 rev $7.12B +22.5%; Q1 FY27 guide rev $2.2–2.4B, non-GAAP EPS
+  $1.85–2.05.** vs consensus ~$1.60 = beat; NO settled AH % print indexed by publish → direction not published.
+  ⚠ TRAPS this run: TheStreet Aug 12 live blog DIRECT fetch serves the 9:39am render (no close; its "3.4% compared
+  with 2.5% in June" line CONFLICTS with Yahoo/TE "from 3.5%" — do not use); Yahoo live blog DIRECT fetch AGAIN
+  served the 8:50am premarket render (trending tickers Tuesday-stale: CRWV 90.32, SMCI 31.60) — rejected as current;
+  CNBC live-blog fetch returned empty. New tags: WS = 1 (Coherent results card); Cisco-print + late-boards New
+  tags RETIRED.
+- CYBER: no content changes. Lazarus / Operation Dream Job attribution for CVE-2026-68820 RE-VERIFIED via this
+  run's fresh result set (BleepingComputer "Lazarus hackers exploited Windows zero-day to target defense firms";
+  Check Point Research "Shattering the Dream"; Help Net Security Aug 12): afd.sys UAF, FudModule rootkit, defense/
+  aerospace/UAV firms in Europe & India, exploited since early July, Win11 builds 26100/26200 — all consistent with
+  the published Top Story/table. KEV countdowns machine-checked 2/2/13 vs Aug 12. Cyber New = 0.
+- MMA: **UFC 330 odds chronology extended — Wednesday-EVENING roundups cite UFC.com's own odds feed at −360/+280
+  (Yahoo Sports/Covers this run); BET99 opener −350/+255 also in the set.** DK −340/+270 and rg.org −370/+290 stand;
+  week's span −325→−390 / +240→+290 unchanged. NEW fight-week color: Makhachev–Machado Garry FACE-OFF at Philly's
+  Rocky statue Tuesday (MMA Mania); media day Thursday 11am ET (Boxing News). CBS re-confirms "could break Anderson
+  Silva's 16-fight undefeated streak" Saturday. Champions sweep re-corroborated EXPLICITLY incl. Ulberg (KO1
+  Procházka Apr 11) and Strickland (SD Chimaev May 9) + Aspinall/Makhachev/Gaethje/Volkanovski (+ Van via listings);
+  stale Pereira-205/Chimaev-185 snippets ABSENT this sweep. Countdown 2026-08-15T21:00 stands; MMA New = 0.
+- VALIDATION (programmatic, this run): 4 pages HTMLParser-balanced 0/0; 5-tab nav + 4 stamp IDs on all 4; 8/8 TV
+  widget JSON parse (CRWV chart of day); champions 11/11; KEV countdowns 2 days ×3 + 13 days ×1 machine-checked vs
+  2026-08-12; trap greps CLEAN (Cody Salkilld/Shamil Yakhyaev/unification/pay-per-view/MacKenzie/"2.5% in June"/
+  No. 1-ranked/No. 2-ranked/on ESPN/Kellanova/ZNU24/"up about 3% in early after-hours"/"still to come" all ×0;
+  "vacant" only in the two Ulberg history references); New tags 0/0/1/0.
