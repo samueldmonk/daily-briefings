@@ -6535,3 +6535,45 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   parse (CRWV chart of day); champions 12/12; KEV countdowns 2/13 machine-checked vs 2026-08-12; scorecard + rates
   anchors verified (incl. new BTC 63,729); trap greps CLEAN (incl. "2.5% in June" / "200 bp of rate hikes" x0);
   New tags WS 1 (NYC probe) / cyber 1 (ShieldBreak) / MMA 0 / index 0.
+
+## Added 2026-08-12 (Wednesday ~11:45am ET — Midday Edition; fourth run of Wednesday; markets OPEN)
+- CLOCK: TZ date = Wed Aug 12 11:34 EDT at run start. Refresh of the ~11:30 edition.
+- MARKETS: TE DIRECT RE-FETCH ~11:37am returned the SAME board as 10:35/11:15 (US500 7,749.95 +0.28% "testing its
+  record" / sidebar 7,751.45 +0.30%; US30 53,865.78 +0.14% board / 53,830 +0.07% sidebar; US100 29,701.21 +0.60% /
+  29,736 +0.71%; US2000 +0.36%; VIX 14.77; MU +6.10% $921.24 / NVDA +2.77% $223.51 / SPCX +4.25% $138.95 / ORCL
+  +2.58%; WTI 82.870 −0.40% / Brent 88.674 −0.27% / gold 4,433.77 +1.45% / silver 66.276 +2.48%; 10Y 4.6710 −0.03;
+  BTC 63,729 +0.28%; TE Related row: Inflation Rate 3.40 prev 3.50 Jul 2026) — lead + rates rows re-stamped "~11:35
+  AM ET". TheStreet live blog re-fetched: STILL modified 9:39am EDT, no newer posts; all TheStreet facts carried.
+  Yahoo Wednesday live blog fetched but served a CACHED PREMARKET render (updated 8:50am, "markets open in 38m") —
+  its sidebar quotes (NBIS +4.95%, CRWV +2.42%, VIX 15.19, BTC 64,084) are time-ambiguous and were NOT published;
+  article text used only for CPI (3.4% from June's 3.5%, m/m +0.1%), hold-tilt, Panama-flagged-ship blockade detail,
+  and the Wed earnings calendar (CSCO/COHR/NBIS/CBRS). ⚠ TE summary AGAIN said "Nvidia, Oracle, and Amazon were up"
+  while the board showed AMZN −0.57% — Amazon still excluded (standing trap). ⚠ GOOGL board row still dated Aug/11 —
+  not published as today. NYC-probe New tag retired; no new WS items sourced this run (page = re-verification pass).
+- CYBER: Senserva DIRECT RE-FETCH (updated Aug 12): 5 KEV in 7d (Cisco/Microsoft/Metabase/Progress/JetBrains),
+  28 in 30d, 2 ransomware-tied, CVE-2026-8037 EPSS 99% "likeliest to be attacked next" — stat strip 394/3/5/99%
+  re-verified. CISA "Adds Three" Aug 11 alert re-surfaced in results (Cisco 20349 / Microsoft 68820 / Metabase 72898).
+  BleepingComputer search summary re-confirms "400 flaws, one actively exploited and two publicly disclosed zero-days"
+  (spread with CSN 394 / SecurityWeek 421 published unchanged). DeadLock decentralized-infrastructure framing,
+  Poland CHP, Matryoshka and ShieldBreak ("vengeful researcher drops Defender exploit granting SYSTEM") all
+  re-corroborated via fresh search summaries. ⚠ Senserva hot-list again shows 68820 "CVSS 9.8" — table keeps n/a per
+  the Microsoft-severity standing rule. KEV countdowns machine-checked vs 2026-08-12: Cisco Aug 14 = 2 days,
+  Microsoft Aug 25 = 13 days. ShieldBreak New tag retired; index card rephrased "new on the board" → "still
+  unpatched" (item no longer New). No new cyber items sourced this run.
+- MMA: UFC 330 re-verified this run (search): Sat Aug 15, Xfinity Mobile Arena Philadelphia, Paramount+ 9 PM ET,
+  Makhachev opened −350/+255, DraftKings −340/+270 — consistent with published FanDuel −390/+280 + "most books
+  −340 to −350 / +255 to +280" (11:05 record). Champions cross-checked against FRESH listings this run (Surprise
+  Sports / UFC Fan Hub / ITN WWE / FIGHTMAG, ESPN in result set): Aspinall / Ulberg (Apr 11) / Strickland (May 9) /
+  Makhachev (Nov 15 2025) / Gaethje (Jun 14) / Volkanovski / Yan / Van — 12/12 board rows match the authoritative
+  block; no title bout since last verification (next = Saturday). ESPN champions-page direct fetch returned an EMPTY
+  body this run — verification rests on the fresh listings + authoritative block. Hasan "IndoNinja"/45-second stop
+  and Hernandez–Rodrigues Sacramento re-corroborated in this run's result titles. ⚠ Items NOT published (no usable
+  snippet): "Talbott vs Figgy Oct 3 Salt Lake City" (names/matchup too vague), "Wonderboy's Last Dance" tease. No
+  MMA page changes; countdown 2026-08-15T21:00 stands.
+- VALIDATION (programmatic): 4 pages HTMLParser-balanced 0/0; 5-tab nav + 4 stamp IDs on all 4; 8/8 TV widget JSON
+  parse (CRWV chart of day); champions 11/11 rows + 12/12 names; KEV countdowns 2/13 machine-checked vs 2026-08-12;
+  scorecard anchors 7,734.77/53,889.24/26,459.35/7,753.11/7,757.64/54,349.12 + rates anchors 4.67%/82.87/88.67/
+  4,433.77/66.28/63,729 verified; trap greps CLEAN (Cody Salkilld/Shamil Yakhyaev/Joshua Vance/unification/
+  pay-per-view/MacKenzie/CarGurus/"2.5% in June"/"200 bp of rate hikes"/"record closing high"/"~11:15 AM" all x0);
+  sole "vacant" = Ulberg history line; New tags 0/0/0/0 (NYC probe + ShieldBreak retired; nothing genuinely new
+  this run vs the 11:30 snapshot). Archive: 414 snapshots, 138 editions.
