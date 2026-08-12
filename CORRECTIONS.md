@@ -6639,3 +6639,49 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   rate hikes"/"record closing high"/~11:35/80-plus/No. 1-ranked/No. 2-ranked/on ESPN/late morning/Levi/Matryoshka
   all x0); sole "vacant" = Ulberg history line; New tags cyber 3 (vCenter, VPN extensions, AI reasoning traces) /
   WS 0 / MMA 0 / index 0. Archive: 417 snapshots, 139 editions.
+
+## Added 2026-08-12 (Wednesday ~2:50pm ET — Midday Edition; sixth run of Wednesday; markets OPEN; research ~2:30–2:45pm)
+- CLOCK: TZ date = Wed Aug 12 14:31 EDT at research. MARKETS: TE DIRECT RE-FETCH ~2:30pm — main board STILL the 10:35
+  snapshot (US500 7,749.95 +0.28% "testing its record" / sidebar 7,751.45 +0.30%; US30 53,865.78 +0.14% / sidebar
+  53,830 +0.07%; US100 29,701.21 +0.60% / 29,736 +0.71%; US2000 +0.36%; VIX 14.77; WTI 82.870 −0.40% / Brent 88.674
+  −0.27% / gold 4,433.77 +1.45% / silver 66.276 +2.48%; 10Y 4.6710 −0.03; BTC 63,729 +0.28%) BUT the stats/meta line
+  UPDATED: "US500 rose to 7748 on August 12, gaining 0.26%" — published as the ~2:30 PM anchor; TE summary now reads
+  "firmly higher... Nasdaq 100 rose nearly 1%" (Amazon-up clause AGAIN excluded — board shows AMZN −0.57%, standing
+  trap; GOOGL row still Aug/11). TheStreet live blog re-fetched: STILL modified 9:39am, no new posts. NEW WS card
+  (New): Workday −4% on enterprise-software rotation + caution ahead of its Q2 report (Yahoo live-blog summary this
+  run). ⚠ TRAP: stockmarketwatch "Dow Jones Today Aug 12" board served YESTERDAY'S figures (MMM +3.70% $148.62 /
+  IBM −2.42% $213.40 / HD −2.14% / NVDA +1.77% $225.01 — identical to the Aug 11 ~11am record) — REJECTED as today's
+  data; its ETF sector lines ("markets await key inflation") pre-CPI/time-ambiguous, NOT published. Lead/tldr/sector/
+  rates re-stamped ~2:30 PM; scorecard/radar/premarket facts carried unchanged.
+- CYBER: THN homepage DIRECT RE-FETCH — same top stories as the 12:35 run (vCenter / VPN-extensions / reasoning-traces
+  New tags retired). TWO cards ADDED (New): **Picus Blue Report 2026** (338M+ real attack simulations H1'26;
+  prevention effectiveness 62%→69%, matching the 2024 peak; logging 58% four-year high; recovery almost exclusively
+  at the perimeter, interior softest vs recon/credential theft — THN direct fetch) and **Kimwolf v7** (Unit 42:
+  HTTP/2 DDoS flood constructing complete browser fingerprints; tiered C2 = ENS + hard-coded Tor .onion + local
+  clearnet-to-Tor proxy; scanning/exploitation/brute-force functionality removed — THN direct fetch; the Aug-11
+  "no primary pinned" caution for Kimwolf is SUPERSEDED by the direct fetch). Senserva DIRECT RE-FETCH (updated
+  Aug 12): 5 KEV/7d (Cisco/Microsoft/Metabase/Progress/JetBrains), 28/30d, 2 ransomware-tied, 8037 EPSS 99% — stat
+  strip 394/3/5/99% re-verified; Senserva hot-list again shows 68820 at 9.8 vs THN 7.0 — table keeps n/a per the
+  standing rule. CISA "Adds Three" Aug 11 alert re-surfaced in results (BOD 26-04). KEV countdowns machine-checked
+  vs 2026-08-12: Cisco Aug 14 = 2 days, Microsoft Aug 25 = 13 days. LiteLLM/CloudSEK still NOT published as a card
+  (THN title "2,100+" vs body "more than 2,500 organizations" discrepancy persists; body explicitly says the totals
+  are "not a victim count" — revisit if reconciled).
+- MMA: **UFC 330 odds UPDATED — DraftKings now −325 / Machado Garry +240 (fight-week roundups this run, MMA News /
+  OddsShark result set; "recent lines −325/−340, Garry +240/+270") — supersedes DK −340/+270 on the record; FanDuel
+  −390/+280 kept as "earlier in the week" (VSiN record).** Garry résumé line added: back-to-back wins over Carlos
+  Prates and former champion Belal Muhammad ("former champion" descriptor stated in this run's snippet). NEW card
+  detail (New tag): **Mansur Abdul-Malik vs. Dustin Stoltzfus is on UFC 330** (Tapology bout page + MMA Mania/Yahoo
+  fight-week previews; Yardbarker "headlines four additions" headline seen; NO odds numbers in snippets so none
+  published; hyphenated "Abdul-Malik" spelling per all sources). Garry numeric rank still NOT published (standing
+  No.1/No.2 conflict — "top contender" only). Champions: fresh listings sweep AGAIN corroborated Aspinall/Makhachev/
+  Volkanovski/Yan/Van; stale Pereira-205 / Chimaev-185 / Topuria-155 snippets AGAIN rejected per the authoritative
+  block; no title bout since verification (next = Saturday); board footnote updated to this edition's chain.
+  "Wonderboy's Last Dance" tease still uncorroborated — not published. Countdown 2026-08-15T21:00 stands.
+- VALIDATION (programmatic): 4 pages HTMLParser-balanced 0/0; 5-tab nav + 4 stamp IDs on all 4; 8/8 TV widget JSON
+  parse (CRWV chart of day); champions 12/12; KEV countdowns 2/13 machine-checked vs 2026-08-12; scorecard anchors
+  7,734.77/53,889.24/26,459.35/7,753.11/7,757.64/54,036.93/54,349.12 + rates anchors 4.67%/82.87/88.67/4,433.77/
+  66.28/63,729/7,748 verified; trap greps CLEAN (Cody Salkilld/Shamil Yakhyaev/Joshua Vance/Baptiste/unification/
+  pay-per-view/MacKenzie/CarGurus/"2.5% in June"/"200 bp"/"record closing high"/held steady at 4.1/No. 1-ranked/
+  No. 2-ranked/−278/82.8%/92.54 all x0; sole "vacant" = Ulberg history line; sole MMA "opened" = Contender Series
+  sentence); New tags WS 1 (WDAY) / cyber 2 (Blue Report, Kimwolf v7) / MMA 1 (330 card: DK −325 + Abdul-Malik) /
+  index 0. Archive pruned to the 21-day window by filename date (192 removed): 228 snapshots, 76 editions.
