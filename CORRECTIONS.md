@@ -6685,3 +6685,53 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   No. 2-ranked/−278/82.8%/92.54 all x0; sole "vacant" = Ulberg history line; sole MMA "opened" = Contender Series
   sentence); New tags WS 1 (WDAY) / cyber 2 (Blue Report, Kimwolf v7) / MMA 1 (330 card: DK −325 + Abdul-Malik) /
   index 0. Archive pruned to the 21-day window by filename date (192 removed): 228 snapshots, 76 editions.
+
+## Added 2026-08-12 (Wednesday ~4:40pm ET — Afternoon Edition; seventh run of Wednesday; research 3:50–4:30pm; MARKET CLOSED 4 PM)
+- CLOCK: TZ date = Wed Aug 12 15:49 EDT at run start; post-close edition.
+- **MARKETS — TUESDAY (AUG 11) OFFICIAL CLOSES CORRECTED; PRIOR VITTARTHI SET SUPERSEDED.** Zacks' "Stock Market
+  News for Aug 12, 2026" (Yahoo Finance SG syndication, surfaced this run) states Tuesday closed **S&P 500 7,728.20
+  (−0.3%) / Nasdaq Composite 26,445.45 (−0.6%) / Dow 53,791.85 (−184.13 pts, −0.3%)**. Cross-checks: Dow
+  53,975.98 − 184.13 = 53,791.85 EXACT vs the Monday anchor; TE's Wednesday math corroborates all day (sidebar
+  53,830 +0.07% → prior ≈53,791.6; closing stats 7,742 +0.18% → prior ≈7,728.2; 2:30 stats 7,748 +0.26% → prior
+  ≈7,728.2; SundayGuardian intraday 7,747.46 +0.25% → prior ≈7,728.2 ✓). The previously published Tuesday set
+  (7,734.77 −0.24% / 26,459.35 −0.55% / 53,889.24 −0.16%, sourced from Vittarthi) FAILS that math and is
+  SUPERSEDED — do NOT republish it. RULE: treat Vittarthi index closes as unreliable unless independently
+  corroborated. Scorecard row now carries a visible "Corrected" tag + explanatory note.
+- WEDNESDAY close published as %s only (official levels NOT corroborated by publish; scorecard row deferred):
+  Yahoo close snippet "Dow closed just below the flat line, S&P +0.3%, Nasdaq +0.5%"; Yahoo headline now "S&P 500,
+  Nasdaq edge higher on cooler inflation data, strong earnings"; TE closing stats line **7,742 +0.18%** (search
+  snapshot; TE DIRECT re-fetch ~4:06pm still served the 10:35 board — 7,749.95 +0.28%, rates/commodities rows
+  identical — re-stamped "~4:05 PM fetch"); "Eight of the 11 S&P 500 sectors green in afternoon trading,
+  information technology leading" (Yahoo snippet). ⚠ TRAPS this run: (1) Yahoo live-blog DIRECT fetch AGAIN served
+  the cached 8:50am premarket render — rejected as current; (2) **Barchart "stocks-finish-higher-on-a-fed-friendly-
+  us-july-cpi-report" is a RESURFACED AUGUST 2024 story** (Mars–Kellanova $36B, ZNU24 contract, 10Y 3.824%, 50bp-
+  CUT odds, VSCO CEO change) — REJECTED ENTIRELY; never use it for 2026 closes.
+- After the Bell: Cisco fiscal Q4 + Coherent reported post-close; NO after-hours prints indexed by publish → none
+  published (setup only: consensus $1.17 / ~$16.8B, $9B FY26 AI-order target raised from $5B after $5.3B through
+  three quarters, options pricing ~8% swing — TipRanks/TradingKey/Benzinga; COHR +8.82% in the regular session —
+  TradingKey; CSCO $120.43 = its AUG 11 close per TipRanks, not published as today's). Reaction lands next edition.
+- CYBER: THN homepage + Senserva exploited-this-week + Senserva CVE-2026-20349 pages fetched directly this run;
+  all carried cards re-verified (vCenter 59310 / 737 VPN extensions / reasoning traces / Blue Report / Kimwolf v7 /
+  DeadLock 96 / SAP 58231 / Adobe 48362 / Cisco ASA 20349 / Patch Tuesday 398-THN / SharePoint 55040 chain /
+  Sandworm UAC-0145). **Cisco KEV due 2026-08-14 CONFIRMED on Senserva's per-CVE page this run** ("Federal agencies
+  were required to remediate by 2026-08-14"); countdown 2 days vs 2026-08-12. 68820 due Aug 25 carried on the
+  standing machine-checked record (WindowsForum); 68820 CVSS conflict PERSISTS (THN 7.0 vs Senserva hot-list 9.8)
+  → table keeps n/a. Stat strip 394/3/5/99% re-verified (Senserva updated Aug 12). ShieldBreak 100%-success-rate
+  (Win11 25H2 + Canary, Server 2025) and no-fix claims RE-CONFIRMED via this run's result set (BleepingComputer +
+  The Register "Microsoft-vendetta hacker" piece; Microsoft patch-timing inquiries unanswered). New tags retired
+  (Blue Report, Kimwolf v7): cyber New = 0. LiteLLM/CloudSEK still NOT a card (2,100+ title vs 2,500+ body
+  discrepancy persists; totals explicitly "not a victim count").
+- MMA: **UFC 330 odds UPDATED — DraftKings −340 / Machado Garry +270 per Wednesday's fight-week roundups
+  (Covers/Yahoo, this run), superseding the earlier-Wednesday MMA News read of DK −325/+240 (both retained in copy
+  as a chronology); opening line −350/+255 (MMAOddsBreaker); week's span −325→−390 / +240→+290, FanDuel −390/+280
+  the high end.** Venue = Xfinity Mobile Arena, Philadelphia — re-confirmed this run. Champions: fresh listings
+  sweep AGAIN corroborated Aspinall/Makhachev/Volkanovski/Yan/Van/Dern; stale Pereira-205 / Chimaev-185 /
+  Topuria-155 snippets AGAIN rejected per the authoritative block; no title bout since verification (next =
+  Saturday). New tag retired on the 330 card: MMA New = 0. Countdown 2026-08-15T21:00 stands.
+- VALIDATION (programmatic, this run): 4 pages HTMLParser-balanced 0/0; 5-tab nav + 4 stamp IDs on all 4; 8/8 TV
+  widget JSON parse (CRWV chart of day); champions 11/11 + interim Gane note; KEV countdowns 2/13 machine-checked
+  vs 2026-08-12; corrected Tue scorecard row present (old 7,734.77 appears once, inside the correction note only);
+  TE closing anchors 7,742/+0.18% present; trap greps CLEAN (Cody Salkilld/Shamil Yakhyaev/Joshua Vance/
+  unification/pay-per-view/MacKenzie/No. 1-ranked/No. 2-ranked/on ESPN/Chicago/Kellanova/ZNU24/3.824/7,747.46/
+  old-odds strings all x0; sole MMA "vacant" = Ulberg history line); New tags 0/0/0/0 (all retired — nothing
+  first-appearing this edition).
