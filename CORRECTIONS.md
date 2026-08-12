@@ -6577,3 +6577,65 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   pay-per-view/MacKenzie/CarGurus/"2.5% in June"/"200 bp of rate hikes"/"record closing high"/"~11:15 AM" all x0);
   sole "vacant" = Ulberg history line; New tags 0/0/0/0 (NYC probe + ShieldBreak retired; nothing genuinely new
   this run vs the 11:30 snapshot). Archive: 414 snapshots, 138 editions.
+
+## Added 2026-08-12 (Wednesday ~12:35pm ET — Midday Edition; fifth run of Wednesday; markets OPEN)
+- CLOCK: TZ date = Wed Aug 12 12:05 EDT at run start. Refresh of the ~11:45 edition.
+- MARKETS: FRESH INTRADAY READ published — Yahoo live board via search snapshot at 12:03 PM ET: S&P 500 +0.24% /
+  Nasdaq Comp +0.48% / Dow +0.07% ("wavered near the flat line"); lead reframed "holds near its record into midday,"
+  stamped ~12:05 PM ET. TE DIRECT RE-FETCH ~12:07pm returned the SAME board as 10:35/11:15/11:37 (US500 7,749.95
+  +0.28% "testing its record" / sidebar 7,751.45 +0.30%; US30 53,865.78 +0.14% board / 53,830 +0.07% sidebar — the
+  sidebar now MATCHES Yahoo's +0.07%; US100 29,701.21 +0.60% / 29,736 +0.71%; US2000 +0.36%; VIX 14.77; MU +6.10%
+  $921.24 / NVDA +2.77% / SPCX +4.25% $138.95 / ORCL +2.58% / CAT +2.26%; WTI 82.870 −0.40% / Brent 88.674 −0.27% /
+  gold 4,433.77 +1.45% / silver 66.276 +2.48%; 10Y 4.6710 −0.03; BTC 63,729 +0.28%) — rates rows re-stamped
+  ~12:05 PM. TheStreet live blog re-fetched: STILL modified 9:39am EDT (13:39:41Z), no newer posts; facts carried.
+  Yahoo DIRECT fetch AGAIN served the cached 8:50am premarket render — its sidebar quotes (NBIS +4.95%, CRWV +2.42%,
+  SMCI +0.45%, BTC 64,084) time-ambiguous, NOT published; the 12:03 PM figures came from the SEARCH SNAPSHOT of that
+  same live blog, which states the time. ⚠ Standing traps re-confirmed and rejected: TheStreet "3.4% compared with
+  2.5% in June" (2.5% is CORE; headline prior 3.5%); TE summary "Nvidia, Oracle, and Amazon were up" vs board AMZN
+  −0.57% (Amazon excluded); GOOGL board row still dated Aug/11. No new WS cards; WS New tags 0.
+- CYBER: THN homepage fetched directly this run — FOUR substantive changes: (1) [New] **VMware vCenter
+  CVE-2026-59310 (CVSS 9.8, patched by Broadcom late July) EXPLOITED in the wild per QUIRSO** — reverse_ssh cron
+  persistence, first attacker-domain contact Aug 3 (five days post-patch); NOT in KEV yet — noted in banner, tldr,
+  card, vuln row, KEV section and index card. (2) [New] 737 fake Chrome VPN/proxy extensions (Socket / Kush Pandya
+  via THN): 75,486 installs, 40+ dev accounts, 274 impersonating 66 brands, 520/522 same SOCKS5 infra, targets
+  Russian-speaking users. (3) [New] LLM reasoning-trace flaw ("Stealing Reasoning Traces from Proprietary LLM APIs"):
+  OpenAI/Anthropic/Google encrypted reasoning blocks replayable across sessions; 315,320 thinking blocks decoded
+  across 6,708 public agent trajectories; API keys/passwords recovered. (4) **DeadLock victim count UPDATED to 96
+  claimed victims (Microsoft via THN)** — supersedes TechTimes "80-plus"; also "deployed by multiple actors incl. a
+  Lynx and INC affiliate." Patch-count spread now 394 (CSN) / 398 (THN) / 400 (BC) / 421 (SecurityWeek). QUIC
+  CVE-2026-62815 row upgraded to CVSS 9.8 per THN ("four 9.8s needing nothing from the victim: DNS Server,
+  Deployment Services, QUIC, HPC Pack"). **68820 CVSS CONFLICT: THN explicitly states 7.0; Senserva hot-list says
+  9.8 — table publishes NO number (n/a) with the conflict noted.** ShieldBreak researcher: THN names "Chaotic
+  Eclipse (aka INFINITE NIGHTMARE, MSNightmare, Nightmare-Eclipse)" vs BleepingComputer's "Nightmare Eclipse" —
+  card now reads "Chaotic Eclipse (aka Nightmare Eclipse)"; RoguePlanet = CVE-2026-50656 **CVSS 7.8** race condition
+  in mpengine.dll, disclosed June / patched July (THN). NEW vuln rows: SAP Commerce Cloud CVE-2026-58231 (10.0,
+  unauth default-auth-client abuse → code execution; patch + re-deploy) and Adobe ColdFusion CVE-2026-48362 (10.0
+  OS command injection, fixed 2025.0.12/2023.0.23; one of three 10.0s incl. Campaign Classic, plus 48273 eval
+  injection 9.9) — neither reported exploited. Sandworm spotlight extended: CERT-UA **UAC-0145** fake-recruiter
+  campaign since May 2026 ("ATLAS Business Group" persona, Telegram, VPN client that can run commands — THN).
+  Cards RETIRED for room: Levi Strauss, Poland CHP (still in spotlight), Matryoshka (clause + source removed).
+  Senserva DIRECT RE-FETCH (updated Aug 12): 5 KEV in 7d / 28 in 30d / 2 ransomware-tied / CVE-2026-8037 EPSS 99% —
+  stat strip 394/3/5/99% re-verified. ⚠ Senserva SEARCH-CACHE title said "3 New Exploited CVEs" but the LIVE page
+  says 5 — live page governs. KEV countdowns machine-checked vs 2026-08-12: Cisco Aug 14 = 2 days, Microsoft
+  Aug 25 = 13 days. NOT published (no primary pinned / internal conflicts): Kimwolf v7, Zoom annotation flaws,
+  LiteLLM-CloudSEK org count (THN title 2,100+ vs body 2,500+).
+- MMA: **GARRY RANK CONFLICT — CBS's G.O.A.T. piece (fetched this run) says "the No. 1-ranked Ian Machado Garry"
+  while CBS's fight-card piece said No. 2 (Aug 11-12 record). RULE: publish NO numeric rank for Garry until UFC.com
+  rankings are verified directly — pages now say "top contender."** G.O.A.T. angle ADDED from the CBS fetch
+  (verbatim-checked): Makhachev one of just NINE UFC fighters to hold titles in two divisions; a win as a ~3-to-1
+  favorite joins the champ-champs who defended belts at both weights; White quote "This guy is headed towards
+  G.O.A.T. talk" (post-Della Maddalena); Makhachev says Silva-record pursuit isn't on his radar (CBS PARAPHRASE —
+  not rendered as a quote). Garry's 5-inch height / 4-inch reach edges added (CBS). Noche UFC main event named in
+  full: **Yair Rodriguez vs. Jean Silva, Sept 12, Glendale** (CBS headline). Paramount+ 9 PM ET re-verified via
+  UFC's embedded tweet in the CBS piece. ⚠ Yahoo how-to-watch summary said UFC 330 airs "on ESPN" — REJECTED
+  (Paramount+ per UFC tweet/CBS/standing record). ⚠ Same summary called Dern "upgraded from interim-title holder" —
+  NOT published (standing record calls UFC 321 a title win; nuance unverified). Champions carried (no title bout
+  since verification; next = Saturday); countdown 2026-08-15T21:00 stands.
+- VALIDATION (programmatic): 4 pages HTMLParser-balanced 0/0; 5-tab nav + 4 stamp IDs on all 4; 8/8 TV widget JSON
+  parse (CRWV chart of day); champions 11/11 + interim Gane note; KEV countdowns 2/13 machine-checked vs
+  2026-08-12; scorecard anchors 7,734.77/53,889.24/26,459.35/7,753.11/7,757.64/54,349.12 + rates anchors
+  4.67%/82.87/88.67/4,433.77/66.28/63,729 + intraday anchors "12:03 PM ET"/"~12:05 PM" verified; trap greps CLEAN
+  (Cody Salkilld/Shamil Yakhyaev/Joshua Vance/unification/pay-per-view/MacKenzie/CarGurus/"2.5% in June"/"200 bp of
+  rate hikes"/"record closing high"/~11:35/80-plus/No. 1-ranked/No. 2-ranked/on ESPN/late morning/Levi/Matryoshka
+  all x0); sole "vacant" = Ulberg history line; New tags cyber 3 (vCenter, VPN extensions, AI reasoning traces) /
+  WS 0 / MMA 0 / index 0. Archive: 417 snapshots, 139 editions.
