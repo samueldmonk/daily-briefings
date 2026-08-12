@@ -6735,3 +6735,54 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   unification/pay-per-view/MacKenzie/No. 1-ranked/No. 2-ranked/on ESPN/Chicago/Kellanova/ZNU24/3.824/7,747.46/
   old-odds strings all x0; sole MMA "vacant" = Ulberg history line); New tags 0/0/0/0 (all retired — nothing
   first-appearing this edition).
+
+## Added 2026-08-12 (Wednesday ~4:35pm ET — Afternoon Edition; eighth run of Wednesday; research ~4:20–4:55pm; post-close)
+- CLOCK: TZ date = Wed Aug 12 16:17 EDT at run start. Refresh of the ~4:15pm post-close edition; Cisco reported at 4:05pm.
+- MARKETS: **TE DIRECT RE-FETCH ~4:20pm — stats/meta line UPDATED to "US500 rose to 7748 on August 12, gaining 0.26%" and the
+  Actual/Previous table now reads 7,748.21 / 7,728.20** (reconciles exactly vs the corrected Tuesday close; 247wallst's late
+  board ~3:56pm read S&P 7,747.90). The prior edition's "closing stats 7,742 +0.18%" snapshot is SUPERSEDED as the TE closing
+  read — pages updated; the old figure is retained only as "an earlier post-bell snapshot." Wednesday OFFICIAL closes remain
+  uncorroborated (TE = CFD series; 247 board = late intraday) — scorecard row still deferred; %s only (Yahoo: S&P +0.3%,
+  Nasdaq +0.5%, Dow just below flat). Board/rates rows identical on re-fetch (10Y 4.671 −0.03 / WTI 82.870 / Brent 88.674 /
+  gold 4,433.77 / silver 66.276 / BTC 63,729 / VIX 14.77) — re-stamped ~4:20 PM. **CISCO FISCAL Q4 (reported 4:05pm): first
+  post-report takes across this run's result sets state a clean DOUBLE BEAT — revenue $17.25B vs $16.83B consensus (+18% y/y)
+  and adj EPS $1.22 vs $1.17 (+23%); shares "initially up ~3%" in first after-hours prints.** Arithmetic cross-checks: vs
+  year-ago $14.7B/$0.99 → +17.3%/+23.2% ✓; exact-phrase search («"$17.25 billion" "$1.22"») returned the 247wallst live blog +
+  Yahoo pieces. Published attributed to "first post-report takes" (24/7 Wall St, Yahoo); FY27 guide/call detail + $9B AI-order
+  verdict (Q4 needed ~$3.7B after $5.3B through three quarters — Investing.com/ts2 math) land next edition. ⚠ TRAPS REJECTED
+  this run: (1) TipRanks "csco-earnings-cisco-stock-tumbles-despite-q4-beat" is the AUGUST 2025 story (fiscal-2025 $14.7B /
+  $0.99 / target $73.33; meta updated_time 2025-08-13) — surfaced TWICE in Cisco searches; never use it for 2026. (2) ts2
+  "Cisco shares fall after earnings" is PRE-earnings (published Aug 11 23:36Z; body = Tuesday close $120.43 −1.75%, AH $121.20,
+  options ~7%) — headline misleading; usable only for Tuesday-dated facts. (3) Investing.com live CSCO badge "+1.91%"
+  time-ambiguous — not published. (4) TradingKey SMCI piece's "Q2 earnings tonight" framing is stale (SMCI reported Aug 11).
+  NEW WS facts published: 247wallst late boards ~3:56pm (SMCI +19.48% $37.76 — coherent vs Tue ~$31.60 close; DELL +8.90%
+  $480.23; HPE +7.49%; STX +6.68%; TER +6.03%; losers CTRA −8.62%, TPL −5.95%, FSLR −5.58%, AXON −5.54%, COR −5.51%; header
+  S&P 7,747.90 / NDX +0.70% / RUT +0.60%) → new "Late boards" card (New) + After the Bell rebuilt as After-Hours Movers cards
+  (Cisco print card New; COHR setup card — consensus published as "clustered near $1.60 ($1.58–$1.62 across previews)" because
+  24/7-derived and Benzinga previews conflict; COHR +8.82% regular session per TradingKey; "fell after 3 of 4 beats"; options
+  ~15%/$10.3B Benzinga). CSCO pre-report facts verified: $124.26 late-morning / +59-61% YTD / Polymarket 96.1% / consensus
+  $16.83B/$1.1689 (247wallst direct fetch, modified 3:56pm).
+- CYBER: **METABASE KEV DUE DATE CONFIRMED — CVE-2026-72898 federal remediation due 2026-08-14, per Senserva's per-CVE page
+  fetched directly this run ("Federal agencies were required to remediate by 2026-08-14"; added 2026-08-11; CVSS 10.0; EPSS
+  <1%). SUPERSEDES all prior "due date not stated" notes. Pages now show BOTH Friday Aug 14 deadlines (Cisco 20349 + Metabase
+  72898), countdowns machine-checked 2/2/13 days vs 2026-08-12.** Senserva exploited-this-week re-fetched (updated Aug 12):
+  5 KEV/7d (Cisco/Microsoft/Metabase/Progress/JetBrains), 28/30d, 2 ransomware-tied, 8037 EPSS 99% — stat strip 394/3/5/99%
+  re-verified; hot-list still shows 8037 at 9.8 (vendor-9.6 standing rule) and 68820 at 9.8 vs THN 7.0 (table keeps n/a).
+  THN homepage re-fetched directly: SAME story set as the ~2:50pm run (vCenter 59310/VPN extensions/reasoning traces/Blue
+  Report/Adobe 10.0s/SAP 58231/ShieldBreak/Cisco 20349/398-Patch-Tuesday/Kimwolf v7/Zoom/UAC-0145/SharePoint 55040/DeadLock 96/
+  LiteLLM 2,100-title-vs-2,500-body still unresolved → still no card). No new cyber items this run; cyber New = 0.
+- MMA: **UFC 330 odds — late-Wednesday roundups stretch to −370/+290 (rg.org/Covers result set: "Makhachev (-370)…Machado
+  Garry (+290)… some books −340 to −350 / +255 to +280"); ADDED to the odds chronology alongside the standing DK −340/+270;
+  week's span −325→−390 / +240→+290 unchanged.** Fresh champions listings this run corroborate Aspinall / Makhachev (UFC 322) /
+  Gaethje (Jun 14) / Volkanovski / Yan / Van / Dern — Gaethje added to the board footnote's corroborated list; ⚠ stale
+  snippets AGAIN showed "Pereira LHW (UFC 320)" and "Chimaev MW (UFC 319)" — REJECTED per the authoritative block. Garry rank:
+  this run's snippet said "No. 2" but the standing No.1/No.2 conflict rule holds — still "top contender," no number. Dern
+  co-main, Paramount+ 9pm, Xfinity Mobile Arena re-confirmed (CBS/Covers/VSiN). Countdown 2026-08-15T21:00 stands; MMA New = 0.
+- VALIDATION (programmatic): 4 pages HTMLParser-balanced 0/0; 5-tab nav + 4 stamp IDs on all 4; 8/8 TV widget JSON parse
+  (CRWV chart of day); KEV countdowns 2/2/13 machine-checked vs 2026-08-12 ("2 days left" ×3 incl. new Metabase bullet);
+  champions 11/11; scorecard anchors 7,728.20/26,445.45/53,791.85/7,753.11/7,757.64/53,975.98/54,036.93/54,349.12 + rates
+  anchors 4.67/82.87/88.67/4,433.77/66.28/63,729 + new 7,748.21 anchors verified; trap greps CLEAN (Cody Salkilld/Shamil
+  Yakhyaev/unification/pay-per-view/MacKenzie/CarGurus/"2.5% in June"/"200 bp"/No. 1-ranked/No. 2-ranked/on ESPN/$14.62/
+  "14.7 billion"/$0.99/73.33 all x0; sole "vacant" = Ulberg history line; residual "7,742" only in superseded-snapshot clause +
+  Tuesday-correction note). New tags WS 2 (late boards, Cisco AH) / cyber 0 / MMA 0 / index 0. Archive: 234 snapshots, 78
+  editions (16 days).
