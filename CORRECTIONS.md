@@ -7008,3 +7008,113 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   CLEAN case-sensitively (Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman / unification / MacKenzie /
   Belal Muhammad / pay-per-view / Jean Matsumoto / Thainara Silva / Kevin Goff all ×0; "Mackenzie"
   correct casing ×1 index, ×5 mma). New tags 0/3/1/2 (index/cyber/ws/mma).
+
+## Added 2026-08-14 (Friday ~5:13pm ET — Afternoon Edition; third run of Friday; POST-CLOSE; research ~5:06–5:12pm)
+- CLOCK: TZ date = Fri Aug 14 17:05 EDT at run start; archive stamp 2026-08-14-1713. Refresh of the ~4:50pm edition.
+- MARKETS: **Friday Aug 14 OFFICIAL CLOSES RE-VERIFIED INDEPENDENTLY THIS RUN — S&P 500 7,785.76,
+  −0.17% (≈−0.2%), third consecutive weekly gain; Dow 53,732.41 −107.58 −0.2% (week LOWER);
+  Nasdaq Composite 26,729.16 −0.3% (slight weekly gain).** Confirmed by a dedicated level search
+  returning "closed at 7,785.76, down 0.17%" plus the Yahoo live-blog headline. Levels reconcile
+  exactly against the verified Thursday closes (7,798.99 / 53,839.99 / 26,803.03).
+  ⚠ CONFLICT: a 24/7 Wall St. headline gives "S&P 500 Closes at 7,782" (≈−0.22%). REJECTED —
+  7,785.76 is internally consistent with both the −0.17% figure and the exact Thursday delta, and is
+  now corroborated across two independent runs. Do not publish 7,782.
+  ⚠ TRAP REPEATED A THIRD TIME: the Zacks "Stock Market News for Aug 14, 2026" piece describes the
+  THURSDAY session — its Reddit +10.4%, SanDisk +7%, Globant −12.6%, Range Resources −7.3% and
+  MDU −6.3% are THURSDAY movers, not Friday's. Rejected again.
+  **MOVERS CORRECTED TO CLOSES using the Yahoo Finance trending rail read live this run (it shows
+  post-close values; SNDK on the rail matches the verified close exactly, validating the rail):
+  SanDisk 1,528.11 +183.82 +13.67% (also "surged over 17% intraday"; JPMorgan Overweight, $2,250 PT
+  ≈47% upside; CNBC: up more than 500% YTD; Investor Day was THURSDAY Aug 13);
+  Reddit 158.12 +4.67 +3.04% CLOSE — this RESOLVES the prior run's "figures conflict, publish
+  attributed" framing; the closing print is now published and the +10.4/+12/+14% snapshots dropped;
+  Applied Materials 534.54 −13.61 −2.48% CLOSE — SUPERSEDES the "−5%" intraday figure carried in the
+  two earlier editions.** AMAT guidance detail added (fiscal Q3 rev ~$8.95B ±$500M, adj EPS $3.36
+  ±$0.20). NEW MOVER: **Broadcom −5.5% (sector piece) / −5.6% and ~$105B of market value
+  (Motley Fool, midday) — single largest drag on both the S&P 500 and the Nasdaq**; grep-absent from
+  archive/wallstreet-2026-08-14-1646.html → tagged New. WS New = 1.
+  **SECTORS NOW PUBLISHABLE (the 4:50pm run had to drop all sector specifics as self-contradictory):
+  energy +1.5% tracking crude and ~7% on the week; S&P 500 information technology index −0.5%.**
+  One editorial line only, under the live heatmap, as the skill allows.
+  RATES UPDATED from CNBC's Aug 14 piece: 10-yr 4.65% (extending the pullback — this REPLACES the
+  "~4.69% carried and labelled approximate" from the prior edition); 2-yr +3bp to 4.171% (REPLACES
+  4.161%/+2bp); 30-yr +~6bp to 5.267% (unchanged level, bp move refined from "more than 5"). Fed
+  funds shown as the RANGE 3.50–3.75% (FOMC left unchanged) rather than the single 3.75% figure.
+  OIL: WTI $81.27 / Brent $88.38 +1.51% (Trading Economics, Aug 14) carried; ADDED the weekly move —
+  Brent and WTI each ~+5% on the week on US pressure over the Strait of Hormuz.
+  ⚠ AFTER-HOURS REJECTED FOR A SECOND CONSECUTIVE EDITION: a summary offered ETON +19.7%,
+  AMPG −28.9% and an FGI volume spike "for August 14" — but the same summary says traders were
+  "shifting focus toward the following day's retail sales data", and retail sales printed ON Aug 14.
+  That binds the snapshot to THURSDAY's after-hours session. NOT PUBLISHED; the section says so.
+  FORWARD ITEMS: Reddit S&P 500 entry Tue Aug 18 replacing AvalonBay; Target/Walmart retail earnings
+  next week and NVIDIA on Aug 26 — both taken from the Yahoo live blog FETCHED IN FULL this run.
+  ⚠ A "next week outlook" search returned 2025 contamination (85% odds of a CUT, 4.25–4.50% range,
+  Waller/Bowman dissent, Jackson Hole). ALL DROPPED — Jackson Hole was NOT published this run.
+- CYBER: TOP STORY unchanged (Metabase CVE-2026-72898, CVSS 10.0, KEV due TODAY). **KEV dates
+  RE-CONFIRMED A THIRD TIME this run via Security Affairs + the CISA "Adds Three" alert page:
+  CVE-2026-72898 and CVE-2026-20349 due AUG 14 (0 days); CVE-2026-68820 due AUG 25 (11 days).**
+  **NEW KEV ENTRY, now cleanly sourced: CVE-2026-16812 (Arista VeloCloud Orchestrator OS command
+  injection) was added JUL 27 alongside CVE-2025-68686 (Fortinet FortiOS) and its action due date is
+  AUG 10, 2026 → PAST DUE.** This RESOLVES the prior run's flagged ambiguity about which of the two
+  Jul 27 additions carried the Aug 10 date — it is CVE-2026-16812. CVE-2026-8037 (Progress
+  LoadMaster, added Aug 7, due Aug 10) also carried past due. All five countdowns machine-checked.
+  NEW VULNS ADDED to the watch table from the Aug Patch Tuesday coverage: **CVE-2026-62815
+  (Microsoft QUIC, CVSS 9.8, use-after-free CWE-416, unauth RCE, no user interaction)** and
+  **CVE-2026-62893 (Windows Deployment Services TFTP Server, CVSS 9.8, unauth RCE, "Exploitation
+  More Likely")** — neither is in KEV; stated as such.
+  ⚠ PATCH TUESDAY CVE COUNT CONFLICTS ACROSS VENDORS: SecurityWeek/Splashtop 421, Tenable 398,
+  CybersecurityNews 394, Senserva 751. The published figure stays 421 (SecurityWeek), consistent
+  with every prior edition; do not silently swap it.
+  NEW INCIDENT ITEMS (both grep-verified ABSENT from archive/cyber-2026-08-14-1646.html → tagged New):
+  **DeadLock ransomware — Microsoft Threat Intelligence, Aug 10: C2 configuration and leak-site
+  content stored in POLYGON SMART CONTRACTS that cannot be seized; the victim app queries the
+  contract for the current chat-proxy address so infrastructure rotates without redelivering the
+  payload. Surfaced Jul 2025, quiet ~11 months, accelerated through Jun 2026; 80-PLUS victims listed,
+  over half in Europe; ~$1 in crypto to reproduce the architecture.**
+  ⚠ VICTIM-COUNT CONFLICT: one summary says "96 victims claimed as of this month" vs the
+  Microsoft/TechTimes headline "80-Plus Victims Hit". Published the headline-supported "more than 80".
+  **LiteLLM supply chain — backdoored PyPI releases 1.82.7 and 1.82.8 published Mar 24 2026 by
+  "TeamPCP" after publishing-credential takeover; credential harvesting → Kubernetes lateral movement
+  → persistent systemd backdoor; packages live ~40 MINUTES; CloudSEK maps 2,500+ organisations and
+  434,000 CI/CD pipelines; THN (Aug 12) says the CVE record now lists the affected LiteLLM builds
+  alongside Trivy components; FBI FLASH-20260702-01 (Jul 2026) warns the stolen credentials will be
+  weaponised later.** By-the-numbers strip changed to 10.0 / 421 / 2,500+ / 434K.
+  Jewelbug spotlight, Helix-Morguard, INC, RingCentral and Questel all CARRIED and their New tags
+  REMOVED (all present in the 16:46 snapshot). Threat level HIGH. Cyber New = 2.
+- MMA: **CHAMPIONS: the generic "UFC current champions August 2026" search returned the KNOWN STALE
+  SET — Pereira at LHW, Chimaev at MW, Topuria at LW. REJECTED per the standing block. A targeted
+  re-verification search confirmed vs ESPN THIS RUN, with dates and defence counts: ULBERG LHW
+  (KO1 Procházka, UFC 327, Apr 11 2026, 0 defences), STRICKLAND MW (SD over Chimaev, UFC 328,
+  May 9 2026, 0 defences), GAETHJE LW (TKO4 Topuria, Freedom 250, Jun 14 2026, 0 defences). A second
+  search re-confirmed Aspinall HW (inherited on Jon Jones's retirement), Gane interim HW (Jun 2026),
+  Yan BW (UD Dvalishvili, UFC 323, Dec 2025), Van FLW (TKO1 Pantoja, UFC 323, second-youngest champ
+  in UFC history), Shevchenko W-FLW (2 defences), Harrison W-BW; Dern W-SW via UFC.com's UFC 330
+  billing. 11/11 machine-checked, board unchanged.** The stale-list trap is now confirmed to recur on
+  the generic query — ALWAYS follow it with the targeted Ulberg/Strickland/Gaethje search.
+  **ODDS MOVED AGAIN: published Makhachev −390 / Machado Garry +280 (FanDuel), noting the cross-book
+  range of about −340/−350 and +255/+280 and that the line has drifted TOWARD the challenger during
+  fight week. SUPERSEDES the 4:50pm −340/+270 DraftKings figure. Co-main updated to Dern ~−250 /
+  Robertson +190, SUPERSEDING the −205/+170 UFC.com feed read from earlier today.** The UFC 330 card
+  tag was changed from "New" to "Line moved" so the marker reflects a real delta vs the prior edition.
+  **TY MILLER'S METHOD IS NOW SOURCED: THIRD-ROUND TKO over Billy Ray Goff (MMA Weekly / Sherdog /
+  MMA Mania bonus reports) — the em dash placeholder carried since Aug 8 is replaced.**
+  **FULL $25,000 FINISHING-BONUS LIST now sourced: Miles Johns, Juliana Miller, Jose Montanha,
+  Diyar Nurgozhay and Yadier del Valle** (previously only del Valle was published).
+  Salkilld framing unchanged: third $100K bonus of 2026 / $300K on the year (a source calling it his
+  "fourth Performance of the Night in a row" spans 2025 and does not conflict).
+  ADDED to the top story: this is Makhachev's FIRST defence of the welterweight title (won at
+  UFC 322, Nov 2025) and Machado Garry arrives on back-to-back wins over CARLOS PRATES and former
+  welterweight champion BELAL MUHAMMAD (UFC/Yahoo). NOTE: this is a legitimate Belal Muhammad
+  reference — the standing trap is specifically the FALSE "Mansur Abdul-Malik vs. Belal Muhammad"
+  pairing, which remains grep-verified absent.
+  ⚠ Ranking descriptors ("No. 1-ranked contender", "No. 5-ranked challenger") again appeared in
+  snippets and again were NOT published. ⚠ "MacKenzie Dern" mis-casing appeared in a snippet;
+  grep-verified 0 occurrences of "MacKenzie" on the built pages. Shanghai card New tag removed
+  (present in the prior snapshot). MMA New = 1.
+- VALIDATION (programmatic, this run): 4 pages HTMLParser-balanced 0 unclosed / 0 errors; 5-tab nav
+  + 4 stamp IDs on all 4; 8/8 TradingView widget JSON blocks parse (Chart of the Day = NASDAQ:SNDK);
+  champions 11/11; KEV countdowns 0 / 0 / 11 / past-due / past-due machine-checked vs 2026-08-14;
+  trap greps CLEAN (Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman / unification / MacKenzie /
+  Jean Matsumoto / Thainara Silva / Kevin Goff / pay-per-view / "Belal Muhammad vs" / Pereira-,
+  Chimaev-, Topuria-in-champions-cell / "featherweight vacant" / "Vacant" / 7,782 / 4.161 / "−5%"
+  all ×0). New tags 0/2/1/1 (index/cyber/ws/mma).
