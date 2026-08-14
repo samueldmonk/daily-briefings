@@ -6902,3 +6902,109 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   0/0/11/overdue machine-checked vs 2026-08-14; champions 11/11; trap greps CLEAN (Cody Salkilld /
   Shamil Yakhyaev / Abdul-Rakhman / unification / MacKenzie / vacant / Belal Muhammad / Pereira-LHW /
   Chimaev-MW all ×0). New tags 0/2/3/1 (index/cyber/ws/mma).
+
+## Added 2026-08-14 (Friday ~4:50pm ET — Afternoon Edition; second run of Friday; POST-CLOSE; research ~4:36–4:48pm)
+- CLOCK: TZ date = Fri Aug 14 16:35 EDT at run start. Refresh of the ~4:05pm edition; markets CLOSED 4:00 PM.
+- MARKETS: **FRIDAY AUG 14 OFFICIAL CLOSES NOW AVAILABLE AND PUBLISHED (supersedes the 4:05pm
+  "intraday only / scorecard carries Thursday" framing): S&P 500 7,785.76 −0.2%; Dow 53,732.41
+  −107.58 −0.2%; Nasdaq Composite 26,729.16 −0.3%** (Yahoo Finance live blog, headline "S&P 500 slips
+  from record high but caps third straight week of gains"). CROSS-CHECK: all three reconcile EXACTLY
+  against the verified Thursday Aug 13 closes — Dow 53,839.99 − 107.58 = 53,732.41 (exact);
+  S&P 7,798.99 − 13.23 = 7,785.76 (−0.17% ≈ −0.2%); Nasdaq 26,803.03 − 73.87 = 26,729.16 (−0.28% ≈ −0.3%).
+  Week: S&P THIRD consecutive weekly gain; Nasdaq slight weekly gain; DOW finished the week LOWER.
+  ⚠ TRAP REPEATED: searching "how major US stock indexes fared Friday 8/14/2026" and the Zacks
+  "Stock Market News for Aug 14, 2026" article BOTH return the THURSDAY tally (53,839.99 / 7,800 /
+  26,803.03) presented as Friday — REJECTED both times this run. Zacks-dated morning recaps describe
+  the PRIOR session; never treat them as the same-day close.
+  ⚠ Detroit News headline gave "−0.2% / NASDAQ −0.5% / DOW −0.3%" — an earlier intraday snapshot that
+  conflicts with the reconciled close percentages; NOT used.
+  DRIVERS: July retail sales −0.6% m/m, first decline in nine months, steepest since May 2025, vs
+  Dow Jones consensus +0.1% (CNN/Yahoo); UMich prelim August sentiment 51 vs 55.2 July and 54.5
+  expected, a fall of almost 8% ending two months of improvement (Epoch Times).
+  MOVERS: **SanDisk (SNDK) +13.67% CLOSE at $1,528.11 — biggest verified mover, corroborated twice
+  (search summary + Yahoo trending rail); supersedes the 4:05pm "+7%" intraday figure. Chart of the
+  Day switched from NYSE:RDDT to NASDAQ:SNDK.** Driver: 2026 Investor Day + J.P. Morgan reinstating
+  coverage at Overweight, $2,250 PT. Reddit: figures CONFLICT across snapshots (+10.4% TE / +12%
+  InsiderFinance / +14% Motley Fool midday / Yahoo rail +3.04%) → published ATTRIBUTED, no single
+  house number; S&P 500 entry before the open TUE AUG 18 replacing AvalonBay stands. AMAT −5%
+  despite a beat + above-consensus guide (98% YTD run cited as the reason).
+  RATES (CNBC Aug 14): 2-yr +2bp to 4.161%; 30-yr +5bp to 5.267%; 10-yr "inches higher" — no Friday
+  level stated, so ~4.69% carried from this morning's verified TE board read and labelled approximate.
+  ⚠ TE 30-yr 5.24% conflicts with CNBC's 5.267% — CNBC (with the bp move) published, TE dropped.
+  Bloomberg: short-dated Treasuries rose on the retail sales miss, 10–30yr slightly higher. Bessent
+  (Newsmax) warned of measures for the "economic isolation" of Iran — moved yields intraday.
+  OIL: WTI $81.27 / Brent $88.38 +1.51%, both Aug 14 (Trading Economics). Sept Fed ~40% odds of a
+  25bp HIKE, down from ~50% a day earlier; July CPI 3.40% (2nd straight month slowing).
+  ⚠ SECTORS: this run's sector search returned SELF-CONTRADICTORY output (Materials +2.87% leading
+  AND energy leading AND energy −0.96% lagging) — ALL sector specifics DROPPED; live heatmap only.
+  AFTER-HOURS: a summary offered CAPR +60% / ETON +20% / INV −44% / AMPG −29% but the underlying
+  ChartMill page is "Friday's after hours session" with NO date binding it to 8/14 — NOT PUBLISHED.
+  The After-Hours section says so explicitly rather than being omitted. WS New tags = 1 (SanDisk).
+- CYBER: **TOP STORY CHANGED to CVE-2026-72898 (Metabase) — its KEV deadline is TODAY and it is the
+  max-severity item.** VERIFIED THIS RUN: CVSS 10.0 unauthenticated SQL injection via the
+  /reset_password endpoint → administrator takeover + theft of connected-database credentials;
+  Metabase disclosed Aug 6 and confirmed in-the-wild exploitation; FIVE companies had already lost
+  customer data by disclosure. Affected 0.59.0–0.59.20 / 0.60.0–0.60.16 / 0.61.0–0.61.10 /
+  0.62.0–0.62.8 / 0.63.0–0.63.4 (+ Enterprise 1.x); <0.58/1.58 NOT affected. Fixed 0.58.24 /
+  0.59.21 / 0.60.17 / 0.61.11 / 0.62.9 / 0.63.5 (Bishop Fox / IONIX / THN / SecurityWeek).
+  **CVE-2026-20349 CVSS is 8.6 (Cisco's figure) — DoS via Remote Access SSL VPN, unauth device
+  reload, advisory cisco-sa-asaftd-vpn-dos-dzv4mQFF published Aug 11, hot fixes for all trains,
+  NO workarounds.** KEV dates RE-CONFIRMED independently this run (Security Affairs + THN + CISA
+  alert page): CVE-2026-72898 and CVE-2026-20349 due AUG 14 (0 days); CVE-2026-68820 due AUG 25
+  (11 days, machine-checked). CVE-2026-8037 Progress LoadMaster (added Aug 7, due Aug 10) carried
+  PAST DUE from this morning's CISA-JSON-mirror verification.
+  ⚠ The "CVE-2026-59310 disclosed August 12, 2026" claim RESURFACED this run — again REJECTED;
+  Broadcom VMSA-2026-0006 is dated JULY 29, 2026 and that is what is published.
+  ⚠ An ambiguous snippet put an Aug 10 due date on the Jul 27 KEV additions (CVE-2025-68686 Fortinet /
+  CVE-2026-16812 Arista) without saying WHICH — dropped in favour of the cleanly-sourced LoadMaster item.
+  **THREAT ACTOR SPOTLIGHT CHANGED from ShinyHunters to JEWELBUG** (aka Ink Dragon, Earth Alux,
+  REF770, CL-STA-0049): Broadcom Threat Hunter Team report published Aug 13 — the SAME infrastructure
+  serves espionage against governments/militaries in the Middle East, Southeast Asia and South Asia
+  AND a financially motivated operation against Chinese-speaking cryptocurrency users (Infosecurity).
+  NEW breach/incident items: **Helix ransomware claimed Morguard (Canadian real estate) on Aug 7,
+  threatening exposure after negotiations failed**, and **INC ransomware accelerating since the start
+  of August — dominant actor exploiting SonicWall SMA 1000 series flaws; 885 claimed victims to date
+  per Ransomware.Live, most recent listed Aug 2 (Resecurity).** Both grep-verified ABSENT from
+  archive/cyber-2026-08-14-1604.html → tagged New. RingCentral (1.6M) and Questel CARRIED, NOT
+  re-tagged New (present in the 16:04 snapshot). By-the-numbers strip: 10.0 / 421 CVEs / 1.6M / 885.
+  Threat level HIGH. Cyber New = 3 (Jewelbug, Helix-Morguard, INC).
+- MMA: **CHAMPIONS RE-VERIFIED EXPLICITLY vs ESPN "Current and all-time UFC champions" THIS RUN for
+  6 belts with dates: Aspinall HW (Jun 21 2025), ULBERG LHW (KO1 Procházka, UFC 327, Apr 11 2026),
+  STRICKLAND MW (SD Chimaev, UFC 328, May 9 2026), Makhachev WW (UD Della Maddalena, UFC 322,
+  Nov 15 2025), GAETHJE LW (TKO4 Topuria, Freedom 250, Jun 14 2026), VOLKANOVSKI FW (UD Lopes,
+  UFC 314, Apr 12 2025, 1 defense).** Yan/Van/Shevchenko/Harrison and interim-HW Gane carried from
+  the standing block; DERN W-SW re-confirmed by UFC.com's UFC 330 co-main billing this run. 11/11
+  machine-checked. No stale Pereira-205 / Chimaev-185 / "featherweight vacant" snippet in this sweep.
+  TOP STORY = **UFC 330 OFFICIAL WEIGH-INS (UFC.com + Bloody Elbow, Aug 14): Makhachev 170,
+  Machado Garry 170; Dern and Robertson also on weight — main and co-main OFFICIAL.** Ceremonial
+  weigh-ins Fri Aug 14 6 PM ET at Xfinity Mobile Arena, streaming on UFC's YouTube/Kick/TikTok/
+  Facebook/Instagram (DraftKings Network). Grep-verified "ceremonial" absent from the 16:04 snapshot
+  → New. Card/times per UFC.com: early prelims 5 PM / prelims 7 PM / main card 9 PM ET, Paramount+
+  exclusive; countdown target 2026-08-15T21:00-04:00 UNCHANGED.
+  **ODDS UPDATED: published DraftKings −340 / +270 with UFC.com's own listing at −350 / +275 this
+  run — supersedes the 4:05pm −360/+280 UFC.com figure (the feed moved).** Dern −205 / Robertson
+  +170 carried from the morning's UFC.com feed read.
+  ⚠ TRAP: a schedule snippet called the UFC 330 main event a "lightweight bout" — FALSE, it is the
+  WELTERWEIGHT title (both men weighed 170 on UFC.com's own results page). Never publish that.
+  ⚠ Ranking descriptors ("#1-ranked", "No. 5-ranked challenger") appeared in snippets but were NOT
+  published, per the standing descriptor rule.
+  **NEW card detail: Aug 29 UFC Shanghai headliner VERIFIED as Umar Nurmagomedov vs Song Yadong,
+  bantamweight, Pudong Development Bank Shanghai Oriental Sports Center, first fight 3 PM CST /
+  main card 6 PM CST (UFC.com + Cageside Press + MMA Mania)** — "Nurmagomedov" grep-absent from the
+  16:04 snapshot → New. Aug 22 Sacramento (Hernandez vs Rodrigues, both former LFA MW champions,
+  Golden 1 Center) already present → not tagged.
+  LAST EVENT (UFC Vegas 120, Aug 8) results, methods and bonuses CARRIED VERBATIM from the verified
+  16:04 edition, including the full-name spellings Diego Ferreira / Billy Quarantillo / Yadier del
+  Valle / Darren Elkins / Alexia Thainara / Amanda Lemos / Ty Miller / Billy Ray Goff. ⚠ SELF-CAUGHT
+  DRAFT ERROR: the first draft of this run invented "Jean Matsumoto del Valle", "Thainara Silva" and
+  "Kevin Goff" from the surname-only correction entry — caught before publish and replaced with the
+  verified spellings. RULE REINFORCED: when CORRECTIONS.md records only a surname, copy the full
+  name from the previous ARCHIVED page, never reconstruct one.
+  DWCS S10 W1 signees (Wint, Hasan, Pagliarulo, Kropschot) present in the prior edition → not New.
+  MMA New = 2 (weigh-in top story/UFC 330 card, Shanghai headliner).
+- VALIDATION (programmatic, this run): 4 pages HTMLParser-balanced 0 unclosed / 0 errors; 5-tab nav
+  + 4 stamp IDs on all 4; 8/8 TradingView widget JSON blocks parse (Chart of the Day = NASDAQ:SNDK);
+  champions 11/11; KEV countdowns 0 / 0 / 11 / past-due machine-checked vs 2026-08-14; trap greps
+  CLEAN case-sensitively (Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman / unification / MacKenzie /
+  Belal Muhammad / pay-per-view / Jean Matsumoto / Thainara Silva / Kevin Goff all ×0; "Mackenzie"
+  correct casing ×1 index, ×5 mma). New tags 0/3/1/2 (index/cyber/ws/mma).
