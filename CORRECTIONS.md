@@ -6825,3 +6825,80 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   2026-08-12; trap greps CLEAN (Cody Salkilld/Shamil Yakhyaev/unification/pay-per-view/MacKenzie/"2.5% in June"/
   No. 1-ranked/No. 2-ranked/on ESPN/Kellanova/ZNU24/"up about 3% in early after-hours"/"still to come" all ×0;
   "vacant" only in the two Ulberg history references); New tags 0/0/1/0.
+
+## Added 2026-08-14 (Friday ~4:05pm ET — Afternoon Edition; first run since Wed Aug 12 evening, ~2-day gap; markets OPEN at research time, closing bell at 4:00pm)
+- CLOCK: TZ date = Fri Aug 14 15:38 EDT at run start; pages built ~15:58–16:04.
+- MARKETS: Friday INTRADAY published as-of ~3:45 PM ET; Friday's OFFICIAL closes were NOT available
+  this run (searching "how major US stock indexes fared Friday 8/14/2026" returned the Thursday AP
+  tally mislabeled — TRAP, rejected). Editorial therefore leads with the intraday read and the
+  Weekly Scorecard carries THURSDAY Aug 13 official closes only, explicitly labeled.
+  **Thursday Aug 13 OFFICIAL closes VERIFIED (AP via Washington Post/wkyc), internally consistent:
+  S&P 500 7,798.99 +50.49 +0.7% (record CLOSE; TheStreet headline says it cleared 7,800 intraday
+  for the first time); Nasdaq Composite 26,803.03 +214.54 +0.8%; Dow 53,839.99 +69.72 +0.1%.**
+  Friday intraday (Yahoo live blog/TheStreet): S&P −0.2%, Dow −0.1%, Nasdaq Composite −0.4%; S&P on
+  pace for a THIRD consecutive weekly gain. Drivers: July retail sales fell the most in more than a
+  year / first decline in nine months (Census); UMich prelim August sentiment 51 vs 55.2 in July.
+  TE board read ~3:45pm: US500 CFD 7,780.97 −0.23%, US30 53,712.54 −0.24%, US100 29,895.48 −0.63%,
+  VIX 14.44, US10Y 4.6940 +0.047, WTI 81.939 +0.85%, Brent 88.064 +1.14%, gold 4,386.18 +0.84%,
+  BTC 63,072 −0.53%; Fed funds 3.75% (Jul), CPI 3.40% (Jul, prior 3.50%). MOVERS: Reddit +10.4%
+  (joins S&P 500 before the open TUE AUG 18, replacing AvalonBay Communities; +12.6% premarket),
+  Broadcom −5.83% (TE component board), Applied Materials ~−5% despite a beat + above-consensus Q4
+  revenue guide, SanDisk +7% (Investor Day; JPMorgan to Overweight), Micron +1.40%, Globant −12.6%,
+  Range Resources −7.3%, MDU −6.3%. Breadth: 8 of 11 sectors higher / 3 lower. Sept Fed: ~40% odds
+  of a 25bp HIKE (TE). Chart of the Day = NYSE:RDDT. No After-Hours block published — no sourced
+  after-hours prints existed at build time. WS New tags = 3 (Reddit, Broadcom, Applied Materials).
+- CYBER: **CISA KEV federal due dates VERIFIED verbatim from the SQ Magazine mirror of the CISA JSON
+  feed (records last confirmed 13 Aug 2026) — these are CISA-STATED, not heuristic:
+  CVE-2026-20349 (Cisco Secure Firewall ASA/FTD heap inspection) added 11 Aug → due 14 AUG = TODAY;
+  CVE-2026-72898 (Metabase SQL injection) added 11 Aug → due 14 AUG = TODAY;
+  CVE-2026-68820 (Windows afd.sys WinSock UAF) added 11 Aug → due 25 AUG (11 days);
+  CVE-2026-8037 (Progress LoadMaster command injection) added 7 Aug → due 10 AUG = PAST DUE.**
+  All four required-action texts cite BOD 26-04 (risk-based), NOT the old flat BOD 22-01 three-week
+  window — the standing correction on risk-based deadlines is RE-CONFIRMED. Patch Priority box, KEV
+  section and countdowns all use these same dates (machine-checked vs 2026-08-14).
+  TOP STORY = CVE-2026-68820, the ONLY Aug 2026 Patch Tuesday bug Microsoft confirms exploited in the
+  wild; release totals 421 CVEs / 62 critical (SecurityWeek); CVSS 7.0; LPE to SYSTEM.
+  ⚠ A "due date is August 10, 2026" figure for CVE-2026-68820 surfaced in one search summary — it
+  PREDATES the 11 Aug add date and is self-contradictory; REJECTED in favour of the mirrored 25 Aug.
+  ⚠ One search summary dated CVE-2026-59310 disclosure to "August 12, 2026" — CONTRADICTED by the
+  Broadcom advisory VMSA-2026-0006 date of JULY 29, 2026 (multiple sources); the July 29 advisory
+  date was published and the Aug 12 claim dropped. CVE-2026-59310 CVSS 9.8 is BROADCOM's own figure.
+  Threat actor spotlight = ShinyHunters (vishing → Microsoft 365). New breach items this run:
+  **Questel confirmed a vishing-led M365 breach on 13 Aug** (Sales SharePoint site; ShinyHunters
+  claims >21M records / >147GB; listed 1 Aug with Alcon and Lumenis, 4 Aug contact deadline) and
+  **HIBP added ~1.6M unique RingCentral email addresses on 13 Aug** (RingCentral disclosed 28 Jul;
+  ShinyHunters claimed 623GB then published a 280GB archive). Neither appeared in the Aug 12 edition
+  (grep-verified against archive/cyber-2026-08-12-1649.html) → both tagged New. Cyber New = 2.
+- MMA: **UFC 330 card VERIFIED against UFC.com's own official weigh-in results page (published
+  2026-08-14T11:00 ET): Sat Aug 15, Xfinity Mobile Arena, Philadelphia; Paramount+ exclusive;
+  early prelims 5 PM ET / prelims 7 PM ET / MAIN CARD 9 PM ET; main + co-main five rounds.
+  Main card: Makhachev (170) vs Ian Machado Garry (170) WW title; Dern (115) vs Gillian Robertson
+  (115) SW title; Jalin Turner vs Kaue Fernandes; Mansur Abdul-Malik vs DUSTIN STOLTZFUS;
+  Edson Barboza vs Esteban Ribovics.**
+  ⚠ TRAP: a search summary rendered the Abdul-Malik bout as "Mansur Abdul-Malik vs. Belal Muhammad" —
+  FALSE; UFC.com lists Dustin Stoltzfus. Never publish that pairing. Also conflicting main-card start
+  times circulated (6:00 PM EDT / 5:30 PM ET); UFC.com's 9 PM ET governs, and the countdown target
+  2026-08-15T21:00-04:00 is therefore CORRECT and unchanged.
+  Odds published: Makhachev −360 / Machado Garry +280 and Dern −205 / Robertson +170, both from
+  UFC.com's odds feed (Yahoo Sports/Covers). BET99 opener −330/+270 also in the set, not published.
+  LAST EVENT = UFC Vegas 120 (Aug 8, META Apex): Salkilld sub (RNC) R1 4:25 over Gamrot — 6th
+  straight UFC win; Ferreira UD 30-27 ×3 over Quarantillo; del Valle TKO R1 0:35 over Elkins;
+  Thainara UD over Lemos; Miller def. Goff (method not sourced → em dash). Bonuses: POTN $100K
+  Salkilld + Ty Miller; FOTN $100K Quarantillo vs Ferreira; del Valle $25K finishing bonus.
+  Salkilld framing kept as "third $100K bonus of 2026 / $300K on the year" per standing correction —
+  a separate source says "fourth Performance of the Night in a row", which spans 2025 and does not
+  conflict; the 2026 count was published, not the streak.
+  **CHAMPIONS SWEEP: 6 belts re-verified EXPLICITLY vs ESPN "Current and all-time UFC champions"
+  THIS RUN (Aspinall HW, ULBERG LHW KO1 Procházka Apr 11, STRICKLAND MW SD Chimaev May 9, Makhachev
+  WW, GAETHJE LW TKO4 Topuria Jun 14, VOLKANOVSKI FW UD Lopes Apr 12 2025 +1 defense); Yan BW,
+  Van FLW and Harrison W-BW re-verified via a second dedicated search; Dern W-SW confirmed by
+  UFC.com's UFC 330 billing; Shevchenko W-FLW and interim-HW Gane carried from the standing block.
+  11/11 machine-checked. No stale Pereira-205 / Chimaev-185 / "featherweight vacant" snippets
+  appeared anywhere in this run's result set.** MMA New = 1 (the weigh-in top story / UFC 330 card).
+  DWCS S10 W1 signees (Wint, Hasan, Pagliarulo, Kropschot) were already in the Aug 12 edition
+  (grep-verified) → NOT tagged New.
+- VALIDATION (programmatic, this run): 4 pages HTMLParser-balanced 0 unclosed / 0 errors; 5-tab nav
+  + 4 stamp IDs present on all 4; 8/8 TradingView widget JSON blocks parse; KEV countdowns
+  0/0/11/overdue machine-checked vs 2026-08-14; champions 11/11; trap greps CLEAN (Cody Salkilld /
+  Shamil Yakhyaev / Abdul-Rakhman / unification / MacKenzie / vacant / Belal Muhammad / Pereira-LHW /
+  Chimaev-MW all ×0). New tags 0/2/3/1 (index/cyber/ws/mma).

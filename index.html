@@ -6,64 +6,58 @@
 <title>Daily Briefings</title>
 <style>
 :root{
-  --bg:#0b0d10; --panel:#141820; --line:#232a35; --text:#e4e9ef; --muted:#8a97a8;
-  --teal:#22d3a8; --gold:#caa64a; --gold2:#e8c766; --red:#e84545; --red2:#ff8a5c; --cyan:#36c6ff;
+  --bg:#0b0e10; --panel:#141a1d; --line:#242f34; --text:#e2e8ea; --muted:#8b9ba1;
+  --teal:#22d3a8; --teal2:#36c6ff; --gold:#caa64a; --gold2:#e8c766; --red:#e84545; --red2:#ff8a5c;
   --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
 .wrap{max-width:1040px;margin:0 auto;padding:28px 20px 64px}
 .masthead{border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:14px}
-.brand{font-size:42px;font-weight:800;letter-spacing:-1px;margin:0}
-.tagline{color:var(--muted);font-size:14.5px;margin:6px 0 13px}
+.brand{font-size:38px;font-weight:800;letter-spacing:-.8px;margin:0}
+.tagline{color:var(--muted);font-size:14px;margin:5px 0 12px}
 .meta{display:flex;flex-wrap:wrap;gap:8px}
 .pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:5px 11px;color:var(--muted)}
 .pill.live{color:var(--teal);border-color:rgba(34,211,168,.4)}
 .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--teal);margin-right:6px;vertical-align:middle}
-.freshline{font-family:var(--mono);font-size:11px;color:var(--muted);margin:12px 0 16px;letter-spacing:.04em}
+.freshline{font-family:var(--mono);font-size:11px;color:var(--muted);margin:9px 0 16px;letter-spacing:.04em}
 nav{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 26px}
 nav a{font-family:var(--mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;text-decoration:none;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 13px;transition:.15s}
-nav a:hover{color:var(--text);border-color:#4b5666}
-nav a.active{color:#0b0d10;background:#e4e9ef;border-color:#e4e9ef;font-weight:700}
-.big{display:grid;grid-template-columns:1fr;gap:16px}
-.bcard{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px 24px;transition:.18s;text-decoration:none;color:inherit;display:block;border-left:4px solid var(--line)}
-.bcard:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.45)}
-.bcard .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.19em;text-transform:uppercase;margin-bottom:9px}
-.bcard h2{margin:0 0 10px;font-size:27px;letter-spacing:-.4px}
-.bcard p{margin:0 0 14px;color:var(--muted);font-size:15.5px;line-height:1.55}
-.bcard .go{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
-.c-sec{border-left-color:var(--teal)}
-.c-sec .kicker,.c-sec .go{color:var(--teal)}
-.c-sec h2{color:var(--teal)}
-.c-sec:hover{border-color:var(--teal);border-left-color:var(--teal)}
-.c-mkt{border-left-color:var(--gold)}
-.c-mkt .kicker,.c-mkt .go{color:var(--gold2)}
-.c-mkt h2{color:var(--gold2);font-family:Georgia,"Times New Roman",serif;font-weight:700}
-.c-mkt:hover{border-color:var(--gold);border-left-color:var(--gold)}
-.c-mma{border-left-color:var(--red)}
-.c-mma .kicker,.c-mma .go{color:var(--red2)}
-.c-mma h2{color:var(--red)}
-.c-mma:hover{border-color:var(--red);border-left-color:var(--red)}
+nav a:hover{color:var(--text);border-color:var(--teal)}
+nav a.active{color:#07120f;background:var(--teal);border-color:var(--teal);font-weight:700}
+.bigcards{display:grid;grid-template-columns:1fr;gap:16px}
+.big{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px 25px;transition:.18s;border-left-width:4px;border-left-style:solid}
+.big:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,0,0,.42)}
+.big .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:9px}
+.big h2{margin:0 0 4px;font-size:26px;letter-spacing:-.4px}
+.big .sublabel{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:11px}
+.big p{margin:0 0 14px;color:var(--muted);font-size:15px;line-height:1.55}
+.big a.read{font-family:var(--mono);font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;text-decoration:none;font-weight:700}
+.big.sec{border-left-color:var(--teal)}
+.big.sec .kicker,.big.sec h2,.big.sec a.read{color:var(--teal)}
+.big.mkt{border-left-color:var(--gold)}
+.big.mkt .kicker,.big.mkt a.read{color:var(--gold)}
+.big.mkt h2{color:var(--gold2);font-family:Georgia,"Times New Roman",serif;font-weight:700}
+.big.mma{border-left-color:var(--red)}
+.big.mma .kicker,.big.mma h2,.big.mma a.read{color:var(--red)}
+.big.mma h2 span{color:var(--red2)}
 footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px}
-.disc{margin-top:12px;font-size:11.5px;color:#66727f;font-style:italic}
+.disc{margin-top:10px;font-size:11.5px;color:#5f6f74;font-style:italic}
 </style>
-
 </head>
 <body>
 <div class="wrap">
-
 <header class="masthead">
   <h1 class="brand">Daily Briefings</h1>
-  <div class="tagline">Three desks, refreshed every 30 minutes — security, markets and the fight game.</div>
+  <div class="tagline">Three desks, refreshed through the day — security, markets and the fight game</div>
   <div class="meta">
     <span class="pill live"><span class="dot"></span>Live</span>
-    <span class="pill" id="edition">—</span>
-    <span class="pill" id="datestamp">—</span>
+    <span class="pill" id="edition">Afternoon Edition</span>
+    <span class="pill" id="datestamp">Friday, August 14, 2026</span>
     <span class="pill">Updated <span id="updated">—</span></span>
   </div>
 </header>
-
-<div class="freshline" id="freshline">Data as of — ET</div>
+<div class="freshline" id="freshline">Data as of — ET · briefings refresh every 30 minutes, 8 AM–6 PM ET</div>
 
 <nav>
   <a href="index.html" class="active">★ Front Page</a>
@@ -73,36 +67,36 @@ footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);color:v
   <a href="archive.html">🗄 Archive</a>
 </nav>
 
-<div class="big">
+<div class="bigcards">
+  <div class="big sec">
+    <div class="kicker">⛨ The Cyber Wire</div>
+    <h2>Two federal patch deadlines land today</h2>
+    <div class="sublabel">The Wire</div>
+    <p>Two CISA KEV remediation deadlines — the Cisco Secure Firewall ASA/FTD flaw and the Metabase SQL injection — fall today, while the actively exploited Windows WinSock driver zero-day from Tuesday's Patch Tuesday runs to August 25 and ShinyHunters keeps converting phone calls into Microsoft 365 breaches at Questel and RingCentral.</p>
+    <a class="read" href="cyber-briefing.html">Read the briefing →</a>
+  </div>
 
-  <a class="bcard c-sec" href="cyber-briefing.html">
-    <div class="kicker">⛨ The Cyber Wire · The Wire</div>
-    <h2>Attackers hit a just-patched VMware vCenter flaw as Patch Tuesday's zero-day is tied to North Korea — and 737 fake Chrome VPN extensions come down</h2>
-    <p>Check Point ties CVE-2026-68820, the exploited WinSock zero-day patched Tuesday, to Lazarus rootkit deployments — and attackers are exploiting a CVSS-9.8 VMware vCenter flaw for persistent remote access before it even reaches the KEV catalog. The Cisco ASA/FTD flaw and the CVSS-10.0 Metabase SQL injection both hit federal deadlines Friday, Microsoft's DeadLock teardown now counts 96 claimed victims, Socket caught 737 fake Chrome VPN extensions proxying entire browser sessions through one network, researchers showed how to decode hidden AI reasoning from OpenAI, Anthropic and Google APIs — and "ShieldBreak," the researcher-released Defender exploit granting SYSTEM, remains unpatched. Picus's Blue Report finds defenses recovering at the perimeter but soft inside, and Kimwolf v7 disguises DDoS floods as real browser traffic.</p>
-    <div class="go">Read the briefing →</div>
-  </a>
+  <div class="big mkt">
+    <div class="kicker">▲ The Closing Bell</div>
+    <h2>A record gives a little back</h2>
+    <div class="sublabel">The Tape</div>
+    <p>Stocks eased back from Thursday's record close as July retail sales fell and August consumer sentiment dropped to 51, with the S&amp;P 500 off about 0.2% as of roughly 3:45 PM ET — still on pace for a third straight weekly gain — while Reddit surged on news it joins the index Tuesday and Broadcom and Applied Materials led the chip complex lower.</p>
+    <a class="read" href="wallstreet-briefing.html">Read the briefing →</a>
+  </div>
 
-  <a class="bcard c-mkt" href="wallstreet-briefing.html">
-    <div class="kicker">▲ The Closing Bell · The Tape</div>
-    <h2>CPI cools to 3.4%, stocks close higher — and Cisco beats after the bell</h2>
-    <p>July inflation came in tame — 0.1% on the month, with the annual rate easing to 3.4% and core to 2.5% — and the tape held the relief through the bell: the S&amp;P 500 finished up roughly a quarter-percent (TE's post-close stats line settled at 7,748.21, +0.26%), the Nasdaq added about half a percent and the Dow ended near flat, with eight of 11 sectors green and tech leading. CoreWeave surged about 20%, Nebius jumped 16.5% and Super Micro ran 19.5% by the late boards — and after the bell <b>Cisco posted a clean fiscal-Q4 double beat</b> — $17.25 billion in revenue (+18%) and $1.22 EPS (+23%), shares up 2.5% in extended trading with FY27 guidance above consensus — while Coherent followed with a beat of its own ($2.05 billion, $1.74 non-GAAP EPS), with Thursday's PPI next. Tuesday's corrected official closes remain in the Weekly Scorecard.</p>
-    <div class="go">Read the briefing →</div>
-  </a>
-
-  <a class="bcard c-mma" href="mma-briefing.html">
-    <div class="kicker">⊘ The Octagon · Tale of the Tape</div>
-    <h2>Three days to UFC 330 — and the Contender Series opens season 10 with four contracts in one night</h2>
-    <p>Saturday in Philadelphia, Islam Makhachev (−340 at DraftKings, −360 on UFC.com's own feed and up to −370 in late-Wednesday roundups, with the week's lines spanning −325 to −390) makes his first welterweight title defense — the pair faced off at Philly's Rocky statue Tuesday — against top contender Ian Machado Garry with a record-tying 16-fight win streak on the line, and Mackenzie Dern defends the strawweight belt in the co-feature. Tuesday's Contender Series premiere handed out four UFC contracts, led by former Jets practice-squad linebacker Anthony Wint's 34-second finish and Bilal Hasan — the biggest favorite in the show's history — winning in 45 seconds.</p>
-    <div class="go">Read the briefing →</div>
-  </a>
-
+  <div class="big mma">
+    <div class="kicker">⊘ The Octagon</div>
+    <h2>UFC 330 is <span>locked in</span></h2>
+    <div class="sublabel">Tale of the Tape</div>
+    <p>UFC 330 is set after every fighter made weight Friday morning in Philadelphia, with welterweight champion Islam Makhachev a −360 favorite over No. 1-ranked Ian Machado Garry and Mackenzie Dern making the first defense of her strawweight title against Gillian Robertson.</p>
+    <a class="read" href="mma-briefing.html">Read the briefing →</a>
+  </div>
 </div>
 
 <footer>
-  Every claim on these pages is checked against a source fetched in the same run. Full source lists sit in the footer of each briefing.
-  <div class="disc">Information only. Not investment, legal or security advice.</div>
+  Each briefing carries its own sourced footnotes. Snapshots of every edition are kept in the <a href="archive.html" style="color:var(--teal2)">Archive</a>.
+  <div class="disc">Compiled from public reporting. Markets content is for information only and is not investment advice; security content is informational and should be verified against vendor advisories; fight cards and bouts are subject to change.</div>
 </footer>
-
 </div>
 <script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
 </body>
