@@ -7155,3 +7155,137 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   ⚠ "Mansur Abdul-Malik" here is a LEGITIMATE reference (he lost to Stoltzfus at UFC 330). The standing trap is the FALSE "Mansur Abdul-Malik vs Belal Muhammad" pairing, still absent.
   ⚠ Ranking descriptors from snippets ("#1 Ian Machado Garry", "top contenders") were not published as belt/title claims. MMA New = 3 (three prospects); the Sacramento card was grep-PRESENT in the Aug 14 snapshot so it is tagged "Next up", not New.
 - VALIDATION (programmatic, this run): 4 pages HTMLParser-balanced 0 unclosed / 0 errors; 5-tab nav + 4 stamp IDs on all 4; 8/8 TradingView widget JSON blocks parse (Chart of the Day = NASDAQ:SNDK); champions 12/12 rows; KEV countdowns 8 / past-due ×4 machine-checked vs 2026-08-17; trap greps CLEAN (Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman / unification / MacKenzie / pay-per-view / Pereira-, Chimaev-, Topuria-in-champions-cell / "featherweight vacant" / "Vacant" / 7,782 / Jean Matsumoto / Thainara Silva / Kevin Goff / Ray-Project / "lightweight bout" all ×0). New tags 0/3/2/3 (index/cyber/ws/mma).
+
+## Added 2026-08-17 (Monday ~4:16pm ET — Afternoon Edition; POST-CLOSE; refresh of the ~3:50pm edition; research ~4:05–4:15pm)
+- CLOCK: TZ date = Mon Aug 17 16:05 EDT at run start; archive stamp 2026-08-17-1616. Markets CLOSED at 4:00 PM, so this is the first post-close edition of the day: After-Hours section ADDED, and the Lead rewritten from intraday to close.
+- MARKETS — ⚠⚠ **MONDAY CLOSING LEVELS DELIBERATELY NOT PUBLISHED.** Sources did not corroborate:
+  a search summary gave S&P **7,745.06 / −40.70 / −0.52%** (internally consistent, and exactly Friday's
+  7,785.76 minus 40.70), while The Motley Fool page fetched in full at ~4:10pm carried TWO delayed
+  quote rails reading **7,758.11 (−0.4%, −27.65)** and **7,754.61 (−0.40%, −31.15)**, and a
+  Trading-Economics-derived summary gave **7,778 / −0.10%**. Per the standing level rule (level +
+  points + percent must be mutually consistent AND corroborated) only DIRECTION AND PERCENT were
+  published: **Dow ≈ −0.5%, S&P 500 ≈ −0.4% to −0.5%, Nasdaq Composite ≈ −0.3%.** The page SAYS SO
+  explicitly and names the conflicting 7,745.06 figure as unconfirmed rather than hiding the gap.
+  Weekly Scorecard keeps the verified FRIDAY Aug 14 closes, explicitly labelled Friday.
+  ⚠ **FRIDAY-FOR-MONDAY TRAP FIRED TWICE THIS RUN AND WAS CAUGHT BOTH TIMES.** (1) The Zacks-style
+  "Stock Market News for Aug 17, 2026" piece returned S&P 7,785.76 −13.23 −0.2% / Dow 53,732.41
+  −107.58 −0.2% / Nasdaq 26,729.16 −73.86 −0.3% — those are FRIDAY's verified closes. (2) The
+  TradingKey article headlined "**US Stocks Close**: Three Major Indexes Edge Lower … SanDisk Extends
+  Gain by 7%" is **datelined Aug 14, 2026 8:12 PM** and gives the same Friday closes plus FRIDAY's
+  movers (SNDK +7.39% to $1,641.11, STX +5.65%, WDC +4.41%, **MU +2.30%**, **SK Hynix +0.40%**,
+  AVGO −5.93%). ALL REJECTED as Monday data. NOTE the sign flip: MU and SKHY were nearly flat FRIDAY
+  and were the big gainers MONDAY — do not mix the two sets.
+  ⚠ The Yahoo Aug 17 live blog fetched in full is AGAIN the **5:44 AM pre-market edition**
+  ("U.S. markets open in 3h 31m") with the same cached trending rail (AVGO −5.94%, AMD +6.50%,
+  MU +2.30%). Rail NOT used. This is the second consecutive run this exact cache has appeared.
+  LEAD: the **June 17 U.S.–Iran MOU hit its 60-day deadline Monday with nothing signed**; a senior
+  Iranian official told Reuters Tehran is going "fully offensive" and would use its military to break
+  the U.S. naval blockade if talks fail; Trump told Fox News he is in no rush and threatened to bomb
+  **Oman** (the mediator) if it interferes. **Hormuz shipping essentially stopped — 3 vessels crossed
+  Sunday vs ~130 daily before the war began in February** (Motley Fool, Aug 17).
+  OIL ⚠ CONFLICT: Motley Fool (midday, explicit) **Brent +0.7% to $89.13, "a quiet day by recent
+  standards"**; the Yahoo Aug 17 live blog says **Brent hit $90**. BOTH published, attributed — the
+  $89.13 figure as the number, the $90 touch credited to Yahoo. Supersedes the 3:50pm CNBC
+  $89.07/+55c pair.
+  RATES: **30-yr 5.31%, +5bp, highest since June 2007** (Yahoo Aug 17) — SUPERSEDES the 5.26% carried
+  earlier today. 10-yr ~4.70% and 2-yr 4.171% carried and explicitly labelled as FRIDAY Aug 14 levels.
+  Fed funds range 3.50–3.75% (July 28–29 FOMC left unchanged — note the meeting DATE is Jul 28–29,
+  confirmed by TheStreet; the Wednesday release is that meeting's minutes).
+  MOVERS (all Motley Fool Aug 17 unless noted): **Cerebras Systems (CBRS) +15% (one source +15.67%),
+  Wedbush PT raised to $290 from $280, exclusive compute backbone for OpenAI's GPT-5.6 Sol Ultrafast
+  mode — 750 output tokens/sec, ~14x standard — with a 750-MW capacity purchase commitment through
+  2028; follows a ~17% drop on Aug 13 on a Q2 revenue miss** (Yahoo/Benzinga/GuruFocus). **SK Hynix
+  +6.5%, ~$83B market value added. Micron +5.9%, back above $1,000/share. Microsoft −2.4%, the
+  S&P 500's single biggest drag, on a Morgan Stanley hyperscaler-capex note. Meta −3.3% ahead of
+  Tuesday's Oakland opening arguments (29 state AGs). Nvidia +0.9% on up to $105B of credit support
+  for an OpenAI campus in PIKE COUNTY, Ohio (+$1.5B into SB Energy; SoftBank-backed SB Energy builds/
+  owns/operates, OpenAI primary tenant on a 20-yr lease, first 4.25 GW in 2028). Intel ~+1.5% after
+  CEO Lip-Bu Tan bought 105,000+ shares last week at $95.**
+  ⚠ SPELLING: Motley Fool renders the Ohio site "Pike City"; TradingKey renders "Pike County" —
+  **Pike County** published.
+  BREADTH (published, sourced): **RSP −0.58%, more than 3x the cap-weighted drop; decliners beat
+  advancers ~1.5-to-1 on the NYSE.** ⚠ SECTOR PERCENTAGES DROPPED AGAIN — no clean Monday sector read
+  surfaced; the breadth line is the single editorial line under the heatmap instead.
+  AFTER-HOURS: section ADDED and says explicitly that **no verified Aug 17 after-hours moves had
+  surfaced** ~15 minutes after the bell. Nothing invented; no prior-session snapshot carried.
+  Chart of the Day = **NASDAQ:MU** (verified Monday mover; CBRS was the larger move but the ticker is
+  a May-2026 IPO and was not risked in a TradingView widget).
+  FORWARD: FOMC minutes Wed; Walmart/Target/Lowe's/Home Depot; **Reddit joins the S&P 500 before the
+  open TUE AUG 18 replacing AvalonBay**; Sept hike odds **~31% (Fool) / ~33% (Capital.com via
+  TheStreet)** — published as "roughly a third", down from ~50/50 a week ago; **BOJ may hike as early
+  as the Sept 17–18 meeting** (TradingKey, three sources); July retail sales fell for the first time
+  in nine months, consumer sentiment 51.0; S&P +13.6% YTD, Q2 earnings tracking ~50% growth.
+- CYBER: **TOP STORY CHANGED from the Unisoc VoLTE chain to the MyDr / Poland health-records theft.**
+  Nearly **19 million** people's medical data taken from MyDr, the software supplier behind electronic
+  medical records for roughly **12,000 medical facilities**; database is **more than 2 terabytes**
+  covering primary-healthcare users — prescriptions, appointments, registered medicines, documents
+  given to doctors. Attackers proved the breach by leaking a senior Polish politician's PESEL number,
+  phone numbers and **25 prescriptions**. **Central Cybercrime Bureau** investigating; **no indication
+  of a Russian or other state attack**; facilities still operating normally; Ministry of Digital
+  Affairs advises citizens to check the database and block their PESEL. Reported Aug 13
+  (Notes From Poland / PAP / Cybernews). ⚠ SIZE CONFLICT: one summary said "2.5TB", the detailed
+  reporting says "more than 2 terabytes" — the latter published.
+  PATCH PRIORITY UNCHANGED: **CVE-2026-68820 (afd.sys, CVSS 7.0), KEV due Aug 25 = 8 days**,
+  machine-checked. Tenable independently re-confirmed this run: CVSSv3 **7.0**, rated Important,
+  local EoP to SYSTEM, the ONLY August Patch Tuesday CVE confirmed actively exploited at patch time.
+  All five KEV countdowns machine-checked vs 2026-08-17: 68820 = 8 days; 72898, 20349 = past due
+  (Aug 14); 8037 = past due (Aug 10); 63077 = past due (Aug 8).
+  ⚠ PATCH TUESDAY COUNT CONFLICT PERSISTS AND WIDENED: SecurityWeek/Splashtop **421**, Tenable **398**,
+  Check Point's Aug 17 report **421**. Published figure stays **421** per the standing do-not-swap rule
+  — now corroborated by Check Point as well as SecurityWeek.
+  SPOTLIGHT: **Lazarus / Operation Dream Job CARRIED, New tag REMOVED** (present in the 1550 snapshot),
+  but re-verified and ENRICHED from Check Point's 17 Aug report: targets **defence organisations in
+  Europe, India and Brazil** using **fraudulent job opportunities and trojanised PDF software**.
+  NEW INCIDENTS (all three grep-verified ABSENT from archive/cyber-2026-08-17-1550.html → tagged New):
+  **(1) North Korean IT worker on a U.S. federal agency payroll — FBI discovered the individual in
+  July 2026; Todd Hemmen, deputy assistant director of the FBI's Cyber Capabilities Branch, disclosed
+  it July 28 at a Digital Government Institute conference in Washington; agency unnamed, duties not
+  described, unclear whether anything was stolen; UN estimates $250M–$600M/yr generated for the DPRK.**
+  **(2) Colombia's Ministry of Justice ransomware, Aug 2, 2026 — hit illicit-drug monitoring and legal
+  process services; some files encrypted; NO data theft detected; days before the presidential
+  transition.** **(3) Akira claims Minnesota Health Insurance Network over an April 2026 attack —
+  passports, home addresses, phone numbers, emails for clients plus similar employee data, project
+  info, financial records, contracts; the organisation had NOT publicly confirmed at the time of the
+  reports, and the page says so.**
+  ROTATED OUT: Unisoc top story, UK police data lapse, DeadLock. CARRIED with New tags REMOVED:
+  Levi Strauss, INC/SonicWall.
+  BY-THE-NUMBERS strip changed to **19M / 2,139 / 93 / 421**. New Check Point Q2 figures published in
+  a new "The Wider Picture" section: **2,139 publicly reported ransomware victims in Q2 2026, +33% YoY;
+  93 active ransomware groups; The Gentlemen using AI coding assistants to build operational tooling;
+  2,336 average weekly attacks per organisation in July 2026, +16% YoY.** Threat level HIGH.
+  Cyber New = 3.
+- MMA: **CHAMPIONS RE-VERIFIED vs ESPN THIS RUN for four belts with dates and defence counts —
+  ULBERG LHW (KO1 Procházka, UFC 327, Apr 11 2026, 0 def), STRICKLAND MW (SD Chimaev, UFC 328,
+  May 9 2026, 0 def), MAKHACHEV WW (UD Della Maddalena, UFC 322, Nov 15 2025, **1 def**), GAETHJE LW
+  (TKO4 Topuria, Freedom 250, Jun 14 2026, 0 def).** The other eight rows carried from the standing
+  block and the verified 1550 edition. 12 rows machine-checked; no stale Pereira-205 / Chimaev-185 /
+  Topuria-155 anywhere in this sweep. Notably the generic stale-list trap did NOT fire this run
+  because the query was targeted at the four names from the outset — keep doing that.
+  TOP STORY, UFC 330 result table, bonuses and Champions Board CARRIED VERBATIM from the verified
+  1550 edition (all full-name spellings preserved per the standing copy-don't-reconstruct rule).
+  NEW THIS RUN (all grep-verified absent from archive/mma-2026-08-17-1550.html):
+  **(1) Anthony Wint (7-0, 34-second win over Matt Adams on DWCS S10 W1) is BOOKED to debut against
+  fellow newcomer TERRANCE CHATMAN at UFC Sacramento, Sat Aug 22** (MMA Mania "Warp speed!").
+  **(2) Bilal Hasan (finished Mridul Saikia in under a minute at bantamweight on DWCS) is BOOKED to
+  debut at UFC Shanghai against NILSON ROJAS.** **(3) Abe Alsaghir improved to 9-0 with a split
+  decision over FABRIZIO ESCARREGA on DWCS W1 but Dana White disagreed with the result and refused to
+  sign him — four of the five winners were signed** (Bloody Elbow, Aug 12). **(4) UFC Shanghai card
+  detail: ELEVEN bouts; Yan Xiaonan vs Denise Gomes (W-SW), Aoriqileng vs Kai Asakura (BW), and a
+  flyweight bout featuring Alex Perez.** Umar Nurmagomedov 20-1 / Song Yadong 23-9-1 added (UFC.com).
+  Wint and Hasan replaced Lucas Fernando and Tresean Gore in Prospect Watch; Donte Johnson carried
+  with the New tag removed. Sacramento odds RE-VERIFIED unchanged at **−166 to −176 / +140 to +147**,
+  with the newly sourced OPENING line **−147 / +120** added to show the drift. Countdown target
+  2026-08-22T20:00-04:00 UNCHANGED.
+  ⚠ Ranking descriptors ("sixth-ranked", "11th-ranked", "#3", "#5") appeared in snippets again and
+  were again NOT published as belt/title claims. "Former UFC Bantamweight Championship challenger"
+  for Umar Nurmagomedov is UFC.com-sourced and true, but was softened to "following his bantamweight
+  title challenge" rather than a standalone descriptor. MMA New = 4 markers.
+- VALIDATION (programmatic, this run): 4 pages HTMLParser-balanced 0 unclosed / 0 errors; 5-tab nav +
+  4 stamp IDs on all 4; 8/8 TradingView widget JSON blocks parse (Chart of the Day = NASDAQ:MU);
+  champions 12/12 rows; KEV countdowns 8 / past-due ×4 machine-checked vs 2026-08-17; trap greps CLEAN
+  (Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman / unification / MacKenzie / pay-per-view /
+  "featherweight vacant" / "Vacant" / Jean Matsumoto / Thainara Silva / Kevin Goff / Ray-Project /
+  "lightweight bout" / 7,782 / "Belal Muhammad vs" / Pereira-, Chimaev-, Topuria-in-champions-cell
+  all ×0). Friday closes appear exactly once each and only inside the Friday-labelled Weekly
+  Scorecard; 7,745.06 appears exactly once, inside the paragraph explaining why it was NOT published.
+  New tags 0/3/5/4 (index/cyber/ws/mma).
