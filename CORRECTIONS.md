@@ -7392,3 +7392,77 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   Thainara Silva / "lightweight bout" / "Belal Muhammad vs" / Ray-Project / 7,782 / Cerebras-on-WS all ×0).
   Monday levels appear 3× each (tldr, Lead, Scorecard); Friday levels appear 2× each and ONLY inside the
   rejection paragraph and the labelled prior-session reference line. New tags 0/0/0/2 (index/cyber/ws/mma).
+
+## Added 2026-08-17 (Monday ~5:12pm ET — Afternoon Edition; POST-CLOSE refresh of the 4:42pm edition; research ~5:06–5:12pm)
+- CLOCK: TZ date = Mon Aug 17 17:05 EDT at run start; archive stamp 2026-08-17-1712. Markets CLOSED.
+- MARKETS: **Monday closes RE-CONFIRMED and carried unchanged — S&P 500 7,745.06 (−40.70, −0.52%); Dow 53,459.78
+  (−272.63, −0.51%); Nasdaq Composite 26,644.91 (−84.25, −0.32%).** A targeted level query returned the identical
+  triple a third time, and the CNBC Aug 17 live-blog headline "Dow loses more than 270 points as oil prices pressure
+  stocks amid rising Iran tensions" appeared again in results. ⚠ **FRIDAY-FOR-MONDAY TRAP FIRED A THIRD TIME AND WAS
+  CAUGHT**: the Zacks-style "Stock Market News for Aug 17, 2026" piece again returned 7,785.76 / 53,732.41 /
+  26,729.16 as "August 17" closes. REJECTED; the page's existing rejection paragraph still names it.
+  ⚠ **SK HYNIX PERCENT CONFLICT (new):** Motley Fool Aug 17 = **+6.5%**; invezz Aug 17 = **+5.6%**. Neither dropped —
+  the card now publishes 6.5% as the figure and states the 5.6% alternative explicitly. Micron **+5.9%, back above
+  $1,000** re-confirmed by a second source (Yahoo "Micron stock heats up again, crossing $1,000"; invezz adds the
+  administration's discouragement of Chinese memory sourcing as a driver alongside the Anthropic-revenue read).
+  AFTER-HOURS: still **no verified single-stock Aug 17 after-hours move**. NEW, published attributed with a caveat:
+  post-market index-proxy screens read **SPY −0.03%, QQQ −0.06%, DIA −0.04%, IWM −0.01%** (stockanalysis.com
+  after-hours screen; **no explicit timestamp on the screen**, so published as direction, not a settled figure).
+  Brent conflict unchanged (Fool midday $89.13 +0.7% published; Trading Economics 88.31 −0.24%; Yahoo $90 touch) —
+  Trading Economics re-returned 88.31 −0.24% this run. 30-yr 5.31% (highest since June 2007) carried.
+  Chart of the Day stays NASDAQ:MU. **WS New tags = 0** (every mover grep-present in archive/wallstreet-2026-08-17-1642.html).
+- CYBER: **TOP STORY CHANGED from Clop/Windchill to the AZURE TENANT DATA-THEFT LISTINGS ("TheHatman").** A seller
+  is advertising **more than 3.6 million records across NINE organisations** allegedly exfiltrated from corporate
+  **Microsoft Azure** environments: **McDonald's >1.7M (largest), Tata Consultancy Services >800,000, Vodafone
+  ~425,000, HCL Technologies also named.** Fields = employee emails, phone numbers, job titles, names, workplace
+  addresses. Research by **Hudson Rock**, which says it linked **infostealer infections** to compromised Azure
+  credentials at several of the named companies; TheHatman claims compromised credentials, **NOT an Azure
+  vulnerability** — the page says this explicitly. **NONE of the named companies has publicly confirmed**, and the
+  page says so and attributes the volumes to the seller's listings. (The Register Aug 17 / SecurityWeek / Cybernews /
+  GovInfoSecurity.) Clop/Windchill DEMOTED to a condensed Breaches card (all figures preserved verbatim: 43 victims,
+  89 GB Shell claim, 13.5 GB Philips claim, GE + Fiserv, Shell's Aug 14 "potential incident" quote).
+- CYBER NEW INCIDENT (grep-verified ABSENT from archive/cyber-2026-08-17-1642.html → tagged New): **N-able N-central
+  takeover — CVE-2026-18577, an authentication bypass created by an INCOMPLETE FIX for CVE-2026-18556; N-able's
+  first hotfix and build 2026.3.1.7 shipped Aug 2; exploitation of the follow-on flaw observed in the wild since
+  Aug 1; CISA added 18577 to KEV Aug 3 and 18556 on Aug 5; post-exploitation abuses N-central's built-in "Take
+  Control" feature to reach managed endpoints and deploys Cloudflare Tunnel (cloudflared) for persistence.**
+  ⚠ NO CVSS figure for 18577 surfaced this run → the Vulnerability Watch cell shows "—" and the page says none is
+  published. NO due dates for 18577/18556 surfaced → they are deliberately NOT added to the KEV countdown list.
+  (THN / Rapid7 / N-able Aug 10 security update.)
+- ⚠ **CVE-2026-12569 CVSS CONFLICT RESOLVED — BOTH FIGURES ARE CORRECT.** Tenable's CVE page gives **CVSS v4.0 = 9.3**
+  AND **CVSS v3.1 = 9.8** (plus v2 = 10). The long-running 9.3-vs-9.8 discrepancy across prior runs was a
+  scale-version difference, not a source error. The table now shows "9.3 / 9.8" and explains it. Root cause also
+  clarified: CISA/KEV catalogues it as **improper input validation**, Tenable/SentinelOne describe **insecure
+  deserialization of untrusted data** — both renderings published side by side. Do not "fix" one into the other.
+- CYBER other: 68820 detail ENRICHED from senserva.com/cve/CVE-2026-68820.html fetched in full — **affected products
+  = Windows 10 version 1809 (32-bit and x64) and Windows Server 2019; fixed by KB5120228 plus twelve further KBs;
+  EPSS 3.7%; KEV-added Aug 11.** Due date **Aug 25 (8 days)** carried from the prior triple-verified runs (the
+  Senserva CVE page does not print the due date). Senserva "exploited this week" fetched in full (updated Aug 17)
+  lists exactly 20349 / 68820 / 72898 / 8037 / 63077 — Ray-Project STILL absent, so the standing rejection holds.
+  BY-THE-NUMBERS changed to **3.6M / 1.7M / 43 / 2,139**. Threat banner rewritten around credential theft. Threat
+  level stays HIGH. Lazarus spotlight, MyDr, DPRK IT worker, Colombia, Akira, Levi Strauss, INC all CARRIED with
+  New tags removed. **Cyber New = 1** (N-able only; the Azure story is the untagged Top Story).
+- MMA: **UFC 330 BUSINESS FIGURES NOW VERIFIED AND PUBLISHED — the section that said "no figures surfaced" is
+  replaced.** MMA Weekly (Jeff Cain, published/modified 2026-08-17T04:22Z) fetched IN FULL: **19,238 spectators,
+  $6,715,776 gate, highest-grossing event in Xfinity Mobile Arena history**; Dana White at the post-fight presser:
+  "We shattered the arena record by two million dollars" and "we do a $7 million gate and we shatter the ... record
+  here. The biggest event that's ever been held here, we beat it by $2 million." Also verified there: **first UFC
+  event in Philadelphia in seven years — the last was UFC on ESPN: Barboza vs. Gaethje, March 2019, when the arena
+  was the Wells Fargo Center.** ⚠ Still NO viewership figure and NO TKO Group disclosure — the page says so
+  explicitly rather than omitting it. This is now the index.html MMA card and the MMA tldr.
+- MMA new card detail (grep-verified absent from archive/mma-2026-08-17-1642.html): **UFC Sacramento main card also
+  has MarQuel Mederos vs. Mason Jones (lightweight) and Carli Judice vs. Jeisla Chaves (flyweight); the event is
+  listed as UFC Fight Night 285.** Odds RE-VERIFIED unchanged (Hernandez −166 to −176 / Rodrigues +140 to +147,
+  opener −147/+120). Countdown target 2026-08-22T20:00-04:00 unchanged. The Sacramento card tag changed from
+  "Card filled out" to "Main card set".
+- MMA champions: targeted query used AGAIN (the standing fix) and ESPN returned all four checked belts WITH dates
+  and defence counts: **Ulberg LHW (KO Procházka, UFC 327, Apr 11 2026, 0 def), Strickland MW (SD Chimaev, UFC 328,
+  May 9 2026, 0 def), Makhachev WW (UD Della Maddalena, UFC 322, Nov 15 2025, 1 def), Gaethje LW (TKO4 Topuria,
+  Freedom 250, Jun 14 2026, 0 def).** The generic stale-list trap did NOT fire this run. 12 rows machine-checked.
+- VALIDATION (programmatic, this run): 4 pages HTMLParser-balanced 0 unclosed / 0 errors; 5-tab nav + 3 stamp IDs on
+  all 4; 8/8 TradingView widget JSON blocks parse (Chart of the Day = NASDAQ:MU); champions 12/12 rows; six KEV
+  countdowns machine-checked vs 2026-08-17 (68820 = 8 days; 72898, 20349, 8037, 63077, 12569 past due); trap greps
+  CLEAN (Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman / MacKenzie / pay-per-view / "featherweight vacant" /
+  ">Vacant<" / Jean Matsumoto / Thainara Silva / "lightweight bout" / "Belal Muhammad vs" / Ray-Project / 7,782 /
+  Cerebras / Pereira-, Chimaev-, Topuria-in-champions-cell all ×0). Friday closes appear exactly 2× each and ONLY
+  inside the rejection paragraph and the labelled prior-session reference line. New tags 0/1/0/0 (index/cyber/ws/mma).
