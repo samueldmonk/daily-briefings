@@ -7466,3 +7466,76 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   ">Vacant<" / Jean Matsumoto / Thainara Silva / "lightweight bout" / "Belal Muhammad vs" / Ray-Project / 7,782 /
   Cerebras / Pereira-, Chimaev-, Topuria-in-champions-cell all ×0). Friday closes appear exactly 2× each and ONLY
   inside the rejection paragraph and the labelled prior-session reference line. New tags 0/1/0/0 (index/cyber/ws/mma).
+
+## Added 2026-08-17 (Monday ~5:40pm ET — Afternoon Edition; POST-CLOSE refresh of the 5:12pm edition; research ~5:35–5:40pm)
+- CLOCK: TZ date = Mon Aug 17 17:35 EDT at run start; archive stamp 2026-08-17-1740. Markets CLOSED.
+- MARKETS: **Monday closes RE-CONFIRMED A FOURTH TIME and carried unchanged — S&P 500 7,745.06 (−40.70, −0.52%);
+  Dow 53,459.78 (−272.63, −0.51%); Nasdaq Composite 26,644.91 (−84.25, −0.32%).**
+  ⚠ **FRIDAY-FOR-MONDAY TRAP FIRED A FOURTH TIME AND IS NOW DEFINITIVELY SETTLED, NOT MERELY INFERRED.** The
+  Zacks-style "Stock Market News for Aug 17, 2026" piece again returned 7,785.76 / 53,732.41 / 26,729.16 as
+  "August 17" closes. REJECTED — and this run produced the clinching source: TradingKey's "US Stock Market This
+  Week – 2026-08-17" states the S&P 500 ended **up 0.4% on the week at 7,785.76 for the period ending August 16**,
+  i.e. the identical figure explicitly labelled as the WEEK's final level, before Monday's session opened. The
+  rejection paragraph on the Wall Street page now carries this. Friday levels appear 3× / 2× / 2× and ONLY inside
+  the rejection paragraph and the labelled prior-session reference line.
+- MARKETS NEW (all grep-verified ABSENT from archive/wallstreet-2026-08-17-1712.html): **(1) SECTOR FIGURES now
+  sourced rather than qualitative — Energy (XLE) +1.39%, Utilities (XLU) +0.61%, Industrials (XLI) +0.39% leading;
+  Consumer Staples −1.46% the weakest, with real estate and rate-sensitive defensives also lower; framed by one
+  account as rotation out of consumer-sensitive sectors after weak retail sales** (Investrade mid-morning look /
+  TradingKey). **(2) Astera Labs (ALAB) +5.7% after Northland upgraded it to Outperform from Market Perform**
+  (Seeking Alpha) — tagged New. **(3) HIVE Digital Technologies higher on a five-year, $350M GPU cloud services
+  deal adding ~$70M annualised revenue** (Seeking Alpha) — tagged New; ⚠ NO percentage move surfaced, so the card
+  publishes direction + contract terms ONLY and says so explicitly.
+- ⚠ **30-YEAR YIELD CONFLICT (new, unresolved — BOTH PUBLISHED).** Prior runs carried **5.31%, "highest since June
+  2007"**; this run Investrade reports the 30-year reaching **5.29%, "the highest since 2007."** Neither dropped —
+  the Rates table now reads "5.29–5.31%" and names both renderings with their attributions. Do NOT silently
+  collapse to one. Driver identical in both (surging oil rekindling inflation fear + national-debt concerns).
+- Brent: 88.31 (−0.24%) re-returned by Trading Economics a fourth time; the published midday $89.13 +0.7% figure
+  stands, and the table now ALSO cites TradingKey's "Brent topped $90 on Middle East risks" alongside the existing
+  Yahoo $90-touch note. After-hours: STILL no verified single-stock Aug 17 move; SPY −0.03% / QQQ −0.06% /
+  DIA −0.04% / IWM −0.01% index proxies re-confirmed and still published as direction, not settled figures
+  (screen carries no timestamp). Chart of the Day stays NASDAQ:MU. **WS New tags = 2.**
+- CYBER: **Azure / "TheHatman" TOP STORY CARRIED and MATERIALLY ENRICHED — the full nine-tenant breakdown is now
+  verified and published:** McDonald's ~1.7M, Tata Consultancy Services ~800,000, **HCL Technologies ~250,000**,
+  Vodafone ~425,000, **InterContinental Hotels Group >185,000, Kyndryl ~170,000, Gap Inc. ~80,000, Hexaware
+  Technologies ~20,000, Wyndham Hotels ~9,000** (InfoStealers / CRN Asia / Cybernews). Field list also expanded
+  from Hudson Rock's sample analysis: departments, designations, assignments, **manager and reporting
+  relationships, group memberships, service accounts, and information identifying Global Administrator accounts.**
+  Caveats UNCHANGED and still prominent — no named company has confirmed, volumes are the seller's claims, and
+  TheHatman claims compromised credentials rather than an Azure vulnerability.
+- CYBER NEW INCIDENT (grep-verified ABSENT from archive/cyber-2026-08-17-1712.html → tagged New): **Unisoc VoLTE
+  video-call exploit chain — SSD Secure Disclosure advisory published Aug 17, 2026; a TWO-STAGE chain achieving
+  full Android KERNEL access on devices running Unisoc modem firmware. Stage one was the March 2026 RCE via a
+  malformed SIP video call; this week's instalment supplies the privilege escalation. Confirmed on a Motorola E13
+  (February 2025 patch level) and a Xiaomi Redmi A5 (January 2026 patch level). Unisoc = Shanghai chipmaker
+  formerly Spreadtrum, supplies Motorola, Realme and Xiaomi across 140+ countries. NO VENDOR FIX — SSD: "We have
+  tried to reach out to the vendor through multiple channels (email and LinkedIn) but have not been able to
+  receive any response."** ⚠ TWO BOUNDING CONDITIONS PUBLISHED EXPLICITLY so the item is not overstated: the
+  attacker must CONTROL A PRIVATE 4G CELLULAR NETWORK and the victim must ANSWER the incoming video call —
+  targeted-attack territory, NOT mass exploitation. ⚠ NO CVE ID and NO CVSS surfaced → deliberately NOT added to
+  the Vulnerability Watch table or the KEV countdown list. **Cyber New = 1** (Unisoc; N-able New tag REMOVED,
+  present at 1712). Threat level stays HIGH; KEV list unchanged at six entries, all countdowns re-machine-checked
+  vs 2026-08-17 (68820 = 8 days; 72898, 20349 = past due Aug 14; 8037 past due Aug 10; 63077 past due Aug 8;
+  12569 past due Jun 28). BY-THE-NUMBERS strip unchanged (3.6M / 1.7M / 43 / 2,139).
+- MMA: **UFC Sacramento (Fight Night 285, Aug 22, Golden 1 Center) UNDERCARD NOW COMPLETE** — new this run and
+  grep-verified absent from archive/mma-2026-08-17-1712.html: **Gauge Young vs. Stan Dorsainvil at lightweight,
+  Dorsainvil stepping in on short notice for the injured Kody Steele; Jamall Emmers vs. Lerryan Douglas at
+  featherweight; and Anthony Wint is a FORMER NFL PLAYER as well as a DWCS alumnus** (UFC.com "Sacramento fight
+  card rounds out" / FOX40 / Wikipedia FN285). Card tag changed "Main card set" → "Full card". Odds, countdown
+  target (2026-08-22T20:00-04:00) and the UFC 330 business block (19,238 / $6,715,776 / arena record) all CARRIED
+  UNCHANGED. **MMA New = 0** in the t-new">New sense; the two orange card tags are "Next up" + "Full card".
+- ⚠ **NEW CHAMPION-BOARD FAILURE MODE — RIGHT FIGHTERS, WRONG DIVISION LABELS.** The targeted ESPN query this run
+  did NOT return the old Pereira/Chimaev/Topuria line-up (that trap did not fire), but the summary it produced
+  attached **wrong divisions to correct results**: it called **Makhachev the LIGHTWEIGHT champion** and **Gaethje
+  the FEATHERWEIGHT champion**, while giving the correct opponents and dates (Della Maddalena, UFC 322, Nov 15
+  2025; Topuria, Freedom 250, Jun 14 2026). REJECTED — the fights settle it: Makhachev = **WELTERWEIGHT**,
+  Gaethje = **LIGHTWEIGHT**, per this file's authoritative block. RULE GOING FORWARD: verify champions by the
+  FIGHT (opponent + event + date), not by the division label in an aggregated summary; a summary can be right
+  about who won and wrong about what belt. The MMA page's reader note now documents this specific failure.
+  12 champion rows machine-checked; Pereira/Chimaev/Topuria in a champion cell = 0; ">Vacant<" = 0.
+- VALIDATION (programmatic, this run): 4 pages HTMLParser-balanced 0 unclosed / 0 errors; 5-tab nav + 3 stamp IDs
+  on all 4; 8/8 TradingView widget JSON blocks parse (Chart of the Day = NASDAQ:MU); champions 12/12 rows; six KEV
+  countdowns machine-checked vs 2026-08-17; trap greps CLEAN (Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman /
+  MacKenzie / pay-per-view / "featherweight vacant" / ">Vacant<" / Jean Matsumoto / Thainara Silva / 7,782 /
+  Cerebras all ×0). Monday levels appear 3× each; Friday levels 3×/2×/2× and ONLY in the rejection paragraph and
+  the labelled prior-session line. New tags 0/1/2/0 (index/cyber/ws/mma).
