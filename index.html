@@ -6,55 +6,51 @@
 <title>Daily Briefings</title>
 <style>
 :root{
-  --bg:#0b0d10; --panel:#14171c; --line:#252a32; --text:#e6eaee; --muted:#8b96a3;
-  --teal:#22d3a8; --gold:#caa64a; --red:#e84545;
+  --bg:#0b0d10; --panel:#141a1f; --line:#242f38; --text:#e6edf2; --muted:#8b9aa6;
+  --cyber:#22d3a8; --markets:#caa64a; --mma:#e84545; --mma2:#ff8a5c;
   --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;font-size:16px}
 .wrap{max-width:1000px;margin:0 auto;padding:26px 20px 70px}
-.masthead{border-bottom:1px solid var(--line);padding-bottom:14px}
-.masthead h1{margin:0;font-size:40px;letter-spacing:-1px}
+.masthead{border-bottom:2px solid var(--line);padding-bottom:14px}
+.masthead h1{margin:0;font-size:40px;letter-spacing:-1px;font-weight:800}
+.masthead h1 span{background:linear-gradient(90deg,var(--cyber),var(--markets),var(--mma));-webkit-background-clip:text;background-clip:text;color:transparent}
 .tagline{color:var(--muted);font-size:14.5px;margin-top:4px}
 .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 .pill{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:4px 11px}
-.pill.live{color:var(--teal);border-color:rgba(34,211,168,.4)}
-.pill.live .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--teal);margin-right:6px;vertical-align:middle}
+.pill.live{color:var(--cyber);border-color:rgba(34,211,168,.4)}
+.pill.live .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--cyber);margin-right:6px;vertical-align:middle}
 .freshline{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.06em;margin:12px 2px 16px}
-nav{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 26px}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px}
 nav a{font-family:var(--mono);font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;text-decoration:none;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:8px 13px;transition:.15s}
-nav a:hover{color:var(--text);border-color:#4b5563}
-nav a.active{color:#0b0d10;background:#e6eaee;border-color:#e6eaee;font-weight:600}
-.big{display:grid;gap:16px}
-.bcard{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px 24px;transition:.18s;display:block;text-decoration:none;color:inherit}
-.bcard:hover{transform:translateY(-4px)}
-.bcard .k{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:8px}
-.bcard h2{margin:0 0 10px;font-size:25px;letter-spacing:-.3px}
-.bcard p{margin:0;font-size:15.5px;color:#c2ccd6;line-height:1.55}
-.bcard .go{display:inline-block;margin-top:14px;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
-.c-cyber{border-left:4px solid var(--teal)}
-.c-cyber:hover{border-color:rgba(34,211,168,.55);border-left-color:var(--teal)}
-.c-cyber .k,.c-cyber .go{color:var(--teal)}
-.c-mkt{border-left:4px solid var(--gold)}
-.c-mkt:hover{border-color:rgba(202,166,74,.55);border-left-color:var(--gold)}
-.c-mkt .k,.c-mkt .go{color:var(--gold)}
-.c-mkt h2{font-family:Georgia,'Times New Roman',serif}
-.c-mma{border-left:4px solid var(--red)}
-.c-mma:hover{border-color:rgba(232,69,69,.55);border-left-color:var(--red)}
-.c-mma .k,.c-mma .go{color:var(--red)}
-footer{margin-top:46px;border-top:1px solid var(--line);padding-top:18px;font-size:12.8px;color:var(--muted)}
+nav a:hover{color:var(--text);border-color:#4a5b68}
+nav a.active{color:var(--bg);background:#dfe7ec;border-color:#dfe7ec;font-weight:600}
+.grid{display:grid;grid-template-columns:1fr;gap:16px}
+.big{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px 24px;transition:.18s;text-decoration:none;color:inherit;display:block}
+.big:hover{transform:translateY(-4px)}
+.big .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:8px}
+.big h2{margin:0 0 10px;font-size:26px;letter-spacing:-.3px}
+.big p{margin:0;font-size:15.5px;color:#c6d3db}
+.big .more{display:inline-block;margin-top:14px;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+.c-cyber{border-left:4px solid var(--cyber)} .c-cyber:hover{border-color:var(--cyber)} .c-cyber .kicker,.c-cyber .more{color:var(--cyber)}
+.c-markets{border-left:4px solid var(--markets)} .c-markets:hover{border-color:var(--markets)} .c-markets .kicker,.c-markets .more{color:var(--markets)}
+.c-markets h2{font-family:Georgia,"Times New Roman",serif}
+.c-mma{border-left:4px solid var(--mma)} .c-mma:hover{border-color:var(--mma)} .c-mma .kicker,.c-mma .more{color:var(--mma2)}
+footer{margin-top:44px;border-top:1px solid var(--line);padding-top:18px;font-size:13px;color:var(--muted)}
+.disc{margin-top:10px;font-size:12.5px;font-style:italic}
 </style>
 </head>
 <body>
 <div class="wrap">
 
 <header class="masthead">
-  <h1>Daily Briefings</h1>
-  <div class="tagline">Three desks, refreshed through the trading day — security, markets and the fight game.</div>
+  <h1>Daily <span>Briefings</span></h1>
+  <div class="tagline">Three desks, refreshed through the day — security, markets and the fight game</div>
   <div class="meta">
     <span class="pill live"><span class="dot"></span>Live</span>
     <span class="pill" id="edition">Afternoon Edition</span>
-    <span class="pill" id="datestamp">Friday, August 14, 2026</span>
+    <span class="pill" id="datestamp">Monday, August 17, 2026</span>
     <span class="pill">Updated <span id="updated">—</span></span>
   </div>
 </header>
@@ -69,33 +65,34 @@ footer{margin-top:46px;border-top:1px solid var(--line);padding-top:18px;font-si
   <a href="archive.html">🗄 Archive</a>
 </nav>
 
-<div class="big">
+<div class="grid">
 
-  <a class="bcard c-cyber" href="cyber-briefing.html">
-    <div class="k">⛨ The Cyber Wire · The Wire</div>
-    <h2>Two federal patch deadlines expire today</h2>
-    <p>Two CISA remediation deadlines expire today — the CVSS 10.0 Metabase pre-authentication SQL injection and the actively exploited Cisco Secure Firewall VPN flaw — as a ransomware crew moves its command-and-control onto the Polygon blockchain and the LiteLLM supply-chain compromise is mapped to more than 2,500 organisations.</p>
-    <span class="go">Read the briefing →</span>
+  <a class="big c-cyber" href="cyber-briefing.html">
+    <div class="kicker">⛨ The Cyber Wire · The Wire</div>
+    <h2>An answered video call is now enough to own an Android kernel</h2>
+    <p>Researchers published an exploit chain today that turns a single VoLTE video call into full Android kernel access on Unisoc-powered phones with no vendor fix available, while the Windows driver flaw North Korea's Lazarus Group burned as a zero-day against defence firms carries a federal remediation deadline eight days out.</p>
+    <span class="more">Read the briefing →</span>
   </a>
 
-  <a class="bcard c-mkt" href="wallstreet-briefing.html">
-    <div class="k">▲ The Closing Bell · The Tape</div>
-    <h2>A soft consumer pauses the record run</h2>
-    <p>A chip-led pullback knocked the S&amp;P 500 off Thursday's record as July retail sales fell and August consumer sentiment tumbled — but the index still banked a third straight winning week, with energy the standout as oil rallied.</p>
-    <span class="go">Read the briefing →</span>
+  <a class="big c-markets" href="wallstreet-briefing.html">
+    <div class="kicker">▲ The Closing Bell · The Tape</div>
+    <h2>Ceasefire lapses, crude firms, stocks give ground</h2>
+    <p>Stocks slipped through Monday afternoon as the interim U.S.–Iran ceasefire expired with talks deadlocked, pushing crude and long-dated Treasury yields higher, while chipmakers rallied on an Anthropic revenue surge that reassured investors about AI infrastructure spending.</p>
+    <span class="more">Read the briefing →</span>
   </a>
 
-  <a class="bcard c-mma" href="mma-briefing.html">
-    <div class="k">⊘ The Octagon · Tale of the Tape</div>
-    <h2>UFC 330 is official, and the line is moving</h2>
-    <p>UFC 330 is official on the scale in Philadelphia, and the betting line is moving toward Ian Machado Garry through fight week as Islam Makhachev prepares the first defence of the welterweight title.</p>
-    <span class="go">Read the briefing →</span>
+  <a class="big c-mma" href="mma-briefing.html">
+    <div class="kicker">⊘ The Octagon · Tale of the Tape</div>
+    <h2>Makhachev takes the all-time consecutive-wins record</h2>
+    <p>Islam Makhachev broke the UFC's all-time record for consecutive Octagon victories at UFC 330 in Philadelphia, retaining the welterweight title over Ian Machado Garry, while Mackenzie Dern made the first defence of her strawweight belt on the same card.</p>
+    <span class="more">Read the briefing →</span>
   </a>
 
 </div>
 
 <footer>
-  Every claim on these pages is checked against a source fetched during the run that produced it. Point-in-time snapshots of each edition are kept in the <a href="archive.html" style="color:#8b96a3">Archive</a>. Markets content is for information only and is not investment advice.
+  Compiled from live web sources each run. Each briefing carries its own source list; figures are point-in-time and move constantly.
+  <div class="disc">Information only — not investment advice. Fight cards and bouts are subject to change.</div>
 </footer>
 
 </div>
