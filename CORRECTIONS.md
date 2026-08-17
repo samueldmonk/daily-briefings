@@ -7539,3 +7539,93 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   MacKenzie / pay-per-view / "featherweight vacant" / ">Vacant<" / Jean Matsumoto / Thainara Silva / 7,782 /
   Cerebras all ×0). Monday levels appear 3× each; Friday levels 3×/2×/2× and ONLY in the rejection paragraph and
   the labelled prior-session line. New tags 0/1/2/0 (index/cyber/ws/mma).
+
+## Added 2026-08-17 (Monday ~6:10pm ET — Afternoon Edition; POST-CLOSE refresh of the 5:40pm edition; research ~6:05–6:12pm)
+- CLOCK: TZ date = Mon Aug 17 18:05 EDT at run start; archive stamp 2026-08-17-1814. Markets CLOSED.
+- MARKETS: **Monday closes RE-CONFIRMED A FIFTH TIME and carried unchanged — S&P 500 7,745.06 (−40.70, −0.52%);
+  Dow 53,459.78 (−272.63, −0.51%); Nasdaq Composite 26,644.91 (−84.25, −0.32%).** A fresh percentage-only query
+  returned Dow −0.5% / S&P −0.5% / Nasdaq Composite −0.3% (Yahoo Aug 17 live blog), matching the published levels
+  to the decimal — an INDEPENDENT corroboration path (percent, not level).
+  ⚠ **FRIDAY-FOR-MONDAY TRAP FIRED A FIFTH TIME.** The Zacks-style "Stock Market News for Aug 17, 2026" piece again
+  returned 7,785.76 / 53,732.41 / 26,729.16 as "August 17" closes. REJECTED again; rejection paragraph updated to
+  say "fifth time". Friday levels appear 3×/2×/2× and ONLY inside the rejection paragraph and the labelled
+  prior-session reference line (machine-verified this run).
+- MARKETS NEW: **(1) BRENT SETTLE FIGURE — Bloomberg's Aug 17 evening recap says Brent crude SETTLED NEAR $91 a
+  barrel.** This is the LATEST and HIGHEST figure any source has attached to the session and does NOT displace the
+  others — the Rates table now prints FOUR renderings side by side with attributions: midday $89.13 (+0.7%, Motley
+  Fool), $90 touch (Yahoo) / "topped $90" (TradingKey), 88.31 −0.24% (Trading Economics), ~$91 settle (Bloomberg).
+  Do NOT collapse these. **(2) Bloomberg evening FRAMING added to The Lead as a new paragraph: stocks declined on
+  concern elevated oil prices will fuel inflation amid dimming hopes for an Iran deal, and "declines in most S&P 500
+  companies overshadowed an advance in chipmakers" — corroborates the narrow-breadth picture already published from
+  the equal-weight/advance-decline data. Bloomberg also ties the oil move to speculation the Fed could HIKE before
+  year-end, which is the stated mechanism for the 30-year move.** **(3) NEW MOVER: Diana Shipping (DSX)** — rose
+  after Diana criticised Genco's high demands and WITHDREW its acquisition offer (Seeking Alpha "Biggest stock
+  movers Monday: LHX, DSX, SPCX, CBRS, and more"). ⚠ NO PERCENTAGE surfaced → card publishes DIRECTION + deal news
+  only and says so, same treatment as HIVE. Tagged New.
+  ⚠ **LHX / SPCX / CBRS / ETSY named as movers with NO percentage in any fetched snippet** → deliberately NOT given
+  cards; listed in a muted footnote line under the Movers grid instead. Seeking Alpha article body could not be
+  fetched (returned empty), so only what the search snippet stated was used.
+  30-yr 5.29–5.31% dual rendering CARRIED. After-hours: STILL no verified single-stock Aug 17 move — FIFTH
+  consecutive post-close check with the same result; SPY/QQQ/DIA/IWM proxies carried as direction only. Chart of the
+  Day stays NASDAQ:MU. Astera Labs + HIVE New tags REMOVED (present at 1740). **WS New tags = 1** (DSX only).
+- CYBER: **MAJOR NEW STORY — the METABASE ZERO-DAY VICTIM CHAIN, now the cyber tldr and the index.html cyber card
+  tail.** CVE-2026-72898 was ALREADY on the page in Vulnerability Watch + KEV; what is new is the DOWNSTREAM
+  CASUALTY LIST, grep-verified absent from archive/cyber-2026-08-17-1740.html (Trezor/Framework/ShipMonk all ×0):
+  unauthenticated SQL injection via **/api/session/reset_password**, **CVSS 10.0**, exploited BEFORE disclosure;
+  Metabase disclosed **Aug 6**, by which point **FIVE companies had already lost customer data**. **Framework**
+  notified **ALL** customers (names, emails, phone numbers, physical addresses; spokesperson Eric Schumacher declined
+  to give a number; NO payment data). **Anaconda** and **n8n**, both Metabase Cloud tenants, also disclosed
+  unauthorised customer-data access from the pre-patch window. **Trezor** disclosed **Aug 13** that shipping provider
+  **ShipMonk** was breached the same way — ShipMonk: "an unauthorized party exploited a vulnerability in Metabase's
+  software to access data related to your account and your customers." **13,689 Trezor customers: 11,742 FULL
+  exposure (name, email, phone, shipping address) + 1,947 PARTIAL (name, city, email)**, orders delivered
+  **May 10 – Aug 8**, in the US, UK, Sweden, Colombia, Brazil, Italy and Portugal. **No private keys touched, no
+  device compromised** — the risk framing published is physical-threat + phishing, because the set is a verified
+  list of hardware-wallet owners with delivery addresses. CISA KEV-added Aug 11. (Help Net Security / THN /
+  SecurityWeek / TechCrunch / BleepingComputer / Trezor blog / Dataminr.)
+- CYBER NEW #2 (grep-verified absent from archive/cyber-2026-08-17-1740.html): **GeoServer zero-day.**
+  Unauthenticated SQL injection in GeoServer's **jsonArrayContains** filter expression, may reach RCE in certain
+  **H2 database** deployments. Disclosed publicly **Aug 12 at 10:46 UTC by researcher @q1uf3ng on X** with no
+  coordination. **watchTowr** saw exploitation attempts **within hours**, hundreds of probes from a small pool of
+  source IPs. Maintainers call it a **REGRESSION of CVE-2023-25158 (CVSS 9.8)**, fixed Feb 2023.
+  ⚠ THREE BOUNDING FACTS PUBLISHED EXPLICITLY: **NO CVE ID, NO CVSS score, NO vendor patch**, and **no confirmed
+  compromises publicly described** as of the reporting checked — only probing. Because there is no CVE/CVSS it is
+  DELIBERATELY NOT in the Vulnerability Watch table or the KEV countdown (same treatment as Unisoc at 1740), and the
+  card says why. Interim guidance published: inventory deployments incl. H2-backed, restrict internet exposure,
+  monitor DB activity/command execution.
+- CYBER other: Azure/"TheHatman" Top Story CARRIED unchanged. Unisoc New tag REMOVED (present at 1740).
+  BY-THE-NUMBERS strip CHANGED to **3.6M / 5 / 13,689 / 2,139** (dropped 1.7M and 43, both still in their cards).
+  New CSS class .t-crit added for the two new cards. Threat level stays HIGH. KEV list unchanged at six entries,
+  all six countdowns MACHINE-CHECKED against 2026-08-17 this run (68820 due Aug 25 = 8 days left; 72898 + 20349 due
+  Aug 14 past due; 8037 due Aug 10 past due; 63077 due Aug 8 past due; 12569 due Jun 28 past due) — 6/6 OK.
+  **Cyber New = 2** (Metabase victim chain, GeoServer).
+- MMA NEW CARD (grep-verified absent from archive/mma-2026-08-17-1740.html — "UFC 331" ×0, "Tsarukyan" ×0):
+  **UFC 331: Van vs. Pantoja 2 — Sat Sep 19, 2026, Crypto.com Arena, Los Angeles; FULL 13-FIGHT card announced.**
+  Flyweight champion **Joshua Van** defends vs former champion **Alexandre Pantoja**, a rematch of UFC 323 (Dec
+  2025) where Van won by **TKO 26 seconds into round one after Pantoja sustained an arm injury**. Co-main =
+  **Arman Tsarukyan vs Mauricio Ruffy**, five rounds at lightweight, winner positioned for a shot at champion
+  Gaethje. Also booked: Renato Moicano vs Brian Ortega; Ryan Gandra vs Ozzy Diaz; undefeated prospect Gable
+  Steveson vs Sean Sharaf; Robelis Despaigne vs Tai Tuivasa (Tuivasa on a SEVEN-fight losing streak). Doors 1pm PT,
+  early prelims 2pm, main card 6pm. ⚠ NO main-event odds surfaced → NONE printed, and the card says so.
+  Tagged New; new .t-title CSS class added. (Wikipedia UFC 331 / Forbes 13-fight card / Crypto.com Arena / AXS /
+  Yahoo Sports / Tapology.)
+- MMA NEW around-the-sport item: **The Tsarukyan–Oliveira rematch is OFF.** It had been reported as FINALISED for
+  the UFC 331 main event on Sep 19 with Oliveira's BMF title discussed as being on the line; the UFC pivoted away
+  and Tsarukyan instead meets Ruffy in the co-main. Reporting also states Tsarukyan sought guarantees from the
+  promotion before agreeing to face Oliveira, and separately that he would NOT be permitted to challenge for the
+  BMF belt. ⚠ **METHOD GUARD FIRED CORRECTLY:** the UFC 300 Tsarukyan-over-Oliveira result was confirmed but the
+  METHOD was NOT stated in any fetched snippet — an initial draft wrote "split decision" from memory and it was
+  REMOVED before publish; the page now says the method was not stated in sources checked. Do not reinstate a method
+  for that fight without a source. (BJPenn / Bloody Elbow / Yahoo Sports / SI.)
+- MMA champions: ESPN-sourced query run again; returned **Aspinall HW, Ulberg LHW, Strickland MW, Makhachev WW,
+  Gaethje LW, Volkanovski FW, Yan BW, Van FLW** — divisions CORRECTLY attached this run (the 1740 wrong-division
+  failure mode did NOT recur). Women's belts (Shevchenko FLW 2 defences, Harrison BW Jun 7 2025 0 defences, Dern
+  SW Oct 25 2025) re-confirmed this run via a targeted women's-champions query AND the standing authoritative block.
+  12 rows machine-parsed; **Pereira/Chimaev/Topuria in a CHAMPION cell = 0** (they appear only in the "beat whom"
+  notes column, which is correct); ">Vacant<" = 0.
+- VALIDATION (programmatic, this run): 4 pages HTMLParser-balanced **0 unclosed / 0 errors**; 5-tab nav + 3 stamp
+  IDs on all 4; **8/8 TradingView widget JSON blocks parse** (Chart of the Day = NASDAQ:MU); champions 12/12 rows
+  parsed and printed; **6/6 KEV countdowns machine-recomputed vs 2026-08-17 — all OK**; trap greps CLEAN (Cody
+  Salkilld / Shamil Yakhyaev / Abdul-Rakhman / MacKenzie / pay-per-view / 7,782 / ">Vacant<" all ×0). Monday levels
+  appear 3× each on WS + 1× each on index; Friday levels 3×/2×/2× and ONLY in the rejection paragraph and the
+  labelled prior-session line (contexts printed and eyeballed). New tags 0/2/1/1 (index/cyber/ws/mma).
