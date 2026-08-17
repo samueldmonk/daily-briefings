@@ -7289,3 +7289,106 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   all ×0). Friday closes appear exactly once each and only inside the Friday-labelled Weekly
   Scorecard; 7,745.06 appears exactly once, inside the paragraph explaining why it was NOT published.
   New tags 0/3/5/4 (index/cyber/ws/mma).
+
+## Added 2026-08-17 (Monday ~4:42pm ET — Afternoon Edition; POST-CLOSE refresh of the 4:16pm edition; research ~4:35–4:40pm)
+- CLOCK: TZ date = Mon Aug 17 16:35 EDT at run start; archive stamp 2026-08-17-1642. Markets CLOSED.
+- MARKETS — ⚠⚠ **MONDAY CLOSING LEVELS NOW PUBLISHED.** The 1616 edition withheld them; this run they cleared
+  the standing level rule. Published: **S&P 500 7,745.06 (−40.70, −0.52%); Dow 53,459.78 (−272.63, −0.51%);
+  Nasdaq Composite 26,644.91 (−84.25, −0.32%).** Evidence: (a) two INDEPENDENT search summaries returned the
+  identical triple; (b) every points-change reconciles EXACTLY against Friday Aug 14's verified closes
+  (7,785.76 − 40.70 = 7,745.06; 53,732.41 − 272.63 = 53,459.78; 26,729.16 − 84.25 = 26,644.91) and each
+  points/percent pair is internally consistent to 2dp; (c) CNBC's own Aug 17 live-blog HEADLINE reads
+  "**Dow loses more than 270 points as oil prices pressure stocks amid rising Iran tensions**", corroborating
+  the −272.63 figure independently. The Weekly Scorecard is retitled "Scorecard — official closes, Monday,
+  August 17"; Friday's closes are retained as a clearly labelled prior-session reference line.
+  ⚠ **FRIDAY-FOR-MONDAY TRAP FIRED AGAIN AND WAS CAUGHT.** The Zacks-style "Stock Market News for Aug 17, 2026"
+  piece again returned 7,785.76 / 53,732.41 / 26,729.16 as "August 17" closes. REJECTED; the page now names
+  this rejection explicitly in the closing-levels paragraph.
+  ⚠ **CEREBRAS (CBRS) DROPPED ENTIRELY.** The 1616 edition published "+15%, Wedbush PT to $290". This run a
+  fresh summary of Motley Fool Aug 17 coverage said Cerebras "plummeted almost 12% after its earnings update",
+  and the Motley Fool Aug 17 market-mover piece fetched IN FULL does not mention Cerebras at all. Conflicting
+  and un-reconcilable within the run → card removed, both Cerebras source links removed from the footer.
+  Do not resurrect a CBRS figure without a single dated source stating it.
+  RE-VERIFIED IN FULL from fool.com/investing/2026/08/17/dow-falls-03-while-memory-chip-stocks-keep-the-nas/
+  (published/modified 2026-08-17T17:19Z, quotes as of 12:26 PM ET): SK Hynix +6.5% / ~$83B market value added;
+  Micron +5.9%, back above $1,000; Nvidia +0.9% on up to $105B credit/compute for the OpenAI Ohio campus,
+  first 4.25 GW in 2028; Meta −3.3% ahead of Tuesday's Oakland opening arguments (29 state AGs); Microsoft
+  −2.4%, the S&P 500's single biggest drag, on a Morgan Stanley hyperscaler-capex note; Brent +0.7% to $89.13,
+  "a quiet day by recent standards"; RSP −0.58%, >3x the cap-weighted drop, decliners over advancers ~1.5-to-1
+  on the NYSE; S&P +13.6% YTD; Q2 earnings tracking near 50% growth; Sept hike odds ~31% vs ~50/50 a week ago;
+  July retail sales the first drop in nine months; consumer sentiment 51.0; Hormuz 3 vessels Sunday vs ~130
+  daily pre-war. ⚠ Fool again renders the Ohio site "Pike City"; **Pike County** kept per the standing entry.
+  NEW THIS RUN: **Commerce Secretary Howard Lutnick told the WSJ the administration "is not in favor" of Apple
+  buying memory from Yangtze Memory Technologies and CXMT in China** (fool.com/investing/2026/08/17/why-sk-hynix-stock-popped-today/)
+  — added to the SK Hynix card as a second driver alongside the Anthropic-revenue read.
+  RATES/OIL: 30-yr **5.31%, highest since June 2007** carried from the 1616 entry; the Yahoo Aug 17 page fetched
+  this run (again the **5:44 AM pre-market edition** — FOURTH consecutive run serving this cache; trending rail
+  AVGO −5.94% / AMD +6.50% / MU +2.30% NOT used) states the **10-yr and 30-yr each rose 5bp as of Friday's
+  close** and Brent "edged up to $88" pre-market. 10-yr row widened to **4.65–4.70%** because Trading Economics
+  gave 4.65% and "the 4.7% mark" for Friday. ⚠ BRENT CONFLICT PERSISTS: Fool midday $89.13 (+0.7%) vs Trading
+  Economics 88.31 (−0.24%) vs Yahoo's $90 touch — the attributed Fool midday figure published, all three named.
+  Fed funds 3.50–3.75% (July 28–29 FOMC). TheStreet Aug 17 (6:36 AM, fetched in full) corroborates Sept hike
+  odds ~33% per Capital.com's Kyle Rodda and ~50% Q2 earnings growth. AFTER-HOURS: section retained and again
+  says explicitly that NO verified Aug 17 after-hours moves surfaced ~45 min after the bell. Chart of the Day
+  stays NASDAQ:MU. WS New tags = 0 (no new movers verified; SKHY/MSFT/META/NVDA/INTC all grep-present in
+  archive/wallstreet-2026-08-17-1616.html so their New tags were REMOVED).
+- CYBER: **TOP STORY CHANGED from MyDr/Poland to the CLOP / PTC WINDCHILL mass-extortion campaign.** Clop listed
+  **43 new victims** from zero-day exploitation of **CVE-2026-12569** — improper input validation in
+  internet-exposed **PTC Windchill and PTC FlexPLM**, **CVSS 9.3** (Tenable), unauthenticated RCE, exploited to
+  drop **JSP web shells**. PTC began shipping patches **June 17**; **CISA added it to KEV June 25 with a June 28
+  due date** (THN/Help Net Security) → 50 days PAST DUE, machine-checked. **Shell** confirmed Aug 14 it is
+  investigating a "potential incident" ("We are aware of a potential incident. We are working with our security
+  teams and relevant experts to investigate", to BleepingComputer); Clop claims **89 GB** from Shell —
+  engineering drawings, facility testing reports, project plans. **Philips** confirmed compromise of "a specific
+  enterprise server related to internal data", customer environments unaffected; Clop claims **~13.5 GB**,
+  mostly diagrams and blueprints. **General Electric** investigating; **Fiserv** among the listed names.
+  ⚠ CAREFULLY WORDED: neither Shell nor Philips has said data was exfiltrated — the page says so explicitly and
+  attributes the volumes to Clop's CLAIMS, not to confirmation. Shell descriptor "one of the world's three
+  largest oil and gas companies, 85,000 employees across more than 70 countries" is BleepingComputer-sourced.
+  **PATCH PRIORITY RESTRUCTURED into two boxes.** Box 1 (crit border): CVE-2026-12569, past-due June 28
+  deadline, under active mass exploitation. Box 2 (warn border): **CVE-2026-68820 (afd.sys, CVSS 7.0), KEV due
+  AUG 25 = 8 days**, machine-checked and INDEPENDENTLY re-verified this run by SOC Prime, which also confirms
+  Microsoft assigned the ID **Aug 5** and shipped the patch **Aug 11**, the same day CISA added it.
+  KEV list now SIX entries; all countdowns machine-checked vs 2026-08-17: 12569 = past due (Jun 28);
+  68820 = 8 days; 72898, 20349 = past due (Aug 14); 8037 = past due (Aug 10); 63077 = past due (Aug 8).
+  SPOTLIGHT: **Lazarus / Operation Dream Job CARRIED and ENRICHED** — SOC Prime adds that a **trojanised PDF
+  viewer deployed a new backdoor tracked as "Troy"** before privilege escalation and an updated FudModule build.
+  MyDr/Poland DEMOTED from Top Story into Breaches & Incidents, verbatim-condensed (2TB, 12,000 facilities,
+  PESEL + 25 prescriptions, Central Cybercrime Bureau, no state-attack indication). BY-THE-NUMBERS strip changed
+  to **43 / 89 GB / 19M / 2,139**. Threat level stays HIGH; banner rewritten around the PLM campaign and now
+  says FIVE past-due deadlines (was four) since 12569 was added. **Cyber New tags = 0** — the Clop story is the
+  untagged Top Story and every Breaches card was grep-present in archive/cyber-2026-08-17-1616.html.
+  Grep-verified ABSENT from the 1616 cyber snapshot before publishing: Clop/Cl0p, Windchill, 12569, Shell,
+  Philips, Fiserv, Troy (all ×0).
+- MMA: **CHAMPIONS RE-VERIFIED and the stale-list trap FIRED AND WAS CAUGHT.** A generic "ESPN current UFC
+  champions" query returned the SUPERSEDED line-up — **Pereira at 205, Chimaev at 185, Topuria at 155** —
+  exactly the regression CORRECTIONS.md warns about. REJECTED. The targeted query (the standing fix) returned
+  ESPN's 2026 midyear-awards piece and CBS Sports' first-half review, which independently confirm **Ulberg**
+  (KO of Procházka for the LHW title at UFC 327 in April), **Strickland** (beat Chimaev at UFC 328 in May) and
+  **Gaethje** (took the LW belt from Topuria at Freedom 250, Jun 14 2026). 12 champion rows machine-checked;
+  Pereira/Chimaev/Topuria in a champion cell = 0. The page now carries an explicit reader note that aggregated
+  ESPN summaries were still returning the old names this run.
+  NEW THIS RUN (all grep-verified absent from archive/mma-2026-08-17-1616.html): **(1) UFC Sacramento card
+  filled out — Serghei Spivac vs Vitor Petrino at heavyweight in the co-main, and Reinier de Ridder (a former
+  ONE Championship titleholder) vs Roman Dolidze at light heavyweight; prelims 5 PM ET, main card 8 PM ET,
+  Paramount+** (ESPN fight centre / MMA Mania). **(2) DWCS Season 10 Week 2 card — Tuesday Aug 18, Meta Apex,
+  FIVE fights: Namo Fazil vs Kaik Brito (welterweight headliner; Brito is a former TWO-TIME Oktagon welterweight
+  champion who fought on DWCS season 7), Douglas Rodrigues vs Trent Miller, Logan Paxton vs Cristian Perez,
+  Mahamed Aly vs Alik Lorenz, Taner Trembley vs Roman Puga** (UFC.com Week 2 preview). **(3) Makhachev is
+  29-1 overall** after UFC 330 (MMA Mania). **(4) Jeremiah Wells was down 20-18 on the cards entering round
+  three** before finishing Orolbai — added as colour.
+  ⚠ TWO METHOD/NAME CONFLICTS SURFACED AND WERE NOT ACTED ON, per the copy-don't-reconstruct rule: a bonus
+  recap calls the Wells finish a "standing ninja choke" (UFC.com's official heading, already published, says
+  **guillotine choke**) and renders Charles Johnson's opponent "Eduardo Henrique" (UFC.com renders **Eduardo
+  Chapolin**, already published). Both UFC.com renderings KEPT. Do not silently switch either.
+  Odds RE-VERIFIED unchanged: Hernandez **−166 to −176** / Rodrigues **+140 to +147**, opener −147 / +120.
+  Countdown target 2026-08-22T20:00-04:00 UNCHANGED. Prospect "Debut booked" tags REMOVED (present at 1616);
+  Shanghai "Card filled out" tag REMOVED (present at 1616). MMA New = 2 (Sacramento "Next up" + "Card filled
+  out"). Business section still says explicitly that no verified UFC 330 viewership/gate/TKO figures surfaced.
+- VALIDATION (programmatic, this run): 4 pages HTMLParser-balanced 0 unclosed / 0 errors; 5-tab nav + stamp IDs
+  on all 4; 8/8 TradingView widget JSON blocks parse (Chart of the Day = NASDAQ:MU); champions 12/12 rows;
+  SIX KEV countdowns machine-checked vs 2026-08-17; trap greps CLEAN (Cody Salkilld / Shamil Yakhyaev /
+  Abdul-Rakhman / MacKenzie / pay-per-view / "featherweight vacant" / ">Vacant<" / Jean Matsumoto /
+  Thainara Silva / "lightweight bout" / "Belal Muhammad vs" / Ray-Project / 7,782 / Cerebras-on-WS all ×0).
+  Monday levels appear 3× each (tldr, Lead, Scorecard); Friday levels appear 2× each and ONLY inside the
+  rejection paragraph and the labelled prior-session reference line. New tags 0/0/0/2 (index/cyber/ws/mma).
