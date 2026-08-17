@@ -7629,3 +7629,102 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   Salkilld / Shamil Yakhyaev / Abdul-Rakhman / MacKenzie / pay-per-view / 7,782 / ">Vacant<" all ×0). Monday levels
   appear 3× each on WS + 1× each on index; Friday levels 3×/2×/2× and ONLY in the rejection paragraph and the
   labelled prior-session line (contexts printed and eyeballed). New tags 0/2/1/1 (index/cyber/ws/mma).
+
+## Added 2026-08-17 (Monday ~6:35pm ET — Afternoon Edition; POST-CLOSE refresh of the 6:10pm edition; research ~6:36–6:45pm)
+- CLOCK: TZ date = Mon Aug 17 18:35 EDT at run start; archive stamp 2026-08-17-1843. Markets CLOSED.
+- MARKETS: **Monday closes RE-CONFIRMED A SIXTH TIME and carried unchanged — S&P 500 7,745.06 (−40.70, −0.52%);
+  Dow 53,459.78 (−272.63, −0.51%); Nasdaq Composite 26,644.91 (−84.25, −0.32%).** A targeted level query returned
+  the Dow line verbatim ("lost 272.63 points, or 0.51%, and closed at 53,459.78"). ⚠ **FRIDAY-FOR-MONDAY TRAP FIRED
+  A SIXTH TIME** — the Zacks/Yahoo "Stock Market News for Aug 17, 2026" piece again returned 7,785.76 / 53,732.41 /
+  26,729.16 as "August 17" closes, this time with sector figures attached (XLV −0.6%, XLK −0.4%, XLY −0.4%,
+  XLE +1.4%). REJECTED, and the attached sector figures were NOT harvested from it even though XLE +1.4% is close
+  to the separately-sourced +1.39% already published. Rejection paragraph updated to "sixth time".
+- ⚠ **30-YEAR CONFLICT RESOLVED — 5.311% WINS, and the 5.29% rendering is demoted to a noted alternative.**
+  CNBC's Aug 17 bond report ("30-year Treasury yield tops 5.31%, the highest in 19 years") states the long bond
+  **advanced more than 4 basis points to 5.311%, its highest level since June 2007**. The dual "5.29–5.31%" row is
+  replaced by a single 5.311% figure that names the earlier 5.29% account. Do NOT reinstate the range without a
+  newer source. NOTE the prior published gloss "rose 5 basis points" is superseded by CNBC's "more than 4 basis
+  points" and was corrected in The Lead.
+- **10-YEAR NOW HAS A MONDAY FIGURE — 4.724%, up more than 2 basis points (CNBC, Aug 17).** This replaces the
+  stale carried-over Friday Aug 14 range of "4.65–4.70%", which the row now explains was a placeholder.
+- **WTI ADDED to the Rates table: Trading Economics has US crude HOLDING ABOVE $82 a barrel on Monday Aug 17.**
+  No WTI settle figure surfaced, so the row publishes the source's range description, not a settle. Brent's FOUR
+  renderings ($89.13 midday / $90 touch / 88.31 −0.24% / ~$91 settle) CARRIED unchanged — do not collapse.
+- AFTER-HOURS: **SIXTH consecutive post-close check with still NO verified large-cap Aug 17 after-hours move.**
+  NEW: the stockanalysis.com after-hours screen listed MICRO-CAPS — **WETO +199.15%, TRUG +58.84%, IVF +57.47%,
+  SNYR +55.37%, ZTG −66.70%** — published verbatim with the standing caveat (screen carries NO timestamp, thin
+  volume, no accompanying news found) and explicitly framed as a curiosity, not a read on the session. SPY −0.03% /
+  QQQ −0.06% / DIA −0.04% / IWM −0.01% proxies carried as direction only. Chart of the Day stays NASDAQ:MU.
+  **WS New tags = 0** (DSX New tag REMOVED — present at 1814).
+- CYBER: **TOP STORY CHANGED from Azure/"TheHatman" to SAP COMMERCE CLOUD CVE-2026-58231.** CVSS **10.0**;
+  insufficient authorization checks + insufficient input validation; an **unauthenticated** attacker abuses a
+  **default authentication client** and submits crafted input to functions lacking validation → **arbitrary code
+  execution** and compromise of internal components, high impact to C/I/A. **Defused Cyber** saw exploitation
+  attempts hit its honeypots **three days after SAP shipped the patch**. ⚠ **NUANCE PUBLISHED, NOT FLATTENED:**
+  there is **NO public PoC**, and one account states the flaw is **not otherwise known to be exploited**, implying
+  attackers reverse-engineered the patch; honeypot traffic ≠ confirmed compromise and **no victims are named**.
+  Remediation published exactly as sourced: patch to the fixed Commerce Cloud release levels in SAP's note **AND
+  re-build/re-deploy**; interim workaround = an **IP Filter Set** restricting access to the vulnerable endpoint.
+  ⚠ **NOT in CISA KEV** as of this run's checks → deliberately NOT in the KEV countdown, and the page says so.
+  Added to Vulnerability Watch and inserted as a SECOND Patch Priority box ("And this, today"); Windchill 12569
+  KEPT as "Do this first" (past-due federal deadline + confirmed mass exploitation) and its stale "flaw behind
+  today's top story" clause was REWRITTEN since the top story changed.
+  ⚠ **NAME-COLLISION TRAP CAUGHT:** an initial search conflated CVE-2026-58231 with the **Unisoc VoLTE** advisory
+  published the SAME DAY (Aug 17). They are DIFFERENT: 58231 = SAP Commerce Cloud; the Unisoc chain still has
+  **NO CVE and NO CVSS**. Do not attach 58231 to Unisoc.
+- CYBER NEW #1 (grep-verified absent from archive/cyber-2026-08-17-1814.html): **GitHub global outage, Mon Aug 17.**
+  Began ~**13:40 UTC**, lasted **3 hours 19 minutes**; ~**20%** error rates across web + API, ~**50%** failure on
+  archive and raw-content downloads; **>3,000** Downdetector reports across the US and India. GitHub declared
+  degradation mitigated across API Requests, Actions, Git Operations, Issues, Pages, Pull Requests and Webhooks at
+  **16:59 UTC** — 7 of 8 services; **Copilot was NOT named** and stayed marked Major Outage. ⚠ Published as an
+  AVAILABILITY event with an explicit line that **no cause has been attributed to an attack**; tagged "Outage",
+  not a breach. New .t-warn CSS class added.
+- CYBER NEW #2 (grep-verified absent from 1814): **ShinyHunters lists Lumenis Ltd.** (Israeli medical device
+  company), claimed **Aug 2, 2026**: **>1.1 million records** of customer/employee PII plus **>176 GB** of internal
+  corporate data, leak-site "final warning" deadline **Aug 4**. ⚠ Published as an **ALLEGATION ON A LEAK SITE** —
+  **Lumenis has issued no statement or forensic confirmation**; figures are the group's own claims. Questel and
+  Alcon noted as other recent ShinyHunters claims. New .t-claim CSS class added.
+- CYBER: Azure/"TheHatman" DEMOTED from Top Story to a Breaches card with ALL nine tenant volumes and every caveat
+  preserved verbatim (McDonald's ~1.7M, TCS ~800k, Vodafone ~425k, HCL ~250k, IHG >185k, Kyndryl ~170k, Gap ~80k,
+  Hexaware ~20k, Wyndham ~9k; Global Administrator identification; no company confirmed; credentials not an Azure flaw).
+  BY-THE-NUMBERS strip changed to **10.0 / 3 days / 3.6M / 2,139**. Threat banner rewritten around the patch-to-probe
+  window. Threat level stays HIGH. **Cyber New = 2** (GitHub, Lumenis); New tags REMOVED from Metabase victim chain,
+  GeoServer and the Azure card (all present at 1814).
+- ⚠ **RAY-PROJECT KEV ENTRY — STANDING REJECTION HELD, AND NOW DOCUMENTED ON THE PAGE.** A KEV aggregator this run
+  stated "Ray-Project's Ray Code Injection Vulnerability added on August 17, 2026 has a due date of August 20, 2026"
+  and a follow-up returned **CVE-2025-62593** as the identifier — but the follow-up could NOT confirm the Aug 17
+  add date, and CISA's own "CISA Adds ..." alert pages seen this run stop at **Aug 11**. NOT published as a
+  deadline; the KEV section now carries an explicit note explaining the omission. Revisit when a cisa.gov alert page
+  confirms it. Six KEV countdowns MACHINE-CHECKED vs 2026-08-17 — 6/6 OK (68820 due Aug 25 = 8 days; 72898 + 20349
+  due Aug 14, 8037 due Aug 10, 63077 due Aug 8, 12569 due Jun 28 — all past due).
+- MMA NEW (grep-verified absent from archive/mma-2026-08-17-1814.html — Cormier/Nascimento/Chute Boxe/Pitbull/
+  Doo Ho Choi/Jourdain all ×0): **the reason the Tsarukyan–Oliveira UFC 331 rematch collapsed is now on the record.**
+  Daniel Cormier says the booking fell apart after the death of **Allan Nascimento**, Oliveira's longtime **Chute
+  Boxe** teammate, and recounts Tsarukyan telling him on the promotion's Abu Dhabi trip that Oliveira was the Los
+  Angeles plan. Tsarukyan to Yahoo Sports: **"Charles' friend died and he cannot train; but I don't understand, in
+  3-4 days he's doing training and back in camp,"** and MMA Mania reports him claiming Oliveira used the death to
+  duck the rematch — "he was just finding an excuse." Page states Oliveira has not been reported responding.
+  ⚠ **UFC 300 METHOD GUARD HELD AGAIN** — the method of Tsarukyan's win over Oliveira is STILL not stated in any
+  fetched snippet and is STILL not printed. Do not reinstate it.
+- MMA other new detail: **UFC 331 adds Patricio Pitbull vs. Doo Ho Choi and Charles Jourdain vs. Marlon Vera**
+  (Al Jazeera / Forbes Aug 17); ET start times confirmed alongside the existing PT ones — early prelims ~5 PM ET,
+  prelims 7 PM ET, main card 9 PM ET (= 2 / 4 / 6 PM PT, consistent with the published PT times).
+  **UFC Sacramento rankings added: Hernandez is SIXTH-ranked, Rodrigues ELEVENTH, and the bout is MIDDLEWEIGHT**
+  (CBS Sports/UFC.com). Odds RE-VERIFIED UNCHANGED: Hernandez −166 to −176 / Rodrigues +140 to +147, opener
+  −147 / +120 (DraftKings −166 / +140 named explicitly this run). Countdown target 2026-08-22T20:00-04:00 UNCHANGED.
+  UFC 330 top story RE-VERIFIED this run against UFC.com/ESPN/FIGHTMAG: Makhachev UD over Ian Machado Garry
+  **49-46, 49-46, 48-47**, **17th straight UFC win passing Anderson Silva's 16**, **fifth two-division champion to
+  defend in both divisions** — all already published, all confirmed. **MMA New = 0** (UFC 331 New tag REMOVED,
+  present at 1814).
+- MMA champions: targeted query used AGAIN (the standing fix). ESPN's 2026 midyear-awards piece and CBS Sports'
+  first-half review independently returned **Ulberg LHW (KO1 Procházka, UFC 327, Apr 11 2026)**, **Strickland MW
+  (SD over Chimaev, UFC 328, May 9 2026)** and **Gaethje LW (TKO4 Topuria, Freedom 250, Jun 14 2026)** with correct
+  divisions attached. NEITHER failure mode fired this run — no stale Pereira/Chimaev/Topuria line-up and no
+  wrong-division swap. 12 rows machine-parsed; Pereira/Chimaev/Topuria in a CHAMPION cell = 0; ">Vacant<" = 0.
+- VALIDATION (programmatic, this run): 4 pages HTMLParser-balanced **0 unclosed / 0 errors**; 5-tab nav + 3 stamp
+  IDs on all 4; **8/8 TradingView widget JSON blocks parse** (Chart of the Day = NASDAQ:MU); champions 12/12 rows;
+  **6/6 KEV countdowns machine-recomputed vs 2026-08-17 — all OK**; trap greps CLEAN (Cody Salkilld / Shamil
+  Yakhyaev / Abdul-Rakhman / pay-per-view / "featherweight vacant" / ">Vacant<" / Jean Matsumoto / Thainara Silva /
+  7,782 / Cerebras all ×0; "Mackenzie Dern" spelled correctly ×3). Monday levels appear 3×/4×/3× on WS and 1× each
+  on index; Friday levels 3×/2×/2× and ONLY in the rejection paragraph and the labelled prior-session line.
+  New tags **0/2/0/0** (index/cyber/ws/mma).
