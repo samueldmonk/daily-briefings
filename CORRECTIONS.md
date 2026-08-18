@@ -7946,3 +7946,109 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   Monday levels 1× each, Friday levels 1× each in the labelled prior-session column; Monday-vs-Friday arithmetic 3/3
   exact. Trap greps CLEAN ×0: Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman / MacKenzie / Thainara Silva / Vacant /
   Pereira-Chimaev-Topuria in champion cells. "Mackenzie Dern" spelled correctly ×4.
+
+## Added 2026-08-18 (Tuesday ~9:13am ET — Morning Edition; PRE-OPEN, third run of Tuesday; research ~9:05–9:12am)
+- CLOCK: TZ date = Tue Aug 18 09:05 EDT at run start; archive stamp 2026-08-18-0913. **Markets still CLOSED — ~17 minutes
+  before the 9:30 open.** Page states this explicitly; futures/pre-market published as "current", not index levels.
+  No After-Hours block (grep "After-Hours" = 0, correct for pre-open).
+- ⚠ **DATE-BLEED TRAP CAUGHT AND REJECTED — DAYFORCE.** A search for Aug 18 premarket returned "Dayforce (DAY) up 26.7%,
+  JBS +4.8%" (itiger). Follow-up search resolved the driver to **Thoma Bravo take-private talks reported August 18,
+  *2025*** (stockstotrade/Investing.com; DAY closed $52.88, jumped to $65.75, ~$8.4B cap). A +26.7% 2026 move is NOT
+  supported → **Dayforce and JBS were NOT published.** Trap grep "Dayforce" = 0 across all four pages. Future runs:
+  itiger/aggregator premarket round-ups are a known year-bleed vector.
+- ⚠ **UNVERIFIED-CARRY PURGE.** Toll Brothers, Klarna and the Reddit/AvalonBay S&P 500 index add were carried by the
+  prior two runs from a Yahoo source NOT re-fetched this run. Benzinga (Aug 18) names **Home Depot and Baidu** as
+  Tuesday's earnings and lists the day's calendar; the three unverified items were **DROPPED** rather than carried.
+  Trap greps "Toll Brothers" / "Klarna" / "Reddit (RDDT)" = 0.
+- ⚠ **YAHOO 5:08 AM STRIP RETIRED.** The prior run published Yahoo's cached futures strip (S&P fut 7,729.25, VIX 15.88,
+  Gold 4,448.80, Bitcoin 64,170.39, WTI Sep 84.15). Yahoo was NOT re-fetched this run → those levels were **removed**
+  from the Lead and the Rates table rather than re-published as current. Gold/Bitcoin rows dropped entirely.
+- MARKETS LEAD CHANGED — **the trigger is now the EXPIRED CEASEFIRE, not the Oman remark.** Benzinga (article stamped
+  **Aug 18, 2:23 AM ET**, fetched IN FULL this run): **President Trump REJECTED extending the 60-day temporary ceasefire
+  with Iran, which EXPIRED MONDAY**, absent a broader peace agreement; **a senior Iranian official threatened Tehran
+  would shift to a "fully offensive" military posture** if diplomacy fails, escalating Strait of Hormuz risk.
+  Energy: **Brent futures $91.27, WTI $84.20** (both firmer and more precise than the prior run's "$91 / $84").
+  The prior run's "Trump threatened to bomb Oman / SPR lowest since 1982" framing is SUPERSEDED as the current cause.
+- MARKETS FUTURES: **S&P 500 futures −0.41%, Nasdaq 100 −0.76%, Dow −0.16%, Russell 2000 −0.24%** (Benzinga, single
+  sourced rendering this run — the two-rendering side-by-side was dropped because Yahoo was not re-fetched).
+  **Polymarket "S&P 500 (SPX) Up or Down on August 18?" = 27% chance of a higher open**; the Aug 17 contract resolved
+  "Down" on $65,999 volume. Benzinga ETF proxies for Monday corroborate the carried closes: SPY −0.47% $772.67,
+  QQQ −0.16% $729.87, DIA −0.49% $534.19.
+- MARKETS NEW #1 — **JULY HOUSING STARTS, released 8:30 AM ET TODAY, is the new lead item.** SAAR **1.239 million vs
+  1.350 million expected**; **−12.4%** from June's revised **1.415M**; **−13.5%** vs July 2025's **1.432M**.
+  **Single-family starts 808,000, −9.9%** from June's revised 897,000. **Permits 1.443M, +5.0% m/m, +3.1% y/y**;
+  single-family permits **894,000 (+2.5%)**; 5-units-or-more **490,000**. Sources: InvestingLive + Crypto Briefing +
+  Census NRC. ⚠ Crypto Briefing's copy says "released Monday" — that is the outlet being sloppy; Benzinga's Aug 18
+  calendar puts July housing starts and import prices at **8:30 AM ET Tuesday**. Published as Tuesday 8:30 AM.
+  ⚠ **No import-price figure appeared in any fetched snippet → NONE published.**
+- MARKETS NEW #2 — **memory chipmakers lower as a group pre-market, Micron and SK Hynix named (CNBC).**
+  ⚠ **No percentage was stated for the group → direction only, no number printed.**
+- MARKETS MOVERS re-verified via the CNBC Aug 18 premarket article: **HD +1.5%** (adj EPS $4.92 vs $4.73; revenue
+  $47.86B vs $47.27B; comps +1.7%, US comps +1.3%; FY guidance reaffirmed $14.69–$15.28), **Tesla −1.2%**,
+  **Fabrinet −9%+ DESPITE a Q4 beat and rosy guidance** (the "despite" is new detail this run).
+  **CHART OF THE DAY MOVED to NYSE:FN** — Fabrinet is the session's single biggest verified mover (−9% vs HD's +1.5%);
+  the prior two runs used NYSE:HD. Ticker-tape feature symbols refreshed to HD/TSLA/FN/**MU**/**BIDU** (RDDT and TOL
+  removed with the unverified items); the three indices + USOIL + US10Y retained.
+- MARKETS RATES: 10-year rendered as **~4.70%** (Trading Economics: back to the 4.7% mark, near the 19-month high tested
+  earlier in the week) with **CNBC's Monday close 4.724%** and **Yardeni's 4.68% last week** named alongside. The prior
+  run's "4.72%–4.74%" range retired (Benzinga's 4.74% and Yahoo's 4.72% not re-fetched). **30-yr 5.31%, 19-year high**
+  retained. **2-yr row DROPPED** (not re-verified this run). NEW: **Yardeni FSVM — S&P forward P/E 19.9 vs 21.4
+  reciprocal of the bond yield; fair value 8,300 at last week's 4.68% ten-year** → index reads slightly undervalued.
+  ⚠ **Still NO current fed funds target figure verified → NONE published (third run running).** CNBC's ~67% September-hold
+  probability retained.
+- MARKETS CALENDAR (Benzinga, today): housing starts + import prices **8:30 AM ET**; industrial production + capacity
+  utilization **9:15 AM ET**; pending home sales **10:00 AM ET**; earnings **Home Depot** and **Baidu**.
+  Sector Heat = live heatmap only + the "no verified Tuesday sector figures at write time" line (pre-open, unchanged).
+- CYBER: TOP STORY, Patch Priority, threat-actor spotlight and the CVE table all **CARRIED UNCHANGED** — macOS Screen
+  Sharing **CVE-2026-65400 (9.8)** re-corroborated this run, Ray **CVE-2025-62593 (9.4)** re-corroborated (a search
+  result states CISA added a critical Ray flaw to KEV citing active exploitation), GitLab **CVE-2026-19478 (9.4)** and
+  Forminator **CVE-2026-15748 (9.8)** both re-confirmed via THN this run, vCenter **CVE-2026-59310 (9.8)** re-corroborated
+  via THN "Attackers Exploit VMware vCenter Vulnerability to Gain Persistent Remote Access". Aug 11 KEV batch re-verified
+  by name this run (20349 Cisco ASA/FTD heap inspection; 68820 Windows AFD for WinSock UAF; 72898 Metabase SQLi) and the
+  Aug 7 addition (8037 Progress LoadMaster command injection). SAP **CVE-2026-58231 (10.0)** still NOT in KEV → still
+  excluded from the countdown, page still says so.
+- CYBER NEW #1 — **BRINKS HOME / ShinyHunters. This NAMES the ">4.9M Salesforce records" item the last three editions
+  carried anonymously.** Breached **July 13** via a **Microsoft Entra vishing** attack; Brinks detected it **July 20,
+  2026**; **>4.9 million Salesforce records** with PII, comprising **>1.1 million rows** of a customer-contacts database,
+  **>4,000 employee records** (names, emails, job titles, phones) and **~3.8 million customer-support chat logs** from
+  the **Brinks Care Cresta** platform; extortion deadline **July 30**; revealed **Aug 4**. ⚠ **4.9M = RECORDS, NOT
+  PEOPLE** — one customer can appear in several records; published with that caveat explicit. Sources: BleepingComputer,
+  Cybernews, The Register, Fox News.
+- CYBER NEW #2 — **France's finance ministry confirmed Aug 14** that attackers used **stolen staff logins** to view and
+  copy **tax and property data on 678,000 people and businesses**. Credential theft, not a software flaw.
+- CYBER also-on-the-wire addition: **McDonald's and Vodafone** named in Aug 17 reporting on a large **Azure
+  credential-theft campaign** (IT Security News daily summary). **BY-THE-NUMBERS strip changed to 9.8 / 2 days / 4.9M /
+  678,000** (the SafePal 39,798 tile retired; SafePal itself retained as a card). Threat level HIGH unchanged.
+  **Cyber New = 2** (Brinks Home, France finance ministry); Clop and MyDr New tags removed (no longer new).
+- MMA: ⚠ **THE DERN SCORECARD CONFLICT FROM THE 8:45am RUN IS NOW RESOLVED.** ESPN's UFC 330 results page
+  (/mma/story/_/id/49624575/) states Dern beat Gillian Robertson **by unanimous decision 49-46, 49-46, 48-47** — matching
+  the standing correction and the main event's spread. UFC.com's "49-46 x2, 49-47" rendering is the OUTLIER.
+  **The 49-46, 49-46, 48-47 card is now PUBLISHED** in the results table, and the page carries a Scorecard Note saying
+  the conflict was resolved in ESPN's favour. Dern = champion, **ONE defence**, Aug 15 2026 (unchanged).
+- MMA NEW — **ARMAN TSARUKYAN vs MAURICIO RUFFY IS OFFICIAL for the UFC 331 CO-MAIN, Sept 19, Crypto.com Arena, Los
+  Angeles — five rounds at lightweight.** Tsarukyan **23-3 MMA, 10-2 UFC**; first fight since his **submission win over
+  Dan Hooker in November 2025**. Ruffy **14-2 MMA, 5-1 UFC**; **first five-round fight**; off **back-to-back TKOs of
+  Rafael Fiziev and former title challenger Michael Chandler**. **Odds: Tsarukyan −400 / Ruffy +300 (Betway).** Booked
+  per Bloody Elbow **Aug 5**; Yahoo Sports and Tapology corroborate. This RESOLVES the long-carried Tsarukyan–Oliveira
+  collapse block: reporting links Tsarukyan's withdrawal from the Oliveira booking to the **death of his longtime
+  teammate, UFC flyweight Allan Nascimento**. ⚠ The **UFC 300 method guard STILL HOLDS a fourth time** — the method of
+  Tsarukyan's win over Oliveira is still not in any fetched snippet and is still NOT printed.
+- MMA: Aug 22 Sacramento odds REFINED — **UFC.com currently shows −170 / +140**, published alongside the −166 to −176 /
+  +140 to +147 cross-book range. Champions board **re-verified against ESPN this run**: Aspinall HW (interim Gane),
+  Ulberg LHW (Apr 11 2026), Strickland MW (May 9 2026), Makhachev WW (Nov 15 2025, 1 defence), Gaethje LW (Jun 14 2026),
+  Volkanovski FW (Apr 12 2025); a second women's query returned Dern WSW, Shevchenko WFLW (won Sept 14 2024 UD over
+  Alexa Grasso, 2 defences), Harrison WBW (Jun 7 2025 sub of Peña, **0 defences**). ⚠ **A source (surprisesports) renders
+  Dern's UFC 321 title win as a SUBMISSION while the standing entry and ESPN say UD over Virna Jandiroba — the METHOD of
+  that win is NOT printed anywhere on the page**, only "Won the belt at UFC 321, Oct 2025". Do not print it until one
+  source is confirmed authoritative. Prospect Watch New tags removed from Salkilld and Thainara (no longer new).
+  Countdown target UNCHANGED at 2026-08-22T20:00-04:00.
+- VALIDATION (programmatic, this run): 4 pages HTMLParser-balanced **0 unclosed / 0 errors**; 5-tab nav + 4 stamp/fresh
+  IDs on all 4; .tldr on all three briefings and absent from index by design; **8/8 TradingView widget JSON blocks
+  parse**; ticker tape retains SPXUSD + NSXUSD + DJI + USOIL + US10Y; **Chart of the Day = NYSE:FN**; **7/7 KEV
+  countdowns machine-recomputed vs 2026-08-18 — all class AND label correct** (62593 Aug 20 = 2 days/soon; 68820 Aug 25
+  = 7 days/ok; 72898 + 20349 Aug 14, 8037 Aug 10, 18577 Aug 6, 12569 Jun 28 all late/past due); Monday-vs-Friday
+  arithmetic **3/3 exact** (−40.70→−0.52%, −272.63→−0.51%, −84.25→−0.32%); champions 11/11 rows; "After-Hours" = 0
+  (correct pre-open). Trap greps CLEAN ×0: Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman / MacKenzie / Thainara Silva /
+  pay-per-view / **Dayforce** / **Toll Brothers** / **Klarna** / **Reddit (RDDT)** / Pereira-Chimaev-Topuria in champion
+  cells / ">Vacant<". "Mackenzie Dern" spelled correctly ×3. **New tags 0/2/2/0** (index/cyber/ws/mma — the MMA new item
+  is the Tsarukyan–Ruffy booking, which lives in the UFC 331 card and Around the Sport, neither of which carries tags).
