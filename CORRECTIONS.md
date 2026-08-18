@@ -7728,3 +7728,130 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   7,782 / Cerebras all ×0; "Mackenzie Dern" spelled correctly ×3). Monday levels appear 3×/4×/3× on WS and 1× each
   on index; Friday levels 3×/2×/2× and ONLY in the rejection paragraph and the labelled prior-session line.
   New tags **0/2/0/0** (index/cyber/ws/mma).
+
+## Added 2026-08-18 (Tuesday ~8:05am ET — Morning Edition; PRE-OPEN, first run of Tuesday; research ~8:06–8:20am)
+- CLOCK: TZ date = Tue Aug 18 08:05 EDT at run start; archive stamp 2026-08-18-0818. **Markets CLOSED — 85 minutes
+  before the 9:30 open.** Page states this explicitly and publishes futures, not index levels, as "current".
+- MARKETS: **Pre-market Tuesday published from Yahoo Finance's live blog (updated Tue Aug 18, 5:00 AM EDT, fetched
+  IN FULL this run) plus its live futures strip read at ~8:07am:** S&P futures 7,729.25 (−39.50, −0.51%); Dow futures
+  53,492.00 (−52.00, −0.10%); Nasdaq futures 29,762.75 (−333.25, −1.11%); Russell 2000 futures 3,055.30 (−9.60,
+  −0.31%); VIX 15.88 (+0.69, +4.54%); Gold 4,448.80 (−24.90, −0.56%); Bitcoin 64,170.39 (+924.18, +1.46%);
+  Crude Oil Sep 26 84.15 (+0.41, +0.49%). Article body renders the same move as Dow futures −0.2% / S&P −0.5% /
+  Nasdaq-100 −0.9%; Bloomberg (5:08 AM NY) renders it Nasdaq 100 −1.1% / S&P 500 −0.5% / Dow −0.16% / Russell −0.24%.
+  BOTH renderings published side by side — do NOT collapse.
+- MARKETS: **Monday Aug 17 closes CARRIED UNCHANGED into the Weekly Scorecard (S&P 7,745.06 −40.70 −0.52%; Dow
+  53,459.78 −272.63 −0.51%; Nasdaq Comp 26,644.91 −84.25 −0.32%)** and machine-reconciled against the Friday levels
+  this run (7,785.76−40.70=7,745.06; 53,732.41−272.63=53,459.78; 26,729.16−84.25=26,644.91 — 3/3 exact). Friday
+  levels appear 1× each and ONLY in the labelled prior-session column. The Zacks/Yahoo "Aug 17" trap did NOT surface
+  this run (no reason to re-query it pre-open).
+- MARKETS CAUSE: **Trump said he intends to inflict more economic pain on Iran and threatened to "bomb" Oman if it
+  interferes with US plans for the Strait of Hormuz** (Yahoo, Aug 18). **Brent hit $91/bbl, WTI rose to $84**, oil's
+  highest in over two weeks; **the US Strategic Petroleum Reserve is at its lowest level since 1982.** Hormuz transit:
+  5 commodity vessels Saturday, ZERO Sunday, vs 31 the previous weekend. Rates: **10-yr 4.72%, 30-yr 5.31% (19-year
+  high)** per Yahoo pre-market — rounded two-figure renderings published because they are the NEWER read; CNBC's
+  Monday-close 4.724% / 5.311% named alongside. Brent has FOUR renderings again ($91 Yahoo / 90.97 +0.11% Trading
+  Economics / +0.5% to $91.3 hdfcsky) — printed, not collapsed. ⚠ **NO current fed funds target figure was verified
+  this run → NONE published.**
+- MARKETS NEW #1: **HOME DEPOT Q2 FY2026, reported 6:00 AM ET today.** Sales **$47.9B, +5.7% y/y**; **comparable
+  sales +1.7%** (vs ~1% expected; **highest since late 2022**); **US same-store +1.3%** (vs 0.9% expected); **diluted
+  EPS $4.79**; **guidance REITERATED** (total sales +2.5–4.5%, comps flat to +2%). Outdoor categories (live goods,
+  mulch, patio, grills) drove it. **Stock +2% pre-market.** Earnings call 9 AM ET. Chart of the Day set to **NYSE:HD**.
+- MARKETS NEW #2: **REDDIT (RDDT) JOINS THE S&P 500 EFFECTIVE BEFORE TODAY'S OPEN, replacing AvalonBay Communities.**
+  Announced by S&P DJI Aug 13; RDDT jumped >11% that Friday; ~**$29.5B market cap**; second major social-media firm in
+  the index after Meta; stock **down 31% on the year**. AvalonBay leaves because of its May all-stock merger with
+  Equity Residential (**$69B enterprise value**), the combined company to be called **Vivmark Residential**, which
+  stays in the index post-close.
+  ⚠ **DATE-BLEED TRAP CAUGHT:** searches for "premarket movers Aug 18" returned CNBC round-ups dated **Aug 14 and
+  Aug 17** (Reddit +12%, SanDisk ~+5%, WDC/Micron +3%, Applied Materials −5%, Alibaba +1.5%, Intel +1.5%, Wayfair +4%).
+  Those belong to THOSE sessions and were NOT published as today's moves; a muted footnote under the Movers grid says
+  so explicitly. Only HD (+2%) and the RDDT index add are published as Tuesday items. Third card = crude oil as a
+  DRIVER, not a stock.
+- ⚠ NO Tuesday sector figures existed (market not open) → Sector Heat carries the live heatmap ONLY, with a line
+  saying no verified sector figures existed at write time. No After-Hours section (pre-open, not post-close).
+- CYBER: **TOP STORY CHANGED to the Ray KEV addition — AND THIS RESOLVES THE STANDING RAY REJECTION FROM 2026-08-17
+  ~6:35pm.** The prior run refused to publish the deadline because CISA's own alert pages stopped at Aug 11. The
+  cisa.gov alert page **/alerts/2026/08/17/cisa-adds-one-known-exploited-vulnerability-catalog** now exists and THN
+  (Ravie Lakshmanan, Aug 18) was fetched IN FULL confirming every element. **CVE-2025-62593, CVSS 9.4, Ray-Project
+  Ray code injection; added to KEV Mon Aug 17; FCEB deadline Thu Aug 20, 2026** (a 3-day risk-based assignment, not
+  BOD 22-01's old flat 3 weeks). Mechanism: Ray maintainers' longstanding decision NOT to authenticate critical
+  endpoints (**/api/jobs**, **/api/job_agent/jobs/**) + modifiable User-Agent header + **DNS rebinding** → RCE via
+  **Firefox and Safari** against a developer who merely visits a malicious site or is served a malicious ad; extends
+  to network-adjacent Ray instances using the browser as a confused-deputy intermediary. **Fixed in Ray 2.52.0.**
+  Credits: Oligo's **Avi Lumelsky** (fetch bypass) and **Jonathan Leitschuh** (DNS rebinding). Ray GitHub: >43,500
+  stars, >7,900 forks. ⚠ **CISA has NOT described how it is being exploited** — published explicitly. Corroborating
+  exploitation: **BitSight (March 2026) — RondoDox DDoS botnet operators added it TWO DAYS BEFORE public disclosure
+  on Nov 26, 2025**, aided by an available PoC; Oligo's **ShadowRay 2.0** turns unpatched clusters with NVIDIA GPUs
+  into a self-replicating crypto-mining botnet. RAY IS NOW THE PATCH PRIORITY (2 days left).
+- CYBER NEW #1: **SafePal — 39,798 customers.** Disclosed **Aug 16**; authorisation flaw in an order-tracking plug-in;
+  names, emails, shipping addresses, phone numbers, purchase details for orders **Mar 2 2025 – Apr 11 2026**. NOT
+  exposed: seed phrases, private keys, wallet passwords, bank details, card numbers, government ID. Remediated;
+  third-party audit; retention cut to 90 days; **30+ phishing sites taken down**; stolen data reported advertised for
+  sale. Framed alongside the Trezor/ShipMonk exposure as the SECOND hardware-wallet customer list out in a fortnight.
+- CYBER NEW #2: **Heights Finance Holdings Co. — over 1.2 million individuals.** Discovered **May 7, 2026**;
+  unauthorised access to a **third-party cloud platform** holding customer data; notifications began **Aug 11**.
+  Names, addresses, **SSNs, bank account details**; possibly phone, email, tax IDs, driver's licence/state ID, DOB.
+  Limited to that platform — loan management systems unaffected. 24 months credit monitoring; law-firm investigations open.
+- CYBER carried: Metabase victim chain (Framework/Anaconda/n8n/Trezor-ShipMonk 13,689 = 11,742 full + 1,947 partial),
+  Azure/"TheHatman" 3.6M+ across nine tenants (all claims labelled as the seller's own, no company confirmed),
+  GeoServer (still NO CVE / NO CVSS / NO patch → still excluded from the CVE table and the KEV countdown, and the
+  page says why), SAP Commerce Cloud CVE-2026-58231 (CVSS 10.0, honeypot probes 3 days post-patch, **still NOT in
+  KEV** → still excluded from the countdown and the page says so). THREAT ACTOR SPOTLIGHT changed to **The Gentlemen**
+  (appeared Aug 2025; **35 victims Q4 2025 → 182 Q1 2026**; KFC Kosova claimed **Aug 15 2026**; Avanta Maroc,
+  Casablanca). Context: **Qilin** = largest-volume operator; **Akira** longest-running RaaS (2023); **7,551 publicly
+  disclosed victims Apr 2025–Mar 2026, +24.9%**. Also on the Wire: **Keyv npm worm — 353 poisoned versions across 79
+  package names (SafeDep)**, spread Aug 4 via preinstall credential-stealer; **cPanel/WHM via CVE-2026-41940 using
+  583 GitHub workflows across 10 versions**; **>4.9M Salesforce records**; **Gitea CVE-2026-59774 (9.8)**, advisory
+  Aug 2, reported under active exploitation. **BY-THE-NUMBERS strip = 9.4 / 2 days / 39,798 / 1.2M.** Threat level HIGH.
+  **Cyber New = 2** (SafePal, Heights Finance).
+- MMA: **TOP STORY = UFC 330 (Sat Aug 15, Xfinity Mobile Arena, Philadelphia), RE-VERIFIED this run via ESPN's UFC 330
+  results-and-analysis page and UFC.com:** Makhachev UD over Ian Machado Garry **49-46, 49-46, 48-47**; **17th straight
+  UFC win, a NEW all-time record passing Anderson Silva's 16**; **fifth two-division champion to defend in both
+  divisions**; now **29-1**; Machado Garry falls to **17-2**.
+  ⚠ **NEW AND IMPORTANT — MACKENZIE DERN HAS NOW DEFENDED THE STRAWWEIGHT BELT.** She beat **Gillian Robertson by UD
+  (49-46, 49-46, 48-47)** in the UFC 330 co-main. The standing champions block previously recorded Dern with the belt
+  from **UFC 321, Oct 25 2025 (UD over Virna Jandiroba)** and no defence — **that is now superseded: Dern = champion,
+  ONE defence, Aug 15 2026.** Zhang Weili is the No. 1 contender. Do NOT publish Dern with zero defences again.
+- MMA other UFC 330 results verified: **Esteban Ribovics def. Edson Barboza, TKO (ref stoppage) R2 1:32**; **Dustin
+  Stoltzfus def. Mansur Abdul-Malik, submission (RNC) R2 4:25**; **Jalin Turner def. Kaue Fernandes, KO (punches) R1
+  0:39**. Card produced **5 KOs and 2 submissions**. **Bonuses: $400,000 total — POTN $100K each to Jalin Turner,
+  Dustin Stoltzfus, Charles Johnson, Jeremiah Wells.** Business block RE-VERIFIED this run: **19,238 spectators,
+  $6,715,776 gate, highest-grossing event in Xfinity Mobile Arena history**, Dana White at the presser: arena record
+  beaten by ~$2M. First Philadelphia card in seven years; sold out. **NO viewership figure surfaced → none published.**
+- MMA NEW: **ESPN divisional rankings — Quillan Salkilld and Alexia Thainara break through.** Salkilld **enters the
+  lightweight top 10 at No. 10, taking Gamrot's place**, after the **first-round submission of Mateusz Gamrot** in his
+  first UFC main event (UFC Fight Night, Las Vegas, Aug 8) — consistent with the standing Salkilld correction (6-0 UFC,
+  RNC R1, third $100K bonus of 2026). **Alexia Thainara enters women's strawweight at No. 8** after a **UD over former
+  title challenger Amanda Lemos**, extending her unbeaten Octagon streak to **four**; **Lemos falls three spots to
+  No. 9.** Spelling is "Alexia Thainara" — the standing "Thainara Silva" trap grep returned 0.
+- MMA cards published (all verified this run): **Aug 22 UFC Fight Night 285, Golden 1 Center, Sacramento —
+  #6 Anthony Hernandez vs #11 Gregory Rodrigues, MIDDLEWEIGHT, both former LFA champions; prelims 5 PM ET Paramount+,
+  main card 8 PM ET; odds Hernandez −166 to −176 / Rodrigues +140 to +147 (DraftKings −166/+140), line tightened
+  through fight week. Co-main Spivac vs Petrino (HW); de Ridder vs Dolidze (LHW); Mederos vs Jones (LW); Judice vs
+  Chaves (FLW).** **Aug 29 UFC Fight Night 286, SPD Bank Oriental Sports Center, Shanghai — #3 Umar Nurmagomedov vs
+  #5 Song Yadong (bantamweight); Umar on a 2-fight streak since his title challenge; Song's SIXTH main event, coming
+  off a submission of Deiveson Figueiredo at UFC Fight Night Macau in May, prior wins over Cejudo/Moraes/Vera; main
+  card 6 PM CST, first fight 3 PM CST. NO odds surfaced → none printed.** **Sep 5 Hooker vs Parnasse (main card
+  12:00 PM ET).** **Sep 12 Noche UFC: Rodriguez vs. Silva (main card 2:00 PM ET).** **Sep 19 UFC 331, Crypto.com Arena,
+  LA — Van vs Pantoja 2 + the full 13-fight card (all carried detail re-verified).** Countdown target UNCHANGED at
+  2026-08-22T20:00-04:00.
+- MMA around-the-sport: **Dana White signed FOUR of the five Week 1 winners from DWCS Season 10** (group includes
+  training partners of Daniel Cormier and Ilia Topuria); **White confirmed UFC interest in signing Usman Nurmagomedov**
+  ("Of course"). Tsarukyan–Oliveira collapse block CARRIED verbatim including the Nascimento/Chute Boxe reason and both
+  quotes. ⚠ **UFC 300 METHOD GUARD HELD A THIRD TIME** — the method of Tsarukyan's win over Oliveira is STILL not in
+  any fetched snippet and is STILL not printed; the page says so. **MMA New = 2** (Salkilld, Thainara).
+- MMA champions: ESPN current-champions query run again this run and returned **Aspinall HW, Ulberg LHW, Strickland MW,
+  Makhachev WW, Gaethje LW, Volkanovski FW** with correct divisions, plus Yan BW and Van FLW named. A separate targeted
+  women's query returned **Dern SW (16-5), Shevchenko FLW (26-4-1), Harrison BW (19-1)**. 11 division rows machine-parsed;
+  **Pereira/Chimaev/Topuria in a CHAMPION cell = 0**; **">Vacant<" = 0**; interim HW Gane carried in the heavyweight note.
+- VALIDATION (programmatic, this run): 4 pages HTMLParser-balanced **0 unclosed / 0 errors**; 5-tab nav + 3 stamp IDs +
+  freshline on all 4; **8/8 TradingView widget JSON blocks parse**, ticker tape retains all three indices + WTI + US10Y,
+  **Chart of the Day = NYSE:HD**; **7/7 KEV countdowns machine-recomputed vs 2026-08-18 — all class AND label correct**
+  (62593 due Aug 20 = 2 days; 68820 due Aug 25 = 7 days; 72898 + 20349 Aug 14, 8037 Aug 10, 63077 Aug 8, 12569 Jun 28 all
+  past due); champions 11/11 rows printed and eyeballed; Monday levels 1× each on WS and 0× on index (index card carries
+  no levels this edition, by design — it leads on futures); Friday levels 1× each in the labelled prior-session column
+  only; Monday-vs-Friday arithmetic 3/3 exact. Trap greps CLEAN: Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman /
+  MacKenzie / pay-per-view / "featherweight vacant" / Thainara Silva / Jean Matsumoto / 7,782 / Cerebras / Vacant all
+  ×0; "Mackenzie Dern" spelled correctly ×4. New tags **0/2/2/2** (index/cyber/ws/mma).
+- ⚠ FIRST-CATCH NOTE for future runs: an initial draft wrote the Ray KEV bullet as "Federal remediation due <strong>…"
+  which broke the machine countdown parser (it silently matched the NEXT list item's date). Keep every KEV bullet in the
+  exact form "Added <date>. Due <strong><date></strong>. <span class=cd …>" so the validator can parse it.
