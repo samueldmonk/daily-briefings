@@ -8343,3 +8343,82 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   Thainara Silva / pay-per-view / Dayforce / Paylocity / 32.4% / 11.3% / **4.5%** / Klarna / Bonfim vs. Brady /
   Joshua Vance / 6,781.48 / 47,706.51 / 22,697.10 / ">Vacant<". "Mackenzie Dern" spelled correctly ×4.
   **New tags 0/1/2/1** (index/cyber/ws/mma).
+
+## Added 2026-08-18 (Tuesday ~11:05am ET — MIDDAY EDITION; fourth post-open run of Tuesday; research ~11:05–11:15am)
+- CLOCK: TZ date = Tue Aug 18 11:05 EDT at run start; archive stamp 2026-08-18-1115. Markets OPEN, ~95 minutes past
+  the bell. Edition bucket flips to **Midday** (h=11). Lead re-stamped "as of ~10:55 AM ET". No After-Hours block
+  (grep = 0, correct pre-4pm).
+- **CYBER TOP STORY REPLACED — LAZARUS / CVE-2026-68820 / OPERATION DREAM JOB.** Check Point Research attributes
+  zero-day exploitation of **CVE-2026-68820** (Windows Ancillary Function Driver for WinSock, AFD.sys, **CVSS 7.0**,
+  use-after-free via a race condition → SYSTEM) to the North Korea-linked **Lazarus Group**. Exploited since **at least
+  early July**; Microsoft patched it **Aug 11, 2026** (August Patch Tuesday) → roughly **five weeks** of live use.
+  Chain: encrypted archive with a legitimate signed PDF viewer + malicious DLL → DLL shows a fake **Lockheed Martin**
+  job description while loading **MISTPEN**, a downloader using the **Microsoft Graph API and OneDrive** → in-memory
+  LPE module exploits AFD.sys → executes a new version of the **FudModule** kernel rootkit. Targets: **defence,
+  aerospace, aviation, drone, robotics, military technology** in **France, Germany, Brazil, India**. Corroborated by
+  SIX independent sources this run: Check Point Research, BleepingComputer, SecurityWeek, The Hacker News, Help Net
+  Security, Security Affairs. The Trezor/ShipMonk/Metabase story was DEMOTED from Top Story to its existing Breaches
+  card (it was already duplicated there, so no content was lost). tldr, threat-level "why", index cyber card and a new
+  CVE-table row all rewritten around Lazarus. BY-THE-NUMBERS strip: the "9.8 / CVE-2026-65400" tile retired to the CVE
+  table, replaced by **"5 weeks"**. KEV line for 68820 annotated with the Lazarus attribution. Inotiv **New tag
+  REMOVED** (in the 1042 snapshot) → **cyber New tags = 0 this run**, which is honest: no genuinely new breach landed.
+- ⚠ **THN SUMMARY CONFLATION CAUGHT — FORMINATOR CVE.** This run's Hacker News summary asserted the critical Forminator
+  Forms WordPress flaw (600,000+ installs) was "**CVE-2026-19478**, rated Critical by GitLab, **CVSS 9.4**". A direct
+  follow-up search the SAME run established the Forminator flaw is **CVE-2026-15748, CVSS 9.8**, affecting ≤ 1.56.1,
+  fixed in **1.56.2 (July 31, 2026)**, exploitable only where a form has both a File Upload and a Select field
+  (handle_file_upload()); **CVE-2026-19478 is a separate GitLab CE/EE issue**. The pages ALREADY carried both correctly
+  from an earlier run, so nothing changed — but the conflation is recorded because the summary will recur. Validator now
+  asserts programmatically that the Forminator row is 15748. Trap: any future page rendering "CVE-2026-19478 /
+  Forminator" is WRONG.
+- MARKETS — **A GENUINELY LATER SNAPSHOT, AND THE SPLIT WIDENED RATHER THAN CLOSED.** As of **~10:55 AM ET**:
+  **Nasdaq Composite −1.34%, S&P 500 −0.57%, Dow −0.06%**. The Nasdaq's loss DEEPENED from the ~1.2% carried at 10:30
+  while the Dow all but closed its gap to unchanged (−0.3% → −0.06%). Both reads are printed, each stamped with its
+  time; the 10:35 run's Trading Economics snapshot (Nasdaq 100 −1.58%, Russell 2000 −0.68%, Dow −0.07%, S&P −0.53%) is
+  retained as the earlier of the two. ⚠ Intraday LEVELS were returned by the source (Dow 53,428.20 −31.58; Nasdaq
+  26,288.79 −356.12) and were **deliberately NOT published** — per the standing rule precise levels belong only in the
+  Weekly Scorecard; editorial carries % moves only.
+- MARKETS NEW — **THE PHILADELPHIA SEMICONDUCTOR INDEX FELL ROUGHLY 3.7%** in early trade, with **Nvidia, Meta and
+  other large technology names** weakening together — a sector move nearly three times the Nasdaq's own, and the
+  cleanest available read on the session. New Movers card ("The chip index, not the Nasdaq, is the real move"), the WS
+  page's **only New tag this run**. Home Depot and "Where the money went instead" **New tags REMOVED** (both in the
+  1042 snapshot).
+- MARKETS — **SECTOR BOARD FILLED OUT FOR THE FIRST TIME.** Prior runs could corroborate only XLE. This run adds two
+  more: **Health Care (XLV) +1.59%, the session's top-performing sector fund**, and **Consumer Staples (XLP) +1.11%**,
+  alongside the retained **Energy (XLE) +1.30%** — a defensive-and-value leadership board. The sector-heat note and the
+  rotation card were both rewritten; the note's "no other verified sector percentage" caveat is now obsolete and gone.
+- MARKETS — **30-YEAR REFINED TO A SOURCED RANGE.** Prior editions printed a flat "5.32%, highest since 2007". CNBC
+  renders it as **topping 5.31% — 5.311%, up more than four basis points, the highest since JUNE 2007 (a 19-year
+  high)**; Bloomberg's live coverage has ~5.32%, +2bp Tuesday. Both are now printed side by side (level cell reads
+  **5.31%–5.32%**) rather than one being picked. NEW source added: CNBC's **Aug 18** follow-up, "The 30-year Treasury
+  yield just hit a 19-year high. Three things could drive it even higher." Also re-verified this run: Brent held near a
+  **three-week high**, US crude **topping $85**.
+- MMA — **NO NEW NEWS THIS RUN; New tags = 0.** DWCS Season 10 Week 2 re-verified for tonight (Tue Aug 18, Meta APEX,
+  7:00 PM ET, Paramount+, Namo Fazil 10-1 vs Kaik Brito 19-6; Brito noted as a two-time Oktagon welterweight champion).
+  The Sacramento card's **New tag was REMOVED** (in the 1042 snapshot). Sacramento detail re-confirmed unchanged this
+  run (Golden 1 Center, prelims 5 PM ET / main card 8 PM ET, Spivac–Petrino, Dolidze–de Ridder, Mederos–Jones,
+  Judice–Chaves, Wint–Chatman; Gaziev–Nzechukwu, Emmers–Douglas, Young–Dorsainvil, McVey–Schultz, Dyer–Reed on prelims).
+  Countdown target UNCHANGED at 2026-08-22T20:00-04:00.
+- ⚠ **RODRIGUES RANKING — THIRD DIFFERENT NUMBER IN TWO DAYS; PAGE NOW REFUSES TO PICK ONE.** Earlier editions carried
+  **No. 11**; the 10:35 run switched to **No. 10** (LowKick/SportsLine lineage); THIS run's event previews (MMA Mania,
+  Yahoo Sports) give **No. 12**. Three sourced values inside two days is not a ranking move, it is source disagreement.
+  **No rank for Rodrigues is printed on the Fight Week card at all now** — only Hernandez's **No. 6**, which every
+  source agrees on — and the Rankings & Business paragraph plus the index MMA card both disclose all three figures
+  explicitly. Supersedes the 10:35 entry's "the newer figure is the one used above".
+- MMA CHAMPIONS re-cross-checked against ESPN's champions page THIS RUN and INDEPENDENTLY CONFIRMED for all eight men's
+  belts: HW **Aspinall**, LHW **Ulberg** (won Apr 11 2026), MW **Strickland** (won May 9 2026), WW **Makhachev** (won
+  Nov 15 2025, two-division), LW **Gaethje** (won Jun 14 2026), FW **Volkanovski** (won Apr 12 2025), BW **Yan**
+  (reclaimed Dec 2025), FLW **Joshua Van** (UFC 323). Women's divisions were not returned by ESPN's summary this run and
+  rest on the standing block. Champions **11/11** rows, **0 bad cells** — validator now checks the CHAMPION COLUMN ONLY,
+  so legitimate citations of beaten former champions in the NOTES column (Gane KO2 Pereira, Strickland SD Chimaev,
+  Gaethje TKO4 Topuria, Yan UD Dvalishvili, Van TKO1 Pantoja) no longer false-positive.
+- VALIDATION (programmatic, this run — rewritten as validate_1105.py with an entity-normalising matcher):
+  4 pages HTMLParser-balanced **0 unclosed / 0 errors**; 5-tab nav + 4 stamp/fresh IDs on all 4 with exactly **1 active
+  tab each**; .tldr on all three briefings with the correct per-page label, absent from index by design;
+  **8/8 TradingView widget JSON blocks parse**; ticker tape retains SPXUSD + NSXUSD + DJI + USOIL + US10Y;
+  **Chart of the Day = NYSE:FN**; **7/7 KEV countdowns machine-recomputed vs 2026-08-18 — all class AND label correct**;
+  Patch Priority and the KEV list agree on Ray = **Aug 20**; Monday-vs-Friday scorecard arithmetic **3/3 exact** (level
+  AND percent both recomputed); champions **11/11** rows / 0 bad cells; "After-Hours" = 0 (correct pre-4pm).
+  Trap greps CLEAN ×0 (21 traps): Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman / MacKenzie / Thainara Silva /
+  pay-per-view / Dayforce / Paylocity / 32.4% / 11.3% / 4.5% / Klarna / Bonfim vs. Brady / Joshua Vance / 6,781.48 /
+  47,706.51 / 22,697.10 / ">Vacant<" / unification / 54,215 / 7,720.01. "Mackenzie Dern" spelled correctly ×4.
+  **New tags 0/0/1/0** (index/cyber/ws/mma).
