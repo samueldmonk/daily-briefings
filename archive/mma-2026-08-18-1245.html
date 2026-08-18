@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Octagon — Daily Briefing</title>
+<style>
+:root{
+  --bg:#100c0c; --panel:#1a1313; --line:#322020; --text:#f5e9e6; --muted:#a08a85;
+  --acc:#e84545; --acc2:#ff8a5c; --gold:#e0b355; --win:#31c48d;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;font-size:16px}
+.wrap{max-width:1000px;margin:0 auto;padding:26px 20px 70px}
+.masthead{border-bottom:2px solid var(--line);padding-bottom:14px}
+.masthead h1{margin:0;font-size:40px;letter-spacing:-1px;font-weight:800;color:var(--acc)}
+.tagline{color:var(--muted);font-size:14.5px;margin-top:4px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:4px 11px}
+.pill.live{color:var(--acc2);border-color:rgba(255,138,92,.4)}
+.pill.live .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--acc2);margin-right:6px;vertical-align:middle}
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:10px;padding:11px 15px;margin:6px 0 2px;font-size:14.5px;line-height:1.5}
+.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);margin-right:9px}
+.freshline{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.06em;margin:10px 2px 16px}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px}
+nav a{font-family:var(--mono);font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;text-decoration:none;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:8px 13px;transition:.15s}
+nav a:hover{color:var(--text);border-color:#5a3838}
+nav a.active{color:#1a1313;background:var(--acc);border-color:var(--acc);font-weight:600}
+.cdbar{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--acc2);border-radius:12px;padding:13px 18px;margin-bottom:22px;display:flex;flex-wrap:wrap;align-items:baseline;gap:10px}
+.cdbar .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.cdbar .ev{font-size:15.5px;font-weight:600}
+.cdbar .t{font-family:var(--mono);font-size:19px;font-weight:700;color:var(--acc2);margin-left:auto}
+h2.sec{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--acc2);margin:34px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+.top{border-left:4px solid var(--acc)}
+.top h3{margin:0 0 9px;font-size:25px;letter-spacing:-.3px}
+.top p{margin:0 0 10px;font-size:15.5px;color:#e0cfca}
+.top p:last-child{margin-bottom:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(285px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;transition:.18s}
+.card:hover{transform:translateY(-3px);border-color:#5e3a3a}
+.card .when{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:7px}
+.card h4{margin:0 0 6px;font-size:17px;letter-spacing:-.2px}
+.card p{margin:0;font-size:14.5px;color:#dcc9c4}
+.odds{margin-top:9px;font-family:var(--mono);font-size:12.5px;color:var(--acc2)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:9px}
+.tag{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.tag.new{color:var(--acc2);border-color:rgba(255,138,92,.45)}
+.tag.prospect{color:var(--win);border-color:rgba(49,196,141,.45)}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:left;padding:9px 10px;border-bottom:1px solid var(--line)}
+td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+td.res{font-weight:600;color:var(--win);white-space:nowrap}
+td.nc{font-weight:600;color:var(--gold);white-space:nowrap}
+ul.plain{margin:0;padding-left:20px;font-size:15px;color:#e0cfca}
+ul.plain li{margin-bottom:9px}
+footer{margin-top:44px;border-top:1px solid var(--line);padding-top:18px;font-size:13px;color:var(--muted)}
+footer a{color:var(--acc2);text-decoration:none;word-break:break-all}
+footer a:hover{text-decoration:underline}
+footer li{margin-bottom:5px}
+.disc{margin-top:12px;font-size:12.5px;font-style:italic}
+.note{font-size:12.5px;color:var(--muted);margin-top:10px;font-style:italic}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="masthead">
+  <h1>The Octagon</h1>
+  <div class="tagline">Your daily MMA briefing — UFC, prospects &amp; the business of fighting</div>
+  <div class="meta">
+    <span class="pill live"><span class="dot"></span>Live</span>
+    <span class="pill" id="edition">Morning Edition</span>
+    <span class="pill" id="datestamp">Tuesday, August 18, 2026</span>
+    <span class="pill">Updated <span id="updated">—</span></span>
+  </div>
+</header>
+
+<div class="tldr"><b>Tale of the Tape</b> <span>Islam Makhachev&rsquo;s win over Ian Machado Garry at UFC 330 set the all-time record for consecutive Octagon victories at 17 &mdash; and tonight Dana White&rsquo;s Contender Series is back at the Meta APEX with five more contracts on the line.</span></div>
+
+<div class="freshline" id="freshline">Data as of — ET</div>
+
+<nav>
+  <a href="index.html">★ Front Page</a>
+  <a href="cyber-briefing.html">⛨ The Cyber Wire</a>
+  <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
+  <a href="mma-briefing.html" class="active">⊘ The Octagon</a>
+  <a href="archive.html">🗄 Archive</a>
+</nav>
+
+<div class="cdbar">
+  <span class="lbl">Next card</span>
+  <span class="ev">UFC Fight Night 285 — Hernandez vs. Rodrigues · Golden 1 Center, Sacramento</span>
+  <span class="t" id="ufccdn">—</span>
+</div>
+
+<h2 class="sec">Top story</h2>
+<div class="panel top">
+  <h3>Seventeen straight: Makhachev passes Anderson Silva on a sold-out Philadelphia night</h3>
+  <p><strong>Islam Makhachev</strong> defended the UFC welterweight title against <strong>Ian Machado Garry</strong> at <strong>UFC 330</strong> on Saturday, August 15, taking a unanimous decision — <strong>49-46, 49-46, 48-47</strong> — at the Xfinity Mobile Arena. It was his <strong>17th consecutive win inside the Octagon</strong>, a new all-time record that passes Anderson Silva's 16, and it made him the fifth two-division champion to defend a belt in both divisions. He moves to <strong>29-1</strong>; Machado Garry falls to <strong>17-2</strong>.</p>
+  <p>Underneath him, <strong>Mackenzie Dern</strong> made the <strong>first successful defence</strong> of the women's strawweight title, outworking <strong>Gillian Robertson</strong> through the first four rounds for a unanimous decision. Zhang Weili is the No. 1 contender at strawweight.</p>
+  <p>The night's business matched the sport: a sell-out with <strong>19,238 in attendance</strong> and a gate of roughly <strong>$6.7 million</strong>, making UFC 330 the highest-grossing event in the arena's history — beating the building record by about $2.2 million. It was the promotion's first Philadelphia card in seven years.</p>
+</div>
+
+<h2 class="sec">Fight week — upcoming cards</h2>
+<div class="cards">
+  <div class="card">
+    <div class="when">Tue Aug 18 · Meta APEX, Las Vegas · 7:00 PM ET</div>
+    <h4>Dana White's Contender Series, Season 10 — Week 2</h4>
+    <p>Tonight, live on Paramount+ at <strong>7:00 PM ET / 4:00 PM PT</strong>. The main event is a welterweight bout between <strong>Namo Fazil</strong> (10-1) of Kurdistan and Brazil's <strong>Kaik Brito</strong> (19-6). It is a better matchup than a Contender Series headliner usually gets: <strong>Fazil has won seven straight since 2022, six of them by finish</strong>, while Brito is a <strong>former Oktagon welterweight champion who won that title in February</strong> and has gone <strong>3-1 since his own Contender Series opportunity in 2023</strong> &mdash; a rare case of a fighter earning a second look and arriving with a belt. The co-main is a middleweight matchup between <strong>Douglas Rodrigues</strong> and Las Vegas-based <strong>Trent Miller</strong> (8-3). Also on the card: <strong>Logan Paxton</strong> (10-1) vs. <strong>Cristian Perez</strong> (14-2) at lightweight, <strong>Alik Lorenz</strong> (7-2) vs. <strong>Mahamed Aly</strong> (5-1) at light heavyweight, and <strong>Roman Puga</strong> (5-1) vs. <strong>Taner Trembley</strong> (7-0) at featherweight.</p>
+    <div class="odds">Contracts are awarded at White's discretion at the end of the night — Week 1 produced four</div>
+  </div>
+  <div class="card">
+    <div class="when">Sat Aug 22 · Golden 1 Center, Sacramento</div>
+    <h4>UFC Fight Night 285: Hernandez vs. Rodrigues</h4>
+    <p>A ranked middleweight main event — <strong>#6 Anthony Hernandez</strong> against <strong>Gregory Rodrigues</strong>, both former LFA champions. Rodrigues is <strong>19-6 with 12 knockouts</strong>, on a <strong>three-fight winning streak</strong>, and last knocked out <strong>Brunno Ferreira in the first round at UFC 326 in March</strong>. Prelims 5 PM ET on Paramount+, main card 8 PM ET. The co-main is Spivac vs. Petrino at heavyweight, with de Ridder vs. Dolidze at light heavyweight underneath, plus Mederos vs. Jones at lightweight and Judice vs. Chaves at flyweight. Late change: lightweight <strong>Gauge Young</strong> now faces short-notice replacement <strong>Stan Dorsainvil</strong>, in for the injured Kody Steele.</p>
+    <div class="odds">Odds: Hernandez −166 to −176 / Rodrigues +140 to +147 across books; UFC.com currently shows −170 / +140 · line history: opened −147/+120 (early books also −142/+122), Hernandez peaked around −184 to −191 with Rodrigues out to +145 before tightening back</div>
+  </div>
+  <div class="card">
+    <div class="when">Sat Aug 29 · SPD Bank Oriental Sports Center, Shanghai</div>
+    <h4>UFC Fight Night 286: Nurmagomedov vs. Song</h4>
+    <p><strong>#3 Umar Nurmagomedov</strong> meets <strong>#5 Song Yadong</strong> at bantamweight. Umar is on a two-fight streak since his title challenge; this is Song's sixth main event, following a submission of Deiveson Figueiredo at UFC Fight Night Macau in May. Main card 6 PM CST, first fight 3 PM CST.</p>
+    <div class="odds">No odds surfaced in verified sources this run — none printed</div>
+  </div>
+  <div class="card">
+    <div class="when">Sat Sep 5 · Main card 12:00 PM ET</div>
+    <h4>UFC Fight Night: Hooker vs. Parnasse</h4>
+    <p>A lightweight main event opening September, with the main card in the early-afternoon US slot.</p>
+  </div>
+  <div class="card">
+    <div class="when">Sat Sep 12 · Main card 2:00 PM ET</div>
+    <h4>Noche UFC: Rodriguez vs. Silva</h4>
+    <p>The promotion's annual Mexican Independence weekend card.</p>
+  </div>
+  <div class="card">
+    <div class="when">Sat Sep 19 · Crypto.com Arena, Los Angeles</div>
+    <h4>UFC 331: Van vs. Pantoja 2</h4>
+    <p>Flyweight champion <strong>Joshua Van</strong> runs it back with <strong>Alexandre Pantoja</strong>, the man he took the belt from at UFC 323 &mdash; a first-round TKO 26 seconds in, after Pantoja injured his arm. The co-main is official: <strong>Arman Tsarukyan vs. Mauricio Ruffy</strong>, five rounds at lightweight. Also confirmed: <strong>Renato Moicano vs. Brian Ortega</strong>, <strong>Ryan Gandra vs. Ozzy Diaz</strong>, undefeated <strong>Gable Steveson vs. Sean Sharaf</strong>, and <strong>Robelis Despaigne vs. Tai Tuivasa</strong>, with Tuivasa on a seven-fight losing streak. Prelims 6 PM ET, main card 9 PM ET on Paramount+.</p>
+    <div class="odds">Co-main odds: Tsarukyan −400 / Ruffy +300 (Betway)</div>
+  </div>
+</div>
+
+<h2 class="sec">Last event — UFC 330 results</h2>
+<div class="panel" style="padding:6px 14px">
+<table>
+  <thead><tr><th>Result</th><th>Bout</th><th>Method</th></tr></thead>
+  <tbody>
+    <tr><td class="res">Makhachev</td><td>Islam Makhachev def. Ian Machado Garry · welterweight title</td><td>Unanimous decision (49-46, 49-46, 48-47)</td></tr>
+    <tr><td class="res">Dern</td><td>Mackenzie Dern def. Gillian Robertson · women's strawweight title</td><td>Unanimous decision (49-46, 49-46, 48-47)</td></tr>
+    <tr><td class="res">Ribovics</td><td>Esteban Ribovics def. Edson Barboza</td><td>TKO (referee stoppage), R2 1:32</td></tr>
+    <tr><td class="res">Stoltzfus</td><td>Dustin Stoltzfus def. Mansur Abdul-Malik</td><td>Submission (rear-naked choke), R2 4:25</td></tr>
+    <tr><td class="res">Turner</td><td>Jalin Turner def. Kaue Fernandes</td><td>KO (punches), R1 0:39</td></tr>
+  </tbody>
+</table>
+</div>
+<div class="note"><strong>Bonuses — $400,000 total.</strong> $100,000 Performance of the Night awards went to <strong>Jalin Turner, Dustin Stoltzfus, Charles Johnson</strong> (for a twister) and <strong>Jeremiah Wells</strong> (a hometown knockout). There was no Fight of the Night; every fighter who scored a finish collected a $25,000 incentive. The card produced five knockouts and two submissions. No viewership figure surfaced this run, so none is published.</div>
+
+<h2 class="sec">Prospect watch</h2>
+<div class="cards">
+  <div class="card">
+    <div class="tags"><span class="tag prospect">Prospect</span></div>
+    <h4>Quillan Salkilld — into the top 10</h4>
+    <p>The Australian lightweight enters ESPN's divisional rankings at <strong>No. 10</strong>, taking the place of the man he beat: a <strong>first-round submission of Mateusz Gamrot</strong> in his first UFC main event, at UFC Fight Night in Las Vegas on August 8. He is <strong>6-0 in the UFC</strong>, and the win earned his third $100,000 bonus of 2026.</p>
+  </div>
+  <div class="card">
+    <div class="tags"><span class="tag prospect">Prospect</span></div>
+    <h4>Alexia Thainara — strawweight No. 8</h4>
+    <p>She enters the women's strawweight rankings at <strong>No. 8</strong> after a unanimous decision over former title challenger <strong>Amanda Lemos</strong>, extending her unbeaten Octagon streak to <strong>four</strong>. Lemos slips three places to No. 9.</p>
+  </div>
+  <div class="card">
+    <div class="tags"><span class="tag prospect">Roster move</span></div>
+    <h4>DWCS Week 1 signings &mdash; and the first is already booked</h4>
+    <p>Dana White handed contracts to <strong>four of the five Week 1 winners</strong> from Dana White's Contender Series season 10 — a group that includes training partners of Daniel Cormier and Ilia Topuria. UFC.com names the four as <strong>Anthony Wint, Bilal Hasan, Tom Pagliarulo</strong> and <strong>Joseph Kropschot</strong>. <strong>Hasan is already booked</strong> for his promotional debut at <strong>UFC Shanghai against Nilson Rojas</strong>, days after earning the contract. Week 2 runs tonight.</p>
+  </div>
+</div>
+
+<h2 class="sec">Around the sport</h2>
+<div class="panel">
+<ul class="plain">
+  <li><strong>Arman Tsarukyan is back, and it is Ruffy.</strong> After the Charles Oliveira booking collapsed, Tsarukyan (<strong>23-3</strong> MMA, 10-2 UFC) is officially in the five-round lightweight co-main of UFC 331 opposite <strong>Mauricio Ruffy</strong> (14-2 MMA, 5-1 UFC). It is Tsarukyan's first fight since his submission win over Dan Hooker in November 2025; Ruffy takes his first five-rounder off back-to-back TKOs of Rafael Fiziev and former title challenger Michael Chandler. Reporting links Tsarukyan's earlier withdrawal to the death of his longtime teammate, UFC flyweight Allan Nascimento.</li>
+  <li><strong>Kayla Harrison will fight again in 2026.</strong> The women's bantamweight champion has been confirmed to return before the end of the year after the neck injury that sidelined her and forced the cancellation of a planned title defence against Amanda Nunes — a bout that had been targeted for UFC 331 on September 19 in Los Angeles.</li>
+  <li><strong>Contender Series Week 2 is tonight at the Meta APEX</strong>, 7:00 PM ET on Paramount+, headlined by Namo Fazil vs. Kaik Brito at welterweight. Week 1's four contract winners were Anthony Wint, Bilal Hasan, Tom Pagliarulo and Joseph Kropschot.</li>
+  <li><strong>Edson Barboza has retired.</strong> The veteran called it a career following his loss at UFC 330, where Esteban Ribovics stopped him in the second round.</li>
+  <li><strong>Jalin Turner wants the BMF belt.</strong> After his 39-second knockout of Kaue Fernandes at UFC 330 &mdash; one of the night's four $100,000 Performance of the Night awards &mdash; Turner said he is interested in a BMF title fight.</li>
+  <li><strong>Din Thomas has retired from cornering</strong> following UFC 330, and later apologised amid strong backlash within the MMA community.</li>
+  <li><strong>Usman Nurmagomedov is on the UFC's radar.</strong> Asked whether the promotion is interested in signing him, Dana White's answer was "Of course."</li>
+  <li><strong>Philadelphia delivered.</strong> UFC 330 was the first card in the city in seven years, sold out the building, and sent both champions home with their belts while a hometown fighter picked up an upset win.</li>
+</ul>
+</div>
+
+<h2 class="sec">Rankings &amp; business</h2>
+<div class="panel">
+  <p style="margin:0 0 12px;font-size:15px;color:#e0cfca"><strong style="color:var(--acc2)">Rankings movement.</strong> Quillan Salkilld debuts at lightweight No. 10, displacing Mateusz Gamrot after submitting him. At middleweight, <strong>Gregory Rodrigues&rsquo; ranking is genuinely disputed across sources and this page will not pick one</strong>: fight-preview sourcing yesterday gave him <strong>No. 10</strong>, an earlier edition carried <strong>No. 11</strong>, and this run's event previews (MMA Mania, Yahoo Sports) give <strong>No. 12</strong>. All three were seen in sourcing within two days of each other, so no rank is printed on the card above &mdash; only Hernandez's No. 6, which every source agrees on. Alexia Thainara enters women's strawweight at No. 8, dropping Amanda Lemos three spots to No. 9. Zhang Weili remains the No. 1 contender at strawweight behind Dern.</p>
+  <p style="margin:0 0 12px;font-size:15px;color:#e0cfca"><strong style="color:var(--acc2)">Scorecard note.</strong> A conflict flagged in an earlier edition is now resolved: ESPN's UFC 330 results page gives Dern's card as <strong>49-46, 49-46, 48-47</strong>, matching the main event's spread, and that is what is printed above.</p>
+  <p style="margin:0;font-size:15px;color:#e0cfca"><strong style="color:var(--acc2)">Business &amp; broadcast.</strong> UFC 330 drew <strong>19,238 spectators</strong> and a gate of about <strong>$6.7 million</strong> — the highest-grossing event in Xfinity Mobile Arena history, beating the venue record by roughly $2.2 million. Bonus outlay for the card was <strong>$400,000</strong> across four $100,000 Performance of the Night awards, plus $25,000 finish incentives. Fight Night cards continue to run on Paramount+, with UFC Sacramento's prelims at 5 PM ET and main card at 8 PM ET this Saturday.</p>
+</div>
+
+<h2 class="sec">Champions board</h2>
+<div class="panel" style="padding:6px 14px">
+<table>
+  <thead><tr><th>Division</th><th>Champion</th><th>Note</th></tr></thead>
+  <tbody>
+    <tr><td>Heavyweight</td><td>Tom Aspinall</td><td>Undisputed since June 21, 2025. Ciryl Gane holds the interim title after a second-round knockout of Alex Pereira at Freedom 250, June 14, 2026.</td></tr>
+    <tr><td>Light Heavyweight</td><td>Carlos Ulberg</td><td>Won the vacant belt by first-round knockout of Jiří Procházka at UFC 327, April 11, 2026.</td></tr>
+    <tr><td>Middleweight</td><td>Sean Strickland</td><td>Split-decision upset of Khamzat Chimaev at UFC 328, May 9, 2026. Two-time champion.</td></tr>
+    <tr><td>Welterweight</td><td>Islam Makhachev</td><td><strong>One defence</strong> — UD over Ian Machado Garry at UFC 330, Aug 15, 2026. Two-division champion; vacated lightweight.</td></tr>
+    <tr><td>Lightweight</td><td>Justin Gaethje</td><td>TKO in round four of Ilia Topuria at Freedom 250, June 14, 2026.</td></tr>
+    <tr><td>Featherweight</td><td>Alexander Volkanovski</td><td>Defended by UD over Diego Lopes at UFC 325, Jan 31, 2026. Movsar Evloev is the No. 1 contender.</td></tr>
+    <tr><td>Bantamweight</td><td>Petr Yan</td><td>UD over Merab Dvalishvili at UFC 323, Dec 6, 2025.</td></tr>
+    <tr><td>Flyweight</td><td>Joshua Van</td><td>TKO1 of Alexandre Pantoja at UFC 323, Dec 6, 2025; defended vs Tatsuro Taira at UFC 328. Rematch with Pantoja set for UFC 331.</td></tr>
+    <tr><td>Women's Flyweight</td><td>Valentina Shevchenko</td><td>Two defences in her second reign, most recently a UD over Zhang Weili at UFC 322, Nov 2025.</td></tr>
+    <tr><td>Women's Bantamweight</td><td>Kayla Harrison</td><td>Submission of Julianna Peña at UFC 316, June 2025. No defences; confirmed to return before the end of 2026.</td></tr>
+    <tr><td>Women's Strawweight</td><td>Mackenzie Dern</td><td><strong>One defence</strong> — UD over Gillian Robertson at UFC 330, Aug 15, 2026. Won the belt at UFC 321, Oct 2025.</td></tr>
+  </tbody>
+</table>
+</div>
+
+<footer>
+  <strong style="color:var(--acc2);font-family:var(--mono);font-size:11px;letter-spacing:.18em">SOURCES</strong>
+  <ul style="padding-left:18px;margin-top:10px">
+    <li><a href="https://www.ufc.com/news/dwcs-season-10-episode-2-preview-athletes-bouts-start-times-streaming">UFC.com — DWCS Season 10 Episode 2 Preview: Athletes, Bouts, Start Times, Streaming</a></li>
+    <li><a href="https://www.ufc.com/news/dana-whites-contender-series-season-10-week-1-results">UFC.com — Week 1 Results + Scorecards: Dana White's Contender Series Season 10</a></li>
+    <li><a href="https://bloodyelbow.com/2026/08/17/meet-the-fighters-competing-for-a-ufc-contract-on-week-2-of-dana-whites-contender-series/">Bloody Elbow — Meet the fighters competing for a UFC contract on Week 2 of DWCS</a></li>
+    <li><a href="https://www.mmamania.com/ufc-fight-cards/455491/latest-ufc-sacramento-fight-card-paramount-start-time-date-location-hernandez-vs-rodrigues">MMA Mania — Latest UFC Sacramento fight card, Paramount+ start time, date and location</a></li>
+    <li><a href="https://www.ufc.com/news/sacramento-fight-card-rounds-out-batch-fascinating-fights">UFC.com — Sacramento Fight Card Rounds Out With A Batch Of Fascinating Fights</a></li>
+    <li><a href="https://www.espn.com/mma/story/_/id/14947566/current-all-ufc-champions">ESPN — Current and all-time UFC champions</a></li>
+    <li><a href="https://www.espn.com/mma/story/_/id/21807736/mma-divisional-rankings-ufc-pfl-rankings-weight-class">ESPN — MMA divisional rankings: Quillan Salkilld, Alexia Thainara break through</a></li>
+    <li><a href="https://www.forbes.com/sites/brianmazique/2026/08/16/ufc-330-results-bonus-winners-highlights-and-reaction/">Forbes — UFC 330 Results: $400K Bonuses Awarded, 5 KOs, 2 Amazing Submissions</a></li>
+    <li><a href="https://www.espn.com/mma/story/_/id/49591854/ufc-330-live-results-analysis-islam-makhachev-vs-ian-machado-garry-mackenzie-dern-vs-gillian-robertson">ESPN — UFC 330 results and analysis from Makhachev's record-setting victory</a></li>
+    <li><a href="https://www.ufc.com/news/ufc-330-islam-makhachev-vs-ian-machado-garry-results">UFC.com — Main Card Results: UFC 330: Makhachev vs Machado Garry</a></li>
+    <li><a href="https://www.ufc.com/news/ufc-330-official-scorecards">UFC.com — Official Scorecards: UFC 330</a></li>
+    <li><a href="https://www.forbes.com/sites/brianmazique/2026/08/16/ufc-330-results-bonus-winners-highlights-and-reaction/">Forbes — UFC 330 Results: $400K Bonuses Awarded, 5 KOs, 2 Amazing Submissions</a></li>
+    <li><a href="https://cagesidepress.com/2026/08/16/johnson-twister-wells-collect-bonuses-ufc-330/">Cageside Press — Johnson Twister, Wells Hometown KO Collect Bonuses at UFC 330</a></li>
+    <li><a href="https://whyy.org/articles/ufc-330-philadelphia-xfinity-mobile-arena/">WHYY — UFC 330 in Philadelphia: sold-out event, hometown upset</a></li>
+    <li><a href="https://www.espn.com/mma/story/_/id/14947566/current-all-ufc-champions">ESPN — Current and all-time UFC champions</a></li>
+    <li><a href="https://bloodyelbow.com/2026/08/05/arman-tsarukyan-returns-to-face-mauricio-ruffy-in-co-main-event-to-ufc-331-title-fight/">Bloody Elbow — Arman Tsarukyan officially returns to face Mauricio Ruffy in the UFC 331 co-main</a></li>
+    <li><a href="https://sports.yahoo.com/articles/ufc-331-arman-tsarukyan-vs-234029371.html">Yahoo Sports — UFC 331: Arman Tsarukyan vs. Mauricio Ruffy odds, what to know</a></li>
+    <li><a href="https://www.espn.com/mma/story/_/id/49624575/dern-dominates-robertson-ground-retain-title-ufc-330">ESPN — Dern dominates Robertson on the ground to retain her title at UFC 330</a></li>
+    <li><a href="https://www.ufc.com/event/ufc-fight-night-august-22-2026">UFC.com — UFC Fight Night: Hernandez vs Rodrigues (UFC Sacramento)</a></li>
+    <li><a href="https://www.ufc.com/news/fight-by-fight-sacramento-preview-ufc-hernandez-rodrigues">UFC.com — Fight By Fight Preview: UFC Sacramento</a></li>
+    <li><a href="https://www.lowkickmma.com/anthony-hernandez-vs-gregory-rodrigues-betting-odds-ufc-sacramento-stakes/">LowKick MMA — Hernandez vs. Rodrigues betting odds</a></li>
+    <li><a href="https://www.fightmatrix.com/2026/08/17/anthony-hernandez-vs-gregory-rodrigues-what-the-betting-says/">Fight Matrix — Hernandez vs Rodrigues: what the betting says</a></li>
+    <li><a href="https://www.sportsline.com/insiders/ufc-fight-night-odds-picks-seasoned-mma-analyst-reveals-selections-for-hernandez-vs-rodrigues-and-other-matchups-at-sacramento-calif-on-aug-22/">SportsLine — UFC Fight Night odds and picks, Sacramento, Aug. 22</a></li>
+    <li><a href="https://www.espn.com/mma/fightcenter/_/id/600060733/league/ufc">ESPN — Dana White&apos;s Contender Series Season 10, Week 2 live coverage</a></li>
+    <li><a href="https://www.sherdog.com/news/articles/How-to-watch-DWCS-2026-Week-2-Start-time-live-stream-fight-card-202377">Sherdog — How to watch DWCS 2026 Week 2: start time, live stream, fight card</a></li>
+    <li><a href="https://www.fightmag.com/dana-whites-contender-series-season-10-week-2-live-results/">FIGHTMAG — DWCS Season 10 Week 2 live results</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/UFC_330">Wikipedia — UFC 330</a></li>
+    <li><a href="https://www.mmaoddsbreaker.com/fight-odds/opening-odds/161230-opening-betting-odds-for-ufc-sacramento-hernandez-vs-rodrigues/">MMA Odds Breaker — Opening odds for UFC Sacramento</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/UFC_Fight_Night:_Hernandez_vs._Rodrigues">Wikipedia — UFC Fight Night: Hernandez vs. Rodrigues</a></li>
+    <li><a href="https://www.paramountplus.com/sneak-peak/ufc-schedule-2026/">Paramount+ — UFC Schedule 2026</a></li>
+    <li><a href="https://www.ufc.com/news/fighters-on-the-rise-2026-part-2">UFC.com — Fighters on the Rise 2026, Part 2</a></li>
+  </ul>
+  <div class="disc">Cards and bouts are subject to change. Odds move constantly and are quoted as reported at the timestamp above.</div>
+</footer>
+
+</div>
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
+<script>(function(){var el=document.getElementById('ufccdn');if(!el)return;var target=new Date('2026-08-22T20:00:00-04:00').getTime();function tick(){var d=target-Date.now();if(d<=0){el.textContent='Fight week — live/completed';return;}var days=Math.floor(d/86400000),hrs=Math.floor(d%86400000/3600000),mins=Math.floor(d%3600000/60000);el.textContent=days+'d '+hrs+'h '+mins+'m';}tick();setInterval(tick,30000);})();</script>
+</body>
+</html>

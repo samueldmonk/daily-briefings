@@ -8490,3 +8490,75 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman / MacKenzie / Thainara Silva / pay-per-view / Dayforce / Paylocity /
   32.4% / 11.3% / 4.5% / Klarna / Bonfim vs. Brady / Joshua Vance / 6,781.48 / 47,706.51 / 22,697.10 / ">Vacant<" /
   unification / 54,215 / 7,720.01. "Mackenzie Dern" spelled correctly ×4. **New tags 0/1/1/0** (index/cyber/ws/mma).
+
+## Added 2026-08-18 (Tuesday ~12:45pm ET — MIDDAY EDITION; sixth post-open run of Tuesday; research ~12:35–12:45pm)
+- CLOCK: TZ date = Tue Aug 18 12:35 EDT at run start; archive stamp 2026-08-18-1245. Markets OPEN, ~3 hours past the
+  bell. Edition bucket Midday (h=12). Lead re-stamped "as of ~12:35 PM ET". No After-Hours block (grep = 0, correct
+  pre-4pm).
+- MARKETS — **THE NASDAQ'S LOSS NARROWED FOR THE FIRST TIME TODAY.** As of **~12:35 PM ET**: **Nasdaq Composite
+  −1.13%, Dow −0.17%, Russell 2000 −0.96%, S&P 500 −0.54% to −0.6%** (the same search returned "Nasdaq −1.3%, Dow
+  −0.2%, S&P −0.6%", so a range is printed for the S&P and the Nasdaq). This REVERSES the direction carried all
+  morning (≈1.2% @10:30 → 1.34% @10:55 → 1.6% @11:36 → ~1.1–1.3% @12:35) and the Dow has all but closed its gap to
+  unchanged. ⚠ Intraday LEVELS were returned by the source (Dow 53,370.90 −88.88; Nasdaq 26,342.99 −301.92; Russell
+  3,028.22 −29.32) and were **deliberately NOT published** — standing rule: levels only in the Weekly Scorecard.
+- MARKETS NEW — **THE MEMORY/STORAGE COMPLEX IS THE SESSION.** **Western Digital −7%, to $500.05**; **Marvell
+  Technology and Seagate Technology each ≈ −8%**; **Micron ≈ −5%**; **SanDisk** lower — 24/7 Wall St.'s Aug 18 piece
+  renders SanDisk at **6% in its headline and 8% in its body**, so BOTH are printed and no single figure is asserted.
+  Stated cause is macro: rising Treasury yields pressuring the most extended trade in semis (AI-server demand +
+  supply-chain policy expectations). Context verified this run: **on Monday Aug 17 Western Digital ROSE 6.5%** as the
+  memory-storage group rallied on SanDisk's investor day / 9th-gen QLC flash (TheStreet Aug 17) — one day of higher
+  long yields took back more than the good news gave. New Movers card = the WS page's **only New tag**; the "long end
+  backed off" card's New tag was REMOVED (in the 1142 snapshot). **Chart of the Day switched NYSE:FN → NASDAQ:WDC**
+  and the ticker tape swapped Fabrinet for Western Digital (SPXUSD/NSXUSD/DJI/USOIL/US10Y all retained).
+- ⚠ **SUPERLATIVE COLLISION CAUGHT AND FIXED IN-RUN.** The first draft called WDC "the single steepest move on the
+  tape" while the same card listed Marvell and Seagate at ≈8% — self-contradictory. Both the lead and the card were
+  rewritten to "the move the reporting keeps returning to … though not the largest fall on the board", and the older
+  Fabrinet card was re-headed from "the day's steepest fall" to "the steepest fall **before the bell**" (its −9% was
+  a pre-market print). RULE: no "steepest/biggest" claim unless it survives every other percentage on the page.
+- MARKETS — **30-YEAR MADE A NEW 19-YEAR HIGH ABOVE 5.33%, THEN REVERSED.** CNBC's dedicated Aug 18 rates story
+  ("30-year Treasury yield tops 5.33%, new 19-year high on inflation, spending concerns") supersedes the 5.31%/5.32%
+  range carried earlier: the 30-year **topped 5.33%** intraday, then **fell more than 1bp to 5.294%** — the level now
+  printed (table cell **5.29%**). **10-year: more than 1bp lower at 4.712%** (cell **4.71%**), replacing the 4.70%
+  Yahoo read, which is retained as the 11:36 AM print. Cited drivers: July's federal deficit the largest monthly
+  total since March 2021; inflation still well above 2%; Middle East conflict lifting crude.
+- MARKETS — sector board gained a SECOND energy read: Benzinga's own "Leading And Lagging Sectors For August 18, 2026"
+  names **XLE the top-gaining sector fund at $63.24, +1.05%** on 201.7K shares, with **XLP also among gainers**. That
+  is a smaller figure than the **XLE +1.30%** already carried, so BOTH are printed. XLV +1.59% / XLP +1.11% unchanged.
+- CYBER NEW — **'THEHATMAN' / AZURE-ENTRA DIRECTORY THEFT, ~3.6 MILLION RECORDS.** A single actor is offering roughly
+  **3.6M records** taken from corporate **Azure/Entra** tenants: **McDonald's Corporation 1.7M+**, **Tata Consultancy
+  Services ~800,000**, **Vodafone ~425,000**, **HCL Technologies ~250,000**, plus **IHG, Kyndryl, Gap Inc., Hexaware
+  and Wyndham Hotels**. Fields: full names, corporate emails incl. tenant-specific .onmicrosoft.com structures,
+  phones, addresses, employee IDs, job titles, departments, manager details, direct reports, group memberships,
+  service accounts and **Global Administrator listings**. **Hudson Rock** = high confidence the data is authentic but
+  **could NOT establish the access vector** (actor claims compromised credentials; candidates floated: infostealer
+  creds/session cookies, phishing, weak/absent MFA, over-permissive third-party apps). **No software vulnerability is
+  implicated** — framed as identity-layer, NOT a product flaw. Sources: BleepingComputer, SecurityWeek, The Register
+  (Aug 17), IT Pro, Cybernews. New Breaches card = the cyber page's **only New tag**; Heights Finance New tag REMOVED
+  (in the 1142 snapshot). BY-THE-NUMBERS: the **1.2M Heights tile RETIRED** (story stays in its card) → **3.6M**.
+- ✅ **"RAY ADDED AUG 18" DISCREPANCY FROM THE 11:42 RUN IS NOW RESOLVED — THE PAGES WERE RIGHT.** CISA's own alert
+  URL is dated **2026/08/17** ("CISA Adds One Known Exploited Vulnerability to Catalog") and The Register's Aug 18
+  piece is headlined **"CISA gives feds 3 days to fix actively exploited Ray RCE bug"** — Aug 17 add → **Aug 20 due**,
+  a three-day risk-based assignment, exactly as published. CVSS **9.4** and "versions prior to 2.52.0" re-confirmed.
+  Patch Priority now cites the three-day window explicitly; Patch Priority and the KEV list still agree on Aug 20.
+- MMA — **NO NEW NEWS THIS RUN; New tags = 0** (honest). Re-verified: next card is **Sat Aug 22, UFC Fight Night 285,
+  Golden 1 Center, Sacramento**, prelims 5 PM ET / main card 8 PM ET, **#6 Anthony Hernandez vs Gregory Rodrigues**;
+  odds **Hernandez −166 to −176 / Rodrigues +140 to +147** across books, line tightened through fight week (matches
+  what was already published). Rodrigues rank still NOT printed on the card — this run's search returned **No. 11**, a
+  THIRD/FOURTH different value across sources in two days; the disclosure of all three figures stands. UFC 330
+  (Aug 15, Philadelphia) remains the most recent completed event; **Makhachev's 17th straight UFC win** re-confirmed.
+  Countdown target UNCHANGED at 2026-08-22T20:00:00-04:00.
+- MMA CHAMPIONS re-cross-checked against ESPN's champions page THIS RUN: **Aspinall / Ulberg (Apr 11 2026) /
+  Strickland (May 9 2026) / Makhachev (Nov 15 2025, two-division) / Gaethje (Jun 14 2026) / Volkanovski (Apr 12 2025)**
+  all explicitly returned and MATCH the standing block; BW Yan, FLW Joshua Van and the women's belts were not in this
+  run's ESPN summary and rest on the standing block. Champions **11/11** rows, **0 bad cells**.
+- VALIDATION (programmatic, this run — validate_1235.py): 4 pages HTMLParser-balanced **0 unclosed / 0 errors**;
+  5-tab nav + 4 stamp/fresh IDs on all 4 with exactly **1 active tab each**; .tldr on all three briefings with the
+  correct per-page label, absent from index by design; **8/8 TradingView widget JSON blocks parse**; ticker tape
+  retains SPXUSD + NSXUSD + DJI + USOIL + US10Y and now carries NASDAQ:WDC; **Chart of the Day = NASDAQ:WDC** and its
+  heading reads "Western Digital"; **7/7 KEV countdowns machine-recomputed vs 2026-08-18 — class AND label correct on
+  every row** (Aug 20 = 2 days left/soon, Aug 25 = 7 days left/ok, five past due/late); Monday-vs-Friday scorecard
+  arithmetic **3/3 exact** (level AND percent recomputed); champions **11/11**; Forminator row = CVE-2026-15748;
+  "After-Hours" = 0 (correct pre-4pm). Trap greps CLEAN ×0: Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman /
+  MacKenzie / Thainara Silva / pay-per-view / Bonfim vs. Brady / Joshua Vance / unification / 6,781.48 / 47,706.51 /
+  22,697.10 / ">Vacant<" / "Pereira (205)". "Mackenzie Dern" spelled correctly. **New tags 0/1/1/0**
+  (index/cyber/ws/mma).
