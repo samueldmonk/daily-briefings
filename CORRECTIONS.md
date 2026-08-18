@@ -8562,3 +8562,87 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   MacKenzie / Thainara Silva / pay-per-view / Bonfim vs. Brady / Joshua Vance / unification / 6,781.48 / 47,706.51 /
   22,697.10 / ">Vacant<" / "Pereira (205)". "Mackenzie Dern" spelled correctly. **New tags 0/1/1/0**
   (index/cyber/ws/mma).
+
+## Added 2026-08-18 (Tuesday ~1:10pm ET — MIDDAY EDITION; seventh post-open run of Tuesday; research ~1:05–1:12pm)
+- CLOCK: TZ date = Tue Aug 18 13:05 EDT at run start; archive stamp 2026-08-18-1310. Markets OPEN, ~3.5 hours past the
+  bell. Edition bucket Midday (h=13). Lead re-stamped "as of ~1:00 PM ET". No After-Hours block (grep = 0, correct
+  pre-4pm).
+- MARKETS — **THE NASDAQ NARROWED FOR A SECOND CONSECUTIVE CHECK.** As of **~1:00 PM ET**: **Nasdaq Composite −1.04%,
+  Dow −0.16%, Russell 2000 −0.91%, S&P 500 −0.6%**. Yahoo Finance's live Tuesday blog renders the same session as
+  **Nasdaq −1.3%, Dow −0.2%, S&P −0.6%**, so a RANGE (1.0%–1.3%) is printed for the Nasdaq and no single figure is
+  asserted. Full intraday arc now: ≈1.2% @10:30 → 1.34% @10:55 → 1.6% @11:36 → 1.13% @12:35 → 1.04%–1.3% @1:00.
+  ⚠ Intraday LEVELS were again returned by the source (Dow 53,375.76 −84.02; Nasdaq 26,368.13 −276.78; Russell
+  3,029.73 −27.80) and were **deliberately NOT published** — standing rule: levels only in the Weekly Scorecard.
+- MARKETS NEW — **INTEL −5%, NVIDIA −2%: THE INDEX RECOVERED, THE CHIPS DID NOT.** Yahoo Finance's live coverage states
+  that within technology "chip stocks took a leg lower," with **Nvidia falling 2%** and **Intel dropping 5%**. Intel is
+  a NEWLY-NAMED casualty — it appears in no earlier read of this session — and its move is roughly five times the
+  Nasdaq's own. New WS Movers card ("The index recovered a little; inside the chips it got worse") is the page's **only
+  New tag**; the Western Digital card's New tag was REMOVED (preserved in the 1245 snapshot). Editorial point made
+  explicitly: the headline-index recovery is being paid for by an increasingly CONCENTRATED chip markdown, not a broad
+  one. Chart of the Day stays **NASDAQ:WDC** (WDC −7% remains the largest single-name fall on the page); ticker tape
+  unchanged.
+- ⚠ **"MATERIALS +2.87% LEADING / ENERGY −0.96% LAGGING" — REJECTED, NOT PUBLISHED.** A sector search summary this run
+  asserted Materials was the day's best sector at +2.87% with Energy LAGGING at −0.96%. A direct follow-up search
+  against **Benzinga's own "Leading And Lagging Sectors For August 18, 2026" page** returned the opposite and matched
+  what is already published: **XLE among the GAINERS at $63.24, +1.05%**; XLB's only sourced figure was **−0.25% on
+  Aug 17**. The synthesis had inverted energy's sign and invented the materials figure. Sector board UNCHANGED
+  (XLV +1.59% / XLE +1.30% with Benzinga's +1.05% also printed / XLP +1.11%). Trap grep on "2.87" = 0.
+- ⚠ **BIO-RAD 32.4% / FABRINET 11.3% / PAYLOCITY +3.1% RESURFACED AND WERE RE-REJECTED.** The movers search returned the
+  same stale evergreen-page cluster caught in earlier runs (S&P −0.53% / Nasdaq 100 −1.58% is the 10:35 snapshot, not a
+  current read). Trap greps for 32.4% / 11.3% / Paylocity all = 0. **Wolfspeed −7.6%** came from the same stale block
+  and was likewise NOT published.
+- MARKETS re-confirmed unchanged: 30-year **5.294%** after topping **5.33%** (CNBC Aug 18 rates story); 10-year
+  **4.712%**; Brent near **$91** / WTI **$84**; WTI settled **$84.50 +2.6%** and Brent **$90.87 +2.7%** on Aug 17;
+  Trump's rejection of the Iran ceasefire extension + the "bomb Oman" threat over the Strait of Hormuz as cause.
+- CYBER NEW — **BRINKS HOME / SHINYHUNTERS: 4.9M SALESFORCE RECORDS, 41GB NOW LEAKED.** ShinyHunters claims more than
+  **4.9 million Salesforce records** from **Brinks Home** and, after the company declined to pay, has **leaked more
+  than 41GB of files**. Brinks Home has **confirmed** a cyberattack. Vector: a **Microsoft Entra vishing call** on
+  **July 13, 2026**; discovered **July 20** (~1 week dwell); listed on the leak site as **"BH Security, LLC
+  (brinkshome.com)"** with a ransom deadline of **July 30, 2026**. Breakdown: **1.1M+ rows** from the Salesforce
+  **Contacts** object, **4,000+ rows** of employee PII (names, emails, job titles, phones), **~3.8M customer support
+  chat logs** from the **Brinks Care Cresta** platform. ⚠ CAVEAT PUBLISHED PROMINENTLY: **4.9 million is a count of
+  DATABASE RECORDS, not of people** — one customer can appear in many rows, and the support-log tranche is the bulk.
+  Do NOT render this as "4.9 million people" (trap grep = 0). No software vulnerability implicated — help-desk/identity
+  layer, same as the wider Salesforce extortion wave. Sources: SecurityWeek, BleepingComputer, The Register (Jul 31),
+  DataBreaches.Net, Fox News. New Breaches card = the cyber page's **only New tag**; TheHatman New tag REMOVED
+  (in the 1245 snapshot). BY-THE-NUMBERS: the **3.6M tile RETIRED** (story stays in its card) → **4.9M**.
+- ✅ **RAY / CVE-2025-62593 RE-VERIFIED A THIRD TIME AND UNCHANGED.** CISA's own alert URL is dated **2026/08/17**;
+  The Register's Aug 18 piece is headlined "CISA gives feds 3 days to fix actively exploited Ray RCE bug"; **CVSS 9.4**,
+  **versions before 2.52.0**, fixed in **2.52.0**, due **Aug 20, 2026**. Mechanism re-confirmed: the dashboard/API
+  defence relied on the HTTP User-Agent starting with "Mozilla", defeated via DNS rebinding. RondoDox had it two days
+  before the Nov 26, 2025 disclosure (BitSight, Mar 2026). Patch Priority and the KEV list still agree on Aug 20.
+- MMA — **NO NEW NEWS THIS RUN; New tags = 0** (honest). Sacramento re-verified against **UFC.com's own event page and
+  fight-by-fight preview**: **Sat Aug 22, UFC Fight Night 285, Golden 1 Center, Sacramento**, prelims **5 PM ET /
+  2 PM PT**, main card **8 PM ET / 5 PM PT**, Paramount+; **Anthony Hernandez vs Gregory Rodrigues** at 185; co-main
+  **Spivac vs Petrino** (HW); **de Ridder vs Dolidze** at LHW (de Ridder noted as a former ONE titleholder);
+  **Mederos vs Jones** (LW), **Judice vs Chaves** (FLW), **Wint vs Chatman** (HW) closing the main card;
+  **Young vs Dorsainvil**, **McVey vs Schultz** on prelims. All matches what is published. Countdown target UNCHANGED
+  at 2026-08-22T20:00:00-04:00.
+- ⚠ **"BONFIM VS. BRADY ON AUG 18" TRAP RE-REJECTED — FIFTH RUN RUNNING.** A UFC search summary AGAIN asserted "UFC
+  Fight Night: Bonfim vs. Brady took place on August 18, 2026, at the Meta APEX." The Aug 18 Meta APEX slot is **DWCS
+  Season 10 Week 2** (Namo Fazil vs Kaik Brito, 7 PM ET, Paramount+), as verified across five prior runs. Trap grep = 0.
+- MMA CHAMPIONS re-cross-checked against ESPN's champions page THIS RUN — six men's belts explicitly returned and ALL
+  MATCH the standing block: HW **Aspinall** (Jun 21 2025, 0 def), LHW **Ulberg** (Apr 11 2026, KO1 Procházka, 0 def),
+  MW **Strickland** (May 9 2026, SD Chimaev, 0 def), WW **Makhachev** (Nov 15 2025, UD Della Maddalena, **now 1
+  defence** — the UFC 330 win over Machado Garry), LW **Gaethje** (Jun 14 2026, TKO4 Topuria, 0 def), FW
+  **Volkanovski** (Apr 12 2025, UD Lopes, 1 def). BW Yan, FLW Joshua Van and the women's belts were not in this run's
+  ESPN summary and rest on the standing block. Champions **11/11** rows, **0 bad cells**.
+- ⚠ **VALIDATOR BUG CAUGHT AND FIXED IN-RUN — TWO CHECKS HAD BEEN PASSING VACUOUSLY.** The inherited KEV-countdown regex
+  and the Weekly-Scorecard arithmetic regex both parsed **0 rows** against the current markup and therefore reported
+  "0 mismatches" while testing nothing. Both were rewritten against the real markup: the KEV matcher now binds
+  `Due <strong>Mon D, 2026</strong>. <span class="cd CLASS">(LABEL)</span>` and recomputes BOTH the label and the
+  colour class from today's date; the scorecard matcher now binds the four-cell `num` row and recomputes level
+  (prior + change) AND percent (change / prior). Post-fix: **7/7 KEV rows parsed, 0 mismatches** (Aug 20 = 2 days
+  left/soon, Aug 25 = 7 days left/ok, five past due/late) and **3/3 scorecard rows parsed, 0 mismatches** (level and
+  percent both exact). RULE for future runs: a validator check reporting zero rows parsed is a FAILING check, not a
+  passing one — assert the expected row COUNT alongside the mismatch count.
+- VALIDATION (programmatic, this run — validate_1305.py): 4 pages HTMLParser-balanced **0 unclosed / 0 errors**;
+  5-tab nav + stamp/fresh IDs on all 4 with exactly **1 active tab each**; .tldr on all three briefings with the
+  correct per-page label, absent from index by design; **8/8 TradingView widget JSON blocks parse**; ticker tape
+  retains SPXUSD + NSXUSD + DJI + USOIL + US10Y and NASDAQ:WDC; **Chart of the Day = NASDAQ:WDC**; **7/7 KEV
+  countdowns** class AND label correct; Patch Priority and KEV agree on Ray = **Aug 20**; scorecard arithmetic
+  **3/3 exact**; champions **11/11** / 0 bad cells; Forminator row = **CVE-2026-15748**; "After-Hours" = 0 (correct
+  pre-4pm). Trap greps CLEAN ×0: Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman / MacKenzie / Thainara Silva /
+  pay-per-view / Bonfim vs. Brady / Joshua Vance / unification / 6,781.48 / 47,706.51 / 22,697.10 / ">Vacant<" /
+  "Pereira (205)" / 2.87 / 32.4% / 11.3% / Paylocity / Wolfspeed / "4.9 million people". **New tags 0/1/1/0**
+  (index/cyber/ws/mma).
