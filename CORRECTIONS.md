@@ -8052,3 +8052,110 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   pay-per-view / **Dayforce** / **Toll Brothers** / **Klarna** / **Reddit (RDDT)** / Pereira-Chimaev-Topuria in champion
   cells / ">Vacant<". "Mackenzie Dern" spelled correctly ×3. **New tags 0/2/2/0** (index/cyber/ws/mma — the MMA new item
   is the Tsarukyan–Ruffy booking, which lives in the UFC 331 card and Around the Sport, neither of which carries tags).
+
+## Added 2026-08-18 (Tuesday ~9:45am ET — Morning Edition; FIRST POST-OPEN run of Tuesday; research ~9:36–9:44am)
+- CLOCK: TZ date = Tue Aug 18 09:35 EDT at run start; archive stamp 2026-08-18-0945. **Markets OPEN** — this is the first
+  Tuesday run after the 9:30 bell. All three pre-open runs (0818/0845/0913) are superseded on framing: the Wall Street
+  page no longer says "markets are closed", publishes early-session index moves as current, and the futures/Polymarket
+  block was retired from the Lead.
+- ⚠ **DATE-BLEED TRAP CAUGHT AND REJECTED — BIO-RAD LABORATORIES (and PAYLOCITY).** Two separate search summaries this
+  run stated "Bio-Rad Laboratories tumbled 32.4%" and "Paylocity rose 3.1%" for Aug 18. The TipRanks source page
+  (/news/catalyst/why-bio-rad-laboratories-stock-is-tumbling-today) was FETCHED IN FULL: it is an **evergreen URL** whose
+  `meta-article:updated_time` is **2026-04-30** and whose body concerns an upcoming **Q1 2026** report, Longleaf exiting
+  and a Citigroup downgrade — NOT an Aug 18 move. **Neither was published.** The WS page carries an explicit rejection
+  note (worded WITHOUT the number, so future trap greps stay clean). Trap greps "Paylocity" and "32.4%" = 0.
+  Future runs: TipRanks "Why X Stock Is Tumbling Today" pages are a known evergreen/year-bleed vector — always check
+  `meta-article:updated_time`.
+- ⚠ **YAHOO 5:00 AM CACHE CONFIRMED AGAIN.** The Yahoo Tuesday live blog was re-fetched this run and STILL renders
+  "U.S. markets open in 4h 22m" with the identical strip (S&P fut 7,729.25, VIX 15.88, Gold 4,448.80, BTC 64,170.39,
+  Crude 84.15) — i.e. a ~5:08 AM read served at 9:40 AM. Byline Grace O'Donnell, "Updated Tue, August 18, 2026 at
+  5:00 AM EDT". **None of those levels were published as current.** Yahoo's Toll Brothers/Klarna earnings mention was
+  again NOT carried (trap greps = 0, fourth run running).
+- MARKETS LEAD CHANGED — **early-session index moves are now published.** TheStreet's Aug 18 live coverage:
+  **Nasdaq Composite ≈ −1.2%, S&P 500 ≈ −0.6%, Dow ≈ −0.3%**, with point moves **Dow −160.54 (−0.30%)** and
+  **Nasdaq −327.15 (−1.23%)** — both consistent with Monday's carried closes (53,459.78 − 160.54; 26,644.91 − 327.15),
+  confirming these are CASH-INDEX reads, not futures. Third straight down day for the S&P 500. Cause unchanged
+  (expired 60-day Iran ceasefire; Iranian official threatens a "fully offensive" posture).
+- MARKETS NEW #1 — **REDDIT (RDDT) JOINS THE S&P 500 TODAY. This REVERSES the 9:13am run's purge**, which dropped the
+  index add as unverified. It is now VERIFIED this run from multiple sources: S&P Dow Jones Indices announced RDDT added
+  **effective prior to the opening of trading Tuesday, August 18, 2026**, replacing **AvalonBay Communities (AVB)**,
+  which is being acquired by fellow constituent **Equity Residential (EQR)**. **CNBC's movers list has RDDT +12%.**
+  Second pure-play social media company in the index after Meta. **JPMorgan estimates passive funds must buy ~16.7 million
+  shares, ~3× average daily volume.** Sources: Morningstar/Business Wire, CNBC, Schaeffer's, Motley Fool. RDDT added to
+  the ticker tape (BIDU removed).
+- MARKETS NEW #2 — **memory chipmakers now have NUMBERS.** The 9:13am run could only print direction. CNBC's Aug 18
+  premarket article states **Micron and SK Hynix each off more than 4%** and **Sandisk also down more than 4%**.
+  Counter-context published: combined revenue for the **five largest NAND suppliers jumped 77% q/q to $68.87 billion**
+  as AI data-centre demand kept NAND undersupplied in Q2.
+- MARKETS RATES REVISED: **30-year now 5.32%, "highest since 2007"** (Bloomberg live, up ~2bp Tuesday) — supersedes the
+  prior runs' "5.31%, 19-year high" as the current read; CNBC's Monday close 5.311% retained alongside. **10-year rendered
+  ~4.68%** per **Schwab's open note** (higher by ~4bp), published as a **4.68%–4.72% range** naming Schwab, Trading
+  Economics (~4.69% Mon), CNBC (4.724% Mon close) and Yardeni (4.68% last week) — the four disagree and the page says so.
+  2-yr 4.19% (Benzinga) retained. **Brent = $90.97 (Trading Economics, Aug 18, +0.11%)**, with Benzinga's 2:23 AM $91.27
+  named as the earlier read; WTI $84.20 (Benzinga) with Bloomberg's "US crude topped $85" carried alongside.
+  ⚠ **FED FUNDS TARGET FINALLY VERIFIED THIS RUN** after three runs of omission: **3.50%–3.75%, held in a 9–3 vote**
+  (CNBC/Bloomberg search summary). CNBC's ~67% September-hold probability retained. **Fed minutes due later this week**
+  (Schwab).
+- MARKETS NEW #3 — **Strait of Hormuz transit collapse published:** **five commodity vessels crossed Saturday and NONE
+  Sunday, against 31 the previous weekend**, after attacks on tankers; Washington–Tehran talks stalled. Added to the Lead
+  and as a row in the Rates/Commodities table.
+- MARKETS: Sector Heat editorial line CHANGED from the pre-open "no verified figures" wording to a qualitative
+  tech-lags/energy-holds line sourced to Bloomberg. ⚠ Search summaries offered "Energy +0.87% / Information Technology
+  −0.16%" — **NOT published**, no fetched source stated them. Chart of the Day UNCHANGED at **NYSE:FN** (Fabrinet −9%
+  remains the largest verified single-name move; the "despite a beat / Q1 expense seasonality margin headwind" detail is
+  new this run). HD +1.5% and TSLA −1.2% carried, HD guidance detail expanded (comps flat to +2%). Monday closes and the
+  Friday column carried unchanged. **No After-Hours block** (grep = 0, correct pre-4pm).
+- CYBER **TOP STORY CHANGED to TREZOR / SHIPMONK — and it is a KEV story.** ShipMonk notified Trezor **Monday, Aug 10**;
+  Trezor confirmed publicly **Aug 13**. **13,689 customers total: 11,742 full exposure** (name, email, phone, shipping
+  address) **+ 1,947 partial** (name, city, email) — arithmetic checked, 11,742 + 1,947 = 13,689. Orders received
+  **May 10 – Aug 8, 2026**, seven countries (US, UK, Sweden, Colombia, Brazil, Italy, Portugal). **ShipMonk told customers
+  the attackers exploited a vulnerability in the third-party analytics platform Metabase** — which ties directly to
+  **CVE-2026-72898**, in KEV since **Aug 11, due Aug 14 (past due)**. No private keys or devices compromised; the risk is a
+  verified, addressed list of hardware-wallet owners. Sources: Trezor blog, BleepingComputer, SecurityWeek, CryptoTicker.
+  The macOS Screen Sharing story (CVE-2026-65400) is DEMOTED from top story to the CVE table; it remains accurate.
+- CYBER: **CVE-2026-72898 (Metabase) ADDED to the Vulnerability Watch table.** ⚠ **No CVSS figure for it appeared in any
+  source fetched this run → the score cell reads "Exploited", not a number.** Do not invent one.
+- CYBER PATCH PRIORITY UNCHANGED (**Ray CVE-2025-62593, CVSS 9.4, due Thu Aug 20**) and now REINFORCED: THN (Aug 18)
+  confirms **CISA added it Monday Aug 17**; CISA's own alert page for Aug 17 is a single-CVE addition. New detail
+  published: fixed in **Ray 2.52.0**, GitHub project has **>43,500 stars / >7,900 forks**, weaponised by the **RondoDox**
+  DDoS botnet (folded in two days before the Nov 26 2025 disclosure, per BitSight March 2026) and by the **ShadowRay 2.0**
+  campaign turning unpatched NVIDIA-GPU clusters into a self-replicating mining botnet.
+- CYBER NEW #1 = Trezor/ShipMonk (above). CYBER NEW #2 = **FRAMEWORK** — the modular-laptop maker told **"all" of its
+  customers** that hackers accessed **names, email addresses, phone numbers and physical addresses**. Contact/delivery
+  data only. Source: Privacy Guides Data Breach Roundup (Aug 7–13, 2026). Brinks Home and France finance-ministry
+  **New tags REMOVED** (no longer new; both cards retained verbatim).
+- CYBER SafePal card REFINED from THN's **Aug 18** story: **~39,798 customers**, authorization flaw in an order-tracking
+  plug-in, customers emailed individually **Aug 16** from security@safepal.com, subject line quoted; under certain
+  conditions one customer could reach another's order info; explicitly NOT seed phrases/keys/passwords/bank/card/gov ID.
+- CYBER also-on-the-wire ADDITION: **RubyGems typosquatting campaign delivering a Windows information stealer, flagged
+  Aug 15, 2026.** Threat level stays **HIGH**, wording updated to lead on the past-due Metabase KEV flaw now having a real
+  breach behind it. **BY-THE-NUMBERS strip changed to 9.8 / 2 days / 13,689 / 39,798** (the 4.9M and 678,000 tiles retired
+  to their cards). **Cyber New = 2.**
+- MMA **NEW = DWCS SEASON 10 WEEK 2 AIRS TONIGHT**, Tue **Aug 18**, **Meta APEX, Las Vegas, 7:00 PM ET on Paramount+**.
+  Main event **Namo Fazil (10-1)** vs **Kaik Brito (19-6)**, welterweight; co-main **Douglas Rodrigues** vs **Trent Miller
+  (8-3)**, middleweight; also **Logan Paxton (10-1)** vs **Cristian Perez (14-2)** LW, **Alik Lorenz (7-2)** vs
+  **Mahamed Aly (5-1)** LHW, **Roman Puga (5-1)** vs **Taner Trembley (7-0)** FW. Sources: UFC.com Week 2 preview,
+  Bloody Elbow (Aug 17), FIGHTMAG. Added as the first Fight Week card and an Around the Sport bullet.
+- MMA: **DWCS WEEK 1 CONTRACT WINNERS NOW NAMED** — the standing "four of five Week 1 winners" line gains the names from
+  UFC.com: **Anthony Wint, Bilal Hasan, Tom Pagliarulo, Joseph Kropschot.** Prospect Watch roster-move card tagged New.
+- MMA: Sacramento (Aug 22) card detail EXPANDED and re-verified via MMA Mania/UFC.com — **Mederos vs Jones (LW)** and
+  **Judice vs Chaves (FLW)** added, plus a late change: **lightweight Gauge Young now faces short-notice replacement
+  Stan Dorsainvil, in for the injured Kody Steele.** Odds unchanged (−166/−176 to +140/+147 cross-book; UFC.com −170/+140).
+  Countdown target UNCHANGED at 2026-08-22T20:00-04:00.
+- ⚠ **MMA DATE-BLEED TRAP REJECTED — "UFC Fight Night: Bonfim vs. Brady took place on August 18, 2026, at the Meta APEX."**
+  A search summary asserted this. Aug 18 2026 is a **TUESDAY**; the UFC does not run Fight Night cards on Tuesdays, and the
+  Meta APEX slot that night is DWCS Week 2. **Not published.** Trap grep "Bonfim vs. Brady" = 0.
+- MMA champions RE-VERIFIED this run: ESPN's current-champions query returned **Aspinall HW, Ulberg LHW (Apr 11 2026),
+  Strickland MW (May 9 2026), Makhachev WW (Nov 15 2025), Gaethje LW (Jun 14 2026), Volkanovski FW (Apr 12 2025)**; a
+  separate women's query returned **Dern WSW, Shevchenko WFLW (two-time), Harrison WBW**. 11/11 rows machine-parsed and
+  printed; Pereira/Chimaev/Topuria in a champion cell = 0; ">Vacant<" = 0. UFC 330 results, the 49-46/49-46/48-47 Dern
+  card and the $400K bonus block all re-corroborated via Forbes/Yahoo/ESPN and carried unchanged.
+- VALIDATION (programmatic, this run): 4 pages HTMLParser-balanced **0 unclosed / 0 errors**; 5-tab nav + 4 stamp/fresh
+  IDs on all 4; .tldr present on all three briefings and absent from index by design; **8/8 TradingView widget JSON blocks
+  parse**; ticker tape retains SPXUSD + NSXUSD + DJI + USOIL + US10Y; **Chart of the Day = NYSE:FN**; **7/7 KEV countdowns
+  machine-recomputed vs 2026-08-18 — all class AND label correct** (62593 Aug 20 = 2 days/soon; 68820 Aug 25 = 7 days/ok;
+  72898 + 20349 Aug 14, 8037 Aug 10, 18577 Aug 6, 12569 Jun 28 all late/past due); champions 11/11; "After-Hours" = 0
+  (correct pre-4pm). Trap greps CLEAN ×0: Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman / MacKenzie / Thainara Silva /
+  pay-per-view / Dayforce / Toll Brothers / Klarna / **Paylocity** / **32.4%** / **Bonfim vs. Brady** / Joshua Vance /
+  Jean Matsumoto / Cerebras / ">Vacant<". "Bio-Rad" ×1 (the rejection note only, number stripped).
+  **New tags 0/2/2/1** (index/cyber/ws/mma).
