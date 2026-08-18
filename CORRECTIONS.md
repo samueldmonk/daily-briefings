@@ -7855,3 +7855,94 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
 - ⚠ FIRST-CATCH NOTE for future runs: an initial draft wrote the Ray KEV bullet as "Federal remediation due <strong>…"
   which broke the machine countdown parser (it silently matched the NEXT list item's date). Keep every KEV bullet in the
   exact form "Added <date>. Due <strong><date></strong>. <span class=cd …>" so the validator can parse it.
+
+## Added 2026-08-18 (Tuesday ~8:45am ET — Morning Edition; PRE-OPEN, second run of Tuesday; research ~8:35–8:44am)
+- CLOCK: TZ date = Tue Aug 18 08:35 EDT at run start; archive stamp 2026-08-18-0845. **Markets still CLOSED — 45 minutes
+  before the 9:30 open.** Page states this explicitly and publishes futures/pre-market, not index levels, as "current".
+- MARKETS: Yahoo live blog re-fetched IN FULL this run (byline Grace O'Donnell, "Updated Tue, August 18, 2026 at 5:00 AM
+  EDT"). ⚠ **CAUGHT: the Yahoo futures strip is CACHED, not live** — the page rendered "U.S. markets open in 4h 22m",
+  i.e. a ~5:08 AM read, NOT the 8:35am fetch time. The prior (8:05am) run described the same strip as read "at ~8:07am";
+  THIS run publishes the strip levels explicitly timestamped "about 5:08 AM ET". Do not describe the Yahoo strip as a
+  current read again. Strip values unchanged: S&P fut 7,729.25 (−39.50, −0.51%); Dow fut 53,492.00 (−52.00, −0.10%);
+  Nasdaq fut 29,762.75 (−333.25, −1.11%); VIX 15.88 (+0.69, +4.54%); Gold 4,448.80 (−24.90, −0.56%); Bitcoin 64,170.39
+  (+924.18, +1.46%); Crude Sep 26 84.15 (+0.41, +0.49%).
+- MARKETS: TWO renderings published side by side, NOT collapsed — Yahoo body (Dow fut −0.2% / S&P −0.5% / Nasdaq-100
+  −0.9%) and Benzinga (Dow flat / S&P −0.4% / Nasdaq-100 −1.1% / Russell −0.24%). Cause verbatim from Yahoo: Trump said
+  he intends to inflict more economic pain on Iran and threatened to "bomb" Oman over the Strait of Hormuz; **Brent $91,
+  WTI $84**, highest in over two weeks; **SPR lowest since 1982**; 10-yr 4.72% / 30-yr 5.31% (19-yr high).
+- MARKETS RATES: Benzinga this run adds **2-yr 4.19%** and renders the 10-yr at **4.74%** — published as a RANGE
+  "4.72%–4.74%" with both sources named, alongside CNBC's Monday-close 4.724% / 5.311%. CNBC also gives **~67%
+  market-implied probability of a September HOLD, up from below 50% a month ago** — published. ⚠ **Still NO current fed
+  funds target figure verified → NONE published** (second run running).
+- MARKETS MOVERS: **CNBC's Aug 18 premarket movers article was located this run** (/2026/08/18/stocks-making-the-biggest-
+  moves-premarket-hd-tsla-fn-duol.html — the direct fetch returned empty, but the search snippet states the numbers).
+  Published: **HD +1.5% premarket** (NOT the +2% Yahoo figure the prior run used — CNBC's later read wins, and the page
+  says 1.5%), **Tesla −1.2%**, **Fabrinet −9%+**. Third card = crude as a DRIVER. HD detail refined via Investing.com:
+  **adjusted EPS $4.92 vs $4.73 expected; revenue $47.86B vs $47.27B expected; comps +1.7%, US comps +1.3%; FY2026
+  guidance reaffirmed at adjusted diluted EPS flat to +4.0% from $14.69 → $14.69–$15.28.** Chart of the Day = NYSE:HD.
+  Date-bleed footnote retained (Aug 14/Aug 17 round-ups excluded).
+- MARKETS: Monday Aug 17 closes carried unchanged (S&P 7,745.06 −40.70 −0.52%; Dow 53,459.78 −272.63 −0.51%; Nasdaq Comp
+  26,644.91 −84.25 −0.32%) and re-reconciled 3/3 exact against Friday. Sector Heat = live heatmap only + "no verified
+  Tuesday sector figures existed at write time". No After-Hours block (pre-open).
+- CYBER: **TOP STORY CHANGED to the macOS Screen Sharing exploitation** (Ray moves to Patch Priority, which it keeps).
+  **CVE-2026-65400, CVSS 9.8, authentication issue in screensharingd**; NCSC-NL advisory **NCSC-2026-0280** confirms
+  active exploitation on multiple systems with **port 5900 internet-exposed**; **root obtained and a Monero miner placed
+  in every confirmed case**. Fixed in **macOS Tahoe 26.6.1 / Sequoia 15.7.9 / Sonoma 14.8.9**, Apple advisory
+  **Aug 6, 2026**, credited **Alfredo Pesoli of Bynario**. Sources: THN Aug 15 + SC Media. ⚠ It is NOT in KEV → NOT in
+  the KEV countdown, only in the CVE table.
+- CYBER: **THREAT ACTOR SPOTLIGHT CHANGED to the suspected China-nexus APT behind VMware vCenter CVE-2026-59310**
+  (CVSS 9.8, directory traversal, Broadcom fix **July 29, 2026**). **QUIRSO assesses with MODERATE confidence** a
+  Chinese-speaking actor in **UTC+08:00**, on Chinese-language script artefacts, reuse of research from a Chinese
+  security publication, and Chinese-language tooling; backdoor + reverse shell in ≥1 instance; **Babuk-derived
+  ransomware** deployed. The Gentlemen spotlight retired this run.
+- CYBER NEW #1: **Clop / PTC Windchill + FlexPLM (CVE-2026-12569) — 43 organisations incl. Shell, GE, Philips**; JSP
+  webshells; blueprints/engineering drawings/facility photos; **89GB claimed from Shell**; **Philips CONFIRMED** a breach
+  of one enterprise server. Source: Check Point Research 17th August Threat Intelligence Report (via search snippet;
+  the direct fetch returned empty). CVE-2026-12569 already sat in the KEV list (due Jun 28, past due) — now has a story.
+- CYBER NEW #2: **MyDr (Poland's primary healthcare platform) — potentially ~19 MILLION citizens**; attackers CLAIM
+  2.5TB. Published with the volume explicitly labelled an attacker claim. Same Check Point source.
+- CYBER CVE TABLE additions verified this run: **GitLab CVE-2026-19478 (9.4)** — out-of-band patch **Aug 17**,
+  self-managed only, unauth modify/delete of public projects, fixed in **19.2.4 / 19.1.6 / 19.0.8 / 18.11.11**,
+  GitLab.com + Dedicated already patched. **Forminator Forms CVE-2026-15748 (9.8)**, ≤1.56.1, 600k+ installs, fixed
+  **1.56.2 (Jul 31)**, requires a form with BOTH File Upload and Select fields. **N-able N-central CVE-2026-18577
+  (8.2)** re-verified: incomplete fix for CVE-2026-18556, KEV **added Aug 3 → due Aug 6** (now past due), fix 2026.3.1.7.
+  SAP CVE-2026-58231 (10.0) retained and STILL flagged not-in-KEV.
+- CYBER KEV COUNTDOWN (7 rows, machine-recomputed vs 2026-08-18, 7/7 class AND label correct): 62593 Aug 20 = 2 days;
+  68820 Aug 25 = 7 days; 72898 Aug 14, 20349 Aug 14, 8037 Aug 10, 18577 Aug 6, 12569 Jun 28 all past due. Threat level
+  HIGH ("two CVSS 9.8 flaws confirmed exploited; seven deadlines due or overdue"). BY-THE-NUMBERS = 9.8 / 2 days / 9.4 /
+  39,798. Also-on-the-wire: Snowflake GitHub Actions (Wiz), Cavern C2 (Kaspersky), Evooo1Bot (Fortinet), Unisoc VoLTE
+  chain (SSD, no vendor fix), Gunra RaaS + Colombia Ministry of Justice. **Cyber New = 2.**
+- MMA: UFC 330 re-verified this run against ESPN's results page AND UFC.com main-card results. Makhachev UD
+  **49-46, 49-46, 48-47**, **17th straight — new all-time record passing Anderson Silva**, fifth two-division champ to
+  defend in both, **29-1**; Machado Garry **17-2**. ⚠ **SCORECARD CONFLICT CAUGHT ON THE DERN FIGHT** — UFC.com's
+  main-card results render her card **"49-46 x2, 49-47"** while ESPN/the standing entry render it **48-47** on the third
+  card. **NEITHER third card is published this run**; Dern's result prints as "unanimous decision" with the
+  "outworked Robertson through the first four rounds" description only. Do not print a Dern third card until one source
+  is confirmed authoritative. Dern = champion, **ONE defence**, Aug 15 2026 (standing correction upheld).
+- MMA bonuses REFINED this run: **$400,000 total; $100K POTN to Jalin Turner, Dustin Stoltzfus, Charles Johnson (twister)
+  and Jeremiah Wells (hometown KO)**; **NO Fight of the Night**; **every fighter who scored a finish got $25,000**
+  (Forbes/Cageside Press — the $25K finish incentive is NEW detail this run). Gate re-verified: **19,238 attendance,
+  ~$6.7M gate, highest-grossing in Xfinity Mobile Arena history**; Forbes/search renders the record margin as **~$2.2M**
+  (the standing entry had Dana White saying "~$2M") — page says "about $2.2 million" and attributes. Still NO viewership
+  figure → none published. Sold out; first Philadelphia card in seven years; a hometown fighter took an upset win (WHYY).
+- MMA NEW: **Kayla Harrison CONFIRMED to return before the end of 2026** after the neck injury that forced cancellation
+  of the Amanda Nunes title defence — a bout that had been **targeted for UFC 331, Sept 19, Los Angeles**. This UPDATES
+  the standing Harrison entry (which said a Nunes bout was "targeted for Sept but unconfirmed"): the RETURN is confirmed,
+  the OPPONENT and DATE are not. Harrison still has **0 defences** — do not credit her with a Nunes defence.
+- MMA champions: 11/11 rows printed. ESPN re-queried this run and returned Aspinall HW, Ulberg LHW, Strickland MW,
+  Makhachev WW (now 1 defence), Gaethje LW, Volkanovski FW; a second query returned Yan BW, Van FLW, Shevchenko WFLW
+  (2 defences, 2nd reign, UD over Zhang Weili UFC 322), Harrison WBW, Dern WSW. Interim HW Gane in the heavyweight note.
+  Trap greps: Pereira/Chimaev/Topuria in a champion cell = 0; "Vacant" = 0.
+- MMA cards unchanged (Aug 22 Sacramento w/ odds −166/−176 vs +140/+147 re-verified; Aug 29 Shanghai, no odds; Sep 5;
+  Sep 12; Sep 19 UFC 331). Countdown target UNCHANGED at 2026-08-22T20:00-04:00. Prospect Watch = Salkilld (LW No. 10),
+  Alexia Thainara (SW No. 8, Lemos to No. 9), DWCS Week 1 signings. **Ty Miller DROPPED** — a snippet had him "set to
+  return" at UFC Vegas 120 (Aug 8, already past) with NO verified result, so he was omitted rather than published as
+  upcoming. Tsarukyan–Oliveira block DROPPED this run (not re-verified; better omitted than half-carried).
+  **MMA New = 2** (Salkilld/Thainara tags) + Harrison in Around the Sport.
+- VALIDATION (programmatic, this run): 4 pages HTMLParser-balanced **0 unclosed / 0 errors**; 5-tab nav + 4 stamp/fresh
+  IDs on all 4; .tldr present on all three briefings and absent from index by design; **8/8 TradingView widget JSON
+  blocks parse**; ticker tape retains SPXUSD + NSXUSD + DJI + USOIL + US10Y (feature symbols refreshed to HD/TSLA/FN/
+  RDDT/TOL); Chart of the Day = NYSE:HD; **7/7 KEV countdowns machine-recomputed — all class AND label correct**;
+  Monday levels 1× each, Friday levels 1× each in the labelled prior-session column; Monday-vs-Friday arithmetic 3/3
+  exact. Trap greps CLEAN ×0: Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman / MacKenzie / Thainara Silva / Vacant /
+  Pereira-Chimaev-Topuria in champion cells. "Mackenzie Dern" spelled correctly ×4.
