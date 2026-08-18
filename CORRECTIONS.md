@@ -8159,3 +8159,104 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   pay-per-view / Dayforce / Toll Brothers / Klarna / **Paylocity** / **32.4%** / **Bonfim vs. Brady** / Joshua Vance /
   Jean Matsumoto / Cerebras / ">Vacant<". "Bio-Rad" ×1 (the rejection note only, number stripped).
   **New tags 0/2/2/1** (index/cyber/ws/mma).
+
+## Added 2026-08-18 (Tuesday ~10:05am ET — Morning Edition; SECOND post-open run of Tuesday; research ~10:05–10:30am)
+- CLOCK: TZ date = Tue Aug 18 10:05 EDT at run start; archive stamp 2026-08-18-1005. Markets OPEN, ~35 minutes past
+  the bell. Lead re-stamped "as of ~10 AM ET". No After-Hours block (grep = 0, correct pre-4pm).
+- ⚠ **DATE-BLEED TRAP CAUGHT AND REJECTED — AGGREGATOR INDEX LEVELS.** A search summary (yournews/barchart lineage)
+  gave Tuesday's session as "S&P 500 fell 14.51 to **6,781.48**, Dow fell 34.29 to **47,706.51**, Nasdaq rose 1.16 to
+  **22,697.10**" plus "oil plunged from nearly $120 toward $90". Those levels are ~13%/11%/15% BELOW where the indices
+  actually trade in Aug 2026 (S&P ~7,745, Dow ~53,460, Nasdaq ~26,645) and the $120 crude framing is the June 2026 war.
+  **Not published.** Trap greps 6,781.48 / 47,706.51 / 22,697.10 = 0. The WS page carries a rejection note worded
+  without the numbers. The ONLY thing carried from that summary is the (independently corroborated) framing that Trump
+  will not revive the stalled truce and the June MOU's 60-day window expired Monday.
+- ⚠ **BIO-RAD / PAYLOCITY TRAP RE-SURFACED AND RE-REJECTED** (second consecutive run): the same "Bio-Rad tumbled 32.4% /
+  Paylocity rose 3.1%" pair came back in this run's movers search. Still not published. Trap greps Paylocity / 32.4% = 0;
+  "Bio-Rad" ×1 (rejection note, number stripped).
+- ⚠ **YAHOO 5:00 AM CACHE CONFIRMED A THIRD TIME.** The Tuesday live blog was re-fetched IN FULL at ~10:10 AM and STILL
+  renders "U.S. markets open in 4h 22m" with the identical strip (S&P fut 7,729.25, Dow fut 53,492.00, Nasdaq fut
+  29,762.75, Russell fut 3,055.30, VIX 15.88, Gold 4,448.80, BTC 64,170.39, Crude Sep 84.15), byline Grace O'Donnell,
+  "Updated Tue, August 18, 2026 at 5:00 AM EDT". **None of those levels published as current.** Yahoo's Toll Brothers /
+  Klarna earnings mention still not carried from Yahoo. Trap grep "Klarna" = 0 (fifth run running).
+- ⚠ **SCHWAB CITATION CORRECTED.** The 9:45am run cited "Schwab's open note … 10-year higher by roughly four basis points
+  to 4.68% this morning." The Schwab market-open URL was FETCHED IN FULL this run and the edition served is dated
+  **August 17, 2026, 9:10 a.m. ET**, whose table reads **10-year 4.71% (+0.02)**, S&P 7,785.76 −13.23, Dow 53,732.41
+  −107.58, Nasdaq 26,729.16 −73.86, WTI $82.91, VIX 15.05, Bitcoin $63,640 — i.e. Friday's closes at Monday's open
+  (7,785.76 matches our labelled Fri Aug 14 column, which cross-checks). The WS page now attributes Schwab explicitly as
+  the **Aug 17** note at **4.71%**, and the 10-year row prints the honest **4.68%–4.72%** range naming Schwab (4.71%,
+  Aug 17), Trading Economics (~4.69% Mon), CNBC (4.724% Mon close) and Yardeni (4.68% last week). **No single intraday
+  Tuesday 10-year print was verified → none published as current.**
+- MARKETS: early-session moves CARRIED and re-corroborated this run (Nasdaq Composite ≈ −1.2%, S&P 500 ≈ −0.6%, Dow
+  ≈ −0.3%; third straight down day). Cause unchanged. Bloomberg re-verified: **30-yr 5.32%, highest since 2007, +2bp**;
+  **WTI +2.6% to $84.50, Brent +2.7% to $90.87**; energy and pockets of semis the only green.
+- MARKETS NEW — **DUOLINGO (DUOL) +3% on a D.A. Davidson upgrade to BUY from neutral, 12-month PT raised to $160 from
+  $130, ~23% upside from Monday's close** (CNBC Aug 18 premarket article). Added as a Movers card, the run's ONLY new
+  tag on the WS page; ticker tape symbol **NASDAQ:TSLA swapped for NASDAQ:DUOL** (indices + USOIL + US10Y retained).
+  Reddit and memory-chipmaker New tags REMOVED (both were in the 0945 snapshot).
+- MARKETS: **Fabrinet figure refined** — CNBC renders it BOTH as "dropped more than 9%" and "fell 8.6%", so BOTH are
+  printed side by side rather than picking one. Beat detail added: revenue **$1.316B** vs ~$1.27B expected, non-GAAP EPS
+  **$4.10** vs $3.81 consensus. ⚠ A "**Fabrinet sank 11.3%**" figure appeared in the same contaminated aggregator summary
+  as Bio-Rad/Paylocity → **NOT published**; trap grep "11.3%" = 0. **Chart of the Day stays NYSE:FN.**
+- MARKETS NEW — **CME FedWatch: 64% chance of a rate HIKE by year-end** (Schwab, Aug 17). Added to the Fed row; sits
+  alongside the retained ~67% September-hold probability (CNBC) and the verified 3.50%–3.75% target held 9–3.
+- MARKETS CALENDAR corrected from Schwab's fetched week-ahead graphic: **Tue** HD, BIDU, **TOL**, July housing starts,
+  building permits, industrial production; **Wed** ADI, TJX, LOW, **TGT**, **FOMC minutes**; **Thu** WMT, BABA, DE, NTES,
+  ROST. The 9:45am run's loose "Schwab flags Walmart and Target … later this week" is superseded by the day-by-day
+  version. **Toll Brothers is now published** — it is named in a source FETCHED this run (Schwab's calendar), which the
+  9:13am purge lacked; trap grep "Toll Brothers" = 1 (the calendar line only).
+- CYBER NEW #1 — **RINGCENTRAL, 1.6 MILLION ACCOUNTS, AND THE DATA IS PUBLIC.** ShinyHunters got in via **social
+  engineering** in July 2026; claimed responsibility and demanded ransom **July 27**; RingCentral detected, engaged a
+  third-party forensic firm and disclosed **July 28**. **623GB exfiltrated**; after refusal to pay a **280GB archive was
+  leaked**. Fields: names, emails, phone numbers, physical addresses. **Have I Been Pwned added it Aug 13** after
+  confirming the leak. No software version uniquely at fault. Sources: BleepingComputer, SecurityWeek, Cyber Daily,
+  Rescana, CISO Platform. **BY-THE-NUMBERS strip: the 39,798 SafePal tile retired to its card, replaced by 1.6M.**
+  Threat-level "why" line updated to name it. Trezor and Framework **New tags REMOVED** (both in the 0945 snapshot).
+- CYBER: **Shell has now CONFIRMED it is investigating a potential security incident** after Clop claimed 89GB — an
+  upgrade on the prior "Clop claims" framing; the Clop/PTC Windchill card was amended in place.
+- CYBER CVE TABLE addition: **CVE-2026-62815, Microsoft QUIC, CVSS 9.8**, use-after-free, unauthenticated remote code
+  execution, no user interaction, low attack complexity; shipped in the **August 2026 Patch Tuesday**. Published
+  explicitly as **disclosed, NOT exploited and NOT in KEV** (contrast CVE-2026-68820, the AFD zero-day from the same
+  release, which IS in KEV). ⚠ **The Patch Tuesday CVE TOTAL is disputed across sources — Tenable's headline says 398,
+  SecurityWeek 421, Computerworld/Senserva 751 → NO total is published.** Other August criticals seen but not published
+  for want of a second source: Windows DNS Server (62878/62817/62820/65789), WDS TFTP 62893 (9.8).
+- CYBER: Ray **CVE-2025-62593** deadline **RE-VERIFIED EXPLICITLY THIS RUN** — THN states CISA added it Monday and FCEB
+  agencies must remediate **by August 20, 2026**. Patch Priority and the KEV countdown both unchanged; 7/7 countdowns
+  machine-recomputed vs 2026-08-18, all class AND label correct. Also-on-the-wire addition: **DeadLock ransomware moving
+  victim-negotiation and leak infrastructure onto decentralised hosting** for takedown resistance.
+- ⚠ **MMA CHAMPIONS — ESPN SUMMARY REGRESSION CAUGHT AND REJECTED.** This run's ESPN champions query returned
+  **"Bantamweight: Merab Dvalishvili (won Sept 14 2024, 3 defenses)"** and **"Flyweight: Alexandre Pantoja (won July 8
+  2023, 4 defenses)"**. Both are OLDER than the standing entries (Petr Yan and Joshua Van, both UFC 323, **Dec 6 2025**),
+  so the standing block WINS and neither was published. **INDEPENDENT CORROBORATION FOUND THE SAME RUN:** UFC 331 is
+  officially billed **"Van vs. Pantoja 2"** with **current champion Joshua Van** defending against **former champion
+  Pantoja** (Yahoo Sports, Tapology, Sherdog, MMA Mania, Wikipedia, Crypto.com Arena) — Van is champion, full stop.
+  Future runs: ESPN's champions *summary* can serve a stale snapshot; always cross-check against the next title booking.
+  Trap greps in champion cells: Pereira / Chimaev / Topuria / Vacant / **Dvalishvili** / **Pantoja** = 0. 11/11 rows.
+- ⚠ **"BONFIM VS. BRADY ON AUG 18" TRAP RE-REJECTED** (second run running). A search summary again asserted a UFC Fight
+  Night at the Meta APEX on Aug 18 2026. **DWCS Season 10 Week 2 was re-verified for that exact slot this run** via
+  UFC.com's Week 2 preview + video page, FIGHTMAG live results, Sherdog and ESPN Fightcenter: Tuesday Aug 18, Meta APEX,
+  **7:00 PM ET / 4:00 PM PT on Paramount+**, main event **Namo Fazil (10-1, Kurdistan, 7-fight win streak) vs Kaik Brito
+  (19-6, Brazil, Oktagon MMA welterweight champion since February)**. Trap grep "Bonfim vs. Brady" = 0.
+- MMA: **UFC 331 CARD EXPANDED and re-verified** (Forbes Aug 5, Yahoo Sports, Tapology, Sherdog, MMA Mania,
+  Crypto.com Arena): Sept 19, Crypto.com Arena, Los Angeles, Paramount+. Headliner **Van vs Pantoja 2** — the first
+  meeting at UFC 323 was a **TKO 26 seconds into round one after Pantoja injured his arm**. Co-main **Tsarukyan vs Ruffy**
+  (unchanged, −400/+300 Betway). Also added: **Renato Moicano vs Brian Ortega**, **Ryan Gandra vs Ozzy Diaz**,
+  **Gable Steveson vs Sean Sharaf**, **Robelis Despaigne vs Tai Tuivasa** (Tuivasa on a **seven-fight losing streak**).
+  **Prelims 6 PM ET, main card 9 PM ET.**
+- MMA NEW items (all Around the Sport): **Edson Barboza RETIRED** after his UFC 330 loss (Ribovics TKO R2 — already in
+  the results table); **Jalin Turner called for a BMF title fight** after his 39-second KO of Kaue Fernandes;
+  **Din Thomas retired from cornering** post-UFC 330 and later apologised amid backlash. Prospect Watch roster card
+  updated: **Bilal Hasan is already booked for his promotional debut at UFC Shanghai vs Nilson Rojas**, days after his
+  DWCS contract — card retains its New tag on that basis. ⚠ **Bella Mir NOT published**: a summary had Dana White
+  praising her ahead of a Contender Series debut, but she is not on the verified Week 2 card and no date was confirmed.
+- MMA unchanged and re-carried: UFC 330 results incl. the resolved Dern card 49-46/49-46/48-47, the $400K bonus block,
+  19,238 / ~$6.7M gate, Sacramento Aug 22 (odds −166 to −176 / +140 to +147 cross-book, UFC.com −170/+140,
+  re-verified this run via Wikipedia/ESPN/Tapology/UFC.com/SportsLine/LowKick), Shanghai Aug 29, Sep 5, Sep 12.
+  Countdown target UNCHANGED at 2026-08-22T20:00-04:00.
+- VALIDATION (programmatic, this run): 4 pages HTMLParser-balanced **0 unclosed / 0 errors**; 5-tab nav + 4 stamp/fresh
+  IDs on all 4; .tldr on all three briefings with the correct per-page label, absent from index by design; **8/8
+  TradingView widget JSON blocks parse**; ticker tape retains SPXUSD + NSXUSD + DJI + USOIL + US10Y; **Chart of the Day
+  = NYSE:FN**; **7/7 KEV countdowns machine-recomputed vs 2026-08-18 — all class AND label correct**; Monday-vs-Friday
+  scorecard arithmetic **3/3 exact**; champions **11/11** rows with 0 bad cells; "After-Hours" = 0 (correct pre-4pm).
+  Trap greps CLEAN ×0: Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman / MacKenzie / Thainara Silva / pay-per-view /
+  Dayforce / Paylocity / 32.4% / 11.3% / Klarna / Bonfim vs. Brady / Joshua Vance / 6,781.48 / 47,706.51 / 22,697.10 /
+  ">Vacant<". "Mackenzie Dern" spelled correctly ×4. **New tags 0/1/1/1** (index/cyber/ws/mma).
