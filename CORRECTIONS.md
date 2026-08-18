@@ -8422,3 +8422,71 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   pay-per-view / Dayforce / Paylocity / 32.4% / 11.3% / 4.5% / Klarna / Bonfim vs. Brady / Joshua Vance / 6,781.48 /
   47,706.51 / 22,697.10 / ">Vacant<" / unification / 54,215 / 7,720.01. "Mackenzie Dern" spelled correctly ×4.
   **New tags 0/0/1/0** (index/cyber/ws/mma).
+
+## Added 2026-08-18 (Tuesday ~11:42am ET — MIDDAY EDITION; fifth post-open run of Tuesday; research ~11:35–11:45am)
+- CLOCK: TZ date = Tue Aug 18 11:35 EDT at run start; archive stamp 2026-08-18-1142. Markets OPEN, ~2 hours past the
+  bell. Edition bucket Midday (h=11). Lead re-stamped "as of ~11:35/11:36 AM ET". No After-Hours block (grep = 0,
+  correct pre-4pm).
+- MARKETS — **THE LONG END EASED AND THE NASDAQ FELL FURTHER ANYWAY — this run's real change.** As of **~11:36 AM ET**
+  (Yahoo Finance live blog): **Nasdaq −1.6%, S&P 500 −0.5%, Dow lower by about 139 points**. The Nasdaq's loss has
+  widened at every read today (≈1.2% @10:30 → 1.34% @10:55 → 1.6% @11:36) while the S&P has barely moved. **10-year
+  Treasury yield EASED in morning trading but remains elevated at 4.70%; 30-year EDGED DOWN to 5.30% after hitting a
+  19-year high.** This is the FIRST easing at the long end this session and it reverses the direction carried in every
+  prior Tuesday edition — the rates table rows for both tenors were rewritten (30Y now prints **5.30%** with the
+  5.31%/5.32% high preserved as context; 10Y now prints **4.70%**, the first VERIFIED intraday Tuesday print, replacing
+  the 4.68%–4.72% source-disagreement range). New WS Movers card **"The long end backed off — and the chips kept
+  falling anyway"** is the page's only New tag; the SOX −3.7% card's New tag was REMOVED (in the 1115 snapshot).
+  Editorial note made explicitly: because yields relented and tech did not recover, the AI-valuation nervousness cited
+  alongside the yield story is doing independent work. ⚠ The Dow figure was published as **"about 139 points"** exactly
+  as sourced — NOT converted to a percent, and no intraday level printed (standing rule: levels only in the Weekly
+  Scorecard).
+- MARKETS unchanged and re-carried: SOX −3.7%; XLV +1.59% / XLE +1.30% / XLP +1.11%; Dow leaders J&J +2.29%, IBM
+  +1.43%, Chevron +1.41% and laggards Caterpillar −2.86%, Nvidia −1.90%, Home Depot −1.24%; Reddit +12% on S&P 500
+  inclusion; Micron −5.4%; Brent ≈ $91 / WTI ≈ $84–85; Trump's rejection of the Iran ceasefire extension as cause.
+  Chart of the Day stays NYSE:FN; ticker tape unchanged.
+- CYBER NEW — **HEIGHTS FINANCE, at least 1.2 MILLION individuals.** The Greenville, South Carolina consumer lender
+  discovered on or about **May 7, 2026** that an unauthorised actor accessed a **third-party cloud platform** holding
+  customer data; exposed fields are **names, Social Security numbers, financial account details and government ID
+  numbers**. Notification began **August 11, 2026**; **24 months** of credit monitoring via **Epiq**, enrolment
+  deadline **November 9, 2026**; class-action investigations already filed over the ~3-month discovery-to-notification
+  gap. Sources: SecurityWeek, Malwarebytes, Heights Finance's own notice page. New Breaches card = the cyber page's
+  **only New tag** this run. BY-THE-NUMBERS strip: the **1.6M RingCentral tile RETIRED** (story retained in its
+  Breaches card), replaced by **1.2M Heights Finance**.
+- CYBER — CVE-2026-62815 (Microsoft QUIC, CVSS 9.8) row ENRICHED, not added: independently re-corroborated this run by
+  **Cisco Talos** and **Security Affairs**; added the CVSS vector **AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H** and the
+  affected platforms **Windows 11 and Windows Server 2022/2025 (Server Core included)**. Still explicitly **disclosed,
+  NOT exploited, NOT in KEV**. ⚠ One blog in results claimed it "affects roughly 13.5 million websites" — single
+  low-authority source, **NOT published**.
+- CYBER "also on the wire" — added **SafePal phishing warning after a data exposure hit nearly 40,000 customers**,
+  **Analog Devices disclosed a data breach** (SecurityWeek), and the **Octagon Android bot** (hidden VNC + accessibility
+  overlays, crypto-wallet credential theft).
+- ⚠ **"RAY ADDED TO KEV ON AUGUST 18" — CHECKED, NOT ACTED ON.** Two independent search summaries this run asserted CISA
+  added the Ray flaw to KEV **on August 18, 2026**. The pages carry **CVE-2025-62593, added Aug 17, due Aug 20**, which
+  is internally consistent with the verified 2-days-left countdown. No CISA page confirming an Aug 18 add date was
+  returned, so **nothing was changed**; the discrepancy is recorded for the next run to resolve against cisa.gov
+  directly. Patch Priority and the KEV section still agree on **Aug 20**.
+- ⚠ **"BONFIM VS. BRADY ON AUG 18" TRAP RE-REJECTED — FOURTH RUN RUNNING.** A UFC search summary AGAIN asserted "UFC
+  Fight Night: Bonfim vs. Brady took place on August 18, 2026, at Meta APEX." Re-verified this run against UFC.com's own
+  DWCS Season 10 Week 2 preview video page, Polymarket, Sherdog, Deadspin, Tapology and next-fight.com: the Aug 18 Meta
+  APEX slot is **DWCS Season 10 Week 2**, 7:00 PM ET / 4:00 PM PT, Paramount+, **Namo Fazil (10-1) vs Kaik Brito (19-6)**.
+  Trap grep = 0.
+- MMA NEW DETAIL (not a New tag) — the DWCS card gained sourced fighter context: **Fazil has won seven straight since
+  2022, six by finish**; **Brito is a former Oktagon welterweight champion who won that title in February** and has gone
+  **3-1 since his own Contender Series opportunity in 2023**. Both from this run's DWCS previews. **MMA New tags = 0**,
+  honest: no new event, result or signing landed.
+- MMA CHAMPIONS re-cross-checked against ESPN's champions page THIS RUN — all eight men's belts returned MATCH the
+  standing block: HW **Aspinall**, LHW **Ulberg** (Apr 11 2026), MW **Strickland** (May 9 2026), WW **Makhachev**
+  (two-division), LW **Gaethje** (Jun 14 2026), FW **Volkanovski** (Apr 12 2025), BW **Yan**, FLW **Joshua Van**.
+  Women's divisions not returned by ESPN's summary this run; they rest on the standing block. Champions **11/11** rows,
+  **0 bad cells**. Countdown target UNCHANGED at 2026-08-22T20:00-04:00.
+- VALIDATION (programmatic, this run): 4 pages HTMLParser-balanced **0 unclosed / 0 errors**; 5-tab nav + 4 stamp/fresh
+  IDs on all 4 with exactly **1 active tab each**; .tldr on all three briefings with the correct per-page label, absent
+  from index by design; **8/8 TradingView widget JSON blocks parse**; ticker tape retains SPXUSD + NSXUSD + DJI +
+  USOIL + US10Y; Chart of the Day = **NYSE:FN**; **7/7 KEV countdowns machine-recomputed vs 2026-08-18 — class AND
+  label correct on every row**; Patch Priority and the KEV list agree on Ray = **Aug 20**; Forminator row asserted
+  programmatically = **CVE-2026-15748** and the CVE-2026-19478 row = **GitLab CE/EE** (the earlier trap grep on the bare
+  string 19478 is a FALSE POSITIVE — the GitLab row is legitimate; future validators must test the CVE+product PAIR, not
+  the bare CVE); champions **11/11** rows / 0 bad cells; "After-Hours" = 0 (correct pre-4pm). Trap greps CLEAN ×0:
+  Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman / MacKenzie / Thainara Silva / pay-per-view / Dayforce / Paylocity /
+  32.4% / 11.3% / 4.5% / Klarna / Bonfim vs. Brady / Joshua Vance / 6,781.48 / 47,706.51 / 22,697.10 / ">Vacant<" /
+  unification / 54,215 / 7,720.01. "Mackenzie Dern" spelled correctly ×4. **New tags 0/1/1/0** (index/cyber/ws/mma).
