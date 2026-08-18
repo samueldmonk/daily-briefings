@@ -8260,3 +8260,86 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   Trap greps CLEAN ×0: Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman / MacKenzie / Thainara Silva / pay-per-view /
   Dayforce / Paylocity / 32.4% / 11.3% / Klarna / Bonfim vs. Brady / Joshua Vance / 6,781.48 / 47,706.51 / 22,697.10 /
   ">Vacant<". "Mackenzie Dern" spelled correctly ×4. **New tags 0/1/1/1** (index/cyber/ws/mma).
+
+## Added 2026-08-18 (Tuesday ~10:35am ET — Morning Edition; THIRD post-open run of Tuesday; research ~10:35–10:55am)
+- CLOCK: TZ date = Tue Aug 18 10:35 EDT at run start; archive stamp 2026-08-18-1042. Markets OPEN, ~1 hour past the
+  bell. Lead re-stamped "as of ~10:30 AM ET". No After-Hours block (grep = 0, correct pre-4pm).
+- ⚠ **NEW TRAP CAUGHT — "DXC TECHNOLOGY GAINED 4.5%".** A live-market summary this run asserted DXC shares gained 4.5%
+  "amid investor reaction to its multi-year AI turnaround strategy." A direct quote check the SAME run returned a
+  **pre-market print of $10.71, −0.83% from a $10.80 previous close** — the opposite direction. **Not published.**
+  The WS page carries a rejection note with the percentage deliberately stripped; trap grep "4.5%" = 0 across all four
+  pages. Future runs: this same summary source (stockmarketwatch live) also supplied the Micron/XLE figures below, so
+  it is usable but must be spot-checked per figure, not trusted wholesale.
+- MARKETS — **THE TAPE SPLIT, AND THAT IS THIS RUN'S REAL CHANGE.** Early-session moves carried and re-corroborated
+  (Nasdaq Composite ≈ −1.2%, S&P 500 ≈ −0.6%, Dow ≈ −0.3%, Yahoo + TheStreet). A LATER intraday snapshot this run
+  (Trading Economics lineage) has **Nasdaq 100 −1.58%, Russell 2000 −0.68%, S&P 500 −0.53%, Dow pared to −0.07%** —
+  published as an explicitly later snapshot alongside, not instead of, the Yahoo/TheStreet reads.
+- MARKETS NEW — **DOW LEADERS/LAGGARDS published for the first time this session:** gainers **J&J +2.29%, IBM +1.43%,
+  Chevron +1.41%**; losers **Caterpillar −2.86%, Nvidia −1.90%, Home Depot −1.24%**. New "Where the money went instead"
+  Movers card carries these plus **XLE +1.30%** (the first per-sector figure verified in three runs — the sector-heat
+  note previously said none was available and has been updated).
+- MARKETS NEW — **HOME DEPOT REVERSED.** The pre-market +1.5% did not survive the open; HD sits among the Dow's three
+  biggest laggards at **−1.24%**. The HD Movers card was rewritten around the reversal and is one of the WS page's two
+  New tags. The Q2 beat detail (EPS $4.92 vs $4.73, revenue $47.86B vs $47.27B, comps +1.7%/US +1.3%, FY reaffirmed
+  $14.69–$15.28) is UNCHANGED and retained. NOTE the apparent contradiction is real and both figures are sourced:
+  CNBC's premarket list said +1.5%, the intraday movers table says −1.24%. Both printed, both labelled by time.
+- MARKETS — **MICRON DEEPENED to −5.4%** and **NVIDIA ≈ −2%** intraday (single-source live summary; labelled as such on
+  the page), against CNBC's premarket "MU/SK Hynix/Sandisk each off more than 4%". Nvidia independently corroborated at
+  **−1.90%** on the Dow-laggards list. **VIX +3.83%** added to the Rates table and the lead.
+- MARKETS — WTI now printed as an honest **$84–$85 range** (Benzinga $84.20 pre-open; TheStreet "$84"; Bloomberg
+  "topping $85") and Brent as **$90.97–$91.27** (Trading Economics $90.97 +0.11%; Benzinga $91.27; TheStreet "$91").
+  Cause re-verified: Trump says he intends to inflict more economic pain on Iran and threatened to "bomb" Oman if it
+  interferes with US plans for the Strait of Hormuz. 30-yr **5.32%, highest since 2007** unchanged and re-verified.
+- MARKETS — ticker tape symbol **NYSE:RDDT swapped for NYSE:CVX** (indices + USOIL + US10Y retained; Chart of the Day
+  stays NYSE:FN). Duolingo and Reddit **New tags REMOVED** (both in the 1005 snapshot). "On the radar" pending-home-sales
+  bullet rewritten to past tense with an explicit "no verified print, none published" note.
+- CYBER NEW — **INOTIV**, pharmaceutical research firm, notifying **9,542 individuals** after an **August ransomware
+  attack** with personal information stolen. New Breaches card, the cyber page's only New tag. Paired with **Black Kite:
+  7,551 publicly disclosed ransomware victims Apr 2025–Mar 2026, up 24.9%**, and Industrial Cyber's "elevated new
+  normal" framing. **BY-THE-NUMBERS strip: the 13,689 Trezor tile retired to the top story, replaced by 7,551.**
+  RingCentral **New tag REMOVED** (in the 1005 snapshot).
+- CYBER CVE TABLE additions, both explicitly **disclosed, NOT exploited, NOT in KEV**: **CVE-2026-62893, Windows
+  Deployment Services, CVSS 9.8** (held back in the 1005 run for want of corroboration; re-confirmed this run by a
+  Patch Tuesday round-up) and **CVE-2026-62816, Windows Reliable Multicast Transport Driver, CVSS 8.8**. The Patch
+  Tuesday CVE TOTAL remains DISPUTED (Tenable 398 / SecurityWeek 421 / Senserva 751) → **still no total published**;
+  the 62816 row says so explicitly. CVE-2026-68820 (AFD) remains the month's one Microsoft-confirmed exploited zero-day.
+- CYBER "also on the wire" — added **UK police data lapse exposing highly sensitive records (watchdog, Aug 17)** and
+  **Qilin vs Motorenmaier GmbH (Aug 16)** plus **xpl0itrs vs school-management software (Aug 15)**. The McDonald's/
+  Vodafone bullet was CORRECTED: this run's source frames it as a **threat actor CLAIMING exfiltration of millions of
+  records from McDonald's, TCS and Vodafone** — reworded as an attacker claim and **TCS added**; the earlier "Azure
+  credential-theft campaign" framing is superseded.
+- CYBER KEV: **7/7 countdowns machine-recomputed vs 2026-08-18 — all class AND label correct.** Ray CVE-2025-62593 due
+  **Aug 20 (2 days left)** unchanged; Patch Priority and the KEV section agree. Aug 11 KEV trio (20349 Cisco ASA/FTD,
+  68820 Windows AFD, 72898 Metabase) and Aug 7 addition (8037 Progress LoadMaster) re-verified against CISA alert pages
+  this run; N-able CVE-2026-18577 FCEB date re-confirmed as **Aug 6**.
+- ⚠ **"BONFIM VS. BRADY ON AUG 18" TRAP RE-REJECTED — THIRD RUN RUNNING.** A UFC search summary AGAIN asserted "UFC
+  Fight Night: Bonfim vs. Brady on August 18, 2026, at Meta APEX". **DWCS Season 10 Week 2 re-verified for that exact
+  slot this run** (ESPN Fightcenter, Sherdog, FIGHTMAG, Tapology, Wikipedia, Deadspin, Combat Press): Tue Aug 18, Meta
+  APEX, **7:00 PM ET / 4:00 PM PT, Paramount+**, main event **Namo Fazil (10-1) vs Kaik Brito (19-6)**, co-main
+  **Douglas Rodrigues vs Trent Miller (8-3)**, plus Paxton–Perez, Lorenz–Aly, Puga–Trembley. Trap grep = 0.
+- MMA NEW — **SACRAMENTO ODDS LINE HISTORY + RODRIGUES PROFILE.** Hernandez **−166 to −176** / Rodrigues **+140 to +147**
+  unchanged and re-verified; ADDED the movement: **opened −147/+120** (early books −142/+122), Hernandez **peaked around
+  −184 to −191** with Rodrigues out to **+145** before tightening. Rodrigues detail added: **19-6, 12 KOs, three-fight
+  win streak, KO'd Brunno Ferreira in R1 at UFC 326 in March.** The Sacramento card carries the MMA page's only New tag;
+  the DWCS Week 1 signings card's New tag was REMOVED (in the 1005 snapshot).
+- ⚠ **RODRIGUES RANKING CHANGED #11 → #10.** This run's fight-preview sourcing (LowKick/SportsLine lineage) gives him as
+  **No. 10**; earlier editions carried **No. 11**. The newer figure is used in the Fight Week card and the discrepancy is
+  disclosed in Rankings & Business rather than silently overwritten. Hernandez remains **#6**.
+- MMA CHAMPIONS re-cross-checked against ESPN's champions page THIS RUN: HW Aspinall (Gane interim), LHW **Ulberg**
+  (KO1 Procházka, UFC 327, Apr 11 2026), MW **Strickland** (SD Chimaev, UFC 328, May 9 2026), WW Makhachev, LW
+  **Gaethje** (TKO4 Topuria, Freedom 250, Jun 14 2026), FW **Volkanovski** — all six men's belts ESPN rendered this run
+  MATCH the standing block. Champions **11/11** rows, **0 bad cells**; trap greps in champion cells Pereira / Chimaev /
+  Topuria / Vacant / Dvalishvili / Pantoja = 0.
+- MMA unchanged and re-carried: UFC 330 (Aug 15, Xfinity Mobile Arena) Makhachev UD Machado Garry — **17th straight
+  Octagon win, all-time record**, re-verified via UFC.com main-card results; Dern UD Robertson 49-46/49-46/48-47;
+  Turner KO1 (0:39) Fernandes; the $400K bonus block; 19,238 / ~$6.7M gate; Shanghai Aug 29, Sep 5, Sep 12, UFC 331
+  Sep 19 (Van vs Pantoja 2). Countdown target UNCHANGED at 2026-08-22T20:00-04:00.
+- VALIDATION (programmatic, this run): 4 pages HTMLParser-balanced **0 unclosed / 0 errors**; 5-tab nav + 4 stamp/fresh
+  IDs on all 4 with exactly 1 active tab each; .tldr on all three briefings with the correct per-page label, absent from
+  index by design; **8/8 TradingView widget JSON blocks parse**; ticker tape retains SPXUSD + NSXUSD + DJI + USOIL +
+  US10Y; **Chart of the Day = NYSE:FN**; **7/7 KEV countdowns machine-recomputed vs 2026-08-18 — all class AND label
+  correct**; Monday-vs-Friday scorecard arithmetic **3/3 exact**; champions **11/11** rows / 0 bad cells; "After-Hours"
+  = 0 (correct pre-4pm). Trap greps CLEAN ×0: Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman / MacKenzie /
+  Thainara Silva / pay-per-view / Dayforce / Paylocity / 32.4% / 11.3% / **4.5%** / Klarna / Bonfim vs. Brady /
+  Joshua Vance / 6,781.48 / 47,706.51 / 22,697.10 / ">Vacant<". "Mackenzie Dern" spelled correctly ×4.
+  **New tags 0/1/2/1** (index/cyber/ws/mma).
