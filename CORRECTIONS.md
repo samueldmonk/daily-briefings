@@ -8751,3 +8751,74 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   7,785.76 / 53,732.41 / 26,729.16. **New tags 0/2/9/1** (index/cyber/ws/mma) — the Wall Street count is high because
   this is the first run of a NEW SESSION whose lead, movers and drivers are all genuinely new versus the Tuesday
   1:10pm snapshot.
+
+## Added 2026-08-19 (Wednesday ~11:11am ET — MIDDAY EDITION; second run of Wednesday, ~12 min after the 10:59 Morning snapshot; markets OPEN; research ~11:03–11:20am)
+- CLOCK: TZ date = Wed Aug 19 11:03 EDT at run start; archive stamp 2026-08-19-1111. Edition bucket **Midday** (h=11)
+  — the 10:59 snapshot was the last Morning-bucket run of the day. Lead re-stamped **~11:15 AM ET** (was 10:45).
+- MARKETS — lead UNCHANGED and re-verified this run: Treasury will **at least double** long-dated "liquidity support"
+  buybacks to **≥$4B per operation**; **30-year yield −9bp to 5.20%** from Tuesday's 5.33% 19-year high; **Trump paused the
+  50% Canadian tariffs for three days** citing a "DEAL" after 11th-hour Carney talks. Both index reads printed again,
+  neither asserted: Yahoo live **Dow +0.4% / S&P +0.5% / Nasdaq edging above flat**, vs **S&P +0.43% / Nasdaq +0.40% /
+  Dow +0.25%**.
+- MARKETS NEW — **two genuinely new movers vs the 10:59 snapshot**: **Keysight Technologies +2%** on FQ3 EPS **$3.07 vs
+  $2.48 expected**; **Mercury Systems −9%+** (defence/aerospace electronics) with NO cause or price stated by any source
+  fetched this run, so only direction/magnitude published. These are the ONLY two "New" tags on the Wall Street page —
+  every carried-over mover card had its New tag REMOVED because it was already in the 10:59 archived edition.
+- MARKETS NEW — **FOMC minutes are TODAY at 2:00 PM ET**, from the **July 28–29** meeting: range held at **3.50–3.75%**,
+  **three dissents for a 25bp HIKE — regional presidents Logan, Hammack and Kashkari**; July effective fed funds **3.63%**;
+  unemployment **4.1%** (Newsquawk preview + Interactive Crypto). Added to the Lead, Fed policy row, Radar and index card.
+- MARKETS NEW — **10-year yield 4.70%** on Aug 19, **−0.01pp** on the session (Trading Economics) — replaces the carried
+  Tuesday 4.706% CNBC print. Long end did the work: 30-yr −9bp vs 10-yr flat, the shape a long-dated buyback produces.
+- MARKETS — **OIL PUBLISHED AS RANGES, NOT POINTS.** WTI reads disagree: Investing.com Wednesday range **84.37–85.04**,
+  another quote source **$85.18**, Yahoo's Wednesday strip **$84.66 +0.71%** — all three printed. Brent: Trading Economics
+  **$91.52 +0.55% (fourth straight up session)** vs Fortune **$93.60 at 6:30 a.m. ET** — both printed, neither picked.
+- ⚠ **RUSSELL/BREADTH CONFLICT PERSISTS AND IS STILL UNRESOLVED.** Same source pair as the 10:59 run: one open summary
+  gives **IWM +0.67% / DIA +0.46% / SPY +0.29%** (rotation into value + small caps), another gives **Russell 2000 −1.30%**.
+  Both now printed IN THE SECTOR NOTE with the contradiction stated explicitly; neither asserted as the day's breadth.
+  Still NO Aug 19 sector-leadership figure published — Benzinga had no Wednesday edition.
+- Ticker tape unchanged (MRNA/MRK/MRVL/NVDA/MU + SPXUSD/NSXUSD/DJI/USOIL/US10Y). **Chart of the Day stays NASDAQ:MRNA.**
+- CYBER NEW — **MLflow + FUXA under active scanning/exploitation** (watchTowr + VulnCheck via THN, Aug 18):
+  **CVE-2026-64849 (CVSS 9.3)** unauth SSRF in **MLflow < 3.15.0** — reach the Tracking Server, force requests to internal
+  **cloud metadata endpoints**, extract secrets; **CVE-2026-25895 (CVSS 9.5)** missing auth + path traversal in **FUXA**
+  (web SCADA/HMI) → arbitrary file write → RCE. **NEITHER IS IN KEV** — explicitly labelled as carrying no federal
+  deadline. New incident card + two Vulnerability Watch rows. This is the page's only "New" tag.
+- CYBER NEW — **Microsoft Copilot Personal "CoSnitch" = CVE-2026-24301** (Varonis): three flaws, one click on a crafted
+  link could silently exfiltrate data from connected apps; hinges on an undocumented URL parameter; reported Dec 2025,
+  **patched Aug 18, 2026**; **no evidence of in-the-wild exploitation**; research does NOT claim M365 Copilot affected.
+  **No CVSS stated by any source this run → none printed.**
+- CYBER NEW — wire items added: **Ransom Busters** (RaaS affiliate cold-emailing victims offering to delete stolen data
+  for **$20,000–$60,000**, GuidePoint GRIT); **TWINLOOT** (PyArmor-hardened Python implant running C2 entirely inside
+  SharePoint Online dead-drops via Graph API + WebRTC over Teams TURN servers, headless victim Edge; Ontinue);
+  **"City Forum"** (Reco — a single Contabo VPS **158.220.87.79**, Go net/http default UA, scraping Salesforce AND
+  ServiceNow portals since **March 2025**).
+- ⚠ **INOTIV DATE CORRECTED ON THE PAGE.** The prior edition said the breach "took place in August", implying August 2026.
+  Sources fetched this run (Security Affairs / BleepingComputer / HIPAA Journal) place it in **August 2025** — discovered
+  **Aug 8, 2025**, attacker access from ~Aug 5 — attributed to **Qilin**, which listed the company on Aug 11. The 9,542
+  figure stands. The card now carries an explicit date correction. **Do not re-render Inotiv as a current-month attack.**
+- ⚠ **THREAT-LEVEL BANNER ARITHMETIC FIXED: "six older KEV deadlines are already past due" → "five".** The KEV list has
+  exactly FIVE past-due rows (Metabase, Cisco ASA/FTD, LoadMaster, N-able, PTC Windchill). The 6 was carried from an
+  earlier edition and was wrong. Re-check this count every run.
+- CYBER — Patch Priority UNCHANGED and re-verified: **Ray CVE-2025-62593, CVSS 4.0 9.4, fixed 2.52.0, added Aug 17,
+  due Aug 20 = TOMORROW (1 day left)**, per the CISA alert + THN + Security Affairs fetched this run. Aug 18 batch
+  (33824 / 55040 / 59310 / 65400) due **Aug 21 (2 days left)** re-confirmed against the CISA alert page. **11/11 KEV
+  countdowns and colour classes recomputed and correct against today.**
+- MMA — NO new items since the 10:59 snapshot; the single stale "New" tag (DWCS Week 2) was REMOVED rather than carried.
+  Re-verified this run: DWCS S10 W2 six contracts from five fights; Prates→Makhachev December callout (nothing signed);
+  Dana White vs Eddie Hearn; **UFC Sacramento = Sat Aug 22, Golden 1 Center, prelims 5 PM ET / main card 8 PM ET,
+  Paramount+, Hernandez vs Rodrigues**; **UFC 331 = Sept 19, Van vs Pantoja 2**. Countdown target unchanged
+  (2026-08-22T20:00:00-04:00).
+- MMA CHAMPIONS re-cross-checked vs **ESPN's champions page this run**: the six men's belts returned (HW Aspinall,
+  LHW Ulberg, MW Strickland, WW Makhachev 1 def, LW Gaethje, FW Volkanovski 1 def) ALL MATCH the standing block.
+  ⚠ **ESPN's page summary ALSO returned stale BW "Merab Dvalishvili" and FLW "Alexandre Pantoja" rows** (pre-UFC 323
+  data). The standing block WINS: **BW = Petr Yan** (UD Dvalishvili, UFC 323, Dec 6 2025), **FLW = Joshua Van**
+  (TKO1 Pantoja, UFC 323, Dec 6 2025; defended vs Taira, UFC 328). Do NOT regress to Dvalishvili/Pantoja.
+- ⚠ **INOTIV/2025 AND THE "AUG 19 SECTOR BOARD" ARE THE TWO TRAPS THIS RUN CAUGHT.** Both rejected/corrected.
+- VALIDATION (programmatic, this run): 4 pages HTMLParser-balanced **0 unclosed / 0 errors**; 5-tab nav + stamp/fresh IDs
+  on all 4 with exactly **1 active tab each**; .tldr present on all three briefings with correct per-page label, absent
+  from index by design; **8/8 TradingView widget JSON blocks parse**; ticker retains SPXUSD+NSXUSD+DJI+USOIL+US10Y;
+  Chart of the Day = NASDAQ:MRNA; **11/11 KEV countdowns** label AND colour class correct; Patch Priority and KEV agree
+  (Ray Aug 20, batch Aug 21); scorecard arithmetic **3/3 exact** on level and percent vs Mon Aug 17 priors;
+  champions **11/11 rows, 0 Vacant**; "After-Hours" = 0 (correct pre-4pm). Trap greps CLEAN ×0: Cody Salkilld /
+  Shamil Yakhyaev / Abdul-Rakhman / MacKenzie Dern / pay-per-view / Bonfim vs. Brady / Joshua Vance / unification /
+  "Pereira (205)" / 7,785.76 / 53,732.41 / 26,729.16 / "4.9 million people" / ">Vacant<".
+  **New tags 0/1/2/0** (index/cyber/wallstreet/mma) — deliberately low because the prior snapshot is only 12 minutes old.
