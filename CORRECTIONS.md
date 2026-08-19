@@ -8646,3 +8646,108 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   pay-per-view / Bonfim vs. Brady / Joshua Vance / unification / 6,781.48 / 47,706.51 / 22,697.10 / ">Vacant<" /
   "Pereira (205)" / 2.87 / 32.4% / 11.3% / Paylocity / Wolfspeed / "4.9 million people". **New tags 0/1/1/0**
   (index/cyber/ws/mma).
+
+## Added 2026-08-19 (Wednesday ~10:59am ET — MORNING EDITION; first run since Tue Aug 18 ~1:10pm, ~22h gap; markets OPEN; research ~10:44–10:58am)
+- CLOCK: TZ date = Wed Aug 19 10:44 EDT at run start; archive stamp 2026-08-19-1059. Edition bucket Morning (h=10).
+  Markets open ~1h15m at research time. No After-Hours block (grep = 0, correct pre-4pm).
+- MARKETS — **THE WEEK TURNED. TREASURY BUYBACK + CANADA TARIFF PAUSE.** The US Treasury said it will **at least double
+  the "liquidity support" buyback operations for longer-dated debt, to at least $4 billion per operation**; the
+  **30-year yield fell nine basis points to 5.20%** (from Tuesday's 5.33% 19-year high). Trump **paused the 50% Canadian
+  tariffs for three days** on Truth Social late Tuesday citing a "DEAL", after 11th-hour talks with Carney's team
+  (verified by direct fetch of the Yahoo live page). Yahoo live: **Dow +0.4%, S&P 500 +0.5%, Nasdaq Composite edging
+  above flat** amid continued chip weakness; a second read: **S&P +0.43%, Nasdaq +0.40%, Dow +0.25%**. BOTH printed,
+  neither asserted alone — no source stated an as-of minute, so the page is stamped with the edition's own time
+  (~10:45 AM ET) rather than a fake source timestamp. ⚠ A **"Russell 2000 −1.30%"** figure appeared in one summary and
+  **conflicted** with an IWM **+0.67%** read in another; NEITHER published.
+- MARKETS NEW — **MODERNA. First successful Phase 3 for any mRNA cancer vaccine.** Moderna + Merck: **intismeran** +
+  **Keytruda** met the primary endpoint and a key secondary endpoint in **INTerpath-001**, **1,137 patients**,
+  completely resected **stage IIB–IV cutaneous melanoma**; first positive Phase 3 for an individualised neoantigen
+  therapy. Regulators "in coming months", possible approval **2027**. ⚠ **THE STOCK MOVE IS REPORTED SIX DIFFERENT
+  WAYS** — CNBC "more than doubles"; Forbes/GuruFocus **~90%**; 24/7 Wall St **93% at ~$121.90**; Quartz/BigGo **>120%
+  at the open, briefly $139.70**; one live read **+132.89%**; ts2 headline "57%". EVERY figure printed WITH its source;
+  none picked. Merck rendered **6%**, **7%** and **over 11% to $150.59** — all given. Also sourced: best session on
+  record, highest since 2024, +357% YTD.
+- MARKETS NEW — **MARVELL/GOOGLE.** Warrant for up to **58.97M shares at $206.58** = **~$12.18B** (Reuters/BNN/Bloomberg);
+  **+11% pre-market**; most of the warrant vests only on purchasing targets **through fiscal 2033**; would make Google
+  Marvell's **fifth-largest investor**. Products: AI inference accelerators, storage, networking, memory-interface
+  controllers, near-memory computing.
+- MARKETS NEW — retail split: **Target** net sales **$26.5B +5.3%**, comps **+3.8%** on **+3.6%** traffic, digital
+  **+8.7%**, op income **$2.56B** (9.6% margin), EPS **$4.11** vs $2.05, FY guide raised to ~5% growth / **$9.90–$10.90**
+  — with a **$994M tariff refund = 40% of quarterly EPS** (published prominently). **Lowe's** sales **$25.96B** vs
+  $23.96B but comps **+0.2%**, online **+15.7%**, guidance **CUT** to **$92B** / flat comps / **$12.25** adj EPS.
+  **TJX** raised FY27 to **$5.31–$5.36** from $5.08–$5.15 but Q3 guide **$1.30–$1.32** ex-tariff vs **$1.35** consensus,
+  **−4.6% pre-market**. **Analog Devices** FQ3 adj EPS **$3.45** on revenue **$4.02B**, a beat.
+- MARKETS — **ASIA CHIP ROUT (ranges printed, not single figures).** KOSPI **−5% to −5.4%** (one account: over 6%,
+  circuit breaker); Nikkei **−3% to −3.2%**; Shanghai −2.0%; Hang Seng +0.2%. Samsung **−7.54% to −7.82%** (KRW ~135tn
+  erased on the larger figure); SK Hynix **−9.75% to −9.93%**; Kioxia −10%+. JGB 10-yr briefly **2.945%**, ~30-year high.
+- MARKETS — **WEEKLY SCORECARD REBUILT ON TUE AUG 18 OFFICIAL CLOSES** (AP tally via Washington Post): S&P 500
+  **7,691.76 −53.30 (−0.69%)**, Dow **53,343.40 −116.38 (−0.22%)**, Nasdaq **26,289.71 −355.20 (−1.33%)**; Russell 2000
+  **3,017.89 −39.65**. Arithmetic re-verified against Mon Aug 17 priors (7,745.06 / 53,459.78 / 26,644.91): level and
+  percent both exact, 3/3. Percentages printed to 2dp computed from the point change; the sources' rounded
+  0.7/0.2/1.3 are consistent.
+- ⚠ **NO AUGUST 19 SECTOR-LEADERSHIP FIGURE PUBLISHED.** Benzinga's leading/lagging series had no Wednesday edition
+  when checked; the previous edition's XLV/XLE/XLP board was TUESDAY data and was **removed** rather than carried
+  forward as current. Sector-heat note now states only the corroborated directional fact (Nasdaq flat vs Dow/S&P up,
+  "continued weakness in chip stocks", per Yahoo).
+- Ticker tape refreshed to MRNA/MRK/MRVL/NVDA/MU while retaining SPXUSD + NSXUSD + DJI + USOIL + US10Y.
+  **Chart of the Day = NASDAQ:MRNA** (largest single-name move on the page).
+- CYBER NEW — **TOP STORY = THE AUG 18 KEV BATCH.** CISA added **four** actively exploited CVEs on **Aug 18, 2026**,
+  federal deadline **Aug 21, 2026** (Security Affairs, dated Aug 19, quoting the CISA alert): **CVE-2026-33824**
+  (Microsoft IKE Service Extensions double free, **9.8**), **CVE-2026-55040** (SharePoint weak auth / JWT forgery,
+  **9.1**), **CVE-2026-59310** (VMware vCenter path traversal, **9.8**), **CVE-2026-65400** (macOS Screen Sharing
+  improper authentication). vCenter campaign detail from QUIRSO via The Hacker News (direct fetch): first attacker
+  contact **Aug 3**, five days after Broadcom's July 29 disclosure; persistence via **cron job + reverse_ssh**;
+  **361 unique victim IPs across 47 countries**, mostly Germany, US, Turkey, Iran, France; **no workaround** per
+  Broadcom. SharePoint chain per **Rapid7**: `alg: none` outer header, STS thumbprint resolves a key without
+  verification, non-empty unverified signature; Defused sees the Rapid7 PoC used against honeypots. macOS: **Dutch
+  NCSC confirmed exploitation Aug 15**; fixed in Tahoe 26.6.1 / Sequoia 15.7.9 / Sonoma 14.8.9; credit Alfredo Pesoli.
+  IKE mitigation: block **UDP 500/4500** (external only, not lateral movement).
+- CYBER — **CVE-2026-59309** (vmdir unauth auth bypass, **9.8**, VMSA-2026-0006) added to Vulnerability Watch and
+  explicitly labelled **NOT in KEV / no confirmed compromise** — Defused sees scanning only, and QUIRSO's COO Denis
+  Szadkowski told THN there is not enough evidence to link it to the 59310 intrusion set. Do NOT conflate the two CVEs.
+- CYBER NEW — **Heights Finance**: **>1.2M** people notified; third-party **cloud platform** accessed, discovered
+  **May 7, 2026**; SSNs, tax IDs, bank name/account/routing, driver's licence + state ID, DOB; state counts
+  **734,828 TX / 486,463 SC / 26 NH / 21 VT**; 24 months credit monitoring (SecurityWeek).
+- CYBER NEW — **Stripe merchant keys**: forum dataset **Aug 18, 2026** with live keys for **659 merchant accounts** +
+  ~**35 GB** data; **>50,000 unique Stripe merchant API keys** exposed across public repos, GitHub Actions logs and
+  misconfigured servers; **>3,000 servers** leaking Stripe strings, ~**12%** with real keys; researchers reached a
+  customer list + fraudulent payment link + **$1 test charge within 17 hours**. ⚠ **STRIPE ITSELF WAS NOT BREACHED** —
+  the keys belong to merchants. Published prominently.
+- CYBER — **PATCH PRIORITY stays Ray CVE-2025-62593 (9.4, fixed 2.52.0), due Aug 20 = TOMORROW (1 day left)** because
+  it is the nearest deadline; the Aug 21 batch is named as the immediate follow-on and vCenter singled out within it.
+  KEV list rebuilt: **11 rows**, countdowns recomputed from today — Aug 20 (1 day, soon), four × Aug 21 (2 days, soon),
+  Aug 25 (6 days, ok), five past due. By-the-numbers strip retired the 5-weeks/2-days/4.9M/7,551 tiles →
+  **4 / 361·47 / 1.2M / 50,000+**.
+- MMA NEW — **DWCS SEASON 10 WEEK 2 (Tue Aug 18, Meta APEX): SIX CONTRACTS FROM FIVE FIGHTS.** Signed: **Kaik Brito,
+  Trent Miller, Cristian Perez, Alik Lorenz, Roman Gabriel Puga, Taner Trembley** (Bloody Elbow + UFC.com). All five
+  winners **plus** the loser of the Puga–Trembley three-rounder. Week 1 produced four → **10 in the season's first
+  fortnight**. Brito: former **Oktagon welterweight champion** (won it in February), **19-6**, **3-1** since his 2023
+  DWCS look. This REPLACES the previous edition's "Contender Series Week 2 is tonight" framing everywhere on the page.
+- MMA NEW — **Carlos Prates → Makhachev, December.** After UFC 330 Prates: *"I will knock you out, bro… I will bring
+  that belt to Brazil"* and *"I'm gonna fight Islam in December, and then I'm gonna fight in April."* Makhachev has
+  named Prates the most deserving next 170 challenger; Prates has cooled a Michael Morales booking. **NOTHING IS
+  SIGNED** — published as such. Also new: Dana White hit back at **Eddie Hearn** over the Fury–Joshua suit claim.
+- MMA — Sacramento re-verified: **Sat Aug 22, UFC Fight Night 285, Golden 1 Center**, prelims **5 PM ET / 2 PM PT**,
+  main card **8 PM ET / 5 PM PT**, Paramount+; **Hernandez vs Rodrigues** at 185. Odds this run: **Hernandez −166 to
+  −176 / Rodrigues +140 to +147**, opened around **−167/+120**. Rodrigues rendered **No. 10** by this run's fight-week
+  odds coverage (vs No. 11 and No. 12 in earlier sourcing) — No. 10 printed WITH the disagreement flagged.
+  Countdown target UNCHANGED at 2026-08-22T20:00:00-04:00.
+- ⚠ **"BONFIM VS. BRADY ON AUG 18" TRAP RE-REJECTED — SIXTH RUN RUNNING.** A UFC schedule summary again asserted
+  "UFC Fight Night: Bonfim vs. Brady is scheduled for August 18, 2026 at Meta APEX." The Aug 18 Meta APEX slot was
+  **DWCS Season 10 Week 2**, now confirmed by its own results. Trap grep = 0.
+- MMA CHAMPIONS re-cross-checked against **ESPN's champions page THIS RUN** — six men's belts explicitly returned and
+  ALL MATCH the standing block: HW **Aspinall** (Jun 21 2025), LHW **Ulberg** (Apr 11 2026, KO1 Procházka), MW
+  **Strickland** (May 9 2026, SD Chimaev), WW **Makhachev** (Nov 15 2025, UD Della Maddalena, **1 defence** — UFC 330),
+  LW **Gaethje** (Jun 14 2026, TKO4 Topuria), FW **Volkanovski** (Apr 12 2025, UD Lopes, 1 def). BW Yan, FLW Joshua Van
+  and the women's belts rest on the standing block. Champions **11/11** rows, **0 Vacant cells**.
+- VALIDATION (programmatic, this run): 4 pages HTMLParser-balanced **0 unclosed / 0 errors**; 5-tab nav + stamp/fresh
+  IDs on all 4 with exactly **1 active tab each**; .tldr on all three briefings with the correct per-page label,
+  absent from index by design; **8/8 TradingView widget JSON blocks parse**; ticker tape retains SPXUSD + NSXUSD +
+  DJI + USOIL + US10Y; **Chart of the Day = NASDAQ:MRNA**; **11/11 KEV countdowns** class AND label correct against
+  today's date; Patch Priority and KEV agree (Ray Aug 20, batch Aug 21); scorecard arithmetic **3/3 exact** (level and
+  percent); champions **11/11 / 0 Vacant**; "After-Hours" = 0 (correct pre-4pm). Trap greps CLEAN ×0: Cody Salkilld /
+  Shamil Yakhyaev / Abdul-Rakhman / MacKenzie / Thainara Silva / pay-per-view / Bonfim vs. Brady / Joshua Vance /
+  unification / "Pereira (205)" / 2.87 / 32.4% / 11.3% / Paylocity / Wolfspeed / "4.9 million people" / ">Vacant<" /
+  7,785.76 / 53,732.41 / 26,729.16. **New tags 0/2/9/1** (index/cyber/ws/mma) — the Wall Street count is high because
+  this is the first run of a NEW SESSION whose lead, movers and drivers are all genuinely new versus the Tuesday
+  1:10pm snapshot.
