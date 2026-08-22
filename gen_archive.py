@@ -1,79 +1,73 @@
-import os, re, glob, html
-from datetime import datetime
-root="."
-files=glob.glob(os.path.join(root,"archive","*.html"))
-pat=re.compile(r'^(cyber|wallstreet|mma)-(\d{4})-(\d{2})-(\d{2})-(\d{2})(\d{2})\.html$')
-secmap={"cyber":("The Cyber Wire","#22d3a8"),"wallstreet":("The Closing Bell","#e8c766"),"mma":("The Octagon","#ff6a4d")}
-data={}  # date -> hhmm -> {section:filename}
-for f in files:
-    b=os.path.basename(f); m=pat.match(b)
+# -*- coding: utf-8 -*-
+import os, re, sys
+sys.path.insert(0,'/sessions/modest-elegant-johnson/build')
+from common import BASE_CSS, STAMP_JS, meta_row, nav
+
+SEC = {'cyber':'The Cyber Wire','wallstreet':'The Closing Bell','mma':'The Octagon'}
+ORDER = ['cyber','wallstreet','mma']
+pat = re.compile(r'^(cyber|wallstreet|mma)-(\d{4}-\d{2}-\d{2})-(\d{4})\.html$')
+
+snaps = {}
+for f in os.listdir('archive'):
+    m = pat.match(f)
     if not m: continue
-    sec,Y,Mo,D2,H,Mi=m.groups()
-    date=f"{Y}-{Mo}-{D2}"; hhmm=H+Mi
-    data.setdefault(date,{}).setdefault(hhmm,{})[sec]=b
-def fmt_time(hhmm):
-    h=int(hhmm[:2]); mi=hhmm[2:]; ap="AM" if h<12 else "PM"; h12=h%12 or 12
-    return f"{h12}:{mi} {ap} ET"
-def fmt_date(d):
-    return datetime.strptime(d,"%Y-%m-%d").strftime("%A, %B %-d, %Y")
-dates=sorted(data.keys(),reverse=True)
-rows=[]
-for d in dates:
-    rows.append(f'<div class="dayhead">{fmt_date(d)}</div>')
-    rows.append('<div class="daypanel">')
-    for hhmm in sorted(data[d].keys(),reverse=True):
-        secs=data[d][hhmm]
-        links=[]
-        for sec in ("cyber","wallstreet","mma"):
-            if sec in secs:
-                nm,col=secmap[sec]
-                links.append(f'<a class="slink" style="color:{col};border-color:{col}55" href="archive/{secs[sec]}">{nm}</a>')
-            else:
-                nm,col=secmap[sec]
-                links.append(f'<span class="slink off">{nm}</span>')
-        rows.append(f'<div class="trow"><span class="ttime">{fmt_time(hhmm)}</span><span class="tlinks">{"".join(links)}</span></div>')
-    rows.append('</div>')
-body="\n".join(rows)
-total=sum(len(v) for v in data.values())
-tpl=f'''<!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Archive — Daily Briefings</title>
-<style>
-:root{{--bg:#0a0b0d;--panel:#14161a;--line:#252a31;--text:#e9edf2;--muted:#8b95a3;--mono:'SF Mono',ui-monospace,Menlo,Consolas,monospace}}
-*{{box-sizing:border-box}}
-body{{margin:0;background:radial-gradient(1200px 520px at 50% -240px,#161a20 0,var(--bg) 60%);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.55}}
-.wrap{{max-width:1000px;margin:0 auto;padding:24px 18px 60px}}
-.masthead{{text-align:center;padding:10px 0 2px}}
-.masthead h1{{font-family:Georgia,serif;font-size:34px;margin:0}}
-.masthead .sub{{color:var(--muted);font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;margin-top:8px}}
-nav.tabs{{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:16px 0 22px}}
-.tab{{font-family:var(--mono);font-size:12.5px;text-decoration:none;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:9px 13px;transition:.15s}}
-.tab:hover{{color:var(--text);transform:translateY(-1px)}}
-.tab.active{{color:var(--text);border-color:#3a424d}}
-.note{{color:var(--muted);font-size:12px;font-style:italic;text-align:center;margin-bottom:20px}}
-.dayhead{{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:22px 0 8px}}
-.daypanel{{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}}
-.trow{{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:11px 15px;border-bottom:1px solid var(--line)}}
-.trow:last-child{{border-bottom:0}}
-.ttime{{font-family:var(--mono);font-size:12.5px;color:var(--text);min-width:92px}}
-.tlinks{{display:flex;flex-wrap:wrap;gap:8px}}
-.slink{{font-family:var(--mono);font-size:11.5px;text-decoration:none;border:1px solid var(--line);border-radius:8px;padding:4px 9px;transition:.15s}}
-.slink:hover{{transform:translateY(-1px)}}
-.slink.off{{color:#4d545e;border-color:var(--line);opacity:.5}}
-.foot{{margin-top:28px;color:var(--muted);font-size:12px;text-align:center}}
-</style></head>
-<body><div class="wrap">
-<div class="masthead"><h1>🗄 Archive</h1><div class="sub">Point-in-time briefing snapshots</div></div>
-<nav class="tabs">
-<a href="index.html" class="tab">★ Front Page</a>
-<a href="cyber-briefing.html" class="tab">⛨ The Cyber Wire</a>
-<a href="wallstreet-briefing.html" class="tab">▲ The Closing Bell</a>
-<a href="mma-briefing.html" class="tab">⊘ The Octagon</a>
-<a href="archive.html" class="tab active">🗄 Archive</a>
-</nav>
-<div class="note">Each snapshot is a point-in-time capture of a briefing as it was published; live widgets and countdowns are not preserved. {total} editions across {len(dates)} days.</div>
-{body}
-<div class="foot">Snapshots are retained for 21 days.</div>
-</div></body></html>'''
-open(os.path.join(root,"archive.html"),"w").write(tpl)
-print("archive.html written:",os.path.getsize(os.path.join(root,"archive.html")),"bytes;",total,"editions across",len(dates),"days")
+    sec, date, hhmm = m.groups()
+    snaps.setdefault(date, {}).setdefault(hhmm, {})[sec] = f
+
+MON = ['January','February','March','April','May','June','July','August','September','October','November','December']
+def prettydate(d):
+    y,m,dd = [int(x) for x in d.split('-')]
+    import datetime
+    wd = datetime.date(y,m,dd).strftime('%A')
+    return "%s, %s %d, %d" % (wd, MON[m-1], dd, y)
+
+def prettytime(h):
+    hh, mm = int(h[:2]), h[2:]
+    ap = 'AM' if hh < 12 else 'PM'
+    h12 = hh % 12 or 12
+    return "%d:%s %s ET" % (h12, mm, ap)
+
+CSS = """
+.day{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+ color:#8fa0b0;margin:28px 0 10px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+.arow{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;padding:9px 13px;
+ background:var(--panel);border:1px solid var(--line);border-radius:10px;margin-bottom:8px}
+.arow .t{font-family:var(--mono);font-size:12.5px;color:#e8edf2;min-width:96px}
+.arow a{font-size:13.6px;text-decoration:none;color:#8fa0b0;border:1px solid var(--line);
+ border-radius:7px;padding:3px 10px;transition:.15s}
+.arow a:hover{color:#e8edf2;border-color:#3a4652}
+.arow a.cyber:hover{color:#22d3a8}.arow a.wallstreet:hover{color:#e8c766}.arow a.mma:hover{color:#ff8a5c}
+"""
+
+H = ['<!DOCTYPE html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
+     '<meta name="viewport" content="width=device-width,initial-scale=1">\n'
+     '<title>Archive — Daily Briefings</title>\n<style>%s%s</style>\n</head>\n<body>\n<div class="wrap">\n' % (BASE_CSS, CSS)]
+H.append('<div class="masthead">\n<h1>Archive</h1>\n'
+         '<p class="tag">Point-in-time snapshots of every edition, newest first</p>\n%s\n</div>' % meta_row())
+H.append('<div class="freshline" id="freshline">&nbsp;</div>')
+H.append(nav("archive.html", "#8fa0b0"))
+H.append('<div class="panel" style="margin-top:4px"><p style="margin:0;font-size:14.5px;color:#c6d2dd">'
+         'Each entry below is the page exactly as it was published at that moment. Snapshots are frozen: '
+         'the live data widgets on the markets page are not present, and figures reflect what was verified at '
+         'the time of that run, not now. Snapshots older than 21 days are pruned automatically.</p></div>')
+
+total = 0
+for date in sorted(snaps.keys(), reverse=True):
+    H.append('<div class="day">%s</div>' % prettydate(date))
+    for hhmm in sorted(snaps[date].keys(), reverse=True):
+        row = ['<div class="arow"><span class="t">%s</span>' % prettytime(hhmm)]
+        for sec in ORDER:
+            f = snaps[date][hhmm].get(sec)
+            if f:
+                total += 1
+                row.append('<a class="%s" href="archive/%s">%s</a>' % (sec, f, SEC[sec]))
+        row.append('</div>')
+        H.append("".join(row))
+
+H.append('<footer>\n<div class="lab">Note</div>\n<ul>\n<li>%d snapshots indexed across %d days. This page is regenerated from the archive directory on every run.</li>\n</ul>\n' % (total, len(snaps)))
+H.append('<p class="disc">Archived editions are historical records and are not updated after publication.</p>\n</footer>\n')
+H.append(STAMP_JS)
+H.append('\n</div>\n</body>\n</html>\n')
+
+open('archive.html','w').write("\n".join(H))
+print("archive.html:", total, "snapshots,", len(snaps), "days")

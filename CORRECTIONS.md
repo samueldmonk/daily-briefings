@@ -8938,3 +8938,130 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   (correct — weekend, with an on-page note). Trap greps CLEAN ×0: Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman /
   MacKenzie / Bonfim vs. Brady / Joshua Vance / "Pereira (205)" / pay-per-view / ">Vacant<" / "former champion" /
   "title challenger" / stale BW-Dvalishvili and FLW-Pantoja champion cells.
+
+## Added 2026-08-22 (Saturday ~5:46pm ET — AFTERNOON EDITION; second run of Saturday, ~27 min after the 5:19pm/1719 snapshot; markets CLOSED for the weekend; research ~5:35–5:45pm)
+- CLOCK: TZ date = Sat Aug 22 17:35 EDT at run start; archive stamp 2026-08-22-1746. Edition bucket **Afternoon** (h=17).
+  Prior archived snapshot is 2026-08-22-1719 (same day), so "New" tags were applied only to items genuinely absent from it.
+- ⚠ **CORRECTION TO THE 5:19pm ENTRY — UFC SACRAMENTO CO-MAIN WAS WRONG.** That entry said "Co-main **Reinier de Ridder
+  (−400) vs Roman Dolidze (+300)** at 205." The co-main event is **Serghei Spivac (18-6, Moldova, No. 6 HW) vs Vitor Petrino
+  (14-2, Brazil)** at **HEAVYWEIGHT**, confirmed this run by UFC.com's own card order, FIGHTMAG, FightBook MMA and Yahoo
+  Sports/MMA Fighting. De Ridder vs Dolidze is the **THIRD** bout on the main card, at light heavyweight. Do not regress.
+- ⚠ **SACRAMENTO RANKINGS DISPUTE RESOLVED — USE UFC.COM.** The 5:19pm entry printed both "No. 7 / No. 10" (Hard Rock Bet)
+  and "No. 6 / No. 11" (fight-week coverage) without picking. **UFC.com's official event page this run shows #6 Hernandez
+  vs #11 Rodrigues.** That is now the published figure; the 7/10 rendering is superseded.
+- MMA — **UFC SACRAMENTO ODDS NOW TAKEN FROM UFC.COM** (the promotion's own board), which differs from the sportsbook lines
+  the prior run printed: **Hernandez −165 / Rodrigues +140** (prior run had −185/+150 Hard Rock, −198/+164 DraftKings,
+  one book to −225/+185). Also from UFC.com: **de Ridder −395 / Dolidze +310** (prior run had −400/+300), **Spivac +130 /
+  Petrino −155**, **Mederos +225 / Jones −278**, **Wint −1000 / Chatman +650**.
+- ⚠ **NO UFC SACRAMENTO RESULTS PUBLISHED — DELIBERATE, DO NOT "FIX" THIS BY TRUSTING SEARCH SUMMARIES.** At ~5:45pm ET,
+  with prelims 45 min in, THREE primary/live sources fetched this run — **UFC.com** (every bout "LIVE NOW", Round/Time/Method
+  blank), **Sherdog's play-by-play** (every "The Official Result" heading empty) and **FightBook MMA** ("Result: TBD" on all
+  13 bouts) — showed NO results. Meanwhile two WebSearch *summaries* asserted winners (Dyer TKO 1:42 R3 over Reed; and a
+  fuller list: Douglas def. Emmers, Gaziev def. Nzechukwu, Haqparast def. Padilla, Young def. Dorsainvil, McVey def. Schultz)
+  — one of those summaries also mis-dated the event to Aug 21. Because no primary source corroborated any of it, NOTHING was
+  published and the page states why. Treat un-corroborated search-summary fight results as unreliable.
+- MMA NEW — **NEXT CARD AFTER TONIGHT VERIFIED FROM UFC.COM: UFC Fight Night 286 "Nurmagomedov vs Song", Sat Aug 29,
+  Oriental Sports Center, Pudong District, Shanghai, China.** Prelims **3:00 AM ET**, main card **6:00 AM ET**, Paramount+.
+  Odds (UFC.com): **Umar Nurmagomedov −450 / Song Yadong +350**; rankings **#3 vs #6** at bantamweight. Also on the card:
+  **Yan Xiaonan (#4) vs Denise Gomes (#14)**, Aoriqileng vs Kai Asakura, **Alex Perez (#11) vs Sumudaerji (#11)**,
+  Liu Ce vs Junior Tafa, Bilal Hasan vs Nilson Rojas. No odds posted for those bouts — none printed.
+- MMA NEW — Sherdog's calendar this run also lists **Road to UFC Season 5: Shanghai Semifinals (Aug 28)** and
+  **UFC Fight Night 287: Hooker vs Parnasse (Sep 5)**. The Sep 5 card is published with NO venue and NO odds — none stated.
+  Noche UFC 4 = **UFC Fight Night 288**, Sep 12 (Sherdog numbering, consistent with the standing Glendale AZ details).
+- MMA NEW — Prospect Watch adds **Anthony Wint**, sourced to UFC.com's own feature "Anthony Wint Has Arrived": beat
+  **Matt Adams** on **Dana White's Contender Series Season 10, Week 1 at the Meta APEX, Aug 11 2026**; main-card slot in
+  Sacramento vs Terrance Chatman at **−1000**. Szabova (10-0, debut reportedly Oct 31 vs Tainara Lisboa) and Blaydes
+  (new **eight-fight** deal) re-confirmed this run via Bloody Elbow (Aug 22 / Aug 21).
+- MMA — Around the Sport rebuilt from **Sherdog's news index as displayed this run** (Jon Jones weighing a return after a
+  Ngannou callout; Pantoja on how the Joshua Van loss is remembered; Ruffy calling Tsarukyan his "toughest challenger" ahead
+  of UFC 331; Pimblett on Tsarukyan vs the Topuria beef; Daniel Marcos on his release after a 5-1 run). Each is framed as a
+  REPORT of what was said, not as a booking. Rankings movement from Sherdog's ranking headlines: **Makhachev stays No. 1
+  divisionally and P4P after UFC 330; Mackenzie Dern moves up in the women's P4P list.**
+- MMA CHAMPIONS — cross-checked again vs **ESPN's champions page this run**; the six men's belts returned (Aspinall, Ulberg,
+  Strickland, Makhachev, Gaethje, Volkanovski) ALL MATCH the standing block. Board **11/11 rows, 0 Vacant**. No UFC event has
+  completed since UFC 330 (Aug 15), so nothing has changed.
+- MARKETS — **WEEKEND FRAMING RETAINED.** Markets closed; the page leads with Friday Aug 21's official close and says so; no
+  intraday figure presented as current; no as-of time in the lead headline.
+- MARKETS — **DOW CLOSE DISCREPANCY RESOLVED IN FAVOUR OF 53,277.** Yahoo Finance's live closing strip fetched this run reads
+  **Dow 53,277.00 +517.80 +0.98%**, and CNBC's Aug 21 coverage reads **53,277.01 +517.80 +0.98%** — two independent sources
+  agreeing to the cent. **Trading Economics' ~53,315 / +555 / +1.05% is an OUTLIER and is NOT used**; the page says so.
+  The one-cent Yahoo-vs-AP/CNBC variance on the Dow (53,277.00 vs .01) and Nasdaq (26,180.46 vs 26,180.45) is FLAGGED on the
+  page rather than silently picked. Scorecard arithmetic re-validated programmatically **4/4 exact** on level and percent.
+- MARKETS — **LEAD REFRAMED** around the week rather than Bessent's Thursday buyback headline: stocks rose Friday (Dow ~+1%,
+  S&P and Nasdaq +0.4% each) but **all major indexes posted WEEKLY LOSSES** after a bond sell-off; Yahoo credits a report that
+  **US business activity grew at its fastest pace in more than four years**; **bitcoin reached $77,000 for its BEST WEEK IN
+  TWO YEARS** (+22% on the week per CNBC). Bessent quote used verbatim from Yahoo/CNBC: *"Part of it is signaling here to show
+  that we believe yields don't reflect the underlying fundamentals."* Buyback framing corrected to **"beyond $4 billion per
+  issue"** (Yahoo's wording) — the 5:19pm entry's "$2B → at least $4B" doubling is the Wednesday action, not Thursday's.
+- MARKETS NEW — **ON THE RADAR NOW LEADS WITH MONDAY:** Bessent holds a **press conference Monday** to unveil the US plan to
+  economically isolate Iran; Trump earlier threatened "TREMENDOUS Economic Consequences" for any country trading with Iran,
+  focusing attention on China. **Jackson Hole runs Aug 27–29**, Warsh's first as Chair, with the **keynote Friday Aug 28**.
+  **Nvidia Q2 earnings next week**; **Marvell earnings Aug 27**.
+- MARKETS — **FED FUNDS VERIFIED THIS RUN: 3.50%–3.75%**, held at the **July 29** FOMC on a **9–3 vote** with three regional
+  bank presidents dissenting **in favour of a HIKE**; unchanged since Dec 2025; **no FOMC meeting in August**. 10-yr ≈4.7%,
+  30-yr ≈5.25% (Trading Economics, attributed). **2-year yield NOT published** — no source this run stated a Friday level,
+  and the table says so explicitly rather than borrowing one.
+- MARKETS — commodity/crypto reads taken from **Yahoo's live closing strip fetched this run**: WTI (Sep 26) **87.06 +0.26%**,
+  gold **4,680.60 +2.39%**, **VIX 15.13 −5.50%**, **bitcoin 77,412.24 −0.11%** at edition time (weekend trading).
+- MARKETS — **CHART OF THE DAY CHANGED TO NASDAQ:HOOD** (was MRNA). Rationale: Robinhood's move is corroborated by a source
+  fetched THIS run (CNBC: "jumping almost 14%") and is the cleanest expression of the week's dominant trade. TheStreet's
+  +11.1% for the same session is ALSO printed as a differing window; neither asserted. Coinbase printed as **+8% (CNBC)** with
+  TheStreet's +8.5% noted. MRNA **+17%** retained as a mover card, attributed to TheStreet. Ticker tape = SPXUSD + NSXUSD +
+  DJI + HOOD + COIN + MRNA + NVDA + APP + USOIL + US10Y (three indices, oil and 10Y retained per spec).
+- ⚠ **"WALMART HAD ITS WORST DAY IN FOUR YEARS" WAS DROPPED.** A CNBC snippet stated it but did not pin the session (Thu Aug 20
+  vs Fri Aug 21). Rather than guess a date, it was omitted entirely. Sector percentages from blended trackers were again NOT
+  published, for the same reason as the 5:19pm run.
+- ⚠ **NO AFTER-HOURS MOVERS SECTION** — Saturday, no post-close session in this run's window, no sourced move. A visible note
+  explains the omission. Rule re-applied.
+- CYBER — **CISCO COUNT CORRECTED UPWARD: NINE flaws, FIVE at CVSS 10.0.** The 5:19pm entry said Cisco "published Aug 21
+  updates for four flaws." THN's Aug 21 story is headlined "Cisco Patches **Nine** Crosswork and Secure Workload Flaws, **Five**
+  Scoring CVSS 10.0": **CVE-2026-20030 (10.0)** SQL injection, **CVE-2026-20357 (10.0)** missing authentication for a critical
+  function, **CVE-2026-20358 (10.0)** external control of file system, **CVE-2026-20359 (9.9)** insufficiently protected
+  credentials — all affecting **Crosswork Data Gateway / Network Controller / Planning 7.2.1 and earlier, fixed in 7.2.1-SP**,
+  regardless of device configuration — plus **five further flaws in Secure Workload including the SaaS offering**.
+- CYBER — **TOP STORY UNCHANGED (GitLab CVE-2026-19478, CVSS 9.4, exploited in the wild)** — still the newest actively-exploited
+  item; all details re-confirmed against THN's article this run.
+- CYBER NEW — **THREAT ACTOR SPOTLIGHT ROTATED to UNC6293 / UNC7005 / UNC5976** (Google Threat Intelligence Group, Aug 20;
+  researchers **Gabby Roncone** and **Wesley Shields**): three suspected Russian espionage clusters abusing **legitimate
+  authentication flows — Google OAuth and WhatsApp device linking** — rather than software flaws; targets are academia,
+  aerospace & defence, governments and think tanks across Europe plus US academia/think tanks. **UNC6293** is assessed a
+  sub-cluster of **Ice Relic (formerly APT29 / Cozy Bear / Midnight Blizzard)**. ⚠ The page states these remain **UNC
+  (uncategorised)** designations — do NOT upgrade to a named-government attribution. (Prior spotlight = CameraSwarm operator.)
+- CYBER NEW — Breach/incident deck rebuilt from THN items fetched this run: **NSA/CISA/FBI/DOE/EPA joint advisory (Aug 19) on
+  AI-generated exploit scripts targeting Siemens S7 PLCs** in US critical infrastructure (actors use **Censys/ZoomEye**;
+  targets incl. critical manufacturing, energy, water; scope assessed broader than Siemens); **Rust supply chain** —
+  arrayref 0.3.10 / internment 0.8.7 / append-only-vec 0.1.9 published Aug 20 from one compromised owner account, removed in
+  **86–107 minutes**, build-script payload, **no CVE, no patched version**, pin arrayref ≤0.3.9, crates carry **245M downloads**;
+  **14 trojanized npm packages → RedC2 4.0 Linux implant** (TrendAI/Trend Micro, Aug 21, transitive import is enough);
+  **Microsoft Defender BTR.sys weaponization** (Check Point, **Jiří Vinopal**, Black Hat USA 2026 + DEF CON 34, PoC BTR_CLI
+  published Aug 20; Windows 7 → Windows 11 25H2; cannot be blocklisted without breaking Defender; **no evidence of real-world
+  use** — say so); **first documented Android car head-unit malware** (Kaspersky, **Dmitry Kalinin**, DoFun firmware updaters,
+  attributed high-confidence to **MoYu Group** / BADBOX).
+- CYBER — Vulnerability Watch additions this run: **Zimbra CVE-2026-73570 (CVSS 8.9), EXPLOITED** per CERT Polska; ZCS before
+  **10.1.20** with zimbra-snmp installed and SNMP notifications enabled; patched last month. **Citrix NetScaler** critical auth
+  bypass (Aug 20): ADC/Gateway **14.1 before 14.1-73.32**, **13.1 before 13.1-63.21** — **no CVSS printed**, none stated in the
+  fetched source. **isolated-vm GHSA-864f-rcv7-6rh4**, ≤7.0.0, **no CVE assigned**, patched **6.2.0 / 7.0.1**.
+- ⚠ **ENTRA ID CVE-2026-69836 (CVSS 10.0) REMAINS *NOT* EXPLOITED** — re-verified against THN's updated article this run
+  ("Microsoft corrected the 'Exploited' status to 'No' on August 21, 2026 … 'this vulnerability was not exploited in the wild'").
+  Published as max-severity but NON-exploited. Any future edition calling it an exploited zero-day is WRONG.
+- CYBER — **PATCH PRIORITY CHANGED TO CVE-2026-59310 (VMware vCenter, CVSS 9.8, exploited, suspected China-nexus APT), KEV due
+  Aug 21 = NOW 1 DAY PAST DUE** — a passed deadline outranks an upcoming one. **CVE-2026-72529 (TrueConf Server), due Aug 23 =
+  TOMORROW**, is named in the same box as the nearest deadline still ahead. Both appear identically in the KEV section.
+- CYBER — KEV list **10 rows**, countdowns recomputed against today and validated programmatically **7/7 correct on both label
+  AND colour class** for the rows carrying explicit due dates: Aug 23 (1 day left, soon), Sep 2 (11 days — MLflow CVE-2026-64849,
+  added Aug 19), Sep 3 (12 days — TrueConf CVE-2026-72530), and four × Aug 21 **1 DAY PAST DUE** (33824 IKE / 55040 SharePoint /
+  59310 vCenter / 65400 macOS). Three Aug 11 rows (20349 Cisco ASA-FTD / 68820 WinSock / 72898 Metabase) shown as past due
+  **without an explicit date**, because no source this run restated their individual deadlines — the page says so.
+  **Past-due count = 7**; threat-level banner, stat strip and note all state 7 and match. CISA's Aug 18 additions being due
+  **Aug 21** was independently re-confirmed this run.
+- CYBER — **BREACH-TRACKER ITEMS REJECTED AGAIN.** Weekend aggregator claims were not corroborated by any primary source or
+  victim statement this run. No victim counts or data categories published; a visible note states they were withheld and why.
+- VALIDATION (programmatic, this run): 5 pages HTMLParser-balanced **0 unclosed / 0 errors**; 5-tab nav + stamp/fresh IDs on
+  all, exactly **1 active tab each** (index's extra Archive link sits in body copy, outside <nav> — validator scoped to the nav
+  block); .tldr on all three briefings with the correct per-page label (The Wire / The Tape / Tale of the Tape), absent from
+  index by design; **8/8 TradingView widget JSON blocks parse**; ticker retains SPXUSD + NSXUSD + DJI + USOIL + US10Y;
+  **Chart of the Day = NASDAQ:HOOD**; **7/7 KEV countdowns** correct on label AND colour, 10 rows, 7 past due; Patch Priority
+  and KEV agree; scorecard arithmetic **4/4 exact**; champions **11/11 rows, 0 Vacant**; After-Hours cards = 0 (correct —
+  weekend, with an on-page note). Trap greps CLEAN ×0: Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman / MacKenzie /
+  Joshua Vance / "Pereira (205)" / pay-per-view / "former champion" / "title challenger" / stale MW-Chimaev, FLW-Pantoja,
+  BW-Dvalishvili and LW-Topuria champion cells.
