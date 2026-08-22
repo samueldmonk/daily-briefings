@@ -9,12 +9,12 @@ Three belts were published WRONG for weeks (Pereira at LHW, Chimaev at MW, feath
 - **Heavyweight:** Tom Aspinall (undisputed, inherited Jun 21 2025). **Interim HW:** Ciryl Gane (KO2 Pereira, Freedom 250, Jun 14 2026).
 - **Light Heavyweight:** CARLOS ULBERG — won the VACANT belt KO1 over Jiří Procházka at UFC 327 (Miami, Apr 11 2026); had ACL surgery after. Alex PEREIRA is NO LONGER LHW champ — he vacated to campaign at heavyweight and LOST the interim-HW bid to Gane. Do NOT list Pereira as LHW champ.
 - **Middleweight:** SEAN STRICKLAND — split-decision upset of Khamzat Chimaev at UFC 328 (Newark, May 9 2026); two-time champ. Khamzat CHIMAEV is NO LONGER MW champ. Do NOT list Chimaev as MW champ.
-- **Welterweight:** Islam Makhachev (UD over Jack Della Maddalena, UFC 322, Nov 15 2025; two-division champ, vacated LW).
+- **Welterweight:** Islam Makhachev (UD over Jack Della Maddalena, UFC 322, Nov 15 2025; two-division champ, vacated LW). **1 DEFENCE** — UD Ian Machado Garry, UFC 330, Aug 15 2026 (17th straight UFC win, a record for consecutive Octagon victories). [updated 2026-08-22]
 - **Lightweight:** Justin Gaethje (TKO4 Topuria, Freedom 250, Jun 14 2026).
 - **Featherweight:** ALEXANDER VOLKANOVSKI — NOT vacant. Reclaimed the belt Topuria vacated (UD over Diego Lopes, UFC 314, Apr 12 2025) and DEFENDED it (UD over Lopes, UFC 325, Jan 31 2026; ties José Aldo at 8 FW title defenses). Movsar Evloev is the #1 contender (beat Lerone Murphy, UFC London, Mar 2026); title fight targeted late summer. Do NOT list featherweight as vacant.
 - **Bantamweight:** Petr Yan (UD over Merab Dvalishvili, UFC 323, Dec 6 2025).
 - **Flyweight:** Joshua Van (TKO1 Alexandre Pantoja, UFC 323, Dec 6 2025; DEFENDED TKO5 Tatsuro Taira, UFC 328, May 9 2026 — 1 defense).
-- **Women's Flyweight:** Valentina Shevchenko. **Women's Bantamweight:** Kayla Harrison (Sub2 Julianna Peña, UFC 316, Jun 7 2025; **0 defenses** — the scheduled UFC 324 defense vs Amanda Nunes on Jan 24 2026 was CANCELED after Harrison withdrew for neck surgery/herniated-disc repair; ESPN champions page lists 0 defenses; a Nunes bout is now targeted for Sept but is unconfirmed. Do NOT credit Harrison with a Nunes defense. Verified 2026-07-03 vs ESPN + Bloody Elbow/MMA Weekly/Heavy). **Women's Strawweight:** Mackenzie Dern (UD over Virna Jandiroba, UFC 321, Oct 25 2025).
+- **Women's Flyweight:** Valentina Shevchenko. **Women's Bantamweight:** Kayla Harrison (Sub2 Julianna Peña, UFC 316, Jun 7 2025; **0 defenses** — the scheduled UFC 324 defense vs Amanda Nunes on Jan 24 2026 was CANCELED after Harrison withdrew for neck surgery/herniated-disc repair; ESPN champions page lists 0 defenses; a Nunes bout is now targeted for Sept but is unconfirmed. Do NOT credit Harrison with a Nunes defense. Verified 2026-07-03 vs ESPN + Bloody Elbow/MMA Weekly/Heavy). **Women's Strawweight:** Mackenzie Dern (UD over Virna Jandiroba, UFC 321, Oct 25 2025). **1 DEFENCE** — UD Gillian Robertson, UFC 330, Aug 15 2026 (was 0). [updated 2026-08-22]
 Sources: ESPN "Current and all-time UFC champions" (living article, reflects the Jun 14 result); UFC.com UFC 327 & UFC 328 official pages; Al Jazeera (UFC 325).
 NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Khamzat Chimaev", "Featherweight VACANT", or "Champions board verified" with the OLD names is OUTDATED — THIS BLOCK WINS.
 
@@ -8822,3 +8822,119 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   Shamil Yakhyaev / Abdul-Rakhman / MacKenzie Dern / pay-per-view / Bonfim vs. Brady / Joshua Vance / unification /
   "Pereira (205)" / 7,785.76 / 53,732.41 / 26,729.16 / "4.9 million people" / ">Vacant<".
   **New tags 0/1/2/0** (index/cyber/wallstreet/mma) — deliberately low because the prior snapshot is only 12 minutes old.
+
+## Added 2026-08-22 (Saturday ~5:19pm ET — AFTERNOON EDITION; first run since Wed Aug 19 ~11:11am, ~3-day gap; markets CLOSED for the weekend; research ~5:05–5:18pm)
+- CLOCK: TZ date = Sat Aug 22 17:05 EDT at run start; archive stamp 2026-08-22-1719. Edition bucket **Afternoon** (h=17).
+  Prior archived snapshot is 2026-08-19-1111, so essentially EVERYTHING this run is genuinely new; "New" tags used accordingly.
+- MARKETS — **WEEKEND FRAMING.** U.S. markets are closed. The page leads with Friday Aug 21's OFFICIAL CLOSE and says so
+  explicitly; no intraday figure is presented as current, and no as-of time is put in the lead headline (markets shut).
+- MARKETS — **FRI AUG 21 2026 OFFICIAL CLOSES (AP tally via Yahoo Finance):** S&P 500 **7,674.37 +33.21 (+0.4%)**,
+  Dow **53,277.01 +517.80 (+1%)**, Nasdaq Composite **26,180.45 +113.29 (+0.4%)**, Russell 2000 **3,017.87 +25.44 (+0.9%)**.
+  WEEK: S&P **−111.39 (−1.4%)**, Dow **−455.40 (−0.8%)**, Nasdaq **−548.71 (−2.1%)**, Russell **−50.54 (−1.6%)**.
+  YTD: S&P **+828.87 (+12.1%)**, Dow **+5,213.72 (+10.8%)**, Nasdaq **+2,938.46 (+12.6%)**, Russell **+535.96 (+21.6%)**.
+  Arithmetic re-verified 4/4: implied priors 7,641.16 / 52,759.21 / 26,067.16 / 2,992.43; computed percents 0.43 / 0.98 /
+  0.43 / 0.85 — consistent with the sources' rounded prints. ⚠ Yahoo's own closing strip renders the Nasdaq **26,180.46**
+  (one-cent difference from the AP tally); the discrepancy is FLAGGED ON THE PAGE rather than silently picked.
+- MARKETS — LEAD: **Bessent doubled Treasury long-term debt buybacks from $2B to AT LEAST $4B per operation** and told CNBC
+  it "could be more than the 4 billion per issue"; also discussed yen/peso currency interventions and fiscal consolidation.
+  Rates did not fully cooperate: Trading Economics has the **10-yr at 4.7%** and the **30-yr at ~5.25%**, nearly erasing
+  Wednesday's decline. Capital.com's **Daniela Hathorn** quote used verbatim. AP: Ross Stores' profit beat plus a strong
+  US business-activity report lifted the tape; oil climbed.
+- MARKETS — MOVERS (all TheStreet Aug 21, attributed): **MRNA +17%** (Phase 3, personalized mRNA cancer vaccine with Merck),
+  **HOOD +11.1%**, **COIN +8.5%**, **MRVL −6%** (profit-taking into Aug 27 earnings), **TER −4%** (Baird → Neutral),
+  **APP −2.3%** (Piper Sandler PT $325 from $385), **ROST +8.1% premarket**, **SPCX +1.1% to $135.42 premarket**
+  (319M-share lockup; DZ Bank initiated Sell, $100 PT; debut $135 Jun 12; record $225.64 Jun 16), **META** down on the
+  four-state suit seeking **up to $1.4 trillion**. **Chart of the Day = NASDAQ:MRNA** (largest single-name move).
+  Ticker tape refreshed to MRNA/HOOD/COIN/MRVL/ROST while retaining SPXUSD + NSXUSD + DJI + USOIL + US10Y.
+- MARKETS — **COMMODITY/CRYPTO READS PRINTED AS PAIRS, NOT POINTS.** WTI **$86.75 (−0.09%, TheStreet early)** vs Yahoo's
+  close strip **87.06 (+0.26%)**; gold **$4,637.10 (+1.44%, early)** vs Yahoo **4,680.60 (+2.39%)**; bitcoin
+  **$76,927.41 (+7.04%, early)** vs Yahoo **$77,358.82 (+2.55%)** — different measurement windows, both printed, neither
+  asserted. Brent **$93.64 (−0.15%)**, second straight weekly gain; silver **$69.42 (−1.92%)**; **VIX 15.13 (−5.50%)**.
+- ⚠ **NO AUG 21 END-OF-DAY SECTOR-LEADERSHIP BOARD PUBLISHED.** A search summary offered specific sector percentages
+  (Consumer Non Cyclical +3.64%, Capital Goods −2.40% etc.) that came from a blended tracker page whose "today" could not
+  be pinned to Aug 21, and which CONTRADICTED TheStreet's own Aug 21 note that materials led. Those percentages were
+  DROPPED. The sector note prints only corroborated facts: TheStreet's **341 S&P 500 holdings advancing** with the index
+  +0.78% late morning, anchored by materials/health care/financials; >62% of US holdings advancing at midday; VIX 15.13.
+- ⚠ **NO AFTER-HOURS MOVERS SECTION** despite the run being after 4 PM ET — it is SATURDAY, there was no post-close
+  session in this run's window and no source stated an after-hours move. A visible note explains the omission; nothing
+  was invented to fill the slot. Re-apply this rule on weekends/holidays.
+- MARKETS — "Fed Chair Warsh signalled a rate hike may not be his preferred tool" is printed ONLY with explicit
+  attribution to Trading Economics, in On the Radar. Do not restate it as an unattributed fact.
+- CYBER NEW — **TOP STORY = GITLAB CVE-2026-19478 (CVSS 9.4) EXPLOITED IN THE WILD** (watchTowr via THN, Aug 21):
+  code injection reachable through a **GraphQL directive**; unauthenticated, no user interaction, no unusual config.
+  Affected **CE/EE 18.2 <18.11.11, 19.0 <19.0.8, 19.1 <19.1.6, 19.2 <19.2.4**; fixed **19.2.4 / 19.1.6 / 19.0.8 / 18.11.11**.
+  watchTowr reproduced it "within minutes" and saw exploitation on its honeypots; **Jake Knott** quote on AI compressing
+  disclosure-to-exploitation. Impact beyond defacement: delete entire repositories, **forge merge records**, ban maintainers.
+  Hunt web logs for **@gl_introduced**; mitigation = restrict unauthenticated **/api/graphql** or remove public repo access.
+- CYBER — **PATCH PRIORITY = TrueConf CVE-2026-72529**, KEV-added **Aug 20**, due **Aug 23 = TOMORROW (1 day left)** —
+  the nearest federal deadline. Companion **CVE-2026-72530** due **Sep 3**. Both fixed back in **June 2026** in TrueConf
+  Server **5.3.9 / 5.4.9 / 5.5.5**. ⚠ **NO CVSS printed for either** — no source fetched this run stated one; the page
+  says so explicitly rather than borrowing a number.
+- CYBER — KEV list rebuilt to **10 rows**, countdowns recomputed against today and validated programmatically 7/7 on the
+  rows carrying explicit due dates: Aug 23 (1 day, soon), Sep 2 (11 days, ok — **MLflow CVE-2026-64849**, added Aug 19,
+  14-day window), Sep 3 (12 days, ok), four × Aug 21 **NOW PAST DUE** (33824 / 55040 / 59310 / 65400 — they came due
+  yesterday; the prior edition's "2 days left" is superseded), plus three Aug 11 rows past due (20349 / 68820 / 72898).
+  **Past-due count = 7.** Threat-level banner arithmetic states 7 and matches.
+- ⚠ **ENTRA ID CVE-2026-69836 (CVSS 10.0) IS *NOT* EXPLOITED — DO NOT REGRESS.** Microsoft's bulletin originally marked
+  Exploited = "Yes"; on **Aug 21, 2026**, after The Hacker News contacted the company, Microsoft **corrected it to "No"**
+  and said "this vulnerability was not exploited in the wild." Fully mitigated, no customer action. THN edited its own
+  headline. The CVE is published here as a max-severity but NON-exploited item, in both the card deck and the CVE table.
+  Any future edition that calls this an exploited zero-day is WRONG.
+- CYBER — **CVE-2026-68820 CVSS CONFLICT PRINTED, NOT RESOLVED: 7.0 (Microsoft via THN) vs 5.5 (Tenable Patch Tuesday).**
+  Both shown. Confirmed this run as the WinSock privilege-escalation zero-day exploited by the North Korea-linked
+  **Lazarus Group** in **Operation Dream Job**.
+- CYBER NEW — **THREAT ACTOR SPOTLIGHT = the Operation CameraSwarm operator** (Hunt.io, via THN/BleepingComputer/Security
+  Affairs): **14,530+ Dahua devices** compromised **Jun 17 – Jul 22, 2026** (35 days); reconstructed from a **407 MB**
+  exposed working directory with **2,616 files across 234 subdirectories**; asyncio scanner hit **12,324 unique IPs** on
+  port **37777** (Easy4IP); **CVE-2021-33044 / CVE-2021-33045** auth bypasses planted backdoor accounts on **1,923 cameras**;
+  **283 cameras** reached by serial number alone via Dahua's cloud relay. Victims concentrated in **Ukraine and Russia**.
+  ⚠ Operator described as **Russian-speaking from language artifacts** but **explicitly NOT attributed** to a named actor,
+  a Russian government entity or any known group — the page says so. Do not upgrade this to an attribution.
+- CYBER — vCenter **CVE-2026-59310** (9.8) now carries THN's assessment of a **suspected China-nexus APT**. Cisco published
+  **Aug 21** updates for four flaws across Crosswork Data Gateway / Network Controller / Planning and Secure Workload.
+- ⚠ **BREACH-TRACKER ITEMS REJECTED.** Aug 21 tracker listings (Bajaj Finserv; a claimed Hospital for Sick Children
+  incident; ShinyHunters claims of 21M Questal / 1.1M Alcon records) were NOT corroborated by a primary source this run.
+  No victim counts or data categories published; a visible note states they were withheld and why.
+- MMA — **UFC SACRAMENTO IS TONIGHT AND WAS STILL IN PROGRESS AT PRESS TIME.** UFC Fight Night 285, **Sat Aug 22, Golden 1
+  Center**, prelims **5 PM ET / 2 PM PT** (seven fights), main card **8 PM ET / 5 PM PT**, Paramount+. **NO RESULTS EXIST YET**
+  and the page says so explicitly. Countdown target **2026-08-22T20:00:00-04:00** (unchanged).
+  Odds: **Hernandez −185 / Rodrigues +150 (Hard Rock Bet, Aug 22 1:00 PM ET)**; **−198 / +164 (DraftKings)**; one book as
+  wide as −225 / +185 — all three printed. Co-main **Reinier de Ridder (−400) vs Roman Dolidze (+300)** at 205.
+- ⚠ **SACRAMENTO RANKINGS DISAGREE ACROSS SOURCES — BOTH PRINTED.** Hard Rock Bet's Aug 22 card says **Hernandez No. 7 /
+  Rodrigues No. 10**; other fight-week coverage says **No. 6 / No. 11**. Neither picked; the disagreement is stated.
+- MMA — **LAST EVENT = UFC 330, Sat Aug 15, Xfinity Mobile Arena, Philadelphia** (NOT the Aug 18 DWCS episode, which is a
+  Contender Series card, not a UFC event). Main card per UFC.com: **Makhachev def. Ian Machado Garry, UD 49-46, 49-46,
+  48-47** (welterweight title); **Dern def. Gillian Robertson, UD 49-46, 49-46, 48-47** (W-SW title); **Jalin Turner def.
+  Kauê Fernandes, KO strikes 0:39 R1**; **Dustin Stoltzfus def. Mansur Abdul-Malik, Submission 4:25 R2**; **Esteban
+  Ribovics def. Edson Barboza, TKO strikes 1:32 R2**.
+  ⚠ **UFC.COM CONTRADICTS ITSELF ON THE STOLTZFUS FINISH** — its result heading says **rear-naked choke**, its own recap
+  says **guillotine**. Only "Submission, R2" is asserted; the conflict is flagged on the page. Do not pick a choke.
+  Bonuses: four **$100,000 Performance of the Night** awards — **Dustin Stoltzfus, Charles Johnson, Jeremiah Wells,
+  Jalin Turner** ($400K total, matching the Forbes headline); four further **$25,000** finish bonuses reported for
+  Lucas Fernando, Neil Nagny, Donte Johnson and Esteban Ribovics, printed as reported rather than asserted.
+- MMA — Makhachev's win was his **17th straight UFC victory** and set a **new record for most consecutive Octagon wins**;
+  he is only the **fifth two-division champion** to defend successfully in both divisions. Machado Garry falls to **17-2**.
+  **Edson Barboza retired in the cage**, laying his gloves down after a **16-year UFC career**.
+- MMA NEW — Upcoming: **Noche UFC, Sat Sep 12, Desert Diamond Arena, Glendale AZ** (Yair Rodriguez vs Jean Silva; Manon
+  Fiorot vs Alexa Grasso; Brandon Moreno vs Joseph Morales; Tim Elliott vs Edgar Chairez; **No. 5 Waldo Cortes-Acosta
+  17-3 vs No. 7 Curtis Blaydes 19-6 1NC**; prelims 1 PM ET, main card 5 PM ET, Paramount+). **UFC 331: Van vs. Pantoja 2,
+  Sat Sep 19, Crypto.com Arena, Los Angeles** — 13 fights; co-main **Arman Tsarukyan vs Mauricio Ruffy** over five rounds;
+  also Moicano vs Ortega 2, Patricio Pitbull vs Doo Ho Choi, Vera vs Jourdain, Steveson vs Sharaf, Despaigne vs Tuivasa.
+  **No odds published for Noche or 331** — none stated by any source fetched this run, and the page says so.
+- MMA NEW — Prospects/roster: **Lucia Szabova** signed, undefeated **10-0** two-weight European champion, improved to 10-0
+  on **Aug 1**, debut reportedly **Oct 31 at the Meta Apex vs Tainara Lisboa** (Bloody Elbow, Aug 22). **Curtis Blaydes
+  signed a new EIGHT-FIGHT deal**, first bout Noche UFC Sep 12 (Bloody Elbow, Aug 21).
+- MMA CHAMPIONS — cross-checked vs **ESPN's champions page this run**; the six men's belts returned and ALL MATCH the
+  standing block (HW Aspinall, LHW Ulberg, MW Strickland, WW Makhachev, LW Gaethje, FW Volkanovski). **BOTH UFC 330 title
+  fights went the distance with the champion retaining, so no belt changed hands on Aug 15.** TWO DEFENCE COUNTS UPDATED
+  IN THE STANDING BLOCK: **Makhachev WW = 1 defence** (UD Machado Garry, UFC 330) and **Mackenzie Dern W-SW = 1 defence**
+  (UD Gillian Robertson, UFC 330, Aug 15 2026 — she previously had 0). Board is **11/11 rows, 0 Vacant**.
+- VALIDATION (programmatic, this run): 4 pages HTMLParser-balanced **0 unclosed / 0 errors**; 5-tab nav + stamp/fresh IDs
+  on all 4 with exactly **1 active tab each**; .tldr on all three briefings with the correct per-page label (The Wire /
+  The Tape / Tale of the Tape), absent from index by design; **8/8 TradingView widget JSON blocks parse**; ticker retains
+  SPXUSD + NSXUSD + DJI + USOIL + US10Y; **Chart of the Day = NASDAQ:MRNA**; **7/7 KEV countdowns with explicit due dates**
+  correct on both label AND colour class, 10 KEV rows total, 7 past due; Patch Priority and KEV agree (TrueConf Aug 23);
+  scorecard arithmetic **4/4 exact** on level and percent; champions **11/11 rows, 0 Vacant**; "After-Hours" section = 0
+  (correct — weekend, with an on-page note). Trap greps CLEAN ×0: Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman /
+  MacKenzie / Bonfim vs. Brady / Joshua Vance / "Pereira (205)" / pay-per-view / ">Vacant<" / "former champion" /
+  "title challenger" / stale BW-Dvalishvili and FLW-Pantoja champion cells.
