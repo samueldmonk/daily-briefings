@@ -9065,3 +9065,84 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   weekend, with an on-page note). Trap greps CLEAN ×0: Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman / MacKenzie /
   Joshua Vance / "Pereira (205)" / pay-per-view / "former champion" / "title challenger" / stale MW-Chimaev, FLW-Pantoja,
   BW-Dvalishvili and LW-Topuria champion cells.
+
+## Added 2026-08-22 (Saturday ~6:05pm ET — AFTERNOON EDITION; third run of Saturday, ~19 min after the 5:46pm/1746 snapshot; markets CLOSED for the weekend; research ~6:06–6:20pm)
+- CLOCK: TZ date = Sat Aug 22 18:05 EDT at run start; archive stamp 2026-08-22-1812. Edition bucket **Afternoon** (h=18).
+  Prior archived snapshot is 2026-08-22-1746 (same day), so "New" tags were re-scoped: the five breach cards that were
+  tagged New at 5:46pm (S7 PLCs, Rust crates, npm/RedC2, Defender BTR.sys, Android car malware) had their **New tags
+  STRIPPED** this run because they appear in the prior snapshot. Only the two genuinely new cards carry New.
+- CYBER **MATERIAL UPDATE — TrueConf CVE-2026-72529 NOW HAS A CVSS AND A NAMED ACTOR.** The 5:19pm and 5:46pm entries both
+  recorded "NO CVSS printed for either TrueConf CVE — no source stated one." That gap is now CLOSED: SecurityWeek, SC Media,
+  Security Affairs and BleepingComputer (all via the CISA Aug 20 KEV addition) state **CVSS 9.3**, missing authentication for
+  a critical function, allowing an unprivileged remote attacker to execute arbitrary scripts by invoking an undocumented
+  function over **port 4307/TCP**. Exploited by the **Head Mare** hacktivist group, which **chained it with CVE-2026-72530**
+  (code injection) against on-premises TrueConf instances and **replaced the TrueConf client distribution files** to push
+  **PhantomCore** malware to meeting participants. Due date **Aug 23** re-confirmed; required action falls under **BOD 26-04
+  (risk-based)**, consistent with the standing rule that the old three-week BOD 22-01 heuristic no longer applies.
+  The stale "no CVSS is printed here" note was REMOVED from the Patch Priority box. **CVE-2026-72530 still has NO CVSS** —
+  none stated in any source fetched this run — and the CVE table prints an em-dash rather than borrowing a number.
+- CYBER — **THREAT ACTOR SPOTLIGHT ROTATED TO HEAD MARE** (prior: UNC6293 / UNC7005 / UNC5976). Framed as a **hacktivist
+  group** per the reporting; **no state sponsor is asserted**. The card explains the client-distribution-file swap as a
+  supply-chain pattern executed inside the victim perimeter, which is the stated reason for the unusually short 3-day window.
+- CYBER NEW — **US BANK / LOCKBIT.** The Register (Aug 20), SC Media, Cybernews and CyberSecurityNews: US Bank is
+  investigating LockBit's claim to have breached it and stolen data; LockBit added the bank to its leak site with a
+  **14-day deadline expiring September 3**. The bank confirms awareness and investigation, declined to discuss contact with
+  the extortionists or the sum demanded, and says there is **no current indication of internal system impact or unauthorised
+  network access**. ⚠ **NO victim count, record total or data category published** — none confirmed, and LockBit's claims are
+  unverified. ⚠ A "fourth-party / third-party vendor contractor" framing appears only on the rankiteo aggregator blog and was
+  **NOT published** — not corroborated by a primary source or a US Bancorp statement fetched this run.
+- CYBER NEW — **TRUFFLE SECURITY: 768 LEAKED AWS KEYS STILL LIVE WITH FULL ADMIN** (BleepingComputer, GBHackers, Cybernews).
+  Composition **526 root access keys + 242 IAM user keys** on the AdministratorAccess managed policy. **10,616 key pairs
+  re-validated on Aug 10, 88% still authenticated.** Oldest working credential **17.4 years**; only **25** enumerable keys
+  created in the prior 30 days; of **2,903** keys examined only **398** had a newer credential on the same IAM user, implying
+  **~86% never rotated**. Study window **Aug 2022 – Aug 2026**. Leak sources: public Git histories, Hugging Face datasets,
+  Docker images, package registries, CI/CD logs. Stat strip rebuilt to **7 / 768 / 88% / 5**.
+- CYBER — **TOP STORY UNCHANGED (GitLab CVE-2026-19478, CVSS 9.4, exploited in the wild).** THN's front page fetched this run
+  still shows Aug 21 as its newest publication date; nothing newer or more urgent appeared. **Patch Priority ALSO UNCHANGED**
+  (CVE-2026-59310 vCenter, 1 day past due) per the standing rule that a PASSED deadline outranks an upcoming one; TrueConf is
+  named in the same box as the nearest deadline still ahead. **ENTRA ID CVE-2026-69836 REMAINS *NOT* EXPLOITED** — unchanged.
+- CYBER — KEV list **10 rows, 7 past due**, countdowns recomputed against today and validated programmatically **7/7 correct
+  on both label AND colour class**: Aug 23 (1 day left, soon), Sep 2 (11 days), Sep 3 (12 days), four × Aug 21 (1 day PAST
+  DUE), three Aug 11 rows past due without an explicit restated date. Banner, stat strip and note all state 7 and agree.
+- MMA — **UFC SACRAMENTO STILL HAS NO PUBLISHED RESULTS AT ~6:20pm ET, WITH PRELIMS ~1H15M OLD. DO NOT "FIX" THIS.**
+  Re-checked all three primaries this run: **UFC.com has now published its dedicated "Prelim Results | UFC Sacramento" page**
+  (article:published_time 2026-08-22T17:00:00-0400) **but the page body still carries only fight PREVIEWS** — no winners,
+  methods or times; **Sherdog's play-by-play** shows an empty "The Official Result" heading under all **13** bouts; and
+  **FightBook MMA** reads "Result: TBD" on every line. ⚠ A WebSearch *snippet* attributed to that same UFC.com URL quoted
+  "a step-in knee to the body … gave Jackson McVey his second straight UFC stoppage win" — text that is **NOT present in the
+  fetched page** (search index ahead of the CDN copy). Per the standing rule this was **NOT published**. Two runs in a row have
+  now correctly refused these; treat un-corroborated search-summary fight results as unreliable.
+- MMA — Sherdog's bout list confirms a 13-fight card and adds **Carli Judice (125.5) vs Jeisla Chaves (124.5)** at flyweight,
+  already on the page. ⚠ **CARD-PLACEMENT DISAGREEMENT ON WINT vs CHATMAN:** UFC.com and FightBook MMA place it on the MAIN
+  CARD (as published); Sherdog's ordering puts it among the prelims. Minor, not asserted either way beyond UFC.com's listing.
+  Co-main **Spivac vs Petrino at HEAVYWEIGHT** re-confirmed by Sherdog's weights (257 vs 246) — the 5:46pm correction holds.
+- MMA CHAMPIONS — cross-checked again this run. ESPN's champions page did not return body content on direct fetch, so the
+  six men's belts were verified via a champions search returning **ESPN, FIGHTMAG and UFC Fan Hub**: HW Aspinall, LHW Ulberg
+  (KO1 Procházka, Apr 11 2026), MW Strickland (SD Chimaev, May 9 2026), WW Makhachev (UD Della Maddalena, Nov 15 2025),
+  LW Gaethje (TKO4 Topuria, Jun 14 2026), FW Volkanovski (UD Lopes, Apr 12 2025) — **ALL MATCH the standing block**.
+  **No UFC event has completed since UFC 330 (Aug 15)** and tonight's Sacramento card has **no title fight**, so no belt can
+  have changed. Board **11/11 rows, 0 Vacant**.
+- MARKETS — **WEEKEND FRAMING RETAINED**; Friday Aug 21 official closes re-confirmed this run via Yahoo Finance and CNBC:
+  **S&P 500 7,674.37 +0.43%, Nasdaq Composite 26,180.45 +0.43%, Dow 53,277.01 +517.80 +0.98%**, all three indexes lower on
+  the week, bitcoin at $77,000 for its best week in two years. Scorecard arithmetic re-validated programmatically **3/3 exact**.
+  No intraday figure presented as current; no as-of time in the lead headline; **NO After-Hours section** (Saturday).
+  **Chart of the Day stays NASDAQ:HOOD.**
+- MARKETS — **ON THE RADAR MONDAY ITEM EXPANDED WITH SOURCED QUOTES.** Bessent's press conference is dated **Monday,
+  August 24**. Verbatim/attributed: "the greatest co-ordinated economic isolation in the history of the world"; combines the
+  naval blockade with the toughest sanctions in history; the choice is "whether you are either with us or against us."
+  **Al Jazeera** reports he said the measures would "collapse" Iran's economy; **CNBC** reports he said the US likely would
+  **not** restart large-scale combat. Caixin's Week Ahead corroborates the Aug 24–30 timing. Jackson Hole Aug 27–29 with the
+  Warsh keynote Friday Aug 28, Nvidia Q2 and Marvell Aug 27 all retained unchanged.
+- ⚠ **REPO NOTE: `gen_archive.py` IS BROKEN** — it imports a `common` module that does not exist in the repo
+  (ModuleNotFoundError). archive.html was regenerated this run by a new self-contained script **`gen_archive_sc.py`**,
+  committed alongside, which rebuilds day headings and rows from `archive/*.html` while preserving the head/CSS/nav/intro
+  and footer. Result: **21 days, 104 timestamped rows, 312 snapshot files**. Future runs should use `gen_archive_sc.py`.
+- VALIDATION (programmatic, this run — `validate_1805.py`, **0 failures**): 5 pages HTMLParser-balanced **0 unclosed /
+  0 errors**; 5-tab nav + stamp/fresh IDs on all 5 with exactly **1 active tab each**; .tldr on all three briefings with the
+  correct per-page label (The Wire / The Tape / Tale of the Tape), absent from index by design; **8/8 TradingView widget JSON
+  blocks parse**; ticker retains SPXUSD + NSXUSD + DJI + USOIL + US10Y; **Chart of the Day = NASDAQ:HOOD**; **7/7 KEV
+  countdowns** correct on label AND colour, 10 rows, 7 past due; Patch Priority and KEV agree on Aug 23 and both carry
+  CVSS 9.3; scorecard arithmetic **3/3 exact**; champions **11/11 rows, 0 Vacant**; MMA page asserts no results and **6/6**
+  un-corroborated winner strings absent. Trap greps CLEAN ×0: Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman / MacKenzie /
+  Joshua Vance / "Pereira (205)" / pay-per-view / "former champion" / "title challenger" / stale MW-Chimaev, FLW-Pantoja,
+  BW-Dvalishvili and LW-Topuria champion cells.
