@@ -9146,3 +9146,82 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   un-corroborated winner strings absent. Trap greps CLEAN ×0: Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman / MacKenzie /
   Joshua Vance / "Pereira (205)" / pay-per-view / "former champion" / "title challenger" / stale MW-Chimaev, FLW-Pantoja,
   BW-Dvalishvili and LW-Topuria champion cells.
+
+## Added 2026-08-22 (Saturday ~6:42pm ET — AFTERNOON EDITION; fourth run of Saturday, ~37 min after the 6:05pm/1812 snapshot; markets CLOSED for the weekend; research ~6:36–6:55pm)
+- CLOCK: TZ date = Sat Aug 22 18:35 EDT at run start; archive stamp 2026-08-22-1842. Edition bucket **Afternoon** (h=18).
+  Prior archived snapshot is 2026-08-22-1812 (same day). "New" tags re-scoped: only the Baxter card is tagged New on cyber.
+- ⚠ **MMA MATERIAL UPDATE — THE FIRST UFC SACRAMENTO RESULTS ARE NOW CORROBORATED AND PUBLISHED.** Three consecutive earlier
+  runs correctly refused un-corroborated search summaries. This run the **MMA Mania / SB Nation live blog, fetched via its
+  Yahoo Sports mirror** (https://sports.yahoo.com/articles/ufc-sacramento-live-results-highlights-204500063.html, byline
+  Tim Edwards, page timestamp Sat Aug 22 21:43 UTC), carries an explicit **"Official Decision"** line in the fetched page
+  body for two bouts. Published verbatim:
+  **Jackson McVey def. Wes Schultz — TKO (knee to the body), R1, 4:13** and
+  **Shanelle Dyer def. Elise Reed — standing TKO (punches), R3, 1:42** (Dyer **116 sig. strikes to 42**, now **2-0** in the UFC).
+  This retroactively vindicates the 5:46pm entry's rejected "Dyer TKO 1:42 R3" summary — but the rule stands: it was published
+  only once a fetched page body stated it.
+- ⚠ **NO OTHER SACRAMENTO RESULTS PUBLISHED — DO NOT "FIX" THIS.** Re-checked this run: **UFC.com's Prelim Results page**
+  (article:published_time 2026-08-22T17:00:00-0400) still carries **previews only**, no winners/methods/times; **FightBook MMA**
+  reads "Result: TBD" on all 13 lines; **FIGHTMAG's** live blog has nothing past Media Day; **Sports Illustrated / MMA Knockout**
+  has no results. A WebSearch summary again asserted **Douglas def. Emmers, Gaziev def. Nzechukwu, Haqparast def. Padilla** —
+  none present in any fetched page body, so **NOT published**. Validator asserts 7/7 un-corroborated winner strings absent.
+- ⚠ **START-TIME CONFLICT: MMA MANIA'S PREAMBLE SAYS MAIN CARD 7 PM ET.** UFC.com and Sports Illustrated both say
+  **8:00 PM ET** (prelims 5:00 PM ET). **8 PM is used**; the page states MMA Mania's 7 PM figure is not used. Countdown
+  target unchanged at 2026-08-22T20:00:00-04:00.
+- MMA CHAMPIONS — cross-checked again this run via a champions search returning **ESPN, UFC Fan Hub and Champinon**: names and
+  dates for Aspinall, Ulberg (KO1 Procházka Apr 11 2026), Strickland (SD Chimaev May 9 2026), Makhachev (UD Della Maddalena
+  Nov 15 2025), Gaethje (TKO4 Topuria Jun 14 2026) and Volkanovski (UD Lopes Apr 12 2025) **ALL MATCH the standing block**.
+  ⚠ Note: that search summary **mislabelled divisions** (put Makhachev at LW and Gaethje at FW). The standing block governs:
+  Makhachev = **welterweight**, Gaethje = **lightweight**, Volkanovski = **featherweight**. No UFC event has completed since
+  UFC 330 (Aug 15) and tonight's card has **no title fight**, so no belt can have changed. Board **11/11 rows, 0 Vacant**.
+- CYBER NEW — **KEV ROW ADDED: CVE-2025-62593 (Ray distributed-computing framework), CVSS 9.4, EXPLOITED, KEV-added Aug 17,
+  due Aug 20 = NOW 2 DAYS PAST DUE** — the **longest-overdue** entry on the board. Verified against **THN (Aug 18, Ravie
+  Lakshmanan)** fetched this run: code injection reachable **from a browser via DNS rebinding** against unauthenticated Ray
+  endpoints (/api/jobs, /api/job_agent/jobs/) on Firefox and Safari; primarily hits developers running Ray locally; can pivot
+  to network-adjacent Ray instances using the browser as a confused deputy. **Fixed in 2.52.0.** The **RondoDox** DDoS botnet
+  adopted it two days before public disclosure on Nov 26 2025; Oligo's **ShadowRay 2.0** campaign turns unpatched clusters with
+  NVIDIA GPUs into a self-replicating crypto-mining botnet. Credits: **Avi Lumelsky** (Oligo) and **Jonathan Leitschuh**.
+  ⚠ CISA has **not** described how it is being exploited — the page does not speculate.
+- CYBER — KEV list now **11 rows, 8 past due** (was 10 / 7). Banner, stat strip and the "Of the 11 entries tracked here,
+  8 are past due" note all restated and validated to agree. **8/8 countdowns with explicit due dates verified correct on both
+  label AND colour class**: Aug 23 (1 day left, soon), Sep 2 (11 days), Sep 3 (12 days), four × Aug 21 (1 day PAST DUE),
+  Aug 20 Ray (2 days PAST DUE); three Aug 11 rows past due without an explicit restated date.
+- CYBER — **PATCH PRIORITY UNCHANGED (CVE-2026-59310 vCenter, CVSS 9.8, exploited, suspected China-nexus APT, 1 day past due)**,
+  but the box now also names **Ray CVE-2025-62593 as the longest-overdue entry (2 days)** and retains **TrueConf CVE-2026-72529
+  (CVSS 9.3, due Aug 23 = tomorrow)** as the nearest deadline still ahead. vCenter kept as "do this first" on severity
+  (9.8 vs 9.4) and enterprise blast radius; the ordering rationale is on the page.
+- CYBER — **TOP STORY UNCHANGED (GitLab CVE-2026-19478, CVSS 9.4, exploited).** THN's front page fetched this run still shows
+  **Aug 21** as its newest publication date; nothing newer appeared. **ENTRA ID CVE-2026-69836 REMAINS *NOT* EXPLOITED.**
+- ⚠ **N-ABLE STORY REJECTED AS STALE.** THN's "N-able Says Attackers Take Over N-central Servers After Initial Fix Proves
+  Incomplete" surfaced in search as if current; the fetched article is bylined **Aug 03, 2026** (CVE-2026-18556 / -18577,
+  CVSS 8.2 each, fixed in 2026.3.1.7). Nearly three weeks old — **not published**. Always check the byline date on THN hits.
+- CYBER NEW — **BAXTER INTERNATIONAL / SHINYHUNTERS.** GovInfoSecurity (ISMG) headline and description fetched this run:
+  ShinyHunters **claims on its dark-web leak site to have leaked 7.1 million Salesforce records** from medical-products maker
+  **Baxter International**; the group's latest healthcare target after DentaQuest. ⚠ Published strictly as an **UNVERIFIED
+  ATTACKER CLAIM** — no Baxter statement and no regulatory filing was found in any source fetched this run, so **no data
+  categories, no affected-individual count and no incident date are asserted** beyond the number the group itself published.
+  The article body did not render on fetch (JS/paywall); only the headline and meta description were available, and only what
+  they state is used.
+- MARKETS — **WEEKEND FRAMING RETAINED.** Friday Aug 21 official closes re-confirmed this run (Yahoo/CNBC via search):
+  **S&P 500 7,674.37 +33.21 (+0.43%), Dow 53,277.01 +517.80 (+0.98%), Nasdaq Composite 26,180.45 +113.29 (+0.43%),
+  Russell 2000 3,017.87 +25.44 (+0.85%)**; all four lower on the week. Scorecard arithmetic re-validated **4/4 exact**
+  (implied priors 7,641.16 / 52,759.21 / 26,067.16 / 2,992.43). No intraday figure presented as current; no as-of time in the
+  lead headline; **NO After-Hours cards** (Saturday) with the on-page explanation retained. **Chart of the Day stays NASDAQ:HOOD.**
+- MARKETS — **YIELDS UPGRADED FROM ROUNDED TO EXACT CLOSES.** Prior editions printed "≈4.7%" / "≈5.25%" attributed to Trading
+  Economics. CNBC's Aug 21 market report states the **10-year finished at 4.737%** and the **30-year at 5.276%**; both are now
+  printed as Friday's finish, with the Trading Economics rounded reads noted as agreeing. Fed funds **3.50%–3.75%** unchanged
+  (held July 29, 9–3, three dissents in favour of a HIKE; no August FOMC). **2-year yield still NOT published** — no source.
+- MARKETS — On the Radar unchanged and re-confirmed by search this run: **Bessent press conference Monday Aug 24** on
+  economically isolating Iran; **Jackson Hole Aug 27–29** with **Warsh's first keynote Friday Aug 28**; **Nvidia Q2** and
+  **Marvell Aug 27**. Bitcoin above **$77,000**, best week in two years, retained.
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`** (note: it takes the repo dir as **argv[1]**; calling it with no argument
+  raises IndexError). Result: **21 days, 105 timestamped rows, 315 snapshot files**. `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, this run — `validate_1835.py`, **0 failures, 130 checks**): 5 pages HTMLParser-balanced
+  **0 unclosed / 0 errors**; 5-tab nav + stamp/fresh IDs on all 5 with exactly **1 active tab each**; .tldr on all three
+  briefings with the correct per-page label (The Wire / The Tape / Tale of the Tape), absent from index by design;
+  **8/8 TradingView widget JSON blocks parse**; ticker retains SPXUSD + NSXUSD + DJI + USOIL + US10Y; **Chart of the Day =
+  NASDAQ:HOOD**; **8/8 KEV countdowns** correct on label AND colour, **11 rows, 8 past due**, all three count statements agree;
+  Patch Priority and KEV agree; scorecard arithmetic **4/4 exact**; champions **11/11 rows, 0 Vacant**; MMA publishes exactly
+  the two corroborated results and **7/7** un-corroborated winner strings are absent; After-Hours block has **0 mover cards**
+  with the omission explained. Trap greps CLEAN ×0: Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman / MacKenzie / Joshua Vance /
+  "Pereira (205)" / pay-per-view / "former champion" / "title challenger" / stale MW-Chimaev, FLW-Pantoja, BW-Dvalishvili and
+  LW-Topuria champion cells.
