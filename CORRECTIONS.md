@@ -9479,3 +9479,74 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   matches the standing block**; MMA results **13/13 rows**; New-tag counts **cyber 0 / markets 0 / MMA 2** (Shanghai full card,
   Szabova). Trap greps CLEAN ×0 on all four pages: Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman / MacKenzie / Joshua Vance /
   "Pereira (205)" / pay-per-view / "Jahmall Emmers def" / stale MW-Chimaev, FLW-Pantoja, BW-Dvalishvili, LW-Topuria cells.
+
+## Added 2026-08-23 (Sunday ~5:50pm ET — AFTERNOON EDITION; markets CLOSED for the weekend; archive stamp 2026-08-23-1827)
+- CLOCK: TZ date = Sun Aug 23 17:50 EDT at run start. Edition bucket **Afternoon** (h=17). Prior archived snapshot is
+  **2026-08-23-1610**. "New" tags re-scoped against THAT snapshot: the two prior MMA New tags (Shanghai full card, Lucia
+  Szabova) were BOTH dropped because both were in the 1610 snapshot. Cyber had zero New tags in 1610.
+- ⚠ **MMA CORRECTION — NOCHE UFC 4 MAIN EVENT CHANGED; THE PAGE WAS STALE AND IS NOW FIXED.** Prior editions listed the
+  Sep 12 headliner as "Noche UFC: Yair Rodriguez vs Jean Silva". **Yair Rodriguez is OUT with a groin injury suffered in
+  training** and **Jose Delgado (12-2) steps in on short notice against Jean Silva (17-3)** — confirmed this run by ESPN
+  (id/49667048), CBS Sports, Sherdog, theScore, Athlon and MMA Sucka. Rodriguez's own Instagram statement: "I got injured.
+  I tried to continue my preparation, but ultimately, it wasn't responsible to compete under these conditions." Delgado is
+  **4-1 in the UFC** since earning his contract on Dana White's Contender Series in **2024**, with 2026 wins over **Andre Fili**
+  and **Austin Bashi**. Odds now published: **Silva −425 / Delgado +355 per FightOdds.io** (MMA Mania/Yahoo/Heavy). The
+  earlier Silva-vs-Yair opening line no longer applies. DO NOT regress this card to Yair Rodriguez.
+- MMA NEW — **UFC 334 and UFC 335 are official** (Forbes Aug 22, MMA Mania, Yahoo Sports, Cageside Press, FIGHTMAG):
+  **UFC 334 — Saturday, November 14, Madison Square Garden, New York**, billed as **"Polymarket UFC 334"** after Polymarket
+  became the UFC's exclusive prediction-market partner (first time that sponsorship is folded into an event name);
+  **UFC 335 — Saturday, December 12, T-Mobile Arena, Las Vegas**. **NO bouts announced for either card** — do not invent any.
+- MMA NEW — **NSAC is withholding three UFC 329 purses.** The Nevada State Athletic Commission withheld the purses of
+  **Max Holloway, Paddy Pimblett and Gable Steveson** pending disciplinary hearings after all three climbed out over the cage
+  following their wins (Nevada has enforced this more strictly since Khabib Nurmagomedov jumped the fence at UFC 229).
+  Holloway and Pimblett were shown on broadcast leaving the cage after first-round stoppages; **Steveson was NOT caught on
+  camera**. Hearings decide whether the money is returned or converted to fines. Pimblett's manager, **Cage Warriors CEO
+  Graham Boyland**, texted MMA Junkie: "For the record, this rule needs to be changed." Precedent printed: **Diego Lopes had
+  $5,000 of his $100,000 show money frozen for scaling the cage at UFC 300 and was fined $2,500**. **The amounts withheld
+  here have NOT been disclosed** — do not state a figure. (Bloody Elbow Aug 21 + Aug 22, Yahoo Sports, MMA Mania, Yardbarker.)
+- MMA — **CHAMPIONS BOARD UNCHANGED, 11/11 rows, 0 vacant**, re-cross-checked this run against ESPN "Current and all-time UFC
+  champions": Aspinall, Ulberg (Apr 11 2026), Strickland (May 9 2026), Makhachev (welterweight, Nov 15 2025), Gaethje
+  (lightweight, Jun 14 2026), Volkanovski (Apr 12 2025) all MATCH. No event has completed since UFC Sacramento. Sacramento
+  results block (13/13 rows), bonuses and the seven-vs-six $25K conflict all left untouched and still correct.
+- CYBER NEW — **CVE-2026-19490, Citrix NetScaler ADC / NetScaler Gateway.** Advisory published **Aug 19, 2026**. Use the
+  **CVSS v4.0 base score 9.3** (Rapid7/vendor) — do NOT print 9.8. **CWE-288, authentication bypass using an alternate path**;
+  remote, unauthenticated, no user interaction. Applies to appliances configured as a **Gateway (SSL VPN, ICA Proxy, CVPN,
+  RDP Proxy) or an AAA virtual server**; on NEWER vulnerable builds a **configured SAML action is additionally required**,
+  on older builds Gateway/AAA config alone suffices. Fixed builds: **14.1 before 14.1-73.32, 13.1 before 13.1-63.21**, plus
+  corresponding FIPS/NDcPP builds. **Rapid7 reported NO evidence of in-the-wild exploitation as of Aug 19** — SecurityWeek
+  headlines it "exploitation expected." It is **NOT a KEV entry**, so it must NOT appear in the federal-deadline board.
+  (Note: this is a DIFFERENT flaw from CVE-2026-3055, the SAML-only NetScaler bug already in this file at CVSS 9.3.)
+- CYBER NEW — **Operation CameraSwarm (Hunt.io).** More than **14,530 Dahua devices compromised between June 17 and July 22,
+  2026** (35 days). Reconstructed from a **407 MB exposed working directory: 2,616 files across 234 subdirectories**. Three
+  parallel methods: credential attacks; two OLD auth-bypass flaws **CVE-2021-33044** and **CVE-2021-33045**; and a **P2P relay
+  reaching 283 cameras behind NAT using only a device serial number**. **1,923 cameras** had a persistent account configured.
+  Confirmed compromises concentrated in **Ukraine and Russia**; language artifacts indicate a **Russian-speaking operator**, but
+  the activity is **NOT attributed** to any named group or government — print that qualifier. (Hunt.io blog, The Hacker News
+  Aug 22, BleepingComputer, SecurityWeek, Security Affairs.)
+- CYBER — **TOP STORY UNCHANGED: GitLab CVE-2026-19478 (9.4, exploited, GraphQL directive, fixed 19.2.4 / 19.1.6 / 19.0.8 /
+  18.11.11).** Nothing newer than Aug 22 exists on The Hacker News. **Entra ID CVE-2026-69836 REMAINS *NOT* EXPLOITED** —
+  a search summary this run claimed it was "exploited in the wild as of August 21"; that is WRONG and contradicts Microsoft's
+  own correction of the Exploited field to "No" on Aug 21. Do not flip it.
+- CYBER — **KEV BOARD UNCHANGED: 12 rows, 7 past due, 1 due today (Aug 23), 4 ahead.** Programmatically re-validated this run
+  against a plain Aug 23 day count: every label AND colour class correct. **Patch Priority stays CVE-2026-72529 (TrueConf,
+  9.8, exploited, due TODAY Aug 23)** and agrees with the KEV list on CVE, CVSS and date. BOD 26-04 risk-based, not 22-01.
+  Stat strip gained a fifth tile (**14,530 Dahua devices hijacked in 35 days**); the other four are unchanged.
+- MARKETS — **WEEKEND FRAMING RETAINED (Sunday, no new session).** Friday Aug 21 official closes unchanged and scorecard
+  arithmetic re-validated **4/4 exact**: S&P 500 7,674.37 +33.21 (+0.43%), Dow 53,277.01 +517.80 (+0.98%), Nasdaq Composite
+  26,180.45 +113.29 (+0.43%), Russell 2000 3,017.87 +25.44 (+0.85%). **NO After-Hours section.** **Chart of the Day stays
+  NASDAQ:MRNA.** Movers unchanged, all New tags absent. NEW SOURCED DETAIL added from CNBC's week-ahead (Aug 21) fetched via
+  search this run: the weekly declines stated more precisely as **S&P 500 −1.43%, Nasdaq Composite −2.05%**; **Warsh's Jackson
+  Hole keynote is scheduled for Friday at 10 a.m.**, his first as chair, and he is expected to avoid forward guidance; CNBC
+  independently puts the **core PCE consensus at +3.3% year over year**, corroborating the figure already on the page.
+- ⚠ **PCE DAY STILL WEDNESDAY, AUGUST 26** — unchanged and re-affirmed. Do NOT flip to Friday.
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`** (takes the repo dir as argv[1]). Result: **22 days, 109 timestamped
+  rows, 327 snapshot files**. `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, this run — `validate_1750.py`, **0 failures, 136 checks**, plus `supp_1750.py`, **100 checks,
+  2 false positives only**: a CVE-count assertion that also matched two source URLs, and a "vacant" grep that matched the
+  legitimate strings "Won the vacant belt" and "Eleven belts, none vacant"). 4 pages HTMLParser-balanced **0 unclosed /
+  0 stray**; 5-tab nav + stamp/fresh IDs on all 4 with exactly 1 active tab each; .tldr on all three briefings with the
+  correct per-page label; 8/8 TradingView widget JSON blocks parse; ticker retains SPXUSD + NSXUSD + DJI + USOIL + US10Y;
+  **12/12 KEV countdowns** correct on label AND colour; scorecard arithmetic 4/4 exact; champions 11/11 rows, 0 vacant;
+  MMA results 13/13 rows. Trap greps CLEAN ×0 on all four pages: Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman /
+  MacKenzie / Joshua Vance / "Pereira (205)" / pay-per-view / "Jahmall Emmers def" — plus a new trap, **"Yair Rodriguez vs
+  Jean Silva" = 0 occurrences.**
