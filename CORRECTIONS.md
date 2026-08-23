@@ -9225,3 +9225,93 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   with the omission explained. Trap greps CLEAN ×0: Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman / MacKenzie / Joshua Vance /
   "Pereira (205)" / pay-per-view / "former champion" / "title challenger" / stale MW-Chimaev, FLW-Pantoja, BW-Dvalishvili and
   LW-Topuria champion cells.
+
+## Added 2026-08-23 (Sunday ~3:24pm ET — AFTERNOON EDITION; markets CLOSED for the weekend; archive stamp 2026-08-23-1537)
+- CLOCK: TZ date = Sun Aug 23 15:24 EDT at run start. Edition bucket **Afternoon** (h=15). Prior archived snapshot is
+  2026-08-22-1842 (Saturday). "New" tags re-scoped against that snapshot by grep.
+- ⚠ **MMA — THE FULL UFC SACRAMENTO CARD IS NOW PUBLISHED (13/13 bouts).** Three prior runs correctly refused
+  un-corroborated summaries; this run **UFC.com's Main Card Results page** (E. Spencer Kyte, published 2026-08-22T23:05,
+  modified 2026-08-23T00:21) carries every main-card result verbatim, and the **Forbes/Yahoo Sports full-card table**
+  (Brian Mazique, Aug 23 03:44 UTC) supplies the prelims. Published:
+  **Rodrigues def. Hernandez UD (48-47, 49-46, 48-47)**; **Petrino def. Spivac UD (30-27 x3)**;
+  **de Ridder def. Dolidze TKO (strikes) R1 4:01**; **Mederos def. Jones TKO (strikes) R2 2:07**;
+  **Judice def. Chaves TKO (body kick) R1 1:39**; **Wint def. Chatman technical submission (arm-triangle) R1 4:29**;
+  **Emmers def. Douglas TKO R1**; **Gaziev def. Nzechukwu KO R1**; **Padilla def. Haqparast technical submission R3**;
+  **Barbosa def. Kuse TKO R1**; **Dorsainvil def. Young UD (29-28 x3)**; **McVey def. Schultz TKO (knee to the body)
+  R1 4:13**; **Dyer def. Reed standing TKO (punches) R3 1:42**. The earlier-rejected Douglas/Gaziev/Haqparast search
+  summary was WRONG on Haqparast — **Padilla beat Haqparast**, not the reverse. Do not regress to the search-summary version.
+- ⚠ **SPELLING/DIVISION CONFLICTS RESOLVED IN FAVOUR OF UFC.com.** Forbes renders the featured-prelim winner
+  **"Jahmall Emmers"**; UFC.com spells him **"Jamall Emmers"** — UFC.com used. Forbes bills **McVey vs Schultz** as
+  *lightweight*; UFC.com and FightBook MMA both bill it **middleweight** — middleweight used. Both conflicts are
+  disclosed on the page.
+- ⚠ **UFC.com's OWN BONUS PAGE HAS MISLABELLED HEADINGS.** https://www.ufc.com/news/bonus-coverage-ufc-sacramento
+  heads the main-event entry "Performance Of The Night" and the Judice entry "Fight Of The Night". **MMA Weekly**
+  (Jeff Cain, Aug 23 3:30 AM EDT, reporting Dana White's announcement) and the **Forbes** bonus table both state:
+  **Fight of the Night = Hernandez AND Rodrigues ($100K each); Performance of the Night = Mederos and Judice ($100K each)**.
+  The MMA Weekly/Forbes designations are used and the UFC.com discrepancy is printed on the page.
+- MMA BUSINESS (sourced, MMA Weekly): **13 bouts, 10 stoppages; 4 x $100,000 bonuses = $400,000; six other finishers
+  received $25,000 finishing bonuses; attendance 16,867; gate $3.3 million.** First UFC event in Sacramento in **seven years**
+  (UFC.com). **No viewership figure published anywhere fetched this run — none printed.**
+- MMA RANKINGS — printed as reported, NOT reconciled: MMA Weekly bills it **No. 7 Hernandez vs No. 10 Rodrigues**;
+  FightBook has Hernandez at **No. 6**; UFC.com expects Rodrigues to climb into the **top 10**; Forbes expects **top 5**.
+  **Dricus du Plessis = No. 2-ranked, former middleweight champion** (sourced this run) — Rodrigues called him out.
+- MMA CHAMPIONS — **board UNCHANGED, 11/11 rows, 0 vacant.** Re-checked vs ESPN "Current and all-time UFC champions"
+  this run: Aspinall, Ulberg (Apr 11 2026), Strickland (May 9 2026), Makhachev (Nov 15 2025), Gaethje (Jun 14 2026),
+  Volkanovski (Apr 12 2025) all MATCH. ⚠ The ESPN search summary **again mislabelled divisions** (Makhachev at LW,
+  Gaethje at FW) — standing block governs: **Makhachev = welterweight, Gaethje = lightweight**. Sacramento had no title
+  fight and no event has completed since UFC 330 (Aug 15), so no belt can have changed.
+- MMA UPCOMING — taken from **UFC.com/events fetched this run**: Aug 29 **Nurmagomedov vs Song**, Oriental Sports Center,
+  Pudong District, China, main card **6:00 AM ET** (countdown target 2026-08-29T06:00:00-04:00); Sep 5 **Hooker vs Parnasse**,
+  Accor Arena, Paris, 3:00 PM ET; Sep 12 **Noche UFC: Rodriguez vs Silva**, Desert Diamond Arena, Glendale AZ, 9:00 PM ET;
+  Sep 19 **UFC 331: Van vs Pantoja 2**, Crypto.com Arena, Los Angeles, 9:00 PM ET (flyweight title); Sep 26
+  **Rosas Jr. vs Barcelos**, Meta APEX. ⚠ NOTE: the "How to Watch" start-time blocks on UFC.com/events are offset by one
+  event — use the per-event heading line, not the block above it. Odds published only for the Aug 29 headliner:
+  **UFC.com −450 / +350; DraftKings −470 / +360; BetOnline opened −700 / +500.**
+- ⚠ **CYBER — CVSS CORRECTION: CVE-2026-72529 (TrueConf Server) IS 9.8, NOT 9.3.** Earlier editions printed 9.3. The KEV
+  catalog mirror (cvefeed.io, NVD-joined) fetched this run shows **CRITICAL 9.8**, alert date **Aug 20**, action due
+  **Aug 23**. The 9.8 is now published and this entry supersedes the 9.3.
+- CYBER — **KEV BOARD NOW 12 ROWS, 7 PAST DUE, 1 DUE TODAY, 4 AHEAD** (was 11 / 8 past due). New row:
+  **CVE-2026-73570 Zimbra ZCS OS command injection, CVSS 8.9, added Aug 21, due Aug 24** — tagged New (it was on the prior
+  page as a vulnerability but was NOT a KEV entry). Verified due dates this run: 72529 Aug 23; 73570 Aug 24; 68820 Aug 25;
+  64849 Sep 2; 72530 Sep 3; 59310/65400/33824/55040 Aug 21; 62593 Aug 20; 72898/20349 Aug 14.
+- CYBER — **PATCH PRIORITY CHANGED to CVE-2026-72529 (TrueConf, 9.8, exploited) because its deadline is TODAY.**
+  vCenter CVE-2026-59310 and Metabase CVE-2026-72898 (10.0) are named as already-overdue and the ordering rationale is
+  on the page. Patch Priority and the KEV list agree on Aug 23 and on 9.8.
+- CYBER — **TOP STORY UNCHANGED: GitLab CVE-2026-19478 (CVSS 9.4, exploited, GraphQL directive, fixed in 19.2.4 /
+  19.1.6 / 19.0.8 / 18.11.11).** THN's front page fetched this run has **Aug 22** as its newest date (TikTok settlement);
+  nothing newer and more operationally urgent appeared. **Entra ID CVE-2026-69836 REMAINS *NOT* EXPLOITED.**
+- CYBER NEW — **TikTok $400M DoJ child-privacy settlement** (THN Aug 22): $300M immediately, $100M "upon entry of an order
+  vacating a prior consent decree entered against TikTok's predecessor, Musical.ly." Tagged New (absent from prior snapshot).
+- CYBER — Baxter/ShinyHunters card **dropped** this edition: it was only ever an unverified attacker claim and no Baxter
+  statement or filing has appeared. Dropping it contradicts nothing.
+- MARKETS — **WEEKEND FRAMING RETAINED.** Friday Aug 21 official closes re-confirmed this run by fetching the Yahoo Finance
+  Aug 21 market report: **S&P 500 7,674.37 +33.21 (+0.43%), Dow 53,277.01 +517.80 (+0.98%), Nasdaq Composite 26,180.45
+  +113.29 (+0.43%), Russell 2000 3,017.87 +25.44 (+0.85%)**; all four LOWER on the week, **S&P 500 about −1.4% on the week**.
+  Scorecard arithmetic validated programmatically **4/4 exact**. **NO After-Hours section** (Sunday) with the omission
+  explained on the page. **Chart of the Day stays NASDAQ:HOOD.**
+- MARKETS NEW SOURCED FIGURES (Yahoo Finance market bar, US markets closed after Friday's session): **VIX 15.13 −0.88
+  (−5.50%); Gold 4,680.60 +109.20 (+2.39%); WTI Sep contract 87.06 +0.23 (+0.26%); Bitcoin 77,412.24 (−0.11%)**, reached
+  $77,000 for its best week in two years. 10-yr **4.737%** / 30-yr **5.276%** (CNBC Aug 21) retained; week-ahead coverage
+  independently puts the 10-yr at **about 4.74%, near 20-month highs**. Fed funds **3.50%–3.75%** unchanged. **2-year yield
+  still NOT published — no source.**
+- MARKETS MOVERS (Friday Aug 21, sourced): **Robinhood +~14%, Coinbase +8%, Moderna +9%+ (afternoon), Merck +2%+**;
+  healthcare (Merck, J&J) supported the Dow. Laggards are **FIVE-DAY** moves and are labelled as such on the page:
+  **Amkor −15%, Credo −11%, Meta −7% over five sessions**. Amkor/Credo/Meta tagged New (absent from prior snapshot);
+  Robinhood/Coinbase/Moderna/Merck were present and are NOT tagged New.
+- ⚠ **MARKETS DATE CORRECTION: NVIDIA REPORTS WEDNESDAY, AUGUST 26, AFTER THE BELL — NOT THURSDAY AUG 27.** Earlier
+  editions said Aug 27. CNBC's week-ahead ("Nvidia takes center stage Wednesday after the bell") and MarketBeat's
+  NVDA Q2 FY2027 report date (8/26/2026) both give Aug 26. The correction is stated on the page. Retained and re-confirmed:
+  **Bessent Iran press conference Monday Aug 24**; Chicago Fed National Activity Index + Dallas Fed Manufacturing Monday;
+  durable goods / consumer confidence / new home sales / Case-Shiller + Intuit Tuesday Aug 25; second Q2 GDP estimate
+  Wednesday; **Jackson Hole Aug 27–29 with Warsh's first keynote Friday Aug 28**, the same morning as **July core PCE**.
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`** (takes the repo dir as argv[1]). Result: **22 days, 106 timestamped
+  rows, 318 snapshot files**. `gen_archive.py` remains BROKEN (imports a nonexistent `common` module).
+- VALIDATION (programmatic, this run — `validate_1524.py`, **0 failures, 136 checks**): 4 pages HTMLParser-balanced
+  **0 unclosed / 0 errors**; 5-tab nav + stamp/fresh IDs on all 4 with exactly **1 active tab each**; .tldr on all three
+  briefings with the correct per-page label (The Wire / The Tape / Tale of the Tape), absent from index by design;
+  **8/8 TradingView widget JSON blocks parse**; ticker retains SPXUSD + NSXUSD + DJI + USOIL + US10Y; **Chart of the Day =
+  NASDAQ:HOOD**; **12/12 KEV countdowns** correct on label AND colour class, 7 past due + 1 due today + 4 ahead, and all
+  three count statements agree; Patch Priority and KEV agree on CVE, CVSS and date; scorecard arithmetic **4/4 exact**;
+  champions **11/11 rows, 0 vacant, every name matches the standing block**; MMA results table **13/13 rows**.
+  Trap greps CLEAN x0: Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman / MacKenzie / Joshua Vance / "Pereira (205)" /
+  pay-per-view / "Jahmall Emmers def" / stale MW-Chimaev, FLW-Pantoja, BW-Dvalishvili and LW-Topuria champion cells.

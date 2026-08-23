@@ -34,48 +34,13 @@ section{margin:30px 0 0}
 .lab{font-family:var(--mono);font-size:11px;letter-spacing:.19em;text-transform:uppercase;
   color:var(--muted);margin:0 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
 .panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:13px}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 17px;transition:.18s}
 .card:hover{transform:translateY(-3px);border-color:#3a4652}
-.card h3{margin:0 0 7px;font-size:16.5px;line-height:1.35}
-.card p{margin:0;font-size:14.5px;color:#c6d2dd}
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:9px}
-.tag{font-family:var(--mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase;
-  border-radius:5px;padding:3px 7px;border:1px solid var(--line);color:var(--muted)}
-.tag.new{color:var(--up);border-color:rgba(63,191,127,.4)}
-.tag.hot{color:var(--crit);border-color:rgba(224,85,85,.4)}
-.tag.warn{color:var(--warn);border-color:rgba(224,163,58,.4)}
-table{width:100%;border-collapse:collapse;font-size:14.5px}
-th{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;
-  color:var(--muted);text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);font-weight:500}
-td{padding:10px 11px;border-bottom:1px solid rgba(36,44,52,.6);vertical-align:top}
-tr:last-child td{border-bottom:none}
-.up{color:var(--up)}.down{color:var(--down)}
-ul.bul{margin:0;padding-left:19px}
-ul.bul li{margin:0 0 9px;font-size:14.8px;color:#c6d2dd}
-ul.bul li:last-child{margin-bottom:0}
-.note{font-size:12.7px;color:var(--muted);margin-top:10px;line-height:1.55}
-.callout{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--warn);
-  border-radius:10px;padding:14px 17px}
-.callout.crit{border-left-color:var(--crit)}
-.callout b{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.16em;
-  text-transform:uppercase;margin-bottom:6px}
-.kev-crit{color:var(--crit);font-family:var(--mono);font-size:12px}
-.kev-soon{color:var(--warn);font-family:var(--mono);font-size:12px}
-.kev-ok{color:var(--muted);font-family:var(--mono);font-size:12px}
 footer{margin-top:44px;border-top:1px solid var(--line);padding-top:18px}
 footer .lab{border:none;padding:0}
 footer ul{margin:0;padding-left:18px;font-size:12.8px;color:var(--muted);line-height:1.75}
 footer a{color:var(--muted)}
 .disc{margin-top:16px;font-size:12.2px;color:var(--muted);font-style:italic}
-.banner{border-radius:11px;padding:13px 17px;border:1px solid var(--line);background:var(--panel);
-  display:flex;flex-wrap:wrap;align-items:baseline;gap:11px}
-.banner .lvl{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:11px;margin-top:13px}
-.stat{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:13px 15px}
-.stat .n{font-size:23px;font-weight:600;letter-spacing:-.5px;line-height:1.2}
-.stat .l{font-family:var(--mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);margin-top:5px}
-
 .big{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:22px}
 .big .card{padding:22px 24px}
 .big .k{font-family:var(--mono);font-size:11px;letter-spacing:.17em;text-transform:uppercase;margin-bottom:9px}
@@ -107,42 +72,44 @@ footer a{color:var(--muted)}
 <a href="mma-briefing.html">⊘ The Octagon</a>
 <a href="archive.html">🗄 Archive</a>
 </nav>
+
 <div class="big">
 <div class="card c-sec">
 <div class="k">&#9880; The Cyber Wire &middot; The Wire</div>
-<h2>Eight federal patch deadlines have already passed</h2>
-<p>Eight entries in CISA&rsquo;s Known Exploited Vulnerabilities catalog now sit past their federal due date, the oldest an actively exploited flaw in the Ray AI computing framework that came due two days ago. A GitLab flaw rated 9.4 remains under exploitation, and the TrueConf Server bug is due tomorrow.</p>
+<h2>A 9.8-rated flaw already under attack comes due today</h2>
+<p>The federal patch deadline for TrueConf Server&rsquo;s CVE-2026-72529 &mdash; an unauthenticated script-execution bug CISA says is being exploited &mdash; lands today, while seven other entries in the Known Exploited Vulnerabilities catalog are already past due, the oldest by nine days.</p>
 <a class="rd" href="cyber-briefing.html">Read the briefing &rarr;</a>
 </div>
 <div class="card c-mkt">
 <div class="k">&#9650; The Closing Bell &middot; The Tape</div>
-<h2>A Friday bounce that didn't save the week</h2>
-<p>US markets are closed for the weekend: stocks rose on Friday &mdash; the Dow up about 1% &mdash; but all three major indexes still finished the week lower after a bond sell-off. Attention now turns to Monday, when Bessent details the plan to economically isolate Iran.</p>
+<h2>A Friday bounce that didn&rsquo;t save the week</h2>
+<p>US markets are closed for the weekend. Stocks rose Friday &mdash; the Dow up 0.98% on healthcare strength &mdash; but every major index still finished the week lower after a Treasury sell-off. Bessent details the plan to economically isolate Iran on Monday; Nvidia reports Wednesday.</p>
 <a class="rd" href="wallstreet-briefing.html">Read the briefing &rarr;</a>
 </div>
 <div class="card c-mma">
 <div class="k">&#8856; The Octagon &middot; Tale of the Tape</div>
-<h2>The first Sacramento results are in</h2>
-<p>Two UFC Sacramento prelim results are now confirmed &mdash; Shanelle Dyer stopped Elise Reed in the third and Jackson McVey folded Wes Schultz with a first-round knee to the body. The rest of the 13-fight card, including the 8 PM ET main event, is still unresolved.</p>
+<h2>Rodrigues survives 25 minutes with Fluffy &mdash; and wants du Plessis</h2>
+<p>Gregory Rodrigues took a unanimous decision over Anthony Hernandez in Sacramento to win his fourth straight, split Fight of the Night with him, and call out No. 2-ranked Dricus du Plessis. Ten of the card&rsquo;s 13 bouts ended in a stoppage.</p>
 <a class="rd" href="mma-briefing.html">Read the briefing &rarr;</a>
 </div>
 </div>
+
 <section>
 <div class="lab">About this page</div>
 <div class="panel">
 <p style="margin:0;font-size:14.8px;color:#c6d2dd">Each briefing is rebuilt from live sources every 30 minutes between 8 AM and 6 PM ET. Every claim on every page traces to a source fetched in the run that produced it; anything that could not be verified in that run is dropped, and where credible sources disagree, the disagreement is printed rather than resolved silently. Point-in-time snapshots of previous editions are kept in the <a href="archive.html" style="color:#8fa0b0">Archive</a>.</p>
 </div>
 </section>
+
 <footer>
 <div class="lab">Sources</div>
 <ul>
 <li>Each briefing carries its own full source list in its footer.</li>
 </ul>
-
 <p class="disc">For information only. Nothing here is investment advice, and security guidance should be validated against your own environment.</p>
 </footer>
 
-<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \u00b7 briefings refresh every 30 minutes, 8 AM\u20136 PM ET';}catch(e){}})();</script>
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
 
 </div>
 </body>
