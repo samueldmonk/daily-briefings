@@ -9315,3 +9315,82 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   champions **11/11 rows, 0 vacant, every name matches the standing block**; MMA results table **13/13 rows**.
   Trap greps CLEAN x0: Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman / MacKenzie / Joshua Vance / "Pereira (205)" /
   pay-per-view / "Jahmall Emmers def" / stale MW-Chimaev, FLW-Pantoja, BW-Dvalishvili and LW-Topuria champion cells.
+
+## Added 2026-08-23 (Sunday ~3:48pm ET — AFTERNOON EDITION; markets CLOSED for the weekend; archive stamp 2026-08-23-1548)
+- CLOCK: TZ date = Sun Aug 23 15:39 EDT at run start. Edition bucket **Afternoon** (h=15). Prior archived snapshot is
+  **2026-08-23-1537** (this same afternoon), so "New" tags were re-scoped against THAT snapshot by grep — several items
+  correctly LOST their New tag this run.
+- ⚠ **MARKETS DATE CORRECTION: JULY PCE IS RELEASED WEDNESDAY, AUGUST 26 — NOT FRIDAY, AUGUST 28.** Earlier editions said
+  Warsh's Jackson Hole keynote fell "the same morning July core PCE lands." **Yahoo Finance's week-ahead economic calendar
+  (Jake Conley / Hamza Shaban, Sun Aug 23 6:00 AM EDT), fetched in full this run, lists PCE and core PCE (m/m and y/y),
+  personal income and spending, Q2 GDP second estimate and July durable goods ALL under Wednesday** — the same day Nvidia
+  reports after the bell. Friday carries only MNI Chicago PMI and the final U. Mich. readings. The correction is printed on
+  the Wall Street page in both the lead and On the Radar. Retained and re-confirmed: **Nvidia Wednesday Aug 26**;
+  **Bessent Iran press conference Monday Aug 24**; **Jackson Hole opens Thursday Aug 27 with Warsh's keynote Friday Aug 28**;
+  **Marvell reports Thursday Aug 27**.
+- MARKETS — **WEEKEND FRAMING RETAINED (Sunday).** Friday Aug 21 official closes re-confirmed this run by TWO independent
+  fetches — the Associated Press index tally via search and Yahoo Finance's market bar: **S&P 500 7,674.37 +33.21 (+0.43%),
+  Dow 53,277.01 +517.80 (+0.98%), Nasdaq Composite 26,180.45 +113.29 (+0.43%), Russell 2000 3,017.87 +25.44 (+0.85%)**.
+  Scorecard arithmetic re-validated **4/4 exact**. WEEKLY moves now printed from Yahoo's week-ahead: **S&P −1.4%,
+  Nasdaq −2%, Dow −0.9%**. **NO After-Hours section** (Sunday), omission explained on the page.
+- ⚠ **CHART OF THE DAY CHANGED FROM NASDAQ:HOOD TO NASDAQ:MRNA.** TheStreet's Aug 21 market-movers post (Rob Lenihan,
+  10:45 AM ET) states **Moderna jumped 17%** on positive Phase 3 results for its personalized mRNA cancer vaccine developed
+  with Merck — a larger single-session move than Robinhood's. MRNA is now the day's biggest sourced mover and the chart symbol.
+- ⚠ **MOVERS REBUILT FROM FRESH SOURCES; THE 5-DAY LAGGARDS ARE GONE.** Prior editions carried Amkor −15% / Credo −11% /
+  Meta −7% as FIVE-DAY moves and Robinhood "+~14%" / Moderna "+9%". None of those were re-confirmable this run. Now published,
+  all single-session Friday Aug 21: **Moderna +17%, Marvell −6% (profit-taking before its Aug 27 earnings), Teradyne −4%
+  (Baird cut to Neutral), AppLovin −2.3% (Piper Sandler PT to $325 from $385)** — all from TheStreet's 10:45 AM movers post;
+  and **Robinhood +12.39%, Coinbase +8.96%, Circle +8.09%, fintech sector +4.61%** — TradingKey end-of-day reads.
+  TheStreet separately had HOOD at +11.1% and COIN at +8.5% at midmorning; both figures are disclosed on the page.
+- MARKETS NEW SOURCED FIGURES: **Bitcoin +7.04% on Friday to about $76,927** (TheStreet 7:48 AM), last quoted on Yahoo's bar
+  at **76,789.79 −171.75 (−0.22%)** — note this REPLACES the prior edition's 77,412.24 quote. Yahoo's article frames it as
+  bitcoin's first move above $70,000 since late May. **Treasury doubled long-term debt buybacks from $2B to at least $4B per
+  operation** (Bessent); **US national debt passed $40 trillion** (Yahoo). **Brent $93.64 (−0.15%)** in Friday morning trade,
+  second straight weekly gain, with WTI Sep at **87.06 +0.23 (+0.26%)** at the close. VIX **15.13 −5.50%**, Gold **4,680.60
+  +2.39%** re-confirmed. Sector read updated to **materials, health care and financials**, with the S&P 500 **+0.78% and 341
+  members higher** at midmorning (TheStreet) — the old "Merck and J&J carried the Dow" line is dropped as un-reconfirmed.
+  10-yr **4.737%** / 30-yr **5.276%** and Fed funds **3.50%–3.75%** retained. **2-year yield still NOT published — no source.**
+- CYBER — **KEV CATALOG RE-FETCHED IN FULL (cvefeed.io mirror) AND THE BOARD IS UNCHANGED: 12 rows, 7 past due, 1 due today,
+  4 ahead.** Every due date re-verified: 72529 **Aug 23 (today, 9.8)**; 73570 Aug 24; 68820 Aug 25; 64849 Sep 2; 72530 Sep 3;
+  59310 / 65400 / 33824 / 55040 Aug 21; 62593 Aug 20; 72898 / 20349 Aug 14. CISA's own alert pages for the Aug 7/11/18/20
+  additions independently corroborate the adds. **Patch Priority stays CVE-2026-72529 (TrueConf, 9.8, exploited, due today.)**
+- CYBER — **TOP STORY UNCHANGED: GitLab CVE-2026-19478 (9.4, exploited, GraphQL directive, fixed in 19.2.4 / 19.1.6 / 19.0.8 /
+  18.11.11).** THN's front page was re-fetched this run and its newest item is still **Aug 22** (TikTok settlement); nothing
+  newer is more operationally urgent. **Entra ID CVE-2026-69836 REMAINS *NOT* EXPLOITED.**
+- CYBER NEW — **Microsoft Defender's own BTR.sys boot-time remediation driver can be weaponised** (Check Point Research,
+  Jiří Vinopal; Black Hat USA 2026 + DEF CON 34; PoC tool BTR_CLI published Aug 20). Arbitrary kernel-level file and registry
+  operations on Windows 7 → Windows 11 25H2; no flaw exploited, no outside driver; BTR.sys is a required component so it
+  cannot be blocklisted or WDAC-blocked without breaking Defender. **Check Point found no evidence of real-world use** — that
+  qualifier is printed. Tagged New (absent from the 1537 snapshot). **TikTok $400M lost its New tag** (it WAS in that snapshot),
+  as did the **Zimbra CVE-2026-73570 KEV row**.
+- CYBER — Cisco round expanded: added **CVE-2026-20359 (9.9, insufficiently protected credentials)** alongside 20030 / 20357 /
+  20358 (10.0), and the row now states Cisco patched **nine flaws across Crosswork and Secure Workload, five scoring 10.0**
+  (THN Aug 21). All fixed in **7.2.1-SP**; no exploitation reported.
+- MMA — **CHAMPIONS BOARD UNCHANGED, 11/11 rows, 0 vacant**, re-cross-checked this run against ESPN "Current and all-time UFC
+  champions": Aspinall, Ulberg (Apr 11 2026), Strickland (May 9 2026), Makhachev (Nov 15 2025), Gaethje (Jun 14 2026),
+  Volkanovski (Apr 12 2025) all MATCH. No event has completed since UFC Sacramento and that card had no title fight.
+- ⚠ **MMA BONUS COUNT CONFLICT DISCLOSED, NOT SILENTLY RESOLVED.** Prior editions said "six other finishers received $25,000."
+  **MMA Mania's bonus article names SEVEN $25K recipients — Jamall Emmers, Shanelle Dyer, Jackson McVey, Marcio Barbosa,
+  Chris Padilla, Anthony Wint and Reinier de Ridder** — while MMA Weekly put the count at six. Both are now printed and the
+  discrepancy is left unreconciled. The **four $100,000 bonuses ($400,000 total)** are unchanged and were re-confirmed this run
+  (MMA Mania: Rodrigues and Hernandez $100K each for Fight of the Night).
+- MMA NEW — **Bilal Hasan**: finished Mridul Saikia in under a minute at bantamweight on **Dana White's Contender Series
+  Season 10, Week 1**, earned a contract on the night, and is already booked to debut against **Nilson Rojas at UFC Shanghai
+  this Saturday** — one of four contracts handed out in week one (CBS Sports). Tagged New. **Curtis Blaydes signed a new
+  EIGHT-FIGHT deal** (Bloody Elbow, Aug 21); he meets Waldo Cortes-Acosta on the Sep 12 Noche UFC card. Published WITHOUT any
+  "title challenger" descriptor. **Anthony Wint and Stan Dorsainvil lost their New tags** (both were in the 1537 snapshot).
+- MMA — **UFC Paris (Sep 5) detail added from MMA Mania/Yahoo Sports**: Hooker vs Parnasse at lightweight, **Michael Page vs
+  Nursulton Ruziboev** at middleweight on the main card, **prelims 12:00 PM ET / main card 3:00 PM ET on Paramount+**.
+  Shanghai odds retained and re-confirmed by search: **UFC.com −450/+350, DraftKings −470/+360, BetOnline opened −700/+500**.
+  Countdown target unchanged at **2026-08-29T06:00:00-04:00**.
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`** (takes the repo dir as argv[1]). Result: **22 days, 107 timestamped
+  rows, 321 snapshot files**. `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, this run — `validate_1545.py`, **0 failures, 172 checks**): 4 pages HTMLParser-balanced
+  **0 unclosed / 0 stray**; 5-tab nav + stamp/fresh IDs on all 4 with exactly **1 active tab each** (note: index.html and
+  archive.html mark the active tab with an inline style, not `class="on"` — the checker accepts both); .tldr on all three
+  briefings with the correct per-page label, absent from index by design; **8/8 TradingView widget JSON blocks parse**;
+  ticker retains SPXUSD + NSXUSD + DJI + USOIL + US10Y; **Chart of the Day = NASDAQ:MRNA**; **12/12 KEV countdowns** correct
+  on label AND colour, 7 past due + 1 due today + 4 ahead, all three count statements agree; Patch Priority and KEV agree on
+  CVE, CVSS and date; scorecard arithmetic **4/4 exact**; champions **11/11 rows, 0 vacant**; MMA results **13/13 rows**.
+  Trap greps CLEAN ×0 on all four pages: Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman / MacKenzie / Joshua Vance /
+  "Pereira (205)" / pay-per-view / "Jahmall Emmers def" / stale MW-Chimaev, FLW-Pantoja, BW-Dvalishvili, LW-Topuria cells.
