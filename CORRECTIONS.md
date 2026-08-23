@@ -9394,3 +9394,88 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   CVE, CVSS and date; scorecard arithmetic **4/4 exact**; champions **11/11 rows, 0 vacant**; MMA results **13/13 rows**.
   Trap greps CLEAN ×0 on all four pages: Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman / MacKenzie / Joshua Vance /
   "Pereira (205)" / pay-per-view / "Jahmall Emmers def" / stale MW-Chimaev, FLW-Pantoja, BW-Dvalishvili, LW-Topuria cells.
+
+## Added 2026-08-23 (Sunday ~4:10pm ET — AFTERNOON EDITION; markets CLOSED for the weekend; archive stamp 2026-08-23-1610)
+- CLOCK: TZ date = Sun Aug 23 16:05 EDT at run start. Edition bucket **Afternoon** (h=16). Prior archived snapshot is
+  **2026-08-23-1548** (this same afternoon). "New" tags re-scoped against THAT snapshot: ALL prior New tags were dropped
+  (cyber BTR.sys; markets Marvell / Teradyne / AppLovin; MMA Bilal Hasan) because every one of them was in the 1548 snapshot.
+- ⚠ **PCE DAY CONFLICT RE-ADJUDICATED — PCE STAYS WEDNESDAY, AUGUST 26.** Capital Street FX's week-ahead (published Aug 22,
+  fetched in full this run) **contradicts itself**: its summary paragraph says "Friday's back-to-back release of July PCE
+  inflation and Fed Chair Warsh's keynote," while its own daily breakdown lists PCE under **Wednesday, August 26**. Yahoo
+  Finance's week-ahead (Jake Conley / Hamza Shaban, Sun Aug 23 6:00 AM EDT) was re-fetched in full this run and its Wednesday
+  block lists **PCE m/m and y/y, core PCE m/m and y/y, personal income and spending, Q2 GDP second estimate and July durable
+  goods**; Friday carries only MNI Chicago PMI, the final U. Mich. readings and Kansas City Fed services. **Wednesday wins.**
+  Do NOT flip to Friday on the strength of the Capital Street FX summary line.
+- MARKETS — **WEEKEND FRAMING RETAINED (Sunday, no new session).** Friday Aug 21 official closes re-confirmed a THIRD time
+  this run (AP index tally via search + Yahoo Finance market bar): **S&P 500 7,674.37 +33.21 (+0.43%), Dow 53,277.01 +517.80
+  (+0.98%), Nasdaq Composite 26,180.45 +113.29 (+0.43%), Russell 2000 3,017.87 +25.44 (+0.85%)**. Scorecard arithmetic
+  re-validated **4/4 exact**. Weekly moves re-confirmed verbatim from Yahoo: **S&P −1.4%, Nasdaq −2%, Dow −0.9%**. Yahoo's bar
+  renders the Nasdaq at 26,180.46; the AP figure 26,180.45 is retained (both consistent with +113.29). VIX **15.13 −5.50%**,
+  Gold **4,680.60 +2.39%**, Bitcoin **76,789.79 −171.75 (−0.22%)**, WTI Sep **87.06 +0.26%** all re-confirmed on the same bar.
+  **NO After-Hours section** (Sunday). **Chart of the Day stays NASDAQ:MRNA.** Movers unchanged and all New tags removed.
+- MARKETS NEW SOURCED MATERIAL (all from the Yahoo week-ahead fetched in full this run): **Fed/Treasury tension** — Warsh has
+  suggested he welcomes higher yields as a way to tighten without moving rates, while the point of Bessent's buyback expansion
+  was to push long yields down; Wilmington Trust's **Wil Stith**: "We have the Fed and the Treasury basically working in sort of
+  opposite directions… that's just going to require the Fed, which has the larger sandbox, to sort of adjust the target fed
+  funds rate more so than it would have." Bond market largely shrugged the maneuver off. **Next FOMC = September.** Added
+  sourced priors: **Q2 GDP +1.5% annualized first estimate; July durable goods +0.5% previously**; Wednesday earnings expanded
+  to **CrowdStrike, Okta, Synopsys, Agilent, Veeva, Williams-Sonoma, Nutanix** alongside Nvidia. **Jan Hatzius** (Goldman) sees
+  price pressures improving with tariffs/energy likely to subside; a hot print revives September **HIKE** talk. **Gautam
+  Chhugani** (Bernstein): "Bitcoin historically has had a positive reaction to liquidity expansion." Retained and re-confirmed:
+  **Nvidia Wednesday Aug 26**, **Marvell Thursday Aug 27**, **Intuit + DICK'S Tuesday Aug 25**, **Bessent Iran press conference
+  Monday Aug 24** (a Getty caption dated Aug 20 records Bessent announcing a Monday press conference on "unprecedented maximum
+  economic pressure sanctions on Iran"), **Jackson Hole opens Thursday Aug 27, Warsh keynote Friday Aug 28**.
+- CYBER — **NOTHING NEWER THAN AUG 22 EXISTS.** The Hacker News front page was re-fetched in full this run; its newest item is
+  still the **Aug 22 TikTok $400M settlement**. **TOP STORY UNCHANGED: GitLab CVE-2026-19478 (9.4, exploited, GraphQL directive,
+  fixed in 19.2.4 / 19.1.6 / 19.0.8 / 18.11.11).** **Entra ID CVE-2026-69836 REMAINS *NOT* EXPLOITED** (THN's own update note
+  re-read this run). **Zero New tags on the cyber page this edition**, and the page says so.
+- CYBER — **KEV CATALOG RE-FETCHED IN FULL (cvefeed.io mirror) — BOARD UNCHANGED: 12 rows, 7 past due, 1 due today, 4 ahead.**
+  Every due date re-verified this run: **72529 Aug 23 (today, CVSS 9.8)**; 73570 Aug 24 (8.9); 68820 Aug 25 (7.0); 64849 Sep 2
+  (9.3); 72530 Sep 3 (9.5); 59310 / 65400 / 33824 / 55040 Aug 21; **62593 Aug 20 (this is CVE-2025-62593, Ray, 9.4)**;
+  72898 Aug 14 (10.0); 20349 Aug 14 (8.6). **Patch Priority stays CVE-2026-72529 (TrueConf, 9.8, exploited, due TODAY)** and
+  agrees with the KEV list on CVE, CVSS and date. Note the mirror's own "days left" counters are off by one against a plain
+  Aug 23 day count for 68820 / 64849 / 72530; the page uses the plain day difference (Aug 24 = 1 day, Aug 25 = 2, Sep 2 = 10, Sep 3 = 11).
+  Also re-confirmed independently by search: CISA gave federal agencies until **Aug 23** for 72529 and **Sep 3** for 72530, a
+  three-day window on the former; Kaspersky traced exploitation to trojanized TrueConf client installers carrying **PhantomCore**
+  and **PhantomGraph** backdoors. KEV deadlines run under **BOD 26-04 (risk-based)**, not the old fixed three-week BOD 22-01.
+- MMA — **CHAMPIONS BOARD UNCHANGED, 11/11 rows, 0 vacant.** Re-cross-checked this run against ESPN "Current and all-time UFC
+  champions": Aspinall, **Ulberg (Apr 11 2026)**, **Strickland (May 9 2026)**, **Makhachev (Nov 15 2025, welterweight)**,
+  **Gaethje (Jun 14 2026, lightweight)**, **Volkanovski (Apr 12 2025)** all MATCH. No event has completed since UFC Sacramento
+  and that card had no title fight, so no belt can have changed.
+- ⚠ **MMA NEW — THE FULL UFC SHANGHAI CARD IS NOW PUBLISHED, FROM UFC.COM'S OWN ANNOUNCEMENT FETCHED THIS RUN.**
+  https://www.ufc.com/news/ufc-returns-shanghai-pivotal-bantamweight-clash-between-3-umar-nurmagomedov-and-5-song-yadong
+  **Co-main: No. 4-ranked Yan Xiaonan (19-5) vs No. 13-ranked Denise Gomes (12-3)** — Yan is China's first female UFC athlete
+  and a former strawweight title challenger (UFC 300 vs then-champion Zhang Weili), with wins over Tabatha Ricci, Jessica
+  Andrade and current champion Mackenzie Dern; it is her first appearance in China since 2018. Gomes has won four straight
+  (Tecia Pennington, Elise Reed, Karolina Kowalkiewicz, Eduarda Moura). Also announced: **Junior Tafa (7-6) vs kickboxing world
+  champion Liu Ce (3-1)** at light heavyweight on Liu's UFC debut; **No. 11-ranked flyweight Alex Perez (26-10) vs Sumudaerji
+  (19-7)** — a REMATCH after their **No Contest** at UFC Fight Night Macau; **Rei Tsuruya (11-1) vs Kevin Borjas (11-5)** at
+  flyweight. Main event billing: **Umar Nurmagomedov (20-1)**, former bantamweight title challenger, two-fight win streak,
+  wins over Deiveson Figueiredo, Cory Sandhagen and Mario Bautista; **Song Yadong (23-9-1)**, sixth main event, coming off a
+  submission of Figueiredo at UFC Macau in May. Fight week is a DOUBLE: **Road to UFC Season 5 semifinals Friday, Aug 28**
+  (16 remaining prospects; opening round produced **10 finishes**). UFC.com calls it the second consecutive year in Shanghai and
+  the first Pudong District event since selling out Mercedes-Benz Arena in **2017**; hosted by the Shanghai Municipal Sports
+  Bureau and Pudong District Government with Migu and Orange Lion Sports (formerly Alisports) co-organizing. Odds retained and
+  unchanged: **UFC.com −450/+350, DraftKings −470/+360, BetOnline opened −700/+500** — **no co-main odds published anywhere
+  fetched this run, so none printed.** Countdown target unchanged at **2026-08-29T06:00:00-04:00**.
+- MMA NEW — **Lucia Szabova**, published with explicit "reported" framing. Bloody Elbow (Aug 22) headlines her as an
+  **undefeated two-weight world champion** signed by the UFC; the search snippet states she holds **bantamweight and flyweight**
+  belts, spent the majority of her pro career in **OKTAGON at 135 lbs**, and is matched with **Tainara Lisboa**, debut
+  **reportedly** October. The Bloody Elbow page itself returned EMPTY on direct fetch, so the card says the date and opponent
+  are reporting, not a confirmed UFC bout announcement. Do not harden this into a booking without a UFC.com announcement.
+- MMA — Sacramento block untouched and still correct: 13/13 results rows; **Fight of the Night = Hernandez AND Rodrigues
+  ($100K each), Performance of the Night = Mederos and Judice ($100K each)** per MMA Weekly/Forbes (UFC.com's own bonus page
+  has the headings swapped — discrepancy still printed); **$400,000 in $100K bonuses; seven $25K finishers per MMA Mania vs six
+  per MMA Weekly, conflict still disclosed; attendance 16,867; gate $3.3M; no viewership figure published anywhere.**
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`** (takes the repo dir as argv[1]). Result: **22 days, 108 timestamped rows,
+  324 snapshot files**. `gen_archive.py` remains BROKEN (imports a nonexistent `common` module).
+- VALIDATION (programmatic, this run — `validate_1615.py`, **0 failures, 136 checks**, plus a **21-check supplemental pass,
+  0 failures**): 4 pages HTMLParser-balanced **0 unclosed / 0 stray**; 5-tab nav + stamp/fresh IDs on all 4 with exactly
+  **1 active tab each**; .tldr on all three briefings with the correct per-page label (The Wire / The Tape / Tale of the Tape),
+  absent from index by design; **8/8 TradingView widget JSON blocks parse**; ticker retains SPXUSD + NSXUSD + DJI + USOIL +
+  US10Y; **Chart of the Day = NASDAQ:MRNA** (the 1524 validator's HOOD assertion was updated, not the page); **12/12 KEV
+  countdowns** correct on label AND colour class, 7 past due + 1 due today + 4 ahead, all three count statements agree; Patch
+  Priority and KEV agree on CVE, CVSS and date; scorecard arithmetic **4/4 exact**; champions **11/11 rows, 0 vacant, every name
+  matches the standing block**; MMA results **13/13 rows**; New-tag counts **cyber 0 / markets 0 / MMA 2** (Shanghai full card,
+  Szabova). Trap greps CLEAN ×0 on all four pages: Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman / MacKenzie / Joshua Vance /
+  "Pereira (205)" / pay-per-view / "Jahmall Emmers def" / stale MW-Chimaev, FLW-Pantoja, BW-Dvalishvili, LW-Topuria cells.
