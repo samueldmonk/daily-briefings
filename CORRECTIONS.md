@@ -10370,3 +10370,71 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   `<span class="kevdue ok">9 days left</span>`, `<span class="kevdue">1 day left</span>`, `<span class="kevdue crit">DUE TODAY — 0 days left</span>`.
   A regex like `\((\d+) days? left\)` matches NOTHING and a `days left` count double-counts the DUE TODAY row. **Parse
   `<span class="kevdue([^"]*)">([^<]*)<` and bucket on the text** — that yields the 12 rows and the 8/1/3 split correctly.
+
+## Added 2026-08-24 (Monday ~2:20pm ET — MIDDAY EDITION; archive stamp 2026-08-24-1413)
+- CLOCK: TZ date = Mon Aug 24 14:06 EDT at run start; ~35 minutes after the 1342 snapshot. Edition bucket **Midday** (h=14).
+  **ONE** New tag site-wide: **WS ×1** ("The memory names have climbed off their lows"). The 1342 New tags
+  (WS "Operation Economic Outcast"; WS "Crude sells off into the announcement") were **BOTH** dropped.
+  **CYBER: zero New tags, second consecutive run. MMA: zero New tags, SEVENTH consecutive run.**
+- ⚠ **TWO INTERNAL CONTRADICTIONS WERE FOUND ON THE LIVE PAGES AND FIXED — BOTH WERE STALE FOOTNOTES DESCRIBING TAGS THAT NO LONGER EXISTED.**
+  (1) The WS movers footnote still read *"Two cards are tagged New this edition — the Apple/CXMT/YMTC memory shock and the auto-tariff hit
+  to Ford and Stellantis"* while the actual New tags sat on Operation Economic Outcast and the crude selloff. (2) The CYBER vulnerability-table
+  footnote read *"One item in Breaches & incidents is tagged New instead: Akamai's finding"* while the cyber page carried **zero** `tag new`
+  markup. **LESSON: when you drop or move a New tag, the prose footnote that names the tagged cards is a SECOND edit — grep the footnote for the
+  old card names in the same pass, and assert the footnote's claimed count equals the actual `tag new` count.** Both footnotes were rewritten to
+  match reality and the validator now asserts the per-page New-tag counts directly (WS 1 / CY 0 / MMA 0).
+- MARKETS — ⚠ **fool.com WENT STALE: THE "STOCKS MENTIONED" MODULE RETURNED THE 1342 RUN'S PRINT UNCHANGED** (^GSPC 7,660.78 −0.18% −13.59;
+  ^DJI 53,399.17 +0.23% +122.16; ^IXIC 26,075.17 −0.40% −105.28), with the footer strip still on 7,661.37 / 53,391.59 / 26,078.04. The page's
+  `Cache-Control` header is `max-age=300` and `article:modified_time` is 2026-08-24T16:15:02Z (12:15 PM ET). **NEW STANDING NOTE: the fool.com
+  "Stocks Mentioned" module is fresher than the footer strip but it is NOT live — once the article stops updating, both freeze. Treat an
+  unchanged fool print across two runs as CACHED, not as "the tape didn't move."** Published as a corroborated but no-longer-fresh read.
+- MARKETS — ⚠ **FRIDAY-CLOSE / MISLABELLED-"CLOSE" TRAP, NINTH CONSECUTIVE RUN.** A search summary asserted the S&P "closed" −0.24%,
+  the Dow +0.25% and the Nasdaq −0.55% at ~2:15 PM ET with the market OPEN. The percentages are the freshest read available this run and were
+  published **strictly as an intraday read** with the mislabelling called out in the text; **no level was published from them.** Corroborated in
+  words by Yahoo Finance's live blog, whose headline had been **retitled** since the 4:03 AM futures version to *"Stock market today: S&P 500,
+  Nasdaq slip as Bessent announces 'economic asphyxiation' campaign against Iran."*
+- MARKETS NEW ×1 — **THE MEMORY COMPLEX IS OFF ITS LOWS.** Stock Market Watch's live movers board (stockmarketwatch.com/live/stock-market-today,
+  fetched this run) had **MU −3.7% $930.86, SNDK −5.6% $1,507.60, WDC −4.2% $439.95, SKHY −3.6% $157.51** — every one materially better than
+  the 11:29 AM ET 24/7 Wall St. readings already on the page (MU $897.86, SNDK $1,458.29, WDC $429.49, SK Hynix $154.48). Optical components did
+  NOT bounce: **AAOI −13% $108.43, COHR −5.7% $272.80, LITE −5.4% $819.23, AXTI −6.2% $66.15.** ⚠ **SOURCE CAVEAT RECORDED IN THE PROSE: this
+  page's ARTICLE is stamped 6:07 a.m. UTC while its quote TABLES carry no timestamp**, so the figures are attributed as live-board readings and
+  are NOT dated to a specific minute. Also taken from the same page and published: live sector strip **telecom +0.6%, materials +0.5%, consumer
+  staples +0.4%, utilities +0.4% leading; semis −1.7%, crude oil −1.6%, China −1.4%, tech −1.1%, energy −0.4% lagging** — consistent with the
+  Motley Fool 11:37 AM sector read (comm services + financials lead; tech/energy/industrials lag), which is retained.
+- MARKETS — Canada tariff detail **re-verified this run** against Fox Business / CBS News / NBC News / ABC7: **50% on Canadian cars, trucks, auto
+  parts and steel from Jan 1, 2027**, vehicles built in the US exempt, Trump citing a **$60 billion** trade deficit; **Carney matches "dollar for
+  dollar" on roughly $28 billion of US goods from Sept 8** (steel, dairy, appliances, agricultural equipment, pulp and paper, electronics).
+  Already on the page in the Ford/Stellantis card; no change required, no New tag.
+- CYBER — **TOP STORY, PATCH PRIORITY AND KEV BOARD UNCHANGED.** CVE-2026-73570 (Zimbra, CVSS 8.9, fixed in 10.1.20) still added Aug 21 →
+  **due Aug 24 (TODAY)**. **KEV board 12 rows: 8 past due, 1 due today, 3 ahead** — re-validated programmatically. Searched for KEV additions
+  dated Aug 24: **none**; the Aug 21 Zimbra entry is still the most recent (Aug 20 TrueConf ×2, Aug 18 ×4, Aug 11 ×3, Aug 7 Progress LoadMaster
+  behind it).
+- CYBER — **ONE STORY ADDED, DELIBERATELY UNTAGGED: StopAndProtect.** Check Point Research (analyst **Jaromír Hořejší**, who first met the
+  StopAndProtect ransomware family in **mid-May 2026**) traced **close to 2,000 compromised WordPress domains** run by a single operator as a
+  rotating payload/C2/exfil pool. Chain: fake CAPTCHA (**ClickFix**) → PowerShell → .NET downloaders and loaders → ransomware + SMB/USB worm +
+  LockScreen + VBS spreader + chat utility + credential stealer. **More than 6,000 unique IPs in campaign logs as of July 24 — 1,852 US, 630
+  Russia, 630 India.** Operators **sometimes exfiltrate without encrypting**. Published earlier in August (THN / Security Affairs / IT Security
+  Guru), so it predates the previous archived snapshot and carries **no New tag**. ⚠ research.checkpoint.com's "24th August – Threat Intelligence
+  Report" URL returned **empty body** on fetch this run; the StopAndProtect facts come from the search snippets plus the named Check Point
+  research URL, not from that report page.
+- CYBER — evaluated and NOT added (all predate the prior snapshot or lack a verified figure): GTA 6 fake-build malware lure; the Aug 24
+  ransomware-leak-site listings (Abacus Advisors/CoinbaseCartel, Aurore Development/Qilin, Black Cat Engineering/Qilin, BOK Financial/ShinyHunters
+  — BOK already appears on the page as an outstanding ShinyHunters extortion deadline); the "319 breaches in 24 hours vs a 36.5/day baseline"
+  aggregate, which no primary source stated.
+- MMA — **NOTHING NEWLY ANNOUNCED; ZERO New tags, seventh consecutive run.** Page content byte-identical to the 1342 edition. UFC Shanghai
+  (Sat **Aug 29**, Shanghai Oriental Sports Center, **Umar Nurmagomedov vs Song Yadong**) re-confirmed with odds unchanged: **BetOnline −700/+500;
+  DraftKings −470/+360; UFC.com −450/+350**. Countdown target unchanged: **2026-08-29T06:00:00-04:00**. Champions board unchanged, **11/11 rows,
+  0 vacant**, asserted programmatically **by CHAMPION COLUMN ONLY**.
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **23 days, 120 timestamped rows, 360 snapshot files**. `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `outputs/validate_1420.py`, **0 failures, 134 checks**). 4 pages HTMLParser-balanced 0 unclosed / 0 stray; 5-tab nav
+  on all 4 with exactly 1 active tab (`class="on"`, scoped inside `<nav class="tabs">`); stamp/fresh IDs on all 4; `.tldr` on all three briefings
+  with correct per-page labels and NONE on index; each index.html card contains its own page's `.tldr` verbatim; **8/8 TradingView widget JSON
+  blocks parse**; ticker retains SPXUSD + NSXUSD + DJI + USOIL + US10Y; **12/12 KEV countdowns** with the 8/1/3 split; champions column 11 cells,
+  8 names present, 4 stale strings absent; Friday closes AND the cached-figure blacklist asserted absent **from the lead block only** while
+  asserted present elsewhere; 14 fresh WS strings, 6 fresh CY strings and the refreshed index card asserted present; four STALE WS strings and one
+  stale CY string asserted ABSENT; New-tag counts asserted **WS 1 / CY 0 / MMA 0** with both dropped WS tag markups asserted gone; after-hours
+  section label asserted ABSENT (regular session under way). Trap greps CLEAN ×0 (Cody Salkilld, Abdul-Rakhman, Shamil Yakhyaev, "title challenger Beneil").
+  ⚠ **VALIDATOR GOTCHA #4 — WRITE THIS DOWN. Do NOT assert `NASDAQ:SNDK` absent from ALL TradingView blocks.** SanDisk is legitimately a
+  **ticker-tape symbol** (the tape is allowed to feature the day's movers). The Chart-of-the-Day assertion must be **scoped to the
+  `embed-widget-mini-symbol-overview` block** — regex `embed-widget-mini-symbol-overview\.js"\s+async>(\{.*?\})</script>` — and only that block
+  should be tested for `"symbol":"NASDAQ:AAOI"` and for the absence of SNDK.
