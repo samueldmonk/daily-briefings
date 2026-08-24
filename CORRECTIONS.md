@@ -10438,3 +10438,81 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   **ticker-tape symbol** (the tape is allowed to feature the day's movers). The Chart-of-the-Day assertion must be **scoped to the
   `embed-widget-mini-symbol-overview` block** — regex `embed-widget-mini-symbol-overview\.js"\s+async>(\{.*?\})</script>` — and only that block
   should be tested for `"symbol":"NASDAQ:AAOI"` and for the absence of SNDK.
+
+## Added 2026-08-24 (Monday ~2:40pm ET — MIDDAY EDITION; archive stamp 2026-08-24-1449)
+- CLOCK: TZ date = Mon Aug 24 14:36 EDT at run start; ~36 minutes after the 1413 snapshot. Edition bucket **Midday** (h=14).
+  **ONE** New tag site-wide: **WS ×1** (Alibaba's post-earnings slide + PDD read-through). The 1413 New tag (WS "The memory names
+  have climbed off their lows") was dropped. **CYBER: zero New tags, third consecutive run. MMA: zero New tags, EIGHTH consecutive run.**
+- MARKETS — ⚠ **fool.com IS NOW CONFIRMED FROZEN: THIRD CONSECUTIVE IDENTICAL PRINT.** Body still stamped 11:37 AM ET; "Stocks Mentioned"
+  module still ^GSPC 7,660.78 −0.18% −13.59 / ^DJI 53,399.17 +0.23% +122.16 / ^IXIC 26,075.17 −0.40% −105.28; footer strip still
+  7,661.37 / 53,391.59 / 26,078.04; `article:modified_time` still **2026-08-24T16:15:02Z (12:15 PM ET)**. **STANDING NOTE UPGRADED: the
+  fool "Stocks Mentioned" module being fresher than the footer only helps while the article is still updating. Once `article:modified_time`
+  stops advancing, BOTH freeze. Check `article:modified_time` against the clock BEFORE trusting either.** Carried as corroboration of session
+  shape, NOT as the current tape.
+- MARKETS — ⚠ **NEW TRAP CLASS, WRITE THIS DOWN: A CACHED PAGE'S "TRENDING TICKERS" STRIP SERVES THE *PREVIOUS SESSION'S* MOVERS.**
+  Yahoo's cached live-blog page (see below) carried a trending strip reading **BABA 119.34 −11.19 (−8.57%)** alongside NVDA 214.72 −0.98%
+  and **AAOI 124.82 −3.32%**. The BABA figure is **FRIDAY's** move (MarketBeat, Aug 21: "Alibaba Group shares down 8.5% on analyst
+  downgrade"); a dedicated check put BABA at about **−2.06% on Monday** (StocksToTrade, Aug 24). The AAOI figure is likewise irreconcilable
+  with the session's verified AAOI reads (fool: "plunged 11% this morning"; Stock Market Watch at the 1413 run: −13% at $108.43).
+  **LESSON: if the page is cached, the quote strip is cached too — and a stale strip hands you LAST session's worst decliner as though it
+  were today's. Never lift a mover from a page whose freshness check has already failed.** None of those three figures were published.
+- MARKETS — ⚠ **YAHOO CACHED A FIFTH TIME; COUNTDOWN RULE WORKED AGAIN.** Strip read **"U.S. markets open in 5h 6m"** (≈4:24 AM ET) and
+  carried **pre-open FUTURES** (ES=F 7,674.25 −0.22%, YM=F 53,306.00 −0.09%, NQ=F 29,175.50 −0.72%, VIX 15.92, Gold 4,693.10 +0.27%,
+  CL=F 85.74 −1.52%). Article body was the **4:03 AM EDT** Grace O'Donnell futures piece. Nothing published as current from the strip —
+  EXCEPT the gold futures prior close, which was used only as an internal reconciliation check (see below).
+- MARKETS — freshest index reads published as a RANGE, not a point: **Dow +0.28% (53,424.21), Nasdaq Comp −0.39% (26,079.56), S&P −0.13%**
+  on the nearest-to-2 PM read, against a separate same-run afternoon summary of **S&P −0.3% / Nasdaq −0.6% / Dow +0.2%**. They agree on
+  direction and disagree only on the width of tech underperformance. **No intraday LEVEL published; editorial carries % only** (10th
+  consecutive run of withholding). Friday-close trap did NOT fire in the mislabelled-"close" form this run, but a search summary again
+  returned **Friday's** "S&P rose 0.4%/33.21 to 7,674.37, Nasdaq +0.4%/113.29 to 26,180.46" as though current — rejected; 7,674.37 remains
+  confined to the Weekly Scorecard.
+- MARKETS — ⚠ **GOLD ROW REBUILT AFTER AN INTERNAL-CONSISTENCY CHECK CAUGHT A SERIES MISMATCH.** fool's 11:37 AM read (**$4,671.09,
+  +1.20%**) implies a prior close of ~**$4,615.7**. The fresh read (**$4,702.70, +0.47%**) implies ~**$4,680.6**, which matches Yahoo's
+  futures quote (4,693.10, +12.50, +0.27% → prior close **4,680.60**) **exactly**. These are therefore **two different series** (spot vs the
+  futures contract) and must not be blended. Row relabelled **"Gold (futures)"** and set to **$4,702.70 / +0.47%**, with the fool spot read
+  documented in the note as a different series. **STANDING RULE: before replacing a commodity/metal level, back out the implied prior close
+  from level ÷ (1+pct). If two sources imply different prior closes, they are different series — not different times.**
+- MARKETS — WTI row moved to **$85.33, −1.99% (Oct contract)**. All three of this session's reads back out to the SAME prior close of
+  ~**$87.06** ($85.33/0.9801; CNBC $84.73/0.973; Yahoo $85.75/0.985), so all three are genuine reads of one contract at different moments
+  and crude has **firmed off its lows**. CNBC's $84.73/−2.7% and Brent $92.44/−2.1% retained in the notes as the earlier report.
+- MARKETS NEW ×1 — **ALIBABA IS A SECOND CHINA-LINKED DRAG ALONGSIDE MEMORY.** BABA about **−2.06% Monday**, extending the slide from its
+  **Aug 20** fiscal Q1 2027 report: EPS **$1.26 vs $1.85 expected**; **China e-commerce revenue −8% to just under ¥111bn ($16.5bn)**;
+  roughly **half of the ¥380bn three-year AI commitment already spent**, so the capex drag has more quarters to run. Friday's **−8.5%** was
+  an analyst downgrade. Read-through: **PDD −1% at $88.74**, attributed to domestic e-commerce rather than the AI-capex story. Overnight,
+  **Hang Seng 25,463.5 −2.1%; Hang Seng TECH 4,582.18 −3.86%; HSCEI 8,460.25 −2.02%** at the HK midday close (Moomoo).
+- CYBER — **PAGE UNCHANGED; ZERO New tags, third consecutive run.** Searched for KEV additions dated Aug 22–24: **none**. Most recent CISA
+  alert pages remain **Aug 20 (TrueConf ×2)**, behind Aug 18 ×4, Aug 11 ×3, Aug 7 Progress LoadMaster; the **Aug 21 Zimbra** entry
+  (CVE-2026-73570, CVSS **8.9**, fixed **10.1.20**) is still the newest and is still **due Aug 24 (TODAY)**. **KEV board 12 rows: 8 past
+  due, 1 due today, 3 ahead** — re-validated programmatically.
+- CYBER — two candidates evaluated and **NOT added**, both consistent with the standing bar: (1) **Citrix NetScaler CVE-2026-19490** —
+  already on the page and re-verified this run at **CVSS v4.0 9.3** (CWE-288 auth bypass, advisory **Aug 19**, no in-the-wild exploitation,
+  SecurityWeek "exploitation expected"); its sibling **CVE-2026-19489 is CVSS v4.0 8.8** (CWE-119 memory overflow, only when SIP ALG is
+  enabled on an LSN group) — ⚠ do NOT conflate the two scores. (2) **NASA/JPL AIT-GUI** unauthenticated command execution — **GHSA-p9r8-2q67-fp86**,
+  **CVSS v3.1 9.4**, **NO CVE ASSIGNED**, affects ≤2.5.1, **fixed in 2.5.2**, advisory **Aug 13**. Too old for a New tag and already patched —
+  same disposition as the GeoServer GHSA rejected at the 1342 run.
+- MMA — **NOTHING NEWLY ANNOUNCED; ZERO New tags, EIGHTH consecutive run.** Page content byte-identical to the 1413 edition.
+  ⚠ **VENUE TRAP CAUGHT AND RESOLVED — DO NOT "CORRECT" THIS BACK.** A search summary this run gave UFC Shanghai's venue as
+  **"Shanghai Indoor Stadium."** The **official UFC.com** event page names it the **Pudong Development Bank (SPD Bank) Shanghai Oriental
+  Sports Center** — the two are alternate names for the same facility, and the page's existing **"Shanghai Oriental Sports Center"** is
+  correct and was left alone. The validator now asserts "Shanghai Indoor Stadium" ABSENT as a trap grep. Also re-confirmed: **Sat Aug 29**,
+  **#3 Umar Nurmagomedov vs #5 Song Yadong**, main card **6 a.m. ET** on Paramount+ (matches the countdown target
+  **2026-08-29T06:00:00-04:00**); third UFC visit to Shanghai, first since Aug 2025.
+- MMA — **CHAMPIONS RE-CROSS-CHECKED AGAINST ESPN THIS RUN** ("Current and all-time UFC champions"): Aspinall HW (Jun 21 2025),
+  **Ulberg** LHW (Apr 11 2026), **Strickland** MW (May 9 2026), Makhachev WW (Nov 15 2025), **Gaethje** LW (Jun 14 2026),
+  **Volkanovski** FW (Apr 12 2025) — all six match the standing block. No event has occurred since UFC 330 (Aug 15), so no belt can have
+  moved. Board unchanged, **11/11 rows, 0 vacant**, asserted programmatically **by CHAMPION COLUMN ONLY**.
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **23 days, 121 timestamped rows, 363 snapshot files**. `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `outputs/validate_1440.py`, **0 failures, 117 checks**). 4 pages HTMLParser-balanced 0 unclosed / 0 stray;
+  5-tab nav on all 4 with exactly 1 active tab; stamp/fresh IDs on all 4; `.tldr` on all three briefings with correct per-page labels and
+  NONE on index; each index card contains its own page's `.tldr` verbatim; **8/8 TradingView widget JSON blocks parse**; ticker retains
+  SPXUSD + NSXUSD + DJI + USOIL + US10Y; Chart of the Day asserted **NASDAQ:AAOI** scoped to the mini-symbol-overview block only;
+  **12/12 KEV countdowns** with the 8/1/3 split; champions column 11 cells, 8 names present, 4 stale strings absent; Friday closes and the
+  cached blacklist asserted absent **from the lead block only** while 7,674.37 asserted present elsewhere; 13 fresh WS strings asserted
+  present and 5 stale WS strings asserted absent; New-tag counts asserted **WS 1 / CY 0 / MMA 0**; movers footnote asserted to name the
+  ACTUAL tagged card (the 1413 lesson); trap greps CLEAN ×0 (Cody Salkilld, Abdul-Rakhman, Shamil Yakhyaev, "title challenger Beneil",
+  **"Shanghai Indoor Stadium"** — new this run).
+  ⚠ **VALIDATOR GOTCHA #5 — WRITE THIS DOWN. Do NOT blacklist a cache tell or an absence-declaration as a "stale string."** Two checks
+  failed on the first pass for exactly this reason: the lead *deliberately quotes* **"U.S. markets open in 5h 6m"** as evidence of Yahoo's
+  cache, and the page *deliberately states* **"No After-Hours Movers section appears in this edition."** Blacklisting those substrings flags
+  correct prose as an error. **Assert the after-hours SECTION LABEL absent** (`class="lab...">After-Hours`), not the phrase — and assert the
+  cache tell PRESENT, since quoting it is the point.

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Cyber Wire — Daily Briefings</title>
+<style>
+:root{
+  --bg:#0a0f11; --panel:#121a1d; --line:#1f2f33; --text:#e6f1f2; --muted:#87a3a8;
+  --mono:'SFMono-Regular',ui-monospace,Menlo,Consolas,'Liberation Mono',monospace;
+  --up:#22d3a8; --down:#e05555; --crit:#e05555; --warn:#e0a33a;
+  --acc:#22d3a8; --acc2:#36c6ff;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1040px;margin:0 auto;padding:26px 20px 60px}
+a{color:inherit}
+.masthead{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:14px}
+.masthead h1{margin:0 0 4px;font-size:36px;letter-spacing:-.5px;line-height:1.15;color:var(--acc)}
+.masthead .tag{color:var(--muted);font-size:14.5px;margin:0}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:5px 11px;color:var(--muted)}
+.pill.live{color:var(--acc);border-color:rgba(34,211,168,.35)}
+.pill.live .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--acc);margin-right:6px;vertical-align:middle}
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:10px;padding:11px 15px;margin:6px 0 2px;font-size:14.5px;line-height:1.5}
+.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);margin-right:9px}
+nav.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 20px}
+nav.tabs a{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;
+  text-decoration:none;background:var(--panel);border:1px solid var(--line);border-radius:9px;
+  padding:9px 13px;color:var(--muted);transition:.15s}
+nav.tabs a:hover{border-color:#31474d;color:var(--text)}
+nav.tabs a.on{color:var(--acc);border-color:rgba(34,211,168,.55);background:rgba(34,211,168,.07)}
+.freshline{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted);margin:9px 0 2px}
+section{margin:30px 0 0}
+.lab{font-family:var(--mono);font-size:11px;letter-spacing:.19em;text-transform:uppercase;
+  color:var(--muted);margin:0 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:13px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 17px;transition:.18s}
+.card:hover{transform:translateY(-3px);border-color:#31474d}
+.card h3{margin:0 0 7px;font-size:16.5px;line-height:1.35}
+.card p{margin:0;font-size:14.5px;color:#c2d6d9}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:9px}
+.tag{font-family:var(--mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase;
+  border-radius:5px;padding:3px 7px;border:1px solid var(--line);color:var(--muted)}
+.tag.new{color:var(--acc);border-color:rgba(34,211,168,.4)}
+.tag.crit{color:var(--crit);border-color:rgba(224,85,85,.45)}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--muted);text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);font-weight:500}
+td{padding:10px 11px;border-bottom:1px solid rgba(31,47,51,.7);vertical-align:top}
+tr:last-child td{border-bottom:none}
+ul.bul{margin:0;padding-left:19px}
+ul.bul li{margin:0 0 11px;font-size:14.8px;color:#c2d6d9}
+ul.bul li:last-child{margin-bottom:0}
+.note{font-size:12.7px;color:var(--muted);margin-top:10px;line-height:1.55}
+.lead{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:12px;padding:18px 20px}
+.lead h2{margin:0 0 9px;font-size:23px;line-height:1.28}
+.lead p{margin:0 0 11px;font-size:15px;color:#c2d6d9}
+.lead p:last-child{margin-bottom:0}
+.banner{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--crit);border-radius:12px;padding:14px 18px;margin-bottom:14px}
+.banner b{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--crit)}
+.banner p{margin:6px 0 0;font-size:14.5px;color:#c2d6d9}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:11px;margin-bottom:6px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:13px 15px}
+.stat .n{font-family:var(--mono);font-size:22px;color:var(--acc2);letter-spacing:-.5px}
+.stat .l{font-size:12.3px;color:var(--muted);margin-top:3px;line-height:1.4}
+.pp{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--crit);border-radius:12px;padding:16px 19px}
+.pp h3{margin:0 0 8px;font-size:18px}
+.pp p{margin:0 0 10px;font-size:14.8px;color:#c2d6d9}
+.pp p:last-child{margin-bottom:0}
+.kevdue{font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--warn)}
+.kevdue.crit{color:var(--crit)}
+.kevdue.ok{color:var(--acc)}
+footer{margin-top:44px;border-top:1px solid var(--line);padding-top:18px}
+footer .lab{border:none;padding:0}
+footer ul{margin:0;padding-left:18px;font-size:12.8px;color:var(--muted);line-height:1.75}
+.disc{margin-top:16px;font-size:12.2px;color:var(--muted);font-style:italic}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="masthead">
+<h1>The Cyber Wire</h1>
+<p class="tag">Your daily security briefing — breaches, exploited bugs and federal deadlines</p>
+<div class="meta"><span class="pill live"><span class="dot"></span>Live</span><span class="pill" id="edition">&nbsp;</span><span class="pill" id="datestamp">&nbsp;</span><span class="pill">Updated <span id="updated">&nbsp;</span></span></div>
+</div>
+
+<div class="tldr"><b>The Wire</b> <span>Iran-linked hackers took a British power plant offline for four days in the first cyberattack known to have halted a UK generating station &mdash; the Treasury Secretary answered at 1 p.m. ET with &ldquo;Operation Economic Outcast,&rdquo; naming more than 60 Iran-linked entities, individuals and vessels, some of them accused of running cyber operations for Tehran &mdash; while CISA&rsquo;s remediation deadline for an actively exploited Zimbra command-injection flaw falls today, eight other Known Exploited Vulnerabilities entries tracked here are already past due, and a maximum-severity SAP Commerce Cloud flaw is drawing exploitation attempts against honeypots.</span></div>
+<div class="freshline" id="freshline">&nbsp;</div>
+
+<nav class="tabs">
+<a href="index.html">★ Front Page</a>
+<a href="cyber-briefing.html" class="on">⛨ The Cyber Wire</a>
+<a href="wallstreet-briefing.html">▲ The Closing Bell</a>
+<a href="mma-briefing.html">⊘ The Octagon</a>
+<a href="archive.html">🗄 Archive</a>
+</nav>
+
+<div class="banner">
+<b>Threat level: High</b>
+<p>Four flaws rated 9.4 or higher remain confirmed under active exploitation with federal due dates already missed, an exploited Zimbra flaw &mdash; CVE-2026-73570 &mdash; comes due today, and a state-linked intrusion has been confirmed to have taken a UK power plant offline for four days.</p>
+</div>
+
+<div class="stats">
+<div class="stat"><div class="n">12</div><div class="l">KEV entries tracked here</div></div>
+<div class="stat"><div class="n">8</div><div class="l">Already past their due date</div></div>
+<div class="stat"><div class="n">7.1M</div><div class="l">Baxter Salesforce records leaked</div></div>
+<div class="stat"><div class="n">4 days</div><div class="l">UK power plant offline after attack</div></div>
+<div class="stat"><div class="n">10.0</div><div class="l">CVSS of the SAP Commerce Cloud flaw drawing exploit attempts</div></div>
+</div>
+
+<section>
+<div class="lab">Top story</div>
+<div class="lead">
+<h2>Iran-linked hackers took a UK power plant offline for four days</h2>
+<p>Hackers linked to Iran&rsquo;s Islamic Revolutionary Guard Corps shut down a small British power plant for four days in July, in what reporting describes as the first cyberattack to bring a UK generating station to a standstill. The story was broken by <em>The Telegraph</em> on August 22 and picked up by CNBC, SecurityWeek and international outlets on August 23.</p>
+<p>The UK government confirmed the incident but said there was no risk to the country&rsquo;s energy system. Neither the government nor the National Cyber Security Centre would identify the site, citing security reasons. The generating station was taken offline for four days and staff had to restore operations manually.</p>
+<p class="note">The Telegraph via CNBC and SecurityWeek, August 22&ndash;23, 2026. This displaces the GitLab exploitation story as the lead; that item now sits in Breaches &amp; incidents below and in the vulnerability table. The timing matters for the other desk: at 1 p.m. ET on Monday, Treasury Secretary Scott Bessent announced &ldquo;Operation Economic Outcast,&rdquo; sanctioning more than 60 entities, individuals and vessels accused of helping Iran procure nuclear and missile technology, <b>conduct cyber operations</b> or generate oil revenue, and broadening secondary-sanctions risk across Iran&rsquo;s digital-asset, technology, gold, aviation and shipping links.</p>
+</div>
+</section>
+
+<section>
+<div class="lab">Patch priority</div>
+<div class="pp">
+<h3>Do this first — the clock runs out today</h3>
+<p><b>CVE-2026-73570 — Zimbra Collaboration Suite — CVSS 8.9.</b> An OS command-injection flaw reachable via crafted SMTP requests, giving remote code execution as the Zimbra user on servers with <code>zimbra-snmp</code> installed. Exploitation was reported by CERT Polska. CISA added it to the KEV catalog on <b>August 21</b> with an action due date of <b>August 24</b> &mdash; today. Patch to 10.1.20 or later.</p>
+<p>Three items outrank it on raw severity but are already overdue rather than due: <b>CVE-2026-72898</b> (Metabase, CVSS 10.0, exploited as a zero-day) is ten days past due, <b>CVE-2026-59310</b> (VMware vCenter, CVSS 9.8, path traversal to arbitrary code execution) is three days past due, and <b>CVE-2026-72529</b> (TrueConf Server, CVSS 9.8) &mdash; last edition&rsquo;s priority &mdash; slipped past its August 23 deadline yesterday. Zimbra leads here because its deadline is the one that expires today; the overdue entries should already be closed out.</p>
+<p class="note">Due dates are the ones stated in the KEV catalog and are assigned per-CVE under BOD 26-04 (risk-based), not on a fixed three-week schedule. The dates used here match the KEV section below exactly.</p>
+</div>
+</section>
+
+<section>
+<div class="lab">Threat actor spotlight</div>
+<div class="cards">
+<div class="card">
+<div class="tags"><span class="tag">Extortion</span><span class="tag">ShinyHunters</span></div>
+<h3>ShinyHunters moves from threatening to publishing</h3>
+<p>The extortion crew has posted on its dark-web site what it says are 7.1 million Salesforce records stolen from medical products maker Baxter International, complete with a download button. &ldquo;The company failed to reach an agreement with us despite our incredible patience, all the chances and offers we made. They don&rsquo;t care,&rdquo; the group wrote. Baxter was first listed on August 14. The wider ShinyHunters Salesforce campaign, which ran through 2025 into 2026, leaned on device-code phishing; Push Security counts more than 1,000 compromised organizations and a claimed 1.5 billion stolen records. Fresh extortion deadlines dated today are outstanding against BOK Financial, NovoCure and a third, partly redacted listing.</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="lab">Breaches &amp; incidents</div>
+<div class="cards">
+
+<div class="card">
+<div class="tags"><span class="tag">Ransomware</span><span class="tag">ClickFix</span></div>
+<h3>One operator is running nearly 2,000 hacked WordPress sites as a single criminal network</h3>
+<p>Check Point Research analyst Jarom&iacute;r Ho&#345;ej&scaron;&iacute;, who first came across the StopAndProtect ransomware family in mid-May 2026, traced it back to an operator actively managing close to <b>2,000 compromised WordPress domains</b> &mdash; a rotating pool used to distribute payloads, carry command-and-control traffic and store files taken from victims. Infections start with a fake CAPTCHA on a compromised site, the ClickFix social-engineering pattern, which talks the visitor into running a PowerShell command; that pulls down .NET downloaders and loaders, and those deliver the real toolkit: ransomware, an SMB/USB worm, a lock screen, a VBS spreader, a chat utility and a credential stealer. Check Point counted more than <b>6,000 unique IP addresses</b> in campaign logs as of July 24, including 1,852 in the United States and 630 each in Russia and India. The detail that matters operationally is that the ransomware is only one component of the kit &mdash; the operators sometimes take the files and never encrypt anything, so an environment can be worked over end to end without ever producing the one signal most detection playbooks are tuned for. Added at this edition and deliberately untagged: the research was published earlier in August and predates the previous archived snapshot.</p>
+</div>
+
+<div class="card">
+<div class="tags"><span class="tag">Ransomware</span><span class="tag">SonicWall SMA 1000</span></div>
+<h3>INC ransomware has become the dominant crew working the SonicWall SMA 1000 flaws</h3>
+<p>Resecurity reports that INC Ransomware has accelerated sharply since the start of August 2026, listing multiple new victims on its leak site; the group claims 885 victims to date, with the most recent posted on August 2. The intrusions are suspected to chain CVE-2026-15409 and CVE-2026-15410 in SonicWall SMA 1000 appliances &mdash; a pair that lets an unauthenticated remote attacker open a WebSocket tunnel to restricted services and escalate to root. SonicWall released fixes in mid-July 2026. The reason patching alone is not remediation: Rapid7 found the intrusions extracted high-value credentials, active session databases and time-based one-time-password MFA seed configurations, giving the attackers persistence and lateral movement that survives a firmware update. Recent targets span the private and public sectors in the United States, Australia, the United Arab Emirates, Colombia and Switzerland. If you run SMA 1000, patching is step one and rotating credentials, invalidating sessions and re-seeding TOTP enrolments is step two.</p>
+</div>
+
+<div class="card">
+<div class="tags"><span class="tag">Education</span><span class="tag">Disruption</span></div>
+<h3>UT San Antonio starts its fall semester today, three days late, after a cyberattack</h3>
+<p>The University of Texas at San Antonio pushed the start of its fall semester back by three days after a cyberattack hit its academic network over a weekend. Classes that were due to begin on Wednesday, August 19 start instead today, Monday, August 24. Help Net Security reported the delay on August 19. It is the clearest recent example of an attack on an academic network translating directly into lost teaching days rather than lost data &mdash; and the kind of operational disruption that lands in the first week of a semester, when enrolment, timetabling and identity systems are all under peak load.</p>
+</div>
+
+<div class="card">
+<div class="tags"><span class="tag">Ransomware</span><span class="tag">Joint advisory</span></div>
+<h3>Medusa has now breached more than 500 organisations, the FBI and CISA say</h3>
+<p>Medusa ransomware has hit over 500 organisations since it first appeared in June 2021, according to an updated joint advisory from the FBI, CISA and the Department of Health and Human Services. The update builds on an advisory first issued in March 2025 and draws on FBI investigations conducted as recently as April 2026. HHS&rsquo;s presence on the byline is the tell: healthcare remains a priority sector for the group. Separately, France&rsquo;s tax authority disclosed a breach of the General Directorate of Public Finances exposing data on 678,000 individuals and professionals, after an attacker using the alias &ldquo;ZeroBytes&rdquo; claimed credit on a cybercrime forum and listed the database for sale.</p>
+</div>
+
+<div class="card">
+<div class="tags"><span class="tag">Retail</span><span class="tag">Credential attack</span></div>
+<h3>ASOS says stolen credentials from elsewhere opened customer accounts</h3>
+<p>The online fashion retailer confirmed that attackers used credentials obtained outside the company to get into customer accounts holding personal information and limited payment card details &mdash; a credential-stuffing-style attack rather than a compromise of ASOS&rsquo;s own systems. The incident was reported to the attorneys general of Texas and Vermont on <b>August 21, 2026</b>, with <b>9,412 Texas residents</b> and <b>80 Vermont residents</b> confirmed affected. Exposed fields include full names, addresses, dates of birth and financial information such as account and card numbers. When the intrusion occurred, how it was found and the full scope remain undisclosed. The practical lesson is the familiar one: password reuse turns someone else&rsquo;s breach into yours, and account-takeover defences &mdash; MFA, credential-stuffing detection, breached-password screening &mdash; do the work here, not patching.</p>
+</div>
+
+<div class="card">
+<div class="tags"><span class="tag">Exploited</span><span class="tag">GitLab</span></div>
+<h3>A GitLab flaw went from disclosure to exploitation in days</h3>
+<p>CVE-2026-19478 (CVSS 9.4) is a code-injection flaw that lets an unauthenticated attacker modify or delete publicly accessible GitLab projects and rewrite their data under certain conditions &mdash; no credentials, no user interaction, no obscure configuration. GitLab said it can be exploited via a GraphQL directive. Exposure-management firm watchTowr told The Hacker News it reproduced the vulnerability within minutes and that it is now under active exploitation. Affected builds are GitLab CE and EE 18.2 before 18.11.11, 19.0 before 19.0.8, 19.1 before 19.1.6 and 19.2 before 19.2.4; fixes shipped in 19.2.4, 19.1.6, 19.0.8 and 18.11.11. No CISA KEV entry exists for this CVE.</p>
+</div>
+
+<div class="card">
+<div class="tags"><span class="tag">Espionage</span><span class="tag">QUICSILVER</span></div>
+<h3>QUICAgent backdoor rides graduation invitations into Myanmar government networks</h3>
+<p>Seqrite Labs flagged a cyber-espionage campaign, codenamed Operation QUICSILVER, targeting government and information technology organisations in Myanmar with a Go backdoor called QUICAgent. The activity is assessed with moderate confidence to be the work of a China-nexus threat actor and was first observed in April 2026, when it delivered a file named &ldquo;HolidayNotice.pdf.exe&rdquo; alongside a fabricated Belgian&ndash;Myanmar public holiday calendar. Two later artefacts, detected in June and July 2026, use a Virtual Hard Disk file containing a Windows shortcut that mimics a PDF; opening it displays a decoy official graduation ceremony invitation written in Burmese.</p>
+</div>
+
+<div class="card">
+<div class="tags"><span class="tag">Cybercrime</span><span class="tag">UAT-10147</span></div>
+<h3>A Chinese-speaking crew is using AI to scale server attacks</h3>
+<p>Cisco Talos detailed UAT-10147, a Chinese-speaking cybercrime group targeting Windows and Linux web servers globally across education, media, technology and gaming, with most victims in Brazil, Bolivia, China, Canada and Vietnam. The group deploys a payload dubbed SPECTRE with EDR bypass and a Linux rootkit. &ldquo;The actor leveraged publicly disclosed vulnerabilities to gain initial access at scale,&rdquo; Talos wrote, describing a mix of open-source offensive frameworks including Metasploit, ysoserial, PentestGPT and DeepAudit plus multiple privilege-escalation exploits used to automate intrusions and establish persistence. The findings came from an open directory at 139.180.197[.]150 observed talking to a compromised machine.</p>
+</div>
+
+<div class="card">
+<div class="tags"><span class="tag">Shadow AI</span><span class="tag">Akamai</span></div>
+<h3>A handful of AI super-adopters carry most of the enterprise risk</h3>
+<p>Akamai&rsquo;s <em>State of the Internet: Enterprise AI Usage Risk Report 2026</em>, published August 24 and built on real-world usage and telemetry data alongside threat analysis, finds that the top 5% of enterprise power users interact with AI models at <b>12 times</b> the rate of the bottom 50% of the workforce. Akamai&rsquo;s argument is that security teams policing casual ChatGPT and Claude drafting are watching the wrong population: the small group hardcoding unvetted tools into critical business operations is the one expanding shadow AI, widening data-leakage exposure and introducing autonomous agents that run inside the enterprise but outside its guardrails.</p>
+</div>
+
+<div class="card">
+<div class="tags"><span class="tag">Apple</span><span class="tag">4 &times; CVSS 9.8</span></div>
+<h3>Apple is today&rsquo;s largest single cluster of critical disclosures</h3>
+<p>CVE Brief&rsquo;s August 24 daily digest counts <b>8 actively exploited vulnerabilities, 23 critical CVEs rated 9.0 or above, and 36 high-priority updates</b> across the day&rsquo;s disclosures. The largest single cluster is Apple&rsquo;s: four CVSS 9.8 flaws spanning mobile and desktop &mdash; <b>CVE-2026-43778</b>, <b>CVE-2026-43799</b> and <b>CVE-2026-43805</b> in iOS and iPadOS, and <b>CVE-2026-64698</b> in macOS. The same digest places enterprise-infrastructure issues in VMware Cloud Foundation, Microsoft SharePoint and Zimbra Collaboration &mdash; the last of which is the entry driving the Patch Priority box above.</p>
+<p class="note">None of the four Apple CVEs is stated by this source to be under active exploitation, and none appears in the CISA KEV catalog as of this edition; they are carried here as critical disclosures, not as exploited bugs. The exploited macOS entry already tracked on this page is CVE-2026-65400, added to KEV on August 18.</p>
+</div>
+
+<div class="card">
+<div class="tags"><span class="tag crit">CVSS 10.0</span><span class="tag">SAP Commerce Cloud</span></div>
+<h3>A maximum-severity SAP flaw is being probed &mdash; three days after the patch shipped</h3>
+<p><b>CVE-2026-58231</b> carries the maximum CVSS score of <b>10.0</b> and sits in SAP Commerce Cloud. Per CVE.org, &ldquo;SAP Commerce Cloud allows an unauthenticated attacker to abuse a default authentication client and submit specially crafted input to certain functions lacking sufficient validation,&rdquo; with successful exploitation enabling arbitrary code execution and compromise of internal components &mdash; high impact on confidentiality, integrity and availability. SAP patched it on <b>August 11</b>. Threat-intelligence firm Defused Cyber told The Hacker News that exploitation attempts began hitting its honeypots merely <b>three days after the patch</b>, and KEVIntel independently confirmed two attempts detected on <b>August 14</b> from a single IP address located in the United States.</p>
+<p>SAP security firm Onapsis recommends customers patch to the fixed Commerce Cloud release levels and re-build and re-deploy, and offers a temporary mitigation: configure an IP Filter Set in SAP Commerce Cloud to restrict access to the vulnerable endpoint. Nobody has been publicly attributed to the activity, though prior SAP flaws &mdash; CVE-2025-31324 in NetWeaver &mdash; were weaponised by China-nexus espionage clusters including UNC5221, UNC5174 and CL-STA-0048, and by the BianLian and RansomExx cybercrime groups.</p>
+<p class="note">Stated precisely, because the sourcing is nuanced: what is confirmed is <em>exploitation attempts</em> against honeypot and sensor infrastructure. Defused Cyber said in the same post that the vulnerability &ldquo;has no public PoC and is not known to be exploited,&rdquo; and CVE-2026-58231 does <b>not</b> appear in the CISA KEV catalog as of this edition, so it carries no federal remediation deadline. It is listed here as a maximum-severity flaw under active probing, not as a confirmed in-the-wild compromise.</p>
+</div>
+
+<div class="card">
+<div class="tags"><span class="tag">Finance</span><span class="tag">Social engineering</span></div>
+<h3>Apollo Global says a social-engineering intrusion reached Social Security numbers</h3>
+<p>Apollo Global Management disclosed that attackers breached its systems in July and accessed personal information, in what the firm describes as a social-engineering incident &mdash; manipulating people rather than exploiting a bug &mdash; to reach data held in Apollo&rsquo;s cloud. The investigation found unauthorised access to certain cloud platforms between <b>July 6 and July 10</b>. Apollo says it learned on <b>August 12</b> that the potentially affected information included names, dates of birth, contact information, home addresses and <b>Social Security numbers</b>. Notification letters to affected individuals are dated <b>August 21</b>. The firm notified law enforcement and engaged outside cybersecurity and forensic experts.</p>
+<p>Bloomberg placed the disclosure in a run of attempted or successful cyberattacks against major hedge funds and alternative-asset managers in recent weeks. The pattern is the one running through several items on this page: the initial access is human, not technical, and the exposure sits in a cloud tenancy rather than on a server anyone owns.</p>
+</div>
+
+<div class="card">
+<div class="tags"><span class="tag">Regulation</span></div>
+<h3>TikTok to pay $400 million over US child-privacy claims</h3>
+<p>The Department of Justice announced that ByteDance-owned TikTok will pay $400 million to settle a 2024 lawsuit accusing it of violating child privacy laws. $300 million is payable immediately, with a further $100 million due &ldquo;upon entry of an order vacating a prior consent decree entered against TikTok&rsquo;s predecessor, Musical.ly.&rdquo; The August 2024 complaint, filed with the FTC, alleged the company knowingly let under-13s create accounts and collected data from them in &ldquo;Kids Mode.&rdquo;</p>
+</div>
+
+<div class="card">
+<div class="tags"><span class="tag">IoT</span><span class="tag">Operation CameraSwarm</span></div>
+<h3>One operator quietly took over 14,500 Dahua cameras</h3>
+<p>Hunt.io researchers reconstructed a 35-day campaign that compromised more than 14,530 Dahua devices between June 17 and July 22, 2026, working from a 407 MB exposed working directory holding 2,616 files across 234 subdirectories. Three methods ran in parallel: credential attacks, two older authentication-bypass flaws (CVE-2021-33044 and CVE-2021-33045), and a peer-to-peer relay that reached 283 cameras sitting behind NAT using nothing but a device serial number. A persistent account was configured on 1,923 cameras. Confirmed compromises cluster in Ukraine and Russia; language artifacts point to a Russian-speaking operator, but the activity has not been attributed to any named group or government.</p>
+</div>
+
+<div class="card">
+<div class="tags"><span class="tag">Endpoint</span></div>
+<h3>Microsoft Defender&rsquo;s own driver can be turned against security software</h3>
+<p>Check Point Research disclosed a technique that uses Defender&rsquo;s legitimately signed boot-time remediation driver, BTR.sys, to perform arbitrary kernel-level file and registry operations on Windows 7 through Windows 11 25H2 &mdash; exploiting no software flaw and importing no outside driver. Because BTR.sys is a required Windows component, it cannot be added to Microsoft&rsquo;s Vulnerable Driver Blocklist or blocked with WDAC without breaking Defender itself. Jiří Vinopal presented the research at Black Hat USA 2026 and DEF CON 34 and published a proof-of-concept tool, BTR_CLI, on August 20. Check Point said it found no evidence of real-world use.</p>
+</div>
+
+<div class="card">
+<div class="tags"><span class="tag">Supply chain</span><span class="tag">No CVE</span></div>
+<h3>Malicious Rust crates ran code at build time</h3>
+<p>The Rust Project deleted malicious versions of three widely used crates after a compromised maintainer account published releases that added a typosquatted dependency whose build script downloaded and executed a remote payload during compilation. The affected releases &mdash; arrayref 0.3.10, internment 0.8.7 and append-only-vec 0.1.9 &mdash; were all published August 20 from the same account and removed within 86 to 107 minutes. Because the code sat in a build script, merely resolving the dependency was enough to run it. There is no patched version and no CVE; developers are advised to search <code>~/.cargo/registry/cache</code> and pin arrayref at 0.3.9 or earlier.</p>
+</div>
+
+<div class="card">
+<div class="tags"><span class="tag">Supply chain</span><span class="tag">npm</span></div>
+<h3>14 trojanized npm packages drop a Linux backdoor</h3>
+<p>TrendAI, Trend Micro&rsquo;s enterprise business, identified 14 npm packages posing as calendar and streak utilities that deliver an AI-powered Linux implant dubbed RedC2 4.0. &ldquo;When the module loads, it locates the bundled binary, marks it executable, and launches it as a detached background process,&rdquo; the researchers wrote &mdash; no install hook required, and a single import anywhere in the dependency graph, even a transitive one, is enough to execute the payload.</p>
+</div>
+
+<div class="card">
+<div class="tags"><span class="tag">Critical infrastructure</span><span class="tag">Joint advisory</span></div>
+<h3>AI-generated exploit scripts are probing US industrial controllers</h3>
+<p>NSA, CISA, FBI, the Department of Energy and the EPA published a joint advisory warning of an &ldquo;active threat&rdquo; against US critical infrastructure using AI-generated exploit scripts disguised as legitimate monitoring tools. The activity targets Siemens S7 Series programmable logic controllers for reconnaissance and capability development, though the agencies assess the broader PLC targeting is not limited to Siemens. Operators are using internet scanning services such as Censys and ZoomEye to find exposed, outdated or poorly protected controllers across critical manufacturing, energy and water.</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="lab">Vulnerability watch</div>
+<div class="panel" style="padding:6px 8px">
+<table>
+<tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr>
+
+<tr><td>CVE-2026-58231</td><td>10.0</td><td>SAP Commerce Cloud; patched August 11, 2026 &mdash; customers must move to the fixed release levels and re-build/re-deploy</td><td>Insufficient authorisation checks and input validation. An unauthenticated attacker can abuse a default authentication client and submit crafted input to functions lacking sufficient validation, reaching arbitrary code execution and compromise of internal components. Defused Cyber recorded exploitation attempts against its honeypots three days after the patch, and KEVIntel confirmed two attempts on August 14 from a single US IP. <b>Defused Cyber states there is no public PoC and the flaw is not known to be exploited in real-world compromises</b>; it is not a KEV entry and carries no federal deadline. Onapsis mitigation: an IP Filter Set restricting access to the vulnerable endpoint.</td></tr>
+
+<tr><td>CVE-2026-18963</td><td>9.1</td><td>Keycloak; upstream fixed in 26.7.2, Red Hat build of Keycloak in 26.4.15 and 26.6.6</td><td>A weak password-recovery mechanism (CWE-640) in the open-source identity and access management server lets an unauthenticated remote attacker take over any user account by forcing a password reset. Rated 9.1 by Red Hat, which is the CNA. Red Hat says the root cause is improper state validation within the reset-credentials flow. Upstream 26.7.2 was released August 19, 2026. <b>No evidence of exploitation and no verified public exploit as of August 24, 2026.</b> Not a KEV entry.</td></tr>
+
+<tr><td>CVE-2026-15748</td><td>9.8</td><td>Forminator Forms for WordPress, all versions up to and including 1.56.1 (600,000+ active installs)</td><td>Arbitrary file upload in <code>handle_file_upload()</code> lets unauthenticated attackers upload executable PHP and reach remote code execution. Exploitation requires a form containing both a File Upload field and a Select field. Fixed in 1.56.2, released July 31, 2026. Reported by the researcher &ldquo;daroo&rdquo;; analysis by Wordfence. Not a KEV entry.</td></tr>
+
+<tr><td>CVE-2026-15826</td><td>9.8</td><td>User Profile Builder for WordPress, all versions before 3.16.5 (40,000+ active installs)</td><td>Authentication bypass letting an unauthenticated attacker log in as user ID 1 &mdash; typically the administrator. Only exploitable where the plugin&rsquo;s Automatically Log In setting is enabled. Patched July 16, 2026 in version 3.16.5. Not a KEV entry.</td></tr>
+
+<tr><td>CVE-2026-73570</td><td>8.9</td><td>Zimbra Collaboration before 10.1.20 with zimbra-snmp installed</td><td>Command injection via crafted SMTP requests → RCE as the Zimbra user; <b>exploited</b> per CERT Polska. Patched in 10.1.20. <b>KEV due today.</b></td></tr>
+
+<tr><td>CVE-2026-19478</td><td>9.4</td><td>GitLab CE/EE 18.2–19.2</td><td>Code injection via GraphQL directive; <b>exploited</b>. Fixed in 19.2.4 / 19.1.6 / 19.0.8 / 18.11.11.</td></tr>
+
+<tr><td>CVE-2026-72529</td><td>9.8</td><td>TrueConf Server (port 4307/TCP)</td><td>Missing authentication → arbitrary script execution; <b>exploited</b>. KEV deadline of Aug 23 has now passed.</td></tr>
+
+<tr><td>CVE-2026-19490</td><td>9.3</td><td>NetScaler ADC &amp; NetScaler Gateway 14.1 before 14.1-73.32, 13.1 before 13.1-63.21 (plus FIPS/NDcPP builds)</td><td>Authentication bypass using an alternate path (CWE-288) — remote, unauthenticated, no user interaction. Applies to appliances configured as a Gateway (SSL VPN, ICA Proxy, CVPN, RDP Proxy) or an AAA virtual server; on newer vulnerable builds a configured SAML action is additionally required. Advisory published Aug 19. Rapid7 reported <b>no evidence of in-the-wild exploitation</b> as of that date, but urged emergency-basis patching; SecurityWeek headlined its coverage &ldquo;exploitation expected.&rdquo; The 9.3 is the CVSS v4.0 base score &mdash; do not print 9.8.</td></tr>
+
+<tr><td>CVE-2026-59310</td><td>9.8</td><td>Broadcom VMware vCenter</td><td>Path traversal → arbitrary code execution with network access; <b>exploited</b>. KEV 3 days past due.</td></tr>
+
+<tr><td>CVE-2026-65400</td><td>9.8</td><td>Apple macOS (Screen Sharing)</td><td>Improper authentication — attacker on the network authenticates without valid credentials; <b>exploited</b> to deploy a cryptocurrency miner. KEV 3 days past due.</td></tr>
+
+<tr><td>CVE-2026-72898</td><td>10.0</td><td>Metabase</td><td>Unauthenticated SQL injection → admin access, stored database credentials and data export; <b>exploited as a zero-day</b>. KEV 10 days past due.</td></tr>
+
+<tr><td>CVE-2026-20030 / -20357 / -20358</td><td>10.0</td><td>Cisco Crosswork Data Gateway, Network Controller, Planning 7.2.1 and earlier</td><td>SQL injection, missing authentication and external control of the file system — three of nine flaws Cisco patched across Crosswork and Secure Workload, five of which score 10.0. Fixed in 7.2.1-SP. No exploitation reported.</td></tr>
+
+<tr><td>CVE-2026-69836</td><td>10.0</td><td>Microsoft Entra ID</td><td><b>Not exploited.</b> Microsoft&rsquo;s bulletin originally marked &ldquo;Exploited: Yes&rdquo;; on Aug 21 it corrected the field to &ldquo;No&rdquo; and said no customer action is required. Do not flip this.</td></tr>
+
+<tr><td>GHSA-864f-rcv7-6rh4</td><td>—</td><td>isolated-vm, all versions up to and including 7.0.0</td><td>Sandbox escape from untrusted JavaScript to the host. Patched in 6.2.0 and 7.0.1. No CVE assigned.</td></tr>
+
+</table>
+</div>
+<div class="note">No vulnerability is new in this edition &mdash; the Keycloak, WordPress, GitLab, Zimbra, NetScaler and Cisco entries were all in the previous archived snapshot, so none carries a New tag. No item anywhere on this page carries a New tag in this edition: every story here, including Akamai&rsquo;s August 24 finding on enterprise AI super-adopters, was already in the previous archived snapshot. That makes two consecutive cyber editions with zero New tags. The one story added at this edition &mdash; the StopAndProtect WordPress network, below &mdash; is Check Point research from earlier in August and is deliberately untagged for the same reason. No fresh CISA KEV addition surfaced in searches this run &mdash; the August 21 Zimbra entry remains the most recent, re-confirmed against the CISA alert page this run, with August 20 (two TrueConf flaws), August 18 (four) and August 11 (three) behind it. CVSS figures for KEV-listed items are the scores carried in the KEV catalog; vendor and researcher advisories are listed in the sources below. The federal-deadline board remains at twelve tracked entries: no CISA KEV addition later than the August 21 Zimbra entry surfaced in searches this run.</div>
+</section>
+
+<section>
+<div class="lab">CISA KEV &amp; federal deadlines</div>
+<div class="panel">
+<ul class="bul">
+<li><b>CVE-2026-73570</b> — Zimbra Collaboration Suite, OS command injection (CVSS 8.9). Added Aug 21, due <b>Aug 24</b>. <span class="kevdue crit">DUE TODAY — 0 days left</span></li>
+<li><b>CVE-2026-68820</b> — Microsoft Windows Ancillary Function Driver for WinSock, use-after-free (CVSS 7.0) — exploited as a zero-day by the North Korean Lazarus group to deploy malware, and one of three zero-days among the 400 flaws fixed in Microsoft&rsquo;s August Patch Tuesday, per BleepingComputer. Added Aug 11, due <b>Aug 25</b>. <span class="kevdue">1 day left</span></li>
+<li><b>CVE-2026-64849</b> — MLflow, server-side request forgery (CVSS 9.3). Added Aug 19, due <b>Sep 2</b>. <span class="kevdue ok">9 days left</span></li>
+<li><b>CVE-2026-72530</b> — TrueConf Server, code injection / sandbox breakout (CVSS 9.5). Added Aug 20, due <b>Sep 3</b>. <span class="kevdue ok">10 days left</span></li>
+<li><b>CVE-2026-72529</b> — TrueConf Server, missing authentication (CVSS 9.8). Added Aug 20, due <b>Aug 23</b>. <span class="kevdue crit">1 day PAST DUE</span></li>
+<li><b>CVE-2026-59310</b> — Broadcom VMware vCenter, path traversal (CVSS 9.8). Added Aug 18, due <b>Aug 21</b>. <span class="kevdue crit">3 days PAST DUE</span></li>
+<li><b>CVE-2026-65400</b> — Apple macOS, improper authentication (CVSS 9.8). Added Aug 18, due <b>Aug 21</b>. <span class="kevdue crit">3 days PAST DUE</span></li>
+<li><b>CVE-2026-33824</b> — Microsoft IKE Service Extensions, double free (CVSS 9.8). Added Aug 18, due <b>Aug 21</b>. <span class="kevdue crit">3 days PAST DUE</span></li>
+<li><b>CVE-2026-55040</b> — Microsoft SharePoint, weak authentication (CVSS 9.1). Added Aug 18, due <b>Aug 21</b>. <span class="kevdue crit">3 days PAST DUE</span></li>
+<li><b>CVE-2025-62593</b> — Ray-Project Ray, code injection reachable from a browser (CVSS 9.4). Added Aug 17, due <b>Aug 20</b>. <span class="kevdue crit">4 days PAST DUE</span></li>
+<li><b>CVE-2026-72898</b> — Metabase, SQL injection (CVSS 10.0). Added Aug 11, due <b>Aug 14</b>. <span class="kevdue crit">10 days PAST DUE</span></li>
+<li><b>CVE-2026-20349</b> — Cisco Secure Firewall ASA and FTD, heap inspection → denial of service (CVSS 8.6). Added Aug 11, due <b>Aug 14</b>. <span class="kevdue crit">10 days PAST DUE</span></li>
+</ul>
+<div class="note">Of the 12 entries tracked here, 8 are past due, 1 comes due today and 3 remain ahead of schedule. Every entry carries the same instruction: apply vendor mitigations in line with BOD 26-04 guidance, or discontinue use if mitigations are unavailable. Deadlines under BOD 26-04 are risk-based and assigned per CVE &mdash; the Aug 21 Zimbra addition got three days, while the Aug 11 Windows WinSock entry got two weeks.</div>
+</div>
+</section>
+
+<footer>
+<div class="lab">Sources</div>
+<ul>
+<li>Check Point Research — Thousands of Hacked WordPress Sites, One Operation: Unmasking StopAndProtect (Jarom&iacute;r Ho&#345;ej&scaron;&iacute;; surfaced this run) — https://research.checkpoint.com/2026/thousands-of-hacked-wordpress-sites-one-operation-unmasking-stopandprotect/</li>
+<li>The Hacker News — StopAndProtect Uses Nearly 2,000 Hacked WordPress Sites to Spread Malware and Steal Data — https://thehackernews.com/2026/08/stopandprotect-uses-nearly-2000-hacked.html</li>
+<li>Security Affairs — StopAndProtect Turns 2,000 Hacked WordPress Sites Into a Criminal Network — https://securityaffairs.com/197537/hacking/stopandprotect-turns-2000-hacked-wordpress-sites-into-a-criminal-network.html</li>
+<li>CISA — KEV catalog additions re-checked this run: no addition later than the Aug 21 Zimbra entry (Aug 20 TrueConf &times;2, Aug 18 &times;4, Aug 11 &times;3, Aug 7 Progress LoadMaster) — https://www.cisa.gov/known-exploited-vulnerabilities-catalog</li>
+<li>CBS News — Bessent announces new economic sanctions against Iran: &ldquo;The clock just started ticking&rdquo; (Aug 24, 2026; fetched this run) — https://www.cbsnews.com/news/bessent-press-conference-iran-sanctions-economic-d-day/</li>
+<li>The Hacker News — SAP Commerce Cloud CVE-2026-58231 Targeted in Exploitation Attempts Days After Patch (Aug 15, 2026; fetched in full this run) — https://thehackernews.com/2026/08/sap-commerce-cloud-cve-2026-58231.html</li>
+<li>SecurityWeek — Iran-Linked Hackers Shut Down UK Power Plant for Four Days (Aug 24, 2026, 5:22 AM ET; fetched in full this run) — https://www.securityweek.com/iran-linked-hackers-shut-down-uk-power-plant-for-four-days/</li>
+<li>Bloomberg — Apollo Reports Data Breach From &lsquo;Social Engineering Incident&rsquo; (Aug 21, 2026) — https://www.bloomberg.com/news/articles/2026-08-21/apollo-reports-data-breach-from-social-engineering-incident</li>
+<li>Insurance Journal — Apollo Global Reveals Data Breach After Hackers Target Financial Firms (Aug 21, 2026) — https://www.insurancejournal.com/news/national/2026/08/21/882462.htm</li>
+<li>CISA — Adds One Known Exploited Vulnerability to Catalog (Aug 21, 2026; CVE-2026-73570, Zimbra; re-verified this run) — https://www.cisa.gov/news-events/alerts/2026/08/21/cisa-adds-one-known-exploited-vulnerability-catalog</li>
+<li>CISA — Known Exploited Vulnerabilities Catalog — https://www.cisa.gov/known-exploited-vulnerabilities-catalog</li>
+<li>CISA &mdash; Adds One Known Exploited Vulnerability to Catalog, Aug 21, 2026 (CVE-2026-73570, Zimbra; due Aug 24, 2026) &mdash; https://www.cisa.gov/news-events/alerts/2026/08/21/cisa-adds-one-known-exploited-vulnerability-catalog</li>
+<li>The Hacker News &mdash; Attackers Exploit Zimbra SNMP Flaw for Unauthenticated Remote Code Execution &mdash; https://thehackernews.com/2026/08/attackers-exploit-zimbra-snmp-flaw-for.html</li>
+<li>Security Affairs &mdash; U.S. CISA adds Zimbra Collaboration Suite (ZCS) flaw to its Known Exploited Vulnerabilities catalog &mdash; https://securityaffairs.com/197693/security/u-s-cisa-adds-zimbra-collaboration-suite-zcs-flaw-to-its-known-exploited-vulnerabilities-catalog.html</li>
+<li>CVE Brief &mdash; daily digest, August 24, 2026 &mdash; https://cvebrief.com/</li>
+<li>CISA &mdash; Known Exploited Vulnerabilities Catalog &mdash; https://www.cisa.gov/known-exploited-vulnerabilities-catalog</li>
+<li>The Hacker News — INC Ransomware Emerges as Dominant Actor Exploiting SonicWall SMA 1000 Flaws (Aug 2026) — https://thehackernews.com/2026/08/inc-ransomware-emerges-as-dominant.html</li>
+<li>Resecurity — From WSProxy to Root: INC ransomware and SonicWall SMA Exploit Chain — https://www.resecurity.com/blog/article/from-wsproxy-to-root-inc-ransomware-and-sonicwall-sma-exploit-chain</li>
+<li>SecurityWeek — Recent SonicWall Vulnerabilities Exploited in Ransomware Attacks — https://www.securityweek.com/recent-sonicwall-vulnerabilities-exploited-in-ransomware-attacks/</li>
+<li>Help Net Security — Week in review: Records allegedly stolen from Azure tenants, Medusa ransomware hits 500+ orgs (Aug 23, 2026; UT San Antonio semester delay, Medusa joint advisory, France DGFiP breach) — https://www.helpnetsecurity.com/2026/08/23/week-in-review-records-allegedly-stolen-from-azure-tenants-medusa-ransomware-hits-500-orgs/</li>
+<li>Help Net Security — Medusa ransomware gang has hit over 500 organizations, CISA warns (Aug 19, 2026) — https://www.helpnetsecurity.com/2026/08/19/medusa-ransomware-cisa-warning/</li>
+<li>Help Net Security — Cyberattack forces UT San Antonio to delay start of fall semester (Aug 19, 2026) — https://www.helpnetsecurity.com/2026/08/19/ut-san-antonio-cyberattack-fall-semester-delay/</li>
+<li>Help Net Security — France’s tax authority admits hackers made off with data on 678,000 individuals (Aug 17, 2026) — https://www.helpnetsecurity.com/2026/08/17/france-tax-authority-data-breach/</li>
+<li>Rankiteo breach register — ASOS US Sales LLC data breach, reported to the Texas and Vermont attorneys general Aug 21, 2026 (9,412 Texas residents, 80 Vermont residents) — https://blog.rankiteo.com/aso1787433052-asos-us-sales-llc-breach-august-2026/</li>
+<li>CISA — Adds One Known Exploited Vulnerability to Catalog, Aug 21, 2026 (CVE-2026-73570, Zimbra; due Aug 24) — https://www.cisa.gov/news-events/alerts/2026/08/21/cisa-adds-one-known-exploited-vulnerability-catalog</li>
+<li>The Hacker News — Attackers Exploit Zimbra SNMP Flaw for Unauthenticated Remote Code Execution — https://thehackernews.com/2026/08/attackers-exploit-zimbra-snmp-flaw-for.html</li>
+<li>Security Affairs — U.S. CISA adds Zimbra Collaboration Suite flaw to its Known Exploited Vulnerabilities catalog — https://securityaffairs.com/197693/security/u-s-cisa-adds-zimbra-collaboration-suite-zcs-flaw-to-its-known-exploited-vulnerabilities-catalog.html</li>
+<li>SecurityWeek — Iran-Linked Hackers Shut Down UK Power Plant for Four Days — https://www.securityweek.com/iran-linked-hackers-shut-down-uk-power-plant-for-four-days/</li>
+<li>CNBC — Small UK power generator shut down after cyberattack linked to Iran: Telegraph (Aug 23, 2026) — https://www.cnbc.com/2026/08/23/small-uk-power-plant-shut-down-after-iran-linked-cyberattack-report.html</li>
+<li>The Times of Israel — Iran-linked hackers blamed for four-day shutdown of UK power plant — https://www.timesofisrael.com/iran-linked-hackers-blamed-for-four-day-shutdown-of-uk-power-plant/</li>
+<li>The Hacker News — The Outsized Shadow: Why 5% of AI Users Are Your Biggest Security Risk (Akamai State of the Internet: Enterprise AI Usage Risk Report 2026, Aug 24, 2026) — https://thehackernews.com/2026/08/the-outsized-shadow-why-5-of-ai-users.html</li>
+<li>The Hacker News — Critical Keycloak Password Reset Flaw Could Let Unauthenticated Attackers Take Over Any Account (Aug 24, 2026) — https://thehackernews.com/2026/08/critical-keycloak-password-reset-flaw.html</li>
+<li>The Hacker News — Operation QUICSILVER Targets Myanmar Government and IT with QUICAgent Backdoor (Aug 24, 2026) — https://thehackernews.com/2026/08/operation-quicsilver-targets-myanmar.html</li>
+<li>The Hacker News — UAT-10147 Uses AI to Scale Server Attacks, Deploys SPECTRE With EDR Bypass and Linux Rootkit (Aug 24, 2026) — https://thehackernews.com/2026/08/uat-10147-uses-ai-to-scale-server.html</li>
+<li>CISA — Adds Two Known Exploited Vulnerabilities to Catalog (Aug 20, 2026) — https://www.cisa.gov/news-events/alerts/2026/08/20/cisa-adds-two-known-exploited-vulnerabilities-catalog</li>
+<li>CISA — Adds Four Known Exploited Vulnerabilities to Catalog (Aug 18, 2026) — https://www.cisa.gov/news-events/alerts/2026/08/18/cisa-adds-four-known-exploited-vulnerabilities-catalog</li>
+<li>The Hacker News — Critical GitLab GraphQL Flaw Could Let Unauthenticated Attackers Delete Public Projects (Aug 21, 2026) — https://thehackernews.com/2026/08/gitlab-cve-2026-19478-comes-under.html</li>
+<li>The Hacker News — Forminator WordPress Flaw Can Enable Unauthenticated RCE via Malicious PHP Uploads (Aug 17, 2026)</li>
+<li>Wordfence — 600,000 WordPress sites affected by arbitrary file upload vulnerability in Forminator Forms</li>
+<li>Wordfence — 40,000 WordPress sites affected by authentication bypass in User Profile Builder</li>
+<li>Information Security Media Group / DataBreachToday — ShinyHunters leaks 7.1 million Baxter International records</li>
+<li>Push Security — How three techniques are behind ShinyHunters&rsquo; 2026 campaigns</li>
+<li>Ransomware.live — Baxter International, Inc. listing, ShinyHunters (first listed Aug 14, 2026)</li>
+<li>The Hacker News — TikTok Agrees to $400 Million Settlement in U.S. Child Privacy Lawsuit (Aug 22, 2026)</li>
+<li>Hunt.io — Operation CameraSwarm: over 14,000 Dahua cameras compromised across Ukraine and Russia</li>
+<li>The Hacker News — Hackers Compromised 14,500+ Dahua Devices Using Credential Attacks, Auth Bypasses, and P2P (Aug 22, 2026)</li>
+<li>The Hacker News — Rust Supply Chain Attack Puts Build-Time Malware in Crates with 245 Million Downloads (Aug 20, 2026)</li>
+<li>The Hacker News — 14 Trojanized npm Packages Drop RedC2 4.0 Linux Backdoor (Aug 21, 2026)</li>
+<li>The Hacker News — AI-Generated Exploit Scripts Target Siemens S7 PLCs in U.S. Critical Infrastructure (Aug 20, 2026)</li>
+<li>The Hacker News — Attackers Exploit Zimbra SNMP Flaw for Unauthenticated Remote Code Execution (Aug 20, 2026)</li>
+<li>The Hacker News — Critical macOS, SharePoint, vCenter, and Microsoft IKE Flaws Under Active Exploitation</li>
+<li>The Hacker News — Microsoft Patches Severe Entra ID Flaw (CVSS 10.0), updated to note it was not exploited (Aug 21, 2026)</li>
+<li>Rapid7 — ETR: CVE-2026-19490, critical vulnerability affecting Citrix NetScaler ADC and NetScaler Gateway (Aug 19, 2026)</li>
+<li>SecurityWeek — Exploitation expected for critical authentication bypass patched in Citrix NetScaler</li>
+<li>Tenable — Microsoft&rsquo;s August 2026 Patch Tuesday addresses 398 CVEs (CVE-2026-68820)</li>
+<li>BleepingComputer — Microsoft August 2026 Patch Tuesday fixes 400 flaws, 3 zero-days (CVE-2026-68820 exploited by Lazarus)</li>
+<li>CISA — Adds One Known Exploited Vulnerability to Catalog (Aug 21, 2026: CVE-2026-73570, due Aug 24)</li>
+<li>CISA — Adds Two Known Exploited Vulnerabilities to Catalog (Aug 20, 2026: CVE-2026-72529, CVE-2026-72530)</li>
+<li>CISA — Adds Four Known Exploited Vulnerabilities to Catalog (Aug 18, 2026)</li>
+<li>CISA — Adds Three Known Exploited Vulnerabilities to Catalog (Aug 11, 2026)</li>
+<li>CISA — BOD 26-04: Prioritizing Security Updates Based on Risk</li>
+</ul>
+<p class="disc">For information only. Security guidance here is a summary of public reporting and should be validated against vendor advisories and your own environment before you act on it.</p>
+</footer>
+
+</div>
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
+</body>
+</html>
