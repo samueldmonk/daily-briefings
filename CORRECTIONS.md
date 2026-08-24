@@ -10516,3 +10516,75 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   cache, and the page *deliberately states* **"No After-Hours Movers section appears in this edition."** Blacklisting those substrings flags
   correct prose as an error. **Assert the after-hours SECTION LABEL absent** (`class="lab...">After-Hours`), not the phrase — and assert the
   cache tell PRESENT, since quoting it is the point.
+
+## Added 2026-08-24 (Monday ~3:10pm ET — AFTERNOON EDITION; archive stamp 2026-08-24-1505)
+- CLOCK: TZ date = Mon Aug 24 15:05 EDT at run start; ~25 minutes after the 1449 snapshot. Edition bucket **Afternoon** (h=15).
+  **ONE** New tag site-wide: **WS ×1** ("The index moves are quiet; the risk gauges are not"). The 1449 New tag (WS Alibaba
+  post-earnings slide) was dropped. **CYBER: zero New tags, fourth consecutive run. MMA: zero New tags, NINTH consecutive run.**
+- 🚨 **THE MOST DANGEROUS CACHE OF THE DAY — YAHOO CACHED A SIXTH TIME AND IT PASSED EVERY ARITHMETIC TEST. WRITE THIS DOWN.**
+  The Yahoo-hosted Motley Fool "Stock Market Midday" page returned a market strip carrying **S&P 500 7,659.82 −14.55 (−0.19%),
+  Dow 30 53,392.55 +115.54 (+0.22%), Nasdaq 26,067.27 −113.18 (−0.43%), Russell 2000 2,998.19 −19.68 (−0.65%), VIX 15.68 +0.55
+  (+3.64%), Gold 4,715.20 +34.60 (+0.74%), Bitcoin USD 79,040.24 +1,634.57 (+2.11%), Crude Oil Oct 26 85.38 −1.68 (−1.93%),
+  Visa 380.57 +9.53 (+2.57%)**. **EVERY SINGLE FIGURE RECONCILES:** adding the point changes back returns Friday's verified
+  closes 7,674.37 / 53,277.01 / 26,180.46 to the cent; the crude quote backs out to the established $87.06 prior close; the gold
+  quote backs out to the established $4,680.60 futures prior close. On arithmetic alone the page is indistinguishable from a live
+  one — **an early draft of this edition led with it as "Yahoo finally comes back live at 2:59 p.m. ET" and had to be torn up.**
+  ⚠ **THE COUNTDOWN WAS THE ONLY TELL, AND THE ARITHMETIC OF THE COUNTDOWN IS EASY TO GET BACKWARDS.** The strip read
+  **"U.S. markets close in 3h 1m."** 4:00 PM − 3h01m = **12:59 PM ET**, NOT 2:59 PM. The draft subtracted from the wrong anchor and
+  turned a two-hour-stale page into a "fresh" one. **RULE: always compute the countdown as `16:00 − offset` and then compare the
+  RESULT against the wall clock. If the result is EARLIER than the previous run's snapshot, the page is stale by definition —
+  a quote board cannot be fresher than a reading you already published.** The 12:59 figures are OLDER than the 1449 edition's ~2 PM reads.
+  ⚠ **BLACKLIST THESE FIGURES FOR THE REST OF THE SESSION: 7,659.82 / 53,392.55 / 26,067.27 / 79,032.63.** They are a valid
+  12:59 PM ET snapshot and are published on the page ONLY where explicitly stamped "12:59 p.m. ET" and described as cached.
+  **LESSON, stated plainly: RECONCILIATION PROVES A FIGURE IS REAL. THE CLOCK PROVES IT IS CURRENT. THEY ARE DIFFERENT TESTS AND
+  A PAGE CAN PASS THE FIRST WHILE FAILING THE SECOND BY TWO HOURS.** This is the strongest form yet of the ninth-run lesson.
+- MARKETS — freshest ATTRIBUTED index reads published as a range, no level: **~2:24 PM ET read of Dow +0.28%, S&P −0.21%,
+  Nasdaq Comp −0.58%**, against a separate ~3 PM summary of **S&P −0.3% / Nasdaq −0.6% / Dow +0.2%**. Agree on direction, differ on
+  the width of tech underperformance. **Eleventh consecutive run of withholding intraday index LEVELS from editorial.**
+- MARKETS — **fool.com FROZEN, FOURTH CONSECUTIVE IDENTICAL PRINT** (body 11:37 AM ET, `article:modified_time` still
+  2026-08-24T16:15:02Z). **Stock Market Watch FROZEN, THIRD CONSECUTIVE RUN**: losers table and sector strip byte-identical
+  (SNDK −5.6% 1507.60, MU −3.7% 930.86, AAOI −13% 108.43, WDC −4.2% 439.95, SKHY −3.6% 157.51, COHR −5.7% 272.80, LITE −5.4%
+  819.23, AXTI −6.2% 66.15), article stamped 6:07 AM UTC. ⚠ Corroborating tell: SMW showed **SDOT +57%** while the (12:59) Yahoo
+  trending rail showed **SDOT +78.68%** — when two boards disagree that far on one small-cap, the flatter one is the stale one.
+  The memory card's "live movers board" wording was rewritten to say the board is treated as **frozen**, dating those figures to
+  the early afternoon. **NEW STANDING RULE: never describe a source as a "live board" once it has repeated a byte-identical table.**
+- MARKETS NEW ×1 — **THE RISK GAUGES ARE MOVING MORE THAN THE INDEXES.** From the (cached, explicitly stamped) 12:59 PM strip:
+  **VIX +3.64% at 15.68** — a bigger percentage move than any headline index; **Russell 2000 −0.65% at 2,998.19**, back under
+  3,000 and lagging the S&P by ~3.4×; **gold futures +0.74% at $4,715.20**; **bitcoin +2.11% at $79,040.24**. Rates/commodities
+  table rows for WTI, gold, bitcoin and VIX were restamped to 12:59 PM ET and a **Russell 2000 row was added**. ⚠ **BITCOIN
+  BASELINE NOTE: BTC trades continuously and vendors anchor the daily change to different cut-offs** — this quote implies a
+  ~$77,405 reference while the prior edition's fool read ($79,716.00, +$2,434.18, +3.1%) implies ~$77,282. Not a contradiction;
+  documented in the row rather than blended.
+- MARKETS — CNBC's **Treasury General Account** story re-verified this run from two CNBC URLs: Treasury weighing use of its
+  **~$1 trillion** General Account to fund expanded buybacks (two Treasury officials, amount unspecified); per-operation ceiling
+  raised **$2bn → at least $4bn** for the 10-to-20-year and 20-to-30-year sectors; **10-year −4 bp to 4.7%, 30-year −4 bp to 5.23%**
+  after the 30-year hit its highest since 2007 last week. Trading Economics separately had the 10-year at **4.71%** Monday.
+  Already on the page from the 1342 run; no New tag.
+- CYBER — **ONE SUBSTANTIVE ADDITION: THE ZIMBRA COMPROMISE HAS A COUNT.** CVE-2026-73570 (CVSS **8.9**, fixed **10.1.20**,
+  added Aug 21 → **due Aug 24, TODAY**) re-verified via SOCRadar/BleepingComputer/CISA. New this run and added to Patch Priority
+  and both tldrs: **CERT Polska reported in-the-wild exploitation on August 17**, and **Shadowserver found more than 270 already-
+  compromised ZCS instances** while scanning for exploitation artefacts. Framing added: for those servers, patching closes the door
+  on an intruder already inside, so webshell/process hunting must run alongside the update. **KEV board 12 rows: 8 past due,
+  1 due today, 3 ahead** — re-validated programmatically. Searched for KEV additions dated Aug 22–24: **none**; Aug 21 Zimbra
+  remains newest. Operation QUICSILVER re-confirmed (Seqrite Labs, disclosed Aug 17, Myanmar govt/IT, QUICAgent Go backdoor over
+  QUIC via Cloudflare Workers) — already on the page, correctly untagged.
+- MMA — **NOTHING NEWLY ANNOUNCED; ZERO New tags, NINTH consecutive run.** Page content byte-identical to the 1449 edition.
+  Only UFC item surfacing was the Aug 23 UFC 334 (MSG, Nov 14) / UFC 335 (T-Mobile, Dec 12) announcement, already on the page.
+  ⚠ **THE STALE-CHAMPIONS TRAP FIRED AGAIN AND WAS REJECTED — DO NOT "CORRECT" THE BOARD BACK.** A search summary for
+  "UFC current champions all divisions August 2026 ESPN" returned the **known-bad** list: *Pereira LHW (UFC 320, Oct 2025),
+  Chimaev MW (UFC 319, Aug 2025), Topuria LW (UFC 317, Jun 2025)*. All three are superseded by the standing block
+  (**Ulberg** LHW Apr 11 2026, **Strickland** MW May 9 2026, **Gaethje** LW Jun 14 2026). The summariser is reading a cached or
+  older ESPN rendering. **Board left unchanged, 11/11 rows, 0 vacant**, asserted programmatically **by CHAMPION COLUMN ONLY**.
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**. `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `outputs/validate_1505.py`, **0 failures, 205 checks**). 4 pages HTMLParser-balanced 0 unclosed /
+  0 stray; 5-tab nav on all 4 with exactly 1 active tab scoped inside `<nav class="tabs">`; stamp/fresh IDs on all 4; `.tldr` on
+  all three briefings with correct per-page labels and NONE on index; each index card contains its own page's `.tldr` verbatim;
+  **8/8 TradingView widget JSON blocks parse**; ticker retains SPXUSD + NSXUSD + DJI + USOIL + US10Y; Chart of the Day asserted
+  **NASDAQ:AAOI** scoped to the mini-symbol-overview block only; **12/12 KEV countdowns** with the 8/1/3 split; champions column
+  11 cells, 8 names present, 4 stale strings absent; blacklisted cached figures asserted absent from the lead block only;
+  New-tag counts asserted **WS 1 / CY 0 / MMA 0** with the footnote asserted to name the ACTUAL tagged card; SMW asserted marked
+  frozen; after-hours section label asserted ABSENT. Trap greps CLEAN ×0 (Cody Salkilld, Abdul-Rakhman, Shamil Yakhyaev,
+  "title challenger Beneil", "Shanghai Indoor Stadium").
+  ⚠ **VALIDATOR GOTCHA #6 — WRITE THIS DOWN. `"2:59"` IS A SUBSTRING OF `"12:59"`.** The blacklist check for the wrong stamp
+  matched every one of the nine CORRECT `12:59` stamps and reported three phantom failures. **Use a lookbehind:
+  `re.search(r'(?<!1)2:59', html)`.** The same class of bug will bite any bare `H:MM` blacklist — always anchor the hour.
