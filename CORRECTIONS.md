@@ -9963,3 +9963,74 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   asserted == 3** (WS 1, CYBER 2, MMA 0). Trap greps CLEAN ×0 on all four pages.
   NOTE for future validators: the KEV countdown regex must be `due <b>(Mon DD)</b>\.\s*<span[^>]*>(label)</span>` —
   the `<b>` wrapper on the date breaks looser patterns.
+
+## Added 2026-08-24 (Monday ~11:42am ET — MIDDAY EDITION; archive stamp 2026-08-24-1142)
+- CLOCK: TZ date = Mon Aug 24 11:32 EDT at run start; ~12 minutes after the 1130 snapshot. Edition bucket **Midday** (h=11).
+  **TWO** New tags site-wide: **WS "The Treasury's $1 trillion cash pile becomes the day's market driver"** and
+  **CYBER "INC ransomware / SonicWall SMA 1000"**. The 1130 New tags (WS Visa/UnitedHealth/Disney Dow-breadth,
+  CYBER UT San Antonio, CYBER Medusa) were ALL dropped. **MMA: zero New tags, second consecutive run.**
+- MARKETS — **MATERIAL MIDDAY REVERSAL, NEW LEAD.** CNBC reported Monday, citing two senior Treasury officials, that
+  Treasury could tap its **near-$1 trillion Treasury General Account** to fund the expanded bond buybacks announced
+  last week. Yields fell on the report: **10-year −4 bp to 4.7%; 30-year −4 bp to 5.23%** (CNBC, "Treasury yields fall
+  as investors brace for Warsh's Jackson Hole keynote amid bond fears", Aug 24). Equities pared with them. Midday bar:
+  **Nasdaq Composite ≈ −0.48%, S&P 500 ≈ −0.25%, Dow ≈ +0.32%** — versus the 1130 edition's ~11 AM bar of
+  −0.94% / −0.38% / +0.21%. The Nasdaq's loss roughly HALVED inside an hour. Buyback detail confirmed: max size at
+  least doubled from **$2B to at least $4B**, running **Sept 9 through November**; Bessent said operations could be larger.
+- ⚠ **INTRADAY LEVELS DELIBERATELY NOT PUBLISHED THIS RUN.** A search summary offered **Dow 53,448.95 / Nasdaq
+  26,055.56**; both reconcile arithmetically to Friday's closes (+171.94 / −124.90), BUT the stockmarketwatch
+  "Dow Jones Today" page gave a Monday range of **52,768.87–53,355.92**, which would put 53,448.95 ABOVE the day's
+  high. Conflict unresolved → per the standing rule, only **percentage moves** were published in editorial; official
+  closes stay in the Weekly Scorecard. NEW RULE WORTH KEEPING: arithmetic reconciliation alone is NOT sufficient when
+  a second source's stated intraday RANGE excludes the level.
+- ⚠ **FRIDAY-CLOSE TRAP, FOURTH CONSECUTIVE RUN.** A search summary again presented **S&P 7,674.37 / Dow 53,277.01 /
+  Nasdaq 26,180.46** as Monday's "close for August 24". They are **FRIDAY AUG 21 closes**. Rejected again.
+- ⚠ **TRADING ECONOMICS PAGE WAS CACHED** at the identical bar to the 1130 run (US500 7,643.80 −30.32; US30 53,356.45
+  +79.44; US100 28,908.54 −400.32; US2000 3,000.41 −17.46; VIX 15.89 +0.76). Its **stats block**, however, read
+  **US500 7,653.03 vs previous 7,674.37** (= −21.34, −0.28%), which reconciles exactly and corroborates the fresher
+  Yahoo midday −0.25%. Both were cited; the CFD board was explicitly labelled as lagging the midday move.
+- MARKETS — rates table rewritten: **10-yr 4.70% (−4 bp), 30-yr 5.23% (−4 bp)**, both attributed to CNBC's midday read.
+  The prior Investing.com 5.248% / TE 4.72% figures were retained ONLY as explicitly-earlier-Monday attributions.
+  Chart of the Day unchanged (**NASDAQ:AAOI**). Weekly Scorecard unchanged at Friday closes. No After-Hours section.
+  **Still NO 2-year yield.** Micron (−7.23%), AAOI, Alibaba, Samsung and Dow-breadth cards all carried forward unchanged.
+- CYBER — **TOP STORY, PATCH PRIORITY AND KEV BOARD UNCHANGED AND RE-VERIFIED.** CVE-2026-73570 (Zimbra, CVSS **8.9**,
+  fixed in **10.1.20**, released Jul 20) re-confirmed **added Aug 21 → due Aug 24 (TODAY)** against the CISA Aug 21
+  alert page, THN and Security Affairs this run. **No KEV addition later than Aug 21** re-verified this run
+  (Aug 20 = two TrueConf CVE-2026-72529/72530; Aug 19 = one, CVE-2026-64849 MLflow SSRF; Aug 18 = four, CVE-2026-33824 /
+  55040 / 59310 / 65400; Aug 11 = three, CVE-2026-20349 / 68820 / 72898). **KEV board 12 rows: 8 past due, 1 due today,
+  3 ahead** — re-validated programmatically.
+- CYBER NEW ×1 — **INC Ransomware is now the dominant actor exploiting the SonicWall SMA 1000 flaws** (Resecurity via
+  The Hacker News / SecurityWeek, fetched this run): activity accelerating since the start of August 2026;
+  **885 victims claimed to date**, most recent listed **Aug 2**; suspected chaining of **CVE-2026-15409 + CVE-2026-15410**
+  (unauthenticated WebSocket tunnel to restricted services → root); **SonicWall fixed mid-July 2026**. Rapid7: intrusions
+  extracted credentials, active session databases and **TOTP MFA seed configurations**, so patching alone is not
+  remediation. Targets across US, Australia, UAE, Colombia, Switzerland. Stat strip: the **"500+ Medusa"** tile was
+  replaced by **"885 victims claimed to date by INC ransomware."** NOT asserted as KEV-listed — no CISA page confirmed it.
+- MMA — **NOTHING NEWLY ANNOUNCED SINCE THE 1130 RUN; ZERO New tags. CHAMPIONS BOARD UNCHANGED, 11/11 rows, 0 vacant.**
+  ⚠ **THE ESPN CHAMPIONS REGRESSION FIRED AGAIN THIS RUN:** a search summary of the ESPN "Current and all-time UFC
+  champions" article returned the STALE 2025 board — **Pereira at LHW, Chimaev at MW, Topuria at LW**. All three are
+  the exact known regressions. **CORRECTIONS.md block governs and was applied**; published board remains Aspinall /
+  **Ulberg** / **Strickland** / Makhachev / **Gaethje** / Volkanovski / Yan / Van + Shevchenko / Harrison / Dern.
+  Do NOT accept an ESPN summary that predates UFC 327 (Apr 11), UFC 328 (May 9) and Freedom 250 (Jun 14).
+- MMA re-verified this run: **UFC Sacramento (Aug 22)** results and bonuses match the published table — Rodrigues UD
+  over Hernandez (48-47, 49-46, 48-47); **four $100K bonuses**: FOTN Rodrigues + Hernandez, POTN MarQuel Mederos,
+  POTN Carli Judice (99-second finish of Jeisla Chaves); eight $25K finish cheques per Yahoo. **UFC 331** (Sat
+  **Sep 19**, Crypto.com Arena, Los Angeles) headliner odds re-confirmed: DraftKings **Pantoja −120 / Van +100**;
+  Sherdog **Van −115 / Pantoja −105**. Co-main **Arman Tsarukyan vs Mauricio Ruffy**. **UFC 334 (MSG, Nov 14)** and
+  **UFC 335 (T-Mobile, Dec 12)** re-confirmed, announced Aug 23, no bouts booked. Countdown target unchanged:
+  **2026-08-29T06:00:00-04:00**. Curtis Blaydes' new **eight-fight deal** (first bout vs Waldo Cortes-Acosta at
+  **Noche UFC, Arizona, Sep 12**) re-confirmed via Bloody Elbow Aug 21 — predates the prior snapshot, so no New tag.
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **23 days, 115 timestamped rows, 345 snapshot files**.
+  `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `outputs/validate_1137.py`, **0 failures, 153 checks**). 4 pages HTMLParser-balanced
+  0 unclosed / 0 stray; 5-tab nav on all 4 with exactly 1 active tab; **NOTE: the active-tab class is `on`, NOT
+  `active`** — a validator regex looking for `class="…active…"` will fail on all four pages (cost one debug cycle
+  this run). Stamp/fresh IDs on all 4; `.tldr` on all three briefings with correct per-page labels and NONE on index;
+  **8/8 TradingView widget JSON blocks parse**; ticker retains SPXUSD + NSXUSD + DJI + USOIL + US10Y; Chart of the Day
+  asserted **NASDAQ:AAOI**; **12/12 KEV countdowns** with the 8/1/3 split asserted; stale-figure blacklist asserted
+  absent (7,645.21 / 53,391.49 / 25,935.17 / 7,652.36 / 53,441.18 / 25,971.85); fresh figures 0.48 / 0.25 / 0.32 /
+  4.7 / 5.23 asserted PRESENT; champions 12 `<tr>` (1 header + 11), no `<td>Vacant</td>`, 8 division/champion pairs
+  asserted by name AND three stale-champion cells asserted ABSENT; each index.html card contains its own page's
+  `.tldr` verbatim; **site-wide New-tag count asserted == 2** (WS 1, CYBER 1, MMA 0) with the three dropped tags each
+  asserted gone by exact markup. Trap greps CLEAN ×0 on all four pages.
+  **NOTE for future validators: the champions-board `<tr>` regex must count `<tr>` not `<tr><td>` — the header row
+  uses `<th>`.**
