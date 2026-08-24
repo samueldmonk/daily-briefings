@@ -10683,3 +10683,113 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   or `1 day PAST DUE`. A regex written against the SKILL's descriptive "(N days left)" phrasing matches **zero** of
   them and reports a phantom 12/12 failure. **Parse `<span class="kevdue[^"]*">(.*?)</span>` and bucket on the words
   PAST DUE / DUE TODAY / left.**
+
+## Added 2026-08-24 (Monday ~4:10pm ET — AFTERNOON EDITION, FIRST POST-CLOSE RUN; archive stamp 2026-08-24-1656)
+- CLOCK: TZ date = Mon Aug 24 16:05 EDT at run start — **the first run of the day after the 4:00 p.m. bell**, ~27 minutes
+  after the 1542 snapshot. Edition bucket **Afternoon** (h=16). **TWO** New tags site-wide: **WS ×1** (closing-bell
+  breadth + the 50% Canadian auto tariff) and **CY ×1** (the Fabrik/Joomla critical cluster). The 1542 New tags
+  (WS Iran sanctions targets, CY WordlistLoader/SynkLoader) were both dropped to "Carried from the previous edition."
+  **MMA: zero New tags, ELEVENTH consecutive run** — page content left byte-identical, nothing newly announced.
+- 🟢 **THE TWELVE-RUN LEVEL BLACKOUT IS OVER — MONDAY'S CLOSE IS PUBLISHED AND IT RECONCILES.** After twelve consecutive
+  runs of withholding intraday index LEVELS, two independent post-close prints fetched this run agree:
+  **Nasdaq Composite 25,980.19 (−200.27, −0.76%)** — identical in both, so the LEVEL is asserted;
+  **S&P 500 −0.28%** and **Dow +0.26%**. Every figure reconciles EXACTLY against Friday's verified closes
+  (7,674.37 − 21.41 = 7,652.96; 53,277.01 + 139.98 = 53,416.99; 26,180.46 − 200.27 = 25,980.19).
+- ⚠ **NEW RULE — TWO PRINTS THAT ARE EACH INTERNALLY CONSISTENT BUT DISAGREE BY A DIME ARE A VENDOR DIFFERENCE, NOT A
+  STALENESS PROBLEM — PUBLISH THE PERCENT AND SHOW THE SPREAD.** Print A: S&P **7,652.96** (−21.41), Dow **53,416.99**
+  (+139.98). Print B: S&P **7,652.86**, Dow **53,417.16** (+140.15). Both back out to Friday's close exactly, so neither
+  is stale; they differ on the settlement/rounding print. The Weekly Scorecard now carries a **"Monday's close — August 24"**
+  table showing the Nasdaq level asserted and the S&P/Dow levels as a **pair** with a `<span class="tag">two prints</span>`
+  marker. Do NOT "resolve" this by picking one — if a later run corroborates a single figure, assert it then.
+  A THIRD, earlier reading (S&P −0.24% / Dow +0.25% / Nasdaq −0.55%) is treated as **late-session**, not a close,
+  precisely because the two closing prints agree with each other and it agrees with neither.
+- MARKETS — **FRIDAY-CLOSE TRAP, TWELFTH CONSECUTIVE RUN.** A search summary again returned Friday's
+  "Dow +1%/517.80 to 53,277.01, S&P +0.4%/33.21 to 7,674.37, Nasdaq +0.4%/113.29 to 26,180.46" as Monday's *close*.
+  Rejected. ⚠ **BUT NOTE THE VALIDATOR CHANGE THIS FORCED — SEE GOTCHA #8 BELOW.**
+- MARKETS — **YAHOO CACHED AN EIGHTH TIME**, crudest form again: "U.S. markets open in 5h 6m" → **open anchor**
+  (9:30 − 5h06m = **4:24 a.m. ET**), 4:03 a.m. Grace O'Donnell body, pre-open futures, and a trending rail still
+  carrying **Friday's** BABA −8.57%. Nothing published from it. **TheStreet and CNBC both returned EMPTY** to
+  web_fetch this run (client-rendered) — neither is a cache failure, just an unusable fetch.
+- MARKETS NEW ×1 — **THE INTERNALS WERE WORSE THAN THE HEADLINE.** Reuters (Purvi Agarwal / Niket Nishant, via
+  Spokesman-Review, 11:55 a.m. ET read): decliners **1.14-to-1 NYSE**, **1.38-to-1 Nasdaq**; S&P 500 **16 new
+  52-week highs vs 6 lows** but Nasdaq **62 highs vs 70 LOWS**; Philadelphia SE Semiconductor index **−2.64%** to a
+  three-week low; **Nvidia −2.03%, Micron −5.76%, Broadcom −1.74%**; **financials +1.19%** (JPMorgan +1.49%,
+  Visa +2.64%) holding the Dow up; **Trump: 50% tariffs on Canadian cars/trucks/parts from January 1**, with
+  **Ford −3.9%, GM −1.9%, J.B. Hunt −5.4%**; one 25bp **HIKE** priced by end-2026 (LSEG). Intraday index reads from
+  the same piece (11:55 a.m.: Dow 53,423.60 +146.59; S&P 7,660.85 −13.52; Nasdaq 26,081.41 −99.04) and a 2:02 p.m.
+  read (Nasdaq −0.57%) show the selling **DEEPENED into the close** (−0.38% → −0.57% → −0.76%).
+- MARKETS — **THE MEMORY STORY GOT ITS CAUSE.** 24/7 Wall St. (David Moadel, Aug 24 11:29 a.m. EDT, fetched in full):
+  **SanDisk −9% at $1,458.29**, **Micron −7% at $897.86**, **Western Digital −7% at $429.49**, **SK hynix −5% at
+  $154.48**, **Roundhill Memory ETF (DRAM) −7% at $53.62** on weekend reports Washington may let Apple source DRAM
+  from **CXMT** and NAND from **YMTC** ahead of Xi's **~September 24** US visit. **NO POLICY DECISION HAS BEEN
+  ANNOUNCED** — keep that caveat. **KC Rajkumar (Lynx Equity Research)** calls it "an overreaction": CXMT qualified
+  for only one low-volume Mac product, not iPhones; YMTC not qualified by Apple for any product. Both on the
+  Pentagon's **Section 1260H** list; **Lutnick, Aug 17, WSJ**: "it's not great American companies using Chinese memory."
+  Scale context: **SanDisk +572% YTD**, **Micron +239% YTD** through Friday's close. **Chart of the Day moved
+  AAOI → NASDAQ:SNDK.**
+- MARKETS — **AFTER-HOURS SECTION ADDED (session over) BUT DELIBERATELY EMPTY OF FIGURES.**
+  ⚠ **stockanalysis.com/markets/afterhours WAS STILL SERVING AUG 21 DATA at ~4:15 p.m. ET** — heading
+  "Stock Indexes — Aug 21, 2026 — After-hours", both tables "Updated Aug 21, 2026". **NOTHING published from it.**
+  **STANDING RULE: an after-hours board checked within ~20 minutes of the bell has very likely not rolled over —
+  check its OWN date stamp before lifting a single name, or you will publish Friday's extended-hours movers as tonight's.**
+- MARKETS — **STOCK MARKET WATCH STILL FROZEN (fourth+ run)**, so its sector board is published as a **late-session
+  snapshot, not a close**: consumer staples +1.30%, comm services +0.99%, financials +0.96%; technology −1.47%
+  (semis −2.23%); **energy worst at −1.00%**. Its index reads (Dow +0.13% / S&P −0.26% / Nasdaq −0.77%) are close to
+  but NOT the close — further evidence it is late-session.
+- CYBER NEW ×1 — **ONE JOOMLA EXTENSION PRODUCED HALF THE WEEKEND'S CRITICALS.** Per **cvebrief.com** (edition dated
+  **Sun Aug 23**, covering **Aug 22** disclosures), the **Fabrik extension for Joomla** accounts for **six of the 12
+  critical (CVSS 9.0+) CVEs**, four at **CVSS 10.0**: **CVE-2026-76604** (unauth RCE, PHP form element),
+  **CVE-2026-76605** (RCE, image element), **CVE-2026-76606** (path traversal, image element), **CVE-2026-76607**
+  (missing access control, download element); plus **CVE-2026-77992 (9.5)**, **CVE-2026-76571 / CVE-2026-76602 (9.3
+  each, unauth SQLi)** and four more at 8.6–8.7. **Patch availability 0% at collection time.** Also added:
+  **TRENDnet TEW-821DAP CVE-2026-77946 (10.0)** and **Comfast CF-N1-S CVE-2026-78050 (9.9)**, both SOHO edge devices;
+  **CVE-2026-77945 (7.4)** is the authenticated TRENDnet sibling — do not conflate. **None is a KEV entry; none has a
+  federal deadline; no in-the-wild exploitation reported.**
+- ⚠ **CYBER TRAP — cvebrief.com RENDERS EVERY KEV ENTRY AT A FLAT "9.5". DO NOT TAKE A CVSS FROM IT FOR A KEV CVE.**
+  It shows Zimbra **CVE-2026-73570 at 9.5**, but the vendor/verified score standing on this page is **8.9**. Its
+  *critical-disclosure* scores (Fabrik 10.0 etc.) match the individual CVE records and were used; its *KEV* scores
+  are a normalised placeholder and were not. Same class of error as the Citrix 9.8-vs-9.3 and Kemp 9.8-vs-9.6 traps.
+- ⚠ **CYBER DATE TRAP CAUGHT — THE ENTRA ID REVERSAL WAS AUGUST 21, NOT AUGUST 24.** A search summary this run stated
+  "on August 24, 2026, Microsoft changed the exploitation status" for **CVE-2026-69836** (Entra ID, **CVSS 10.0**,
+  deserialization → unauth RCE, found by MS Principal Security Engineer **Robert Fitzpatrick**, fully mitigated
+  server-side, no customer action). **The Hacker News — which prompted the change by contacting Microsoft — states the
+  "Exploited" field went Yes → No on AUGUST 21, 2026.** The Aug 21 date is what was published. **STANDING RULE: when a
+  summariser supplies a date the primary source contradicts, the primary wins — and prefer the outlet that CAUSED the
+  correction.** Help Net Security's Aug 21 piece still carries the older "exploited in the wild" headline; the body's
+  facts (CVSS, mechanism, discoverer, no-action-required) were used, the headline framing was not.
+- CYBER — **KEV: dedicated check for additions dated Aug 22–24 returned NONE**; Aug 21 Zimbra **CVE-2026-73570**
+  remains newest and still **due Aug 24 — TODAY**; latest CISA *alert page* still **Aug 20 (TrueConf ×2)**.
+  **KEV board 12 rows: 8 past due, 1 due today, 3 ahead** — re-validated programmatically.
+- MMA — **CHAMPIONS RE-CROSS-CHECKED AGAINST ESPN THIS RUN**: Aspinall HW (Jun 21 2025), **Ulberg** LHW (Apr 11 2026),
+  **Strickland** MW (May 9 2026), Makhachev WW (Nov 15 2025, **1 defence**), **Gaethje** LW (Jun 14 2026),
+  **Volkanovski** FW (Apr 12 2025, 1 defence) — all six match the standing block. **No title fight has occurred since
+  UFC 330 (Aug 15)**, so no belt can have moved (state the TITLE-FIGHT premise, not the event premise — 1542 lesson).
+  Board unchanged, **11/11 rows, 0 vacant**, asserted **by CHAMPION COLUMN ONLY**. UFC Shanghai re-confirmed:
+  **Sat Aug 29, Pudong Development Bank Shanghai Oriental Sports Center**, **#3 Umar Nurmagomedov vs #5 Song Yadong**,
+  main card **6 p.m. CST = 6 a.m. ET**, countdown target **2026-08-29T06:00:00-04:00**; odds **UFC.com −450/+350**,
+  **CBS Sports −470/+360 (79%/21%)**. Undercard detail verified but NOT added (not newly announced): Yan Xiaonan vs
+  Denise Gomes, **Aoriqileng vs Kai Asakura**, Alex Perez vs Sumudaerji, 12 fights total.
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **23 days, 124 timestamped rows, 372 snapshot files**.
+  `gen_archive.py` remains BROKEN. Note: archive.html marks its active tab with an **inline style**, not `class="on"` —
+  that is by design; do not "fix" it to match the briefing pages' markup.
+- VALIDATION (programmatic, `outputs/validate_1610.py`, **0 failures, 217 checks**). 4 pages HTMLParser-balanced
+  0 unclosed / 0 stray (archive.html separately balanced 0/0); 5-tab nav on all 4 with exactly 1 active tab scoped
+  inside `<nav class="tabs">`; stamp/fresh IDs on all 4; `.tldr` on all three briefings with correct per-page labels
+  and NONE on index; each index card carries its own page's `.tldr` **verbatim**; **8/8 TradingView widget JSON blocks
+  parse**; ticker retains SPXUSD + NSXUSD + DJI + USOIL + US10Y; Chart of the Day asserted **NASDAQ:SNDK** scoped to
+  the mini-symbol-overview block only (gotcha #4); **12/12 KEV countdowns** parsed as `<span class="kevdue">` with the
+  8/1/3 split (gotcha #7); champions column 11 cells, 8 names present, 5 stale strings absent; `(?<!1)2:59` lookbehind
+  clean (gotcha #6); after-hours **SECTION LABEL asserted PRESENT** this run (gotcha #5, inverted — the session is over);
+  New-tag counts asserted **WS 1 / CY 1 / MMA 0 / index 0**, each tag asserted to sit on the card its footnote names;
+  30 fresh WS strings and 14 fresh CY strings present, 4 stale WS strings absent; no leftover scaffolding.
+  Trap greps CLEAN ×0 (Cody Salkilld, Abdul-Rakhman, Shamil Yakhyaev, "title challenger Beneil",
+  "Shanghai Indoor Stadium", "mid-August 2025").
+  ⚠ **VALIDATOR GOTCHA #8 — WRITE THIS DOWN. DO NOT BLANKET-BLACKLIST FRIDAY'S CLOSES FROM THE LEAD BLOCK.**
+  The post-close lead *must* quote 7,674.37 / 53,277.01 / 26,180.46 — they are the baseline the close is reconciled
+  against, and the reconciliation sentence is the strongest evidence the page has. A flat "these strings must be absent
+  from the lead" check (correct for the previous twelve intraday runs) reported **three phantom failures** on the first
+  pass. **Fix: test the CONTEXT, not the presence — for each occurrence inside the lead, require the word "Friday"
+  within a ~260-character lookbehind window.** This is the same lesson as gotcha #5, generalised: *a figure being
+  blacklisted-as-stale and a figure being cited-as-a-baseline look identical to a substring match.* The cached
+  **12:59** figures (7,659.82 / 53,392.55 / 26,067.27 / 79,032.63) remain blanket-blacklisted from the lead, because
+  those genuinely are never quoted there.
