@@ -9701,3 +9701,97 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   `<td[^>]*>`); champions **11/11 rows**, 0 vacant; each index.html card contains its own page's .tldr sentence verbatim.
   Trap greps CLEAN ×0 on all four pages: Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman / MacKenzie / Joshua Vance /
   "Pereira (205)" / pay-per-view / "Jahmall Emmers def" / "Yair Rodriguez vs Jean Silva" / **Finastra (new trap)**.
+
+## Added 2026-08-24 (Monday ~9:44am ET — MORNING EDITION; **FIRST POST-OPEN RUN of Monday**; archive stamp 2026-08-24-0944)
+- CLOCK: TZ date = Mon Aug 24 09:35 EDT at run start, 09:44 EDT at archive stamp. Edition bucket **Morning** (h=9).
+  Prior archived snapshot is **2026-08-24-0914** — 30 minutes earlier. "New" tags re-scoped against THAT snapshot:
+  Western Digital's New tag DROPPED (it was the 0914 New tag); the two WordPress plugin rows and ShinyHunters/Baxter
+  stay untagged. Five New tags published site-wide: WS Alibaba (rewritten), WS Samsung/SK hynix, WS Micron,
+  WS Nvidia–Perplexity, CYBER Keycloak + QUICSILVER + UAT-10147.
+- MARKETS — **US session OPENED at 09:30 ET; no post-open index print could be verified against any source fetched
+  this run.** TheStreet's Aug 24 live page returned EMPTY on fetch; CNBC's Aug 23 live page returned EMPTY; Yahoo's
+  live-blog page rendered with a STALE header ("U.S. markets open in 5h 6m") though its market bar carried fresher
+  quotes. The page therefore states the open explicitly and labels every index figure as the last confirmed
+  PRE-MARKET read. Do NOT publish a post-open level without a fetched source stating it.
+- ⚠ **REJECTED — a search-result summary asserted Aug 24 "closing numbers" of S&P 500 7,674.37 +0.43%,
+  Dow 53,277.01 +0.98%, Nasdaq 26,180.46 +0.43%.** Those are **FRIDAY AUG 21 CLOSES** (corroborated: CNBC headline
+  "Dow surges 500 points Friday"; Investing.com index strip carries the identical values). A synthesized summary
+  presented them as Monday's close 6 hours before the close existed. NOT published as today. Permanent trap:
+  never accept a same-day "close" before 4 PM ET.
+- ⚠ **Investing.com's "Pre Market Activity" ETF row (DIA +0.46%, QQQ +0.58%, SPY +0.41%, IWM +0.66%) is STALE**
+  and contradicts every other pre-market source (SPY −0.31%, QQQ −0.77%, DIA −0.23%, IWM −0.24%). The page publishes
+  the negative reads. Its Market Movers / Trending tables (TSLA +5.14%, MRNA +8.86%, MRVL −5.57%, NVDA −0.98%,
+  utilities down) are **FRIDAY session** figures, NOT Monday — do not print them as today's movers.
+- MARKETS — Yahoo market bar read THIS run: **S&P futures 7,674.25 −17.00 (−0.22%); Dow futures 53,306.00 −47.00
+  (−0.09%); Nasdaq futures 29,175.50 −212.25 (−0.72%); Russell 2000 futures 3,020.60 −1.50 (−0.05%); VIX 15.92
+  +0.79 (+5.23%); Gold 4,693.10 +12.50 (+0.27%); Bitcoin 76,972.82 +507.88 (+0.66%); Crude Oil OCT 26 85.74 −1.32
+  (−1.52%).** Supersedes the 6:45 AM bar used in the 0907/0914 editions.
+- MARKETS NEW — **overnight Asian tech rout is the new lead.** Investing.com (Aug 24): "Asian stocks sink as Samsung,
+  Alibaba lead tech rout." **Samsung** fell after a record 2026 shareholder-return plan of up to **₩110tn** missed
+  expectations (no buyback / treasury-share-cancellation timetable). ⚠ CONFLICT LOGGED: one account says **−5.2%**,
+  another **−9%** for the same session — the page prints the RANGE and asserts neither. **SK hynix +2.4%** on its own
+  **₩40tn** repurchase-and-cancellation plan. **Micron ≈−3% US pre-market.** **YMTC $4.9bn IPO** flagged as new
+  extended-supply risk. Asia: **Nikkei 225 −0.10%, Kospi −0.71%, Kosdaq +0.94%, ASX 200 +0.33%.** Europe:
+  **Stoxx 600 −0.1% at the open, technology −0.78%, travel/miners/food & beverage each ≈+0.4%.**
+- MARKETS NEW — **Alibaba card rewritten on fresh Reuters detail:** HK shares **fell 8% in early trade and sank as
+  much as 10.5% to a one-month low**; **710,000,000 new shares at HK$112.70**, HK$80bn / **US$10.21bn**, **8.4%
+  discount**; **largest-ever primary follow-on by a Hong Kong-listed company, third-largest globally this year after
+  Alphabet and Intel**. ADRs **−3.38%** (Benzinga) / **−3.4%** (Reuters) pre-market. The 0907 edition's "HK ended
+  morning trade down 9.8% at HK$111.00" line was REPLACED by the sourced 8% / 10.5% figures.
+- MARKETS NEW — **Nvidia in talks to invest in Perplexity at a $30B valuation** (The Information via Investing.com,
+  Aug 24). Added as a mover card.
+- MARKETS — **RATES REFRESHED from Investing.com this run: 10-yr 4.712% (−0.026), 30-yr 5.248% (−0.028),
+  5-yr 4.406% (−0.018), 3-month 3.811% (+0.005); WTI 85.60 −1.68%, Brent 91.30 −1.48%.** The long end is BACKING OFF
+  from the ~5.28% / above-5.3% two-decade high cited by TheStreet earlier Monday — both are on the page, with times.
+  A 2-year yield is still NOT published (no source stated it; do not derive it from the 10-2 spread).
+- MARKETS — Ticker tape: **Seagate (NASDAQ:STX) swapped out for Micron (NASDAQ:MU)**; SPXUSD + NSXUSD + DJI + USOIL +
+  US10Y retained. **Chart of the Day stays NYSE:BABA.** Weekly Scorecard UNCHANGED at Friday Aug 21 closes,
+  arithmetic re-validated **4/4 exact**. **NO After-Hours section** (session under way, not finished) — the scorecard
+  note was reworded from "before the opening bell" to "the regular session is under way."
+- CYBER — **TOP STORY ROTATED to the UK power plant.** Hackers linked to Iran's **IRGC** shut a **small British power
+  plant** down for **four days in July 2026** — reported first by **The Telegraph on Aug 22**, picked up by CNBC and
+  SecurityWeek **Aug 23**. UK government **confirmed** the incident but says **no risk to the UK energy system**;
+  neither the government nor **NCSC** would name the site; staff restored operations **manually**. Described as the
+  first attack to bring a UK generating station to a standstill. GitLab CVE-2026-19478 DEMOTED from top story to a
+  Breaches & Incidents card (content otherwise unchanged, still in Vulnerability Watch).
+- CYBER NEW — **CVE-2026-18963, Keycloak, CVSS 9.1 (Red Hat is the CNA), CWE-640 weak password recovery.**
+  Unauthenticated remote account takeover by forcing a password reset; root cause is improper state validation in the
+  reset-credentials flow. **Upstream fix 26.7.2, released Aug 19 2026; Red Hat build of Keycloak 26.4.15 and 26.6.6.**
+  **NO evidence of exploitation and NO verified public exploit as of Aug 24 2026; NOT a KEV entry** — do not flip it.
+- CYBER NEW — **Operation QUICSILVER** (Seqrite Labs, THN Aug 24): China-nexus **moderate confidence**, Myanmar
+  government + IT, Go backdoor **QUICAgent**; first seen **April 2026** via "HolidayNotice.pdf.exe" + fake
+  Belgian–Myanmar holiday calendar; June and July artefacts use a **VHD** containing an **LNK** mimicking a PDF, decoy
+  is a Burmese graduation-ceremony invitation.
+- CYBER NEW — **UAT-10147** (Cisco Talos two-part report, THN Aug 24): Chinese-speaking cybercrime group hitting
+  Windows and Linux web servers in education, media, technology, gaming; victims mostly **Brazil, Bolivia, China,
+  Canada, Vietnam**; deploys **SPECTRE** with EDR bypass + Linux rootkit; open directory **139.180.197[.]150**; tooling
+  includes **Metasploit, ysoserial, PentestGPT, DeepAudit**.
+- CYBER — **PATCH PRIORITY UNCHANGED: CVE-2026-73570, Zimbra, CVSS 8.9, KEV added Aug 21, DUE TODAY Aug 24, fixed
+  10.1.20.** **KEV BOARD UNCHANGED AT 12 ROWS; 8 past due, 1 due today, 3 ahead** — re-validated programmatically
+  against an Aug 24 day count. **No CISA KEV addition later than Aug 21 surfaced this run** (Aug 20 = two TrueConf
+  CVEs; Aug 18 = four: CVE-2026-33824, CVE-2026-55040, CVE-2026-59310, CVE-2026-65400).
+- CYBER — stat strip: **$400M TikTok tile REPLACED by "4 days — UK power plant offline after attack."** Threat-level
+  banner still **High**, rationale extended to name the UK plant intrusion.
+- MMA — **NOTHING MATERIALLY NEW; CHAMPIONS BOARD UNCHANGED, 11/11 rows, 0 vacant.** Cross-checked this run against
+  ESPN "Current and all-time UFC champions": **Aspinall (Jun 21 2025), Ulberg (Apr 11 2026), Strickland (May 9 2026),
+  Makhachev — WELTERWEIGHT (Nov 15 2025, 1 defence), Gaethje — LIGHTWEIGHT (Jun 14 2026), Volkanovski (Apr 12 2025)**
+  all MATCH. UFC Sacramento (Aug 22) remains the most recent completed event and had no title fight, so no belt can
+  have changed hands. ⚠ A search summary this run claimed "UFC 335 is scheduled for August 25, 2026 at the Meta APEX"
+  (a Tuesday) and that Jamall Emmers scored a R1 TKO at Sacramento — NEITHER was published; the Emmers claim is
+  already a standing trap grep.
+- MMA — one sourced detail ADDED to the Shanghai card: **Umar Nurmagomedov 20-1 MMA / 8-1 UFC**, second UFC main
+  event, coming off wins over **Mario Bautista** and **Deiveson Figueiredo**; **Song Yadong 23-9-1 / 12-4-1**, sixth
+  UFC main event, submitted **Figueiredo in May**; the card is **UFC Fight Night 286** at the **Shanghai Oriental
+  Sports Center** on **Paramount+**. Countdown target unchanged: **2026-08-29T06:00:00-04:00**.
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**. Result: **23 days, 112 timestamped rows, 336 snapshot files**.
+  `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, this run — `validate_0940.py`, **0 failures, 158 checks**). 4 pages HTMLParser-balanced
+  **0 unclosed / 0 stray**; 5-tab nav on all 4 with exactly **1 active tab each** (active tab is `class="on"`);
+  stamp/fresh IDs on all 4; .tldr on all three briefings with the correct per-page label and NONE on index;
+  **8/8 TradingView widget JSON blocks parse**; ticker retains SPXUSD + NSXUSD + DJI + USOIL + US10Y; **12/12 KEV
+  countdowns** correct on label AND colour with the 8/1/3 split asserted; scorecard arithmetic **4/4 exact**;
+  champions **11/11 rows**, 0 vacant (NOTE: the validator must match `<td>Vacant` in the CHAMPION cell — a plain
+  "vacant" substring test false-fails on Ulberg's legitimate "won the vacant belt" note); each index.html card
+  contains its own page's .tldr sentence verbatim. Trap greps CLEAN ×0 on all four pages: Cody Salkilld /
+  Shamil Yakhyaev / Abdul-Rakhman / MacKenzie / Joshua Vance / "Pereira (205)" / pay-per-view / "Jahmall Emmers def" /
+  "Yair Rodriguez vs Jean Silva" / Finastra.
