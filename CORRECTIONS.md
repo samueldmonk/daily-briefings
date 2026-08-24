@@ -10293,3 +10293,80 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   "Won the *vacant* belt" and in the note "none *vacant*". **Scope the test to the CHAMPION column** — regex `<tr><td>[^<]*</td><td>([^<]*)</td>` → 11 cells.
   (2) **Never grep the whole Wall Street page for "After-Hours Movers"** — the Weekly Scorecard note legitimately says *"No After-Hours Movers section
   appears in this edition."* **Test for the section LABEL** (`<div class="lab">After-hours movers`) instead.
+
+## Added 2026-08-24 (Monday ~1:35pm ET — MIDDAY EDITION; archive stamp 2026-08-24-1342)
+- CLOCK: TZ date = Mon Aug 24 13:35 EDT at run start; ~30 minutes after the 1317 snapshot. Edition bucket **Midday** (h=13).
+  **TWO** New tags site-wide: **WS ×2** ("Operation Economic Outcast"; "Crude sells off into the announcement").
+  The 1317 New tags (WS Moderna, WS speculative complexes, CYBER SAP Commerce Cloud, CYBER Apollo Global) were **ALL FOUR** dropped.
+  **CYBER: zero New tags this run. MMA: zero New tags, SIXTH consecutive run.**
+- ⚠ **THE DAY'S LEAD CHANGED — THE BESSENT PRESSER HAPPENED AND IT HAS A NAME.** At **1 p.m. ET Monday at the Treasury Building**,
+  Treasury Secretary Scott Bessent announced **"Operation Economic Outcast."** Verified this run against CBS News (fetched in full,
+  article stamped Aug 24 12:06 PM EDT and updated through the presser), WEAR TV, NBC News live blog and Fox News Digital live blog.
+  VERBATIM/SOURCED DETAIL, all published: "Today, at President Trump's direction, the United States Treasury has begun Operation
+  Economic Outcast, an unprecedented campaign against the Islamic Republic of Iran and its enablers." **OFAC is sanctioning MORE THAN
+  60 entities, individuals and vessels** accused of helping Iran procure nuclear and missile technology, **conduct cyber operations**,
+  or generate oil revenue. The package targets **"five of Iran's most vital lifelines that it exploits in other countries — digital
+  assets, technology, gold, aviation, and shipping."** Other verified quotes: "These measures broaden secondary sanctions risk for
+  anyone foolish enough to continue conducting business with this regime"; "This is economic asphyxiation of this regime"; "If people
+  do not want to meet our expectations than we expect, and they should expect that they will leave the dollar system"; "Any entity that
+  facilitates money laundering on behalf of Iran will be removed from the U.S. dollar system." Trump is **telephoning world leaders with
+  specific requests** to cease trading with Tehran. Treasury says it **mapped the networks** Iran uses to smuggle oil and evade sanctions
+  — exchange houses, free-trade zones, banks, shipping registries, aviation links. CBS headline: **"The clock just started ticking."**
+  ⚠ **THE OLD "1 p.m. presser BEGINS / details this afternoon" FRAMING IS NOW STALE ON ALL THREE PAGES AND WAS REMOVED** (WS lead,
+  WS tldr, CYBER top story, CYBER tldr, index Security + Markets cards). Do not reinstate future-tense framing of this presser.
+- MARKETS — read this run from **The Motley Fool's Aug 24 midday page (fool.com/coverage/stock-market-today/2026/08/24/...), fetched in
+  full.** Its **"Stocks Mentioned" module** rendered a FRESHER board than the footer strip and **all three reconcile EXACTLY** against
+  Friday Aug 21's verified closes: **^GSPC $7,660.78 −0.18% (−$13.59)** → 7,674.37 − 13.59 = 7,660.78 ✓; **^DJI 53,399.17 +0.23%
+  (+$122.16)** → 53,277.01 + 122.16 = 53,399.17 ✓; **^IXIC 26,075.17 −0.40% (−$105.28)** → 26,180.46 − 105.28 = 26,075.18 ✓.
+  ⚠ **NEW STANDING NOTE: on a fool.com market page, the "Stocks Mentioned" module is fresher than the footer quote strip** (footer
+  still showed the 1317 run's 7,661.37 / 53,391.59 / 26,078.04). Read BOTH and take the more recent. Levels still WITHHELD from
+  editorial; only % published. Body stamp unchanged at 11:37 AM ET (Dow +0.27% 53,419.17; S&P −0.23% 7,656.50; Nasdaq Comp −0.44%
+  26,066.56; gold +1.20% $4,671.09; 10-yr −0.04 to 4.69%; sectors: comm services + financials LEAD, tech/energy/industrials LAG).
+- MARKETS NEW ×2 — (1) the Operation Economic Outcast card above. (2) **CRUDE SOLD OFF INTO THE ANNOUNCEMENT: CNBC ("Oil prices fall as
+  investors await 'toughest' U.S. sanctions on Iran", Aug 24) puts WTI down ~2.7% at $84.73 and Brent down 2.1% at $92.44.**
+  ⚠ Both CNBC figures are **internally corroborated**: $84.73 / −2.7% implies a prior close of ~$87.08, and Yahoo's (cached) 9:59 AM strip
+  showed WTI 85.75 −1.50% → prior close 87.06 ✓. **The rates table's WTI and Brent rows were updated to the CNBC levels**, with the
+  earlier Investing.com Brent $91.30 / −1.48% and Yahoo WTI $85.93 / −1.30% retained in the notes as superseded reads. Also verified this
+  run and published: **the US military says it has helped tankers move more than 660 million barrels of crude through the Strait of
+  Hormuz since early May** — the supply fact that reconciles the counterintuitive selloff.
+- ⚠ **FRIDAY-CLOSE TRAP, EIGHTH CONSECUTIVE RUN, AND A NEW VARIANT: A SEARCH SUMMARY CALLED AN INTRADAY SNAPSHOT A "CLOSE."**
+  A summary asserted the S&P "closed at 7,645.21 −29.16 (−0.38%), Dow 53,391.49 +114.48 (+0.21%), Nasdaq 25,935.17 −245.29 (−0.94%)"
+  — at ~1:35 PM ET, with the market OPEN. All three reconcile against Friday's closes, so they are a **valid intraday snapshot mislabeled
+  as a close**. Rejected as "the close"; not published as a level. **LESSON: reconciling against Friday proves the figure is real, NOT
+  that it is final. Check the clock before accepting the word "closed."**
+- ⚠ **YAHOO CACHED A FOURTH TIME — COUNTDOWN RULE WORKED AGAIN.** The TheStreet-on-Yahoo page's strip read **"U.S. markets close in
+  6h 1m"** (≈9:59 AM ET) and again carried the blacklisted **7,652.36 / 53,441.18 / 25,971.85 / VIX 16.03 / gold 4,731.50 /
+  BTC 78,578.69 / WTI 85.75 −1.50%**. The ARTICLE body was still usable (Rob Lenihan, stamped **9:48 AM ET**): stocks mixed on Iran
+  sanctions, failed US-Canada trade talks and reciprocal tariff threats; Capital.com's **Daniela Hathorn** on Warsh's Friday keynote
+  ("regime change," reaction function, no conventional forward guidance); NVDA/INTU/CRM/MRVL earnings this week.
+- CYBER — **TOP STORY, PATCH PRIORITY AND KEV BOARD UNCHANGED.** CVE-2026-73570 (Zimbra, CVSS **8.9**, fixed in **10.1.20**) still
+  **added Aug 21 → due Aug 24 (TODAY)**, re-confirmed via THN this run. **KEV board 12 rows: 8 past due, 1 due today, 3 ahead** —
+  re-validated programmatically. **CVE-2026-64849 (MLflow SSRF, CVSS 9.3) re-confirmed added Aug 19 → due Sep 2** (9 days left) against
+  CISA's own Aug 19 alert page listing + Security Affairs/BleepingComputer/SecurityWeek/THN; the **two-week** window is consistent with
+  the page's standing note that KEV due dates are assigned **per-CVE under BOD 26-04 (risk-based)**, NOT the old fixed three-week
+  BOD 22-01 schedule. **No KEV addition later than Aug 21.** The only cyber content change this run was folding the now-delivered
+  Bessent announcement (incl. the **"conduct cyber operations"** designation category) into the top story and tldr.
+- CYBER — ⚠ **A CANDIDATE WAS EVALUATED AND REJECTED: the GeoServer zero-day.** THN's "GeoServer Zero-Day Targeted in Active
+  Exploitation Attempts" was fetched in full — it is **dated Aug 13**, the flaw has **no CVE ID** (GitHub advisory **GHSA-mqjf-5f49-2fjh**,
+  CVSS 9.8, a regression of CVE-2023-25158), and it was **PATCHED Aug 14** in GeoServer 3.0.1 / 2.28.5 / 2.27.6. Too old for a New tag and
+  no longer unpatched. Not added. Also seen and NOT added (all predate the prior snapshot): Lazarus Windows zero-day, Keycloak
+  CVE-2026-18963 (CVSS 9.1, no exploitation), Entra ID CVSS 10.0.
+- MMA — **NOTHING NEWLY ANNOUNCED SINCE THE 1317 RUN; ZERO New tags, sixth consecutive run.** The only UFC item surfacing this run was
+  the **Aug 23** announcement of UFC 334 (MSG, Nov 14) and UFC 335 (T-Mobile, Dec 12), already on the page. **Champions board unchanged,
+  11/11 rows, 0 vacant**, asserted programmatically **by CHAMPION COLUMN ONLY** with Pereira/Chimaev/Topuria/vacant asserted absent from
+  that column. MMA page content byte-identical to the 1317 edition.
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **23 days, 119 timestamped rows, 357 snapshot files**. `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `outputs/validate_1335.py`, **0 failures, 154 checks**). 4 pages HTMLParser-balanced 0 unclosed / 0 stray;
+  5-tab nav on all 4 with exactly 1 active tab (class is `on`, scoped inside `<nav class="tabs">`); stamp/fresh IDs on all 4; `.tldr` on
+  all three briefings with correct per-page labels and NONE on index; each index.html card contains its own page's `.tldr` verbatim;
+  **8/8 TradingView widget JSON blocks parse**; ticker retains SPXUSD + NSXUSD + DJI + USOIL + US10Y; Chart of the Day asserted
+  **NASDAQ:AAOI** with NASDAQ:SNDK asserted ABSENT as a widget symbol; **12/12 KEV countdowns** with the 8/1/3 split; champions column
+  11 cells with 8 names present and 4 stale strings absent; Friday closes + cached blacklist asserted absent **from the lead block only**
+  while 7,674.37 asserted present elsewhere (Weekly Scorecard); 10 fresh WS strings and 2 fresh CY strings asserted present; five STALE
+  strings asserted ABSENT site-wide ("As of roughly 1:15 p.m. ET", "The event risk is on the podium", "Bessent takes the podium",
+  "press conference this afternoon", "press conference begins at 1 p.m. ET"); New-tag count asserted **WS 2 / CY 0 / MMA 0** with both
+  dropped WS tag markups asserted gone; trap greps CLEAN ×0 (Cody Salkilld, Abdul-Rakhman, Shamil Yakhyaev, "title challenger Beneil", "2 p.m.").
+  ⚠ **VALIDATOR GOTCHA #3 — WRITE THIS DOWN.** KEV countdown labels are **NOT parenthesised and the singular case exists**: the markup is
+  `<span class="kevdue ok">9 days left</span>`, `<span class="kevdue">1 day left</span>`, `<span class="kevdue crit">DUE TODAY — 0 days left</span>`.
+  A regex like `\((\d+) days? left\)` matches NOTHING and a `days left` count double-counts the DUE TODAY row. **Parse
+  `<span class="kevdue([^"]*)">([^<]*)<` and bucket on the text** — that yields the 12 rows and the 8/1/3 split correctly.
