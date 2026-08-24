@@ -10034,3 +10034,70 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   asserted gone by exact markup. Trap greps CLEAN ×0 on all four pages.
   **NOTE for future validators: the champions-board `<tr>` regex must count `<tr>` not `<tr><td>` — the header row
   uses `<th>`.**
+
+## Added 2026-08-24 (Monday ~12:13pm ET — MIDDAY EDITION; archive stamp 2026-08-24-1213)
+- CLOCK: TZ date = Mon Aug 24 12:06 EDT at run start; ~31 minutes after the 1142 snapshot. Edition bucket **Midday** (h=12).
+  **TWO** New tags site-wide: **WS "Micron / Netlist ITC complaint"** and **CYBER "Akamai enterprise AI super-adopters"**.
+  The 1142 New tags (WS Treasury $1T TGA, CYBER INC ransomware/SonicWall) were BOTH dropped. **MMA: zero New tags, third consecutive run.**
+- MARKETS — **THIRD CONSECUTIVE IMPROVEMENT; LEAD REFRAMED, NOT REPLACED.** CNBC's live blog ("S&P 500 falls slightly as
+  chip stock slide outweighs yield decline") read this run: **S&P 500 ≈ −0.2%, Nasdaq Composite ≈ −0.4%, Dow +161 points ≈ +0.3%.**
+  Versus 1142 (−0.25% / −0.48% / +0.32%) and 1130 (−0.38% / −0.94% / +0.21%). CNBC's mover detail this run: **Micron −5%+,
+  AMD −2%, Broadcom −1%, iShares Semiconductor ETF (SOXX) −3%.** The Treasury General Account buyback story remains the driver.
+- MARKETS NEW ×1 — **Netlist has disclosed a new complaint at the US International Trade Commission** seeking exclusion and
+  cease-and-desist orders over alleged infringement involving certain Micron memory products, adding company-specific legal
+  risk on top of the memory unwind (quiverquant / StocksToTrade / TipRanks, Aug 24). ⚠ **MICRON INTRADAY FIGURES DIVERGE WIDELY
+  THIS RUN: CNBC "more than 5%", TradingKey "opened down 6.86%", TipRanks "over 3%", this desk's 11 AM read 7.23%.** Only
+  attributed readings published; no single figure asserted. The card's tag was changed from "−7.2%" to "−5%+".
+- MARKETS — **BESSENT PRESS CONFERENCE TIME PINNED: 1 p.m. ET Monday Aug 24** (per search this run, corroborating the
+  Yahoo/TheStreet "Monday afternoon" framing). Added to the lead, both tldrs and On the Radar. Confirmed this run from Schwab's
+  9:05 a.m. ET market open note: week ahead = **NVDA Wed, MRVL Thu, PCE Wed, Q2 GDP 2nd estimate Wed, Warsh Jackson Hole Fri**.
+- ⚠ **FRIDAY-CLOSE TRAP, FIFTH CONSECUTIVE RUN.** A search summary again presented **S&P 7,674.37 / Dow 53,277.01 /
+  Nasdaq 26,180.46** as Monday's close "with major indices finishing in positive territory." They are **FRIDAY AUG 21 closes** —
+  now definitively confirmed as such by the **Schwab market-open table published 9:05 a.m. ET Aug 24**, which lists exactly those
+  three levels with Friday's changes (+0.43% / +0.98% / +0.43%). Rejected again.
+- ⚠ **BOTH YAHOO PAGES WERE CACHED THIS RUN.** The Yahoo live-blog page's quote strip read "U.S. markets open in 5h 6m"
+  (≈4:24 AM ET, pre-market) and the TheStreet-on-Yahoo page read "U.S. markets close in 6h 1m" (≈9:59 AM ET) — the latter carrying
+  **7,652.36 / 53,441.18 / 25,971.85 / VIX 16.03 / gold 4,731.50 / BTC 78,578.69**, i.e. the exact 1130-run blacklist.
+  **NEW RULE WORTH KEEPING: read the Yahoo strip's own "markets open/close in Xh Ym" countdown to date-stamp the cache before
+  trusting any level on that page.** Intraday levels were withheld again; only % moves published.
+- MARKETS — rates table unchanged and re-verified: **10-yr 4.70% (−4 bp)**, corroborated this run by Trading Economics at
+  **4.72%** and Schwab at **4.71% (−0.03)**; **30-yr 5.23% (−4 bp)**. WTI ≈ **$85.6–85.9, −1.5% to −1.7%** (Schwab $85.59 −1.69%,
+  Yahoo $85.75 −1.50%, TechTimes $85.65 −1.62%). Weekly Scorecard unchanged at Friday closes. No After-Hours section.
+  **Still NO 2-year yield.** Chart of the Day unchanged (**NASDAQ:AAOI**).
+- CYBER — **TOP STORY, PATCH PRIORITY AND KEV BOARD UNCHANGED AND RE-VERIFIED.** CVE-2026-73570 (Zimbra, CVSS **8.9**, fixed in
+  **10.1.20**, released **Jul 20**) re-confirmed **added Aug 21 → due Aug 24 (TODAY)** against BleepingComputer, Security Affairs,
+  THN and securityonline this run. New corroborating detail captured but not published as a stat: **CERT Polska first flagged
+  in-the-wild targeting Aug 17; Shadowserver found 270+ compromised ZCS instances.** **No KEV addition later than Aug 21** —
+  re-verified this run via the CISA alerts index (Aug 20 = two TrueConf, Aug 18 = four, Aug 11 = three, Aug 7 = one). KEV board
+  **12 rows: 8 past due, 1 due today, 3 ahead** — re-validated programmatically.
+- CYBER NEW ×1 — **Akamai, "State of the Internet: Enterprise AI Usage Risk Report 2026"** (via The Hacker News, Aug 24):
+  the **top 5% of enterprise AI power users interact with AI models at 12× the rate of the bottom 50%** of the workforce, based on
+  real-world usage and telemetry. Akamai's argument: the shadow-AI risk sits with the small group hardcoding unvetted tools and
+  autonomous agents into critical operations, not with casual drafting use. Stat strip: the **"885 INC victims"** tile was replaced
+  by the **"12×"** tile. Also re-verified present and unchanged from the prior snapshot: Keycloak **CVE-2026-18963 CVSS 9.1**
+  (Red Hat is the CNA; upstream fix **26.7.2** released Aug 19; RHBK **26.4.15 / 26.6.6**; **not exploited, no public exploit as of
+  Aug 24; not in KEV**), Operation QUICSILVER, UAT-10147, TikTok $400M. The Keycloak row's stale "New this edition" bolding was removed.
+- MMA — **NOTHING NEWLY ANNOUNCED SINCE THE 1142 RUN; ZERO New tags. CHAMPIONS BOARD UNCHANGED, 11/11 rows, 0 vacant**, and
+  asserted programmatically by name for 8 divisions with the three known-stale cells (Pereira / Chimaev / Topuria) asserted ABSENT.
+- MMA — **UFC 332 CARD EXPANDED: Rafael dos Anjos vs Alexander Hernandez added** (Sat Oct 3, **Delta Center**, Salt Lake City).
+  RDA is **41**, a **former UFC lightweight champion**, out **two years** after tearing an ACL in his **UFC 308 loss to Geoff Neal**
+  in Abu Dhabi and needing **three knee operations in 14 months**; it will be his **50th professional MMA bout**. Hernandez arrives
+  off a **unanimous-decision loss to Rafa Garcia**. ⚠ **WEIGHT CLASS IS DISPUTED IN SOURCES THIS RUN** — Fightomic says lightweight,
+  MiddleEasy/SportBible say welterweight — so **NO DIVISION IS ASSERTED**. Reported **Aug 21**, predating the prior snapshot, so it
+  correctly carries **NO New tag** (same treatment as UFC 333). Sources: Yahoo Sports, MMA Mania, MiddleEasy, SportBible, boxingnews.
+- MMA — UFC Shanghai (Sat **Aug 29**, Oriental Sports Center, Pudong) re-confirmed: **Umar Nurmagomedov vs Song Yadong**, main card
+  **6 a.m. ET**, prelims 3 a.m. ET, Paramount+. Odds re-confirmed: **BetOnline opened Nurmagomedov −700 / Song +500**; UFC.com
+  −450/+350; DraftKings −470/+360. Countdown target unchanged: **2026-08-29T06:00:00-04:00**.
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **23 days, 116 timestamped rows, 348 snapshot files**.
+  `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `outputs/validate_1206.py`, **0 failures, 148 checks**). 4 pages HTMLParser-balanced 0 unclosed /
+  0 stray; 5-tab nav on all 4 with exactly 1 active tab (**class is `on`, NOT `active`**); stamp/fresh IDs on all 4; `.tldr` on all
+  three briefings with correct per-page labels and NONE on index; **8/8 TradingView widget JSON blocks parse**; ticker retains
+  SPXUSD + NSXUSD + DJI + USOIL + US10Y; Chart of the Day asserted **NASDAQ:AAOI**; **12/12 KEV countdowns** with the 8/1/3 split
+  asserted (regex `due <b>(Mon DD)</b>\.\s*<span[^>]*>(label)</span>`); champions board counts `<tr>` == 12 (header uses `<th>`);
+  stale-figure blacklist asserted absent from editorial (**now also 53,506.48 / 26,090.11**, two fresh cache artefacts seen this run);
+  Friday closes asserted absent from the lead block specifically; each index.html card contains its own page's `.tldr` verbatim;
+  **site-wide New-tag count asserted == 2** (WS 1, CYBER 1, MMA 0) with both dropped tags asserted gone by exact markup and both
+  new tags asserted present by exact markup. Trap greps CLEAN ×0 on all four pages.
+  **NOTE for future validators: do NOT blanket-ban Friday closes from the whole Wall Street page — they legitimately appear in the
+  Weekly Scorecard. Scope the assertion to the editorial blocks (lead / movers) only.**
