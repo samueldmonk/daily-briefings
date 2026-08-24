@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Octagon — Daily Briefings</title>
+<style>
+:root{
+  --bg:#100c0c; --panel:#1a1313; --line:#322020; --text:#f3e9e9; --muted:#a89090;
+  --mono:'SFMono-Regular',ui-monospace,Menlo,Consolas,'Liberation Mono',monospace;
+  --up:#3fbf7f; --down:#e05555; --crit:#e84545; --warn:#e0a33a;
+  --acc:#e84545; --acc2:#ff8a5c; --gold:#d8b45c;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1040px;margin:0 auto;padding:26px 20px 60px}
+a{color:inherit}
+.masthead{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:14px}
+.masthead h1{margin:0 0 4px;font-size:36px;letter-spacing:-.5px;line-height:1.15;color:var(--acc2)}
+.masthead .tag{color:var(--muted);font-size:14.5px;margin:0}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:5px 11px;color:var(--muted)}
+.pill.live{color:var(--acc2);border-color:rgba(255,138,92,.35)}
+.pill.live .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--acc);margin-right:6px;vertical-align:middle}
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:10px;padding:11px 15px;margin:6px 0 2px;font-size:14.5px;line-height:1.5}
+.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);margin-right:9px}
+nav.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 20px}
+nav.tabs a{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;
+  text-decoration:none;background:var(--panel);border:1px solid var(--line);border-radius:9px;
+  padding:9px 13px;color:var(--muted);transition:.15s}
+nav.tabs a:hover{border-color:#4a2f2f;color:var(--text)}
+nav.tabs a.on{color:var(--acc2);border-color:rgba(232,69,69,.6);background:rgba(232,69,69,.09)}
+.freshline{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted);margin:9px 0 2px}
+.cdn{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:12px;padding:13px 17px;margin-bottom:14px}
+.cdn b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);margin-right:9px}
+.cdn span#ufccdn{font-family:var(--mono);color:var(--gold)}
+section{margin:30px 0 0}
+.lab{font-family:var(--mono);font-size:11px;letter-spacing:.19em;text-transform:uppercase;
+  color:var(--muted);margin:0 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:13px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 17px;transition:.18s}
+.card:hover{transform:translateY(-3px);border-color:#4a2f2f}
+.card h3{margin:0 0 7px;font-size:16.5px;line-height:1.35}
+.card p{margin:0 0 9px;font-size:14.5px;color:#dcc9c9}
+.card p:last-child{margin-bottom:0}
+.dateline{font-family:var(--mono);font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--gold);margin-bottom:7px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:9px}
+.tag{font-family:var(--mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase;
+  border-radius:5px;padding:3px 7px;border:1px solid var(--line);color:var(--muted)}
+.tag.new{color:var(--up);border-color:rgba(63,191,127,.4)}
+.tag.pro{color:var(--up);border-color:rgba(63,191,127,.4)}
+.tag.hot{color:var(--acc2);border-color:rgba(255,138,92,.45)}
+table{width:100%;border-collapse:collapse;font-size:14.5px}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--muted);text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);font-weight:500}
+td{padding:10px 11px;border-bottom:1px solid rgba(50,32,32,.75);vertical-align:top}
+tr:last-child td{border-bottom:none}
+.win{color:var(--up)}
+.nc{color:var(--gold)}
+ul.bul{margin:0;padding-left:19px}
+ul.bul li{margin:0 0 11px;font-size:14.8px;color:#dcc9c9}
+ul.bul li:last-child{margin-bottom:0}
+.note{font-size:12.7px;color:var(--muted);margin-top:10px;line-height:1.55}
+.lead{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:12px;padding:18px 20px}
+.lead h2{margin:0 0 9px;font-size:23px;line-height:1.28}
+.lead p{margin:0 0 11px;font-size:15px;color:#dcc9c9}
+.lead p:last-child{margin-bottom:0}
+footer{margin-top:44px;border-top:1px solid var(--line);padding-top:18px}
+footer .lab{border:none;padding:0}
+footer ul{margin:0;padding-left:18px;font-size:12.8px;color:var(--muted);line-height:1.75}
+.disc{margin-top:16px;font-size:12.2px;color:var(--muted);font-style:italic}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="masthead">
+<h1>The Octagon</h1>
+<p class="tag">Your daily MMA briefing — UFC, prospects &amp; the business of fighting</p>
+<div class="meta"><span class="pill live"><span class="dot"></span>Live</span><span class="pill" id="edition">&nbsp;</span><span class="pill" id="datestamp">&nbsp;</span><span class="pill">Updated <span id="updated">&nbsp;</span></span></div>
+</div>
+
+<div class="tldr"><b>Tale of the Tape</b> <span>Gregory Rodrigues outlasted Anthony Hernandez over five rounds in Sacramento for his fourth straight win and called out No. 2-ranked Dricus du Plessis; the promotion now turns to Shanghai on Saturday, while UFC 332 in Salt Lake City fills out around Johnny Walker&rsquo;s heavyweight debut against Mick Parkin.</span></div>
+<div class="freshline" id="freshline">&nbsp;</div>
+
+<nav class="tabs">
+<a href="index.html">★ Front Page</a>
+<a href="cyber-briefing.html">⛨ The Cyber Wire</a>
+<a href="wallstreet-briefing.html">▲ The Closing Bell</a>
+<a href="mma-briefing.html" class="on">⊘ The Octagon</a>
+<a href="archive.html">🗄 Archive</a>
+</nav>
+
+<div class="cdn"><b>Next card</b> <span>UFC Shanghai — Nurmagomedov vs Song, Oriental Sports Center, Pudong District, China · Sat, Aug 29, main card 6:00 AM ET — <span id="ufccdn">&nbsp;</span></span></div>
+
+<section style="margin-top:0">
+<div class="lab">Top story</div>
+<div class="lead">
+<h2>Rodrigues wins the war in Sacramento — and asks for du Plessis</h2>
+<p>Gregory Rodrigues quieted a partisan Golden 1 Center crowd on Saturday night, taking a unanimous decision (48-47, 49-46, 48-47) over local favourite Anthony &ldquo;Fluffy&rdquo; Hernandez in a 25-minute middleweight main event. &ldquo;Robocop&rdquo; seemed poised to finish in the second after chopping down Hernandez&rsquo;s lead leg, but Hernandez endured and seized the third before Rodrigues found a second wind in the fourth and defended well down the stretch.</p>
+<p>It is Rodrigues&rsquo; fourth consecutive win. Yahoo Sports reported he knocked Hernandez down four times and stuffed 26 of 29 takedown attempts; Hernandez has now lost two straight. Both men took home $100,000 for Fight of the Night, and Rodrigues used the cage interview and the post-fight press conference to call for a fight with Dricus du Plessis &mdash; &ldquo;Dricus Du Plessis, where are you?&rdquo; &mdash; arguing it is the fight to make at 185 pounds. Du Plessis, a former middleweight champion, is currently ranked No. 2 in the division.</p>
+<p class="note">Sources: UFC.com main card results (E. Spencer Kyte, Aug 23), UFC.com bonus coverage, MMA Weekly, Yahoo Sports/Forbes. Sacramento remains the most recent completed UFC event; no card has run since.</p>
+</div>
+</section>
+
+<section>
+<div class="lab">Fight week — upcoming cards</div>
+<div class="cards">
+
+<div class="card">
+<div class="dateline">Sat, Aug 29 · Oriental Sports Center, Pudong District, China</div>
+<div class="tags"><span class="tag hot">Full card announced</span></div>
+<h3>UFC Shanghai: Umar Nurmagomedov vs Song Yadong</h3>
+<p>A bantamweight headliner between Nurmagomedov, a former UFC bantamweight title challenger, and Song, the division&rsquo;s No. 5-ranked contender. Main card 6:00 AM ET.</p>
+<p>No. 4-ranked strawweight Yan Xiaonan &mdash; China&rsquo;s first female UFC athlete and a former strawweight title challenger &mdash; meets No. 13-ranked Denise Gomes in the co-main; it is Yan&rsquo;s first appearance in China since 2018. Also announced: Junior Tafa vs kickboxing world champion Liu Ce at light heavyweight on Liu&rsquo;s UFC debut; a flyweight rematch between No. 11-ranked Alex Perez and Sumudaerji after their No Contest in Macau; and Rei Tsuruya vs Kevin Borjas at flyweight.</p>
+<p class="note">Odds: Nurmagomedov −450 / Song +350 (UFC.com). DraftKings has −470 / +360; BetOnline opened the line at −700 / +500. No odds published for the co-main in any source fetched this run.</p>
+<p class="note">Records and billing confirmed this run: Nurmagomedov is 20-1 in MMA and 8-1 in the UFC, entering his second UFC main event on the back of wins over Mario Bautista and Deiveson Figueiredo; Song is 23-9-1 and 12-4-1, entering his sixth UFC main event after submitting Figueiredo in May. The card is UFC Fight Night 286, at the Shanghai Oriental Sports Center, on Paramount+.</p>
+</div>
+
+<div class="card">
+<div class="dateline">Sat, Sep 5 · Accor Arena, Paris, France</div>
+<h3>UFC Fight Night: Dan Hooker vs Salahdine Parnasse</h3>
+<p>The UFC returns to Paris with a lightweight headliner between Hooker and Parnasse. Michael Page vs Nursulton Ruziboev at middleweight is also on the main card, with Nathaniel Wood, Fares Ziam and Morgan Charrière among the home-continent names further down. Prelims 12:00 PM ET, main card 3:00 PM ET, on Paramount+.</p>
+<p class="note">Odds: not stated in any source fetched this run.</p>
+</div>
+
+<div class="card">
+<div class="dateline">Sat, Sep 12 · Desert Diamond Arena, Glendale, AZ</div>
+<div class="tags"><span class="tag hot">Main event changed</span></div>
+<h3>Noche UFC 4: Jean Silva vs Jose Delgado</h3>
+<p><b>Yair Rodriguez is out.</b> The former interim featherweight champion withdrew from the headliner with a groin injury suffered in training &mdash; &ldquo;I got injured. I tried to continue my preparation, but ultimately, it wasn&rsquo;t responsible to compete under these conditions,&rdquo; he wrote on Instagram &mdash; and Jose Delgado (12-2) steps in on short notice against Jean Silva (17-3). Delgado is 4-1 in the UFC since earning his contract on Dana White&rsquo;s Contender Series in 2024 and has beaten Andre Fili and Austin Bashi this year. The annual Mexican Independence weekend card also lists Brandon Moreno, Manon Fiorot vs Alexa Grasso and Curtis Blaydes vs Waldo Cortes-Acosta. Main card 9:00 PM ET on Paramount+.</p>
+<p class="note">Odds: Silva −425 / Delgado +355 (FightOdds.io, via MMA Mania/Yahoo Sports). Odds against Rodriguez in the original booking no longer apply.</p>
+</div>
+
+<div class="card">
+<div class="dateline">Sat, Sep 19 · Crypto.com Arena, Los Angeles, CA</div>
+<h3>UFC 331: Joshua Van vs Alexandre Pantoja 2</h3>
+<p>A flyweight championship rematch: reigning champion Van meets the former champion he took the belt from. Arman Tsarukyan vs Mauricio Ruffy and Patricio Pitbull vs Doo Ho Choi are also on the UFC.com card. Main card 9:00 PM ET.</p>
+<p class="note">Odds: not stated in any source fetched this run.</p>
+</div>
+
+<div class="card">
+<div class="dateline">Sat, Sep 26 · Meta APEX, Las Vegas, NV</div>
+<h3>UFC Fight Night: Raul Rosas Jr. vs Raoni Barcelos</h3>
+<p>A bantamweight main event back at the APEX. Main card 9:00 PM ET.</p>
+<p class="note">Odds: not stated in any source fetched this run.</p>
+</div>
+
+<div class="card">
+<div class="dateline">Sat, Oct 3 · Salt Lake City, UT</div>
+<div class="tags"><span class="tag">Main event TBA</span></div>
+<h3>UFC 332: Johnny Walker moves to heavyweight against Mick Parkin</h3>
+<p>Johnny Walker (22-10, 1 NC), a former light heavyweight contender, makes his heavyweight debut against Mick Parkin (10-1) &mdash; heavyweight champion Tom Aspinall&rsquo;s training partner, who won his first four UFC fights before losing to Marcin Tybura. Walker was originally set to change divisions at UFC Belgrade in August before losing opponent Ante Delija for undisclosed reasons. Seven bouts have now been announced for the card while the main event remains unannounced.</p>
+<p class="note">Odds: not stated in any source fetched this run.</p>
+</div>
+
+</div>
+<div class="note">Dates, venues and main-card start times for the September cards are taken from UFC.com&rsquo;s events page; the UFC 332 date and venue are as reported by Yahoo Sports, Bloody Elbow and Cageside Press. Cards and bouts are subject to change.</div>
+</section>
+
+<section>
+<div class="lab">Last event — UFC Sacramento results</div>
+<div class="panel" style="padding:6px 8px">
+<table>
+<tr><th>Result</th><th>Bout</th><th>Method</th></tr>
+<tr><td class="win">Gregory Rodrigues</td><td>def. Anthony Hernandez — middleweight, main event</td><td>Unanimous decision (48-47, 49-46, 48-47)</td></tr>
+<tr><td class="win">Vitor Petrino</td><td>def. Serghei Spivac — heavyweight, co-main event</td><td>Unanimous decision (30-27, 30-27, 30-27)</td></tr>
+<tr><td class="win">Reinier de Ridder</td><td>def. Roman Dolidze — light heavyweight</td><td>TKO (strikes), R1, 4:01</td></tr>
+<tr><td class="win">MarQuel Mederos</td><td>def. Mason Jones — lightweight</td><td>TKO (strikes), R2, 2:07</td></tr>
+<tr><td class="win">Carli Judice</td><td>def. Jeisla Chaves — flyweight</td><td>TKO (body kick), R1, 1:39</td></tr>
+<tr><td class="win">Anthony Wint</td><td>def. Terrance Chatman — heavyweight</td><td>Technical submission (arm-triangle choke), R1, 4:29</td></tr>
+<tr><td class="win">Jamall Emmers</td><td>def. Lerryan Douglas — featherweight, featured prelim</td><td>TKO, R1</td></tr>
+<tr><td class="win">Shamil Gaziev</td><td>def. Kennedy Nzechukwu — heavyweight</td><td>KO, R1</td></tr>
+<tr><td class="win">Chris Padilla</td><td>def. Nasrat Haqparast — lightweight</td><td>Technical submission, R3</td></tr>
+<tr><td class="win">Marcio Barbosa</td><td>def. Ryan Kuse — featherweight</td><td>TKO, R1</td></tr>
+<tr><td class="win">Stan Dorsainvil</td><td>def. Gauge Young — lightweight</td><td>Unanimous decision (29-28, 29-28, 29-28)</td></tr>
+<tr><td class="win">Jackson McVey</td><td>def. Wes Schultz — middleweight</td><td>TKO (knee to the body), R1, 4:13</td></tr>
+<tr><td class="win">Shanelle Dyer</td><td>def. Elise Reed — strawweight</td><td>Standing TKO (punches), R3, 1:42</td></tr>
+</table>
+</div>
+<div class="note">Main-card results, methods and exact times come from UFC.com&rsquo;s official main card recap. Prelim winners and methods are taken from the Forbes/Yahoo Sports full-card table; the McVey and Dyer finish details come from the MMA Mania live blog. Forbes lists McVey vs Schultz as a lightweight bout — UFC.com and FightBook MMA both billed it at middleweight, which is what is used here. Forbes also renders the featured-prelim winner &ldquo;Jahmall Emmers&rdquo;; UFC.com&rsquo;s spelling, Jamall Emmers, is used.</div>
+
+<div class="panel" style="margin-top:14px">
+<div style="font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:9px">Performance bonuses</div>
+<ul class="bul">
+<li><b>Fight of the Night — Anthony Hernandez and Gregory Rodrigues</b>, $100,000 each, for a five-round main event MMA Weekly calls a likely Fight of the Year candidate.</li>
+<li><b>Performance of the Night — MarQuel Mederos</b>, $100,000, for the second-round TKO of Mason Jones by elbows and punches.</li>
+<li><b>Performance of the Night — Carli Judice</b>, $100,000, for the first-round finish of Jeisla Chaves — a front kick to the body that set up fight-ending punches.</li>
+</ul>
+<div class="note">Four $100,000 bonuses were paid, $400,000 in total. Of the card&rsquo;s 13 bouts, 10 ended in a stoppage, and the other finishers collected $25,000 apiece. MMA Mania names seven recipients — Jamall Emmers, Shanelle Dyer, Jackson McVey, Marcio Barbosa, Chris Padilla, Anthony Wint and Reinier de Ridder; MMA Weekly put the count at six. The names are printed as MMA Mania listed them and the discrepancy is left unreconciled. UFC.com&rsquo;s own bonus-coverage page labels Judice&rsquo;s award &ldquo;Fight Of The Night&rdquo; and the main event &ldquo;Performance Of The Night&rdquo;; those headings contradict both the body of that page and every other source, so the MMA Weekly / Forbes designations are used.</div>
+</div>
+</section>
+
+<section>
+<div class="lab">Prospect watch</div>
+<div class="cards">
+
+<div class="card">
+<div class="tags"><span class="tag pro">Prospect</span></div>
+<h3>Lucia Szabova — a two-weight OKTAGON champion, reportedly UFC-bound</h3>
+<p>Bloody Elbow reported on Saturday that the UFC has signed Szabova, whom it bills as an undefeated two-weight world champion. She holds belts at bantamweight and flyweight and has spent the majority of her professional career in OKTAGON at 135 pounds. Her promotional debut is <em>reported</em> to be set for October, against Tainara Lisboa. The UFC has not published a bout announcement, so treat the date and the opponent as reporting rather than confirmed booking.</p>
+</div>
+
+<div class="card">
+<div class="tags"><span class="tag pro">Prospect</span></div>
+<h3>Anthony Wint — 8-0, and a week removed from a contract</h3>
+<p>Wint earned his UFC deal on the opening episode of Season 10 of Dana White&rsquo;s Contender Series, then submitted Terrance Chatman in the first round of his promotional debut. There were dicey moments — Chatman threatened a kimura on the way down — but Wint worked free, took top position and clamped on an arm-triangle from knee-on-belly to put Chatman to sleep. He is the second heavyweight with NFL ties in as many years to come to the UFC through Contender Series.</p>
+</div>
+
+<div class="card">
+<div class="tags"><span class="tag pro">Prospect</span></div>
+<h3>Bilal Hasan — contract to debut in a matter of days</h3>
+<p>Hasan finished Mridul Saikia in under a minute at bantamweight on the opening episode of Season 10 of Dana White&rsquo;s Contender Series, and White confirmed on the night that he had earned a UFC deal. Days later he was booked for his promotional debut against Nilson Rojas on the UFC Shanghai card this Saturday, one of four contracts handed out in the season&rsquo;s first week.</p>
+</div>
+
+<div class="card">
+<div class="tags"><span class="tag pro">Prospect</span></div>
+<h3>MarQuel Mederos — 11 straight, unbeaten in the Octagon</h3>
+<p>Now 4-0-1 in the UFC and riding an 11-fight winning streak overall, which UFC.com notes is tied for the second-longest unbeaten run in the lightweight division alongside Tom Nolan and Arman Tsarukyan, one behind Chris Padilla and Quillan Salkilld. The MMA Lab product called for a top-15 opponent or a date with Beneil Dariush or Chris Duncan.</p>
+</div>
+
+<div class="card">
+<div class="tags"><span class="tag pro">Prospect</span></div>
+<h3>Carli Judice — four in a row, three finishes</h3>
+<p>&ldquo;Crispy&rdquo; has won four straight with three finishes since dropping a split decision in her promotional debut. The Louisiana native closed the distance on Chaves, buried a front kick in her midsection and ended the fight in an instant. She is climbing the flyweight ranks and should be looking at a ranked opponent next.</p>
+</div>
+
+<div class="card">
+<div class="tags"><span class="tag pro">Prospect</span></div>
+<h3>Francesco Nuzzi — signed on a ten-day turnaround</h3>
+<p>Nuzzi signed with the UFC on August 19 and was slotted straight into the UFC Shanghai card on August 29 — ten days from signature to Octagon walk, among the fastest turnarounds of the year.</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="lab">Around the sport</div>
+<div class="panel">
+<ul class="bul">
+<li><b>A finish-filled card.</b> Ten of the 13 Sacramento bouts ended inside the distance, including six finishes in the seven preliminary fights and first-round stoppages from Anthony Wint, Carli Judice and Reinier de Ridder on the main card.</li>
+<li><b>De Ridder restarts at 205.</b> After faltering in his last two middleweight appearances, Reinier de Ridder moved up and flattened Roman Dolidze in the first, aided by Dolidze pulling guard to chase leg locks. De Ridder previously won gold in ONE Championship; the light heavyweight division has another contender to consider.</li>
+<li><b>Petrino wins ugly.</b> Vitor Petrino swept the cards against Serghei Spivac to go 4-0 since moving to heavyweight, but UFC.com was blunt that the performance &ldquo;wasn&rsquo;t the kind that is going to do him any favors.&rdquo; He is 10 fights into his UFC career.</li>
+<li><b>Delphine Benouaich joins the Paris card.</b> Benouaich has signed with the UFC and lands at the Accor Arena on September 5 against Argentina&rsquo;s Sofia Montenegro at women&rsquo;s strawweight.</li>
+<li><b>Blaydes re-signs.</b> Heavyweight Curtis Blaydes has put pen to paper on a new eight-fight deal, securing his place on the roster against what Bloody Elbow describes as a run of surprise roster removals. He is booked against Waldo Cortes-Acosta on the September 12 Noche UFC card.</li>
+<li><b>Road to UFC returns Friday.</b> Shanghai fight week is a back-to-back double: the Road to UFC Season 5 semifinals run Friday, August 28 (5 PM China time), with the 16 surviving Asia-Pacific prospects fighting for a place in the finals and a multi-fight UFC contract. UFC.com says the opening round produced 10 finishes.</li>
+<li><b>A Shanghai homecoming.</b> UFC.com describes Saturday&rsquo;s card as the promotion&rsquo;s return to Shanghai for a second consecutive year and its first event in the Pudong District since it sold out Mercedes-Benz Arena in 2017. The event is hosted by the Shanghai Municipal Sports Bureau and the Pudong District Government, with China Mobile subsidiary Migu and Orange Lion Sports (formerly Alisports) as co-organizers.</li>
+<li><b>The year&rsquo;s last two numbered cards are official.</b> UFC 334 goes to Madison Square Garden in New York on Saturday, November 14, and UFC 335 closes the year at T-Mobile Arena in Las Vegas on Saturday, December 12. UFC 334 is being billed as Polymarket UFC 334 after the prediction market became the promotion&rsquo;s exclusive prediction-market partner — the first time that sponsorship has been folded into an event name. No bouts have been announced for either card.</li>
+<li><b>Nevada is holding three UFC 329 purses.</b> The Nevada State Athletic Commission has withheld the fight purses of Max Holloway, Paddy Pimblett and Gable Steveson pending disciplinary hearings, after all three climbed out over the cage following their wins — a violation Nevada has enforced more strictly since Khabib Nurmagomedov jumped the fence at UFC 229. Holloway and Pimblett were both shown on the broadcast leaving the cage after first-round stoppages; Steveson was not caught on camera doing so. The hearings will decide whether the withheld money is returned or converted into fines. Pimblett&rsquo;s manager, Cage Warriors CEO Graham Boyland, texted MMA Junkie: &ldquo;For the record, this rule needs to be changed.&rdquo; The precedent is small — Diego Lopes had $5,000 of his $100,000 show money frozen for scaling the cage at UFC 300 and was fined $2,500 — but the amounts withheld here have not been disclosed.</li>
+<li><b>Next up.</b> The promotion heads to Shanghai on Saturday, August 29 for Umar Nurmagomedov vs Song Yadong, then Paris on September 5.</li>
+</ul>
+</div>
+</section>
+
+<section>
+<div class="lab">Rankings &amp; business</div>
+<div class="cards">
+<div class="card">
+<h3>Rankings movement</h3>
+<p>MMA Weekly billed the Sacramento main event as No. 7 Anthony Hernandez vs No. 10 Gregory Rodrigues at middleweight; FightBook MMA had Hernandez at No. 6. Both figures are printed as reported rather than reconciled.</p>
+<p>UFC.com expects Rodrigues to climb into the top 10 on the strength of the win; Forbes expects him to land in the top five when rankings update. Neither is an official ranking yet.</p>
+<p>Dricus du Plessis, the man Rodrigues called out, is the division&rsquo;s No. 2-ranked fighter and a former middleweight champion.</p>
+</div>
+<div class="card">
+<h3>Business &amp; broadcast</h3>
+<p>16,867 spectators at Golden 1 Center generated $3.3 million in gate receipts (MMA Weekly).</p>
+<p>$400,000 paid in $100,000 bonuses, plus $25,000 finishing bonuses to the card&rsquo;s other finishers — seven of them per MMA Mania, six per MMA Weekly.</p>
+<p>The event streamed on Paramount+ in the United States: prelims 5:00 PM ET, main card 8:00 PM ET.</p>
+<p>No viewership figure has been published in any source fetched this run, so none is given here.</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="lab">Champions board</div>
+<div class="panel" style="padding:6px 8px">
+<table>
+<tr><th>Division</th><th>Champion</th><th>Won the title</th><th>Notes</th></tr>
+<tr><td>Heavyweight</td><td>Tom Aspinall</td><td>Jun 21, 2025 (inherited, undisputed)</td><td><b>Interim champion: Ciryl Gane</b> — KO2 Alex Pereira, Freedom 250, Jun 14, 2026.</td></tr>
+<tr><td>Light Heavyweight</td><td>Carlos Ulberg</td><td>Apr 11, 2026 — KO1 Jiří Procházka, UFC 327</td><td>Won the vacant belt; had ACL surgery afterwards.</td></tr>
+<tr><td>Middleweight</td><td>Sean Strickland</td><td>May 9, 2026 — split decision over Khamzat Chimaev, UFC 328</td><td>Two-time champion.</td></tr>
+<tr><td>Welterweight</td><td>Islam Makhachev</td><td>Nov 15, 2025 — UD Jack Della Maddalena, UFC 322</td><td>1 defence: UD Ian Machado Garry, UFC 330, Aug 15, 2026 — a 17th straight UFC win, a record for consecutive Octagon victories.</td></tr>
+<tr><td>Lightweight</td><td>Justin Gaethje</td><td>Jun 14, 2026 — TKO4 Ilia Topuria, Freedom 250</td><td></td></tr>
+<tr><td>Featherweight</td><td>Alexander Volkanovski</td><td>Apr 12, 2025 — UD Diego Lopes, UFC 314</td><td>Defended UD over Lopes, UFC 325, Jan 31, 2026. Movsar Evloev is the No. 1 contender.</td></tr>
+<tr><td>Bantamweight</td><td>Petr Yan</td><td>Dec 6, 2025 — UD Merab Dvalishvili, UFC 323</td><td></td></tr>
+<tr><td>Flyweight</td><td>Joshua Van</td><td>Dec 6, 2025 — TKO1 Alexandre Pantoja, UFC 323</td><td>1 defence: TKO5 Tatsuro Taira, UFC 328, May 9, 2026. Defends against Pantoja again at UFC 331 on Sep 19.</td></tr>
+<tr><td>Women&rsquo;s Flyweight</td><td>Valentina Shevchenko</td><td></td><td></td></tr>
+<tr><td>Women&rsquo;s Bantamweight</td><td>Kayla Harrison</td><td>Jun 7, 2025 — submission R2 over Julianna Peña, UFC 316</td><td>0 defences — the UFC 324 defence vs Amanda Nunes was cancelled after Harrison withdrew for neck surgery.</td></tr>
+<tr><td>Women&rsquo;s Strawweight</td><td>Mackenzie Dern</td><td>Oct 25, 2025 — UD Virna Jandiroba, UFC 321</td><td>1 defence: UD Gillian Robertson, UFC 330, Aug 15, 2026.</td></tr>
+</table>
+</div>
+<div class="note">Eleven belts, none vacant. Cross-checked this run against ESPN&rsquo;s &ldquo;Current and all-time UFC champions&rdquo; article, which matches on every name and date for the six men&rsquo;s divisions it returned — Aspinall, Ulberg (Apr 11, 2026), Strickland (May 9, 2026), Makhachev at welterweight (Nov 15, 2025), Gaethje at lightweight (Jun 14, 2026) and Volkanovski (Apr 12, 2025). No UFC event since UFC 330 on August 15 has featured a title fight, and the Sacramento card had none, so no belt can have changed hands.</div>
+</section>
+
+<footer>
+<div class="lab">Sources</div>
+<ul>
+<li>UFC.com — Main Card Results, UFC Sacramento (E. Spencer Kyte, Aug 23, 2026)</li>
+<li>UFC.com — Bonus Coverage, UFC Sacramento (Aug 23, 2026)</li>
+<li>MMA Weekly — UFC Sacramento Bonuses: Main event takes Fight of the Night (Jeff Cain, Aug 23, 2026)</li>
+<li>Forbes via Yahoo Sports — UFC Fight Night Sacramento Results, Bonus Winners And Highlights (Brian Mazique, Aug 23, 2026)</li>
+<li>Yahoo Sports — UFC Sacramento results: Rodrigues upsets Hernandez, calls out Dricus du Plessis</li>
+<li>FightBook MMA — UFC Sacramento card and bout order</li>
+<li>MMA Mania — Bonuses: Gregory Rodrigues banks $100K for upsetting Anthony Hernandez, UFC Sacramento</li>
+<li>UFC.com — Events (upcoming cards, venues and start times)</li>
+<li>UFC.com — UFC Fight Night: Nurmagomedov vs Song (UFC Shanghai, Aug 29, 2026) — https://www.ufc.com/event/ufc-fight-night-august-29-2026</li>
+<li>ESPN — Current and all-time UFC champions (re-checked this run) — https://www.espn.com/mma/story/_/id/14947566/current-all-ufc-champions</li>
+<li>Yahoo Sports — UFC Shanghai odds: Umar opens as enormous betting favorite over Yadong Song — https://sports.yahoo.com/articles/ufc-shanghai-odds-umar-opens-200000672.html</li>
+<li>UFC.com — UFC returns to Shanghai with a pivotal bantamweight clash between #3 Umar Nurmagomedov and #5 Song Yadong</li>
+<li>Yahoo Sports — UFC Shanghai: Umar Nurmagomedov vs. Song Yadong odds, what to know</li>
+<li>MMA Mania — UFC Shanghai odds: Umar opens as enormous betting favorite over Yadong Song</li>
+<li>ESPN — Rodriguez out of Silva bout at Noche UFC, replaced by Delgado</li>
+<li>CBS Sports — Noche UFC main event: Jose Delgado to step in as replacement for Yair Rodriguez against Jean Silva</li>
+<li>MMA Mania — Noche UFC 4 odds: betting line opens for Jean Silva vs. Jose Delgado (Silva −425 / Delgado +355, FightOdds.io)</li>
+<li>Yahoo Sports — UFC 332 adds several new bouts, including Johnny Walker&rsquo;s heavyweight debut</li>
+<li>Bloody Elbow — UFC 332 gets first fight as Johnny Walker books heavyweight debut against Tom Aspinall&rsquo;s teammate (Jul 29, 2026)</li>
+<li>Cageside Press — Figueiredo vs. Talbott, Walker vs. Parkin among UFC 332 additions (Aug 19, 2026)</li>
+<li>Yardbarker — Seven fights announced while the UFC 332 main event remains a mystery</li>
+<li>Fightomic — Newly Booked UFC Fights: Week Ending 23 August 2026 (Benouaich, Nuzzi, Walker)</li>
+<li>Bloody Elbow — UFC signs undefeated two-weight world champion, debut reportedly set for October (Aug 22, 2026)</li>
+<li>Bloody Elbow — Ex-UFC title challenger survives trend of surprise roster removals by signing new 8-fight deal (Aug 21, 2026)</li>
+<li>Bloody Elbow — Paddy Pimblett&rsquo;s manager demands &lsquo;common sense&rsquo; after commission withholds his UFC 329 purse (Aug 22, 2026)</li>
+<li>Forbes — UFC 334 and 335 announced: dates and venues confirmed (Aug 22, 2026)</li>
+<li>MMA Mania — Dates and locations revealed for the last major UFC events of 2026</li>
+<li>CBS Sports — Dana White&rsquo;s Contender Series 2026 Week 1 results: Anthony Wint, Bilal Hasan earn UFC contracts</li>
+<li>MMA Mania — UFC Paris fight card, start time, date and location: Hooker vs. Parnasse</li>
+<li>ESPN — Current and all-time UFC champions</li>
+</ul>
+<p class="disc">Cards and bouts are subject to change. Betting odds are shown only where a fetched source stated them and move constantly.</p>
+</footer>
+
+</div>
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
+<script>(function(){function tick(){var el=document.getElementById('ufccdn');if(!el)return;var t=new Date('2026-08-29T06:00:00-04:00').getTime();var d=t-Date.now();if(d<=0){el.textContent='Fight week — live/completed';return;}var days=Math.floor(d/86400000),h=Math.floor(d%86400000/3600000),m=Math.floor(d%3600000/60000);el.textContent=days+'d '+h+'h '+m+'m';}tick();setInterval(tick,30000);})();</script>
+</body>
+</html>

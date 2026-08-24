@@ -9795,3 +9795,95 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   contains its own page's .tldr sentence verbatim. Trap greps CLEAN ×0 on all four pages: Cody Salkilld /
   Shamil Yakhyaev / Abdul-Rakhman / MacKenzie / Joshua Vance / "Pereira (205)" / pay-per-view / "Jahmall Emmers def" /
   "Yair Rodriguez vs Jean Silva" / Finastra.
+
+## Added 2026-08-24 (Monday ~11:13am ET — MORNING EDITION; **first run of the day carrying a VERIFIED POST-OPEN index print**; archive stamp 2026-08-24-1113)
+- CLOCK: TZ date = Mon Aug 24 10:56 EDT at run start, 11:13 EDT at archive stamp. Edition bucket **Morning** (h=10).
+  Prior archived snapshot is **2026-08-24-0944** (~90 min earlier). "New" tags re-scoped against THAT snapshot:
+  the 0944 New tags (WS Alibaba, Samsung/SK hynix, Micron, Nvidia–Perplexity; CYBER Keycloak, QUICSILVER, UAT-10147)
+  were ALL DROPPED. Exactly **TWO** New tags published site-wide: **WS Applied Optoelectronics** and **CYBER ASOS**.
+- MARKETS — **THE POST-OPEN GAP IS CLOSED.** The 0944 run could not verify any post-open level. This run fetched
+  Yahoo Finance's market bar on the TheStreet/Yahoo article page (`stock-market-today-aug-24-134834490.html`, filed
+  **9:48 AM ET**) with the header reading **"U.S. markets close in 6h 1m" ≈ 9:59–10:00 AM ET**:
+  **S&P 500 7,652.36 −22.01 (−0.29%); Dow 30 53,441.18 +164.17 (+0.31%); Nasdaq Composite 25,971.85 −208.61 (−0.80%);
+  Russell 2000 3,001.24 −16.63 (−0.55%); VIX 16.03 +0.90 (+5.96%); Gold 4,731.50 +50.90 (+1.09%);
+  Bitcoin 78,578.69 +1,096.90 (+1.42%); Crude Oil OCT 26 85.75 −1.31 (−1.50%).**
+  ✅ CORROBORATION METHOD WORTH REUSING: each change reconciles **exactly** against Friday's official closes
+  (7,652.36+22.01=7,674.37; 53,441.18−164.17=53,277.01; 25,971.85+208.61=26,180.46). That arithmetic is what
+  distinguishes a genuine post-open print from a stale futures bar — assert it programmatically before publishing.
+  Trading Economics separately had the S&P 500 at **7,661, −0.18%** slightly later. Lead headline is now
+  **"The tape splits in the first hour — Dow up, Nasdaq down 0.8% as of ~10 AM ET."**
+- ⚠ **STALE-PAGE TRAP, REPEATED:** the Yahoo **live-blog** URL (`...-080306047.html`) STILL returns the pre-open
+  header ("U.S. markets open in 5h 6m") and the 0944 futures bar. TheStreet's own domain returned EMPTY on fetch.
+  The *article* mirror of the same TheStreet copy on finance.yahoo.com carried the live post-open bar. When the live
+  blog looks frozen, try the article mirror before concluding no post-open print exists.
+- ⚠ **REJECTED AGAIN — "Aug 24 closing numbers" of S&P 7,674.37 / Dow 53,277.01 / Nasdaq 26,180.46.** A synthesized
+  search summary presented these as today's close for the *second consecutive run*. They are **FRIDAY AUG 21 closes** —
+  a second Yahoo/Zacks recap fetched this run states them explicitly as Friday's ("Dow gained 1%, or 517.80 points, to
+  close at 53,277.01"; "S&P rose 0.4%, or 33.21 points, to 7,674.37"). Standing trap holds: never accept a same-day
+  "close" before 4 PM ET. A note to this effect was added to the Weekly Scorecard.
+- MARKETS NEW MOVER — **Applied Optoelectronics (AAOI) is the session's single biggest identified US mover and the
+  new Chart of the Day (NASDAQ:AAOI, replacing NYSE:BABA).** Launched a **$600 million at-the-market equity offering**
+  under an equity distribution agreement signed **Friday with Raymond James and Needham**. Benzinga (8:04 AM):
+  **−11.9% to $109.99** pre-market, live quote **$109.80, −12.0%**; Yahoo trending tickers showed a deeper
+  **$104.37, −$20.45, −16.38%**. Context: record **Q2 revenue $191.9M** on a **140% surge in data-centre sales**,
+  swung to non-GAAP profitable; this is the **third** large 2026 raise (a $500M raise in April, another $600M ATM in May).
+- ⚠ **BABA ADR INTRADAY % NOT ASSERTED.** Yahoo's trending-ticker widget gave **two mutually inconsistent readings in
+  the same run**: `119.34 −11.19 (−8.57%)` and then `117.38 −1.96 (−1.64%)` — the second measures against the first,
+  not against Friday's close. The page prints both dollar readings, states the baselines conflict, and asserts NO
+  intraday percentage. Keep the sourced pre-market **−3.38% (Benzinga) / −3.4% (Reuters)** and the HK 8% / 10.5% figures.
+  Do not "resolve" this by picking one.
+- MARKETS NEW SOURCED DETAIL — **US sector performance for Aug 24: energy +0.98% (best), technology −0.43%.**
+  Energy also leads YTD at **+42.01%**, consumer discretionary weakest at **−0.17%**. First US sector-level percentages
+  published in several runs; they corroborate the Dow-up/Nasdaq-down split. Added to the Sector Heat note.
+- MARKETS — additional sourced Benzinga pre-market decliners now on the page: **SanDisk −4.5% to $1,524.24;
+  Coherent −4.6% to $276.35 (live $275.20, −4.95%); Lumentum −4.1% to $831.60; AXT −4.3% to $67.68 (live $66.96,
+  −5.34%); Seagate −3.5% to $820.00 (live $824.88, −2.96%)**; and in the section note, **RF Acquisition Corp II −35.2%
+  to $37.61** (after **+356% Friday**), **Zerostack −13.4% to $4.08**, **ZKH Group −11.7% to $2.56**.
+  ⚠ Benzinga's own top-of-page ETF strip (QQQ +0.51%, DIA +0.08%) contradicts the index tape and was NOT used.
+- MARKETS — **RATES: 10-year now published as ≈4.72%** (Trading Economics, Aug 24, −2bp on the session; a second
+  reading of 4.71%), with the Investing.com 4.712% retained as corroboration. 30-yr/5-yr/3-month/Brent carried forward
+  from the earlier Investing.com read with times stated. **Still NO 2-year yield** — no source stated it. Gold, bitcoin,
+  VIX and WTI(Oct) rows refreshed to the post-open Yahoo bar. **Ticker tape: MRVL swapped out for AAOI**; SPXUSD +
+  NSXUSD + DJI + USOIL + US10Y retained. **NO After-Hours section** (session under way). Weekly Scorecard unchanged at
+  Friday closes; **Nasdaq cell corrected 26,180.45 → 26,180.46** to match the sourced figure and the post-open arithmetic.
+- CYBER NEW — **ASOS confirms a credential-based account-takeover.** Attackers used **credentials obtained outside the
+  company** to reach customer accounts holding personal information and limited payment-card details — NOT a compromise
+  of ASOS systems. Reported to the **Texas and Vermont attorneys general on Aug 21, 2026**; **9,412 Texas residents**
+  and **80 Vermont residents** affected. Exposed fields: full names, addresses, dates of birth, account and card numbers.
+  Timing, discovery and full scope undisclosed. Only cyber card tagged New.
+- CYBER — **TOP STORY UNCHANGED (Iran/IRGC-linked shutdown of a small UK power plant, four days, July 2026; Telegraph
+  Aug 22, CNBC/SecurityWeek Aug 23). PATCH PRIORITY UNCHANGED: CVE-2026-73570, Zimbra, CVSS 8.9, KEV added Aug 21,
+  DUE TODAY Aug 24, fixed 10.1.20** — re-verified this run against the **CISA Aug 21 alert page**, THN and Security
+  Affairs, all of which state the Aug 24 FCEB deadline explicitly. **KEV BOARD UNCHANGED AT 12 ROWS; 8 past due,
+  1 due today, 3 ahead** — re-validated programmatically against an Aug 24 day count.
+  **No CISA KEV addition later than Aug 21 surfaced this run** (Aug 20 = two TrueConf; Aug 19 = MLflow CVE-2026-64849;
+  Aug 18 = four; Aug 11 = three). Note for validators: the **CVE-2026-68820 (WinSock, due Aug 25)** row legitimately
+  carries a **bare `class="kevdue"` (amber/warn)**, not `kevdue ok` — a validator asserting `ok` on every
+  not-yet-due row will FALSE-FAIL. Amber for due-tomorrow is intentional.
+- ⚠ **REJECTED — "Nearly 800 malicious npm packages / WEL1DROPPER".** Surfaced as current; fetching the THN article
+  shows a byline of **Aug 07, 2026** (updated Aug 11). Stale, not published. Same category as the Forminator/MacSync
+  date errors logged at 0907.
+- MMA — **NOTHING MATERIALLY NEW; ZERO New tags. CHAMPIONS BOARD UNCHANGED, 11/11 rows, 0 vacant.** Cross-checked this
+  run: **Aspinall (Jun 21 2025), Ulberg (Apr 11 2026), Strickland (May 9 2026), Makhachev — WELTERWEIGHT (Nov 15 2025,
+  1 defence), Gaethje — LIGHTWEIGHT (Jun 14 2026), Volkanovski (Apr 12 2025, 1 defence)** all MATCH the ESPN
+  "Current and all-time UFC champions" listing. **UFC Sacramento (Aug 22) re-confirmed as the most recent completed
+  event** — Gregory Rodrigues def. Anthony Hernandez, **UD 48-47 / 49-46 / 48-47**, four knockdowns, stuffed **26 of 29**
+  takedowns, called out **Dricus du Plessis**; bonuses re-confirmed at **$100K** each — **FOTN Rodrigues/Hernandez**,
+  **POTN MarQuel Mederos** (TKO2 Mason Jones) and **Carli Judice** (R1 finish of Jeisla Chaves) — plus **eight $25K
+  finish cheques**. No title fight since UFC 330 (Aug 15), so no belt can have changed hands.
+  **UFC Shanghai (Aug 29) odds re-verified exactly as published: UFC.com −450/+350, DraftKings −470/+360,
+  BetOnline opener −700/+500.** Countdown target unchanged: **2026-08-29T06:00:00-04:00**.
+  ⚠ Yahoo's Sacramento recap spells the prelim winner **"Jamall Emmers"** (one h). The standing trap grep is on the
+  string **"Jahmall Emmers def"** — it did NOT fire and the page does not name him. Leave the trap as-is.
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**. Result: **23 days, 113 timestamped rows, 339 snapshot files**.
+  `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, this run — `/tmp/validate_1100.py`, **0 failures, 147 checks**). 4 pages HTMLParser-balanced
+  **0 unclosed / 0 stray**; 5-tab nav on all 4 with exactly **1 active tab each** (active tab is `class="on"`);
+  stamp/fresh IDs on all 4; `.tldr` on all three briefings with the correct per-page label and NONE on index;
+  **8/8 TradingView widget JSON blocks parse**; ticker retains SPXUSD + NSXUSD + DJI + USOIL + US10Y; Chart of the Day
+  asserted as **NASDAQ:AAOI**; **12/12 KEV countdowns** correct on label AND colour with the 8/1/3 split asserted;
+  scorecard arithmetic **4/4 exact**; **post-open S&P/Dow/Nasdaq changes asserted to reconcile to Friday's closes**
+  (new check, worth keeping); champions **11/11 rows**, 0 vacant; each index.html card contains its own page's `.tldr`
+  sentence verbatim; **site-wide New-tag count asserted == 2**. Trap greps CLEAN ×0 on all four pages: Cody Salkilld /
+  Shamil Yakhyaev / Abdul-Rakhman / MacKenzie / Joshua Vance / "Pereira (205)" / pay-per-view / "Jahmall Emmers def" /
+  "Yair Rodriguez vs Jean Silva" / Finastra.
