@@ -9887,3 +9887,79 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   sentence verbatim; **site-wide New-tag count asserted == 2**. Trap greps CLEAN ×0 on all four pages: Cody Salkilld /
   Shamil Yakhyaev / Abdul-Rakhman / MacKenzie / Joshua Vance / "Pereira (205)" / pay-per-view / "Jahmall Emmers def" /
   "Yair Rodriguez vs Jean Silva" / Finastra.
+
+## Added 2026-08-24 (Monday ~11:30am ET — MIDDAY EDITION; archive stamp 2026-08-24-1130)
+- CLOCK: TZ date = Mon Aug 24 11:15 EDT at run start. Edition bucket **Midday** (h=11). Prior archived snapshot is
+  **2026-08-24-1113**, only ~17 minutes earlier, so the delta is deliberately narrow. **THREE** New tags site-wide:
+  **WS "Visa, UnitedHealth and Disney are holding the Dow up"**, **CYBER UT San Antonio**, **CYBER Medusa advisory**.
+  The 1113 New tags (WS Applied Optoelectronics, CYBER ASOS) were BOTH dropped. **MMA: zero New tags.**
+- MARKETS — **FRESHER POST-OPEN PRINT VERIFIED, ~11 AM ET:** **S&P 500 7,645.21 −29.16 (−0.38%); Dow 30 53,391.49
+  +114.48 (+0.21%); Nasdaq Composite 25,935.17 −245.29 (−0.94%); VIX 15.89 +0.76 (+5.02%); Gold 4,723.70 +43.10
+  (+0.92%); Bitcoin 79,111.23 +1,930.77 (+2.50%).** All three index changes reconcile EXACTLY to Friday's closes
+  (7,645.21+29.16=7,674.37; 53,391.49−114.48=53,277.01; 25,935.17+245.29=26,180.46). Supersedes the 1113 edition's
+  ~10 AM bar (7,652.36 / 53,441.18 / 25,971.85) — do NOT regress to those.
+  ✅ **INDEPENDENT CORROBORATION, NEW SOURCE THIS RUN — Trading Economics live CFD board** (fetched, not summarised):
+  **US500 7,643.80 −30.32 (−0.40%); US30 53,356.45 +79.44 (+0.15%); US2000 3,000.41 −17.46 (−0.58%);
+  US100 28,908.54 −400.32 (−1.37%); USVIX 15.89 +0.76.** Previous-close field on the same page reads **7,674.37**,
+  matching Friday. The VIX matches Yahoo's bar to the cent — strong cross-source confirmation. TE also lists
+  Fed funds 3.75%, US inflation 3.40% (Jul 2026), unemployment 4.10% (Jul 2026).
+- ⚠ **STALE-PAGE TRAP AGAIN, BOTH DIRECTIONS.** Fetching the Yahoo TheStreet *article* mirror this run returned the
+  SAME cached "close in 6h 1m" (~10 AM) bar as the 1113 run; the Zacks article page returned an even OLDER
+  "close in 6h 19m" (~9:41 AM) bar (7,653.64 / 53,386.15 / 26,016.13). The FRESHER numbers came from the WebSearch
+  result summary over those pages. RULE CONFIRMED: when fetched page bars look frozen, accept the fresher
+  search-surfaced bar ONLY if (a) it reconciles arithmetically to the prior official closes AND (b) an independent
+  source (Trading Economics) corroborates direction and level. Both held this run.
+- ⚠ **REJECTED FOR THE THIRD CONSECUTIVE RUN** — a search summary again presented **S&P 7,674.37 / Dow 53,277.01 /
+  Nasdaq 26,180.46** as Monday's "close". They are **FRIDAY AUG 21 closes**. Standing trap holds.
+- MARKETS NEW MOVER (New tag) — **Dow breadth is defensive, not technological.** Trading Economics session note:
+  Dow opened **+76 points / +0.14%**; top gainers **Visa +2.06%, UnitedHealth +1.97%, Walt Disney +1.71%**;
+  biggest drags **Caterpillar −2.13%, Boeing −1.55%, Merck −1.53%**. Broader note adds **Visa and Mastercard each
+  +2%** on a credit-services rebound.
+- MARKETS — **MICRON DEEPENED FROM ~−3% PRE-MARKET TO −7.23% INTRADAY: $896.92, −$69.86** (Trading Economics
+  largest-companies tracker). Same board: **Nvidia $209.27 −2.54%; Broadcom $361.43 −1.91%; Tesla −1.34%;
+  Alphabet +1.24%; Amazon +1.15%; Microsoft +1.01%; Apple +0.86%; Meta +0.62%.** TE narrative: "Micron, Marvell,
+  and Sandisk were between 6% and 10%" down. The Micron card was rewritten but is **NOT** tagged New (the name was
+  already in the 1113 snapshot) — this is the correct application of the New-tag rule.
+- MARKETS — **AAOI REMAINS Chart of the Day (NASDAQ:AAOI)** at −16.38%/−17.23% on Yahoo trending; the New tag was
+  dropped. **WTI (Oct) refreshed to $85.93 −1.13 (−1.30%)** with TE's crude oil $85.08 (−2.28%) noted alongside;
+  gold/bitcoin/VIX rows refreshed to the ~11 AM bar. Weekly Scorecard unchanged at Friday closes. No After-Hours
+  section (session under way). **Still NO 2-year yield.**
+- CYBER — **TOP STORY, PATCH PRIORITY AND KEV BOARD ALL UNCHANGED AND RE-VERIFIED.** CVE-2026-73570 (Zimbra,
+  CVSS 8.9) re-confirmed **added Aug 21 → due Aug 24 (TODAY)** against the CISA Aug 21 alert page and
+  securityonline/Security Affairs/THN this run. **KEV board 12 rows: 8 past due, 1 due today, 3 ahead** —
+  re-validated programmatically. **No KEV addition later than Aug 21** (Aug 20 = two TrueConf; Aug 18 = four;
+  Aug 11 = three; Aug 7 = one, CVE-2026-8037 Progress LoadMaster).
+- CYBER NEW ×2 (both from Help Net Security's Aug 23 week-in-review, fetched this run):
+  (a) **UT San Antonio** pushed its fall semester back three days after a cyberattack on its academic network;
+  classes due Wed **Aug 19** now start **today, Mon Aug 24**. (b) **Medusa ransomware has breached 500+ organisations
+  since June 2021** per an updated **FBI / CISA / HHS** joint advisory building on the March 2025 advisory and drawing
+  on FBI investigations as late as **April 2026**. Also captured but given only a trailing mention: **France's DGFiP
+  tax-authority breach, 678,000 individuals and professionals**, attacker alias **"ZeroBytes"**.
+  Stat strip: the **14,530 Dahua** tile was replaced by **"500+ orgs hit by Medusa since 2021."**
+- MMA — **NOTHING NEWLY ANNOUNCED; ZERO New tags. CHAMPIONS BOARD UNCHANGED, 11/11 rows, 0 vacant**, cross-checked
+  this run against ESPN "Current and all-time UFC champions" (Aspinall, Ulberg Apr 11 2026, Strickland May 9 2026,
+  Makhachev WELTERWEIGHT Nov 15 2025, Gaethje LIGHTWEIGHT Jun 14 2026, Volkanovski Apr 12 2025 — all MATCH).
+  UFC Sacramento (Aug 22) remains the most recent completed event; no title fight since UFC 330 (Aug 15).
+- MMA — **UFC 333 ADDED to the Fight Week board (was missing): Sat Oct 24, 2026, Etihad Arena, Abu Dhabi.**
+  Main event **Alexander Volkanovski vs Movsar Evloev** for the featherweight title (Evloev **20-0**, majority
+  decision over **Lerone Murphy** in London); co-main **Petr Yan vs Merab Dvalishvili 3** for the bantamweight title
+  (Yan reclaimed it by UD at **UFC 323, Dec 2025**). Sources: The National (Aug 16), CBS Sports, Sherdog, Gulf News.
+  Announced **Aug 16**, i.e. predating the prior snapshot, so **correctly carries NO New tag**.
+- MMA — UFC 334 (MSG, Nov 14) / UFC 335 (T-Mobile Arena, Dec 12) re-confirmed via **SI/MMA Knockout, published
+  2026-08-24 11:00 UTC**; both were announced **Aug 23 during the UFC Sacramento broadcast**. Added detail: headliner
+  options for UFC 334 are thinning because men's FW/BW are booked at UFC 333 and FLW at UFC 331 (**Joshua Van vs
+  Alexandre Pantoja 2, Sep 19, Los Angeles**); a rebooked **Harrison vs Nunes** is floated as SPECULATION only —
+  published as such. Countdown target unchanged: **2026-08-29T06:00:00-04:00**.
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **23 days, 114 timestamped rows, 342 snapshot files**.
+  `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `/tmp/validate_1130.py`, **0 failures, 171 checks**). 4 pages HTMLParser-balanced
+  0 unclosed / 0 stray; 5-tab nav on all 4 with exactly 1 active tab; stamp/fresh IDs on all 4; `.tldr` on all three
+  briefings with correct per-page labels and NONE on index; **8/8 TradingView widget JSON blocks parse**; ticker
+  retains SPXUSD + NSXUSD + DJI + USOIL + US10Y; Chart of the Day asserted **NASDAQ:AAOI**; **12/12 KEV countdowns**
+  correct on label with the 8/1/3 split asserted; scorecard arithmetic 4/4 exact; **post-open index changes asserted
+  to reconcile to Friday's closes**; **stale-figure blacklist asserted absent** (7,652.36 / 53,441.18 / 25,971.85 /
+  16.03 / 78,578.69 / 4,731.50) — a new check worth keeping; champions 11/11 rows, 0 vacant, 8 division/champion
+  pairs asserted by name; each index.html card contains its own page's `.tldr` verbatim; **site-wide New-tag count
+  asserted == 3** (WS 1, CYBER 2, MMA 0). Trap greps CLEAN ×0 on all four pages.
+  NOTE for future validators: the KEV countdown regex must be `due <b>(Mon DD)</b>\.\s*<span[^>]*>(label)</span>` —
+  the `<b>` wrapper on the date breaks looser patterns.
