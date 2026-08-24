@@ -10101,3 +10101,84 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   new tags asserted present by exact markup. Trap greps CLEAN ×0 on all four pages.
   **NOTE for future validators: do NOT blanket-ban Friday closes from the whole Wall Street page — they legitimately appear in the
   Weekly Scorecard. Scope the assertion to the editorial blocks (lead / movers) only.**
+
+## Added 2026-08-24 (Monday ~12:43pm ET — MIDDAY EDITION; archive stamp 2026-08-24-1243)
+- CLOCK: TZ date = Mon Aug 24 12:35 EDT at run start; ~30 minutes after the 1213 snapshot. Edition bucket **Midday** (h=12).
+  **THREE** New tags site-wide: **WS ×2** ("Apple / CXMT / YMTC" memory shock; "Auto tariffs" Ford/Stellantis) and **CYBER ×1**
+  ("4 × CVSS 9.8" Apple cluster). The 1213 New tags (WS Netlist ITC, CYBER Akamai 12×) were BOTH dropped.
+  **MMA: zero New tags, FOURTH consecutive run.**
+- MARKETS — **LEAD REPLACED. THE CHIP SLIDE FINALLY HAS A NAMED CAUSE.** 24/7 Wall St. (published **Aug 24, 11:29 AM EDT**, fetched
+  in full this run): memory stocks slid on **weekend reports the Trump administration may permit Apple to source DRAM from China's
+  ChangXin Memory Technologies (CXMT) and NAND flash from Yangtze Memory Technologies (YMTC)** — framed as a possible diplomatic
+  gesture ahead of **Xi Jinping's planned US visit, expected on or around Sept 24**. **NO POLICY DECISION HAS BEEN ANNOUNCED** —
+  always state this. Sourced moves: **SanDisk −9% to $1,458.29; Micron −7% to $897.86; Western Digital −7% to $429.49; SK Hynix
+  −5% to $154.48; Roundhill Memory ETF (DRAM) −7% to $53.62.** YTD through Friday's close: **SanDisk +572%, Micron +239%.**
+  Apple: "evaluating all options"; Chinese sourcing "could help us on the supply side and perhaps the pricing side."
+  Counter-view published alongside: **KC Rajkumar, Lynx Equity Research** calls it "an overreaction" — CXMT qualified for only ONE
+  low-volume Mac product and **not qualified for iPhones at all** (poor yield on high-density lpDDR5x DRAM); Apple has **not
+  qualified YMTC NAND for any product** and YMTC allocated latest-gen NAND to domestic customers. Both **CXMT and YMTC are on the
+  Pentagon's Section 1260H list**. **Aug 17: Commerce Secretary Howard Lutnick told the WSJ "it's not great American companies using
+  Chinese memory"** and MU/SNDK rose sharply that session.
+- MARKETS NEW ×2 — second New card: **Ford and Stellantis −4%, GM slips, as the 50% Canada duties took effect and Trump set 50%
+  auto tariffs** (24/7 Wall St., Aug 24). Corroborating detail verified this run: **NBC News** — Trump threatened 50% tariffs on
+  imported cars, trucks, auto parts and steel **starting Jan 1, 2027**; **Bloomberg/NPR** — Carney matches "dollar for dollar" from
+  **Sept 8** on roughly **$28 billion** of goods.
+- MARKETS — read this run: **CNBC live blog S&P 500 ≈ −0.1%, Nasdaq Composite ≈ −0.4%, Dow +161 pts ≈ +0.3%** (fourth consecutive
+  improvement: 11:00 −0.38/−0.94/+0.21 → 11:40 −0.25/−0.48/+0.32 → 12:10 −0.2/−0.4/+0.3 → now −0.1/−0.4/+0.3).
+  ⚠ **NEW AND WORTH KEEPING: 24/7 Wall St.'s own index strip is a usable SECOND board.** Read this run it showed **S&P 500 7,664.00
+  −0.13%; Dow 53,423.00 +0.30%; Nasdaq 100 29,085.60 −0.76%; Russell 2000 3,003.80 −0.41%**. The S&P reading **reconciles EXACTLY**
+  against Friday's verified 7,674.37 close (−10.37 = −0.135%) and corroborates CNBC's −0.1%. Note it quotes the **Nasdaq 100**, NOT
+  the Composite — do not cross-compare those two. Levels still WITHHELD from editorial per standing practice; only % published.
+- ⚠ **FRIDAY-CLOSE TRAP, SIXTH CONSECUTIVE RUN** (7,674.37 / 53,277.01 / 26,180.46 presented as Monday's close). Rejected again.
+- ⚠ **BOTH YAHOO PAGES CACHED AGAIN, AND THE COUNTDOWN RULE WORKED BOTH TIMES.** The live-blog strip read "U.S. markets open in
+  5h 6m" (≈4:03 AM ET, futures: ES 7,674.25 −0.22%, YM 53,306.00 −0.09%, NQ 29,175.50 −0.72%) and the TheStreet-on-Yahoo strip read
+  "U.S. markets close in 6h 1m" (≈9:59 AM ET), again carrying the blacklisted **7,652.36 / 53,441.18 / 25,971.85**. Keep using the
+  strip's own open/close countdown to date-stamp the cache before trusting any level.
+- MARKETS — **BESSENT TIME RE-PINNED AND NOW PRIMARY-SOURCED: 1 p.m. ET, Treasury Building.** ⚠ A search summary this run asserted
+  **2 p.m.** (and a "7 PM CET" = 1 PM ET reading). **REJECTED.** CBS News's explicit "How to watch" box — article timestamped
+  **Aug 24, 2026 / 12:06 PM EDT** — states **What: Bessent speaks on Iran · Date: Mon Aug 24 · Time: 1 p.m. ET · Location: Treasury
+  Building.** Also confirmed there: the package is **secondary sanctions on entities/countries transacting with Tehran**, layered on
+  the naval blockade, aimed at reopening the Strait of Hormuz; the war is **in its sixth month**; Aug 7 was the **eighth** such
+  Treasury action (Shahr Bank, Titan Exchange, Alps International). FT op-ed quote verified verbatim: "At dawn begins an economic
+  D-Day — the single greatest financial offensive ever marshaled against an adversary."
+- MARKETS — **CHART OF THE DAY MOVED: NASDAQ:AAOI → NASDAQ:SNDK.** AAOI's only readings this run came from page bars date-stamped
+  as cached (Benzinga $109.80 −12.0% / Yahoo $104.37 −16.38% are carried as earlier attributions, not as the current biggest mover).
+  SanDisk −9% is stated in a headline and body of a story published 11:29 AM ET and is tied to the session's lead story.
+  Micron card figure refreshed to the two closest-agreeing readings: **24/7 story −7% at $897.86** and **24/7 live losers board
+  −6.97% at $899.42**. Rates table, Weekly Scorecard (Friday closes) and On the Radar unchanged. No After-Hours section. Still NO 2-year yield.
+- CYBER — **TOP STORY, PATCH PRIORITY AND KEV BOARD UNCHANGED AND RE-VERIFIED.** CVE-2026-73570 (Zimbra, CVSS **8.9**, fixed in
+  **10.1.20**) re-confirmed **added Aug 21 → due Aug 24 (TODAY)** against The Hacker News, Security Affairs, SOCRadar and securityonline
+  this run; mechanism re-verified: command injection reachable via crafted **SMTP** requests when the optional **zimbra-snmp** package
+  is installed and SNMP notifications are enabled → RCE as the Zimbra user, ZCS before 10.1.20. **No KEV addition later than Aug 21**
+  re-verified this run (Aug 20 = two TrueConf 72529/72530; Aug 18 = four 33824/55040/59310/65400; Aug 11 = three 20349/68820/72898;
+  Aug 7 = one **CVE-2026-8037 Progress LoadMaster command injection**). KEV board **12 rows: 8 past due, 1 due today, 3 ahead** —
+  re-validated programmatically.
+- CYBER NEW ×1 — **CVE Brief daily digest, August 24, 2026**: **8 actively exploited vulnerabilities, 23 critical CVEs (CVSS 9.0+),
+  36 high-priority updates** logged for the day; largest single cluster is **Apple — four CVSS 9.8 flaws: CVE-2026-43778,
+  CVE-2026-43799, CVE-2026-43805 (iOS/iPadOS) and CVE-2026-64698 (macOS)**; enterprise-infrastructure issues in VMware Cloud
+  Foundation, Microsoft SharePoint and Zimbra. ⚠ **PUBLISHED EXPLICITLY AS "critical disclosures, NOT exploited"** — the source does
+  NOT state exploitation for these four and none is in KEV. The stat strip's **"12×" Akamai tile was replaced by a "23 critical CVEs
+  (9.0+) logged today" tile**; the Akamai card stays, New tag removed.
+- MMA — **NOTHING NEWLY ANNOUNCED SINCE THE 1213 RUN; ZERO New tags, fourth consecutive run.** **CHAMPIONS BOARD UNCHANGED, 11/11
+  rows, 0 vacant**, asserted programmatically by name for 8 divisions with Pereira/Chimaev/Topuria cells asserted ABSENT.
+  ✅ **NO ESPN REGRESSION THIS RUN** — the champions search returned the CORRECT post-Freedom-250 board (Aspinall / **Ulberg** /
+  **Strickland** / Makhachev / **Gaethje** / Volkanovski), matching CORRECTIONS.md for the first time in several runs.
+- MMA re-verified this run: **UFC Shanghai (Sat Aug 29, SPD Bank Oriental Sports Center, Shanghai)** — Umar Nurmagomedov vs Song
+  Yadong, UFC Fight Night 286, prelims 3 a.m. ET / main card 6 a.m. ET, Paramount+, 12-fight card. Countdown target unchanged:
+  **2026-08-29T06:00:00-04:00**. **Noche UFC (Sep 12, Desert Diamond Arena, Glendale AZ)** re-confirmed via CBS Sports/ESPN/Bloody
+  Elbow: Yair Rodriguez out injured, **Jean Silva (17-3) vs Jose Miguel Delgado (12-2)**; detail ADDED this run — Delgado is an
+  **Arizona native** and took the bout on **less than a month's notice**, and his Contender Series contract came via a **knockout of
+  Ernie Juarez** in 2024. UFC 334 (MSG, Nov 14) and UFC 335 (T-Mobile, Dec 12) re-confirmed, announced Aug 23.
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **23 days, 117 timestamped rows, 351 snapshot files**. `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `outputs/validate_1235.py`, **0 failures, 147 checks**). 4 pages HTMLParser-balanced 0 unclosed / 0 stray;
+  5-tab nav on all 4 with exactly 1 active tab; stamp/fresh IDs on all 4; `.tldr` on all three briefings with correct per-page labels
+  and NONE on index; each index.html card contains its own page's `.tldr` verbatim; **8/8 TradingView widget JSON blocks parse**;
+  ticker retains SPXUSD + NSXUSD + DJI + USOIL + US10Y; **Chart of the Day asserted NASDAQ:SNDK and NASDAQ:AAOI asserted ABSENT as a
+  widget symbol**; **12/12 KEV countdowns** with the 8/1/3 split; champions `<tr>` == 12 with 8 names asserted present and 3 stale
+  cells absent; cached-figure blacklist asserted absent **from the lead block only** (Weekly Scorecard legitimately holds Friday
+  closes); fresh figures 0.13 / 0.30 / 0.76 / 1,458.29 / 897.86 / 429.49 asserted PRESENT; **"2 p.m." asserted ABSENT** from the
+  Wall Street page and "1 p.m. ET" asserted present on both WS and CYBER; site-wide New-tag count asserted **WS 2 / CY 1 / MMA 0**
+  with both dropped tags asserted gone by exact markup. Trap greps CLEAN ×0 on all four pages.
+  ⚠ **TWO VALIDATOR GOTCHAS THAT COST A CYCLE THIS RUN — WRITE THESE DOWN.** (1) The nav active class is a BARE `class="on"` on the
+  `<a>`, **not** `class="tab on"` — scope the regex to inside `<nav class="tabs">…</nav>` and count `class="on"`. (2) KEV countdown
+  labels are **UPPERCASE "PAST DUE"** and "DUE TODAY — 0 days left"; a lowercase `'past due'` test matches nothing.
