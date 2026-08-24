@@ -10182,3 +10182,114 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   ⚠ **TWO VALIDATOR GOTCHAS THAT COST A CYCLE THIS RUN — WRITE THESE DOWN.** (1) The nav active class is a BARE `class="on"` on the
   `<a>`, **not** `class="tab on"` — scope the regex to inside `<nav class="tabs">…</nav>` and count `class="on"`. (2) KEV countdown
   labels are **UPPERCASE "PAST DUE"** and "DUE TODAY — 0 days left"; a lowercase `'past due'` test matches nothing.
+
+## Added 2026-08-24 (Monday ~1:05pm ET — MIDDAY EDITION; archive stamp 2026-08-24-1317)
+- CLOCK: TZ date = Mon Aug 24 13:05 EDT at run start; ~22 minutes after the 1243 snapshot. Edition bucket **Midday** (h=13).
+  **FOUR** New tags site-wide: **WS ×2** ("Moderna −7% / 392% YTD profit-taking"; "speculative complexes unwinding" — drones/quantum/rare earth)
+  and **CYBER ×2** ("SAP Commerce Cloud CVE-2026-58231 CVSS 10.0"; "Apollo Global social-engineering breach"). The 1243 New tags
+  (WS Apple/CXMT/YMTC memory shock, WS auto tariffs, CYBER Apple 4×9.8 cluster) were **ALL THREE** dropped.
+  **MMA: zero New tags, FIFTH consecutive run** — but the MMA page gained a substantive, previously-missed booking (see below).
+- ⚠ **BEST MARKET READ OF THE DAY — THE MOTLEY FOOL BOARD RECONCILES EXACTLY. WRITE THIS DOWN.** The Motley Fool's
+  "Stock Market Midday, Aug. 24" page (published **12:15 PM ET**, body figures stamped **"as of 11:37 AM ET"**) was fetched in full this
+  run and carries a **live footer quote strip** that rendered at fetch time: **S&P 500 7,661.37 −0.2% (−13.00); DJI 53,391.59 +0.2%
+  (+114.58); NASDAQ Composite 26,078.04 −0.4% (−102.41)**. All three reconcile EXACTLY against Friday Aug 21's verified closes:
+  7,674.37 − 13.00 = 7,661.37 ✓ · 53,277.01 + 114.58 = 53,391.59 ✓ · 26,180.46 − 102.41 = 26,078.05 ✓. This is the first board all day
+  where **all three** indices reconcile, and it is a far better cache test than any single-index check.
+  **NEW STANDING RULE: fool.com/coverage/stock-market-today/<YYYY>/<MM>/<DD>/... is a reliable, timestamped second board — its footer
+  strip renders live on fetch and its body carries an explicit "as of HH:MM AM/PM ET" stamp.** Also on that board this run:
+  Bitcoin $79,716.00 +3.1%, NVDA $210.66 −1.9%, AAPL $311.66 +0.7%, AMZN +1.5%, GOOG +1.6%, META +1.0%, MSFT +1.2%, TSLA −1.7%, SPCX $136.73 −0.2%.
+  Body snapshot at 11:37 AM ET: **Dow +0.27% to 53,419.17; S&P 500 −0.23% to 7,656.50; Nasdaq Composite −0.44% to 26,066.56**;
+  **gold +1.20% to $4,671.09**; **10-year yield −0.04 to 4.69%**. Levels still WITHHELD from editorial per standing practice; only % published.
+- MARKETS — 24/7 Wall St.'s index strip, read this run: **S&P 500 7,668.40 −0.07%; Dow 53,392.00 +0.24%; Nasdaq 100 29,124.80 −0.63%;
+  Russell 2000 2,999.35 −0.56%** (fresher than the 1243 run's 7,664.00 / −0.13%). Its live top-losers board refreshed to: **Coterra Energy
+  −8.62% $32.56; Seagate −5.64% $802.10; J.B. Hunt −5.16% $261.25; Micron −5.13% $917.23; Western Digital −5.06% $436.19** — i.e. the
+  memory losses NARROWED through midday (Micron −6.97% → −5.13%). Top gainers: Expedia +4.09% $334.80, Verisign +3.74% $292.35,
+  Altria +3.68% $68.52, Lamb Weston +3.27% $55.44, GoDaddy +3.19% $100.17.
+- MARKETS NEW ×2 — (1) **Moderna −7%** on profit-taking after a **392% YTD** surge, **BioNTech −4%**, Merck slips (24/7, Aug 24).
+  (2) **Speculative-complex unwind**: drones (**Unusual Machines −9%, Red Cat −7%, Ondas −5%**), quantum (**Rigetti and Infleqtion −7%,
+  IonQ −6%**), critical minerals (**USA Rare Earth −5% despite $1.55B government-backed funding; United States Antimony −9%**) — all 24/7, Aug 24.
+- MARKETS — **BESSENT $1T BOND FIGHT CARD UPGRADED** from 24/7 Wall St. (published **Aug 24, 11:37 AM EDT**, fetched in full):
+  Aug 19 Treasury announced **doubling the max buyback size for 10–20y and 20–30y nominals from $2B to at least $4B per operation**,
+  **beginning Sept 9 and running through the Nov 4 quarterly refunding**, targeting off-the-run securities for market functioning, NOT debt reduction.
+  **30-yr fell ~10bp on Aug 19 to 5.187% after touching 5.337% the prior day (highest since 2007); 10-yr fell to 4.651%. By Aug 20 the 10-yr
+  had climbed 4.7bp back to 4.70% and the 30-yr to 5.247%.** TGA "approaching $1 trillion" but **usable buffer realistically $100B–$200B**;
+  Treasury's own 2025 analysis: a $120B annual buyback programme moves the ~6-year weighted-average maturity by only a few weeks.
+  In 2025 Treasury raised long-end buyback frequency from 2 to 4 operations/quarter, lifting the max liquidity-support programme from
+  **$30B to $38B per quarter**. Framing: liquidity support, **not QE**.
+- MARKETS — **CHART OF THE DAY MOVED BACK: NASDAQ:SNDK → NASDAQ:AAOI, and this time properly sourced.** The Motley Fool's midday
+  report states plainly that **Applied Optoelectronics "plunged 11% this morning after announcing a $600 million equity offering"** — a live,
+  timestamped statement, which removes the exact objection (cache-dated page bars) that caused the 1243 run to move OFF AAOI. AAOI −11%
+  is larger than Coterra −8.62% (worst on 24/7's live losers board) and larger than SanDisk −9% (11:29 AM). Documented on the page.
+- ⚠ **SECTOR LINE CORRECTED — A STALE FRIDAY READ HAD BEEN RUNNING AS "TODAY".** Earlier editions carried "energy is the day's best
+  performer at +0.98%, technology −0.43%" and "energy leads YTD +42.01%". The Motley Fool's 11:37 AM ET read says the opposite for Monday:
+  **communication services and financials LEAD; technology, energy and industrials LAG.** The old line is now assessed as **Friday Aug 21's
+  session** and has been WITHDRAWN from the Sector Heat note. Same trap family as the Friday-close trap: a sector table that does not
+  date-stamp itself. **Do not reinstate the "energy best performer" line without a same-day, timestamped source.**
+- ⚠ **FRIDAY-CLOSE TRAP, SEVENTH CONSECUTIVE RUN.** A search summary again presented **S&P 7,674.37 / Dow 53,277.01 / Nasdaq 26,180.46**
+  as Monday's close, this time with the point changes attached (**Dow +517.80 / +1%, S&P +33.21 / +0.4%, Nasdaq +113.29 / +0.4%**).
+  Those point changes are internally consistent with FRIDAY (53,277.01 − 517.80 = 52,759.21 → +0.98% ✓), so they CORROBORATE the Weekly
+  Scorecard rather than Monday's tape. Rejected as "today" again; the point changes have been retained in the Scorecard.
+- ⚠ **YAHOO CACHED AGAIN — COUNTDOWN RULE WORKED A THIRD TIME.** The TheStreet-on-Yahoo page's strip read **"U.S. markets close in 6h 1m"**
+  (≈9:59 AM ET) and again carried the blacklisted **7,652.36 / 53,441.18 / 25,971.85 / VIX 16.03 / gold 4,731.50 / BTC 78,578.69 / WTI 85.75 −1.50%**.
+  Keep using the strip's own open/close countdown to date-stamp the cache before trusting any level on that page.
+- MARKETS — Bessent press conference **1 p.m. ET, Treasury Building**, re-confirmed this run against **The Washington Post** ("economic D-Day"),
+  **NPR**, **CBS News** and **KPBS**. Substance re-verified: **a wider range of secondary sanctions on countries doing business with Iran**,
+  framed as a "final warning" to any entity with Iran ties, aimed at pressuring Tehran to reopen the Strait of Hormuz; Bessent criticised China
+  last week for historically buying **about 90% of Iran's oil**. **CNBC (Aug 24): Iran is warning of Hormuz ship seizures ahead of the push.**
+  Week ahead re-confirmed via TheStreet + Motley Fool: **NVDA Wed, CrowdStrike Wed, Intuit, Salesforce, MRVL Thu; PCE Wed; Q2 GDP 2nd estimate Wed;
+  Jackson Hole opens Thu; Warsh keynote Fri.**
+- CYBER — **TOP STORY, PATCH PRIORITY AND KEV BOARD UNCHANGED AND RE-VERIFIED.** CVE-2026-73570 (Zimbra, CVSS **8.9**, fixed in **10.1.20**)
+  re-confirmed **added Aug 21 → due Aug 24 (TODAY)** against the **CISA alert page for Aug 21 itself** plus Security Affairs, THN and SecurityWeek.
+  Mechanism re-verified: unauthenticated OS command injection executing as the **zimbra** user, affecting instances with the **SNMP trap service**
+  enabled (**snmp_notify** + **swatchdog**, enabled by default). CERT Polska reported the campaign **Aug 17, four days before the KEV addition.**
+  **No KEV addition later than Aug 21** re-verified this run (Aug 20 = two TrueConf 72529/72530; Aug 18 = four 33824/55040/59310/65400;
+  Aug 11 = three 20349/68820/72898; Aug 7 = one 8037 Progress LoadMaster). KEV board **12 rows: 8 past due, 1 due today, 3 ahead** — re-validated programmatically.
+- CYBER — TOP STORY enriched from the **SecurityWeek piece fetched in full this run** (Kevin Townsend, **Aug 24, 5:22 AM ET**): the attack
+  occurred in **July 2026**; the Telegraph broke it **Aug 22**; BBC/Guardian/FT followed on the Telegraph's account; **virtually no official NCSC comment.**
+  Expert reaction captured: **Muhammad Yahya Patel (Huntress)**, **Phil Tonkin (Dragos)** — "very repeatable attacks that could be deployed at scale" —
+  **Rafael Narezzi (Centrii)**, **Graeme Stewart (Check Point)**. SecurityWeek rebuts the BBC's "little activity so far" framing, listing Iran-affiliated
+  targeting of the **US (water, CNI, military-linked), Israel, GCC (UAE, Bahrain, Kuwait, Qatar, Saudi Arabia) and Europe (Cyprus, Romania, now Britain)**.
+- CYBER NEW ×1 — **SAP Commerce Cloud CVE-2026-58231, CVSS 10.0** (THN, Aug 15, fetched in full this run + SC Media/BleepingComputer/SecurityWeek/
+  Security Affairs). Insufficient authorisation checks and input validation in the **Data Hub Adapter** extension; an unauthenticated attacker abuses a
+  **default authentication client** → arbitrary code execution. **Patched by SAP Aug 11.** **Defused Cyber** saw exploitation attempts hit its honeypots
+  **three days after the patch**; **KEVIntel** independently confirmed **two attempts on Aug 14 from a single US IP**. Onapsis mitigation: an **IP Filter Set**
+  restricting access to the vulnerable endpoint. ⚠ **CAREFUL — THE SOURCING IS DELIBERATELY NUANCED AND MUST STAY THAT WAY:** in the SAME THN piece,
+  Defused Cyber is quoted saying the flaw **"has no public PoC and is not known to be exploited."** So publish **exploitation ATTEMPTS against
+  honeypots/sensors**, NOT confirmed in-the-wild compromise. **It is NOT in CISA KEV and carries NO federal deadline.** Both the card and the
+  Vulnerability Watch row state this explicitly. Prior SAP NetWeaver flaw CVE-2025-31324 was weaponised by UNC5221, UNC5174, CL-STA-0048, BianLian and RansomExx.
+- CYBER NEW ×1 — **Apollo Global Management breach** (Bloomberg Aug 21 + Insurance Journal + SecurityWeek + PYMNTS): a **social-engineering**
+  incident, not an exploit; **unauthorised access to certain cloud platforms July 6–10**; Apollo **learned Aug 12** that potentially affected data included
+  **names, dates of birth, contact information, home addresses and Social Security numbers**; **notification letters dated Aug 21**; law enforcement notified
+  and outside forensics engaged. Bloomberg places it in a run of attacks on major hedge funds. Stat strip: the **"23 critical CVEs"** tile was replaced by
+  a **"10.0 — CVSS of the SAP Commerce Cloud flaw"** tile; the Apple 4×9.8 card stays with its New tag removed.
+- MMA — ✅ **NO ESPN REGRESSION, SECOND CONSECUTIVE RUN.** The champions search returned the CORRECT post-Freedom-250 board
+  (Aspinall / **Ulberg** / **Strickland** / Makhachev / **Gaethje** / **Volkanovski**), matching CORRECTIONS.md. **Champions board unchanged, 11/11 rows,
+  0 vacant**, asserted programmatically **by CHAMPION COLUMN ONLY** (see validator note below).
+- MMA — ⚠ **A SUBSTANTIVE OMISSION WAS FOUND AND FIXED: UFC 332 HAS A TITLE FIGHT AND THIS DESK HAD MISSED IT.**
+  **Valentina Shevchenko vs Natália Silva for the women's flyweight title**, reported as the **co-main event** of UFC 332 (Sat Oct 3, Delta Center,
+  Salt Lake City). **First reported by ESPN Brasil; the UFC has NOT officially announced it** — publish as REPORTED, not confirmed. **Natália Silva
+  (note the accent) has EIGHT consecutive UFC wins, and her last three were unanimous decisions over three former champions: Rose Namajunas,
+  Alexa Grasso and Jessica Andrade.** Reported **Aug 21**, so it predates the previous archived snapshot and correctly carries **NO New tag**
+  (same treatment as RDA vs Hernandez and UFC 333). Also added to the card block from the same sources: **Deiveson Figueiredo vs Payton Talbott,
+  Roman Kopylov vs Ateba Gautier, Damian Pinas vs Andrey Pulyaev, Marvin Vettori vs Ismail Naurdiev, Court McGee vs Eric Nolan,
+  Imanol Rodríguez vs Alden Coria**. **Main event still unannounced.** UFC 332 is the promotion's **fifth visit to Salt Lake City, first since UFC 307
+  in October 2024**. Sources: Heavy, Yahoo Sports, Bloody Elbow, MMA Sucka, Sports Illustrated, Wikipedia UFC 332.
+  **LESSON: when a card block says "seven bouts announced," re-pull the full bout list — a championship fight had been sitting outside it for three days.**
+- MMA — UFC Shanghai (Sat **Aug 29**, Shanghai Oriental Sports Center) re-confirmed: **Umar Nurmagomedov vs Song Yadong**, prelims 3 a.m. ET /
+  main card 6 a.m. ET, Paramount+. Odds re-confirmed unchanged: **BetOnline −700/+500; DraftKings −470/+360; UFC.com −450/+350**.
+  Countdown target unchanged: **2026-08-29T06:00:00-04:00**.
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **23 days, 118 timestamped rows, 354 snapshot files**. `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `outputs/validate_1305.py`, **0 failures, 180 checks**). 4 pages HTMLParser-balanced 0 unclosed / 0 stray;
+  5-tab nav on all 4 with exactly 1 active tab (class is `on`); stamp/fresh IDs on all 4; `.tldr` on all three briefings with correct per-page labels and
+  NONE on index; each index.html card contains its own page's `.tldr` verbatim; **8/8 TradingView widget JSON blocks parse**; ticker retains
+  SPXUSD + NSXUSD + DJI + USOIL + US10Y; **Chart of the Day asserted NASDAQ:AAOI with NASDAQ:SNDK asserted ABSENT as a widget symbol**;
+  **12/12 KEV countdowns** with the 8/1/3 split; champions `<tr>` == 12 with 8 names present; cached-figure blacklist AND Friday closes asserted absent
+  **from the lead block only** while asserted PRESENT elsewhere (Weekly Scorecard); 20 fresh WS figures, 8 fresh CY figures and 6 fresh MMA items asserted present;
+  "2 p.m." asserted ABSENT and "1 p.m. ET" asserted present on both WS and CY; site-wide New-tag count asserted **WS 2 / CY 2 / MMA 0** with all three
+  dropped tags asserted gone and all four new tags asserted present by exact markup. Trap greps CLEAN ×0 (Cody Salkilld, Abdul-Rakhman, Shamil Yakhyaev, Dariush-as-challenger).
+  ⚠ **TWO VALIDATOR FALSE-POSITIVE FAMILIES CAUGHT AND FIXED THIS RUN — WRITE THESE DOWN.**
+  (1) **Never grep the whole champions section for "Pereira"/"Chimaev"/"Topuria"/"vacant"** — those names legitimately appear in the *"Won the title"*
+  column as DEFEATED OPPONENTS (Gane KO2 **Pereira**; Strickland SD over **Chimaev**; Gaethje TKO4 **Topuria**) and "vacant" appears in
+  "Won the *vacant* belt" and in the note "none *vacant*". **Scope the test to the CHAMPION column** — regex `<tr><td>[^<]*</td><td>([^<]*)</td>` → 11 cells.
+  (2) **Never grep the whole Wall Street page for "After-Hours Movers"** — the Weekly Scorecard note legitimately says *"No After-Hours Movers section
+  appears in this edition."* **Test for the section LABEL** (`<div class="lab">After-hours movers`) instead.
