@@ -10793,3 +10793,95 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   blacklisted-as-stale and a figure being cited-as-a-baseline look identical to a substring match.* The cached
   **12:59** figures (7,659.82 / 53,392.55 / 26,067.27 / 79,032.63) remain blanket-blacklisted from the lead, because
   those genuinely are never quoted there.
+
+## Added 2026-08-24 (Monday ~5:05pm ET — AFTERNOON EDITION, SECOND POST-CLOSE RUN; archive stamp 2026-08-24-1704)
+- CLOCK: TZ date = Mon Aug 24 16:58 EDT at run start, ~48 minutes after the 1656 snapshot. Edition bucket
+  **Afternoon** (h=16/17). **ONE** New tag site-wide: **WS ×1** (the resolved close + the closing decliner board).
+  The 1656 New tags (WS closing-bell breadth/Canadian auto tariff, CY Fabrik/Joomla) were both demoted to
+  "Carried from the previous edition." **CY: zero New tags. MMA: zero New tags, TWELFTH consecutive run** — page
+  left byte-identical, nothing newly announced.
+- 🟢 **THE TWO-PRINT SPREAD IS RESOLVED — 7,652.86 AND 53,417.16 WIN TWO VOTES TO ONE.** A **third** independent
+  post-close print (CNBC live blog, returned by two separate searches this run) returns print B again to the cent:
+  **S&P 500 7,652.86 (−0.28%)**, **Nasdaq Composite 25,980.19 (−200.27, −0.76%)**, **Dow 53,417.16 (+140.15,
+  +0.26%)**. Those levels are now ASSERTED and the `two prints` tag is gone (validator asserts the string absent).
+  Print A (S&P 7,652.96 / −21.41; Dow 53,416.99 / +139.98) is **retained on the page as a disclosed vendor variant,
+  not erased** — it reconciles too. ⚠ **NOTE THE POINT-CHANGE TRAP: −21.41 belongs to print A, NOT to 7,652.86.**
+  7,674.37 − 7,652.86 = **−21.51**, which is what the table now shows, explicitly labelled as *derived arithmetic
+  against Friday's verified close* rather than a quoted figure. Pairing a quoted level with the other print's quoted
+  change would have published a number no source states. The Dow's +140.15 and the Nasdaq's −200.27 ARE quoted.
+- MARKETS NEW ×1 — **THE CLOSING DECLINER BOARD.** Same CNBC print: **Micron −5.8%**, **AMD more than −3%**,
+  **Broadcom more than −2%**, **Coherent and Lumentum each more than −4%**, **SanDisk −6%**, **Seagate Technology
+  −6.5%**, **Corning almost −3%**. Note the breadth of that list — optical components and hard-disk storage are not
+  Apple DRAM/NAND suppliers, so the session reads as a sector-wide de-risking of the AI hardware chain into
+  Wednesday's Nvidia print, not a clean trade on the CXMT/YMTC rumour. Also added: **Bloomberg** framed the session
+  as **S&P 500 −0.3% / Nasdaq 100 −1%**.
+- MARKETS — ⚠ **stockanalysis.com/markets/afterhours IS NOT SLOW, IT IS FROZEN.** Re-fetched at ~5 p.m. ET, a full
+  hour past the bell, and STILL serving **Aug 21** — index strip "Stock Indexes — Aug 21, 2026 — After-hours" and
+  both movers tables "Updated Aug 21, 2026," byte-identical to the 4:15 p.m. fetch. **STANDING RULE UPGRADED: the
+  earlier rule said "a board checked within ~20 minutes of the bell has likely not rolled over." That was too
+  generous — this board did not roll over in an hour. Check its own date stamp EVERY time, at any hour, and treat a
+  repeat of the previous fetch as frozen.** The After-Hours section is present (session over) but deliberately
+  carries **no figures**; the note now says so and names the reason. Third quote source set aside today alongside
+  Yahoo Finance and Stock Market Watch.
+- MARKETS — **YAHOO CACHED A NINTH TIME, BYTE-IDENTICAL TO THE EIGHTH.** Same "U.S. markets open in 5h 6m" strip
+  (open anchor → 4:24 a.m. ET), same 4:03 a.m. Grace O'Donnell body, same pre-open futures (ES=F 7,674.25, YM=F
+  53,306.00, NQ=F 29,175.50, VIX 15.92, CL=F 85.74), same Friday BABA −8.57% trending rail. **Nothing published
+  from it** — validator asserts all three futures levels ABSENT from the lead. **TheStreet and CNBC's own pages
+  again returned EMPTY to web_fetch** (client-rendered); CNBC's figures reached this page only via search snippets.
+- MARKETS — ⚠ **FRIDAY-CLOSE / SECTOR TRAP, THIRTEENTH CONSECUTIVE RUN, NEW DISGUISE.** A sector search returned
+  **"Materials best at +2.67%," "8 of 11 sectors closed higher," "consumer staples +1.4%"** as *Monday's* board.
+  The +2.67%/8-of-11 pair is **FRIDAY** (matches the standing Friday note: XLB +2.2%, 8 of 11 positive). **REJECTED
+  — no new sector figures published this run**; the page keeps the previous edition's Stock Market Watch board
+  explicitly labelled a *late-session snapshot*, not a close. **LESSON: the Friday trap has migrated from index
+  levels to SECTOR boards. Apply the same test — if the summary also says "8 of 11 higher" on a day the S&P fell,
+  it is Friday's board.**
+- MARKETS — **FORWARD CALENDAR CONFLICT, LEFT UNRESOLVED ON PURPOSE.** One source puts **core PCE Wednesday
+  morning**, another puts **July core PCE Friday morning, the same morning as Warsh's keynote**. Only the
+  **Jackson Hole Friday keynote (Warsh's first as Chair)** and **Nvidia fiscal Q2 Wednesday after the bell** are
+  asserted with a day. Do not pick a PCE date until one source is corroborated.
+- MARKETS — verified but NOT newly added (already on the page from the 1656 run): Operation Economic Outcast detail
+  (**60+ entities/individuals/vessels**; shipping, oil, crypto, gold, aviation; "removed from the U.S. dollar
+  system"; Trump phoning world leaders with "specific requests"; the FT "economic D-Day" op-ed line), the
+  US–Canada breakdown and Carney's like-for-like retaliation, and the 10-year at ~4.71%.
+- CYBER — **PAGE UNCHANGED IN SUBSTANCE; the one carried New tag (Fabrik/Joomla CVE row) was demoted.** THN's front
+  page was fetched in full this run and every Aug 24 item on it — **Keycloak CVE-2026-18963 (CVSS 9.1, Red Hat CNA,
+  CWE-640, fixed upstream 26.7.2 released Aug 19 / RHBK 26.4.15 + 26.6.6, not exploited)**, **Operation QUICSILVER /
+  QUICAgent** (Seqrite, Myanmar, China-nexus moderate confidence), **UAT-10147 / SPECTRE** (Cisco Talos), and the
+  **Akamai 5%-of-users-at-12× research** — was ALREADY published from the 1610/1656 runs. Nothing genuinely new.
+- CYBER — **KEV re-verified: Zimbra CVE-2026-73570 added Aug 21, due Aug 24 — TODAY.** Fresh corroboration this run
+  (BleepingComputer/CISA alert 2026/08/21): patched in **10.1.20, released July 20**; requires the optional
+  **zimbra-snmp** package with SNMP notifications enabled; unauth RCE as the Zimbra user via crafted SMTP;
+  **exploitation waves since early August and 270+ compromised ZCS instances found**. Dedicated check for KEV
+  additions dated **Aug 22–24: none**; Aug 21 Zimbra remains newest, **Aug 20 TrueConf ×2** the latest alert page.
+  **KEV board 12 rows: 8 past due, 1 due today, 3 ahead** — re-validated programmatically via gotcha #7 parsing.
+- MMA — **PAGE BYTE-IDENTICAL; ZERO New tags, TWELFTH consecutive run.** Everything found this run was already
+  published: **UFC Shanghai Sat Aug 29** (countdown target `2026-08-29T06:00:00-04:00`), **Curtis Blaydes' new
+  8-fight deal** (Bloody Elbow Aug 21), **Francesco Nuzzi** signed Aug 19 into Shanghai, **UFC 332 Oct 3, Delta
+  Center, Salt Lake City** with **Shevchenko vs Natália Silva** as co-main. New corroborating detail seen but not
+  added (not newly announced): **UFC Fight Night 286**, Umar Nurmagomedov **20-1** on a two-fight streak, Song
+  Yadong **23-9-1** in his sixth main event after a submission of Deiveson Figueiredo at UFC Macau in May 2026,
+  prelims **3 a.m. ET** / main card **6 a.m. ET** Paramount+, 12 fights. ⚠ **VENUE ALIAS — NOT A CORRECTION:**
+  Wikipedia renders the venue **"SPD Bank Oriental Sports Center"**, UFC.com renders it **"Pudong Development Bank
+  Shanghai Oriental Sports Center."** SPD *is* Shanghai Pudong Development Bank — same building. The UFC.com form
+  stays on the page; do not "fix" it to the Wikipedia form and do not treat the difference as a regression.
+  Champions board unchanged, **11/11 rows, 0 vacant**; **no title fight has occurred since UFC 330 (Aug 15)**, so no
+  belt can have moved (state the TITLE-FIGHT premise, not the event premise).
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **23 days, 125 timestamped rows, 375 snapshot files**.
+  `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `outputs/validate_1700.py`, **0 failures, 144 checks**). 4 pages HTMLParser-balanced
+  0 unclosed / 0 stray (archive.html included); 5-tab nav on all 4 with exactly 1 active tab scoped inside
+  `<nav class="tabs">`; stamp/fresh IDs on all 4; `.tldr` on all three briefings with correct per-page labels and
+  NONE on index; each index card carries its own page's `.tldr` **verbatim**; **8/8 TradingView widget JSON blocks
+  parse**; ticker retains SPXUSD + NSXUSD + DJI + USOIL + US10Y; Chart of the Day asserted **NASDAQ:SNDK** scoped
+  to the mini-symbol-overview block only (gotcha #4); **12/12 KEV countdowns** parsed as `<span class="kevdue">`
+  with the 8/1/3 split (gotcha #7); champions column 11 cells, 8 names present, 5 stale strings absent; `two prints`
+  asserted ABSENT and 7,652.86 / 53,417.16 / +140.15 / −21.51 asserted PRESENT; Friday closes inside the lead
+  context-tested with a 260-char "Friday" lookbehind (gotcha #8) rather than blanket-blacklisted; cached 12:59
+  figures AND the nine-times-cached Yahoo pre-open futures asserted absent from the lead; after-hours SECTION LABEL
+  asserted PRESENT; New-tag counts asserted **WS 1 / CY 0 / MMA 0 / index 0**, with the single WS tag asserted to
+  sit on the card whose `<h3>` contains "ten-cent question is settled." Trap greps CLEAN ×0 (Cody Salkilld,
+  Abdul-Rakhman, Shamil Yakhyaev, "title challenger Beneil", "Shanghai Indoor Stadium", "mid-August 2025").
+  ⚠ **VALIDATOR GOTCHA #9 — WRITE THIS DOWN. `"DUE TODAY" in k is False` IS NOT `not ("DUE TODAY" in k)`.**
+  Python chains the comparison as `("DUE TODAY" in k) and (k is False)`, which is always False, so the KEV "ahead"
+  bucket silently counted **0 of 3** and reported a phantom failure. Write `"DUE TODAY" not in k`. Same class of
+  bug as any chained-comparison surprise — never mix `in` and `is` in one expression.
