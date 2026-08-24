@@ -10588,3 +10588,98 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   ⚠ **VALIDATOR GOTCHA #6 — WRITE THIS DOWN. `"2:59"` IS A SUBSTRING OF `"12:59"`.** The blacklist check for the wrong stamp
   matched every one of the nine CORRECT `12:59` stamps and reported three phantom failures. **Use a lookbehind:
   `re.search(r'(?<!1)2:59', html)`.** The same class of bug will bite any bare `H:MM` blacklist — always anchor the hour.
+
+## Added 2026-08-24 (Monday ~3:38pm ET — AFTERNOON EDITION; archive stamp 2026-08-24-1542)
+- CLOCK: TZ date = Mon Aug 24 15:38 EDT at run start; ~33 minutes after the 1505 snapshot, ~20 minutes before the close.
+  Edition bucket **Afternoon** (h=15). **TWO** New tags site-wide: **WS ×1** (the Iran sanctions package's named
+  shadow-fleet targets + Tehran's threatened response) and **CY ×1** (WordlistLoader / SynkLoader). The 1505 WS New tag
+  ("The index moves are quiet; the risk gauges are not") was dropped. **CYBER ENDS A FOUR-RUN ZERO-NEW-TAG STREAK.
+  MMA: zero New tags, TENTH consecutive run.**
+- ⚠ **CORRECTION TO THE 1505 ENTRY — THE MOST RECENT COMPLETED UFC EVENT IS NOT UFC 330.** The 1505 note read
+  "No event has occurred since UFC 330 (Aug 15), so no belt can have moved." The *conclusion* was right but the
+  *premise* was wrong: **UFC Fight Night: Hernandez vs. Rodrigues (UFC Sacramento) ran Sat Aug 22 at Golden 1 Center**,
+  and is the most recent completed event — re-verified this run against UFC.com's results page, Wikipedia, ESPN
+  FightCenter, Tapology and Yahoo Sports. It carried **no title bout**, which is why no belt moved. The MMA page has
+  had Sacramento as its Last Event / Top Story since the Aug 22 runs and was **correct**; only the CORRECTIONS note
+  was loose. **LESSON: state the belt conclusion and the event premise separately — "no title fight has occurred since
+  X" is the claim that licenses leaving the champions board alone, NOT "no event has occurred."**
+- MARKETS — ⚠ **fool.com FROZEN, FIFTH CONSECUTIVE IDENTICAL PRINT** (body 11:37 AM ET, `article:modified_time` still
+  **2026-08-24T16:15:02Z**, "Stocks Mentioned" still ^GSPC 7,660.78 −0.18% −13.59 / ^DJI 53,399.17 +0.23% / ^IXIC
+  26,075.17 −0.40%, footer strip still 7,661.37 / 53,391.59 / 26,078.04). **Yahoo Finance CACHED A SEVENTH TIME**, this
+  time in its crudest form: strip read **"U.S. markets open in 5h 6m"** (16:00 anchor is wrong here — the OPEN anchor
+  applies: 9:30 − 5h06m = **4:24 AM ET**) with pre-open futures (ES=F 7,674.25 −0.22%, YM=F 53,306.00 −0.09%,
+  NQ=F 29,175.50 −0.72%, VIX 15.92, Gold 4,693.10, CL=F 85.74 −1.52%) and the 4:03 AM Grace O'Donnell body. Nothing
+  published from it. **NOTE ON THE COUNTDOWN RULE: it has TWO anchors — "markets close in X" → 16:00 − X; "markets
+  open in X" → 09:30 − X. Using the wrong one is exactly the error that nearly published a 12:59 board as 2:59.**
+- MARKETS — ⚠ **FRIDAY-CLOSE TRAP, ELEVENTH CONSECUTIVE RUN, AND THE WIDEST YET.** Three separate searches returned
+  Friday's figures as Monday's *close*: "S&P 500 rose 0.4%/33.21 to 7,674.37, Dow gained 1%/517.80 to 53,277.01,
+  Nasdaq +0.4%/113.29 to 26,180.46," plus **XLV +1.3%, XLB +2.2%, 8 of 11 sectors positive, VIX −5.5% to 15.13, NYSE
+  advancers 1.68-to-1** — all FRIDAY. The self-tell was in the same summary: "the S&P ended the **week** 1.4% lower."
+  All rejected; 7,674.37 stays confined to the Weekly Scorecard, asserted programmatically absent from the lead block.
+- MARKETS — **NO READING NEWER THAN ~3 PM ET EXISTED THIS RUN.** Published as a range with no level: **S&P −0.3% /
+  Nasdaq Comp −0.6% / Dow +0.2%** (~3 PM summary, re-confirmed this run) against the previous edition's ~2:24 PM read
+  (Dow +0.28% / S&P −0.21% / Nasdaq −0.58%). **TWELFTH consecutive run withholding intraday index LEVELS.** The
+  official close was NOT available from any source fetched this run and was **not** published — the next run should
+  lead with it once verified. No After-Hours section (regular session under way); asserted by SECTION LABEL, not phrase.
+- MARKETS NEW ×1 — **THE SANCTIONS PACKAGE NOW HAS NAMED TARGETS AND TEHRAN HAS ANSWERED.** NPR, published 8:26 AM ET
+  and **updated 1:24 PM ET** (fetched this run, the only genuinely fresh market-relevant source of the run): Treasury's
+  statement names **"a network of brokers, companies, and shadow fleet vessels operating across the UAE, Hong Kong,
+  China, Singapore, Switzerland, Europe, and other regions"** moving Iranian oil and channeling revenue to the
+  **IRGC-Qods Force**. Bessent: "sever every economic lifeline that sustains this tyrannical regime until Tehran stands
+  alone." Iran's new security chief **Mohsen Rezaei** (ex-Revolutionary Guard commander, now military adviser to
+  Supreme Leader **Mojtaba Khamenei**) vowed retaliation in a **"seismic manner,"** warned Gulf states that joining the
+  restrictions makes them targets, and threatened tankers on the **Omani side of the Strait of Hormuz** — "not even a
+  single drop of oil will leave the region." NPR notes **Iran is NOT currently interfering with those routes** — keep
+  that caveat, it is what makes the threat a new variable rather than the status quo. Also published: **rial past
+  2,000,000/$**, Iranian inflation **~90%** (Statistical Center of Iran via Iran International), **Guterres** offering
+  UN monitoring of civilian shipping in the strait, and **Alan Eyre**'s dissent ("there are no new sanctions that are
+  effective"). Also added to the lead from this run's searches: **SanDisk −10%** and **Monster Beverage +2.3%** (record
+  Q2 2026) from an afternoon summary, and Schwab's **early-session** read (XLK >−2%, SOX >−3.75%, NVDA −2.3%,
+  TSM −3.7%, AMD −3.33%, AVGO −1.3%) — all labelled early-session, not current.
+- CYBER NEW ×1 — **FIRST CYBER New TAG IN FIVE RUNS: WordlistLoader AND SynkLoader.** The Hacker News, **Aug 24, 2026**
+  (Ravie Lakshmanan), fetched in full this run. **WordlistLoader** (Gen Digital; researcher **Vojtěch Krejsa**):
+  intermediate stage delivering **Amatera Stealer** (aka ACR/AcridRain) via **ClearFake + ClickFix**; shellcode stored
+  as **plain English words, one word per byte** (variant uses 16-byte UUID chunks); **hardware-breakpoint ETW bypass**;
+  **EtherHiding** (JS fetched from a blockchain smart contract); payload staged on **cdn.jsdelivr[.]net**; chain is
+  conhost → hidden cmd.exe → `pushd` WebDAV mount → `rundll32.exe`, replacing the Python loaders Microsoft observed
+  late Apr–mid Jun 2026. **SynkLoader** (Expel; researcher **Marcus Hutchins**): Teams phish from the target's own
+  `onmicrosoft.com` domain as **"IT Service Desk"** → **MSI on Azure Blob Storage posing as "PowerShell Cleaner"** →
+  in-memory PowerShell → Python loader, 3 hard-coded C2s, **90–120 s** jitter. **SEVEN modules**: System Profiler (C#,
+  collects AD detail), Persistence (random scheduled task at logon + daily 10 a.m.), **PhishLocker** (fake Windows lock
+  screen), **TrafficRedirector** (reverse proxy), interactive PowerShell RAT, **StreamMaster** (VNC), status checker.
+  Assessed as a ransomware group or initial access broker. ⚠ **DO NOT PUBLISH THE "detected by Expel in mid-August
+  2025" DATE** — THN's own sentence is internally inconsistent with the rest of the piece (an Aug 2026 report on a
+  "previously undocumented" loader) and is almost certainly a year typo. It was deliberately omitted; the validator
+  asserts "mid-August 2025" ABSENT. **STANDING RULE: when a single date inside an otherwise-solid source contradicts
+  the source's own framing, drop the date, keep the rest.**
+- CYBER — **TOP STORY, PATCH PRIORITY AND KEV BOARD OTHERWISE UNCHANGED.** CVE-2026-73570 (Zimbra, CVSS **8.9**, fixed
+  **10.1.20**, added Aug 21) still **due Aug 24 — TODAY**. Dedicated search for KEV additions dated **Aug 22–24: none**;
+  Aug 21 Zimbra remains newest, **Aug 20 TrueConf ×2** the latest CISA *alert page*, behind Aug 18 ×4 and Aug 11 ×3.
+  **KEV board 12 rows: 8 past due, 1 due today, 3 ahead** — re-validated programmatically. Evaluated and NOT added:
+  GTA 6 fake-build lures; "ransomware attackers zeroing in on mid-market companies"; the Aug 24 leak-site listings
+  (el-group.ch/INC_RANSOM, euroflorasrl.it/Qilin, abacusadv.com/CoinbaseCartel) — no primary figure.
+- MMA — **PAGE BYTE-IDENTICAL TO THE 1505 EDITION; ZERO New tags, TENTH consecutive run.** Last event re-verified as
+  **UFC Sacramento, Sat Aug 22, Golden 1 Center — Gregory Rodrigues def. Anthony Hernandez, UD (48-47, 49-46, 48-47)**,
+  Rodrigues' fourth straight, $100K Fight of the Night to both, callout of **No. 2-ranked Dricus du Plessis**. Next card
+  unchanged: **UFC Shanghai, Sat Aug 29, Shanghai Oriental Sports Center, Umar Nurmagomedov vs Song Yadong**, countdown
+  target **2026-08-29T06:00:00-04:00**. Champions board unchanged, **11/11 rows, 0 vacant**, asserted programmatically
+  **by CHAMPION COLUMN ONLY**; no title fight has occurred since UFC 330 (Aug 15), so no belt can have moved.
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **23 days, 123 timestamped rows, 369 snapshot files**.
+  `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `outputs/validate_1538.py`, **0 failures, 170 checks**). 4 pages HTMLParser-balanced
+  0 unclosed / 0 stray; 5-tab nav on all 4 with exactly 1 active tab scoped inside `<nav class="tabs">`; stamp/fresh IDs
+  on all 4; `.tldr` on all three briefings with correct per-page labels and NONE on index; each index card contains its
+  own page's `.tldr` **verbatim**; **8/8 TradingView widget JSON blocks parse**; ticker retains SPXUSD + NSXUSD + DJI +
+  USOIL + US10Y; Chart of the Day asserted **NASDAQ:AAOI** scoped to the mini-symbol-overview block only (gotcha #4);
+  **12/12 KEV countdowns** with the 8/1/3 split; champions column 11 cells, 8 names present, 4 stale strings absent;
+  Friday closes + blacklisted cached figures asserted absent **from the lead block only** while 7,674.37 asserted
+  present elsewhere; `(?<!1)2:59` lookbehind clean (gotcha #6); New-tag counts asserted **WS 1 / CY 1 / MMA 0** with
+  both footnotes asserted to name the ACTUAL tagged cards (1413 lesson); 13 fresh WS strings + 10 fresh CY strings
+  present, 5 stale WS strings + 2 stale CY strings absent; after-hours SECTION LABEL asserted absent (gotcha #5);
+  no leftover `<!--OLD` edit scaffolding on any page. Trap greps CLEAN ×0 (Cody Salkilld, Abdul-Rakhman,
+  Shamil Yakhyaev, "title challenger Beneil", "Shanghai Indoor Stadium").
+  ⚠ **VALIDATOR GOTCHA #7 — WRITE THIS DOWN. The KEV countdowns are NOT plain "(N days left)" text.** They are
+  `<span class="kevdue [crit|ok]">` elements whose text is `DUE TODAY — 0 days left`, `1 day left`, `9 days left`
+  or `1 day PAST DUE`. A regex written against the SKILL's descriptive "(N days left)" phrasing matches **zero** of
+  them and reports a phantom 12/12 failure. **Parse `<span class="kevdue[^"]*">(.*?)</span>` and bucket on the words
+  PAST DUE / DUE TODAY / left.**
