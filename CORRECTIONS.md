@@ -9638,3 +9638,66 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   contain its own page's .tldr sentence. Trap greps CLEAN ×0 on all four pages: Cody Salkilld / Shamil Yakhyaev /
   Abdul-Rakhman / MacKenzie / Joshua Vance / "Pereira (205)" / pay-per-view / "Jahmall Emmers def" / "Yair Rodriguez vs
   Jean Silva".
+
+## Added 2026-08-24 (Monday ~9:14am ET — MORNING EDITION; PRE-OPEN, 7 minutes after the 0907 run; archive stamp 2026-08-24-0914)
+- CLOCK: TZ date = Mon Aug 24 09:08 EDT at run start, 09:14 EDT at archive stamp. Edition bucket **Morning** (h=9).
+  Prior archived snapshot is **2026-08-24-0907** — only SEVEN minutes earlier. "New" tags therefore re-scoped hard:
+  **ALL prior New tags dropped** (WS: Alibaba/Sandisk/Coherent/Marvell/Seagate/AMD-Intel; cyber: ShinyHunters-Baxter +
+  the two WordPress "New this edition" labels; MMA: UFC 332, Francesco Nuzzi, Delphine Benouaich) because every one of
+  them was in the 0907 snapshot. Exactly **ONE** New tag published site-wide: Western Digital.
+- MARKETS — still PRE-OPEN at publish (09:14 ET; open 09:30). Lead headline changed to
+  **"A tariff-and-sanctions Monday — and a 30-year yield at a two-decade high."**
+- MARKETS NEW (sourced this run): **TheStreet (Aug 24) puts the 30-year Treasury yield at roughly 5.28%, describing it as
+  having climbed above 5.3% — its highest in nearly two decades — with government bond yields in Japan, France and Germany
+  also at multi-year highs.** Rates table 30-yr row updated from the static Friday 5.276% to **≈5.28%** with the Friday
+  finish retained as context. Bloomberg framing (surging government spending, flood of long-dated sales, inflation stuck
+  above target five years) added. **Treasury buybacks: at least DOUBLING the maximum from $2 billion to at least $4 billion,
+  purchases running September through November** (CNBC Aug 20) — relief was temporary; yields rebounded and wiped out the
+  post-Bessent dip.
+- MARKETS NEW: later pre-market print from **TheStreet — Dow futures 53,306.00 (−47.00, −0.09%), Nasdaq futures 29,227.50
+  (−160.25, −0.55%), S&P 500 futures −0.1%, Nasdaq contract −0.4%** — published ALONGSIDE (not replacing) the 6:45 AM
+  Yahoo market-bar figures, with both times stated. Pre-market ETF proxies added: **SPY −0.31%, QQQ −0.77%, DIA −0.23%,
+  IWM −0.24%** (StockAnalysis/PreMarketPrice).
+- MARKETS NEW MOVER: **Western Digital ≈−4% pre-market alongside Seagate** (CNBC pre-market round-up). Only card tagged New.
+- MARKETS: **Nvidia fiscal Q2 consensus — more than $92.05 billion of quarterly revenue expected (FXStreet, Aug 24)** added
+  to On the Radar. ⚠ **PCE STILL WEDNESDAY AUG 26; Nvidia Wednesday Aug 26 after the bell; Warsh Jackson Hole keynote
+  Friday Aug 28 at 10 a.m.** Unchanged, re-affirmed. Weekly Scorecard UNCHANGED at Friday Aug 21 closes, arithmetic
+  re-validated **4/4 exact**. Chart of the Day stays **NYSE:BABA**. **NO After-Hours section** (pre-open).
+- ⚠ **REJECTED THIS RUN — Finastra "400GB breach".** A search summary listed it among "today's" (Aug 24) breaches. Fetching
+  the coverage shows the incident is **November 2024** (abyss0, IBM Aspera exfil). NOT published. Added as a permanent trap
+  grep: "Finastra" must be **0 occurrences** on all four pages.
+- ⚠ **REJECTED — Coca-Cola / fairlife / Anubis ransomware.** Also surfaced as "today's" news; it is a **July 16, 2026**
+  8-K disclosure with plants since restored. Stale, not published.
+- ⚠ **REJECTED — Tata Electronics / World Leaks (204,341 files, 630.4 GB, Apple iPhone 18 Pro + Tesla documents).** Real,
+  but **June 2026** (leak published Jun 12, Tata confirmed Jun 22). Stale, not published.
+- ⚠ **CVE-2026-69836 (Microsoft Entra ID, CVSS 10.0) — DO NOT FLIP TO EXPLOITED.** Multiple outlets fetched this run
+  (Help Net Security, Techzine, BleepingComputer, news4hackers) still headline it as "exploited in the wild." The standing
+  page note is correct and WINS: Microsoft's bulletin originally read "Exploited: Yes" and was **corrected to "No" on
+  Aug 21**; the flaw was found internally by Principal Security Engineer Robert Fitzpatrick and **fully mitigated
+  server-side with no customer action required**. Vulnerability Watch row unchanged.
+- CYBER NEW DETAIL: **CVE-2026-68820 (Windows WinSock AFD use-after-free, CVSS 7.0, KEV due Aug 25) was exploited as a
+  zero-day by the North Korean Lazarus group to deploy malware**, and is one of **three zero-days among the 400 flaws** in
+  Microsoft's August Patch Tuesday (BleepingComputer). Added to the KEV board entry.
+- CYBER — **TOP STORY UNCHANGED (GitLab CVE-2026-19478, 9.4, exploited). PATCH PRIORITY UNCHANGED (CVE-2026-73570, Zimbra,
+  CVSS 8.9, KEV added Aug 21, DUE TODAY Aug 24, fixed 10.1.20).** Re-confirmed this run against the CISA Aug 21 alert page
+  and THN. KEV board **UNCHANGED AT 12 ROWS; 8 past due, 1 due today, 3 ahead** — re-validated programmatically.
+  Latest CISA KEV alert found remains **Aug 21** (one CVE, Zimbra); the Aug 20 alert added the two TrueConf CVEs.
+- MMA — **NOTHING NEW PUBLISHED; CHAMPIONS BOARD UNCHANGED, 11/11 rows, 0 vacant.** UFC Sacramento (Aug 22) re-confirmed as
+  the most recent completed event — **Gregory Rodrigues def. Anthony Hernandez, UD 48-47 / 49-46 / 48-47, Fight of the
+  Night** (UFC.com, ESPN, Yahoo). No title fight since UFC 330 (Aug 15), so no belt can have changed hands.
+  **UFC Shanghai (Aug 29) headliner re-confirmed as Umar Nurmagomedov vs Song Yadong** (Wikipedia/UFC.com/MMA Mania).
+  **Lucia Szabova was already on the page** from the 0907 run — re-verified this run (10-0, OKTAGON two-weight champion at
+  flyweight and bantamweight, defended the bantamweight belt Aug 1 vs former UFC fighter Lucie Pudilova, reportedly booked
+  vs Tainara Lisboa Oct 31 at the Meta Apex; first reported by Ag Fight, **no official UFC announcement**) — so it is NOT
+  a New tag this edition. Countdown target unchanged: **2026-08-29T06:00:00-04:00**.
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**. Result: **23 days, 111 timestamped rows, 333 snapshot files**.
+  `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, this run — `/tmp/validate_0915.py`, **0 failures, 149 checks**). 4 pages HTMLParser-balanced
+  **0 unclosed / 0 stray**; 5-tab nav on all 4 with exactly **1 active tab each** (note: the active tab is `class="on"`,
+  NOT `class="tab active"` — a validator written against `tab active` will false-fail); stamp/fresh IDs present on all 4;
+  .tldr on all three briefings with the correct per-page label; **8/8 TradingView widget JSON blocks parse**; ticker
+  retains SPXUSD + NSXUSD + DJI + USOIL + US10Y; **12/12 KEV countdowns** correct on label AND colour with the 8/1/3 split
+  asserted; scorecard arithmetic **4/4 exact** (note: the scorecard change/percent `<td>`s carry `class="up"` — match
+  `<td[^>]*>`); champions **11/11 rows**, 0 vacant; each index.html card contains its own page's .tldr sentence verbatim.
+  Trap greps CLEAN ×0 on all four pages: Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman / MacKenzie / Joshua Vance /
+  "Pereira (205)" / pay-per-view / "Jahmall Emmers def" / "Yair Rodriguez vs Jean Silva" / **Finastra (new trap)**.
