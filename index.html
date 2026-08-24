@@ -8,7 +8,8 @@
 :root{
   --bg:#0b0d10; --panel:#14181d; --line:#242c34; --text:#e8edf2; --muted:#8fa0b0;
   --mono:'SFMono-Regular',ui-monospace,Menlo,Consolas,'Liberation Mono',monospace;
-  --up:#3fbf7f; --down:#e05555; --crit:#e05555; --warn:#e0a33a;
+  --teal:#22d3a8; --gold:#caa64a; --gold2:#e8c766; --red:#e84545; --orange:#ff8a5c;
+  --up:#3fbf7f;
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--text);
@@ -17,43 +18,34 @@ body{margin:0;background:var(--bg);color:var(--text);
 .wrap{max-width:1040px;margin:0 auto;padding:26px 20px 60px}
 a{color:inherit}
 .masthead{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:14px}
-.masthead h1{margin:0 0 4px;font-size:34px;letter-spacing:-.5px;line-height:1.15}
+.masthead h1{margin:0 0 4px;font-size:40px;letter-spacing:-.6px;line-height:1.12;font-family:Georgia,'Times New Roman',serif;font-weight:600}
 .masthead .tag{color:var(--muted);font-size:14.5px;margin:0}
 .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 .pill{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
   background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:5px 11px;color:var(--muted)}
 .pill.live{color:var(--up);border-color:rgba(63,191,127,.35)}
 .pill.live .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--up);margin-right:6px;vertical-align:middle}
-nav.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 20px}
+.freshline{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted);margin:11px 0 2px}
+nav.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 24px}
 nav.tabs a{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;
   text-decoration:none;background:var(--panel);border:1px solid var(--line);border-radius:9px;
   padding:9px 13px;color:var(--muted);transition:.15s}
 nav.tabs a:hover{border-color:#3a4652;color:var(--text)}
-.freshline{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted);margin:9px 0 2px}
-section{margin:30px 0 0}
+nav.tabs a.on{color:var(--text);border-color:#4a5a68;background:rgba(255,255,255,.05)}
 .lab{font-family:var(--mono);font-size:11px;letter-spacing:.19em;text-transform:uppercase;
-  color:var(--muted);margin:0 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
-.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 17px;transition:.18s}
-.card:hover{transform:translateY(-3px);border-color:#3a4652}
-footer{margin-top:44px;border-top:1px solid var(--line);padding-top:18px}
-footer .lab{border:none;padding:0}
-footer ul{margin:0;padding-left:18px;font-size:12.8px;color:var(--muted);line-height:1.75}
-footer a{color:var(--muted)}
-.disc{margin-top:16px;font-size:12.2px;color:var(--muted);font-style:italic}
-.big{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:22px}
-.big .card{padding:22px 24px}
-.big .k{font-family:var(--mono);font-size:11px;letter-spacing:.17em;text-transform:uppercase;margin-bottom:9px}
-.big h2{margin:0 0 11px;font-size:23px;line-height:1.25}
-.big p{font-size:15px;color:#c6d2dd;margin:0 0 15px}
-.big a.rd{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;text-decoration:none}
-.c-sec{border-top:3px solid #22d3a8}
-.c-sec .k,.c-sec a.rd{color:#22d3a8}
-.c-mkt{border-top:3px solid #caa64a}
-.c-mkt .k,.c-mkt a.rd{color:#e8c766}
-.c-mkt h2{font-family:Georgia,'Times New Roman',serif;font-weight:600}
-.c-mma{border-top:3px solid #e84545}
-.c-mma .k,.c-mma a.rd{color:#ff8a5c}
+  color:var(--muted);margin:0 0 14px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+.big{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.bcard{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 22px;
+  transition:.18s;text-decoration:none;display:block;border-top:3px solid var(--line)}
+.bcard:hover{transform:translateY(-4px);border-color:#3a4652}
+.bcard .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.17em;text-transform:uppercase;margin-bottom:9px}
+.bcard h2{margin:0 0 10px;font-size:21px;line-height:1.25}
+.bcard p{margin:0 0 14px;font-size:14.6px;color:#c6d2dd;line-height:1.55}
+.bcard .go{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase}
+.c-sec{border-top-color:var(--teal)} .c-sec .kicker,.c-sec .go{color:var(--teal)} .c-sec:hover{border-color:rgba(34,211,168,.5);border-top-color:var(--teal)}
+.c-mkt{border-top-color:var(--gold)} .c-mkt .kicker,.c-mkt .go{color:var(--gold2)} .c-mkt h2{font-family:Georgia,'Times New Roman',serif;font-weight:600} .c-mkt:hover{border-color:rgba(202,166,74,.5);border-top-color:var(--gold)}
+.c-mma{border-top-color:var(--red)} .c-mma .kicker,.c-mma .go{color:var(--orange)} .c-mma:hover{border-color:rgba(232,69,69,.5);border-top-color:var(--red)}
+footer{margin-top:44px;border-top:1px solid var(--line);padding-top:18px;font-size:12.6px;color:var(--muted)}
 </style>
 </head>
 <body>
@@ -63,54 +55,48 @@ footer a{color:var(--muted)}
 <h1>Daily Briefings</h1>
 <p class="tag">Three desks, refreshed through the day — security, markets and the fight game</p>
 <div class="meta"><span class="pill live"><span class="dot"></span>Live</span><span class="pill" id="edition">&nbsp;</span><span class="pill" id="datestamp">&nbsp;</span><span class="pill">Updated <span id="updated">&nbsp;</span></span></div>
-</div>
 <div class="freshline" id="freshline">&nbsp;</div>
+</div>
+
 <nav class="tabs">
-<a href="index.html" style="color:#e8edf2;border-color:#e8edf2;background:rgba(255,255,255,.03)">★ Front Page</a>
+<a href="index.html" class="on">★ Front Page</a>
 <a href="cyber-briefing.html">⛨ The Cyber Wire</a>
 <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
 <a href="mma-briefing.html">⊘ The Octagon</a>
 <a href="archive.html">🗄 Archive</a>
 </nav>
 
+<div class="lab">Today&rsquo;s briefings</div>
 <div class="big">
-<div class="card c-sec">
-<div class="k">&#9880; The Cyber Wire &middot; The Wire</div>
-<h2>A 9.8-rated flaw already under attack comes due today</h2>
-<p>The federal patch deadline for TrueConf Server&rsquo;s CVE-2026-72529 &mdash; an unauthenticated script-execution bug CISA says is being exploited &mdash; lands today, while seven other entries in the Known Exploited Vulnerabilities catalog are already past due, the oldest by nine days. New this edition: a critical Citrix NetScaler authentication bypass (CVE-2026-19490, CVSS 9.3) that researchers expect to be exploited, and a campaign that quietly hijacked more than 14,500 Dahua cameras in 35 days.</p>
-<a class="rd" href="cyber-briefing.html">Read the briefing &rarr;</a>
-</div>
-<div class="card c-mkt">
-<div class="k">&#9650; The Closing Bell &middot; The Tape</div>
-<h2>A Friday bounce that didn&rsquo;t save the week</h2>
-<p>US markets are closed for the weekend. Stocks rose broadly on Friday &mdash; the Dow up 0.98%, led by materials, health care and financials &mdash; but every major index still finished the week lower after a Treasury sell-off. Bessent details the plan to economically isolate Iran on Monday, July PCE lands the same day Nvidia reports on Wednesday, and Warsh keynotes Jackson Hole on Friday with the Fed and the Treasury pulling opposite ways on yields.</p>
-<a class="rd" href="wallstreet-briefing.html">Read the briefing &rarr;</a>
-</div>
-<div class="card c-mma">
-<div class="k">&#8856; The Octagon &middot; Tale of the Tape</div>
-<h2>Rodrigues survives 25 minutes with Fluffy &mdash; and wants du Plessis</h2>
-<p>Gregory Rodrigues took a unanimous decision over Anthony Hernandez in Sacramento to win his fourth straight, split Fight of the Night with him, and call out No. 2-ranked Dricus du Plessis. Since then the UFC has made its last two numbered cards of the year official &mdash; UFC 334 at Madison Square Garden on November 14, UFC 335 in Las Vegas on December 12 &mdash; and lost Yair Rodriguez from the Noche UFC main event to a groin injury, with Jose Delgado stepping in against Jean Silva.</p>
-<a class="rd" href="mma-briefing.html">Read the briefing &rarr;</a>
-</div>
-</div>
 
-<section>
-<div class="lab">About this page</div>
-<div class="panel">
-<p style="margin:0;font-size:14.8px;color:#c6d2dd">Each briefing is rebuilt from live sources every 30 minutes between 8 AM and 6 PM ET. Every claim on every page traces to a source fetched in the run that produced it; anything that could not be verified in that run is dropped, and where credible sources disagree, the disagreement is printed rather than resolved silently. Point-in-time snapshots of previous editions are kept in the <a href="archive.html" style="color:#8fa0b0">Archive</a>.</p>
+<a class="bcard c-sec" href="cyber-briefing.html">
+<div class="kicker">⛨ The Cyber Wire · The Wire</div>
+<h2>A Zimbra deadline expires today, and eight KEV entries are already late</h2>
+<p>CISA&rsquo;s remediation deadline for an actively exploited Zimbra command-injection flaw falls today, eight other Known Exploited Vulnerabilities entries tracked here are already past due, and ShinyHunters has begun dumping 7.1 million Salesforce records stolen from Baxter International.</p>
+<div class="go">Read the briefing →</div>
+</a>
+
+<a class="bcard c-mkt" href="wallstreet-briefing.html">
+<div class="kicker">▲ The Closing Bell · The Tape</div>
+<h2>Futures slip into a tariff-and-sanctions Monday</h2>
+<p>Ahead of the Monday open, US stock futures are modestly lower with the Nasdaq lagging, as 50% US tariffs on a list of Canadian goods take effect, Treasury Secretary Scott Bessent prepares to detail what he calls an &ldquo;economic D-Day&rdquo; sanctions package against Iran this afternoon, and Alibaba slides on a $10.2 billion discounted share sale.</p>
+<div class="go">Read the briefing →</div>
+</a>
+
+<a class="bcard c-mma" href="mma-briefing.html">
+<div class="kicker">⊘ The Octagon · Tale of the Tape</div>
+<h2>Rodrigues survives Sacramento; Shanghai is next</h2>
+<p>Gregory Rodrigues outlasted Anthony Hernandez over five rounds in Sacramento for his fourth straight win and called out No. 2-ranked Dricus du Plessis; the promotion now turns to Shanghai on Saturday, while UFC 332 in Salt Lake City fills out around Johnny Walker&rsquo;s heavyweight debut against Mick Parkin.</p>
+<div class="go">Read the briefing →</div>
+</a>
+
 </div>
-</section>
 
 <footer>
-<div class="lab">Sources</div>
-<ul>
-<li>Each briefing carries its own full source list in its footer.</li>
-</ul>
-<p class="disc">For information only. Nothing here is investment advice, and security guidance should be validated against your own environment.</p>
+Each briefing is rebuilt from live web sources every 30 minutes between 8 AM and 6 PM ET. Point-in-time snapshots of past editions are kept in the <a href="archive.html">Archive</a>. Market content is for information only and is not investment advice.
 </footer>
 
-<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
-
 </div>
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
 </body>
 </html>

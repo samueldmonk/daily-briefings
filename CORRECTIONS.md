@@ -9550,3 +9550,91 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   MMA results 13/13 rows. Trap greps CLEAN ×0 on all four pages: Cody Salkilld / Shamil Yakhyaev / Abdul-Rakhman /
   MacKenzie / Joshua Vance / "Pereira (205)" / pay-per-view / "Jahmall Emmers def" — plus a new trap, **"Yair Rodriguez vs
   Jean Silva" = 0 occurrences.**
+
+## Added 2026-08-24 (Monday ~9:07am ET — MORNING EDITION; PRE-OPEN, first run since Sun Aug 23 ~5:50pm; archive stamp 2026-08-24-0907)
+- CLOCK: TZ date = Mon Aug 24 08:02 EDT at run start, 09:07 EDT at publish. Edition bucket **Morning** (h=9).
+  Prior archived snapshot is **2026-08-23-1827**. "New" tags re-scoped against THAT snapshot: the prior MMA New tags
+  (UFC 334/335, NSAC purses) and cyber New tags (Citrix NetScaler CVE-2026-19490, Operation CameraSwarm) were ALL DROPPED
+  because all four were in the 1827 snapshot.
+- MARKETS — **FIRST PRE-OPEN EDITION OF THE WEEK. US session had NOT started at publish (09:07 ET; open 09:30).**
+  Yahoo Finance market bar read at ~6:45 AM ET (page header said "U.S. markets open in 2h 44m"):
+  **S&P futures 7,679.00 −12.25 (−0.16%); Dow futures 53,331.00 −22.00 (−0.04%); Nasdaq futures 29,236.50 −151.25 (−0.51%);
+  Russell 2000 futures 3,019.60 −2.50 (−0.08%); VIX 15.93 +0.80 (+5.29%); Gold 4,703.10 +22.50 (+0.48%);
+  Bitcoin 77,777.22 +1,000.28 (+1.30%); Crude Oil OCT 26 contract 85.02 −2.04 (−2.34%).** NOTE the WTI contract has ROLLED
+  from September to **October** — do not compare $85.02 (Oct) against the prior page's $87.06 (Sep) as a move.
+  Yahoo's live blog (filed 4:03 AM ET) says Dow futures edged into the red, S&P −0.2%, Nasdaq −0.7%.
+  ⚠ CONFLICT LOGGED: the Simply Wall St "Morning Bull" piece on Yahoo (Aug 24, 4:08 AM) says futures are "pointing higher,
+  E-mini S&P +0.4%, Nasdaq-100 +0.3%" — that TEXT contradicts Yahoo's own market bar on the same page and every other
+  source (Yahoo live blog, TheStreet, PreMarketPrice, Benzinga). The page publishes the LOWER reading. Do not flip to
+  "futures higher" on the strength of that one paragraph.
+- MARKETS LEAD — **two weekend policy shocks.** (1) **US–Canada trade talks collapsed late Friday**; additional **50% US
+  duties took effect at the stroke of midnight** under **Section 338 of the Tariff Act of 1930**, covering alcohol, hockey
+  equipment, cement, dairy, building materials and certain clothing. **Carney called it "a miscalculation,"** blamed
+  "uneconomic"/"unfair" US demands, and said **Canadian retaliatory tariffs take effect September 8** targeting dairy,
+  appliances, agricultural equipment, pulp and paper, and electronics. Saturday presser: **"You're at war when you get
+  attacked. We got attacked."** USD +0.2% vs CAD to **1.3790**. (Axios, NBC News, NPR, Bloomberg, Reuters/Yahoo.)
+  (2) **Iran:** Bessent holds an **afternoon press conference Monday**; his FT op-ed calls the coming measures
+  **"an economic D-Day — the single greatest financial offensive ever marshalled against an adversary."**
+- MARKETS MOVERS — **all pre-market, all tagged New** (prior edition covered Friday's CLOSE, so every card is genuinely new).
+  **Alibaba**: US-listed ADRs off **2%** (CNBC) / **3.38%** (Benzinga); **Hong Kong shares ended morning trade down 9.8% at
+  HK$111.00**; deal is **HK$80 billion / US$10.2 billion of new shares at HK$112.70 each, an 8.4% discount to Friday's close**,
+  proceeds to chips, AI infrastructure and models. ⚠ Benzinga separately calls it a "3.6% discount to its prior U.S. close" —
+  DIFFERENT baseline; the page prints the 8.4%-to-HK-close figure with attribution. **Sandisk −5%, Coherent −4.7%,
+  Marvell −3.5%, Seagate −3.2%, AMD and Intel about −2%. Megacaps mixed: Apple +0.4%, Nvidia +0.1%, Alphabet −0.3%.**
+  (Investing.com premarket movers, CNBC premarket round-up, BNN Bloomberg.)
+- MARKETS — **Chart of the Day switched from NASDAQ:MRNA to NYSE:BABA.** Ticker tape reworked to BABA/SNDK/MRVL/STX/NVDA while
+  retaining SPXUSD + NSXUSD + DJI + USOIL + US10Y. **NO After-Hours section** (pre-open, not post-close). Weekly Scorecard
+  UNCHANGED at Friday Aug 21 closes; arithmetic re-validated **4/4 exact**. 10-yr **≈4.74%, near a 20-month high** (Yahoo,
+  Aug 24); Friday finish 4.737%, 30-yr 5.276% (CNBC Aug 21) retained. **US Composite PMI 56, services 56.8, manufacturing 53.2**
+  (Simply Wall St, Aug 24) — new sourced detail.
+- ⚠ **PCE STILL WEDNESDAY, AUGUST 26; Nvidia also Wednesday Aug 26 (after the bell); Warsh's first Jackson Hole keynote
+  Friday Aug 28 at 10 a.m.** Unchanged and re-affirmed. Do NOT flip PCE to Friday or Nvidia to Thursday.
+- CYBER — **PATCH PRIORITY ROTATED.** Last edition's priority, **CVE-2026-72529 (TrueConf, 9.8), went PAST DUE on Aug 23**.
+  The new priority is **CVE-2026-73570 — Zimbra Collaboration, OS command injection, CVSS 8.9, exploited per CERT Polska,
+  added Aug 21, DUE TODAY Aug 24**, fixed in 10.1.20. Patch Priority, Vulnerability Watch and the KEV board all agree on
+  CVE, CVSS and date. BOD 26-04 risk-based, not 22-01.
+- CYBER — **KEV BOARD UNCHANGED AT 12 ROWS; recomputed for Aug 24: 8 past due, 1 due today (Zimbra), 3 ahead.**
+  Programmatically re-validated against a plain Aug 24 day count: every label AND colour class correct.
+  No CISA KEV addition later than the Aug 21 Zimbra entry surfaced in searches this run (latest CISA alert page found: Aug 20,
+  two TrueConf CVEs).
+- CYBER — **TOP STORY UNCHANGED: GitLab CVE-2026-19478 (9.4, exploited, GraphQL directive, fixed 19.2.4 / 19.1.6 / 19.0.8 /
+  18.11.11).** ⚠ A search summary this run claimed THN published "Forminator WordPress flaw" and "Microsoft links 30+ domains
+  to MacSync Stealer" **on August 24** — BOTH ARE WRONG. Fetching the articles shows bylines of **Aug 17** (Forminator) and
+  **Aug 19** (MacSync). Do not treat either as a same-day story or promote it to top story on that basis.
+- CYBER NEW — **ShinyHunters / Baxter International.** The group has posted **7.1 million Salesforce records** on its
+  dark-web site with a download button: "The company failed to reach an agreement with us despite our incredible patience,
+  all the chances and offers we made. They don't care." Baxter first listed **Aug 14, 2026**. Wider Salesforce campaign
+  (2025→2026) used **device-code phishing**; Push Security counts **1,000+ compromised organizations** and a **claimed
+  1.5 billion records** — print "claimed". Fresh extortion deadlines dated **Aug 24** outstanding against **BOK Financial,
+  NovoCure** and a third partly redacted listing. Promoted to Threat Actor Spotlight, replacing the Russian OAuth clusters.
+- CYBER NEW — **two WordPress plugin flaws added to Vulnerability Watch, both explicitly NOT KEV entries.**
+  **CVE-2026-15748, Forminator Forms** (600,000+ installs), **CVSS 9.8**, arbitrary file upload in `handle_file_upload()` →
+  unauth RCE; **requires a form with BOTH a File Upload field AND a Select field**; affects all versions ≤ **1.56.1**;
+  **fixed in 1.56.2, released July 31, 2026**; reported by researcher "daroo", analysis by Wordfence.
+  **CVE-2026-15826, User Profile Builder** (40,000+ installs), **CVSS 9.8**, auth bypass → log in as user ID 1; only
+  exploitable where **Automatically Log In is enabled**; **patched July 16, 2026 in 3.16.5**.
+- CYBER — stat strip now five tiles: 12 KEV tracked / 8 past due / **7.1M Baxter records (new)** / $400M TikTok / 14,530 Dahua.
+- MMA — **CHAMPIONS BOARD UNCHANGED, 11/11 rows, 0 vacant.** Re-cross-checked this run against ESPN "Current and all-time UFC
+  champions": Aspinall, **Ulberg (Apr 11 2026)**, **Strickland (May 9 2026)**, **Makhachev — WELTERWEIGHT (Nov 15 2025)**,
+  **Gaethje — LIGHTWEIGHT (Jun 14 2026)**, **Volkanovski (Apr 12 2025)** all MATCH. UFC Sacramento (Aug 22) remains the most
+  recent completed event and had no title fight, so no belt can have changed hands. Sacramento results block (13/13 rows),
+  bonuses and the seven-vs-six $25K conflict left untouched and still correct.
+- MMA NEW — **UFC 332 card entry added: Saturday, October 3, Salt Lake City.** **Johnny Walker (22-10, 1 NC)** makes his
+  **heavyweight debut against Mick Parkin (10-1)**, Tom Aspinall's training partner, who won his first four UFC fights before
+  losing to **Marcin Tybura**. Walker was originally set to change divisions at **UFC Belgrade in August** before losing
+  opponent **Ante Delija** for undisclosed reasons. **Seven bouts announced; the main event remains unannounced** — do not
+  invent one. (Yahoo Sports, Bloody Elbow Jul 29, Cageside Press Aug 19, Yardbarker, mixedmartialarts.com.)
+- MMA NEW — **Delphine Benouaich** signed with the UFC and is booked at the **Accor Arena on September 5 against Argentina's
+  Sofia Montenegro at women's strawweight**. **Francesco Nuzzi** signed **August 19** and was slotted into **UFC Shanghai on
+  August 29** — a ten-day turnaround. (Fightomic, "Newly Booked UFC Fights: Week Ending 23 August 2026".)
+- MMA — Next-card countdown target **2026-08-29T06:00:00-04:00** (UFC Shanghai main card 6:00 AM ET).
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`** (takes the repo dir as argv[1]). Result: **23 days, 110 timestamped
+  rows, 330 snapshot files**. `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, this run — `validate_0824.py`, **0 failures, 180 checks**). 4 pages HTMLParser-balanced
+  **0 unclosed / 0 stray**; 5-tab nav + stamp/fresh IDs on all 4 with exactly 1 active tab each; .tldr on all three briefings
+  with the correct per-page label; **8/8 TradingView widget JSON blocks parse**; ticker retains SPXUSD + NSXUSD + DJI +
+  USOIL + US10Y; **12/12 KEV countdowns** correct on label AND colour with the 8/1/3 split asserted; scorecard arithmetic
+  **4/4 exact**; champions **11/11 rows** matched name-by-name; MMA results **13/13 rows**; each index.html card verified to
+  contain its own page's .tldr sentence. Trap greps CLEAN ×0 on all four pages: Cody Salkilld / Shamil Yakhyaev /
+  Abdul-Rakhman / MacKenzie / Joshua Vance / "Pereira (205)" / pay-per-view / "Jahmall Emmers def" / "Yair Rodriguez vs
+  Jean Silva".
