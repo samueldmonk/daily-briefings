@@ -11374,3 +11374,93 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   disclosure and the DWCS Aug-26 rejection. Trap greps CLEAN ×0 across all four pages (Cody Salkilld, Abdul-Rakhman,
   Shamil Yakhyaev, "title challenger Beneil", **Shanghai Indoor Stadium**, "mid-August 2025", "Pereira retains",
   "Featherweight vacant").
+
+## Added 2026-08-25 (Tuesday ~2:44pm ET — MIDDAY EDITION, fifth run of the day, ~14 min after the 1430 snapshot; archive stamp 2026-08-25-1444)
+- CLOCK: TZ date = Tue Aug 25 14:31 EDT at run start. Edition bucket **Midday** (h=14). New tags site-wide reduced to
+  **one per briefing** (WS 1, CY 1, MMA 1) because only three things actually changed since the 1430 snapshot;
+  everything the previous run tagged New was demoted to "Carried · 2:00 edition" with a whole-file regex sweep on
+  `<span class="tag new">…</span>` (which also catches the label-carrying variants such as
+  `<span class="tag new">New four non-reconciling reads</span>` — **NEW GOTCHA #15: the plain-`New` string replace misses those**).
+- 🟢 **MARKETS — THE FOOL PAGE NOW SPLITS INTO A FRESH HALF AND A CACHED HALF, AND THE SPLIT IS THE STORY.**
+  Re-fetched `fool.com/coverage/stock-market-today/2026/08/25/…` at **~2:35 p.m. ET**. Two of its quote modules had
+  **re-rendered**: the "Stocks Mentioned" module gives **S&P 500 +0.30% +23.15, Nasdaq Composite +0.61% +157.86,
+  Dow +0.18% +93.77**, and the "Index" module gives **S&P 500 +0.26% +20.25** (day's range 7,650.92–7,686.11, NOT published
+  per freshness rule d). ✅ All four point changes reconcile exactly to Monday's closes (7,652.86 / 53,417.16 / 25,980.19).
+  ⚠ **The foot-of-page ticker rail returned BYTE-IDENTICAL figures to the 1:40 p.m. read** (+22.33 / +105.40 / +161.37) —
+  a cached render, not a coincidence. **Published as the 1:40 read, not as the current board.** The **DKS quote card
+  ($127.27 / −29.03%) sits on that same rail**, so it is likewise carried as the 1:40 price and NOT asserted as the 2:35 price.
+  **NOTE FOR FUTURE RUNS: treat the Fool page as two sources with two different freshnesses — quote modules vs. ticker rail.**
+- MARKETS — cache counter advanced: **Yahoo cached for the FOURTEENTH consecutive run**; TheStreet's Aug 25 blog re-fetched in
+  full and **still frozen at its 7:55 a.m. entry** (published 10:43Z, modified 11:55Z) for a fifth consecutive edition;
+  stockmarketwatch **rejected for the fourth consecutive edition**.
+- MARKETS — **Schwab's 9:08 a.m. table re-confirms Monday's closes with the CORRECT point changes**
+  (S&P −21.51 −0.28%, Dow +140.15 +0.26%, Nasdaq −200.26 −0.76%; 10-yr 4.66% −0.04, DXY 99.01, VIX 15.85, WTI $82.45 −3.01%,
+  BTC $79,005). ⚠ **The Zacks recap's "1.51 points" for the S&P remains a typo** — 7,674.37 → 7,652.86 is −21.51. Schwab wins.
+- MARKETS — **DKS progression extended**: "dropped **more than 22% at the open**" and an untimed aggregator print of
+  **−25.48%** join ~12% (untimed) → 25.3% (10:49) → "more than 27%" (11:36) → 29.03% (1:40). Chart of the Day stays **NYSE:DKS**.
+  ⚠ The **$21.9–$22.2 billion / "adjusted per-share earnings"** mislabel in Schaeffer's is **net sales**; the page prints the correction.
+  ⚠ **SECTORS: the XLK −1.8% / XLP +1.7% / XLF +1.3% board that search syntheses keep returning for "August 25" is MONDAY's**
+  (the Zacks piece it comes from describes the 7,652.86 close). Do NOT publish it as Tuesday leadership. Tuesday's only sourced
+  sector line is the Fool's 11:36 read: **utilities and financials green, industrials and energy lagging**.
+- 🔴 **CYBER NEW — E4del AND PINHOLE: FTP BANNERS AS DEAD-DROP RESOLVERS.** BleepingComputer (Bill Toulas, **Aug 21, 07:00 a.m.**,
+  fetched in full) on SOCRadar research, resurfaced by **The Hacker News today (Aug 25)**. Weaponised **since early July 2026**,
+  still operational, **new infrastructure as recently as August 2026** (FOFA); ZIP → LNK chain, initial access likely phishing;
+  first seen by **MalwareHunterTeam** in July. **E4del** = Node.js RAT inside a **digitally signed Electron app masquerading as
+  Discord** (persistent/temporary shells, screenshots, WebSocket desktop streaming, payload download); a Node module
+  **`crypto32.node`** attempts privesc but **could not be retrieved for analysis**. **PINHOLE** resolves C2 from **Pinterest pins
+  and SurveyMonkey survey questions**, keeps one **4KB** section of payload in memory via shellcode fluctuation, Early Bird APC
+  injection into a suspended **`ApplicationFrameHost.exe`**, **14 commands** incl. browser-credential theft. **11 execution events**
+  at analysis = early stage. SOCRadar's own caveat published: FTP is **less stealthy** than X/GitHub/YouTube dead drops.
+  ⚠ **NO CVE AND NO CVSS — it is a delivery technique, not a product flaw. Neither published.**
+- CYBER — **WIRE STATUS RECORDED: BleepingComputer's security index re-fetched in full and UNCHANGED since 11:52 a.m.**
+  (Norway DDoS still the newest item). No new security story was published between the 1430 and 1444 runs, which is why the
+  Norway lead did not move. Useful precedent: **a re-fetch of the section index is the cheapest way to prove the lead is still current.**
+- CYBER — **KEV BOARD UNCHANGED AT 13 ROWS: 9 past due, 1 DUE TODAY (WinSock CVE-2026-68820, Aug 25), 3 ahead**
+  (Oracle Aug 27 = 2 days, MLflow Sep 2 = 8, TrueConf Sep 3 = 9). Verified directly against CISA's alert pages: newest addition is
+  **Aug 24 (one CVE, Oracle)**, preceded by **Aug 20 (two, TrueConf)** and **Aug 11 (three)**. **No August 25 addition.**
+  The three-day tier under **BOD 26-04** re-confirmed by Forbes ("72 hours to patch old 10/10 Oracle bug"). The superseded
+  "BOD 22-01 = three weeks" rule stays superseded — always read the due date off the catalog entry.
+- 🥊 **MMA NEW — THE SHANGHAI LINE MOVED AT DRAFTKINGS: −500 / +380** (RotoWire fight page fetched this run; no-vig implied
+  **80.0% / 20.0%**). Previously **−470 / +360** at the same book, so the drift is toward the favourite. Still printed alongside
+  UFC.com **−450/+350**, a reported open **−500/+385** and BetOnline **−700/+500**. **No single number presented as the price.**
+- ⚠ **MMA — NEW START-TIME CONFLICT, NOT RESOLVED: RotoWire lists the Shanghai main event at 5:00 a.m. ET** where UFC.com and
+  the FightNews full-card listing give a **6:00 a.m. ET main card**. **6:00 a.m. is used** (two sources, and it is the countdown
+  target `2026-08-29T06:00:00-04:00`); the RotoWire time is printed, not erased, and may be the prelim time.
+- ⚠ **MMA — THE "SHANGHAI INDOOR STADIUM" TRAP FIRED AGAIN THIS RUN** from a Tapology-sourced search synthesis, which also said
+  the card is **"11 fights deep."** Both **REJECTED**: the venue is published as **the Oriental Sports Center's 18,000-seat indoor
+  arena** and the count stays at **13** per the FightNews full listing. Banned string asserted ABSENT ×0 on all four pages.
+- MMA — **UFC SACRAMENTO RE-VERIFIED AGAINST THE PRIMARY SOURCE.** UFC.com's Main Card Results and Bonus Coverage pages both
+  re-fetched in full: Rodrigues def. Hernandez **UD 48-47, 49-46, 48-47**; Petrino def. Spivac **UD 30-27 ×3**; de Ridder def.
+  Dolidze **TKO R1 4:01**; Mederos def. Jones **TKO R2 2:07**; Judice def. Chaves **TKO body kick R1 1:39**; Wint def. Chatman
+  **technical submission, arm-triangle, R1 4:29**. Event = **UFC Fight Night 285**, Golden 1 Center, first UFC in Sacramento in
+  **seven years**. Mederos now **4-0-1 UFC / 11-fight streak**, which UFC.com places **one behind Chris Padilla and Quillan Salkilld**.
+  ⚠ **THE BONUS-LABEL CONTRADICTION IS IN UFC.COM ITSELF AND IS CONFIRMED FIRST-HAND:** that page heads the main-event pair
+  **"Performance Of The Night"** and heads **Carli Judice "Fight Of The Night"** — contradicting its own body copy and every other
+  outlet (Yahoo/MMA Weekly: FOTN = Hernandez & Rodrigues). **Both printed; the MMA Weekly/Forbes designations are used.**
+  Amounts (**four × $100,000; eight × $25,000 finish checks**) come from Yahoo, not UFC.com.
+- 🥊 **MMA — CHAMPIONS RE-CROSS-CHECKED, FIFTH CONSECUTIVE EDITION TODAY.** ESPN's "Current and all-time UFC champions" returned
+  Aspinall (Jun 21 2025), **Ulberg** (Apr 11 2026), **Strickland** (May 9 2026), **Makhachev** (Nov 15 2025, **1 defence**),
+  **Gaethje** (Jun 14 2026) and **Volkanovski** (Apr 12 2025, **1 defence**) — matching the standing block on all six.
+  **No title fight since UFC 330 (Aug 15)**; DWCS is not a title card. Board unchanged, **11/11 rows, 0 vacant**, asserted by
+  CHAMPION COLUMN ONLY (gotcha #14).
+- MMA — Noche UFC (Sep 12, Desert Diamond Arena, Glendale AZ) confirmed again this run: **Yair Rodríguez OUT injured, Jose Miguel
+  Delgado (12-2) IN vs Jean Silva (17-3)**; fourth annual Noche card. Already on the page from the Aug 22 reporting, so **no New tag**.
+- ⚠ **INFRA — `mcp__workspace__web_fetch` ENFORCES A PROVENANCE SET.** Direct fetches of `thehackernews.com/` and CISA's advisory
+  index were **refused ("URL not in provenance set")** because those URLs had not appeared in a prior WebSearch result. **Always
+  WebSearch first and fetch only URLs that come back in the result list.** Retries will not help.
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **24 days, 130 timestamped rows, 390 snapshot files**.
+  `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `outputs/validate_1435.py`, **0 failures, 170 checks**). 4 pages HTMLParser-balanced 0 unclosed /
+  0 stray; 5-tab nav scoped inside `<nav class="tabs">` with exactly 1 correctly-targeted active tab on each; stamp/fresh IDs ×4
+  on all 4; `.tldr` ×1 per briefing with the correct per-page label and NONE on index; **index cards anchored on
+  `class="bcard c-sec|c-mkt|c-mma"` and asserted to carry their own page's tldr VERBATIM** (bare `<p>`, not `<p class="sum">`);
+  **8/8 TradingView JSON blocks parse**; tape retains SPXUSD+NSXUSD+DJI+USOIL+US10Y; Chart of the Day asserted **NYSE:DKS** scoped
+  to the mini-symbol-overview block; after-hours asserted ABSENT; **13/13 KEV countdowns with the 9/1/3 split** parsed on
+  `class="kevdue"`; champions 8 names present / 6 stale strings absent **from the champion column only**, 12 `<tr>` incl header,
+  11 champion cells; **eleven index/DKS reconciliations asserted with `round(x,2)`**; the **seven derived index levels asserted
+  ABSENT** from the WS body; New counts asserted **WS 1 / CY 1 / MMA 1 / index 0**; and content guards for the 2:35 fetch, the
+  fourteenth cache counter, the byte-identical-rail disclosure, the net-sales correction, the Nvidia-not-yet-reported caveat,
+  E4del/PINHOLE/ApplicationFrameHost, the "nothing added August 25" KEV line, the −500/+380 line move, the 5:00 a.m. conflict,
+  the fifth champions check, "Alex Apodaca" and "Gary Belletto Jr." Trap greps CLEAN ×0 across all four pages (Cody Salkilld,
+  Abdul-Rakhman, Shamil Yakhyaev, "title challenger Beneil", **Shanghai Indoor Stadium**, "mid-August 2025", "Pereira retains",
+  "Featherweight vacant", "Nvidia's results").
