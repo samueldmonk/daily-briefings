@@ -11656,3 +11656,94 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   failed the moment the page *disclosed* that the After-Hours section was deliberately omitted. **RULE: scope
   absence checks to the structural element you actually mean** (here `class="lab">…After-Hours`), and pair every
   "X must be absent" check with a positive "the disclosure of X's absence must be present" check.
+
+## Added 2026-08-25 (Tuesday ~4:10pm ET — AFTERNOON EDITION, eighth run of the day; archive stamp 2026-08-25-1610)
+- CLOCK: run started **16:02 EDT**, ~2 minutes after the bell; pages archived at **16:10 EDT**. Edition bucket
+  **Afternoon** (h=16). New tags site-wide: **WS 1 / CY 2 + a new lead / MMA 0 / index 0**; everything the 1600 run
+  tagged New was demoted to "Carried · 4:00 edition" by the whole-file regex
+  `<span class="tag new">New[^<]*</span>` (gotcha #15 respected).
+- ⚠ **MARKETS — THE 1600 RUN'S INSTRUCTION ("next run must lead with the verified close") COULD NOT BE SATISFIED, AND
+  THAT IS THE CORRECT OUTCOME.** At ~10 minutes past the bell **no source fetched this run had published official
+  Aug 25 closing levels.** Evidence recorded on the page: Yahoo's live-blog URL served the **5:00 a.m. Grace O'Donnell
+  body behind "U.S. markets open in 4h 26m"** (SEVENTEENTH consecutive cached run); **TheStreet's live blog re-fetched
+  in full AFTER the bell is still frozen at its 7:55 a.m. entry** (published 10:43Z, modified 11:55Z) even though its
+  live headline has rolled twice today; **CNBC's Aug 25 live-updates URL returned an EMPTY body** again; and the Fool
+  page is still stamped **16:27Z**. **The 4 p.m. straddle note was rewritten as a post-bell disclosure** rather than
+  deleted. **The next run must try the close again.**
+- ⚠ **MARKETS — THE FOOL PAGE NOW CARRIES THREE MUTUALLY INCONSISTENT UNTIMED S&P FIGURES ON ONE PAGE.** Re-fetched
+  after the bell: `article:modified_time` **16:27Z** (unmoved for three runs); foot-of-page rail **+22.33 / +105.40 /
+  +161.37**; S&P 500 **quote module 7,673.11 / +20.25 / +0.26%**; **stocks-mentioned module 7,676.01 / +23.15 /
+  +0.30%**. All reconcile against Monday's 7,652.86 but disagree with each other, so **no level from that page is
+  published** (freshness rule (d)). **RULE EXTENDED: check modified_time, the quote module, the stocks-mentioned
+  module AND the rail — four artefacts, not two.** DKS quote card ($127.27 / −29.03%) still sits on the stale rail.
+- MARKETS — board unchanged at the **3:05 p.m. ET** read (**S&P +0.41% / Nasdaq +0.68% / Dow +0.22%**); post-bell
+  search syntheses returned only those same percentages, so they were treated as intraday, NOT as a close. The trap
+  string `markets closed higher today` remains asserted absent ×0.
+- 🟢 **MARKETS — RATES UPDATED: 10-YEAR AT 4.637%.** Coverage of Yahoo's Aug 25 live blog states the benchmark yield
+  **fell to 4.637%** and credits it with supporting the rally. Published as the latest sourced read **alongside, not
+  blended with**, Schaeffer's 12:13 p.m. **4.65%** and the Fool's 11:36 a.m. **4.64%** (vs Monday's 4.704%).
+- 🟢 **MARKETS NEW ×1 — THE FIRST POST-CLOSE TEST: INTUIT AND ZOOM.** Both report after today's bell. Sourced
+  expectations only, no results: **Intuit $3.59/sh (+30.5% y/y) on $4.27B (+11.5%)**, options pricing an **8.86% move**
+  = about **$8.94B** of value against a ~**$101B** cap (Benzinga); **Zoom $1.48/sh on $1.27B**, release timed
+  **4:05 p.m. ET** (24/7 Wall St.). **After-Hours Movers section still OMITTED with disclosure** — no post-close move
+  was stated by any source fetched this run (gotcha #18 scoping retained).
+- 🔴 **CYBER — NEW TOP STORY: miniOrange SAML (Mirage2FA demoted to Breaches & incidents, telemetry intact).**
+  THN (Ravie Lakshmanan), **Aug 25**: attackers are actively scanning for two unauthenticated bypasses in the
+  **Xecurify miniOrange SAML 2.0 Single Sign On** plugin for WordPress. **CVE-2026-15981 / CVSS 9.8** — auth bypass;
+  `mo_saml_validate_signature()` does a **loose boolean check on PHP `openssl_verify()`'s tri-state return**, so an
+  error value of **−1 evaluates truthy**; a crafted `SAMLResponse` with attacker-controlled `NameID` + deliberately
+  malformed signature reaches **`wp_set_auth_cookie()`** for any account. Fixed **17.0.6** (Standard edition).
+  **CVE-2026-61979 / CVSS 8.1** — unauthenticated privilege escalation via **signature-algorithm confusion** (public
+  key treated as shared secret → forged signature). Fixed **17.0.5** (Standard). Disclosed by **Patchstack**, credited
+  to the **DigitalOcean security team**, which found it after an anomalous WP admin session from outside its trusted
+  network — *"the attacker had already used the bypass to obtain a WordPress admin session cookie, but was stalled
+  because the admin panel operations themselves sat restricted behind the trusted network."* Six scanning IPs printed:
+  **207.211.214.41, 79.127.224.14, 102.91.71.83, 162.243.116.148, 84.201.6.54, 64.225.25.188** — *"opportunistic
+  scanning rather than a targeted campaign."* **Public PoC chains the two for site takeover.** ⚠ **NEITHER IS
+  KEV-LISTED AND NEITHER CARRIES A FEDERAL DEADLINE** — stated explicitly on the page so the Patch Priority box is not
+  misread. ⚠ **The "DigitalOcean detected Aug 16" and "free edition 16.1.9" details appeared only in a search
+  synthesis of Patchstack, NOT in the THN body — deliberately NOT published.**
+- CYBER — **KEV BOARD UNCHANGED AT 13 ROWS: 9 past due, 1 DUE TODAY (WinSock CVE-2026-68820, Aug 25), 3 ahead**
+  (Oracle Aug 27 = 2 days, MLflow Sep 2 = 8, TrueConf Sep 3 = 9) — **no countdown moved**. Re-verified against CISA's
+  alert index this run: newest addition **Aug 24 (one, Oracle CVE-2026-21962)**, preceded by **Aug 20 (two, TrueConf
+  72529/72530)** and **Aug 11 (three)**. **NOTHING ADDED AUGUST 25.** **Forbes (Davey Winder), Aug 25** independently
+  corroborates the deadline: *"CISA gives federal agencies 72 hours to patch old 10/10 Oracle bug"* — consistent with
+  the **BOD 26-04 risk-based** framing (the old "BOD 22-01 = three weeks" rule remains **superseded**).
+- CYBER — candidates SEEN but NOT published for want of verified specifics this run: **NVIDIA NemoClaw / Ollama**
+  weakness (Oasis Security), **WhatsApp multiple-passkeys** rollout (Meta), **Surgeons Choice Medical Center** breach
+  (Aug 21). Each appeared in a search synthesis only; none was fetched to a primary source, so none went on the page.
+- 🥊 **MMA NEW ×0 — AND THAT IS AGAIN THE CORRECT ANSWER.** Every candidate this run was already on the page
+  (Shanghai / Oriental Sports Center / Umar Nurmagomedov vs Song Yadong at 135, Bilal Hasan's debut, RTU5 semi-finals
+  Friday, Jean Silva vs Jose Miguel Delgado at Noche UFC Sept 12). Nothing manufactured.
+- 🥊 **MMA — CHAMPIONS RE-CROSS-CHECKED, EIGHTH CONSECUTIVE EDITION TODAY.** ESPN's "Current and all-time UFC
+  champions" returned Aspinall (Jun 21 2025), **Ulberg** (Apr 11 2026, KO1 Procházka, UFC 327), **Strickland**
+  (May 9 2026, SD Chimaev, UFC 328), **Makhachev** (Nov 15 2025, UD Della Maddalena, UFC 322), **Gaethje**
+  (Jun 14 2026, TKO4 Topuria, Freedom 250) and **Volkanovski** (Apr 12 2025, UD Lopes, UFC 314) — matching the
+  standing block on all six. **No title fight since UFC 330 (Aug 15).** Board unchanged, **11/11 rows, 0 vacant**,
+  asserted by CHAMPION COLUMN ONLY (gotcha #14).
+- ⚠ **NEW GOTCHA #19 — THE ACTIVE NAV CLASS ON THIS SITE IS `on`, NOT `active`.** A fresh validator asserted
+  `class="…active…"` and produced **8 spurious failures** on pages that were correct. **RULE: read the actual markup
+  before writing a structural assertion; the five-tab nav marks its current tab with `class="on"`.**
+- ⚠ **GOTCHA #20 — A SPLICE GUARD THAT REJECTS INSERTIONS.** The `assert 0 < start < end` guard from gotcha #16 is
+  right for *replacements* but fails every *insertion*, where `start == end`. Use `0 < start <= end <= len(c)` and
+  keep the `start < hit < end` ordering assertion for replacements only.
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **24 days, 133 timestamped rows, 399 snapshot files**.
+  `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `outputs/validate_1607.py`, **0 failures, 204 checks**). 4 pages HTMLParser-balanced
+  0 unclosed / 0 stray; 5-tab nav scoped inside `<nav class="tabs">` with exactly 1 correctly-targeted `class="on"`
+  tab on each; stamp/fresh IDs ×4 on all 4; `.tldr` ×1 per briefing with the correct per-page label and NONE on index;
+  **index cards anchored on `class="bcard c-sec|c-mkt|c-mma"` and asserted to carry their own page's tldr VERBATIM**;
+  **8/8 TradingView JSON blocks parse**; tape retains SPXUSD+NSXUSD+DJI+USOIL+US10Y; Chart of the Day asserted
+  **NYSE:DKS** scoped to the mini-symbol-overview block; **after-hours asserted absent as a SECTION** (regex scoped to
+  `class="lab">`) paired with a positive check that the omission disclosure IS present (gotcha #18); **13/13 KEV
+  countdowns with the 9/1/3 split** parsed on `class="kevdue[^"]*"`; champions 8 names present / 6 stale strings
+  absent **from the champion column only**, 12 `<tr>` incl header, 11 champion cells; New counts asserted
+  **WS 1 / CY 2 / MMA 0 / index 0**; and content guards for the post-bell timing note, the seventeenth cache counter,
+  4.637%, the 8.86%/$8.94B/4:05 p.m./$1.27B earnings figures, 0.41/0.68/0.22, 16:27Z, 7,673.11, 7,676.01,
+  "reports Wednesday after the close", CVE-2026-15981/61979, 17.0.6/17.0.5, `mo_saml_validate_signature`,
+  `openssl_verify`, `wp_set_auth_cookie`, DigitalOcean, Patchstack, 64.225.25.188, "opportunistic scanning rather than
+  a targeted campaign", Mirage2FA/9,426/LinX Coders, CVE-2026-21962/68820/73570, "Displaced from the lead by this
+  item", Umar Nurmagomedov, Song Yadong, Shanghai Oriental Sports Center, Carlos Ulberg and −500. Trap greps CLEAN ×0
+  across all four pages (Cody Salkilld, Abdul-Rakhman, Shamil Yakhyaev, "title challenger Beneil", Shanghai Indoor
+  Stadium, "mid-August 2025", "Pereira retains", "Featherweight vacant", "Nvidia's results", "markets closed higher
+  today").
