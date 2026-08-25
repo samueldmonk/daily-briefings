@@ -11747,3 +11747,116 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   across all four pages (Cody Salkilld, Abdul-Rakhman, Shamil Yakhyaev, "title challenger Beneil", Shanghai Indoor
   Stadium, "mid-August 2025", "Pereira retains", "Featherweight vacant", "Nvidia's results", "markets closed higher
   today").
+
+## Added 2026-08-25 (Tuesday ~4:45pm ET — AFTERNOON EDITION, ninth run of the day; archive stamp 2026-08-25-1643)
+- ✅ **THE CLOSE WAS OBTAINED. The 1600/1610 instruction ("the next run must lead with the verified close") is
+  DISCHARGED.** Run started **16:33 EDT**; pages archived **16:43 EDT**. Edition bucket **Afternoon**. New tags
+  site-wide: **WS 2 / CY 0 + a new lead / MMA 1 / index 0**; everything the 1610 run tagged New was demoted to
+  "Carried · 4:10 edition" by the whole-file regex `<span class="tag new">New[^<]*</span>` (gotcha #15 respected).
+- 🟢 **MARKETS — VERIFIED CLOSE FOR TUESDAY, AUGUST 25, 2026.** Source: **Reuters via Yahoo Finance**, "Wall Street
+  ends higher as tech rebounds before Nvidia results" (Saeed Azhar, Purvi Agarwal, Niket Nishant), **timestamped
+  Tue Aug 25 2026 4:00 p.m. EDT**, fetched IN FULL this run, page header reading **"U.S. markets closed"** —
+  https://finance.yahoo.com/markets/stocks/articles/wall-street-ends-higher-tech-200038341.html
+  **SETTLED QUOTE BOARD (this is what the site publishes): S&P 500 7,677.28 +24.42 +0.32% · Dow 53,577.40 +160.24
+  +0.30% (THIRD straight winning session) · Nasdaq Composite 26,151.30 +171.11 +0.66% · Russell 2000 3,010.02 +14.94
+  +0.50% · VIX 15.49 −0.36 −2.27% · Gold 4,723.10 +25.30 +0.54% · Bitcoin 78,851.16 −78.10 −0.10% · Crude Oil Oct 26
+  80.57 −4.44 −5.22% · DKS trending ticker 124.31 −55.02 (−30.68%)**.
+  ⚠ **REUTERS' OWN BODY COPY CARRIES A DIFFERENT, EXPLICITLY *PRELIMINARY* BOARD — S&P +23.76/0.31% to 7,676.62,
+  Nasdaq +165.28/0.64% to 26,145.47, Dow +155.75/0.29% to 53,572.91. BOTH SETS ARE PRINTED, NEITHER IS MERGED.**
+  Arithmetic gate passed on the settled set against Monday's verified closes: 7,677.28−7,652.86=+24.42;
+  53,577.40−53,417.16=+160.24; 26,151.30−25,980.19=+171.11. **These are now the reference closes for Aug 25.**
+- ⚠ **THE 3:05 P.M. BOARD (+0.41 / +0.68 / +0.22) WAS INTRADAY AND THE CLOSE PROVES IT.** Final was +0.32 / +0.66 /
+  +0.30. Any future run tempted to treat a late-afternoon synthesis as a close: don't.
+- ⚠ **ZACKS/YAHOO "Stock Market News for Aug 25, 2026" IS A RECAP OF **MONDAY**.** It prints 7,652.86 / 53,417.16 /
+  25,980.19 as "closing" levels for its headline date. **REJECTED as Tuesday's close** (and its point changes,
+  "40.15" for the Dow and "1.51" for the S&P, fail against its own levels — the standing correction on that recap
+  stands). A Proactive Investors piece giving Nasdaq 26,151.30 / Dow 53,577.40 was **last updated 12:20 p.m. ET** and
+  was therefore held as intraday until the 4:00 p.m. Reuters story independently confirmed the same figures.
+- MARKETS — cache counter: **Yahoo's LIVE-BLOG url cached for the EIGHTEENTH consecutive run** (5:00 a.m. Grace
+  O'Donnell body behind "U.S. markets open in 4h 26m"); **TheStreet's live blog still frozen at its 7:55 a.m. entry**
+  (published 10:43Z, modified 11:55Z) even though its headline has now rolled to "$INTU, $ZM to report after the
+  closing bell; Nasdaq jumps". **RULE LEARNED: the close came from a SEPARATE freshly-published wire story, not from
+  either live blog. When a live blog is cached, search for the wire recap by headline instead of re-fetching it.**
+- 🟢 **MARKETS NEW ×2 — AFTER-HOURS MOVERS SECTION PUBLISHED FOR THE FIRST TIME TODAY.**
+  (1) **Intuit** FQ4 **$4.03/sh on $4.35B** vs **$3.58 on $4.27B** expected; **FY2027 guidance $22.88–$23.12** vs
+  **$27.34** consensus, revenue **$23.3–$23.5B (9–10% growth)** vs **$23.7B** est., down from **14%**; "AI competition"
+  cited; **Mailchimp guided flat-to-negative**. ⚠ **TWO DIFFERENT AFTER-HOURS MOVES ARE ON THE WIRES — −7.3% and
+  −16%. BOTH PRINTED, NEITHER MERGED**; the page asserts only "fell sharply". (2) **Zoom**: enterprise revenue
+  **+7.8% y/y** (fastest in three years), **FY27 non-GAAP EPS guidance $6.08–$6.12**, **AI Companion paid users +184%
+  y/y**, stock **+21% YTD**. **No Zoom share reaction was stated by any source fetched this run — none published.**
+- MARKETS — rates/commodities updated to settled reads: **10-yr 4.625%** (fell >7bp; earlier 4.637 / 4.645 / 4.65 /
+  4.64 printed unblended vs Monday's 4.704%), **WTI Oct 26 $80.57 −5.22%** (one-week low), **VIX 15.49**, **Gold
+  $4,723.10 +0.54%** (the four contradictory intraday gold reads are retained for audit), **Bitcoin $78,851.16
+  −0.10%**. Chart of the Day stays **NYSE:DKS**; its note now carries the **−30.68% / $124.31 close**.
+- MARKETS — new radar item from the Reuters body: **US consumer confidence fell in August to a seven-month low**, and
+  **money markets price ONE 25bp INCREASE by year-end (LSEG)** — a hike, not a cut. Quinlan (Merrill/BofA Private
+  Bank) and Malek (Siebert) quotes carried verbatim.
+- ⚠ **NEW GOTCHA #21 — A VERBATIM WIRE QUOTE CAN CONTAIN A BANNED TRAP STRING.** Reuters' copy legitimately contains
+  "Nvidia's results" twice (both plainly forward-looking: "ahead of AI heavyweight Nvidia's results" and "Nvidia's
+  results on Wednesday will be the next test"). Rather than publish the trap string or silently alter a quote, **both
+  clauses were re-cut so the quotation marks close before the phrase** ("as technology stocks recovered from a
+  selloff" ahead of Nvidia's Wednesday report; Reuters framed Wednesday's Nvidia report as "the next test for the
+  earnings-driven rally"). **RULE: re-cut the quote boundary; never edit inside quotation marks, never publish the
+  trap.** Also: the trap grep must test the **HTML-entity** form (`Nvidia&rsquo;s results`), not just the ASCII
+  apostrophe — the first check passed while the page still contained the entity form.
+- 🔴 **CYBER — NEW TOP STORY: E4del and PINHOLE / FTP BANNERS AS DEAD DROP RESOLVERS.** THN (Ravie Lakshmanan),
+  **Aug 25**, fetched in full; research by **SOCRadar's Threat Research Unit**. **First time the FTP-banner dead-drop
+  variant has been seen in the wild**; observed since **early July 2026**; first flagged by **MalwareHunterTeam**.
+  Researchers' own caveat published: it is "a lot less stealthy than traditional web-based" DDRs. Chain: Spanish
+  voucher-claim lure → LNK → banner at **157.254.194[.]31:21** → banner at **167.148.41[.]164:21** → PowerShell →
+  ZIP → **E4del**, a **Node.js RAT in a digitally signed Electron app masquerading as Discord**; jitter tiers
+  **Active 200ms–2s (first 20s) / Semi-Active 2–5s (20–40s) / Inactive 5–9s (>40s)**. **PINHOLE**: DDRs on
+  **Pinterest + SurveyMonkey** behind **Cloudflare Workers**, banner **209.99.185[.]38:21**, `MSXML2.XMLHTTP` →
+  `%TEMP%u.cmd`, fake **Weston Computing Systems Ltd.** wrapper, **Halo's Gate**, **Early Bird APC injection**,
+  **six unpacking layers**, **119 KB x86-64 PE**, **14 commands**, browser-stealer module undetermined. Operator
+  **"FTP Stats Panel" at 69.48.228[.]126:5000** had logged **only 11 execution events** — "still in its infancy".
+  ⚠ **NO CVE, NO CVSS, NOT KEV-LISTED — stated explicitly on the page so the Patch Priority box is not misread.**
+- CYBER — **miniOrange SAML demoted from the lead into Breaches & incidents with every detail intact**
+  (CVE-2026-15981 9.8 / CVE-2026-61979 8.1, 17.0.6 / 17.0.5, `mo_saml_validate_signature`, `openssl_verify` −1
+  truthy, `wp_set_auth_cookie`, DigitalOcean/Patchstack, all six scanning IPs, "opportunistic scanning rather than a
+  targeted campaign", public PoC, **neither KEV-listed, neither carries a federal deadline**). Mirage2FA retained.
+- CYBER — **KEV BOARD UNCHANGED AT 13 ROWS FOR THE NINTH CONSECUTIVE EDITION: 9 past due, 1 DUE TODAY (WinSock
+  CVE-2026-68820, Aug 25), 3 ahead** (Oracle Aug 27 = 2 days, MLflow Sep 2 = 8, TrueConf Sep 3 = 9). **NOTHING ADDED
+  AUGUST 25** — dedicated search returned none; newest is **Aug 24 (Oracle CVE-2026-21962)**, preceded by **Aug 20
+  (two, TrueConf 72529/72530)** and **Aug 11 (three: Cisco 20349, WinSock 68820, Metabase 72898)**. Separately
+  re-read this run: THN on **CVE-2025-62593 (Ray, CVSS 9.4, added Aug 17, FCEB deadline Aug 20)**, which confirms
+  that row is genuinely past due rather than mis-dated. **BOD 26-04 risk-based** framing re-confirmed.
+- 🥊 **MMA NEW ×1 — THE SHANGHAI UNDERCARD.** MMA Junkie via Yahoo Sports (Matthew Wells, dated **Jul 17 2026**),
+  fetched in full: Song **23-9-1 MMA, 12-4-1 UFC**, **sixth** UFC main event, submitted Deiveson Figueiredo in May;
+  **Shanghai Oriental Sports Center**; **Paramount+**; **Sat Aug 29 2026**. Card depth **11 fights**, plus
+  **Yan Xiaonan vs Denise Gomes** (W-strawweight) and **Aoriqileng vs Kai Asakura** (bantamweight); Nurmagomedov
+  **20-1 (8-1 UFC)**, second UFC main event, off wins over **Mario Bautista** and **Deiveson Figueiredo**; event is
+  **UFC Fight Night 286**.
+  ⚠ **ODDS TRAP AVOIDED. That article's DraftKings line of −470 / +360 is the OPENING line (article dated Jul 17) and
+  is OLDER than the −500 / +380 this page already carries from RotoWire.** It is published **labelled as the opener**,
+  NOT as a fresh move, and the current line was NOT changed. Do not "update" to −470/+360 in a future run.
+- 🥊 **MMA — CHAMPIONS RE-CROSS-CHECKED, NINTH CONSECUTIVE EDITION TODAY.** ESPN's "Current and all-time UFC champions"
+  returned Aspinall (Jun 21 2025, 0 def), **Ulberg** (Apr 11 2026, 0), **Strickland** (May 9 2026, 0), **Makhachev**
+  (Nov 15 2025, 1), **Gaethje** (Jun 14 2026, 0) and **Volkanovski** (Apr 12 2025, 1) — matching the standing block on
+  all six. **No title fight since UFC 330 (Aug 15).** Board unchanged, **11/11 rows, 0 vacant**, asserted by CHAMPION
+  COLUMN ONLY (gotcha #14).
+- ⚠ **NEW GOTCHA #22 — "days PAST DUE" IS NOT ALWAYS PLURAL.** A KEV bucketing regex `\d+ days PAST DUE` reported
+  8 past-due rows instead of 9 because one row reads **"1 day PAST DUE"**. **RULE: use `\d+ days? PAST DUE`.**
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **24 days, 134 timestamped rows, 402 snapshot files**.
+  `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `outputs/validate_1650.py`, **0 failures, 199 checks**). 4 pages HTMLParser-balanced
+  0 unclosed / 0 stray; 5-tab nav scoped inside `<nav class="tabs">` with exactly 1 correctly-targeted `class="on"`
+  tab on each and the five hrefs in order; stamp/fresh IDs ×4; `.tldr` ×1 per briefing with the correct per-page
+  label and NONE on index; **index cards anchored on `class="bcard c-sec|c-mkt|c-mma"` and asserted to carry their
+  own page's tldr VERBATIM**; **8/8 TradingView JSON blocks parse**; tape retains SPXUSD+NSXUSD+DJI+USOIL+US10Y;
+  Chart of the Day asserted **NYSE:DKS** scoped to the mini-symbol-overview block; **13/13 KEV countdowns with the
+  9/1/3 split** parsed on `class="kevdue[^"]*"` using `days?`; champions 8 names present / 7 stale strings absent
+  **from the champion column only**, 12 `<tr>` incl header, 11 champion cells; **three index reconciliations
+  (level, point change AND percent) with `round(x,2)`**; New counts asserted **WS 2 / CY 0 / MMA 1 / index 0**; and
+  content guards for 7,677.28 / 26,151.30 / 53,577.40 / +24.42 / +160.24 / +171.11 / 3,010.02 / 15.49 / 4,723.10 /
+  78,851.16 / 80.57 / −5.22% / 30.68% / 124.31, the preliminary trio 7,676.62 / 26,145.47 / 53,572.91, 4.625%,
+  $4.03 / $4.35 / 22.88 / 27.34 / 23.7 / 6.08 / 184% / −7.3% / 16%, "consumer confidence fell in August",
+  "25-basis-point rate increase", Quinlan, Malek, "third straight winning session", the eighteenth cache counter,
+  the After-Hours section label, E4del, PINHOLE, SOCRadar, MalwareHunterTeam, Halo, Early Bird APC,
+  69.48.228[.]126:5000, "11 execution events", 119 KB, Weston Computing Systems, CVE-2026-15981/61979, 17.0.6/17.0.5,
+  `mo_saml_validate_signature`, `openssl_verify`, `wp_set_auth_cookie`, 64.225.25.188, Mirage2FA/9,426/LinX Coders,
+  CVE-2026-21962/68820/73570, BOD 26-04, "Nothing was added on August 25", Umar Nurmagomedov, Song Yadong,
+  Shanghai Oriental Sports Center, Yan Xiaonan, Denise Gomes, Aoriqileng, Kai Asakura, 23-9-1, 20-1, −500, −470,
+  Carlos Ulberg and UFC Fight Night 286. Trap greps CLEAN ×0 across all four pages (Cody Salkilld, Abdul-Rakhman,
+  Shamil Yakhyaev, "title challenger Beneil", Shanghai Indoor Stadium, "Pereira retains", "Featherweight vacant",
+  **"markets closed higher today"**, and **both apostrophe forms of "Nvidia's results"**).
