@@ -11464,3 +11464,101 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   the fifth champions check, "Alex Apodaca" and "Gary Belletto Jr." Trap greps CLEAN ×0 across all four pages (Cody Salkilld,
   Abdul-Rakhman, Shamil Yakhyaev, "title challenger Beneil", **Shanghai Indoor Stadium**, "mid-August 2025", "Pereira retains",
   "Featherweight vacant", "Nvidia's results").
+
+## Added 2026-08-25 (Tuesday ~3:08pm ET — AFTERNOON EDITION, sixth run of the day; archive stamp below)
+- CLOCK: TZ date = Tue Aug 25 15:05 EDT at run start. Edition bucket **Afternoon** (h=15). New tags site-wide:
+  **WS 1 / CY 4 + a new lead / MMA 2 / index 0**; everything the 1444 run tagged New was demoted to
+  "Carried · 2:44 edition" by the whole-file regex `<span class="tag new">New[^<]*</span>` (gotcha #15 respected).
+- 🟢 **MARKETS — NEW BOARD, 3:05 p.m. ET: S&P 500 +0.41%, Dow +0.22%, Nasdaq Composite +0.68%.** Sourced from the
+  Yahoo Finance Aug 25 live blog *via search synthesis* (the page itself is cached, see below) and corroborated by
+  TheStreet's Aug 25 page. Wider than the 2:35 board on all three; ranking unchanged for a sixth consecutive edition
+  (Nasdaq > S&P > Dow). Per freshness rule (d) no index LEVEL is published for this read — % only.
+- ⚠ **MARKETS — THE MOTLEY FOOL PAGE IS NOW STALE IN *BOTH* HALVES.** The 1444 entry recorded a split page (fresh quote
+  modules, cached ticker rail). Re-fetched in full at ~3:05 p.m. ET, **both halves returned byte-identical figures to the
+  2:35 read** — modules S&P +0.30%/+23.15, Nasdaq +0.61%/+157.86, Dow +0.18%/+93.77; rail +22.33/+105.40/+161.37 — and the
+  article's own `article:modified_time` is **unmoved at 16:27Z**. All four point changes still reconcile exactly to Monday's
+  closes (7,652.86 / 53,417.16 / 25,980.19), so they are published as the EARLIER reads, never as the 3:05 board. The
+  **DKS quote card ($127.27 / −29.03%) sits on that rail** and is likewise carried, not asserted as the 3:05 price.
+  **NOTE: `article:modified_time` is the cheapest staleness test for the Fool page — check it before trusting either half.**
+- MARKETS — cache counter advanced: **Yahoo's live-blog URL cached for the FIFTEENTH consecutive run** (returned the
+  5:00 a.m. Grace O'Donnell body behind "U.S. markets open in 4h 26m"; nothing taken from it). The *search synthesis* of the
+  same live blog IS fresh and is what the 3:05 board rests on — **the two are different artefacts and must not be conflated.**
+- 🟢 **MARKETS NEW ×1 — SEMICONDUCTORS LEAD: Marvell +5.54%, AMD +4.63%** (TheStreet, "semis are so back"), reversing
+  Monday's chip sell-off (Nasdaq −0.76%, Nvidia's **seventh** consecutive daily loss). Published with the standing caveat that
+  **Nvidia has NOT reported — it reports Wednesday after the close** (banned string "Nvidia's results" asserted absent ×0).
+  AMD's move separately attributed to an analyst upgrade.
+- ⚠ **MARKETS — SECTOR TRAP AGAIN.** A search synthesis this run offered **Materials +2.67% / Utilities −1.62%** and a
+  separate "info tech and health care led, consumer staples and energy lagged" board for Aug 25. **REJECTED — untimed and
+  mutually contradictory.** The only sourced Tuesday sector line remains the Fool's 11:36 a.m. read (utilities and financials
+  green, industrials and energy lagging), unchanged from the 1444 entry. Energy lagging is the one point of agreement.
+- 🔴 **CYBER — NEW TOP STORY: MIRAGE2FA.** The Hacker News, **Aug 25**: "Mirage2FA Surge Hits 4,500 US and EU Companies,
+  Abusing Microsoft 365 Login Flows." Commercial PhaaS, **adversary-in-the-middle reverse proxy**; victim completes password +
+  one-time 2FA code, kit relays all three to Microsoft over a **WebSocket** in real time and keeps the **authenticated session
+  cookie**. ANY.RUN telemetry: **9,426 unique targeted addresses, 4,532 potentially compromised (~48%), 94 countries, 63.7%
+  US**, operator **LinX Coders**, active **September 2024 – July 2026**. Delivery: **.htm / .xhtml / .svg** attachment or QR
+  link. Fortra corroborates the obfuscated-HTML-loader delivery. ⚠ **THE TWO SCALE FIGURES ARE NOT THE SAME COUNT** —
+  "roughly 4,500 companies" (THN headline) vs 4,532 potentially compromised *addresses* (ANY.RUN). Both printed, explicitly
+  not merged. Mirage2FA had been a stat-strip figure only since the 1444 run; this is its first editorial treatment.
+- CYBER — **Norway DDoS demoted from lead into Breaches & incidents with all detail intact** (03:38 CEST Monday, Digdir,
+  Frode Danielsen, no breach / no personal-data compromise, no attribution, NSM + Datatilsynet notified, third DDoS after June
+  and Aug 3, Altinn + Skatteetaten knock-ons). The BleepingComputer 11:52 a.m. ET timestamp is retained as *when it was
+  reported*, not as a claim of current wire status.
+- CYBER NEW ×3 cards + 1 CVE row — (1) **SynkLoader**: Teams phishing, **IT-help-desk pretext**, fake **"PowerShell Cleaner"
+  MSI hosted in Azure**, first compiled ~**July 28 2026**, drops `cleaner.ps1` + bundled Python + **fake Microsoft runtime
+  DLLs**; modules **PhishLocker** (fake Windows lock screen), persistence (random scheduled task at logon + **daily 10 a.m.**),
+  **TrafficRedirector** (reverse proxy), interactive PowerShell shell, **StreamMaster** (VNC). **Detection tell published:
+  Alt+Tab / Ctrl+Alt+Delete defeats the borderless full-screen lock screen.** No CVE/CVSS → neither published.
+  (2) **Truffle Security AWS keys**: **64,024 unique key pairs across 431,875 public findings**, Aug 2022–Aug 2026; of
+  **10,616 tested pairs, 88% still authenticate** as of **Aug 10 2026** → the **9,300+** headline; **817** company-linked,
+  **526 root keys**, **242 AdministratorAccess IAM users**; no key material published, owners being notified.
+  (3) **ToxicPanda 2.0** (Zimperium): abuses **VPN service permission** to block Google Play / Play Services, **167 remote
+  commands**, overlays for **349** banking/finance/crypto/e-wallet apps in **16 countries**, separate **140-app PIN-harvesting
+  module**, spoofs the Android lock screen, distributed from **AWS-hosted buckets**. No CVE/CVSS → neither published.
+  (4) **CVE-2026-19598 / CVSS 9.8**, Everest Forms for WordPress, **<3.0.9.5**, **100,000+ sites**; unauthenticated arbitrary
+  file upload in `EVF_Form_Fields_Upload` → web shell → site takeover; fix **3.0.9.5**. ⚠ **DO NOT MERGE WITH CVE-2026-3300**,
+  the separate earlier Everest Forms *Pro* RCE reported exploited in June — the page states the distinction explicitly.
+- CYBER — **KEV BOARD UNCHANGED AT 13 ROWS: 9 past due, 1 DUE TODAY (WinSock CVE-2026-68820, Aug 25), 3 ahead**
+  (Oracle Aug 27 = 2 days, MLflow Sep 2 = 8, TrueConf Sep 3 = 9) — identical to the 1118/1145/1334/1430/1444 runs, so **no
+  countdown moved**. Re-verified against CISA's own alert pages: newest addition is **Aug 24 (one CVE, Oracle)**, preceded by
+  **Aug 20 (two, TrueConf)**, **Aug 18 (four)** and **Aug 11 (three)**. **NOTHING ADDED AUGUST 25.** Oracle
+  **CVE-2026-21962 / CVSS 10.0 / added Aug 24 / due Aug 27** re-confirmed against THN's Aug 25 piece, which adds that Oracle
+  patched it in the **January 2026** CPU and that **CloudSEK** logged honeypot exploitation attempts from **Jan 22** (right
+  after a public PoC). The **BOD 26-04 risk-based** framing stands; the old "BOD 22-01 = three weeks" rule remains **superseded**.
+- 🥊 **MMA NEW ×2 — (1) THREE CALENDAR CONFIRMATIONS DATED AUGUST 25**: the **RTU5 semi-finals air Friday, Aug 28, 5 a.m. ET
+  on UFC Fight Pass**; **Bilal Hasan debuts at UFC Shanghai** (Sat Aug 29, **6 a.m. ET**, Paramount+ — which independently
+  corroborates the 6 a.m. main-card time over RotoWire's 5 a.m., though the conflict is still printed rather than erased);
+  and **Jean Silva vs Jose Miguel Delgado** confirmed again as the new Noche UFC main event, Sept 12 (already on the page, so
+  flagged as previously reported). (2) **Jamall Emmers def. Lerryan Douglas** — right hand down the middle, immediate stoppage,
+  closing the Sacramento prelims; first-round finishes from **Anthony Wint, Carli Judice, Reinier de Ridder** re-confirmed.
+- 🥊 **MMA — SHANGHAI LINE UNCHANGED.** RotoWire fight page re-fetched in full: DraftKings **−500 / +380**, no-vig **80.0% /
+  20.0%**, and **"No changes have been recorded yet"** on every line-movement panel. Same as the 1444 read, so **no New tag**.
+  RotoWire still lists the main event at **5:00 a.m. ET**; **6:00 a.m. is used** (UFC.com + FightNews + today's UFC Shanghai
+  announcement), countdown target unchanged at `2026-08-29T06:00:00-04:00`.
+- 🥊 **MMA — CHAMPIONS RE-CROSS-CHECKED, SIXTH CONSECUTIVE EDITION TODAY.** ESPN's "Current and all-time UFC champions"
+  returned Aspinall (Jun 21 2025), **Ulberg** (Apr 11 2026), **Strickland** (May 9 2026), **Makhachev** (Nov 15 2025),
+  **Gaethje** (Jun 14 2026) and **Volkanovski** (Apr 12 2025) — matching the standing block on all six. **No title fight since
+  UFC 330 (Aug 15)**; DWCS is not a title card. Board unchanged, **11/11 rows, 0 vacant**, asserted by CHAMPION COLUMN ONLY
+  (gotcha #14). The Makhachev **17-vs-18 streak discrepancy** from the 1430 entry remains unresolved and is still **not asserted**.
+- ⚠ **NEW GOTCHA #16 — UNBOUNDED SLICE EDITS CAN DUPLICATE THE WHOLE DOCUMENT.** An edit script located a note by text, then
+  took `s_start = c.rfind('<li>', 0, hit)` and `s_end = c.find('</li>', hit) + 5`. The note was inside a `<div class="note">`,
+  **not** an `<li>`, so `find` returned **−1** and `s_end` became **4** — making `c[:s_start] + new + c[s_end:]` **duplicate
+  ~45KB of the document tail**, producing two `<footer>` blocks, two Sources lists and **25 KEV countdowns instead of 13**.
+  The HTMLParser balance check and the KEV-count check both caught it. **RULE: after computing a slice, assert
+  `0 < start < hit < end` before splicing, and rebuild from the pristine repo copy rather than patching a corrupted file.**
+- ⚠ **VALIDATOR GOTCHA #17** — a "days left" filter counted the **"DUE TODAY — 0 days left"** row as *ahead of schedule*.
+  Exclude the TODAY row explicitly when bucketing KEV countdowns.
+- VALIDATION (programmatic, `outputs/validate_1508.py`, **0 failures, 176 checks**). 4 pages HTMLParser-balanced 0 unclosed /
+  0 stray; 5-tab nav scoped inside `<nav class="tabs">` with exactly 1 correctly-targeted active tab on each; stamp/fresh IDs
+  ×4 on all 4; `.tldr` ×1 per briefing with the correct per-page label and NONE on index; **index cards anchored on
+  `class="bcard c-sec|c-mkt|c-mma"` and asserted to carry their own page's tldr VERBATIM**; **8/8 TradingView JSON blocks
+  parse**; tape retains SPXUSD+NSXUSD+DJI+USOIL+US10Y; Chart of the Day asserted **NYSE:DKS** scoped to the
+  mini-symbol-overview block; after-hours asserted ABSENT; **13/13 KEV countdowns with the 9/1/3 split** parsed on
+  `class="kevdue"`; champions 8 names present / 6 stale strings absent **from the champion column only**, 12 `<tr>` incl
+  header, 11 champion cells; **seven index reconciliations with `round(x,2)`**; the **seven derived index levels asserted
+  ABSENT** from the WS body; New counts asserted **WS 1 / CY 4 / MMA 2 / index 0**; and content guards for the 3:05 read,
+  0.41/0.68/0.22, the fifteenth cache counter, the byte-identical disclosure, Marvell 5.54%, the Nvidia-not-yet-reported
+  caveat, Mirage2FA/9,426/LinX Coders, SynkLoader, Truffle Security, ToxicPanda, CVE-2026-19598, CVE-2026-3300,
+  "No fresh CISA KEV addition surfaced this run", BOD 26-04, Bilal Hasan, RTU5, Jamall Emmers, Lerryan Douglas, the sixth
+  champions check, −500, "Alex Apodaca" and "Oriental Sports Center". Trap greps CLEAN ×0 across all four pages
+  (Cody Salkilld, Abdul-Rakhman, Shamil Yakhyaev, "title challenger Beneil", **Shanghai Indoor Stadium**, "mid-August 2025",
+  "Pereira retains", "Featherweight vacant", "Nvidia's results").
