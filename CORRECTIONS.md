@@ -11103,3 +11103,140 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   **WS 4 / CY 5 / MMA 1 / index 0**. Trap greps CLEAN ×0 across all four pages (Cody Salkilld, Abdul-Rakhman,
   Shamil Yakhyaev, "title challenger Beneil", **Shanghai Indoor Stadium**, "mid-August 2025", "Pereira retains",
   "Featherweight vacant").
+
+## Added 2026-08-25 (Tuesday ~1:45pm ET — MIDDAY EDITION, third run of the day, ~2h after the 1145 snapshot; archive stamp 2026-08-25-1334)
+- CLOCK: TZ date = Tue Aug 25 13:02 EDT at run start. Edition bucket **Midday** (h=13). New tags site-wide:
+  **WS ×3**, **CY ×5**, **MMA ×2**. Everything the 1145 run tagged New was demoted, **including the 30-year and
+  2-year rate rows** — those are table rows, not cards, and were missed on the first pass of the demotion sweep.
+  ⚠ **NEW GOTCHA #13 — DEMOTE New TAGS IN TABLE ROWS, NOT JUST CARDS.** The New-tag count check caught WS at 5
+  when 3 were intended; the two extras were `<td><b>5.196%</b> <span class="tag new">New</span></td>` and the
+  2-year equivalent. **Sweep `<span class="tag new">` across the whole file, never just the `.cards` blocks.**
+- 🟢 **MARKETS — A GENUINELY NEW PRIMARY SOURCE: CHARLES SCHWAB'S MARKET UPDATE.** `schwab.com/learn/story/stock-market-update-open`
+  (Joe Mazzola), **"Published as of: August 25, 2026, 9:08 a.m. ET"**, fetched in full. Its table prints Monday's closes
+  with the point changes **CORRECT**: S&P 500 **7,652.86 −21.51 −0.28%**, Dow **53,417.16 +140.15 +0.26%**, Nasdaq
+  Composite **25,980.19 −200.26 −0.76%**. This **independently confirms the arithmetic correction this desk made
+  against the Zacks recap** (which printed "40.15" and "1.51"). Same board: 10-yr **4.66% −0.04**, **DXY 99.01 +0.01%**,
+  VIX **15.85**, **WTI $82.45 −$2.56 −3.01%**, bitcoin **$79,005 +$155 +0.20%**.
+  Movers new to the page: **United Airlines ~+3% premarket** on new Europe/Japan routes; **Visa +3% Monday to an
+  all-time high, fifth straight up day**; DKS "about 17%" lower premarket.
+  Diesel block (all Schwab, IEA cited for the export figure): diesel **near all-time highs, +~125% YTD** vs crude
+  **+~48% and ~30% below March highs**; **record diesel–WTI spread last week**; July diesel exports from Russia/ME/Asia
+  down by the equivalent of **~20% of global seaborne trade** YoY; US diesel inventories **lowest for the time of year
+  in three decades**, gasoline **lowest since 2012**, US refineries **above 95% capacity**.
+  Debasement block: **gold +7% and bitcoin +22% since the Treasury announcement**; gold futures **+~20% off July lows,
+  +~7% over four sessions**, at **$4,651.80** vs a 200-day MA of **$4,524.10**; **Liz Ann Sonders** quoted.
+  Calendar: **Nvidia AND CrowdStrike report Wednesday Aug 26** alongside July PCE, Q2 GDP 2nd estimate, July personal
+  income/spending and July durable orders; **Palo Alto Networks and Dell report Tuesday, Sep 1**.
+- ⚠ **MARKETS — THE ONLY CURRENT INDEX READ THIS RUN IS UNTIMED, AND IS PUBLISHED AS SUCH.** Two independent search
+  syntheses returned the same figures from Yahoo's Tuesday live blog: **S&P 500 +0.41%, Dow +0.22%, Nasdaq +0.68%**
+  (with **KURA +10.5%** and **DKS −17%**). No timestamp accompanies them. **RULE APPLIED: publish the percentages as
+  "the latest available read", label them untimed, and derive NO levels from them.** A first draft wrote the implied
+  levels (~7,684 / ~53,535 / ~26,157) into the lead and then said the page does not publish levels — a self-contradiction
+  the validator caught. **Those three strings are now asserted ABSENT from the WS page.**
+- ⚠ **MARKETS — 7,673.04 "+0.42%" REJECTED FOR THE SECOND CONSECUTIVE EDITION.** 7,673.04 − 7,652.86 = 20.18 = **+0.26%**,
+  not +0.42%. Body asserted clean of the string, footer asserted to contain it (gotcha #11).
+- ⚠ **MARKETS — YAHOO CACHE, TWELFTH CONSECUTIVE TIME.** Article page again "close in 5h 19m" → the same 10:41 bar,
+  byte-identical to the 1118 and 1145 runs; live-blog page again "open in 4h 26m" / 5:00 a.m. Grace O'Donnell body.
+  TheStreet's Aug 25 live blog is **frozen at its 7:55 a.m. entry** (modified 11:55Z). CNBC's Aug 25 live-updates URL
+  returned an **empty body**. A client-rendered live-markets page (vittarthi.com/markets/us) returned **no figures at all**.
+  **The 10:41 strip therefore remains the newest board this desk can place precisely in the session.**
+  Corrected on the page this run: the "ten consecutive runs" cache counter → **twelve**, and the stale quoted live-blog
+  headline was replaced with both the current search-result headline and the cached article title, disclosed as a pair.
+- Ticker tape: **INTC → NASDAQ:UAL** (indices + USOIL + US10Y retained). Chart of the Day stays **NYSE:DKS**.
+  After-Hours section asserted **ABSENT** (session in progress).
+- 🔴 **CYBER NEW TOP THREAD — miniOrange SAML SSO FOR WORDPRESS IS UNDER ACTIVE EXPLOITATION.**
+  **CVE-2026-61979** (unauth privilege escalation via **signature-algorithm confusion**: the plugin honours the algorithm
+  named in the incoming SAML response, attacker selects **HMAC-SHA1**, plugin treats the IdP's public RSA key as a shared
+  secret) chained with **CVE-2026-15981** (`mo_saml_validate_signature()` loose-checks the tri-state integer from
+  `openssl_verify()`, so the **−1 error value reads as success** and malformed signatures validate) → forged SAML response
+  → **administrator session cookie**. Vendor **Xecurify**; **seven** plugin editions, free version **10,000 downloads**,
+  **30,000 customers** on the other six. Disclosed and fixed in **July**, but **the vendor advisory covered ONLY the free
+  edition**, so the six paid editions got no alert and WordPress shows them no update warning. Patched builds: **5.4.5 /
+  13.0.4 / 17.06 / 20.2.8 / 26.0.3 / 32.0.8 / 35.0.7**. **DigitalOcean blocked an anomalous admin session on Aug 16**;
+  investigation found the chain used against **Standard edition 16.1.9**. Patchstack sees scanning from **six IPs across
+  Europe, Africa and the US**; a **public PoC against the free edition** exists.
+  ⚠ **CVSS NOT ASSERTED.** BleepingComputer (Bill Toulas, **Aug 24 3:26 PM ET**, fetched in full) and Patchstack state
+  **no CVSS**; a search summary gives **9.8** (15981) and **8.1** (61979). Published as **"as reported"** in the CVE table
+  with the caveat printed. ⚠ **CVE-ID TRAP:** third-party databases surfaced **CVE-2026-19842** (SentinelOne) and
+  **CVE-2026-57807** (a personal blog) against the same plugin. **Only the pair named in the exploitation reporting is
+  published.** Not KEV, no federal deadline.
+- CYBER other new items: **Medusa ransomware — FBI/CISA/HHS #StopRansomware advisory UPDATED Aug 18, 2026** with FBI data
+  as of **April 2026**: **500+ victims**, up from **300+** in the March 2025 version; sectors medical/education/legal/
+  insurance/technology/manufacturing plus healthcare, defence, government services, IT, financial services; double
+  extortion with a **48-hour** response window before direct contact and leak-site posting. **Nutex Health** — hospital
+  operator, **28 facilities across 12 states** (Bayou City ER & Hospital TX, Green Bay ER & Hospital WI), disclosed in an
+  **SEC filing** that data was **accessed and exfiltrated**; **no scope, no attribution, no ransomware claim — none
+  estimated**. **Mirage2FA** — phishing-as-a-service kit active **2024–2026** against **Microsoft 365**, bypasses 2FA;
+  **ANY.RUN: 48% of targeted addresses potentially compromised**; delivery via a cluster of **24 npm packages** redirecting
+  to ClickFix-style fake CAPTCHA pages.
+- CYBER — **KEV board UNCHANGED at 13 rows: 9 past due, 1 due today (WinSock CVE-2026-68820, Aug 25), 3 ahead**
+  (Oracle Aug 27 = 2 days, MLflow Sep 2 = 8, TrueConf Sep 3 = 9). **Same date as the 1118 and 1145 runs, so no countdown
+  moved.** ⚠ **DATE TRAP CAUGHT: a WebSearch synthesis stated the two TrueConf CVEs (CVE-2026-72529 / -72530) were added
+  "around August 25."** The alert URL in the same result set is `/alerts/2026/08/20/`. **Aug 20 published; Aug 25 rejected.**
+  Dedicated check for KEV additions dated **Aug 25: none.** Oracle remains the newest addition.
+- CYBER corroboration added: The Hacker News' Aug 19 KEV piece re-fetched in full — confirms **CVE-2026-65400 9.8 /
+  CVE-2026-55040 9.1 / CVE-2026-59310 9.8 / CVE-2026-33824 9.8** and the **Aug 21** deadline for all four, and adds
+  vCenter campaign scale: **361 unique victim IPs across 47 countries** — Germany 55, US 41, Turkey 38, Iran 26, France 25.
+- 🥊 **MMA — THE APODACA SPELLING IS NOW RESOLVED THE OTHER WAY. THIS SUPERSEDES THE 1118 ENTRY.** The 1118 run published
+  the UFC.com Week 3 **matchup-heading** form "**Alexa Apodaca**" and instructed not to change it silently. This run, EVERY
+  source fetched renders it "**Alex Apodaca**": UFC.com's own fight-preview video page (`ufc.com/video/159475`, titled
+  "Bella Mir vs Alex Apodaca Preview"), Yahoo Sports, MMA Mania, Sherdog and Cageside Press. **"Alex Apodaca" is now the
+  published form**, with the UFC.com heading variant disclosed on the page rather than erased. **Do not revert to "Alexa"
+  without a fresh UFC.com heading fetch.**
+- ⚠ **MMA — NEW OPEN SPELLING CONFLICT, NOT RESOLVED: "Gary Balletto" (UFC.com Week 3 preview) vs "Gary Belletto Jr."
+  (this run's weigh-in listings).** Neither asserted; both printed. Do not silently pick one.
+- MMA — **DWCS S10 W3 IS OFFICIAL ON THE SCALE** (Meta APEX, tonight, five bouts): Mir **136** vs Apodaca **135.5**;
+  Piazzon **238** vs Uriel **241.5**; Balletto/Belletto **169** vs Clancy **170**; Humphrey **169** vs Miranda **170**;
+  Petruzzella **185.5** vs Galanti **185**. Records **Mir 4-0, Apodaca 3-1**. Card re-tagged **New** this edition on the
+  strength of the weigh-in confirmation.
+- 🔴 **MMA NEW — THE FULL 13-BOUT UFC SHANGHAI CARD, PUBLISHED THIS MORNING.** FightNews (Gabriel F. Cordero via Boxing Bob
+  Newman), `article:published_time 2026-08-25T12:51:57+00:00` = **8:51 a.m. ET today**. Main billboard beneath the
+  headliner: **Yan Xiaonan vs Denise Gomes; Aoriqileng vs Kai Asakura; Alex Pérez vs Sumudaerji; Liu Ce vs Levi Rodrigues Jr.;
+  Bilal Hasan vs Nilson Rojas.** Prelims: **Namsrai Batbayar vs André Lima; Rei Tsuruya vs Kevin Borjas; Jack Jenkins vs
+  Sean Woodson; Xiao Long vs Francesco Nuzzi; Rio Lawrence vs Hector James; Xiong Jingnan vs Julia Polastri; Ding Meng vs
+  Cameron Nelson.** 1 + 5 + 7 = **13**, which **settles the 11-vs-13 bout-count question** the 1145 run left open.
+  ⚠ **CARD CONFLICT RECORDED, NOT RESOLVED: FightNews puts Liu Ce opposite Levi Rodrigues Jr.; the UFC.com announcement
+  this page carried previously had Liu Ce opposite Junior Tafa.** Both printed as reported.
+  ⚠ **VENUE — THE TRAP PHRASE ALMOST FIRED FROM A LEGITIMATE SOURCE.** FightNews writes "Shanghai Oriental Sports Center
+  ( Indoor Stadium seating 18,000)". That is the Oriental Sports Center's indoor arena, **NOT** the separate venue named in
+  the standing trap. Published as "**the Oriental Sports Center's 18,000-seat indoor arena**"; the banned string is asserted
+  ABSENT ×0 across all four pages.
+- MMA business NEW: **the UFC has scheduled 44 events across four continents in 2026, following its seven-year agreement
+  with Paramount+** (FightNews, Aug 25). Shanghai is the promotion's **second consecutive year and third visit overall**
+  to the city.
+- MMA — **UFC 331 detail expanded and re-confirmed**: **Sep 19, Crypto.com Arena, Los Angeles**; **Joshua Van vs Alexandre
+  Pantoja 2** for the flyweight title; **Arman Tsarukyan vs Mauricio Ruffy** co-main; **13 fights confirmed**. Van took the
+  belt at **UFC 323 (Dec 2025) by TKO 26 seconds into round one** after Pantoja sustained an arm injury, then defended with
+  a **fifth-round TKO of Tatsuro Taira at UFC 328 in May**. Pantoja, **36**, would be only the **third flyweight to reclaim
+  the title**, after **Brandon Moreno** and **Deiveson Figueiredo**.
+- MMA — **CHAMPIONS RE-CROSS-CHECKED, THIRD CONSECUTIVE EDITION TODAY.** An ESPN-sourced search result naming Aspinall
+  (Jun 21 2025), **Ulberg** (Apr 11 2026, KO1 Procházka UFC 327), **Strickland** (May 9 2026, SD Chimaev UFC 328),
+  **Makhachev** (Nov 15 2025, UD Della Maddalena UFC 322), **Gaethje** (Jun 14 2026, TKO4 Topuria Freedom 250) and
+  **Volkanovski** (Apr 12 2025, UD Lopes UFC 314) matches the standing block verbatim on all six. **No title fight has
+  occurred since UFC 330 (Aug 15)**; DWCS is not a title card. Board unchanged, **11/11 rows, 0 vacant**, asserted by
+  CHAMPION COLUMN ONLY.
+- MMA Shanghai odds unchanged and still spread across four books: **UFC.com −450/+350, DraftKings −470/+360, a reported
+  open of −500/+385, BetOnline's open −700/+500.** No single number presented as the price. Song's ranking stays WITHDRAWN.
+  Records re-confirmed: **Nurmagomedov 20-1 MMA / 8-1 UFC**, wins over Bautista and Figueiredo, lost his title shot to
+  Dvalishvili at UFC 311; **Song 23-9-1 / 12-4-1**, sixth UFC main event, submitted Figueiredo in May. Card is **UFC Fight
+  Night 286**; main card **10:00 UTC = 6:00 AM ET**; countdown target unchanged at **2026-08-29T06:00:00-04:00**.
+- ⚠ **INFRA — THE FULL CLONE TIMES OUT. USE `--depth 1 --single-branch --branch main`.** A plain `git clone` of this repo
+  (~23 MB, 384 archive snapshots) exceeded the 120-second bash timeout twice this run, and a backgrounded `nohup` clone was
+  killed when the bash call returned (leaving a `.git`-only directory). **The shallow clone completed in well under a
+  minute.** Do this from the first attempt.
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **24 days, 128 timestamped rows, 384 snapshot files**.
+  `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `outputs/validate_1345.py`, **0 failures, 167 checks**). 4 pages HTMLParser-balanced 0 unclosed
+  / 0 stray; 5-tab nav scoped inside `<nav class="tabs">` with exactly 1 correctly-targeted active tab on each; stamp/fresh
+  IDs ×4 on all 4; `.tldr` ×1 per briefing with correct per-page label and NONE on index; **index cards anchored on
+  `class="bcard c-sec|c-mkt|c-mma"` (gotcha #10) and asserted to carry their own page's tldr VERBATIM** — note the index
+  cards use a bare `<p>`, **not** `<p class="sum">`, which broke the first swap attempt; **8/8 TradingView JSON blocks parse**
+  (tape + 3 single-quote + mini + heatmap + events + one more — assert **8**, not 6); ticker retains SPXUSD+NSXUSD+DJI+USOIL
+  +US10Y and UAL-not-INTC; Chart of the Day asserted **NYSE:DKS** scoped to the mini-symbol-overview block only (gotcha #4);
+  after-hours asserted ABSENT; **13/13 KEV countdowns with the 9/1/3 split**, parsed on `class="kevdue"` in UPPERCASE
+  (gotcha #12); champions 8 names present, 5 stale names absent **from the champion column only**, 12 `<tr>` incl header,
+  and the vacancy check tests **the champion column, not the whole table** — "Won the vacant belt" in Ulberg's notes cell
+  produced a phantom failure on the first pass (**NEW GOTCHA #14**); index reconciliations asserted in Python with
+  `round(x,2)`; the three derived-but-unpublished levels asserted absent; New counts asserted **WS 3 / CY 5 / MMA 2 /
+  index 0**. Trap greps CLEAN ×0 across all four pages (Cody Salkilld, Abdul-Rakhman, Shamil Yakhyaev, "title challenger
+  Beneil", **Shanghai Indoor Stadium**, "mid-August 2025", "Pereira retains", "Featherweight vacant").
