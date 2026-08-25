@@ -11007,3 +11007,99 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   cited-as-rejected look identical to a substring match.
   ⚠ **ARITHMETIC GOTCHA — `7652.86 + 11.91 == 7664.77` IS FALSE IN FLOAT.** Wrap reconciliation assertions in
   `round(x, 2)`. Cost one phantom failure.
+
+## Added 2026-08-25 (Tuesday ~11:45am ET — MIDDAY EDITION, second run of the day, ~27 min after the 1118 snapshot; archive stamp 2026-08-25-1145)
+- CLOCK: TZ date = Tue Aug 25 11:35 EDT at run start. Edition bucket **Midday** (h=11). New tags site-wide:
+  **WS ×4 (2 cards + 2 rate rows)**, **CY ×5 (3 cards + 2 CVE rows)**, **MMA ×1** — everything the 1118 run tagged New
+  was demoted to "Carried · 11:18 edition" this run.
+- 🟢 **MARKETS — A SECOND TIMED BOARD FOUND, AND IT RECONCILES EXACTLY.** The Sunday Guardian / NewsX
+  "US Stock Market Today" page (Amreen Ahmad) carries `meta-article:published_time 2026-08-25T14:14:06+00:00` and
+  "Last Updated 19:44:06 IST" — both = **10:14 a.m. ET**. Board: S&P 500 **7,680.82 +27.96 +0.37%**, Nasdaq
+  Composite **26,195.17 +214.98 +0.83%**, Dow **53,456.81 +39.65 +0.07%**. All three back out EXACTLY to Monday's
+  closes (7,652.86 / 25,980.19 / 53,417.16). ⚠ **It is EARLIER than the 10:41 Yahoo strip, not later** — published
+  as such, and the two together are used to say the tape **pared its opening gain during the 10 o'clock hour**.
+  The 10:41 strip (7,664.77 +0.16% / 53,450.68 +0.06% / 26,099.52 +0.46%) remains the CURRENT timed read.
+  A later untimed Yahoo live-blog summary (Dow ~+0.1%, S&P ~+0.2%, Nasdaq ~+0.4%) corroborates the SMALLER
+  10:41 magnitudes, not the 10:14 ones — which is why the 10:14 board's equity prices are labelled
+  "morning high-water mark" wherever they appear.
+- ✅ **MARKETS — THE 2-YEAR GAP FLAGGED AT 1118 IS NOW CLOSED.** Same 10:14 board: **2-yr 4.208% (−0.028)**,
+  **30-yr 5.196% (−0.035)** — the FIRST Tuesday long-bond read this desk has sourced — 10-yr **4.664% (−0.040)**,
+  1-yr 4.007%, 6-mo 3.918%, 3-mo 3.798%, 1-mo 3.698%. Parallel decline, not a curve twist. **DXY 98.96 −0.04%.**
+  Oil later read: **WTI $82.30 −3.19%, Brent $89.26 −3.16%** (vs TheStreet's 7:00 a.m. 82.34/89.41).
+  ⚠ **GOLD NOW HAS THREE NON-RECONCILING READS** — 4,679.90 −0.38% (Yahoo 10:41), $4,695 −0.60% (TheStreet 7:16 a.m.),
+  **$4,607.44 −0.96% (10:14 board)**. All three shown, NONE blended; the only asserted claim is "gold is lower."
+- MARKETS NEW ×4 — (1) **named chip board**: AMD **+3.93% $474.60** (largest gainer), Nvidia **+2.72% $214.15**
+  (mkt cap **>$5.2T**), Intel **+2.61% $89.54**, Micron **+2.25% $930.45**, Oracle **+2.16% $145.52**;
+  (2) **Tuesday's decliners**: Target **−4.83% $161.68**, Nike **−3.31% $39.40**, Charter **−2.73% $146.20**,
+  Deere **−2.58% $631.90**, Intuit **−2.25% $361.57** (Nike + Chevron named as the Dow drags);
+  (3) the 30-yr row; (4) the 2-yr row. **Canada has ANNOUNCED RETALIATORY TARIFFS on US goods** (Yahoo live-blog
+  headline changed to "…hold steady as US-Canada trade tensions heat up") — scope/rate/start date NOT stated
+  anywhere, so none published. Nvidia bar newly sourced: **~$92bn revenue / ~$2.09 EPS**, report **Aug 26 after
+  the close**. JPMorgan overweight on Palo Alto Networks, PT raised to **$384** (~9.4% above Monday's close).
+  Ticker tape: **KURA → INTC** (indices + USOIL + US10Y retained). Chart of the Day stays **NYSE:DKS**.
+- ⚠ **MARKETS — REJECTED, UNTIMED SCREEN.** stockmarketwatch.com/live/stock-market-today: article body stamped
+  **6:07 a.m. UTC** (2:07 a.m. ET) but its Actives/Gainers/Losers tables are internally consistent and clearly
+  later (NVDA +0.8% $210.11, INTC +3.2% $90.05, MU +2.0% $928.87, SNDK +3.1%, **DKS $158.00 −12%**). Because the
+  tables carry NO timestamp of their own they cannot be placed in the session — **nothing published**, figures
+  disclosed in the WS sources footer only. (Gotcha #11 applied: body asserted CLEAN of "210.11", full page asserted
+  to CONTAIN it.)
+- ⚠ **MARKETS — YAHOO CACHE, ELEVENTH CONSECUTIVE TIME.** The live-blog URL again returned "U.S. markets open in
+  4h 26m" / 5:00 a.m. Grace O'Donnell body; the article page again returned the **10:41** bar ("close in 5h 19m"),
+  byte-identical to the 1118 run. **Standing rule holds: judge the strip by its own countdown.** CNBC's Aug 25
+  live-updates URL returned an **EMPTY body** to web_fetch this run.
+- 🔴 **CYBER NEW ×5 — A SECOND MASS-EXPLOITATION THREAD OPENS ALONGSIDE THE ORACLE KEV STORY.** From **Check Point
+  Research's "24th August — Threat Intelligence Report"** (fetched this run): **Cl0p** extortion campaign exploiting
+  **CVE-2026-12569 in PTC Windchill and FlexPLM**, **40+ organisations named**, custom implant that **decrypts stored
+  credentials and reaches databases directly** for bulk theft (no CVSS stated anywhere → none published);
+  a **China-nexus APT** exploiting a **newly patched VMware vCenter flaw** to deploy **Babuk-derived ransomware**
+  (CVE id NOT stated → not published — do NOT conflate with the KEV vCenter entry CVE-2026-59310);
+  **SAP Commerce Cloud CVE-2026-58231 exploited within 72 hours of disclosure**;
+  **Citrix NetScaler ADC/Gateway CVE-2026-19489 + CVE-2026-19490** patched, critical auth bypass on
+  **SAML-configured** appliances (**no CVSS stated → none published**);
+  **Keycloak / Red Hat CVE-2026-18963, CVSS 9.1**, unauthenticated account takeover by **forcing a password reset**.
+  None of the five is KEV-listed and none carries a federal deadline — stated explicitly on the page.
+- CYBER breaches added: **Trezor — nearly 14,000 customers** via the **ShipMonk** logistics compromise (names,
+  shipping addresses, emails, phones; US/UK/Sweden/Colombia/Brazil/Italy/Portugal; orders **May 10 – Aug 8, 2026**);
+  **Framework** notified "all" customers (names, emails, phones, physical addresses); **Wesco** investigating an
+  incident (no scope published); **DHS confirmed a breach of the Homeland Security Information Network** used to
+  coordinate **2026 FIFA World Cup** security. Stat strip gained **ITRC: 1,803 US data compromises in H1 2026 vs
+  1,732** a year earlier (CNBC, Aug 14) and the **40+** Cl0p victim count.
+- CYBER — **KEV board UNCHANGED at 13 rows: 9 past due, 1 due today (WinSock CVE-2026-68820, Aug 25), 3 ahead**
+  (Oracle Aug 27 = 2 days left, MLflow Sep 2 = 8, TrueConf Sep 3 = 9). Same date as the 1118 run, so no countdown
+  moved. Oracle **CVE-2026-21962 / CVSS 10.0 / added Aug 24 / due Aug 27** re-confirmed this run against CISA's
+  own alert URL path (`/alerts/2026/08/24/`), The Register, SecurityWeek, Forbes ("72 Hours") and Security Affairs.
+  Oracle's New tags DEMOTED in both the CVE table and the KEV list (it was in the 1118 edition).
+  ⚠ **VALIDATOR GOTCHA #12 — KEV COUNTDOWNS ARE NOT IN PARENTHESES.** They are
+  `<span class="kevdue …">N days left | DUE TODAY — 0 days left | N days PAST DUE</span>`. A `\(([^()]*days?[^()]*)\)`
+  regex returns **ZERO** matches and looks like a catastrophic content loss. **Parse on `class="kevdue"`, and match
+  PAST DUE / DUE TODAY in UPPERCASE** — the page uses caps, so `.lower()`-free comparisons are required.
+- 🥊 **MMA — CHAMPIONS RE-CROSS-CHECKED THIS RUN.** ESPN's champions page returned an **EMPTY body** to web_fetch
+  (client-rendered, as before), so it was corroborated via an ESPN-sourced search result naming Aspinall (Jun 21
+  2025), **Ulberg** (Apr 11 2026), **Strickland** (May 9 2026), Makhachev (Nov 15 2025), **Gaethje** (Jun 14 2026),
+  **Volkanovski** (Apr 12 2025), **Yan** (Dec 6 2025) and **Van** — all eight match the standing block verbatim.
+  **No title fight has occurred since UFC 330 (Aug 15)**; DWCS is not a title card. Board unchanged, 0 vacant.
+- MMA NEW ×1 — **UFC Shanghai line now spans FOUR books and roughly 250 cents.** A reported **opening line of
+  Umar −500 / Song +385** joins UFC.com −450/+350, DraftKings −470/+360 and BetOnline's −700/+500 open.
+  **No single number is presented as "the price"** — only the shared claim that Umar is a heavy favourite.
+  Card listed at **13 bouts**. Song's ranking stays WITHDRAWN (No. 5 vs No. 6 conflict unresolved).
+  ⚠ **"SHANGHAI INDOOR STADIUM" TRAP FIRED AGAIN THIS RUN** — a WebSearch synthesis named it as the Aug 29 UFC
+  venue. **REJECTED**; UFC.com's **Oriental Sports Center, Pudong District** stands. (Shanghai Indoor Stadium is the
+  **Road to UFC Aug 28** venue, a different event.) Trap grep asserted ABSENT, ×0.
+- MMA re-verified, not newly tagged: **UFC Sacramento (Aug 22) main event Gregory Rodrigues def. Anthony Hernandez
+  by unanimous decision (48-47, 49-46, 48-47)** at Golden 1 Center; both men took **$100,000**. ⚠ The label conflict
+  stands — Yahoo says **Fight of the Night** for that pair, UFC.com's own bonus page heads it **Performance of the
+  Night**. The page still names winners + amount WITHOUT asserting which label goes where. Do not "fix" it.
+  **DWCS S10 W3 tonight** (Meta APEX, 5 bouts, Bella Mir vs "Alexa Apodaca" heading form) demoted from New.
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **24 days, 127 timestamped rows, 381 snapshot files**.
+  `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `outputs/validate_1145.py`, **0 failures, 176 checks**). 4 pages HTMLParser-balanced
+  0 unclosed / 0 stray; 5-tab nav scoped inside `<nav class="tabs">` with exactly 1 active tab on each; stamp/fresh
+  IDs on all 4; `.tldr` ×1 on each briefing with correct per-page label and NONE on index; **index cards anchored on
+  `class="bcard c-sec|c-mkt|c-mma"` (gotcha #10) and asserted to carry their own page's tldr VERBATIM**;
+  **8/8 TradingView JSON blocks parse**; ticker retains SPXUSD+NSXUSD+DJI+USOIL+US10Y and INTC-not-KURA;
+  Chart of the Day asserted **NYSE:DKS** scoped to the mini-symbol-overview block only (gotcha #4); after-hours
+  asserted ABSENT; **13/13 KEV countdowns with the 9/1/3 split**; champions column 8 names present / 5 stale strings
+  absent; six index reconciliations asserted in Python with `round(x,2)` (float gotcha); New counts asserted
+  **WS 4 / CY 5 / MMA 1 / index 0**. Trap greps CLEAN ×0 across all four pages (Cody Salkilld, Abdul-Rakhman,
+  Shamil Yakhyaev, "title challenger Beneil", **Shanghai Indoor Stadium**, "mid-August 2025", "Pereira retains",
+  "Featherweight vacant").
