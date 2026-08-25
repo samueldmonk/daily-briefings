@@ -11240,3 +11240,137 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   `round(x,2)`; the three derived-but-unpublished levels asserted absent; New counts asserted **WS 3 / CY 5 / MMA 2 /
   index 0**. Trap greps CLEAN ×0 across all four pages (Cody Salkilld, Abdul-Rakhman, Shamil Yakhyaev, "title challenger
   Beneil", **Shanghai Indoor Stadium**, "mid-August 2025", "Pereira retains", "Featherweight vacant").
+
+## Added 2026-08-25 (Tuesday ~2:00pm ET — MIDDAY EDITION, fourth run of the day, ~26 min after the 1334 snapshot; archive stamp 2026-08-25-1400)
+- CLOCK: TZ date = Tue Aug 25 13:36 EDT at run start. Edition bucket **Midday** (h=13). New tags site-wide:
+  **WS ×6 (5 cards + the gold row), CY ×4, MMA ×3**. Everything the 1334 run tagged New was demoted to
+  "Carried · 1:34 edition" with a whole-file sweep on `<span class="tag new">` (gotcha #13 applied from the start).
+- 🟢 **MARKETS — THE CACHE PROBLEM IS SOLVED BY A NEW SOURCE: THE MOTLEY FOOL'S DAILY MIDDAY PAGE.**
+  `fool.com/coverage/stock-market-today/2026/08/25/stock-market-midday-aug-25-...` (Emma Newbery,
+  `article:published_time 2026-08-25T16:27:56Z` = **12:27 p.m. ET**). Two distinct reads on one page:
+  (a) an **explicitly timed editorial read, "As of 11:36 AM ET"** — Nasdaq Composite **+0.58%**, S&P 500 **+0.23%**,
+  Dow **+0.07%**; and (b) a **live quote strip rendered at fetch time (~1:40 p.m. ET)** — **S&P 500 +0.3% +22.33,
+  Dow +0.2% +105.40, Nasdaq +0.6% +161.37**. ✅ **ALL THREE POINT CHANGES RECONCILE EXACTLY** to Monday's verified
+  closes (7,652.86 / 53,417.16 / 25,980.19 → 7,675.19 / 53,522.56 / 26,141.56). The strip is published as the
+  current board, labelled by its fetch time; the 11:36 read is published as the earlier timed read. **Levels are
+  NOT published in editorial** (freshness rule d) and the three derived levels are asserted ABSENT from the WS body.
+- MARKETS — third timed source added: **Schaeffer's "Midday Market Check", `Date 2026-08-25T12:13:28-04:00`**
+  (Liliana Orozco): Nasdaq up triple digits, **Dow +74 points**, SPX "confidently higher", **10-yr 4.65% at last look**.
+  ⚠ **FACTUAL ERROR IN THAT PIECE, CAUGHT AND CAVEATED:** it says "Nvidia's heavily anticipated earnings have sparked
+  a chip rally." **Nvidia does not report until Wednesday Aug 26 after the close.** Published as anticipation, with the
+  caveat printed on the page and asserted by the validator. Do not let a future run repeat it as "Nvidia's results."
+- 🔴 **MARKETS — DKS IS NOW THE WORST SINGLE-SESSION LOSS IN THE COMPANY'S HISTORY, AND THE MAGNITUDE IS A MOVING
+  TARGET.** Schaeffer's dedicated piece (`2026-08-25T10:49:02-04:00`): **−25.3% at $134.03**, "worst single-session
+  percentage loss on record", 10th loss in 11 sessions, two-year lows, **YTD −32.6%, RSI 19, 7.48M shares short =
+  11.88% of float ≈ six days**, **28,000 calls / 33,000 puts = 18× ADV**, Sept 160 put most popular then Sept 130.
+  Live strip at ~1:40pm: **$127.27, −$52.06, −29.03%** (prior close **$179.33**, which all four reads back out to).
+  Progression disclosed on the page: ~12% (untimed) → 25.3% (10:49) → "more than 27%" (11:36) → 29.03% (~1:40).
+  Fundamentals from CNBC/WWD/24-7: **adj EPS $3.53 vs $3.78 consensus; FY26 adj EPS guidance $11.00–$12.00 vs $14.20
+  consensus; Foot Locker proforma comps −3.6%**; Ed Stack cited an increasingly promotional athletic footwear market.
+  ⚠ **SOURCE ERROR RECORDED, NOT REPEATED:** Schaeffer's calls the **$21.9–$22.2 billion** range "adjusted per-share
+  earnings." That is the **net-sales** guidance. The page prints the correction explicitly.
+- MARKETS NEW ×6 — (1) **Super Micro +7.6% $37.84**, best-performer on the Nasdaq after **Cisco announced a formal
+  expansion of its AI infrastructure portfolio through a new partnership with Super Micro**; YTD **+29.5%**.
+  (2) **lululemon −4.2% $117.69** after **UBS cut its PT to $120 from $124** (neutral maintained); first loss in three
+  sessions; **YTD −43.4%**; 24/7 Wall St. pairs it with **Nike −3%**. (3) **Moderna +12% this morning** (personalised
+  cancer vaccine trial results last week); **AMD up on an analyst upgrade — no figure stated, none published.**
+  (4) **Megacap board at ~1:40pm**: NVDA **+1.9% $212.35** (first bounce after **seven straight daily losses**),
+  TSLA +1.6% $354.55, META +1.2% $565.67, MSFT +0.4% $489.31, AAPL −0.2% $309.86, GOOG −0.4% $343.14,
+  AMZN −0.6% $260.63, SPCX +2.5% $138.32, BTC $79,189 +0.3%. (5) **Cooper Companies −2.6% $73.82**, worst drop since
+  Jul 14, **4,100+ calls = 20× normal, catalyst unclear**, YTD −10%. (6) the **gold row**.
+- ⚠ **MARKETS — GOLD NOW HAS FOUR NON-RECONCILING READS AND THEY DISAGREE ON DIRECTION.** $4,682.40 −0.33% (Yahoo
+  pre-open 5:00am), **$4,695 −0.60%** (TheStreet 7:16am), **$4,679.90 −0.38%** (Yahoo 10:41), and
+  **$4,657.45 +0.38%** (Motley Fool 11:36am). All four printed, none blended, **and the page now asserts NOTHING about
+  gold's direction today** — an escalation from the previous "gold is lower" claim, which the +0.38% read invalidates.
+- ⚠ **MARKETS — YAHOO CACHE, THIRTEENTH CONSECUTIVE TIME.** Live-blog URL → 5:00am Grace O'Donnell body behind
+  "open in 4h 26m"; article page → the same **10:41** bar behind "close in 5h 19m", byte-identical to 1118/1145/1334.
+  TheStreet's Aug 25 blog **still frozen at its 7:55am entry** (modified 11:55Z). CNBC Aug 25 → **empty body** again.
+  stockmarketwatch → same **6:07am UTC** body with untimed tables, **REJECTED for the third consecutive edition**
+  (disclosed in the WS sources footer only). Counter on the page updated twelve → **thirteen**.
+  ⚠ **NOTE FOR FUTURE RUNS: the Yahoo article page's "trending tickers" rail is part of the SAME cached snapshot** —
+  its DKS −27.29%/$130.39 is a 10:41 figure, not a live one. Do not treat that rail as a live quote source.
+- Ticker tape: **UAL → NASDAQ:SMCI** (indices + USOIL + US10Y retained). Chart of the Day stays **NYSE:DKS**.
+  After-Hours section asserted **ABSENT** (session in progress).
+- Rates this run: **10-yr 4.65%** (Schaeffer's 12:13pm) / **4.64%** (Fool 11:36am, −0.07pp vs Monday's **4.704%**);
+  30-yr **5.196%** and 2-yr **4.208%** still from the 10:14am board (no later Tuesday read sourced); **WTI $82.34
+  −3.14%** (TheStreet 7:00am) vs **$82.74 −2.67%** (Yahoo 10:41); **Brent $89.41 −3%**; **silver $67.85 −1.08%**;
+  **VIX 15.78 −0.44%** vs Monday's 15.85; **DXY 98.96–99.01**; **BTC topped $80,000 for the first time in three
+  months** before easing (Treasury bond-buyback / debasement trade; Robinhood and Coinbase higher).
+- 🔴 **CYBER NEW TOP STORY — NORWAY'S SHARED GOVERNMENT LOGIN LAYER IS UNDER DDoS.** BleepingComputer (Bill Toulas,
+  **Aug 25, 11:52 AM ET**, fetched in full): attack began **03:38 CEST Monday** against infrastructure behind services
+  run by the **Norwegian Digitalization Agency (Digitaliseringsdirektoratet, "Digdir")** and its operations provider
+  **Vivicta**. Digdir runs public-service logins, electronic IDs and signatures, secure digital mail, government forms,
+  public-record access and inter-agency data exchange. Several services **completely unavailable for short periods**;
+  **ID-porten and eSignering remain partially inaccessible**. Director **Frode Danielsen**: **no indication of a
+  security breach or personal-data compromise**; **third DDoS on Digdir recently** — one in June, one on **Aug 3**.
+  **NSM** and **Datatilsynet** notified. **NO official attribution** — Norwegian media speculate Russian involvement;
+  **the page does NOT assert it**. Knock-ons: **Altinn** and **Skatteetaten** login warnings.
+- CYBER NEW ×4 — (1) Norway is the lead, so the *card* count is: **Zimbra scale** — Shadowserver, **274 instances seen
+  compromised in scans on 2026-08-22**, **≥8,200 unpatched** (explicitly "does not mean exploitable — the vuln is in a
+  non-default config"); mechanism = **OS command injection in the SNMP monitoring component when SNMP notifications are
+  enabled**, unauth RCE; fixed in **ZCS 10.1.20, released July 20**; **CERT Polska** first flagged in-the-wild last
+  Monday with log-hunting guidance (unexpected Zimbra restarts; files created by the `zimbra` user in
+  `/opt/zimbra/jetty/webapps/`, `/opt/zimbra/jetty_base/webapps/`, `/tmp/` in the last 30 days). (2) **22-country
+  crackdown: 263 suspects identified, 58 arrested**, African-coordinated networks (no codename/loss figures stated →
+  none published). (3) **Calix GS7 XGS (GS5239XG) residential routers, UNPATCHED** — remote unauth attackers can create
+  port-forwarding rules exposing LAN devices (**no CVE, no CVSS stated → neither published**). (4) **WhatsApp** ships
+  **multiple passkeys + stronger two-step verification**.
+- CYBER — **KEV board UNCHANGED at 13 rows: 9 past due, 1 due today (WinSock CVE-2026-68820, Aug 25), 3 ahead**
+  (Oracle Aug 27 = 2 days, MLflow Sep 2 = 8, TrueConf Sep 3 = 9). Same date as the 1118/1145/1334 runs, so **no
+  countdown moved**. Oracle **CVE-2026-21962 / CVSS 10.0 / added Aug 24 / due Aug 27** re-confirmed against **The
+  Register's own Aug 25 piece** (Connor Jones, 11:43Z), which adds: **CWE-284**; affected **12.2.1.4.0, 14.1.1.0.0,
+  14.1.2.0.0**; patched in Oracle's **January 20, 2026** CPU; three days is **the tightest deadline CISA is authorized
+  to set under BOD 26-04**; recent 3-day peers = **Ray RCE (KEV'd Aug 18)** and **N-able "god mode" (KEV'd Aug 3)**;
+  **CloudSEK's Vikas Kundu ran a honeypot Jan 22–Feb 3** that caught CVE-2026-21962 attempts plus 2017/2020 WebLogic
+  RCE attempts, traffic dominated by **libredtail-http and the Nmap Scripting Engine**, "spray and pray."
+- ⚠ **STANDING-CORRECTION UPDATE — THE THREE-WEEK KEV RULE IS SUPERSEDED.** Older entries in this file state
+  "BOD 22-01 = THREE WEEKS from the add date." **That is no longer the governing framework**: KEV deadlines are now
+  assigned **per-CVE and risk-based under BOD 26-04**, with a **three-day tier** for the most urgent. Evidence this run:
+  Oracle added Aug 24 → due **Aug 27** (3 days); Zimbra added Aug 21 → due **Aug 24** (3 days); WinSock added Aug 11 →
+  due **Aug 25** (14 days). **Always take the due date from the KEV catalog entry itself; never compute +21 days.**
+- CYBER — Zimbra **CVE-2026-73570** is now **1 day PAST DUE** (added Aug 21, due Aug 24) and the page says so in the
+  Patch Priority box, the CVE table and the KEV list, with the same date in all three.
+- 🥊 **MMA NEW TOP STORY — MAKHACHEV CALLS THE RETIREMENT REPORTS FAKE NEWS.** To MMA Junkie: "It's like somebody put
+  the fake news I'm going to retire after this fight. No, it's not true, man. I want to keep going," and "I want to
+  keep fighting and beat all the records and we stay here more years." Context: **Khabib** retired after three LW
+  defences, and **Joe Rogan** publicly predicted a Makhachev retirement around UFC 330. He has floated **20 consecutive
+  UFC wins** as a target and separately said he anticipates **"at least three more very difficult fights ahead"** —
+  framed on the page as *not* contradictory (denying that this is the end ≠ claiming an unlimited career).
+  ⚠ **STREAK COUNT DISPUTED — NOT ASSERTED.** Sources this run say he broke **Anderson Silva's** longest-win-streak
+  record with the UFC 330 win over **Ian Machado Garry** and put the streak at **18 straight UFC wins**; this file's
+  2026-08-22 entry says **17**. He has not fought since Aug 15, so the number cannot have moved — this is a
+  **source discrepancy**. Both are printed on the page; **neither is published as fact.** Resolve against a primary
+  source (ESPN/UFC.com record page) before any future run asserts a number.
+- 🥊 **MMA — DWCS S10 W3 DATE TRAP CAUGHT.** A search synthesis this run stated Week 3 was "scheduled for **Aug. 26**
+  at Meta Apex." **REJECTED.** Event listings, weigh-in coverage and the broadcast listing all give **Tuesday,
+  August 25, 7 p.m. ET on Paramount+**. Published with the rejection stated on the page.
+  Main card as listed this run: **135 Bella Mir vs Alex Apodaca; 265 Mario Piazzon vs Guilherme Uriel; 170 Sean Clancy
+  Jr. vs Gary Balletto; 170 Ronald Humphrey vs Alexis Miranda; 185 Nick Galanti vs Carlos Petruzzella.**
+  The **Balletto / Belletto Jr.** conflict stands unresolved — both forms printed, neither asserted. "**Alex Apodaca**"
+  remains the published form per the 1334 entry.
+- MMA NEW ×3 — Makhachev top story; the DWCS start-time/running-order confirmation; and **UFC 334 colour**:
+  **MSG, November 14**, with **UFC 335 at T-Mobile Arena, December 12** — **no bouts announced for either card**;
+  **Alex Pereira** and **Paddy Pimblett** named as having angled publicly for the Garden; the November MSG date has run
+  every year since **2016** except **2020**.
+- 🥊 **MMA — CHAMPIONS RE-CROSS-CHECKED, FOURTH CONSECUTIVE EDITION TODAY.** An ESPN-sourced result naming Aspinall
+  (Jun 21 2025), **Ulberg** (Apr 11 2026, KO1 Procházka UFC 327), **Strickland** (May 9 2026, SD Chimaev UFC 328),
+  **Makhachev** (Nov 15 2025, UD Della Maddalena UFC 322), **Gaethje** (Jun 14 2026, TKO4 Topuria Freedom 250),
+  **Volkanovski** (Apr 12 2025, UD Lopes UFC 314), **Yan** and **Van** matches the standing block verbatim on all
+  eight. **No title fight since UFC 330 (Aug 15)**; DWCS is not a title card. Board unchanged, **11/11 rows, 0 vacant**,
+  asserted by CHAMPION COLUMN ONLY (gotcha #14).
+- ⚠ **INFRA — the shallow-clone advice from the 1334 entry is right but a full clone DID complete this run**
+  (`git clone` of the ~23MB repo, no timeout). Keep `--depth 1 --single-branch --branch main` as the default anyway.
+- VALIDATION (programmatic, `outputs/validate_1400.py`, **0 failures, 189 checks**). 4 pages HTMLParser-balanced
+  0 unclosed / 0 stray; 5-tab nav scoped inside `<nav class="tabs">` with exactly 1 correctly-targeted active tab on
+  each; stamp/fresh IDs ×4 on all 4; `.tldr` ×1 per briefing with the correct per-page label and NONE on index;
+  **index cards anchored on `class="bcard c-sec|c-mkt|c-mma"` and asserted to carry their own page's tldr VERBATIM**
+  (bare `<p>`, not `<p class="sum">`); **8/8 TradingView JSON blocks parse**; tape retains SPXUSD+NSXUSD+DJI+USOIL+
+  US10Y and **SMCI-not-UAL**; Chart of the Day asserted **NYSE:DKS** scoped to the mini-symbol-overview block;
+  after-hours asserted ABSENT; **13/13 KEV countdowns with the 9/1/3 split**, parsed on `class="kevdue"` in UPPERCASE;
+  champions 8 names present / 5 stale strings absent **from the champion column only**, 12 `<tr>` incl header; eight
+  index/DKS reconciliations asserted with `round(x,2)`; the three derived index levels asserted ABSENT from the WS body;
+  New counts asserted **WS 6 / CY 4 / MMA 3 / index 0**; and explicit content guards for the Nvidia-earnings caveat,
+  the thirteenth cache counter, the Schaeffer's EPS mislabel note, the Norway attribution caveat, the Makhachev streak
+  disclosure and the DWCS Aug-26 rejection. Trap greps CLEAN ×0 across all four pages (Cody Salkilld, Abdul-Rakhman,
+  Shamil Yakhyaev, "title challenger Beneil", **Shanghai Indoor Stadium**, "mid-August 2025", "Pereira retains",
+  "Featherweight vacant").
