@@ -11979,3 +11979,133 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   **scoped** 336 trap: 0 occurrences in MMA body copy of the ASCII form, exactly 1 quoted-and-corrected `UFC&nbsp;336` in the
   disclosure, exactly 1 in the Sources footer (the article title), and positive assertions that the 334/335 correction and the
   corrected "UFC 334 — Madison Square Garden (Saturday, Nov. 14)" line are both present.
+
+## Added 2026-08-25 (Tuesday ~6:37pm ET — AFTERNOON EDITION, eleventh run of the day; archive stamp 2026-08-25-1837)
+- CLOCK: run started **18:28 EDT**, research 18:28–18:32, archived **18:37 EDT**. Edition bucket **Afternoon** (h=18).
+  New tags site-wide: **WS 5 / CY 2 / MMA 0 / index 0**; everything the 1825 run tagged New was demoted to
+  "Carried · 6:25 edition". **LABEL DRIFT AVOIDED:** the edit script was written with a `@@T@@` token rather than a
+  hard-coded time; the token was substituted twice — first to 6:45 (a forward guess), then re-substituted to the
+  ACTUAL clock reading **6:37** immediately before the archive stamp. **RULE (reinforcing the 1825 lesson): build
+  time labels as a token, resolve the token from `date` at stamp time, never earlier.**
+- 🟢 **MARKETS — THE CLOSE IS RE-CONFIRMED A THIRD TIME AND IS UNCHANGED.** S&P 500 **7,677.28 +24.42 +0.32%** ·
+  Dow **53,577.40 +160.24 +0.30%** · Nasdaq **26,151.30 +171.11 +0.66%** · Russell 2000 **3,010.02 +14.94 +0.50%**.
+  **The arithmetic gate was re-run against a NEWLY FETCHED Monday primary this run** — the Zacks recap on Yahoo
+  Finance (published 9:27 a.m. EDT Aug 25, fetched in full) restates Monday's closes as **Dow 53,417.16 /
+  S&P 7,652.86 / Nasdaq 25,980.19**, and all three Tuesday point changes and percents reconcile exactly.
+  ⚠ **A search snippet this run gave the Dow close as 53,579.94 — NOT PUBLISHED**, because it fails the gate
+  against the fetched Monday close (53,579.94 − 53,417.16 = 162.78, not the 160.24 every other source states).
+  ⚠ Also do NOT take the Zacks recap's own point changes: it prints the Dow's Monday gain as "40.15 points" and
+  the S&P's loss as "1.51 points", both of which fail against its own levels (correct: +140.15 and −21.51).
+- 🟢 **MARKETS NEW ×5 — THE AFTER-HOURS SECTION IS REBUILT ON A SINGLE FIVE-NAME FETCHED PRIMARY.**
+  **Investing.com, "After-Hours Movers: INTU, SMTC, SYRE, ZM, NCNO"** (Louis Juricic, published 21:44 UTC,
+  updated 21:54 UTC, in-article stamp **"Updated — August 25, 2026 4:49 PM EDT"**, fetched in full):
+  (1) **INTUIT −9%** — "shares fell 9% after hours as a downbeat full-year forward guidance disappointed
+  investors"; FY27 EPS **$22.88–$23.12** vs **$27.30** expected; revenue **$23.3–$23.5B** vs **$23.74B**
+  consensus; cause given as "slower-than-expected TurboTax growth and ongoing platform restructuring".
+  ⚠ **THE 7% AND THE 9% ARE BOTH PUBLISHED, UNMERGED** (AskTraders 22:03 UTC "more than 7%" vs Investing.com
+  4:49 p.m. EDT "9%"). The **−16%** figure stays RETIRED. Note the consensus EPS differs by source —
+  **$27.34** (carried) vs **$27.30** (this wire) — both printed as reported.
+  (2) **ZOOM −3.5%** (vs the 4.5%/$96.70 print filed 4:25 p.m.; both published, unmerged) — EPS **$1.55** on
+  **$1.28B**; **FY27 revenue guidance $5.09–$5.10B** (first revenue-guidance RANGE this desk has sourced;
+  distinct from the $6.10 midpoint EPS figure).
+  (3) **SEMTECH (SMTC) +3%** — adj EPS **$0.71** on revenue **$341.9M**; **AI data-centre networking +64%**;
+  Q3 guide revenue **$405–$415M**, EPS **$1.02–$1.08**. Consensus figures NOT stated → no beat margin computed.
+  (4) **SPYRE THERAPEUTICS (SYRE) −16%** — Phase 2 **SKYWAY** trial of **SPY072** (a **TL1A inhibitor**) in
+  **rheumatoid arthritis** "failed to meet its internal efficacy threshold to advance as a monotherapy".
+  No patient counts/effect sizes stated → none published.
+  (5) **nCINO (NCNO) −10%** — adj EPS **$0.05** on **$161M**; Q3 revenue guide **$161.25–$163.25M**;
+  "elongated sales cycles across regional banking clients".
+- 🟢 **MARKETS — THE TUESDAY SECTOR PLACEHOLDER IS RESOLVED AFTER SIX EDITIONS.** Every earlier run today refused
+  to print sector leadership because every board on offer was Monday's. A Tuesday-specific statement was finally
+  returned this run: **of the 11 S&P 500 sectors, FOUR finished positive, led by INFORMATION TECHNOLOGY and
+  HEALTH CARE, with CONSUMER STAPLES and ENERGY the worst laggards** — close to a straight reversal of Monday
+  (tech worst, staples best). ⚠ **No percentages accompanied it; none were invented.** Note the tension flagged
+  on the page: four of 11 higher is NARROW breadth for a session where all four indexes closed green.
+- 🟢 **MARKETS — DKS SECOND CLOSE READ + THE NUMBERS BEHIND THE FALL.** Close **$124.32 −30.67%** this run vs
+  **$124.31 −55.02 −30.68%** at 6:05; both printed, neither tidied. Q2 adj EPS **$3.53** vs **$3.78** (miss of
+  **$0.25**); revenue **$5.59B** vs **$5.65B** est but **+53.2% y/y** on Foot Locker consolidation; **Foot Locker
+  pro-forma comp sales −3.6%, operating loss $31.9M**; **FY26 GAAP EPS guidance cut to $10.94–$11.94 from
+  $13.27–$14.27** (~$2.33 off the midpoint, ~17%). Chart of the Day stays **NYSE:DKS**.
+- 🟢 **MARKETS — FRESH POST-CLOSE RATES AND COMMODITIES (Investing.com live boards, same fetch).**
+  **10Y 4.626% −0.078 (−1.66%)** (vs 4.625% at 6:25 — agrees to rounding), **5Y 4.337% −0.071** (a line this page
+  had never carried), **2Y 4.176% −0.060** (first post-close front-end read today; the 10:14 a.m. 4.208% retained),
+  **WTI $81.07 −$3.94 −4.63%**, **Brent $86.06 +$0.31 +0.36%** ⚠ **the two crude benchmarks moved OPPOSITE
+  directions on the same board at the same time — printed, not reconciled**; **Gold $4,715.80 +$18.00 +0.38%**;
+  **Silver $68.63 +0.036 +0.05%**.
+- 🔴 **CYBER NEW ×2 — BOTH FROM THE HACKER NEWS FRONT PAGE, FETCHED IN FULL.**
+  (1) **GitLab CVE-2026-19478 (CVSS 9.4)** — **under ACTIVE EXPLOITATION within days of disclosure** (watchTowr,
+  which reproduced it "within minutes"). Code injection; **unauthenticated** attacker can **modify or delete
+  publicly accessible GitLab projects and rewrite their data**, no credentials, no user interaction, reachable
+  **via a GraphQL directive**. Affected **18.2 before 18.11.11 / 19.0 before 19.0.8 / 19.1 before 19.1.6 /
+  19.2 before 19.2.4**; fixed in **19.2.4, 19.1.6, 19.0.8, 18.11.11**. ⚠ **NOT KEV-listed, NO federal deadline** —
+  it is named in Patch Priority precisely BECAUSE it has no clock. THN Aug 21.
+  (2) **Cisco Crosswork / Secure Workload — nine flaws, FIVE scoring CVSS 10.0.** **CVE-2026-20030 (10.0, SQLi)**,
+  **CVE-2026-20357 (10.0, missing auth for critical function)**, **CVE-2026-20358 (10.0, external control of file
+  system)**, **CVE-2026-20359 (9.9, insufficiently protected credentials)**. Affects **Crosswork Data Gateway,
+  Network Controller and Planning, Release 7.2.1 and earlier, REGARDLESS OF DEVICE CONFIGURATION**; fixed in
+  **7.2.1-SP**. THN Aug 21. Not KEV, no deadline.
+- 🔴 **CYBER HOUSEKEEPING — DUPLICATE TABLE ROWS REMOVED.** Vulnerability Watch had accumulated **two rows each
+  for CVE-2026-75149 and CVE-2026-18963** across the day's editions. The abbreviated duplicates were deleted; each
+  flaw now appears exactly once. **A validator check now asserts `<tr><td>…CVE` row count == 1 per CVE.**
+- CYBER — **KEV BOARD UNCHANGED AT 13 ROWS FOR THE ELEVENTH CONSECUTIVE EDITION: 9 past due, 1 DUE TODAY
+  (WinSock CVE-2026-68820, Aug 25), 3 ahead** (Oracle Aug 27 = 2 days, MLflow Sep 2 = 8, TrueConf Sep 3 = 9).
+  Oracle's **three-day BOD 26-04** window re-confirmed this run against the search index of CISA's Aug 24 alert,
+  **The Register** ("CISA slaps its tightest three-day patching deadline on perfect-10 Oracle flaw", Aug 25) and
+  **Forbes** ("CISA Gives Federal Agencies 72 Hours…", Aug 25). ⚠ **cisa.gov again returned an EMPTY BODY to
+  direct fetch; no countdown moved on that basis.**
+- CYBER — candidates seen but NOT published for want of a fetched primary this run: **Mirage2FA** (M365 2FA bypass,
+  thousands of companies 2024–2026), **NVIDIA NemoClaw / Ollama** weakness (Oasis Security). Search synthesis only.
+- 🥊 **MMA — CHAMPIONS UNCHANGED, ELEVENTH CONSECUTIVE EDITION TODAY; board asserted 11/11 rows, 0 vacant, by
+  CHAMPION COLUMN ONLY (gotcha #14).** Re-checked this run against the search index of ESPN's champions article:
+  Aspinall, **Ulberg (Apr 11, 2026)**, **Strickland (May 9, 2026)**, **Makhachev (Nov 15, 2025)**,
+  **Gaethje (Jun 14, 2026)**, **Volkanovski (Apr 12, 2025)** all returned identical; **Yan** and **Van**
+  re-confirmed against UFC 323 (Dec 6, 2025). ⚠ **espn.com returned an EMPTY BODY to direct fetch** (as cisa.gov did).
+- 🥊 **MMA — UFC 330 DETAIL NOW SOURCED (used only in the champions note; UFC Sacramento remains the LAST EVENT).**
+  Makhachev def. **Ian Machado Garry** UD **49–46, 49–46, 48–47**; **17th straight UFC win**; only the **fifth
+  two-division champion to record a successful title defence in BOTH divisions**. **Dern** def. **Gillian
+  Robertson** UD on the same **49–46, 49–46, 48–47** card. **Bonuses: $500,000 total — four $100,000 Performance
+  of the Night awards plus four $25,000 finish incentives.** Only **three** POTN winners are named in the
+  reporting fetched this run — **Jalin Turner, Dustin Stoltzfus, Charles Johnson** — so the fourth is NOT named
+  on the page. ⚠ Headline "$400K Bonuses Awarded" and body "$500,000 on the table" are CONSISTENT (400K POTN +
+  100K finish incentives); do not treat them as contradictory.
+- ⚠ **NEW GOTCHA #25 — A COUNTDOWN VALIDATOR MUST MATCH THE PAGE'S ACTUAL MARKUP, NOT AN ASSUMED FORMAT.** The
+  first validator run reported "KEV countdown rows found 1" because it looked for `(N days left)` inside
+  PARENTHESES while the page renders `<span class="kevdue ok">2 days left</span>`. **RULE: anchor countdown
+  checks on the `kevdue` span, then bucket on the text** — `ahead` = `\d+ days? left` AND NOT `due today`
+  (gotcha #23), `today` = `due today`, `past` = `past due`. Now asserts 13 = 9 + 1 + 3 with ahead == [2, 8, 9].
+- ⚠ **NEW GOTCHA #26 — TRAP STRINGS MUST BE WRITTEN IN THE PAGE'S OWN ENTITY FORM.** The positive assertion for
+  the corrected MSG line failed on `'UFC 334 &mdash; Madison Square Garden'` because the page renders
+  `UFC&nbsp;334 &mdash; …`. **RULE: grep the page for the literal before hard-coding it into a check; ASCII
+  spaces and `&nbsp;` are not interchangeable.** Same family as gotchas #21 and #24.
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **24 days, 136 timestamped rows, 408 snapshot files**.
+  `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `outputs/validate_1836.py`, **0 failures, 263 checks**). 4 pages HTMLParser-balanced
+  0 unclosed / 0 stray / 0 left open; 5-tab nav scoped inside `<nav class="tabs">` with the five hrefs in order
+  and exactly 1 correctly-targeted `class="on"` tab each (gotcha #19); stamp/fresh IDs ×4; `.tldr` ×1 per briefing
+  with the correct per-page label and NONE on index; **index cards anchored on `class="bcard c-sec|c-mkt|c-mma"`
+  and asserted to carry their own page's tldr VERBATIM** (rebuilt programmatically from the source pages rather
+  than hand-copied); **8/8 TradingView JSON blocks parse**; tape retains SPXUSD+NSXUSD+DJI+USOIL+US10Y; Chart of
+  the Day asserted **NYSE:DKS** scoped to the mini-symbol-overview block; after-hours asserted present;
+  **13/13 KEV countdowns with the 9/1/3 split and ahead == [2,8,9]**; champions 11 good names present / 8 stale
+  strings absent **from the champion column only**, 12 `<tr>` incl header, 11 champion cells; **three index
+  reconciliations (level, point change AND percent) with `round(x,2)` against the newly fetched Monday primary**;
+  four forward dates asserted still in the future; New counts asserted **WS 5 / CY 2 / MMA 0 / index 0** and
+  **zero unsubstituted `@@T@@` tokens on any page**; duplicate-row check asserting exactly one table row per CVE
+  for 75149 and 18963; and content guards for the full markets set (7,677.28 / 26,151.30 / 53,577.40 / +24.42 /
+  +160.24 / +171.11 / 3,010.02, the preliminary trio, "fell 9% after hours", $22.88, $23.12, $27.30, $23.74,
+  TurboTax, "fell 3.5%", $5.09, $5.10, "traded down 4.5% to $96.70", Semtech, $0.71, 341.9, 405, 415, $1.02,
+  $1.08, Spyre, SKYWAY, SPY072, TL1A, rheumatoid arthritis, nCino, $0.05, 161.25, 163.25, "elongated sales
+  cycles", 4.626%, 4.337%, 4.176%, $86.06, $81.07, $4,715.80, $124.32, 30.67%, $3.53, $3.78, $5.59, $5.65,
+  53.2%, 3.6%, $31.9, $10.94, $11.94, $13.27, $14.27, "information technology and health care", "consumer
+  staples and energy", Louis Juricic, 4:49, Investing.com), the cyber set (CVE-2026-19478, 9.4, "GraphQL
+  directive", watchTowr, 18.11.11, 19.0.8, 19.1.6, 19.2.4, CVE-2026-20030/20357/20358/20359, 7.2.1-SP,
+  Crosswork, Secure Workload, CVE-2026-21962, CVE-2026-68820, BOD 26-04, E4del, PINHOLE, CVE-2026-75149,
+  CVE-2026-18963, Keycloak) and the MMA set (Umar Nurmagomedov, Song Yadong, Shanghai Oriental Sports Center,
+  Yan Xiaonan, Denise Gomes, Aoriqileng, Kai Asakura, Ian Machado Garry, 49–46, Gillian Robertson, Jalin Turner,
+  Dustin Stoltzfus, Charles Johnson, $500,000, Carlos Ulberg, $13.6 million, UFC 205, Eddie Alvarez).
+  Trap greps CLEAN across all four pages (Cody Salkilld, Abdul-Rakhman, Shamil Yakhyaev, "title challenger
+  Beneil", Shanghai Indoor Stadium, "Pereira retains", "Featherweight vacant", "markets closed higher today",
+  both apostrophe forms of "Nvidia's results", **and the newly added "−16% after hours"**) plus the **scoped**
+  336 trap: 0 occurrences in MMA body copy of the ASCII form, exactly 1 quoted-and-corrected `UFC&nbsp;336` in
+  the disclosure, 1 in the Sources footer, and positive assertion of the corrected
+  `UFC&nbsp;334 &mdash; Madison Square Garden` line.
