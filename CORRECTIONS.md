@@ -11860,3 +11860,122 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   Carlos Ulberg and UFC Fight Night 286. Trap greps CLEAN ×0 across all four pages (Cody Salkilld, Abdul-Rakhman,
   Shamil Yakhyaev, "title challenger Beneil", Shanghai Indoor Stadium, "Pereira retains", "Featherweight vacant",
   **"markets closed higher today"**, and **both apostrophe forms of "Nvidia's results"**).
+
+## Added 2026-08-25 (Tuesday ~6:25pm ET — AFTERNOON EDITION, tenth run of the day; archive stamp 2026-08-25-1825)
+- CLOCK: run started **17:54 EDT**, research ~17:54–18:10, pages archived **18:25 EDT**. Edition bucket **Afternoon** (h=18).
+  New tags site-wide: **WS 2 / CY 1 / MMA 0 / index 0**; everything the 1643 run tagged New was demoted to
+  "Carried · 4:45 edition" by the whole-file regex `<span class="tag new">New[^<]*</span>` (gotcha #15 respected).
+  ⚠ **LABEL DRIFT CAUGHT BEFORE PUBLISH:** the edit script was written assuming a ~5:55 publish; by the time the archive
+  stamp was taken it was 18:25. All "New · 5:55" / "(5:55 p.m. ET)" labels were rewritten to 6:25 and the board-read label
+  to 6:05 **before** the snapshot was committed. **RULE: re-read the clock immediately before stamping and reconcile every
+  hard-coded time label on the page against it.**
+- 🟢 **MARKETS — THE CLOSE IS INDEPENDENTLY RE-CONFIRMED AND UNCHANGED.** The Yahoo Finance article page fetched this run
+  (StockStory/Zoom) re-served the settled board under a **"U.S. markets closed"** header: **S&P 500 7,677.28 +24.42 +0.32% ·
+  Dow 53,577.40 +160.24 +0.30% · Nasdaq 26,151.30 +171.11 +0.66% · Russell 2000 3,010.02 +14.94 +0.50%** — byte-identical to
+  the 4:00 p.m. Reuters figures. **Arithmetic gate re-run programmatically** (level − Monday's close = point change; point
+  change / Monday's close = percent, `round(x,2)`) and passed on all three. **These remain the reference closes for Aug 25.**
+- 🟢 **MARKETS — POST-CLOSE DRIFT ON THE CONTINUOUSLY QUOTED LINES, BOTH READS PRINTED, NEITHER MERGED.** The same board at
+  ~6:05 p.m.: **VIX 15.45 −0.40 −2.52%** (was 15.49 −0.36 −2.27% at 4:35), **Gold 4,715.90 +18.10 +0.39%** (was 4,723.10
+  +25.30 +0.54%), **Bitcoin 78,107.04 −863.27 −1.09%** (was 78,851.16 −78.10 −0.10%), **Crude Oil Oct 26 81.09 −3.92 −4.61%**
+  (was 80.57 −4.44 −5.22%). **DKS trending ticker unchanged at 124.31 −55.02 (−30.68%)**; Chart of the Day stays NYSE:DKS.
+  **RULE: futures, gold, crypto and the VIX keep quoting after the equity bell — a 4:35 "settled" read is not a final read;
+  label the timestamp and keep both.** New trending tickers seen but NOT published (no accompanying story fetched):
+  OKLO 44.27 +11.54%, RZLV 2.96 +21.81%, BNS.TO 128.73 +7.02%, AIXI 1.31 +186.28%.
+- 🟢 **MARKETS NEW ×2 — BOTH AFTER-HOURS CARDS UPGRADED FROM SEARCH SYNTHESIS TO FETCHED PRIMARIES.**
+  (1) ⚠ **THE INTUIT −16% FIGURE IS RETIRED.** The 1643 run printed **−7.3% and −16% unmerged** because neither was fetched.
+  This run **AskTraders** (published 22:03 Aug 25, fetched in full) states **"plunged more than 7% in after-hours trading"**,
+  and no source fetched this run states −16%. The page now **carries the ~7% figure and flags the 16% one as uncorroborated**.
+  New sourced detail: regular-session close **$358.91 −2.98%**; **~$6.9B** of value erased; **Online Ecosystem +17% to $2.6B**;
+  **QuickBooks Online Accounting +20%**; **FQ1 adj EPS $2.44–$2.48** attributed to a **revised stock-based-compensation
+  accounting method**, not fundamentals; **Mailchimp −1% to flat**; **Global Business Solutions +13–14%**; **Credit Karma
+  +11–13%**; average price target **$446.02**. Revenue restated as **$4.354B** (page carries $4.35B).
+  (2) ✅ **THE ZOOM SHARE-REACTION GAP IS CLOSED.** The 1643 run published no Zoom move because none was sourced.
+  **StockStory via Yahoo Finance** (Kayode Omotosho, **Tue Aug 25 4:25 p.m. EDT**, fetched in full): **"the stock traded down
+  4.5% to $96.70 immediately after reporting."** Also: revenue **$1.28B (+4.9%)** vs $1.27B est.; **adj EPS $1.55** vs $1.48
+  (5% beat); **adj operating income $510.3M (40% margin, in line)**; **operating margin 24.6%** vs 26.4%; **FCF margin 37%**
+  vs 40.4%; **billings $1.34B +5.2%**; **NRR 99%**; **4,625 customers >$100K**; **market cap $30.74B**; **full-year adj EPS
+  raised to $6.10 midpoint (+2%)**; Eric S. Yuan quote; **Zoom Virtual Agent customer count +256% y/y**; acquisitions
+  **Common Room** and **BrightHire**. ⚠ A search synthesis claimed the loss narrowed to ~2% later; **not fetched, not published.**
+  NOTE: **+256% (Zoom Virtual Agent customers)** and the previously carried **+184% (AI Companion paid users)** are DIFFERENT
+  metrics — do not merge or substitute one for the other.
+- 🟢 **MARKETS — THE CANADA TARIFF PLACEHOLDER IS RESOLVED.** Prior runs published a disclosure that no source stated the
+  scope/rate/date of Canada's counter-measures. **Irish Times / Financial Times** (Ilya Gridneff, Aug 25 16:48, fetched in
+  full): finance minister **François-Philippe Champagne** issued a **99-page list** of hundreds of US goods facing higher
+  levies **after September 8th**, covering **$20 billion (€17.14 billion)** of US imports incl. steel, dairy and agricultural
+  equipment, at **15, 25 or 50 per cent**, matching US rates. Quotes carried verbatim. Talks **collapsed Friday** after PM
+  **Mark Carney** suspended them; US tariffs on $20B of Canadian goods took effect **Saturday**; **Monday** the US raised
+  duties on Canadian cars and parts. ⚠ **NOT PUBLISHED** (search synthesis only, never fetched): a **C$27.6B** product total,
+  a **700-plus** line count and a **C$7.5B** support package. Do not add these without a fetched source.
+- 🔴 **CYBER NEW ×1 — MARIMO CVE-2026-75149 (added to Vulnerability Watch AND Breaches & incidents; E4del/PINHOLE retained
+  as the lead).** THN (Swati Khandelwal), **Aug 25**, fetched in full. Code injection in the Marimo Python notebook:
+  a crafted notebook supplies an **attacker-controlled MCP server command** via notebook configuration and, per **VulnCheck's
+  CNA record**, that command **launches as a local subprocess when the file is opened in edit mode — before any cell executes**.
+  **CVSS v4 8.7 / v3.1 8.8**; user interaction required, no authentication. Affected **< 0.23.15**; fixed **0.23.15**
+  (released **Jul 23 2026**); CVE **published Aug 19**; current PyPI release **0.24.0** (Aug 17), confirmed by THN **Aug 25**.
+  **PEP 723 hardening commit** treats notebook metadata as attacker-controlled and allowlists it, removing the **ai, mcp,
+  completion, secrets, server** sections. Credit **Gregory Tan (Grg0rry)**, also a co-author on that commit.
+  **Two sibling CVEs kept DISTINCT, not merged:** **CVE-2026-67618** (CVSS **7.1**, disclosed **Aug 4 2026**, also < 0.23.15)
+  leaks the operator's **API key** to an attacker-controlled AI `base_url` from notebook metadata; **CVE-2026-39987** was a
+  missing auth check on **/terminal/ws** in **≤ 0.20.4** giving a full **PTY shell**, patched in **0.23.0**.
+  ⚠ **NONE OF THE THREE IS KEV-LISTED AND NONE CARRIES A FEDERAL DEADLINE** — stated on the page so Patch Priority is not misread.
+- CYBER — **KEV BOARD UNCHANGED AT 13 ROWS FOR THE TENTH CONSECUTIVE EDITION: 9 past due, 1 DUE TODAY (WinSock
+  CVE-2026-68820, Aug 25), 3 ahead** (Oracle Aug 27 = 2 days, MLflow Sep 2 = 8, TrueConf Sep 3 = 9). **NOTHING ADDED
+  AUGUST 25** — dedicated search of CISA's alert index returned newest **Aug 24 (one, Oracle CVE-2026-21962)**, preceded by
+  **Aug 20 (two, TrueConf 72529/72530)** and **Aug 11 (three)**. The search index independently re-stated that CISA gave FCEB
+  agencies **the shortest deadline available under BOD 26-04 — three days** — for the Oracle flaw, matching Forbes.
+  ⚠ **cisa.gov returned an EMPTY BODY to direct fetch again this run** (as on prior runs); the alert titles/dates/CVEs came
+  from the search index of those same pages and **no countdown was moved on that basis**. Disclosed on the page.
+- CYBER — candidates seen but NOT published for want of a fetched primary: **Surgeons Choice Medical Center** breach (Aug 21,
+  Vermont regulators), **Consultores de Seguros** leak-site listing. Search synthesis only.
+- 🥊 **MMA NEW ×0 IN CARDS — BUT A REAL NUMBERING TRAP CAUGHT.** POST Wrestling (John Pollock), **Aug 25**, fetched in full,
+  is headlined **"UFC 335 & UFC 336 dates and locations confirmed"** and its prose calls the two shows 335 and 336 — but
+  **its own opening sentence AND its own numbered-events list both read UFC 334 = Madison Square Garden (Sat Nov 14) and
+  UFC 335 = T-Mobile Arena, Las Vegas (Sat Dec 12)**. The article contradicts itself. **The site KEEPS 334/335**, corroborated
+  by Forbes, MMA Mania, Yahoo Sports, Cageside Press, FIGHTMAG and SI/MMA Knockout. ⚠ **NEVER "update" to 335/336.**
+  The wrong numbering appears on the page exactly twice: once inside the verbatim article title in the Sources footer, and
+  once inside the disclosure that quotes and immediately corrects it. **A validator trap must allow those two and ban all others.**
+- 🥊 **MMA — NEW SOURCED BUSINESS FIGURES from that same article** (dates/venues/gates are consistent across sources; only the
+  numbering is not): **Nov 14 at MSG is the tenth anniversary** of UFC 205 (Nov 2016, **Eddie Alvarez vs Conor McGregor**);
+  the UFC has run the Garden annually **except 2020**; **last year's MSG card (Makhachev def. Della Maddalena, welterweight
+  title) drew a $13.6M gate**; **Dec 12 is a six-month turnaround at T-Mobile Arena**, which staged **Max Holloway vs Conor
+  McGregor at UFC 329** and produced **the promotion's highest gate in history, $26.4M**; **no title fights are officially
+  announced for either show.** The list also re-confirms **UFC 331: Joshua Van vs Alexandre Pantoja (Sat Sep 19)**,
+  **UFC 332: Salt Lake City, no main event announced (Sat Oct 3)** and **UFC 333: Volkanovski vs Evloev (Sat Oct 24)**.
+- 🥊 **MMA — CHAMPIONS UNCHANGED, TENTH CONSECUTIVE EDITION TODAY.** No title fight has occurred since UFC 330 (Aug 15), so
+  no belt can have changed hands; board asserted **11/11 rows, 0 vacant**, by **CHAMPION COLUMN ONLY** (gotcha #14).
+- ⚠ **NEW GOTCHA #23 — "DUE TODAY" ALSO MATCHES THE "days left" REGEX.** A KEV bucketing check reported **4 ahead instead of 3**
+  because the due-today row reads **"DUE TODAY — 0 days left"**. **RULE: exclude `due today` rows from the `\d+ days? left`
+  bucket**, i.e. `re.search(r'\d+ days? left', k) and not re.search(r'due today', k)`.
+- ⚠ **NEW GOTCHA #24 — A BANNED STRING CAN BE A LEGITIMATE SOURCE TITLE.** Blanket-banning "UFC 336" failed on the Sources
+  footer, where the real article title must be reproduced verbatim, and on the disclosure that quotes the error to correct it.
+  **RULE: scope trap greps to editorial body copy (split the page at the Sources label) and assert the permitted occurrences
+  positively rather than loosening the ban.** Same shape as gotcha #21 (the Reuters "Nvidia's results" quote).
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **24 days, 135 timestamped rows, 405 snapshot files**.
+  `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `outputs/validate_1755.py`, **0 failures, 257 checks**). 4 pages HTMLParser-balanced 0 unclosed /
+  0 stray; 5-tab nav scoped inside `<nav class="tabs">` with the five hrefs in order and exactly 1 correctly-targeted
+  `class="on"` tab on each (gotcha #19); stamp/fresh IDs ×4; `.tldr` ×1 per briefing with the correct per-page label and NONE
+  on index; **index cards anchored on `class="bcard c-sec|c-mkt|c-mma"` and asserted to carry their own page's tldr VERBATIM**
+  (the markets card headline "The bell has rung and the close is not out yet" was stale and was replaced, then asserted absent);
+  **8/8 TradingView JSON blocks parse**; tape retains SPXUSD+NSXUSD+DJI+USOIL+US10Y; Chart of the Day asserted **NYSE:DKS**
+  scoped to the mini-symbol-overview block; **after-hours asserted PRESENT as a section**; **13/13 KEV countdowns with the
+  9/1/3 split** using `days?` and the gotcha-#23 exclusion; champions 8 names present / 7 stale strings absent **from the
+  champion column only**, 12 `<tr>` incl header, 11 champion cells; **three index reconciliations (level, point change AND
+  percent) with `round(x,2)`**; four forward dates asserted still in the future; New counts asserted **WS 2 / CY 1 / MMA 0 /
+  index 0**; and content guards for 7,677.28 / 26,151.30 / 53,577.40 / +24.42 / +160.24 / +171.11 / 3,010.02, the preliminary
+  trio 7,676.62 / 26,145.47 / 53,572.91, 4.625%, 124.31 / 30.68%, both reads of VIX (15.45/15.49), gold (4,715.90/4,723.10),
+  bitcoin (78,107.04/78,851.16) and WTI (81.09/80.57), $358.91 / 2.98% / $6.9B / $2.6B / $2.44–$2.48 / $446.02 /
+  "plunged more than 7%" / "traded down 4.5% to $96.70" / $510.3M / 24.6% / 4,625 / $30.74B / $6.10 / Eric S. Yuan / 256% /
+  Common Room / BrightHire, the Canada set (99-page list, September 8th, €17.14 billion, 15/25/50 per cent, Champagne, Carney,
+  "stand up for Canadians"), the Marimo set (CVE-2026-75149, 8.7, 8.8, 0.23.15, 0.24.0, MCP, edit mode, VulnCheck, Gregory Tan,
+  Grg0rry, PEP 723, CVE-2026-67618, CVE-2026-39987, /terminal/ws, 0.20.4, 0.23.0, pseudo-terminal), the retained cyber set
+  (E4del, PINHOLE, SOCRadar, CVE-2026-15981/61979, 17.0.6/17.0.5, mo_saml_validate_signature, openssl_verify,
+  wp_set_auth_cookie, Patchstack, CVE-2026-21962/68820, BOD 26-04, "Nothing was added on August 25") and the MMA set
+  (Carlos Ulberg, Umar Nurmagomedov, Song Yadong, Shanghai Oriental Sports Center, Yan Xiaonan, Denise Gomes, Aoriqileng,
+  Kai Asakura, −500, $13.6 million, $26.4 million, UFC 205, Eddie Alvarez, Max Holloway, "tenth anniversary", "No title fights
+  have been officially announced for either show", Salt Lake City, John Pollock). Trap greps CLEAN across all four pages
+  (Cody Salkilld, Abdul-Rakhman, Shamil Yakhyaev, "title challenger Beneil", Shanghai Indoor Stadium, "Pereira retains",
+  "Featherweight vacant", "markets closed higher today", both apostrophe forms of "Nvidia's results") plus the new
+  **scoped** 336 trap: 0 occurrences in MMA body copy of the ASCII form, exactly 1 quoted-and-corrected `UFC&nbsp;336` in the
+  disclosure, exactly 1 in the Sources footer (the article title), and positive assertions that the 334/335 correction and the
+  corrected "UFC 334 — Madison Square Garden (Saturday, Nov. 14)" line are both present.
