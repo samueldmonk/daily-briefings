@@ -12109,3 +12109,102 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   336 trap: 0 occurrences in MMA body copy of the ASCII form, exactly 1 quoted-and-corrected `UFC&nbsp;336` in
   the disclosure, 1 in the Sources footer, and positive assertion of the corrected
   `UFC&nbsp;334 &mdash; Madison Square Garden` line.
+
+## Added 2026-08-25 (Tuesday ~6:45pm ET — AFTERNOON EDITION, twelfth run of the day; archive stamp 2026-08-25-1845)
+- CLOCK: run started **18:39 EDT**, research 18:39–18:44, archived **18:45 EDT** — only **~8 minutes** after the
+  1837 snapshot. Edition bucket **Afternoon** (h=18). New tags site-wide: **WS 1 / CY 1 / MMA 0 / index 0**;
+  everything the 1837 run tagged New was demoted to "Carried · 6:37 edition" and every inline
+  `New at 6:37 p.m. ET` prose marker was rewritten to `Added at 6:37 p.m. ET`.
+  **LABEL DRIFT AVOIDED AGAIN:** all time labels were authored as `@@T@@`, substituted to 6:44 at build time,
+  then **re-read from `date` and re-substituted to 6:45 immediately before the archive stamp**, with the validator
+  asserting zero unsubstituted tokens. The token discipline from the 1837 run is now the standing method.
+- 🟢 **MARKETS — THE CLOSE IS RE-CONFIRMED A FOURTH TIME AND IS UNCHANGED.** S&P 500 **7,677.28 +24.42 +0.32%** ·
+  Dow **53,577.40 +160.24 +0.30%** · Nasdaq **26,151.30 +171.11 +0.66%** · Russell 2000 **3,010.02 +14.94 +0.50%**.
+  Yahoo Finance, TheStreet and The Motley Fool all returned the S&P at **7,677.28 / +0.32%** with the Nasdaq
+  **~+0.6%** and **technology and health care leading**. The arithmetic gate was re-run programmatically inside
+  the validator against Monday's fetched closes (**7,652.86 / 53,417.16 / 25,980.19**) on all three of level,
+  point change and percent with `round(x,2)` — all pass.
+  ⚠ **THE 53,579.94 DOW LEVEL RESURFACED IN A SNIPPET AND WAS REJECTED FOR THE SECOND CONSECUTIVE RUN**
+  (53,579.94 − 53,417.16 = 162.78, not 160.24). It now appears on the page **exactly once**, inside the
+  disclosure that rejects it, and the validator asserts that single occurrence sits within the string
+  "NOT published" — the gotcha-#24 scoping pattern applied to a number rather than a title.
+- 🟢 **MARKETS NEW ×1 — A THIRD, UNMERGED PRINT OF THE INTUIT AFTER-HOURS MOVE.** Seeking Alpha
+  ("Intuit stock slides after Q4 earnings beat is followed up by soft guidance", surfaced this run) states
+  **7.3%** in Tuesday after-hours trading, the quarter as **adjusted EPS $4.03 on revenue $4.354 billion**, and
+  frames FY2027 revenue growth of **9%–10%** as **"a sharp deceleration from the 14% growth posted in fiscal
+  2026"** — the same arithmetic this desk had already derived from the guidance range, now stated in a source.
+  **Three after-hours prints now stand on the page unmerged: 7.3% (Seeking Alpha), "more than 7%" (AskTraders,
+  22:03 UTC) and 9% (Investing.com, 4:49 p.m. EDT)**, explicitly framed as readings from different moments of a
+  moving tape rather than competing claims. **The −16% figure stays RETIRED.** The revenue is carried at both
+  **$4.35B** (prior wires) and **$4.354B** (this one); neither was tidied into the other.
+- 🔴 **CYBER NEW ×1 — WEEDHACK.** thehackernews.com front page **fetched in full again this run**; it re-served
+  every story this page already carries (GitLab 19478, Cisco Crosswork, Keycloak 18963, QUICSILVER, UAT-10147,
+  WordlistLoader/SynkLoader, Akamai, Siemens PLC, TikTok) unchanged, and supplied one addition:
+  **"Weedhack Malware Spreads via Fake Minecraft Clients and SEO Poisoning" (Aug 24)** — **McAfee Labs detected
+  and blocked more than 6,300 attempts** to reach sites impersonating Minecraft clients; lookalike pages copy
+  branding, feature lists, FAQs, install guides, developer credits and links to **genuine GitHub repositories**;
+  **one lure site was built with Lovable**, an AI website builder; first documented **June 2026** using
+  **SEO poisoning and YouTube**; multi-stage chain ending in **JAR payloads**. ⚠ **No CVE, no patch, no federal
+  deadline** — stated on the card so it cannot be misread into Patch Priority or the KEV countdowns.
+- 🔴 **CYBER HOUSEKEEPING — A SECOND DUPLICATE ROW CAUGHT, THIS TIME FOR CVE-2026-19478.** The 1837 run added a
+  per-CVE duplicate-row check for 75149 and 18963 only; extending the same check to **19478** immediately found
+  an abbreviated second Vulnerability Watch row (`GitLab CE/EE 18.2–19.2 … Fixed in 19.2.4 / 19.1.6 / 19.0.8 /
+  18.11.11`) alongside the full one. The abbreviated row was deleted. **RULE: run the duplicate-row check over
+  EVERY CVE on the page, not just the ones a prior run happened to duplicate.**
+- CYBER — **KEV BOARD UNCHANGED AT 13 ROWS FOR THE TWELFTH CONSECUTIVE EDITION: 9 past due, 1 DUE TODAY
+  (WinSock CVE-2026-68820, Aug 25), 3 ahead** (Oracle Aug 27 = 2 days, MLflow Sep 2 = 8, TrueConf Sep 3 = 9).
+  A dedicated KEV search this run re-listed the August additions — **Aug 7 (one, Progress LoadMaster
+  CVE-2026-8037)**, **Aug 11 (three: Cisco ASA/FTD CVE-2026-20349, WinSock CVE-2026-68820, Metabase
+  CVE-2026-72898)**, **Aug 18 (four: CVE-2026-33824, CVE-2026-55040, CVE-2026-59310, CVE-2026-65400)**,
+  **Aug 20 (two: TrueConf CVE-2026-72529/72530)** and the **Oracle** addition — with **nothing added August 25**.
+  No countdown moved.
+- CYBER — still NOT published for want of a fetched primary: **Mirage2FA** and the **NVIDIA NemoClaw / Ollama**
+  weakness. Both surfaced again in the search index this run; both remain search synthesis only.
+- 🥊 **MMA NEW ×0 — CHAMPIONS UNCHANGED, TWELFTH CONSECUTIVE EDITION TODAY.** Re-checked against the search index
+  of ESPN's champions article, which returned **Aspinall**, **Ulberg (Apr 11, 2026)**, **Strickland (May 9, 2026)**,
+  **Makhachev (Nov 15, 2025, 1 defence)**, **Gaethje (Jun 14, 2026)** and **Volkanovski (Apr 12, 2025, 1 defence)**
+  identical. **No card has been staged since UFC 330 on Aug 15, so no belt can have changed hands.** Board asserted
+  **11/11 rows, 0 vacant, by CHAMPION COLUMN ONLY** (gotcha #14).
+- 🥊 **MMA — THE 334/335 NUMBERING TRAP HELD UNDER PRESSURE.** This run's search summary of the POST Wrestling
+  article once again narrated the two shows as **"UFC 335" (MSG, Nov 14)** and **"UFC 336" (T-Mobile, Dec 12)** —
+  the same self-contradiction the 1825 run documented. **The site KEPT 334/335.** The scoped trap passed: 0 ASCII
+  "UFC 336" in MMA body copy, exactly 1 quoted-and-corrected `UFC&nbsp;336` in the disclosure, 1 in the Sources
+  footer (the verbatim article title), and the corrected `UFC&nbsp;334 &mdash; Madison Square Garden` line present.
+- 🥊 **MMA — Fightnews re-served unchanged**: UFC returns to **Shanghai Saturday, August 29**, second consecutive
+  year and third time overall, at the **Shanghai Oriental Sports Center**, headlined by **Umar Nurmagomedov vs.
+  Song Yadong at 135 lb**.
+- ⚠ **NEW GOTCHA #27 — AN INDEX CARD HEADLINE CAN GO STALE WHILE ITS SUMMARY STAYS CORRECT.** The Security card on
+  index.html still read *"Anyone can log in as your WordPress administrator — and scanners are already trying"*
+  while the cyber page's own lead had long since become the FTP-banner malware and the two federal patch clocks;
+  the card's PARAGRAPH was correct because it is rebuilt from the page's tldr, so the tldr-verbatim check passed
+  and the drift went unseen. Headline replaced with *"Two federal patch clocks are running — and the flaw actually
+  under attack has no deadline at all"*, and the old string is now a trap grep. **RULE: the index card check must
+  cover the `<h2>` as well as the `<p>` — verifying the summary does not verify the headline above it.**
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **24 days, 137 timestamped rows, 411 snapshot files**.
+  `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `outputs/validate_1845.py`, **0 failures, 252 checks**). 4 pages HTMLParser-balanced
+  0 unclosed / 0 stray; **zero unsubstituted `@@T@@` tokens**; 5-tab nav scoped inside `<nav class="tabs">` with
+  the five hrefs in order and exactly 1 correctly-targeted `class="on"` tab each (gotcha #19); stamp/fresh IDs ×4;
+  `.tldr` ×1 per briefing with the correct per-page label and NONE on index; **index cards rebuilt from and
+  asserted equal to their own page's tldr VERBATIM**, plus the new stale-headline trap (gotcha #27);
+  **8/8 TradingView JSON blocks parse**; tape retains SPXUSD+NSXUSD+DJI+USOIL+US10Y; Chart of the Day asserted
+  **NYSE:DKS** scoped to the mini-symbol-overview block; after-hours asserted present; **13/13 KEV countdowns
+  anchored on the `kevdue` span with the 9/1/3 split and ahead == [2,8,9]** (gotchas #23/#25); per-CVE
+  duplicate-row check extended to 75149 / 18963 / **19478**; champions 11 good names present / 8 stale strings
+  absent **from the champion column only**, 12 `<tr>` incl header, 11 champion cells; **three index reconciliations
+  (level, point change AND percent) with `round(x,2)`** plus the scoped 53,579.94 rejection check; four forward
+  dates asserted still in the future; New counts asserted **WS 1 / CY 1 / MMA 0 / index 0** and zero undemoted
+  `New &middot; 6:37` tags. Content guards across the full markets set (7,677.28 / 26,151.30 / 53,577.40 /
+  +24.42 / +160.24 / +171.11 / 3,010.02, 53,417.16, 4.354, 7.3%, "9% to 10%", Seeking Alpha, $22.88, $23.12,
+  $27.30, $23.74, TurboTax, Semtech, SKYWAY, SPY072, TL1A, nCino, "elongated sales cycles", 4.626%, 4.337%,
+  4.176%, $81.07, $86.06, $4,715.80, 124.32, 30.67%, $10.94, $11.94, $13.27, $14.27, "information technology and
+  health care", "consumer staples and energy", September 8), the cyber set (CVE-2026-19478, 9.4, GraphQL,
+  watchTowr, 18.11.11, 19.0.8, 19.1.6, 19.2.4, CVE-2026-20030/20357/20358/20359, 7.2.1-SP, Crosswork, Secure
+  Workload, CVE-2026-21962, CVE-2026-68820, BOD 26-04, CVE-2026-75149, CVE-2026-18963, Keycloak, **Weedhack,
+  6,300, McAfee Labs, Lovable, JAR**) and the MMA set (Umar Nurmagomedov, Song Yadong, Shanghai Oriental Sports
+  Center, Yan Xiaonan, Denise Gomes, Aoriqileng, Kai Asakura, Carlos Ulberg, Ian Machado Garry, Gillian
+  Robertson, 13.6 million, UFC 205, Eddie Alvarez, Jalin Turner, Charles Johnson) — the last two written in the
+  page's own `&nbsp;` entity form after gotcha #26 bit again on `$13.6 million` and `UFC 205`. Trap greps CLEAN
+  across all four pages (Cody Salkilld, Abdul-Rakhman, Shamil Yakhyaev, "title challenger Beneil", Shanghai
+  Indoor Stadium, "Pereira retains", "Featherweight vacant", "markets closed higher today", both apostrophe forms
+  of "Nvidia's results", "−16% after hours", **and the retired WordPress index headline**).
