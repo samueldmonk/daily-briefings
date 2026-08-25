@@ -11562,3 +11562,97 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   champions check, −500, "Alex Apodaca" and "Oriental Sports Center". Trap greps CLEAN ×0 across all four pages
   (Cody Salkilld, Abdul-Rakhman, Shamil Yakhyaev, "title challenger Beneil", **Shanghai Indoor Stadium**, "mid-August 2025",
   "Pereira retains", "Featherweight vacant", "Nvidia's results").
+
+## Added 2026-08-25 (Tuesday ~4:00pm ET — AFTERNOON EDITION, seventh run of the day; archive stamp 2026-08-25-1600)
+- CLOCK: run started **15:35 EDT**, pages finished and archived at **16:00 EDT** — i.e. the build straddled the
+  closing bell. Edition bucket **Afternoon** (h=15/16). New tags site-wide: **WS 2 / CY 2 / MMA 0 / index 0**;
+  everything the 1508 run tagged New was demoted to "Carried · 3:08 edition" by the whole-file regex
+  `<span class="tag new">New[^<]*</span>` (gotcha #15 respected).
+- ⚠ **NEW RULE — THE 4 P.M. STRADDLE.** The bell landed mid-build. **No official closing levels for Aug 25 were
+  published by any source fetched this run**, so NONE were stated. A `.note` with a `var(--warn)` left border was
+  added at the top of the WS lead disclosing that the edition was assembled as the close landed, that everything
+  below is intraday and carries its own as-of time, and that the **After-Hours Movers section is omitted because no
+  post-close move was stated by any source fetched this run**. A search synthesis this run DID assert US markets
+  "closed higher on August 25" — **REJECTED as premature/untimed**; the trap string `markets closed higher today`
+  is asserted absent ×0 by the validator. **The next run must lead with the verified close.**
+- 🟢 **MARKETS NEW ×1 — LEAD CHANGED: NVIDIA SNAPS THE STREAK.** Search synthesis over TheStreet's Aug 25 live blog
+  (headline had rolled to "Dow climbs ahead of Nvidia earnings, Fed symposium"): Nvidia **on track to snap its
+  longest losing streak in around four years**, **+1.5% in midday trading**, which would be its **first winning day
+  in eight**. The Fool rail separately shows **NVDA $212.35 +$3.87 (+1.9%)** — published as *untimed corroboration
+  of direction only*. Standing caveat re-asserted verbatim: **Nvidia has NOT reported — Wednesday after the close**
+  (banned string "Nvidia's results" absent ×0).
+- 🟢 **MARKETS NEW ×1 — THE AMD UPGRADE NOW HAS FIGURES.** CNBC midday movers, Aug 25: **Raymond James upgraded AMD
+  to strong buy from outperform, $641 price target, ~40% upside from Monday's close**; AMD **+5%** on that list —
+  printed *alongside* but NOT merged with TheStreet's **+4.63%** (two point-in-time reads of the same move). Same
+  piece: **Kura Oncology +11%** (CEO Troy Wilson bought 100,000 shares), **Dynatrace +3%** (Morgan Stanley
+  overweight), **DKS down more than 27%** on revenue of **$5.59B vs $5.65B expected**, on pace for its worst day ever.
+- MARKETS — board unchanged from the 1508 entry (**S&P +0.41% / Dow +0.22% / Nasdaq +0.68%, 3:05 p.m. ET**); no
+  fresher *timed* board surfaced by 3:40 p.m. Rates/commodities re-verified: **10-yr 4.645%** (CNBC Aug 25),
+  **WTI −3.14% $82.34 / Brent −3% $89.41** (TheStreet's timed 7:00 a.m. entry). Chart of the Day stays **NYSE:DKS**.
+- ⚠ **MARKETS — THE MOTLEY FOOL PAGE IS SPLIT AGAIN** (opposite of the 1508 all-stale read). `article:modified_time`
+  still **unmoved at 16:27Z**, and the rail is still **+22.33 / +105.40 / +161.37** — but the **S&P 500 quote module
+  re-rendered to 7,673.11 / +20.25 / +0.26%**, a value not seen in any prior run. It reconciles exactly against
+  Monday's 7,652.86, so it is arithmetically sound but **untimed**, and no level from it was published (freshness
+  rule (d)). **The modified_time test alone is NOT sufficient — check the modules and the rail separately.**
+- MARKETS — cache counter advanced: **Yahoo's live-blog URL cached for the SIXTEENTH consecutive run** (5:00 a.m.
+  Grace O'Donnell body behind "U.S. markets open in 4h 26m"; nothing taken from it). **TheStreet's page is now ALSO
+  serving cached** — fetched directly it returned the 7:55 a.m. body (`modified_time` 11:55Z) while its live
+  headline had already rolled; only its **timed pre-market entries** (oil, gold, silver, bitcoin, SpaceX) were used.
+- ⚠ **MARKETS — SECTOR TRAP, THIRD CONSECUTIVE RUN. REJECTED AGAIN.** A synthesis offered **XLK −1.8% / XLP +1.7% /
+  XLF +1.3%** *while simultaneously* claiming tech **led** the session — mutually contradictory and untimed. The only
+  sourced Tuesday sector line remains the Fool's timed **11:36 a.m.** read: utilities and financials green,
+  industrials and energy lagging.
+- 🔴 **CYBER NEW ×2 CVE ROWS — MARIMO.** THN (Swati Khandelwal), **Aug 25**: **CVE-2026-75149**, code injection in
+  marimo notebooks, **VulnCheck CNA scores CVSS v4 8.7 / v3.1 8.8** (published as the CNA's, not a blog figure);
+  affects **< 0.23.15**, fixed in **0.23.15**; a crafted notebook supplies an **attacker-controlled MCP server
+  command** via notebook configuration and it launches as a **local subprocess before any cell executes** in edit
+  mode; no attacker auth, user interaction required; **published Aug 19**; credited to **Gregory Tan (Grg0rry)**;
+  PEP 723 hardening patch strips `ai`/`mcp`/`completion`/`secrets`/`server`. Current PyPI release is **0.24.0,
+  published Aug 17**. Second row: **CVE-2026-67618 / CVSS 7.1**, disclosed **Aug 4**, same configuration boundary,
+  API-key exfiltration via attacker-controlled AI `base_url`. ⚠ **DO NOT MERGE EITHER WITH CVE-2026-39987**, the
+  earlier `/terminal/ws` missing-auth RCE (≤0.20.4, patched 0.23.0) — the page states the distinction. **Neither is
+  KEV-listed; no federal deadline; no in-the-wild exploitation reported** — all three facts printed explicitly.
+- CYBER — **Mirage2FA RETAINED as top story** (still THN's Aug 25 lead); tldr unchanged and carried verbatim by the
+  index card. **KEV BOARD UNCHANGED AT 13 ROWS: 9 past due, 1 DUE TODAY (WinSock CVE-2026-68820, Aug 25), 3 ahead**
+  (Oracle Aug 27 = 2 days, MLflow Sep 2 = 8, TrueConf Sep 3 = 9) — **no countdown moved**. Re-verified: newest CISA
+  addition is **Aug 24 (one, Oracle CVE-2026-21962, CVSS 10.0, HTTP Server + WebLogic Proxy Plug-in, patched in the
+  Jan 2026 CPU, due Aug 27)**, preceded by **Aug 20 (two, TrueConf 72529/72530)** and **Aug 11 (three, Cisco 20349 /
+  WinSock 68820 / Metabase 72898)**. **NOTHING ADDED AUGUST 25.**
+- 🥊 **MMA NEW ×0 — AND THAT IS THE CORRECT ANSWER.** Every candidate found this run was already on the page:
+  Sacramento full card, the four **$100,000** bonuses (**$400,000** total), the du Plessis callout, Shanghai, RTU5,
+  Bilal Hasan. Nothing was tagged New rather than manufacture novelty. Re-verified against UFC.com's main-card recap:
+  main-event cards **48-47, 49-46, 48-47**; Rodrigues' **fourth consecutive win**, "should climb into the Top 10";
+  **de Ridder TKO 4:01 R1** in his LHW debut; **Mederos 4-0-1, 11-fight unbeaten run**; **Petrino 4-0 at heavyweight**;
+  prelims produced **six finishes in seven fights**. FightNews (Aug 25) re-confirms **Shanghai Oriental Sports
+  Center**, UFC's third visit / second straight year, **Umar Nurmagomedov vs Song Yadong** at 135.
+- 🥊 **MMA — CHAMPIONS RE-CROSS-CHECKED, SEVENTH CONSECUTIVE EDITION TODAY.** ESPN's "Current and all-time UFC
+  champions" returned Aspinall (Jun 21 2025, 0 def), **Ulberg** (Apr 11 2026, 0 def), **Strickland** (May 9 2026,
+  0 def), **Makhachev** (Nov 15 2025, **1 def**), **Gaethje** (Jun 14 2026, 0 def) and **Volkanovski** (Apr 12 2025,
+  **1 def**) — matching the standing block on all six. **No title fight since UFC 330 (Aug 15).** Board unchanged,
+  **11/11 rows, 0 vacant**, asserted by CHAMPION COLUMN ONLY (gotcha #14).
+- ⚠ **JAHMALL vs JAMALL EMMERS — BOTH SPELLINGS OBSERVED, DISCLOSED NOT SILENTLY PICKED.** The Forbes/Yahoo full-card
+  table fetched this run renders the featured-prelim winner **"Jahmall Emmers"**; UFC.com's spelling is **"Jamall
+  Emmers"** and is what the page prints, with the discrepancy stated in the table's note. Do not "fix" either
+  spelling in a future run without re-fetching both sources.
+- VALIDATION (programmatic, `outputs/validate_1540.py`, **0 failures, 214 checks**). 4 pages HTMLParser-balanced
+  0 unclosed / 0 stray; 5-tab nav scoped inside `<nav class="tabs">` with exactly 1 correctly-targeted active tab on
+  each; stamp/fresh IDs ×4 on all 4; `.tldr` ×1 per briefing with the correct per-page label and NONE on index;
+  **index cards anchored on `class="bcard c-sec|c-mkt|c-mma"` and asserted to carry their own page's tldr VERBATIM**;
+  **8/8 TradingView JSON blocks parse**; tape retains SPXUSD+NSXUSD+DJI+USOIL+US10Y; Chart of the Day asserted
+  **NYSE:DKS** scoped to the mini-symbol-overview block; **after-hours asserted absent as a SECTION** (regex scoped to
+  `class="lab">`, not a bare substring — the omission *disclosure* legitimately contains the phrase, see gotcha #18);
+  **13/13 KEV countdowns with the 9/1/3 split** parsed on `class="kevdue[^"]*"`; champions 8 names present / 7 stale
+  strings absent **from the champion column only**, 12 `<tr>` incl header, 11 champion cells; **seven index
+  reconciliations with `round(x,2)`**; the **seven derived index levels asserted ABSENT** from the WS editorial
+  (split at the Weekly Scorecard boundary); New counts asserted **WS 2 / CY 2 / MMA 0 / index 0**; and content guards
+  for the Nvidia streak language, Raymond James/$641, "reports Wednesday after the close", 0.41/0.68/0.22, the
+  sixteenth cache counter, the sector REJECTION, 4.645%/$82.34/$89.41/$5.59B/$212.35, CVE-2026-75149/67618/39987,
+  8.7, 0.23.15, 0.24.0, Grg0rry, Mirage2FA/9,426, CVE-2026-21962, "Nothing was added August 25", CVE-2026-68820,
+  the Sacramento scorecards, $400,000, du Plessis, Shanghai Oriental Sports Center and Carlos Ulberg. Trap greps
+  CLEAN ×0 across all four pages (Cody Salkilld, Abdul-Rakhman, Shamil Yakhyaev, "title challenger Beneil",
+  **Shanghai Indoor Stadium**, "mid-August 2025", "Pereira retains", "Featherweight vacant", "Nvidia's results",
+  **"markets closed higher today"**).
+- ⚠ **NEW GOTCHA #18 — A DISCLOSURE CAN TRIP ITS OWN TRAP GREP.** The bare check `'after-hours' not in page.lower()`
+  failed the moment the page *disclosed* that the After-Hours section was deliberately omitted. **RULE: scope
+  absence checks to the structural element you actually mean** (here `class="lab">…After-Hours`), and pair every
+  "X must be absent" check with a positive "the disclosure of X's absence must be present" check.
