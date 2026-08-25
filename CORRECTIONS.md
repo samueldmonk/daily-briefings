@@ -10885,3 +10885,125 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   Python chains the comparison as `("DUE TODAY" in k) and (k is False)`, which is always False, so the KEV "ahead"
   bucket silently counted **0 of 3** and reported a phantom failure. Write `"DUE TODAY" not in k`. Same class of
   bug as any chained-comparison surprise — never mix `in` and `is` in one expression.
+
+## Added 2026-08-25 (Tuesday ~11:18am ET — MIDDAY EDITION, first run of the day; archive stamp 2026-08-25-1118)
+- CLOCK: TZ date = Tue Aug 25 11:03 EDT at run start. Edition bucket **Midday** (h=11). New tags site-wide:
+  **WS ×3**, **CY ×2**, **MMA ×2** — the first run since Aug 24 17:04, so everything from that edition was
+  demoted and today's items are all genuinely new.
+- 🟢 **MARKETS — YAHOO'S MARKET BAR WAS LIVE THIS RUN, AND IT RECONCILED PERFECTLY.** The bar on
+  `finance.yahoo.com/markets/stocks/articles/stock-market-news-aug-25-...` carried **"U.S. markets close in
+  5h 19m" → 10:41 a.m. ET**: S&P 500 **7,664.77 +11.91 (+0.16%)**, Dow **53,450.68 +33.52 (+0.06%)**, Nasdaq
+  Composite **26,099.52 +119.33 (+0.46%)**, Russell 2000 **3,003.56 +8.48**, VIX **15.78 −0.07**, gold futures
+  **4,679.90 −17.90**, bitcoin **79,120.15 −365.95**, Oct WTI **82.74 −2.27 (−2.67%)**. All three index reads
+  back out EXACTLY to Monday's closes (7,652.86+11.91; 53,417.16+33.52; 25,980.19+119.33). Trending rail gave
+  **DKS 130.39 −48.94 (−27.29%)**, CID HoldCo +84.97%, T3 Defense +24.01%, Rezolve AI +21.60%.
+  ⚠ **STANDING RULE CONFIRMED: the Yahoo ARTICLE body can be cached while the market BAR on the same page is
+  live.** The live-blog URL fetched separately this run was cached for the TENTH time ("U.S. markets open in
+  4h 26m" → 4:24 a.m. anchor, 5:00 a.m. Grace O'Donnell body) and nothing was taken from it. Judge the strip
+  by its own countdown, not by the article's byline time.
+- ⚠ **MARKETS — REJECTED, INTERNALLY INCONSISTENT SUMMARY.** A search summary offered S&P **7,673.04 "+0.42%"**,
+  Dow **53,195.36 "+0.83%"**, Nasdaq **26,168.46 "+0.39%"** as Tuesday's figures. A Dow level BELOW Monday's
+  53,417.16 close cannot be a +0.83% gain; the other two percentages fail against their own levels too.
+  Not published (disclosed in the WS sources footer as a rejected figure). A second summary asserted markets
+  "closed higher on August 25" while the session was still running — also rejected.
+- ✅ **MARKETS — THE MONDAY-vs-FRIDAY SECTOR AMBIGUITY IS RESOLVED.** The XLK −1.8% / XLP +1.7% / XLF +1.3% /
+  "eight of 11 sectors higher" board that the Aug 24 1704 run REJECTED as possibly-Friday is confirmed by the
+  Zacks recap (published 9:27 a.m. ET Aug 25) as **MONDAY's** board. It is now published, labelled Monday's.
+  **No Tuesday sector figures exist in any source fetched this run — none published.**
+- ⚠ **MARKETS — ZACKS RECAP POINT-CHANGE TRAP.** The same recap prints Monday's Dow gain as "**40.15** points"
+  and the S&P's loss as "**1.51** points" while giving the correct levels (53,417.16 / 7,652.86). Both fail
+  against its own levels; correct figures are +140.15 and −21.51. **Levels used, point changes discarded.**
+  Its Nasdaq change of 200.26 vs the 200.27 carried here is a one-cent rounding difference, disclosed.
+- MARKETS verified this run: 10-year **~4.66%** (Trading Economics, −0.04pp; Yahoo live blog 4.658%); Monday's
+  close 10-yr **4.704%**, 30-yr **5.234%**; Fed funds **3.50–3.75%**; WTI **−3.14% at $82.34** and Brent
+  **−3% at $89.41** (TheStreet 7:00 a.m.); silver **$67.85 −1.08%**; bitcoin above **$80,000** early Tuesday,
+  first time since mid-May; **SPCX +1.43% at $136.93** premarket (debut $135 Jun 12, record $225.64 Jun 16);
+  **AMD and Micron each +3%**; **Nvidia's seventh consecutive daily loss** Monday; Nvidia telling customers it
+  will raise server prices; Kyle Rodda (Capital.com) and Ole Hansen (Saxo Bank) quotes; **two tankers** through
+  Hormuz Monday, lowest since early May; Novoshakhtinsk (Rostov) refinery hit by a Ukrainian drone, Atyrau
+  (KazMunayGas) refinery fire. **Canada 50% tariffs on cars/trucks/parts/steel take effect JANUARY 1, 2027** —
+  do NOT conflate with the earlier Canada duties already live.
+- MARKETS NEW ×3 — **DKS**, **KURA**, **the chip rebound**. DKS: adj EPS **$3.53** vs $3.78, revenue **$5.59bn**
+  vs $5.65bn; FY non-GAAP EPS guidance cut to **$11–$12 from $13.50–$14.50** (consensus $14.20); net sales to
+  **$21.9–22.2bn from $22.1–22.4bn**; Foot Locker proforma comps **−3.6%**; Schaeffer's "on track for worst day
+  ever." ⚠ Reported percentages ranged 16%/17%/22%/25.48%/27.29% across vendors within the hour — the **timed
+  live quote with a consistent price AND point change** was published. **Chart of the Day moved SNDK → NYSE:DKS.**
+  KURA: **+11.0% premarket**, new 52-week high, high **$13.50**, last ~**$13.38**; CEO **Troy Edward Wilson**
+  bought **100,000 shares Aug 24 at a $12.39 weighted average (~$1.24m, trades $11.47–$12.85)**, his SECOND buy
+  in a week after **$1.11m / 100,000 shares Aug 17**.
+- 🔴 **CYBER NEW TOP STORY — CVE-2026-21962, ORACLE, CVSS 10.0, KEV-ADDED AUG 24, DUE AUG 27 (THREE DAYS).**
+  Oracle HTTP Server + WebLogic Server Proxy Plug-in for Apache HTTP Server and IIS; improper access control
+  (CWE-284), unauthenticated over HTTP, no user interaction, low complexity, **scope change**. Affected
+  **12.2.1.4.0 / 14.1.1.0.0 / 14.1.2.0.0**; **patched by Oracle Jan 20, 2026**. The Register: three days is
+  **"the tightest deadline CISA is authorized to set"** under BOD 26-04 (same treatment as the Ray RCE added
+  last week and N-able's "god mode" flaw added Aug 3). **CloudSEK's Vikas Kundu** ran a WebLogic honeypot
+  **Jan 22 – Feb 3, 2026** and logged automated exploitation of this CVE plus CVE-2020-14882/14883,
+  CVE-2020-2551 and CVE-2017-10271; "libredtail-http and the Nmap Scripting Engine dominating."
+  ⚠ **DATE TRAP CAUGHT: Security Affairs' article links to CISA's AUGUST 21 alert page** (which is the Zimbra
+  addition), while its own text, The Register, SecurityWeek, Forbes and the alert URL path all say **Aug 24**.
+  **Aug 24 published.** Same class as the Entra ID Aug-21-not-Aug-24 trap: the primary/URL wins over a link.
+  ⚠ CISA's own alert page **returned an EMPTY body** to web_fetch again (client-rendered) — corroborated instead.
+- CYBER — **KEV BOARD NOW 13 ROWS: 9 past due, 1 due today, 3 ahead** (validated programmatically, gotcha #7
+  parsing, gotcha #9 `not in` form). Zimbra **CVE-2026-73570** rolled from "DUE TODAY" to **1 day PAST DUE**;
+  WinSock **CVE-2026-68820** is now **DUE TODAY (Aug 25)**; Oracle is the only "ahead" addition. Of the nine
+  past-due entries, **six** are rated 9.4+ (four at 9.8, plus Ray 9.4 and Metabase 10.0) — the banner said
+  "four" on the first pass and was corrected before publish. Dedicated check for KEV additions dated
+  **Aug 22, 23 and 25: none**.
+- 🔴 **MMA — THE "LAST EVENT" WAS ALREADY CORRECT BUT THE PAGE HAD NO AUG 25 ITEM; DWCS S10 W3 IS TONIGHT.**
+  **Dana White's Contender Series Season 10, Week 3, Tuesday Aug 25, Meta APEX** — five bouts. Headliner
+  **Bella Mir vs Alexa Apodaca** at women's bantamweight, the season's FIRST women's bout and first bantamweight
+  bout of any kind. Mir (23, daughter of Frank Mir) is **4-0** with three straight first-round submissions, a
+  **No-Gi world title at purple belt** and a **Division I national wrestling championship at North Central
+  College**; UFC.com says a contract would make the Mirs **the first father-and-daughter pair to compete in the
+  UFC**. Apodaca (Denver) lost her debut in early 2024, has won three straight by unanimous decision.
+  Rest of card: Mario Piazzon vs Guilherme Uriel (HW), Gary Balletto vs Sean Clancy Jr. (WW; Clancy 8-0, 100%
+  finish rate, Cage Warriors champ), Ronald Humphrey vs Alexis Miranda, Carlos Petruzzella vs Nick Galanti.
+  **10 contracts awarded across weeks 1–2**; Kaik Brito was the first welterweight, by third-round KO of
+  Namo Fazil; returning contestants are 4-2 this year.
+  ⚠ **NAME TRAP — UFC.COM CONTRADICTS ITSELF:** the Week 3 preview's matchup heading says **"Alexa Apodaca"**,
+  its body copy and video titles say **"Alex Apodaca"**. The **heading form is published** and the conflict is
+  disclosed on the page. Do not "fix" it silently either way.
+- MMA — **CHAMPIONS RE-CROSS-CHECKED AGAINST ESPN THIS RUN**: Aspinall HW (Jun 21 2025), **Ulberg** LHW
+  (Apr 11 2026), **Strickland** MW (May 9 2026), Makhachev WW (Nov 15 2025, 1 defence), **Gaethje** LW
+  (Jun 14 2026), **Volkanovski** FW (Apr 12 2025, 1 defence) — all six match the standing block verbatim.
+  **No title fight has occurred since UFC 330 (Aug 15)** — UFC Sacramento (Aug 22) had no title bout — so no
+  belt can have moved. Board unchanged, 11/11 rows, 0 vacant, asserted by CHAMPION COLUMN ONLY.
+- ⚠ **MMA — SONG YADONG'S RANKING IS NOW DISPUTED AND HAS BEEN WITHDRAWN FROM THE PAGE.** UFC.com had him
+  **No. 5** when last checked (Aug 24 runs); a schedule listing fetched this run says **No. 6**. Neither was
+  re-fetched from UFC.com/rankings this run, so the page now says "a ranked bantamweight contender" and
+  discloses the conflict. Umar's **No. 3** is unchanged. Odds re-confirmed: **UFC.com −450/+350**,
+  **DraftKings −470/+360**, **BetOnline opened −700/+500**.
+- MMA verified but NOT newly tagged (already on the page): UFC Sacramento results and the **four $100,000
+  bonuses** (Rodrigues, Hernandez, Mederos, Judice) plus **eight $25,000 finish cheques**; UFC 334 at MSG
+  Nov 14 / UFC 335 at T-Mobile Dec 12; Blaydes' 8-fight deal; Shanghai countdown target
+  `2026-08-29T06:00:00-04:00`. ⚠ **UFC.COM'S OWN BONUS PAGE TRANSPOSES ITS LABELS** — it heads the
+  Rodrigues/Hernandez award "Performance Of The Night" and Judice's "Fight Of The Night," which is backwards
+  against Yahoo's report. The page names the four winners and the amount without asserting which label
+  belongs to which. Do not "correct" it to UFC.com's headings.
+- WALL STREET — **After-Hours section REMOVED this edition** (session in progress, gotcha #5 in its normal
+  orientation). Ticker tape refreshed to SPXUSD / NSXUSD / DJI / **DKS / KURA / AMD / MU / NVDA** / USOIL /
+  US10Y — the three indices, oil and the 10-year retained as required.
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **24 days, 126 timestamped rows, 378 snapshot files**.
+  `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `outputs/validate_1105.py`, **0 failures, 181 checks**). 4 pages HTMLParser-balanced
+  0 unclosed / 0 stray; 5-tab nav on all 4 scoped inside `<nav class="tabs">` with exactly 1 active tab;
+  stamp/fresh IDs on all 4; `.tldr` on all three briefings with correct per-page labels and NONE on index;
+  each index card carries its own page's `.tldr` **verbatim**; **8/8 TradingView widget JSON blocks parse**;
+  ticker retains SPXUSD + NSXUSD + DJI + USOIL + US10Y; Chart of the Day asserted **NYSE:DKS** scoped to the
+  mini-symbol-overview block only (gotcha #4); after-hours section asserted **ABSENT**; **13/13 KEV countdowns**
+  parsed with the 9/1/3 split; champions column 8 names present, 5 stale strings absent; index reconciliation
+  arithmetic asserted in Python; fresh WS/CY/MMA strings present; New-tag counts asserted **WS 3 / CY 2 /
+  MMA 2 / index 0**. Trap greps CLEAN ×0 (Cody Salkilld, Abdul-Rakhman, Shamil Yakhyaev, "title challenger
+  Beneil", "Shanghai Indoor Stadium", "mid-August 2025").
+  ⚠ **VALIDATOR GOTCHA #10 — WRITE THIS DOWN. `s.index('href="cyber-briefing.html">')` MATCHES THE NAV, NOT THE
+  CARD.** The index.html card builder anchored on the href and silently wrote the MMA summary into the Security
+  card and vice versa; the "index card carries its page's tldr verbatim" check is what caught it. **Fix: anchor
+  index cards on `class="bcard c-sec|c-mkt|c-mma"`, never on the href** — every href on that page appears twice,
+  once in the nav and once on a card, and the nav always comes first.
+  ⚠ **VALIDATOR GOTCHA #11 — A REJECTED FIGURE MUST BE ABSENT FROM THE BODY BUT PRESENT IN THE FOOTER.**
+  Blanket-asserting the three rejected index levels absent from the whole page reported three phantom failures,
+  because the sources footer *discloses* them as rejected. **Test the body (`ws[:ws.index('<footer>')]`) for
+  absence AND the full page for presence.** Same lesson as gotchas #5 and #8: blacklisted-as-wrong and
+  cited-as-rejected look identical to a substring match.
+  ⚠ **ARITHMETIC GOTCHA — `7652.86 + 11.91 == 7664.77` IS FALSE IN FLOAT.** Wrap reconciliation assertions in
+  `round(x, 2)`. Cost one phantom failure.
