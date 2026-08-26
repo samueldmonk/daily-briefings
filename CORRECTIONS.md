@@ -12445,3 +12445,115 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   on all four pages (Cody Salkilld, Abdul-Rakhman, Shamil Yakhyaev, "title challenger Beneil", Shanghai Indoor
   Stadium, "Pereira retains", "Featherweight vacant", "markets closed higher today", @@T@@, UFC 336, UFC 335, and
   the three new PCE traps).
+
+## Added 2026-08-26 (Wednesday ~9:16am ET — MORNING EDITION, third run of the day; archive stamp 2026-08-26-0916)
+- CLOCK: run started **09:05 EDT**, research 09:06–09:12, archived **09:16 EDT** — **30 minutes** after the 0846 snapshot.
+  Edition bucket **Morning** (h=9). **STILL PRE-OPEN** (bell at 9:30). Method: **incremental edits** to the 0846 pages.
+  New tags site-wide: **WS 1 / CY 1 / MMA 0 / index 0**; every 0846 New tag demoted to `Carried &middot; 8:46 edition`.
+- 🟢 **MARKETS — THE JULY PCE PRINT IS CONFIRMED AND PUBLISHED. This supersedes the 0818 and 0846 refusals.**
+  **Fox Business, "Fed's favored inflation gauge rose more than expected in July," Eric Revell, published
+  August 26, 2026 8:35 a.m. EDT, FETCHED IN FULL**, states as reported by the Commerce Department:
+  **headline PCE +0.2% m/m and +3.7% y/y — BOTH HOTTER than the LSEG poll's 0.1% / 3.6%**; **core PCE +0.2% m/m
+  and +3.3% y/y — BOTH IN LINE** with the LSEG poll. Corroborated by CNBC's declarative release headline
+  "Fed's preferred inflation gauge shows core prices rose 3.3% annually in July" (cnbc.com/2026/08/26/...).
+  **Gotcha #30 held and then resolved correctly**: the 0846 run refused because every figure traced to a preview;
+  this run published only once a source timestamped AFTER 8:30 stated the numbers as reported. The page carries
+  the correction to the 8:46 edition explicitly. **Trap greps updated**: "no source fetched at 8:44" and
+  "is not printing a number yet" are now traps, so a later run cannot regress to the refusal language.
+- 🟢 **MARKETS — FED PRICING SHARPENED.** CME FedWatch (via the FXStreet 08:00 GMT preview, fetched in full):
+  **38% probability of a quarter-point HIKE in September, DOWN FROM 55% one month ago** — this replaces the
+  looser "38–40%" carried in the two earlier editions. Also from the same fetch and now published: core's
+  **May 3.4% YoY peak**; **DBS Bank** on Warsh needing to spell out "how a Fed without forward guidance intends
+  to anchor expectations…"; **OCBC** on the dollar; **US Dollar Index 0.75% lower on the month, >2.5% below its
+  late-July top**. ⚠ The FXStreet piece is timestamped BEFORE the release — only its forward-looking and
+  positioning content is used, never the print. The page says so.
+- 🟢 **MARKETS — POST-PRINT REACTION PUBLISHED AS DIRECTION ONLY.** Yahoo Finance's live blog re-titled to
+  "Dow, S&P 500 futures hold steady as PCE inflation stays sticky, Nvidia earnings loom"; a separate post-print
+  read returned **S&P 500 futures −0.1% / Nasdaq-100 futures −0.4%**. ⚠ **Neither read carries a timestamp on the
+  page it came from, so both publish as direction, not as a level at a stated moment.** Personal income **+0.4%**
+  (vs 0.3% expected) and personal spending **+0.2%** come from a search summary rather than a full fetch and are
+  labelled as such on the page.
+- 🔴 **CYBER — BOSTON SCIENTIFIC TOP STORY UPGRADED FROM SECONDHAND WIRES TO THE PRIMARY 8-K.**
+  **SEC EDGAR, Boston Scientific Corporation Form 8-K, Item 8.01, date of earliest event reported August 26 2026,
+  FETCHED IN FULL.** Verbatim: incident **identified August 25, 2026**; **"has resulted in a global disruption to
+  the Company's operations"**; **"disruptions and limitations of access to certain of the Company's information
+  systems and business applications … including the ability to process and ship customer orders"**; **"the
+  timeline for a full restoration is not yet known"**; **"activated its incident response protocols and began an
+  investigation with the assistance of third-party cybersecurity experts"**; **"has not yet determined whether the
+  incident is reasonably likely to have a material impact."** Signed **Susan Thompson, VP, Chief Corporate Counsel
+  and Assistant Secretary**. ⚠ **The filing names NO threat actor, NO ransomware family, NO CVE, NO intrusion
+  vector, and asserts NO data exfiltration and NO patient-safety/device-integrity impact** — the page says so and
+  asserts none. Premarket prints published unmerged as successive snapshots: **−3.2% (Investing.com, 7:10 a.m. ET)**,
+  later untimestamped reads of **3.5%–4%** and **5.8%**. Do not average these.
+- 🔴 **CYBER NEW — MICROSOFT ENTRA ID CVE-2026-69836 (CVSS 10.0), AND THE VENDOR'S OWN CORRECTION.**
+  THN (Ravie Lakshmanan, Aug 21, fetched in full): **"Deserialization of untrusted data in Microsoft Entra ID
+  allows an unauthorized attacker to execute code over a network."** The bulletin **originally marked
+  "Exploited: Yes"; on August 21, 2026 Microsoft corrected it to "No"** after THN asked, stating **"this
+  vulnerability was not exploited in the wild"**, that the CVE was published **"for greater transparency"**, and
+  that **"there are no additional actions customers need to take."** **Fully mitigated by Microsoft.** Credited to
+  principal security engineer **Robert Fitzpatrick**. Added to Vulnerability Watch and to Breaches & Incidents.
+  Same article re-confirms **CVE-2026-68820 at CVSS 7.0** and its attribution to **Lazarus / Operation Dream Job**.
+- ⚠ **CYBER — TWO REAL BUGS IN THE 0846 PAGES, BOTH FIXED THIS RUN.**
+  (1) **The KEV summary note still read "Of the 13 entries tracked here … 3 remain ahead"** after the Gitea row was
+  inserted above it — the summary contradicted the board it summarised. Now **14 entries / 10 past due / 0 due
+  today / 4 ahead** (Oracle 1, Gitea 2, MLflow 7, TrueConf 8). The validator now asserts BOTH the kevdue spans AND
+  the prose summary, and asserts "13 entries" is absent.
+  (2) **The ticker tape had lost `TVC:US10Y`** when the 0846 run swapped CRWD/OKTA out for SMTC/BSX — violating the
+  standing rule to always retain the three indices plus oil and the 10-year. Restored; the validator now asserts
+  all five required symbols by name.
+- 🥊 **MMA — UFC.COM FIGHT-BY-FIGHT PREVIEW FETCHED IN FULL** (E. Spencer Kyte, Aug 24, modified Aug 25).
+  **Sat Aug 29, 6:00 AM EDT** (the countdown had been targeting **midnight** — CORRECTED to
+  `2026-08-29T06:00:00-04:00`), **Oriental Sports Center, Pudong District, Shanghai**, **Paramount+**, UFC's
+  **second consecutive year and third time overall** in Shanghai. **Full main card:** Nurmagomedov vs Song;
+  **Yan Xiaonan vs Denise Gomes** (co-main, strawweight); **Aoriqileng vs Kai Asakura**; **Alex Perez vs
+  Sumudaerji**; **Liu Ce vs Levi Rodrigues Jr.**; **Bilal Hasan vs Nilson Rojas**; plus a **12-fight undercard**.
+  ⚠ **"UFC Fight Night 286" was REMOVED and is now a trap grep** — no source fetched this run states an event
+  number; the page uses the UFC.com event title "UFC Fight Night: Nurmagomedov vs Song".
+- 🥊 **MMA — THE "TWO FIGUEIREDO WINS" ODDITY IS RESOLVED, NOT DELETED.** Prior editions flagged that both
+  main-eventers were credited with a recent Figueiredo win and published the oddity rather than guess. UFC.com
+  settles it: **they are two different fights.** **Nurmagomedov beat Figueiredo on the cards at UFC 324** (January,
+  three months after beating **Mario Bautista at UFC 321** in October); **Song submitted Figueiredo in round 2 at
+  UFC Fight Night Macau in May**. Both were always true. The standing note is RETIRED.
+- 🥊 **MMA — RANKINGS CONFLICT, PUBLISHED UNMERGED.** UFC.com's own announcement headline says **"#3 Umar
+  Nurmagomedov and #5 Song Yadong"**; a separate read this run says **No. 2 and No. 6 in the latest Meta UFC
+  rankings**. Both on the page, neither tidied into the other. Do not "fix" this without a dated source.
+- 🥊 **MMA — records/descriptors confirmed against UFC.com this run:** Nurmagomedov **20-1 MMA, 8-1 UFC**, described
+  by UFC.com as a **former title challenger** (lost the title bid to Dvalishvili at UFC 311); Song **23-9-1 MMA,
+  12-4-1 UFC**, age **28**, sixth main event, **dropped a close decision to Sean O'Malley at UFC 324**, first
+  appearance on Chinese soil since 2018. **Yan Xiaonan has never lost in China in the UFC**, enters off a decision
+  loss to Virna Jandiroba, and beat current champ **Mackenzie Dern** by majority decision. **Denise Gomes, 26, on a
+  four-fight win streak**, six of her last seven. UFC.com also re-confirms **Dern's UFC 330 defence over Gillian
+  Robertson in Philadelphia** and that **Petr Yan is the two-time bantamweight champion** awaiting a **Dvalishvili
+  trilogy** — both consistent with the champions block above.
+- 🥊 **MMA — CHAMPIONS UNCHANGED, FIFTEENTH CONSECUTIVE EDITION.** No card since UFC Sacramento (Aug 22, no title
+  fight), so no belt can have moved. Board asserted 11/11 rows, 0 vacant, **by CHAMPION COLUMN ONLY** (gotcha #14),
+  stale-name trap now covering Pereira, Chimaev, Topuria, Pantoja, Dvalishvili, Della Maddalena, O'Malley and
+  **Nurmagomedov** (added because he now appears all over the page as a contender).
+- ⚠ **NEW GOTCHA #32 — INSERTING A ROW INTO A TABLE DOES NOT UPDATE THE PROSE THAT COUNTS THE TABLE.** The 0846
+  run added the Gitea KEV row but left the summary sentence saying 13/3. **RULE: any assertion about a board's
+  SIZE or SPLIT must be validated against the board itself, in prose as well as in markup — assert the sentence,
+  not just the spans.**
+- ⚠ **NEW GOTCHA #33 — SWAPPING TICKER-TAPE SYMBOLS CAN SILENTLY DROP A MANDATORY ONE.** CRWD/OKTA were swapped for
+  SMTC/BSX at 0846 and `TVC:US10Y` went with them. **RULE: the validator must assert the five required symbols
+  (SPXUSD, NSXUSD, DJI, USOIL, US10Y) by name inside the parsed ticker-tape JSON after every symbol change.**
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **25 days, 140 timestamped rows, 420 snapshot files**.
+  `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `outputs/validate_0914.py`, **0 failures, 278 checks**). 4 pages HTMLParser-balanced,
+  0 stray / 0 left open; archive.html separately balanced. 5-tab nav scoped inside `<nav class="tabs">`, five hrefs
+  in order, exactly 1 correctly-targeted `class="on"` per page; stamp/fresh IDs ×4; `.tldr` ×1 per briefing with the
+  correct per-page label and NONE on index; **index cards anchored on `class="bcard c-sec|c-mkt|c-mma"`, asserted to
+  carry their own page's tldr VERBATIM plus a non-empty `<h2>` and a CTA**; **8/8 TradingView JSON blocks parse**;
+  **tape asserted to retain all five required symbols incl. the restored US10Y**; Chart of the Day asserted
+  NASDAQ:NVDA scoped to the mini-symbol-overview block; **14/14 KEV countdowns with the 10/0/4 split, ahead ==
+  [1,2,7,8], per-span colour/text agreement, AND the prose summary reconciled**; per-CVE duplicate-row check over
+  every row; champions 11 good / 8 stale by champion column only, 12 `<tr>` incl header, 0 vacant; **three index
+  reconciliations (level, points AND percent) with `round(x,2)`** plus the scoped 53,579.94 rejection asserting
+  count == 1 AND that the occurrence sits inside "NOT published"; **ten forward dates asserted still in the future**;
+  MMA countdown asserted at 06:00 EDT and asserted NOT at midnight; zero undemoted New tags. Content guards across
+  the full markets set (every PCE figure, LSEG, Revell, 8:35 a.m. EDT, 38%/55%, 3.4%, 65th month, DBS, DXY, the
+  Nvidia revenue four, the rates three), the cyber set (69836, Fitzpatrick, the four 8-K quotations, Susan Thompson,
+  21962, 60004, 19478, Mirage2FA, BOD 26-04, 1.27.1/1.27.2) and the MMA set (venue, district, 6:00 a.m. EDT, both
+  records, the whole main card, the 12-fight undercard, all three odds pairs, Sacramento). Trap greps CLEAN on all
+  four pages (Cody Salkilld, Abdul-Rakhman, Shamil Yakhyaev, "title challenger Beneil", Shanghai Indoor Stadium,
+  "Pereira retains", "Featherweight vacant", "markets closed higher today", @@T@@, **"UFC Fight Night 286"**,
+  **"no source fetched at 8:44"**, **"is not printing a number yet"**, "−500 / +380", **"Figueiro"**).
