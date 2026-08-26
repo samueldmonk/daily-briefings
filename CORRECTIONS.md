@@ -14164,3 +14164,95 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   Window-scoped to rejection/correction contexts only: "7,677.24", "4,637.03", "112.62", "97.69", "$213.70",
   "1.45%", "1.59%", "$1 trillion in combined Blackwell", "350 plants", "1.5 million components",
   "$200 billion CPU market", "our demand is much higher than that".
+
+## Added 2026-08-26 (Wednesday ~6:36pm ET — AFTERNOON EDITION, POST-CLOSE, twenty-first run of the day; archive stamp 2026-08-26-1843)
+- CLOCK: research fetched at **18:36 EDT**, archived **18:43 EDT**. The 6:06 run called itself "FINAL"; it was not.
+  Method: **incremental edits** to the 1820 pages (`edits_1836.py` + `sync_index_1836.py` + `fix_1836.py`).
+- 🟢 **CYBER — A NEW TOP STORY, AND IT IS FROM THE PRIMARY SOURCE: DOJ AND FBI SEIZE QSCAN AND QTROUTER.**
+  The **DOJ Office of Public Affairs press release (number 26-972, published 8:20 a.m. ET, updated 10:22 a.m. ET) was
+  fetched in full**. Court-authorized **domain seizures** against **"two complementary hacking platforms known as
+  'QScan' and 'QTRouter,' used to target U.S. critical infrastructure and other sensitive networks"**; documents
+  unsealed in the **Southern District of California**. Operator: a PRC state-sponsored group called **QTFY**,
+  **employed by China-based Nanjing Xinjiuwei Network Technology Company**. **Victims named by DOJ: NASA, the Federal
+  Reserve, the Department of Energy, the Department of Justice, the Department of Health and Human Services, the
+  National Institutes of Health, and the U.S. Senate.** Mechanism: **QScan mass-infects IoT devices**, which join
+  **QTRouter** (those devices **plus commercial proxy services and leased VPSs**), which serves as an **"obfuscation
+  network"** so intrusions **appear to originate outside the PRC, sometimes local to the target**. QTFY **sells hacking
+  services to paying customers "including the PRC's Ministry of State Security and the People's Liberation Army."**
+  Because **the seized domains were hard-coded into both malwares** for **communication and authentication**, the
+  seizures **made QScan and QTRouter inoperable**. Quoted: **AG Todd Blanche, FBI Director Kash Patel, AAG John A.
+  Eisenberg, U.S. Attorney Adam Gordon, SAC Mark Remily (FBI San Diego)**. Also published: an **FBI/NSA advisory with
+  IOCs covering activity back to at least 2018**, and **Lumen's Black Lotus Labs TTP write-up**. Prior operations DOJ
+  names: **PlugX removed from over 4,000 U.S. computers (2025, Mustang Panda)**; a **hundreds-of-thousands-device IoT
+  botnet disabled (2024, Flax Typhoon)**; a **Volt Typhoon botnet disrupted (2023)**.
+  ⚠ **NO breach date, dwell time, record count or per-victim impact is stated by DOJ and NONE is asserted. NO CVE,
+  CVSS or patch attaches to this item — it is an infrastructure disruption, not a vulnerability, and it is NOT in KEV.**
+  Boston Scientific's 8-K is **demoted in place to a second Top-story block, tagged Carried · 6:06**, intact.
+- 🔴 **GOTCHA #58 — A JUNE STORY RETURNED AS TODAY'S NEWS AND WAS CAUGHT BEFORE PUBLICATION: TATA ELECTRONICS.**
+  A search for **"cybersecurity news August 26 2026 data breach ransomware"** returned, as current, that **Tata
+  Electronics confirmed an incident after World Leaks published 200,000+ files**. Follow-up dating shows the leak was
+  **June 12, 2026 (204,341 files / 630.4 GB)** and **Tata confirmed it on June 22**, saying **operations were not
+  disrupted**. **NOT published as a current breach** — it appears on the page only inside an explicit rejection card.
+  **RULE: a summary that dates a story to the query date is dating it to the query, not to the event.**
+- ⚠ **CYBER — TACO BELL / PIZZA HUT RETURNED A THIRD TIME AND STAYS REJECTED.** Same headline the 4:15 run examined and
+  rejected when follow-ups produced only the **2023 Yum! Brands** incident and no 2026 body text. Nothing asserted.
+- ⚠ **CYBER — KEV STATIC, SEVENTEENTH CONSECUTIVE EDITION.** Board holds **14 rows**; nearest deadlines unchanged —
+  **Oracle CVE-2026-21962 due Aug 27** and **Gitea CVE-2026-60004 due Aug 28**. Visible alert pages remain **Aug 18
+  (four)**, **Aug 20 (two — TrueConf CVE-2026-72529 / CVE-2026-72530)**, **Aug 21 (one — Zimbra CVE-2026-73570)**, with
+  the **Gitea Aug 25** addition latest on the board. ⚠ **A search summary claimed CISA published a "Vulnerability
+  Review" for FY2024–2025 on Aug 26; the CISA resource page returned NO body text when fetched, so nothing about that
+  document is asserted.**
+- 🟢 **MARKETS — THE NIGHT'S FOURTH AND MOST SETTLED NVIDIA READ: MORE THAN +4%, POST-CALL.** CNBC's markets live blog
+  is headlined **"Stock futures rise as Nvidia shares jump 4% after earnings"** and reports NVDA **up more than 4% in
+  extended trading** after a quarter that **beat forecasts by its largest amount in two years**. This is the **first
+  read taken after the call ended**, and it sits **below** the **~+5%** peak Kiplinger logged at **5:10 p.m.** — exactly
+  as that blog's own **5:24** entry ("down some from its after-hours peak") implied. ⚠ **ALL FOUR READS STAND:
+  −1.3% (Kiplinger, pre-call), −1% (Investing.com, 5:36), ~+5% (Kiplinger, 5:10) and >+4% (CNBC, post-call). Nothing is
+  averaged, reconciled or retracted, and NO after-hours dollar level is asserted.**
+- 🟢 **MARKETS — OKTA GETS A THIRD READ, +19%**, against **~15% (CNBC, 5:06)** and **17% (Investing.com, 5:36)**. Printed
+  with its time, adopted over neither. Fundamentals unchanged and already verified: **adj EPS $1.05 vs $0.97 expected**
+  on **revenue $805M vs $795M expected**, full-year guidance raised.
+- ⚠ **MARKETS — THE AUG 25 CLOSING SET WAS OFFERED A THIRD TIME AND IS REJECTED A THIRD TIME — BUT THE REJECTION IS NOW
+  STATED PRECISELY.** The set **7,677.24 / 53,577.40 (+160.24) / 26,151.30 (+171.11)** was returned as "the Aug 26
+  close." **It is Tuesday's, mislabelled.** ⚠ **IMPORTANT NUANCE RECORDED SO A FUTURE HARNESS DOES NOT MIS-FLAG IT:
+  53,577.40 and 26,151.30 are LEGITIMATE figures — they are the Aug 25 Dow and Nasdaq closes and already appear on the
+  Wall Street page in exactly that role, as the prior-close bases every intraday board subtracts back to. What is
+  rejected on those two is the DATE, not the number. Only 7,677.24 is rejected outright** (the Zacks print of Tuesday's
+  S&P close, declined at 2:44 in favour of **7,677.28**). Wednesday's close on the page stands: **7,675.70, −1.58, −0.02%**.
+- 🥊 **MMA — NOTHING MOVED; ONE NEW WRINKLE, AND IT IS A DISAGREEMENT ABOUT RANKINGS.** Next card remains **UFC Shanghai,
+  Umar Nurmagomedov vs. Song Yadong, Aug 29, Oriental Sports Center**, odds re-confirmed **−500 / +380 (~80%/20%)**;
+  most recent completed event remains **Hernandez vs. Rodrigues, Aug 22, Sacramento**. ⚠ **UFC.com's own preview headline
+  bills the bout as "#3 Umar Nurmagomedov and #5 Song Yadong"; a summary of that same coverage says they are "ranked
+  No. 2 and No. 6 in the latest Meta UFC rankings at 135 pounds." BOTH PRINTED, NEITHER ADOPTED — the page asserts no
+  numeric rank for either man.** Records as stated in that coverage: **Nurmagomedov 20-1 (Dagestan, Russia)**, two-fight
+  win streak since his title challenge; **Song Yadong "The Kung Fu Kid" 23-9-1 (Heilongjiang, China)**, sixth main event,
+  after a **submission win over former UFC flyweight champion Deiveson Figueiredo at UFC Fight Night Macau in May**.
+  Fight week has begun (first face-off held); **no result asserted**. **Champions board unchanged — THIRTY-THIRD
+  consecutive edition**, re-checked rather than re-copied: no title card has occurred since Sacramento and Shanghai is
+  not one either.
+- 🟢 **FRESHNESS HYGIENE (`fix_1836.py`): 6 stale new-markers demoted** to `Carried` across the three briefings.
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **25 days, 158 timestamped rows, 474 snapshot files**.
+  `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `validate_1836.py`, **0 failures, 239 checks**). Covered: five-tab nav, masthead pills,
+  self-stamp JS, per-page tldr labels, freshline, **balanced div counts on all four pages**, all six TradingView blocks
+  (exactly 3 single-quote widgets, five mandatory tape symbols), the MMA countdown element, the full DOJ top-story
+  fact list, an **invented-CVE guard scoped to the new top-story block only**, the Tata/Taco Bell rejection framing,
+  KEV row count and both nearest deadlines, Nvidia segment arithmetic re-derived in Python (48.71+40.31=89.02;
+  +7.20=96.22→$96.2B; 106.0%; 111.4%; 89.4% guide), **champions board parsed as real `<td>` cells with all three
+  historical regressions tested by name**, index-card-to-page-lead agreement, new-marker hygiene, and a
+  **duplicate-introduction guard** over every `New · 6:36` block against ten already-carried identifiers.
+  ⚠ **FOUR HARNESS BUGS FOUND AND FIXED, NOT WORKED AROUND:**
+  **(i) THE DANGEROUS ONE — the rejected-figure test flagged 53,577.40 and 26,151.30 as published-without-rejection
+  when they are LEGITIMATE Tuesday closes doing prior-close duty.** A test that treats a correct number as a defect
+  would have driven a future run to delete good data. Rewritten: 7,677.24 is tested as a rejected value; the other two
+  are tested only for never being labelled "the August 26 close."
+  **(ii)** the NVDA figure test demanded Kiplinger's decimals (`106.0%`, `111.4%`) but the page carries **CNBC's**
+  renderings (`106%`, `$2.22 vs $2.10`) — both sourced. Retargeted to the forms actually published.
+  **(iii)** the Patch Priority test asserted every `due August N` must be ≥ today, false-failing **CVE-2026-68820
+  (Lazarus WinSock zero-day), whose Aug 25 deadline the page CORRECTLY reports as one day past due.** Now allows past
+  deadlines that the surrounding text marks overdue/lapsed. **NINTH recurrence of the flat-window class.**
+  **(iv)** the rejection vocabulary again failed to recognise the page's own wording — **"the Tuesday close this desk
+  adopted at 2:44 over the 7,677.24 Zacks printed"** is a rejection. **SEVENTH recurrence of the vocabulary class.**
+  Trap greps CLEAN: "Cody Salkilld", "Shamil Yakhyaev", "Abdul-Rakhman", "Fight Night 286", "$1.4 trillion", "Suno".
+  Window-scoped to rejection contexts only: "112.62", "97.69", "4,637.03", "$1 trillion in combined Blackwell",
+  "350 plants", "$200 billion CPU market", "our demand is much higher than that".
