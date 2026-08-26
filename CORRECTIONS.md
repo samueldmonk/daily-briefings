@@ -13496,3 +13496,77 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   hard trap when it is a CONTEXT-ALLOWED string quoted inside a rejection. Trap greps CLEAN: "Cody Salkilld",
   "Shamil Yakhyaev", "Abdul-Rakhman", "Fight Night 286", "$1.4 trillion", "Suno". Window-scoped to rejection/correction
   contexts only: "Shanghai Indoor Stadium", "7,677.24", "30.68", "#6", "34%", "slipped 0.12%", "Dooho Choi".
+
+## Added 2026-08-26 (Wednesday ~3:19pm ET — MIDDAY EDITION, fourteenth run of the day; archive stamp 2026-08-26-1519)
+- CLOCK: run started **15:11 EDT**, archived **15:19 EDT**. Edition bucket **Midday** (h=15; masthead JS self-stamps).
+  Method: **incremental edits** to the 1509 pages (`edits_1512.py`). New tags site-wide: **WS 1 card + 3 lead
+  paragraphs / CY 2 CVE rows + 2 paragraphs + 1 KEV note / MMA tldr rewrite / index 3 card rewrites**; all
+  `New · 3:05` / `New at 3:05` markers demoted (class AND label).
+- ⚠ **MARKETS — NOTHING LATER THAN THE 3:00 STRIP EXISTS, AND THE PAGE SAYS SO RATHER THAN RE-DRESSING.**
+  The Yahoo/Zacks Aug 26 recap re-fetched **~3:12pm** served **both of its caches frozen**: index board still
+  countdown **"close in 3h 55m" → ~12:05pm** (now >3h stale), trending strip **byte-identical to the 2:40 strip**
+  (ANF 153.40/+44.50/+40.86%, INTU 339.41/−18.05/−5.05%, CRE 6.18/+3.61/+140.47%, XPON 8.86/+3.59/+68.12%,
+  META 577.46/+7.41/+1.30%). **Gotcha #50 confirmed a second time: the two widgets date independently.**
+  **TheStreet's Aug 26 page returned an EMPTY body for a FOURTH consecutive run.** The Yahoo Wednesday live blog
+  still serves the **~4:25am pre-session futures board** ("markets open in 5h 4m") — rejected as a Wednesday reading,
+  as at 2:44/3:05.
+- 🟢 **MARKETS — THE STALE BOARD STILL VERIFIES 8/8, AND GOLD'S BASE IS CONFIRMED AGAIN.** All eight lines of the
+  ~12:05 board reconcile in Python: **S&P 7,670.01/−7.27/−0.09%**, **Dow 53,455.18/−122.22/−0.23%**,
+  **Nasdaq 26,063.23/−88.07/−0.34%** → **7,677.28 / 53,577.40 / 26,151.30** exactly; **VIX 15.45/0.00/0.00%** flat on
+  its own Tuesday close; **Gold 4,655.50/−39.00/−0.83% → $4,694.50 prior close** (the figure this desk adopted over
+  the ~$4,637 Motley Fool base, now confirmed a further time); **WTI Oct-26 82.88/+0.52/+0.63% → $82.36**, i.e. crude
+  **above** Tuesday's close at midday having traded below it in the morning. ⚠ **Russell 3,002.71/−7.32/−0.24% adds
+  back to 3,010.03 vs the 3,010.02 close** — the 2:44 one-cent rounding artefact **recurs** and is printed, not smoothed.
+- 🔴 **MARKETS — GOTCHA #51 REINFORCED: A FOURTH BITCOIN BASE.** The 12:05 board implies **79,153.30**; an earlier
+  board this session implied **79,153.29** — one cent apart. The pre-session futures board implies **79,905.81**.
+  Each percent equals its own change over its own base. **RULE STANDS: never reconcile a crypto quote against a stored
+  prior close, and never infer staleness from a shifting crypto base.** Every equity/index/commodity line held its base
+  to the cent; only BTC moved.
+- 🟢 **CYBER — TWO GENUINELY NEW FLAWS, BOTH OUTSIDE KEV.**
+  **(a) CVE-2026-58231, SAP Commerce Cloud — CVSS 10.0.** Improper authorization in the **Data Hub Adapter**;
+  unauthenticated network attacker "abuses a default authentication client" and submits crafted input to functions
+  lacking validation → **arbitrary code execution**, high impact on C/I/A. **Patched Aug 11** on SAP Security Patch Day
+  (**28 new security notes**, 1 GitHub advisory, 2 updates). **Exploitation attempts observed in honeypots Aug 14 —
+  three days after the patch** (Defused; independently confirmed by **KEVIntel**). **No public PoC** → attackers appear
+  to have reverse-engineered the patch. ⚠ **CISA has NOT added it to KEV; no federal deadline; it is NOT on the board.**
+  ⚠ One source carried a database status line saying "no public PoC and is not known to be exploited" — **recorded, NOT
+  merged** into the honeypot reporting, which four outlets state directly. Sources: SecurityWeek, BleepingComputer,
+  The Hacker News, SC Media, SoCRadar, Cybersecurity Dive.
+  **(b) CVE-2026-47301, Microsoft Configuration Manager (SCCM) — CVSS 8.8 (SentinelOne advisory, CWE-284).**
+  Chain from **low-privileged domain user to SYSTEM on a Primary Site Server**: broken access control → path traversal
+  during CAB extraction → arbitrary file write → certificate-verification bypass → DLL hijacking. **Public PoC published
+  by researcher Omri Baso** (source, project files, crafted CAB, compiled release). Reported to Microsoft **May 23**;
+  one CVE fixed **Jul 14**; ⚠ **the rest of the chain is UNPATCHED until ConfigMgr 2609 in October 2026.**
+  **Not in KEV, no deadline.** Sources: Cybersecurity News, GBHackers, XM Cyber, Baso's Medium + GitHub.
+- ⚠ **CYBER — KEV STATIC, ELEVENTH CONSECUTIVE EDITION.** No alert page later than those already on the board.
+  Board holds **14 rows, 10 past due**; Patch Priority unchanged (**Oracle Aug 27 — 1 day left; Gitea Aug 28 — 2 days
+  left**) and matches the board. **Neither new CVE is in KEV, so neither changes the count.**
+- 🥊 **MMA — NOTHING NEW, AND THE PAGE SAYS SO.** Fresh searches returned no item not already carried. Most recent
+  completed event remains **UFC Fight Night 285, Hernandez vs. Rodrigues, Aug 22, Golden 1 Center, Sacramento**; next
+  card remains **Sat Aug 29, Oriental Sports Center, Pudong District, Shanghai** (three days out). The five unmerged
+  Nurmagomedov/Song odds lines stand; the twelve-bout UFC 331 listing stands. **Champions board unchanged — TWENTY-SIXTH
+  consecutive edition.**
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **25 days, 151 timestamped rows, 453 snapshot files**.
+  `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `outputs/validate_1512.py`, **0 failures, 201 checks**). Arithmetic in Python: **10
+  level/change/percent/prior-close quadruples reconciled three ways** (6 board lines + 4 strip lines), the Russell
+  one-cent case, the **two-base Bitcoin case with both bases asserted to differ**, 14 KEV date→countdown→colour triples
+  derived from the printed due dates, the champions CHAMPION-COLUMN scan, new-tag CLASS hygiene, five-tab nav, masthead
+  pills, self-stamp JS, tldr labels per page, all six TradingView blocks (with exactly 3 single-quote widgets and the
+  five mandatory tape symbols), and the MMA countdown element.
+  ⚠ **FOUR HARNESS BUGS FOUND AND FIXED, NOT WORKED AROUND: (i)** the KEV scope searched for the label
+  `"CISA KEV &amp; Federal Deadlines"` but the page renders it **lowercase** `"federal deadlines"`, so the fallback bare
+  `find("CISA KEV")` matched the **stat strip 56k characters earlier** and dragged the whole document into scope —
+  the 2:44 bug class recurring under a new spelling; the scope now anchors on the label regex (case-insensitive) and
+  stops at that section's `</section>`. **(ii)** the KEV row regex was written `&nbsp;?`, which makes only the SEMICOLON
+  optional and therefore **demands the literal characters "&nbsp"** — every row rendered with a plain space ("Aug 27")
+  failed to match and the board parsed as EMPTY; corrected to `(?:&nbsp;|\s)*`. **(iii)** the not-in-KEV qualifier test
+  used a **forward-only** window, false-failing a mention whose qualifier is stated earlier in the same paragraph; the
+  window is now bidirectional. **(iv)** the CVE-leak test scanned the whole KEV SECTION, which legitimately contains the
+  prose note explaining both new CVEs are OUTSIDE KEV; it now scans the board `<li>` ROWS only.
+  ⚠ **A FIFTH harness bug: the rejection-context vocabulary was too narrow** — the page's real rejection language uses
+  "discrepancy", "not adopted", "declined to adopt", "stale strip", "Tuesday's close" and "not a Wednesday move", none of
+  which were listed, so **eight correctly-scoped mentions of "7,677.24" and "30.68" false-failed**; vocabulary widened.
+  Trap greps CLEAN: "Cody Salkilld", "Shamil Yakhyaev", "Abdul-Rakhman", "Fight Night 286", "$1.4 trillion", "Suno".
+  Window-scoped to rejection/correction contexts only: "7,677.24", "30.68", "41.8", "slipped 0.12%",
+  "Shanghai Indoor Stadium", "Dooho Choi".
