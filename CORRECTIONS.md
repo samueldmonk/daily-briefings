@@ -14055,3 +14055,112 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   Trap greps CLEAN: "Cody Salkilld", "Shamil Yakhyaev", "Abdul-Rakhman", "Fight Night 286", "$1.4 trillion", "Suno".
   Window-scoped to rejection/correction contexts only: "7,677.24", "4,637.03", "30.68", "122%", "Shanghai Indoor
   Stadium", "Dooho Choi", "112.62", "97.69".
+
+## Added 2026-08-26 (Wednesday ~6:06pm ET — AFTERNOON EDITION, POST-CLOSE, twentieth and FINAL run of the day; archive stamp 2026-08-26-1820)
+- CLOCK: research fetched at **18:06 EDT**, archived **18:20 EDT**. Method: **incremental edits** to the 1750
+  pages (`edits_1806.py` + `edits2_1806.py` + `demote_1806.py` + `fix_1806.py`).
+- 🟢 **MARKETS — THE LEAD OF THE DAY CHANGES AFTER THE BELL: NVIDIA'S AFTER-HOURS LOSS REVERSED LIVE ON THE CALL.**
+  Kiplinger's live blog, **entry stamped 5:10 p.m. ET**, fetched in full: the stock **"turned sharply higher shortly
+  after CFO Colette Kress started talking"** and **"NVDA stock is now up almost 5% in after-hours trading."**
+  Kress's material: **"another outstanding quarter"** with **record revenue, operating income and EPS**; **"growth
+  accelerated for the fourth consecutive quarter"**; a **fiscal-2028 revenue growth forecast of 70%**, flagged by her
+  as a **"supply-constrained" estimate**; **backlog now more than $2 trillion**; **hyperscaler capex of more than
+  $800B this year and $1.3T in 2027**; an **expanded AWS partnership**; and a head-on defence of the **$500B
+  third-party financing mechanism**. ⚠ **THE −1% AND −1.3% READS PUBLISHED AT 5:36 ARE NOT CORRECTED AWAY** — they
+  were accurate before the call, and the same blog's **5:24 entry** already has the price **"down some from its
+  after-hours peak"**, so **"almost 5%" is published as a peak-adjacent reading and NO 6 p.m. level is asserted.**
+  Huang at 5:34: **"I don't know if you've seen, AI has become useful"**; **"about half of our business is growing
+  about 100% a year, and that's beyond the cloud"**; **"we've got a huge year coming up next year. It's going to be
+  extraordinary."**
+- 🔴 **GOTCHA #57 — FOUR CLAIMS ABOUT THE CALL OFFERED BY A SEARCH SUMMARY, ALL FOUR REJECTED.** The summary
+  attributed to Huang: (a) **$1 trillion in combined Blackwell and Rubin sales from 2025 through end-CY2027**;
+  (b) **350 plants building the 1.5 million components in each Blackwell rack**; (c) **Vera Rubin production
+  shipments in Q3 unlocking a $200 billion CPU market**; (d) the **70% fiscal-2028 figure plus "our demand is much
+  higher than that."** **NONE of (a)–(c) appears anywhere in the live blog fetched this run**, and **(d)
+  MISATTRIBUTES the 70% forecast, which the fetched blog gives to KRESS.** The 70% number is published as hers;
+  the four claims are printed only inside a rejection block. **RULE: a paraphrase of a call is not a transcript
+  of it.**
+- ⚠ **MARKETS — A CLOSING SET RE-OFFERED AND RE-REJECTED.** A search summary again returned **S&P 500 7,677.24
+  (+24.38, +0.3%) / Dow 53,577.40 (+160.24) / Nasdaq 26,151.30 (+171.11)** as the **Aug 26** close. **7,677.24 is
+  a standing rejected figure in this file** and the set traces to a **CNBC article dated Aug 25**. The Aug 26 close
+  on this page remains **7,675.70 / −1.58 / −0.02%**, which reconciles to the **7,677.28** Tuesday close. Not merged.
+- 🟢 **MARKETS — THE NVIDIA SEGMENT TABLE RECONCILES EXACTLY AND THEREFORE PUBLISHES.** From the CFO commentary:
+  **Data Center $89.02B (+116.6% y/y, +18.3% q/q)** = **Hyperscale $48.71B (+101.5%, +13.1%)** + **ACIE — AI Clouds,
+  Industrial and Enterprise — $40.31B (+138.1%, +25.2%)**; plus **Edge Computing $7.20B (+27.5%, +13.0%)** on strong
+  Blackwell workstation sales **offset by slower consumer PC sales on higher memory and system prices** — the same
+  memory-cost story behind HP Inc's −11%. **Checked in Python: 48.71 + 40.31 = 89.02 exactly; 89.02 + 7.20 = 96.22,
+  which rounds to the $96.2B top line; the q/q bases also reconcile (43.07 + 32.20 ≈ 75.25).** Gross margin
+  **75.0% vs 72.7%**; Q3 guide **74.0% vs 73.6%**. Q3 revenue guide **$108B ±2% = +89.4% on $57.01B** (checked).
+- 🔴 **GOTCHA #56, AND IT WAS OURS AGAIN — GOTCHA #55 RECURRING: FIVE CYBER ITEMS DRAFTED AS NEW THAT WERE ALREADY
+  ON THE PAGE.** `edits_1806.py` added a Vulnerability Watch note and a Breaches card covering **Keycloak
+  CVE-2026-18963, Marimo CVE-2026-75149, the Oasis Security NemoClaw research, Chrome 152 and Mirage2FA** — **all
+  five were already published in earlier editions today, several in MORE detail than the new copy** (the existing
+  NemoClaw entry already names **Elad Luz** and the PSIRT report; the existing Mirage2FA entry already carries the
+  same **ANY.RUN 4,500 / 63.7%** figures). The **Gitea "patched in 1.27.1 in late July"** line was likewise already
+  on the board twice. `fix_1806.py` **deleted the duplicates** and replaced them with a self-check note that names
+  what was cut. **RULE (restated, third time): grep the whole page for the identifier BEFORE adding a row.**
+- 🟢 **CYBER — TWO GENUINELY NEW ITEMS.** **Apollo Global Management** has confirmed a **social-engineering**
+  intrusion: attackers reached data in the firm's **cloud platforms between July 6 and July 10, 2026**; an
+  investigation determined on **August 12** that exposed fields include **names, dates of birth, contact
+  information, home addresses and Social Security numbers**. **Limited to a subset of systems; no client funds
+  compromised; no evidence of public posting or fraud; credit monitoring offered.** ⚠ **Apollo has NOT disclosed a
+  victim count and NONE is published.** Framed as part of an **August wave against U.S. private equity and financial
+  services firms** using **calls to employees' personal mobiles while posing as internal IT help desk**.
+  (SecurityWeek / Bloomberg / Cybernews.) Second: **Taiwanese prosecutors have charged nine people over illegal AI
+  server exports to China, including Nvidia and Super Micro employees** (SecurityWeek, Aug 25) — ⚠ **no charge
+  sheet, dollar value, server count or individual name asserted.**
+- ⚠ **CYBER — KEV STATIC, SIXTEENTH CONSECUTIVE EDITION.** Board holds **14 rows**; nearest deadlines unchanged —
+  **Oracle CVE-2026-21962 due Aug 27 (1 day left)** and **Gitea CVE-2026-60004 due Aug 28 (2 days)**. Patch Priority
+  unchanged.
+- 🥊 **MMA — THE THREE RANKINGS THIS PAGE DELIBERATELY LEFT BLANK NOW HAVE NUMBERS.** **Sports Illustrated / MMA
+  Knockout, published 10:05 a.m. ET Aug 26 and fetched in full**, gives the post-Sacramento **Meta** rankings:
+  **Gregory Rodrigues +3 to #7 middleweight**; **Anthony Hernandez −2 to #9** (two-fight skid; Strickland ended his
+  eight-fight streak in February); **Vitor Petrino +3 to #8 heavyweight**; **Serghei Spivac −4 to #13**;
+  **Carli Judice enters at #15 women's flyweight** (stopped the formerly undefeated **Jeisla Chaves**, fourth
+  straight win); and a name this desk had never listed — **Jamall Emmers debuts at #14 featherweight** after a
+  first-round KO of **Lerryan Douglas**, who entered on a six-fight KO streak. Also: **Rodrigues and Hernandez both
+  took Fight of the Night** (⚠ no dollar figure stated, none published) and **10 of the 13 scheduled fights ended
+  inside the distance.**
+- ⚠ **MMA — REINIER DE RIDDER'S EXACT LIGHT-HEAVYWEIGHT RANK IS DISPUTED AND IS NOT ASSERTED.** SI's article body
+  says he **"broke into the UFC light heavyweight rankings at #9"**; a **Sherdog** headline and an **MMA Mania**
+  headline both frame the same debut as **#10 / "Top 10."** **Both readings printed, neither adopted** — the page
+  says only that he **entered the light heavyweight top ten** after a **first-round TKO of Roman Dolidze** in his
+  first fight in the division. **Spelling: "Jamall Emmers" (double L), per the SI article body; SI's own subheading
+  renders it "Jamal" and is wrong.**
+- 🥊 **MMA — NEW AROUND-THE-SPORT ITEM.** **Duel Arena 1: Perry vs. Danis**, **Saturday Aug 29, Kia Center, Orlando,
+  8 p.m. ET**, **Mike Perry vs. Dillon Danis at 170 lbs** — ⚠ **NOT a UFC event**, and its 8 p.m. ET start is
+  **fourteen hours after** UFC Shanghai's 6 a.m. ET main card, not opposite it. **No odds, purse or broadcast figure
+  published.** **Champions board unchanged — THIRTY-SECOND consecutive edition**, and independently cross-checked
+  this run: the SI piece calls **Sean Strickland the reigning UFC middleweight champion.**
+- 🟢 **A REAL PAGE DEFECT FROM THE 5:36 RUN, FOUND AND FIXED:** the After-hours note printed the same caveat
+  sentence ("That last clause is no longer true as of 5:36…") **twice**. Deduplicated. Also fixed: the Wall Street
+  page's **`<div class="wrap">` was never closed** — a long-standing off-by-one now balanced (0 unclosed divs).
+- 🟢 **FRESHNESS HYGIENE (`demote_1806.py`): 12 stale new-markers demoted** across the cyber and Wall Street pages,
+  in **both** the `<span class="tag new">` form and the inline prose form.
+- VALIDATION (programmatic, `validate_1806.py`, **0 failures, 311 checks**). Arithmetic in Python: the **entire
+  Nvidia segment table re-derived and proved to reconcile to the top line and to its own q/q bases**, the
+  **+106.0% / +111.4% / +89.4%** growth rates, both gross-margin comparisons; **14 KEV due-date→countdown→past-due
+  triples** with a minimum-triples guard against vacuous passes; the **11-belt champions column parsed as real
+  `<td>` cells** with all three historical regressions tested by name; five-tab nav, masthead pills, self-stamp JS,
+  per-page tldr labels, freshline, all six TradingView blocks (exactly 3 single-quote widgets, five mandatory tape
+  symbols), the MMA countdown element, prose-level new-tag hygiene, and windowed rejection-context tests for every
+  claim rejected this run.
+  ⚠ **FIVE HARNESS BUGS FOUND AND FIXED, NOT WORKED AROUND: (i)** the rejection vocabulary again failed to
+  recognise the page's own wording ("mutually contradictory… Nothing from either is published"), false-failing the
+  ANF prices — **SIXTH recurrence of the vocabulary class.** **(ii)** the Apollo window anchored on the FIRST
+  mention of the firm, which is in the tldr 24k characters above the card. **(iii)** the NemoClaw window anchored
+  on the first of five "Oasis Security" occurrences — and that miss is precisely what exposed GOTCHA #56, because
+  the "first occurrence" was the item this run was about to duplicate. **(iv)** the Chrome 152 sentence test used a
+  400-character MINIMUM before hunting a period, walking out of a **stat-strip tile** into an unrelated F5 Labs CVE,
+  and a later version matched the **Sources footer link titles** — **SEVENTH and EIGHTH recurrences of the
+  flat-window class**; now scoped to prose between the Top story label and the Sources footer. **(v)** the champions
+  "cell" was a character slice off the row text, so **Topuria (the DEFEATED lightweight) fell inside Gaethje's
+  champion cell**; rewritten to parse real `<td>` elements.
+  ⚠ **NEW HARNESS CAPABILITY ADDED THIS RUN:** a **duplicate-introduction guard** — every block stamped
+  `New · 6:06` is extracted at element scope and checked against a list of already-carried identifiers, so a future
+  run cannot re-introduce a published item as new without saying so. This is the test that GOTCHA #55 and #56
+  needed and that the harness did not have.
+  Trap greps CLEAN: "Cody Salkilld", "Shamil Yakhyaev", "Abdul-Rakhman", "Fight Night 286", "$1.4 trillion", "Suno".
+  Window-scoped to rejection/correction contexts only: "7,677.24", "4,637.03", "112.62", "97.69", "$213.70",
+  "1.45%", "1.59%", "$1 trillion in combined Blackwell", "350 plants", "1.5 million components",
+  "$200 billion CPU market", "our demand is much higher than that".
