@@ -13708,3 +13708,94 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   Trap greps CLEAN: "Cody Salkilld", "Shamil Yakhyaev", "Abdul-Rakhman", "Fight Night 286", "$1.4 trillion", "Suno".
   Window-scoped to rejection/correction contexts only: "7,677.24", "4,637.03", "30.68", "Shanghai Indoor Stadium",
   "Dooho Choi".
+
+## Added 2026-08-26 (Wednesday ~4:15pm ET — AFTERNOON EDITION, POST-CLOSE, sixteenth run of the day; archive stamp 2026-08-26-1614)
+- CLOCK: run started **16:06 EDT**, archived **16:14 EDT** — the first run of the day AFTER the 4 PM close, so the
+  page leads with the official close and carries an **After-Hours Movers** section per the standing spec. Edition
+  bucket **Afternoon**. Method: **incremental edits** to the 1546 pages (`edits_1615b.py` + an index card-swap fix).
+- 🔴 **GOTCHA #52 — THE BIGGEST TRAP YET: A BARCHART "CLOSE" THAT IS TWO YEARS OLD.** A search for the Wednesday close
+  surfaced **barchart.com/story/news/28260060/stocks-close-lower-ahead-of-nvidia-earnings**, whose live title is
+  **"Stocks Close in the Red, Nvidia Trades Lower After Earnings Report"** and whose meta-description reads **"The
+  Nasdaq 100 fell to a 2-week low on Wednesday"** ahead of Nvidia. The search summariser presented its numbers as
+  today's: **S&P 500 −0.60%, Dow −0.39%, Nasdaq 100 −1.18%**, plus **"Nvidia revenue +122% y/y, stock −7% after the
+  bell."** **FETCHED IN FULL, THE BODY DATES ITSELF TO AUGUST 2024:** Super Micro **"closed down more than −19% … after
+  it said it would delay filing its Annual Report on Form 10-K for the fiscal year ended June 30, 2024"**; Foot Locker
+  **"cutting its 2025 gross margin forecast"**; the next-morning earnings list names **Catalent** and **HashiCorp**.
+  **RULE: an article matched on situational similarity ("Wednesday close, Nvidia print") is not dated by that
+  similarity. NEVER publish index moves or an after-hours reaction from a page whose body has not been read for
+  self-dating evidence.** Nothing from it published; the page names the provenance and the evidence explicitly.
+  ⚠ The **+122%** figure is the giveaway — it is Nvidia's **Q2 FY2025** growth rate, not anything from FY2027.
+- 🟢 **MARKETS — THE OFFICIAL WEDNESDAY CLOSE, AND THE 7,677.28 BASE SURVIVES A FIFTH AND SIXTH BOARD.**
+  **S&P 500 closed 7,675.70, −1.58, −0.02%** (Yahoo-sourced read); a second read this run gives
+  **7,675.82, −1.46, −0.02%**. **Both subtract to exactly 7,677.28** — the Tuesday close this desk adopted at 2:44
+  over Zacks' **7,677.24**. ⚠ **The twelve-cent divergence between the two closing reads is PRINTED, NOT SMOOTHED, and
+  no S&P closing level is asserted to the cent.** Also: **Dow declined ~0.2%**, **Nasdaq Composite slipped ~0.08%**,
+  **NVDA closed −1.59%**. Day's full shape now complete: **green at 9:59 (only all-green board), worst at 12:29,
+  clawing back by 1:24, flat at the bell.**
+- ⚠ **MARKETS — THE TUESDAY-AS-WEDNESDAY RELABEL RETURNS, THIRD AND FOURTH OCCURRENCES TODAY.** Two separate search
+  summaries handed back **7,677.24 / 53,577.40 +160.24 / 26,151.30 +171.11** as "the August 26 close." Those are
+  **Tuesday's** closes and the S&P figure is additionally the rejected Zacks variant. **Rejected again.** ⚠ The Yahoo
+  Aug 26 live blog re-fetched this run is **still served from its ~4:18am cache** ("U.S. markets open in 5h 4m"), so
+  its futures board **and its trending strip** (DKS −30.68%, INTU 357.46/−3.37%, ZM, RZLV, OKLO) are **not** post-close
+  readings and were not published as such.
+- 🟢 **MARKETS — NVIDIA: EXPECTATIONS PUBLISHED AS EXPECTATIONS, NO RESULT ASSERTED.** Reported **after the close
+  Aug 26** for **Q2 FY2027**, call later that evening (CNBC live blog). **Visible Alpha: $92.16B revenue, $2.09 adj EPS,
+  $85.67B Data Center**; **41 analysts: $92.07B / $2.09**; **Data Center range $83.5B–$91.5B**; **company guide
+  $91.0B ±2%**; **year-ago $46.74B and $1.05** ("roughly double" — checked in Python, 1.97x and 1.99x).
+  Options (Benzinga): **NVDA 13.26% implied vol, ~$5.26T cap, ~$282B in play**; ⚠ **a companion Benzinga headline says
+  $286B — both printed, NOT merged**, and neither is derivable from 5.26T × 13.26%. **CRWD 7.59% on a $196B cap ≈
+  $14.9B** (verified: 196 × 0.0759 = 14.88). Sell-side tilt: **CRM 73% bullish / 4% bearish; CRWD 77% / 2%.**
+  Reporting after this bell: **NVDA, CRWD, CRM, OKTA, WSM, ANF** (+ Kohl's in the options screen).
+  ⚠ **NO VERIFIED AFTER-HOURS PRICE MOVE existed in any source at 4:15pm ET — the After-Hours section says so
+  explicitly rather than inventing one.**
+- ⚠ **MARKETS — A THIRD 10-YEAR FIGURE, ATTRIBUTED AND STILL NOT RECONCILED.** Trading Economics: the 10-year
+  **eased to 4.65% from a 20-month high of 4.75% on Aug 21**. That contradicts the midday arithmetic already carried
+  (Zacks 4.625% Tuesday settle + Motley Fool's +0.017 = **4.642%**, and the Fool's own prose 4.67%). **All three
+  printed with sources; no single 10-year level asserted.** Macro re-confirmed: **core PCE 3.3% July, in line,
+  unchanged from June**; **Jackson Hole this week, Chair Kevin Warsh speaking on the central bank's future plans.**
+  ⚠ **Meta settlement: a Yahoo summary says "roughly $16.7 billion" — a FOURTH secondary count. FLAGGED, NOT MERGED;
+  the CA AG's own release (51 AGs, "up to $17 billion over ten years") remains what publishes.**
+- 🟢 **CYBER — ONE GENUINELY NEW SUPPLY-CHAIN ITEM.** **OX Security**: a **fake Cloudflare Captcha campaign
+  distributing ClickFix malware through npm**, with **24 distinct malicious packages sharing the exact same malicious
+  code**. Same paste-and-run technique as the **Cruciferra / ErrTraffic (LenAI)** loader already in the Spotlight, but
+  delivered through the package registry rather than compromised WordPress. ⚠ **No CVE, NOT in KEV, no federal
+  deadline.**
+- ⚠ **CYBER — KEV STATIC, THIRTEENTH CONSECUTIVE EDITION.** No CISA alert page later than those on the board; visible
+  alert pages remain **Aug 18 (four)**, **Aug 20 (two — TrueConf CVE-2026-72529 missing auth, CVE-2026-72530 code
+  injection)**, **Aug 21 (one — Zimbra CVE-2026-73570 OS command injection)**. Board holds **14 rows, 10 past due**;
+  **Patch Priority unchanged (Oracle CVE-2026-21962 due Aug 27 — 1 day left; Gitea CVE-2026-60004 Aug 28 — 2 days)**.
+  ⚠ **THE GITEA/ORACLE GARBLE RECURS:** a summary again rendered **CVE-2026-60004** as "an Oracle HTTP Server and
+  Oracle WebLogic Server Proxy Plug-in flaw" while, in the same sentence, describing **Gitea repository shell-command
+  execution**. **Rejected for the second consecutive edition; CVE-2026-60004 is Gitea.**
+- ⚠ **CYBER — A HEADLINE SEEN AND DELIBERATELY NOT PUBLISHED.** "Taco Bell and Pizza Hut operator discloses breach
+  after suspicious network activity" appeared as a current Aug 26 item, but **every follow-up search returned only the
+  2023 Yum! Brands ransomware incident** (the Jan 13 attack and its notification letters) and **no 2026 body text**.
+  **Nothing asserted.** RULE REINFORCED: a fast-food-brand breach headline will always pull the 2023 Yum! coverage —
+  require 2026 body text before publishing.
+- 🥊 **MMA — UFC.COM'S OWN PREVIEW FILLS IN THE SHANGHAI CARD.** The promotion's **fight-by-fight preview** confirms the
+  **bantamweight bout headlines UFC Fight Night at Shanghai's Oriental Sports Center on August 29**, of "massive
+  divisional significance," each man chasing **the clubhouse leader spot for the next title opportunity**. **Co-main:
+  Denise Gomes vs. Xiaonan Yan, with significant strawweight title implications.** Main card also features **Qileng
+  Aori vs. Kai Asakura**. Odds unchanged: **Nurmagomedov −500 / Song +380 (~80% / ~20%** — verified in Python as 83.3%
+  and 20.8% raw implied). ⚠ **Card had NOT taken place; no result asserted for any bout.**
+  **Champions board unchanged — TWENTY-EIGHTH consecutive edition.**
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **25 days, 153 timestamped rows, 459 snapshot files**.
+  `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `outputs/validate_1615b.py`, **0 failures, 232 checks**). Arithmetic in Python: **both
+  Wednesday closing reads reconciled three ways against 7,677.28**, the **twelve-cent divergence asserted as real**,
+  the **four-cent Zacks delta**, the **Nvidia "roughly double" claims (1.97x revenue, 1.99x EPS)**, **consensus inside
+  the ±2% guide band**, **DC estimate inside its stated range**, **CRWD 196×7.59%≈$14.9B**, a **proof that the $282B
+  and $286B swing figures are NOT one derivation** (hence both printed), **−500/+380 implied probabilities**, **14 KEV
+  due-date→countdown→past-due triples parsed off the printed due dates with the past-due count asserted at 10**, the
+  **11-belt champions column with the three historical regressions (Pereira/LHW, Chimaev/MW, featherweight-vacant)
+  tested by name**, five-tab nav, masthead pills, self-stamp JS, per-page tldr labels, freshline, all six TradingView
+  blocks (exactly 3 single-quote widgets, five mandatory tape symbols), the MMA countdown element, new-tag hygiene,
+  and **windowed rejection-context tests for every 2024-Barchart figure and every Tuesday-close figure on the page**.
+  ⚠ **ONE HARNESS BUG FOUND AND FIXED, NOT WORKED AROUND: "Shanghai Indoor Stadium" was filed as a HARD trap**, but the
+  MMA page legitimately carries it **twice, both inside its own rejection prose** ("…is rejected on the strength of
+  that primary source"). **This is the exact "Dooho Choi" mis-filing fixed at 3:50, recurring under a new string.**
+  Moved to the context-allowed list with the venue-rejection vocabulary added; a positive check now requires the
+  rejection sentence to be PRESENT.
+  Trap greps CLEAN: "Cody Salkilld", "Shamil Yakhyaev", "Abdul-Rakhman", "Fight Night 286", "$1.4 trillion", "Suno".
+  Window-scoped to rejection/correction contexts only: "7,677.24", "4,637.03", "30.68", "Shanghai Indoor Stadium",
+  "Dooho Choi".
