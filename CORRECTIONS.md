@@ -13799,3 +13799,87 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   Trap greps CLEAN: "Cody Salkilld", "Shamil Yakhyaev", "Abdul-Rakhman", "Fight Night 286", "$1.4 trillion", "Suno".
   Window-scoped to rejection/correction contexts only: "7,677.24", "4,637.03", "30.68", "Shanghai Indoor Stadium",
   "Dooho Choi".
+
+## Added 2026-08-26 (Wednesday ~4:36pm ET — AFTERNOON EDITION, POST-CLOSE, seventeenth run of the day; archive stamp 2026-08-26-1636)
+- CLOCK: run started **16:36 EDT**. The 4:14 run said, correctly, that **no verified after-hours move existed**.
+  Twenty-two minutes later **three of the six names had reported**, so this run replaces the after-hours placeholder
+  with real prints and **re-leads the Wall Street page on them**. Method: **incremental edits** to the 1614 pages
+  (`edits_1636.py` + `fix_1636.py`).
+- 🟢 **MARKETS — NVIDIA Q2 FY2027 IS A RESULT NOW, NOT AN EXPECTATION.** **Revenue $96.22B vs $92.17B expected**;
+  **adjusted EPS $2.22 vs $2.10**; **revenue +106% y/y** (vs the year-ago **$46.74B** that is **2.06x** — checked in
+  Python, so "more than doubled" is literally true); **Data Center $89B vs $86.33B expected, +117% y/y**, now
+  **92% of company sales** (89/96.22 = **92.5%**). **Q3 guide $108B ±2% vs $104.2B expected — the ENTIRE band,
+  $105.84B–$110.16B, sits above consensus**; midpoint is **+12.2% sequential**. **Outlook includes NO data-center
+  sales from China.** ⚠ **The print came in ABOVE the top of the company's own $91.0B ±2% guide ($89.18–$92.82B)**,
+  so every consensus figure this page carried all day (Visible Alpha $92.16B, 41-analyst $92.07B) was **low by ~$4B**.
+  **The stock SLIPPED in extended trading anyway.** ⚠ **NO after-hours percentage for NVDA existed in any source
+  fetched this run — direction published, magnitude explicitly withheld.** (CNBC live blog.)
+- 🟢 **MARKETS — SALESFORCE IS THE ONLY SOURCED AFTER-HOURS NUMBER, AND ITS EPS LINE DOES NOT RECONCILE.**
+  **Shares soared 14% in extended trading**; **revenue $11.35B vs $11.32B expected, +11%** (quarter ended Jul 31);
+  FY27 guide **$16.67–$16.71 EPS on $46.1–$46.4B**, source-stated **11% growth at the midpoint** ($46.25B, checked);
+  **$2.6B gain on strategic investments from its ANTHROPIC stake**; **Agentforce annualized revenue >$1.5B, +240% y/y**.
+  ⚠ **PRINTED AND FLAGGED, NOT MERGED:** CNBC gives **net income $3.53B, or $4.29/sh, "jumped 87%" from $1.89B, or
+  $1.96/sh**. Net income growth is **86.8%** and reconciles; **per share the same pair is +118.9%**, which needs the
+  diluted share count to fall **~964M → ~823M, −14.7% in a year**. **Both quoted; no reconciled EPS growth asserted.**
+- 🟢 **CYBER/MARKETS — CROWDSTRIKE FROM THE 8-K ITSELF, NOT A SUMMARY.** SEC Form 8-K Ex. 99.1 fetched in full:
+  **revenue $1.47B, +26%** (statements give **$1,470,897K vs $1,168,952K = +25.8%**); **non-GAAP EPS $0.31 vs $0.29
+  expected**; **GAAP EPS $0.01**; **record net new ARR $333M ($332.8M), accelerating to +51% y/y**, vs guidance
+  **$284–$286M** — a **~$47M** beat; **ARR $5.84B +25%**; **Falcon Flex ending ARR >$2.29B, +101%**; **Q2-record CFO
+  $530M / FCF $377M**; **FY27 net new ARR growth outlook raised 630bp to 34% at midpoint**. Kurtz: **"Q2 was the best
+  quarter in CrowdStrike's history."** Also disclosed: **agreement to acquire the technology assets of XM Cyber**
+  (Schwarz Digits); **4-for-1 stock split effected after the close July 1, 2026**. ⚠ **No CRWD after-hours price sourced.**
+- 🔴 **GOTCHA #53 — A SEARCH SUMMARY SERVED THE PRIOR QUARTER AS "THE QUARTER."** Asked for CrowdStrike's after-hours
+  reaction, a summary returned **"record $256 million in net new ARR, up 32%", "ending ARR $5.51 billion", "revenue
+  $1.39 billion"** — **those are Q1 FY27, not Q2.** Rejected; the 8-K governs. **RULE: for a company that reports
+  quarterly records, a "record" figure in a summary is not evidence of WHICH quarter.**
+- ⚠ **A GENUINE NUMERIC COINCIDENCE, RECORDED SO IT IS NOT "CORRECTED" LATER:** CrowdStrike's **Q2 net new ARR is
+  $332.8M** and its **year-ago Q2 net cash from operations is also $332,832K**. Two different metrics, same digits.
+  **Do not treat this as a transcription error in a future run.**
+- 🟢 **CYBER — THE GITEA KEV ROW NOW HAS PRIMARY DETAIL.** **CVE-2026-60004, CVSS 9.8**: an attacker with **ordinary
+  repository write access** plants an **executable Git hook** and runs shell commands as the **Gitea service account**.
+  Affects **1.17 onward**, **fixed in 1.27.1**. In-the-wild provenance is an incident write-up on the Russian blog
+  **Habr** (self-hosted instance compromised to run **crypto-mining** software). **CISA added it Aug 25; FCEB deadline
+  August 28, 2026** — matching the Patch Priority box. **Patch Priority unchanged (Oracle CVE-2026-21962 due Aug 27 —
+  1 day left).** Board holds **14 rows, 10 past due**.
+- 🟢 **CYBER — NEW INCIDENT ITEM: RMM ABUSE AT SCALE.** A phishing operation **active since January 2026** across
+  **46 countries** installs **legitimate remote monitoring and management tools** for hands-on control; lures are
+  **SSA notices, Adobe PDF prompts, invoices, VAT alerts, shipping and shared-file themes**. A strand aimed
+  **primarily at financial institutions** uses **fake Adobe Document Cloud pages** to install **ScreenConnect**.
+  ⚠ **No CVE, not in KEV, no federal deadline.** Same user-performs-the-install family as ClickFix/Cruciferra.
+- 🥊 **MMA — UFC.COM FILLS IN THE SHANGHAI CARD SHAPE.** **13 bouts total — a 12-fight undercard** under
+  **Nurmagomedov vs. Song** at the **Oriental Sports Center, Aug 29**. ⚠ **U.S. times are EARLY MORNING, not evening:
+  prelims 3 a.m. ET, main card 6 a.m. ET, Paramount+.** UFC.com's own words describe the co-main fighter as
+  **"former title challenger and home country fighter Yan Xiaonan"** — **the descriptor is the promotion's, and is
+  therefore permitted**; Yan challenged for the strawweight title. Odds unchanged **−500 / +380**. **No result asserted.**
+  **Champions board unchanged — TWENTY-NINTH consecutive edition.**
+- VALIDATION (programmatic, `outputs/validate_1636.py`, **0 failures, 277 checks**). Arithmetic in Python: every NVDA
+  figure re-derived (2.06x, +106%, 92.5% DC share, the ±2% guide bands both old and new, the entire Q3 band above
+  consensus, +12.2% sequential), the **CRM 86.8% vs 118.9% divergence and the implied 964M→823M share count**, the
+  **CRWD +25.8% off the raw statements** and the **$47M ARR beat**, **14 KEV due-date→countdown→past-due triples**,
+  the **11-belt champions column**, moneyline implied probabilities, five-tab nav, masthead pills, self-stamp JS,
+  per-page tldr labels, freshline, all six TradingView blocks (exactly 3 single-quote widgets, five mandatory tape
+  symbols), the MMA countdown element, and windowed rejection-context tests.
+  ⚠ **ONE REAL PAGE DEFECT CAUGHT BY THE HARNESS AND FIXED, NOT SUPPRESSED:** `edits_1636.py` appended the Gitea
+  enrichment to the **WRONG KEV ROW** — it searched the KEV section for "CVE-2026-60004", landed in the section's
+  intro prose, and the next `</li>` closed the **Oracle CVE-2026-21962** row. **Gitea's CVSS, fixed version and Habr
+  provenance printed inside an Oracle row** — the exact Gitea/Oracle conflation these corrections warn about,
+  produced this time by our own script. `fix_1636.py` cut the note out and re-anchored it on the `<li>` whose CVE
+  *label* is Gitea, asserting the row names Gitea and does not name Oracle.
+  ⚠ **EIGHT HARNESS BUGS FOUND AND FIXED, NOT WORKED AROUND: (i)** the NVDA-percentage guard allowed 120 chars of
+  slack, so it matched the 2024-Barchart rejection prose AND a sentence whose percentage belonged to the Nasdaq 100.
+  **(ii)** bare `5.51` is a SUBSTRING of the **VIX 15.51** quote all over the page — every VIX mention false-failed;
+  anchored on the ARR phrasing. **(iii)** the KEV countdown regex required **parentheses**, but the page renders
+  `<span class="kevdue ok">1 day left</span>` — it failed EVERY future-dated row. **(iv)** the Gitea/Oracle test used
+  a flat 400-char window that ran into the adjacent row; scoped to the enclosing `<li>` — and in its corrected form
+  it is what caught the real defect above. **(v)** the middleweight test could not distinguish champion from
+  **defeated opponent** — Chimaev legitimately appears as the man Strickland beat; now asserts the champion cell and
+  a defeat verb. **(vi)** the venue vocabulary again missed the page's real rejection language ("the Oriental Sports
+  Center name is the one published here" contains no form of "reject") — **THIRD recurrence of this bug class**
+  (Dooho Choi 3:50, Shanghai Indoor Stadium 4:14). **(vii)** the same under-specified vocabulary false-failed
+  `7,677.24` ("declined to adopt", "adopted at 2:44 over") and `122%` ("two years old", "NONE of it publishes").
+  **(viii)** the new-tag test only inspected `<span class="tag new">`, so **INLINE prose labels ("New · 4:15")
+  survived into a 4:36 edition still calling themselves new** — 8 of them across three pages, now demoted, and
+  freshness is tested in prose from here on.
+  Trap greps CLEAN: "Cody Salkilld", "Shamil Yakhyaev", "Abdul-Rakhman", "Fight Night 286", "$1.4 trillion", "Suno".
+  Window-scoped to rejection/correction contexts only: "7,677.24", "4,637.03", "30.68", "Shanghai Indoor Stadium",
+  "Dooho Choi", "122%", and the CRWD prior-quarter figures.
