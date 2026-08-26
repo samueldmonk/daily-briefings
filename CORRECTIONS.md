@@ -13933,3 +13933,125 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   the print red"**, so it false-failed the Movers card twice. Vocabulary extended; the guard still catches any use of
   −1.59% as an after-hours figure.
   Trap greps CLEAN: "Cody Salkilld", "Shamil Yakhyaev", "Abdul-Rakhman", "Fight Night 286", "$1.4 trillion", "Suno".
+
+## Added 2026-08-26 (Wednesday ~5:36pm ET — AFTERNOON EDITION, POST-CLOSE, nineteenth run of the day; archive stamp 2026-08-26-1750)
+- CLOCK: research fetched at **17:36 EDT**, archived **17:50 EDT**; the page's prose labels say **5:36** because that
+  is when the sources were fetched. Method: **incremental edits** to the 1706 pages (`edits_1736.py` +
+  `sources_1736.py` + `fix_1736.py` + a small polish pass).
+- 🟢 **MARKETS — THE FULL AFTER-HOURS ROUNDUP LANDS, AND IT IS SEVEN NAMES, NOT FOUR.** Investing.com's
+  **"After-Hours Movers: NVDA, CRM, SNPS, CRWD, OKTA, NTNX"** wrap, **fetched in full** this run, prices the night as
+  **Okta +17%, Salesforce +12%, CrowdStrike +10%, Nutanix +5%, Nvidia −1%, Synopsys −6%, HP Inc −11%.**
+  ⚠ **THESE DIFFER FROM THE 4:36–5:06 CNBC/QUARTZ FIGURES (Okta ~+15%, CRM +14%, CRWD as much as +12%) AND BOTH SETS
+  ARE PRINTED WITH THEIR OWN TIMESTAMPS AND SOURCES. NOTHING IS MERGED, AVERAGED OR REPLACED.** An extended-hours
+  quote is a live price; a later read moving is the tape behaving normally, not evidence the earlier read was wrong.
+  **RULE ADOPTED: after-hours percentages are timestamped observations, not facts to be reconciled.**
+- 🟢 **MARKETS — NVIDIA FINALLY HAS AN AFTER-HOURS MAGNITUDE, AND IT IS SMALL.** **−1%** (Investing.com) and
+  **−1.3% about half an hour before the call** (Kiplinger's live blog). **Both printed, neither adopted.**
+  ⚠ **Both remain categorically distinct from −1.59%, which is NVDA's REGULAR-SESSION close** and was offered as an
+  after-hours figure at 5:06 and rejected. **It stays rejected.** The 5:06 direction-only stance was correct at 5:06.
+- 🟢 **MARKETS — THREE NAMES THIS DESK HAD NEVER SEEN, AND THE NIGHT'S WORST MOVE IS NOT NVIDIA.**
+  **HP Inc (HPQ) −11% despite beating both lines**: **adjusted EPS $0.83** on **revenue $15.7B, +12.5% y/y** vs a
+  **$14.34B** estimate (**+9.5%** beat, checked); **FY26 adjusted EPS guide raised to $3.19–$3.29**, midpoint **$3.24**
+  vs **$3.04** consensus (**+6.6%**, checked). Sold on **soft Q4 margin expectations / rising component costs, memory
+  in particular.** ⚠ **THREE CONSENSUS EPS FIGURES WERE IN CIRCULATION AND ALL THREE ARE PRINTED: $0.66** (implied by
+  Investing.com calling it a 17-cent beat), **$0.69** (TradingView) and **$0.72** (AlphaStreet). Only the **$0.83**
+  print is asserted. **Synopsys (SNPS) −6%** on a Q3 beat (**EPS $3.91 on $2.48B**) plus raised full-year guidance,
+  attributed to profit-taking. **Nutanix (NTNX) +5%** on fiscal Q4 **adjusted EPS $0.60, eleven cents ahead** (so a
+  **$0.49** consensus, checked) on **revenue $757.1M, +16% y/y**.
+- ⚠ **MARKETS — A FOURTH SALESFORCE EPS FIGURE, REJECTED.** Investing.com's wrap states **"an EPS of $5.90 ($2.63
+  ahead of consensus)"**. That cannot be CNBC's **$4.29 a share**, and **four quarters at $5.90 is $23.60, far above
+  Salesforce's own $16.67–$16.71 FY guide** (checked in Python), so it is not an annualisable measure either.
+  **Flagged on the page, NOT published as Salesforce's EPS.**
+- 🔴 **MARKETS — A REAL ERROR ON THIS PAGE, CAUGHT AND RETRACTED: WSM AND ANF DID NOT REPORT AFTER THIS BELL.**
+  At 4:15 and again at 5:06 this page listed **Williams-Sonoma and Abercrombie & Fitch** as still to report tonight
+  (per Yahoo Finance and TheStreet). **Both reported BEFORE Wednesday's open.** WSM: **net revenues $1.96B, +6.7% y/y**
+  vs a **$1.93B** estimate, **diluted EPS $2.10, +5%**, **comparable brand revenue growth 6.2% (from 4.8% in Q1)**,
+  **operating margin 17.3%**, FY26 guidance raised (comp **4%–6.5%**, total revenue **4.7%–7.2%**, operating margin
+  **17.8%–18.2%**). ANF reported pre-open too and is the regular session's biggest mover. **The page now carries an
+  explicit retraction card and the old placeholder is marked SUPERSEDED.**
+  **RULE: an earnings-calendar listing is not evidence of the time of day a company reports.**
+- 🟢 **MARKETS — THE ANF PRICE LADDER RESOLVES; A THIRD STOCKSTORY READ VINDICATES IT RATHER THAN BREAKING IT.**
+  A StockStory piece **published 11:39am ET** is headlined **"Stock Jumps 11.9%"** and prints **$121.47** — which looks
+  like it contradicts the **+40.86%** this page carries. **It does not.** Against the common base the 2:40 Yahoo strip
+  confirms exactly (**153.40 − 44.50 = 108.90**), the three prices **$121.47 (11:39) → $144.81 (12:55) → $153.40
+  (2:40)** are **+11.5% / +33.0% / +40.9%** — **a monotonic intraday climb, checked in Python.**
+  ⚠ **What still does NOT reconcile is StockStory's own arithmetic: its 11.9% needs a $108.55 base; its 41.8% needs
+  no base this page can find.** New from that article: **adjusted EBITDA $296M vs $170.3M est (23.4% margin, +73.8%,
+  checked)**; **Q3 revenue guide $1.36B midpoint vs $1.34B**; **FY GAAP EPS guide $13.35 midpoint** (the exact midpoint
+  of the **$13.10–$13.60** already published, checked); **operating margin 19.9% from 17.1%**; **FCF margin 15.9% from
+  4.2%**; **same-store sales flat**. ⚠ **It puts the GAAP EPS consensus at $1.97 where this page carries $1.99 — a
+  two-cent divergence, printed, not smoothed.**
+- ⚠ **MARKETS — NO ANF CLOSING PRICE ASSERTED.** Searches for one returned mutually contradictory figures: one summary
+  offered **$112.62, +1.94%** while flagging its own source as three weeks old; another offered **$97.69, +5.19%**,
+  which sits BENEATH every intraday price above. **Neither published.**
+- 🔴 **CYBER — GOTCHA #55, AND IT WAS OUR OWN: A "NEW" CVE ROW THAT DUPLICATED AND CONTRADICTED THE PAGE'S OWN PATCH
+  PRIORITY BOX.** SecurityWeek's MiniOrange article was fetched and written up as a **new** Vulnerability Watch row
+  stating **"no numeric CVSS is asserted."** But **CVE-2026-15981 (CVSS 9.8) and CVE-2026-61979 (CVSS 8.1) have been
+  in this page's Patch Priority box since the 11:05 edition**, with the Patchstack analysis, the DigitalOcean credit,
+  the scanning IPs and the `mo_saml_validate_signature()` root cause. **The row therefore put the page in contradiction
+  with itself.** `fix_1736.py` **deleted the row** and folded in only the genuinely new detail.
+  **RULE: before adding a CVE row, grep the whole page for the CVE id. Fresh coverage of an old CVE is corroboration,
+  not a new entry.**
+- 🟢 **CYBER — THE GENUINELY NEW MINIORANGE DETAIL IS THE FREE EDITION'S FIX, AND IT IS A TRAP.** The **free edition is
+  fixed in version 5.4.5**, and **its advisory lists that fix as a BUGFIX rather than a security patch**; the **paid
+  and enterprise editions were not notified at all** and use a **different versioning scheme**, so an administrator
+  **cannot tell from a version number whether the site is patched**. ⚠ **This is why 5.4.5 and the 17.0.5 / 17.0.6
+  already on the page do NOT contradict each other — 5.4.5 is the free edition, 17.0.5/17.0.6 the Standard edition.
+  Recorded so a future run does not "correct" one into the other.** Free edition runs on **>10,000 sites**.
+- 🟢 **CYBER — THE 5:06 REJECTION IS NOW PUBLISHABLE, BECAUSE THE ARTICLE WAS FETCHED.** At 5:06 an Adobe/NVIDIA
+  advisory headline was seen and **correctly withheld for want of a fetched bulletin**. SecurityWeek's write-up
+  (published 8:39am ET Aug 26) was fetched in full this run. **NVIDIA: four advisories Tuesday**; one covers
+  **18 vulnerabilities in NemoClaw and OpenShell** (AI-agent runtime/security products), **two critical**, **a dozen
+  high**, with **Cyera detailing one that hijacks AI agents**; **five fixed in DGX Spark** (three high); **two high +
+  three medium in Unified Fabric Manager**; a fourth adds mitigation advice for **Rowhammer attacks against NVIDIA
+  GPUs**. Last week: **five in Triton Inference Server**, plus **Cumulus Linux and NVOS**. **Adobe (now twice-monthly):
+  seven advisories**; **critical code execution in Substance 3D Designer / Sampler / Painter, XD and Campaign
+  Classic**; DoS and info-exposure in **Illustrator and Content Credentials SDK**; **Adobe says none exploited in the
+  wild** and **only Campaign Classic carries priority rating 1**. ⚠ **NO CVE ID, CVSS OR FIXED VERSION IS ASSERTED for
+  any of them — the coverage states counts and severities, not identifiers. None is in KEV.**
+- 🟢 **CYBER — THREE NEW INCIDENT ITEMS.** **Nutex Health** has told the **SEC** it detected **unauthorized access and
+  data exfiltration** (scope/record count NOT asserted). **ReliaQuest confirms a ShinyHunters intrusion, says impact
+  was limited** — entry was **one phished employee reaching a dashboard**, i.e. a security vendor falling to the same
+  human-in-the-loop pattern as the ClickFix/RMM items. **CISA: over 100 internet-exposed water systems targeted in
+  July.** Also noted without detail: **Chrome 152 patches 300+ vulnerabilities**; **first malware built specifically
+  for car head units** feeding a botnet.
+- ⚠ **CYBER — KEV STATIC, FIFTEENTH CONSECUTIVE EDITION.** No CISA alert page later than those on the board. Board holds
+  **14 rows**; nearest deadlines **Oracle CVE-2026-21962 Aug 27** and **Gitea CVE-2026-60004 Aug 28**.
+- 🥊 **MMA — NOTHING MOVED.** Most recent completed event remains **UFC Fight Night: Hernandez vs. Rodrigues, Aug 22,
+  Golden 1 Center, Sacramento**; next card remains **Umar Nurmagomedov vs. Song Yadong, Aug 29, Oriental Sports Center,
+  Shanghai** (prelims 3 a.m. ET, main card 6 a.m. ET, Paramount+), odds **−500 / +380**. **No result asserted.**
+  **Champions board unchanged — THIRTY-FIRST consecutive edition.**
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **25 days, 156 timestamped rows, 468 snapshot files**.
+  `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `validate_1736.py`, **0 failures, 308 checks**). Arithmetic in Python: the **ANF three-price
+  ladder proved monotonic against the 108.90 base with all three percentages re-derived**, the **11.9% implied 108.55
+  base**, a **proof that 41.8% does NOT reconcile to $144.81**, the **ANF FY midpoint and EBITDA beat**, **every HP
+  figure (9.5% revenue beat, 3.24 midpoint, 6.6% vs consensus, the 17-cent beat implying a 0.66 base)**, the **NTNX
+  0.49 implied consensus**, a **proof that CRM's $5.90 cannot be annualised into the company's own FY guide**, the
+  NVDA 2.06x / 92.5% / guide-band checks, **KEV due-date→countdown→past-due triples parsed off the printed due dates**,
+  the **11-belt champions column with all three historical regressions tested by name**, five-tab nav, masthead pills,
+  self-stamp JS, per-page tldr labels, freshline, all six TradingView blocks (exactly 3 single-quote widgets, five
+  mandatory tape symbols), the MMA countdown element, prose-level new-tag hygiene, and windowed rejection-context tests.
+  ⚠ **EIGHT HARNESS BUGS FOUND AND FIXED, NOT WORKED AROUND: (i)** the ANF trap list contained bare percentages, and
+  **`1.94%` is legitimately Alphabet's Dow-laggard figure** elsewhere on the page — scoped to the two prices.
+  **(ii)** the Adobe/NVIDIA no-CVE window was a flat 3200 chars and **ran past `</p>` into the CVE table**, reporting
+  an "invented" CVE that was a legitimate table row — scoped to the enclosing paragraph. **This is the flat-window bug
+  class recurring for the fifth time.**
+  **(iii) THE MOST DANGEROUS ONE: the KEV date regex demanded a full month name and a four-digit year, but the rows
+  render `due <b>Aug 27</b>` — so it parsed ZERO of the 14 rows and the entire countdown test passed VACUOUSLY.**
+  A test that matches nothing reports success. A **minimum-triples assertion** now guards against that, and the regex
+  tolerates abbreviated months, an intervening `<b>`, and a missing year.
+  **(iv)** the Patch Priority test assumed the box leads on Oracle; **it actually leads on the miniOrange WordPress
+  login bypass** — rewritten to test what the box claims, and to assert both edition fix versions are present AND
+  distinguished, plus a guard that the box never both asserts and disclaims a CVSS for the same CVE.
+  **(v)** `m.find('Middleweight')` landed on a **fight result** ("Middleweight — main event"), not the champions row —
+  anchored on the Champions board section, with Chimaev required to appear as the DEFEATED opponent.
+  **(vi)** the page uses the vendor's own casing **"miniOrange SAML 2.0 Single Sign On"**, not "MiniOrange … Sign-On".
+  **(vii)** the index security-card test still required "MiniOrange" after the card was rewritten to lead on the
+  vendor advisories and the two incidents.
+  **(viii)** `edits_1736.py`, `fix_1736.py` and `polish_1736.py` all **wrote their files BEFORE checking `fails`**, so
+  a partial run left half-applied edits on disk and the next run's anchors "vanished." **Writes are now deferred until
+  after the failure check, and the pipeline is re-run from the pristine repo copies.**
+  Trap greps CLEAN: "Cody Salkilld", "Shamil Yakhyaev", "Abdul-Rakhman", "Fight Night 286", "$1.4 trillion", "Suno".
+  Window-scoped to rejection/correction contexts only: "7,677.24", "4,637.03", "30.68", "122%", "Shanghai Indoor
+  Stadium", "Dooho Choi", "112.62", "97.69".
