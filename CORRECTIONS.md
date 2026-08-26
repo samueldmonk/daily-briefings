@@ -13570,3 +13570,141 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   Trap greps CLEAN: "Cody Salkilld", "Shamil Yakhyaev", "Abdul-Rakhman", "Fight Night 286", "$1.4 trillion", "Suno".
   Window-scoped to rejection/correction contexts only: "7,677.24", "30.68", "41.8", "slipped 0.12%",
   "Shanghai Indoor Stadium", "Dooho Choi".
+
+## Added 2026-08-26 (Wednesday ~3:50pm ET — AFTERNOON EDITION, fifteenth run of the day; archive stamp 2026-08-26-1546)
+- CLOCK: run started **15:36 EDT**, archived **15:46 EDT**. Edition bucket **Afternoon** (h=15 → the JS buckets 15 as
+  Afternoon; masthead self-stamps). Method: **incremental edits** to the 1519 pages (`edits_1550.py`). New tags
+  site-wide: **WS 3 cards + 3 lead paragraphs + 1 rates note / CY 5 items (1 spotlight, 1 breach card, 4 CVE rows,
+  2 stat tiles) / MMA 2 paragraphs + tldr / index 3 card rewrites**; all `New · 3:12` / `New at 3:12` markers demoted
+  (class AND label).
+- 🟢 **MARKETS — THE DAY FINALLY HAS A STORY THAT IS NOT A CACHE PROBLEM, AND IT IS SOURCED TO A PRIMARY DOCUMENT.**
+  The **California DOJ press release** (oag.ca.gov, AG **Rob Bonta**, published 2026-08-25T22:28 PT / modified 08-26)
+  announces a **proposed settlement** with **Meta Platforms, Inc.** by **a bipartisan coalition of 51 attorneys general**:
+  **up to $17 billion to the states over ten years**, **California $1.5B–$2.1B**, **subject to court approval through
+  entry of a consent judgment**, cutting short a trial that **began Aug 18 in the U.S. District Court for the Northern
+  District of California**. Injunctive terms published verbatim from the release: **default 2-hour daily limit for
+  under-18s** (→ **1 hour** if other platforms match), **default midnight–6am block** (→ **10pm–7am** if matched),
+  **notification blocks 10pm–7am and school day 8am–3pm, Aug 15–Jun 15**, **90% of teen harm reports answered within six
+  hours**, **bans on like counts and cosmetic-procedure filters for under-18s**, **non-personalized feed option**,
+  **age assurance**, **independent auditor**. ⚠ **SECONDARY COUNTS CONFLICT AND ARE FLAGGED, NOT MERGED**: a wire summary
+  said **47 states**, Variety said **$17.1B with 29 states**, and the suit was **filed in 2023** by a smaller group.
+  **RULE: the CA AG's own release — 51 AGs, "up to $17 billion over ten years" — is what publishes.**
+- 🟢 **MARKETS — A GENUINELY LATER BOARD, 8/8 RECONCILED, AND THE AFTERNOON'S SHAPE IS A CLAW BACK.** The Motley Fool
+  midday piece on Yahoo served an index board dated by its own countdown **"close in 2h 36m" → ~1:24pm** — later than the
+  12:05 and 12:29 boards. **S&P 7,673.94/−3.34/−0.04%**, **Dow 53,468.18/−109.22/−0.20%**, **Nasdaq 26,100.65/−50.65/
+  −0.19%**, **Russell 3,003.80/−6.22/−0.21%** → **7,677.28 / 53,577.40 / 26,151.30 / 3,010.02** exactly; **VIX 15.55/
+  +0.10/+0.65%** off 15.45; **Gold 4,650.50/−44.00/−0.94%** off **$4,694.50** (that base confirmed a further time);
+  **WTI Oct-26 82.73/+0.37/+0.45%** off **$82.36**. **Proved in Python: all four indices are LESS RED at 1:24 than at
+  12:29, and the Nasdaq — worst of four at 12:29 — is no longer worst; none is green.** The **~9:59 board remains the
+  only all-green reading of the day**.
+- 🔴 **GOTCHA #51, A FIFTH BITCOIN BASE.** The 1:24 board implies **79,237.00**, against 78,633.35 / 79,507.16 /
+  79,153.29 / 79,153.30 earlier today. Every equity/index/commodity line held its base to the cent; only BTC moved.
+  **RULE STANDS: never reconcile a crypto quote against a stored prior close, never infer staleness from a shifting
+  crypto base.**
+- ⚠ **MARKETS — TWO SOURCE FIGURES PUBLISHED AS ATTRIBUTED AND FLAGGED AS NON-RECONCILING.** (a) The Motley Fool piece
+  says the **10-year "gained 0.017 to 4.67%"** as of **11:47am**; Zacks says the 10-year **slid >7bp to settle 4.625%
+  Tuesday**, and 4.625+0.017 = **4.642%**, not 4.67%. **Quote printed, inconsistency stated, no 10-year level asserted.**
+  (b) The same piece puts **gold at "$4,608.72, down 0.61%"** → implied base **$4,637.03** — the base this desk
+  **rejected** in favour of **$4,694.50**, and which the board on that very page contradicts. **Prose gold not adopted.**
+- 🟢 **MARKETS — A FOURTH SINGLE-NAME STRIP, WITH A NEW NAME, AND EXPLICITLY NOT ORDERED.** **ANF 144.03/+35.12/+32.25%**,
+  **META 577.39/+7.34/+1.29%**, **XPON 8.00/+2.73/+51.80%**, **RVMD 212.68/+1.30/+0.62%** (Revolution Medicines, new to
+  the page, off **211.38**), **INTU 344.53/−12.93/−3.62%**. All five reconcile. ⚠ **ANF's implied base here is 108.91,
+  one cent above the 108.90 every other ANF read implies** — printed, not smoothed. ⚠ **NOT later than the 3:00 strip**
+  (ANF 144.03 sits well below 152.93 and the widget is undated) — **published as an additional undated reading**;
+  Gotcha #50 (two widgets on one page date independently) again.
+- ⚠ **MARKETS — SOURCES STILL DEGRADING.** **TheStreet's Aug 26 page returned an EMPTY body for a FIFTH consecutive
+  run.** The **Zacks/Yahoo recap re-fetched this run is STILL frozen** at the ~12:05 board and the 2:40 strip.
+  ⚠ **A search summary this run presented Tuesday's closes as "at 3 PM" and repeated the Zacks 7,677.24 — REJECTED
+  again**; the correct implied S&P close is **7,677.28**, now confirmed by a fourth independent board.
+- 🟢 **MARKETS — VERIFIED MACRO CARRIED FORWARD.** July headline **PCE +0.2% m/m, +3.7% y/y, a touch above estimates**;
+  **core PCE 3.3% y/y, unchanged from June**. **Nvidia reports after today's close** for **Q2 FY2027, period ended
+  July 26, 2026**; ⚠ the **">$100 billion quarterly revenue"** line is the **source's expectation, published as such,
+  not a result**. Zacks Tuesday detail: **14.32B shares traded vs a 16.4B 20-session average**; NYSE **190 new highs /
+  79 lows**, Nasdaq **105/85**, S&P **11/4**; **Case-Shiller +0.4% sequential (June), +1.5% y/y**; **consumer confidence
+  89.4, a seven-month low, −0.8% m/m vs 90.2 consensus**.
+- 🟢 **CYBER — F5 LABS' BULLETIN DATED TODAY DELIVERS THREE ITEMS THE PAGE HAD NOT CARRIED.**
+  **(a) CVE-2026-19490, Citrix NetScaler ADC / NetScaler Gateway — 9.3 on CVSS v4.0, CWE-288.** Unauthenticated
+  auth bypass on appliances configured as gateways (SSL VPN, ICA Proxy, Clientless VPN, RDP Proxy) or AAA vservers.
+  **14.1-43.56 / 13.1-61.28 and later vulnerable builds require a configured SAML action; 14.1-43.55 and earlier and
+  13.1-61.27 and earlier are vulnerable simply by operating as a Gateway or AAA vserver.** Affects **14.1 < 14.1-73.32**
+  and **13.1 < 13.1-63.21**, incl. FIPS/NDcPP and Secure Private Access Hybrid on customer-managed instances.
+  ⚠ **NOT in KEV, no federal deadline** — but SecurityWeek's headline is **"Exploitation Expected."** ⚠ **Note the CVSS
+  is v4.0 9.3** — consistent with the standing rule to take Citrix's own figure over a blog number.
+  **(b) CVE-2026-76310, Splunk Enterprise — CVSS v3.1 9.4.** Improper access control in **embedded reporting**: the REST
+  endpoint delivering embedded report results does not restrict downloading the search job's **dispatch archive**, so an
+  **unauthenticated attacker holding only an embedded report token** retrieves **session material** usable to impersonate
+  the report owner. Affects **10.4 < 10.4.2, 10.2 < 10.2.6, 10.0 < 10.0.9, 9.4 < 9.4.14**. **No exploitation, no public
+  PoC.** Workaround **allowEmbedTokenAuth = false** in **server.conf**. ⚠ **NOT in KEV.** ⚠ **DO NOT MERGE with
+  CVE-2026-20253**, the 9.8 pre-auth Splunk RCE already on the page — different flaws; the page says so.
+  **(c) Cruciferra / ErrTraffic / LenAI — new THREAT ACTOR SPOTLIGHT.** From **late July 2026**, the **ErrTraffic MaaS
+  platform (operator: LenAI)** runs **ClickFix** campaigns delivering the **Cruciferra** loader. Compromised WordPress
+  sites serve an obfuscated JS implant that **queries a Polygon smart contract to resolve live C2 domains**, then shows
+  **fake reCAPTCHA / Cloudflare Turnstile / Windows BSOD** pages so the **user pastes and runs a PowerShell command by
+  hand — no download ever occurs.** Then **DLL side-loading via a malicious mscoree.dll** + **process hollowing** injects
+  the **Remus** stealer into **ServiceModelReg.exe**; a **BYOVD** step exploits a **UAC bypass**, drops the
+  signed-but-vulnerable **MocoMsys driver DCRCVDrv.sys** to **C:\Windows\Temp\**, registers it as a service, and uses its
+  IOCTL to **terminate 145 AV/EDR processes** incl. **Microsoft Defender, CrowdStrike Falcon, SentinelOne**. Victim
+  countries: **India, South Korea, United States**. ⚠ Hashes/domains left to the F5 bulletin, not reproduced.
+  **(d) also added to Vulnerability Watch:** **CVE-2026-32475, Elementor Pro ≤ 4.2.1, CVSS 9.0** — unauth RCE via the
+  Forms module, extension validation and file-move in **separate loops with differing empty-entry handling**, bypassed by
+  **submitting two file parts for one File Upload field**, writing PHP to **wp-content/uploads/elementor/forms/
+  &lt;uniqid&gt;.php**; fixed **4.2.2**. And **CVE-2026-65640, WordPress core 4.7–7.0, CVSS 8.8** — Author+ RCE via
+  **PostScript uploads** on hosts running **Imagick and Ghostscript**; fixed **7.0.4**. **Neither in KEV.**
+- 🟢 **CYBER — THE AUG 18 KEV BATCH NOW HAS DETAIL AND A STATED FEDERAL DEADLINE.** F5 gives all four:
+  **CVE-2026-65400 (9.8)** macOS Screen Sharing improper auth, **abused to deploy Monero miners**; **CVE-2026-55040
+  (9.1)** SharePoint weak-auth bypass, **exploited after public PoC release**; **CVE-2026-59310 (9.8)** VMware vCenter
+  path traversal, used by a **suspected China-nexus APT** to deploy **backdoors, reverse SSH binaries and Babuk-derived
+  ransomware**, compromising **361 unique IPs across 47 countries**, concentrated in **Germany, the US and Turkey**;
+  **CVE-2026-33824 (9.8)** Microsoft IKE Service Extensions double free, exploited by a **Chinese-speaking actor running
+  manual operations alongside an AI-enabled autonomous hacking campaign powered by DeepSeek**. **FCEB deadline stated as
+  August 21, 2026 — five days past.** Consistent with the board's **10 of 14 past due**; **Patch Priority unchanged**
+  (**Oracle CVE-2026-21962 due Aug 27 — 1 day left; Gitea Aug 28 — 2 days**).
+- ⚠ **CYBER — KEV STATIC, TWELFTH CONSECUTIVE EDITION.** Direct search confirms **no CISA KEV alert page dated Aug 25 or
+  Aug 26**; the latest remains **Aug 24 (Oracle CVE-2026-21962)**. Board holds **14 rows, 10 past due**.
+  ⚠ **A search summary this run garbled CVE-2026-60004 (Gitea) into an Oracle product name — rejected; the board's
+  own descriptions stand.**
+- 🥊 **MMA — THE SHANGHAI LINE HAS A DOCUMENTED DRIFT, AND THE FIRST REAL TALE OF THE TAPE.** **LowKick MMA**,
+  **Timothy Wheaton**, published **Aug 26, 2026 8:18am ET**: consensus **Nurmagomedov −500 / Song +380**, translated by
+  the source to **"roughly an 80% market-implied chance for Nurmagomedov leaving Song near 20%"**, having **tightened
+  from early numbers around −380 with Song near +295**, through a **−500/+385** range as fight week arrived — the
+  **sixth reading** of this line and the first to give MOVEMENT rather than a snapshot. Preferred angle in the piece:
+  **Nurmagomedov by decision −170**; **Song by knockout** as the upset script. Records/styles, all from that piece:
+  **Umar 20-1 pro, 8-1 UFC**; **only loss a five-round title fight vs Merab Dvalishvili at UFC 311**; since then **UDs
+  over Mario Bautista and Deiveson Figueiredo, incl. a 30-27 over Figueiredo in January**; **>4 takedowns per 15 min**
+  and **has defended every takedown attempted against him apart from Dvalishvili's**; of **20 career wins, 11 decisions,
+  7 submissions, 2 KOs** (sums to 20 — checked in Python). **Song 23-9-1 with 1 NC**, **submitted Figueiredo via
+  second-round guillotine in May**, **nine career KO wins**; **Nurmagomedov has been dropped twice in his last five
+  bouts**. **The pair were first booked for December 2024 and that fight was cancelled because of a Song injury** — a
+  delayed matchup, not a new one. ⚠ **Figueiredo appears on BOTH men's recent records in two different fights; printed
+  as the source states, not merged.** **Champions board unchanged — TWENTY-SEVENTH consecutive edition.**
+  ⚠ Headlines seen but NOT published for lack of body text: a Jon Jones comeback item, DWCS S10 Wk3 results, and a
+  celebrity-death tribute item — **none asserted**.
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **25 days, 152 timestamped rows, 456 snapshot files**.
+  `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `outputs/validate_1550.py`, **0 failures, 256 checks**). Arithmetic in Python: **11
+  level/change/percent/prior-close quadruples reconciled three ways** (7 board lines + 4 strip lines), the **fifth
+  Bitcoin base asserted to differ from all four earlier ones**, the **ANF one-cent base divergence**, the
+  **countdown→clock derivations for 2h36m and 3h55m**, a **programmatic proof of the claw-back claim** (every index
+  less red at 1:24 than 12:29, Nasdaq no longer worst of four, none green), the **10-year 4.625+0.017=4.642 vs 4.67
+  contradiction**, the **gold 4,608.72/−0.61% → 4,637.03 rejected-base derivation**, **14 KEV due-date→countdown→colour
+  triples parsed off the printed due dates**, the **11-belt champions column**, **win-method sum 11+7+2=20**, five-tab
+  nav, masthead pills, self-stamp JS, per-page tldr labels, all six TradingView blocks (exactly 3 single-quote widgets,
+  five mandatory tape symbols), the MMA countdown element, new-tag class hygiene, and an index card-swap guard anchored
+  on `class="bcard c-sec|c-mkt|c-mma"`.
+  ⚠ **SEVEN HARNESS BUGS FOUND AND FIXED, NOT WORKED AROUND: (i)** the KEV date regex grabbed the **ADDED** date, not the
+  **due** date — every row mis-dated and four false "not marked past due" failures; now anchored on `due`.
+  **(ii)** the not-in-KEV leak test scanned the whole KEV **SECTION**, which legitimately contains prose explaining that
+  CVE-2026-58231 and CVE-2026-47301 are OUTSIDE KEV — **the 1512 bug class recurring**; it now scans `<li>` ROWS only.
+  **(iii)** the CVSS-cell window was **40 characters**, shorter than a cell carrying a `<span class="muted">` qualifier,
+  so the NetScaler 9.3 and Splunk 9.4 cells false-failed; widened to 160.
+  **(iv)** the featherweight test split on the LAST occurrence of "featherweight", landing in the page's own correction
+  prose; rewritten to test the champion ROW and to require Volkanovski by name.
+  **(v)** `"Dooho Choi"` was filed as a HARD trap when the page carries it **only inside its own 3:05 correction note**
+  ("previously rendered ... 'Dooho Choi'"); moved to the context-allowed list.
+  **(vi)** the rejection vocabulary again missed the page's real DKS language — **"Tuesday's close", "carried forward",
+  "completed session"** — false-failing a correctly-scoped `-30.68%`; widened.
+  **(vii)** the rewritten featherweight regex then matched **"featherweight is not vacant"** — the negation was invisible
+  to it; a negative lookahead added, plus a positive check that the not-vacant note is PRESENT.
+  Trap greps CLEAN: "Cody Salkilld", "Shamil Yakhyaev", "Abdul-Rakhman", "Fight Night 286", "$1.4 trillion", "Suno".
+  Window-scoped to rejection/correction contexts only: "7,677.24", "4,637.03", "30.68", "Shanghai Indoor Stadium",
+  "Dooho Choi".
