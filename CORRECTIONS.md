@@ -12557,3 +12557,83 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   four pages (Cody Salkilld, Abdul-Rakhman, Shamil Yakhyaev, "title challenger Beneil", Shanghai Indoor Stadium,
   "Pereira retains", "Featherweight vacant", "markets closed higher today", @@T@@, **"UFC Fight Night 286"**,
   **"no source fetched at 8:44"**, **"is not printing a number yet"**, "−500 / +380", **"Figueiro"**).
+
+## Added 2026-08-26 (Wednesday ~9:42am ET — MORNING EDITION, fourth run of the day; archive stamp 2026-08-26-0942)
+- CLOCK: run started **09:35 EDT**, research 09:36–09:41, archived **09:42 EDT** — **26 minutes** after the 0916 snapshot.
+  Edition bucket **Morning** (h=9). **THE BELL HAS RUNG** — first post-open edition of the day. Method: **incremental
+  edits** to the 0916 pages. New tags site-wide: **WS 1 / CY 0 / MMA 1 / index 0**; the two remaining bare `New` tags
+  (WS PCE card, CY Entra ID card) demoted to `Carried &middot; 9:16 edition`.
+- 🟢 **MARKETS — THE OPEN IS PUBLISHED AS DIRECTION ONLY; NO OPENING LEVEL FOR ANY INDEX.** Yahoo Finance's live blog
+  (same URL, `…081834782.html`) has re-titled a **second** time and the word "futures" has dropped out of it: 8:46
+  recorded **"Dow, S&P 500 *futures* hold steady as PCE inflation stays sticky, Nvidia earnings loom"**; it now reads
+  **"Dow, S&P 500, Nasdaq slip as PCE inflation stays sticky, Nvidia earnings loom."** The attached summary has stocks
+  **"mostly flat"**, **Dow ≈ −0.1%**, **S&P 500 below the flat line**, **Nasdaq Composite ≈ −0.1%**. ⚠ **That read
+  carries no clock time on the page it came from**, so it is published as DIRECTION, never as a level — and the page
+  says so explicitly ("No opening level for any index is published in this edition"). The live TradingView widgets
+  carry the actual tape. Lead sentence flipped from "U.S. markets are still not open" (**now a trap grep**) to
+  "U.S. markets are open."
+- 🟢 **MARKETS — THE NVIDIA EPS REFUSAL IS LIFTED, AND CORRECTLY.** Three earlier editions refused to publish an EPS
+  estimate because previews disagreed ($2.08 vs $0.65–$0.68 adjusted). **Two independent reads this run agree:**
+  CNBC's "5 things to know before the stock market opens Wednesday" (Aug 26) gives **$2.09 a share on $92.28 billion,
+  per FactSet**; a Motley Fool preview gives **$2.09** on **$92.2 billion, up 97.4% YoY**. ⚠ **Both are search
+  summaries, not full fetches**, and the page labels them as such; the stray $0.65–$0.68 figure remains unexplained
+  and is explicitly not endorsed. Also added to On the Radar: **Jensen Huang on CNBC's "Mad Money," 6 p.m. ET**
+  (same CNBC preview).
+- ⚠ **MARKETS — TWO STALE-DATA TRAPS CAUGHT AND NOT PUBLISHED THIS RUN.** (1) The Yahoo Finance quote board returned in
+  the article fetch was stamped **"U.S. markets open in 5h 4m"** — i.e. ~4:26 a.m. ET — and its trending-ticker strip
+  showed **DKS −30.68%**. That DKS move is **TUESDAY's** crash (Seeking Alpha/Motley Fool/Schwab all date it Aug 25;
+  Schwab had it "about 17% before the opening bell" Tuesday). **DKS was NOT published as a Wednesday mover.**
+  (2) The **Schwab "Stocks Rise Early"** page at the standing `stock-market-update-open` URL is **Tuesday's** update
+  (published Aug 25, 9:08 a.m. ET) and its table is Monday's close. **RULE: that Schwab URL is a rolling slug — always
+  read its own "Published as of" line before using anything on it.**
+- 🔴 **CYBER — BOSTON SCIENTIFIC: THE WIRES CAUGHT UP, AND ONE NAMED-SITE CONSEQUENCE.** Accounts surfaced this run
+  (The Star, Union Leader, Insurance Journal, all Reuters-sourced) confirm detection on **August 25**, incident-response
+  activation and third-party experts — consistent with the 8-K — and place it against a run of healthcare incidents,
+  naming **Abbott Laboratories, Stryker, Medtronic, Clover Health, Novo Nordisk and West Pharmaceutical Services** as
+  recently hit. Ireland's **Echo**: **"Boston Scientific confirms it has been hit by cyberattack; Cork staff told to
+  work from home."** ⚠ **All are search summaries/headlines, not full fetches**, and they state only that the other
+  companies were "recently hit" — **no date, no attacker and no linkage is asserted, and the page says no common actor
+  should be inferred.** A separately-surfaced **−3.5% premarket** read is consistent with the 3.5%–4% band already
+  carried unmerged; nothing was averaged.
+- ⚠ **CYBER — KEV: NOTHING SEEN THIS RUN.** A catalogue search returned the Aug 18 (four), Aug 20 (two, TrueConf),
+  Aug 21 (one, **CVE-2026-73570 Zimbra Collaboration Suite OS command injection**) and Gitea alerts, and **no alert
+  page dated August 25 or 26**. Per gotcha #31 that is worded as **"nothing seen this run,"** never "nothing added."
+  Board unchanged at **14 entries / 10 past due / 0 due today / 4 ahead**; **Oracle CVE-2026-60004 still due Aug 28**.
+- 🥊 **MMA — FIGHT WEEK IS PHYSICALLY UNDER WAY (New · 9:40).** Yahoo Sports/MMA Junkie: Nurmagomedov **(20-1 MMA,
+  8-1 UFC)** and Song **(23-9-1 MMA, 12-4-1 UFC)** held their **first faceoff on Tuesday, in front of the host arena**
+  in Shanghai. UFC.com's fight-by-fight preview calls the bout **"massive divisional significance"** at 135 lb with the
+  winner **"the clubhouse leader in the chase for the next title opportunity,"** and describes **Yan Xiaonan** as a
+  **former title challenger** and home-country fighter **"looking to return to the win column."** The **No. 2 / No. 6
+  Meta rankings** read is re-confirmed this run and still sits unmerged beside UFC.com's own **#3 / #5** announcement
+  headline — **do not tidy one into the other.**
+- 🥊 **MMA — CHAMPIONS UNCHANGED, SIXTEENTH CONSECUTIVE EDITION.** No card since UFC Sacramento (Aug 22, no title
+  fight), so no belt can have moved. Board asserted 11/11 rows, 0 vacant, **by CHAMPION COLUMN ONLY** (gotcha #14),
+  stale-name trap covering Pereira, Chimaev, Topuria, Pantoja, Dvalishvili, Della Maddalena, O'Malley, Nurmagomedov.
+- ⚠ **NEW GOTCHA #34 — A CACHED QUOTE BOARD INSIDE AN ARTICLE FETCH CARRIES ITS OWN, OLDER TIMESTAMP.** The Yahoo
+  fetch at 9:38 returned a board reading "U.S. markets open in 5h 4m." **RULE: the widget's stamp, not the fetch time,
+  governs; if a quote strip disagrees with the wall clock, it is cache and must be dated from its own countdown.**
+- ⚠ **NEW GOTCHA #35 — A ROLLING "MARKET OPEN" SLUG IS NOT NECESSARILY TODAY'S.** Schwab's
+  `/learn/story/stock-market-update-open` served **Tuesday's** update on Wednesday morning. **RULE: read the page's own
+  "Published as of" line before quoting any figure from a slug that has no date in it.**
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **25 days, 141 timestamped rows, 423 snapshot files**.
+  `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `outputs/validate_0940.py`, **0 failures, 325 checks**). 4 pages + archive.html
+  HTMLParser-balanced, 0 stray / 0 unclosed; 5-tab nav scoped inside `<nav class="tabs">`, five hrefs in order, exactly
+  1 correctly-targeted `class="on"` per page; stamp/fresh IDs ×4 plus the freshness string; `.tldr` ×1 per briefing
+  with the correct per-page label and NONE on index; **index cards anchored on `class="bcard c-sec|c-mkt|c-mma"`,
+  asserted to carry their own page's tldr VERBATIM plus a non-empty `<h2>` and a CTA**; **8/8 TradingView JSON blocks
+  parse**; **tape asserted to retain all five required symbols by name (SPXUSD, NSXUSD, DJI, USOIL, US10Y)**; Chart of
+  the Day asserted NASDAQ:NVDA scoped to the mini-symbol-overview block; **14/14 kevdue spans AND the prose summary,
+  with "13 entries" asserted to occur exactly once and only inside the "Corrected this run" note**; champions 11 rows /
+  0 vacant / 8 stale names rejected by champion column only, 12 `<tr>` incl header; **four forward date markers
+  asserted present**; MMA countdown asserted at `2026-08-29T06:00:00-04:00` and asserted NOT at midnight; **New-tag
+  hygiene: every `tag new` must read exactly "New · 9:40", counts WS 1 / CY 0 / MMA 1, and zero bare `New` tags across
+  all four pages**; 53,579.94 asserted ≤1 occurrence and inside a "NOT published" disclaimer. Content guards across the
+  markets set (all four PCE figures, LSEG, Revell, 8:35 a.m. EDT, 38%/55%, the re-title string, $2.09, $92.28bn,
+  $92.2bn, 97.4%, FactSet, Mad Money, "U.S. markets are open.", "No opening level"), the cyber set (Aug 25, Susan
+  Thompson, all six named healthcare companies, Cork staff, 3.2%) and the MMA set (both records, Oriental Sports
+  Center, −470, Denise Gomes, clubhouse leader, first faceoff on Tuesday). Trap greps CLEAN on all four pages (Cody
+  Salkilld, Abdul-Rakhman, Shamil Yakhyaev, "title challenger Beneil", Shanghai Indoor Stadium, "Pereira retains",
+  "Featherweight vacant", "markets closed higher today", @@T@@, "UFC Fight Night 286", UFC 336, UFC 335, "no source
+  fetched at 8:44", "is not printing a number yet", "−500 / +380", "Figueiro", and **"U.S. markets are still not
+  open"** plus the superseded single-re-title sentence).
