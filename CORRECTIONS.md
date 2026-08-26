@@ -13233,3 +13233,71 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   "slipped 0.12%", "Fight Night 286", "$1.4 trillion", "Suno", "No opening level for any index". The two
   context-allowed strings — **"Shanghai Indoor Stadium"** and **"nothing added"** — are now asserted to
   appear ONLY inside a rejection or self-correction note (window-scoped), rather than banned outright.
+
+## Added 2026-08-26 (Wednesday ~1:36pm ET — MIDDAY EDITION, eleventh run of the day; archive stamp 2026-08-26-1341)
+- CLOCK: run started **13:36 EDT**, archived **13:41 EDT**. Edition bucket **Midday** (h=13). Method: **incremental
+  edits** to the 1313 pages (`edits_1340.py`). New tags site-wide: **WS 4 cards / CY 0 / MMA 0 / index 3 rewrites**;
+  all `New · 1:09` / `New at 1:09` markers demoted to `Carried from the 1:09 edition`.
+- 🟢 **MARKETS — FIRST FOUR-INDEX BOARD OF THE SESSION, AND ALL FOUR LINES RECONCILE.** Yahoo Finance's live quote
+  strip, read this run on Yahoo's syndication of the Motley Fool midday report
+  (finance.yahoo.com/markets/stocks/articles/stock-market-midday-aug-26-164743533.html), returns **S&P 500 7,673.94
+  / −3.34 / −0.04%**, **Dow 30 53,468.18 / −109.22 / −0.20%**, **Nasdaq 26,100.65 / −50.65 / −0.19%** and — for the
+  first time this session — **Russell 2000 3,003.80 / −6.22 / −0.21%**. Every line subtracts exactly to a close
+  already in the Weekly Scorecard (7,677.28 / 53,577.40 / 26,151.30 / 3,010.02) and every percent equals
+  points-over-prior-close. ⚠ **The board carries no clock stamp; its header reads "U.S. markets close in 2h 36m",
+  placing it at ~1:24 p.m. ET — roughly seventeen minutes behind the wall clock at fetch — so it is published as a
+  cached render stamped by its own countdown, not a live tick.** Against the 12:27-stamped Fool strip carried through
+  the 1:09 edition, **all three headline indices have NARROWED their losses**; the page says so rather than implying
+  a deepening selloff. Same board: **VIX 15.55 / +0.10 / +0.65%** (reconciles).
+- ⚠ **MARKETS — THE MOTLEY FOOL PAGE IS STILL CACHED (GOTCHA #46 RECURS, THIRD RUN).** Re-fetched in full at ~1:38
+  p.m. ET; `article:modified_time` still **16:27:43Z (12:27 p.m. ET)**, identical strip. No new Fool board claimed.
+  **TheStreet's Aug 26 page returned an EMPTY body this run** and was not used.
+- 🟢 **MARKETS — ANF GETS A SEVENTH RENDERING, AND A SECOND ONE THAT RECONCILES.** Yahoo trending strip on the same
+  ~1:24 read: **ANF $144.03 / +$35.12 / +32.25%** (144.03 − 35.12 = 108.91; 35.12/108.91 = 32.25%). This does NOT
+  displace the earlier reconciling **+30.85% / $142.50** — both are printed as successive ticks off the same $108.91
+  prior close, and the Chart of the Day note was updated to say so. **Chart of the Day stays NYSE:ANF.**
+- 🟢 **MARKETS — TWO NEW SINGLE NAMES.** **XPON (Expion360) $8.00 / +$2.73 / +51.80%** — the largest percentage move
+  any source has put a number on today; arithmetic checks, ⚠ **no catalyst stated by the source and none asserted**,
+  and it does NOT take Chart of the Day. **INTU $344.53 / −$12.93 / −3.62%** — third successive unmerged tick off the
+  same **357.46** prior close (after 357.46/−12.46/−3.37% premarket and 345.35/−12.11 intraday).
+- ⚠ **MARKETS — COMMODITIES: FOUR ROWS ADDED, NONE REPLACED, ONE SIGN CONFLICT PRINTED.** **WTI Oct-26 contract
+  $82.73 / +$0.37 / +0.45%** at ~1:24 (Yahoo) sits BELOW, not in place of, the Trading Economics **$80.78 / −1.92%**
+  row — **opposite signs, both stated this run, neither adjudicated.** **Gold $4,650.50 / −$44.00 / −0.94%** (implies
+  a $4,694.50 prior) against the Fool's **$4,608.72 / −0.61%** (implies ~$4,637) — both printed, gap flagged.
+  **Bitcoin $78,349.37 / −$887.63 / −1.12%**; **VIX 15.55**.
+- ⚠ **MARKETS — THE REJECTED RUSSELL FIGURE IS NOW PROVABLY WRONG.** The earlier search summary putting the Russell
+  **up 0.50%** on Wednesday was rejected at the time as Tuesday's close mislabelled. The 1:24 board confirms it:
+  Wednesday's Russell is **−0.21%**, and **+0.50% is exactly Tuesday's close** as published in the Scorecard.
+  Rejection recorded on the page.
+- 🔴 **CYBER — NOTHING NEW SEEN THIS RUN, AND THE PAGE SAYS SO.** Fresh Aug 26 searches for breach news, ransomware
+  claims, exploited-vulnerability advisories and KEV additions returned **no item not already carried**: Hut American
+  Group / Flynn, Apple American Group, the 24 malicious npm packages staging ClickFix pages on UNPKG/npmmirror, the
+  miniOrange SAML SSO pair, the Adobe and Nvidia advisory waves, and Oracle **CVE-2026-21962** are all already on the
+  page. ⚠ **KEV: nothing seen this run — EIGHTH consecutive edition** with no alert page later than August 25. Board
+  holds at **14 rows, 10 past due**; Patch Priority unchanged (Oracle **Aug 27**, Gitea **Aug 28**), matching the board.
+- 🥊 **MMA — NOTHING NEW, TWENTY-THIRD CONSECUTIVE UNCHANGED CHAMPIONS BOARD.** Aug 26 searches surfaced only the
+  MMA Mania open thread (post-Sacramento rankings, Herb Dean, Perry–Danis) — **all three threads already carried**.
+  ⚠ A Yardbarker snippet again gave the UFC Shanghai venue as **"Shanghai Indoor Stadium"**; Wikipedia's event page
+  gives **Oriental Sports Center**, which is what this page publishes — the Yardbarker rendering stays rejected.
+  Board asserted 12 `<tr>` incl. header, 11 incumbents, champion column free of Pereira / Chimaev / Topuria / "vacant".
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **25 days, 148 timestamped rows, 444 snapshot files**.
+  `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `outputs/validate_1340.py`, **0 failures, 180 checks**). All index arithmetic computed in
+  Python, not grepped: **seven index reads reconciled three ways** (level+change=prior close, percent=points/prior,
+  level present on page) plus six single-name percent checks (ANF, XPON, INTU, VIX, BTC, gold) and the INTU 357.46
+  base. Structural gates carried forward: three single-quote widgets and one each of tape/timeline/heatmap/
+  mini-overview/events; tape symbols de-duplicated with the five mandatory symbols and **NASDAQ:INTU asserted absent**;
+  Chart of the Day scoped to the mini-overview block and asserted **NYSE:ANF**; KEV span count (14), colour split
+  (4 ok / 10 crit) and per-span colour-vs-text agreement; **Patch Priority and KEV board deadlines compared after
+  tag-stripping**; champions `<tr>` count and champion-column stale-name scan; nav parsed as a five-link list with
+  order, targets and exactly one `class="on"` per page; per-page `.tldr` label; `#freshline` / `#ufccdn`; no
+  TradingView on index.html; New-tag hygiene by regex (**any `New · <not 1:40>` fails**); div/script/tr/section balance.
+  **Two harness bugs found and FIXED, not worked around: (a) the Patch Priority block was scoped with a 3,000-char
+  window ending at `</section>`, but the real block is 8,134 chars and runs to the next `<div class="lab">`;
+  (b) `strip()` removed tags but left HTML entities, so `August\s*27` never matched `August&nbsp;27` — it now
+  normalises `&nbsp;`, `&mdash;`, `&minus;`, `&amp;` and friends before any date or text assertion.**
+  ⚠ **NEW GOTCHA #49 — A COUNTDOWN IS A CLOCK STAMP, BUT NOT A LIVE ONE.** The 1:24 board was seventeen minutes stale
+  at fetch. Derive the time from the countdown, publish that time, AND say how far behind the wall clock it was.
+  Trap greps CLEAN on all four pages: "Cody Salkilld", "Shamil Yakhyaev", "Abdul-Rakhman", "slipped 0.12%",
+  "Fight Night 286", "$1.4 trillion", "Suno", "No opening level for any index". "Shanghai Indoor Stadium" asserted
+  to appear only inside a rejection window.
