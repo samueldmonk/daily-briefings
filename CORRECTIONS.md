@@ -12334,3 +12334,114 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   Abdul-Rakhman, Shamil Yakhyaev, "title challenger Beneil", Shanghai Indoor Stadium, "Pereira retains",
   "Featherweight vacant", "markets closed higher today", @@T@@, **UFC 336 and UFC 335 — both now ASCII-clean on
   every page, since neither show is referenced this edition**).
+
+## Added 2026-08-26 (Wednesday ~8:46am ET — MORNING EDITION, second run of the day; archive stamp 2026-08-26-0846)
+- CLOCK: run started **08:35 EDT**, research 08:36–08:44, archived **08:46 EDT** — **28 minutes** after the 0818
+  snapshot. Edition bucket **Morning** (h=8). Method: **incremental edits** to the 0818 pages (which were
+  themselves rebuilt from scratch this morning), not a full rebuild. New tags site-wide: **WS 7 / CY 1 / MMA 0 /
+  index 0**; every 0818 New tag demoted to `Carried &middot; 8:18 edition`. Time labels authored as `@@T@@` and
+  substituted to **8:44 a.m. ET** at build time; validator asserts zero unsubstituted tokens.
+- 🔴 **CYBER — CORRECTION TO THE 0818 EDITION: CISA DID ADD A KEV ENTRY ON AUGUST 25.** The 0818 run published
+  "Nothing has been added on August 25 or August 26." That was WRONG. **CISA added Gitea CVE-2026-60004 to KEV on
+  Tuesday, August 25**, citing active exploitation (Help Net Security, Zeljka Zorz, Aug 26, **fetched in full**,
+  linking https://www.cisa.gov/news-events/alerts/2026/08/25/cisa-adds-one-known-exploited-vulnerability-catalog).
+  Board is now **14 rows: 10 past due / 0 due today / 4 ahead** (Oracle Aug 27 = 1, **Gitea Aug 28 = 2**,
+  MLflow Sep 2 = 7, TrueConf Sep 3 = 8). The KEV note on the page states the correction explicitly.
+  ⚠ **The Aug 28 deadline is a THREE-DAY window and is carried on Help Net Security's attribution** — the CISA
+  alert page itself returned an empty body when fetched this run, and the page says so. Consistent with BOD 26-04
+  (risk-based, three-day tier for the most urgent), which this site already uses instead of the old three-week rule.
+- 🔴 **CYBER — Gitea CVE-2026-60004 detail (all from the Help Net Security primary):** the *diffpatch* endpoint
+  installs and executes a Git hook from repository-controlled content; maintainers quote verbatim — "An attacker
+  with ordinary write access to a repository can execute arbitrary shell commands as the Gitea OS user … With open
+  registration enabled, the attack can be performed by an unauthenticated visitor after registering a normal
+  account and creating a repository." **The published advisory contained a PoC.** One documented compromise
+  (victim's own Habr write-up): automated scanner registered on an outdated instance with open registration and no
+  email confirmation/CAPTCHA, wrote a "proof" of RCE into a Git branch, then pulled a shell loader and a
+  crypto-miner dropper; **active phase ~11 seconds**; Gitea ran in an unprivileged Docker container and the payload
+  did not survive restart; no cron/systemd/SSH-key persistence found. **Patched in 1.27.1** (late July);
+  **1.27.2 is the current release** and the one admins are told to move to. **STILL NO CVSS ANYWHERE — the
+  Vulnerability Watch cell is a dash and the KEV row says "no CVSS published." Do not estimate one.**
+- 🔴 **CYBER NEW TOP STORY — BOSTON SCIENTIFIC.** A company filing reported **Wednesday, August 26** says a
+  cybersecurity incident **affected certain IT systems and has led to global disruption in operations**
+  (MarketScreener). Investing.com's 7:10 a.m. premarket wire adds that the stock **fell 3.2% premarket** and that
+  the incident **disrupted its IT systems on Tuesday**. ⚠ **No threat actor, no ransomware family, no CVE, no
+  patient-safety or device-integrity claim** appears in any source fetched this run — the page says so explicitly
+  and asserts none of them. This item runs on BOTH the cyber page (top story) and the markets page (mover card).
+  The Iran/Operation Economic Outcast story was **demoted from top story to a Breaches & Incidents card** tagged
+  "Carried · 8:18 edition"; its Treasury/Bessent detail is unchanged.
+- 🟢 **MARKETS — THE 8:30 PCE PRINT IS NOT PUBLISHED, AND THAT IS DELIBERATE.** The July Personal Income and
+  Outlays report released at 8:30 a.m. ET. **As of 8:44 a.m. ET no source fetched this run states the actual
+  figure.** Search summaries returned "headline 3.6% / core 3.3%" but every one traces to a PRE-RELEASE preview
+  (IndexBox headline is literally "*Expected* to Rise 3.6%, Core Steady at 3.3%"; FXStreet timestamp 08:00;
+  TradingKey/Morningstar/BigGo all previews). **RULE APPLIED: a consensus restated after the release hour is still
+  a forecast.** The page publishes the consensus AS a consensus, states plainly that the print is unconfirmed, and
+  carries trap greps ("core PCE came in", "core PCE rose", "PCE printed") to stop a later run regressing.
+  Sourced context that IS published: 65th consecutive month above 2% if core holds; **38–40%** odds on a September
+  **hike**; headline expected to ease from June's **3.7%**.
+- 🟢 **MARKETS NEW ×7 — A FULL PREMARKET MOVER SET FROM ONE FETCHED PRIMARY.** Investing.com "Premarket movers:
+  Nvidia in focus, Intuit slides and Semtech surges", **published 08/26/2026 7:10 a.m. ET, fetched in full**:
+  futures at 7:10 = **Dow mostly unchanged, S&P 500 −7 pts / −0.1%, Nasdaq 100 −66 pts / −0.2%**;
+  **INTU −11.8% to $315.30** (FY27 guide short, overshadowing a Q4 beat) — **deeper than every Tuesday-night
+  after-hours print (7.3% / "more than 7%" / 9%), all four now stand on the page as successive snapshots**;
+  **Spyre Therapeutics −11.7%** (Phase 2 SKYWAY basket trial, SPY072 rheumatoid-arthritis sub-study, fell short of
+  Spyre's internal threshold for standalone advancement); **Sadot Group +10.3%** (secondary offering, up to
+  4.25M shares by selling stockholders); **SolarEdge +5.6%** (UBS **Buy from Neutral**, PT **$42 from $36**, on the
+  FCC adding foreign-produced power inverters to its national-security **Covered List**, potentially affecting
+  **more than half** the U.S. inverter market — ⚠ a second wire said **"nearly 7%"**; both prints published
+  unmerged, neither averaged); **Semtech +4.7%** (record FQ2, guide **$405–$415M** ≈14% above street, adj EPS
+  **$1.02–$1.08** vs ~**$0.73**); **nCino −4.9%** (FQ2 significant miss); **GoDaddy −3.5%** (Wells Fargo to
+  **Underweight**, PT **$76**, breaking a consensus of 8 Buys / 9 Holds; FY revenue guide narrowed to
+  **$5.215–$5.255B**); **Boston Scientific −3.2%** (see above). Ticker tape refreshed: CRWD/OKTA swapped out for
+  **NASDAQ:SMTC** and **NYSE:BSX**; indices + USOIL + US10Y retained per the standing rule.
+- 🟢 **MARKETS — unchanged and re-asserted:** Tuesday closes (S&P **7,677.28 +24.42 +0.32%**, Dow **53,577.40
+  +160.24 +0.30%**, Nasdaq **26,151.30 +171.11 +0.66%**, Russell **3,010.02 +14.94 +0.50%**) reconcile against
+  Monday's 7,652.86 / 53,417.16 / 25,980.19 on level, points AND percent inside the validator. **53,579.94 rejected
+  for a FOURTH consecutive run**, appearing exactly once, inside the sentence that rejects it. Rates are still
+  Tuesday's CNBC figures (4.629 / 4.183 / 5.163). **Still no federal funds target level published.** Chart of the
+  Day stays **NASDAQ:NVDA**. Added to On the Radar: **Consumer Confidence and New Home Sales, 10:00 a.m. ET**
+  (ts2.tech market-calendar panel).
+- 🥊 **MMA — SHANGHAI ODDS: A THIRD BOOK, AND THE DRAFTKINGS LINE IS BACK, PROPERLY SOURCED.** MMA Junkie via
+  Yahoo Sports (Matthew Wells), **fetched in full**: **Nurmagomedov −470 / Song +360 (DraftKings)**. The two
+  opening lines already carried (**−700/+500 BetOnline.ag** and **−500/+385**) stand alongside it, unmerged.
+  ⚠ Note this is NOT the −500/+380 DraftKings line retired yesterday for want of re-confirmation; the sourced
+  DraftKings numbers are **−470/+360**. Same fetch confirms **Shanghai Oriental Sports Center** (a search summary
+  again said "Shanghai Indoor Stadium" — REJECTED, remains a trap grep), Saturday **Aug 29**, **Paramount+**.
+- 🥊 **MMA — records added:** **Nurmagomedov 20-1 MMA, 8-1 UFC**, second UFC main event, back-to-back wins over
+  **Mario Bautista** and **Deiveson Figueiredo**. **Song 23-9-1 MMA, 12-4-1 UFC**, sixth UFC main event, submitted
+  **Deiveson Figueiredo in May**; last back-to-back wins were **Ricky Simon** and **Chris Gutierrez** in 2023.
+  ⚠ **BOTH men are credited with a recent Figueiredo win by the same outlet.** Only Song's carries a date/event
+  (UFC Fight Night Macau, May 2026). The page publishes both as written and **discloses the oddity rather than
+  reconciling it** — do not "fix" this by deleting one without a source.
+- 🥊 **MMA NEW — CONTRACTS.** **Curtis Blaydes signed a new eight-fight deal**; first bout **Noche UFC, Arizona,
+  September 12, vs Waldo Cortes-Acosta** (Bloody Elbow, Aug 21). **41 fighters removed from the active roster in
+  2026 as of August**, most recent Aug 8. **UFC signed Lucia Szabova**, undefeated 28-year-old holding two belts in
+  a European promotion; debut **October 31, Meta Apex, Las Vegas, vs Tainara Lisboa** (Bloody Elbow, Aug 22).
+- 🥊 **MMA — CHAMPIONS UNCHANGED, FOURTEENTH CONSECUTIVE EDITION.** No card has been staged since UFC Sacramento
+  (Aug 22, no title fight), so no belt can have moved. Board asserted 11/11 rows, 0 vacant, **by CHAMPION COLUMN
+  ONLY** (gotcha #14), stale-name trap covering Pereira, Chimaev, Topuria, Pantoja, Dvalishvili, Della Maddalena.
+- ⚠ **NEW GOTCHA #30 — A SEARCH ENGINE WILL NARRATE A FORECAST AS A RESULT ONCE THE RELEASE HOUR HAS PASSED.**
+  Asked for the PCE print 15 minutes after 8:30, the search layer returned "The July PCE was released on Aug. 26 at
+  8:30 a.m. The PCE index showed a 3.6% rise…" — assembled entirely from preview articles. **RULE: after a
+  scheduled release, a number only counts as a print if the SOURCE ITSELF is timestamped after the release AND
+  states it as reported. Check the article's own timestamp, not the search summary's phrasing.**
+- ⚠ **NEW GOTCHA #31 — "NOTHING WAS ADDED TO KEV" IS A CLAIM, AND IT NEEDS A SOURCE LIKE ANY OTHER.** The 0818 run
+  asserted no August 25 addition on the strength of an alert-index listing that had not caught up. **RULE: a
+  negative claim about KEV must come from the catalog or that day's alert page; absence from a search index is not
+  evidence of absence. Prefer wording the board note as "nothing seen this run" over "nothing added."**
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **25 days, 139 timestamped rows, 417 snapshot files**.
+  `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `outputs/validate_0844.py`, **0 failures, 324 checks**). 4 pages HTMLParser-balanced,
+  0 unclosed / 0 stray; zero `@@T@@`; 5-tab nav scoped inside `<nav class="tabs">`, five hrefs in order, exactly 1
+  correctly-targeted `class="on"` per page; stamp/fresh IDs ×4; `.tldr` ×1 per briefing with the correct per-page
+  label and NONE on index; **index cards anchored on `class="bcard c-sec|c-mkt|c-mma"`, asserted to carry their own
+  page's tldr VERBATIM plus a non-empty `<h2>` and a CTA** (gotcha #27); **8/8 TradingView JSON blocks parse**; tape
+  retains SPXUSD+NSXUSD+DJI+USOIL+US10Y; Chart of the Day asserted NASDAQ:NVDA scoped to the mini-symbol-overview
+  block; **14/14 KEV countdowns anchored on the `kevdue` span with the 10/0/4 split and ahead == [1,2,7,8]**;
+  per-CVE duplicate-row check over EVERY row in Vulnerability Watch; champions 11 good / 8 stale by champion column
+  only, 12 `<tr>` incl header; **three index reconciliations (level, points, percent) with `round(x,2)`** plus the
+  scoped 53,579.94 rejection asserting count == 1 AND that the occurrence sits inside "NOT published"; **eight
+  forward dates asserted still in the future**; New counts asserted WS 7 / CY 1 / MMA 0 / index 0 and zero
+  undemoted `New &middot; 8:18` tags. Content guards across the full markets, cyber and MMA sets. Trap greps CLEAN
+  on all four pages (Cody Salkilld, Abdul-Rakhman, Shamil Yakhyaev, "title challenger Beneil", Shanghai Indoor
+  Stadium, "Pereira retains", "Featherweight vacant", "markets closed higher today", @@T@@, UFC 336, UFC 335, and
+  the three new PCE traps).
