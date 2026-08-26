@@ -12930,3 +12930,96 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   wp_set_auth_cookie, two scanning IPs, the "opportunistic scanning" quotation, CoreRAT, Core Werewolf, BI.ZONE,
   UltraVNC, Telegram, 1.27.1, "CVE-2026-21962 is the Oracle"**, and on **"−500 / +375"** plus
   **Shanghai Oriental Sports Center**. Trap greps CLEAN on all four pages.
+
+## Added 2026-08-26 (Wednesday ~12:50pm ET — MIDDAY EDITION, eighth run of the day; archive stamp 2026-08-26-1250)
+- CLOCK: run started **12:04 EDT** (a `git clone` timed out at 180s and was retried shallow, costing ~10 min),
+  research 12:43–13:00, archived **12:50 EDT** — **97 minutes** after the 1113 snapshot. Edition bucket **Midday**
+  (h=12). Session **open ~3h20m**. Method: **incremental edits** to the 1113 pages (`edits_1250.py`).
+  New tags site-wide: **WS 1 / CY 1 / MMA 2 / index 0**; all `New · 11:05` tags demoted to `Carried · 11:05 edition`.
+- 🟢 **MARKETS — THE S&P 500 HAS TURNED RED, AND TWO INDEPENDENT READS TWO MINUTES APART BOTH RECONCILE.**
+  **7,661.57, −15.71, −0.20% as of 12:41:56 p.m. EDT** and **7,662.54, −14.74, −0.19% as of 12:39 p.m. EDT**.
+  Each passes the three-way test on its own: 7,661.57 + 15.71 = **7,677.28** and 7,662.54 + 14.74 = **7,677.28**
+  (Tuesday's published close), and 15.71 ÷ 7,677.28 = **0.205%** / 14.74 ÷ 7,677.28 = **0.192%**, matching the
+  stated 0.20% and 0.19%. Both published, both labelled with their own clock stamps. The 11:06 read
+  (7,681.36, +4.08, +0.05%) and the 9:59 Yahoo board are retained as superseded snapshots.
+  ⚠ **The 12:39 timestamp initially looked impossible** — the run's first `date` call read 12:04 EDT — but the
+  clone retry and fetches consumed ~39 minutes, and a re-checked clock returned **12:43:24 EDT**. **NEW GOTCHA #41
+  — on a long run, re-read the clock before rejecting a source timestamp as being in the future.**
+- ⚠ **MARKETS — TRADING ECONOMICS' 7,674 IS A CFD, NOT THE INDEX, AND IS NOT USED.** Its meta description gives
+  **US500 7,674 on August 26, 2026, −0.04%**, explicitly "according to trading on a **contract for difference (CFD)**
+  that tracks this benchmark". It does not reconcile against the cash close and is published as noted-and-unused.
+  The same page also renders Tuesday's close as **7,677.24** against this site's **7,677.28** — the site's figure
+  is retained because every intraday read this run subtracts to it exactly.
+- 🟢 **MARKETS — NASDAQ 100 −0.5% ON CHIP WEAKNESS, DIRECTION ONLY.** A wrap this run has US stocks "mostly lower
+  amid losses from heavyweight chip producers", with the **S&P 500 and Dow inching below the flatline** and the
+  **Nasdaq 100 down 0.5%**. ⚠ No level, no points, no clock time for the Nasdaq 100 — printed as magnitude only,
+  and the validator asserts **no Dow level (`53,5`) and no Nasdaq level (`26,1`) appears anywhere in the 12:50 block**.
+- 🟢 **MARKETS — NEW MOVERS CARD.** **Summit Therapeutics (SMMT) +12.49%** on the **Global HARMOni Phase III**
+  readout (**ivonescimab + chemo** beat placebo + chemo on **progression-free survival**, statistically significant
+  and clinically meaningful, EGFR-mutated NSCLC). **Kura Oncology (KURA) +10.5%** — CEO **Troy Edward Wilson**
+  bought **100,000 shares on Aug 24 at a $12.39 weighted average** (second buy in ~a week), **Jefferies reaffirmed
+  Buy on Aug 26**, and Q2 beat at **−$0.77 adj. vs −$0.88** on **$20.87m vs $20.16m**. **Jefferies Financial Group
+  (JEF) +5.5%**; **Meta** and **J.M. Smucker** named among early gainers, Smucker having **beaten and raised its
+  FY2027 sales and adjusted-EPS outlook**. ⚠ **None carries a level or clock time — percentages/directions only.**
+  Ticker tape: **NASDAQ:SEDG → NASDAQ:SMMT**; five mandatory symbols retained, no duplicates, **DKS still absent**
+  (the ts2.tech "DICK'S −30.7%" headline surfaced again this run and was again not published). **Chart of the Day
+  stays NYSE:ANF** — ANF at **+30.85%** is still the largest single-name number any source gives with a level.
+- 🟢 **MARKETS — THE 10-YEAR FINALLY HAS A WEDNESDAY PRINT: 4.65%, eased** (Trading Economics). Added as a row
+  **above** Tuesday's 4.629% rather than replacing it. ⚠ **No basis-point change is stated, and 4.65% is HIGHER
+  than Tuesday's 4.629% close — the page says so explicitly rather than repeating the word "eased" unqualified.**
+  30-year and 2-year rows stay Tuesday's. **Fed Chair named: Kevin Warsh**, Jackson Hole **Friday**, "not expected
+  to provide clear guidance" on September — carried as the outlet's characterisation, not the Fed's.
+- 🟢 **MARKETS — ts2.tech headline added to On the Radar: "Nvidia Shares Gain 2.2% as Options Market Prices in
+  $280 Billion Earnings Move."** ⚠ Headline only, no clock time, and it sits **unmerged** beside the wrap's
+  "Nvidia shares wavering" — both printed, neither adjudicated.
+- 🔴 **CYBER — NEW BREACH CARD: HUT AMERICAN GROUP (Pizza Hut / Flynn Group).** Breach report filed with the
+  **Texas Attorney General on August 21, 2026**, **3,528 Texas residents**. Exposed categories: **addresses, SSNs,
+  driver's licence numbers, government IDs incl. passports and state ID cards, financial/account and payment-card
+  numbers, dates of birth**. Flynn Group also franchises **Applebee's, Panera Bread, Taco Bell, Wendy's**.
+  Separately, **Apple American Group** (largest US Applebee's franchisee) **began reporting a breach to state AGs
+  from August 18, 2026** — ⚠ **the reporting explicitly says it is unclear whether the two are related, and no link
+  is asserted.** ⚠ No actor, family, CVE, vector or national total; **3,528 is the Texas filing only**.
+- 🟢 **CYBER — TRUECONF KEV PAIR INDEPENDENTLY RE-CONFIRMED, WITH THREE NEW DETAILS.** CISA ordered federal agencies
+  to patch **both by September 3, 2026**, with a **three-day** window on the missing-auth flaw and **two weeks** on
+  the code-injection flaw — consistent with per-CVE risk-based assignment under **BOD 26-04**. **CVE-2026-72529** is
+  reachable by a remote attacker over **TCP port 4307** to invoke an undocumented function and run an arbitrary
+  script **unauthenticated**. **Kaspersky attributes exploitation of both to Head Mare since at least July 2026**,
+  replacing client installers with malicious versions that deploy backdoors — carried as the vendor states it.
+- ⚠ **CYBER — NEW GOTCHA #42: A SECURITYWEEK-SOURCED SUMMARY GIVES CVE-2026-72530 A CVSS OF 9.0; THE BOARD CARRIES
+  9.5.** Both renderings are printed on the page, unmerged, and **the lower figure is NOT substituted** without a
+  vendor or CISA page confirming it. Validator asserts both strings present.
+- ⚠ **CYBER — KEV: NOTHING SEEN THIS RUN (fifth consecutive edition)** for an alert page dated August 26. Board
+  unchanged and validator-asserted structurally for the first time: **exactly 14 `kevdue` spans, 4 `ok` / 10 `crit`,
+  with per-span colour-text agreement** (`ok` ⇒ "left", `crit` ⇒ "past due"/"due today"). Oracle **CVE-2026-21962
+  due Aug 27** remains the Patch Priority deadline and matches the board.
+- 🥊 **MMA — THE OFFICIAL RANKINGS HAVE MOVED ON SACRAMENTO (New · 12:50).** **Gregory Rodrigues +3 to #7** at
+  middleweight (four-fight streak, **7-1 in his last eight**); **Anthony Hernandez −2 to #9**, now on a **two-fight
+  skid** after **Sean Strickland** ended his eight-fight run in February. Also: **Vitor Petrino** into the
+  **heavyweight top 15** (beat **Serghei Spivac**, co-main), **Carli Judice** into the **women's flyweight top 15**
+  (R1 stoppage of **Jeisla Chaves**), **Reinier de Ridder** into the **light-heavyweight top 10**.
+  ⚠ **Rodrigues/Hernandez placements are given as *Meta* rankings by the outlet stating them; no exact rank number
+  is stated for de Ridder, Petrino or Judice, so none is printed.**
+- 🥊 **MMA — NEW AROUND-THE-SPORT ITEM: PERRY vs DANIS, DUEL ARENA 1, SAME NIGHT AS SHANGHAI (New · 12:50).**
+  **Mike Perry vs Dillon Danis**, a **professional MMA bout**, headlines the inaugural **Duel Arena 1** at
+  **Orlando's Kia Center on August 29** — a **hybrid MMA/boxing/kickboxing card contested in a ring, not a cage**.
+  Perry holds **BKFC's "King of Violence" title** and **returned to MMA rules in May** for the first time since 2021.
+  ⚠ **Explicitly flagged as not a UFC event and neither man on the UFC roster.**
+- ⚠ **MMA — VENUE: the "Shanghai Indoor Stadium" trap grep was a FALSE POSITIVE and is now context-scoped**, exactly
+  as the "nothing added" trap was at 11:05 — the page contains the string only inside an explicit rejection. This
+  run a fresh search renders the venue as **"SPD Bank Oriental Sports Center"**; that is the **sponsor-prefixed form
+  of the same building** and the page now says so rather than treating it as a third name.
+- 🥊 **MMA — CHAMPIONS UNCHANGED, TWENTIETH CONSECUTIVE EDITION.** No card since UFC Sacramento (Aug 22, no title
+  fight). Board asserted **12 `<tr>` incl. header, all eleven incumbents present, champion column free of
+  Pereira / Chimaev / Topuria / "vacant"** (scoped to the champion column only).
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **25 days, 145 timestamped rows, 435 snapshot files**.
+  `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `outputs/validate_1250.py`, **0 failures, 253 checks**). The harness now computes the
+  index arithmetic itself rather than grepping for it: **both 12:xx S&P reads reconciled three ways in Python**,
+  plus the carried 11:06 and 9:59 reads, **ANF's implied $108.91** and **INTU's 345.35 + 12.11 = 357.46**. New
+  structural gates: **exactly three single-quote widgets**; **tape symbol list de-duplicated and checked for the
+  five mandatory symbols**; **Chart of the Day scoped to the mini-symbol-overview block**; **KEV span count and
+  colour-text agreement**; **champions `<tr>` count and champion-column stale-name scan**; **index.html card text
+  asserted to match each page's own lead**; **New-tag hygiene by regex (any `New · <not 12:50>` fails)**; and the
+  **"nothing added"** and **"Shanghai Indoor Stadium"** traps both context-asserted. Trap greps CLEAN on all four
+  pages, including **"Fight Night 286", "$1.4 trillion", "Suno", "slipped 0.12%", "No opening level for any index",
+  "Cody Salkilld", "Shamil Yakhyaev", "Abdul-Rakhman"**.
