@@ -13142,3 +13142,94 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   `New · <not 12:58>` or `New at <not 12:58>` fails)**; and **div / script / tr balance on all four pages**.
   Trap greps CLEAN on all four pages: **"Cody Salkilld", "Shamil Yakhyaev", "Abdul-Rakhman", "slipped 0.12%",
   "Fight Night 286", "$1.4 trillion", "Suno", "No opening level for any index"**.
+
+## Added 2026-08-26 (Wednesday ~1:09pm ET — MIDDAY EDITION, tenth run of the day; archive stamp 2026-08-26-1313)
+- CLOCK: run started **13:04 EDT**, archived **13:13 EDT**. Edition bucket **Midday** (h=13). Method:
+  **incremental edits** to the 1258 pages (`edits_1309.py`). New tags site-wide: **WS 2 cards / CY 1 card +
+  3 vuln rows / MMA 0 / index 3**; all `New · 12:58` and `New at 12:58` markers demoted to
+  `Carried from the 12:58 edition`.
+- 🟢 **MARKETS — NO NEW THREE-INDEX BOARD, AND THE PAGE SAYS SO EXPLICITLY.** The Motley Fool midday page
+  was re-fetched in full at **~1:07 p.m. ET** and returned the **identical** strip to the 12:58 edition
+  (S&P **7,667.22 / −10.06 / −0.13%**, Dow **53,433.49 / −143.91 / −0.27%**, Nasdaq **26,055.25 / −96.05 /
+  −0.37%**, plus the 7,668.63 and 7,668.89 ticks). Cause identified and published: **Cache-Control
+  max-age=300** with `article:modified_time` **16:27:43Z (12:27 p.m. ET)**. **NEW GOTCHA #46 — when the
+  upstream page is cached, say the board is unchanged rather than re-dressing the same snapshot as a fresh
+  read.** Two single-name quotes DID tick and are published as successive reads, unmerged: **NVDA $210.33 /
+  −1.28% / −$2.72** (stocks-mentioned panel) against **$210.27 / −1.3% / −$2.78** (footer strip), and a
+  first **QQQ $709.26 / −0.20% / −$1.46**.
+- 🟢 **MARKETS — FIRST TECHNICAL/OVERNIGHT CARD, HEAVILY CAVEATED.** Vantage Markets (published 08:52 UTC
+  Aug 26), **fetched in full**: **SPX500 CFD 7,682.85 as of 11:41 GMT+8 on 26 Aug**, above the **50-period
+  MA 7,673.98** and **200-period MA 7,678.17**; **RSI(14) 58.35** vs its own MA **53.79**; overnight path
+  rally to **7,708** → dip to **7,664** → 7,682.85. ⚠ **TWO CAVEATS PRINTED ON THE CARD: it is a CFD, not
+  the cash index, and 11:41 GMT+8 on Aug 26 is 11:41 p.m. ET on Aug 25 — i.e. BEFORE Wednesday's open.**
+  It does NOT displace any cash figure. The same note **independently re-confirms Tuesday's closes for a
+  second consecutive run** (S&P 7,677.28 +0.32%, third straight positive session; Dow 53,577.40 +0.3%;
+  Nasdaq 26,151.30 +0.66% on a semiconductor rally) and that oil **slid over 3%**.
+- ⚠ **MARKETS — TUESDAY'S 10-YEAR NOW HAS TWO PRINTS AND NEITHER IS ADJUDICATED.** Vantage says the yield
+  fell **more than seven basis points to 4.625%**; CNBC (already on the page) says **4.629%**, also "more
+  than 7 bp lower". Both rows sit in the Rates table with the 0.4 bp gap flagged in the newer row.
+- 🔴 **CYBER — NEW: SONICWALL NETEXTENDER LINUX, ROOT FILE WRITE, NO WORKAROUND.** Advisory
+  **SNWLID-2026-0013**, published **Aug 25 2026**; Cyber Press account fetched in full Aug 26.
+  **CVE-2026-66152** — path traversal (**CWE-29**) in **OPSWAT tarball handling**; `../` sequences let an
+  attacker write arbitrary files **with root privileges**; vector **AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H**.
+  **CVE-2026-66153** — **7.0**, improper link resolution before file access (**CWE-59**) in the **NEService
+  auto-upgrade**; local, low-priv, no UI, high complexity. Both affect **NetExtender Linux Client 10.3.5 and
+  all earlier**; **Windows clients NOT affected**; fixed in **10.3.6+**; **no workaround exists**. SonicWall
+  reports **no in-the-wild exploitation at disclosure**; credited to **Yan Zhou**. **Not in KEV → no federal
+  deadline**, stated as such. ⚠ **The 8.8 is the advisory's COMBINED severity rating as reported by the
+  press, not a per-CVE NVD score read by this desk — labelled that way on the row.** ⚠ The SonicWall PSIRT
+  page itself was NOT fetched.
+- 🔴 **CYBER — NEW: OPENSSL, NINE FLAWS, 25 AUGUST 2026 ADVISORY.** Three **Moderate** + six **Low** across
+  **QUIC, CMS, CMP, DTLS, TLS RPK and AEAD** code paths. Published row: **CVE-2026-18798**, a **double-free
+  in the QUIC server stack** — a malformed, non-RFC 9000-compliant **INITIAL packet with a Destination
+  Connection ID shorter than eight bytes** fails channel creation, then the same **QRX receive object is
+  freed twice**, corrupting the heap and typically killing the server; **advisory says RCE is "highly
+  improbable" but the flaw can be induced with relatively low effort**. Fixed versions carried: **4.0→4.0.2,
+  3.6→3.6.4, 3.5→3.5.8, 3.4→3.4.7, 3.0→3.0.22**. ⚠ **No numeric CVSS is stated for any of the nine**, so the
+  CVSS cell reads "Moderate (no numeric score stated)". Not in KEV, no deadline.
+- 🔴 **CYBER — NEW CARD, EXPLICITLY HEADLINE-LEVEL.** Three Aug 26 Cyber Press items carried at headline +
+  standfirst only, with the limitation printed on the card: **Balonx Sistema** PhaaS targeting **20+ Mexican
+  banks** with **AI vishing and an Android RAT**; **MuddyWater-linked Dindoor** backdoor **abusing the
+  legitimate Deno runtime**; **28,000 publicly accessible Git repositories** leaking **API keys, bank details
+  and corporate secrets**. No victim, hash, CVE, date range or dollar figure asserted.
+- ⚠ **CYBER — REJECTED: THE INOTIV BREACH IS AN AUGUST STORY FROM THE WRONG YEAR. NEW GOTCHA #47.** A
+  search for today's breach news surfaced Inotiv (**9,542 people**, **Qilin**, "the incident occurred on
+  **August 8**") — which reads as fresh in a late-August run. Fetching SecurityWeek shows the article is
+  datelined **December 4, 2025** and the intrusion was **approximately August 5–8, 2025**. **NOT PUBLISHED**;
+  the rejection is recorded in the page's Sources block. **An "August 8" incident date in an August run is
+  not evidence of freshness — check the article dateline AND the incident year.**
+- ⚠ **CYBER — KEV: NOTHING SEEN THIS RUN (seventh consecutive edition).** Board holds at **14 rows, 10 past
+  due**; Patch Priority still Oracle **Aug 27 (1 day left)**, Gitea **Aug 28 (2 days left)**, matching the
+  board.
+- 🥊 **MMA — NOTHING NEW, AND THE STALE ESPN CHAMPIONS LIST RESURFACED AGAIN.** Fresh Aug 26 UFC searches and
+  Shanghai card/odds searches returned **no item not already carried**. ⚠ **The champions search returned a
+  summary of the ESPN article listing Pereira (LHW), Chimaev (MW) and Topuria (LW)** — the exact regression
+  this desk has published wrongly before. Per the authoritative block above those belts changed at
+  **UFC 327 (Apr 11)**, **UFC 328 (May 9)** and **Freedom 250 (Jun 14)**. **REJECTED; board unchanged,
+  TWENTY-SECOND CONSECUTIVE EDITION** (no card since UFC Sacramento, Aug 22, no title fight). Board asserted
+  **12 `<tr>` incl. header, 11 incumbents present, champion column free of Pereira / Chimaev / Topuria /
+  "vacant"**. The rejection is recorded in the page's Sources block.
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **25 days, 147 timestamped rows, 441 snapshot files**.
+  `gen_archive.py` remains BROKEN.
+- ⚠ **BUILD GOTCHA #48 — THE SANDBOX RECYCLED `/tmp` MID-RUN AND DESTROYED THE CLONE.** Between the research
+  and publish phases the clone directory was emptied (only files copied in afterwards survived). Recovery:
+  the four built pages live in **outputs**, not the clone, so a **fresh `git clone` into a NEW directory**
+  followed by re-copying from outputs cost nothing. **Build into outputs first, treat the clone as
+  disposable, and re-clone rather than trusting a `/tmp` path across phases.**
+- VALIDATION (programmatic, `outputs/validate_1309.py`, **0 failures, 211 checks**). Arithmetic computed in
+  Python, not grepped: **seven index reads reconciled three ways** (level−change=prior close, percent=
+  points/prior, level present on page), the **11:47 S&P and Dow arms that reconcile**, and the **Nasdaq arm
+  that does not** (asserting the −0.131% flag is on the page). Structural gates carried forward: exactly
+  three single-quote widgets and one each of tape/timeline/heatmap/mini-overview/events; tape symbols
+  de-duplicated with the five mandatory symbols; Chart of the Day scoped to the mini-overview block and
+  asserted **NYSE:ANF**; **KEV span count (14), colour split (4 ok / 10 crit) and per-span colour-vs-text
+  agreement**; champions `<tr>` count and champion-column stale-name scan; **nav parsed as a five-link list
+  with order, targets and exactly one `class="on"` matching the current page**; per-page `.tldr` label;
+  `#freshline` / `#ufccdn`; no TradingView on index.html; index card text asserted against each page's own
+  lead; New-tag hygiene by regex; div/script/tr balance. **Two harness bugs found and fixed this run, not
+  worked around: (a) the nav check matched a non-existent `<a class="tab` pattern — the real markup is
+  `<nav class="tabs">` with `class="on"`; (b) the KEV colour rule was written as `crit iff ≤2 days`, but the
+  spec is `crit iff 0/overdue`.** Trap greps CLEAN: "Cody Salkilld", "Shamil Yakhyaev", "Abdul-Rakhman",
+  "slipped 0.12%", "Fight Night 286", "$1.4 trillion", "Suno", "No opening level for any index". The two
+  context-allowed strings — **"Shanghai Indoor Stadium"** and **"nothing added"** — are now asserted to
+  appear ONLY inside a rejection or self-correction note (window-scoped), rather than banned outright.
