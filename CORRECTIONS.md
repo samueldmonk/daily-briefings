@@ -12208,3 +12208,129 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   across all four pages (Cody Salkilld, Abdul-Rakhman, Shamil Yakhyaev, "title challenger Beneil", Shanghai
   Indoor Stadium, "Pereira retains", "Featherweight vacant", "markets closed higher today", both apostrophe forms
   of "Nvidia's results", "−16% after hours", **and the retired WordPress index headline**).
+
+## Added 2026-08-26 (Wednesday ~8:18am ET — MORNING EDITION, first run of the day; archive stamp 2026-08-26-0818)
+- CLOCK: run started **08:06 EDT**, archived **08:18 EDT**. Edition bucket **Morning** (h=8). **PRE-OPEN** —
+  U.S. markets do not open until 9:30, so the Wall Street page leads with futures (time-stamped) and the most
+  recent completed session (Tue Aug 25), and says so explicitly. New tags site-wide: **WS 2 / CY 5 / MMA 3 / index 0**.
+- **METHOD CHANGE THIS RUN: all four pages were REBUILT FROM SCRATCH rather than incrementally edited.** The
+  previous 12 editions were same-day edits of Tuesday's pages; carrying that markup into a new trading day would
+  have meant re-verifying ~280KB of yesterday's intraday copy. Every sentence now on the site traces to a source
+  fetched this run or to an entry in this file. The established design (CSS, nav, tldr, livebar, stat strip,
+  kevdue spans, countdown bar) was carried forward verbatim from the prior pages.
+- 🟢 **MARKETS — PRE-OPEN, WEDNESDAY AUG 26.** Yahoo Finance live blog *"Dow, S&P 500, Nasdaq futures hold steady
+  ahead of inflation data, Nvidia earnings"* (Grace O'Donnell, **4:18 a.m. EDT Aug 26**) **fetched in full**:
+  futures flat, **Nasdaq-100 −0.2%**; **8:30 a.m. ET core PCE, consensus 3.3% unchanged m/m**; a reaccelerating
+  print "would put more pressure on the central bank to **raise** rates"; **Jackson Hole**, Chairman **Kevin Warsh**
+  speaking; **Nvidia reports after the close**, framed as "a quarterly yardstick for the health of the AI trade";
+  also reporting Wed: **CrowdStrike, Williams-Sonoma, Okta, Abercrombie & Fitch**.
+  ⚠ **The Yahoo quote board on that page is stamped "U.S. markets open in 5h 4m" → the futures levels are as of
+  ~4:25 a.m. ET, NOT the 8 a.m. fetch time. Published with that stamp, not as "current".** Levels: **S&P fut
+  7,687.00 −5.00 −0.07% · Dow fut 53,701.00 +56.00 +0.10% · Nasdaq fut 29,215.50 −61.25 −0.21% · Russell fut
+  3,014.70 +0.30 +0.01% · VIX 15.67 +0.22 +1.42% · Gold 4,682.80 −11.70 −0.25% · Bitcoin 78,998.81 −907.00 −1.14%
+  · WTI Oct 80.15 −2.21 −2.68%**. Second premarket read (stockanalysis.com): **SPY −0.04% / QQQ −0.21% /
+  DIA +0.06% / IWM −0.03%** — both published, unmerged.
+- 🟢 **MARKETS — TUESDAY'S CLOSES STAND UNCHANGED AND THE 53,579.94 DOW LEVEL WAS REJECTED FOR A THIRD
+  CONSECUTIVE RUN.** S&P **7,677.28 +24.42 +0.32%** · Dow **53,577.40 +160.24 +0.30%** · Nasdaq **26,151.30
+  +171.11 +0.66%** · Russell **3,010.02 +14.94 +0.50%**. A search snippet again returned the Dow close as
+  **53,579.94**; it fails the arithmetic gate against Monday's 53,417.16 (gives 162.78, not 160.24) and appears
+  on the page exactly once, inside the sentence rejecting it. **The validator asserts count == 1 AND that the
+  single occurrence sits within "NOT published"** — the prose was reworded so the arithmetic is spelled out in
+  words rather than repeating the number (which had tripped the count check at 2).
+- 🟢 **MARKETS — NVIDIA EPS ESTIMATES CONFLICT AND ARE NOT PUBLISHED.** Revenue figures are all sourced and all
+  printed: company guide **$91.0B ±2%**, **Visible Alpha $92.2B**, **40-analyst poll $91.85B**, year-ago quarter
+  **$46.74B**. ⚠ But the per-share previews returned **$2.08** in one place and **$0.65–$0.68 adjusted** in
+  another — irreconcilable from the snippets. **No EPS estimate published; the conflict is disclosed on the page.**
+- 🟢 **MARKETS — RATES ARE TUESDAY'S, ATTRIBUTED TO CNBC.** 10Y **4.629%** (>7bp lower), 2Y **4.183%** (>5bp),
+  30Y **5.163%** (>6bp), on oil's continued slide. ⚠ **NO FEDERAL FUNDS TARGET LEVEL IS PUBLISHED** — no source
+  fetched this run stated one. What is published is the *direction*: Bloomberg's "curbing expectations for more
+  than one Fed rate **hike** in the coming year."
+- 🟢 **MARKETS — CHART OF THE DAY IS NASDAQ:NVDA**, with an on-page note that Wednesday's session has not opened
+  so there is no biggest mover yet, and that the last completed session's biggest mover was **DKS −30.68%**.
+  Ticker tape refreshed to SPXUSD/NSXUSD/DJI + NVDA, INTU, DKS, CRWD, OKTA + USOIL + US10Y (indices, oil and 10Y
+  retained per the standing rule).
+- 🔴 **CYBER NEW ×5 — thehackernews.com front page FETCHED IN FULL.** New TOP STORY: **U.S. Treasury sanctions on
+  Iran-linked hackers, "Operation Economic Outcast"** (Aug 25) — **nearly 60** Iran-linked entities, individuals
+  and vessels across nuclear/missile/oil/cyber incl. digital assets; **Secretary Scott Bessent** quote published
+  verbatim; targets a cyber group **"affiliated with" Iran** — no named threat actor, none invented.
+- 🔴 **CYBER — THE TWO LONG-STANDING "NO FETCHED PRIMARY" ITEMS ARE BOTH CLEARED THIS RUN.**
+  (1) **Mirage2FA** — ANY.RUN via THN Aug 25: **4,500 US and EU companies**, 2024–2026, phishing-as-a-service
+  vs Microsoft 365, steals passwords AND session cookies to land inside an already-authenticated session;
+  **48% of targeted email addresses potentially compromised**; **US = 63.7%** of the total. Promoted to Threat
+  Actor Spotlight. (2) **NVIDIA NemoClaw / Ollama** — Oasis Security via THN Aug 25: attacker-controlled webpage
+  takes **unauthenticated** control of the local Ollama instance and plants hidden instructions in the model;
+  **no CVE**; **no exploitation reported as of Aug 25**; **v0.0.35 fixed macOS and Linux**, **no fix on the
+  Windows/WSL path** where **v0.0.34 added a Windows install carrying a warning instead**; **Elad Luz**, head of
+  research. **The standing note that neither had a primary is now RETIRED.**
+  Also new: **24 npm packages abusing unpkg mirrors** to host ClickFix fake-Cloudflare-CAPTCHA pages (OX Security,
+  **Moshe Siman Tov Bustan** and **Vitalii Chepurko**; quote published verbatim — the registry is being used as
+  "safe, validated storage", not to infect installers); and **WhatsApp multiple passkeys** (Meta, Tue; **>1 billion**
+  people use a passkey to log into WhatsApp; Android Oct 2023 → iOS early 2024 → Facebook Jun 2025; full password
+  option added to 2SV).
+- 🔴 **CYBER — KEV BOARD STILL 13 ROWS BUT THE SPLIT MOVED FOR THE FIRST TIME IN TWELVE EDITIONS: now
+  10 past due / 0 due today / 3 ahead** (Oracle Aug 27 = **1 day**, MLflow Sep 2 = **7**, TrueConf Sep 3 = **8**).
+  **WinSock CVE-2026-68820 rolled from "DUE TODAY" to "1 day past due"** at the date change. Nothing added Aug 25
+  or Aug 26; August additions re-verified against CISA's alert index as **Aug 7 (1) / Aug 11 (3) / Aug 18 (4) /
+  Aug 20 (2) / Aug 24 (1, Oracle)**. Validator asserts the 10/0/3 split with ahead == [1,7,8].
+- 🔴 **CYBER — Gitea CVE-2026-60004 added to Vulnerability Watch with NO CVSS.** A search result this run states
+  it is an RCE patched in **1.27.1** in late July; **no score was given anywhere, so the CVSS cell is a dash.**
+  RULE reaffirmed: a missing score is printed as a dash, never estimated.
+- 🥊 **MMA — THE LAST EVENT CHANGED: UFC SACRAMENTO (Aug 22) REPLACES UFC 330 AS THE MOST RECENT CARD.**
+  **Gregory Rodrigues def. Anthony Hernandez, UD 48–47, 49–46, 48–47**, Golden 1 Center, Aug 22.
+  **Bonuses: Rodrigues AND Hernandez $100,000 each for Fight of the Night; MarQuel Mederos and Carli Judice
+  $100,000 each for Performance of the Night; eight other fighters $25,000 finish bonuses.** ⚠ **No single total
+  was stated in any source, so no total is asserted** — the page shows the arithmetic of the stated awards only.
+- 🥊 **MMA NEW — BOTH SACRAMENTO MAIN-EVENTERS SUSPENDED 180 DAYS.** California State Athletic Commission:
+  **Rodrigues 180 days or until cleared for a possible fracture to his RIGHT LEG**; **Hernandez 180 days or until
+  cleared for a potential fracture to his LEFT KNEE**. **26 fighters** received medical suspensions from the card.
+- 🥊 **MMA NEW — SEAN STRICKLAND BANNED SIX MONTHS AS A CORNERMAN.** CBS Sports: suspended six months after
+  attacking a fighter in a post-fight brawl **while serving as a cornerman**; BBC Sport: "UFC's Strickland in
+  six-month ban after cage melee." ⚠ **Reported as a disciplinary matter only — no source fetched this run ties
+  it to his middleweight title, and the page says so.** He remains MW champion on the board.
+- 🥊 **MMA — UFC 331 FULL CARD NOW SOURCED.** **Sep 19, Crypto.com Arena, Los Angeles**; **Joshua Van vs.
+  Alexandre Pantoja 2** for the flyweight title (first meeting UFC 323, Dec 2025, **Van TKO at 0:26 of R1 on a
+  Pantoja arm injury**); co-main **Arman Tsarukyan vs. Mauricio Ruffy, five rounds at lightweight**; also
+  **Patrício Pitbull vs. Dooho Choi**, **Renato Moicano vs. Brian Ortega**, **Alonzo Menifield vs. Iwo Baraniewski**.
+  Times: early prelims ~5 p.m. ET, prelims 7 p.m. ET, main card 9 p.m. ET.
+  **UFC 332 = Oct 3** (no headliner/venue sourced → the card publishes the DATE ONLY and says so).
+  **UFC 333 = Oct 24, Volkanovski vs. Evloev.**
+- 🥊 **MMA — SHANGHAI ODDS PUBLISHED UNMERGED.** Nurmagomedov opened **−700 / Song +500 (BetOnline.ag)**; a second
+  book opened **−500 / +385**. Both printed as opening lines from different books; neither tidied into the other.
+  ⚠ The **−500 / +380 DraftKings** line carried yesterday was NOT re-confirmed this run and is not on the page.
+- 🥊 **MMA — CHAMPIONS UNCHANGED, THIRTEENTH CONSECUTIVE EDITION.** No belt can have moved: the only card since
+  UFC 330 (Aug 15) is UFC Sacramento (Aug 22), which had **no title fight**. Board asserted 11/11 rows, 0 vacant,
+  **by CHAMPION COLUMN ONLY** (gotcha #14), with the stale-name trap extended to include **Pantoja** and
+  **Dvalishvili** (both appear elsewhere on the page as challengers/contenders, so the check must stay scoped).
+- ⚠ **NEW GOTCHA #28 — A "FETCHED THIS RUN" PAGE CAN CARRY QUOTES THAT ARE HOURS OLD.** The Yahoo live blog was
+  fetched at 8:07 a.m. but its embedded quote board reads "U.S. markets open in 5h 4m", i.e. ~4:25 a.m.
+  **RULE: derive the as-of time from the page's OWN countdown/stamp, not from when the fetch happened**, and
+  publish that stamp beside every level taken from it.
+- ⚠ **NEW GOTCHA #29 — A SCOPED-REJECTION CHECK BREAKS IF THE PROSE SPELLS THE ARITHMETIC OUT.** The
+  "53,579.94 appears exactly once" assertion failed at 2 because the rejection sentence repeated the number inside
+  the subtraction. **RULE: when a number is on a page only to be rejected, write the arithmetic in words
+  ("that level minus Monday's close") so the literal occurs exactly once.**
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **25 days, 138 timestamped rows, 414 snapshot files**.
+  `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `outputs/validate_0826.py`, **0 failures, 275 checks**). 4 pages HTMLParser-balanced
+  0 unclosed / 0 stray / 0 left open; 5-tab nav scoped inside `<nav class="tabs">`, five hrefs in order, exactly
+  1 correctly-targeted `class="on"` per page (gotcha #19); stamp/fresh IDs ×4; `.tldr` ×1 per briefing with the
+  correct per-page label and NONE on index; **index cards anchored on `class="bcard c-sec|c-mkt|c-mma"` and
+  asserted to carry their own page's tldr VERBATIM, plus a non-empty `<h2>` check** (gotcha #27); **8/8
+  TradingView JSON blocks parse**; tape retains SPXUSD+NSXUSD+DJI+USOIL+US10Y; Chart of the Day asserted
+  **NASDAQ:NVDA** scoped to the mini-symbol-overview block; **13/13 KEV countdowns anchored on the `kevdue` span
+  with the 10/0/3 split and ahead == [1,7,8]** (gotchas #23/#25); per-CVE duplicate-row check run over **every**
+  CVE row on the page, not a hard-coded subset; champions 11 good names present / 7 stale strings absent **from
+  the champion column only**, 12 `<tr>` incl header, 11 champion cells; **three index reconciliations (level,
+  point change AND percent) with `round(x,2)` against Monday's 7,652.86 / 53,417.16 / 25,980.19**, plus the
+  scoped 53,579.94 rejection; seven forward dates asserted still in the future; zero `@@T@@` tokens. Content
+  guards across the markets set (futures levels, VIX, gold, bitcoin, WTI, core PCE 3.3%, Warsh, the four Nvidia
+  revenue figures, the four Wednesday reporters, 4.629% / 4.183% / 5.163%, DKS/INTU/ZM/OKLO/RZLV levels, the
+  Tuesday sector line), the cyber set (Operation Economic Outcast, Bessent, 21962, 19478, GraphQL, watchTowr,
+  Mirage2FA, ANY.RUN, 48%, 63.7%, 4,500, NemoClaw, Oasis Security, Elad Luz, v0.0.35, v0.0.34, OX Security and
+  both researcher names, unpkg, passkey, BOD 26-04, 18963, 75149, 15981, 61979, Weedhack, 6,300, E4del, PINHOLE,
+  Medusa, 60004, 1.27.1) and the MMA set (both main-event names and records, the venue, both odds pairs, the
+  scorecards, Mederos, Judice, 180-day, 26 fighters, Strickland, Van, Pantoja, Tsarukyan, Ruffy, Moicano, Ortega,
+  Crypto.com Arena, Evloev, Figueiredo, Dvalishvili). Trap greps CLEAN on all four pages (Cody Salkilld,
+  Abdul-Rakhman, Shamil Yakhyaev, "title challenger Beneil", Shanghai Indoor Stadium, "Pereira retains",
+  "Featherweight vacant", "markets closed higher today", @@T@@, **UFC 336 and UFC 335 — both now ASCII-clean on
+  every page, since neither show is referenced this edition**).
