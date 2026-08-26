@@ -12637,3 +12637,102 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   "Featherweight vacant", "markets closed higher today", @@T@@, "UFC Fight Night 286", UFC 336, UFC 335, "no source
   fetched at 8:44", "is not printing a number yet", "−500 / +380", "Figueiro", and **"U.S. markets are still not
   open"** plus the superseded single-re-title sentence).
+
+## Added 2026-08-26 (Wednesday ~10:20am ET — MORNING EDITION, fifth run of the day; archive stamp 2026-08-26-1013)
+- CLOCK: run started **10:05 EDT**, research 10:06–10:19, archived **10:13 EDT** — **31 minutes** after the 0942 snapshot.
+  Edition bucket **Morning** (h=10). Session **open ~1 hour**. Method: **incremental edits** to the 0942 pages.
+  New tags site-wide: **WS 1 / CY 1 / MMA 1 / index 0**; both remaining `New · 9:40` tags demoted to
+  `Carried · 9:40 edition`.
+- 🟢 **MARKETS — NEW LEAD: META SETTLES THE STATES' SOCIAL-MEDIA ADDICTION CASE. The PCE print is demoted to the
+  second paragraph.** Four independent headlines this run (CNBC "Meta settles social media addiction case with
+  California, other states for **$16.7 billion**"; Bloomberg "Meta Agrees to Pay **Up to $16.7 Billion**"; NBC News
+  "settles … for **up to $16 billion**"; a fourth read giving **$16.68 billion**). ⚠ **All four renderings are
+  published UNMERGED — nothing averaged or rounded into one figure**, and the page says so. Also verified and
+  published: **29 states**; co-led by **California AG Rob Bonta** with **Colorado, New Jersey and Kentucky**;
+  California's share **$1.5bn–$2.1bn** subject to court approval; guardrails limiting youth scroll time and barring
+  safety-setting changes without parental consent; the filing's language that Meta **"denies the allegations against
+  it and that it has any liability to the Plaintiffs"**; judge must still sign off. ⚠ **The CNBC article body would
+  NOT return on fetch this run** — all four are search summaries/headlines and are labelled as such.
+- ⚠ **MARKETS — META'S SHARE REACTION IS THREE-WAY CONTRADICTORY AND NO PERCENTAGE IS ASSERTED.** Yahoo summary:
+  **"Meta stock jumped in early trading."** TipRanks: **"Meta shares were falling 1.1% to $563.84 in early
+  trading."** A third read: **"surged 3.9% in pre-open trading."** **None carries a clock time on its own page and
+  they cannot all describe one instant.** All three published as found; **the page asserts NO percentage and NO
+  level for META this edition.** ⚠ A **$1.4 trillion worst-case-verdict** figure appeared in one unattributed search
+  summary and was **NOT published** — no named outlet could be tied to it. **New trap grep: "$1.4 trillion".**
+- 🟢 **MARKETS — TUESDAY'S CLOSES INDEPENDENTLY RE-CONFIRMED, AND THEY RECONCILE THREE WAYS.** Benzinga this run:
+  **S&P 500 +0.32% to 7,677.28**, **Nasdaq Composite +0.66% to 26,151.30**, **Dow +0.3% to 53,577.40**. Each
+  reconciles against Monday's closes (**7,652.86 / 53,417.16 / 25,980.19**, from Schwab's own table) on **level,
+  points AND percent**. The **53,579.94** rejection stands and still occurs exactly once, inside its disclaimer.
+- 🟢 **MARKETS — NVIDIA'S RELEASE TIME PUBLISHED.** TipRanks: **results at 4:20 p.m. ET, call at 5 p.m.** Added to
+  On the Radar alongside the rest of today's macro slate confirmed from Schwab's forward calendar: **second estimate
+  of Q2 GDP, July durable goods orders, July personal income and spending.**
+- ⚠ **MARKETS — GOTCHAS #34 AND #35 BOTH RECURRED AND WERE CAUGHT AGAIN.** (1) The Yahoo live-blog fetch returned a
+  **fully cached page** — the headline had reverted to the 4:18 a.m. "futures hold steady" version and the quote
+  board again read **"U.S. markets open in 5h 4m"** with **DKS −30.68%** in the trending strip. Nothing from that
+  fetch was published as Wednesday data; the re-titled "Dow, S&P 500, Nasdaq slip" version survives only from the
+  search summary. (2) The Schwab `stock-market-update-open` slug **again served Tuesday's update** ("Published as of:
+  August 25, 2026, 9:08 a.m. ET"). Only its forward calendar was used.
+- ⚠ **MARKETS — TWO STALE ARTEFACTS OF THE PRE-OPEN PAGES FIXED.** (1) The **Chart of the Day note still read
+  "Wednesday's session has not opened"** an hour after the bell — rewritten, and **"session has not opened" is now a
+  trap grep.** (2) The **ticker tape still carried NYSE:DKS**, which is Tuesday's crash, and carried **TVC:US10Y
+  twice.** DKS swapped for **NASDAQ:META**, duplicate removed; validator now asserts the five mandatory symbols AND
+  that the symbol list has no duplicates AND that DKS is absent. **Chart of the Day moved NVDA → NASDAQ:INTU**, the
+  largest single-name move any source this run puts a number on (−11.8% premarket); the note states explicitly that
+  **no source read this run gives a regular-session percentage move for any individual stock.**
+- 🔴 **CYBER — BOSTON SCIENTIFIC: THE PREMARKET BAND RESOLVES INTO A REGULAR-SESSION FIGURE (New · 10:20).**
+  Reuters, via Insurance Journal / The Star / Union Leader: **shares down 5.03% at $46.90, a fresh 20-day low.**
+  ⚠ Untimestamped on the page it was found on, and **published alongside — not merged into** — the earlier
+  premarket snapshots (**−3.2%** Investing.com 7:10 a.m. ET, then untimestamped **3.5%–4%** and **5.8%**).
+  **Nothing averaged.** Wires re-confirm the 8-K facts and add nothing beyond them: **still no threat actor, no
+  ransomware family, no CVE, no intrusion vector, no exfiltration claim, no patient-safety claim** — the page
+  asserts none of these.
+- ⚠ **CYBER — KEV: NOTHING SEEN THIS RUN (second consecutive edition).** Catalogue search returned only the
+  **Aug 18 (four)**, **Aug 20 (two, TrueConf)** and **Aug 21 (one, Zimbra CVE-2026-73570)** alerts; **no alert page
+  dated August 25 or 26.** Per gotcha #31 this is worded "nothing seen this run," never "nothing added." Board
+  unchanged: **14 entries / 10 past due / 0 due today / 4 ahead** (Oracle 1, Gitea 2, MLflow 7, TrueConf 8);
+  **Oracle CVE-2026-60004 still due Aug 28.** ⚠ **The prose guard had to be rewritten**: the summary sentence reads
+  "The board holds **&lt;b&gt;14&lt;/b&gt;** entries", so a naive `"14 entries" in html` guard FAILS on the markup.
+  **NEW GOTCHA #36 — A PROSE GUARD MUST BE WRITTEN AGAINST THE ACTUAL MARKUP, INCLUDING INLINE TAGS INSIDE THE
+  NUMBER.** Validator now asserts the exact string with its `<b>` and the full 10/0/4 split sentence.
+- 🥊 **MMA — NEW TOP STORY: THE WEDNESDAY MEDIA-DAY FACEOFF (New · 10:20).** Song Yadong and Umar Nurmagomedov came
+  face to face again at **UFC Shanghai media day on Wednesday**, and **Song pulled his shirt off in front of
+  Nurmagomedov**, saying **"If I win this fight, I will get a title shot."** UFC.com carries the exchange under the
+  title **"Song Yadong: 'With This Fight I Will Get A Title Shot'"** (ufc.com/video/159548); corroborated by The
+  Body Lock and MiddleEasy. ⚠ **This is a DISTINCT occasion from the Tuesday faceoff in front of the host arena**
+  reported by Yahoo Sports and carried since 9:40 — **two faceoffs, two days, both published; do not merge them.**
+- ⚠ **MMA — WIKIPEDIA NOW STATES AN EVENT NUMBER; THE TRAP HOLDS ANYWAY.** A Wikipedia entry for the card carries
+  **"UFC Fight Night 286"** in its URL and says "also known as." **No source fetched this run from UFC.com or ESPN
+  states an event number**, so the page continues to use the official UFC.com title only and **"UFC Fight Night 286"
+  remains a trap grep.** The footer says so explicitly. Revisit only if UFC.com or ESPN states a number.
+- 🥊 **MMA — CHAMPIONS UNCHANGED, SEVENTEENTH CONSECUTIVE EDITION.** No card since UFC Sacramento (Aug 22, no title
+  fight), so no belt can have moved. Board asserted **11/11 rows, 0 vacant, by CHAMPION COLUMN ONLY** (gotcha #14),
+  stale-name trap covering Pereira, Chimaev, Topuria, Pantoja, Dvalishvili, Della Maddalena, O'Malley,
+  Nurmagomedov; all eleven current champions additionally asserted PRESENT by name.
+- ⚠ **ARCHIVE VALIDATOR FIX — archive.html DOES NOT USE `class="on"`.** It marks its own tab with an inline
+  `style="color:#8fa0b0…"`. The 5-tab check now special-cases archive.html and asserts the inline highlight plus the
+  ABSENCE of `class="on"`, instead of failing every run. (This had been a silent false positive waiting to happen.)
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **25 days, 142 timestamped rows, 426 snapshot files**.
+  `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `outputs/validate_1020.py`, **0 failures, 277 checks**). 4 pages + archive.html
+  HTMLParser-balanced, 0 stray / 0 unclosed; 5-tab nav scoped inside `<nav class="tabs">`, five hrefs in order,
+  exactly 1 correctly-targeted active tab per page (archive by inline style); stamp/fresh IDs ×4 plus the freshness
+  string; `.tldr` ×1 per briefing with the correct per-page label and NONE on index; index cards anchored on
+  `class="bcard c-sec|c-mkt|c-mma"`, each asserted to carry its own page's tldr VERBATIM plus a non-empty `<h2>` and
+  a CTA; **8/8 TradingView JSON blocks parse**; tape asserted to retain all five mandatory symbols by name, to have
+  **no duplicates**, to have **dropped NYSE:DKS** and to carry **NASDAQ:META**; Chart of the Day asserted
+  **NASDAQ:INTU** scoped to the mini-symbol-overview block; 14/14 kevdue spans with the 10/0/4 split, ahead ==
+  [1,2,7,8], per-span colour/text agreement, **plus the prose sentence asserted against its real markup**; champions
+  11 rows / 0 vacant / 8 stale names rejected by champion column only / all 11 incumbents asserted present, 12 `<tr>`
+  incl header; **three index reconciliations (level, points AND percent) with `round(x,2)`** plus the scoped
+  53,579.94 rejection asserting count == 1 AND that the occurrence sits inside "NOT published"; forward dates
+  asserted still in the future; MMA countdown asserted at `2026-08-29T06:00:00-04:00` and asserted NOT at midnight;
+  **New-tag hygiene: every `tag new` must read exactly "New · 10:20", counts WS 1 / CY 1 / MMA 1 / index 0, zero
+  undemoted 9:40 tags**. Content guards across the markets set (all four Meta renderings, 29 states, Rob Bonta, the
+  California share, the denial language, 4:20 p.m. ET, ~10:20 a.m. ET, every PCE figure, LSEG, 8:35 a.m. EDT,
+  38%/55%, $563.84, 3.9%, −11.8%, $315.30, all three Tuesday closes, the GDP line, Mad Money), the cyber set (5.03%,
+  $46.90, 20-day low, Aug 25, the 8-K quotation, Susan Thompson, 69836, 60004, 73570, Fitzpatrick) and the MMA set
+  (both records, Oriental Sports Center, 6:00 a.m. EDT, −470, Denise Gomes, the Song quotation, media day, shirt
+  off). Trap greps CLEAN on all four pages (Cody Salkilld, Abdul-Rakhman, Shamil Yakhyaev, "title challenger
+  Beneil", Shanghai Indoor Stadium, "Pereira retains", "Featherweight vacant", "markets closed higher today",
+  @@T@@, "UFC Fight Night 286", UFC 336, UFC 335, "no source fetched at 8:44", "is not printing a number yet",
+  "−500 / +380", "Figueiro", "U.S. markets are still not open", and **"session has not opened"**).
