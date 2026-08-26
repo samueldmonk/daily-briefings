@@ -13023,3 +13023,122 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   **"nothing added"** and **"Shanghai Indoor Stadium"** traps both context-asserted. Trap greps CLEAN on all four
   pages, including **"Fight Night 286", "$1.4 trillion", "Suno", "slipped 0.12%", "No opening level for any index",
   "Cody Salkilld", "Shamil Yakhyaev", "Abdul-Rakhman"**.
+
+## Added 2026-08-26 (Wednesday ~1:02pm ET — MIDDAY EDITION, ninth run of the day; archive stamp 2026-08-26-1302)
+- CLOCK: run started **12:52 EDT**, archived **13:02 EDT** — **12 minutes** after the 1250 snapshot, the tightest
+  gap of the day. Edition bucket **Midday** (h=13). Method: **incremental edits** to the 1250 pages
+  (`edits_1258.py` + follow-ups). New tags site-wide: **WS 3 cards + 4 radar items / CY 2 cards / MMA 0 / index 3**;
+  all `New · 12:50` and `New at 12:50` markers demoted to `Carried from the 12:50 edition`.
+- 🟢 **MARKETS — FIRST FULLY RECONCILED THREE-INDEX INTRADAY BOARD SINCE 9:59, AND ALL THREE ARE RED.**
+  From The Motley Fool's midday page (Emma Newbery, published 12:27 p.m. ET), **fetched in full**, live quote strip
+  read at ~12:55 p.m. ET: **S&P 500 7,667.22 / −10.06 / −0.13%**, **Dow 53,433.49 / −143.91 / −0.27%**,
+  **Nasdaq Composite 26,055.25 / −96.05 / −0.37%**. All three subtract exactly to **7,677.28 / 53,577.40 /
+  26,151.30** and every percent matches points-over-prior-close (0.131 / 0.269 / 0.367). The same page rendered
+  each quote **twice more moments apart** — S&P **7,668.63 (−8.65, −0.11%)** and **7,668.89 (−8.39, −0.1%)**,
+  Dow **53,433.99 (−143.41, −0.3%)**, Nasdaq **26,055.65 (−95.65, −0.4%)** — **all six also reconcile**, and all
+  are published unmerged as successive ticks. ⚠ **The strip carries no clock stamp**; published as a read at the
+  moment of fetch, explicitly labelled as such. **This independently re-confirms all three Tuesday closes.**
+- 🟢 **MARKETS — 11:47 a.m. ET READ PUBLISHED, WITH ONE ARM FLAGGED AS NOT RECONCILING.** The Fool's own text:
+  "As of 11:47 AM ET, the S&P 500 is up 0.01% to 7,678, while the Nasdaq Composite has fallen 0.12% to 26,117,
+  and the Dow Jones Industrial Average is trading 0.18% lower at 53,480." S&P checks (+0.72 = +0.009% → 0.01%)
+  and Dow checks (53,577.40 × 0.9982 = 53,481.0 ≈ 53,480). ⚠ **The Nasdaq pair does NOT: 26,117 against
+  26,151.30 implies −0.131%, not the stated 0.12%.** Both printed verbatim, neither corrected. **NEW GOTCHA #43 —
+  publish the discrepancy rather than picking the arm that suits the narrative.**
+- 🟢 **MARKETS — THREE NEW MOVERS CARDS.** **Alibaba** "erased some losses after plunging on news of a
+  **$10 billion share placement** to fund AI development" — ⚠ **no percent, no level, no clock time**; direction
+  and placement size only. **Abercrombie & Fitch** gets a **SIXTH rendering — "soared an eye-watering 40%"** —
+  joining 8.3% / 11.9% / "over 11%" premarket / 17% / **+30.85%**; ⚠ **the 40% does NOT displace +30.85% in the
+  Chart of the Day note** because only the board figure reconciles against a stated prior close. **Meta**
+  "whipsawed … following a **$17 billion** legal settlement" (vs **$16.7 billion** in the CNBC account already on
+  the page — both printed), quote strip **META $577.35 / +1.3% / +$7.30** vs the earlier TipRanks **−1.1% to
+  $563.84** — neither pair adjudicated. Ticker tape: **NASDAQ:INTU → NYSE:BABA**; five mandatory symbols
+  retained, no duplicates. **Chart of the Day stays NYSE:ANF.**
+- 🟢 **MARKETS — FIRST WEDNESDAY SECTOR LINE.** Fool: **"Energy and industrial stocks lead the sector gainers,
+  and basic materials and healthcare trail."** ⚠ Leadership ranking only — no sector percentage, no advancing
+  count, no clock time. It **disagrees with Tuesday's board** (health care led); both printed at their own dates.
+- 🟢 **MARKETS — COMMODITIES/RATES: FOUR ROWS ADDED, NONE REPLACED.** **WTI $80.78, −1.92%** (Trading Economics,
+  Aug 26) — first Wednesday crude print; reason stated: US measures on Iran **less aggressive than expected**,
+  **no secondary sanctions** on trading partners. ⚠ No clock time; sits **below**, not in place of, the ~9:59
+  October-contract $81.52 row. **Gold $4,608.72 −0.61%** and **Bitcoin $78,048.00 −$1,154.82 −1.5%** (Fool,
+  ~12:55) added alongside the ~9:59 board rows. ⚠ **THE TWO 10-YEAR READS DISAGREE AND NEITHER IS CORRECTED:**
+  Fool **4.67%, +0.017** (implies a 4.653 prior); Trading Economics **4.65%, "eased"** from a **20-month high of
+  4.75% on Aug 21**; this site's Tuesday close is **4.629%**. All three printed, and the page states explicitly
+  that **both 4.65% and 4.67% are HIGHER than Tuesday's close**, so "eased" is a move off the Aug 21 high.
+- 🟢 **MARKETS — FOUR NEW ON-THE-RADAR ITEMS.** Nvidia **"may post over $100 billion in quarterly revenue for the
+  first time"** (⚠ outlet characterisation, not guidance or consensus); NVDA **$210.27 / −1.3% / −$2.78**.
+  **Consumer confidence 89.4** in August, a **seven-month low**, **−0.8%** m/m, vs **consensus 90.2**.
+  **Core PCE +3.3% y/y** alongside the headline **+0.2% m/m / +3.7% y/y** already carried. Gainers/losers board:
+  **UnitedHealth +1.97%, Travelers +1.05%, Cisco +1.01%; Alphabet −1.94%, Merck −1.62%, Goldman Sachs −1.15%**
+  — ⚠ no clock time, no levels, and its Alphabet figure sits against **GOOG −1.6% at $337.92** on the Fool strip
+  minutes later; both printed, neither merged.
+- ⚠ **MARKETS — "slipped 0.12%" SURFACED AGAIN THIS RUN AND WAS AGAIN NOT PUBLISHED** (a TheStreet-sourced
+  S&P/Dow/Nasdaq/Russell set with no clock time). Trap grep asserted CLEAN.
+- 🔴 **CYBER — GITEA CVE-2026-60004 NOW HAS A SEVERITY: CVSS 9.8, TRIPLE-SOURCED.** SecurityWeek, Help Net
+  Security and BleepingComputer independently give **9.8**, the **Aug 25 KEV addition**, the **Aug 28, 2026**
+  federal deadline, the fix in **1.27.1** (late July), and the mechanism — **"an attacker with ordinary
+  repository write access"** can **"plant an executable Git hook and run arbitrary shell commands with the
+  privileges of the Gitea service account."** The standing "no CVSS published" note is **RETIRED** on the Patch
+  Priority box, the Vulnerability Watch row and the KEV board. ⚠ **Press figure agreed by three outlets, NOT a
+  vendor advisory or NVD page read by this desk** — labelled as such everywhere it appears. ⚠ **The CISA alert
+  page for Aug 25 AGAIN returned no readable body when fetched this run** (second consecutive run).
+- 🔴 **CYBER — NEW: KALTURA mwEmbed, TWO UNPATCHED UNAUTHENTICATED FLAWS, VENDOR UNREACHABLE.** CERT/CC
+  **VU#308749** covers **CVE-2026-19913** (arbitrary file read) and **CVE-2026-19912** (RCE), both from the same
+  **unsafe deserialization in mwEmbedLoader.php** in the mwEmbed player library (also shipped as **html5lib**).
+  **Neither requires authentication or a Kaltura session token**; network access to the endpoint is the only
+  precondition. On 19913, a **file:// path supplied to ServiceUrl** is reflected back in the deserialization
+  error, exposing DB credentials, admin secrets and API keys. **NO PATCH EXISTS** — CERT/CC was **"unable to
+  reach Kaltura to coordinate these vulnerabilities."** Mitigation: restrict/disable external access + strict
+  **ServiceUrl allow-list**. ⚠ **No CVSS stated for either CVE; neither is in KEV, so neither carries a federal
+  deadline** — both published with a dash.
+- 🔴 **CYBER — NEW BREACH CARD: LACMA.** Los Angeles County Museum of Art: suspicious activity detected
+  **July 11, 2025**, network compromise confirmed **~a month later**, full extent of exposed data identified
+  **late February 2026**, breach **reported August 24, 2026** — **thirteen-plus months from detection to report**.
+  Exposed: **full names, DOB, SSNs, driver's licence / government ID numbers, partial financial account numbers,
+  partial payment-card information, health insurance information, and medical details incl. provider names,
+  diagnoses and treatment dates.** Law enforcement notified; **one year** of identity-theft protection offered.
+  ⚠ **Attack method and number of individuals affected NOT disclosed**; no actor, family, CVE or vector asserted.
+- 🔴 **CYBER — NEW BREACH CARD: AnonyMousKIT (SOCRadar).** PhaaS platform automating Apple ID theft to strip
+  **Activation Lock** from stolen iPhones; **active since early 2024**; **506 domains**, **168 storefront
+  brands**; also touches **iCloud backups and Keychain credentials**. **200 calls recovered, placed
+  Aug 31 2025 – May 30 2026**, **55 distinct transcripts**, a voice AI agent under **five personas** all carrying
+  the same translated identity **"Alice from Apple Support"** in **English, Spanish and Portuguese**; **179 of
+  the 200 went to Brazilian numbers.** Transcript: agent asks the victim to confirm ownership, requests the
+  **four- or six-digit passcode**, **reads the digits back**, then cites an Apple Store Activation Lock removal
+  and asks about a recovery link. Stat strip swapped: **"~60 Iran designations" → "506 domains / 168
+  storefronts."** ⚠ No dollar loss, no arrest, no takedown stated.
+- ⚠ **CYBER — KEV: NOTHING SEEN THIS RUN (sixth consecutive edition)** for an alert page dated August 26. Board
+  holds at **14 rows, 10 past due**; validator asserts **exactly 14 kevdue spans, 4 ok / 10 crit**, per-span
+  colour-text agreement, and that the Patch Priority deadline matches the board (Oracle **Aug 27, 1 day left**;
+  Gitea **Aug 28, 2 days left**).
+- 🥊 **MMA — NOTHING NEW SEEN THIS RUN, AND THE PAGE SAYS SO.** Fresh searches on Aug 26 UFC news, the Shanghai
+  card/odds and Aug 24–26 roster news returned **no item not already carried**. ⚠ The one candidate — **PFL's
+  announcement of 18 signings incl. Javid Basharat and Daniel Marcos** — is dated **June 24, 2026** and was
+  **NOT published as news**; a note recording the rejection was added to Sources. **CHAMPIONS UNCHANGED,
+  TWENTY-FIRST CONSECUTIVE EDITION** (no card since UFC Sacramento, Aug 22, no title fight); board asserted
+  **12 `<tr>` incl. header, 11 incumbents present, champion column free of Pereira / Chimaev / Topuria /
+  "vacant"**. The index MMA card was rewritten to say plainly that nothing moved rather than re-dressing an old
+  lead as new.
+- ⚠ **BUILD GOTCHA #44 — ANCHORING AN index.html CARD REWRITE ON THE CARD TITLE MATCHES THE NAV FIRST.** The
+  first pass anchored on the strings "The Closing Bell" / "The Cyber Wire", both of which appear in the five-tab
+  nav ABOVE the cards, so both rewrites landed in the SAME (cyber) card and the markets card was never touched.
+  The validator caught it (8 missing-string failures). **Anchor index card edits on `<a class="bcard c-mkt"` /
+  `c-sec` / `c-mma`, never on the card's own title text.**
+- ⚠ **BUILD GOTCHA #45 — INSERTING A CARD BLOCK BEFORE AN EXISTING `<div class="cards">` DUPLICATES THE OPENER.**
+  Cost one unbalanced `<div>` (69 open / 68 close), caught by the div-balance check. Balance is now 68/68.
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **25 days, 146 timestamped rows, 438 snapshot files**.
+  `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `outputs/validate_1258.py`, **0 failures, 288 checks**). The harness computes all
+  index arithmetic in Python rather than grepping for it: **ten separate index reads reconciled three ways**
+  (the six new Fool ticks, the carried 12:41:56 / 12:39 / 11:06 reads), the **9:59 four-index board**, the
+  **11:47 pair that reconciles plus the Nasdaq arm that does not** (asserting the "-0.131%" flag is on the page),
+  and **INTU 345.35 + 12.11 = 357.46**. Structural gates carried forward and extended: exactly three
+  single-quote widgets and one each of tape/timeline/heatmap/mini-overview/events; tape symbol list
+  de-duplicated with the five mandatory symbols asserted and **NASDAQ:INTU asserted absent**; Chart of the Day
+  scoped to the mini-symbol-overview block and asserted **NYSE:ANF**; KEV span count and colour-text agreement;
+  KEV deadlines compared **after tag-stripping** (they carry inline `<b>`); champions `<tr>` count and
+  champion-column stale-name scan; **five nav tabs and exactly one active tab on every page**; per-page `.tldr`
+  label (**The Tape / The Wire / Tale of the Tape**); `#freshline` and `#ufccdn` present; **no TradingView on
+  index.html**; index card text asserted against each page's own lead; **New-tag hygiene by regex (any
+  `New · <not 12:58>` or `New at <not 12:58>` fails)**; and **div / script / tr balance on all four pages**.
+  Trap greps CLEAN on all four pages: **"Cody Salkilld", "Shamil Yakhyaev", "Abdul-Rakhman", "slipped 0.12%",
+  "Fight Night 286", "$1.4 trillion", "Suno", "No opening level for any index"**.
