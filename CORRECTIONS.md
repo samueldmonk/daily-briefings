@@ -12736,3 +12736,114 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   Beneil", Shanghai Indoor Stadium, "Pereira retains", "Featherweight vacant", "markets closed higher today",
   @@T@@, "UFC Fight Night 286", UFC 336, UFC 335, "no source fetched at 8:44", "is not printing a number yet",
   "−500 / +380", "Figueiro", "U.S. markets are still not open", and **"session has not opened"**).
+
+## Added 2026-08-26 (Wednesday ~10:45am ET — MORNING EDITION, sixth run of the day; archive stamp 2026-08-26-1044)
+- CLOCK: run started **10:35 EDT**, research 10:36–10:43, archived **10:44 EDT** — **31 minutes** after the 1013 snapshot.
+  Edition bucket **Morning** (h=10). Session **open ~1h15m**. Method: **incremental edits** to the 1013 pages.
+  New tags site-wide: **WS 3 / CY 1 / MMA 2 / index 0**; all `New · 10:20` tags demoted to `Carried · 10:20 edition`.
+- 🟢 **MARKETS — THE BIG ONE: THE FIRST VERIFIED REGULAR-SESSION INDEX PRINTS OF THE DAY, AND THEY RECONCILE FOUR
+  FOR FOUR.** The TheStreet piece syndicated on Yahoo Finance (**"Stock Market Today (Aug. 26, 2026): S&P 500 futures
+  edge lower ahead Nvidia earnings"**, **Rob Lenihan**, **9:43 a.m. EDT**) was **fetched in full** and its quote board
+  returned: **S&P 500 7,686.64 +9.36 +0.12%**, **Dow 30 53,594.69 +17.29 +0.03%**, **Nasdaq 26,173.36 +22.06 +0.08%**,
+  **Russell 2000 3,007.66 −2.36 −0.08%**. The board's own header reads **"U.S. markets close in 6h 1m"**, which places
+  it at **~9:59 a.m. ET** — that is how the clock stamp was derived and the page says so. **All four subtract to
+  Tuesday's published closes to the cent** (7,677.28 / 53,577.40 / 26,151.30 / 3,010.02) and each percent matches its
+  own points-over-prior-close arithmetic. The standing "no opening level is published" refusal is **retired**, and the
+  string **"No opening level for any index"** is now a **trap grep**.
+- ⚠ **MARKETS — THE SEARCH SUMMARY FOR THE SAME ARTICLE HAD THREE OF FOUR SIGNS BACKWARDS AND WAS REJECTED.** It said
+  the S&P **"slipped 0.12%"**, the Dow was **down 0.08%**, the Nasdaq **lost 0.16%** and the Russell **gained 0.50%**.
+  The fetched board says +0.12 / +0.03 / +0.08 / −0.08, and **+0.50% is Tuesday's Russell close**, not a Wednesday move.
+  **The fetched, self-reconciling board wins; the summary is not published.** New trap grep: **"slipped 0.12%"**.
+  **NEW GOTCHA #37 — A SEARCH SUMMARY OF AN ARTICLE CAN INVERT THE SIGNS OF THE QUOTE BOARD ON THE SAME PAGE.
+  Always fetch and reconcile before publishing a direction.**
+- 🟢 **MARKETS — NEW BIGGEST MOVER, AND THE CHART OF THE DAY MOVES INTU → NYSE:ANF.** **Abercrombie & Fitch at
+  $142.50, +$33.59, +30.85%** on the same 9:59 board — the largest single-name number any source gives this run.
+  Quarter: **EPS $4.17 vs $1.98 forecast**, **record Q2 net sales $1.27bn +5%**, **~$100m of tariff refunds**, FY guide
+  raised to **$13.10–$13.60 on ~5% sales growth** from **$10.20–$11.00 on 3–5%**, **≥$500m of 2026 buybacks**.
+  ⚠ **FIVE renderings of the share reaction, published UNMERGED**: RTTNews **8.3%**, StockStory/FinancialContent
+  **11.9%**, a third read **"over 11% premarket"**, Investing.com's transcript headline **17%**, and the board's
+  **30.85%**. Only the board has a derivable clock time and a prior close, so only it is used in the chart note.
+  The board's implied ANF prior close of **$108.91** is labelled **implied**, not asserted (no source states it).
+- 🟢 **MARKETS — INTU'S REGULAR SESSION IS A THIRD OF ITS PREMARKET.** Board: **$345.35, −$12.11, −3.39%**
+  (345.35 + 12.11 = 357.46 = Tuesday's close ✓). That sits alongside — not merged into — the **−11.8% to $315.30**
+  premarket (Investing.com 7:10 a.m.) and Tuesday night's 7%/7.3%/9% after-hours band. Trap grep added on the old
+  chart-note sentence **"largest single-name move any source fetched this run puts a number on is Intuit"**.
+  Also published from the same board: **KSS $16.85 −$0.83 −4.69%** (Q2 comps −0.9%), **OKLO $44.84 +$0.57 +1.29%**,
+  **RZLV $2.96 unchanged 0.00%**.
+- 🟢 **MARKETS — RATES/COMMODITIES TABLE REFRESHED OFF THE 9:59 BOARD** (replacing the ~4:25 a.m. reads):
+  **WTI Oct $81.52 −$0.84 −1.02%** (note: **higher** than the overnight $80.15), **Gold $4,680.70 −$13.80 −0.29%**,
+  **Bitcoin $78,410.76 −$222.59 −0.28%**, **VIX 15.51 +0.06 +0.39%**. The three Treasury rows stay Tuesday's — no
+  source this run states a Wednesday yield. Ticker tape: **NASDAQ:SMTC → NYSE:ANF** (SMTC was premarket-only);
+  five mandatory symbols + META retained, no duplicates, DKS still absent.
+- 🟢 **MARKETS — TWO NAMED ANALYSTS ADDED FROM THE FETCHED PIECE.** **Chris Zaccarelli** (CIO, **Northlight Asset
+  Management**): core PCE **"held constant and that will give the Fed more time to leave rates on hold."**
+  **Daniela Hathorn** (senior market analyst, **Capital.com**) on Nvidia being **"arguably bigger than a
+  single-company earnings report."** Both verbatim from the fetched page.
+- 🔴 **CYBER — NEW ITEM: ADOBE COMMERCE / MAGENTO CVE-2026-71362, ACTIVELY EXPLOITED PER SANSEC, ADOBE SAYS NOT.**
+  Incorrect-authorization → unauthenticated elevated access; **Sansec's Shield WAF is already blocking exploitation
+  attempts** while **Adobe's advisory APSB26-92 says it is unaware of in-the-wild exploits** — both published, neither
+  adjudicated. Sansec: exploiting needs **"no existing account, administrator privileges or user interaction"** and
+  **"lets attackers switch a customer session to another customer account."** Companion CVEs with scores:
+  **48413 (8.7), 48414 (7.7), 48415 (7.6), 48416 (7.5), 48411 (6.5), 48412 (2.7)**. ⚠ **No CVSS is published for
+  71362** — the report gives none. ⚠ **BleepingComputer, Bill Toulas, dated August 12 2026** — carried at its real
+  date and explicitly **not** presented as August-26 news. **Not in KEV**, so no deadline.
+- ⚠ **CYBER — NEW GOTCHA #38: A SEARCH SUMMARY CONFLATED TWO KEV ENTRIES INTO ONE.** It described "an Oracle HTTP
+  Server and Oracle WebLogic Server Proxy Plug-in flaw, tracked as **CVE-2026-60004**." That is wrong:
+  **CVE-2026-21962 = Oracle (due Aug 27)**; **CVE-2026-60004 = Gitea code injection (due Aug 28)**. The same summary
+  then describes 60004's mechanic correctly as repository-write-access RCE, i.e. Gitea. The page now says so
+  explicitly. **NOTE: the 10:20 corrections entry itself carried this error** ("Oracle CVE-2026-60004 still due
+  Aug 28") — that line is superseded by this one.
+- ⚠ **CYBER — KEV: NOTHING SEEN THIS RUN (third consecutive edition).** Board unchanged: **14 entries / 10 past due /
+  0 due today / 4 ahead**. Wording rule enforced by the validator: the exact phrase **"nothing seen this run"** must
+  appear, never "nothing added."
+- 🟢 **CYBER — FIERCE BIOTECH ADDS TWO NAMES TO THE MEDTECH SEQUENCE.** Its list is **Abbott, iRhythm, Medtronic,
+  Stryker** plus **Amgen** and **Novo Nordisk** — adding **iRhythm** and **Amgen**. Published **alongside** the
+  Star/Union Leader/Insurance Journal list (which has Clover Health and West Pharmaceutical), **not merged into it**.
+  Reuters BSX figure re-confirmed a second run: **−5.03% at $46.90, 20-day low**. Still no actor, family, CVE, vector
+  or exfiltration claim, and the page asserts none.
+- 🥊 **MMA — THE STANDING BUSINESS BLANK IS FILLED, AND IT IS THE WHITE HOUSE CARD'S P&L (New · 10:45).** MMA News
+  (Mike Reichlin), **fetched in full**: TKO CFO **Andrew Schleimer** told investors on the **Q2 earnings call** that
+  **UFC Freedom 250 lost roughly $30 million** (anticipated), on **~$60 million of production**, with **no tickets
+  sold** and **~4,000 invited guests**; he tied the card to TKO's **adjusted EBITDA margin falling 59% → 52% y/y**,
+  and said partners were signed on deals running **into 2027 and beyond**. TKO president/COO **Mark Shapiro** put the
+  card's **earned media value at >$1 billion**. ⚠ **Article dated August 15 2026** — carried at that date, framed as
+  the first sourced business figures this page can carry, **not** as today's news. Still **no gate, no viewership,
+  no broadcast-revenue figure**.
+- 🥊 **MMA — DANA WHITE'S "IMPOSSIBLE EVENT" TEASE, CARRIED WITH ITS WINDOW MARKED AS LAPSED (New · 10:45).** On
+  **The Pat McAfee Show** White said an announcement **"could land within a week"**; concept from **Craig Borsari**,
+  head of production, pitched after the White House card; calls scheduled after **UFC 330**, then Borsari walks the
+  site. **"If I end up doing this, I'll announce it here first."** No location, no date, no explanation.
+  ⚠ **Dated Aug 15, i.e. BEFORE UFC 330 — the "within a week" window has elapsed and no announcement surfaced this
+  run.** Published as an unresolved tease, never as a pending event. **Roman Colosseum** noted as a site he has since
+  called impossible on logistics.
+- ⚠ **MMA — THE UNSOURCED EVENT NUMBER IS GONE FROM THE PAGE ENTIRELY.** The Fight Week card tag read
+  **"Fight Night 286"**; per the standing rule (no UFC.com or ESPN source states a number) it is now **"UFC Shanghai"**,
+  and the **bare string "Fight Night 286" is a trap grep** alongside "UFC Fight Night 286".
+  Separately: Tapology this run gives the venue as **"Shanghai Indoor Stadium"** — that is the standing trap;
+  the page keeps **Oriental Sports Center** per UFC.com. Odds unchanged: **−470 / +360 (DraftKings)**, with
+  **−700 / +500 (BetOnline.ag)** and **−500 / +385** printed unmerged.
+- 🥊 **MMA — CHAMPIONS UNCHANGED, EIGHTEENTH CONSECUTIVE EDITION.** No card since UFC Sacramento (Aug 22, no title
+  fight). Board asserted **11/11 rows, 0 vacant, by CHAMPION COLUMN ONLY**; stale-name trap and all-eleven-present
+  assertion both clean.
+- ⚠ **NOT PUBLISHED THIS RUN.** The **Suno** breach (55.3M accounts) surfaced in a "cybersecurity news August 26"
+  summary but the underlying reporting is **July 2026** on a **November 2025** incident — dropped as not-today, and
+  **"Suno" is now a trap grep** on all four pages. **"$1.4 trillion"** trap holds.
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **25 days, 143 timestamped rows, 429 snapshot files**.
+  `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `outputs/validate_1045.py`, **0 failures, 377 checks**). All prior gates retained, plus:
+  Chart of the Day asserted **NYSE:ANF** scoped to the mini-symbol-overview block; tape asserted to carry **NYSE:ANF**
+  and to have **dropped NASDAQ:SMTC**; **the four intraday index fragments each asserted PRESENT and each reconciled
+  three ways** (level−points == Tuesday's close, and percent == points/prior×100 within 0.006); **INTU and ANF
+  arithmetic reconciled in the validator itself**; **$108.91 asserted to occur exactly once and to sit within 300
+  chars of the word "implied"**; New-tag hygiene at **WS 3 / CY 1 / MMA 2 / index 0**, all reading exactly
+  "New · 10:45", with zero undemoted 9:40 **or 10:20** tags; cyber guards on **CVE-2026-71362, APSB26-92, Sansec,
+  iRhythm, Amgen, Bill Toulas, "August 12, 2026"**, the exact phrase **"nothing seen this run"** and the string
+  **"CVE-2026-21962 is the Oracle flaw"**; MMA guards on **Andrew Schleimer, Mark Shapiro, $30 million, $60 million,
+  4,000 invited guests, "59 percent to 52 percent", ">$1 billion in earned media value", Craig Borsari,
+  Pat McAfee Show, August 15, Roman Colosseum**, plus an assertion that the Business section **no longer says
+  "none is published"**; markets guards on **~9:59 a.m. ET, all four levels, Rob Lenihan, 9:43 a.m. EDT,
+  "U.S. markets close in 6h 1m", +30.85%, $142.50, $4.17, $1.98, $1.27 billion, both guidance ranges, $500 million,
+  $108.91, 8.3%, 11.9%, 17%, −3.39%, $345.35, $16.85, Zaccarelli, Northlight, Hathorn, Capital.com, $81.52, 15.51**.
+  Trap greps CLEAN on all four pages, now including **"Fight Night 286", "$1.4 trillion", "Suno", "slipped 0.12%",
+  "No opening level for any index"** and **"largest single-name move any source fetched this run puts a number on is
+  Intuit"**.
