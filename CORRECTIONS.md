@@ -13402,3 +13402,97 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   belt". Trap greps CLEAN: "Cody Salkilld", "Shamil Yakhyaev", "Abdul-Rakhman", "Fight Night 286", "$1.4 trillion",
   "Suno". "Shanghai Indoor Stadium", "slipped 0.12%", "41.8", "30.68" and "7,677.24" each asserted to appear ONLY
   inside a rejection window.
+
+## Added 2026-08-26 (Wednesday ~3:14pm ET — MIDDAY EDITION, thirteenth run of the day; archive stamp 2026-08-26-1509)
+- CLOCK: run started **14:55 EDT**, archived **15:09 EDT**. Edition bucket **Midday** (h=14/15 boundary; masthead JS
+  self-stamps). Method: **incremental edits** to the 1454 pages (`edits_1505.py`), plus `fixes_1505.py` for three real
+  page bugs found by the harness. New tags site-wide: **WS 3 cards + 4 lead paragraphs / CY 1 card / MMA 1 around-item /
+  index 3 card rewrites**; all `New · 2:44` / `New at 2:44` markers demoted.
+- 🟢 **MARKETS — THREE FULL EIGHT-LINE BOARDS, EVERY LINE ON EVERY ONE RECONCILES, AND THE SESSION'S SHAPE IS NOW EXPLICIT.**
+  Yahoo syndication pages each carry a board dated only by its own countdown to the 4pm close: TheStreet **"6h 1m" → ~9:59am**,
+  24/7 Wall St. **"4h 1m" → ~11:59am**, WWD **"3h 31m" → ~12:29pm**. 9:59: **S&P 7,686.64/+9.36/+0.12%**, **Dow 53,594.69/
+  +17.29/+0.03%**, **Nasdaq 26,173.36/+22.06/+0.08%**, **Russell 3,007.66/−2.36/−0.08%**. 11:59: **7,670.89/−6.39/−0.08%**,
+  **53,474.94/−102.46/−0.19%**, **26,060.89/−90.41/−0.35%**, **3,003.16/−6.86/−0.23%**. 12:29: **7,665.46/−11.82/−0.15%**,
+  **53,425.42/−151.98/−0.28%**, **26,049.37/−101.93/−0.39%**, **3,002.26/−7.76/−0.26%**. All twelve subtract exactly to
+  **7,677.28 / 53,577.40 / 26,151.30 / 3,010.02**. **The 9:59 board is the ONLY reading all day with the three headline
+  indices green** — the session opened higher and gave it back; by 12:29 the Nasdaq was worst of the four.
+- 🟢 **MARKETS — THE ZACKS 7,677.24 IS NOW CONTRADICTED THREE MORE TIMES.** All three boards independently imply **7,677.28**
+  for Tuesday's S&P close. They also agree on **VIX 15.45** (which crossed its own prior close during the morning: 15.51/
+  +0.06, then 15.45/0.00 flat, then 15.59/+0.14) and on **gold's $4,694.50 prior close** — which **settles the earlier
+  gold gap in favour of $4,694.50** and against the ~$4,637 implied by the Motley Fool strip. Gold slid steadily:
+  **4,680.70 −0.29% → 4,663.10 −0.67% → 4,654.20 −0.86%**. **WTI Oct-26 agrees on an $82.36 prior close on all three and
+  CROSSED IT TWICE**: **81.52 −1.02% → 82.32 −0.05% → 83.14 +0.95%** — which **explains the previously unadjudicated
+  opposite-signed oil rows**: the barrel genuinely traded both sides of Tuesday's close today.
+- 🔴 **NEW GOTCHA #51 — BITCOIN HAS NO FIXED PRIOR CLOSE, AND THREE BOARDS PROVE IT.** BTC reads **78,410.76/−222.59/−0.28%**,
+  **78,049.39/−1,457.77/−1.83%** and **78,056.02/−1,097.27/−1.39%**. Each percent equals its own change over its own base —
+  but the bases are **78,633.35 / 79,507.16 / 79,153.29**, three different numbers inside two and a half hours. Bitcoin
+  trades continuously, so Yahoo's "previous close" for it is a **rolling 24-hour reference**, not a fixed session close.
+  **RULE: never reconcile a crypto quote against a stored prior close, and never treat a shifting crypto base as evidence
+  that a board is stale or wrong.** Every equity and commodity line held its base exactly; only BTC moved.
+- 🟢 **MARKETS — LATEST SINGLE-NAME STRIP (fetched ~3:00pm).** **ANF 152.93/+44.03/+40.43%**, **XPON 9.02/+3.75/+71.16%**
+  (largest percentage move anyone has numbered today; ⚠ **no catalyst stated by any source, none asserted**),
+  **META 575.47/+5.42/+0.95%** — all three reconcile against 108.90 / 5.27 / 570.05. ⚠ **INTU 339.18/−18.29/−5.11% is one
+  cent out** (339.18+18.29 = 357.47 vs the 357.46 eleven renderings give) **and its percent is TRUNCATED, not rounded**
+  (5.1166% → 5.12 rounded, 5.11 printed); both disclosed. A ~2:58 strip on the WWD page gives ANF 148.96/+36.78% (also a
+  truncation of 36.786), XPON 8.56/+62.43%, INTU 341.35/−4.51%, META 576.82/+1.19%. ⚠ **Ordering the 3:00 strip against
+  the 2:40 strip is INDETERMINATE**: XPON and CRE extended and INTU deepened, but ANF sits 47¢ BELOW 153.40. No claim made.
+- 🔴 **MARKETS — CRE'S PERCENT FIELD DOES NOT RECONCILE, ON EITHER STRIP.** **CRE 6.40/+3.83/+148.54%**: 6.40−3.83 = 2.57
+  (the same base every earlier CRE read implied) but **3.83/2.57 = 149.03%**, not 148.54. And **CRE 6.26/+3.69/+145.84%**:
+  **3.69/2.57 = 143.58%**, not 145.84. **Level and change published; the source's percent printed as found and flagged as
+  internally inconsistent, with the correct value stated.**
+- 🟢 **MARKETS — THE ABERCROMBIE QUARTER, LINE BY LINE (WWD 12:20pm + 24/7 Wall St. 11:30am).** WWD: **37% lift to $149.26**,
+  **15th consecutive quarter of growth**; three months ended **Aug 1**: net sales **+5% to $1.3B** from $1.2B; operating income
+  **$252.7M** vs **$206.7M**; net income **$185.5M / $4.17 diluted** vs **$143.4M / $2.91**; **Abercrombie +8% sales, +4% comps**;
+  **Hollister +2% sales, −3% comps**; **Americas +5%, APAC +19%, EMEA +2%**; a further **~$20M** of tariff refunds expected.
+  24/7: **operating margin 19.9% vs 13.9% adj**, **APAC comps +13%**, **companywide comps FLAT**, refund is an **IEEPA refund
+  booked as a reduction of cost of sales** supplying **$1.75 of the $4.17** and **220bp** of the margin upgrade; ANF was
+  **down 13% YTD through Tuesday's close**. ⚠ **The 24/7 article contradicts ITSELF** — Quick Read "surged 34%", body
+  "surging 37% to $148.91". **Neither published as the move; the reconciling strip readings are.**
+- 🟢 **MARKETS — RETAIL PEERS, SAME CATALYST, THREE ANSWERS.** **ROST −0.5% to $240.09** (its tariff-refund quarter landed
+  LAST Wednesday; +34% YTD through Tuesday's close); **KSS +0.4% to $17.75** (−12% YTD coming in); **XRT +1% to $88.58**;
+  **SPY practically unchanged at $765.57**. ⚠ **KSS CROSSED THE FLAT LINE inside ninety minutes** — the ~9:59 strip had
+  **16.85/−0.83/−4.69%** — and **both reconcile off the same $17.68 Tuesday close**. Both printed as successive ticks.
+- ⚠ **MARKETS — TWO PRE-SESSION BOARDS CAUGHT AND REJECTED.** Yahoo's Wednesday live blog served a board headed "markets
+  **OPEN** in 5h 4m" (**~4:26am** futures: S&P 7,687.00, Dow 53,701.00, Nasdaq 29,215.50) with a trending strip still on
+  Tuesday's closes; the TS2/TechStock² US live page was stamped **00:14 EDT**. Neither published as a Wednesday reading.
+  **A FOURTH source touches the DKS date**: TS2 headlines "tumbles 30.7% … wipes out **$4.9 billion**" and dates it Aug 26,
+  but its own live clock last advanced at 00:14 EDT on the 26th — an overnight write-up of TUESDAY. **The 2:44 rejection
+  stands; no Wednesday DKS figure asserted; the $4.9B is attributed, not confirmed.** Also clean: **OKLO 44.84/+0.57/+1.29%**
+  off a **44.27** Tuesday close, itself a **+11.54%** Tuesday session off 39.69.
+- 🔴 **CYBER — NOTHING NEW EXCEPT ONE CISA ADVISORY, AND IT IS PUBLISHED WITH A HARD CAVEAT.** Fresh Aug 26 searches returned
+  **no item not already carried** (OpenSSL DoS flaws, Balonx Sistema, the Taco Bell/Pizza Hut operator disclosure, CoreRAT,
+  Metabase CVE-2026-72898, Cisco CVE-2026-20349, Windows AFD CVE-2026-68820, the Aug 18 KEV batch, the miniOrange SAML pair,
+  the Adobe/Nvidia waves — all on the page). The one exception is **CISA #StopRansomware advisory AA26-222A, "Gunra
+  Ransomware."** ⚠ **The advisory page returned an EMPTY BODY when fetched**, so ONLY its existence, identifier and a
+  one-line "ransomware-as-a-service" characterisation from a search result are published — **no IOCs, TTPs, vectors,
+  victims, sectors or dates are asserted**, and the card says so and points defenders at CISA's page directly.
+  ⚠ **KEV STATIC, TENTH CONSECUTIVE EDITION** — no alert page later than **Aug 24 (Oracle CVE-2026-21962)**. Board holds
+  **14 rows, 10 past due**; Patch Priority unchanged (**Oracle Aug 27, Gitea Aug 28**) and matches the board.
+- 🥊 **MMA — THE FULL UFC 331 CARD, AND A REAL SPELLING CORRECTION.** MMA Mania via Yahoo Sports gives **twelve bouts** for
+  **Sat Sept 19, Crypto.com Arena, Los Angeles**, on **Paramount+**, **prelims 6pm ET / main card 9pm ET** — the listing
+  notes **numbered UFC events have moved from a 10pm to a 9pm main-card start**. Undercard now carried: Moicano vs **Ortega 2**,
+  **Patricio Pitbull vs Doo Ho Choi**, Jourdain vs Vera, Gandra vs Diaz, O'Neill vs Moura, Shahbazyan vs Ferreira,
+  **Tai Tuivasa vs Robelis Despaigne**, **Gable Steveson vs Sean Sharaf**, Baraniewski vs Menifield, Chikadze vs Brito,
+  Aswell Jr. vs Joo Sang Yoo. ⚠ **CORRECTION MADE: this page had been rendering the featherweight "Dooho Choi"; the primary
+  listing spells him "Doo Ho Choi"** and that is now used throughout, with the old rendering shown only inside the
+  correction note. ⚠ The listing does NOT split main card from prelims, so the page's earlier five-fight main-card
+  composition and the twelve-bout listing are printed side by side, **neither adopted as definitive**. ⚠ A search summary
+  again gave the Shanghai headliners as **#2/#6**; **UFC.com's #3/#5 is what publishes** — rejected a second time.
+  **Champions board unchanged — TWENTY-FIFTH consecutive edition.**
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **25 days, 150 timestamped rows, 450 snapshot files**.
+  `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `outputs/validate_1505.py`, **0 failures, 285 checks**). All arithmetic in Python:
+  **29 level/change/percent/prior-close quadruples reconciled three ways**, plus the three-base Bitcoin case, the two
+  non-reconciling CRE cases (with the CORRECT percent asserted onto the page), the INTU one-cent/truncation case, the
+  three countdown→clock derivations, and a programmatic green-then-red proof (9:59 above the prior close, 12:29 below,
+  on all three headline indices, with the Nasdaq computed as worst of four at 12:29). Structural gates carried forward.
+  ⚠ **THREE REAL PAGE BUGS FOUND BY THE HARNESS AND FIXED, NOT WORKED AROUND (`fixes_1505.py`): (a) all three index.html
+  card rewrites landed in the WRONG CARD** — the swap anchored on `href="cyber-briefing.html"` etc., whose FIRST occurrence
+  is the NAV, so the MMA text ended up under the Cyber headline; the fix anchors on `class="bcard c-sec|c-mkt|c-mma"` and
+  rewrites the h2 as well as the paragraph. **(b) the stale "Dooho Choi" spelling** was carried from an earlier edition.
+  **(c) the 3:00 INTU percent truncation was undisclosed.** ⚠ **THREE HARNESS BUGS ALSO FOUND AND FIXED: (i)** the KEV
+  colour rule tested for "overdue"/"0 day" but the board renders "N days past due", so it false-failed every overdue row;
+  **(ii)** the INTU percent test assumed rounding on a feed that truncates; **(iii)** `"slipped 0.12%"` was mis-filed as a
+  hard trap when it is a CONTEXT-ALLOWED string quoted inside a rejection. Trap greps CLEAN: "Cody Salkilld",
+  "Shamil Yakhyaev", "Abdul-Rakhman", "Fight Night 286", "$1.4 trillion", "Suno". Window-scoped to rejection/correction
+  contexts only: "Shanghai Indoor Stadium", "7,677.24", "30.68", "#6", "34%", "slipped 0.12%", "Dooho Choi".
