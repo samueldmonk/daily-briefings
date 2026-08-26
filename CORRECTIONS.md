@@ -12847,3 +12847,86 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   Trap greps CLEAN on all four pages, now including **"Fight Night 286", "$1.4 trillion", "Suno", "slipped 0.12%",
   "No opening level for any index"** and **"largest single-name move any source fetched this run puts a number on is
   Intuit"**.
+
+## Added 2026-08-26 (Wednesday ~11:13am ET — MIDDAY EDITION, seventh run of the day; archive stamp 2026-08-26-1113)
+- CLOCK: run started **11:05 EDT**, research 11:06–11:12, archived **11:13 EDT** — **29 minutes** after the 1044 snapshot.
+  Edition bucket **Midday** (h=11). Session **open ~1h43m**. Method: **incremental edits** to the 1044 pages
+  (`edits_1105.py`). New tags site-wide: **WS 1 / CY 1 / MMA 1 / index 0**; all `New · 10:45` tags demoted to
+  `Carried · 10:45 edition`.
+- 🟢 **MARKETS — A FRESHER INDEX READ, AND IT REVERSES THE 9:59 BOARD ON TWO OF THREE.** A market summary returned
+  this run states **S&P 500 7,681.36, +4.08, +0.05% at around 11:06 a.m. EDT**. It **reconciles three ways on its
+  own**: 7,681.36 − 4.08 = **7,677.28**, exactly Tuesday's published S&P close, and 4.08 ÷ 7,677.28 = **0.053%**,
+  which rounds to the stated 0.05%. Published as the current read; the 9:59 Yahoo board is retained but explicitly
+  labelled a **9:59 snapshot, not the current read**. The same summary gives the **Dow down about 0.2%** and the
+  **Nasdaq Composite down about 0.3%** — ⚠ **directions only, no level and no points figure for either, so none is
+  printed.** Net: the S&P has roughly halved its opening gain and the other two have given theirs back.
+- 🟢 **MARKETS — THE LIVE BLOG REVERSED ITS OWN HEADLINE AT THE SAME URL.** Yahoo Finance's Wednesday blog
+  (`stock-market-today-wednesday-august-26-dow-sp-500-nasdaq-081834782.html`) read **"…futures hold steady ahead of
+  inflation data, Nvidia earnings"** earlier today and this run reads **"Dow, S&P 500, Nasdaq slide as PCE inflation
+  stays sticky, Nvidia earnings loom."** Both strings are published and both are validator guards. **NEW GOTCHA #39
+  — a live-blog headline can flip its verb at an unchanged URL; the headline is a timestamped observation, not a
+  stable fact, and must be attributed to when it was read.**
+- 🟢 **MARKETS — FOUR NEW NAMES WITH PERCENTAGES BUT NO LEVELS.** **SolarEdge (SEDG) +8.3%** on a **UBS upgrade,
+  Neutral → Buy, price target $42 from $36**; **Williams Companies (WMB) +5.6%** (AI-data-centre gas demand);
+  **Zoom Communications (ZM) −6.2%** (Q3 guide missed, overshadowing a fiscal-Q2 beat); **Moderna (MRNA) −5%**
+  (pullback from a 150% surge on oncology trial updates). None carries a level or clock time, so each is published
+  as a **percentage move only**. Ticker tape: **NYSE:BSX → NASDAQ:SEDG** (BSX is a cyber-page story, not a markets
+  mover); five mandatory symbols + ANF retained, no duplicates, DKS still absent. **Chart of the Day stays NYSE:ANF.**
+- ⚠ **MARKETS — INTUIT NOW HAS TWO COMPETING REGULAR-SESSION NUMBERS, PUBLISHED UNMERGED.** The same summary says
+  **INTU −9.2%**; the ~9:59 Yahoo trending-tickers board says **−3.39% at $345.35**, and only the board reconciles
+  (345.35 + 12.11 = 357.46 = Tuesday's close). **Only the board figure is used in the Chart of the Day note.**
+  Alongside the standing −11.8% premarket read and the 7%–9% Tuesday after-hours band, that is **four unmerged
+  renderings of one reaction** — the same pattern as ANF's five. Do not average them.
+- 🔴 **CYBER — NEW PATCH-PRIORITY LEAD: miniOrange SAML SSO FOR WORDPRESS, ACTIVELY SCANNED, PUBLIC PoC.**
+  **CVE-2026-15981 (CVSS 9.8)** — `mo_saml_validate_signature()` does **"a loose boolean check on the raw tri-state
+  integer returned by PHP's openssl_verify()"**, so an **error return of −1 is truthy and treated as a successful
+  signature verification**; a deliberately malformed signature reaches `wp_set_auth_cookie()` for any account.
+  **CVE-2026-61979 (CVSS 8.1)** — unauthenticated privilege escalation via **signature algorithm confusion**.
+  Product: **Xecurify miniOrange SAML 2.0 Single Sign On**. Fixed **17.0.5 (61979) / 17.0.6 (15981)**, Standard
+  edition. Disclosed by **Patchstack**, credited to the **DigitalOcean** security team. Scanning IPs:
+  **207.211.214.41, 79.127.224.14, 102.91.71.83, 162.243.116.148, 84.201.6.54, 64.225.25.188** — **"opportunistic
+  scanning rather than a targeted campaign."** Source: **The Hacker News, Ravie Lakshmanan, August 25 2026**,
+  fetched in full. ⚠ **NOT in KEV → no federal deadline**, so the Patch Priority box's *deadline* still points at
+  Oracle **CVE-2026-21962, due Aug 27**, matching the KEV section.
+- ⚠ **CYBER — NEW GOTCHA #40: A HEADLINE CALLED BOTH miniOrange CVEs "CVSS 9.8". IT IS WRONG.** A securityaffairs
+  headline read this run says **"Two CVSS 9.8 Auth Bypasses."** The CVE.org-sourced figures in the THN piece give
+  **9.8 to 15981 and 8.1 to 61979**. **The per-CVE figures win; the headline is not published.** Both the prose and
+  the Vulnerability Watch table are validator-asserted at 9.8/8.1.
+- 🔴 **CYBER — NEW INCIDENT CARD: CoreRAT / Core Werewolf (BI.ZONE).** First **fully functional RAT** for the group,
+  replacing its earlier use of legitimate **UltraVNC**. Written in **C++**; **encrypts internal strings and C2
+  addresses**; checks system details, recent shortcut activity and network adapter identifiers for a VM and **shuts
+  down rather than revealing behaviour**. Delivery: **Telegram phishing** with files posing as military/government
+  documents, **PDF decoy** while a hidden installer runs. Campaigns observed **June–July 2026**, active **since at
+  least March**; focus **Russia's public sector and defence industry**. ⚠ **No victim count, no named organisation,
+  no CVE stated — and none asserted on the page.**
+- ⚠ **CYBER — KEV: NOTHING SEEN THIS RUN (fourth consecutive edition).** This run's catalogue search surfaced CISA
+  alert pages dated **Aug 11 (three), Aug 18 (four), Aug 20 (two), Aug 24 (one)** and **nothing later**. Board
+  unchanged: **14 entries / 10 past due / 0 due today / 4 ahead**. Both prior adjudications independently
+  re-confirmed: **CVE-2026-21962 = Oracle HTTP Server / WebLogic Proxy Plug-in (added Aug 24)** and
+  **CVE-2026-60004 = Gitea RCE, patched in 1.27.1 in late July**. Wording rule enforced: the exact phrase
+  **"nothing seen this run"** appears; **"nothing added"** now occurs only twice on the page, both times as a
+  correction or as the wording rule itself, and the validator asserts that context rather than banning the string.
+- 🥊 **MMA — A FOURTH ODDS RENDERING, FROM THE OFFICIAL UFC SITE.** Added: **−500 / +375 (UFC.com)**, alongside the
+  standing **−470 / +360 (DraftKings)**, **−700 / +500 (BetOnline.ag)** and **−500 / +385**. All four printed
+  unmerged; all four agree on direction. **Venue re-confirmed as Shanghai Oriental Sports Center** by a fresh
+  search this run — ⚠ **the "Shanghai Indoor Stadium" rendering surfaced again and was again rejected**; the trap
+  grep holds. Start times re-confirmed: **Paramount+ prelims 3 a.m. ET, main card 6 a.m. ET**.
+- 🥊 **MMA — CHAMPIONS UNCHANGED, NINETEENTH CONSECUTIVE EDITION.** No card since UFC Sacramento (Aug 22, no title
+  fight). Board asserted **11/11 rows, 0 vacant BY CHAMPION COLUMN ONLY** (the note column legitimately contains
+  "won the vacant belt" for Ulberg — the old whole-table `vacant` grep was a false positive and is now scoped),
+  stale-name trap clean, all eleven incumbents present, 12 `<tr>` incl. header.
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **25 days, 144 timestamped rows, 432 snapshot files**.
+  `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `outputs/validate_1105.py`, **0 failures, 350 checks**). Notable fixes to the harness
+  itself, all of which were false positives in the 10:45 gate carried forward: the **kevdue spans carry no
+  parentheses** (markup is `<span class="kevdue ok">1 day left</span>`), so classification now reads the class plus
+  the words **"past due" / "due today" / "left"** and asserts colour-text agreement per span; the **champions
+  `vacant` check is scoped to the champion column**; and the **"nothing added" trap is now context-asserted rather
+  than absolute**. New guards: the 11:06 S&P read asserted present and reconciled **three ways** in the validator's
+  own arithmetic; **"directions only"** asserted present in the 11:05 block so no Dow/Nasdaq level can creep in;
+  content guards on **SolarEdge, +8.3%, "$42 from $36", Williams Companies, +5.6%, Zoom, −6.2%, Moderna, −5%,
+  −9.2%, "slide as PCE inflation stays sticky", "hold steady"**, on **CVE-2026-15981, CVE-2026-61979, Xecurify,
+  Patchstack, DigitalOcean, Ravie Lakshmanan, 17.0.5, 17.0.6, openssl_verify, mo_saml_validate_signature,
+  wp_set_auth_cookie, two scanning IPs, the "opportunistic scanning" quotation, CoreRAT, Core Werewolf, BI.ZONE,
+  UltraVNC, Telegram, 1.27.1, "CVE-2026-21962 is the Oracle"**, and on **"−500 / +375"** plus
+  **Shanghai Oriental Sports Center**. Trap greps CLEAN on all four pages.

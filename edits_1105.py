@@ -1,182 +1,248 @@
-import io, sys
-from canonrep import load, save, rep, slice_between
+#!/usr/bin/env python3
+"""Midday Edition edits, Wednesday August 26 2026, ~11:05 a.m. ET."""
+import io, sys, os
 
-# ============================== CYBER ==============================
-f = 'cyber-briefing.html'; t = load(f)
+D = os.path.dirname(os.path.abspath(__file__))
+FAIL = []
 
-t = rep(t,
-  "<b>The Wire</b> <span>A Metabase flaw already sitting past-due in CISA's KEV catalogue was used to breach logistics provider ShipMonk and expose 13,689 Trezor hardware-wallet owners by name and home address &mdash; while the federal deadline for the actively exploited Ray flaw lands Thursday.</span>",
-  '<b>The Wire</b> <span>North Korea&rsquo;s Lazarus group ran a Windows kernel zero-day against defence and aerospace firms for roughly five weeks before Microsoft patched it on August 11 &mdash; and the federal deadline for the actively exploited Ray flaw now lands Thursday.</span>',
-  f, 'tldr')
+def load(f):
+    return io.open(os.path.join(D, f), encoding='utf-8').read()
 
-t = rep(t,
-  '<div class="why">A past-due KEV flaw in Metabase has now been used in a real supply-chain breach; two CVSS 9.8 flaws &mdash; macOS Screen Sharing and VMware vCenter &mdash; are confirmed exploited in the wild; seven KEV remediation deadlines are due or overdue for federal agencies; and a 1.6-million-account leak at RingCentral has now been indexed by Have I Been Pwned.</div>',
-  '<div class="why">A Windows kernel zero-day was run by a nation-state actor against defence and aerospace targets for weeks before it was patched; a past-due KEV flaw in Metabase has been used in a real supply-chain breach; two CVSS 9.8 flaws &mdash; macOS Screen Sharing and VMware vCenter &mdash; are confirmed exploited in the wild; and seven KEV remediation deadlines are due or overdue for federal agencies.</div>',
-  f, 'threat why')
+def save(f, s):
+    io.open(os.path.join(D, f), 'w', encoding='utf-8').write(s)
 
-t = rep(t,
-  '<div class="stat"><div class="n">9.8</div><div class="l">CVSS of CVE-2026-65400, the exploited macOS Screen Sharing flaw</div></div>',
-  '<div class="stat"><div class="n">5 weeks</div><div class="l">Lazarus ran the Windows AFD zero-day before Microsoft patched it</div></div>',
-  f, 'stat tile')
+def rep(s, old, new, n=1, label=''):
+    c = s.count(old)
+    if c != n:
+        FAIL.append('%s: expected %d occurrence(s), found %d :: %s' % (label, n, c, old[:90]))
+        return s
+    return s.replace(old, new)
 
-OLD_TOP = slice_between(t, '<h2 class="sec">Top story</h2>', '<h2 class="sec">Patch priority</h2>')
-NEW_TOP = '''<h2 class="sec">Top story</h2>
-<div class="panel top">
-  <h3>A fake Lockheed Martin job advert, a Windows kernel zero-day, and five weeks of unpatched access to defence contractors</h3>
-  <p><strong>Check Point Research</strong> has attributed the zero-day exploitation of <strong>CVE-2026-68820</strong> &mdash; an elevation-of-privilege flaw in the Windows Ancillary Function Driver for WinSock, <span class="cve">AFD.sys</span> &mdash; to the North Korea-linked <strong>Lazarus Group</strong>, running its long-standing <strong>Operation Dream Job</strong> campaign. Microsoft patched the flaw on <strong>August 11, 2026</strong> in the August Patch Tuesday. Check Point reports the group had been exploiting it since at least <strong>early July</strong>, which puts roughly five weeks of live use behind the fix.</p>
-  <p>The targeting is specific: organisations in <strong>defence, aerospace, aviation, drone, robotics and military technology</strong>, with victims reported across <strong>France, Germany, Brazil and India</strong>. The lure is a job offer. A victim downloads an encrypted archive containing a legitimate signed PDF viewer and a malicious DLL; the DLL displays a convincing <strong>Lockheed Martin</strong> job description on screen while silently loading <strong>MISTPEN</strong>, a lightweight downloader that communicates through the <strong>Microsoft Graph API and OneDrive</strong> &mdash; traffic that looks unremarkable on a corporate network.</p>
-  <p>Once persistence is established, MISTPEN loads an in-memory privilege-escalation module that exploits the AFD.sys bug. The flaw is a <strong>use-after-free</strong> reached by triggering a race condition, and it yields <strong>SYSTEM</strong>. That, in turn, is used to execute a new version of <strong>FudModule</strong>, Lazarus&rsquo; kernel-mode rootkit.</p>
-  <p>The chain is the point. A social-engineering lure gets code on the box; a kernel bug gets that code into the kernel; a rootkit keeps it there. None of the individual stages is novel, and that is exactly why it worked for five weeks. The flaw is already in CISA&rsquo;s Known Exploited Vulnerabilities catalogue &mdash; added <strong>August 11</strong>, federal remediation due <strong>August 25</strong> &mdash; so for once the patch, the KEV listing and the attribution have all landed inside a week of each other. Applying August&rsquo;s Patch Tuesday is the whole remediation.</p>
-</div>
+# ---------------------------------------------------------------- demote tags
+def demote(s):
+    return s.replace('<span class="tag new">New &middot; 10:45</span>',
+                     '<span class="tag">Carried &middot; 10:45 edition</span>')
 
-'''
-t = rep(t, OLD_TOP, NEW_TOP, f, 'top story swap')
+NEW = '<span class="tag new">New &middot; 11:05</span>'
 
-t = rep(t,
-  '''<div class="tags"><span class="tag new">New</span><span class="tag">Pharma</span><span class="tag crit">Ransomware</span></div>''',
-  '''<div class="tags"><span class="tag">Pharma</span><span class="tag crit">Ransomware</span></div>''',
-  f, 'inotiv New off')
+# ================================================================ WALL STREET
+ws = load('wallstreet-briefing.html')
+ws = demote(ws)
 
-t = rep(t,
-  '''    <tr>
-      <td class="cve">CVE-2026-65400</td><td class="score s-crit">9.8</td>''',
-  '''    <tr>
-      <td class="cve">CVE-2026-68820</td><td class="score s-crit">7.0</td>
-      <td>Windows Ancillary Function Driver for WinSock (AFD.sys)</td>
-      <td>Use-after-free reached via a race condition, giving local escalation to SYSTEM. Exploited as a <strong>zero-day since at least early July</strong> by the Lazarus Group in Operation Dream Job, per Check Point Research, to load the FudModule kernel rootkit. Patched August 11, 2026; in CISA KEV the same day, federal deadline August 25.</td>
-    </tr>
-    <tr>
-      <td class="cve">CVE-2026-65400</td><td class="score s-crit">9.8</td>''',
-  f, 'cve 68820 row')
+# --- tldr
+old_tldr = ws[ws.find('<div class="tldr">'):ws.find('</span></div>', ws.find('<div class="tldr">')) + len('</span></div>')]
+new_tldr = (u'<div class="tldr"><b>The Tape</b> <span>Two hours in, the tape has split and it is still barely moving &mdash; '
+            u'the <b>S&amp;P&nbsp;500 is 7,681.36, up 4.08 points or 0.05%</b> in a read stamped <b>~11:06&nbsp;a.m. ET</b>, '
+            u'reconciling three ways against Tuesday&rsquo;s close, while the <b>Dow is down about 0.2%</b> and the '
+            u'<b>Nasdaq down about 0.3%</b> with no level stated for either &mdash; and Yahoo Finance&rsquo;s live blog has '
+            u'reversed its own headline from <i>&ldquo;hold steady&rdquo;</i> to <b>&ldquo;slide as PCE inflation stays sticky&rdquo;</b>, '
+            u'with <b>Abercrombie &amp; Fitch still the day&rsquo;s outlier at +30.85%</b> and everything waiting on '
+            u'<b>Nvidia after the close</b>.</span></div>')
+ws = rep(ws, old_tldr, new_tldr, 1, 'WS tldr')
 
-t = rep(t,
-  '<span class="p">CVE-2026-68820</span> &mdash; Microsoft Windows Ancillary Function Driver for WinSock use-after-free. Added Aug 11, 2026. Due <strong>Aug 25, 2026</strong>. <span class="cd ok">(7 days left)</span>',
-  '<span class="p">CVE-2026-68820</span> &mdash; Microsoft Windows Ancillary Function Driver for WinSock use-after-free. Added Aug 11, 2026. Due <strong>Aug 25, 2026</strong>. <span class="cd ok">(7 days left)</span> &mdash; the zero-day Lazarus ran against defence and aerospace firms before the August 11 patch.',
-  f, 'kev 68820 note')
+# --- lead headline
+ws = rep(ws,
+    u'<h2>The tape finally prints &mdash; four indices, four reconciled reads, and almost no movement in any of them as of <i>~9:59&nbsp;a.m. ET</i></h2>',
+    u'<h2>The tape splits &mdash; the S&amp;P&nbsp;500 clings to green while the Dow and Nasdaq slip, as of <i>~11:06&nbsp;a.m. ET</i></h2>',
+    1, 'WS lead h2')
 
-t = rep(t,
-  '''<li><a href="https://www.bleepingcomputer.com/news/security/ringcentral-data-breach-exposed-info-of-16-million-accounts/">BleepingComputer &mdash; RingCentral data breach exposed info of 1.6 million accounts</a></li>''',
-  '''<li><a href="https://research.checkpoint.com/2026/shattering-the-dream-when-a-job-offer-becomes-a-zero-day-attack/">Check Point Research &mdash; Shattering the Dream: when a job offer becomes a zero-day attack</a></li>
-    <li><a href="https://www.bleepingcomputer.com/news/security/lazarus-hackers-exploited-windows-zero-day-to-target-defense-firms/">BleepingComputer &mdash; Lazarus hackers exploited Windows zero-day to target defense firms</a></li>
-    <li><a href="https://www.securityweek.com/fresh-windows-zero-day-exploited-in-north-korean-cyberattacks/">SecurityWeek &mdash; Fresh Windows zero-day exploited in North Korean cyberattacks</a></li>
-    <li><a href="https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html">The Hacker News &mdash; Lazarus exploits Windows zero-day to gain SYSTEM access and deploy backdoor</a></li>
-    <li><a href="https://www.helpnetsecurity.com/2026/08/12/north-korea-lazarus-fake-job-offers/">Help Net Security &mdash; Lazarus hackers pair fake job offers with Windows zero-day exploit</a></li>
-    <li><a href="https://www.bleepingcomputer.com/news/security/ringcentral-data-breach-exposed-info-of-16-million-accounts/">BleepingComputer &mdash; RingCentral data breach exposed info of 1.6 million accounts</a></li>''',
-  f, 'cyber sources')
+# --- new opening paragraph in The Lead
+anchor = u'<p><b>This edition retires the refusal that ran on this page all morning.</b>'
+newpara = (
+ u'<p><b>&#9679; New at 11:05 &mdash; the freshest read on the tape, and it does not match the 9:59 board.</b> '
+ u'A market summary returned this run states that <b>the S&amp;P&nbsp;500 stood at 7,681.36, up 4.08 points or 0.05%, at around 11:06&nbsp;a.m. EDT</b>. '
+ u'That figure passes this page&rsquo;s three-way test on its own: <b>7,681.36 &minus; 4.08 = 7,677.28</b>, which is exactly Tuesday&rsquo;s '
+ u'S&amp;P close as published in the Weekly Scorecard below, and <b>4.08 &divide; 7,677.28 = 0.053%</b>, which rounds to the stated 0.05%. '
+ u'Level, points and percent agree with each other and with an independently published prior close, so it is published as the current read. '
+ u'The same summary puts the <b>Dow down about 0.2%</b> and the <b>Nasdaq Composite down about 0.3%</b> &mdash; '
+ u'<b>&#9888; those two are directions only. No level and no points figure is stated for either index at that clock time, so none is printed here.</b> '
+ u'Against the 9:59 board reproduced below, that is a session that has <b>given back its opening gains on two of the three headline indices</b> '
+ u'while the S&amp;P&nbsp;500 has roughly halved its own.</p>\n'
+ u'<p><b>&#9679; The live blog has reversed its own headline.</b> Yahoo Finance&rsquo;s running Wednesday blog was titled '
+ u'<b>&ldquo;Dow, S&amp;P 500, Nasdaq futures hold steady ahead of inflation data, Nvidia earnings&rdquo;</b> when this page read it earlier today. '
+ u'This run it reads <b>&ldquo;Dow, S&amp;P 500, Nasdaq slide as PCE inflation stays sticky, Nvidia earnings loom.&rdquo;</b> '
+ u'Same URL, same session, changed verb &mdash; which is the clearest single marker that the morning&rsquo;s flat print has turned. '
+ u'The underlying story is unchanged: sticky PCE into a Jackson Hole week, and a market that will not commit before Nvidia opens its books after the bell.</p>\n'
+ + anchor)
+ws = rep(ws, anchor, newpara, 1, 'WS lead new para')
 
-save(f, t)
+# --- board paragraph gets a superseded marker
+ws = rep(ws,
+    u'That is the three-way test this page requires, and it passes on all four indices.</p>',
+    u'That is the three-way test this page requires, and it passes on all four indices. '
+    u'<b>&#9888; As of this edition that board is a 9:59 snapshot, not the current read</b> &mdash; the 11:06 figures above supersede it for the S&amp;P&nbsp;500 '
+    u'and reverse its direction on the Dow and the Nasdaq. It is kept because it remains the only fully reconciled four-index board any source has produced today.</p>',
+    1, 'WS board superseded')
 
-# ============================ WALL STREET ==========================
-f = 'wallstreet-briefing.html'; t = load(f)
+# --- new mover card
+movers_anchor = u'<div class="lab">Movers &amp; drivers</div>\n<div class="cards">\n'
+newcard = movers_anchor + (
+ u'<div class="card">\n'
+ + u'<div class="tags">' + NEW + u'<span class="tag">Gainers</span><span class="tag">Losers</span></div>\n'
+ u'<h3>Four more names get a number &mdash; and Intuit gets a second, larger one</h3>\n'
+ u'<p><b>New reads surfaced this run, each stated as a percentage move with no level attached.</b> On the upside: '
+ u'<b>SolarEdge (SEDG) &plus;8.3%</b> after <b>UBS upgraded the stock from Neutral to Buy and raised its price target to $42 from $36</b>; and '
+ u'<b>The Williams Companies (WMB) &plus;5.6%</b>, attributed to surging natural-gas demand from AI data centres, solid results and new power-infrastructure projects. '
+ u'On the downside: <b>Zoom Communications (ZM) &minus;6.2%</b>, where third-quarter guidance missed expectations and overshadowed a fiscal-second-quarter beat; and '
+ u'<b>Moderna (MRNA) &minus;5%</b>, described as a pullback from a 150% surge that followed clinical-trial updates to its oncology pipeline.</p>\n'
+ u'<p><b>&#9888; Intuit now has two competing regular-session numbers and neither is merged into the other.</b> '
+ u'The same summary that carries the four names above puts <b>INTU &minus;9.2%</b>, attributing it to a quarterly beat paired with weak guidance for next year. '
+ u'The Yahoo trending-tickers board read at ~9:59&nbsp;a.m. put it at <b>&minus;3.39%, at $345.35</b> &mdash; and that reading reconciles exactly against Tuesday&rsquo;s $357.46 close. '
+ u'<b>Only the board figure carries a clock time and a prior close, so only it is used in the Chart of the Day note; the &minus;9.2% is printed as found.</b> '
+ u'This page also carries a &minus;11.8% premarket read and a 7%&ndash;9% after-hours band from Tuesday night, all separately sourced and all left unmerged.</p></div>\n'
+)
+ws = rep(ws, movers_anchor, newcard, 1, 'WS new mover card')
 
-t = rep(t,
-  '<b>The Tape</b> <span>An hour into trade the tape has split &mdash; the Nasdaq Composite is down about 1.2% and the memory names are being marked down hard, while the Dow has nearly clawed back to flat behind J&amp;J, IBM and Chevron &mdash; with an expired US&ndash;Iran ceasefire keeping crude bid and the 30-year Treasury yield at 5.32%, its highest since 2007.</span>',
-  '<b>The Tape</b> <span>Ninety minutes in, the split has widened rather than closed &mdash; the Nasdaq Composite is now off about 1.34% with the Philadelphia semiconductor index down roughly 3.7%, while the Dow sits all but flat at &minus;0.06% as health care, energy and staples absorb the rotation, and the 30-year Treasury yield holds a 19-year high.</span>',
-  f, 'tldr')
+# --- ticker tape: swap RZLV-style filler is not present; add SEDG while keeping mandatory five
+ws = rep(ws, u'{"proName":"NASDAQ:MU","title":"Micron"}', u'{"proName":"NASDAQ:SEDG","title":"SolarEdge"}', 1, 'WS tape SEDG')
 
-t = rep(t,
-  '<h3>A split tape as of ~10:30 AM ET: the Nasdaq is carrying the losses, the Dow has nearly recovered, and the 30-year sits at a 2007 high</h3>',
-  '<h3>As of ~10:55 AM ET the split has widened: the Nasdaq is down about 1.34%, the chip index roughly 3.7%, and the Dow is all but flat</h3>',
-  f, 'lead h3')
+save('wallstreet-briefing.html', ws)
 
-t = rep(t,
-  '''<strong>The regular session is roughly an hour old as this edition is written.</strong> As of about 10:30 AM ET the <strong>Nasdaq Composite was down about 1.2%</strong>, the <strong>S&amp;P 500 about 0.6%</strong> and the <strong>Dow Jones Industrial Average about 0.3%</strong>, per <em>Yahoo Finance</em>'s and <em>TheStreet</em>'s live Tuesday coverage. That extends Monday's losses and puts the S&amp;P 500 on course for a third straight down day.</p>''',
-  '''<strong>The regular session is about ninety minutes old as this edition is written, and the divergence has widened.</strong> As of roughly <strong>10:55 AM ET</strong> the <strong>Nasdaq Composite was down about 1.34%</strong>, the <strong>S&amp;P 500 about 0.57%</strong> and the <strong>Dow Jones Industrial Average about 0.06%</strong> &mdash; the Dow is now within a rounding error of unchanged while the Nasdaq&rsquo;s loss has deepened from the roughly 1.2% carried at 10:30. Earlier in the session the moves read <strong>Nasdaq &minus;1.2%, S&amp;P 500 &minus;0.6%, Dow &minus;0.3%</strong> on <em>Yahoo Finance</em>&rsquo;s and <em>TheStreet</em>&rsquo;s live Tuesday coverage; both reads are given, each stamped with its time. That extends Monday&rsquo;s losses and puts the S&amp;P 500 on course for a third straight down day.</p>''',
-  f, 'lead p1')
+# ===================================================================== CYBER
+cy = load('cyber-briefing.html')
+cy = demote(cy)
 
-t = rep(t,
-  '''<strong>But the tape is splitting as the morning goes on, and that is the change since the open.</strong> A later intraday snapshot fetched this run had the <strong>Nasdaq 100 down 1.58%</strong> and the <strong>Russell 2000 down 0.68%</strong> while the <strong>Dow had pared to &minus;0.07%</strong> and the S&amp;P 500 sat at &minus;0.53% &mdash; the index carrying the least technology is the index taking the least damage.''',
-  '''<strong>What is doing the damage is now precisely locatable: it is the chips.</strong> The <strong>Philadelphia semiconductor index fell roughly 3.7%</strong> in early trade, with <strong>Nvidia, Meta and other large technology names</strong> weakening &mdash; a sector-level move nearly three times the Nasdaq&rsquo;s own. An earlier intraday snapshot this run had the <strong>Nasdaq 100 down 1.58%</strong> and the <strong>Russell 2000 down 0.68%</strong> while the <strong>Dow had pared to &minus;0.07%</strong> and the S&amp;P 500 sat at &minus;0.53% &mdash; the index carrying the least technology is the index taking the least damage.''',
-  f, 'lead p2')
+old_tldr = cy[cy.find('<div class="tldr">'):cy.find('</span></div>', cy.find('<div class="tldr">')) + len('</span></div>')]
+new_tldr = (u'<div class="tldr"><b>The Wire</b> <span>A pair of unauthenticated authentication bypasses in the '
+            u'<b>Xecurify miniOrange SAML 2.0 Single Sign On</b> WordPress plugin &mdash; <b>CVE-2026-15981 (CVSS&nbsp;9.8)</b> and '
+            u'<b>CVE-2026-61979 (CVSS&nbsp;8.1)</b> &mdash; are <b>under opportunistic mass scanning from six recorded IPs with public exploit code available</b>, '
+            u'and they let an attacker log in as <b>any WordPress user, including administrators</b>; meanwhile <b>Boston Scientific&rsquo;s outage has moved the stock</b>, '
+            u'with an 8-K describing an incident identified <b>August&nbsp;25</b> causing <b>&ldquo;a global disruption to the Company&rsquo;s operations&rdquo;</b> and Reuters '
+            u'reporting shares <b>down 5.03% at $46.90</b>, while the federal board holds at <b>14 tracked KEV deadlines, 10 already past due</b>, '
+            u'with the Oracle CVSS&nbsp;10.0 flaw due tomorrow.</span></div>')
+cy = rep(cy, old_tldr, new_tldr, 1, 'CY tldr')
 
-t = rep(t,
-  '''the US 30-year rose about two basis points to <strong>5.32%, the highest since 2007</strong>.''',
-  '''the US 30-year sits at a <strong>19-year high</strong>. CNBC has it topping <strong>5.31%</strong> &mdash; 5.311%, up more than four basis points, the highest since <strong>June 2007</strong> &mdash; and Bloomberg&rsquo;s live coverage puts it around 5.32%, up about two basis points on Tuesday. CNBC followed up this morning with a piece on three things that could drive it higher still.''',
-  f, 'lead 30yr')
+# --- Patch priority: new lead item
+pp_anchor = u'<h3>Do this first &mdash; two federal deadlines inside 48 hours, both on flaws already under attack</h3>\n'
+pp_new = (
+ u'<h3>Do this first &mdash; a CVSS&nbsp;9.8 WordPress login bypass under live scanning, then two federal deadlines inside 48 hours</h3>\n'
+ u'<p><b>&#9679; New at 11:05 &mdash; CVE-2026-15981 (CVSS&nbsp;9.8) and CVE-2026-61979 (CVSS&nbsp;8.1), Xecurify miniOrange SAML 2.0 Single Sign On for WordPress.</b> '
+ u'The Hacker News, under <b>Ravie Lakshmanan</b>&rsquo;s byline dated <b>August&nbsp;25, 2026</b>, reports that bad actors are actively attempting to exploit both flaws. '
+ u'They are <b>unauthenticated authentication bypasses that let an attacker sign in as any WordPress user, including administrators</b>. '
+ u'CVE-2026-15981 exists because <code>mo_saml_validate_signature()</code> performs <b>&ldquo;a loose boolean check on the raw tri-state integer returned by PHP&rsquo;s openssl_verify()&rdquo;</b>, '
+ u'so an <b>error return value of &minus;1 is evaluated as truthy and therefore treated as a successful signature verification</b> &mdash; a deliberately malformed signature '
+ u'bypasses verification entirely and <code>wp_set_auth_cookie()</code> is called for the targeted account. CVE-2026-61979 is a privilege escalation stemming from '
+ u'<b>signature algorithm confusion</b>. Disclosed by <b>Patchstack</b>, which credited the <b>DigitalOcean</b> security team after DigitalOcean spotted an anomalous '
+ u'WordPress administrator session attempt from outside its trusted network. <b>Fixed in version 17.0.5 (61979) and 17.0.6 (15981) for the Standard edition.</b> '
+ u'Patchstack recorded scanning from <b>207.211.214.41, 79.127.224.14, 102.91.71.83, 162.243.116.148, 84.201.6.54 and 64.225.25.188</b> and judged the spread to suggest '
+ u'<b>&ldquo;opportunistic scanning rather than a targeted campaign&rdquo;</b> &mdash; whoever is running it is <b>&ldquo;throwing the exploit at every site with the plugin installed '
+ u'without checking which edition or version is behind it.&rdquo;</b> <b>Proof-of-concept code is public</b> and chains the two flaws to admin. '
+ u'<b>&#9888; Neither CVE is in KEV, so neither carries a federal deadline</b> &mdash; and <b>&#9888; a separate headline read this run described both as &ldquo;CVSS 9.8&rdquo;; '
+ u'the CVE.org-sourced figures above give 9.8 only to 15981 and 8.1 to 61979, and those are what this page publishes.</b></p>\n'
+)
+cy = rep(cy, pp_anchor, pp_new, 1, 'CY patch priority')
 
-# --- movers: drop the two prior New tags, add the semis card
-t = rep(t,
-  '''<div class="tags"><span class="tag new">New</span><span class="tag down">Reversed to &minus;1.24%</span></div>''',
-  '''<div class="tags"><span class="tag down">Reversed to &minus;1.24%</span></div>''',
-  f, 'HD New off')
+# --- Vulnerability watch rows
+vw_anchor = u'<tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr>\n'
+vw_new = vw_anchor + (
+ u'<tr><td>CVE-2026-15981</td><td>9.8</td><td>Xecurify miniOrange SAML 2.0 Single Sign On for WordPress (fixed in 17.0.6, Standard edition)</td>'
+ u'<td>Authentication bypass &mdash; malformed signatures accepted as valid because <code>openssl_verify()</code>&rsquo;s &minus;1 error is treated as truthy. '
+ u'<b>Actively targeted; public PoC. Not in KEV, no deadline.</b> Patchstack / The Hacker News, Aug&nbsp;25.</td></tr>\n'
+ u'<tr><td>CVE-2026-61979</td><td>8.1</td><td>Xecurify miniOrange SAML 2.0 Single Sign On for WordPress (fixed in 17.0.5, Standard edition)</td>'
+ u'<td>Unauthenticated privilege escalation via signature algorithm confusion; chains with 15981 to obtain admin. '
+ u'<b>Actively targeted. Not in KEV, no deadline.</b> Credited to the DigitalOcean security team.</td></tr>\n'
+)
+cy = rep(cy, vw_anchor, vw_new, 1, 'CY vuln rows')
 
-t = rep(t,
-  '''<div class="tags"><span class="tag new">New</span><span class="tag up">Defensives bid</span></div>''',
-  '''<div class="tags"><span class="tag up">Defensives bid</span></div>''',
-  f, 'rotation New off')
+# --- Breaches: CoreRAT card
+br_anchor = u'<div class="lab">Breaches &amp; incidents</div>\n<div class="cards">\n'
+br_new = br_anchor + (
+ u'<div class="card">\n'
+ + u'<div class="tags">' + NEW + u'<span class="tag">Espionage</span><span class="tag">RAT</span></div>\n'
+ u'<h3>Core Werewolf retires its borrowed tooling and ships a custom RAT</h3>\n'
+ u'<p><b>BI.ZONE analysts have documented CoreRAT</b>, described as the group&rsquo;s <b>first fully functional remote access trojan</b>, replacing its earlier reliance on '
+ u'the legitimate <b>UltraVNC</b> remote-access software. The campaigns were observed <b>from June through July 2026</b>, with evidence the tool has been active '
+ u'<b>since at least March</b>. Delivery ran through <b>phishing messages on Telegram</b> carrying files dressed up as official military or government documents; '
+ u'opening the attachment showed a <b>PDF decoy</b> while a hidden program installed the malware. The reported focus was <b>Russia&rsquo;s public sector and defence industry</b>.</p>\n'
+ u'<p><b>Written in C++</b>, CoreRAT <b>encrypts its internal strings and command-and-control addresses</b>, and before running it checks for signs it is inside a '
+ u'virtual analysis machine &mdash; system details, recent shortcut activity and network adapter identifiers &mdash; <b>shutting down rather than revealing its behaviour</b> '
+ u'if it suspects it is being watched. <b>&#9888; No victim count, no named organisation and no CVE is stated in the reporting fetched this run, and none is asserted here.</b></p></div>\n'
+)
+cy = rep(cy, br_anchor, br_new, 1, 'CY corerat card')
 
-t = rep(t,
-  '''  <div class="card">
-    <div class="tags"><span class="tag down">MU, SK Hynix &minus;4%+</span></div>''',
-  '''  <div class="card">
-    <div class="tags"><span class="tag new">New</span><span class="tag down">SOX &minus;3.7%</span></div>
-    <h4>The chip index, not the Nasdaq, is the real move</h4>
-    <p>The <strong>Philadelphia semiconductor index fell roughly 3.7%</strong> in early trade, against the Nasdaq Composite&rsquo;s own decline of about 1%&ndash;1.34% &mdash; the sector is falling roughly three times as fast as the index it dominates. <strong>Nvidia, Meta and other large technology names</strong> weakened together. This is the cleanest read on the session: it is not a broad de-rating of equities but a concentrated markdown of long-duration semiconductor risk as the long end of the curve prints a 19-year high, with the rest of the market largely absorbing it.</p>
-  </div>
-  <div class="card">
-    <div class="tags"><span class="tag down">MU, SK Hynix &minus;4%+</span></div>''',
-  f, 'semis card')
+# --- KEV consecutive count
+cy = rep(cy,
+    u'the third consecutive edition in which a catalogue search returned only the Aug&nbsp;18, Aug&nbsp;20 and Aug&nbsp;21 alerts and no alert page dated August&nbsp;25 or 26.</b>',
+    u'the fourth consecutive edition in which a catalogue search returned no alert page dated August&nbsp;25 or 26. '
+    u'This run the search surfaced CISA alert pages dated <b>August&nbsp;11 (three), August&nbsp;18 (four), August&nbsp;20 (two) and August&nbsp;24 (one)</b> and nothing later, '
+    u'and it independently re-confirmed both adjudications: <b>CVE-2026-21962 is the Oracle HTTP Server and WebLogic Proxy Plug-in flaw added August&nbsp;24</b>, '
+    u'and <b>CVE-2026-60004 is the Gitea remote code execution flaw</b>, patched by Gitea in late July in <b>version 1.27.1</b>.</b>',
+    1, 'CY kev count')
 
-t = rep(t,
-  '''The <strong>Energy Select Sector SPDR ETF (XLE) was up 1.30%</strong> and among the top-performing sector funds &mdash; the rotation is the story the index-level numbers hide.</p>''',
-  '''At the sector level the leadership is now legible: <strong>Health Care (XLV) is the top performer, up 1.59%</strong>, followed by <strong>Energy (XLE) at 1.30%</strong> and <strong>Consumer Staples (XLP) at 1.11%</strong> &mdash; defensives and value, in that order. The rotation is the story the index-level numbers hide.</p>''',
-  f, 'rotation card sectors')
+save('cyber-briefing.html', cy)
 
-t = rep(t,
-  '''One sector figure was corroborated this run &mdash; the <strong>Energy Select Sector SPDR ETF (XLE) up 1.30%</strong>, among the session's top-performing sector funds. No verified percentage was carried for any other sector, so none is printed; the live heatmap above is the reference.</div>''',
-  '''Three sector figures were corroborated this run: <strong>Health Care (XLV) up 1.59%</strong>, the session&rsquo;s top-performing sector fund, <strong>Energy (XLE) up 1.30%</strong> and <strong>Consumer Staples (XLP) up 1.11%</strong> &mdash; a defensive-and-value leadership board. Against that, the <strong>Philadelphia semiconductor index is down roughly 3.7%</strong>. No verified percentage was carried for any other sector, so none is printed; the live heatmap above is the reference.</div>''',
-  f, 'sector note')
+# ======================================================================= MMA
+mma = load('mma-briefing.html')
+mma = demote(mma)
 
-t = rep(t,
-  '''<td class="num">5.32%</td><td>Up about two basis points on Tuesday and the <strong>highest since 2007</strong>, per Bloomberg's live coverage. CNBC's Monday close was 5.311%.</td>''',
-  '''<td class="num">5.31%&ndash;5.32%</td><td>A <strong>19-year high</strong>. CNBC reports the yield topping <strong>5.31%</strong> &mdash; 5.311%, up more than four basis points, the highest since <strong>June 2007</strong>; Bloomberg's live Tuesday coverage puts it near <strong>5.32%</strong>, up about two basis points. Both are printed rather than one picked. CNBC published a follow-up this morning on three things that could push it higher.</td>''',
-  f, 'rates 30yr')
+# --- odds: add UFC.com official rendering
+mma = rep(mma,
+ u'<p><b>Odds:</b> <b>Nurmagomedov &minus;470 / Song +360 (DraftKings)</b>, per MMA Junkie&rsquo;s odds piece re-fetched this run. '
+ u'Two opening lines from other books also stand: <b>&minus;700 / +500 (BetOnline.ag)</b> and <b>&minus;500 / +385</b>. '
+ u'The three are printed unmerged &mdash; they are different books at different moments &mdash; but they agree on the direction: '
+ u'Nurmagomedov is a heavy favourite everywhere.</p>',
+ u'<p><b>Odds:</b> <b>Nurmagomedov &minus;470 / Song +360 (DraftKings)</b>, per MMA Junkie&rsquo;s odds piece. '
+ u'Three further lines stand: <b>&minus;700 / +500 (BetOnline.ag)</b>, <b>&minus;500 / +385</b>, and &mdash; <b>new this run</b> &mdash; '
+ u'<b>&minus;500 / +375, the line the official UFC site is listing</b>. '
+ u'The four are printed unmerged &mdash; they are different books at different moments &mdash; but they agree on the direction: '
+ u'Nurmagomedov is a heavy favourite everywhere, and no source read this run has him anything but.</p>\n'
+ u'<p class="note"><b>&#9679; Venue, re-confirmed this run.</b> A fresh search states the card is held at the '
+ u'<b>Shanghai Oriental Sports Center, Shanghai, China</b>, which matches UFC.com and this page. '
+ u'<b>&#9888; A separate result this run again renders the venue as &ldquo;Shanghai Indoor Stadium&rdquo; and again gives the card 13 fights; '
+ u'the Oriental Sports Center name is the one published here.</b> Start times re-confirmed: '
+ u'<b>Paramount+ prelims 3&nbsp;a.m. ET, main card 6&nbsp;a.m. ET</b>.</p>',
+ 1, 'MMA odds')
 
-t = rep(t,
-  '''<li><a href="https://www.cnbc.com/2026/08/18/stocks-making-the-biggest-moves-premarket-hd-tsla-fn-duol.html">''',
-  '''<li><a href="https://www.cnbc.com/2026/08/18/30-year-treasury-yield-three-things-that-could-drive-it-even-higher.html">CNBC &mdash; The 30-year Treasury yield just hit a 19-year high (Aug 18)</a></li>
-    <li><a href="https://www.cnbc.com/2026/08/17/treasury-yields-federal-reserve-fomc-minutes.html">CNBC &mdash; 30-year Treasury yield tops 5.31%, the highest in 19 years</a></li>
-    <li><a href="https://stockmarketwatch.com/live/stock-market-today">StockMarketWatch &mdash; live sector performance (XLV, XLE, XLP), Aug 18</a></li>
-    <li><a href="https://www.cnbc.com/2026/08/18/stocks-making-the-biggest-moves-premarket-hd-tsla-fn-duol.html">''',
-  f, 'ws sources')
+mma = rep(mma,
+ u'<div class="tags"><span class="tag hot">This Saturday</span><span class="tag">UFC Shanghai</span></div>',
+ u'<div class="tags"><span class="tag hot">This Saturday</span>' + NEW + u'<span class="tag">UFC Shanghai</span></div>',
+ 1, 'MMA card tag')
 
-save(f, t)
+old_tldr = mma[mma.find('<div class="tldr">'):mma.find('</span></div>', mma.find('<div class="tldr">')) + len('</span></div>')]
+new_tldr = (u'<div class="tldr"><b>Tale of the Tape</b> <span>Three days out from <b>UFC Shanghai</b>, the line on '
+            u'<b>Umar Nurmagomedov (20-1) vs. Song Yadong (23-9-1)</b> has now been read four different ways &mdash; '
+            u'<b>&minus;470/+360 at DraftKings</b>, <b>&minus;700/+500 at BetOnline.ag</b>, <b>&minus;500/+385</b>, and '
+            u'<b>&minus;500/+375 on the official UFC site</b>, all published unmerged and all pointing the same way &mdash; '
+            u'for a <b>6:00&nbsp;a.m. EDT Saturday</b> main event at the <b>Shanghai Oriental Sports Center</b> whose winner UFC.com says is '
+            u'<b>&ldquo;first in line to face the winner of Yan-Dvalishvili 3,&rdquo;</b> while the business page still rests on TKO&rsquo;s CFO telling '
+            u'investors the White House card lost about <b>$30&nbsp;million</b> on roughly <b>$60&nbsp;million</b> of production.</span></div>')
+mma = rep(mma, old_tldr, new_tldr, 1, 'MMA tldr')
 
-# =============================== MMA ===============================
-f = 'mma-briefing.html'; t = load(f)
+save('mma-briefing.html', mma)
 
-t = rep(t,
-  '''    <div class="tags"><span class="tag new">New</span></div>
-    <h4>UFC Fight Night 285: Hernandez vs. Rodrigues</h4>''',
-  '''    <h4>UFC Fight Night 285: Hernandez vs. Rodrigues</h4>''',
-  f, 'sacramento New off')
+# ===================================================================== INDEX
+ix = load('index.html')
 
-t = rep(t,
-  '''At middleweight, Gregory Rodrigues is given as <strong>No. 10</strong> in this run's fight-preview sourcing ahead of Saturday's main event, against the No. 11 an earlier edition carried &mdash; a one-place move, and the newer figure is the one used above.''',
-  '''At middleweight, <strong>Gregory Rodrigues&rsquo; ranking is genuinely disputed across sources and this page will not pick one</strong>: fight-preview sourcing yesterday gave him <strong>No. 10</strong>, an earlier edition carried <strong>No. 11</strong>, and this run's event previews (MMA Mania, Yahoo Sports) give <strong>No. 12</strong>. All three were seen in sourcing within two days of each other, so no rank is printed on the card above &mdash; only Hernandez's No. 6, which every source agrees on.''',
-  f, 'rodrigues rank')
+def card(ix, cls, h2, p, label):
+    import re as _re
+    m = _re.search(r'(<a class="bcard %s"[^>]*>.*?<h2>)(.*?)(</h2>\s*<p>)(.*?)(</p>)' % cls, ix, _re.S)
+    if not m:
+        FAIL.append('index card %s not matched' % label)
+        return ix
+    return ix[:m.start(2)] + h2 + ix[m.end(2):m.start(4)] + p + ix[m.end(4):]
 
-save(f, t)
+def tldr_body(f):
+    s = load(f)
+    i = s.find('<div class="tldr">')
+    a = s.find('<span>', i) + len('<span>')
+    b = s.find('</span></div>', a)
+    return s[a:b]
 
-# ============================== INDEX ==============================
-f = 'index.html'; t = load(f)
+ix = card(ix, 'c-sec',
+  u'A CVSS&nbsp;9.8 WordPress login bypass is under mass scanning &mdash; with public exploit code',
+  tldr_body('cyber-briefing.html'), 'sec')
+ix = card(ix, 'c-mkt',
+  u'The tape splits at midday: the S&amp;P clings to green, the Dow and Nasdaq slide',
+  tldr_body('wallstreet-briefing.html'), 'mkt')
+ix = card(ix, 'c-mma',
+  u'Four books, four different lines on Umar &mdash; and they all say the same thing',
+  tldr_body('mma-briefing.html'), 'mma')
 
-OLD_CY = slice_between(t, '<h2>A past-due KEV bug', '<span class="more">Read the briefing')
-NEW_CY = '''    <h2>A fake Lockheed Martin job advert, a Windows kernel zero-day, and five weeks inside defence contractors</h2>
-    <p>Check Point Research has attributed zero-day exploitation of CVE-2026-68820 &mdash; an elevation-of-privilege flaw in the Windows AFD.sys driver &mdash; to North Korea&rsquo;s Lazarus Group, running its long-standing Operation Dream Job campaign. Microsoft patched it on August 11; Check Point says the group had been using it since at least early July, roughly five weeks earlier. Targets were defence, aerospace, aviation, drone, robotics and military-technology organisations in France, Germany, Brazil and India. The lure is a job offer: a malicious DLL displays a convincing Lockheed Martin job description while loading MISTPEN, a downloader that talks through the Microsoft Graph API and OneDrive, which then escalates to SYSTEM through the AFD.sys use-after-free and executes the FudModule kernel rootkit. The flaw entered CISA&rsquo;s KEV catalogue on August 11 with a federal deadline of August 25. Elsewhere on the page: the ShipMonk breach that exposed 13,689 Trezor customers by name and address is attributed to a Metabase flaw whose own KEV deadline passed on August 14, and CISA&rsquo;s deadline for the actively exploited Ray flaw falls Thursday.</p>
-    '''
-t = rep(t, OLD_CY, NEW_CY, f, 'index cyber card')
+save('index.html', ix)
 
-OLD_MK = slice_between(t, '<h2>A split tape: the Nasdaq', '<span class="more">Read the briefing')
-NEW_MK = '''    <h2>The split widened: the Nasdaq is off 1.34%, the chip index roughly 3.7%, and the Dow is all but flat</h2>
-    <p>As of roughly 10:55 AM ET the Nasdaq Composite was down about 1.34%, the S&amp;P 500 about 0.57% and the Dow about 0.06% &mdash; the Nasdaq&rsquo;s loss has deepened since the 10:30 read while the Dow has closed almost the whole gap to unchanged. The concentrated damage is in semiconductors: the Philadelphia semiconductor index fell roughly 3.7% in early trade, with Nvidia, Meta and other large technology names weakening together. The cause is unchanged &mdash; President Trump rejected extending the 60-day Iran ceasefire that expired Monday, crude stayed bid with Brent near a three-week high and US crude topping $85, and the 30-year Treasury yield sits at a 19-year high, CNBC putting it above 5.31% and Bloomberg near 5.32%. The money went to defensives: health care led sectors at +1.59%, energy +1.30% and staples +1.11%. Home Depot beat on both lines and reaffirmed guidance, then gave the gain back and spent the morning among the Dow&rsquo;s worst.</p>
-    '''
-t = rep(t, OLD_MK, NEW_MK, f, 'index markets card')
-
-t = rep(t,
-  '''The next UFC card is Sacramento on Saturday, with Anthony Hernandez against Gregory Rodrigues at middleweight &mdash; Hernandez &minus;166 to &minus;176 across books after opening near &minus;147, with Rodrigues 19-6 and on a three-fight winning streak.</p>''',
-  '''The next UFC card is Sacramento on Saturday, with No. 6 Anthony Hernandez against Gregory Rodrigues at middleweight &mdash; Hernandez &minus;166 to &minus;176 across books after opening near &minus;147, with Rodrigues 19-6 and on a three-fight winning streak. Rodrigues&rsquo; own ranking is given as No. 10, No. 11 and No. 12 by different sources within two days, so none is printed.</p>''',
-  f, 'index mma card')
-
-save(f, t)
-print('\nALL EDITS APPLIED')
+if FAIL:
+    print('FAILURES:')
+    for f in FAIL:
+        print(' -', f)
+    sys.exit(1)
+print('edits OK')
