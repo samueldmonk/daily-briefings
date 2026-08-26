@@ -13301,3 +13301,104 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   Trap greps CLEAN on all four pages: "Cody Salkilld", "Shamil Yakhyaev", "Abdul-Rakhman", "slipped 0.12%",
   "Fight Night 286", "$1.4 trillion", "Suno", "No opening level for any index". "Shanghai Indoor Stadium" asserted
   to appear only inside a rejection window.
+
+## Added 2026-08-26 (Wednesday ~2:44pm ET — MIDDAY EDITION, twelfth run of the day; archive stamp 2026-08-26-1454)
+- CLOCK: run started **14:23 EDT**, archived **14:54 EDT**. Edition bucket **Midday** (h=14). Method: **incremental
+  edits** to the 1341 pages (`edits_1440.py`). New tags site-wide: **WS 4 cards + 3 lead bullets / CY 1 CVE row /
+  MMA 1 odds block + 1 around-item / index 3 rewrites**; all `New · 1:40` markers demoted.
+- 🔴 **NEW GOTCHA #50 — ONE PAGE, TWO CACHES: THE INDEX BOARD AND THE TRENDING STRIP ARE SERVED SEPARATELY.**
+  Yahoo's syndication of the Zacks Aug 26 recap
+  (finance.yahoo.com/markets/stocks/articles/stock-market-news-aug-26-130500595.html), fetched ~2:40pm, carries an
+  index board whose countdown ("close in 3h 55m") places it at **~12:05pm — two and a half hours stale** — while the
+  **trending-ticker strip on the same page** carried materially LATER ticks: **ANF 153.40/+44.50/+40.86%**,
+  **XPON 8.86/+3.59/+68.12%**, **INTU 339.41/−18.05/−5.05%**, **CRE 6.18/+3.61/+140.47%**. All four reconcile
+  exactly. Confirmed as the later read because ANF, XPON and INTU had each EXTENDED versus the same three names on
+  the earlier page's strip (+32.33%, +51.99%, −3.59%). RULE: **never date a trending strip from the index board on
+  the same page, or vice versa — derive and publish a time for each widget independently.**
+- 🔴 **MARKETS — DKS REJECTED: A TUESDAY COLLAPSE NEARLY PUBLISHED AS A WEDNESDAY MOVER.** A Yahoo trending strip
+  gave **DKS 124.31/−55.02/−30.68%** (arithmetic clean against a 179.33 prior close). Seeking Alpha ("plunges 31%
+  after earnings miss"), **Schaeffer's dated Aug 25** ("on track for worst day ever") and **Motley Fool dated
+  Aug 25** ("Why Dick's Sporting Goods Stock Crashed Today") all place it on **TUESDAY**. Q2 missed both lines;
+  FY26 adj EPS guided **$11.00–$12.00 vs $14.20 consensus**; cause = promotional athletic footwear market hitting
+  the acquired **Foot Locker** banner. **No Wednesday DKS figure is asserted.** Rejection printed on the page.
+- ⚠ **MARKETS — THE MOTLEY FOOL STRIP IS CACHED (GOTCHA #46 RECURS, FOURTH RUN) AND WAS CAUGHT BY COMPARISON.**
+  The fool.com midday page re-fetched this run returned a quote strip **byte-identical** to the one the 12:58
+  edition recorded (7,667.22/−10.06; 53,433.49/−143.91; 26,055.25/−96.05, plus the 7,668.63 / 7,668.89 / 53,433.99 /
+  26,055.65 ticks). `article:modified_time` still **16:27:43Z**. It was NOT republished as a fresh 2:26 read.
+  **TheStreet's Aug 26 page returned an EMPTY body again** (third consecutive run).
+- 🟢 **MARKETS — THE FOUR-INDEX BOARD ADVANCES ONE TICK AND STILL RECONCILES 4/4.** Yahoo earnings-live blog,
+  countdown "close in 2h 35m" → **~1:25pm** (69 min behind wall clock at fetch): **S&P 7,674.09/−3.19/−0.04%**,
+  **Dow 53,469.42/−107.98/−0.20%**, **Nasdaq 26,101.79/−49.51/−0.19%**, **Russell 3,003.81/−6.22/−0.21%**,
+  **VIX 15.55/+0.10/+0.65%**. First three subtract exactly to 7,677.28 / 53,577.40 / 26,151.30. ⚠ **Russell is one
+  cent out** (3,003.81+6.22 = 3,010.03 vs a 3,010.02 close) — consistent with a level rounded from 3,003.805;
+  disclosed on the page, not smoothed.
+- 🟢 **MARKETS — ANF: THE 41.8% HEADLINE IS REJECTED, THE 40.86% TICK IS PUBLISHED.** StockStory (12:55pm EDT)
+  headlines "jumped 41.8%" but prices the stock at **$144.81** in the same article — $144.81 off the $108.91 close
+  is **+32.96%**, so the headline does not reconcile with its own body and was NOT published. The **2:40 strip's
+  +40.86%** is published instead. ⚠ **That strip implies a $108.90 prior close where eight earlier renderings gave
+  $108.91** — a one-cent gap in Yahoo's change field, printed unadjudicated. Fundamentals (all StockStory): record
+  Q2 net sales **$1.27B, +5% y/y, 15th straight growth quarter**; diluted EPS **$4.17 vs $1.99 consensus**;
+  ⚠ **~$100M pre-tax tariff refunds supplied $1.75 of that $4.17** — a one-off, and the page says so; gross margin
+  **62.4%**, operating margin ~**20%**; APAC **+19%**, Abercrombie brand **+8%**, Hollister **+2%**; FY guide
+  **EPS $13.10–$13.60**, buybacks **≥$500M**. **Chart of the Day stays NYSE:ANF.**
+- 🟢 **MARKETS — A GENUINELY LATER SINGLE-NAME FEED.** FinancialContent/CloudQuote table (labelled **"delayed at
+  least 20 minutes"** → effective ~2:07pm): **NVDA 209.99/−3.06/−1.44%** (below $210 into its own print, deeper
+  than the cached −1.28%), **ORCL 148.19/+3.44/+2.37%**, **AMD 483.88/+4.70/+0.98%**, AAPL 313.17/+3.27/+1.05%,
+  META 577.20/+7.15/+1.25%, MSFT 494.72/+3.01/+0.61%, AMZN 258.93/−2.13/−0.82%, GOOG 338.26/−5.08/−1.48%,
+  TSLA 346.46/−3.79/−1.08%. **This feed and the Fool strip agree to the cent on the prior closes of AAPL (309.90),
+  META (570.05), MSFT (491.71) and AMZN (261.06)** — the strongest prior-close corroboration of the day.
+  ⚠ **BAC 62.45/+0.02/+0.04% DROPPED** (0.02/62.43 = 0.032%, rounds to 0.03, not 0.04; move too small to publish on
+  a disputed rounding). ⚠ **ORCL and AAPL percentages are TRUNCATED, not rounded** (2.3765→2.37 stated; 1.0552→1.05
+  stated); both disclosed on the page rather than corrected.
+- ⚠ **MARKETS — ZACKS GIVES THE S&P TUESDAY CLOSE AS 7,677.24; THIS DESK KEEPS 7,677.28.** Roughly a dozen
+  independent quote renderings today subtract exactly to **7,677.28**, so the Zacks figure is recorded as a
+  four-cent discrepancy and NOT adopted. Zacks otherwise **confirms** Dow +160.24→53,577.40, Nasdaq +171.11→
+  26,151.30, and — usefully — **VIX closed 15.45 (−2.52%)**, which is the base every VIX reconciliation uses.
+  New sourced context: Tuesday breadth **1.71-to-1 NYSE / 1.76-to-1 Nasdaq**, **14.32B shares vs 16.4B 20-day avg**,
+  **190 NYSE new highs / 79 lows**; **Conference Board consumer confidence 89.4, a seven-month low, vs 90.2
+  consensus**; **Case-Shiller +0.4% m/m, +1.5% y/y (June)**; **Bessent / ~$1T Treasury General Account** floated for
+  bond buybacks (⚠ a report of a possibility, not an announced programme — the page says so).
+- 🟢 **MARKETS — PCE NAILED DOWN PRECISELY.** CNBC/UPI/CBS/Bloomberg/CNN: **core PCE +0.2% m/m, 3.3% y/y — IN
+  LINE**; **headline +0.2% m/m, 3.7% y/y — each a tenth ABOVE consensus**; **consumer spending stalled**. Do not
+  render this as "core came in hot."
+- 🟢 **CYBER — ONE GENUINELY NEW ITEM: CVE-2026-19490 (Citrix NetScaler ADC & Gateway).** **CVSS v4.0 9.3**, per
+  Citrix advisory **CTX696939** via Rapid7 (fetched in full). Critical **authentication bypass**, unauthenticated,
+  network, no UI, no privileges, on appliances configured as **gateway or AAA vservers**. Advisory **Aug 19 2026**.
+  Fixed: **14.1-73.32**, **13.1-63.21**, FIPS **14.1-73.32 FIPS**, FIPS/NDcPP **13.1-37.277**. ⚠ **As of Aug 19
+  Rapid7 had NOT observed in-the-wild exploitation — do not claim it is exploited.** **Not in KEV, no deadline.**
+  ⚠ **DISTINCT from CVE-2026-3055**, the earlier NetScaler SAML flaw also at an official 9.3 — same vendor, same
+  product line, same score. **DO NOT MERGE THE TWO.** Page states the distinction explicitly.
+- ⚠ **CYBER — KEV STILL STATIC, NINTH CONSECUTIVE EDITION.** This run's searches surfaced no alert page later than
+  the **Aug 18** batch; earlier editions confirmed **Aug 24 (Oracle)** and **Aug 25 (Gitea)** additions, both on the
+  board. Board holds **14 rows, 10 past due, 4 in window**; Patch Priority unchanged (**Oracle Aug 27, Gitea
+  Aug 28**) and matches the board. Everything else searched (Boston Scientific, npm ClickFix, miniOrange pair,
+  Adobe/Nvidia waves, CoreRAT, TrueConf, Zimbra, afd.sys CVE-2026-68820) was already carried.
+- 🥊 **MMA — VENUE SETTLED FROM THE PRIMARY SOURCE; FIFTH ODDS LINE.** **UFC.com's own announcement** names the
+  building **"Pudong Development Bank Shanghai Oriental Sports Center"** — the sponsored form of the Oriental Sports
+  Center this page publishes — and gives **Sat Aug 29**, first fight **3pm CST**, main card **6pm CST**, ranking the
+  pair **#3 Nurmagomedov / #5 Song**. **The recurring "Shanghai Indoor Stadium" rendering is now rejected on primary
+  authority.** ⚠ A separate summary cited "the latest Meta UFC rankings" at **#2 and #6** — recorded, NOT adopted;
+  UFC.com's numbers are published. Fifth line: **LowKick consensus −500 / +380 (~80%/20% implied)**, joining
+  DraftKings −470/+360, BetOnline −700/+500, −500/+385 and UFC.com −500/+375, all unmerged. Fight week: Song
+  removed his shirt at the faceoff (MiddleEasy / The Body Lock). **Champions board unchanged — TWENTY-FOURTH
+  consecutive edition.**
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **25 days, 149 timestamped rows, 447 snapshot files**.
+  `gen_archive.py` remains BROKEN.
+- VALIDATION (programmatic, `outputs/validate_1440.py`, **0 failures, 282 checks**). All arithmetic computed in
+  Python: **19 level/change/percent/prior-close quadruples reconciled three ways** plus the Russell one-cent case.
+  **Two harness bugs found and FIXED, not worked around: (a) the percent test assumed rounding, so it failed the
+  AAPL and ORCL lines that feeds TRUNCATE — it now accepts truncation AND requires the page to disclose it (a real
+  page fix followed: AAPL's truncation was undisclosed and is now flagged alongside ORCL's); (b) the KEV block was
+  scoped by a bare `find('CISA KEV')` that matched text inside the breaches section, and looked for a `cd` span
+  class that does not exist — it now scopes by the section label and reads the real `kevdue ok|crit` spans.**
+  ⚠ **NEW HARNESS CAPABILITY — KEV countdowns are now verified against their own printed due dates in Python**
+  (14 date/countdown pairs; `due Aug 27`→"1 day left"→`ok`, `due Sep 2`→"7 days left", overdue→`crit`), and the
+  Patch Priority / KEV date comparison now normalises "August"→"Aug" because **the two sections spell the month
+  differently**. ⚠ **A THIRD real page bug was found and fixed: 12 stale items across three pages still carried
+  `class="tag new"` after earlier runs demoted only their TEXT**, so superseded cards were still rendering in the
+  highlight colour. New-tag hygiene now checks the CLASS, not just the label.
+  **Champions-board scan corrected to read the CHAMPION COLUMN ONLY** — the previous whole-section scan false-flagged
+  Pereira / Chimaev / Topuria / "vacant", which legitimately appear as defeated opponents and in "won the vacant
+  belt". Trap greps CLEAN: "Cody Salkilld", "Shamil Yakhyaev", "Abdul-Rakhman", "Fight Night 286", "$1.4 trillion",
+  "Suno". "Shanghai Indoor Stadium", "slipped 0.12%", "41.8", "30.68" and "7,677.24" each asserted to appear ONLY
+  inside a rejection window.
