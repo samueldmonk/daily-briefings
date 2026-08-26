@@ -13883,3 +13883,53 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   Trap greps CLEAN: "Cody Salkilld", "Shamil Yakhyaev", "Abdul-Rakhman", "Fight Night 286", "$1.4 trillion", "Suno".
   Window-scoped to rejection/correction contexts only: "7,677.24", "4,637.03", "30.68", "Shanghai Indoor Stadium",
   "Dooho Choi", "122%", and the CRWD prior-quarter figures.
+
+## Added 2026-08-26 (Wednesday ~5:06pm ET — AFTERNOON EDITION, POST-CLOSE, eighteenth run of the day; archive stamp 2026-08-26-1706)
+- CLOCK: run started **17:06 EDT**. Method: **incremental edits** to the 1646 pages (`edits_1706.py`).
+- 🟢 **MARKETS — THE AFTER-HOURS TAPE IS NOW THREE WINNERS AND ONE LOSER.** **OKTA reported and is the night's biggest
+  gainer: shares +~15% in extended trading**; **adjusted EPS $1.05 vs 97 cents expected**; **revenue $805M vs $795M
+  expected, +11% from $728M** (checked: **+10.58%**); **net income $116M, or 65 cents/sh, vs $67M, or 37 cents**
+  (checked: **+73.1%** net income, **+75.7%** per share — share count roughly flat, so both reconcile). CEO **Todd
+  McKinnon**: the agentic-AI security opportunity is still **"very early."** (CNBC, cnbc.com/2026/08/26/okta-okta-earnings-q2-2027.html.)
+- 🟢 **MARKETS — CROWDSTRIKE NOW HAS A PRICE AND A GUIDE.** **Shares jumped as much as 12% in extended trading**;
+  **FY27 revenue guide $5.99–$6.01B vs a $5.94B estimate**; **Q3 revenue guidance of up to $1.53B vs $1.52B**; the
+  $0.31 print is a **ninth consecutive quarterly EPS beat**. (Quartz; Yahoo Finance earnings live blog.) The 8-K
+  figures published at 4:36 are unchanged.
+- 🟢 **MARKETS — NVIDIA'S DATA CENTER LINE GETS ITS EXACT PRINT.** Company-record **$89.02B, +116.6% y/y and +18.3%
+  sequentially**, attributed to **"the ramp of our Blackwell Ultra infrastructure."** Derived in Python: the y/y rate
+  implies a **$41.10B** year-ago base and the q/q rate a **$75.25B** prior quarter — both consistent.
+- 🔴 **GOTCHA #54 — TWO NVIDIA AFTER-HOURS PERCENTAGES OFFERED, BOTH REJECTED, FOR TWO DIFFERENT REASONS.**
+  (a) A summary returned **"down 1.59% in extended trading."** **−1.59% is NVDA's REGULAR-SESSION close**, already on
+  this page since 4:15 — the day's close relabelled as the night's move. (b) A quote-page summary returned
+  **"$213.70, +1.45% from a $210.65 close," stamped "as of 8:00 PM ET"** — a time that **had not occurred** when the
+  edition was built, and a direction **opposite** to CNBC's and Yahoo's reporting. **Neither published; Nvidia remains
+  DIRECTION ONLY ("slipped in extended trading").** **RULE: a quote-page summary carrying a future timestamp is not
+  evidence of anything; and a percentage that already appears on the page as a regular-session close cannot be
+  re-used as an after-hours move.**
+- ⚠ **MARKETS — A CLOSING SET NOT ADOPTED.** A search summary gave the Aug 26 close as **S&P −0.12% / Dow −0.08% /
+  Nasdaq −0.16% / Russell +0.50%.** The S&P figure **contradicts the 7,675.70 / −1.58 / −0.02% reading that has now
+  survived six independent boards and reconciles exactly to the 7,677.28 Tuesday close.** Not merged, recorded here.
+- 🟢 **MARKETS — FRAME.** **FactSet: Q2 S&P 500 earnings on pace to rise 50% y/y, the highest growth rate since 2021**,
+  cited by **Bank of America** strategists with AI as the engine. (Yahoo Finance earnings live blog.)
+- ⚠ **CYBER — KEV STATIC, FOURTEENTH CONSECUTIVE EDITION.** Latest CISA alert pages remain **Aug 18 (four)**,
+  **Aug 20 (two TrueConf)**, **Aug 21 (one Zimbra)**, with the **Gitea CVE-2026-60004 addition of Aug 25** already on
+  the board. **Patch Priority unchanged (Oracle CVE-2026-21962 due Aug 27 — 1 day left; Gitea Aug 28 — 2 days).**
+  **SEEN AND DELIBERATELY NOT ADDED TO THE TABLE:** an aggregator headline that **Adobe and NVIDIA each published
+  advisories addressing critical vulnerabilities**. **No vendor bulletin was fetched, so no CVE, CVSS or fixed version
+  is asserted**; printed as a rejection note in Vulnerability Watch rather than as a row.
+- 🥊 **MMA — BOTH CALENDAR ANCHORS RE-VERIFIED, NEITHER MOVED.** Most recent completed event remains **UFC Fight Night:
+  Hernandez vs. Rodrigues, Aug 22, Golden 1 Center, Sacramento**; next card remains **Umar Nurmagomedov vs. Song Yadong,
+  Aug 29, Oriental Sports Center, Shanghai, main card 6:00 a.m. ET**. **No Shanghai result asserted. Champions board
+  unchanged — THIRTIETH consecutive edition**, and it cannot have changed: Sacramento had no title fight and the last
+  card that did was UFC 330 on Aug 15.
+- VALIDATION (programmatic, `validate_1706.py`, **0 failures, 317 checks**). Every 5:06 figure re-derived in Python
+  (Okta's three growth rates, the NVDA Data Center y/y and q/q bases, the CrowdStrike guide-vs-consensus comparisons,
+  the S&P close reconciliation), plus **windowed rejection-context tests for 1.45%, $213.70, $210.65 and 1.59%**,
+  14 KEV due-date→countdown→past-due triples, the 11-belt champions column with all three historical regressions
+  tested by name, five-tab nav, masthead pills, self-stamp JS, per-page tldr labels, freshline, all six TradingView
+  blocks, the MMA countdown element, and prose-level new-tag hygiene.
+  ⚠ **ONE HARNESS BUG FOUND AND FIXED, NOT WORKED AROUND (FOURTH RECURRENCE OF THE VOCABULARY CLASS):** the new
+  `1.59%` guard did not recognise the page's own correct labels **"NVDA down 1.59% on the session"** and **"went into
+  the print red"**, so it false-failed the Movers card twice. Vocabulary extended; the guard still catches any use of
+  −1.59% as an after-hours figure.
+  Trap greps CLEAN: "Cody Salkilld", "Shamil Yakhyaev", "Abdul-Rakhman", "Fight Night 286", "$1.4 trillion", "Suno".
