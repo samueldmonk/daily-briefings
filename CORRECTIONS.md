@@ -14382,3 +14382,100 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   Window-scoped to rejection context only: "7,677.24" (appears solely inside the mislabelled-close rejection note).
 - ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **26 days, 159 timestamped rows, 477 snapshot files**.
   `gen_archive.py` remains BROKEN.
+
+## Added 2026-08-27 (Thursday ~8:43am ET — MORNING EDITION, second run of the day, PRE-OPEN; archive stamp 2026-08-27-0843)
+- 🟢 **MARKETS — THE PRE-MARKET PICTURE IMPROVED BETWEEN 8:06 AND 8:40 AND THE PAGE SAYS SO EXPLICITLY.** The
+  8:06 edition led on "S&P 500 and Nasdaq futures higher **while Dow futures slipped**." As of ~8:40 **all three**
+  are green: **Dow futures +0.23%, S&P 500 futures +0.38%, Nasdaq futures +0.53%** (Trading Economics). The lead
+  names the change rather than silently overwriting the earlier read — an edition that contradicts its own
+  predecessor must show its work.
+- 🟢 **MARKETS — NVDA PRE-MARKET NOW HAS A THIRD READ AND ALL THREE ARE PRINTED, NONE AVERAGED: 7.4%
+  (Reuters/AOL), 7.32% (Benzinga), 6% (CNBC).** New this run: the read-through to the rest of the complex —
+  **Marvell +5.8%, Micron +4.5%, VanEck Semiconductor ETF +3.5%, iShares Semiconductor ETF +3%**. Those two ETF
+  figures are the ONLY numeric sector reads on the page; no S&P sector or breadth number was stated anywhere this
+  run and none is asserted.
+- 🔴 **GOTCHA #60 — A 2022 JOBLESS-CLAIMS REPORT WAS RETURNED AS TODAY'S 8:30 PRINT AND WAS CAUGHT.** A search for
+  the Aug 27 claims release surfaced **"232,000 initial claims for the week ending August 27, vs 248,000 expected,
+  prior 237,000 revised from 243,000, 4-week average 241,500"** — traced to an **fxstreet article from September
+  2022**. It is also internally impossible: **a Thursday claims report covers the week ending the PREVIOUS
+  Saturday and can never cover the day it is published.** NOT PUBLISHED. The page states the release window has
+  passed and that no figure from it was corroborated, and names the rejected number so a later run does not
+  re-adopt it. Same failure class as gotcha #59 (2021 Benzinga calendar) — **an undated weekday economic-data
+  article is dated by its publication year, not by the weekday you asked about.** A second search
+  ("GDP second estimate 1.5%, released August 26") was also rejected: it contradicts itself on the release date
+  and no primary BEA page was fetched.
+- ⚠ **MARKETS — VERTIV (VRT) IS PUBLISHED WITH ITS SOURCE FLAGGED.** "Raised FY2026 revenue and adjusted-earnings
+  guidance, ~27% organic growth" comes from a **pre-market movers feed, not the company release**, and the On the
+  Radar bullet says exactly that. **The tapeboard 'top premarket gainers' list (VNRX +84.58%, MERC +68.28%,
+  MIMI +34.44%) is NOT published** — it is a live relative-volume screen with no timestamp, not a sourced move.
+- ⚠ **MARKETS — WEDNESDAY'S CLOSE IS UNCHANGED AND THE AUG 25 MISLABEL WAS NOT RE-OFFERED THIS RUN.** S&P 500
+  **7,675.70, −0.02%**; Dow −0.08%, Nasdaq Composite −0.16%, both **levels still uncorroborated** and printed as
+  such. The rejection note for 7,677.24 / 53,577.40 / 26,151.30 stays on the page; the validator window-scopes
+  those strings to the rejection context.
+- 🟢 **CYBER — NEW INCIDENT: NUTEX HEALTH.** Hospital operator, **28 facilities across 12 US states**, disclosed in
+  a **Form 8-K filed Aug 24** that a third party accessed its servers and **exfiltrated** data that "may be private
+  or confidential"; scope (patient/employee/provider/business/financial/IP) still being assessed; external IR and
+  forensics engaged, law enforcement notified, **no material impact** to date, **no actor has claimed
+  responsibility** (BleepingComputer, SecurityWeek, SC Media).
+- 🟢 **CYBER — TWO KEV BATCHES ADDED TO THE BOARD, BOTH NEW TO THIS PAGE.** **Aug 26: SIX** CVEs —
+  **CVE-2015-3246, CVE-2015-5287, CVE-2019-1068, CVE-2021-23758, CVE-2022-0995, CVE-2026-8452** (five of six are
+  legacy 2015–2022 ids). **Aug 20: TWO**, both **TrueConf Server** — **CVE-2026-72529, CVE-2026-72530**. The
+  **Aug 18 batch is now itemised**: CVE-2026-33824 (Microsoft IKE Service), CVE-2026-55040 (SharePoint),
+  CVE-2026-59310 (VMware vCenter), CVE-2026-65400 (Apple macOS). ⚠ **NO DUE DATE IS ASSERTED for the Aug 26,
+  Aug 20, Aug 21 or Aug 18 additions** — none was verified this run and the risk-based-window rule forbids
+  inferring one.
+- 🟢 **CYBER — TWO "Not confirmed" CVSS CELLS WERE RESOLVED WITH REAL SOURCES.** **CVE-2026-68820 = 7.0**
+  (Tenable; the only August Patch Tuesday bug confirmed exploited in the wild — note it is a **7.0**, not a
+  critical, which is why the max-severity Oracle flaw outranks it for Patch Priority). **CVE-2026-60004 = 9.8**
+  (Gitea; an attacker with ordinary **write** access to a repo can run arbitrary shell commands; CISA has warned
+  of active exploitation). New rows: **CVE-2026-18963 Keycloak, CVSS 9.1**, unauthenticated account takeover via
+  forced password reset (Red Hat + upstream patched); **CVE-2026-19913 / CVE-2026-19912 Kaltura** — the two
+  **unpatched** CERT/CC flaws now have identifiers.
+- ⚠ **CYBER — THE ENTRA ID "CVSS 10.0" HEADLINE IS DELIBERATELY NOT ATTACHED TO CVE-2026-69836.** A Hacker News
+  headline this run reads "Microsoft Patches Severe Entra ID Flaw (CVSS 10.0) Allowing Remote Code Execution," but
+  **the snippet never names the CVE**. CVE-2026-69836 therefore still prints **"Max severity (Microsoft)"** with a
+  note recording the headline and stating the score is not attached. Two facts that look like one fact are not
+  merged without a source that joins them.
+- ⚠ **CYBER — NVIDIA NemoClaw** agent-hijack flaw published **with no CVE and no CVSS**, because the source stated
+  neither. Card says so in terms.
+- 🥊 **MMA — THE BLOODY ELBOW "UNNAMED EX-TITLE CHALLENGER" IS NOW NAMED: CURTIS BLAYDES.** The Aug 21 eight-fight
+  deal was carried anonymously for several editions because no name appeared in the text seen; coverage this run
+  identifies him as UFC heavyweight **Curtis Blaydes**. The page attributes the "title challenger" descriptor to
+  Bloody Elbow's headline rather than asserting it independently.
+- 🥊 **MMA — DWCS SEASON 10 WEEK 3 RESOLVED (Tue Aug 25, Meta APEX): FIVE FIGHTS, FIVE CONTRACTS.** The prior
+  edition correctly refused to assert a result. Verified this run: **Alex Apodaca def. Bella Mir by unanimous
+  decision, 29-28 on all three cards** — Mir was a **−6000** favourite, Apodaca a **+1200** underdog, reported as
+  the **biggest upset in Contender Series history**. Also signed: **Ronald Humphrey** (R1 submission of **Alexis
+  Miranda**), **Sean Clancy Jr.**, **Nick Galanti**, **Guilherme Uriel**. Season total across the three verified
+  episodes: **15 contracts** (4 + 6 + 5).
+- 🥊 **MMA — UFC SHANGHAI CO-MAIN AND START TIMES ADDED.** Co-main: **Yan Xiaonan (No. 4)** — China's first female
+  UFC athlete and a former strawweight title challenger — **vs. No. 13 Denise Gomes** at women's strawweight.
+  **Prelims 3 a.m. ET, main card 6 a.m. ET** (Athlon Sports). Official weights released for the Oriental Sports
+  Center athletes **Aug 28**. Odds unchanged: **−500 / +380** consensus, DraftKings opened **−470 / +360**.
+- ⚠ **MMA — THE BANTAMWEIGHT RANKINGS DISAGREEMENT IS PRINTED UNRESOLVED FOR A THIRD EDITION.** UFC.com's own
+  headline says **#3 Umar Nurmagomedov and #5 Song Yadong**; a summary of the same coverage says **No. 2 and
+  No. 6**. Both printed, neither adopted. UFC.com's wording was re-confirmed this run but the conflict is not
+  declared settled on one source's headline alone.
+- 🥊 **CHAMPIONS BOARD UNCHANGED — THIRTY-FIFTH CONSECUTIVE EDITION, RE-CHECKED RATHER THAN RE-COPIED.** Six belts
+  re-verified against ESPN's current-champions listing THIS RUN (Aspinall HW, Ulberg LHW, Strickland MW,
+  Makhachev WW, Gaethje LW, Volkanovski FW) with dates and methods matching; the remaining five carried from the
+  authoritative block above. Last completed event remains **UFC Sacramento, Aug 22**; no title bout since
+  **UFC 330 (Aug 15)**, and Shanghai is not one.
+- ⚠ **VALIDATION — THE HARNESS WAS REPLACED, NOT WORKED AROUND. `validate_1836.py` HAD GONE STALE AND FAILED 30
+  CHECKS ON CORRECT PAGES.** It asserted an "Okta fundamentals" block, a literal "33rd edition" string, and
+  `&nbsp;` / `&minus;` / `&plus;` HTML entities the pages no longer emit, and **its champions-board parser
+  returned `None` for every cell** — meaning the single most important regression test in the suite had been
+  silently passing on nothing. Rewritten as **`validate_0840.py`: 202 checks, 0 failures.** Covers five-tab nav
+  and per-page active tab, masthead pills + self-stamp JS + edition buckets + freshline, per-page tldr labels with
+  index using cards, balanced div/table/tr/td on all four pages, all six TradingView blocks with exactly three
+  single-quote widgets and the five mandatory tape symbols, zero live widgets on the other three pages, the MMA
+  countdown element and elapsed string, the three KEV countdown ids, the crit-bordered Patch Priority carrying the
+  same Aug 27 date in all three required places, a **25-id CVE whitelist that fails on any other identifier**, a
+  champions board **parsed as real `<td>` cells** with all four regressions tested by name in champion cells only
+  (Pereira, Chimaev, "vacant", Topuria), window-scoped rejection context for the three mislabelled Aug 25 levels,
+  the 232,000-claims trap required to appear only as a rejection, the as-of time, a guard that no After-Hours
+  section appears pre-open, index-card-to-page-lead agreement, sources-footer depth and per-page disclaimer
+  wording, and trap greps. **LESSON: a validator that cannot parse the page it guards reports success and protects
+  nothing — check that the parser finds rows, not just that the test passes.**
+- ARCHIVE — regenerated with `gen_archive_sc.py .`: **26 days, 160 timestamped rows, 480 snapshot files.**
+  `gen_archive.py` remains BROKEN.
