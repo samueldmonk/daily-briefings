@@ -14514,7 +14514,9 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   result; no company filing confirming it has been fetched. **The page now states the rejection explicitly instead
   of silently omitting it**, so a later run does not "discover" it as new. Validator requires "$5.90" to appear
   only inside a non-publication note.
-- 🔴 **MARKETS — A STALE "JACKSON HOLE" FRAMING WAS REMOVED FROM ON THE RADAR AND THE REMOVAL IS DOCUMENTED ON THE
+- 🔴 ⚠⚠ **THIS ENTRY WAS WRONG AND IS SUPERSEDED BY THE 2026-08-27 ~9:36am BLOCK AT THE END OF THIS FILE. JACKSON
+  HOLE 2026 RUNS AUG 27–29 AND WARSH SPEAKS FRI AUG 28 — DO NOT DELETE JACKSON HOLE FROM THE PAGE ON THE REASONING
+  BELOW.** (Original entry retained for the record:) **MARKETS — A STALE "JACKSON HOLE" FRAMING WAS REMOVED FROM ON THE RADAR AND THE REMOVAL IS DOCUMENTED ON THE
   PAGE.** The bullet had Chair **Kevin Warsh**'s Jackson Hole address as forward-looking. Jackson Hole falls in the
   third week of August; on **Aug 27** it is not upcoming. Worse, "investors awaited the Fed's Jackson Hole
   gathering" appears this run in a summary blended with a **2025** article (a tipranks result literally dated
@@ -14582,3 +14584,102 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   cosmetic. **(ii)** the MMA page said official Shanghai weights **"were released"** on **August 28** — a past
   tense on a **future** date, since today is Aug 27. Rewritten to "are due on August 28." **LESSON: the
   chronology check must cover verb tense, not just whether a date is in the right order.**
+
+
+## Added 2026-08-27 (Thursday ~9:36am ET — MORNING EDITION, fourth run of the day, FIRST POST-OPEN run; archive stamp 2026-08-27-0936)
+- CLOCK: research fetched at **09:36 EDT**, six minutes after the opening bell. Method: **targeted edits** onto the
+  9:05 pages (`edits_0936.py` + `fix_0936.py`), every replacement asserted unique-and-found before writing.
+- 🔴🔴 **GOTCHA #61 IS RETRACTED. THE 9:05 RUN DELETED A REAL, CURRENT EVENT ON BAD REASONING, AND THE PAGE NOW SAYS
+  SO IN THE OPEN.** The 9:05 edition removed the Jackson Hole bullet on the theory that "Jackson Hole falls in the
+  third week of August" and that the phrasing was contaminated by a 2025 tipranks article. **That theory was wrong.**
+  Verified this run: the **2026 Jackson Hole Economic Policy Symposium runs AUGUST 27–29** at **Jackson Lake Lodge**,
+  hosted by the **Federal Reserve Bank of Kansas City**, theme **"Financial Innovation: Implications for Payments and
+  Policy,"** roughly **120 central bankers, economists and officials from more than 70 countries**; Chair **Kevin
+  Warsh** delivers the keynote the **morning of Friday, August 28** — **his first as Fed Chair** — and is **not
+  expected to give clear September guidance** (kansascityfed.org plus corroborating coverage). The symposium is a
+  **Thursday-to-Saturday event in the LAST full week of August**, which in 2026 is this week; the 2025 edition
+  (Aug 21–23) sat a week earlier only because the calendar did. **The 9:05 entry above has been annotated as
+  superseded.** ⚠ **LESSON, and it is the mirror image of gotchas #59–#61: a year-contamination heuristic is itself a
+  claim, and it must be verified against a primary source before it is used to DELETE something. Refusing to publish
+  an unverified fact is cheap; deleting a true one because of an unverified rule of thumb is not. Both directions
+  need a source.**
+- 🟢 **MARKETS — FIRST POST-OPEN EDITION, AND THE PAGE FLAGS THE LIMIT OF ITS OWN INDEX FIGURES.** Yahoo Finance's
+  Thursday live coverage has stocks **climbing**, **S&P 500 +0.4%**, **Nasdaq Composite ~+1%**, **Dow near the flat
+  line**. ⚠ **Those three numbers are IDENTICAL to the pre-open futures reads carried at 9:05 (NDX futures +0.9%,
+  SPX futures +0.4%, Dow near flat) and no source stamped them post-open, so the page prints them as "the latest
+  available index reads" and explicitly declines to assert them as prices struck after the 9:30 bell.** The evidence
+  that live trading is being quoted is the single-stock tape, which HAS moved off pre-market levels.
+- 🟢 **MARKETS — THE LEADERSHIP ROTATED AND THE PAGE NAMES THE ROTATION.** Latest quotes: **Okta +20%+**,
+  **Salesforce +14.78%**, **CrowdStrike +14.34%**, **Nvidia +5.87%**. Nvidia is **BELOW** all three pre-market reads
+  (7.4% Reuters/AOL, 7.32% Benzinga, 6% CNBC); CRM and CRWD are well **above** theirs (~12% and 8.9%). All reads
+  printed, none averaged. ⚠ An earlier draft said the three risers were "each well above its pre-open read" — false
+  for **Okta**, which had no pre-open number at all. Corrected before publish.
+- 🟢 **MARKETS — OKTA GOES FROM "NO NUMBER" TO THE SESSION'S BIGGEST MOVER.** Adjusted **$1.05/share on $805M
+  revenue** vs **97c / $795M** expected, demand attributed to agentic AI; **Bank of America upgraded OKTA to Neutral
+  from Underperform, $170 PT**. The 9:05 edition's refusal to print a percentage was correct at the time and the
+  card records that.
+- 🟢 **MARKETS — CROWDSTRIKE'S HEADLINE METRIC ADDED: net new ARR a record $333 million, +51% y/y.**
+- 🟢 **MARKETS — NEW MOVER, AND IT IS A COUNTER-EXAMPLE: ABERCROMBIE & FITCH.** Q2 **$4.17/diluted share on
+  $1.267B sales** vs **$1.99 / $1.248B** est; **FY2026 EPS guidance RAISED to $13.10–$13.60 from $10.20–$11.00**;
+  shares nonetheless **−1.4%** after **Citi cut it to neutral from buy** on limited remaining upside.
+- ⚠ **MARKETS — THE SALESFORCE "$5.90 vs $3.27" LINE IS WITHHELD FOR A THIRD RUN, BUT THE REASONING IS NOW
+  DOCUMENTED AS WEAKENED.** ANF's **$4.17 vs $1.99** — a beat of very similar proportion, in the same feed, the same
+  run — suggests the feed may compare against an estimate on a different basis rather than simply being wrong. The
+  card says exactly that and still declines to assert the figure absent a company filing. **A future run that fetches
+  the Salesforce release should publish it and update this entry.** Also recorded: this run's snippet puts the
+  Salesforce revenue consensus at **$11.33B** against the **$11.32B** the page carries — both printed, neither picked.
+- 🟢 **MARKETS — SEPTEMBER-MEETING ODDS ADDED:** Trading Economics has traders pricing a **nearly 52% chance of a
+  rate RISE** in September, **down from 67%** a week earlier; Yahoo frames the same setup as investors weighing "the
+  likelihood that the Fed would hold rates steady." Both framings printed. 10-year **eased to ~4.65% from a
+  20-month high of 4.75% set Aug 21**; Yahoo describes yields as having **stabilised** after last week's spike.
+- 🟢 **CYBER — A SECOND MAXIMUM-SEVERITY FLAW LANDS: VEEAM ONE.** **CVE-2026-64633, CVSS v4.0 10.0**, remote
+  **unauthenticated** RCE on the **Veeam ONE agent host**; affects **13.0.2.6723 and all earlier v13 builds**; fixed
+  in **13.1.0.7034** (Veeam **KB4892**). Also **CVE-2026-65641, CVSS v4.0 9.3**, unauthenticated coercion of an SMB
+  authentication attempt from the Veeam ONE service — Veeam **KB4905, published Aug 25, 2026**, reported via
+  HackerOne. ⚠ **NO exploitation reported and NOT in KEV as of this run, so no federal deadline is stated — and the
+  Patch Priority box explicitly explains why the Oracle flaw still outranks it: exploitation plus a deadline beats
+  severity alone.** Both ids added to the validator whitelist (now 28).
+- 🟢 **CYBER — TWO NEW ITEMS.** **Aurora ransomware** tied to a **Russian-speaking affiliate who used an AI coding
+  assistant**, targeting **20+ organisations** (no victim names/sectors/ransom figures stated, none printed).
+  **Displaydata** named on a ransomware leak site. ⚠ **An earlier draft called Displaydata an "electronic-shelf-label
+  maker" — that descriptor came from memory, not from the source, and was DELETED before publish. The card now says
+  the reporting does not describe the company's business.** Same discipline class as the fighter-name rule.
+- 🟢 **CYBER — THE FULL AUGUST KEV RUN WAS RE-VERIFIED DIRECTLY AGAINST CISA ALERT PAGES THIS RUN**, not against a
+  summary: **Aug 11 (3)** CVE-2026-20349 Cisco Secure Firewall ASA/FTD, CVE-2026-68820 Windows AFD for WinSock,
+  CVE-2026-72898 Metabase; **Aug 18 (4)**; **Aug 20 (2, TrueConf)**; **Aug 24 (1)** = **CVE-2026-21962, "Oracle HTTP
+  Server and Oracle WebLogic Server Proxy Plug-in Improper Access Control"**; **Aug 26 (6)** — and **CVE-2026-8452 is
+  now identified from the CISA alert as a Citrix NetScaler ADC / NetScaler Gateway memory-buffer flaw.** Oracle's
+  **Aug 27** due date re-confirmed; Patch Priority, KEV board and Vulnerability Watch all carry it.
+- 🥊 **MMA — NEW CARD BOOKED: NOCHE UFC, SEPT 12 — JEAN SILVA vs. JOSÉ MIGUEL DELGADO, Paramount+.** No venue,
+  weight class or odds stated in the announcement seen this run; none printed.
+- 🥊 **MMA — THE 9:05 TENSE FIX IS NOW ITSELF SUPERSEDED, CORRECTLY.** The 9:05 run changed "weights were released"
+  to "weights are due on August 28" because Aug 28 was in the future. UFC.com this run states official weights for
+  the athletes competing at the Oriental Sports Center on **August 28 have been released** — so the page now says
+  released, and records the earlier wording. Also new: **Road to UFC season 5 semifinals, Friday Aug 28, 5 a.m. ET /
+  5 p.m. CST, UFC Fight Pass**; venue's full name **Pudong Development Bank Shanghai Oriental Sports Center**;
+  Umar's resume — wins over **Deiveson Figueiredo, Cory Sandhagen and Mario Bautista**; **Bilal Hasan** (DWCS S10
+  week 1 signee) **makes his UFC debut at UFC Shanghai**.
+- ⚠ **MMA — THE BANTAMWEIGHT RANKINGS DISAGREEMENT IS PRINTED UNRESOLVED FOR A FIFTH EDITION** (UFC.com "#3 / #5"
+  vs a summary's "No. 2 / No. 6"). Neither adopted.
+- 🥊 **CHAMPIONS BOARD UNCHANGED — THIRTY-SEVENTH CONSECUTIVE EDITION, RE-CHECKED RATHER THAN RE-COPIED.** Six belts
+  re-verified against **ESPN "Current and all-time UFC champions" THIS RUN** with dates matching: Aspinall HW
+  (Jun 21 2025), Ulberg LHW (Apr 11 2026), Strickland MW (May 9 2026), Makhachev WW (Nov 15 2025), Gaethje LW
+  (Jun 14 2026), Volkanovski FW (Apr 12 2025). Remaining five carried from the authoritative block. Last completed
+  event remains **UFC Sacramento, Aug 22**; no title bout since **UFC 330 (Aug 15)**; Shanghai is not one.
+- VALIDATION — **`validate_0936.py`: 288 checks, 0 failures.** Derived from the 237-check 9:06 harness. **The
+  Jackson Hole guard was INVERTED** — it previously required the string to sit inside a removal note; it now requires
+  the symposium to be PUBLISHED with its dates, venue, theme, Warsh's Friday keynote, the kansascityfed.org source
+  and the words "That reasoning was wrong," and it FAILS if the stale removal note is still in On the Radar. New
+  guards: the post-open lead tag and the index-figure provenance caveat; all four live single-stock quotes plus the
+  pre-market reads they superseded; Okta's fundamentals and BofA upgrade; ANF's results, raised guidance and Citi
+  downgrade; the $333M net-new-ARR figure; the 52%/67% September odds; the two Veeam CVEs with builds, KBs, the
+  no-exploitation statement and the Patch-Priority ranking rationale; Aurora and Displaydata with their stated
+  unknowns; five CISA alert-page URLs; the Noche UFC booking; the Road to UFC times; the released-weights wording;
+  Umar's resume; and index-card-to-page-lead agreement on Okta, Veeam and Noche UFC. **Guard-liveness was checked
+  rather than assumed** — the window-scoped loops were confirmed to find 2 occurrences of 232,000, 1 of $5.90, 1 of
+  the Aug 21 KEV window and 5 of "Jackson Hole", and the champions parser was confirmed to return **11 real rows**.
+  Trap greps CLEAN: "Cody Salkilld", "Shamil Yakhyaev", "Abdul-Rakhman", "Fight Night 286".
+- FINAL READ-THROUGH (caught by eye after the programmatic pass, fixed before publish): **(i)** "each well above its
+  pre-open read" was false for Okta; **(ii)** the Displaydata industry descriptor was unsourced; **(iii)** four mover
+  cards still carried 9:05-era "Carried"/"New" tags after their numbers changed — retagged **Updated · 9:35**;
+  **(iv)** the MMA Top Story tag read a bare "Updated" with no time on a freshness-first page — stamped 9:35.
