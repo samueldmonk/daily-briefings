@@ -14479,3 +14479,100 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   nothing — check that the parser finds rows, not just that the test passes.**
 - ARCHIVE — regenerated with `gen_archive_sc.py .`: **26 days, 160 timestamped rows, 480 snapshot files.**
   `gen_archive.py` remains BROKEN.
+
+## Added 2026-08-27 (Thursday ~9:06am ET — MORNING EDITION, third run of the day, PRE-OPEN; archive stamp 2026-08-27-0912)
+- CLOCK: research fetched at **09:06 EDT**, archived **09:12 EDT**. Method: **targeted edits** onto the 8:43
+  pages (`edits_0906.py`), each replacement asserted unique-and-found before writing.
+- 🟢 **MARKETS — THE 8:30 JOBLESS-CLAIMS PRINT IS NOW VERIFIED AND PUBLISHED, AND IT IS NOT THE NUMBER THAT WAS
+  REJECTED AT 8:43.** Initial claims for the week ending **August 22** were **203,000**, down **4,000** from the
+  prior week's **upwardly revised 207,000** (first reported 206,000); the **four-week moving average rose 1,250 to
+  205,500**. Corroborated by **two** sources this run: the DOL weekly claims release text and **Trading Economics**
+  ("decreased to 203 thousand in the week ending August 22 of 2026 from 207 thousand"). TE adds that the print
+  extends a run of low claims since a **near-60-year low of 189,000 in mid-July** — published with that
+  attribution. ⚠ **Gotcha #60's rejected "232,000 for the week ending August 27" (a 2022 fxstreet piece) stays on
+  the page as a named rejection only; the validator window-scopes the string to a rejection context.** The
+  reference week here — Aug 22, the Saturday before a Thursday release — is exactly the internal-consistency test
+  that exposed the 2022 figure.
+- ⚠ **MARKETS — THE Q2 GDP SECOND ESTIMATE IS STILL NOT PUBLISHED, SECOND EDITION RUNNING.** A search returned
+  "second estimate released August 26, advance 1.5% annualized, down from 2.1% in Q1," which contradicts itself on
+  the release date (the page says the release window was 8:30 a.m. **Aug 27**) and no BEA release was fetched.
+  Dropped again. **Corporate profits likewise.**
+- 🟢 **MARKETS — THE FUTURES PICTURE NARROWED BETWEEN 8:40 AND 9:05 AND THE PAGE SAYS SO RATHER THAN OVERWRITING.**
+  The 8:43 edition led on all three futures green with **Dow +0.23%**. Yahoo Finance's Thursday read this run has
+  **Nasdaq 100 futures +0.9%, S&P 500 futures +0.4%, Dow futures hovering near the flat line**. Both reads printed,
+  the change named. Bloomberg separately has **S&P 500 contracts ~+1%** (note: the 8:06 entry logged this as
+  *Nasdaq 100* contracts ~+1%; this run's snippet attributes the ~1% to the **S&P 500** — the page follows this
+  run's wording). ETF proxies: **QQQ +1.04%, SPY +0.4%** (StockMarketWatch).
+- 🟢 **MARKETS — CROWDSTRIKE'S QUARTER NOW HAS NUMBERS, NOT JUST A PRICE MOVE.** FQ2 2027, quarter ended **July 31**:
+  revenue **$1.47B, +26% y/y**, vs **$1.44B** consensus; **adj EPS $0.31 vs $0.29** expected; **full-year outlook
+  raised**. Pre-open **+8.9%** (Investing.com), with a second tally at "nearly 10%". Wednesday close **$189.18,
+  +2.05%** and after-hours **+10.49% to $209.02** carried. **Salesforce pre-open ~+12%** (CNBC premarket movers).
+  **Okta** added as a mover with **direction only** — Yahoo's earnings live blog says CRM/CRWD/OKTA "surge" but no
+  Okta percentage was stated, so none is printed.
+- ⚠ **MARKETS — THE SALESFORCE "$5.90 vs $3.27" EPS LINE WAS OFFERED A SECOND TIME AND IS REJECTED A SECOND TIME.**
+  CNBC's premarket-movers piece repeats it. An ~80% consensus beat is far more likely a mismatched estimate than a
+  result; no company filing confirming it has been fetched. **The page now states the rejection explicitly instead
+  of silently omitting it**, so a later run does not "discover" it as new. Validator requires "$5.90" to appear
+  only inside a non-publication note.
+- 🔴 **MARKETS — A STALE "JACKSON HOLE" FRAMING WAS REMOVED FROM ON THE RADAR AND THE REMOVAL IS DOCUMENTED ON THE
+  PAGE.** The bullet had Chair **Kevin Warsh**'s Jackson Hole address as forward-looking. Jackson Hole falls in the
+  third week of August; on **Aug 27** it is not upcoming. Worse, "investors awaited the Fed's Jackson Hole
+  gathering" appears this run in a summary blended with a **2025** article (a tipranks result literally dated
+  `8 27 25`, the same calendar slot as NVDA's 2025 Q2 report). **NEW GOTCHA CLASS — #61: an anniversary collision.
+  Nvidia reporting Q2 in the last week of August means 2025 and 2026 coverage share headlines, dates AND subject
+  matter, so year contamination survives a plausibility check that gotchas #59 and #60 failed.** Only the verified
+  **3.50%–3.75%** target range is published.
+- 🟢 **CYBER — THE ANONYMOUS "3,750,000 AFFECTED / HHS FILING" FIGURE DROPPED AT 8:06 HAS BEEN IDENTIFIED: IT IS
+  CARECLOUD, AND IT IS NOW PUBLISHED WITH THE ENTITY NAMED.** **3.7 million** people affected (HHS breach tracker;
+  HIPAA Journal renders it 3.75M), up from an initial estimate of roughly **350,000**. Intrusion detected
+  **mid-March**, attackers inside an **AWS environment March 10–16**, disclosed early July. Stolen: names,
+  addresses, **SSNs**, driver's licence numbers, DOB, health-insurance and medical information, plus **full payment
+  -card data for a limited subset**. **No group has claimed it**; unclear whether a ransom was paid. **Fifth-largest
+  health-data theft of 2026.** (TechCrunch, SecurityWeek, HIPAA Journal, Malwarebytes.) **The card carries an
+  explicit note recording that the figure was previously withheld for lack of a named entity** — the refusal was
+  correct and the resolution is shown, not quietly swapped in.
+- 🟢 **CYBER — THREE NEW INCIDENTS.** **Hospital for Sick Children (Canada)** attacked **Aug 21**, employee data
+  stolen; **University of Texas at San Antonio** took systems offline after an **Aug 18** attack (both Tech.co 2026
+  tracker). **FBI: Water and Wastewater Sector utilities in at least SEVEN US states have reported incidents since
+  July 27, 2026, with some activity degrading water operations.** Also added: **CISA #StopRansomware advisory
+  AA26-222A (Aug 10)** on **Gunra** — FBI-observed since **April 2025**, formal **RaaS affiliate programme** since
+  **January 2026**, management panel + configurable builder, **Tor negotiation portal**, dedicated leak site.
+- ⚠ **CYBER — THE FIRST KEV DUE DATE SEEN SINCE THE DIRECTIVE CHANGED IS REPORTED, NOT ASSERTED.** A source this
+  run states agencies had until **Aug 21** to remediate the **Aug 18** batch — a **three-day** window. It is
+  consistent with **BOD 26-04, "Prioritizing Security Updates Based on Risk,"** which replaces the fixed BOD 22-01
+  three-week window with per-CVE risk-based dates. **Because the date came from a search summary rather than the
+  CISA alert page, the KEV board reports it and explicitly declines to assert it**, and still infers no due date
+  for the Aug 26, Aug 21, Aug 20, Aug 11 or Aug 7 additions. ⚠ **THE OLD THREE-WEEK RULE IN THIS FILE'S PREAMBLE IS
+  SUPERSEDED BY BOD 26-04 — do not compute a due date as add-date + 21 days.**
+- 🟢 **CYBER — Aug 7 KEV addition itemised:** **CVE-2026-8037**, **Progress LoadMaster** command injection. Added to
+  the validator's CVE whitelist (now 26 ids). Oracle **CVE-2026-21962** re-verified this run as **due today, Aug 27**,
+  maximum severity, actively exploited — Patch Priority, KEV countdown and Vulnerability Watch all carry Aug 27.
+- 🥊 **MMA — FIGHT WEEK CONFIRMED UNDERWAY; UFC 331 GAINS REAL DETAIL.** Nurmagomedov and Song have had their
+  **first fight-week faceoff** (Yahoo Sports). ⚠ **The 8:43 page said they "came face to face on Wednesday at media
+  day" — the source says only "first fight week faceoff," so the day-and-venue specificity was REMOVED rather than
+  left standing.** New, sourced: Umar is rebuilding **after losing to Merab Dvalishvili at UFC 311**; Song is
+  **China's highest-ranked male UFC contender**. **UFC 331 (Sep 19, Crypto.com Arena):** Van's UFC 323 win **ended
+  Pantoja's four-defence reign**; Van carries a **seven-fight winning streak**; **Tsarukyan vs. Ruffy is a
+  lightweight title eliminator, winner expected to challenge Gaethje**; main card **9 p.m. ET / 6 p.m. PT**,
+  Paramount+.
+- ⚠ **MMA — THE BANTAMWEIGHT RANKINGS DISAGREEMENT IS PRINTED UNRESOLVED FOR A FOURTH EDITION.** UFC.com's headline
+  ("#3 Umar Nurmagomedov and #5 Song Yadong") was re-confirmed verbatim this run; the "No. 2 / No. 6" reading is
+  still printed alongside. Neither adopted.
+- 🥊 **CHAMPIONS BOARD UNCHANGED — THIRTY-SIXTH CONSECUTIVE EDITION, RE-CHECKED RATHER THAN RE-COPIED.** Six belts
+  re-verified against **ESPN "Current and all-time UFC champions" THIS RUN**, with dates and methods matching:
+  Aspinall HW (Jun 21 2025), Ulberg LHW (KO1 Procházka, UFC 327, Apr 11 2026), Strickland MW (SD Chimaev, UFC 328,
+  May 9 2026), Makhachev WW (UD Della Maddalena, UFC 322, Nov 15 2025, 1 defence), Gaethje LW (TKO4 Topuria,
+  Freedom 250, Jun 14 2026), Volkanovski FW (UD Lopes, UFC 314, Apr 12 2025, 1 defence). Remaining five carried
+  from the authoritative block. Last completed event remains **UFC Sacramento, Aug 22**; no title bout since
+  **UFC 330 (Aug 15)**; Shanghai is not one.
+- VALIDATION — **`validate_0906.py`: 237 checks, 0 failures** (the 202-check 8:40 harness plus 35 edition-specific
+  checks). New guards: the 203,000/207,000/205,500 claims set present; **232,000 window-scoped to a rejection**;
+  **"Jackson Hole" window-scoped to its own removal note**; **"$5.90" window-scoped to a non-publication note**;
+  CrowdStrike's $1.47B/$0.31 pair; the futures and QQQ/SPY reads; no After-Hours block pre-open; CareCloud's
+  3.7M/350,000/March 10–16 set **and** the 3,750,000 provenance note; Gunra AA26-222A; the FBI seven-states line;
+  BOD 26-04 present with the Aug 21 window required to sit inside "rather than asserted"; CVE-2026-8037 whitelisted;
+  the five new UFC 331 / Umar / Song facts; and index-card-to-page-lead agreement on 203,000 and 0.9%. Balanced
+  div/table/tr on all four pages. Trap greps CLEAN: "Cody Salkilld", "Shamil Yakhyaev", "Abdul-Rakhman",
+  "Fight Night 286".
+- ARCHIVE — regenerated with `gen_archive_sc.py .`: **26 days, 161 timestamped rows, 483 snapshot files.**
+  `gen_archive.py` remains BROKEN.
