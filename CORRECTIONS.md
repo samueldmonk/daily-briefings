@@ -14803,3 +14803,72 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   **(v)** duplicate ESPN and UFC.com entries in the MMA sources footer, removed.
 - ARCHIVE — regenerated with `gen_archive_sc.py .`: **26 days, 163 timestamped rows, 489 snapshot files.**
   `gen_archive.py` remains BROKEN.
+
+## Added 2026-08-27 (Thursday ~12:05pm ET — MIDDAY EDITION, sixth run of the day; archive stamp 2026-08-27-1212)
+- CLOCK: research fetched at **12:05 EDT**, archived **12:12 EDT**. Method: **targeted edits** onto the 1146 pages
+  (`edits_1205_ws.py`, `edits_1205_cy.py`, `edits_1205_mma.py`, `demote_sources_1205.py`), every replacement
+  asserted unique-and-found before writing. Gap since the previous run: ~30 min.
+- 🟢 **MARKETS — THE RALLY COOLED AND THE PAGE SAID SO RATHER THAN KEEPING THE BIGGER NUMBER.** Published lead:
+  **Dow +147.67 (+0.28%)**, **Nasdaq Composite +279.61 (+1.07%)**, **Russell 2000 +7.64 (+0.25%)**, **S&P 500
+  +0.4%** (Benzinga + Yahoo Aug 27 live blog). Both large-cap reads sit **below** the 11:35 tallies (+217.20/+0.41%,
+  +327.22/+1.25%) and the page names the drift. ⚠ **The 11:35 "three competing index sets" framing was RETIRED as
+  wrong-shaped:** all three Dow reads (169.90/0.32%, 217.20/0.41%, 147.67/0.28%) and all three Nasdaq reads
+  (300.97/1.15%, 327.22/1.25%, 279.61/1.07%) divide out to a prior close inside the rounding band of Wednesday's,
+  so they are a **sequence of intraday snapshots, not rival claims about one moment**. Rewritten to say so.
+  **RULE: before declaring two index reads irreconcilable, check whether they are simply different times of day.**
+- ⚠ **MARKETS — A SECOND SECTOR TABLE REJECTED, SAME FAILURE MODE AS 11:35.** "Energy down 1.82%" and "8 out of 11
+  sectors **closed** higher" — a closed session cannot describe a tape two hours from lunch, and the source dates
+  itself only as "the most recent trading session." **Not published.** What IS published from the same source, as a
+  direction and not a number: **Thursday opened with a technology rally and energy weakness.**
+- 🟢 **MARKETS — NEW/UPDATED MOVERS:** **CrowdStrike +9.4%** (vs 9% at 11:35, 14.34% at 9:35, 8.9% pre-open — all
+  four printed); **Arm Holdings +6.2% at $266.50** (new, no catalyst stated in the source and none asserted);
+  Salesforce 11.2% and Okta 26.17%/19% carried. **CME FedWatch: 36.1% probability of a September rate HIKE**
+  (Benzinga) — printed explicitly as a hike, not a cut. Jobless claims **203,000** re-confirmed. 10-yr **4.66%**,
+  2-yr **4.22%** re-confirmed.
+- 🟢 **CYBER — CVE-2026-8452 NOW HAS A VENDOR SCORE: CVSS 8.8, ASSIGNED BY CITRIX** (SecurityWeek, "reported by
+  Citrix at the end of June and attributed a severity rating of 8.8"). The "Not confirmed" cell carried for four
+  editions is filled. Also added: intrusions drop web shells named **x.php** and **z.php** and run discovery
+  commands **id** and **echo**. Aug 29 federal deadline re-confirmed and still carried in four places.
+- 🟢 **CYBER — NEW CVE, AND IT IS DELIBERATELY NOT CONFLATED WITH 8452: CVE-2026-19490**, NetScaler ADC/Gateway
+  **authentication bypass**, **CVSS v4.0 9.3**, CWE-288, advisory published **Aug 19 2026**; exploitable only where
+  a **SAML action** is configured on 14.1-43.56+ / 13.1-61.28+, any Gateway or AAA vserver on earlier builds.
+  **Rapid7 reported NO in-the-wild exploitation as of Aug 19** and it is **not** in the KEV additions verified this
+  run. The table row says so explicitly so the two NetScaler CVEs are not merged. (Rapid7, THN, Help Net, SecurityWeek)
+- 🟢 **CYBER — THE AURORA AFFILIATE CARD IS NOW QUANTIFIED** (was one line): **20+ organisations, nine countries,
+  April–July 2026**; **Cursor** used for intrusion planning and AD escalation; **domain-level or interactive access
+  in ≥17 environments**; **four victims named on Aurora's leak site**; exposed server held Kerberos tickets,
+  credential dumps, GPO exports, BloodHound collections, Cursor chat logs and Aurora binaries (GBHackers).
+  ⚠ **A separate aggregator headline attributes the case to a DIFFERENT AI coding tool. Not published** — the
+  primary reporting fetched here names Cursor, and only that is printed, with the disagreement stated on the card.
+- 🔴 **CYBER — "Server Killers" CLAIMED BOSTON SCIENTIFIC A SECOND TIME AND WAS REJECTED A SECOND TIME.** Same
+  roundup shape as 11:35; the dedicated coverage still says no group has claimed it. **A claim does not become
+  sourced by reappearing** — that sentence is now on the card.
+- 🔴 **MMA — GOTCHA #63: ESPN'S CHAMPIONS PAGE RETURNED A STALE SUMMARY LISTING PEREIRA (LHW), CHIMAEV (MW) AND
+  TOPURIA (LW) — THE EXACT THREE-BELT REGRESSION THIS FILE EXISTS TO PREVENT.** The query was the one the gate
+  mandates, against the mandated URL, and it came back with a champions list predating UFC 327, UFC 328 and
+  Freedom 250. **NOT ADOPTED.** The authoritative block in this file governs and the board is unchanged
+  (Ulberg / Strickland / Gaethje). The rejection is printed above the Champions Board on the page.
+  **RULE, restated: a champions list that predates the most recent title fight is wrong no matter how
+  authoritative the domain — verify the date of the list, not the reputation of the site.**
+- 🥊 **MMA — UFC SHANGHAI CARD EXPANDED AND A THIRD ODDS READ ADDED.** Main card now also lists **Qileng Aori vs.
+  Kai Asakura** and **Alex Perez vs. Su Mudaerji**, a rematch after a **low blow** ended their **May** meeting
+  early; co-main **Yan Xiaonan vs. Denise Gomes** carries strawweight title implications. Odds: consensus
+  **−500 / +380**, **MMAOddsBreaker opening −500 / +385**, **DraftKings opening −470 / +360** — three reads, none
+  averaged. ⚠ **A tldr draft saying Nurmagomedov is "a −500 favourite across all three lines" was FALSE** (DraftKings
+  opened −470) and was caught in the final read-through and fixed on the MMA page AND on index.html.
+- VALIDATION — **`validate_1205.py`: 192 checks, 0 failures.** Guards carried and re-checked for liveness: the
+  edition-stamp freshness guard (fails on any New/Updated tag not stamped 12:05, and on bare unstamped "New");
+  window-scoping for 7,673.04, 6,279, $3.97 trillion, 232,000, $5.90, the Zscaler targets and the new "Energy down
+  1.82%" rejection; the **inverted Jackson Hole guard** (must be PUBLISHED with "That reasoning was wrong.");
+  Aug 29 required in ≥4 places; a **30-id CVE whitelist** plus a ≥20-id liveness assertion; champions board parsed
+  as real `<td>` cells with an ≥11-row liveness assertion and all four regressions tested in champion cells only;
+  "Shamil Yakhyaev", "Cody Salkilld" and "Abdul-Rakhman" trap greps clean; index.html asserted free of the stale
+  217.20 figure.
+- FINAL READ-THROUGH (caught by eye AFTER the programmatic pass, all fixed before publish): **(i)** the
+  reconciliation paragraph said **"Four index reads"** and then listed **three** — an arithmetic claim contradicted
+  by its own list; **(ii)** the ordinals "A third set… a fourth item" were orphaned when the "three competing sets"
+  framing was retired, and were renumbered; **(iii)** the Lead's movers paragraph still carried CrowdStrike at 9%
+  and called Zscaler/Palantir "new this run" when they are 11:35 items — retensed, with Arm added as the only
+  genuinely new name; **(iv)** the false "−500 across all three lines" tldr, above.
+- ARCHIVE — regenerated with `gen_archive_sc.py .`: **26 days, 164 timestamped rows, 492 snapshot files.**
+  `gen_archive.py` remains BROKEN.
