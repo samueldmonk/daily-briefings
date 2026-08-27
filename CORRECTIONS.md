@@ -14872,3 +14872,102 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   genuinely new name; **(iv)** the false "−500 across all three lines" tldr, above.
 - ARCHIVE — regenerated with `gen_archive_sc.py .`: **26 days, 164 timestamped rows, 492 snapshot files.**
   `gen_archive.py` remains BROKEN.
+
+## Added 2026-08-27 (Thursday ~12:38pm ET — MIDDAY EDITION, seventh run of the day; archive stamp 2026-08-27-1314)
+- CLOCK: research fetched at **12:38 EDT**, archived **13:14 EDT**. Method: **targeted edits** onto the 1205 pages
+  (`edits_1238_ws.py`, `edits_1238_cy.py`, `edits_1238_cy2.py`, `edits_1238_mma.py`, `sources_1238.py`,
+  `sync_index_1238.py`), every replacement asserted unique-and-found before writing. Gap since previous run: ~33 min.
+- ⚠ **INFRASTRUCTURE — `git clone` OF THIS REPO NOW EXCEEDS THE 180s MCP TOOL CAP.** The archive is ~34 MB and two
+  foreground clone attempts (full, then `--depth 1 --single-branch`) both timed out mid-transfer, leaving unusable
+  partial directories in /tmp. **Fix that worked: run the clone with `nohup … &` in the background, write the target
+  dir to a file, and poll `du -sh` until `.git` and a working tree appear.** Previous run dirs in /tmp are owned by
+  `nobody` and are READ-ONLY but still readable — CORRECTIONS.md and the prior pages can be read from them while the
+  fresh clone runs. Also needed: `git config --global --add safe.directory '*'` for the foreign-owned dirs.
+- 🟢 **MARKETS — THE MIDDAY COOLING REVERSED, AND THE PAGE NAMED THE REVERSAL RATHER THAN THE LARGER NUMBER ALONE.**
+  Published lead: **Nasdaq Composite +400.29 (+1.53%)**, **Dow +208.48 (+0.39%)**, **S&P 500 +0.4%** (Yahoo Finance
+  Aug 27). Both large-cap reads sit **above** the 12:05 tallies (+147.67/+0.28%, +279.61/+1.07%). The 12:05 rule was
+  applied and held: all **four** Dow reads (169.90/0.32%, 217.20/0.41%, 147.67/0.28%, 208.48/0.39%) and all four
+  Nasdaq reads (300.97/1.15%, 327.22/1.25%, 279.61/1.07%, 400.29/1.53%) divide out to a prior close inside the
+  rounding band of Wednesday's, so they are a **sequence of intraday snapshots, not rival claims**. The paragraph's
+  count word was changed from "Three" to "Four" **and** the list was checked to actually contain four of each — the
+  12:05 run shipped a draft saying "Four" over a list of three, so the arithmetic is now checked against the list.
+- ⚠ **MARKETS — NO RUSSELL 2000 READ WAS SEEN THIS RUN AND THE PAGE SAYS SO** rather than restating the 12:05
+  small-cap line (+7.64, +0.25%) as current. **RULE: a figure that was not re-fetched is not re-asserted as current.**
+- 🔴 **MARKETS — THE SAME AGGREGATOR WAS REJECTED A SECOND TIME, IN THE OPPOSITE DIRECTION.** At 11:35/12:05 it
+  offered **7,673.04 / 53,195.36 / 26,168.46** as the **close** of Aug 27. This run the same site says US markets
+  **"ended the session slightly lower on August 27."** Both are impossible before 4 PM ET and they contradict each
+  other on direction. **NOT PUBLISHED**, and the rejection is on the page. **RULE: a source that dates a close before
+  the close is not repaired by changing which way it went.**
+- 🟢 **MARKETS — A MATERIALLY HIGHER SINGLE-STOCK SET ARRIVED WITH THE FRESH INDEX SET, AND EVERY READ IS PRINTED.**
+  Yahoo Finance (same article as the +400.29 figure): **Nvidia +9.48%**, **Salesforce +21.04%**, **CrowdStrike
+  +17.93%** — each the highest this page has seen for that name today. Full ladders printed, none averaged: CRM
+  14.78% → 11.2% → 21.04%; CRWD 8.9% → 14.34% → 9% → 9.4% → 17.93%; NVDA 5.87% live / 6–7% pre-market → 9.48%.
+  ⚠ **The Benzinga 11.2% / 9% pair resurfaced in a separate search and was explicitly NOT treated as a new competing
+  read** — it is the 12:05 coverage returning again. **RULE: a figure reappearing in a later search is not a later
+  figure.** The page asserts none of the reads as *the* move and says why. Corroboration printed: Seeking Alpha
+  "surged more than 10%" on CRM; Bloomberg lists CRM among top performers on outlook + the Anthropic partnership.
+- 🟢 **MARKETS — CHART OF THE DAY STAYS ON OKTA, AND THE REASON IS ARITHMETIC.** Salesforce's 21.04% sits **between**
+  Okta's two reads (19% and 26.17%), so no name seen this run exceeds 26.17% and the symbol does not move. The note
+  says exactly that instead of implying Okta is unchallenged.
+- 🟢 **CYBER — THE AUG 26 KEV BATCH NOW HAS TWO DEADLINES, NOT ONE.** The Hacker News: CISA ordered FCEB agencies to
+  fix **CVE-2019-1068 (Microsoft SQL Server)** *and* **CVE-2026-8452 (Citrix NetScaler)** by **Aug 29**, and the
+  remaining four — CVE-2015-3246, CVE-2015-5287, CVE-2021-23758, CVE-2022-0995 — by **Sept 9**. For four editions
+  this page said "no due date is asserted for the other five"; that line is now retired. New countdown ids `kev5`
+  (Aug 29) and `kev6` (Sept 9). ⚠ **No CVSS was stated for CVE-2019-1068 in any source fetched this run and the
+  table cell says "Not confirmed this run"** rather than borrowing a score.
+- 🟢 **CYBER — THE ORACLE FLAW IS NOW ATTRIBUTED AND QUANTIFIED.** CVE-2026-21962 is among several bugs a
+  **China-linked actor** used against government and commercial infrastructure in **100+ countries** to deliver the
+  **SNOWLIGHT** downloader (SOCRadar, reported July); **CloudSEK** honeypots logged **140,000+ attempts from 21
+  countries over 12 days** (TechTimes). ⚠ **No link is asserted between the honeypot traffic and the named actor** —
+  no source seen makes one. The 421-CVE Patch Tuesday stat tile was retired to make room; the two Patch Tuesday CVEs
+  it supported (62815, 62893) remain in the table with their own context.
+- 🟢 **CYBER — TWO NEW BREACH CARDS, BOTH SCOPED TO WHAT THE SOURCES ACTUALLY SAY.** **ATF** confirmed a
+  **"major incident"** on a **standalone system** after **Qilin** claimed the agency on **Aug 26**; DOJ
+  investigating; agency states no indication the enterprise network or **eForms** was affected. ⚠ The "investigative
+  tools obtained / gun-owner data not compromised" detail is **attributed to unnamed sources inside the agency, not
+  asserted**, and the page says timing, initial access and exfiltration are all undisclosed. Qilin: first detected
+  2022, ~**1,900 victims** in 18 months. **Nutex Health**: 8-K filed **Aug 24**, **28 facilities across 12 US
+  states**, data accessed and exfiltrated, **no group has claimed it**, no material operational impact to date, and
+  **no victim count is printed** because none is known.
+- 🟢 **MMA — GOTCHA #63 DID NOT REPEAT: ESPN RETURNED THE CORRECT BOARD THIS RUN.** The same mandated query against
+  the same ESPN URL that served a **stale Pereira / Chimaev / Topuria** list at 12:05 came back this run with
+  **Aspinall (Jun 21 2025), Ulberg (KO1 Procházka, UFC 327, Apr 11 2026), Strickland (SD Chimaev, UFC 328, May 9
+  2026), Makhachev (UD Della Maddalena, UFC 322, Nov 15 2025), Gaethje (TKO4 Topuria, Freedom 250, Jun 14 2026) and
+  Volkanovski (UD Lopes, UFC 314, Apr 12 2025)** — six belts matching the board on champion and date. **Board
+  unchanged for a thirty-ninth consecutive edition.** The page now records BOTH outcomes and draws the sharper rule:
+  **the same URL can return either answer, so the board is confirmed against the latest results, not against the
+  domain.** Remaining five divisions were not in this run's ESPN return and are carried from the authoritative block.
+  ⚠ A draft of that note claimed the six matched "on champion, **method** and date" — the board does not state the
+  UFC 314 method for Volkanovski, so the claim was narrowed to "on method wherever the board states one."
+- 🟢 **MMA — BLAYDES DESCRIPTOR UPGRADED FROM HEADLINE-WORDING TO SOURCED FACT.** Coverage this run names **Curtis
+  Blaydes** as the **No. 10-ranked** heavyweight and a **one-time interim heavyweight title challenger**, reveals the
+  eight-fight deal came via an interview with **James Lynch** for Ozoon, and notes he has **lost three of his last
+  five**, most recently to **Josh Hokit at UFC 327**. The looser "title challenger" wording carried earlier today is
+  replaced, and the page states he has never fought for the undisputed belt.
+- 🟢 **MMA — SACRAMENTO PAYROLL ADDED:** **Gregory Rodrigues led all fighters with $340,000** — **$170,000 to show +
+  $170,000 win bonus** — on top of the $100K FOTN award (Yahoo Sports). **No other disclosed purse was stated and
+  none is printed.** UFC 331 card expanded: **Moicano vs. Ortega** rematch added (descriptors "former lightweight
+  championship challenger" / "former featherweight championship challenger" both sourced); Tsarukyan **No. 2**,
+  Ruffy **No. 10**.
+- VALIDATION — **`validate_1238.py`: 177 checks, 0 failures.** Guards carried and re-checked for liveness: the
+  edition-stamp freshness guard (fails on any New/Updated tag not stamped **12:38**, and on any bare unstamped
+  "New") — **it fired on three surviving 12:05 tags, which were demoted to "Carried" programmatically**; window
+  scoping for 7,673.04, 6,279, $3.97 trillion, 232,000 and $5.90; the **inverted Jackson Hole guard** (must be
+  PUBLISHED with "That reasoning was wrong."); **Aug 29 required in ≥4 places**; `kev1/kev4/kev5/kev6` ids AND their
+  `set(...)` calls both asserted; a **CVE whitelist that fails on any unlisted identifier** plus a ≥20-id liveness
+  assertion — **it caught five legitimate carried CVEs missing from the whitelist (18963, 19912, 19913, 62815,
+  62893), each of which was checked in context before being added**; champions board parsed as real `<td>` cells with
+  a ≥11-row liveness assertion and all four regressions tested in champion cells only; trap greps for "Shamil
+  Yakhyaev", "Cody Salkilld", "Abdul-Rakhman"; index.html asserted free of the stale 147.67 / 279.61 and required to
+  carry 400.29; **all three index cards asserted byte-identical to their page's tldr** — this fired after a late
+  MMA tldr edit and forced a re-sync, which is exactly what it is for; and the six TradingView widget blocks plus
+  the three single-quote symbols and the five required ticker-tape symbols.
+- FINAL READ-THROUGH (caught by eye AFTER the programmatic pass, all fixed before publish): **(i)** the second
+  aggregator rejection said the claim was impossible **"two and a half hours"** before the bell — at 12:38 it is
+  **more than three hours**; a rejection that gets its own arithmetic wrong undercuts itself, so it was corrected.
+  **(ii)** the MMA tldr said the stale ESPN list was served **"an hour ago"** when the gap was ~33 minutes —
+  retimed to "earlier today". **(iii)** the cyber Threat-Level banner still called Saturday a **single** "second
+  federal deadline" after CVE-2019-1068 joined it — rewritten to name both and the Sept 9 tail, so the banner, the
+  Patch Priority box, the KEV board and the Vulnerability Watch table all agree.
+- ARCHIVE — regenerated with `gen_archive_sc.py .`: **26 days, 165 timestamped rows, 495 snapshot files.**
+  `gen_archive.py` remains BROKEN.
