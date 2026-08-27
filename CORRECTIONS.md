@@ -14683,3 +14683,123 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   pre-open read" was false for Okta; **(ii)** the Displaydata industry descriptor was unsourced; **(iii)** four mover
   cards still carried 9:05-era "Carried"/"New" tags after their numbers changed — retagged **Updated · 9:35**;
   **(iv)** the MMA Top Story tag read a bare "Updated" with no time on a freshness-first page — stamped 9:35.
+
+## Added 2026-08-27 (Thursday ~11:35am ET — MIDDAY EDITION, fifth run of the day; archive stamp 2026-08-27-1146)
+- CLOCK: research fetched at **11:35 EDT**, archived **11:46 EDT**. Method: **targeted edits** onto the 9:36/0945
+  pages (`edits_1135_ws.py`, `edits_1135_cy.py`, `edits_1135_mma.py`, `sources_1135.py`), every replacement asserted
+  unique-and-found before writing. Gap since the previous run: ~2 hours.
+- 🟢 **MARKETS — THE DOW HAS COME OFF THE FLAT LINE AND THE PAGE CHOSE BETWEEN THREE COMPETING INDEX SETS IN THE
+  OPEN.** Published lead: **Dow +217.20 points (+0.41%)**, **Nasdaq Composite +327.22 points (+1.25%)**,
+  **S&P 500 +0.4%**. A **second** read is printed alongside and not averaged: **Dow +169.90 (+0.32%) to 53,633.78**,
+  **Nasdaq +300.97 (+1.15%) to 26,431.17**. ⚠ **The first set leads because it is the only one that reconciles
+  against Wednesday's verified close** — 217.20 is 0.41% of Wednesday's Dow level and 327.22 is 1.25% of the
+  Nasdaq's, while set two implies a prior close ~70 points off on the Dow and ~21 off on the Nasdaq. **No level is
+  asserted in editorial; levels stay in the Weekly Scorecard.** Neither source stamped a time and the page says so.
+- 🔴 **GOTCHA #62 — A 2025 MIDDAY SNAPSHOT WAS RETURNED AS TODAY'S AND WAS CAUGHT.** A search for the Thursday
+  midday tape produced **"Nvidia up 39 cents to $163, market cap $3.97 trillion, S&P 500 up 16 points to 6,279."**
+  Those are **2025** levels — the S&P is above 7,600 this week and NVDA is nowhere near $163. **NOT PUBLISHED**, and
+  named on the page as a rejection. **This is the third instance of the late-August anniversary collision** first
+  logged at 9:05 (Nvidia reports Q2 in the last week of August every year, so 2025 and 2026 coverage share dates,
+  headlines and subject matter). The tell that works: **cross-check the level against the verified prior close.**
+- ⚠ **MARKETS — A FOURTH INDEX SET WAS REJECTED: "7,673.04 / 53,195.36 / 26,168.46, the August 27 CLOSE."** Offered
+  by an aggregator page at 11:35 in the morning. A close cannot exist before 4 PM, and its Dow figure is
+  irreconcilable with its own stated +0.83%. Named on the page as a rejection; the validator window-scopes it.
+- ⚠ **MARKETS — SECTOR FIGURES REJECTED. "Information Technology +1.03%, Energy −1.25%, 8 of 11 sectors higher"
+  is NOT published.** The same result asserted that "US equity markets ended the session slightly lower on
+  August 27" — impossible at 11:35 a.m. — and attributed its numbers to the Aug 26 session in one line while
+  presenting them as today's in another. **A source that cannot say which session it is describing cannot supply a
+  sector number.** The ETF proxies (+3.5% VanEck, +3% iShares) remain the only sector reads, flagged as pre-open.
+- 🟢 **MARKETS — THE 30-YEAR YIELD IS PUBLISHED FOR THE FIRST TIME IN FIVE EDITIONS: 5.25%** (Trading Economics,
+  "ended trading at 5.25%"), with CNBC's **5.33% 19-year high on Aug 18** and same-day **5.285%** as context. The
+  row previously read "not verified this run" — the refusal was correct and the resolution is shown.
+- 🟢 **MARKETS — MOVERS AT MIDDAY, EVERY READ PRINTED, NONE AVERAGED.** **Okta 26.17%** and, in the same coverage,
+  **"surged 19%"** — both printed. **Salesforce 11.2%** (vs 14.78% at 9:35), **CrowdStrike 9%** (vs 14.34%): the
+  software pair have given back part of the opening pop and the page says so rather than keeping the higher number.
+  **Nvidia's 5.87% remains the last LIVE quote** — this run's "6% to 7%" figures are attached to *pre-market* in
+  their own sentences and are not treated as fresher. New: **Zscaler +8.7%**, **Palantir +3.8% at $184.32**, both
+  morning trading. Also: **WTI $81.63, −0.73%** (Benzinga) alongside **$81.36, −1.06%** (TE); **Bitcoin $79,836.71,
+  +1.30%**.
+- ⚠ **MARKETS — NO ZSCALER PRICE TARGET IS PUBLISHED, AND THE REASON IS ON THE PAGE.** Three irreconcilable reads
+  this run: raised to **$215 from $205**; raised to **$250 from $240**; and a headline saying JPMorgan **CUT** the
+  target on FY27 outlook concerns. The **8.7% move** is stated plainly and is published; the targets are not.
+  **Three sources that cannot be reconciled into one do not become one by picking the newest-looking.**
+- 🟢 **CYBER — A SECOND FEDERAL DEADLINE IS NOW VERIFIED: CITRIX CVE-2026-8452, DUE SATURDAY AUG 29.** For four
+  editions the **Aug 26 KEV batch** was carried with **no due date**. BleepingComputer states CISA ordered
+  remediation **by Aug 29** ("by Saturday" — internally consistent, Aug 29 is a Saturday). Citrix patched it
+  **Jun 30, 2026** and first assessed it **DoS-only**; **watchTowr** demonstrated **RCE as root**, and it is
+  exploited in the wild to plant **web shells**. Fixed: **14.1-72.61 (FIPS), 13.1-63.18, 13.1-37.272**. NetScaler
+  ADC / Gateway with Gateway VPN or AAA vservers. **No numeric CVSS confirmed — the row prints "Not confirmed
+  (high severity per SecurityWeek)."** Oracle **CVE-2026-21962** remains Patch Priority (deadline TODAY); Citrix is
+  named as the explicit runner-up in the same box. `kev4` countdown added; Aug 29 carried in Top Story, Patch
+  Priority, Vulnerability Watch and the KEV board — the same date in all four.
+- 🔴 **CYBER — A NAMED ATTRIBUTION WAS OFFERED AND REJECTED: "Server Killers" DID NOT CLAIM BOSTON SCIENTIFIC.** A
+  general news roundup said the pro-Russian group **Server Killers** claimed the attack. The dedicated coverage —
+  **Cybersecurity Dive, MedTech Dive, Healthcare Dive, Cybernews, HIPAA Journal** — states explicitly that
+  **no group has claimed it and the company has named no attacker.** **NOT PUBLISHED**, and the rejection is on the
+  card. **RULE: attribution to a named threat actor must come from the reporting on that incident, never from a
+  roundup that mentions it in passing.** Published facts: intrusion detected **Mon Aug 25**, **8-K** filed,
+  network outage across several IT systems and business applications, **order processing and shipping cut off
+  globally**, thousands of staff at **Irish plants** working from home, duration undisclosed.
+- 🟢 **CYBER — NEW ITEM, DATED TODAY: TWO CHARGED IN AUSTRALIA OVER TeamPCP.** The **AFP** charged two Western
+  Australian men with **14 offences** over **TeamPCP**, behind the **March 2026** compromise of **Trivy**,
+  **Checkmarx KICS** and **LiteLLM**. **Louis Michael Gaebler, 23** and **Ruben Ian Thomson, 21** appeared in
+  **Perth Magistrates Court on Aug 27**. Card states these are allegations; no plea or outcome is reported or implied.
+- 🟢 **CYBER — NemoClaw IS NOW QUANTIFIED:** NVIDIA published **four advisories** this week, one covering
+  **18 vulnerabilities in NemoClaw and OpenShell**, **two of them critical** (code execution, privilege escalation,
+  data tampering, information disclosure, DoS). ⚠ **STILL no CVE and no CVSS for the agent-hijack flaw itself, and
+  none is printed.** ⚠ **NO ADOBE VULNERABILITY COUNT IS PUBLISHED:** the sources give **"51 across 5 products"**
+  and **"55 across 11 products"** — two counts that cannot both be right are not averaged. The publication day is
+  given as both "Tuesday" and "August 26" in one summary, so the page says "this week."
+- 🥊 **MMA — THE BANTAMWEIGHT RANKINGS DISAGREEMENT IS NOW THREE-WAY AND IS PRINTED UNRESOLVED FOR A SIXTH
+  EDITION:** UFC.com's headline **#3 / #5** (re-confirmed verbatim), a summary's **No. 2 / No. 6**, and a third
+  read this run of **#3 / #6**. None adopted. **New context, published WITHOUT a causal claim:** UFC began
+  transitioning its official rankings from the media panel to the data-determined **Meta UFC Rankings** on
+  **June 22, 2026** (UFC.com, with Meta as official fan technology partner). The page records this next to the
+  disagreement and **explicitly states it does not assert the two are connected** — no source seen makes that link.
+- 🥊 **MMA — DWCS S10 WEEK 3 IS NOW FULLY SOURCED WITH METHODS AND TIMES** (prior edition had methods for only two
+  of five): **Apodaca def. Bella Mir UD 29-28 ×3**; **Guilherme Uriel def. Mario Piazzon**, sub (guillotine), R1
+  0:50; **Sean Clancy Jr. def. Gary Balleto**, TKO R2 3:54; **Ronald Humphrey def. Alexis Miranda**, sub (RNC) R1
+  4:03; **Nick Galanti def. Carlos Petruzzella**, KO R1 0:35. Ten fighters, five contracts (SI). Mir **−6000**,
+  Apodaca **+1200**, biggest upset in DWCS history. Season total **15** across three verified episodes.
+- ⚠ **MMA — THE "Shamil Yakhyaev" TRAP RESURFACED IN A SEARCH RESULT THIS RUN AND WAS NOT PUBLISHED.** A roster
+  search returned a Yakhyaev Contender Series/debut narrative. It is a standing trap grep in this file; the
+  validator greps for it on all four pages and they are clean.
+- ⚠ **MMA — WEIGHTS: THE AUG 28 UFC.COM NOTICE BELONGS TO THE FRIDAY ROAD TO UFC CARD, NOT SATURDAY'S UFC
+  SHANGHAI, AND THE PAGE NOW SAYS SO.** The 9:36 edition said weights "have been released" for athletes competing
+  at the Oriental Sports Center on Aug 28 — true, but Aug 28 is the **Road to UFC season 5 semifinals**; the UFC
+  Shanghai card is **Aug 29**. Clarified, and the page states that **no weigh-in figures for the Saturday card were
+  seen this run and none are printed.** A tldr draft saying "official weigh-ins due Friday" contradicted the
+  released-weights line and was removed before publish.
+- 🥊 **CHAMPIONS BOARD UNCHANGED — THIRTY-EIGHTH CONSECUTIVE EDITION, RE-CHECKED RATHER THAN RE-COPIED.** Six belts
+  re-verified against **ESPN "Current and all-time UFC champions" THIS RUN** with dates, methods and defence counts
+  matching: Aspinall HW (Jun 21 2025, 0 def), Ulberg LHW (KO1 Procházka, UFC 327, Apr 11 2026, 0 def), Strickland
+  MW (SD Chimaev, UFC 328, May 9 2026, 0 def), Makhachev WW (UD Della Maddalena, UFC 322, Nov 15 2025, 1 def),
+  Gaethje LW (TKO4 Topuria, Freedom 250, Jun 14 2026, 0 def), Volkanovski FW (UD Lopes, UFC 314, Apr 12 2025,
+  1 def). Remaining five carried from the authoritative block. Last completed event remains **UFC Sacramento,
+  Aug 22**; no title bout since **UFC 330 (Aug 15)**; Shanghai is not one.
+- VALIDATION — **`validate_1135.py`: 248 checks, 0 failures.** New guards this run: the three-way index-set
+  framing (217.20/0.41%, 327.22/1.25%, 169.90, 300.97) present; **7,673.04, 6,279 and $3.97 trillion window-scoped
+  to rejection context**; the older 232,000 and $5.90 window scopes re-checked **for liveness, not just for
+  passing**; Jackson Hole guard still INVERTED (must be published, with "That reasoning was wrong."); the 30-year
+  5.25% present and the "not verified this run" cell gone; Okta's two reads, Zscaler, Palantir; the sector
+  rejection note; **Citrix Aug 29 required in four separate places**; `kev4` id + `set('kev4',d(2026,8,29))`;
+  **Server Killers window-scoped to a rejection note**; Boston Scientific and TeamPCP name/venue set; the Adobe
+  dual-count unresolved framing; a **29-id CVE whitelist that fails on any other identifier** plus a liveness
+  assertion that ≥20 ids are found; champions board **parsed as real `<td>` cells** with a ≥11-row liveness
+  assertion and all four regressions tested in champion cells only (Pereira, Chimaev, "vacant", Topuria).
+  ⚠ **NEW GUARD CLASS ADDED — EDITION-STAMP FRESHNESS, made programmatic:** the harness now fails on any
+  `New ·`/`Updated ·` tag not stamped `11:35`, and on any **unstamped bare "New" tag**. This was previously caught
+  only by eye. It fired immediately and correctly.
+- FINAL READ-THROUGH (caught by eye AFTER the programmatic pass, all fixed before publish):
+  **(i)** the Okta card said the two reads "both sit above the 'more than 20%' this page carried at 9:35" —
+  **false for the 19% figure, which is below it.** Rewritten to name the spread; the same false claim appeared a
+  second time in the Lead and was fixed there too. **This is the same error shape as the 9:36 "each well above its
+  pre-open read" mistake — a comparative sentence covering two numbers must be true of BOTH.**
+  **(ii)** the cyber **Threat-Level banner** still described the day as Oracle + Veeam + Cl0p and had not been
+  updated for the new Citrix deadline or Boston Scientific — a stale banner on a page whose lead had changed.
+  Rewritten. **(iii)** CrowdStrike's card said HP was on the watchlist "this morning" on a midday page — retensed.
+  **(iv)** twelve cards across cyber and MMA still carried "New" tags for items that were already in the 0945
+  snapshot; **demoted to "Carried" by diffing against the archived previous edition**, not by judgement.
+  **(v)** duplicate ESPN and UFC.com entries in the MMA sources footer, removed.
+- ARCHIVE — regenerated with `gen_archive_sc.py .`: **26 days, 163 timestamped rows, 489 snapshot files.**
+  `gen_archive.py` remains BROKEN.
