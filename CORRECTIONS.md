@@ -14576,3 +14576,9 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   "Fight Night 286".
 - ARCHIVE — regenerated with `gen_archive_sc.py .`: **26 days, 161 timestamped rows, 483 snapshot files.**
   `gen_archive.py` remains BROKEN.
+- FINAL READ-THROUGH (after the programmatic pass, both caught by eye and fixed before publish):
+  **(i)** the Cyber Top Story still carried the tag **"New · 8:40"** on a 9:05 edition — retagged
+  **"Updated · 9:05"**. A stale timestamp on a page whose whole premise is freshness is a real error, not
+  cosmetic. **(ii)** the MMA page said official Shanghai weights **"were released"** on **August 28** — a past
+  tense on a **future** date, since today is Aug 27. Rewritten to "are due on August 28." **LESSON: the
+  chronology check must cover verb tense, not just whether a date is in the right order.**
