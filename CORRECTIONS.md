@@ -15170,3 +15170,118 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
 - 🟢 **MMA — ESPN AGREED A FOURTH CONSECUTIVE RUN** on Aspinall, Ulberg, Strickland, Makhachev, Gaethje and Volkanovski. Women's belts and Yan/Van not returned this run and are carried. **Board unchanged for a forty-second consecutive edition.**
 - VALIDATION — **`validate_1515.py`: 163 checks, 0 failures.** Guards carried and re-checked for liveness: the **edition-stamp freshness guard** (fails on any `tag new` not stamped **3:15** and on bare "New") — **it fired on four surviving 2:41 tags, which were demoted**, and on the MMA page it caught that there was **no fresh tag at all**, forcing one onto the Shanghai card; **all three index cards asserted byte-identical to their page's tldr** — re-run after the polish pass, which is what caught that the polish had edited two tldrs out of sync; the **inverted Jackson Hole guard**; window-scoping for 7,673.04, 6,279, $3.97 trillion and 1.82%; an **arithmetic guard on the 7,675.70 × 1.0067 = 7,727.1 reconciliation**; "as of ~3:15 PM ET" required in the Lead; a guard asserting **no close is claimed for Aug 27**; a **32-id CVE whitelist that fails on any unlisted identifier** plus a ≥25-id liveness assertion — **it caught six legitimate carried CVEs missing from the whitelist** (18963 Keycloak, 19490 NetScaler auth bypass, 19912/19913 Kaltura, 62815/62893 August Patch Tuesday), each read in page context before being added; champions board **parsed as real `<td>` cells** with an ≥11-row liveness assertion and all four regressions (Pereira, Chimaev, "vacant", Topuria) tested **in champion cells only**; trap greps for "Shamil Yakhyaev", "Cody Salkilld", "Abdul-Rakhman"; **both spellings of Balleto/Balletto, Aoriqileng and Sumudaerji asserted PRESENT** so a later run cannot silently normalise them; the retired "stable across them" and "remain the only numeric sector reads" sentences asserted **ABSENT**; all seven Shanghai odds reads asserted present; the six TradingView blocks, exactly three single-quote widgets, five required ticker-tape symbols, NASDAQ:OKTA as Chart of the Day, and **live widgets asserted absent from index/cyber/mma**; Aug 29 required in ≥4 places; **BOD 22-01 asserted ABSENT and BOD 26-04 present**.
 - ARCHIVE — regenerated with `gen_archive_sc.py .`: **26 days, 168 timestamped rows, 504 snapshot files.** `gen_archive.py` remains BROKEN.
+
+## Added 2026-08-27 (Thursday ~4:05pm ET — AFTERNOON EDITION, POST-CLOSE, eleventh run of the day; archive stamp 2026-08-27-1611)
+- CLOCK: research fetched at **16:05 EDT**, four minutes after the closing bell; archived **16:11 EDT**. Method:
+  **targeted edits** onto the 1559 pages (`edits_1605_ws.py`, `edits_1605_cy.py`, `edits_1605_mma.py`,
+  `sources_1605.py`, `sync_index_1605.py`, `validate_1605.py`), every replacement asserted found-before-write.
+  Gap since the previous run: ~50 minutes. Clone succeeded in the foreground (~33 MB).
+- 🔴 **MARKETS — THE BELL RANG AND NO CLOSE WAS PUBLISHED. THE PREVIOUS EDITION'S PROMISE WAS BROKEN ON THE PAGE,
+  NOT QUIETLY.** The 3:15 page said "the next edition will carry them." It does not, and the timing note now says so
+  in those words. **RULE: a promise made to the reader in a prior edition is either kept or explicitly retracted —
+  never silently dropped.** Reason: four minutes is not enough for a settled closing print, and the only levels
+  offered contradicted themselves.
+- 🟢 **MARKETS — THE FIRST FULL-SESSION READS OF THE DAY.** The Motley Fool (Aug 27): **Nasdaq Composite +1.31%,
+  S&P 500 +0.66%, Dow +0.33%**; **NVDA +8.4%** and a **$461bn** market-value gain; **CRM +19%, CRWD +9%**.
+  Printed as describing the whole session, **explicitly NOT as the official close**, and **NOT promoted into the
+  Weekly Scorecard**, which still holds no Aug 27 row.
+- ⚠ **MARKETS — "THE TAPE FADED INTO THE BELL" WAS DRAFTED AND THEN REFUSED.** Against the **2:41** reads
+  (0.4 / 1.51 / 0.8) all three are lower; against the **3:05** tracker reads (Dow +0.15, Nasdaq +1.32) **the Dow more
+  than doubled and the Nasdaq held**. The sentence is true of one comparison and false of the other, so it is not
+  written, and the page says why. **RULE: a directional summary must hold against the MOST RECENT prior read, not
+  merely against a convenient earlier one.**
+- 🟢 **MARKETS — THE TIGHTEST TWO-SOURCE AGREEMENT RECORDED TODAY.** Trading Economics **7,727, +0.67%** against the
+  Fool's **+0.66%** — 0.01 of a percentage point apart, and 7,675.70 × 1.0067 = **7,727.1**, so the level reconciles
+  against Wednesday's verified close. Published **untimed and outside the Scorecard**. ⚠ Three drafts wrote "within
+  0.01 of a **point**"; percentages differ in **percentage points** and all three were corrected.
+- 🟢 **MARKETS — THE FIRST STOCK-LEVEL BREADTH COUNT OF THE DAY:** **156 of 503** S&P 500 stocks higher and **23 of
+  30** Dow components lower. The **31%** derived from 156/503 is **labelled as this page's arithmetic**, not quoted.
+- 🔴 **MARKETS — TWO "CLOSING" SETS REJECTED.** (i) **7,673.04 +0.42% / Dow 53,195.36 +0.83% / Nasdaq 26,168.46
+  +0.39%**; (ii) **S&P +0.24% / Dow −0.19% / Nasdaq +0.83%**. **7,673.04 has now been offered THREE TIMES TODAY WITH
+  THREE DIFFERENT PERCENTAGES**, and it sits *below* Wednesday's 7,675.70 while being labelled a gain; set (ii) puts
+  the Dow down and assigns the Nasdaq the figure set (i) gives the Dow. **RULE: a level that arrives with a different
+  percentage each time is an unsettled aggregator field, not a close.**
+- 🔴 **MARKETS — "ENERGY DOWN 1.82%" REJECTED A FIFTH TIME**, same undated shape. Rejections now stand at 11:35,
+  12:05, 2:21, 2:41 and 4:05.
+- 🟢 **MARKETS — AFTER-HOURS SECTION ADDED AND DELIBERATELY EMPTY OF NUMBERS.** Rubrik, Bloom Energy and a
+  special-distribution stock were returned in an **undated** block and **none could be tied to an Aug 27 post-close
+  print**. **RULE: the undated-mover standard does not loosen after 4 PM.** Names recorded as seen-and-declined.
+- 🟢 **MARKETS — NEW HIGHS AND A CONTRADICTION IN THE SAME RUN:** **CRM 22.87%** and **CRWD 20.47%** (highest reads
+  of the day) arrived alongside the Fool's **CRM 19% / CRWD 9%** for the same finished session — ~4 points and ~11
+  points apart with **no intraday left to explain it**. None asserted, none averaged. NVDA market-value adds now
+  **$461bn** (Fool) vs **~$435bn** (Eastern Herald); both printed, method unstated by either, gap named not resolved.
+  Chart of the Day stays **NASDAQ:OKTA**: CRM's new 22.87% high is the closest any name has come but remains below
+  Okta's 26.17%.
+- 🟢 **CYBER — THE ORACLE DEADLINE EXPIRED DURING THIS EDITION'S WINDOW.** `CVE-2026-21962` (CVSS 10.0) was due
+  **Aug 27**; the KEV countdown flips from "0 days left" to **overdue**, and **`CVE-2026-8452` (Citrix NetScaler)
+  takes the top of the Patch Priority box** with a live **Aug 29** clock (2 days).
+- ⚠ **CYBER — THE FINAL READ-THROUGH CAUGHT WHAT THE VALIDATOR COULD NOT: the carried Oracle paragraph still said
+  "this is the single most urgent item on the board", "the remediation date expires today" and "Citrix ranks second
+  today only because Oracle's clock runs out first" — three sentences contradicting the new top of the same box.**
+  All retimed, and the superseded ordering is **recorded on the page rather than deleted**. **RULE: when an item is
+  demoted, re-read every sentence inside the demoted item, not just its heading.**
+- 🟢 **CYBER — THE Aug 29 START DATE IS SETTLED.** CISA's own alert announcing the six-CVE batch is published at a
+  URL dated **2026/08/26**, and BleepingComputer's headline says feds must patch **"by Saturday"** (= Aug 29). One
+  secondary summary this run said the batch was added **Aug 27**; the alert page's own date is preferred and the
+  discrepancy is recorded. Due date unchanged either way. **BOD 22-01 absent, BOD 26-04 present.**
+- 🟢 **CYBER — FIRST IOCs FOR THE CITRIX FLAW:** web shells **x.php** and **z.php**, discovery commands **id** and
+  **echo** (Help Net Security). Also newly sourced: Citrix **disclosed and patched CVE-2026-8452 on June 30 2026**,
+  describing it only as memory overflow → unpredictable behaviour / DoS; **both the vendor framing and watchTowr's
+  RCE-as-root finding stay on the page.** New stat tiles: **Expired** (Oracle) and **Jun 30**.
+- 🔴 **CYBER — THE CVE WHITELIST GUARD CAUGHT A REAL CONTRADICTION, NOT JUST A MISSING ENTRY.** Three CVEs added to
+  Vulnerability Watch this run — **CVE-2026-55040** (SharePoint), **CVE-2026-33824** (Windows IKE) and the
+  unidentified **VMware vCenter** row — collided with identifiers **already on the page in the Aug 18 KEV batch**.
+  Two rows had been drafted saying "not among the KEV additions verified this run," **which was false**. Rewritten:
+  the CVEs were already listed, **what is new is the ransomware exploitation**. The vCenter row notes that the page
+  carries **CVE-2026-59310** as a vCenter KEV entry but that **no source this run connects it to the Babuk campaign,
+  so this page does not either.** **RULE: before writing "not already on this page," grep the page.**
+- 🟢 **CYBER — NEW BREACH CARD: Nutex Health** discloses unauthorised activity on its network, preliminary findings
+  indicating unknown third-party access. **No victim count, data categories, actor or timeline stated; none printed.**
+  **CVE-2026-68820** corroborated independently as an **afd.sys use-after-free exploited for SYSTEM privilege
+  escalation** — first mechanism description carried; deadline unchanged (overdue).
+- 🟢 **MMA — NEW TOP STORY: Rodrigues and Hernandez each suspended six months after a main-event brawl** (Forbes,
+  Aug 24) — the same bout that produced the $100K Fight of the Night and the card's largest disclosed payday.
+  **What is NOT stated and NOT printed: the issuing body, whether the suspensions are medical or disciplinary,
+  any appeal, the start date, or what happened.** The page says a six-month medical and a six-month disciplinary
+  suspension are different events and that it cannot yet tell the reader which this is.
+- 🟢 **MMA — THE RESULTS TABLE GREW FOR THE FIRST TIME SINCE IT WAS BUILT.** Added: **MarQuel Mederos def. Mason
+  Jones, TKO round 2 (elbows and punches)**, lightweight; **Carli Judice def. Jeisla Chaves, finish round 1**,
+  women's flyweight. ⚠ **The exact stoppage type for Judice was not stated, so the cell reads "Finish, round 1"
+  rather than naming one.** **Anthony Wint and Reinier de Ridder stay OUT** — opponents and methods still unstated.
+  ⚠ A draft tldr said "the two opponents missing from that card's results are now named"; **only Judice was in the
+  2:41 three-name list — Mederos was not** — so it was retightened to "both Performance of the Night winners can
+  finally be entered with an opponent and a method," and index.html was re-synced.
+- 🟢 **MMA — UFC 331 IS NOW SOURCED, AND IT CLOSES THE LAST GAP ON THE CHAMPIONS BOARD.** **Sept 19 2026,
+  Crypto.com Arena, Los Angeles**, Paramount+: **Joshua Van vs. Alexandre Pantoja 2** for the flyweight title (Van
+  won it **TKO 26 seconds into round one at UFC 323, Dec 2025**); co-main **Arman Tsarukyan (No. 2 LW) vs. Mauricio
+  Ruffy** over five rounds; **Marlon Vera vs. Charles Jourdain** at bantamweight. Sixth LA event, first since **UFC
+  227 (Aug 2018)**. **The listing describes Van as the CURRENT flyweight champion — the one belt that had been
+  carried without a source seen this run.** ESPN agreed a **fifth consecutive run** on the six men's belts.
+  **Board unchanged for a forty-third consecutive edition.** No odds stated for this card; none printed.
+- 🟢 **MMA — THE SHANGHAI OPENING LINE ARRIVES, AND A MOVE CAN FINALLY BE ASSERTED.** RotoWire consensus
+  **−500 / +380** (~80% implied); **opening line ~−380 / +295**; method props **Nurmagomedov by decision −170** and
+  **−5.5 at −145**. Favourite reads now **−380 (open), −470, −500, −500, −500, −550**; underdog **+295 (open), +380,
+  +385, +400**. **Open-to-current IS a move and is called one — unlike the −500/−550 spread at 3:15, where two
+  simultaneous books were NOT called a drift. The distinction is kept explicitly on the page.** Also new: **official
+  weights posted**. ⚠ **Date discrepancy recorded, not resolved:** one listing places the event at the Oriental
+  Sports Center on **Aug 28**, the broadcast listing says **live Saturday Aug 29, 6 a.m. ET**; page carries Aug 29.
+- 🟢 **MMA — NEW CARDS:** **DWCS season 10 week 4, Tue Sep 1, 7:00 PM ET** — Darby vs. Rivera (WW) main event, plus
+  Holmes/Rodrigues, Livingston/Smith, McCracken/Sanchez, Cleveland/Lourenço. **RTU 5 semifinals, Fri Aug 28, 5 a.m.
+  ET, UFC Fight Pass** (no bouts named; none printed).
+- VALIDATION — **`validate_1605.py`: 173 checks, 0 failures.** Guards carried and re-checked for liveness: the
+  **edition-stamp freshness guard** (fails on any `tag new` not stamped **4:05** and on bare "New") — it fired on the
+  surviving 3:15 tags, which were demoted; **all three index cards asserted byte-identical to their page's tldr** —
+  it caught the tldr retightening and forced a re-sync; champions board **parsed as real `<td>` cells** with an ≥11-row
+  liveness assertion and all four regressions (Pereira, Chimaev, "vacant", Topuria) tested **in champion cells only**;
+  trap greps for "Shamil Yakhyaev", "Cody Salkilld", "Abdul-Rakhman"; **both spellings of Balleto/Balletto,
+  Aoriqileng and Sumudaerji asserted PRESENT**; **arithmetic guards on 7,675.70 × 1.0067 = 7,727.1 and on 156/503 =
+  31%**; a guard asserting **the Weekly Scorecard contains no Aug 27 row**; a guard requiring the "faded" sentence to
+  appear **only** alongside "is not written"; "energy 1.82%" required to carry the fifth-rejection text; Aug 29
+  required in ≥4 places; **BOD 22-01 asserted ABSENT, BOD 26-04 present**; the Oracle countdown asserted flipped to
+  **overdue** and the stale "due today, August 27" asserted **absent**; a **34-id CVE whitelist that fails on any
+  unlisted identifier** plus a ≥20-id liveness assertion — **it caught six legitimate carried CVEs and, in checking
+  them in page context, exposed the Aug-18-batch contradiction above**; ⚠ the TradingView guard **was itself wrong** —
+  it asserted 6 script tags when block B is three widgets, so the correct count is **8 tags across 6 distinct widget
+  types**; rewritten rather than relaxed. Live widgets asserted **absent** from index/cyber/mma.
+- ARCHIVE — regenerated with `gen_archive_sc.py .`: **26 days, 169 timestamped rows, 507 snapshot files.**
+  `gen_archive.py` remains BROKEN.
