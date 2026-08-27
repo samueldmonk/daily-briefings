@@ -14971,3 +14971,102 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   Patch Priority box, the KEV board and the Vulnerability Watch table all agree.
 - ARCHIVE — regenerated with `gen_archive_sc.py .`: **26 days, 165 timestamped rows, 495 snapshot files.**
   `gen_archive.py` remains BROKEN.
+
+## Added 2026-08-27 (Thursday ~2:21pm ET — MIDDAY EDITION, eighth run of the day; archive stamp 2026-08-27-1433)
+- CLOCK: research fetched at **14:21 EDT**, archived **14:33 EDT**. Method: **targeted edits** onto the 1238 pages
+  (`edits_1421_ws.py`, `edits_1421_cy.py`, `edits_1421_mma.py`, `sources_1421.py`, `sync_index_1421.py`,
+  `fix_1421.py`, `fix2_1421.py`, `polish_1421.py`), every replacement asserted found-before-write. Gap since the
+  previous run: ~1h43m — the longest gap of the day, and the page says "as of ~2:21 PM ET" rather than implying continuity.
+- ⚠ **INFRASTRUCTURE — the clone SUCCEEDED in the foreground this run** (33 MB, ~40s), contrary to the 12:38 entry's
+  finding that it exceeds the 180s cap. Both are true observations of a variable transfer; **the background-clone
+  recipe in the 12:38 entry is retained as the fallback, not retired.**
+- 🟢 **MARKETS — THE S&P 500's GAIN DOUBLED, AND IT IS THE ONLY INDEX THAT MOVED.** Published lead: **Dow +0.4%**,
+  **S&P 500 +0.8%**, **Nasdaq Composite +1.5%** (Yahoo Finance + TheStreet, Aug 27). The Dow and Nasdaq reads sit
+  inside the rounding band of the 12:38 tallies (+0.39%, +1.53%), so the large-cap tape is where it was after lunch;
+  **0.4% had been the only S&P figure this page carried all day** and it is now quoted at double that. **This read is
+  percentage-only — neither source published point changes — so no point figures were invented and the 2:21 read was
+  explicitly EXCLUDED from the four-read point-and-percent ladder** rather than being forced into it.
+- 🟢 **MARKETS — THE FIRST TIME-STAMPED CASH-SESSION FIGURE OF THE DAY, AND IT RETIRED A STANDING CLAIM.** Bloomberg:
+  **S&P 500 up 0.8% at 1:25 p.m. in New York**, with **technology the ONLY sector to advance**, and **Micron, Marvell,
+  Sandisk, Palo Alto and GE Vernova adding between 6% and 3%**. ⚠ For four editions this page asserted flatly that
+  **"no source stamped its figures with a time."** That is now false and **the sentence was struck on the page**, not
+  quietly edited — narrowed to "none of those four sources." ⚠ A draft tldr called it "the first time-stamped figure
+  any source has given this page today," which is **FALSE**: Benzinga's 8:15 a.m. read of S&P *futures* is in this
+  page's own sources footer. Narrowed to **"cash-session"** in the tldr, the Lead and index.html.
+  **RULE: before writing "the first X today," grep the page's own footer for a counterexample.**
+- 🔴 **MARKETS — "ENERGY DECLINED 1.82%" WAS REJECTED A THIRD TIME.** Same figure, same undated shape as 11:35 and
+  12:05. Rejection printed with the rule: **a number does not become sourced by being offered three times.** Also NOT
+  published: a Bloomberg line reading "S&P 500 and Nasdaq 100 gained 0.4% and 0.7%, the Dow inched lower" — that is
+  the **futures** article published before the bell, and it is labelled as such on the page rather than dropped silently.
+- 🟢 **MARKETS — THE 2:21 MOVERS SET IS LOWER THAN THE 12:38 SET ACROSS THE BOARD, AND BOTH ARE PRINTED.**
+  **Okta +17.4%**, **Salesforce +10.4%**, **Nvidia +9%**, **CrowdStrike +9%**, plus a **software ETF +6.5%**; Bloomberg
+  adds a third Nvidia read at **+7%**. Every one is below the 12:38 quotes (26.17 / 21.04 / 9.48 / 17.93), by up to nine
+  points on CRWD. **Neither set is treated as a correction of the other and none is averaged.**
+- ⚠ **MARKETS — CHART OF THE DAY STAYED ON OKTA, BUT THE REASON HAD TO BE REBUILT.** The 12:38 basis ("no read puts
+  another name above 26.17%") no longer supports the claim it was doing, because **Okta's newest read (17.4%) is BELOW
+  Salesforce's 21.04%**. The note now states the narrower true claims: Okta leads **within each internally consistent
+  single-source set** (17.4% vs CRM 10.4% on this run's roundup), and no name has been quoted above Okta's 26.17% high.
+  **RULE: when a new read breaks the reasoning behind a carried editorial decision, rebuild the reasoning or move the
+  decision — do not leave the old justification standing under a new fact.**
+- 🟢 **MARKETS — NEW SOURCED FIGURES:** third WTI read **$82.86, −0.08%** (ConvexTrade), joining $81.36 and $81.63;
+  **first Brent read of the day, $87.65** (Eastern Herald); **July PCE +0.2% m/m against 0.1% expected, 3.7% y/y against
+  3.6% forecast** (Trading Economics) added to On the Radar as the backdrop to September hike pricing.
+  **Jackson Hole guard held and is now CORROBORATED:** today's Yahoo/TheStreet coverage frames the session as investors
+  *awaiting* the symposium, which places Aug 27–29 ahead of the tape. "That reasoning was wrong." remains published.
+- 🟢 **CYBER — NEW LEAD ITEM: A PROMPT-INJECTION EXFILTRATION PATH IN AMAZON KIRO**, an agentic AI IDE, via prompt
+  injection and **Kiro Powers** (The Hacker News). ⚠ **No CVE, CVSS, affected version or patch status was stated in the
+  reporting fetched this run and NONE is printed.** ⚠ A draft called it "the third AI developer tool on this page today";
+  a grep found only **two** (Cursor, via the Aurora affiliate, and Kiro). **Corrected to "second" in the tldr, the card
+  and index.html. RULE: a counting claim must be greppable against the page it appears on.**
+- 🟢 **CYBER — TWO NEW CVEs, BOTH WITH THE CVSS CELL LEFT HONEST:** **CVE-2026-45659** (SharePoint deserialisation,
+  reported exploited by ransomware operators since early July; machine-key theft yields token access surviving password
+  resets) and **CVE-2026-58231** (SAP Commerce Cloud, reported exploited within 72 hours of disclosure). **Neither source
+  stated a CVSS and neither row borrows one — both read "Not confirmed this run."** Neither is in the KEV additions
+  verified this run and both rows say so.
+- 🟢 **CYBER — NEW STAT TILE:** **471.2M data-breach victim notices in H1 2026, above the 297.5M for all of 2025, a 58%
+  rise** (Identity Theft Resource Center). It replaced the Aurora "20+" tile, whose figure survives in full on the
+  Aurora card. Aug 29 Citrix/SQL Server deadline and the Sept 9 tail re-confirmed and still carried in four places.
+- 🟢 **MMA — ESPN AGREED FOR A SECOND CONSECUTIVE RUN, AND FOR THE FIRST TIME RETURNED THE WOMEN'S BELTS.** The mandated
+  query returned Aspinall, Ulberg, Strickland, Makhachev, Gaethje, Volkanovski **plus Kayla Harrison, Valentina
+  Shevchenko and Mackenzie Dern** — **nine of eleven divisions confirmed against the source rather than carried**;
+  men's bantamweight (Yan) and men's flyweight (Van) were not returned and remain carried. **Board unchanged for a
+  fortieth consecutive edition.** The 12:05 stale-list rejection stays on the page for the record. ⚠ Its lead-in read
+  "An hour earlier" — the gap from 12:05 to 2:21 is **more than two hours**; retimed to name the clock time instead of
+  a relative gap. **RULE: relative time phrases go stale on a page that is re-edited every half hour; state the clock.**
+- 🟢 **MMA — THE NOCHE UFC CARD'S BLANKS ARE FILLED, AND THE REASON FOR THE RESHUFFLE IS NOW SOURCED.**
+  **Noche UFC: Silva vs. Delgado — Sept 12 2026, Desert Diamond Arena, Glendale, Arizona**, also billed **UFC Fight
+  Night 288 / Noche UFC 4**; the main event is at **featherweight**. **Yair Rodríguez** was originally booked opposite
+  Jean Silva and **withdrew with an injury**, replaced by **José Miguel Delgado** of Mexico. The 12:38 card said "no
+  venue, weight class or odds were stated"; venue and weight class are now sourced and added, **odds still are not and
+  none are printed**. Also added: **Bilal Hasan makes his UFC debut at UFC Shanghai**, sixteen days after winning his
+  contract on DWCS week 1 (Aug 11, finished Mridul Saikia in under a minute).
+- ⚠ **MMA — NAME SPELLING SPLIT RECORDED, NOT RESOLVED:** this page carries **"Gary Balleto"** (one t) from the week-3
+  DWCS card; a Bloody Elbow piece fetched this run spells it **"Balletto"** (two t's) and confirms the second-round
+  stoppage by Sean Clancy Jr. **Both spellings are printed and neither is adopted.** Do not silently normalise.
+- VALIDATION — **`validate_1421.py`: 201 checks, 0 failures.** Guards carried and re-checked for liveness: the
+  **edition-stamp freshness guard** (fails on any `new` tag not stamped 2:21 and on any bare "New") — it forced the
+  demotion of every surviving 12:38 tag; **all three index cards asserted byte-identical to their page's tldr** — this
+  **fired twice**, after the fix pass and again after the polish pass, and forced two re-syncs, which is exactly what it
+  is for; the **inverted Jackson Hole guard** (must be PUBLISHED with "That reasoning was wrong."); window-scoping for
+  7,673.04, 6,279, $3.97 trillion, 232,000 and 1.82%; **an arithmetic guard that parses the ladder paragraph and counts
+  four Dow reads in the list under the word "Four"**; Aug 29 required in ≥4 places; a **31-id CVE whitelist that fails on
+  any unlisted identifier** plus a ≥12-id liveness assertion — **it caught 14 legitimate carried CVEs missing from the
+  whitelist, each checked in page context before being added** (12569 Cl0p/PTC, 8037 Aug-7 KEV, the Aug 11/18/20 KEV
+  batches, and three that appear only as source-footer link labels); champions board **parsed as real `<td>` cells** with
+  an ≥11-row liveness assertion and all four regressions (Pereira, Chimaev, "vacant", Topuria) tested **in champion cells
+  only**; trap greps for "Shamil Yakhyaev", "Cody Salkilld", "Abdul-Rakhman"; index.html asserted free of the retired
+  400.29 / 208.48; the six TradingView widget blocks, exactly three single-quote widgets, the five required ticker-tape
+  symbols, and NASDAQ:OKTA as the Chart of the Day symbol; **BOD 22-01 asserted ABSENT and BOD 26-04 present.**
+- FINAL READ-THROUGH (caught by eye AFTER the programmatic pass, all fixed before publish): **(i)** the false "first
+  time-stamped figure any source has given this page today," above; **(ii)** the carried 12:38 lead paragraph still said
+  "the latest read seen this run has the Nasdaq up 400.29" while the paragraph above it carried a newer read — **two
+  paragraphs both claiming to be the latest**; retensed to "The 12:38 read had"; **(iii)** a draft claimed the S&P was
+  "quoted at 0.4% in every read this page carried from the open through 12:38" — unverifiable from the page itself, so
+  narrowed to "0.4% is the only S&P 500 figure this page has carried at any point today"; **(iv)** the new Bloomberg
+  sector line sat directly under a sentence saying the two semiconductor ETFs "remain the only numeric sector reads" —
+  a reader-visible tension, resolved by stating that Bloomberg supplies a sector *direction* plus an index figure and
+  five single-stock figures, and **no numeric sector return**; **(v)** the Lead panel's freshest tag was rendering third,
+  behind the demoted 12:38 tag — reordered; **(vi)** the "third AI developer tool" miscount and **(vii)** the "An hour
+  earlier" ESPN retiming, both above.
+- ARCHIVE — regenerated with `gen_archive_sc.py .`: **26 days, 166 timestamped rows, 498 snapshot files.**
+  `gen_archive.py` remains BROKEN.
