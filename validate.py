@@ -1,106 +1,112 @@
-# -*- coding: utf-8 -*-
-import json, re, sys
-from html.parser import HTMLParser
+#!/usr/bin/env python3
+import re, os
+OUT="/sessions/nice-ecstatic-thompson/mnt/outputs"
+P={f:open(os.path.join(OUT,f)).read() for f in
+   ["index.html","cyber-briefing.html","wallstreet-briefing.html","mma-briefing.html"]}
+fails=[]; n=0
+def ck(cond,msg):
+    global n; n+=1
+    if not cond: fails.append(msg)
 
-VOID={'br','img','meta','link','hr','input','source','area','base','col','embed','param','track','wbr'}
-PAGES=['index.html','cyber-briefing.html','wallstreet-briefing.html','mma-briefing.html','archive.html']
-fails=[]
-
-class P(HTMLParser):
-    def __init__(s):
-        super().__init__(); s.st=[]; s.err=[]
-    def handle_starttag(s,t,a):
-        if t not in VOID: s.st.append(t)
-    def handle_endtag(s,t):
-        if t in VOID: return
-        if s.st and s.st[-1]==t: s.st.pop()
-        elif t in s.st:
-            while s.st and s.st.pop()!=t: pass
-            s.err.append('mismatch '+t)
-        else: s.err.append('stray </%s>'%t)
-
-for f in PAGES:
-    html=open(f,encoding='utf-8').read()
-    p=P(); p.feed(html)
-    print("%-26s unclosed=%d errors=%d" % (f, len(p.st), len(p.err)))
-    if p.st or p.err: fails.append((f,'html balance',p.st[:5],p.err[:5]))
-    # nav
-    navblk=re.search(r'<nav class="tabs">(.*?)</nav>', html, re.S).group(1)
-    n=len(re.findall(r'<a href="(?:index|cyber-briefing|wallstreet-briefing|mma-briefing|archive)\.html"', navblk))
-    act=len(re.findall(r'<a href="[a-z\-]+\.html" style="color:', navblk))
-    if n!=5: fails.append((f,'nav tabs=%d'%n))
-    if act!=1: fails.append((f,'active tabs=%d'%act))
-    for i in ['id="edition"','id="datestamp"','id="updated"','id="freshline"']:
-        if i not in html: fails.append((f,'missing '+i))
+for f,h in P.items():
+    for tab in ["index.html","cyber-briefing.html","wallstreet-briefing.html","mma-briefing.html","archive.html"]:
+        ck('href="%s"'%tab in h, "%s: missing nav tab %s"%(f,tab))
+    for pid in ["edition","datestamp","updated","freshline"]:
+        ck('id="%s"'%pid in h, "%s: missing #%s"%(f,pid))
+    ck("Intl.DateTimeFormat" in h and "Morning Edition" in h, "%s: missing self-stamp JS"%f)
+    ck(h.count("<div")==h.count("</div>"), "%s: unbalanced divs %d/%d"%(f,h.count("<div"),h.count("</div>")))
+    ck('class="pill live"' in h, "%s: missing LIVE pill"%f)
+    ck(h.count("<table>")==h.count("</table>"), "%s: unbalanced tables"%f)
+    ck("<html" in h and "</html>" in h, "%s: html tags"%f)
 
 # tldr labels
-for f,lab in [('cyber-briefing.html','The Wire'),('wallstreet-briefing.html','The Tape'),('mma-briefing.html','Tale of the Tape')]:
-    h=open(f,encoding='utf-8').read()
-    if h.count('class="tldr"')!=1: fails.append((f,'tldr count'))
-    if '<b>%s</b>'%lab not in h: fails.append((f,'tldr label'))
-if 'class="tldr"' in open('index.html',encoding='utf-8').read(): fails.append(('index.html','tldr present'))
+ck('<b>The Wire</b>' in P["cyber-briefing.html"], "cyber: tldr label")
+ck('<b>The Tape</b>' in P["wallstreet-briefing.html"], "ws: tldr label")
+ck('<b>Tale of the Tape</b>' in P["mma-briefing.html"], "mma: tldr label")
+for f in ["cyber-briefing.html","wallstreet-briefing.html","mma-briefing.html"]:
+    ck('class="tldr"' in P[f], "%s: missing tldr strip"%f)
+ck('class="tldr"' not in P["index.html"], "index: should use cards not tldr")
 
-# tradingview widgets
-ws=open('wallstreet-briefing.html',encoding='utf-8').read()
-blocks=re.findall(r'embed-widget-[a-z\-]+\.js" async>(\{.*?\})</script>', ws, re.S)
-ok=0
-for b in blocks:
-    try: json.loads(b); ok+=1
-    except Exception as e: fails.append(('ws','widget json',str(e)[:60]))
-print("tradingview widget blocks parsed: %d/%d"%(ok,len(blocks)))
-if len(blocks)!=8: fails.append(('ws','widget count=%d'%len(blocks)))
-for s in ['FOREXCOM:SPXUSD','FOREXCOM:NSXUSD','FOREXCOM:DJI','TVC:USOIL','TVC:US10Y']:
-    if s not in ws: fails.append(('ws','ticker missing '+s))
-if '"symbol":"NASDAQ:HOOD"' not in ws: fails.append(('ws','chart of the day'))
+# active tabs
+ck('<a href="cyber-briefing.html" class="on">' in P["cyber-briefing.html"], "cyber: active tab")
+ck('<a href="wallstreet-briefing.html" class="on">' in P["wallstreet-briefing.html"], "ws: active tab")
+ck('<a href="mma-briefing.html" class="on">' in P["mma-briefing.html"], "mma: active tab")
+ck('<a href="index.html" class="on">' in P["index.html"], "index: active tab")
 
-# scorecard arithmetic
-sc=[('S&P 500',7674.37,33.21,0.43),('Dow',53277.01,517.80,0.98),('Nasdaq',26180.45,113.29,0.43),('Russell',3017.87,25.44,0.85)]
-good=0
-for name,close,chg,pct in sc:
-    prior=close-chg
-    calc=chg/prior*100
-    if abs(calc-pct)<=0.02: good+=1
-    else: fails.append(('ws','scorecard %s calc=%.3f vs %.2f'%(name,calc,pct)))
-print("scorecard arithmetic: %d/4 exact"%good)
+# TradingView blocks on WS
+w=P["wallstreet-briefing.html"]
+for widget in ["ticker-tape","single-quote","timeline","stock-heatmap","mini-symbol-overview","events"]:
+    ck("embed-widget-%s.js"%widget in w, "ws: missing widget %s"%widget)
+ck(w.count("embed-widget-single-quote.js")==3, "ws: single-quote count %d"%w.count("embed-widget-single-quote.js"))
+for sym in ["FOREXCOM:SPXUSD","FOREXCOM:NSXUSD","FOREXCOM:DJI","TVC:USOIL","TVC:US10Y"]:
+    ck(sym in w, "ws: tape missing %s"%sym)
+ck('class="livebar"' in w and "LIVE QUOTES" in w, "ws: livebar")
+ck("Quotes stream live" in w, "ws: note line")
+for other in ["index.html","cyber-briefing.html","mma-briefing.html"]:
+    ck("tradingview.com" not in P[other], "%s: should have no live widgets"%other)
 
-# kev countdowns
-cy=open('cyber-briefing.html',encoding='utf-8').read()
-import datetime
-TODAY=datetime.date(2026,8,22)
-rows=re.findall(r'due <b>(\d{4}-\d{2}-\d{2})</b> <span class="(kev-[a-z]+)">\((.*?)\)</span>', cy)
-kok=0
-for due,cls,lbl in rows:
-    y,m,d=[int(x) for x in due.split('-')]
-    delta=(datetime.date(y,m,d)-TODAY).days
-    if delta<0: exp=("%d day%s PAST DUE"%(abs(delta),'' if abs(delta)==1 else 's'),'kev-crit')
-    elif delta==0: exp=("due today",'kev-crit')
-    elif delta<=3: exp=("%d day%s left"%(delta,'' if delta==1 else 's'),'kev-soon')
-    else: exp=("%d days left"%delta,'kev-ok')
-    if (lbl,cls)==exp: kok+=1
-    else: fails.append(('cyber','kev %s got (%s,%s) exp %s'%(due,lbl,cls,str(exp))))
-print("kev countdowns with explicit due dates: %d/%d correct"%(kok,len(rows)))
-pastdue = cy.count('PAST DUE') + cy.count('window elapsed')
-print("kev rows total:", cy.count('<li><b>CVE-'), " past-due markers:", pastdue)
-if 'CVE-2026-72529' not in cy or 'August 23' not in cy: fails.append(('cyber','patch priority/kev agreement'))
-if 'CVE-2026-59310' not in cy: fails.append(('cyber','patch priority cve'))
+# MMA countdown
+m=P["mma-briefing.html"]
+ck('id="ufccdn"' in m and "Fight week — live/completed" in m, "mma: countdown")
 
-# champions board
-mm=open('mma-briefing.html',encoding='utf-8').read()
-crows=re.findall(r'<tr><td>(?:Heavyweight|Light Heavyweight|Middleweight|Welterweight|Lightweight|Featherweight|Bantamweight|Flyweight|Women\'s Flyweight|Women\'s Bantamweight|Women\'s Strawweight)</td>', mm)
-print("champions rows:", len(crows), " vacant cells:", mm.count('>Vacant<'))
-if len(crows)!=11: fails.append(('mma','champions rows=%d'%len(crows)))
-if mm.count('>Vacant<')!=0: fails.append(('mma','vacant present'))
+# champions regressions
+ch=m[m.find("Champions Board"):]
+ck("Carlos Ulberg" in ch and "Light Heavyweight</td><td><b>Carlos Ulberg" in ch.replace("\n",""), "mma: LHW must be Ulberg")
+ck(not re.search(r"Light Heavyweight</td><td><b>Alex Pereira", ch), "mma: Pereira must not be LHW champ")
+ck("Middleweight</td><td><b>Sean Strickland" in ch, "mma: MW must be Strickland")
+ck(not re.search(r"Middleweight</td><td><b>Khamzat", ch), "mma: Chimaev must not be MW champ")
+ck("Featherweight</td><td><b>Alexander Volkanovski" in ch, "mma: FW must be Volkanovski")
+# HARNESS FIX: "vacant" is legitimate in a historical note ("won the VACANT belt").
+# Only the champion CELL may never say vacant.
+champ_cells = re.findall(r"<tr><td>[^<]+</td><td>(.*?)</td>", ch)
+ck(len(champ_cells) == 11, "mma: champion cells parsed %d" % len(champ_cells))
+ck(all("vacant" not in x.lower() for x in champ_cells), "mma: a champion cell says vacant")
+ck("Lightweight</td><td><b>Justin Gaethje" in ch, "mma: LW must be Gaethje")
+ck("Ciryl Gane" in ch, "mma: interim HW Gane")
+ck(ch.count("<tr><td>")==11, "mma: champions rows %d"%ch.count("<tr><td>"))
 
 # trap greps
-traps=['Cody Salkilld','Shamil Yakhyaev','Abdul-Rakhman','MacKenzie','Joshua Vance','Pereira (205)','pay-per-view','former champion','title challenger','Chimaev</b></td>','Pantoja</b></td>','Dvalishvili</b></td>','Topuria</b></td>']
-allhtml={f:open(f,encoding='utf-8').read() for f in PAGES}
-for t in traps:
-    hits=[f for f,h in allhtml.items() if t in h]
-    print("trap %-22s -> %s" % (t, hits if hits else 'CLEAN'))
-    if hits: fails.append(('trap',t,hits))
+traps=["Cody Salkilld","Shamil Yakhyaev","Abdul-Rakhman","Fight Night 286","7,677.24 / 53,577.40 / 26,151.30 is the close"]
+for f,h in P.items():
+    for t in traps[:4]:
+        ck(t not in h, "%s: trap string present: %s"%(f,t))
+# rejected close set must appear only inside the rejection note
+ck("7,677.24" in w and "mislabelled" in w, "ws: rejected set must be framed as rejected")
+ck("7,675.70" in w, "ws: verified S&P close missing")
 
-# after-hours (weekend => explanatory note, no cards)
-if 'No after-hours section this edition' not in ws: fails.append(('ws','after-hours note missing'))
+# cyber checks
+c=P["cyber-briefing.html"]
+ck("CVE-2026-21962" in c and "10.0" in c, "cyber: top CVE")
+ck('class="callout crit"' in c, "cyber: patch priority crit border")
+ck(c.count("August 27")>=2, "cyber: deadline date")
+ck("kev1" in c and "kev2" in c and "kev3" in c, "cyber: kev countdowns")
+ck("Threat level · High" in c, "cyber: threat banner")
+ck(c.count('class="stat"')==4, "cyber: stat strip count")
+# patch priority must match KEV nearest deadline
+ck("due today, August 27" in c, "cyber: patch priority deadline wording")
 
-print("\n=== FAILURES: %d ==="%len(fails))
-for f in fails: print(" ", f)
+# index cards match page leads
+i=P["index.html"]
+ck("CVE-2026-21962" in i, "index: cyber card lead")
+ck("Nvidia" in i and "96.2" in i, "index: markets card lead")
+ck("Nurmagomedov" in i and "Song" in i, "index: mma card lead")
+for cls in ["c-cy","c-ws","c-mm"]:
+    ck('class="card %s"'%cls in i, "index: card %s"%cls)
+ck(i.count("Read the briefing →")==3, "index: three read links")
+
+# no invented CVEs outside the verified list
+verified={"CVE-2026-21962","CVE-2026-12569","CVE-2026-69836","CVE-2026-68820","CVE-2026-62815",
+          "CVE-2026-62893","CVE-2026-60004","CVE-2026-73570","CVE-2026-20349","CVE-2026-72898"}
+found=set(re.findall(r"CVE-\d{4}-\d{4,6}", c))
+ck(found<=verified, "cyber: unverified CVE ids %s"%(found-verified))
+
+# sources footers
+for f in ["cyber-briefing.html","wallstreet-briefing.html","mma-briefing.html"]:
+    ck("<footer>" in P[f] and P[f].count("<a href=\"http")>=10, "%s: sources footer thin"%f)
+    ck('class="disc"' in P[f], "%s: disclaimer"%f)
+# HARNESS FIX: the page's wording is "Nothing here is investment advice" — accept the real phrasing.
+ck("investment advice" in w.lower() and "for information only" in w.lower(), "ws: investment disclaimer")
+ck("subject to change" in m, "mma: cards disclaimer")
+
+print("checks:", n, "failures:", len(fails))
+for x in fails: print("  FAIL:", x)

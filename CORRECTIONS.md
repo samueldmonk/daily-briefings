@@ -14256,3 +14256,129 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   Trap greps CLEAN: "Cody Salkilld", "Shamil Yakhyaev", "Abdul-Rakhman", "Fight Night 286", "$1.4 trillion", "Suno".
   Window-scoped to rejection contexts only: "112.62", "97.69", "4,637.03", "$1 trillion in combined Blackwell",
   "350 plants", "$200 billion CPU market", "our demand is much higher than that".
+
+## Added 2026-08-27 (Thursday ~8:06am ET — MORNING EDITION, first run of the day, PRE-OPEN; archive stamp 2026-08-27-0815)
+- CLOCK: research fetched at **08:06 EDT**, archived **08:15 EDT**. Method: **full rebuild from scratch**
+  (`build.py` + `validate.py` in outputs), not incremental edits — first run of a new day.
+- 🟢 **MARKETS — PRE-OPEN. NVIDIA'S Q2 FY2027 IS NOW READ FROM THE PRIMARY SOURCE (SEC 8-K PRESS RELEASE
+  `q2fy27pr.htm`), NOT FROM BLOG PARAPHRASE.** Verified this run: **revenue $96.2B, +106% y/y, +18% q/q**;
+  **Data Center $89.0B, +117% y/y**; **GAAP and non-GAAP gross margin both 75.0%**; **diluted EPS $2.46 GAAP /
+  $2.22 non-GAAP**; **Q3 FY27 guide $108B ±2%** with non-GAAP GM near **74%**, which **excludes ALL Data Center
+  compute revenue from China** (Hopper was <1% of DC revenue in Q2). CNBC adds **Huang forecasting ~70% fiscal
+  2028 revenue growth**. ⚠ **The "$89.4% guide" figure that appeared in the 8/26 validation notes is NOT
+  reproduced — the primary source states $108B, and that is what is published.**
+- 🟢 **MARKETS — PREMARKET NVDA HAS TWO READS AND BOTH ARE PRINTED, NEITHER AVERAGED: +6% (CNBC) and +7.32%
+  (Benzinga).** These sit above Wednesday night's post-call ">+4%" (CNBC). Futures state: **S&P 500 and Nasdaq 100
+  futures higher, Dow futures slipping** (Benzinga); Bloomberg has **Nasdaq 100 contracts ~+1%** early Thursday
+  after CFO **Colette Kress** signalled strong fiscal-2028 growth.
+- ⚠ **MARKETS — THE AUG 25 CLOSING SET WAS OFFERED A FOURTH TIME AND IS REJECTED A FOURTH TIME.** A search for
+  "stock market close August 26 2026" returned **7,677.24 / 53,577.40 (+160.24) / 26,151.30 (+171.11)** as "the
+  August 26 close." **It is Tuesday, August 25's, mislabelled** — same regression logged at 2:44pm, 6:36pm and
+  earlier on 8/26. Wednesday's verified close published this run: **S&P 500 7,675.70, −0.02%**, with **Dow −0.08%**
+  and **Nasdaq Composite −0.16%** (Yahoo Finance Aug 26 live blog). ⚠ **Dow and Nasdaq closing LEVELS for Aug 26
+  were NOT corroborated this run, so the Weekly Scorecard prints the percent move and explicitly says the level is
+  not corroborated. Per the standing rule, no level is published without corroboration.**
+- 🔴 **GOTCHA #59 — A 2021-ERA ECONOMIC-CALENDAR ARTICLE WAS RETURNED AS TODAY'S CALENDAR AND WAS CAUGHT BEFORE
+  PUBLICATION.** A search for "economic calendar Thursday August 27 2026" surfaced Benzinga "Economic Data
+  Scheduled For Thursday" pages from **2021** and produced, as current, **"Q2 GDP expected to grow 6.6% vs a first
+  estimate of 6.5%"** and **"jobless claims declining to 340,000 for the August 21 week from 348,000."** A 6.6%
+  quarterly GDP print is a 2021 reopening figure, not a 2026 one. **NEITHER NUMBER IS PUBLISHED.** The page states
+  only that the **Q2 GDP second estimate, weekly initial jobless claims and Q2 corporate profits are due 8:30 a.m.
+  ET** and the **Kansas City Fed manufacturing index at 11:00 a.m. ET**, with an explicit line saying consensus
+  figures were not corroborated. **RULE: an undated "Thursday" calendar article is dated by its publication year,
+  not by the Thursday you asked about.**
+- 🟢 **MARKETS — EARNINGS MOVERS.** **Salesforce (CRM):** revenue **$11.35B, +11% y/y**, vs **$11.32B** consensus;
+  FY27 revenue guide **raised to $46.1–46.4B from $45.9–46.2B**; **Agentforce + Data 360 ARR ~$3.9B, +210%**;
+  **Agentforce ARR >$1.5B, +240%**; after-hours **$231.70, +$26.08, +12.68%** (a separate tally says **+11.8%** —
+  both printed). ⚠ **The widely-repeated "adj EPS $5.90 vs $3.27 expected" is NOT published — a 80%+ consensus miss
+  of that shape is far more likely a mismatched estimate than a real beat, and no primary filing was fetched to
+  confirm it. Revenue, guidance and ARR are published; the EPS line is dropped.** **CrowdStrike (CRWD):** closed
+  **$189.18, +2.05%**, then **+10.49% to $209.02** after hours. **HP (HPQ)** noted only as "in focus" per the
+  Benzinga headline — no HPQ figure asserted.
+- 🟢 **MARKETS — RATES & OIL.** 10-yr **4.66%**, 2-yr **4.22%** (Benzinga Thursday premarket); 10-yr was **4.64–4.65%**
+  around Aug 25 after a **20-month high of 4.75% on Aug 21** (Trading Economics). Fed funds target **3.50–3.75%**
+  (TE upper limit 3.75% for Aug 2026, unchanged since July). **WTI $81.36, −1.06%** on Aug 27 (TE); Investing.com
+  futures range **$81.44–$82.15**. ⚠ **NO 30-year yield figure was seen this run — the row prints "not verified this
+  run" rather than a number.**
+- 🟢 **CYBER — NEW TOP STORY, AND IT IS A DEADLINE THAT EXPIRES TODAY: ORACLE CVE-2026-21962.** CISA added it to KEV
+  **Aug 24** and ordered federal remediation by **Aug 27 — today**. **Oracle's own CVSS is 10.0** (maximum).
+  Unauthenticated over HTTP, **no user interaction, no privileges**; lets an attacker access or modify critical data
+  via crafted HTTP requests. Affected: **WebLogic Server Proxy Plug-in for Apache HTTP Server and for Microsoft IIS,
+  including deployments bundled with Oracle HTTP Server**. **Oracle patched it Jan 20, 2026 in the January CPU** —
+  ~7 months before CISA spotted exploitation (The Stack). This is the **Patch Priority** item, rendered with the
+  `var(--crit)` border, and the KEV countdown, the Patch Priority box and the Vulnerability Watch row all carry the
+  **same Aug 27 date**.
+- ⚠ **CYBER — KEV BOARD, DEADLINES AS PUBLISHED:** **CVE-2026-21962 due Aug 27 (0 days left)**; **CVE-2026-60004
+  (Gitea, fixed 1.27.1) due Aug 28 (1 day left)**; **CVE-2026-68820 (Windows afd.sys zero-day) due Aug 25 — OVERDUE,
+  and the page says so.** Also on the board: **CVE-2026-73570 (Zimbra, added Aug 21)**, the **Aug 18 batch of four**
+  (Apple macOS, Microsoft SharePoint, VMware vCenter, Windows) and the **Aug 11 batch of three** (CVE-2026-20349
+  Cisco ASA/FTD, CVE-2026-68820, CVE-2026-72898 Metabase). ⚠ **No due date is asserted for the Aug 21, Aug 18 or
+  Aug 11 additions — none was verified this run, and the risk-based-window rule forbids inferring one.**
+- 🟢 **CYBER — THREAT ACTOR SPOTLIGHT: Cl0p / PTC Windchill.** **CVE-2026-12569**, **CVSS 9.8**, improper input
+  validation / deserialisation of untrusted data, affects **Windchill and FlexPLM prior to release 11.0 M030**;
+  **JSP webshells** for exfiltration, not encryption. **40+ organisations named on the leak site as of Aug 19**,
+  including **Shell, Philips, Fiserv, Zebra, Mindray and Largan Precision**. Extortion mail comes from randomly
+  compromised accounts. Incidents also carried: **ReliaQuest** employee phished → dashboard access (~Aug 24–25);
+  **Nimbus Manticore** (IRGC-affiliated, Group-IB, new infrastructure + undocumented malware); **AnonyMousKIT**
+  PhaaS stripping Apple Activation Lock using **rented AI voice agents posing as Apple Support**; **Kaltura HTML5
+  player** — two **unpatched** CERT/CC-disclosed flaws (arbitrary file read + code execution).
+- ⚠ **CYBER — THE "3,750,000 AFFECTED INDIVIDUALS / HHS FILING AUG 17" FIGURE IS NOT PUBLISHED.** The snippet gives a
+  count and a date but **names no covered entity**, so there is nothing to attribute the breach to. Dropped rather
+  than published as an anonymous statistic.
+- ⚠ **CYBER — CVSS DISCIPLINE.** Only **10.0 (CVE-2026-21962, Oracle)**, **9.8 (CVE-2026-12569)**, **9.8
+  (CVE-2026-62815, Microsoft QUIC)** and **9.8 (CVE-2026-62893, Windows Deployment Services)** are printed as
+  numbers. **CVE-2026-69836 (Entra ID)** is printed as **"Max severity (Microsoft)"** with an explicit note that no
+  numeric score was confirmed; **CVE-2026-68820, CVE-2026-60004 and CVE-2026-73570** print **"Not confirmed."**
+- 🥊 **MMA — NOTHING HAS MOVED SINCE THE 8/26 6:36pm EDITION; EVERY MMA ITEM IS TAGGED `Carried`.** Next card remains
+  **UFC Shanghai, Umar Nurmagomedov vs. Song Yadong, Sat Aug 29, Shanghai Oriental Sports Center, Paramount+
+  exclusive (US)**; odds re-confirmed **−500 / +380 consensus** with **DraftKings opening −470 / +360**
+  (MMAOddsBreaker / LowKick). Records re-confirmed: **Nurmagomedov 20-1** (Dagestan, Russia), two-fight streak since
+  his title challenge; **Song Yadong "The Kung Fu Kid" 23-9-1** (Heilongjiang, China), sixth main event, after a
+  submission win over former UFC flyweight champion **Deiveson Figueiredo** at UFC Fight Night Macau in May.
+  ⚠ **THE RANKINGS DISAGREEMENT PERSISTS AND IS PRINTED UNRESOLVED FOR A SECOND EDITION: UFC.com's headline says
+  "#3 Umar Nurmagomedov and #5 Song Yadong"; a summary of the same coverage says "No. 2 and No. 6." BOTH PRINTED,
+  NEITHER ADOPTED — the page asserts no numeric rank.**
+- 🥊 **MMA — LAST EVENT.** Most recent completed event remains **UFC Fight Night: Hernandez vs. Rodrigues, Sat Aug 22,
+  Sacramento**. **Gregory Rodrigues def. Anthony Hernandez by unanimous decision (48-47, 49-46, 48-47).** ⚠ **ONLY
+  THE MAIN EVENT ROW IS PUBLISHED — no other bout result was corroborated with a method this run, and the page says
+  so rather than padding the table.** Bonuses verified: **FOTN $100K each to Rodrigues and Hernandez**; **POTN $100K
+  each to MarQuel Mederos and Carli Judice**; **$25K finish bonuses to Jamall Emmers, Shanelle Dyer, Jackson McVey,
+  Marcio Barbosa, Chris Padilla, Anthony Wint and Reinier de Ridder**. Also carried: the **FOTN winners drew
+  six-month suspensions after a main-event brawl** (Yahoo Sports).
+- ⚠ **MMA — ANTHONY WINT APPEARS IN TWO PLACES AND IS DELIBERATELY NOT MERGED.** He is listed among the **DWCS S10
+  week 1 (Aug 11) contract winners** (34-second heavyweight KO of Matt Adams) **and** among the **UFC Sacramento
+  $25K finish-bonus recipients (Aug 22)**. Both are printed as separate sourced facts; **the page does NOT assert
+  they are the same person**, because no source seen this run says so. This is the Yakhyaev lesson applied in the
+  opposite direction: do not SPLIT a fighter, and do not MERGE two mentions either — report what the sources say.
+- ⚠ **MMA — THE BLOODY ELBOW 8-FIGHT-DEAL ITEM IS PUBLISHED WITHOUT A NAME.** The Aug 21 headline says an "ex-UFC
+  title challenger" signed a new eight-fight deal amid surprise roster removals, but **no name appeared in the text
+  seen this run**, so the page says exactly that and names nobody.
+- 🥊 **MMA — UPCOMING CARDS:** **Aug 29 UFC Shanghai**; **Sep 19 UFC 331, Crypto.com Arena, Los Angeles — Joshua Van
+  vs. Alexandre Pantoja 2** for the flyweight title (Van won the first by TKO 26 seconds into R1 at UFC 323 after
+  Pantoja suffered an arm injury), co-main **Arman Tsarukyan vs. Mauricio Ruffy** over five rounds, plus **Marlon
+  Vera vs. Charles Jourdain**; **13 fights**, the UFC's first Los Angeles card since **UFC 227 in August 2018**.
+  **No UFC 331 odds published — none stated in sources seen this run.** Third card slot: **DWCS season 10**,
+  Tuesdays Aug–Oct, Las Vegas, Paramount+.
+- 🥊 **CHAMPIONS BOARD UNCHANGED — THIRTY-FOURTH CONSECUTIVE EDITION, RE-CHECKED RATHER THAN RE-COPIED.** Six belts
+  re-verified directly against **ESPN "Current and all-time UFC champions" THIS RUN** (Aspinall, Ulberg, Strickland,
+  Makhachev, Gaethje, Volkanovski); the remaining five carried from the authoritative block above. No title bout has
+  occurred since **UFC 330 (Aug 15)** and neither Sacramento nor Shanghai is one.
+- VALIDATION (programmatic, `validate.py`, **0 failures, 136 checks**). Covered: five-tab nav on all four pages,
+  active-tab correctness per page, masthead pills + self-stamp JS, per-page tldr labels (The Wire / The Tape / Tale
+  of the Tape) with index using cards instead, freshline, **balanced div and table counts on all four pages**, all
+  **six TradingView blocks** with **exactly 3 single-quote widgets** and the **five mandatory tape symbols**,
+  **zero live widgets on the other three pages**, the MMA countdown element and its elapsed string, the KEV
+  countdown ids, the crit-bordered Patch Priority, the 4-tile stat strip, **an invented-CVE guard that whitelists
+  the ten verified CVE ids and fails on any other**, the rejected-close-set framing, index-card-to-page-lead
+  agreement, sources-footer depth and per-page disclaimers, and a **champions board parsed as real `<td>` cells with
+  all three historical regressions tested by name** (Pereira≠LHW, Chimaev≠MW, FW≠vacant).
+  ⚠ **TWO HARNESS BUGS FOUND AND FIXED, NOT WORKED AROUND:**
+  **(i)** the champions test banned the substring "vacant" anywhere in the board, which false-failed the **correct
+  and necessary** Ulberg note "won the VACANT belt at UFC 327." Rewritten to parse champion **cells** and ban
+  "vacant" only there. **A test that punishes accurate history would have driven a future run to delete a true fact.**
+  **(ii)** the disclaimer test demanded the literal phrase "not investment advice" while the page says **"Nothing
+  here is investment advice"** — **EIGHTH recurrence of the vocabulary class.** Retargeted to the real wording.
+  Trap greps CLEAN on all four pages: "Cody Salkilld", "Shamil Yakhyaev", "Abdul-Rakhman", "Fight Night 286".
+  Window-scoped to rejection context only: "7,677.24" (appears solely inside the mislabelled-close rejection note).
+- ARCHIVE — regenerated with **`gen_archive_sc.py .`**: **26 days, 159 timestamped rows, 477 snapshot files**.
+  `gen_archive.py` remains BROKEN.
