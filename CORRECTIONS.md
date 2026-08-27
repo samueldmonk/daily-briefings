@@ -15070,3 +15070,79 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   earlier" ESPN retiming, both above.
 - ARCHIVE — regenerated with `gen_archive_sc.py .`: **26 days, 166 timestamped rows, 498 snapshot files.**
   `gen_archive.py` remains BROKEN.
+
+## Added 2026-08-27 (Thursday ~2:41pm ET — MIDDAY EDITION, ninth run of the day; archive stamp 2026-08-27-1444)
+- CLOCK: research fetched at **14:41 EDT**, archived **14:44 EDT**. Method: **targeted edits** onto the 1433 pages
+  (`edits_1441_ws.py`-equivalent inline scripts, `validate_1441.py`), every replacement asserted found-before-write.
+  Gap since the previous run: **~20 minutes — the shortest of the day.** Clone succeeded in the foreground again (~34 MB);
+  the 12:38 background-clone recipe stays as the fallback.
+- 🟢 **MARKETS — THE FIRST READ OF THE DAY THAT TIES A SINGLE STOCK TO AN INDEX MOVE.** Yahoo Finance now has
+  **Nvidia +9.3% on the day**, "pushing the **Nasdaq (+1.51%)** up over one and a half percentage points." The 1.51%
+  sits inside the rounding band of 1.5% (2:21) and 1.53% (12:38), so the tech tape is unmoved since lunch. S&P 500 and
+  Dow unchanged at ~0.8% / ~0.4% and **explicitly not restated as re-fetched levels**.
+- ⚠ **MARKETS — TWO COUNTING/ARITHMETIC ERRORS CAUGHT IN THE FINAL READ-THROUGH, AFTER validate PASSED.**
+  **(i)** A draft called 9.3% "a **fifth distinct read** for that name today" and then sat above a movers card listing
+  **nine** Nvidia reads. Narrowed to "the fifth read taken **since the opening bell**," with the nine-read total stated
+  explicitly. **RULE restated: a counting claim must be greppable against the page it appears on — including sections
+  further down the page, not just the paragraph it sits in.**
+  **(ii)** A draft said the tape "has not meaningfully moved in **three hours**" when the 12:38→2:41 gap is **two**.
+  **(iii)** A draft claimed "**every earlier read** either extended the range or sat at its edge" — FALSE: the pre-market
+  **6%** and Bloomberg's 1:25 p.m. **7%** both landed inside an established range. The "first" claim was **dropped**
+  rather than weakened.
+  **(iv)** The ladder aside read "(The **2:21** read above is percentage-only…)" while the new 2:41 read directly above
+  it is **also** percentage-only — rewritten to name both. **RULE: an aside that points at "the read above" breaks when
+  a newer paragraph is inserted above it; re-read asides after every insertion.**
+- 🔴 **MARKETS — "ENERGY DOWN 1.82%" REJECTED A FOURTH TIME.** Returned again, now wrapped in "one of the
+  worst-performing sectors **on the day**" — still with no session date on the figure itself. **Not published**, and the
+  page says so. **RULE: a framing sentence does not supply the date the number is missing.**
+- 🟢 **MARKETS — TWO FIGURES WITHHELD FOR FOUR EDITIONS ARE NOW PUBLISHED.** **Q2 GDP +1.5%, as initially estimated**
+  (Trading Economics) — the page had withheld it because the only earlier line offering it contradicted itself on the
+  release date; a clean source arrived, so the figure goes in. **Q2 corporate profits still not corroborated and still
+  not printed.** Also new: **July durable goods +1.1% vs 0.5% expected**. 10-yr **4.65%** re-confirmed.
+- 🟢 **CYBER — NEW LEAD: TWO CHARGED IN AUSTRALIA OVER TeamPCP.** AFP charged **Louis Michael Gaebler, 23** and
+  **Ruben Ian Thomson, 21** with a combined **14 offences**; **Perth Magistrates Court, Aug 27**, a day after AFP/WAPF
+  warrants at **Cottesloe, Hamilton Hill and Mandurah**. Campaign = the **March 2026** compromise of **Trivy**,
+  **Checkmarx KICS** and **LiteLLM**. Chain: Trivy creds → KICS actions days later; **LiteLLM's pipeline installed Trivy
+  unpinned**, the poisoned scanner took the publishing token, backdoored releases pushed late March. AFP scope:
+  **1,000+ organisations, 500,000+ credentials, ≥300 GB exfiltrated**; crypto payments under investigation.
+  **Charges printed as allegations; no conviction asserted.**
+- 🟢 **CYBER — TWO NEW BREACH CARDS, BOTH WITH THE VICTIM COUNT CHOSEN DELIBERATELY.** **Carhartt / ShinyHunters:**
+  **12.9M unique emails** (BleepingComputer; HIBP lists **12,933,413**), ~**50 GB** claimed, **$3.3M demand rejected**.
+  ⚠ The Register reports the real figure is **about half what ShinyHunters claimed** because the leak was **padded with
+  millions of lines of synthetic data** — the page prints the **analysed** figure, not the leak-site headline, and says
+  why. **RULE: when a leak-site count and an analysis of the actual data disagree, publish the analysis.**
+  **Manchester Airports Group:** **8.7M customers** across **Manchester, London Stansted, East Midlands**; emails,
+  phones, **vehicle registrations**, postcodes; car park / lounge / Fast Track bookings and **in-airport Wi-Fi sign-ups**;
+  **no bank or payment details**; operations and aviation security unaffected; **no group has claimed it and none is named**.
+- 🟢 **CYBER — STAT STRIP RESHAPED:** the Cl0p "40+" tile was retired (the figure survives on the Cl0p spotlight card)
+  in favour of **500,000+** (TeamPCP credentials) and **21.6M** (12.9M + 8.7M, this run's two breaches). Aug 29 still
+  carried in ≥4 places; **BOD 22-01 asserted absent, BOD 26-04 present**. Cyber tldr countdown retimed from "under three
+  hours" to "about two hours" of the business day.
+- 🟢 **MMA — ESPN AGREED A THIRD CONSECUTIVE RUN, AND RETURNED PETR YAN FOR THE FIRST TIME.** Ten of eleven divisions
+  confirmed against the source; only **men's flyweight (Joshua Van)** is now carried without a source seen this run.
+  **Board unchanged for a forty-first consecutive edition.** ⚠ **Artefact recorded, not smoothed over:** the return filed
+  **Petr Yan under a "Women's Divisions" heading**. That is a formatting artefact of the summary, not a claim about the
+  division; Yan is the **men's** bantamweight champion and the board is not changed by it. **RULE: record a source's
+  formatting errors on the page rather than silently correcting them — the next run needs to know the source did it.**
+- 🟢 **MMA — THE FIRST BUSINESS FIGURE OF THE DAY.** UFC Sacramento: **attendance 16,867, live gate $3,300,000**
+  (UFC.com). The standing "no viewership, gate or TKO Group figure was stated" sentence is **retired for the gate and
+  kept for viewership/TKO**. Derived and labelled as arithmetic, not as a reported average: **~$196 per ticket**.
+  Also added: **first-round finishes from Anthony Wint, Carli Judice and Reinier de Ridder** before the main event
+  (all three already in the bonus list) — ⚠ **no opponent, weight class or method was stated for any of the three, so
+  none was added to the results table**, which still holds only the main event.
+- VALIDATION — **`validate_1441.py`: 146 checks, 0 failures.** Guards carried and re-checked for liveness: the
+  edition-stamp freshness guard (fails on any `tag new` not stamped **2:41**, and on bare "New") — **it fired on four
+  surviving 2:21 tags, which were demoted**, and it also fired on the three green **"prospect"** design tags, which are
+  NOT freshness tags and are now explicitly exempted rather than the guard being weakened; index cards asserted
+  **byte-identical** to each page's tldr; the **inverted Jackson Hole guard**; window-scoping for 7,673.04, 6,279,
+  $3.97 trillion, 232,000 and **1.82% (now requiring the fourth-rejection text)**; a **38-id CVE whitelist** that fails
+  on any unlisted identifier plus a ≥20-id liveness assertion — **it caught three legitimate carried CVEs (64633, 65641
+  in the Veeam ONE card; 69836 Entra ID), each checked in page context before being added**; champions board parsed as
+  real `<td>` cells with an ≥11-row liveness check and all four regressions tested **in champion cells only**; trap greps
+  for "Shamil Yakhyaev", "Cody Salkilld", "Abdul-Rakhman"; index asserted free of the retired "under three hours" and
+  "Desert Diamond Arena" text; **the ladder arithmetic guard rewritten to strip tags before counting** — it had been
+  silently failing to match its own paragraph, which is why it is now asserted to find **8 pairs (4 Dow + 4 Nasdaq)**;
+  the six TradingView blocks, exactly three single-quote widgets, five required ticker-tape symbols, NASDAQ:OKTA as
+  Chart of the Day; and **an arithmetic check on the $196/ticket gate derivation**.
+- ARCHIVE — regenerated with `gen_archive_sc.py .`: **26 days, 167 timestamped rows, 501 snapshot files.**
+  `gen_archive.py` remains BROKEN.
