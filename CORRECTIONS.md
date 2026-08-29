@@ -16300,3 +16300,72 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   pages**; a CVE well-formedness sweep with a ≥12 liveness assertion; and per-footer duplicate-href,
   absolute-href and minimum-link checks (**52 / 24 / 33** links, zero duplicates).
 - ARCHIVE — regenerated with `gen_archive_sc.py .`: **28 days, 180 timestamped rows, 540 snapshot files.**
+
+## Added 2026-08-29 (Saturday ~1:05–1:09pm ET — MIDDAY EDITION, weekend, ELEVENTH run of the day; archive stamp 2026-08-29-1309)
+- CLOCK: research fetched 1:05–1:08 EDT, archived **1:09 EDT**. Gap since the previous run: ~27 minutes
+  (Sat 12:42pm). Method: **targeted edits** (`edits_1305.py`, `fix_1305.py`, `fix2_1305.py`, `validate_1305.py`)
+  onto the 12:42 pages. Clone succeeded.
+- 🔴 **CYBER — NEW LEAD: THREE CVSS 10.0 ServiceNow FLAWS, AND A ONE-DIGIT TRAP THAT WOULD HAVE INVERTED
+  THEIR STATUS.** ServiceNow's **August 27, 2026** advisory batch patched **CVE-2026-18885** (code injection,
+  GraphQL Composite Data API, unauthenticated RCE), **CVE-2026-18886** (improper access control in the system
+  configuration image upload processor, privilege escalation) and **CVE-2026-74820** (SQL injection via a
+  dynamic schema ORDER BY clause) — **all CVSS 10.0**, all **unauthenticated / no user interaction /
+  low complexity** — plus **CVE-2026-6876** (sandbox escape, Now Platform, **CVSS 8.7**). Affected trains:
+  **Xanadu, Yokohama, Zurich**. Patching-Program customers were updated automatically on hosted instances;
+  **self-hosted customers must apply it themselves** — printed, because that is where the exposure sits.
+  ⚠ **THE TRAP:** a first search returned a BleepingComputer headline, *"Critical ServiceNow code execution
+  flaw now exploited in attacks,"* alongside the August batch. A targeted follow-up established it is about
+  **CVE-2026-6875** — a **different** ServiceNow sandbox escape, in the **AI Platform**, **CVSS 9.8**, reported
+  by **Searchlight Cyber on April 1** and covered as exploited in **July 2026**. **6875 is exploited and old;
+  6876 is new and not exploited** — ServiceNow states it is **"not currently aware of exploitation"** of
+  anything in the August batch, and **none of the four is KEV-listed**. Had the headline been attached to the
+  new batch, this page would have published **active exploitation of a max-severity flaw** that is not
+  exploited. **6875 is deliberately NOT carried as a row** (July story, no current activity sourced); both ids
+  are printed side by side so the pair cannot be collapsed. ⚠ Also recorded, **not resolved**: a **vendor KB
+  page fetched this run is titled for 6875** while trade reporting on the August batch names **6876**.
+  **RULE ADDED: consecutive CVE ids on the same vendor and the same weakness class are a collision risk, not a
+  convenience — resolve which id a status attaches to before attaching it.**
+- 🟢 **CYBER — KEV BOARD RE-CHECKED, NOTHING MOVED.** A fresh August-2026 KEV search returned **no CISA alert
+  later than August 26** (same six ids: 2015-3246, 2015-5287, 2019-1068, 2021-23758, 2022-0995, 2026-8452).
+  Countdowns unchanged at **0 / 1 / 11 / 12**. Standing caveat restated: **"no later alert was returned" ≠
+  "CISA published none."** Oracle `CVE-2026-21962` **still not carried, tenth run**.
+- 🟢 **MARKETS — WEEKEND, NO NEW SESSION; TWELFTH VERIFICATION, AND IT IS THE BROAD ONE AGAIN.** This run's
+  search returned **all three levels and all three percentage moves together** for a **second consecutive
+  check** — S&P 500 **7,711.76 −0.25%**, Nasdaq **26,402.42 −0.52%**, Dow **53,559.99 −9.45 −0.02%** — so the
+  S&P/Nasdaq levels the 12:05 edition had to flag as **carried** stay **retired**, rather than reverting.
+  Dow points/percent reconciliation at 0.005 tolerance passed. No "as of ~"; **7,673.04 stayed out**;
+  **After-Hours absent**; Chart of the Day stays **NASDAQ:PYPL**; **contested December** marking unchanged and
+  **no December probability published**. **Fresh-tag count on markets: 0.**
+- 🟢 **MMA — NO MATERIAL CHANGE; NO GENERAL CHAMPIONS QUERY RE-RUN.** Searches this hour returned only what the
+  page already carries: the UFC Shanghai main-event result (**Song Yadong def. Umar Nurmagomedov, KO (punch),
+  R2, 1:48**) and the bonus picture (**four fighters × $100,000 = $400,000**), the latter now corroborated by a
+  **Forbes** headline in addition to the Sherdog report already on the page. ⚠ A Yahoo result titled
+  *"Song Yadong taps Deiveson Figueiredo on home soil"* was **rejected as a different, earlier event**
+  (UFC Fight Night: Song vs. Figueiredo) — **a fighter's name plus "Shanghai" is not an event identifier.**
+  Champions board unchanged for a **fifty-fifth consecutive edition**; agreement counter again **deliberately
+  not restated as a number**.
+- ⚠ **FIVE VALIDATION GUARDS FIRED; ALL FIVE WERE REAL DEFECTS OF MINE.** Four pages had the masthead
+  `id="updated"` **fallback text still reading 12:35 PM ET** while the freshline had been restamped to 1:05 —
+  the stale-masthead guard caught all four (the self-stamp JS would have masked this in a browser, which is
+  exactly why the guard tests the fallback). Fifth: I re-added a **CISA six-KEV link already present** in the
+  cyber footer — removed, footer back to zero duplicates. **No guard was relaxed.**
+- ⚠ **ONE SELF-CONSISTENCY FIX IN THE FINAL READ-THROUGH.** The markets lead had been edited to read
+  "re-verified a twelfth time … the second consecutive check to return all three levels and all three
+  percentage moves together, **by a search that returned all three index levels and all three percentage moves
+  together**" — the same clause twice. Rewritten to state the breadth once and say what it implies (the
+  carried flag stays retired). A forbid on the retired phrasing is in the validator.
+- VALIDATION — **`validate_1305.py`: 198 checks, 0 failures.** Five-tab nav + masthead ids + self-stamp per
+  page; **1:05 fallback stamp asserted and stale-12:35 forbidden on freshline AND masthead for all four
+  pages**; all six TradingView blocks plus oil, US10Y and PYPL, with a **no-widgets** assertion on the other
+  three pages; six close figures with a Dow reconciliation and forbids on 7,673.04, "as of ~" and After-Hours;
+  the **twelfth-check breadth family** with a forbid on the retired duplicated clause; the new **ServiceNow
+  family** — four ids, three 10.0s, the 8.7, the August 27 date, the vendor no-exploitation statement, the
+  self-hosted note, a **not-KEV** assertion on the rows, and a **±420-char status sweep requiring "exploited"
+  near every CVE-2026-6875 and "not exploited" near every CVE-2026-6876**, plus the explicit pair-distinction,
+  row-exclusion and recorded-not-resolved strings; KEV board ids and BOD 26-04 / BOD 22-01 guards; the
+  **Oracle not-carried context sweep**; the CISA-review family; McKesson records-vs-people; a **12-name
+  champions assertion** plus **Pereira/Chimaev context sweeps at 420 chars**; the UFC 333, Gaethje idle-belt,
+  bonus-total, Jon Jones and **cageside-forbidden** families; **index-card-mirrors-tldr equality for all three
+  pages**; a CVE well-formedness sweep with a ≥15 liveness assertion; and per-footer duplicate-href,
+  absolute-href and minimum-link checks.
+- ARCHIVE — regenerated with `gen_archive_sc.py .`: **28 days, 181 timestamped rows, 543 snapshot files.**
