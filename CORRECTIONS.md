@@ -16068,3 +16068,96 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   framing**; the fifty-first counter with a `fiftieth` forbid; **index-card-mirrors-tldr equality for all three
   pages**; and per-footer duplicate-href and minimum-link checks.
 - ARCHIVE — regenerated with `gen_archive_sc.py .`: **28 days, 177 timestamped rows, 531 snapshot files.**
+
+## Added 2026-08-29 (Saturday ~11:35–11:45am ET — MIDDAY EDITION, weekend, EIGHTH run of the day; archive stamp 2026-08-29-1144)
+- CLOCK: research fetched 11:35–11:43 EDT, archived **11:44 EDT**. Gap since the previous run: ~32 minutes
+  (Sat 11:12am). Method: **targeted edits** (`edits_1135_mma.py`, `edits_1135_cy.py`, `edits_1135_ws.py`,
+  `sync_index_1135.py`, `validate_1135.py`) onto the 11:12 pages. Clone succeeded. First **Midday Edition** of
+  the day (11:xx ET falls in the midday bucket).
+- 🔴 **MMA — THE PAGE HAD BEEN ARGUING AGAINST A BOOKING THAT EXISTS. UFC 333 IS NOW CARRIED.**
+  Three editions printed that Song Yadong's title callout ran into "no bantamweight title bout on any card in
+  the Fight Week section". That was true **only of the September cards then listed**. A targeted check on the
+  bantamweight belt returned **UFC 333, Sat Oct 24, Etihad Arena, Yas Island, Abu Dhabi**: **Volkanovski vs.
+  Movsar Evloev** (featherweight title) headlining and **Petr Yan vs. Merab Dvalishvili 3** (bantamweight
+  title) as co-main, series **level 1-1** after Yan's UD at UFC 323 (Dec 6 2025); also **Lone'er Kavanagh
+  (No.6 FW) vs. Ramazan Temirov (No.7)**. Corroborated across Gulf News, The National (Aug 16), SI/FanNation,
+  Wikipedia and the **Etihad Arena's own event listing**. Card added to Fight Week as the only **New** tag on
+  the page; the callout paragraph now says the shot Song asked for is **already assigned**, and the earlier
+  framing is **withdrawn in writing rather than deleted**. ⚠ **RULE: a "nothing is booked" claim is only ever
+  as wide as the section it was checked against — scope it or verify it.**
+- 🔴 **MMA — A "VACANT" BANTAMWEIGHT SNIPPET REJECTED; THIRD DIFFERENT ANSWER IN THREE RUNS OF ONE QUERY.**
+  This run's general champions listing **agreed on six men's belts by NAME AND DATE** (Aspinall; Ulberg Apr 11
+  2026; Strickland May 9 2026; Makhachev Nov 15 2025; Gaethje Jun 14 2026; Volkanovski Apr 12 2025) and then
+  rendered **men's bantamweight as "vacant"**. **Rejected** — Petr Yan holds it and has a **booked defence**
+  (UFC 333, Oct 24). That is the same shape as the standing **"featherweight vacant"** regression. Tally across
+  three consecutive runs of the identical query: **stale names (10:50) → full agreement (11:05) → agreement
+  plus a false vacancy (11:35)**. **RULE re-proved and strengthened: an ABSENCE in a listing is not a vacancy,
+  and a champion with a booked defence is not vacant.** Board unchanged for a **fifty-second consecutive
+  edition**; the agreement counter is again **not restated as a number**.
+- 🟢 **MMA — THE PUNCH HAS A THIRD NAME, SO THE TALLY IS ABANDONED, NOT BROKEN.** ESPN calls the finish a
+  **"short right hand"** — neither the hook (Bloody Elbow/Yahoo live) nor the uppercut (bonus report + a third
+  report + a Yahoo headline). New mechanism from ESPN: Nurmagomedov **ducked away from a left hand into its
+  path**, it **connected near his right ear**, **three finishing shots on the mat**. ⚠ Note the split: the
+  **LOCATION now corroborates** (near/behind the right ear) while the **NAME does not** — three names across at
+  least four reports. The 11:05 "two-to-one for the uppercut" framing is **retired on the page**. **RULE: a
+  count of secondary descriptions was never a verification method; a third entrant exposes that rather than
+  breaking a tie.** Official method **KO (punch)** remains the only primary-sourced description.
+- 🟢 **MMA — NEW POST-FIGHT ITEM, INTENT LEFT OPEN.** Two accounts printed, neither adopted: (a) Song ran a
+  victory lap and **nearly ran into Usman Nurmagomedov** (Umar's younger brother/cornerman, **PFL lightweight
+  champion**) **who had rushed in to check on his fallen brother**; (b) **Usman charged the Octagon and came
+  close to throwing a spinning elbow aimed at Song's head**. They differ on **intent**, agree that **nothing
+  landed**. Aftermath undisputed: **both sides respectful**, **Khabib Nurmagomedov helped treat a cut on Song**
+  — "(the reporting does not say where)" printed, because a draft had added "on his face" unsourced and it was
+  cut before publish. No commission/promotion comment sourced; none printed.
+- 🟢 **MMA — ESPN's "nearly 5-1 underdog at DraftKings" printed as a CHARACTERISATION, not converted.** The
+  widest price this page has recorded on any book is **+400** and **no source states a DraftKings number**.
+  **RULE: a rounded description of a price and a recorded price are different objects — do not convert one into
+  the other to make them agree.**
+- 🔴 **MARKETS — DATING A CARRIED FIGURE EXPOSED A CONTRADICTION IN ANOTHER ONE.** The pre-speech "one in
+  three" now has an origin and a date: around **mid-August** a rate-probability tool showed **~30% hike / ~70%
+  pause**, after **Goldman's Jan Hatzius (Aug 16)** called a September increase **"extremely unlikely"** citing
+  **falling retail sales and disappointing employment**, with Goldman seeing **3.50%–3.75% held through 2026**;
+  CNBC (Aug 7) had already reported September odds **tumbling after the big July jobs miss**. ⚠ The SAME
+  reporting says traders had moved a **fully-priced December hike out to January 2027** — which is **not
+  compatible** with this page's carried, undated **">70% hike by December"**. The December line is now marked
+  **CONTESTED** in the rates table and in On the Radar, **no December probability is published**, and neither
+  number is asserted. All of it is labelled **pre-Jackson-Hole**; the post-speech reads (**above 50/50**,
+  Kalshi **48%**) are unchanged. **RULE: dating a loose figure is how you find the figure it contradicts.**
+- 🟢 **MARKETS — WEEKEND, NO NEW SESSION; FRIDAY CLOSES RE-VERIFIED A NINTH TIME AND UNCHANGED** (S&P 7,711.76
+  −0.25%; Nasdaq 26,402.42 −0.52%; Dow 53,559.99 −9.45 −0.02%; Thu 7,730.99 / 26,541.35 / 53,569.44; week S&P
+  +0.5%, Nasdaq +0.9%, Dow +0.5%). Three reconciliation guards at 0.005 tolerance passed. No "as of ~";
+  **7,673.04 stayed out**; **After-Hours absent**; Chart of the Day stays **NASDAQ:PYPL**. **Fresh-tag count on
+  markets: 0.**
+- 🟢 **CYBER — AVADA VERSION DISCREPANCY RESOLVED TWO-TO-ONE, OUTLIER KEPT.** **WPScan** and **Patchstack**
+  both state **Avada ≤ 7.16 with Fusion Builder ≤ 3.16**, matching vendor-sourced reporting; **IONIX's "≤ 7.1"
+  is the lone outlier and stays printed as such**. New Argus detail: it **wrote a working PoC from scratch with
+  no human involvement** and is built to work a **single target** hunting **longer chains**. Still **not
+  KEV-listed, no in-the-wild exploitation** — printed on the row.
+- 🟢 **CYBER — BOSTON SCIENTIFIC: A PATIENT-SAFETY FINDING, SCOPED NARROWLY.** The investigation **has not
+  found any impact on implantable cardiac rhythm management device function** (company update + trade press).
+  ⚠ Printed as a finding about **device function, not data**, and as what has been found **so far**: the company
+  **remains in a network outage**, manufacturing and order processing/shipping are **still disrupted**, and the
+  **full-restoration timeline is unknown**. Devices working, logistics stopped — that is the whole of it.
+  KEV countdowns unchanged: **0 / 1 / 11 / 12**. Oracle `CVE-2026-21962` **still not carried, eighth run**.
+- ⚠ **FOUR VALIDATION GUARDS FIRED; TWO WERE REAL DEFECTS AND TWO WERE MY OWN GUARDS.** Real: **two duplicate
+  source hrefs** I introduced (a BleepingComputer Avada link and the CNBC Aug 7 link already existed) — both
+  removed, footers now 50 and 24 links with zero duplicates. Mine: a **CVE whitelist** that failed on
+  `CVE-2026-21962`, which appears **only inside its own "not carried" framing** (guard replaced with one that
+  asserts that framing), and a **Pereira/Chimaev context sweep** whose 320-char window clipped the champions-row
+  frame "Split decision over Khamzat Chimaev" (window widened to 360 and the phrase added as an accepted
+  frame). **Neither guard was relaxed; both were made to test the right thing.**
+- ⚠ **TWO SELF-CONSISTENCY FIXES IN THE FINAL READ-THROUGH.** The rates table's "As of" cell still read
+  "December read carried" while the row itself now says contested → rewritten. The index note said "three
+  different names by three different reports" while the MMA page says "across at least four reports" →
+  aligned to the page.
+- VALIDATION — **`validate_1135.py`: 199 checks, 0 failures.** Five-tab nav + masthead ids + self-stamp per
+  page; freshline stamped 11:35 with a stale-11:05 forbid and a stale-10:50 masthead forbid; all six TradingView
+  blocks plus oil and US10Y; six close figures with three arithmetic reconciliations; the payrolls two-forecast
+  family with a `90000-58000==32000` assertion; the full contested-December family; the Avada
+  two-to-one/outlier-kept family; Boston Scientific device-function scoping; McKesson record-vs-people guards;
+  a **17-id CVE whitelist** with a ≥15 liveness assertion and a `CVE-2026-21962`-in-context sweep; an
+  **eleven-name champions assertion** plus the Pereira/Chimaev context sweep; the **vacancy-rejection family**;
+  the **UFC 333 family**; the punch **three-names / stops-counting** family with a forbid on the retired tally;
+  the DraftKings characterisation family; the Usman two-account family; **index-mirrors-tldr equality for all
+  three pages**; and per-footer duplicate-href and minimum-link checks.
+- ARCHIVE — regenerated with `gen_archive_sc.py .`: **28 days, 178 timestamped rows, 534 snapshot files.**
