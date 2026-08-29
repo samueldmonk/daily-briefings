@@ -15581,3 +15581,89 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   top followed by a left on the ground**. **RULE: a counting adjective is a claim like any other, and the
   validator cannot count for you.**
 - ARCHIVE — regenerated with `gen_archive_sc.py .`: **28 days, 172 timestamped rows, 516 snapshot files.**
+
+## Added 2026-08-29 (Saturday ~9:05–9:15am ET — MORNING EDITION, weekend, THIRD run of the day; archive stamp 2026-08-29-0911)
+- CLOCK: research fetched 09:05–09:14 EDT. Gap since the previous run: ~27 minutes (Sat 8:46am). Method:
+  **targeted edits** (`edits_0915.py`, `validate_0915.py`) onto the 8:44 pages. Clone succeeded.
+- 🟢 **MMA — THE MAIN EVENT IS RESOLVED, AND IT IS AN UPSET: SONG YADONG def. UMAR NURMAGOMEDOV, KO (punch),
+  1:48 R2.** The last `Undecided` row is gone; the card is complete at 13 bouts. Song (23-9-1, 1 NC), No. 6,
+  beat the No. 3 contender and former title challenger (20-1) who had been as short as **−625** at the books
+  this page recorded. Song had said pre-fight that beating him would guarantee a title shot (MMA Mania/Yahoo).
+- ⚠ **MMA — PROVENANCE PRINTED, BECAUSE EVERY FETCHABLE PAGE WAS STILL LAGGING.** At fetch time: UFC.com's own
+  main-card results page still carried a **preview** (`article:modified_time 2026-08-28T14:03`); **Sherdog's
+  live PBP had filled in only through the main-card opener (Hasan)** — Liu Ce, Sumudaerji, Asakura, Gomes and
+  the main event were all **empty section stubs**; **MMA Fighting/Yahoo (12:18 UTC = 8:18 ET) had every
+  main-card bout EXCEPT the main event**; FIGHTMAG (09:38 UTC = 5:38 ET) was stale. Published on **three
+  separately worded searches returning identical specifics** (winner, method, round, 1:48). **RULE RE-APPLIED:
+  a corroborated result may run when the primary source is LAGGING rather than CONTRADICTING, and the lag is
+  printed.** ⚠ One of those same search summaries put the venue at "Shanghai Indoor Stadium" — **wrong, UFC.com
+  says Oriental Sports Center** — recorded as a caution that a summary can be right on the fight and wrong on
+  the furniture.
+- ⚠ **MMA — TWO METHOD DISCREPANCIES RECORDED, NEITHER RESOLVED AWAY.** MMA Fighting calls the Gomes finish
+  **"TKO (strikes)"** where the prior edition (and a third search) said **"KO (elbows and punches)"** — both
+  printed in the Method cell. MMA Fighting calls Liu Ce's finish **"KO (right hook)"** where the prior edition
+  said "KO (punch)" — the **more specific sourced form was adopted**.
+- 🔴 **MMA — A COUNT IN THE SUMMARY CONTRADICTED THE COUNT IN THE BODY, CAUGHT IN THE FINAL READ-THROUGH AFTER
+  validate PASSED.** The tldr said "**nine** of thirteen bouts finished inside the distance" while the Top Story
+  said "**Ten** of the thirteen". Correct answer is **TEN** (13 bouts, 3 decisions: Sumudaerji UD, Woodson SD,
+  Nelson UD). Fixed on both the briefing and the index card. **RULE (second consecutive edition): the validator
+  cannot count for you, and a guard written against the body string will not catch the summary.**
+- 🔴 **MMA — A SOURCING SENTENCE CONTRADICTED THE PARAGRAPH BELOW IT.** A draft said "every other bout on the
+  card is sourced to UFC.com's own pages, Sherdog's play-by-play, or both" while the next paragraph correctly
+  said the **co-main came from search results and NOT from UFC.com**. Rewritten to the true split: **the seven
+  prelims and the main-card opener** are UFC.com + Sherdog; **the four main-card bouts between the opener and
+  the co-main** come from an independent results listing. **RULE: a provenance claim must be checked against the
+  other provenance claims on the same page.**
+- ⚠ **MMA — TWO STALE "LIVE NOW" MARKERS REMOVED.** The countdown bar still read "UFC Shanghai is live now" and
+  a card still carried a `tag warn">Live now`; both now say complete. A page that resolves an event must be
+  swept for the in-progress language it was carrying.
+- 🟢 **MMA — NEW CARD ADDED: UFC FIGHT NIGHT 288 · NOCHE UFC 4, Sat Sept 12**, from Sherdog's event rail fetched
+  this run. **No venue, headliner, bout order or odds stated by any source this run and none printed** — the
+  date and the event name are the whole of what is verified. UFC 331 (Sept 19) and UFC FN 287 Paris (Sept 5)
+  unchanged; countdown still targets **2026-09-20T01:00:00Z**.
+- ⚠ **MMA — STILL NO BONUSES.** None announced in any source seen this run despite the card being complete;
+  the page says so rather than guessing. Next edition should re-check.
+- 🟢 **MMA — CHAMPIONS BOARD UNCHANGED, FORTY-SEVENTH CONSECUTIVE EDITION.** UFC Shanghai carried no title bout,
+  so no belt could move on it. All four regressions tested in champion cells only and absent.
+- 🟢 **CYBER — THE PAPERCUT STORY GOT WORSE, AND IT IS NOW THE TLDR.** watchTowr found **multiple patch bypasses
+  plus an additional authentication bypass**; one was closed in **Emergency Patch Release 2**, but the
+  researchers state **new patch bypasses affecting the LATEST, FULLY PATCHED version have been identified**.
+  The page states the consequence precisely: **applying the current patch is necessary and, on this reporting,
+  not provably sufficient** — which is why the vendor's take-it-off-the-internet advice outranks the version
+  number. **Huntress reports detecting exploitation in TWO customer environments as of Aug 27**; in one the
+  attacker ran **base64-encoded `whoami` and `ver`** commands — printed as a hunting hint.
+- 🔴 **CYBER — "HANDS-ON-KEYBOARD" WAS AN EMBELLISHMENT AND WAS CUT IN THE FINAL READ-THROUGH.** The tldr claimed
+  Huntress "confirmed hands-on-keyboard exploitation"; the source says it **detected exploitation** in two
+  customer environments and describes the commands. Interactive recon *implies* it, but no source said it.
+  Replaced with the sourced wording. **RULE: an inference that reads like a quote is a fabrication.**
+- 🟢 **CYBER — KEV BATCH RE-VERIFIED AGAINST CISA'S OWN ALERT PAGE + Security Affairs + The Hacker News, and the
+  Aug 26 batch is confirmed SIX CVEs with TWO deadlines.** Due **TODAY Aug 29 (0 days)**: `CVE-2026-8452`
+  (Citrix NetScaler) and `CVE-2019-1068` (Microsoft SQL Server RCE, Database Engine service account context).
+  Due **Sept 9 (11 days)**: `CVE-2022-0995`, `CVE-2021-23758`, `CVE-2015-5287`, `CVE-2015-3246`. Also live:
+  Aug 30 (1 day) for `CVE-2026-53362` + `CVE-2023-49105`; Sept 10 (12 days) for `CVE-2026-66384`. **BOD 26-04
+  and CISA's Forensics Triage Requirements both named by the source.** Countdowns on the page: **0/1/11/12**.
+- ⚠ **CYBER — ORACLE `CVE-2026-21962` NOT CARRIED, FOURTH CONSECUTIVE RUN.** No source restated it; it survives
+  only in the "what changed" note and on the CVE whitelist for exactly that mention.
+- 🟢 **MARKETS — WEEKEND, NO NEW SESSION; FRIDAY CLOSES RE-VERIFIED A FOURTH TIME AND UNCHANGED** (S&P 7,711.76
+  −0.25%; Nasdaq 26,402.42 −0.52%; Dow 53,559.99 −9.45 −0.02%; Thu 7,730.99 / 26,541.35 / 53,569.44; week
+  S&P +0.5%, Nasdaq +0.9%, Dow +0.5%, Dow's first winning week in three). All three reconciliation guards
+  re-run and passed. No "as of ~" anywhere; **7,673.04 stayed out**; **After-Hours asserted absent**; Chart of
+  the Day stays **NASDAQ:PYPL**. Markets page carried forward from 8:44 with stamps only — no new market
+  session exists to report.
+- VALIDATION — **`validate_0915.py`: 176 checks, 0 failures.** Guards: five-tab nav and exactly one active tab
+  per page; all four stamp ids + self-stamp JS on all four pages; **index cards asserted byte-identical to each
+  page's tldr (whitespace-normalised)**; tldr absent from index; **8 TradingView scripts across 6 widget types,
+  exactly 3 single-quote widgets**, five required tape symbols, NASDAQ:PYPL as Chart of the Day, live widgets
+  absent from index/cyber/mma; **three close-reconciliation arithmetic guards**; "as of ~" absent and "Monday,
+  August 31" required; 7,673.04 absent; After-Hours absent; a **14-id CVE whitelist that fails on any unlisted
+  identifier** plus a ≥12 liveness assertion; **9.8 absent**; both Citrix build sets + CTX696604 present; all
+  four KEV countdowns (0/1/11/12); BOD 26-04 present, BOD 22-01 only-if-superseded; champions board **parsed as
+  real `<td>` cells**, ≥11 rows, eight belts asserted by division, all four regressions tested **in champion
+  cells only**; trap greps for "Shamil Yakhyaev", "Cody Salkilld", "Abdul-Rakhman"; spelling splits present;
+  **`Undecided` asserted to be ZERO** now that the main event resolved; **`(prelim)</td>` absent** so no row
+  ships without a division label; **`tag warn">Live now` asserted absent**; an edition-stamp freshness guard
+  requiring every `tag new` to carry "9:15 AM" and asserting both "8:44 AM" and "8:40 AM" are gone.
+  ⚠ **Four prose errors were caught in the FINAL READ-THROUGH, after validate passed** — the nine/ten count
+  split, the self-contradicting provenance sentence, "hands-on-keyboard", and two stale "live now" markers.
+  **All four fixed rather than shipped.**
+- ARCHIVE — regenerated with `gen_archive_sc.py .`: **28 days, 173 timestamped rows, 519 snapshot files.**
