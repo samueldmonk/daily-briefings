@@ -15452,3 +15452,132 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   "8:40 AM"** and failing on any bare "New". ⚠ Three guards fired on the first run and **two were fixed rather than
   relaxed** (whitespace-normalised content matching; whitelist extended after reading the CVE in page context);
   the third (1.82%) was window-scoped, as on prior runs.
+
+## Added 2026-08-29 (Saturday ~8:35–8:46am ET — MORNING EDITION, weekend, SECOND run of the day; archive stamp 2026-08-29-0846)
+- CLOCK: research fetched 08:35–08:46 EDT. Gap since the previous run: ~27 minutes (Sat 8:19am). Method:
+  **targeted edits** (`edits_0845.py`, `validate_0844.py`) onto the 8:19 pages rather than a full rebuild — a
+  same-day edition existed to edit onto and the design was carried forward unchanged. Clone succeeded.
+- 🟢 **MMA — THE CO-MAIN IS RESOLVED, AND IT IS AN UPSET.** **Denise Gomes def. Yan Xiaonan — KO (elbows and
+  punches), 4:49 R1.** Gomes rocked her with an overhand right ~2:00 into the round; Yan came straight back;
+  Gomes finished late in the frame. Gomes was **+125** against a **−150** favourite and entered on a
+  **four-fight winning streak** (now five). ⚠ **PROVENANCE STATED ON THE PAGE:** this result came from
+  **post-event search results fetched this run**, corroborated across **three separate queries with identical
+  specifics**, and **NOT** from UFC.com — whose main-card page (`article:modified_time 2026-08-28T14:03`) and
+  scorecards page (`2026-08-28T13:25`) were both still pre-result at fetch time, as was **Sherdog's live
+  play-by-play** and **FIGHTMAG** (modified 09:38 UTC = 05:38 ET, before the main card began). The page says
+  so in the Top Story provenance note. **RULE APPLIED: a corroborated snippet result may be published when the
+  primary source is merely LAGGING rather than contradicting — but the lag must be printed, not hidden.**
+- 🔴 **MMA — THE MAIN EVENT IS STILL UNDECIDED, FOURTH SEPARATE FETCH.** **Umar Nurmagomedov vs. Song Yadong**
+  was not resulted by UFC.com main card, UFC.com scorecards, Sherdog PBP, FIGHTMAG, SI/FanNation, Yahoo live
+  blog, or any search query run at ~8:38, ~8:42 and ~8:50. **Exactly one `Undecided` row remains** and the
+  reason is printed. Next edition must carry it.
+- 🟢 **MMA — EVERY WEIGHT CLASS IS NOW SOURCED; THE FOUR UNLABELLED BOUTS ARE LABELLED.** Taken from UFC.com's
+  **official scorecards page headings** plus **Sherdog's published weigh-in weights**: Santiago/Lui
+  **bantamweight** (135.5/135), Nuzzi/Xiao **bantamweight** (136/135), Nelson/Ding **welterweight** (170/170),
+  Tsuruya/Borjas **flyweight** (125/126), Lima/Batbayar **flyweight** (127 missed/126), Hasan/Rojas
+  **flyweight** (124.5/124.5), Liu Ce/Rodrigues **light heavyweight** (206/206), Sumudaerji/Perez
+  **flyweight** (125/126), Asakura/Aoriqileng **bantamweight** (135.5/135.5), Gomes/Yan **women's strawweight**
+  (115/115.5). ⚠ **Polastri vs Xiong is CATCHWEIGHT, not strawweight** — **BOTH** women missed (118.5 and 117)
+  and the bout was re-made at a catchweight. The Aug 29 8:19 edition had only half of this (it said Polastri
+  missed). ⚠ An aggregated listing this run labelled Santiago/Lui **featherweight**; UFC.com and Sherdog both
+  say **bantamweight** — the aggregator is wrong and was not followed.
+- ⚠ **MMA — A METHOD DISCREPANCY, RESOLVED TO THE PRIMARY SOURCE AND PRINTED.** An aggregated results listing
+  seen this run calls the **Andre Lima** finish a **rear-naked choke**; **UFC.com's own recap AND Sherdog's
+  round-by-round both say GUILLOTINE choke** (he dove on it as Batbayar dipped his head, rolled to full mount,
+  forced the tap). Guillotine is printed; the discrepancy is disclosed on the page. **RULE: an aggregator does
+  not outrank the promotion's own recap plus a live play-by-play.**
+- ⚠ **MMA — RANKING CORRECTION, PRIMARY SOURCE WINS.** **Umar Nurmagomedov is No. 3 bantamweight**, per UFC.com's
+  own Aug 29 event copy on three separate pages ("No. 3 ranked bantamweight and former title challenger"). The
+  Aug 28 entry in this file recorded **No. 2** — **that is superseded; use No. 3.** Song Yadong **No. 6**,
+  Yan Xiaonan **No. 4**, Denise Gomes **No. 14** (all UFC.com). Gomes beating Yan closes a **ten-place** gap.
+  **No updated rankings table has been published for this card**, so no new position is asserted for anyone.
+- 🟢 **MMA — THREE FIGHTERS MISSED WEIGHT, AND THE CONSEQUENCE IS SOURCED.** Lima **127** (second miss of his
+  UFC tenure; eliminated from the bonus conversation; **forfeits 20% of his purse to Batbayar**), Xiong **117**,
+  Polastri **118.5**. **Still no bonuses announced** in any source seen this run, which is expected while the
+  main event is unresulted. Batbayar's **six-fight winning streak** ended.
+- 🟢 **MMA — NEW CARD ADDED: UFC FIGHT NIGHT 287, Sat Sept 5, ACCOR ARENA, PARIS.** **Dan Hooker vs. Salahdine
+  Parnasse** at lightweight, **13 bouts**, prelims **12:00 PM ET**, Paramount+. Also listed: Fares Ziam vs.
+  Axel Sola, Michael Page vs. Nursulton Ruziboev, Losene Keita vs. Muhammadjon Naimov. **No odds stated; none
+  printed.** UFC 331 (Sept 19, Crypto.com Arena) is unchanged and the countdown still targets
+  **2026-09-20T01:00:00Z**.
+- 🟢 **MMA — CHAMPIONS BOARD UNCHANGED, FORTY-SIXTH CONSECUTIVE EDITION.** UFC Shanghai carried **no title
+  bout**, so no belt could move on it; stated on the page. All eight named men's divisions asserted by division
+  and all four regressions (Pereira, Chimaev, Topuria, "vacant") tested **in champion cells only** and absent.
+- 🔴 **CYBER — A SECOND FEDERAL DEADLINE EXPIRING TODAY WAS MISSING FROM THE PREVIOUS EDITION.** CISA's
+  **Aug 26 batch is SIX CVEs, not one**, and **TWO** of them are due **Sat Aug 29**: `CVE-2026-8452` (Citrix
+  NetScaler, already carried) **and `CVE-2019-1068`** (Microsoft SQL Server RCE in the context of the Database
+  Engine service account) — the latter was **entirely absent** from the Aug 29 8:19 page. The remaining four are
+  due **Wed Sept 9 (11 days)**: `CVE-2022-0995` (Linux kernel OOB write), `CVE-2021-23758` (Ajax.NET
+  Professional / AjaxPro deserialization → RCE via arbitrary .NET classes), `CVE-2015-5287` (Red Hat ABRT
+  priv-esc via predictable-name symlink), `CVE-2015-3246` (Red Hat libuser race condition → /etc/passwd
+  corruption). Source: CISA alert 2026/08/26 + The Hacker News (Aug 27) + Security Affairs. **RULE: "CISA added
+  N flaws" headlines must be enumerated, not sampled — the previous edition took one CVE out of a batch of six
+  and lost a same-day deadline.** ⚠ There is **no public information on how CVE-2019-1068 is exploited**; the
+  page says so and says that is a reason to patch, not to deprioritise.
+- 🟢 **CYBER — THE CITRIX EXPLOITATION IS NOW QUANTIFIED AND HUNTABLE.** **36 exploitation attempts over 12
+  days from 12 unique attacker IPs** in Switzerland, Germany, Hong Kong, Japan, the Netherlands, Russia,
+  Singapore, Türkiye, the US and Vietnam. Observed post-exploitation: **web shells named `x.php` and `z.php`**,
+  discovery commands **`id`** and **`echo`**. Both Citrix build sets remain printed (14.1-73.32+/13.1-63.21+
+  vs 14.1-72.61/13.1-63.18/13.1-37.272) with the take-the-higher-build instruction and **CTX696604**.
+- 🟢 **CYBER — NEW THREAT ACTOR SPOTLIGHT: UAT-10147 / SPECTRE, AND IT EXPLAINS FOUR OF THE SIX KEV ADDITIONS.**
+  Cisco Talos: Chinese-speaking cybercrime group active since **early 2026**, targeting internet-facing Windows
+  and Linux web servers for **data theft and SEO fraud**, with **agentic AI wired into exploitation, recon,
+  payload generation, validation and persistence**. Recovered from actor infrastructure: **AI-generated
+  operational playbooks**, including a **nine-section ASP.NET ViewState exploitation guide** documenting a real
+  intrusion down to hostnames, IPs and **MachineKey** values; and a target list of ~**170,000 URLs**. Tooling:
+  **Metasploit, ysoserial, PentestGPT, DeepAudit**. Payload: **SPECTRE**, custom C backdoor for Windows and
+  Linux; Windows build supports **45 commands**; Linux rootkit and BYOVD capabilities. Screening Serpens
+  (Unit 42) demoted to the second card; CYFIRMA 66.6%/66% split preserved on the third.
+- 🟢 **CYBER — ENTRA ID CVE-2026-69836 ADDED TO VULNERABILITY WATCH, WITH ITS CORRECTION STORY.** **CVSS 10.0**,
+  unauthenticated network-accessible RCE in the identity backbone, **CWE-502** deserialization of untrusted
+  data, disclosed **Aug 20**. Microsoft first tagged it **"Exploited: Yes"** then **corrected the status to
+  "No" on Aug 21**; Microsoft says it fixed the issue service-side and customers need take no further action.
+  **Not KEV-listed** — stated explicitly so it is not confused with the deadline items. **9.8 asserted absent**
+  from the page by the validator, as on prior runs.
+- 🟢 **CYBER — CISA'S OWN VULNERABILITY REVIEW PRINTED AS CONTEXT:** injection weaknesses the most dominant
+  category — **7,701 CVEs in 2024, 21,019 in 2025** — and **memory safety and improper input validation appear
+  disproportionately in KEV entries** versus the full CVE population. Two of the four Sept 9 CVEs are from
+  **2015**, which the page uses as the argument in list form.
+- ⚠ **CYBER — ORACLE `CVE-2026-21962` NOT CARRIED, THIRD CONSECUTIVE RUN.** No source seen this run restated it.
+  It appears only in the "what changed" note explaining its absence, and remains on the CVE whitelist for
+  exactly that mention.
+- 🟢 **MARKETS — WEEKEND, NO NEW SESSION. Fri Aug 28 closes re-verified a third time and unchanged**
+  (S&P 7,711.76 −0.25%; Nasdaq 26,402.42 −0.52%; Dow 53,559.99 −9.45 −0.02%; Thu Aug 27 7,730.99 +0.7% /
+  26,541.35 +1.6% / 53,569.44 +0.2%; week S&P +0.5%, Nasdaq +0.9%, Dow +0.5%, Dow's first winning week in
+  three). All three reconciliation guards re-run and passed. No "as of ~" anywhere; **7,673.04 stayed out**;
+  **1.82% window-scoped to its rejection text**; **After-Hours asserted absent**.
+- ⚠ **MARKETS — TWO CONFLICTING READS OF THE SAME PayPal MOVE, BOTH PRINTED, NEITHER ADOPTED.** One report:
+  **"fell as much as 16% in premarket trading"**; another headlines a **15%** plunge. **No Friday CLOSING
+  percentage for PYPL was stated by any source seen this run and none is printed.** New detail sourced this run:
+  the board **rejected the offer as undervaluing the company**, the two sides had been **negotiating a
+  potentially higher price**, and **a future approach remains possible should conditions shift**. Bid terms
+  re-confirmed: **$60.50/share, valuing PayPal above $53bn**. **Chart of the Day stays NASDAQ:PYPL.**
+- 🟢 **MARKETS — THE FORWARD CALENDAR NOW HAS CONSENSUS NUMBERS.** August Employment Situation, **Fri Sept 4,
+  8:30 AM ET**: nonfarm payrolls **+58,000**, unemployment rate **4.1%** (unchanged), average hourly earnings
+  **+3.1% y/y**. Also next week: **ISM Manufacturing, ISM Services, JOLTS, ADP**, Eurozone flash CPI, BoC
+  decision. **Monday Aug 31 is quiet** — no major US report scheduled. Earnings: **Broadcom, Dell Technologies,
+  lululemon athletica, Palo Alto Networks, Zscaler**. CPI **Sept 11**, FOMC **Wed Sept 16, 2:00 PM ET** stand.
+  **No Fed funds target level printed** (none stated); probabilities only (~65% no change in September, >70%
+  odds of a hike by December).
+- VALIDATION — **`validate_0844.py`: 160 checks, 0 failures.** Guards: five-tab nav and exactly one active tab
+  per page; all four stamp ids + self-stamp JS on all four pages; **index cards asserted byte-identical to each
+  page's tldr** (whitespace-normalised); tldr asserted ABSENT from index; **8 TradingView scripts across 6
+  widget types, exactly 3 single-quote widgets**, five required tape symbols, **NASDAQ:PYPL as Chart of the
+  Day**, live widgets asserted absent from index/cyber/mma; **three close-reconciliation arithmetic guards**;
+  "as of ~" absent and "Monday, August 31" required; 7,673.04 absent; 1.82% window-scoped; After-Hours absent;
+  a **13-id CVE whitelist that fails on any unlisted identifier** plus a ≥13 liveness assertion; **9.8 absent**;
+  both Citrix build sets + CTX696604 present; **all four KEV countdowns (0/1/11/12) asserted**; BOD 26-04
+  present and BOD 22-01 present-but-marked-superseded; champions board **parsed as real `<td>` cells**, ≥11
+  rows, eight belts asserted by division, all four regressions tested **in champion cells only**; trap greps
+  for "Shamil Yakhyaev", "Cody Salkilld", "Abdul-Rakhman"; all four Chinese-name spelling forms present;
+  **exactly ONE "Undecided" row** with its reason text; **`"(prelim)</td>"` asserted absent** so no row can
+  ship without a division label; exactly 4 `tag pros`; **an edition-stamp freshness guard requiring every
+  `tag new` to carry "8:44 AM"** AND asserting the prior "8:40 AM" stamp is gone from all four pages.
+  ⚠ Three prose errors were caught in the FINAL READ-THROUGH, after validate passed, and all three were fixed:
+  (1) **"Eight of the twelve completed bouts ended inside the distance" — the correct count is NINE** (three
+  decisions: Sumudaerji, Woodson, Nelson); (2) **"the biggest upset on the card" was an editorial claim no
+  source made** and was replaced with the sourced fact (a fighter ten places above her in the rankings);
+  (3) the Hasan finish was described as "a straight right" when Sherdog's own text says **a right hand over the
+  top followed by a left on the ground**. **RULE: a counting adjective is a claim like any other, and the
+  validator cannot count for you.**
+- ARCHIVE — regenerated with `gen_archive_sc.py .`: **28 days, 172 timestamped rows, 516 snapshot files.**
