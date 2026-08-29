@@ -16161,3 +16161,74 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   the DraftKings characterisation family; the Usman two-account family; **index-mirrors-tldr equality for all
   three pages**; and per-footer duplicate-href and minimum-link checks.
 - ARCHIVE — regenerated with `gen_archive_sc.py .`: **28 days, 178 timestamped rows, 534 snapshot files.**
+
+## Added 2026-08-29 (Saturday ~12:05–12:12pm ET — MIDDAY EDITION, weekend, NINTH run of the day; archive stamp 2026-08-29-1212)
+- CLOCK: research fetched 12:05–12:11 EDT, archived **12:12 EDT**. Gap since the previous run: ~28 minutes
+  (Sat 11:44am). Method: **targeted edits** (`edits_1205.py`, `sources_1205.py`, `sync_index_1205b.py`,
+  `fix_1205.py`, `validate_1205.py`, `validate_1205b.py`) onto the 11:44 pages. Clone succeeded.
+- 🔴 **MMA — FOURTH RUN OF ONE QUERY, FOURTH DISTINCT FAILURE MODE; THIS ONE REFUTED ITSELF.**
+  The general champions listing again **agreed on six men's belts by NAME AND DATE** (Aspinall; Ulberg Apr 11
+  2026; Strickland May 9 2026; Makhachev Nov 15 2025; Gaethje Jun 14 2026; Volkanovski Apr 12 2025) and named
+  **Petr Yan** at bantamweight rather than repeating the 11:35 vacancy — then closed with a sentence saying
+  Makhachev **"vacated the lightweight title and now holds titles in both the welterweight and lightweight
+  divisions."** **REJECTED, and no external source was needed to reject it:** a fighter cannot have vacated a
+  belt and still hold it, so the sentence is **disqualified by its own wording**. The external check ran anyway
+  and came back clean — a fighter-specific search returns **Justin Gaethje as the undisputed lightweight
+  champion**, and the same listing had dated Gaethje's win four lines above the sentence contradicting it.
+  Tally across four consecutive runs of the identical query: **stale names (10:50) → full agreement (11:05) →
+  agreement + false vacancy (11:35) → agreement + self-contradicting two-division claim (12:05)**.
+  ⚠ **RULE ADDED: a listing that is right about six things is not thereby right about the seventh** —
+  accuracy elsewhere in a source is not evidence for the claim being checked. Board unchanged for a
+  **fifty-third consecutive edition**; agreement counter again **deliberately not restated as a number**.
+- 🟢 **MMA — NEW ITEM: THE LIGHTWEIGHT BELT IS IDLE WHILE THE ONE SONG ASKED FOR IS BOOKED.** Newly sourced:
+  **Gaethje has no title defence scheduled** and is **not expected to compete again in 2026** after stopping
+  Topuria on Jun 14; his camp does not expect a defence before **2027**. Manager **Ali Abdelaziz** says only
+  that the next fight is against "someone he's never fought before"; **Gaethje names Arman Tsarukyan** as
+  deserving the shot. ⚠ **Nothing is booked** — no opponent, no date — and the Tsarukyan line is printed as
+  **the champion's opinion, not a matchmaking decision**. Sharpens the Song callout thread: bantamweight has a
+  dated Oct 24 trilogy, lightweight has an open calendar.
+- 🟢 **CYBER — MAG: THE RESPONSE DETAIL CARRIES THE ONLY DEFENDER ACTION ON THAT ITEM.** Newly sourced: MAG says
+  **passenger safety and aviation security were not affected**; it **restricted access to affected systems**,
+  engaged **specialist cybersecurity advisers**, **notified the relevant authorities**, and has **emailed
+  affected customers warning them to be alert for phishing**. Printed with the consequence made explicit:
+  because the stolen fields are **contact details, vehicle registrations and postcodes** rather than payment
+  data, **nothing here can be cancelled or reissued** — residual risk is **targeted phishing built from real
+  booking details**, and it does not expire. McKesson: 8-K describes the investigation as **still in its early
+  stages**; company points to a **standing incident page** for updates. KEV countdowns unchanged.
+- 🟢 **MARKETS — WEEKEND, NO NEW SESSION; FRIDAY CLOSES RE-VERIFIED A TENTH TIME.** Three reconciliation guards
+  at 0.005 tolerance passed (S&P 7,711.76 −0.25%; Nasdaq 26,402.42 −0.52%; Dow 53,559.99 −9.45 −0.02%).
+  No "as of ~"; **7,673.04 stayed out**; **After-Hours absent**; Chart of the Day stays **NASDAQ:PYPL**.
+- ⚠ **MARKETS — THE FINAL READ-THROUGH CAUGHT MY OWN OVERSTATEMENT, AND IT IS THE ENTRY THAT MATTERS.**
+  The lead had been drafted "re-verified a tenth time … against a fresh search returning **the same three
+  figures**." That was **not true of this run's search**, which returned the **Dow LEVEL** (53,560, −9, −0.02%)
+  and the **S&P/Nasdaq moves as PERCENTAGES ONLY** ("slid nearly 0.3%", "declined by 0.5%") — it did **not**
+  restate the S&P and Nasdaq index LEVELS, which remain **carried**. Rewritten to say exactly that.
+  **RULE: "re-verified" must name which fields the check actually returned; a verification claim inherits the
+  narrowness of its check, not the breadth of the thing being checked.**
+- 🟢 **MARKETS — A CARRIED FLOOR REPLACED BY A SOURCED FIGURE, WITH THE DISTINCTION STATED.** The Nvidia card
+  had carried **"fell more than 3% on Friday"**; a wrap fetched this run puts it at **−4.45%** and names Nvidia
+  the session's biggest single drag. **Not a contradiction — a floor superseded by a precise value**, and
+  printed as such. Also newly sourced, Friday Aug 28 single-stock moves this page had never carried: decliners
+  **Nvidia −4.45%, 3M −2.56%, Honeywell −2.19%**; gainers **Amazon +4.02%, Salesforce +3.06%, Nike +3.02%**.
+  ⚠ **None tagged New** — the tape has been shut throughout; this is **new precision on an old session, not a
+  new move**. **Salesforce appears as a Friday gainer while its card records a Thursday spread** — flagged as
+  different days, **not netted**, same discipline as the Broadcom/Intel card.
+- 🟢 **MARKETS — THE PRE-SPEECH PAIR NO LONGER RESTS ON ONE REPORT.** A **second, differently sourced**
+  week-ahead preview states independently that before Warsh spoke the odds of the Fed **holding** in September
+  were **nearly 70%**, matching the carried near-70% pause, and **re-states the Kalshi 48%** post-speech read.
+  ⚠ The **contested December** marking is **unchanged** — corroborating the pre-speech figure does nothing to
+  resolve the December conflict, and **no December probability is published**.
+- VALIDATION — **`validate_1205.py`: 210 checks, 0 failures**, plus **`validate_1205b.py`: 26 checks, 0
+  failures (236 total)**. Five-tab nav + masthead ids + self-stamp per page; freshline stamped 12:05 with
+  stale-11:35 forbids on both freshline and masthead; all six TradingView blocks plus oil and US10Y, and a
+  no-widgets assertion on the other three pages; six close figures with three arithmetic reconciliations; the
+  tenth-verification **scoping** family incl. a forbid on the retired "same three figures" phrasing; the
+  Nvidia floor-superseded family; the six Friday single-stock figures with a **no-New-tag** assertion; the
+  corroborated pre-speech family with the contested-December marking preserved; an **11-name champions
+  assertion** plus a **Pereira/Chimaev context sweep** at 380 chars; the **fourth-check / self-contradiction**
+  family; the retained **vacancy-rejection** rule; the **UFC 333** family; the **Gaethje idle-belt** family
+  with its "nothing is booked" and opinion-scoping guards; a CVE well-formedness sweep with a ≥12 liveness
+  assertion and the `CVE-2026-21962` not-carried context sweep; MAG response/phishing family; McKesson
+  early-stages; **index-card-mirrors-tldr equality for all three pages**; and per-footer duplicate-href,
+  absolute-href and minimum-link checks (33 / 51 / 24 links, zero duplicates).
+- ARCHIVE — regenerated with `gen_archive_sc.py .`: **28 days, 179 timestamped rows, 537 snapshot files.**
