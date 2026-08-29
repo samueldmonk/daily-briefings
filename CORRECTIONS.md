@@ -16232,3 +16232,71 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   early-stages; **index-card-mirrors-tldr equality for all three pages**; and per-footer duplicate-href,
   absolute-href and minimum-link checks (33 / 51 / 24 links, zero duplicates).
 - ARCHIVE — regenerated with `gen_archive_sc.py .`: **28 days, 179 timestamped rows, 537 snapshot files.**
+
+## Added 2026-08-29 (Saturday ~12:35–12:42pm ET — MIDDAY EDITION, weekend, TENTH run of the day; archive stamp 2026-08-29-1242)
+- CLOCK: research fetched 12:35–12:41 EDT, archived **12:42 EDT**. Gap since the previous run: ~30 minutes
+  (Sat 12:12pm). Method: **targeted edits** (`edits_1235.py`, `validate_1235.py`) onto the 12:12 pages.
+  Clone succeeded.
+- 🟢 **MARKETS — THE ELEVENTH CHECK IS THE BROAD ONE THE TENTH WAS NOT, AND THAT IS THE ENTRY.**
+  The 12:05 edition had to record that its "tenth verification" returned only the **Dow level** and the
+  **S&P/Nasdaq moves as percentages**, leaving both of those **levels carried**. This run's search returned
+  **all three levels and all three percentage moves together** — S&P 500 **7,711.76 −0.25%**, Nasdaq
+  **26,402.42 −0.52%**, Dow **53,559.99 −9.45 −0.02%** — plus the weekly figures **S&P +0.5% / Nasdaq +0.9% /
+  Dow +0.5%**, and the Dow's week described as its **first winning week in three** (newly added to the page).
+  The **carried** flag on the S&P and Nasdaq levels is therefore **retired in writing**, and the page says
+  plainly that **nothing in the numbers changed between the two checks — only which fields the check
+  returned**. **RULE HELD, NOT WEAKENED:** the 12:05 rule ("a verification claim inherits the narrowness of
+  its check") is what made this run's broader result reportable as a change at all.
+- 🟢 **MARKETS — WEEKEND, NO NEW SESSION.** Three reconciliation guards at 0.005 tolerance passed. No "as of ~";
+  **7,673.04 stayed out**; **After-Hours absent**; Chart of the Day stays **NASDAQ:PYPL**; contested-December
+  marking unchanged and **no December probability published**. **Fresh-tag count on markets: 0.**
+- 🟢 **CYBER — CISA's OWN REVIEW NOW PUTS AN AGE ON THE PROBLEM, AND THIS PAGE'S DEADLINE BOARD IS THE
+  EXAMPLE.** Newly sourced (**The Register, Aug 28**, reporting CISA's 2024–2025 analysis): the most common
+  weakness classes are **injection flaws — XSS, OS command injection, SQL injection**; **improper input
+  validation** is the **single most common weakness type** across **both** the KEV catalogue and registered
+  CVEs; and **seven of the top ten weakness types in 2025** were ones already classed **"unforgivable" in
+  2007**. CISA's conclusion: **not technical difficulty** but **organisational culture, developer workflow and
+  Secure by Design gaps**. Printed against the board directly above it, where the **2015 / 2019 / 2021 / 2022**
+  CVEs carrying federal due dates **are** the finding rather than an illustration of it.
+- 🟢 **CYBER — KEV BOARD RE-CHECKED, NOTHING MOVED.** A fresh search for August 2026 KEV additions again
+  returned **no CISA alert dated later than August 26**; countdowns unchanged at **0 / 1 / 11 / 12**. The same
+  search independently surfaced **Aug 28** as a BOD 26-04 due date for **other** catalogue entries — noted as
+  consistent with per-CVE windows and **matching none of the four rows carried here**. The standing caveat is
+  restated: **"no later alert was returned" ≠ "CISA published none."** Oracle `CVE-2026-21962` **still not
+  carried, ninth run**.
+- 🔴 **MMA — THE OUTLET THAT GAVE THE PUNCH A THIRD NAME HAS NOW GIVEN IT A FOURTH, AND IT IS ITS OWN.**
+  A search this hour returns the **same national outlet** describing the finish as a **right-hand uppercut**,
+  where its report read at 11:35 AM called it a **short right hand**. ⚠ The page explicitly **declines the
+  two-two tally** this would create. **RULE ADDED: when one publication renders the same event two ways, the
+  competing descriptions are shown to be descriptions rather than findings — which retroactively justifies
+  having stopped counting rather than restarting the count.** A Yahoo Sports **uppercut** headline returned
+  this hour was **already on record** and is printed as **adding nothing**. Official method **KO (punch)**
+  remains the only primary-sourced description.
+- 🟢 **MMA — NEW POST-FIGHT DETAIL, ORDERING LEFT UNASSERTED.** Newly sourced and **not in dispute between the
+  two competing accounts**: Song **ran straight to Jon Jones to celebrate the win**. ⚠ **Neither report places
+  that moment relative to the victory lap / Usman Nurmagomedov sequence**, so the page **does not order them**.
+  A draft had written "the first thing Song did after the finish" and "at cageside" — **both cut before
+  publish as unsourced**; a guard now forbids "at cageside" on the page and on the index.
+- 🟢 **MMA — CHAMPIONS BOARD UNCHANGED, fifty-fourth consecutive edition.** No general champions query was
+  re-run this hour; the board carries forward against the standing correction and the latest event
+  (UFC Shanghai, a non-title bout). Agreement counter again **deliberately not restated as a number**.
+- ⚠ **TWO VALIDATION GUARDS FIRED; BOTH WERE MINE, NEITHER WAS RELAXED.** A whitespace-literal
+  `'not\ncarried'` check on `CVE-2026-21962` (replaced with a tag-stripped, whitespace-normalised context
+  sweep asserting **"not carried"** near **every** occurrence) and a **Pereira/Chimaev** corrective-frame
+  sweep whose accepted-frame list lacked **"superseded"** and **"regression"**, the exact words the
+  champions-verification paragraph uses (added; window widened to 420). A third guard fired on the **Jon
+  Jones** string after the sentence was rewritten mid-run — that one caught a **real** unsourced-descriptor
+  edit and was tightened rather than retargeted.
+- VALIDATION — **`validate_1235.py`: 184 checks, 0 failures.** Five-tab nav + masthead ids + self-stamp per
+  page; **12:35 fallback stamp asserted and stale-12:05 forbidden on all four pages**; all six TradingView
+  blocks plus oil and US10Y, and a **no-widgets** assertion on the other three pages; six close figures with a
+  Dow points/percent reconciliation and the three weekly figures; the **eleventh-check breadth family** incl.
+  forbids on both retired phrasings; nine KEV CVE ids plus BOD 26-04 / superseded-BOD 22-01 / liveness-caveat
+  guards; the **Oracle not-carried context sweep**; the new **CISA-review family** (unforgivable-2007,
+  seven-of-ten, input-validation superlative, Secure by Design, board-as-instance) with its five aged CVEs
+  asserted present; an **11-name champions assertion** plus the widened Pereira/Chimaev sweep; the
+  **fourth-name / same-outlet-two-ways** family with the two-two declination; the **Jon Jones** family with
+  ordering-not-asserted and cageside-forbidden guards; **index-card-mirrors-tldr equality for all three
+  pages**; a CVE well-formedness sweep with a ≥12 liveness assertion; and per-footer duplicate-href,
+  absolute-href and minimum-link checks (**52 / 24 / 33** links, zero duplicates).
+- ARCHIVE — regenerated with `gen_archive_sc.py .`: **28 days, 180 timestamped rows, 540 snapshot files.**
