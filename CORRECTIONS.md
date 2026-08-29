@@ -15891,3 +15891,113 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   READ-THROUGH after validate passed**, across four fix passes; **all eleven fixed rather than shipped, and each
   now has a guard.**
 - ARCHIVE — regenerated with `gen_archive_sc.py .`: **28 days, 175 timestamped rows, 525 snapshot files.**
+
+## Added 2026-08-29 (Saturday ~10:35–10:53am ET — MORNING EDITION, weekend, SIXTH run of the day; archive stamp 2026-08-29-1053)
+- CLOCK: research fetched 10:35–10:50 EDT, archived **10:53 EDT**. Gap since the previous run: ~19 minutes
+  (Sat 10:16am). Method: **targeted edits** (`edits_1050_cy.py`, `edits_1050_ws.py`, inline MMA/index patches,
+  `validate_1050.py`) onto the 10:20 pages. Clone succeeded.
+- 🔴 **MMA — THE STORY OF THIS RUN IS A CHAMPIONS-BOARD NEAR-MISS, AND THE STANDING FILE IS WHAT CAUGHT IT.**
+  A fresh general search for current UFC champions returned, as its **leading result, ESPN's own
+  current-champions article naming ALEX PEREIRA at light heavyweight (Oct 4 2025) and KHAMZAT CHIMAEV at
+  middleweight (Aug 16 2025)** — **exactly the two regressions this file exists to prevent**. Both are
+  superseded: **Ulberg KO1 Procházka at 3:45 R1, UFC 327, Apr 11 2026** (vacant title) and **Strickland
+  split-decision over Chimaev, UFC 328, May 9 2026**, both re-confirmed by a second targeted search this run.
+  **The board was not changed and the near-miss is printed on the page.** ⚠ **This edition does NOT extend the
+  ESPN-agreement counter** (the snippet *disagreed*); the board is unchanged for a **fiftieth consecutive
+  edition**, and the page states that *unchanged* and *re-confirmed* are different claims. **RULE re-proved: a
+  champions listing that predates the most recent title fight is wrong however authoritative the masthead —
+  compare title DATES against later events before copying names.** Newly sourced: **Ulberg is recovering from
+  an ACL tear and is not expected back until early 2027** (CBS Sports), which is why his defence count is 0.
+- 🔴 **A SILENT EDIT-SCRIPT LOSS, AND IT COST SEVEN FIXES.** My MMA fix script used `raise SystemExit(1)` on any
+  failed match **before** the file write, so when two of nine replacements missed on line-wrapping, **the seven
+  that had matched were discarded too** while the script had already printed a success line for an earlier
+  batch. Only the final read-through's own stale-phrase sweep caught it. **RULE: an edit script must write the
+  edits it did make and report the ones it did not — never make a partial success into a total rollback, and
+  never trust a success message printed before the write.** All seven were re-applied and each now has a
+  `hasnt` guard naming the exact stale phrase.
+- 🔴 **CYBER — NEW TOP STORY: McKESSON, AND THE HEADLINE NUMBER IS A ROW COUNT, NOT A PEOPLE COUNT.** McKesson
+  disclosed a cybersecurity incident in a **Form 8-K with the SEC**, **discovered Aug 25 2026**, investigation
+  **in its early stages**, involving **third-party applications and unauthorised access and exfiltration**;
+  **not yet determined material**; customers warned of **intermittent service degradation**; company **not
+  proactively disconnecting systems**. It has **not** disclosed which applications, how access was gained, or
+  what was taken. **ShinyHunters** claims: **vishing multiple employees → Okta SSO → Salesforce and Snowflake**;
+  **~1TB over four days, Aug 21–25**; ransom **$55,236,150** with a 72-hour deadline, **unanswered**. ⚠ **The
+  284 million figure was AMENDED BY THE ATTACKER**: earlier reporting said 284M *patients*; ShinyHunters
+  clarified it is a **raw count of ~284M records/lines** and that it **does not know how many unique people**
+  are in them. **Both printed; neither published as a victim count.** Lure domain **mckesson[.]claims**, matching
+  a **ReliaQuest**-documented `company[.]claims` pattern (post since deleted). BleepingComputer states it has
+  **not independently verified** the claims, and the claimed data-category list is printed **as an allegation**.
+  Health-ISAC warning + Medtronic / DentaQuest / iRhythm / OneMedical / AdaptHealth named as other targets.
+  **PaperCut demoted to a second, explicitly Carried panel — not deleted.**
+- 🟢 **CYBER — NEW IN VULNERABILITY WATCH: THREE SIMULTANEOUS UBIQUITI 10.0s**, patched **Aug 26 2026**:
+  **CVE-2026-77537** (UniFi Protect, improper input validation, unauthenticated compromise), **CVE-2026-77550**
+  (UniFi OS, **CRLF injection** → auth bypass), **CVE-2026-77554** (UniFi Talk, command injection). **No
+  credentials, no user interaction.** ⚠ **None is KEV-listed and no source states in-the-wild exploitation —
+  both facts printed on every row.** Severity, not exploitation, is why they are on the page.
+- 🟢 **CYBER — KEV CHECKED FROM THE OTHER END THIS RUN, AND THE LIMIT OF THE CHECK IS PRINTED.** The 10:20
+  edition's direct CISA fetch had returned an empty body; this run a search for August 2026 KEV additions
+  returned CISA's own alert pages for **Aug 7 (1), Aug 11 (3), Aug 18 (4), Aug 20 (2) and Aug 26 (6)** and **no
+  alert dated later than Aug 26**. ⚠ The page states explicitly that **"no later alert was returned" is not the
+  same as "CISA published none"**. Countdowns unchanged: **0 / 1 / 11 / 12**. Oracle `CVE-2026-21962` **not
+  carried, seventh consecutive run**.
+- 🟢 **MARKETS — A THIRD READ ON THE SEPTEMBER RATE CALL THAT RECONCILES THE OTHER TWO RATHER THAN ADDING A
+  FOURTH FIGURE.** CNBC's analysis of the Jackson Hole speech: odds of a September hike were **about one in
+  three before Warsh spoke** and **above 50/50 after**. ⚠ **The pre-speech figure is the complement of the
+  "nearly 70% holding" reading the earlier editions carried** — the same moment from the other side, *not* a
+  contradiction, and the page says so. Post-speech reads **do** differ (**above 50/50** vs Kalshi's **48%**):
+  close, differently sourced, **neither adopted, nothing averaged**. Warsh substance newly sourced: inflation
+  **above the 2% goal**, **may need to raise rates in coming months**, the speech framed as his answer to a
+  **muddled July news conference** — printed alongside the equally sourced point that he **gave no indication
+  of where rates should be** and **declined to state conditions for a policy change**. Both characterisations
+  kept; they are not in conflict.
+- 🟢 **MARKETS — WEEKEND, NO NEW SESSION; FRIDAY CLOSES RE-VERIFIED A SEVENTH TIME AND UNCHANGED** (S&P
+  7,711.76 −0.25%; Nasdaq 26,402.42 −0.52%; Dow 53,559.99 −9.45 −0.02%; Thu 7,730.99 / 26,541.35 / 53,569.44;
+  week S&P +0.5%, Nasdaq +0.9%, Dow +0.5%). Three reconciliation guards re-run at 0.005 tolerance and passed.
+  No "as of ~"; **7,673.04 stayed out**; **After-Hours absent**; **1.82% window-scoped**; Chart of the Day stays
+  **NASDAQ:PYPL** and the page now says it has stayed there **since 8:19** rather than implying it moved today.
+  **Fresh-tag count on markets: 0**, and the movers note says why.
+- 🟢 **MMA — SONG'S CALLOUT IS THE NEW ITEM, AND IT IS PRINTED AS A CALLOUT.** Post-fight he **asked for the
+  title shot outright** and **vowed to become the first male UFC champion from China** (LowKickMMA, Aug 29).
+  ⚠ **Nothing announced; the page refuses to treat a callout as a booking** and points at **Petr Yan** on the
+  board and the absence of any bantamweight title bout from the Fight Week section.
+- ⚠ **MMA — THE PUNCH IS NOW TWO ACCOUNTS TO ONE AND STILL NOT ADOPTED.** A third independent report backs the
+  **uppercut** version (Song stuffed the takedowns, landed an uppercut as Nurmagomedov shot again, then
+  ground-and-pound); the 9:40 account's **hook** stands alone. **Both still printed** — a 2-to-1 count of
+  secondary reports is not a primary source and the official method, **KO (punch)**, does not distinguish them.
+  New first-round detail from the same report: **Nurmagomedov took him down and held top control, Song threatened
+  the neck, Nurmagomedov escaped, Song stood back up** — consistent with the wrestling-led-round description.
+- 🟢 **MMA — "SECOND PROFESSIONAL MMA LOSS" IS NOW SOURCED, AND THE OLD CAVEAT IS WITHDRAWN ON THE PAGE.**
+  Earlier editions printed the figure while stating it was a derivation from the pre-fight 20-1 record; a
+  post-event report this run states it outright. The withdrawal is written, not silently deleted.
+- ⚠ **MMA — UFC.COM BEHIND ON A SEVENTH CONSECUTIVE FETCH** (`article:modified_time` still **2026-08-28T14:03**,
+  now >4h after the main event; its results page still carries six future-tense previews under the line "this
+  page will be updated live"). Newly attributed to UFC.com from this run's fetch: Song **coming off a submission
+  win in Macau earlier this year**, **Aoriqileng fighting in his own city** with Asakura's first UFC win on that
+  same Macau card, and **Liu Ce entering his debut 3-1 with a 100% finish rate**.
+- 🔴 **ELEVEN STALE ATTRIBUTIONS CAUGHT IN THE FINAL READ-THROUGH, FIFTH CONSECUTIVE EDITION OF THIS FAMILY.**
+  Cyber: PaperCut "re-verified … this run", Citrix "the source seen this run", Screening Serpens "material seen
+  this run", and a KEV note pointing at "the board below" when the board is above. Markets: PayPal "reporting
+  seen this run", "Chart of the Day moves … the only single-name story sourced fresh this run", "the 10-year
+  figure comes with an explicit cause this run", and a Lead line saying the rate pricing turned over at 9:40
+  "not this one" after it had gained a third read at 10:50. MMA: "it finished between this edition and the last
+  one", "printed here for the first time", "this is the edition that could print them", "Three of the four cards
+  … the Bilal Hasan card is tagged Updated" (it is tagged Carried), plus a stale ESPN-agreement counter. **All
+  rewritten to name the edition that actually did the work; each now has a named `hasnt` guard.**
+- ⚠ **AN UNVERIFIABLE SUPERLATIVE CUT BEFORE PUBLISH.** A draft threat-level line called McKesson "the largest
+  claimed healthcare data theft on this page all week" — which would compare a **record** count against the
+  **people** counts on the CareCloud and MAG cards. **RULE: do not rank quantities that are not the same
+  quantity.** Rewritten to say only that it is the biggest new item and was reached by phone calls rather than
+  by any software flaw. The stat strip was also trimmed back to four figures.
+- VALIDATION — **`validate_1050.py`: 309 checks, 0 failures.** Carries the guard families from
+  `validate_1020.py` plus: McKesson record-vs-people guards (the victim-count refusal is asserted verbatim);
+  a **16-id CVE whitelist** with a ≥15 liveness assertion; per-row Ubiquiti KEV/exploitation disclaimers;
+  the KEV "not the same as CISA having published none" disclosure; the three-read rate guards including the
+  one-in-three/two-in-three reconciliation sentence; **exact per-page fresh-tag counts (cyber 1, markets 0,
+  MMA 1)** each required to carry "10:50 AM"; a **champions near-miss family** asserting the rejected names,
+  their superseding events, "the board was not changed", the refusal to extend the agreement counter, and a
+  context sweep requiring every occurrence of "Pereira"/"Chimaev" to sit beside its rejection or interim
+  framing; a **forty-ninth-counter guard** allowing that figure only inside its historical attribution; and
+  **eleven named stale-attribution greps**. ⚠ **Three guards fired on the first pass and all three were fixed
+  rather than relaxed** — two were **my own guards written against raw markup** (whitespace-normalised), one
+  was a real duplicate-link defect (5 duplicate hrefs removed from the MMA sources list).
+- ARCHIVE — regenerated with `gen_archive_sc.py .`: **28 days, 176 timestamped rows, 528 snapshot files.**
