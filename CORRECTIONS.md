@@ -15308,3 +15308,147 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
 - 🟢 **MMA — DWCS SEASON 10:** 10 contracts over the first two weeks, covering every men's division **except bantamweight**. New prospects: **Sean Clancy Jr.** (stopped **Gary Balletto** r2, wk 3), **Alex Apodaca** (beat **Bella Mir** Aug 25, described as the biggest upset in the show's history), **Kaik Brito** (flying knee :12 of r3 over **Namo Fazil**, wk 2). ⚠ **Balletto/Balleto split preserved on the page; this run's source says Balletto and neither form is adopted.** Wk 1: Wint (34s), Hasan (<1 min), Pagliarulo, Kropschot.
 - VALIDATION — **`validate.py`: 154 checks, 0 failures.** Guards: five-tab nav and exactly one active tab per page; all three stamp-pill ids + freshline + self-stamp JS on all four pages; **index cards asserted byte-identical to each page's tldr**; tldr strip asserted ABSENT from index; **8 TradingView script tags across 6 widget types, exactly 3 single-quote widgets**, five required tape symbols, **NASDAQ:MRVL as Chart of the Day**, live widgets asserted **absent** from index/cyber/mma; **four independent close-reconciliation arithmetic guards**; "official closing figures" required and any intraday "as of ~" marker forbidden on a post-close page; 1.82% and 7,673.04 asserted absent; declined after-hours percentages asserted absent while the tickers are asserted present; **a 6-id CVE whitelist that fails on any unlisted identifier** plus a ≥6 liveness assertion; Aug 29 required in ≥4 places; **BOD 26-04 present, BOD 22-01 absent**; all three KEV countdowns (1/2/13 days) asserted; champions board **parsed as real `<td>` cells**, ≥11 rows, all eleven names asserted present and all four regressions tested **in champion cells only**; trap greps for "Shamil Yakhyaev", "Cody Salkilld", "Abdul-Rakhman"; **both Balletto/Balleto spellings asserted present**; gate arithmetic ($3,300,000 / 16,867 ≈ $196) asserted and the derivation required to be labelled; **an edition-stamp freshness guard requiring every `tag new` to carry "7:00 PM"**, with the three green `tag pros` design tags explicitly exempted rather than the guard weakened.
 - ARCHIVE — regenerated with `gen_archive_sc.py .`: **27 days, 170 timestamped rows, 510 snapshot files.** `gen_archive.py` remains BROKEN.
+
+## Added 2026-08-29 (Saturday ~8:05–8:45am ET — MORNING EDITION, weekend, first run of the day; archive stamp below)
+- CLOCK: research fetched 08:05–08:45 EDT. Gap since the previous run: ~13.5 hours (Fri 7:04pm). Method:
+  **full rebuild** (`common.py`, `ws.py`, `cy.py`, `mma.py`, `idx.py`, `validate.py`) — no same-day page existed
+  to edit onto. Clone succeeded in the foreground.
+- 🟢 **MARKETS — WEEKEND. NO NEW SESSION.** Friday Aug 28 closes **re-verified by fresh search this run** and
+  unchanged: **S&P 500 7,711.76 −0.25%; Nasdaq Composite 26,402.42 −0.52%; Dow 53,559.99 −9.45 pts −0.02%**;
+  Thu Aug 27: **7,730.99 +0.7% / 26,541.35 +1.6% / 53,569.44 +0.2%**. Week: S&P +0.5%, Nasdaq +0.9%, Dow +0.5%
+  (Dow's first winning week in three). All three reconciliation guards re-run and passed. **No intraday "as of ~"
+  marker appears anywhere on the page** and the Lead states plainly that markets are closed and reopen Mon Aug 31.
+- 🟢 **MARKETS — NEW LEAD ITEM: STRIPE AND ADVENT ABANDON THEIR PayPal PURSUIT.** Bid worth **more than $50bn**,
+  **$60.50 per share**, valuing PayPal **above $53bn**; board judged it too low and had **not sent any formal
+  reply**; **Block** was in the original April approach but left the group before the bid. **PYPL fell as much as
+  16% in PREMARKET trading Friday** — ⚠ labelled premarket in three places; **no Friday closing percentage for
+  PYPL was stated by any source and none is printed.** **Chart of the Day moves MRVL → NASDAQ:PYPL**, with the
+  page stating that the 16% is a premarket figure and the chart shows the traded session.
+- 🟢 **MARKETS — NVIDIA'S QUARTER IS NOW SOURCED WITH NUMBERS:** EPS **$2.22** vs **$2.09** consensus; revenue
+  **$96.22bn** for the quarter ended July 2026, **4.82%** above consensus; guidance for **70% revenue growth in
+  fiscal 2028**. The Friday **−3%+** share move is **carried from CORRECTIONS**, explicitly labelled as carried
+  rather than restated this run.
+- ⚠ **MARKETS — BROADCOM +4.5% AND INTEL +4.4% ARE THURSDAY FIGURES, NOT FRIDAY.** The Zacks recap that carries
+  them describes the Aug 27 session. The page labels them Thursday and notes that Intel was *also* named among
+  Friday's semiconductor decliners — **the two facts sit on different days and are not netted.**
+- 🟢 **MARKETS — A FOURTH, FIFTH AND SIXTH READ ON SALESFORCE, STILL NOT RESOLVED.** New this run: **CRM +22.6%**
+  (Thursday). The page now records **11.2%, 19%, 22.6%, 22.68%, 22.75%, 22.87%** for the same session.
+  **None asserted, none averaged.**
+- 🟢 **MARKETS — 10-YEAR YIELD NOW HAS A CAUSE ATTACHED:** ~**4.67%** Friday, having climbed to **4.73%** after
+  Warsh warned inflation has not meaningfully slowed. 2s **4.24%** / 30s **5.20%** remain **dated Aug 27** on the
+  page. WTI ~**$83**, Brent ~**$88** (Aug 28) — consistent with the prior run's $82.82 / $88.22. ⚠ **No Fed funds
+  target level is printed** — none was stated this run; the page prints **probabilities** instead: ~**65%** odds of
+  no change in September, **>70%** odds of a **hike** by December. **"Energy down 1.82%" did not reappear** and
+  stays unpublished (rejections: 11:35, 12:05, 2:21, 2:41, 4:05). **7,673.04 stayed out.**
+- 🟢 **MARKETS — FORWARD CALENDAR SOURCED THIS RUN:** Employment Situation **Fri Sept 4, 8:30 AM ET**; ISM
+  Manufacturing and ISM Services PMIs, Eurozone flash CPI and a BoC decision in the same week; **CPI Fri Sept 11**;
+  **FOMC Wed Sept 16, 2:00 PM ET**.
+- 🔴 **CYBER — THE CITRIX DEADLINE IS TODAY AND THIS IS ITS LAST EDITION.** `CVE-2026-8452` (NetScaler ADC/Gateway,
+  **CVSS v4.0 8.8**) was added to KEV **Aug 26** and is due **Sat Aug 29** — countdown reads **0 days left / due
+  today**, in the crit-bordered Patch Priority box. Newly sourced mechanism: **pre-auth heap memory overflow in the
+  code that parses SAML SSO messages in the AAA service**; web shells and discovery activity observed on
+  compromised appliances.
+- ⚠ **CYBER — A FIXED-BUILD DISCREPANCY, PRINTED AND RESOLVED TOWARD THE SAFE SIDE.** This run's source gives
+  **14.1-73.32+ / 13.1-63.21+** (plus FIPS and NDcPP builds); the Aug 28 edition carried **14.1-72.61 /
+  13.1-63.18 / 13.1-37.272**. **Both printed, neither discarded**; the page tells the reader to take the higher
+  build in each train and names the asymmetry (if the newer numbers are right, the older leave you exposed; if the
+  older sufficed, the newer costs nothing) and points at Citrix advisory **CTX696604**. Same rule as the Aug 27
+  KEV-date conflict. **RULE re-applied: an asymmetric-cost disagreement is resolved toward the safe side ON THE
+  PAGE, with both readings shown.**
+- 🟢 **CYBER — TOP STORY MOVES ON WITHIN THE SAME INCIDENT: PAPERCUT'S FIRST EMERGENCY PATCH WAS BYPASSED.**
+  Current builds are **Emergency Patch Release 2**, published **Aug 28**, after PaperCut worked with **watchTowr**
+  and **Huntress** to close bypasses of the earlier patches; patches now cover **NG/MF v24, v25 and v26** on
+  Windows, Linux and macOS. CVE details corroborated independently this run: **CVE-2026-81578** auth bypass **8.8**
+  (web management interface), **CVE-2026-82078** unsafe dynamic class loading **9.4** (database connection
+  utilities, driver class names not checked against an allowlist); chain attributed to watchTowr's **Jake Knott**.
+  **Still unstated and still unprinted: actor, victim count, ransomware link, exposure count.**
+- 🟢 **CYBER — THE ownCloud DEADLINE ARRIVED, VINDICATING THE PRIOR EDITION'S REFUSAL.** `CVE-2023-49105` now has a
+  sourced due date of **Aug 30**, alongside `CVE-2026-53362` (Linux kernel); `CVE-2026-66384` (JFrog Artifactory,
+  **CVSS 5.3**, Docker-cache path traversal) is due **Sept 10**. The Aug 28 page had printed no countdown for
+  ownCloud and said a missing deadline is not the same as no deadline — **that was correct.** Countdowns published:
+  **0 / 1 / 12 days** from Aug 29. **BOD 26-04 present, BOD 22-01 named only as superseded.**
+- ⚠ **CYBER — ORACLE `CVE-2026-21962` IS AGAIN NOT CARRIED**, second consecutive run — no source seen this run
+  restated it. It appears on the page **only** in the "what changed" note explaining its absence, and the CVE
+  whitelist guard was extended by one id to cover exactly that mention.
+- 🟢 **CYBER — TWO BREACH CARDS FULLY SOURCED THIS RUN.** **Manchester Airports Group (8.7M)**: car park, lounge,
+  Fast Track bookings and in-airport Wi-Fi sign-ups at Manchester / London Stansted / East Midlands; **email
+  addresses, phone numbers, vehicle registrations, postcodes**; **no bank or payment details held**; Manage My
+  Booking suspended, flights unaffected. **Boston Scientific**: incident identified **Aug 25**, global disruption,
+  order-processing and shipping systems hit, **pacemaker and cardiac stent shipments to hospitals halted**, no
+  restoration timeline, **Piper Sandler** suggests all products shipping again in **under three weeks**. **No actor,
+  ransom demand or data-theft claim stated for Boston Scientific; none printed.**
+- 🔴 **CYBER — THREE LEAK-SITE LISTINGS PUBLISHED AS CLAIMS, WITH THE TRACKER'S OWN CAVEAT QUOTED.** Tennessee
+  Medical Association (listed Aug 28, attack est. Aug 27), Caduceus Medical Group (Aug 28), ETNA Software (Aug 27),
+  inside **49 newly surfaced breaches in 24 hours**. The tracker itself states such listings are third-party claims
+  that may be unverified and that a listing does not confirm a breach — **that caveat is printed on the card**.
+  **No victim counts or data categories printed for any of the three.** This is a change of method from Aug 28,
+  where two similar listings were dropped entirely: they are included here **only because the caveat travels with
+  them on the page**.
+- 🟢 **CYBER — NEW THREAT ACTOR SPOTLIGHT: Screening Serpens** (Iran-nexus, Unit 42), targeting the **US, Israel
+  and the UAE** and likely two further Middle Eastern entities. ⚠ **No malware family, initial-access vector,
+  victim count or date range was stated and none is printed** — the page says the finding is the targeting set, not
+  a technical profile. Second card: CYFIRMA via Industrial Cyber puts **energy and utilities in 66.6%** of observed
+  APT campaigns over three months — ⚠ **the headline rounds it to 66%; both forms recorded, neither adopted.**
+  Mustang Panda, Lazarus and Sandworm named as active.
+- 🟢 **MMA — THE CARD IS RUNNING DURING THE EDITION.** UFC Fight Night: Nurmagomedov vs Song, **Sat Aug 29,
+  Oriental Sports Center, Pudong District, Shanghai**; prelims **3:00 AM ET**, main card **6:00 AM ET**,
+  Paramount+. **All seven prelims official on UFC.com; four main-card bouts resulted in sources fetched this run;
+  six of the eleven ended inside the distance.**
+- 🔴 **MMA — THE TWO BIGGEST FIGHTS ARE MARKED UNDECIDED ON THE PAGE RATHER THAN OMITTED.** Neither
+  **Yan Xiaonan vs Denise Gomes** (co-main) nor **Umar Nurmagomedov vs Song Yadong** (main) was resulted by any
+  source fetched this run — UFC.com's own main-card page still carried previews for both at fetch time
+  (article:modified_time 2026-08-28T14:03). **Three separate searches at ~8:20, ~8:32 and ~8:45 all came back
+  pre-result.** Both appear as **Undecided** rows with the reason stated. **RULE: a gap the reader can see beats a
+  gap they cannot.** The next edition must carry them.
+- 🟢 **MMA — RESULTS VERIFIED THIS RUN.** Main card: **Kai Asakura def. Aoriqileng, KO (head kick and strikes),
+  0:34 R2**; **Sumudaerji def. Alex Perez, UD (29-28 ×3)**; **Liu Ce def. Levi Rodrigues Jr., KO (punch), 4:26 R1**;
+  **Bilal Hasan def. Nilson Rojas, KO (straight right), 2:28 R2**. Prelims (UFC.com's own page): **Andre Lima def.
+  Namsrai Batbayar, submission (guillotine choke), 3:03 R3**; **Rei Tsuruya def. Kevin Borjas, submission (RNC),
+  4:14 R1**; **Sean Woodson def. Jack Jenkins, split decision (29-28, 28-29, 29-28)**; **Francesco Nuzzi def. Xiao
+  Long, TKO (strikes), 1:00 R1**; **Hector Santiago def. Lawrence Lui, KO (strikes), 0:53 R2**; **Julia Polastri
+  def. Xiong Jingnan, KO (head kick), 3:06 R1**; **Cam Nelson def. Ding Meng, UD (29-28 ×3)**. ⚠ **Weight classes
+  printed only where a source stated one — four bouts carry no division label.**
+- ⚠ **MMA — NO BONUSES PRINTED, AND THE REASON IS STATED.** None announced in any source seen this run, which is
+  expected before the main event. UFC.com does state **Andre Lima missed weight for the second time in his UFC
+  tenure, eliminating himself from the bonus conversation**, and that **Julia Polastri also missed weight** — both
+  printed. Lima is **5-1 in the UFC** and suffered **the first loss of his career in June**.
+- 🟢 **MMA — FOUR NEW PROSPECT CARDS, ALL FROM THIS CARD:** **Bilal Hasan** (9-0, 1 NC; DWCS S10; debuted **under
+  three weeks** after his contract; KO'd fellow unbeaten Rojas), **Rei Tsuruya** (24; **two first-round submissions
+  in three months**), **Cam Nelson** (**three weeks' notice**, six-fight streak, **first competitor from Prince
+  Edward Island to compete and win in the Octagon**), **Francesco Nuzzi** (**12th and biggest win**, one-minute TKO
+  on debut). ⚠ Two of three Road to UFC winners on the card (Lui, Batbayar) **lost their debuts**.
+- ⚠ **MMA — SPELLING SPLITS PRESERVED AND NOW EXPLAINED.** Page carries **Aoriqileng / Qileng Aori** and
+  **Sumudaerji / Su Mudaerji**. Newly noted: **UFC.com's article text uses "Sumudaerji" while its own athlete URL
+  reads `su-mudaerji`** — the split exists *inside the primary source*, which is why neither form is adopted.
+- 🟢 **MMA — CHAMPIONS BOARD: SIXTH CONSECUTIVE RUN OF ESPN AGREEMENT** on all six men's belts heavyweight
+  through featherweight. **Joshua Van independently corroborated this run** by the UFC 331 listing describing him
+  as the current flyweight champion. Bantamweight and the three women's belts carried from this file. **UFC
+  Shanghai carries no title bout, so no belt can move on it** — stated on the page. **Board unchanged for a
+  forty-fifth consecutive edition.** All four regressions tested in champion cells only and absent.
+- 🟢 **MMA — UFC 331 FULLY SOURCED THIS RUN:** **Sat Sept 19, Crypto.com Arena, Los Angeles**, **13 fights**,
+  prelims **6 PM ET** / main card **9 PM ET**, Paramount+. **Van vs Pantoja 2** for the flyweight title (Van won it
+  **TKO :26 R1 at UFC 323, Dec 2025, after an arm injury to Pantoja**); co-main **Tsarukyan (No. 2) vs Ruffy
+  (No. 10)**, five rounds. **No odds stated for this card; none printed.** Countdown bar targets
+  **2026-09-20T01:00:00Z** and is labelled "next numbered card", with the page saying separately that Shanghai is
+  live now.
+- ⚠ **MMA — NO BUSINESS FIGURES AT ALL, AND THAT IS THE ENTRY.** No viewership, gate, attendance, purse or TKO
+  Group number was stated for either card. The Rankings & Business section says so explicitly rather than being
+  padded.
+- VALIDATION — **`validate.py`: 164 checks, 0 failures.** Guards: five-tab nav and exactly one active tab per page;
+  all four stamp ids + self-stamp JS on all four pages; **index cards asserted byte-identical to each page's tldr**;
+  tldr strip asserted ABSENT from index; **8 TradingView script tags across 6 widget types, exactly 3 single-quote
+  widgets**, five required tape symbols, **NASDAQ:PYPL as Chart of the Day**, live widgets asserted **absent** from
+  index/cyber/mma; **three independent close-reconciliation arithmetic guards**; "as of ~" asserted **absent** from
+  a closed-market page and "Monday, August 31" required; 1.82% window-scoped to its rejection text; 7,673.04
+  asserted absent; **After-Hours asserted absent** on a weekend-morning page; a **7-id CVE whitelist that fails on
+  any unlisted identifier** plus a ≥7 liveness assertion — it caught `CVE-2026-21962` in the Oracle-absence note,
+  which was read in context before being whitelisted; **9.8 asserted absent**; both Citrix build sets asserted
+  present; all three KEV countdowns (0/1/12) asserted; BOD 26-04 present and BOD 22-01 present-but-marked-
+  superseded; champions board **parsed as real `<td>` cells**, ≥11 rows, eight named belts asserted by division and
+  all four regressions (Pereira, Chimaev, Topuria, "vacant") tested **in champion cells only**; trap greps for
+  "Shamil Yakhyaev", "Cody Salkilld", "Abdul-Rakhman"; **all four spelling forms (Aoriqileng/Qileng Aori,
+  Sumudaerji/Su Mudaerji) asserted present**; **exactly two "Undecided" rows** with their reason text required;
+  exactly 4 green `tag pros` design tags; **an edition-stamp freshness guard requiring every `tag new` to carry
+  "8:40 AM"** and failing on any bare "New". ⚠ Three guards fired on the first run and **two were fixed rather than
+  relaxed** (whitespace-normalised content matching; whitelist extended after reading the CVE in page context);
+  the third (1.82%) was window-scoped, as on prior runs.

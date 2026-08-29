@@ -5,7 +5,7 @@
 <style>:root{
   --bg:#0c0c0e; --panel:#151519; --line:#25252b;
   --acc:#d8d4cf; --acc2:#8fb8d8;
-  --fg:#e9e6e2; --mut:#93908c;
+  --fg:#e9e6e2; --mut:#8f8c88;
   --up:#3fbf7f; --down:#e05a5a; --warn:#d9a441; --crit:#e0483f;
   --mono:'SF Mono',ui-monospace,Menlo,Consolas,monospace;
 }
@@ -50,6 +50,7 @@ h2.sec{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transfo
 .tag{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
   padding:3px 8px;border-radius:5px;background:rgba(255,255,255,.05);color:var(--mut);border:1px solid var(--line)}
 .tag.new{color:var(--up);border-color:rgba(63,191,127,.45);background:rgba(63,191,127,.08)}
+.tag.pros{color:var(--up);border-color:rgba(63,191,127,.45);background:rgba(63,191,127,.08)}
 .tag.crit{color:var(--crit);border-color:rgba(224,72,63,.45);background:rgba(224,72,63,.08)}
 .tag.warn{color:var(--warn);border-color:rgba(217,164,65,.45);background:rgba(217,164,65,.08)}
 .tag.acc{color:var(--acc);border-color:var(--line)}
@@ -89,37 +90,36 @@ footer .srcs{font-size:12.8px;color:var(--mut);line-height:1.85;word-break:break
 .c-cy{border-top-color:#22d3a8} .c-cy .kick,.c-cy h3,.c-cy a.go{color:#22d3a8} .c-cy:hover{border-color:#22d3a8}
 .c-ws{border-top-color:#caa64a} .c-ws .kick,.c-ws h3,.c-ws a.go{color:#caa64a} .c-ws:hover{border-color:#caa64a}
 .c-ws h3{font-family:Georgia,'Times New Roman',serif}
-.c-mm{border-top-color:#e84545} .c-mm .kick,.c-mm h3,.c-mm a.go{color:#e84545} .c-mm:hover{border-color:#e84545}
-</style></head>
+.c-mm{border-top-color:#e84545} .c-mm .kick,.c-mm h3,.c-mm a.go{color:#e84545} .c-mm:hover{border-color:#e84545}</style></head>
 <body><div class="wrap">
 <header class="masthead">
 <h1 class="brand">Daily Briefings</h1>
 <p class="tagline">Three desks, refreshed through the day &mdash; security, markets and the fight game</p>
 <div class="meta">
 <span class="pill live"><span class="dot"></span>Live</span>
-<span class="pill" id="edition">Afternoon Edition</span>
-<span class="pill" id="datestamp">Friday, August 28, 2026</span>
-<span class="pill">Updated <span id="updated">7:00 PM ET</span></span>
+<span class="pill" id="edition">Morning Edition</span>
+<span class="pill" id="datestamp">Saturday, August 29, 2026</span>
+<span class="pill">Updated <span id="updated">8:40 AM ET</span></span>
 </div>
-</header><div class="freshline" id="freshline">Data as of 7:00 PM ET</div><nav class="tabs"><a href="index.html" class="on">★ Front Page</a><a href="cyber-briefing.html" class="">⛨ The Cyber Wire</a><a href="wallstreet-briefing.html" class="">▲ The Closing Bell</a><a href="mma-briefing.html" class="">⊘ The Octagon</a><a href="archive.html" class="">🗄 Archive</a></nav><div class="big"><div class="bigcard c-cy">
+</header><div class="freshline" id="freshline">Data as of 8:40 AM ET</div><nav class="tabs"><a href="index.html" class="on">&#9733; Front Page</a><a href="cyber-briefing.html" class="">&#9880; The Cyber Wire</a><a href="wallstreet-briefing.html" class="">&#9650; The Closing Bell</a><a href="mma-briefing.html" class="">&#8856; The Octagon</a><a href="archive.html" class="">&#128451; Archive</a></nav><div class="big"><div class="bigcard c-cy">
 <div class="kick">&#9880; The Cyber Wire</div>
 <h3>The Wire</h3>
 <div class="sub">Security</div>
-<p>PaperCut has assigned CVE-2026-81578 and CVE-2026-82078 to an actively exploited zero-day chain affecting all NG and MF versions and shipped emergency patches, while CISA's federal deadline to remediate the exploited Citrix NetScaler flaw expires Saturday.</p>
+<p>The federal deadline to remediate an actively exploited Citrix NetScaler flaw expires today, and PaperCut has shipped a <b>second</b> emergency patch after attackers bypassed the first &mdash; two internet-facing products under live exploitation with the clock already run out on one of them.</p>
 <a class="go" href="cyber-briefing.html">Read the briefing &rarr;</a>
 </div><div class="bigcard c-ws">
 <div class="kick">&#9650; The Closing Bell</div>
 <h3>The Tape</h3>
 <div class="sub">Markets</div>
-<p>The S&amp;P 500 slipped 0.25% to 7,711.76 on Friday but still closed out a winning week, after Fed Chair Kevin Warsh used his Jackson Hole address to warn that underlying inflation trends have not meaningfully improved.</p>
+<p>Markets are closed for the weekend, so Friday&rsquo;s official closes stand &mdash; the S&amp;P 500 slipped 0.25% to 7,711.76 and still finished the week higher &mdash; while the weekend&rsquo;s live story is Stripe and Advent walking away from a $50 billion-plus pursuit of PayPal.</p>
 <a class="go" href="wallstreet-briefing.html">Read the briefing &rarr;</a>
 </div><div class="bigcard c-mm">
 <div class="kick">&#8856; The Octagon</div>
 <h3>Tale of the Tape</h3>
 <div class="sub">MMA</div>
-<p>UFC Shanghai lands early Saturday morning with Umar Nurmagomedov a heavy favourite over Song Yadong at prices ranging from &minus;530 to &minus;625 across books, in a five-round bantamweight main event both men are treating as a step toward a title shot.</p>
+<p>UFC Shanghai is running live as this edition publishes &mdash; all seven prelims and four main-card bouts are decided, six of the eleven by finish, but neither the Yan Xiaonan co-main nor the Nurmagomedov&ndash;Song headliner had been resulted by any source seen this run.</p>
 <a class="go" href="mma-briefing.html">Read the briefing &rarr;</a>
-</div></div><div class="note" style="margin-top:22px">Each card above carries that briefing's own summary line, unchanged. Briefings refresh every 30 minutes between 8 AM and 6 PM ET; point-in-time snapshots of every edition are kept in the <a href="archive.html">Archive</a>.</div><footer><div class="srcs">Every figure on these pages is checked against a source fetched in the same run that published it. Where a number could not be tied to a dated source, the pages say so rather than printing it &mdash; several such items are recorded as seen-and-declined in today's editions.</div><div class="disc">Information only. The markets briefing is not investment advice; the security briefing is not a substitute for your own vulnerability management process; fight cards and odds are subject to change.</div></footer>
+</div></div><div class="note" style="margin-top:22px">Each card above carries that briefing's own summary line, unchanged. Briefings refresh every 30 minutes between 8 AM and 6 PM ET; point-in-time snapshots of every edition are kept in the <a href="archive.html">Archive</a>. Weekend note: U.S. equity markets are closed today, so the markets briefing carries Friday's official closes and says so.</div><footer><div class="srcs">Every figure on these pages is checked against a source fetched in the same run that published it. Where a number could not be tied to a dated source, the pages say so rather than printing it &mdash; this edition records a Citrix build-number discrepancy, a set of unverified leak-site listings, and two live UFC bouts that had no result yet, each labelled as such rather than filled in.</div><div class="disc">Information only. The markets briefing is not investment advice; the security briefing is not a substitute for your own vulnerability management process; fight cards, odds and in-progress results are subject to change.</div></footer>
 </div>
 <script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \u00b7 briefings refresh every 30 minutes, 8 AM\u20136 PM ET';}catch(e){}})();</script>
 </body></html>
