@@ -15796,3 +15796,98 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   FINAL READ-THROUGH after validate passed**, across four fix passes. **All fifteen fixed rather than
   shipped, and each now has a guard.**
 - ARCHIVE — regenerated with `gen_archive_sc.py .`: **28 days, 174 timestamped rows, 522 snapshot files.**
+
+## Added 2026-08-29 (Saturday ~10:05–10:20am ET — MORNING EDITION, weekend, FIFTH run of the day; archive stamp 2026-08-29-1016)
+- CLOCK: research fetched 10:05–10:16 EDT. Gap since the previous run: ~27 minutes (Sat 9:49am). Method:
+  **targeted edits** (`edits_1020.py`, `fix_1020.py` … `fix5_1020.py`, `validate_1020.py`) onto the 9:40 pages.
+  Clone succeeded.
+- 🟢 **MMA — THE BONUSES ARE ANNOUNCED, AT THE SIXTH CHECK, AND FIVE EDITIONS OF REFUSING TO GUESS PAID OFF.**
+  Sherdog (Kunal Singh, Aug 29 2026): **four fighters, $100,000 each**, announced after the card by **Kevin
+  Chang**, UFC senior vice president and head of Asia — **one Fight of the Night** (**Liu Ce vs. Levi Rodrigues
+  Jr.**, light heavyweight; both men paid) and **two Performance of the Night** awards (**Song Yadong**,
+  **Bilal Hasan**). The same report independently puts the card at **ten finishes**, matching the count this
+  page has carried since 9:15. **Neither Julia Polastri nor Andre Lima is on the list** — both missed weight,
+  exactly as the previous five editions had recorded. The live blog's "Polastri would have won one" line is
+  kept and explicitly marked **overtaken by the actual announcement**.
+- 🔴 **MMA — A NEAR-MISS ON THE BONUS SOURCE, RECORDED BECAUSE IT WOULD HAVE BEEN A BAD ERROR.** The first
+  search returned a Sherdog headline reading **"Four Fighters Get 'Performance of the Night' Bonuses at UFC
+  Shanghai"** — which is **Aug 23, 2025**, a *different* UFC Shanghai (Johnny Walker vs. Mingyang Zhang at the
+  **Shanghai Indoor Stadium**), naming Walker, Charles Johnson, Kyle Daukaus and Uran Satybaldiev at **$50,000**
+  each. Fetching it and **reading its byline date** is what caught it; the correct Aug 29 2026 article
+  (`…-202571`) was found in that page's own "More" rail. **RULE: a recurring event name makes headline-matching
+  unsafe — open the article and read the date before taking a single figure off it.**
+- ⚠ **MMA — A METHOD-DETAIL DISCREPANCY ON THE MAIN EVENT, BOTH VERSIONS PRINTED.** The bonus report describes
+  Song's finish as a **right uppercut landed behind the ear** followed by **punches and hammerfists**, and frames
+  round one as Song *seemingly losing* it; the 9:40 account called the finishing blow a **hook thrown as
+  Nurmagomedov shot for a takedown**. **Winner, method category, round and the 1:48 mark agree across every
+  source; the punch does not, and no version is adopted.** Also newly sourced: Song trains as a **Team Alpha
+  Male** associate; Liu Ce's KO is confirmed at **4:26 of round one**, matching the table.
+- ⚠ **MMA — "THIRD VISIT TO THE VENUE" DROPPED RATHER THAN CAVEATED.** The bonus report calls this the
+  promotion's third visit to the venue, but the 2025 Shanghai card was at the **Shanghai Indoor Stadium** and
+  this one at the **Oriental Sports Center**, so "venue" is doubtful. It added nothing and was cut.
+- ⚠ **MMA — UFC.COM IS BEHIND ON A SIXTH CONSECUTIVE FETCH.** Fetched directly this run;
+  `article:modified_time` still **2026-08-28T14:03**, unmoved. What it **did** confirm this run and is attributed
+  to it: venue (**Oriental Sports Center, Pudong District**), the **3:00 AM ET prelims / 6:00 AM ET main card**
+  times, Paramount+ carriage, every weight class, the rankings (Umar **No. 3**, Song **No. 6**, Yan **No. 4**,
+  Gomes **No. 14**), Perez–Sumudaerji as a **rematch of a no contest**, and Hasan's record/camp/contract
+  timeline. Sherdog's event rail independently corroborates **UFC 331 = Van vs. Pantoja 2** (Sept 19),
+  **UFC FN 287 = Hooker vs. Parnasse** (Sept 5) and **UFC FN 288 = Noche UFC 4** (Sept 12).
+- 🟢 **MMA — CHAMPIONS BOARD UNCHANGED, FORTY-NINTH CONSECUTIVE EDITION.** No title bout on the card.
+- 🟢 **CYBER — NEW: THE ATF CONFIRMS A "MAJOR INCIDENT", AND THE CLAIM ATTACHED TO IT IS KEPT SEPARATE.**
+  ATF press release **Aug 26**: a **standalone** system holding **ATF investigation** information was
+  compromised; the agency says it **operates separately from the ATF enterprise network** and there is **no
+  indication** the enterprise network, **ATF eForms** or any other system was affected. **Qilin** listed ATF on
+  its leak site **the same day** — but **ATF has not attributed the incident to Qilin**, has not commented on the
+  claim and has named no attacker, and the group posted **no evidence, no file samples, no data-volume figure and
+  no public ransom demand**. **The confirmation and the claim are both printed; the link between them is not.**
+- 🟢 **CYBER — NEW: GPUThor, PRINTED WITH NO CVE BECAUSE NONE WAS STATED.** University of Toronto Rowhammer
+  attack that **defeats ECC** on **NVIDIA Ampere workstation GPUs with GDDR6** (RTX **A4000/A4500/A5000/A6000**),
+  giving **DoS and root-level privilege escalation on the host**; privilege escalation still works on the
+  server-class **A100** because it relies on **SECDED-level ECC**. Up to **23,500× more bit flips** than the first
+  GPU Rowhammer attack; **end-to-end privesc on an A6000 in 1.1 minutes** vs **21.9 hours** for the previous best.
+  **Precondition: the ability to launch an unprivileged CUDA kernel** on the target GPU. Disclosed to NVIDIA
+  **Apr 29**; NVIDIA guidance **Aug 21**. **No CVE and no CVSS stated by any source, so neither is printed**, and
+  the page says explicitly that it is **not** a KEV item.
+- 🟢 **CYBER — KEV RE-VERIFIED, ON WEAKER PROVENANCE, AND THE PAGE SAYS SO.** A **direct fetch of CISA's own
+  Aug 26 alert page returned an EMPTY BODY** this run (the same failure mode ESPN's champions page produced at
+  9:40). The batch was confirmed from **search results enumerating all six CVEs by identifier** — CVE-2015-3246,
+  CVE-2015-5287, CVE-2019-1068, CVE-2021-23758, CVE-2022-0995, CVE-2026-8452 — matching the standing record
+  exactly, with **no new KEV batch since Aug 26**. Countdowns unchanged at **0/1/11/12**.
+- 🟢 **MARKETS — WEEKEND, NO NEW SESSION; FRIDAY CLOSES RE-VERIFIED A SIXTH TIME AND UNCHANGED** (S&P
+  7,711.76 −0.25%; Nasdaq 26,402.42 −0.52%; Dow 53,559.99 −9.45 −0.02%; week S&P +0.5%, Nasdaq +0.9%, Dow +0.5%).
+  All three reconciliation guards re-run and passed. **No market figure on the page changed this run**, and the
+  movers note now says so in those words.
+- 🔴 **THE STORY OF THIS RUN IS AGAIN STALE NOVELTY — TEN EXPIRED CLAIMS ACROSS THREE PAGES, FOURTH CONSECUTIVE
+  EDITION.** Caught in the read-through *after* the validator passed: markets tldr *"turned over since the last
+  edition"*, markets movers *"the only figure that changed this run"* and *"new to the 9:40 edition"*, markets
+  Lead *"What is new to this edition is the rate pricing"*, cyber *"Context sourced this run"* on the open letter,
+  cyber TeamPCP *"re-confirmed this run"*, cyber *"sources fetched this run"* on the signatory counts, markets
+  *"Expectations sourced this run"* / two Kalshi-source *"fetched this run"*, MMA *"the finishing sequence,
+  sourced this run"*, MMA co-main and main-card *"fetched this run"*. **All rewritten to name the edition that
+  actually did the fetching.** The validator now carries a **SYSTEMATIC guard**: every POSITIVE novelty phrase
+  is enumerated and must sit in an allow-listed context verified true for this run, or be a negative
+  ("no source seen this run states X"). **RULE: this family is no longer spotted, it is enumerated.**
+- 🔴 **A SILENT NO-OP IN MY OWN EDIT SCRIPT.** `sub(..., count=ws.count(old))` passes trivially when the count
+  is **0**, so the markets re-verification edit reported success while changing nothing. Only the validator
+  caught it. **RULE: a replacement helper must treat count==0 as a FAILURE, never as a satisfied expectation.**
+  Two further edits missed because the source strings **wrap across newlines** in the markup.
+- 🔴 **A STALE COUNT IN THE CHAMPIONS-BOARD NOTE THE VALIDATOR COULD NOT SEE.** It still read "none of the
+  results above is affected by **the two undecided fights**" — there are **zero**; the co-main resolved at 8:46
+  and the main event at 9:15. The guard greps capital-U `Undecided` and this was lowercase prose.
+  **RULE: a guard written against a markup token will not catch the same claim written as English.**
+- ⚠ **TWO OF MY OWN GUARDS WERE WRONG AND WERE FIXED, NOT RELAXED.** (1) The KEV-zone guard ran from the KEV
+  heading to **end of file**, so it swept the **footer** and fired on the GPUThor *source link*; rescoped to stop
+  at `<footer`. (2) The novelty guard matched raw markup, so a negative sentence **wrapped across a line** looked
+  like a positive claim; the window is now tag-stripped and whitespace-normalised. A third guard (`no bonuses`)
+  was **window-scoped** to the page's own historical sentence rather than dropped.
+- ⚠ **ORACLE `CVE-2026-21962` NOT CARRIED, SIXTH CONSECUTIVE RUN.** Unchanged reasoning.
+- VALIDATION — **`validate_1020.py`: 579 checks, 0 failures.** Carries every guard from `validate_0940.py` plus:
+  exact per-page fresh-tag counts (**cyber 1, markets 0, MMA 2**); the systematic positive-novelty enumeration;
+  bonus guards (figure, announcer, all four winners, both award categories, headcount adjective, both ineligible
+  fighters still named, and six banned forms of the superseded "none announced" claim); sixth-fetch and
+  sixth-re-verification counters with their fifth-form bans; the finish-discrepancy both-versions guard; ATF
+  non-attribution and no-evidence guards; GPUThor no-CVE / not-KEV guards with a rescoped KEV zone; the CISA
+  empty-body disclosure; and per-page unique-href checks. ⚠ **Eleven prose errors were caught in the FINAL
+  READ-THROUGH after validate passed**, across four fix passes; **all eleven fixed rather than shipped, and each
+  now has a guard.**
+- ARCHIVE — regenerated with `gen_archive_sc.py .`: **28 days, 175 timestamped rows, 525 snapshot files.**
