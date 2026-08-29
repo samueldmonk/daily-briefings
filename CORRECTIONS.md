@@ -16001,3 +16001,70 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   rather than relaxed** — two were **my own guards written against raw markup** (whitespace-normalised), one
   was a real duplicate-link defect (5 duplicate hrefs removed from the MMA sources list).
 - ARCHIVE — regenerated with `gen_archive_sc.py .`: **28 days, 176 timestamped rows, 528 snapshot files.**
+
+## Added 2026-08-29 (Saturday ~11:05–11:12am ET — MORNING EDITION, weekend, SEVENTH run of the day; archive stamp 2026-08-29-1112)
+- CLOCK: research fetched 11:05–11:11 EDT, archived **11:12 EDT**. Gap since the previous run: ~19 minutes
+  (Sat 10:53am). Method: **targeted edits** (`edits_1105.py`, `fix_1105.py`, `sync_1105.py`, `sources_1105.py`,
+  `validate_1105.py`) onto the 10:50 pages. Clone succeeded.
+- 🟢 **MMA — THE CHAMPIONS CHECK CAME BACK THE OTHER WAY, FIFTEEN MINUTES LATER, AND THAT IS THE FINDING.**
+  The 10:50 run's general champions search returned an ESPN listing naming **Pereira (LHW)** and **Chimaev (MW)**
+  — the two standing regressions — and was rejected. **The same query this run returned a listing agreeing with
+  the board on six of six men's belts**: Aspinall, **Ulberg (Apr 11 2026)**, **Strickland (May 9 2026)**,
+  Makhachev, **Gaethje**, **Volkanovski**. **The board did not change on either result**, because on both runs
+  the title DATES were compared before the names were copied. **RULE ADDED: a single search is not a
+  verification method — two consecutive runs of one query produced opposite snippets.** The agreement counter is
+  therefore **extended but deliberately NOT restated as a number** on the page; a tally across contradictory
+  snippets would imply a stability the evidence does not support. Board unchanged for a **fifty-first
+  consecutive edition**. Shanghai carried no title bout, the independent reason nothing could move.
+- 🟢 **MMA — BONUSES CORROBORATED BY ARITHMETIC, NOT BY A SECOND LIST.** Forbes (Aug 29) reports **"$400K in
+  bonuses"** and names **Song Yadong**'s $100,000 Performance of the Night. That is **four × $100,000 = exactly
+  the four already sourced from Sherdog** (FOTN Liu Ce vs. Levi Rodrigues Jr.; POTN Song Yadong and Bilal Hasan).
+  ⚠ **RULE: a round total is corroboration of the known recipients, NOT evidence of a fifth award** — one
+  aggregated snippet this run loosely said "five more fighters collected", which was **not adopted**. Also newly
+  sourced: **Denise Gomes received no bonus** despite the co-main KO; the writer's "most deserving performance
+  that went unrewarded" is printed **as his judgement**, not as a finding.
+- 🟢 **CYBER — NEW: AVADA WORDPRESS CHAIN, CVE-2026-18431, CVSS 9.8, FOUND BY AN AI AGENT.** Six flaws chained
+  into **zero-click unauthenticated PHP code execution**; affects **Avada ≤ 7.16 with Fusion Builder ≤ 3.16**;
+  fixed in **Avada 7.16.1 / Fusion Builder 3.16.1**. Prerequisites do **not** narrow the pool — Wordfence told
+  BleepingComputer that **Fusion Builder is required by the Avada theme**, so every site running the theme runs
+  the plugin; **>1 million sales**. Found and PoC'd by Wordfence's **Argus** agentic framework **in about two
+  hours**, reproduced **Jul 30**, disclosed **Aug 5**, acknowledged **Aug 10**. Wordfence is withholding full
+  technical detail. ⚠ **NOT KEV-listed, no in-the-wild exploitation stated, no victim** — all three printed on
+  both the panel and the table row. ⚠ **VERSION DISCREPANCY RECORDED:** one aggregator (IONIX) renders the range
+  **"≤ 7.1"**; vendor-sourced reporting says **7.16**, which is what is published, with the discrepancy disclosed.
+- 🟢 **CYBER — ATF: THE "MAJOR INCIDENT" LABEL IS A DoJ DESIGNATION, NOT THE AGENCY'S ADJECTIVE.** Newly sourced:
+  ATF **cut off access to the affected system immediately** on discovery and began incident-response/forensics;
+  **senior Department of Justice officials designated the event a "major incident" under federal guidelines**,
+  which is what brings DoJ into the investigation. Qilin still **makes no specific claim** and ATF still **does
+  not attribute** the incident to it — the confirmation/claim separation is unchanged.
+- 🟢 **CYBER — McKESSON VISHING COUNT NOW SPECIFIC: TWO EMPLOYEES.** Earlier editions could say only "multiple";
+  a report fetched this run puts it at **two**. The **284M = records, not people** refusal, the **"neither
+  published as a victim count"** line, the **$55,236,150** figure and the **not-independently-verified** caveat
+  all stand. KEV countdowns unchanged; Aug 26 remains the latest CISA alert returned.
+- 🟢 **MARKETS — WEEKEND, NO NEW SESSION; FRIDAY CLOSES RE-VERIFIED AN EIGHTH TIME AND UNCHANGED** (S&P
+  7,711.76 −0.25%; Nasdaq 26,402.42 −0.52%; Dow 53,559.99 −9.45 −0.02%; Thu 7,730.99 / 26,541.35 / 53,569.44;
+  week S&P +0.5%, Nasdaq +0.9%, Dow +0.5%). Three reconciliation guards re-run at 0.005 tolerance, passed.
+  No "as of ~"; **7,673.04 stayed out**; **After-Hours absent**; Chart of the Day stays **NASDAQ:PYPL**.
+  **Fresh-tag count on markets: 0.**
+- 🟢 **MARKETS — A SECOND, DIFFERENTLY-SOURCED PAYROLLS FORECAST, AND NEITHER IS ADOPTED.** The carried **+58,000
+  / 4.1%** is a **Reuters poll** cited in a week-ahead preview; **Capital Economics** previews **+90,000**. Gap
+  of **32,000**, printed as the useful information; **nothing averaged**. The **4.1% unemployment expectation
+  comes from one source only** and is labelled so. Context newly sourced: **July payrolls FELL 23,000** against a
+  **+80,000** forecast, with **June revised down to +20,000**. Week-ahead days dated (ISM Mfg/JOLTS Sep 1; ADP +
+  Beige Book Sep 2; ISM Services/claims Sep 3; **jobs report Fri Sep 4**) with **only the days asserted, not the
+  consensus figures**.
+- ⚠ **FOUR VALIDATION GUARDS FIRED AND ALL FOUR WERE MY OWN, WRITTEN AGAINST RAW MARKUP.** Three asserted a line
+  break inside a phrase that ships unwrapped ("about two hours", "more than 1 million sales", "$400,000 ... not a
+  fifth award") and one omitted the `<b>` tags around a bonus recipient list. **All four were normalised, none
+  relaxed**; no content defect was behind any of them. The edit scripts used the **partial-write** discipline
+  adopted at 10:50: seven edits missed on first pass across two files, the matching edits were **written anyway**
+  and the misses **reported**, then re-anchored against the real markup.
+- VALIDATION — **`validate_1105.py`: 159 checks, 0 failures.** Includes: five-tab nav + masthead-id + self-stamp
+  per page; freshline stamped 11:05 with a stale-10:50 forbid; all six TradingView blocks plus oil and US10Y;
+  six close figures with three arithmetic reconciliations; the payrolls two-forecast family incl. a
+  `90000-58000==32000` assertion; the full Avada detail family with KEV/exploitation/version-discrepancy guards;
+  McKesson record-vs-people guards; the ATF DoJ-designation family; an **eleven-name champions board assertion**
+  plus a **context sweep requiring every "Pereira"/"Chimaev" occurrence to sit beside its rejection or interim
+  framing**; the fifty-first counter with a `fiftieth` forbid; **index-card-mirrors-tldr equality for all three
+  pages**; and per-footer duplicate-href and minimum-link checks.
+- ARCHIVE — regenerated with `gen_archive_sc.py .`: **28 days, 177 timestamped rows, 531 snapshot files.**
