@@ -15667,3 +15667,132 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   split, the self-contradicting provenance sentence, "hands-on-keyboard", and two stale "live now" markers.
   **All four fixed rather than shipped.**
 - ARCHIVE — regenerated with `gen_archive_sc.py .`: **28 days, 173 timestamped rows, 519 snapshot files.**
+
+## Added 2026-08-29 (Saturday ~9:35–9:49am ET — MORNING EDITION, weekend, FOURTH run of the day; archive stamp 2026-08-29-0949)
+- CLOCK: research fetched 09:36–09:47 EDT. Gap since the previous run: ~24 minutes (Sat 9:11am). Method:
+  **targeted edits** (`edits_0940.py`, `fix_0940.py`, `fix2_0940.py`, `fix3_0940.py`, `fix4_0940.py`,
+  `validate_0940.py`) onto the 9:15 pages. Clone succeeded.
+- 🔴 **THE STORY OF THIS RUN IS A SYSTEMIC ONE: ELEVEN CARDS ACROSS THREE PAGES WERE WEARING THIS
+  EDITION'S FRESH STAMP FOR CONTENT SOURCED IN EARLIER EDITIONS.** The stamp-replacement step rewrites
+  every `tag new` to the current time, which silently converts *carried* items into *new* ones. Demoted this
+  run: **three markets movers** (PayPal, Nvidia, Broadcom/Intel), **two cyber cards** (MAG → Carried, Boston
+  Scientific → Updated, since it genuinely gained detail), **the UAT-10147 spotlight**, **all four prospect
+  cards**, and **two upcoming-card entries** (UFC 331, Paris). **RULE: a blanket stamp rewrite is not a
+  freshness claim and must never be allowed to become one. `tag new` now means sourced or materially changed
+  IN THIS RUN, and the validator asserts an EXACT per-page count (cyber 2, markets 0, MMA 1) rather than
+  merely ">0", so a carried item cannot wear a fresh stamp again.** Bilal Hasan is marked **Carried ·
+  re-verified** — UFC.com corroborated it this run — because **re-verifying is not the same as being new**.
+- 🔴 **FOUR STALE "THIS RUN" / TEMPORAL CLAIMS, ALL CAUGHT IN THE FINAL READ-THROUGH AFTER validate PASSED.**
+  (1) markets Lead: *"the one genuinely new item this run"* of PayPal — it led the **8:19** edition;
+  (2) cyber Top Story: *"What is new this run"* on the watchTowr bypasses — new at **9:15**;
+  (3) cyber Patch Priority: *"New this run — the exploitation is quantified"* on Citrix — new at **8:46**;
+  (4) MMA Top Story: *"The headliner resolved after the previous edition went out"* — it resolved **during
+  the 9:15 edition**. All four rewritten to name the edition that first carried them. **RULE: "this run" is a
+  dated claim and expires; every occurrence must be re-checked against the edition that actually sourced it.**
+- 🔴 **A TABLE CELL CONTRADICTED A BULLET ON THE SAME PAGE.** The Rates table asserted *"~65% odds of no
+  change in September … As of: This run"* while On the Radar, forty lines below, said that figure was
+  **superseded**. Fixed to the current pricing with a split vintage label ("Sept read this run; Dec read
+  carried"). **RULE: a page's tables must be swept whenever its prose supersedes a number — the validator
+  checked the prose and never looked at the cell.**
+- 🟢 **MARKETS — THE SEPTEMBER RATE CALL TURNED OVER AND IS THE ONLY NEW FIGURE THIS RUN.** CNBC: traders on
+  **Kalshi** now price **48% odds of a 25bp HIKE** in September, explicitly a shift from a point when odds of
+  the Fed **holding** were **nearly 70%**, attributed to Warsh saying he is committed to fighting inflation.
+  **Both readings printed; the direction of travel is the finding.** These are **consecutive** reads of one
+  question, not simultaneous books disagreeing — the distinction is stated on the page. The **>70% hike by
+  December** figure is **labelled carried** (not restated this run). The prior editions' **~65% no-change**
+  is **superseded**.
+- ⚠ **MARKETS — A MISCOUNT AND A FALSE SOURCING CLAIM ON THE SAME CARD.** The Salesforce card was headed
+  *"a fourth read of the same move"* above a list of **six** (11.2 / 19 / 22.6 / 22.68 / 22.75 / 22.87), and
+  said *"a fresh source this run puts CRM at +22.6%"* when **no source restated it this run** (+22.6% arrived
+  at 8:19). Rewritten as **six reads, all carried, none asserted, none averaged**. **RULE (third consecutive
+  edition): the validator cannot count for you.**
+- 🟢 **MARKETS — WEEKEND, NO NEW SESSION; FRIDAY CLOSES RE-VERIFIED A FIFTH TIME AND UNCHANGED** (S&P
+  7,711.76 −0.25%; Nasdaq 26,402.42 −0.52%; Dow 53,559.99 −9.45 −0.02%; Thu 7,730.99 / 26,541.35 / 53,569.44;
+  week S&P +0.5%, Nasdaq +0.9%, Dow +0.5%). All three reconciliation guards re-run and passed at a tolerance
+  of **0.005**, stricter than the prose. No "as of ~"; **7,673.04 stayed out**; **After-Hours absent**; Chart
+  of the Day stays **NASDAQ:PYPL**. A note above the movers board states plainly that **nothing on it can be
+  new while the market is shut**.
+- 🟢 **CYBER — NEW BREACH CARD, AND IT IS ONE OF THE YEAR'S LARGEST: CareCloud, 3,756,469 individuals**, filed
+  with **HHS in August 2026** for a **March 2026** intrusion. An unauthorised third party had access to **one
+  of CareCloud's AWS environments between March 10 and March 16**, hosting **one of the company's six EHR
+  systems**; the intruder claimed database exfiltration. Categories: names, addresses, **SSNs**, driver's
+  licence numbers, DOBs, health insurance and medical records, with **full payment card data for a very
+  limited subset**. IDX monitoring offered. **No group has claimed it.** ⚠ **The victim count was AMENDED
+  UPWARD, not disputed** — the same outlet headlined **"over 350,000"** earlier and **"3.7 million"** later.
+  **Both printed with the history**, because an amended filing is not two sources contradicting each other.
+- 🟢 **CYBER — BOSTON SCIENTIFIC GAINED REAL DETAIL:** thousands of employees in **Ireland** (three
+  manufacturing/research sites) told to **work from home Aug 26** after network communications were severed;
+  analysts model **up to 700 basis points** off Q3 revenue; shares **fell as much as 6%**; a spokesperson
+  **declined to say whether ransomware was involved**. Card promoted to **Updated**, not New.
+- 🔴 **CYBER — A COUNTING ADJECTIVE WRONG AGAIN, IN THE OPPOSITE DIRECTION.** The OpenAI-led open-letter item
+  said the signatory count was reported **"three different ways"** and then listed **four**: **116** (CNBC),
+  **nearly 130** (SecurityWeek), **more than 130** (a trade outlet), **100-plus** (CyberScoop). Fixed to four;
+  **no figure adopted**. ⚠ **The index page's "what changed" note said FOUR and was right while the briefing
+  said three** — the cross-page check caught it. **RULE: when two pages disagree about the same count, neither
+  is trustworthy until re-derived from the list itself.** Letter content printed: the quoted warning, the
+  hospitals/water/internet-infrastructure risk set, the three asks, and the named signatories.
+- 🟢 **CYBER — KEV BATCH RE-VERIFIED AGAINST CISA'S OWN ALERT PAGE THIS RUN AND UNCHANGED.** Due **TODAY
+  Aug 29 (0 days)**: `CVE-2026-8452` (Citrix NetScaler) and `CVE-2019-1068` (Microsoft SQL Server, RCE in the
+  Database Engine service account context). Due **Sept 9 (11 days)**: `CVE-2022-0995`, `CVE-2021-23758`,
+  `CVE-2015-5287`, `CVE-2015-3246`. Aug 30 (1 day): `CVE-2026-53362`, `CVE-2023-49105`. Sept 10 (12 days):
+  `CVE-2026-66384`. **BOD 26-04 present; BOD 22-01 named only as superseded.** PaperCut chain re-verified
+  independently (81578 **8.8**, 82078 **9.4**, Emergency Patch Release 2, Aug 28); **Jake Knott's title
+  sourced this run** as head of threat intelligence at watchTowr.
+- ⚠ **CYBER — ORACLE `CVE-2026-21962` NOT CARRIED, FIFTH CONSECUTIVE RUN.** Unchanged reasoning.
+- 🔴 **MMA — A PAGE THAT CONTRADICTED ITSELF ON A COUNT AND ON A DATE.** (a) A bullet headed **"Two fighters
+  missed weight"** sat two bullets above one saying **three** did; **three is correct** (Lima 127, Xiong 117,
+  Polastri 118.5). (b) The results note still said bonuses were unannounced **"since the main event has not
+  been resulted"** — stale from 8:46, and flatly contradicted by the Around the Sport bullet on the same page
+  saying the main event ended hours ago. (c) **"Three of thirteen fighters missed"** — **thirteen is the BOUT
+  count**, not the fighter count. All three fixed. (d) The **115-pound strawweight limit** was asserted; **no
+  source seen this run stated a limit**, so the weights are printed and the limit is not.
+- 🟢 **MMA — NOCHE UFC 4 IS NOW SOURCED, AND THE EVENT HAS TWO NAMES.** **Sat Sept 12, Desert Diamond Arena,
+  Glendale, Arizona.** Booked as **Yair Rodríguez vs. Jean Silva**; **Rodríguez WITHDREW with an injury and
+  was replaced by Jose Delgado**, so an updated encyclopedia entry calls it **Noche UFC: Silva vs. Delgado**
+  while **Ticketmaster and the broadcaster's own schedule still read "Rodriguez vs. Silva."** **Both printed,
+  neither adopted** — a marketing name lags a late replacement. Also on the card: **Curtis Blaydes vs. Waldo
+  Cortes-Acosta** at heavyweight. **No odds stated; none printed.** UFC 331 (Sept 19) and Paris (Sept 5)
+  unchanged; countdown still targets **2026-09-20T01:00:00Z**.
+- 🟢 **MMA — MAIN EVENT CORROBORATED A FOURTH TIME, WITH THE SEQUENCE AND THE REFEREE.** Song caught
+  Nurmagomedov with a **hook as he shot for a takedown ~90 seconds into round two**, after a wrestling-led
+  first round; referee **Marc Goddard** stopped it at **1:48**; one outlet describes him as knocked out cold.
+  ⚠ **UFC.com IS STILL BEHIND ON A FIFTH CONSECUTIVE FETCH** — fetched directly this run,
+  `article:modified_time` still **2026-08-28T14:03**, unmoved since before the card opened. **UFC.com is
+  LAGGING, not CONTRADICTING**, and the lag is printed. What UFC.com *did* confirm this run and is now
+  attributed to it: venue, times, carriage, **every weight class**, and the rankings (Umar **No. 3**, Song
+  **No. 6**, Yan **No. 4**, Gomes **No. 14**), plus that **Perez–Sumudaerji was a rematch of a no contest**.
+- ⚠ **MMA — STILL NO BONUSES, FIFTH CHECK.** None announced. Newly sourced and printed **as a reporter's
+  assessment, not an announcement**: a live blog states **Julia Polastri would have won Performance of the
+  Night for her head-kick knockout had she made weight** — the same mechanism already recorded for Lima.
+- ⚠ **MMA — CHAMPIONS BOARD VERIFIED, BUT ON WEAKER PROVENANCE THAN LAST RUN, AND THE PAGE SAYS SO.** A
+  **direct fetch of ESPN's champions page returned an EMPTY BODY** this run. The six men's belts were
+  confirmed from **search results whose leading source is that same ESPN listing**, which returned **method,
+  event and date for each** — all matching the standing record exactly. Counted as a **seventh consecutive
+  edition** of agreement and a **forty-eighth consecutive edition** of an unchanged board, but recorded as
+  the weaker check it is. **RULE: a snippet-mediated read of a primary source is not the same as reading it,
+  and the difference goes on the page.** UFC Shanghai carried **no title bout**, so no belt could move.
+- ⚠ **DEDUPLICATION:** adding sources without checking produced **5 duplicate links on cyber, 3 on MMA, 1 on
+  markets**. All removed; the validator now asserts **unique hrefs per page**. A provenance sentence was also
+  **inserted twice** by a non-idempotent fix script — deduped, and guarded.
+- VALIDATION — **`validate_0940.py`: 439 checks, 0 failures.** Guards: five-tab nav and **exactly one active
+  tab** per page; all four stamp ids + self-stamp JS on all four pages; **index cards asserted identical
+  (whitespace-normalised) to each page's tldr**; tldr absent from index; **8 TradingView scripts across 6
+  widget types, exactly 3 single-quote widgets**, five required tape symbols, **NASDAQ:PYPL** as Chart of the
+  Day, live widgets absent from index/cyber/mma; **three close-reconciliation guards at 0.005 tolerance**;
+  "as of ~" absent and "Monday, August 31" required; 7,673.04 absent; After-Hours absent; **1.82%
+  window-scoped to its rejection text**; **superseded/48%/Kalshi/nearly-70%/carried all asserted** on the
+  markets page; a **14-id CVE whitelist that fails on any unlisted identifier** plus a ≥12 liveness
+  assertion; **9.8 absent**; both Citrix build sets + CTX696604; all four KEV countdowns (0/1/11/12);
+  BOD 26-04 present, BOD 22-01 only-if-superseded; champions board **parsed as real `<td>` cells**, ≥11 rows,
+  **eight belts asserted by division**, all four regressions tested **in champion cells only**; trap greps
+  for "Shamil Yakhyaev", "Cody Salkilld", "Abdul-Rakhman"; all four Chinese-name spelling forms; `Undecided`
+  asserted **zero**; `(prelim)</td>` absent; `live now` absent; **EXACT per-page fresh-tag counts (2/0/1)**;
+  **four stale-novelty greps**; **four MMA self-contradiction greps** (unresulted-main-event, two-vs-three
+  weight misses, thirteen-fighters, 115-pound limit); **signatory-count adjective guard**; **unique-href
+  guard on all three briefings**. ⚠ **Two guards fired on the first pass and BOTH were fixed rather than
+  relaxed** — one was **my own guard being wrong** (it read the Contender Series start time "7:00 PM ET" as a
+  stale edition stamp, and was rescoped to read stamps only inside tag spans and the freshline, not raw
+  prose); the other was a real stale champions-board counter. ⚠ **Fifteen prose errors were caught in the
+  FINAL READ-THROUGH after validate passed**, across four fix passes. **All fifteen fixed rather than
+  shipped, and each now has a guard.**
+- ARCHIVE — regenerated with `gen_archive_sc.py .`: **28 days, 174 timestamped rows, 522 snapshot files.**
