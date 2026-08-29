@@ -16454,3 +16454,113 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   three pages**; a CVE well-formedness sweep with a ≥15 liveness assertion; and per-footer duplicate-href,
   absolute-href and minimum-link checks.
 - ARCHIVE — regenerated with `gen_archive_sc.py .`: **28 days, 182 timestamped rows, 546 snapshot files.**
+
+## Added 2026-08-29 (Saturday — research ~2:32–2:45pm ET AND ~5:02–5:12pm ET, published 5:15pm — AFTERNOON EDITION, weekend, THIRTEENTH run of the day; archive stamp 2026-08-29-1715)
+- ⚠ **CLOCK — THE HOST MACHINE SLEPT MID-RUN, AND THE PAGES ARE STAMPED FOR THE PUBLISH, NOT THE RESEARCH.**
+  Research began at **2:32pm** and two WebSearch calls returned `API Error: Your computer went to sleep
+  mid-response`. When the shell was next reachable the wall clock read **5:02pm** — a ~2h20m gap between the
+  first research batch and the publish. **Rather than stamp 2:35pm research as current, the time-sensitive
+  items were re-queried at 5:02–5:12pm** (KEV additions, breaking cyber) before anything was written. Markets
+  were shut all day and UFC Shanghai had finished that morning, so neither could go stale in the gap. Gap since
+  the previous run: ~3h30m (Sat 1:45pm). Method: **targeted edits** (`edits_1715.py`, `tldr_1715.py`,
+  `validate_1715.py`) onto the 1:45 pages. Clone succeeded.
+- 🔴 **MMA — A SECOND TIER OF BONUSES THIS PAGE HAD MISSED, WHICH FALSIFIES A LINE IT PUBLISHED.**
+  Beyond the four **$100,000** awards, **five fighters received $25,000 finish bonuses** at UFC Shanghai:
+  **Hector Santiago** (KO2 Lawrence Lui), **Francesco Nuzzi** (KO1 Xiao Long, on debut), **Rei Tsuruya**
+  (RNC R1 Kevin Borjas), **Kai Asakura** (KO2 Aoriqileng) and **Denise Gomes**. Confirmed against two
+  separately worded reports. ⚠ **THE CORRECTION:** since **11:05 AM** this page had carried, from a Forbes
+  write-up, that **"Denise Gomes did not receive a bonus"** despite the co-main knockout. **She did** — not one
+  of the four $100,000 awards, but a $25,000 finish bonus. Corrected in place to *"did not receive one of the
+  four $100,000 awards."* **The $400,000 figure is NOT changed** — it remains the total of the four $100,000
+  awards, and the earlier reasoning rejecting it as evidence of a fifth $100,000 recipient still holds.
+  **No source states a combined total for the card, so none is printed.** ⚠ Left **unresolved and printed as
+  such**: one report frames the $25,000 as going to *every fighter who earned a finish*, which cannot be squared
+  with **ten finishes** against **five** named recipients — the five names are sourced, the policy sentence is
+  not adopted. **RULE ADDED: a bonus total corroborates only the tier it counts; "no fifth award at this tier"
+  is not "no further awards."**
+- 🟢 **MMA — UFC PARIS (Sept 5) FILLED IN.** Main card time added (**3:00 PM ET**, prelims 12:00 PM ET,
+  Paramount+); **Accor Arena** named; the headliner is a **five-round lightweight bout**; **Salahdine Parnasse**
+  is a **promotional newcomer making his UFC debut**, a **two-time KSW featherweight and one-time KSW lightweight
+  champion**; **Dan Hooker** enters off a **second-round stoppage loss to Benoit Saint Denis, February, Sydney**.
+  Champions board unchanged for a **fifty-seventh consecutive edition**; no general champions query re-run.
+- 🔴 **CYBER — NEW: UNITREE G1 EDU, TWO ROOT RCE CHAINS, ONE REACHABLE OVER BLUETOOTH.**
+  **CVE-2026-76640** (BLE, GATT characteristic **0xFFE2**, accepts the bootstrap write **without pairing or
+  authentication**; heredoc WiFi hijack → path traversal leaking the load address → **1050-byte BSS overflow**
+  calling `system()` as root on the **Locomotion PC**) and **CVE-2026-76639** (network-adjacent, via
+  `chat_go`/`bashrunner`). Researcher **Olivier Laflamme**; the BLE chain is named **UniBLEed** and is reported
+  **wormable**. **No CVSS is printed for either — none was stated by any source fetched this run** — and **no
+  fixed firmware release is printed**, because reporting says an exact fixed release **could not be verified**
+  in accessible Unitree guidance. ⚠ **A collision was caught and printed:** the same search returned an
+  **October 2025** Help Net Security report of a Unitree G1 Bluetooth flaw plus data transmission to China.
+  **Different, earlier disclosure** — the rows carry the **2026** ids only, and the two are kept apart on the
+  page for the same reason the ServiceNow 6875/6876 pair is.
+- 🟢 **CYBER — TITAN RaaS ADDED AS A SPOTLIGHT, WITH THE AI CLAIM MARKED AS ADVERTISING.**
+  **CyberXTron** reports TITAN was **founded April 4, 2026**, active since **May**, **24 listed victims across
+  10 countries** (**Italy 10, Czechia 4, US 3**; also India, Sri Lanka, South Korea, Mexico, Tunisia, France,
+  Singapore), entry via **exposed VPN gateways, firewall appliances and RMM tools**, **Windows encryptor**,
+  affiliate split **90/10**. Its advertised AI platform claims classification of stolen files and **700GB of
+  corporate documents per hour** on **AMD EPYC + GPU inference**. ⚠ **Printed explicitly as the group's own
+  marketing:** sources state the capability has **not been independently validated**. **The victim count comes
+  from an analyst firm; the 700GB figure comes from the criminals' own advertisement — the page says so rather
+  than letting the two share a sentence.**
+- 🟢 **CYBER — KEV DEADLINE BOARD CORROBORATED FROM OUTSIDE CISA FOR THE FIRST TIME.** The 5:10pm check
+  returned an **Infosecurity Magazine** report on the Aug 26 batch stating CISA urged agencies to patch **the
+  Citrix and Microsoft SQL Server flaws by August 29** and the **remaining four by September 9** — both dates
+  match this page's board exactly, so the **0-day and 11-day countdowns no longer rest on CISA's own alert page
+  alone**. The **Aug 27 batch (1 / 12) was not restated** and stays as carried. Same six ids; countdowns
+  unchanged at **0 / 1 / 11 / 12**. Standing caveat restated. Oracle `CVE-2026-21962` **still not carried,
+  eleventh run** (and the validator now asserts it appears only inside a not-carried statement and never in a
+  table row).
+- 🟢 **CYBER — HUGGING FACE CARD GAINS A MODEL NAME.** Reporting this run identifies the agents as driven by
+  **OpenAI's internal model IM1**. Printed as **new to the page's description, not new to the incident** — the
+  July dating and the Aug 26 post-mortem framing are unchanged.
+- 🔴 **MARKETS — TWO RATE ROWS CHANGED, AND ONE IS A CORRECTION OF THIS PAGE'S OWN FIGURE.** A dedicated
+  **end-of-day Treasury-yields series dated August 28**, fetched twice, states the 10-year **finished** at
+  **4.73%** and the 2-year **finished** at **4.34%**. The 2-year gets its **first Friday print** (retiring
+  **4.24%**, carried from Thursday all day). The 10-year line — **"~4.67%, after touching 4.73%"** — is
+  **contradicted**: 4.73% was the **close**, not an intraday touch. Adopted, and **~4.67% retired but left
+  visible in the row, dimmed, rather than deleted**. ⚠ **Stated precisely: the two hits are ONE syndicated
+  series republished on two sites, not two independent measurements.** The **30-year stays dated Thursday**
+  (5.20%) — no Friday print stated. **Fed pricing becomes a fourth read:** a report attributes **near 50%**
+  September-hike odds to **CME FedWatch** — the first read here from the venue traders actually quote, rather
+  than Kalshi or an unattributed wrap. **Still not adopted as this page's number.** **Contested December
+  marking unchanged; no December probability published.**
+- 🟢 **MARKETS — FOURTEENTH VERIFICATION, BROAD FOR A FOURTH CONSECUTIVE CHECK.** Friday's closes returned
+  with all three levels and all three percentage moves together — S&P 500 **7,711.76 −0.25%**, Nasdaq
+  **26,402.42 −0.52%**, Dow **53,559.99 −9.45 −0.02%**. Dow points/percent reconciliation at 0.005 passed.
+  No "as of ~"; **7,673.04 stayed out**; **After-Hours absent** (weekend); Chart of the Day stays
+  **NASDAQ:PYPL**. **Fresh-tag count on markets: 0.**
+- ⚠ **FOUR VALIDATION GUARDS FIRED; ALL FOUR WERE DEFECTS IN MY OWN VALIDATOR, AND ONE OF THEM FOUND A REAL
+  QUESTION ANYWAY.** (1) A flat forbid on the retired **"~4.67%, after touching"** string fired on the
+  deliberate *"(was … — retired 5:15 PM)"* frame — replaced with a **per-occurrence retirement-frame check**,
+  which is stricter than the forbid it replaced. (2) A flat forbid on **CVE-2026-21962** fired on the passage
+  that *declines* to carry it — replaced with a proximity requirement for "not carried" **plus** an assertion
+  that the id never appears inside a `<tr>`. (3) The footer check anchored on the last literal `"sources"`,
+  which on the MMA page lands **inside the disclaimer**, after the link list — re-anchored on `<footer`.
+  (4) An interim `== 1` count on `~4.67%` failed at 4 occurrences; inspection showed **all four sit inside
+  retirement frames**, so the count was the wrong invariant and the per-occurrence frame check is the right one.
+  **No guard was relaxed.** Two duplicate footer links I had just added were caught by the duplicate-href guard
+  and removed.
+- ⚠ **ONE HONESTY FIX IN THE FINAL READ-THROUGH.** The rates note claimed the retired figure was **"shown
+  struck through"**; it is rendered **dimmed** (`opacity:.75`), not struck through. Wording corrected to match
+  what actually renders. **RULE: a note describing the page's own formatting is a factual claim about the page
+  and gets checked like one.**
+- VALIDATION — **`validate_1715.py`: 428 checks, 0 failures.** Five-tab nav + masthead ids + self-stamp per
+  page; **5:15 fallback stamp asserted and stale 1:35 / 1:05 / 12:35 forbidden on freshline AND masthead for
+  all four pages**; all six TradingView blocks plus oil, US10Y and PYPL with a **no-widgets** assertion on the
+  other three pages; six close figures with a Dow reconciliation and forbids on 7,673.04, "as of ~" and
+  After-Hours; the new **rates family** — 4.34% and 4.73%-at-the-close asserted, the retired 4.24% cell and
+  live "~4.67%, after touching" phrasing forbidden, a **per-occurrence retirement-frame sweep** on ~4.67%, the
+  30-year Thursday row asserted, four-reads label and CME FedWatch asserted with the three-reads label
+  forbidden; the new **Unitree family** — both ids, researcher, UniBLEed, no-pairing, wormable, both
+  declinations (no CVSS, no fixed release) and the **October 2025 non-identification**, plus a ±200-char
+  "Not stated" sweep on each id so no CVSS can be attached; the new **TITAN family** with a ±700-char
+  not-independently-validated sweep on the 700GB claim; the **ServiceNow ±420-char status sweep** (exploited
+  near 6875, not-exploited near 6876); KEV ids, four countdowns, BOD 26-04, liveness caveat and the **new
+  outside-corroboration strings**; the **rebuilt Oracle guard**; per-occurrence **66384** merits sweep; IM1
+  scoping; Hasbro/March and McKesson records-vs-people; a **12-name champions assertion** plus Pereira/Chimaev
+  corrective-frame sweeps, the featherweight-vacancy forbids and a **Dariush descriptor sweep**; the new
+  **$25,000 family** — five named recipients, the corrected Gomes wording with the old string forbidden, the
+  $400,000 retention and the combined-total declination; the **Paris card family**; countdown target and four
+  future card dates; **index-card-mirrors-tldr equality for all three pages**; a CVE well-formedness sweep with
+  a ≥15 liveness assertion; and per-footer duplicate-href, absolute-href and minimum-link checks.
