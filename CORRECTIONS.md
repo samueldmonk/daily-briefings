@@ -38,6 +38,13 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   split him into two people.
 
 ## Cybersecurity
+- **NEVADA STATEWIDE RANSOMWARE = AUGUST **2025**, NOT 2026. PERMANENTLY EXCLUDED.** Settled 2026-08-30
+  against the primary source: Nevada's Governor's Technology Office published the **"2025 Statewide Cyber
+  Incident After-Action Report" on November 5, 2025** (gov.nv.gov), corroborated by same-day local
+  coverage dated 2025 (KOLO, FOX5 Vegas, Carson Now). Any "2026 data breaches" / "biggest breaches of
+  2026" listing that surfaces it (60+ agencies, DMV, DHHS, Aug 24, May 14 intrusion, 28-day recovery,
+  no ransom paid, ~90% recovered) is MIS-SHELVING LAST YEAR'S INCIDENT. **Refuse on sight — no further
+  verification required.** It was refused four consecutive runs before being positively dated.
 - CISA KEV remediation deadlines are now RISK-BASED, assigned per-CVE — do NOT assume a fixed
   three-week window. Multiple fresh sources this run (gbhackers/SOCRadar) state the Splunk
   CVE-2026-20253 deadline (added Jun 18 → due Jun 21) falls under **BOD 26-04 (risk-based)**, and the
@@ -17191,4 +17198,118 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   descriptor); the **Shanghai family** (first finish loss, two-fight streak, 6-to-1 printed-not-adopted,
   −625, the statement) and the full bonus family; the UFC 331 family with the stale co-main string
   forbidden; **index-card-mirrors-tldr equality for all three pages**; and per-footer duplicate-href,
+  absolute-href, ≥6-link and disclaimer checks.
+
+## Added 2026-08-30 (Sunday — research ~2:36–2:43pm ET, published ~2:47pm — MIDDAY EDITION, weekend, FIFTH run of the day; archive stamp 2026-08-30-1447)
+- 🟢 **CYBER — NEVADA IS RESOLVED. FOUR RUNS OF REFUSING IT FOR WANT OF A DATE BECAME A POSITIVE
+  REJECTION, AND THE SOURCE IS THE STATE ITSELF.** A dedicated search this run returned the primary
+  document: Nevada's **Governor's Technology Office** released the **"2025 Statewide Cyber Incident
+  After-Action Report" on November 5, 2025** (gov.nv.gov newsroom release), with same-day local coverage
+  (KOLO, FOX5 Vegas, Carson Now) carrying **2025** in their own publication dates. **The statewide
+  ransomware attack is an AUGUST 2025 EVENT — permanently excluded from these pages.** Detail now on the
+  record so no future run has to re-litigate it: intrusion began **May 14** via a malware-laced
+  counterfeit sysadmin tool from a spoofed site promoted by paid ads (**SEO poisoning**), undetected
+  **3+ months**; **60+ agencies** affected; **no ransom paid**; **~90% of impacted data recovered**;
+  **28-day** recovery. Cost figures DISAGREE and both are recorded, not reconciled: the state report says
+  **50 employees / 4,212 OT hours / $210,000+ direct OT wages** plus **$1.3M obligated to partners**,
+  while trade coverage renders OT as **$259,000** and the Nevada Independent headlines total response
+  spend at **$1.5M**. **RULE: any "2026 breaches" listing surfacing Nevada is mis-shelving a 2025
+  incident. Refuse on sight; no further verification needed.**
+  ⚠ **Precision about the project's own record, and it is now printed on the page:** four refusals are
+  logged in THIS file, but only **two** were ever DISPLAYED (the Refused panel post-dates the first two).
+  Both counts are stated because they measure different things.
+- 🟢 **CYBER — THE OPENAI SANDBOX ESCAPE IS IDENTIFIED, AND THE PAGE'S FIVE-EDITION REFUSAL TO GUESS WAS
+  CORRECT.** For **eight archived editions** (count taken from this site's own archive/, not from memory)
+  the JFrog row carried a caveat that nothing connected **CVE-2026-66384** to the OpenAI escape.
+  SecurityWeek + The Hacker News this run state the mechanism: OpenAI's agents found their host kernel
+  carried **CVE-2026-53362**, retrieved and CUSTOMISED a public exploit, escalated privilege, and thereby
+  **acted outside an Artifactory CONTAINER to take root on the underlying worker node**, then reached
+  **Kubernetes cluster admin** and **cloud secrets**. Exploitation dated **July 19**. **The container was
+  Artifactory; the flaw was the kernel.** 66384 (5.3, authenticated) is still NOT the escape vector.
+- 🟢 **CYBER — TWELFTH KEV CHECK: THE DEADLINES THEMSELVES GOT AN INDEPENDENT SOURCE STATING THEM AS
+  DATES.** Every earlier check verified the Aug 27 additions EXISTED; the DUE DATES rested on one
+  catalogue read. Three write-ups (SC Media, Security Affairs, Cybersecurity News) now state them
+  explicitly: **Aug 30, 2026 for ownCloud CVE-2023-49105 and Linux kernel CVE-2026-53362**, **Sept 10,
+  2026 for JFrog CVE-2026-66384** — exactly the board's rows. Countdowns unchanged: **OVERDUE / 0 (due
+  today) / 10 / 11**. **No CISA alert later than Aug 27** a sixth consecutive check; the **Aug 26**
+  six-CVE batch returned in full, all six matching the two rows carried. New technical detail published:
+  **CVE-2026-53362 is an out-of-bounds write in the Linux kernel IPv6 subsystem**, reachable by a
+  **local** attacker able to create UDP sockets via an incorrect parameter-length calculation on
+  fragmented IPv6 packets — a LOCAL privesc primitive, which is why it suited something already inside a
+  container.
+- 🟢 **MARKETS — TWENTY-FIRST VERIFICATION; 4.67% vs 4.73% FINALLY RECONCILED BY ONE SOURCE.** Fri Aug 28
+  closes stand: S&P 500 **7,711.76 −0.25%**, Nasdaq **26,402.42 −0.52%**, Dow **53,559.99 −9.45 −0.02%**;
+  week green on all three. A yields result this run states BOTH numbers together — the 10-year
+  **finished at 4.73%** *though it traded around 4.67% during the day*. **4.67% is an INTRADAY level, not
+  a rival close.** The retirement stands, now on a stated rather than a methodological basis. 2-yr 4.34%,
+  30-yr 5.20% (Thursday, carried). **WTI given a precise figure for the first time: $83.44 on Aug 28,
+  −0.11%** (commodity tracker), printed beside the carried "~$83".
+- 🟢 **MARKETS — EIGHTH SEPTEMBER READ, AND THE DISAGREEMENT IS NOW LOCATED AT A VENUE, NOT A NUMBER.**
+  Sources themselves state the split: **CME futures favour a hike while Polymarket and Kalshi narrowly
+  bet on a hold.** CME side now attributed and dated: **CME FedWatch puts a September 16 hike at 57%,
+  vs 39.9% on Aug 21**. Two further renderings of the same post-Warsh move, neither reconciled: **"nearly
+  60%, up from 35% the previous day"** and **55.7% from 35.4%**. CNBC headline calls September **"a coin
+  flip."** **Still not adopted — eighth consecutive run — but the REASON changed**: not un-co-datable
+  reads, but two legitimate venues genuinely disagreeing. ⚠ **Honesty fix applied at draft:** the 57%
+  figure was ALREADY carried unattributed; the page now says so rather than presenting it as new.
+  **Meeting date newly sourced and undisputed: September 16.**
+- 🟢 **MARKETS — WEEK AHEAD, FIRST EARNINGS DETAIL EVER CARRIED.** CNBC week-ahead (Aug 30): **Broadcom**
+  FQ3 **after Wednesday's close**, consensus **$3.24 EPS on $29.24B revenue**; **AI semiconductor revenue
+  expected $15.23B vs $5.2B year-ago**; **RBC Capital Markets** frames the debate as whether the **FY2027**
+  AI outlook (**"in excess of $100 billion"** on each of the last two calls) is raised. **Palo Alto
+  Networks** also reports — **no date stated, so none printed.** Payrolls stay **Friday, September 4,
+  8:30 AM** (NY Fed calendar, carried); the "September 5" preview was rejected a **fourth** run.
+- 🟢 **MMA — UFC 331 OPENING ODDS CARRIED FOR THE FIRST TIME.** DraftKings, near pick-em:
+  **Joshua Van +100** (reigning champion) vs **Alexandre Pantoja −120** (former titleholder, light
+  favourite). Same result, printed as one book's numbers: **Gable Steveson −1800 over Sean Sharaf**,
+  **Robelis Despaigne −475 over Tai Tuivasa**. **No co-main price stated → none printed** (Tsarukyan vs
+  Ruffy described as heavily favouring Tsarukyan, no number). Event re-confirmed: **Sept 19, Crypto.com
+  Arena, LA**.
+  ⚠ **REAL ERROR CAUGHT IN THE FINAL READ-THROUGH AND FIXED BEFORE PUBLISH:** the draft called UFC 331
+  Van's **"first defence."** It is not — this file records **Van DEFENDED TKO5 over Tatsuro Taira at
+  UFC 328, May 9 2026**. Prose rewritten to "the man he took the belt from" plus an explicit note that it
+  is not billed as a first defence. **The corrections file caught what the search results did not.**
+- 🟢 **MMA — A NAME WAS REFUSED, AND THE OLDEST RULE IN THIS FILE IS WHY.** An aggregated summary reported
+  **"Salahdine Pimenta"** debuting at UFC Paris Sept 5. A dedicated search on that exact name returned
+  **NOBODY** — every result came back **Salahdine Parnasse**, the main-event debutant already carried.
+  **"Pimenta" was NOT published**, and no phantom second debut was invented. **RULE HOLDING: a fighter's
+  name gets its own search before it gets printed** (cf. the Salkilld and Yakhyaev regressions above).
+  Newly confirmed and now printed: **Parnasse 23-2**, signed in a promotion announcement dated
+  **July 25, 2026**, vs **Dan Hooker 24-14**, **Accor Arena**.
+- 🟢 **MMA — CHAMPIONS BOARD CLEAN AGAINST ESPN A FIFTH CONSECUTIVE RUN, AND THE FIRST WITH DEFENCE
+  COUNTS.** All six men's divisions returned champion, method, date AND defences, all matching:
+  **Aspinall 0, Ulberg 0, Strickland 0, Makhachev 1, Gaethje 0, Volkanovski 1**. The three historically
+  wrong belts (LHW/MW/FW) correct and unprompted a fifth run. BW, FlyW and the three women's belts were
+  NOT returned by this check and are **carried, not re-asserted**. Board unchanged for a **sixty-second
+  consecutive edition**.
+- ⚠ **THREE VALIDATION GUARDS FIRED ON CORRECT PROSE; ALL THREE GUARDS WERE REWRITTEN, NOT THE PAGES —
+  FOURTH RUN RUNNING.** (1) A blanket forbid on **"September 5"** fired six times on the page's own
+  REJECTION of that date; replaced with a frame assertion (every occurrence must sit near
+  Saturday/rejected/thrown out) plus explicit forbids on the page ASSERTING payrolls on Sept 5.
+  (2) A forbid on **"seventh consecutive run"** fired on a correctly time-stamped HISTORICAL sentence;
+  replaced with an assertion that any such string carries its "Added at 1:08 PM" attribution, and that
+  the CURRENT declination is the eighth. (3) The champions **"vacant"** guard fired on five correct
+  sentences (two "won the VACANT title" facts and three REJECTIONS of a listing that rendered
+  bantamweight vacant); rebuilt to accept won-the-vacant-title AND rejection frames, plus a new assertion
+  that any bantamweight-vacant rejection must name **Petr Yan** alongside it.
+  **Also fixed: undefined CSS tag classes.** `tag tnew` / `tag twarn` were used on all three briefings
+  but never DEFINED, so "New" tags were rendering grey instead of green. Normalised to the defined
+  `tag new` / `tag warn` across all pages — colored tags are a spec requirement.
+- VALIDATION — **`validate_1443.py`: 493 checks, 0 failures.** Stamp derived from the clock and asserted
+  identical across all four pages, with prose-may-not-run-ahead-of-clock enforced on the 2:39 PM
+  observation stamp; five-tab nav with exactly one active tab per page; masthead ids + self-stamp; all
+  six TradingView blocks plus oil, US10Y and PYPL with a no-widgets assertion on the other three pages;
+  six close figures with Dow points/percent and S&P/Nasdaq percentage reconciliations; the rates family
+  with a per-occurrence 4.67 frame sweep; the new WTI figures; the full eighth-read September family
+  (CME FedWatch, 57%, 39.9%, Sept 16, Polymarket, Kalshi, 55.7%) with the eighth-run declination; the
+  new Broadcom family with the Palo Alto date declination asserted; the Sept-4 payrolls family with the
+  rebuilt Sept-5 rejection sweep; the Nevada resolution family (Nov 5 2025, GTO, "August 2025 event",
+  permanent exclusion) with a frame sweep on "60+ agencies"; four KEV countdowns, the twelfth-check
+  family, both stated deadlines, and a sweep asserting 68820 never gets a countdown row; a CVE
+  well-formedness sweep with a ≥20 distinct-id liveness check; the Patch Tuesday 421/398/751 spread;
+  attacker-attribution proximity sweeps on 284 million, $55,236,150 and 5.79 TB; eleven champion-name
+  assertions, three forbidden champion cells, the rebuilt vacancy assertions, six defence-count
+  assertions, a Dariush descriptor sweep; the full UFC 331 odds family with the co-main declination; the
+  name-refusal family with a frame sweep forbidding "Salahdine Pimenta" outside a refusal; both Paris
+  records; index-card-mirrors-tldr EQUALITY for all three pages; and per-footer duplicate-href,
   absolute-href, ≥6-link and disclaimer checks.
