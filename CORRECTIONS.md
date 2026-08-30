@@ -17552,3 +17552,84 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   champion cells, the Yakhyaev spelling with both wrong forms forbidden, and a Dariush descriptor sweep;
   index-card-mirrors-tldr equality for all three pages; per-footer duplicate-href, absolute-href, ≥6-link and
   disclaimer checks; a tag-class-defined sweep; and the new cross-page consistency block.
+
+## Added 2026-08-30 (Sunday — research ~4:06–4:12pm ET, published ~4:14pm — AFTERNOON EDITION, weekend, EIGHTH run of the day; archive stamp 2026-08-30-1614)
+- ⚠ **CLOCK — DERIVED STAMP HELD A THIRD CONSECUTIVE RUN, AND THE RESTAMPER HAD A LATENT BUG THAT THE VALIDATOR EXPOSED.**
+  Prose stamps the observation (**4:06 PM**); the restamper derived the masthead from the clock at write time (**4:14 PM**).
+  ⚠ **The restamper's `id` regexes assumed `<span id="…">` with the id first**, but `#datestamp` and `#edition` are written
+  `<span class="pill" id="datestamp">` — so **those two ids were never actually being rewritten**; they had been correct only
+  because the date and edition bucket happened not to have changed. **Regex widened to `<span[^>]*id="…"` on both the restamper
+  and the validator.** This is the same class of defect as last run's dedupe bug: *a rewrite that only matches the tag shape you
+  wrote yourself is not a rewrite.*
+- ⚠ **VALIDATOR — THE BLANKET "PROSE MAY NOT RUN AHEAD OF PUBLISH" SWEEP WAS WRONG AND WAS NARROWED.** It flagged 17 times
+  (5:15 PM, 6:20 PM, 8:35 PM, 8:38 PM, 9:42 PM …) that are **legitimate carried references to *earlier days'* editions**, not
+  claims about today. **RULE CORRECTED: the assertion is that *this run's own* stamp (4:06 PM) does not exceed the masthead**, plus
+  a check that the run-stamp marker actually appears on all four pages. A time later than the masthead is only a defect if it is
+  stamped to today.
+- 🟢 **CYBER — ONE GENUINELY NEW CVE, AND IT IS ON THE BOARD FOR REACHABILITY RATHER THAN ACTIVITY.** **CVE-2026-62878**,
+  **Windows DNS Server**, **CVSS 9.8**: a **stack-based buffer overflow** giving **unauthenticated RCE with elevated privileges**
+  from a single crafted packet, **no user interaction**. Affects **Windows Server 2012 through 2025** plus listed Windows 10
+  versions. **Zero Day Initiative singled it out of the four unauthenticated 9.8 RCEs in the August release** because DNS sits on
+  the perimeter of essentially every Windows domain; other researchers call it **potentially wormable**. ⚠ **Neither exploited in
+  the wild nor publicly disclosed as of the advisory date, and not KEV-listed** — printed with the distinction between *what the
+  flaw would permit* and *what anyone reports happening* made explicit. **The only exploited flaw in the August release remains
+  CVE-2026-68820**, unchanged.
+- 🟢 **CYBER — FIFTEENTH KEV CHECK; NOTHING LATER THAN AUGUST 27 A NINTH CONSECUTIVE TIME.** CISA's own alert pages returned for
+  **Aug 7** (one: **CVE-2026-8037**, Progress LoadMaster — matching this file's standing **vendor CVSS 9.6, not ZDI's 9.8**),
+  **Aug 11** (three), **Aug 18** (four), **Aug 20** (two), **Aug 26** (six). ⚠ **A SECOND AGGREGATE ARRIVED AND NEITHER IS
+  ADOPTED:** one summary puts August's additions at **"at least 16"** where a tracker read earlier put them at **24**. Both are
+  third-party counts; **with three known gaps across fifteen checks this page certifies neither as complete** and publishes only
+  from the individual dated alert pages.
+- 🟢 **CYBER — THE TWO DEADLINES DUE TODAY RE-READ AGAINST A 4 PM CLOCK AND STILL FALL TODAY:** **CVE-2023-49105 (ownCloud)** and
+  **CVE-2026-53362 (Linux kernel)**, **Sunday August 30**. Countdowns unchanged (**OVERDUE / 0 / 10 / 11**). Per last run's
+  extended rule, the Patch Priority *body sentences* were re-read alongside the heading; no heading/body contradiction this run.
+- 🟢 **CYBER — NEVADA REFUSED A SEVENTH TIME, ON SIGHT.** Same listing genre. **ServiceNow (three CVSS 10.0), Cosmos EVM
+  ($5.72M, GHSA with no CVE), Gitea (8,393 IPs), Hugging Face (July 2026 dating)** all re-confirmed as already carried and correct;
+  **the OpenAI-led "call for collective action on cyber defense" (Aug 27) is already on the page and its signatory count remains
+  reported four different ways** — 128 / "nearly 130" / "more than 130" / "over 100" — still printed as a spread.
+- 🟢 **MARKETS — TWENTY-FOURTH VERIFICATION, AND THE HAWKISH READ IS NOW IN WARSH'S OWN SENTENCES.** Fri Aug 28 closes stand
+  (S&P **7,711.76 −0.25%**, Nasdaq Composite **26,402.42 −0.52%**, Dow **53,559.99 −9.45 −0.02%**). **Two direct quotations newly
+  sourced:** the 2% goal is **"a firm, fixed target"**, and **"responsibility for 65 months of sustained, elevated inflation sits
+  squarely with the central bank."** That is an argument about **credibility**, not about one data print — which is why a speech
+  with no new data moved the pricing as far as it did. The previously carried PCE/CPI quote is **retained, not replaced**.
+- ⚠ **MARKETS — A FOURTH FRIDAY INDEX FIGURE RECORDED AND DELIBERATELY NOT PROMOTED: the NASDAQ 100 closed 29,433.43, −0.70%.**
+  The scorecard tracks the **Nasdaq COMPOSITE** (**26,402.42, −0.52%**). **Different index, different membership — the two do not
+  compete and neither corrects the other.** Recorded precisely because a 0.70% decline sitting beside a 0.52% one invites the
+  substitution this page keeps refusing; **validator now asserts 29,433 and 0.70% never appear adjacent to "Nasdaq Composite."**
+  Also re-confirmed with one sharpening: **WTI $83.44 −0.11%**, **Brent $88.29 −0.26%**. **10-year stays 4.73%** (4.72% still
+  refused), **2-year 4.34%**.
+- 🟢 **MARKETS — ELEVENTH SEPTEMBER READ, STILL NO ADOPTION, AND A FORECAST PRINTED AS ATTRIBUTION.** An analyst reading holds a
+  hike **"probably won't come in September, but will by October or December"** — **attributed, not adopted**, because two venues
+  already answer the question differently (**CME 57/43 hike vs Polymarket and Kalshi both 52% hold**) and the level itself returns
+  as **57% / 55.7% / 55%**. **FOMC September 16 unchanged and not in dispute.** Labor Day = **Monday, September 7** sweep enforced.
+- 🟢 **MMA — THE PARIS CARD FINALLY HAS A BETTING LINE, AND IT IS PRINTED AS A SPREAD BECAUSE THREE BOOKS DISAGREE BY 100 POINTS.**
+  Every prior edition of **UFC Fight Night 287 (Sat Sept 5, Accor Arena, Paris)** ended on "no betting line was stated, so none is
+  printed." Three were stated this run: **BetWay Parnasse −400 / Hooker +300**; **consensus Parnasse −428 / Hooker +292**;
+  **UFC.com's own event page Parnasse −500 / Hooker +375**. **Published as "Parnasse −400 to −500 / Hooker +292 to +375 (three
+  books)"; no single figure adopted** — no source states which is a closing line. Direction is unanimous and is the story: **the
+  debuting former KSW champion is a heavy favourite over the UFC veteran.**
+- 🟢 **MMA — A FOURTH SEPTEMBER CARD ADDED, MARKED THIN ON PURPOSE: Sat Sept 26, "Rosas Jr. vs. Barcelos," 11 fights.** **No venue,
+  broadcast, start time, full first names or odds were stated and none is filled in.** Sept 5 Paris, **Sept 12 Noche UFC:
+  Rodriguez vs. Silva** and **Sept 19 UFC 331** all re-confirmed.
+- ⚠ **MMA — A UFC 331 START-TIME CONFLICT RECORDED, NOT RESOLVED:** a schedule aggregator puts the main card at **5 PM ET** where
+  this page carries **9 PM ET**. **Neither adopted** — an aggregator listing a month of events is not the promotion's page, and a
+  Los Angeles card can be listed in local or Eastern time. **Date, venue and card unaffected.**
+- 🟢 **MMA — THE PUNCH TALLY DID *NOT* MOVE, AND THAT IS THE FINDING.** A bonus write-up this run calls the finish a **"perfectly
+  timed right uppercut"** — which is **already inside the five recorded names**, not a sixth. **index.html's "five different names"
+  and the MMA page's "five names, one punch, no adoption" both stand unchanged**, and the cross-page consistency guard added last
+  run passed on exactly the claim it was written for. **Shanghai bonuses re-confirmed in full: $400,000 total = four × $100,000
+  (POTN Song Yadong and Bilal Hasan; FOTN Liu Ce and Levi Rodrigues Jr.), plus the five $25,000 finish bonuses** — no change.
+- 🟢 **MMA — CHAMPIONS BOARD CLEAN AN EIGHTH CONSECUTIVE RUN**; board unchanged for a **sixty-fifth consecutive edition**. The three
+  historically-wrong belts (**Ulberg** at LHW, **Strickland** at MW, **Volkanovski** at FW) correct again; Pereira/Chimaev/vacant-FW/
+  Topuria-at-LW all asserted **absent** as table cells.
+- VALIDATION — **`validate_1606.py`: 446 checks, 0 failures.** Stamp identical across all five pages with the *narrowed* run-stamp
+  assertion; five-tab nav with exactly one active tab per page; masthead ids under the widened regex; all six TradingView blocks
+  plus the three indices, oil and US10Y, with a no-widgets sweep on the other three pages **and archive.html**; the three Friday
+  closes; the **Nasdaq-100-not-promoted-into-the-Composite** adjacency sweep (new); the 4.73/4.72 rates family; both new Warsh
+  quotations; the CVE-2026-62878 family **with its not-exploited posture asserted as a string**; the fifteenth-check and
+  two-aggregates families; a CVE well-formedness sweep with a ≥20 distinct-id liveness check; the Citrix-9.3 and LoadMaster-9.6
+  vendor-CVSS guards; the three-book odds spread with a no-single-figure-adopted assertion; the Sept 26 card and the UFC 331
+  start-time conflict; **eleven champion-name assertions and four forbidden champion cells**; the Yakhyaev/Salkilld spellings and
+  the Dariush descriptor sweep; index-card-mirrors-tldr **exact-string equality** for all three pages; cross-page consistency on
+  the punch count and the odds spread; per-footer duplicate-href, https-only, ≥6-link and disclaimer checks; a whole-file
+  duplicate-href sweep on all four pages; and a tag-class-defined sweep.
