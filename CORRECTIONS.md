@@ -16957,3 +16957,119 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   both new bouts, all six odds prices, both start times, the adoption declination); the Song finish family
   (Goddard, 1:48); the countdown target and the Sept 5 card; **index-card-mirrors-tldr equality for all three
   pages**; and per-footer duplicate-href, absolute-href, ≥6-link and disclaimer checks.
+
+## Added 2026-08-30 (Sunday — research ~1:02–1:08pm ET, published 1:09pm — MIDDAY EDITION, weekend, THIRD run of the day; archive stamp 2026-08-30-1309)
+- ⚠ **CLOCK — PROSE WAS CORRECTED DOWN AGAIN, SECOND CONSECUTIVE RUN.** This run started **1:02pm**, nine
+  minutes after the previous run published at 1:00pm. Drafting used **1:10 PM** as the observation stamp; the
+  wall clock read **1:08** when the pages were checked, so **every prose occurrence of 1:10 PM was corrected
+  down to 1:08**, and the masthead was stamped separately at the true publish clock, **1:09pm**. A validator
+  assertion now forbids the drafted-ahead string in the masthead region of all four pages. **RULE HOLDING:
+  the masthead stamps the publish, prose stamps the observation, and prose may not run ahead of the clock.**
+  Method: targeted edits (`edits_1310.py`, `sync_index_1310.py`, `fix_1310.py`, `fix2_1310.py`,
+  `restamp_1310.py`, `validate_1310.py`) onto the 12:58pm pages.
+- 🔴 **CYBER — THE BIG FINDING THIS RUN IS A GENRE, NOT AN INCIDENT: THREE ITEMS FETCHED FROM "2026 BREACHES"
+  ROUNDUPS, ALL THREE REFUSED.** A new **"Refused This Run"** panel now shows them, because a refusal that is
+  never displayed is indistinguishable from a search that found nothing.
+  (1) **Nevada — third consecutive refusal.** Same listing genre, same **August 24 / 60+ agencies** claim, still
+  **no source dating it to 2026**; surrounding detail remains the **2025** incident's after-action reporting.
+  (2) **Salesloft Drift — refused on irreconcilable dates.** The roundup says Drift email tokens reached Google
+  Workspace mail and that **Salesloft and Salesforce revoked Drift tokens on August 20**; dedicated write-ups
+  fetched in the same minute date the campaign to **June 8–18, 2026**, detection **June 19**, actor **UNC6395**,
+  **700+ organisations**, support-case text and embedded credentials taken, **no Salesforce vulnerability
+  involved**. **A June campaign and an August revocation are not the same event and nothing fetched reconciles
+  them** — the substance is well-attested, the DATE does not survive its own sources, so it is not published as
+  news of this weekend.
+  (3) **Brightspeed / Crimson Collective — refused on age.** The **1 million+** residential-record extortion
+  claim is real and sourced but was announced **January 4, 2026** — eight months old, surfacing only because a
+  year-in-review roundup ranks it among 2026's largest.
+  **RULE ADDED: a "recent breaches" listing is a RANKING OF THE YEAR, not a feed of the day. Three items from
+  one genre in one run, every one misdated or stale, is the measure of it.**
+- 🟢 **CYBER — TENTH KEV CHECK: A BLANK FILLED, NOT A FOURTH HOLE OPENED.** CISA's own alert pages returned for
+  **August 7 (one), 11 (three), 18 (four), 20 (two) and 26 (six)**, **nothing later than August 27**, so all four
+  countdowns (**OVERDUE / 0 / 10 / 11**) stand unmoved a fourth consecutive check. The **August 7** addition,
+  counted since Saturday but never named, is **`CVE-2026-8037` (Progress LoadMaster command injection)**.
+  ⚠ **This is explicitly NOT a fourth gap** — Oracle (Aug 24), Gitea (Aug 25) and Zimbra (Aug 21) are additions
+  **no check here ever returned**; August 7 is a batch this board **did** see and merely left unnamed. **Three
+  gaps in ten checks, not four.** As with all three, **no due date was stated by any source fetched this run, so
+  CVE-2026-8037 gets no row and no countdown**; a validator guard asserts the id never appears near a countdown.
+- 🟢 **CYBER — THE WINSOCK ROW GAINED ITS ORIGIN.** `CVE-2026-68820`, already on this board from the Aug 11 KEV
+  batch, is confirmed as **the single exploited zero-day in an August Patch Tuesday that fixed 421 CVEs** — an
+  elevation-of-privilege **use-after-free in the Ancillary Function Driver for WinSock (afd.sys)** used to reach
+  SYSTEM. The 421 figure replaced the Citrix "36 attempts" tile in the stat strip.
+- 🟢 **MARKETS — NINETEENTH VERIFICATION, FULL FIELDS AGAIN.** Fri Aug 28 closes returned with all three levels
+  and all three percentage moves: S&P 500 **7,711.76 −0.25%**, Nasdaq **26,402.42 −0.52%**, Dow **53,559.99
+  −9.45 −0.02%** (points/percent reconciled at 0.005), plus the weekly figures **S&P +0.5% / Nasdaq +0.9% /
+  Dow +0.5%** and the Dow's **first winning week in three**. **10-year 4.73% confirmed a fifth time** from a
+  dated Treasury-yields snapshot for August 28; 2-yr 4.34%, 30-yr still Thursday's 5.20%. 7,673.04 stayed out;
+  4.67 stayed retired; no "as of ~"; After-Hours absent (weekend); Chart of the Day stays **NASDAQ:PYPL**.
+- 🟢 **MARKETS — A SEVENTH READ ON SEPTEMBER, AND THE FIRST ONE PHRASED IN WORDS.** **Goldman Sachs says a
+  September hike has become "very unlikely"** (softer retail sales, slowing labour market, cooling inflation);
+  the same run returned **48% (Kalshi)** and a statement that **before Warsh spoke the odds of no move were
+  nearly 70%**. Against **near 50% (CME FedWatch)**, **57% hike** and **65% hold** already carried, that is a
+  **fifth distinct answer to one question**, none co-dated, none reconciled. **Seventh consecutive run declining
+  to adopt a September probability.** Cause still uncontested: **Warsh's Jackson Hole warning.**
+- 🔴 **MARKETS — "SEPTEMBER 5" FAILED THE WEEKDAY TEST A SECOND CONSECUTIVE RUN.** A week-ahead preview again
+  puts nonfarm payrolls on **"September 5."** **September 5, 2026 is a Saturday** (today, Aug 30, is Sunday →
+  Friday is **Sept 4**). Payrolls are not released Saturday. **Rejected again**; the row stays **Friday,
+  September 4 at 8:30 a.m.** A per-occurrence rejection-frame sweep enforces it.
+- 🟢 **MARKETS — "Sunday midday" advanced to "Sunday, just past one o'clock"** in the Lead. Fourth consecutive
+  run in which a time-of-day WORD, not a number, was the thing that had gone stale.
+- 🟢 **MMA — UFC PARIS IS NOW A COMPLETE CARD, AND THE OFFICIAL BILLING NAMES THE UNDERDOG FIRST.** The
+  promotion's own event page and three card write-ups returned all **13 bouts** at the **Accor Arena**,
+  **Sat Sept 5**, prelims 12:00 PM ET / main card 3:00 PM ET, Paramount+. Newly named this run: **Morgan
+  Charrière vs. Felipe Lima**, **Patrick Soriano vs. Daniil Donchenko**, **Kaan Ofli Campbell vs. Trevor Peek**,
+  **Lucas Dias vs. Manon Duclos**, **Nora Cornolle vs. Klaudia Syguła**, **Fabia Sintes vs. Mohammed Aljarouj**,
+  **Daniel Benouaich vs. Sofia Montenegro** — alongside Ziam/Sola, Page/Ruziboev, Keita/Naimov, Pinto/Spann and
+  Sy/Bukauskas already carried. ⚠ **Several first names were given only as initials in the listing and the page
+  says so rather than expanding what it did not see spelled out.** The official title is **UFC Fight Night:
+  Hooker vs. Parnasse** — **Hooker first**, though every book has **Parnasse** favoured; the page states the UFC
+  bills by fighter of record and **does not read the order as a prediction**. Odds still a **range**
+  (**−400 / −428 / −500**), **none adopted**. Parnasse's **two-time KSW featherweight / one-time KSW lightweight**
+  credentials re-confirmed word for word.
+- 🟢 **MMA — CHAMPIONS BOARD CLEAN AGAINST ESPN A THIRD CONSECUTIVE RUN.** ESPN's "Current and all-time UFC
+  champions" returned six men's divisions with champion, method and date: Aspinall (HW, Jun 21 2025),
+  **Ulberg** (LHW, Apr 11 2026), **Strickland** (MW, May 9 2026), Makhachev (WW, Nov 15 2025), Gaethje (LW,
+  Jun 14 2026), **Volkanovski** (FW, Apr 12 2025) — **all six matching.** The three belts this project has
+  historically got wrong came back correct and unprompted a **third consecutive run**. Board unchanged for a
+  **sixtieth consecutive edition**; the four divisions ESPN did not return (BW, FlyW, three women's belts) stay
+  as carried and are **not** re-asserted as fresh.
+- ⚠ **NINE VALIDATION GUARDS FIRED; ALL NINE WERE DEFECTS IN MY OWN VALIDATOR AND THE PAGES WERE CLEAN.**
+  (1–5) Five `vacan` occurrences fired on the page's **own corrective narrative** about a source's false
+  vacancy ("an absence in a listing is not a vacancy", "agreement plus one unsupported vacancy", "when
+  featherweight was published vacant while Volkanovski held it"). The vocabulary sweep was **replaced outright
+  with assertion-based guards**: no champions-board `<td>` may read "vacant"; featherweight may never be
+  **affirmatively** asserted vacant (regex over "featherweight … is vacant" requiring a rejection frame); and
+  every "vacant" must sit near a champion, a belt or a rejection. **Stricter than what it replaced.**
+  (6) A stale **"fifty-ninth consecutive edition"** in body prose — a real defect in the PAGE, corrected to
+  **sixtieth** with the tldr, and the forbid correctly scoped to the tldr region so history may still be
+  narrated. (7–9) Duplicate-href guards fired on all three footers because this run's added links were already
+  present; fixed with a **first-occurrence-wins footer dedupe**, not by relaxing the guard.
+  **RULE REAFFIRMED: a guard that fires on correct prose is a broken guard — rewrite it to check the assertion,
+  not the vocabulary.**
+- 🟢 **ARCHIVE — RETENTION PRUNING ACTUALLY RAN FOR THE FIRST TIME.** The documented `find -mtime +21` prune
+  **can never fire on a fresh clone**, because every file's mtime is the clone time; the archive had grown to
+  **29 days / 188 snapshots**. Pruning was reimplemented **by the date encoded in the filename**, which is what
+  the retention rule means: **198 snapshots older than 21 days removed**, archive now **16 days / 122
+  snapshots**, and every remaining `archive/` link verified to exist on disk.
+- VALIDATION — **`validate_1310.py`: 537 checks, 0 failures.** Five-tab nav + masthead ids + self-stamp + single
+  active tab per page; **1:09 PM stamp asserted on all four pages with 12:58 / 12:55 / 11:05 AM / 9:42 PM /
+  8:31 PM / Afternoon-Edition / Saturday-Aug-29 forbidden in the masthead region**, plus a new **prose-ahead-of-
+  clock forbid on "1:10 PM"** there; all six TradingView blocks plus oil, US10Y and PYPL with a **no-widgets**
+  assertion on the other three pages; six close figures with a Dow points/percent reconciliation and forbids on
+  7,673.04, "as of ~" and After-Hours; the rates family (4.73 / 4.34 / 5.20) with a per-occurrence 4.67
+  rejection sweep; the advanced **nineteenth / seventh-read** counters with the stale strings forbidden; all
+  five September probability reads plus the seventh declination; the weekly figures and "first winning week in
+  three"; a per-occurrence **"September 5" rejection sweep** with Sept 4 / 8:30 a.m. asserted; the **lead
+  time-of-day** advance with three stale variants forbidden; the **unmoved KEV board** (OVERDUE / 0 / 10 / 11)
+  with stale 1-day and 12-day strings forbidden and nine KEV ids; the new **LoadMaster family** (id, product,
+  never-near-a-countdown, no-due-date frame, "not a fourth gap", "three gaps in ten checks"); gap ids
+  (Zimbra, Gitea) never in a countdown region; the **Patch Tuesday family** (421, CVE-2026-68820, afd.sys,
+  Ancillary Function Driver); the new **Refused This Run** panel with per-occurrence refusal-frame sweeps on
+  Nevada, Salesloft and Brightspeed plus UNC6395, the June 8–18 window and the January 4 date; an
+  attacker-attribution proximity sweep on 5.79 TB, 284M, $55,236,150 and 1 million+; a CVE well-formedness
+  sweep with a ≥20 distinct-id liveness assertion; **ten champion-name assertions**, three forbidden champion
+  cells, the **rebuilt assertion-based vacancy guards**, a Dariush descriptor sweep and both board counters;
+  the **Paris family** (fourteen bout names, 13 bouts, venue, official billing, all three odds prices, the
+  adoption declination, the KSW descriptor); the Song finish family (Goddard, 1:48) and $400,000;
+  **index-card-mirrors-tldr equality for all three pages**; and per-footer duplicate-href, absolute-href,
+  ≥6-link and disclaimer checks.
