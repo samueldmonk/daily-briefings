@@ -17445,3 +17445,110 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   two-finishes separation asserted; **index-card-mirrors-tldr equality for all three pages**; per-footer
   duplicate-href, absolute-href, ≥6-link and disclaimer checks; and a **tag-class-defined sweep** on all
   four pages.
+
+## Added 2026-08-30 (Sunday — research ~3:36–3:44pm ET, published ~3:48pm — AFTERNOON EDITION, weekend, SEVENTH run of the day; archive stamp 2026-08-30-1547)
+- ⚠ **CLOCK — DERIVED STAMP HELD A SECOND CONSECUTIVE RUN.** Prose stamps the observation (**3:36 PM**), the
+  restamper derived the masthead from the clock at write time (**3:44 PM**), and the validator read the stamp off
+  the page and asserted prose ≤ publish across all four. **The restamper this run also writes `id="updated"`,
+  `id="edition"` and `id="datestamp"`, which the previous one left to the client-side JS** — a static read of the
+  page now shows the right time even before the script runs. **archive.html was restamped too; it had been
+  serving a static masthead reading Saturday 9:42 PM.**
+- 🟢 **CYBER — A GENUINELY NEW INCIDENT, AND IT RECONCILES BY ARITHMETIC.** **Cosmos EVM**, advisory
+  **GHSA-7g4w-cg88-2cq2**, Critical, **published with no CVE, no CWE and no CVSS**: an **integer underflow** in
+  the shared balance-handling module let an attacker drive a balance below zero, have it read as the largest
+  positive number, and move other accounts' tokens. **$5.72M taken from six chains Aug 20–25; three chains halted;
+  40 networks contacted.** The post-mortem's split — **$2.87M through DEXs + $2.85M through CEXs — sums to $5.72M
+  exactly**, so the total is printed as a figure rather than a range; a **$5.7M** rounding is recorded as the same
+  number, not a second claim. **Governance is the story:** reported through the bug bounty **April 25**, assessed
+  then as posing **no risk to live funds**; all chains confirmed affected **Aug 13**; fix shipped **v0.6.2 / v0.7.2
+  on Aug 19**, the day before the first drain; post-mortem **Aug 28**. ⚠ **Deliberately given NO row in the
+  Vulnerability Watch table** — that table indexes CVEs and this is not one.
+- 🔴 **CYBER — THE SAME DATE DEFECT AS LAST RUN, ONE PARAGRAPH DEEPER, FOUND AND FIXED.** The Patch Priority
+  heading for Citrix had been demoted to **EXPIRED YESTERDAY** last run, but the paragraph *under* it still read
+  **"That is today: the countdown below reads 0 days left."** Heading and body contradicted each other for one
+  edition. **RULE EXTENDED: re-reading a box against the clock means re-reading its sentences, not just its
+  heading.** The two CVEs actually due today (**CVE-2023-49105 ownCloud, CVE-2026-53362 Linux kernel, Sunday
+  August 30**) were re-read and still fall today; countdowns unchanged (**OVERDUE / 0 / 10 / 11**).
+- 🟢 **CYBER — FOURTEENTH KEV CHECK; NOTHING LATER THAN AUGUST 27 AN EIGHTH CONSECUTIVE TIME.** CISA's own alert
+  pages returned for **Aug 11** (three), **Aug 18** (four), **Aug 20** (two: CVE-2026-72529 / CVE-2026-72530
+  TrueConf), **Aug 21** (one: CVE-2026-73570 Zimbra), **Aug 26** (six, all ids matching) and **Aug 27** (three).
+  **CVE-2026-68820 still gets no countdown row — presence is CISA-sourced, its due date still is not.** ⚠ A
+  tracker's aggregate — **"24 new KEV entries in the 30 days of August"** — is printed as that site's number and
+  is NOT used to claim completeness, given three known gaps in fourteen checks.
+- 🟢 **CYBER — ownCloud CVE-2023-49105 now carries vendor-grade detail:** **WebDAV API authentication bypass**,
+  **CVSS 9.8**, exploitable when the username is known and the victim has **no signing key configured — the
+  default**; disclosed by ownCloud **November 2023**, core **10.6.0–10.13.0**, **fixed in 10.13.1**. Actor
+  described only as **Chinese-speaking**; no further attribution printed.
+- 🟢 **CYBER — GITEA SHARPENED ON THREE POINTS:** Shadowserver's exposure figure has a precise form and a date —
+  **8,393 IPs vulnerable on Aug 27** (what "8,300+" was rounding); the flaw was **reported by Salesforce
+  researcher Shai Rod**; and the Aug 28 date now has a directive behind it — **CISA gave three days under BOD
+  26-04**. ⚠ Still news-sourced, not a CISA page, so **still no countdown row**; either way it is now two days past.
+- 🟢 **CYBER — ANTHROPIC/CLAUDE SESSION HIJACKING GAINED THE FAMILIES AND THE MECHANISM:** **Vidar, LummaC2,
+  StealC, RedLine** among others; because the attacker **reuses a valid session, the login flow is never entered,
+  so the password and 2FA prompts are both bypassed.** Signing out kills the session, not the malware.
+- 🟢 **CYBER — NEVADA REFUSED A SIXTH TIME, ON SIGHT.** Same listing genre, same Aug 24 / 60-plus-agencies claim.
+  Hugging Face keeps its **July 2026** dating; the **August 29** publication-date framing stays refused.
+- 🟢 **MARKETS — TWENTY-THIRD VERIFICATION, AND THE SEPTEMBER READ FINALLY HAS A DATED PRIOR.** Fri Aug 28 closes
+  stand (S&P **7,711.76 −0.25%**, Nasdaq **26,402.42 −0.52%**, Dow **53,559.99 −9.45 −0.02%**). **TENTH September
+  read, and the first with an anchor: CME FedWatch 57% hike is stated against 39.9% on August 21** — roughly a
+  **17-point swing in a week** either side of Warsh's Jackson Hole speech — and the hike would lift the range from
+  **3.50–3.75% to 3.75–4%**, which this page had never printed. **Venue split unchanged and still not adopted:**
+  CME 57/43 hike vs **Polymarket and Kalshi both 52% hold**.
+- ⚠ **MARKETS — A THIRD RENDERING OF FRIDAY'S 10-YEAR CLOSE, 4.72%, RECORDED AND REFUSED.** The table keeps
+  **4.73%** from a dated end-of-day Treasury series (three independent returns, reconciled at 2:39 PM against the
+  intraday **4.67%** by a source stating both). **Tie-break is source specificity, not gap size.** From the same
+  result, **Brent $88.29 −0.26%** WAS adopted — it sharpens "~$88" rather than contradicting it. WTI **$83.44**
+  and the 2-year **4.34%** unchanged.
+- 🟢 **MARKETS — SEPTEMBER SEASONALITY CAME BACK IN FOUR INCOMPATIBLE RENDERINGS AND NONE WAS ADOPTED.**
+  **−0.7% over 75 years**; **−0.7% over 50 years with gains 46% of the time**; **−1.2% since 1928**; **−1.17%
+  since 1928**; and on frequency **44% positive since 1950** against that **46%**. No source states its own basis,
+  so the **range** is printed: an average September loss of **0.7–1.2%**, positive in **44–46%** of years.
+  ⚠ The conditional is printed and the conclusion is NOT: above the **200-day** entering September the average is
+  **+1.3%** with **60%** green, below it **−4.2%** with **15%** green — **no source fetched this run states which
+  side the S&P 500 is on, so this page does not say.** New calendar detail: **Aug 31 carries no major earnings or
+  events**; **Sept 1 adds July construction spending** alongside ISM Manufacturing. Payrolls unchanged, **Fri
+  Sept 4, 8:30 AM** — defended a sixth run. **Labor Day = Monday, September 7** sweep still enforced.
+- 🟢 **MMA — UFC 333 FILLED OUT FROM TWO TITLE FIGHTS INTO A FULL MAIN CARD.** Added: **Volkov vs Kuniev** (HW),
+  **Arnold Allen vs Aaron Pico** (FW), **Reyes vs Murzakanov** and **Krylov vs Abdul Rakhman Yakhyaev** (LHW),
+  **Abus Magomedov vs Cam Rowston** (MW), **Grant Dawson vs Nurullo Aliev** (LW). **Main card 2 PM ET / 11 AM PT**,
+  Paramount+ **with no PPV charge**. ⚠ **The Yakhyaev spelling was checked against this file's standing entry and
+  matches: "Abdul Rakhman Yakhyaev", no hyphen, one fighter not two.** Oct 24, Etihad Arena, Abu Dhabi unchanged.
+- 🟢 **MMA — SONG'S POST-FIGHT RECORD IS SOURCED FOR THE FIRST TIME: 24-9-1, 1 NC.** The page carried the pre-fight
+  **23-9-1** throughout and refused to add the win itself; **both halves of that pair (Song's record, Umar's second
+  loss) are now sourced and neither was ever derived on the page.** Also newly sourced: Nurmagomedov was
+  **finished for the first time in his career**, and he has spoken — **"Everything is fine with me… I will work on
+  the mistakes. And I will be back"** — with a separate team statement printed alongside.
+- ⚠ **MMA — A RANKING CONFLICT RECORDED, NOT RESOLVED:** a post-event rankings write-up calls Nurmagomedov the
+  **previously ranked No. 2** bantamweight where this page carries **No. 3**. **Neither adopted** — official
+  rankings update on their own schedule and the article may describe the board either side of it. The two figures
+  the page is confident of are unaffected: **Song entered No. 6** and **beat a former title challenger**.
+  Reporting that Song **lands in the top five**, is **3-1 in his last four**, and is headed for a **title
+  eliminator against the Yan–Dvalishvili 3 winner** is printed as **reporting, not a booking** — the promotion has
+  **booked nothing after UFC 333**, and **Sean O'Malley** stays on the page as a competing claim on the same footing.
+- 🟢 **MMA — CHAMPIONS BOARD CLEAN A SEVENTH CONSECUTIVE RUN**; board unchanged for a **sixty-fourth consecutive
+  edition**. The three historically-wrong belts (Ulberg at LHW, Strickland at MW, Volkanovski at FW) correct again.
+- 🔴 **A CROSS-PAGE CONTRADICTION WAS CAUGHT BY THE VALIDATOR AND IT WAS ON THE FRONT PAGE.** index.html's footer
+  said the Shanghai knockout punch had been given **"three different names across at least four reports"** while
+  the MMA page says **"Five names, one punch, no adoption."** Corrected to five — and the **report count was
+  dropped rather than guessed**, because no source states one. **New guard class added: cross-page consistency
+  (index vs each briefing) on the punch count, the index closes, the Cosmos total and Song's record.**
+- 🔴 **THIS RUN'S OWN EDITS INTRODUCED DUPLICATE FOOTER SOURCE LINKS ON ALL THREE BRIEFINGS AND THE VALIDATOR
+  CAUGHT THEM.** Six URLs added at the head of each footer already existed further down. Deduped keeping the
+  **first** occurrence (this run's better-labelled entry). ⚠ The first dedupe pass **missed three** because its
+  regex assumed `<a href="…">` with no other attributes; some older links carry `target="_blank" rel="noopener"`
+  and one MMA block sits **after `</footer>`**. **A dedupe that only matches the tag shape you wrote yourself is
+  not a dedupe** — regex widened, all three caught on the second pass.
+- VALIDATION — **`validate_1536.py`: 309 checks, 0 failures.** Stamp derived from the page and asserted identical
+  across all four with prose-may-not-run-ahead enforced; five-tab nav with exactly one active tab; masthead ids +
+  self-stamp JS; all six TradingView blocks plus oil, US10Y and PYPL with a no-widgets assertion on the other three
+  pages and on archive.html; six close figures plus the Thursday-minus-Friday arithmetic identity; the full
+  seasonality family with an explicit no-adoption assertion; the 4.72/4.73/4.67 rates family with a
+  not-promoted-into-the-table sweep; the Labor Day / September 7 family and the standing September 5 rejection;
+  the four-figure undated-rejection frame; Patch Priority/KEV agreement with the Citrix contradiction string
+  asserted **absent**; the countdown baseline asserted to today; the fourteenth-check family; the full Cosmos
+  family **with the $2.87 + $2.85 = $5.72 identity asserted in code** and a GHSA-not-in-the-CVE-table sweep; the
+  Gitea and stealer-family additions; Nevada and Hugging Face refusal frames; a CVE well-formedness sweep with a
+  ≥20 distinct-id liveness check; the UFC 333 card family, eleven champion-name assertions, four forbidden
+  champion cells, the Yakhyaev spelling with both wrong forms forbidden, and a Dariush descriptor sweep;
+  index-card-mirrors-tldr equality for all three pages; per-footer duplicate-href, absolute-href, ≥6-link and
+  disclaimer checks; a tag-class-defined sweep; and the new cross-page consistency block.
