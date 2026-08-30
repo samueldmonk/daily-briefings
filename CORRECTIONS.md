@@ -16849,3 +16849,111 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   wording and the old string forbidden; the countdown target and four future card dates;
   **index-card-mirrors-tldr equality for all three pages**; and per-footer duplicate-href, absolute-href,
   minimum-link and `.disc` disclaimer checks.
+
+## Added 2026-08-30 (Sunday — research ~12:53–12:58pm ET, published 1:00pm — MIDDAY EDITION, weekend, SECOND run of the day; archive stamp 2026-08-30-1300)
+- ⚠ **CLOCK — THE SHORTEST GAP THIS PROJECT HAS RECORDED, BEATING SATURDAY NIGHT'S.** This run STARTED at
+  **12:53pm, two minutes after the previous run published at 12:51pm**. Research ran **12:53–12:58pm**; the
+  masthead was stamped **12:58pm** at publish. ⚠ **A prose-time correction fired in the other direction this
+  time:** four sentences had been drafted saying a check ran "at 1:00 PM" when the wall clock still read
+  **12:58**, and they were corrected DOWN to 12:58 before publish. Per the standing rule the masthead stamps
+  the publish and prose stamps the observation — **and prose must not run ahead of the clock any more than it
+  may lag behind it.** Method: **targeted edits** (`edits_1305.py`, `edits2_1305.py`, `sync_index_1305.py`,
+  `restamp_1305.py`, `fix_1305.py`, `validate_1305.py`) onto the 12:51pm pages.
+- 🔴 **CYBER — NINTH KEV CHECK: A THIRD HOLE IN THE CATALOGUE, AND THE SINGLE-VULN ALERT CAME BACK ON A
+  DIFFERENT DATE.** CISA's own alert pages returned for **August 11 (three), August 18 (four), August 20 (two),
+  August 21 (ONE) and August 26 (six)** — **nothing later than August 27**, so all four countdowns
+  (**OVERDUE / 0 / 10 / 11**) stand unmoved. ⚠ **The one-CVE alert this run is dated August 21, not August 24,
+  and it is `CVE-2026-73570` (Zimbra Collaboration Suite OS command injection)** — an addition **no check this
+  board has run has ever carried**. That is the **third** known gap, after the Aug 24 Oracle alert and the
+  Aug 25 Gitea entry (`CVE-2026-60004`). **No source fetched this run states a due date for it, so it gets no
+  row and no countdown** — a KEV entry without a CISA-stated deadline is not a deadline. **Three gaps in nine
+  checks is now the page's own stated measure of how much of the catalogue these searches see.**
+- 🟢 **CYBER — THE COUNTED BATCHES GAINED THEIR IDS.** Named for the first time this run: Aug 11 =
+  `CVE-2026-20349` (Cisco Secure Firewall ASA/FTD), `CVE-2026-68820` (Windows WinSock UAF), `CVE-2026-72898`
+  (Metabase SQLi); Aug 18 = `CVE-2026-33824` (Microsoft IKE double free), `CVE-2026-55040` (SharePoint weak
+  auth), `CVE-2026-59310` (VMware vCenter path traversal), `CVE-2026-65400` (Apple macOS improper auth);
+  Aug 20 = `CVE-2026-72529` / `CVE-2026-72530` (TrueConf Server). THN separately confirms the macOS,
+  SharePoint, vCenter and IKE flaws are **under active exploitation**.
+- 🟢 **CYBER — NEW: ANTHROPIC IS SIGNING CLAUDE USERS OUT AFTER INFOSTEALERS TOOK LIVE SESSIONS.** Anthropic is
+  warning users that **infostealer malware on their own PCs stole active Claude login sessions**, which an
+  attacker then used to reach accounts and **consume their usage**. The observable symptom was a **quota that
+  refilled and drained while the user was not working** — a billing signature, not a login alert. Anthropic is
+  **signing affected users out, removing saved payment methods and refunding charges it identifies as
+  unauthorised**, and states plainly there is **no reason to believe the malware is related to Claude, was
+  installed through Claude, or relates to anything the user did with Claude**. ⚠ **No affected-account count
+  was stated by any source fetched this run, and none is printed.**
+- 🟢 **CYBER — NEW: ANONYMOUSKIT, PHISHING-AS-A-SERVICE WITH A RENTED AI VOICE.** Disclosed **August 26**: a
+  PhaaS platform using **rented AI voice agents** to call **phone-theft victims posing as Apple Support** and
+  request the device passcode. **No pricing, victim count or operator attribution sourced — none printed.**
+- 🔴 **CYBER — NEVADA SURFACED AGAIN AND WAS REFUSED AGAIN.** The same "2026 data breaches" listing genre
+  returned the Nevada statewide ransomware attack dated **August 24** affecting 60+ agencies. **Still no source
+  dating it to 2026; the surrounding detail remains the 2025 incident's after-action reporting. NOT PUBLISHED,
+  second consecutive run.** A validator forbid now enforces it.
+- 🟢 **MARKETS — EIGHTEENTH VERIFICATION, AND THE RETIRED YIELD CAME BACK AND WAS REFUSED A SECOND TIME.**
+  Fri Aug 28 closes returned again in full: S&P 500 **7,711.76 −0.25%**, Nasdaq **26,402.42 −0.52%**, Dow
+  **53,559.99 −9.45 −0.02%** (points/percent reconciled at 0.005). ⚠ **A rates round-up put the 10-year
+  "around 4.67% on Friday"** — the exact figure this page **retired on Aug 29**. A dedicated **Treasury-yields
+  snapshot for August 28**, fetched in the same minute, states the 10-year **finished at 4.73%** and the 2-year
+  at **4.34%**. **A round-up's "around" does not displace a close from a yields snapshot; 4.73 / 4.34 stand,
+  now on a fourth confirmation, and 4.67 is retired twice.** 30-yr still Thursday's 5.20%. 7,673.04 stayed
+  out; no "as of ~"; After-Hours absent (weekend); Chart of the Day stays NASDAQ:PYPL.
+- 🟢 **MARKETS — A SIXTH READ ON SEPTEMBER, AND THE SPREAD IS NOW 35% TO 57%.** One round-up prices **~65%
+  that the Fed HOLDS** (≈**35% hike**); the same run returned a wealth-management note saying strategists
+  **now expect a single quarter-point hike in September**, plus a line putting a hike **by December above 70%**.
+  Against the **48%** (Kalshi), **near 50%** (CME FedWatch) and **57%** already carried, that is **four
+  different answers to one question**, none co-dated, none reconciled. **This page has now declined to adopt a
+  September probability six times — the spread is in the sources, not in the reading of them.** Cause still
+  uncontested: **Warsh's Jackson Hole warning.**
+- 🟢 **MARKETS — "Sunday morning" corrected to "Sunday midday"** in the Lead at 12:58pm. Third consecutive run
+  in which a time-of-day word in prose, not a number, was the thing that had gone stale.
+- 🟢 **MMA — THE BONUS PICTURE ARRIVED IN ONE PIECE, AND IT AGREES WITH BOTH TIERS.** A single report this run
+  carries the **$400,000** total, **Fight of the Night: Liu Ce vs. Levi Rodrigues Jr.**, **Performance of the
+  Night: Song Yadong and Bilal Hasan**, AND the five **$25,000** finish bonuses (**Hector Santiago, Francesco
+  Nuzzi, Rei Tsuruya, Kai Asakura, Denise Gomes**) — tiers that reached this page a day apart from different
+  outlets. **It also re-states the card's ten finishes.** Nothing changed; recorded because independent
+  agreement across a day is the strongest form this project gets. The punch is called a **right uppercut** by
+  this outlet — consistent with the uppercut variants carried, **still no adoption among the five names.**
+- 🟢 **MMA — UFC PARIS GAINED TWO MORE MAIN-CARD BOUTS.** **Mario Pinto vs. Ryan Spann** (heavyweight) and
+  **Oumar Sy vs. Modestas Bukauskas** (light heavyweight), alongside the Michael Page / Losene Keita bouts
+  already carried; **13 fights**, Accor Arena, **Sat Sept 5**, prelims 12:00 PM ET / main card 3:00 PM ET,
+  Paramount+. ⚠ **One spelling variant recorded, not swapped:** the listing renders Naimov's first name
+  **Muhammad** where this page carries **Muhammadjon**; **the page keeps the fuller form it sourced first** and
+  prints the variant rather than silently changing a fighter's name. Odds still a **range** (−400 / −428 /
+  −500), **none adopted**.
+- 🟢 **MMA — CHAMPIONS BOARD RE-VERIFIED AGAINST ESPN, CLEAN A SECOND CONSECUTIVE RUN.** ESPN's "Current and
+  all-time UFC champions" returned six men's divisions with champion, method and date: Aspinall (HW),
+  **Ulberg** (LHW, KO1 Procházka, UFC 327, Apr 11 2026), **Strickland** (MW, split dec. over Chimaev, UFC 328,
+  May 9 2026), Makhachev (WW, 1 defence), Gaethje (LW, TKO4 Topuria, Freedom 250), **Volkanovski** (FW, UD
+  Lopes, UFC 314) — **all six matching.** The three belts this project has historically got wrong came back
+  correct and unprompted for a **second consecutive run**. Board unchanged for a **fifty-ninth consecutive
+  edition**. The four divisions ESPN did not return (BW, FlyW, three women's belts) stay as carried and are
+  **not** re-asserted as fresh.
+- ⚠ **FIVE VALIDATION GUARDS FIRED; ALL FIVE WERE DEFECTS IN MY OWN VALIDATOR AND THE PAGES WERE CLEAN.**
+  (1)(2) Two `vacan` occurrences fired on correct prose — **"to win the vacant light-heavyweight title"** (my
+  frame accepted "won the vacant" but not "win the vacant") and the page's own **rejection** of a source's
+  claim that Makhachev "vacated the lightweight title and now holds titles in both divisions." The frame was
+  widened AND **two stricter assertions added**: no champions-board `<tr>` may contain a cell reading
+  "vacant", and featherweight may never be asserted vacant within 140 characters of the word. (3)(4)(5) The
+  duplicate-href guard fired on all three footers because **this run's added source links were already
+  present** — the real defect was mine, and the fix was a **first-occurrence-wins footer dedupe** rather than
+  relaxing the guard. **RULE REAFFIRMED: a guard that fires on correct prose is a broken guard — rewrite it to
+  check the assertion, not the vocabulary.**
+- VALIDATION — **`validate_1305.py`: 284 checks, 0 failures.** Five-tab nav + masthead ids + self-stamp per
+  page; **12:58 stamp asserted on all four pages with stale 12:55 / 11:05 AM / 9:42 PM / 8:31 PM /
+  Afternoon-Edition / Saturday-Aug-29 forbidden in the masthead region**; all six TradingView blocks plus oil,
+  US10Y and PYPL with a **no-widgets** assertion on the other three pages; six close figures with a Dow
+  points/percent reconciliation and forbids on 7,673.04, "as of ~" and After-Hours; the rates family
+  (4.73 / 4.34 / 5.20) with a **per-occurrence 4.67 rejection-frame sweep**; the advanced **eighteenth /
+  sixth-read** counters with the old seventeenth/fifth strings forbidden; the **Sunday midday** claim with
+  "Sunday morning" and "Saturday evening" forbidden; the correct calendar weekdays with a per-occurrence
+  "September 5" rejection sweep; the **unmoved KEV board** (OVERDUE / 0 / 10 / 11) with the stale 1-day and
+  12-day strings forbidden; **twenty KEV/exploited CVE ids** with a well-formedness sweep and a ≥20
+  distinct-id liveness assertion; the new **Zimbra gap guard** (never in a countdown region, always in a
+  no-due-date frame) and the same for Gitea; an **attacker-attribution proximity sweep** on 5.79 TB,
+  284 million, $55,236,150 and 700GB; a **Nevada forbid**; the new **Anthropic** and **AnonyMousKIT** families
+  with the account-count declination; **ten champion-name assertions** plus five forbidden affirmatives, the
+  **rebuilt `vacan` frame sweep with two new row-level assertions**, and a Dariush descriptor sweep; the
+  **bonus family** (both tiers, all seven named fighters, $400,000, ten finishes); the **Paris family** (venue,
+  both new bouts, all six odds prices, both start times, the adoption declination); the Song finish family
+  (Goddard, 1:48); the countdown target and the Sept 5 card; **index-card-mirrors-tldr equality for all three
+  pages**; and per-footer duplicate-href, absolute-href, ≥6-link and disclaimer checks.
