@@ -16564,3 +16564,79 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   $400,000 retention and the combined-total declination; the **Paris card family**; countdown target and four
   future card dates; **index-card-mirrors-tldr equality for all three pages**; a CVE well-formedness sweep with
   a ≥15 liveness assertion; and per-footer duplicate-href, absolute-href and minimum-link checks.
+
+## Added 2026-08-29 (Saturday — research ~5:59–6:20pm ET, published 8:31pm — AFTERNOON EDITION, weekend, FOURTEENTH run of the day; archive stamp 2026-08-29-2031)
+- ⚠ **CLOCK — THE HOST SLEPT TWICE MID-RUN, AND THE PAGES WERE RE-STAMPED TWICE RATHER THAN SHIPPED STALE.**
+  Research ran **5:59–6:20pm**. Pages were first stamped **6:35pm**; at archive time the wall clock read
+  **7:42pm**, and after a further gap **8:31pm**. **The stamp was rewritten to the real publish time on both
+  occasions** rather than publishing a 6:35 stamp at 8:31. Time-sensitive items were re-queried after the first
+  jump (breaking cyber + a fifth KEV check): **no CISA alert dated later than August 27 was returned**, markets
+  were shut all weekend and UFC Shanghai had finished that morning, so nothing could go stale in the gaps.
+  Gap since previous run: ~45m research / ~3h15m publish-to-publish. Method: **targeted edits**
+  (`edits_1835.py`, `fix_1835.py`, `edits2_1835.py`, `fix2_1835.py`, `validate_1835.py`) onto the 5:15 pages.
+- 🟢 **CYBER — NEW ITEM: THE OPENAI-LED COLLECTIVE CYBER DEFENSE LETTER, WITH THE COUNT PRINTED AS A RANGE.**
+  OpenAI published **"A call for collective action on cyber defense"** on **August 27, 2026**. Three principles:
+  current practices will not be enough; empower more defenders with cyber-capable AI; mobilize a collective
+  response. Also calls for coordinated government funding for **under-resourced critical infrastructure**,
+  naming **hospitals and water treatment plants**. Warns AI-enabled attacks get **significantly more capable in
+  the coming months**. ⚠ **THE SIGNATORY COUNT IS CONTESTED ACROSS FOUR REPORTS FETCHED THIS RUN: CNBC says
+  116 companies and entities; a second says 128 organisations; a third says "over 100 companies"; a fourth says
+  "130 other companies."** Published as the range **116 to roughly 130**, with the page stating that **no source
+  fetched this run defines its own unit** — "companies" vs "organisations and entities" is the likely cause.
+  **Do NOT collapse this to a single number.** Signatory NAMES agree across reports and are safe: Anthropic,
+  Google, Microsoft, AWS, IBM, Oracle, Cisco, Check Point, Cloudflare, CrowdStrike, OpenAI leading.
+- 🟢 **CYBER — KEV: THE AUGUST 27 BATCH IS NOW ANCHORED ON CISA ITSELF (FIFTH CHECK).** The 6:20pm search
+  returned **CISA's own alert page "CISA Adds Three Known Exploited Vulnerabilities to Catalog," dated
+  August 27, 2026** — and **three** matches the three August 27 ids this board carries (**CVE-2026-53362**,
+  **CVE-2023-49105**, **CVE-2026-66384**). Until this run that row rested on reporting *about* the catalogue.
+  ⚠ **The same search surfaced a CISA alert dated August 24 adding ONE vulnerability that none of the four
+  earlier checks had returned.** It **predates** the Aug 26 batch so it moves **no countdown**, but it is
+  recorded as the **concrete instance** of this page's standing caveat that these searches do not see the whole
+  catalogue. **No alert later than August 27.** Countdowns unchanged at **0 / 1 / 11 / 12**.
+- 🟢 **MMA — TWO RESULTS-TABLE FIGURES WERE CHALLENGED AND BOTH WERE UPHELD.** An aggregated listing fetched
+  this run put the **Bilal Hasan** KO of Nilson Rojas in **round one** and **Rei Tsuruya's** RNC at **4:03**.
+  **Neither was adopted.** Targeted per-bout searches returned **round two, 2:28** for Hasan (three separate
+  write-ups, one headlining a "Round 2 walk-off shot") and **4:14 of round one** for Tsuruya — the figures the
+  table already carried. **RULE REAFFIRMED: an aggregate that gets one round wrong is a reason to distrust the
+  aggregate, not to overwrite primaries — and the challenge is recorded rather than deleted.**
+- 🟢 **MMA — SONG'S OWN WORDS AND HIS ACTUAL PATH, BOTH SOURCED.** Song Yadong: **"I think the UFC should give
+  me the title shot. I feel like I can finish everyone. I can finish Petr, I can finish Merab."** The belt is
+  **not available**: **Petr Yan defends vs Merab Dvalishvili at UFC 333, October 24**. Reporting frames Song's
+  realistic options as a **backup role or a fight with the winner** — previously inferred here from the
+  schedule, now attributable. ⚠ **Odds discrepancy recorded, not resolved:** one report prices Nurmagomedov at
+  **−600**; this page carries **−625** from a different book. **Both kept; neither is stated as closing.**
+  One account calls Song the **first man to knock out Umar Nurmagomedov**.
+- 🟢 **MARKETS — FIFTEENTH VERIFICATION, BROAD FOR A FIFTH CONSECUTIVE CHECK; NOTHING ELSE MOVED.** Friday
+  Aug 28 closes returned with all three levels, all three percentage moves AND the three weekly figures
+  together: S&P 500 **7,711.76 −0.25%**, Nasdaq **26,402.42 −0.52%**, Dow **53,559.99 −9.45 −0.02%**; week
+  **S&P +0.5%, Nasdaq +0.9%, Dow +0.5%** (Dow's first winning week in three). Dow points/percent reconciled at
+  0.005. Page counter advanced **thirteenth → fourteenth** (the tldr's own counter; the 5:15 note's
+  "fourteenth" referred to the corrections-file tally — **the page counter is the one that governs**).
+  **7,673.04 stayed out; no "as of ~"; After-Hours absent (weekend); Chart of the Day stays NASDAQ:PYPL.**
+  ⚠ **ONE STALE-PROSE FIX:** the Lead opened **"It is Saturday morning"** and was still saying so in the
+  evening — corrected to **"Saturday evening."** **RULE: a time-of-day phrase in prose is a factual claim and
+  must be re-read every run, not just the masthead stamp.**
+- ⚠ **SEVEN VALIDATION GUARDS FIRED; THREE WERE REAL DEFECTS AND FOUR WERE DEFECTS IN MY OWN VALIDATOR.**
+  **Real:** three footer links I added this run **already existed** in those footers — the duplicate-href guard
+  caught all three and `fix2_1835.py` removed the newly-added copy while keeping the original.
+  **Validator defects:** blunt ±600-char proximity guards on **Pereira**, **Chimaev** and **vacant** fired on
+  the page's own *corrective narrative* (the passage describing how ESPN's listing came back stale, and the
+  legitimate "won the **vacant** light-heavyweight title"). **Replaced, not relaxed, with something stricter:**
+  a **champions-board ROW parser** asserting the champion named in each of the eight men's division rows, a
+  forbid-list of affirmative claims (`Pereira</b></td>`, `champion Khamzat Chimaev`, …), and a per-occurrence
+  frame check on every `vacant` and on every `featherweight`+`vacan` co-occurrence. **RULE: a guard that fires
+  on correct prose is a broken guard — rewrite it to check the assertion, not the vocabulary.**
+- VALIDATION — **`validate_1835.py`: 417 checks, 0 failures.** Five-tab nav + masthead ids + self-stamp per
+  page; 8:31 stamp asserted with stale 5:15 / 1:45 / 1:35 forbidden on freshline AND masthead across all four
+  pages; all six TradingView blocks plus oil and US10Y with a **no-widgets** assertion on the other three pages;
+  six close figures with Dow reconciliation and forbids on 7,673.04, "as of ~" and After-Hours; weekly figures;
+  the rates family (4.73 / 4.34 / 5.20, CME FedWatch); nine KEV ids and four countdowns with BOD 26-04 and the
+  new CISA-anchored strings; the **new letter family** — all ten signatory names, both disputed counts, the
+  116-to-130 range and the unit-undefined caveat, with single-number claims forbidden; the ServiceNow
+  ±420-char 6875/6876 status sweep; the rebuilt Oracle not-carried + never-in-a-row guard; the Unitree ±200-char
+  no-CVSS sweep; the TITAN ±700-char not-validated sweep on 700GB; a CVE well-formedness sweep with a ≥15
+  liveness assertion; the **rebuilt champions guards** (8 row assertions + 9 forbidden affirmatives + vacant and
+  featherweight frame sweeps) plus a Dariush descriptor sweep; the upheld Hasan/Tsuruya figures with the
+  rejected ones forbidden; the Song quote, UFC 333 date and both odds; the $25,000 family with the corrected
+  Gomes wording and the old string forbidden; the countdown target; **index-card-mirrors-tldr equality for all
+  three pages**; and per-footer duplicate-href, absolute-href and minimum-link checks.
