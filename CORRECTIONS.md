@@ -17073,3 +17073,122 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   adoption declination, the KSW descriptor); the Song finish family (Goddard, 1:48) and $400,000;
   **index-card-mirrors-tldr equality for all three pages**; and per-footer duplicate-href, absolute-href,
   ≥6-link and disclaimer checks.
+
+## Added 2026-08-30 (Sunday — research ~2:06–2:11pm ET, published 2:14pm — MIDDAY EDITION, weekend, FOURTH run of the day; archive stamp 2026-08-30-1415)
+- ⚠ **CLOCK — PROSE WAS CORRECTED DOWN A THIRD CONSECUTIVE RUN.** Drafting used **2:12 PM** as the
+  observation stamp; the wall clock read **2:11** when the pages were written, so **every prose occurrence
+  of 2:12 PM was corrected down to 2:11**, and the masthead was stamped separately at the true publish
+  clock, **2:14pm**. **RULE HOLDING: the masthead stamps the publish, prose stamps the observation, and
+  prose may not run ahead of the clock.** The restamper now *derives* the stamp and the validator *reads it
+  off the page* instead of carrying a hardcoded time — the previous three runs all had to hand-correct a
+  typed-in number, which is the defect the derivation removes.
+- 🟢 **MARKETS — TWENTIETH VERIFICATION, AND THE SEPTEMBER-5 REJECTION FINALLY GOT A PRIMARY SOURCE.** Fri
+  Aug 28 closes returned in full again: S&P 500 **7,711.76 −0.25%**, Nasdaq **26,402.42 −0.52%**, Dow
+  **53,559.99 −9.45 −0.02%** (reconciled at 0.005), weekly **S&P +0.5% / Nasdaq +0.9% / Dow +0.5%**, Dow's
+  first winning week in three. 10-yr **4.73%** and 2-yr **4.34%** confirmed a **sixth** time from the dated
+  Aug 28 Treasury-yields snapshot; 30-yr still Thursday's 5.20%. 7,673.04 stayed out, 4.67 stayed retired,
+  no "as of ~", After-Hours absent (weekend), Chart of the Day stays NASDAQ:PYPL.
+  ⚠ **The payrolls date was rejected a THIRD consecutive run — and for the first time not by arithmetic.**
+  A week-ahead preview again said **"September 5"**. This run the **New York Fed's own economic-indicators
+  calendar for September 2026** was fetched and puts the **Employment Situation on Friday, September 4 at
+  8:30 AM** — exactly where this page had it. **The rejection is now sourced to a release calendar rather
+  than to a day-of-week calculation.** Same calendar fills the week: **ISM Manufacturing + JOLTS Tue Sept 1
+  10:00 AM**, **ADP Wed Sept 2 8:15 AM**, **initial claims + trade balance 8:30 AM and ISM Services 10:00 AM
+  Thu Sept 3**; **Mon Aug 31 carries no first-tier release.**
+- 🟢 **MARKETS — FIRST SEASONAL FIGURE EVER CARRIED, AND IT IS FRAMED AS HISTORY.** A seasonality study
+  dated **August 28, 2026** reports the S&P 500 has lost **0.7% on average in September** over the past
+  **50 years**, with gains in only **46%** of them — the weakest month of the year. **Printed explicitly as
+  a historical average and not a forecast**, and set against the fact that the week just ended green on all
+  three indices. A validator guard requires the not-a-forecast framing to sit with the figure.
+  ⚠ **A breadth reading (SPX 71.00% from 75.20%) was returned this run and NOT published** — no source in
+  the result attributed it, and an unattributed percentage is not a figure this page prints.
+- 🟢 **MARKETS — no eighth read on September was fetched; the seventh-run declination stands unchanged.**
+- 🔴 **CYBER — THE 421 FIGURE THIS PAGE PRINTS IS NOT THE ONLY COUNT, AND THE SPREAD IS NOW PRINTED.**
+  This page has carried **421 CVEs** for August Patch Tuesday. This run a major vulnerability-management
+  vendor's own analysis titles its post **398 CVEs**, and a third tracker ranks **751**. **Nothing fetched
+  reconciles the three.** The likely explanation (Microsoft-issued vs republished third-party vs everything
+  in the release) is one this page can offer but cannot source, so it is offered as such. **421 stays** —
+  majority return, described as the Security Update Guide total — **but is now stated as one count among
+  three rather than as the number.** What all versions agree on is published as agreed: **exactly one flaw
+  in the release was being exploited, CVE-2026-68820**, the afd.sys use-after-free; the 398 source adds it
+  was **one of three zero-days**, the other two not exploited. **RULE: when a number this page already
+  prints turns out to have rivals, print the spread — do not quietly keep the one you had.**
+- 🟢 **CYBER — ELEVENTH KEV CHECK: THE AUG 27 ROWS GOT AN INDEPENDENT CONFIRMATION BY NAME.** A fresh sweep
+  returned CISA's **August 27** alert with all three CVEs stated explicitly — **CVE-2023-49105** (ownCloud
+  improper authentication), **CVE-2026-53362** (Linux kernel) and **CVE-2026-66384** (JFrog Artifactory) —
+  **exactly the three this board carries**, and **nothing dated later than August 27** a fifth consecutive
+  check. All four countdowns (**OVERDUE / 0 / 10 / 11**) stand unmoved. Until now those rows rested on a
+  single catalogue read.
+  ⚠ **A deadline surfaced for a CVE already on this board, and it gets NO ROW.** Patch-Tuesday reporting
+  states CISA gave **CVE-2026-68820** a KEV due date of **August 25** — **five days past**. That came from a
+  news write-up, **not from a CISA alert page fetched this run**, so it is recorded in the narrative and
+  **given no countdown row**. A deadline this board cannot source to CISA is not a deadline it displays.
+- 🔴 **CYBER — NEVADA REFUSED A FOURTH CONSECUTIVE TIME.** Same "2026 breaches" listing genre, same
+  **August 24 / 60+ agencies** claim, **still no source dating it to 2026**. The Refused panel and the tldr
+  were both advanced to *fourth* — an earlier pass this run left the panel saying "third" while the tldr
+  said "fourth", **an internal contradiction the validator caught before publish.**
+- 🟢 **CYBER — BERLIN VOLUME: ROUNDING VARIANT RECORDED, FIGURE NOT SWAPPED.** A listing renders the Rhysida
+  claim as **5.8TB** where this page carries **5.79 TB**. Same figure rounded, not a second claim; the
+  precise form sourced first is kept and the rounded one printed beside it.
+- 🟢 **MMA — THE PARIS SPREAD NARROWED WITHOUT A BOOK MOVING.** A fresh sweep returned **Hooker +375 /
+  Parnasse −500** again from a source other than the UFC listing that first gave it — a **third independent
+  return of that pair** — while **neither −400 nor −428 came back from anything fetched this run**.
+  **Still not adopted** (no source dates its quote), but the page now states which of the three has
+  independent agreement and which two do not. ⚠ **First undercard prices ever carried:** **Farès Ziam −150 /
+  Axel Sola +125** and **Michael Page −200 / Nursulton Ruziboev +165**, both from one listing, **printed as
+  one book's line, not as a consensus.**
+- 🟢 **MMA — SHANGHAI AFTERMATH: A THIRD CHARACTERISATION OF THE SAME PRICE, PRINTED NOT ADOPTED.** A report
+  calls Nurmagomedov **"a 6-to-1 favourite"** — at the far end of, but inside, the range this page recorded
+  (widest **−625** ≈ 6.25-to-1), alongside the "nearly 5-1" DraftKings line. New and sourced: the KO was
+  **Nurmagomedov's first finish loss of his career**, it ended a **two-fight win streak**, and **Song takes
+  his place in the bantamweight contender line**. Nurmagomedov's post-fight statement reads in part
+  **"Everything is fine with me."** **No next bout for either man was announced by anything fetched, and
+  none is printed.** Bonuses re-confirmed a third time in one piece: **$400,000**, FOTN **Liu Ce vs. Levi
+  Rodrigues Jr.**, POTN **Song Yadong and Bilal Hasan**, five **$25,000** finish bonuses (**Hector Santiago,
+  Francesco Nuzzi, Rei Tsuruya, Kai Asakura, Denise Gomes**).
+- 🟢 **MMA — UFC 331 CO-MAIN UPGRADED FROM INFERENCE TO ATTRIBUTION.** Reporting this run states a **title
+  shot against lightweight champion Justin Gaethje is likely on the line** for the winner of **Arman
+  Tsarukyan vs. Mauricio Ruffy** — firmer than the "title implications" this page carried, and printed with
+  the caveat that **the promotion has not said so itself.** Event re-confirmed: **Sept 19, Crypto.com Arena,
+  Los Angeles, Van vs. Pantoja 2, 13 bouts.**
+- 🟢 **MMA — CHAMPIONS BOARD CLEAN AGAINST ESPN A FOURTH CONSECUTIVE RUN.** All six men's divisions returned
+  with champion, method and date and every one matched: Aspinall (HW), **Ulberg** (LHW, Apr 11 2026),
+  **Strickland** (MW, May 9 2026), Makhachev (WW, Nov 15 2025), Gaethje (LW, Jun 14 2026), **Volkanovski**
+  (FW, Apr 12 2025). The three belts this project historically got wrong came back correct and unprompted a
+  **fourth consecutive run**. Board unchanged for a **sixty-first consecutive edition**; BW, FlyW and the
+  three women's belts stay as carried and are **not** re-asserted as fresh.
+- ⚠ **THREE VALIDATION GUARDS FIRED ON CORRECT PROSE AND ALL THREE GUARDS WERE REWRITTEN, NOT THE PAGES.**
+  (1) The champions-board vacancy guard fired on the cell **"KO1 Jiří Procházka for the vacant title, UFC
+  327"** — correct history. Replaced with two assertions: a champion cell may never *name* a vacancy as the
+  holder, and any "vacant" inside a cell must sit in a **won/for-the-vacant-title** frame. (2) The Patch
+  Tuesday guard used a ±1200-character proximity window and missed a body paragraph that was present;
+  replaced with **direct assertions on the claims** (398 printed, "421 stays", "one count among three",
+  "exactly one flaw … exploited", "Nothing fetched reconciles the three"). (3) The disclaimer guard did not
+  know the cyber page's wording (**"Information only, and not a substitute for your own vulnerability
+  management process"**) and was widened to accept it. **RULE REAFFIRMED, THIRD RUN RUNNING: a guard that
+  fires on correct prose is a broken guard — rewrite it to check the assertion, not the vocabulary.**
+  **TWO REAL PAGE DEFECTS were caught by the same pass:** the masthead pill fallback text on all four pages
+  still read **1:09 PM** (only the freshline had been restamped), and the Nevada third/fourth contradiction
+  above.
+- VALIDATION — **`validate_1412.py`: 516 checks, 0 failures.** Stamp **derived from the page** and asserted
+  identical across all four, with seven stale stamps and the drafted-ahead "2:12 PM" forbidden; five-tab nav
+  with **exactly one** active tab per page; masthead ids + self-stamp; all six TradingView blocks plus oil,
+  US10Y and PYPL with a **no-widgets** assertion on the other three pages; six close figures with a Dow
+  points/percent reconciliation and forbids on 7,673.04, "as of ~" and After-Hours; the rates family
+  (4.73 / 4.34 / 5.20) with a per-occurrence 4.67 rejection sweep; **twentieth / sixth-time** counters with
+  the stale ordinals forbidden; all five September reads plus the seventh declination; a per-occurrence
+  **"September 5" rejection sweep** with Sept 4 / 8:30 asserted; the new **NY Fed calendar family** and the
+  new **seasonality family** with a not-a-forecast framing assertion; the **eleventh KEV check** family, nine
+  KEV ids, four countdowns with stale strings forbidden, **gap CVEs asserted never to appear in a countdown
+  region**, and the **68820 August-25 deadline** asserted to carry both its non-CISA attribution and its
+  no-countdown-row exclusion; a CVE well-formedness sweep with a ≥20 distinct-id liveness check; the
+  **Patch Tuesday spread family**; per-occurrence refusal-frame sweeps on Nevada / Salesloft / Brightspeed
+  with the **fourth-run** counters asserted and the third-run strings forbidden; an attacker-attribution
+  proximity sweep on 5.79 TB, 284 million and $55,236,150; the **5.8TB rounding-variant** frame; eleven
+  champion-name assertions, three forbidden champion cells, the **rebuilt vacancy assertions**, a Dariush
+  descriptor sweep and both board counters; the **Paris family** (venue, 13 fights, six odds prices, the
+  third-independent-return claim, both undercard pairs with a one-book framing assertion, the KSW
+  descriptor); the **Shanghai family** (first finish loss, two-fight streak, 6-to-1 printed-not-adopted,
+  −625, the statement) and the full bonus family; the UFC 331 family with the stale co-main string
+  forbidden; **index-card-mirrors-tldr equality for all three pages**; and per-footer duplicate-href,
+  absolute-href, ≥6-link and disclaimer checks.
