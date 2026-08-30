@@ -16640,3 +16640,79 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   rejected ones forbidden; the Song quote, UFC 333 date and both odds; the $25,000 family with the corrected
   Gomes wording and the old string forbidden; the countdown target; **index-card-mirrors-tldr equality for all
   three pages**; and per-footer duplicate-href, absolute-href and minimum-link checks.
+
+## Added 2026-08-29 (Saturday — research ~8:33–8:40pm ET, published 9:42pm — AFTERNOON EDITION, weekend, FIFTEENTH run of the day; archive stamp 2026-08-29-2142)
+- ⚠ **CLOCK — THE HOST SLEPT TWICE AGAIN, AND THE STAMP WAS REWRITTEN TWICE RATHER THAN SHIPPED STALE.**
+  This run STARTED at **8:33pm**, two minutes after the previous run published (8:31pm) — the shortest gap
+  this project has recorded. Research ran **8:33–8:40pm**. The pages were first stamped **9:01pm** when the
+  clock reappeared, then the wall clock read **9:20pm**, then **9:42pm** at publish. **The stamp was rewritten
+  to the real publish time each time.** ⚠ **AND A NEW CLASS OF FIX:** the 9:01 stamp had been written into two
+  PROSE sentences that describe *when a check ran* ("re-verified a fifteenth time at 9:01 PM", "A sixth check
+  at 9:01 PM"). Those are claims about research time, not publish time, and were corrected back to the real
+  research times (**8:38 PM** and **8:35 PM**). **RULE ADDED: a global stamp replacement must not touch prose
+  that dates a specific check — the masthead stamps the publish, prose stamps the observation, and the two are
+  different facts.** Markets shut all weekend and UFC Shanghai finished that morning, so nothing could go stale
+  in the gaps. Method: **targeted edits** (`edits_2040.py`, `validate_2040.py`) onto the 8:31 pages.
+- 🟢 **CYBER — KEV: SIXTH CHECK, NO ALERT LATER THAN AUGUST 27.** The 8:35pm search returned CISA's own alert
+  pages for **August 11 (three), August 18 (four), August 20 (two), August 24 (one) and August 26 (six)** —
+  and **nothing dated later than August 27**. All six ids and all four countdowns (**0 / 1 / 11 / 12**) stand
+  unchanged. The August 26 batch ids **CVE-2019-1068** (Microsoft SQL Server RCE) and **CVE-2026-8452**
+  (Citrix NetScaler ADC/Gateway memory-buffer flaw) were restated by name this run. ⚠ The **August 24
+  single-vulnerability alert** — Oracle HTTP Server / WebLogic — surfaced again, the second consecutive run it
+  has appeared; it predates the Aug 26 batch and moves no countdown, and `CVE-2026-21962` remains **not
+  carried, twelfth run**.
+- 🟢 **CYBER — MANCHESTER AIRPORTS GROUP RE-CONFIRMED INDEPENDENTLY.** MAG confirmed **Thursday, August 27**
+  that an "unauthorised third party" exposed data for **~8.7 million customers** across **Manchester, London
+  Stansted and East Midlands**; fields are **email addresses, telephone numbers, postal codes and vehicle
+  registration numbers**, drawn from **car park, lounge and Fast Track bookings plus in-airport WiFi sign-ups**;
+  **no bank or payment card details**; **passenger safety, aviation security and airport operations
+  unaffected**; **Manage My Booking suspended as a precaution**. Already carried — this is corroboration from
+  Help Net Security / Bitdefender / IT Security Guru, not a new item.
+- 🟢 **MARKETS — SIXTEENTH VERIFICATION OVERALL, BROAD FOR A SIXTH CONSECUTIVE CHECK.** Friday Aug 28 closes
+  returned again with all three levels, all three percentage moves AND the weekly figures together: S&P 500
+  **7,711.76 −0.25%**, Nasdaq **26,402.42 −0.52%**, Dow **53,559.99 −9.45 −0.02%**; week **S&P +0.5%,
+  Nasdaq +0.9%, Dow +0.5%** (Dow's first winning week in three), the move attributed to **Warsh's first
+  Jackson Hole keynote read as mildly hawkish**. Dow points/percent reconciled at 0.005. **Page counter
+  advanced fourteenth → fifteenth** (the page counter governs). **7,673.04 stayed out; no "as of ~";
+  After-Hours absent (weekend); Chart of the Day stays NASDAQ:PYPL. "Saturday evening" re-read and still
+  true at 9:42pm.**
+- 🟢 **MMA — SHANGHAI RE-CONFIRMED FROM UFC.COM'S OWN RESULTS PAGES.** The 8:35pm search returned UFC.com's
+  **main card results**, **prelim results** and **official scorecards** pages for the event — the promotion's
+  own pages, which had been stuck on the pre-event preview for seven consecutive fetches earlier in the day.
+  **Song Yadong KO2 Umar Nurmagomedov** (punch, after clipping him on the ear), **Denise Gomes def. Yan
+  Xiaonan by KO1 (elbows and punches)** in the co-main, **Kai Asakura KO2 Aoriqileng** — all match the table
+  as published. ⚠ **One aggregate figure was seen and NOT adopted:** a listing put the card at **14 fights
+  with 10 ending inside the distance**. The finish count is consistent with what this page already reasons
+  about the $25,000 tier, but **no UFC.com or major-outlet source fetched this run states either number**, so
+  neither is printed. **Umar is correctly describable as a former 135-pound title challenger** — stated by
+  MMA Mania this run, and distinct from the Dariush descriptor rule.
+- ⚠ **SIX VALIDATION GUARDS FIRED; ALL SIX WERE DEFECTS IN MY OWN VALIDATOR, AND THE PAGES WERE CLEAN.**
+  (1) The **700GB** proximity guard accepted only the literal "not been independently validated" and fired on
+  the tldr's equally correct *"carried here as the criminals' own marketing and not as a capability"* —
+  broadened to an **assertion check** accepting any marketing/own-claim/own-advertisement frame.
+  (2) Two **`vacant`** occurrences fired inside the page's own *corrective narrative* about the featherweight
+  regression ("An absence in a listing is not a vacancy"; "published vacant while Volkanovski held it") —
+  accepted frames extended to that argument. (3) The flat forbid on **`4:03`** fired three times: twice on the
+  page's own *rejection* of the figure, and once on the substring of the timestamp **`2026-08-28T14:03`** —
+  replaced with a **word-boundary, per-occurrence rejection-frame check plus an assertion that 4:03 never
+  appears in a results-table cell**, which is stricter than the forbid it replaced. (4) **`September 5`** fired
+  because the page renders it **`Sept 5`**. (5) The footer **disclaimer** guard looked for the words
+  "disclaim"/"investment advice"; the cyber page's disclaimer is a **`class="disc"` block** with different
+  wording — re-anchored on the element. **No guard was relaxed into a weaker assertion.**
+  **RULE REAFFIRMED: a guard that fires on correct prose is a broken guard.**
+- VALIDATION — **`validate_2040.py`: 343 checks, 0 failures.** Five-tab nav + masthead ids + self-stamp per
+  page; **9:42 stamp asserted ≥2x per page with stale 8:31 / 5:15 / 1:45 / 1:35 / 6:35 forbidden in the
+  masthead/freshline region of all four pages**; all six TradingView blocks plus oil, US10Y and PYPL with a
+  **no-widgets** assertion on the other three pages; six close figures with a Dow points/percent
+  reconciliation and forbids on 7,673.04, "as of ~" and After-Hours; the advanced **fifteenth / fifth
+  consecutive** counter with the old fourteenth/fourth strings forbidden **on the index card as well as the
+  page**; the rates family (4.73 / 4.34 / 5.20 / CME FedWatch); the "Saturday evening" time-of-day claim with
+  "Saturday morning" forbidden; five KEV ids, BOD 26-04, the new sixth-check string with the 9:01 variant
+  forbidden; the **rebuilt Oracle guard** (not-carried frame **plus** never-inside-a-`<tr>`); the ServiceNow
+  ±420-char status sweep; the Unitree ±200-char **no-CVSS-may-attach** sweep on both ids; the rebuilt TITAN
+  700GB framing sweep; the letter's 116-to-130 range with single-number claims forbidden; a CVE
+  well-formedness sweep with a ≥15 distinct-id liveness assertion; **twelve champion-name assertions** plus
+  five forbidden affirmatives, the rebuilt per-occurrence `vacant` frame sweep and the Dariush descriptor
+  check; the upheld Hasan/Tsuruya figures with the rebuilt 4:03 rejection-frame check; the $25,000 family with
+  the corrected Gomes wording and the old string forbidden; the countdown target and the Sept 5 card; and
+  per-footer duplicate-href, absolute-href, minimum-link and `.disc` disclaimer checks.
