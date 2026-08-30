@@ -1,254 +1,250 @@
 #!/usr/bin/env python3
-# Incremental edits: 4:36 PM ET Afternoon Edition, Aug 26 2026 (17th run of the day).
-# The 4:14 pages said no verified after-hours move existed. Nvidia, CrowdStrike and
-# Salesforce have all now reported. This run replaces the after-hours placeholder with
-# the real, sourced prints and re-leads the Wall Street page on them.
-import io, re, sys, os
+# Edition edits — Sunday Aug 30 2026, ~4:36 PM ET research (ninth run of the day)
+import io, re, sys
 
-D = os.path.dirname(os.path.abspath(__file__))
+O = "/sessions/relaxed-dreamy-einstein/mnt/outputs/"
+
+def rd(p):
+    with io.open(O+p, encoding="utf-8") as f: return f.read()
+
+def wr(p, s):
+    with io.open(O+p, "w", encoding="utf-8") as f: f.write(s)
+
 fails = []
-
-def load(p):
-    with io.open(os.path.join(D, p), encoding='utf-8') as f:
-        return f.read()
-
-def save(p, s):
-    with io.open(os.path.join(D, p), 'w', encoding='utf-8') as f:
-        f.write(s)
-
-def sub_once(s, old, new, label):
-    if s.count(old) != 1:
-        fails.append('ANCHOR %s: found %d occurrences' % (label, s.count(old)))
+def sub_once(s, needle, repl, label):
+    n = s.count(needle)
+    if n != 1:
+        fails.append("%s: needle count=%d (expected 1)" % (label, n))
         return s
-    return s.replace(old, new, 1)
+    return s.replace(needle, repl, 1)
 
-def demote_new(s):
-    """Previous edition's 'New' tags stop being new this run."""
-    return s.replace('<span class="tag new">New &middot; 4:15</span>',
-                     '<span class="tag">4:15</span>')
+# ─────────────────────────────────────────────────────────────── CYBER ──
+cy = rd("cyber-briefing.html")
 
-# ---------------------------------------------------------------- WALL STREET
-ws = load('wallstreet-briefing.html')
-ws = demote_new(ws)
+# 1) Three new Breaches & Incidents cards at the head of the section.
+CLOP = (
+ '<div class="card"><div class="tags"><span class="tag new">New &middot; 4:36 PM</span>'
+ '<span class="tag warn">Victim count disputed</span><span class="tag">Extortion</span></div>'
+ '<h3>Cl0p emptied one product-lifecycle platform and forty-odd manufacturers came out with it &mdash; Shell, GE and Philips among them</h3>'
+ '<p><b>What happened.</b> The <b>Cl0p</b> extortion group listed a batch of new victims on its leak site '
+ 'taken, according to reporting fetched this run, through <b>internet-exposed instances of PTC&rsquo;s '
+ '<i>Windchill</i> and <i>FlexPLM</i></b> product-lifecycle-management software. The flaw is tracked as '
+ '<b>CVE-2026-12569</b> and is described as a <b>critical improper-input-validation</b> issue. <b>Shell, '
+ 'General Electric and Philips have each confirmed they are investigating</b> the claims.</p>'
+ '<p><b>The claimed volumes are the group&rsquo;s own figures, and they are printed as such:</b> '
+ '<b>89 GB</b> from <b>Shell</b>, <b>391 GB</b> from <b>GE</b> and <b>15.5 GB</b> from <b>Philips</b>. '
+ 'In Shell&rsquo;s case the group says the material includes <b>engineering drawings, photographs of oil '
+ 'facilities and project plans</b>. &#9888; <b>No company has confirmed a volume</b>, and this page does not '
+ 'convert an extortion post into a measured loss.</p>'
+ '<p>&#9888; <b>The victim count came back three ways and none is adopted.</b> One account says <b>43 new '
+ 'victims</b>, a second <b>more than 40</b>, a third <b>nearly 50</b>. <b>43 is the most specific and is '
+ 'printed as that source&rsquo;s figure</b>, with the spread recorded beside it &mdash; a leak-site tally '
+ 'moves as posts are added, so three counts taken on three days are not necessarily three contradictions.</p>'
+ '<p><b>What the companies actually said, which is narrower than the claims.</b> <b>Philips</b> says it '
+ '<b>identified and contained an attempted compromise of one enterprise server</b> holding internal data and '
+ 'that <b>customer-facing environments were not reached</b>. <b>Shell</b> confirms only that it is '
+ '<b>investigating a potential incident</b>. <b>That gap &mdash; between what the leak site claims and what '
+ 'the victim confirms &mdash; is the whole story of a mass-exploitation campaign in its first fortnight</b>, '
+ 'and this page will carry both halves rather than resolve them early.</p></div>'
+)
 
-OLD_TLDR = ws[ws.index('<div class="tldr"><b>The Tape</b>'):]
-OLD_TLDR = OLD_TLDR[:OLD_TLDR.index('</div>') + 6]
-NEW_TLDR = (
- '<div class="tldr"><b>The Tape</b> <span>The regular session ended flat &mdash; '
- '<b>the S&amp;P&nbsp;500 closed at 7,675.70, down 1.58 points, &minus;0.02%</b> &mdash; and then the '
- 'after-hours tape delivered the day: <b>Nvidia beat with revenue of $96.22&nbsp;billion against '
- '$92.17&nbsp;billion expected</b>, more than double a year ago, <b>guided the current quarter to '
- '$108&nbsp;billion</b> against $104.2&nbsp;billion expected &mdash; <b>and the stock slipped anyway</b>, '
- 'while <b>Salesforce soared 14% in extended trading</b> and <b>CrowdStrike posted the best quarter in its '
- 'history</b>.</span></div>')
-ws = sub_once(ws, OLD_TLDR, NEW_TLDR, 'ws-tldr')
+MEDUSA = (
+ '<div class="card"><div class="tags"><span class="tag new">New &middot; 4:36 PM</span>'
+ '<span class="tag">Ransomware</span><span class="tag">Healthcare</span></div>'
+ '<h3>Medusa is past 500 victims, and the federal advisory has been reopened with a health-sector co-author</h3>'
+ '<p><b>What was published.</b> <b>CISA, the FBI and HHS updated their joint advisory on Medusa ransomware '
+ 'on August 18, 2026</b>, adding findings from FBI investigations conducted <b>through April 2026</b>. The '
+ 'update states that Medusa actors have <b>impacted more than 500 victims</b> across <b>healthcare, '
+ 'education, legal services, insurance, technology and manufacturing</b>. Medusa is a '
+ '<b>ransomware-as-a-service variant first identified in June 2021</b> and operates by <b>double extortion</b> '
+ '&mdash; encrypting data while threatening to publish it.</p>'
+ '<p><b>Why the re-issue is the news rather than the number.</b> The advisory was <b>first published on '
+ 'March 12, 2025</b>; this is an update to a standing document, not a new one. What changed is the '
+ 'authorship: <b>HHS joined as a co-sealer</b>, contributing what it sees of Medusa&rsquo;s operations '
+ 'against the <b>Healthcare and Public Health Sector</b>. <b>A federal advisory gaining a health-department '
+ 'co-author is a statement about where the victims are</b>, made in the only way that document can make it.</p>'
+ '<p><b>One incident is cited for scale.</b> In <b>late February 2026</b> an attack took the <b>University '
+ 'of Mississippi Medical Center offline for nine days</b>. UMMC is described as the state&rsquo;s largest '
+ 'hospital system and its <b>only Level I trauma center, only children&rsquo;s hospital and only organ '
+ 'transplant program</b> &mdash; which is what "a frequent target" means when the target is a hospital '
+ 'and there is no second one.</p></div>'
+)
 
-ws = sub_once(ws,
- '<h2>A $17&nbsp;billion settlement, a later board that reconciles &mdash; and Nvidia after the bell</h2>',
- '<h2>Nvidia beats, guides above the street &mdash; and the stock goes down anyway</h2>\n'
- '<p><b>&#9679; New &middot; 4:36 &mdash; the print the whole tape was waiting on, and it is a result now, not an expectation.</b> '
- '<b>Nvidia</b> reported the second quarter of fiscal&nbsp;2027 after Wednesday&rsquo;s close and beat on both lines: '
- '<b>revenue of $96.22&nbsp;billion against $92.17&nbsp;billion expected</b>, and <b>adjusted earnings of $2.22 a share '
- 'against $2.10 expected</b> (CNBC). Revenue <b>climbed 106% from a year earlier</b> &mdash; against the '
- '<b>$46.74&nbsp;billion</b> of the year-ago quarter that is <b>2.06&times;</b>, checked in Python, so the '
- '&ldquo;more than doubled&rdquo; framing is literally true. <b>Data Center revenue was $89&nbsp;billion against '
- '$86.33&nbsp;billion expected, up 117% year over year</b>, and now accounts for <b>92% of company sales</b> '
- '(89&nbsp;&divide;&nbsp;96.22 = <b>92.5%</b>, consistent). The guide is the bigger number: the company '
- '<b>sees $108&nbsp;billion in the current quarter, plus or minus 2%</b>, where <b>analysts wanted $104.2&nbsp;billion</b> '
- '&mdash; the <b>entire &plusmn;2% band, $105.84&nbsp;billion to $110.16&nbsp;billion, sits above the consensus</b>, '
- 'and the midpoint is <b>12.2% sequential growth</b>. <b>&#9888; The outlook includes no data-center sales from China.</b> '
- '<b>&#9888; Note what the printed quarter did to this desk&rsquo;s own carried expectations:</b> $96.22&nbsp;billion is '
- '<b>above the top of the company&rsquo;s own $91.0&nbsp;billion &plusmn;2% guide ($89.18&ndash;$92.82&nbsp;billion)</b>, so '
- 'every consensus figure this page carried all day &mdash; Visible Alpha&rsquo;s $92.16&nbsp;billion, the 41-analyst '
- '$92.07&nbsp;billion &mdash; was <b>too low by roughly $4&nbsp;billion</b>. <b>And the stock slipped in extended trading '
- 'regardless</b> &mdash; a beat, a raise, and a lower price. <b>&#9888; No verified after-hours percentage for NVDA appeared '
- 'in any source fetched this run; the direction is published, the magnitude is not.</b></p>\n'
- '<p><b>&#9679; New &middot; 4:36 &mdash; Salesforce is the actual after-hours move, and it has a number.</b> '
- '<b>Salesforce shares soared 14% in extended trading</b> after revenue of <b>$11.35&nbsp;billion against '
- '$11.32&nbsp;billion expected</b>, <b>up 11%</b> in the quarter ended July&nbsp;31 (CNBC). The company guided the full '
- 'year to <b>$16.67&ndash;$16.71 in earnings per share on $46.1&ndash;$46.4&nbsp;billion of revenue</b>, which the source '
- 'puts at <b>11% growth at the midpoint</b> ($46.25&nbsp;billion). Two items underneath the headline: a '
- '<b>$2.6&nbsp;billion gain on strategic investments from its stake in the AI startup Anthropic</b>, and '
- '<b>annualized revenue from Agentforce AI products above $1.5&nbsp;billion, up 240% year over year</b>. '
- '<b>&#9888; ONE FIGURE IS PRINTED AND FLAGGED, NOT SMOOTHED:</b> CNBC gives <b>net income of $3.53&nbsp;billion, or '
- '$4.29 a share, &ldquo;jumped 87%&rdquo; from $1.89&nbsp;billion, or $1.96 a share.</b> The net-income growth is '
- '<b>86.8%</b> and reconciles &mdash; but <b>per share the same pair is &plus;118.9%</b>, which would require the diluted '
- 'share count to fall from <b>~964&nbsp;million to ~823&nbsp;million, down 14.7% in a year</b>. Both figures are quoted as '
- 'the source states them; <b>no reconciled EPS growth rate is asserted.</b></p>\n'
- '<p><b>&#9679; New &middot; 4:36 &mdash; CrowdStrike, straight from the 8-K, and it is a records quarter.</b> '
- 'The company&rsquo;s own earnings release filed with the SEC &mdash; fetched in full this run, not summarised &mdash; '
- 'reports <b>total revenue of $1.47&nbsp;billion, up 26%</b> from $1.17&nbsp;billion (the statements give '
- '<b>$1,470,897&nbsp;thousand vs $1,168,952&nbsp;thousand</b>, which is <b>&plus;25.8%</b>), <b>non-GAAP earnings of '
- '$0.31 a share against $0.29 expected</b>, and <b>record net new ARR of $333&nbsp;million, accelerating to 51% '
- 'year-over-year growth</b> &mdash; against guidance of <b>$284&ndash;$286&nbsp;million</b>, a beat of roughly '
- '<b>$47&nbsp;million</b>. Ending <b>ARR is $5.84&nbsp;billion, up 25%</b>; <b>Falcon Flex ending ARR passed '
- '$2.29&nbsp;billion, up 101%</b>; <b>Q2-record operating cash flow of $530&nbsp;million and free cash flow of '
- '$377&nbsp;million</b>. The company <b>raised its full-year fiscal&nbsp;2027 net new ARR growth outlook by 630 basis '
- 'points to 34% at the midpoint</b>. Founder and CEO <b>George Kurtz</b>: <b>&ldquo;Q2 was the best quarter in '
- 'CrowdStrike&rsquo;s history.&rdquo;</b> <b>&#9888; A SEARCH SUMMARY THIS RUN HANDED BACK THE WRONG QUARTER</b> &mdash; '
- '&ldquo;record $256&nbsp;million in net new ARR, up 32%&rdquo;, &ldquo;ending ARR $5.51&nbsp;billion&rdquo;, '
- '&ldquo;revenue $1.39&nbsp;billion&rdquo; &mdash; <b>those are the prior quarter&rsquo;s numbers, and they are rejected;</b> '
- 'the 8-K governs. <b>&#9888; No verified after-hours percentage for CRWD exists in any source fetched this run.</b></p>',
- 'ws-h2')
+MICROCOMM = (
+ '<div class="card"><div class="tags"><span class="tag new">New &middot; 4:36 PM</span>'
+ '<span class="tag warn">Attribution refused</span><span class="tag">Critical infrastructure</span></div>'
+ '<h3>The FBI is looking at a hack of the company that makes the controllers in America&rsquo;s water plants</h3>'
+ '<p><b>What happened.</b> <b>Micro-Comm</b>, of <b>Olathe, Kansas</b>, which makes the <b>programmable logic '
+ 'controllers</b> used by water and wastewater facilities, <b>discovered a breach on July 31</b>. The '
+ '<b>Barracuda</b> ransomware group &mdash; a new group that says it is <b>profit-motivated and not '
+ 'government sponsored</b> &mdash; then published what it claimed were <b>nearly 850,000 stolen files '
+ 'totalling roughly 644 GB</b>. <b>The company and the FBI have both confirmed the attack</b>, which had not '
+ 'been reported before.</p>'
+ '<p>&#9888; <b>The tempting attribution is available and this page is not making it.</b> The breach fell '
+ 'inside a <b>late-July run of attacks on PLCs in Minnesota and at least six other states</b> that '
+ 'researchers link to a <b>long-running Iranian-affiliated campaign</b>. <b>The government has not connected '
+ 'Micro-Comm to that campaign</b>, and the FBI is reported to have told the company its attack <b>appeared '
+ 'opportunistic rather than specifically targeted</b>. <b>Sitting inside a window is not membership of a '
+ 'campaign</b>, and the two claims are printed apart because the only source that joins them is inference.</p>'
+ '<p><b>What the company says was not taken.</b> Micro-Comm describes the attack as limited and says it did '
+ '<b>not expose customer passwords, credentials, or the information that lets Micro-Comm remotely reach its '
+ 'own equipment</b> &mdash; which is the sentence that matters, because remote access to a supplier&rsquo;s '
+ 'installed controllers is the reason a supplier breach in this sector is worth a briefing at all.</p></div>'
+)
 
-# --- After-hours section: replace the 4:15 "nothing verified yet" placeholder body
-AH_START = ws.index('<div class="lab">After-hours movers</div>')
-AH_END = ws.index('</section>', AH_START)
-NEW_AH = (
- '<div class="lab">After-hours movers</div>\n'
- '<p class="note"><b>&#9679; Updated 4:36 &mdash; the after-hours tape now exists, and it does not agree with the '
- 'earnings.</b> At <b>4:15&nbsp;p.m. ET this page said, correctly, that no verified after-hours price move existed in any '
- 'source.</b> Twenty minutes later three of the six names that reported have results, and <b>only one of them has a '
- 'sourced price move.</b> Everything below is either a reported figure or an explicitly attributed direction; '
- '<b>no percentage is published for a stock unless a source stated it.</b></p>\n'
- '<div class="cards">\n'
- '<div class="card"><div class="tags"><span class="tag new">New &middot; 4:36</span><span class="tag up">+14%</span>'
- '<span class="tag">Sourced move</span></div>\n'
- '<h3>Salesforce (CRM) &mdash; the only after-hours number anyone has put a figure on</h3>\n'
- '<p><b>Shares soared 14% in extended trading</b> on revenue of <b>$11.35&nbsp;billion vs $11.32&nbsp;billion expected, '
- '&plus;11%</b>, and full-year guidance of <b>$16.67&ndash;$16.71 EPS on $46.1&ndash;$46.4&nbsp;billion</b>. '
- '<b>Agentforce annualized revenue tops $1.5&nbsp;billion, &plus;240% y/y</b>; a <b>$2.6&nbsp;billion gain on strategic '
- 'investments</b> came from its <b>Anthropic</b> stake. <b>&#9888; The $4.29 per-share figure does not grow at the same '
- '87% the net-income line does &mdash; see The Lead; both printed, neither reconciled.</b></p>\n'
- '<h3>Nvidia (NVDA) &mdash; a beat, a raise above the street, and a lower price</h3>\n'
- '<p><b>$96.22&nbsp;billion revenue vs $92.17&nbsp;billion expected</b>; <b>$2.22 adjusted EPS vs $2.10</b>; '
- '<b>Data Center $89&nbsp;billion vs $86.33&nbsp;billion, &plus;117%</b>; <b>Q3 guide $108&nbsp;billion &plusmn;2% vs '
- '$104.2&nbsp;billion expected</b>, with <b>no China data-center revenue assumed</b>. <b>The stock slipped in extended '
- 'trading.</b> <b>&#9888; DIRECTION ONLY &mdash; no source fetched this run states the size of the move, so none is '
- 'printed.</b> For scale, the options market had priced <b>~$282&nbsp;billion</b> of value in play on a '
- '<b>13.26%</b> implied swing.</p>\n'
- '<h3>CrowdStrike (CRWD) &mdash; records on every line the company reports</h3>\n'
- '<p><b>Revenue $1.47&nbsp;billion &plus;26%</b>; <b>non-GAAP EPS $0.31 vs $0.29 expected</b>; <b>record net new ARR '
- '$333&nbsp;million, &plus;51% y/y</b> against a <b>$284&ndash;$286&nbsp;million</b> guide; <b>ARR $5.84&nbsp;billion '
- '&plus;25%</b>; <b>FY27 net new ARR growth outlook raised 630bp to 34%</b>. GAAP net income was <b>$5.3&nbsp;million, '
- '$0.01 a share</b> &mdash; positive, and far below the non-GAAP line, as the release&rsquo;s own reconciliation shows. '
- '<b>&#9888; No after-hours price move sourced.</b> The call is at <b>5:00&nbsp;p.m. ET</b>.</p>\n'
- '<h3>Still to be seen: Okta, Williams-Sonoma, Abercrombie &amp; Fitch</h3>\n'
- '<p><b>OKTA</b>, <b>WSM</b> and <b>ANF</b> were also on tonight&rsquo;s list per Yahoo Finance and TheStreet. '
- '<b>&#9888; No results and no after-hours prices for any of the three appeared in any source fetched this run &mdash; '
- 'nothing is asserted about them.</b> Abercrombie was the <b>regular session&rsquo;s biggest mover</b> and remains the '
- 'Chart of the Day on that basis.</p>\n'
- '</div>\n')
-ws = ws[:AH_START] + NEW_AH + ws[AH_END:]
+cy = sub_once(cy,
+    '<h2 class="sec">Breaches &amp; Incidents</h2><div class="cards">\n',
+    '<h2 class="sec">Breaches &amp; Incidents</h2><div class="cards">\n' + CLOP + "\n" + MEDUSA + "\n" + MICROCOMM + "\n",
+    "cyber: breaches head")
 
-# Sources
-ws = sub_once(ws, '<div class="lab">Sources</div>',
- '<div class="lab">Sources</div>\n'
- '<p class="note"><b>Added 4:36:</b> '
- '<a href="https://www.cnbc.com/2026/08/26/nvidia-nvda-earnings-report-q2-2027-live-updates.html">CNBC &mdash; Nvidia Q2 FY2027 results</a> &middot; '
- '<a href="https://www.cnbc.com/2026/08/26/salesforce-crm-q2-earnings-report-2027.html">CNBC &mdash; Salesforce Q2 FY2027 results</a> &middot; '
- '<a href="https://www.sec.gov/Archives/edgar/data/0001535527/000153552726000029/crwd-20260826xex991.htm">SEC &mdash; CrowdStrike Q2 FY2027 earnings release (Form 8-K Ex. 99.1)</a></p>',
- 'ws-sources')
-save('wallstreet-briefing.html', ws)
-
-# --------------------------------------------------------------------- CYBER
-cy = load('cyber-briefing.html')
-cy = demote_new(cy)
-
-# by-the-numbers: swap in the CrowdStrike record ARR figure is business, not threat --
-# instead add the Gitea detail + the new RMM campaign as an incident card.
-INC = cy.index('<div class="lab">Breaches &amp; incidents</div>')
-CARDS = cy.index('<div class="cards">', INC) + len('<div class="cards">')
-NEW_CARD = (
- '\n<div class="card"><div class="tags"><span class="tag new">New &middot; 4:36</span>'
- '<span class="tag warn">Phishing</span><span class="tag">RMM abuse</span></div>\n'
- '<h3>A phishing operation is installing legitimate remote-control software in 46 countries</h3>\n'
- '<p>Attackers are abusing <b>legitimate remote monitoring and management (RMM) tools</b> to take direct control of '
- 'victim machines, in a campaign reported across <b>46 countries</b> and <b>active since January&nbsp;2026</b>. The '
- 'lures are deliberately mundane &mdash; <b>Social Security Administration notices, Adobe PDF prompts, invoices, VAT '
- 'alerts, shipping messages and shared-file themes</b>. A related strand aimed <b>primarily at financial institutions</b> '
- 'uses <b>fake Adobe Document Cloud pages</b> to talk victims into installing <b>ScreenConnect</b>. '
- '<b>&#9888; Why it is hard to catch:</b> the tool being installed is signed, commercial and often already whitelisted, '
- 'so the technique sits in the same family as the <b>ClickFix</b> and <b>Cruciferra</b> activity already in the Spotlight '
- 'below &mdash; <b>the user performs the install, and no malicious binary is ever downloaded.</b> '
- '<b>&#9888; No CVE, not in KEV, no federal deadline.</b></p>\n'
- '</div>')
-cy = cy[:CARDS] + NEW_CARD + cy[CARDS:]
-
-# Enrich the Gitea KEV entry with the detail confirmed this run.
-if 'CVE-2026-60004' in cy:
-    KEV = cy.index('<div class="lab">CISA KEV')
-    seg = cy[KEV:]
-    li = seg.index('CVE-2026-60004')
-    li_end = seg.index('</li>', li)
-    add = ('  <b>&#9679; Updated 4:36:</b> confirmed this run &mdash; <b>CVSS 9.8</b>; an attacker with '
-           '<b>ordinary repository write access</b> can plant an <b>executable Git hook</b> and run arbitrary shell '
-           'commands as the <b>Gitea service account</b>. Affects <b>1.17 onward</b>, <b>fixed in 1.27.1</b>. The '
-           'in-the-wild report traces to an incident write-up on the Russian blog <b>Habr</b> describing a self-hosted '
-           'Gitea instance compromised to run <b>crypto-mining software</b>. CISA added it on <b>Aug&nbsp;25</b> and '
-           'federal civilian agencies are instructed to remediate by <b>August&nbsp;28, 2026</b> &mdash; the same '
-           'deadline the Patch Priority box carries.')
-    cy = cy[:KEV] + seg[:li_end] + add + seg[li_end:]
+# 2) Vulnerability Watch — add CVE-2026-12569.
+mrow = re.search(r'<tr>\s*<td[^>]*>\s*<b>CVE-2026-62878</b>', cy)
+if not mrow:
+    fails.append("cyber: could not locate CVE-2026-62878 row to anchor new row")
 else:
-    fails.append('ANCHOR cy-gitea: CVE-2026-60004 not found')
+    NEWROW = (
+      '<tr><td><b>CVE-2026-12569</b></td><td>Not stated</td>'
+      '<td>PTC <b>Windchill</b> / <b>FlexPLM</b> (internet-exposed instances)</td>'
+      '<td><b>Improper input validation</b>, described as critical. Reported as the entry point for the '
+      '<b>Cl0p</b> mass-extortion campaign that named <b>Shell, GE and Philips</b> among a batch of victims. '
+      '&#9888; <b>No CVSS figure was stated by any source fetched this run and none is invented</b>; the '
+      'severity word is the reporting&rsquo;s, not a vendor score. Not KEV-listed as of this run.</td></tr>\n'
+    )
+    cy = cy[:mrow.start()] + NEWROW + cy[mrow.start():]
 
-cy = sub_once(cy, '<div class="lab">Sources</div>',
- '<div class="lab">Sources</div>\n'
- '<p class="note"><b>Added 4:36:</b> '
- '<a href="https://www.securityweek.com/cisa-warns-of-exploited-gitea-vulnerability/">SecurityWeek &mdash; CISA warns of exploited Gitea vulnerability</a> &middot; '
- '<a href="https://www.helpnetsecurity.com/2026/08/26/gitea-cve-2026-60004-exploited-in-the-wild/">Help Net Security &mdash; CVE-2026-60004 exploited in the wild</a> &middot; '
- '<a href="https://www.cisa.gov/news-events/alerts/2026/08/25/cisa-adds-one-known-exploited-vulnerability-catalog">CISA &mdash; Adds one KEV, Aug 25 2026</a> &middot; '
- '<a href="https://cybersecuritynews.com/hackers-abuse-legitimate-rmm-tools-3/">Cybersecurity News &mdash; RMM abuse, 46-country phishing campaign</a> &middot; '
- '<a href="https://www.sec.gov/Archives/edgar/data/0001535527/000153552726000029/crwd-20260826xex991.htm">SEC &mdash; CrowdStrike Q2 FY2027 earnings release</a></p>',
- 'cy-sources')
-save('cyber-briefing.html', cy)
+# 3) Stat strip — add the Cl0p and Medusa figures.
+cy = sub_once(cy,
+    '<div class="stat"><div class="n">Overdue</div>',
+    '<div class="stat"><div class="n">43</div><div class="l">Victims named in one leak-site batch tied to the '
+    '<b>PTC Windchill / FlexPLM</b> flaw &mdash; the most specific of three counts in circulation '
+    '(<b>&ldquo;more than 40&rdquo;</b>, <b>&ldquo;nearly 50&rdquo;</b>); <b>Cl0p&rsquo;s tally, not a confirmed one</b></div></div>\n'
+    '<div class="stat"><div class="n">500+</div><div class="l">Medusa ransomware victims in the <b>CISA / FBI / HHS</b> '
+    'advisory updated <b>Aug 18</b>, from FBI investigations through <b>April 2026</b></div></div>\n'
+    '<div class="stat"><div class="n">Overdue</div>',
+    "cyber: stat strip")
 
-# ----------------------------------------------------------------------- MMA
-mm = load('mma-briefing.html')
-mm = demote_new(mm)
-FW = mm.index('<div class="lab">Fight week')
-CARDS = mm.index('<div class="cards">', FW) + len('<div class="cards">')
-NEW_MMA = (
- '\n<div class="card"><div class="tags"><span class="tag new">New &middot; 4:36</span>'
- '<span class="tag">UFC Shanghai</span><span class="tag">Aug 29</span></div>\n'
- '<div class="dateline">Sat, Aug 29 &middot; Oriental Sports Center, Shanghai</div>\n'
- '<h3>The Shanghai card has its full shape: 13 bouts, and a start time that is not prime time</h3>\n'
- '<p>UFC.com and the event listing confirm <b>UFC Fight Night: Nurmagomedov vs. Song</b>, live from the '
- '<b>Oriental Sports Center in Shanghai on August&nbsp;29, 2026</b>. <b>Umar Nurmagomedov</b> and <b>Song Yadong</b> '
- '&ldquo;close out the festivities in a matchup that carries massive divisional significance in the 135-pound weight '
- 'class,&rdquo; each looking to end up <b>the clubhouse leader in the chase for the next title opportunity</b>. The main '
- 'event is <b>backed by a 12-fight undercard, for 13 bouts in total</b>. In the co-main, UFC.com describes '
- '<b>&ldquo;former title challenger and home country fighter Yan Xiaonan&rdquo;</b> looking to return to the win column '
- '&mdash; <b>the descriptor is the promotion&rsquo;s own</b>. <b>&#9888; Because the card is in China, the U.S. times are '
- 'early morning, not evening: prelims 3&nbsp;a.m. ET, main card 6&nbsp;a.m. ET, on Paramount+.</b> Odds unchanged from the '
- 'consensus already carried: <b>Nurmagomedov &minus;500 / Song &plus;380</b>. '
- '<b>&#9888; The card has not taken place; no result is asserted for any bout.</b></p>\n'
- '</div>')
-mm = mm[:CARDS] + NEW_MMA + mm[CARDS:]
-mm = sub_once(mm, '<div class="lab">Sources</div>',
- '<div class="lab">Sources</div>\n'
- '<p class="note"><b>Added 4:36:</b> '
- '<a href="https://www.ufc.com/event/ufc-fight-night-august-29-2026">UFC.com &mdash; UFC Fight Night: Nurmagomedov vs Song (Shanghai)</a> &middot; '
- '<a href="https://www.ufc.com/news/fight-fight-preview-ufc-shanghai-umar-nurmagomedov-vs-song-yadong">UFC.com &mdash; Fight-by-fight preview, UFC Shanghai</a></p>',
- 'mma-sources')
-save('mma-briefing.html', mm)
+# 4) TL;DR
+CY_TLDR = (
+ 'Three ransomware and extortion stories are new to this board and each one is carried with its claim and its '
+ 'confirmation kept apart: <b>Cl0p</b> named a batch of victims &mdash; <b>43</b> by the most specific count, '
+ 'with <b>&ldquo;more than 40&rdquo;</b> and <b>&ldquo;nearly 50&rdquo;</b> also in circulation &mdash; taken '
+ 'through <b>CVE-2026-12569</b> in internet-exposed <b>PTC Windchill and FlexPLM</b>, with <b>Shell, GE and '
+ 'Philips</b> all confirming investigations while the terabyte figures remain <b>the group&rsquo;s own</b>; '
+ 'the <b>CISA / FBI / HHS Medusa advisory was reopened on August 18</b> past <b>500 victims</b> and with '
+ '<b>HHS joining as a co-sealer</b>; and the <b>FBI is investigating a breach at Micro-Comm</b>, the Kansas '
+ 'maker of the <b>programmable logic controllers used in water and wastewater plants</b> &mdash; where the '
+ 'nearby <b>Iranian-linked PLC campaign is recorded and explicitly not attributed</b>, the FBI having reportedly '
+ 'called the intrusion <b>opportunistic</b>. Carried: <b>CVE-2026-62878</b> in <b>Windows DNS Server</b> stays '
+ 'on the board for reachability rather than activity, and the <b>two federal deadlines due today</b> '
+ '&mdash; ownCloud <b>CVE-2023-49105</b> and Linux kernel <b>CVE-2026-53362</b> &mdash; were re-read against a '
+ '4:36 PM clock and still fall <b>Sunday, August 30</b>.'
+)
+cy = re.sub(r'(<div class="tldr"><b>The Wire</b> <span>).*?(</span></div>)',
+            lambda m: m.group(1) + CY_TLDR + m.group(2), cy, count=1, flags=re.S)
 
-# --------------------------------------------------------------------- INDEX
-ix = load('index.html')
+# 5) Sources
+CY_SRC = (
+ '<a href="https://www.bleepingcomputer.com/news/security/philips-and-ge-investigating-clop-ransomware-data-theft-claims/">BleepingComputer &mdash; Philips and GE investigating Clop data-theft claims (CVE-2026-12569, 43 victims)</a><br>'
+ '<a href="https://www.computerweekly.com/news/366648757/Multiple-organisations-investigating-fresh-wave-of-Cl0p-breaches">Computer Weekly &mdash; Multiple organisations investigating fresh wave of Cl0p breaches</a><br>'
+ '<a href="https://www.helpnetsecurity.com/2026/08/19/medusa-ransomware-cisa-warning/">Help Net Security &mdash; Medusa ransomware gang has hit over 500 organizations, CISA warns</a><br>'
+ '<a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-071a">CISA &mdash; #StopRansomware: Medusa Ransomware (AA25-071A, updated Aug 18 2026)</a><br>'
+ '<a href="https://www.newsmax.com/newsfront/cybersecurity-ransomware-water/2026/08/26/id/1267342/">Newsmax &mdash; Hack of water sector supplier Micro-Comm in Kansas draws FBI scrutiny</a><br>'
+)
+mfoot = re.search(r'<div class="srcs">', cy)
+if not mfoot:
+    fails.append("cyber: no srcs block")
+else:
+    # insert after the first link that follows the srcs marker
+    ins = cy.index('<a href="', mfoot.start())
+    cy = cy[:ins] + CY_SRC + cy[ins:]
 
-def swap_card(s, cls, new_text):
-    global fails
-    i = s.find('class="bcard %s"' % cls)
-    if i < 0:
-        fails.append('ANCHOR index %s' % cls)
-        return s
-    p0 = s.index('<p', i)
-    p1 = s.index('</p>', p0)
-    return s[:p0] + '<p>' + new_text + s[p1:]
+wr("cyber-briefing.html", cy)
 
-ix = swap_card(ix, 'c-mkt',
- 'Nvidia beat with <b>$96.22&nbsp;billion of revenue against $92.17&nbsp;billion expected</b> and guided the current '
- 'quarter <b>above the street to $108&nbsp;billion</b> &mdash; and the stock slipped anyway, while '
- '<b>Salesforce soared 14%</b> after the bell.')
-ix = swap_card(ix, 'c-sec',
- 'CISA&rsquo;s newest KEV entry, the <b>Gitea flaw CVE-2026-60004 (CVSS 9.8)</b>, is being used to plant Git hooks and '
- 'mine crypto, with a <b>federal deadline of August&nbsp;28</b>; a separate phishing operation is installing '
- '<b>legitimate remote-control software across 46 countries</b>.')
-ix = swap_card(ix, 'c-mma',
- 'UFC Shanghai is set for <b>Saturday at the Oriental Sports Center</b> &mdash; <b>13 bouts</b> topped by '
- '<b>Umar Nurmagomedov vs. Song Yadong</b> at bantamweight, with the winner the clubhouse leader for the next title '
- 'shot, and U.S. viewers watching from <b>3&nbsp;a.m. ET</b>.')
-save('index.html', ix)
+# ──────────────────────────────────────────────────────────── WALL ST ──
+ws = rd("wallstreet-briefing.html")
 
-print('EDIT FAILURES:', fails if fails else 'none')
+WS_PARA = (
+ '<p><b>Twelfth September read, taken at 4:36 PM, and the venue that had been quoted round now has a '
+ 'precise pair &mdash; which makes the split wider, not narrower.</b> <b>Kalshi</b> returned this run at '
+ '<b>47% for a 25-basis-point hike and 54% for a hold</b>. This page has carried Kalshi at <b>52% hold</b> '
+ 'and at <b>48% hike</b> in earlier editions; <b>47/54 is a third rendering, not a correction of the other '
+ 'two</b>, and it is recorded rather than substituted, because no source fetched this run dates its quote '
+ 'or states which reading is current. &#9888; <b>Note that 47 and 54 sum to 101</b> &mdash; the two figures '
+ 'come from the same account and are printed as that account gives them, not reconciled into a pair that '
+ 'adds up. <b>The CME side gained two more renderings of its own:</b> <b>&ldquo;nearly 56%&rdquo;</b>, and a '
+ 'separate account putting the post-speech probability at <b>&ldquo;nearly 60%, up from 35% the previous '
+ 'day&rdquo;</b>. Against the <b>57%</b>, <b>55.7%</b> and <b>55%</b> already carried, the honest statement '
+ 'is a <b>range in the mid-to-high fifties on CME futures against a hold-leaning reading on the prediction '
+ 'markets</b>, and that is what is printed. <b>The direction is not in dispute and the level is</b>; the '
+ '<b>FOMC decision is September 16</b>, unchanged.</p>'
+)
+m = re.search(r'<b>The FOMC date is unchanged and not in dispute: September 16\.</b></p>', ws)
+if not m:
+    fails.append("ws: FOMC anchor not found")
+else:
+    ws = ws[:m.end()] + "\n" + WS_PARA + ws[m.end():]
+
+WS_TLDR_ADD = (
+ ' <b>New at 4:36 PM:</b> a <b>twelfth read of September</b> and still no adoption &mdash; <b>Kalshi</b> came '
+ 'back at <b>47% hike / 54% hold</b>, a third rendering from that venue rather than a correction of the '
+ '<b>52%</b> and <b>48%</b> this page already carried, while the CME side added <b>&ldquo;nearly 56%&rdquo;</b> '
+ 'and <b>&ldquo;nearly 60%, up from 35% the day before&rdquo;</b> to its own spread; the direction is '
+ 'undisputed and the level is not, so a <b>range</b> is printed and no number is adopted.'
+)
+mt = re.search(r'(<div class="tldr"><b>The Tape</b> <span>)(.*?)(</span></div>)', ws, flags=re.S)
+if not mt:
+    fails.append("ws: tldr not found")
+else:
+    ws = ws[:mt.start(3)] + WS_TLDR_ADD + ws[mt.start(3):]
+
+WS_SRC = (
+ '<a href="https://news.kalshi.com/p/fed-rate-hike-odds-september-2026-jackson-hole-speech">Kalshi &mdash; Fed rate-hike odds after the Jackson Hole speech (47% hike / 54% hold)</a><br>'
+ '<a href="https://www.cnbc.com/2026/08/28/-september-fed-decision-now-a-coin-flip-as-rate-hike-odds-increase.html">CNBC &mdash; September Fed decision now a coin flip as rate-hike odds increase post-Warsh</a><br>'
+)
+mfoot = re.search(r'<div class="srcs">', ws)
+if not mfoot:
+    fails.append("ws: no srcs block")
+else:
+    ins = ws.index('<a href="', mfoot.start())
+    ws = ws[:ins] + WS_SRC + ws[ins:]
+
+wr("wallstreet-briefing.html", ws)
+
+# ──────────────────────────────────────────────────────────────── MMA ──
+mma = rd("mma-briefing.html")
+
+mma = sub_once(mma,
+    '<b>The main card starts at 2 PM ET / 11 AM PT</b>',
+    '<b>New at 4:36 PM &mdash; the prelims now have a start time too: 10 AM ET</b>, which puts the full '
+    'broadcast day for a U.S. audience between mid-morning and late afternoon. '
+    '<b>The main card starts at 2 PM ET / 11 AM PT</b>',
+    "mma: UFC 333 prelim time")
+
+MMA_TLDR_ADD = (
+ ' <b>New at 4:36 PM:</b> <b>UFC 333&rsquo;s prelims have a start time &mdash; 10 AM ET</b>, ahead of the '
+ '<b>2 PM ET</b> main card already carried, and the <b>Paris broadcast window was re-confirmed at prelims '
+ '12 PM ET / main card 3 PM ET</b>. The <b>champions board was cross-checked against ESPN&rsquo;s current-champions '
+ 'page for a ninth consecutive run and is unchanged</b> &mdash; <b>Ulberg</b> at light heavyweight, '
+ '<b>Strickland</b> at middleweight and <b>Volkanovski</b> at featherweight all confirmed again.'
+)
+mt = re.search(r'(<div class="tldr"><b>Tale of the Tape</b> <span>)(.*?)(</span></div>)', mma, flags=re.S)
+if not mt:
+    fails.append("mma: tldr not found")
+else:
+    mma = mma[:mt.start(3)] + MMA_TLDR_ADD + mma[mt.start(3):]
+
+MMA_SRC = (
+ '<a href="https://en.wikipedia.org/wiki/UFC_333">Wikipedia &mdash; UFC 333: Volkanovski vs. Evloev (prelims 10 AM ET, main card 2 PM ET)</a><br>'
+ '<a href="https://www.espn.com/mma/story/_/id/14947566/current-all-ufc-champions">ESPN &mdash; Current and all-time UFC champions (re-verified this run)</a><br>'
+)
+mfoot = re.search(r'<div class="srcs">', mma)
+if not mfoot:
+    fails.append("mma: no srcs block")
+else:
+    ins = mma.index('<a href="', mfoot.start())
+    mma = mma[:ins] + MMA_SRC + mma[ins:]
+
+wr("mma-briefing.html", mma)
+
+print("EDIT FAILURES:", fails if fails else "none")
 sys.exit(1 if fails else 0)

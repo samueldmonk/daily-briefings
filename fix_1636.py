@@ -1,40 +1,61 @@
 #!/usr/bin/env python3
-"""Fixes the one REAL page bug the 1636 harness caught: the Gitea enrichment note was
-appended to the WRONG KEV row. edits_1636.py searched the KEV section for the string
-'CVE-2026-60004', but the section opens with prose that cross-references that CVE, so
-index() landed in the intro and the following '</li>' closed the FIRST row -- Oracle
-CVE-2026-21962. Result: Gitea's CVSS, fixed version and Habr provenance were printed
-inside an Oracle row. This is the Gitea/Oracle conflation the standing corrections warn
-about, produced this time by our own edit script rather than by a search summary.
-Fix: cut the note out and re-insert it at the end of the row that actually contains the
-Gitea CVE in a <b> tag."""
-import io, os, re, sys
+"""Fix pass:
+   (a) index.html was mangled by a non-greedy <p>...</p> sync that swallowed
+       everything between the first <p> in the document and each card's
+       closing </p>.  Restore from repo and re-sync anchored BACKWARDS from
+       each 'Read the briefing' link to its own immediately-preceding <p>.
+   (b) dedupe footer source links this run's edits duplicated."""
+import io, re, sys, shutil
 
-D = os.path.dirname(os.path.abspath(__file__))
-p = os.path.join(D, 'cyber-briefing.html')
-cy = io.open(p, encoding='utf-8').read()
+O = "/sessions/relaxed-dreamy-einstein/mnt/outputs/"
+REPO = "/tmp/db_1788122176/"
+fails = []
 
-start = cy.index('  <b>&#9679; Updated 4:36:</b> confirmed this run')
-end = cy.index('Patch Priority box carries.', start) + len('Patch Priority box carries.')
-note = cy[start:end]
-cy = cy[:start] + cy[end:]
-assert 'Updated 4:36' not in cy, 'note not fully removed'
+# ── (a) restore + correct sync ──
+shutil.copy(REPO+"index.html", O+"index.html")
+idx = io.open(O+"index.html", encoding="utf-8").read()
 
-# Re-target: the row whose CVE *label* is the Gitea one.
-m = re.search(r'<li>(?:(?!</li>).)*<b>CVE-2026-60004</b>(?:(?!</li>).)*</li>', cy, re.S)
-assert m, 'Gitea KEV row not found'
-row = m.group(0)
-assert 'Gitea' in row, 'targeted row is not the Gitea row'
-assert 'Oracle' not in row, 'targeted row mentions Oracle'
-cy = cy[:m.start()] + row[:-len('</li>')] + note + '</li>' + cy[m.end():]
+def tldr_of(page, label):
+    s = io.open(O+page, encoding="utf-8").read()
+    m = re.search(r'<div class="tldr"><b>%s</b> <span>(.*?)</span></div>' % re.escape(label), s, re.S)
+    if not m: fails.append("tldr missing on %s" % page)
+    return m.group(1) if m else None
 
-io.open(p, 'w', encoding='utf-8').write(cy)
+for page, label, href in [("cyber-briefing.html","The Wire","cyber-briefing.html"),
+                          ("wallstreet-briefing.html","The Tape","wallstreet-briefing.html"),
+                          ("mma-briefing.html","Tale of the Tape","mma-briefing.html")]:
+    body = tldr_of(page, label)
+    if body is None: continue
+    anchor = '<a class="go" href="%s">' % href
+    ai = idx.find(anchor)
+    if ai < 0: fails.append("index: anchor %s not found" % href); continue
+    ce = idx.rfind("</p>", 0, ai)                 # this card's closing </p>
+    cs = idx.rfind("<p>", 0, ce)                  # its OWN opening <p>
+    if ce < 0 or cs < 0: fails.append("index: <p> block for %s not found" % href); continue
+    seg = idx[cs+3:ce]
+    if "<p>" in seg or "</p>" in seg or "class=\"go\"" in seg:
+        fails.append("index: card block for %s is not a single flat <p>" % href); continue
+    idx = idx[:cs+3] + body + idx[ce:]
 
-# Prove it landed correctly.
-m2 = re.search(r'<li>(?:(?!</li>).)*Updated 4:36(?:(?!</li>).)*</li>', cy, re.S)
-row2 = m2.group(0)
-print('note now in row containing CVE-2026-60004:', '<b>CVE-2026-60004</b>' in row2)
-print('that row mentions Oracle:', 'Oracle' in row2)
-print('Oracle row still clean:', 'Updated 4:36' not in re.search(
-    r'<li>(?:(?!</li>).)*CVE-2026-21962(?:(?!</li>).)*</li>', cy, re.S).group(0))
-sys.exit(0 if ('<b>CVE-2026-60004</b>' in row2 and 'Oracle' not in row2) else 1)
+io.open(O+"index.html","w",encoding="utf-8").write(idx)
+
+# ── (b) dedupe footer hrefs, keeping the FIRST occurrence ──
+# widened per the standing rule: links may carry target/rel attributes and may
+# sit after </footer>, so match any <a ...href="http...">...</a>.
+LINK = re.compile(r'<a\s[^>]*href="(https?://[^"]+)"[^>]*>.*?</a>(?:<br>)?', re.S)
+for p in ["cyber-briefing.html","wallstreet-briefing.html","mma-briefing.html"]:
+    s = io.open(O+p, encoding="utf-8").read()
+    seen = set(); out = []; last = 0; removed = 0
+    for m in LINK.finditer(s):
+        url = m.group(1)
+        if url in seen:
+            out.append(s[last:m.start()]); last = m.end(); removed += 1
+        else:
+            seen.add(url)
+    out.append(s[last:])
+    s = "".join(out)
+    io.open(O+p,"w",encoding="utf-8").write(s)
+    print("%s: removed %d duplicate links" % (p, removed))
+
+print("FIX FAILURES:", fails if fails else "none")
+sys.exit(1 if fails else 0)

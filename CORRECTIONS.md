@@ -17633,3 +17633,123 @@ NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Kha
   the Dariush descriptor sweep; index-card-mirrors-tldr **exact-string equality** for all three pages; cross-page consistency on
   the punch count and the odds spread; per-footer duplicate-href, https-only, ≥6-link and disclaimer checks; a whole-file
   duplicate-href sweep on all four pages; and a tag-class-defined sweep.
+
+## Added 2026-08-30 (Sunday — research ~4:36–4:44pm ET, published ~4:45pm — AFTERNOON EDITION, weekend, NINTH run of the day; archive stamp 2026-08-30-1644)
+- 🔴 **THE INDEX-SYNC BUG THAT MANGLED ALL THREE FRONT-PAGE CARDS, AND THE SECOND-ORDER BUG THAT BROUGHT IT BACK AFTER IT WAS FIXED.**
+  The sync copied each briefing's `.tldr` span into its index card using a forward non-greedy
+  `<p>(.*?)</p>\s*<a class="go" href="X">`. **A non-greedy match still starts at the FIRST `<p>` in the
+  document**, so for each card it swallowed everything from the top of the page down to that card's closing
+  tag: the Security card ended up carrying the **MMA** summary and the page's card boundaries were destroyed.
+  **Fixed by anchoring BACKWARDS** — find the card's own `<a class="go" href=…>`, `rfind` the `</p>` before it,
+  `rfind` the `<p>` before that, and assert the extracted block contains no nested `<p>`. ⚠ **Then it was
+  reintroduced within two minutes:** the restamp script still contained a copy of the broken sync, so running
+  restamp *after* the fix re-mangled the file. **RULE: a repair and a rewrite must not live in the same script
+  — the fix ran, then the stale copy of the bug ran after it.** Sync now lives only in `fix_1636.py`;
+  `restamp_1636.py` restamps and nothing else. **Same defect class as the last two runs (dedupe, then id
+  rewriting): a matcher that only fits the shape you had in mind is not a matcher.**
+- 🔴 **THREE VALIDATOR FALSE POSITIVES WERE INSPECTED BEFORE BEING BELIEVED, AND ALL THREE WERE THE VALIDATOR'S
+  FAULT — BUT THE MIRROR CHECK WAS FAILING FOR THE *RIGHT* REASON AND HAD TO BE FIXED THE SAME WAY AS THE SYNC.**
+  (a) A **Citrix/9.8 adjacency sweep** fired on a sentence *about* keeping a blog's 9.8 off the Citrix row —
+  correct behaviour, flagged as its opposite. **Narrowed to: no Citrix table ROW may have a `<td>9.8</td>` CVSS
+  cell.** (b) **"Chimaev appears as a champion cell"** and **"a belt shows vacant"** both fired on the champions
+  table's *notes* column — "split decision over Khamzat Chimaev" and "for the vacant title" are the correct
+  renderings. **Narrowed to the champion column only (cell 2 of each row), with Pereira/Chimaev/Topuria and
+  "vacant" forbidden there and nowhere else.** (c) The **index-mirrors-tldr** check used the same broken forward
+  regex as the sync and reported 3,516- and 5,598-character "cards"; **rewritten to the backwards anchor**, at
+  which point it passed. ⚠ **A validator and the code it checks sharing a defective assumption means the check
+  is decorative** — the mirror check would have caught the mangling on the first pass had it not been written
+  from the same mistaken idea of the page's shape.
+- 🔴 **DUPLICATE FOOTER LINKS AGAIN, ON TWO PAGES, FROM THIS RUN'S OWN EDITS.** The CNBC coin-flip URL on Wall
+  Street and the UFC 333 Wikipedia + ESPN champions URLs on MMA were appended to footers that already carried
+  them. **Deduped keeping the first occurrence**, using the widened matcher from the 3:36 PM run (any `<a …
+  href="http…">`, attributes in any order, including blocks after `</footer>`). **Three consecutive runs have
+  now introduced this; the pre-publish dedupe is not optional.**
+- 🟢 **CYBER — THREE GENUINELY NEW INCIDENTS, THE FIRST SUBSTANTIAL ADDITION IN SEVERAL RUNS, AND EACH IS
+  PUBLISHED WITH THE CLAIM AND THE CONFIRMATION KEPT APART.**
+  **(1) Cl0p / PTC.** Mass extortion through **internet-exposed PTC Windchill and FlexPLM**, entry point
+  **CVE-2026-12569**, described as **critical improper input validation**. **Shell, General Electric and
+  Philips have each confirmed they are investigating.** ⚠ **The victim count returned three ways — 43,
+  "more than 40", "nearly 50" — and none is adopted; 43 is printed as the most specific source's figure**
+  with the spread beside it, on the reasoning that a leak-site tally read on three days is not necessarily
+  three contradictions. ⚠ **Volumes are the group's: 89 GB (Shell), 391 GB (GE), 15.5 GB (Philips)** — no
+  company has confirmed a number. **Philips's own statement is narrower than the claim** (one enterprise
+  server, contained, customer-facing environments not reached); **Shell confirms only "a potential incident."**
+  ⚠ **CVE-2026-12569 was given a Vulnerability Watch row with the CVSS cell reading "Not stated"** — no source
+  fetched this run gave a score and **none was invented**; the validator asserts that cell verbatim.
+  ⚠ **Not KEV-listed despite confirmed mass exploitation — recorded as a gap, not explained.**
+  **(2) Medusa.** The **CISA / FBI / HHS joint advisory (AA25-071A) was updated August 18, 2026** with FBI
+  findings **through April 2026**: **more than 500 victims**, RaaS first identified **June 2021**, double
+  extortion. **First published March 12, 2025** — this is a re-issue, and the news is the authorship:
+  **HHS joined as a co-sealer.** Cited for scale: **University of Mississippi Medical Center offline nine days
+  in late February 2026**, the state's only Level I trauma center, children's hospital and transplant program.
+  **(3) Micro-Comm.** **Olathe, Kansas**, maker of the **PLCs used in water and wastewater plants**; breach
+  **discovered July 31**; the **Barracuda** group (**self-described profit-motivated, not government sponsored**)
+  published **~850,000 files / ~644 GB**; **company and FBI both confirm**. ⚠ **THE ATTRIBUTION IS AVAILABLE AND
+  IS REFUSED:** it fell inside a **late-July run of PLC attacks in Minnesota and six-plus other states** tied to
+  a **long-running Iranian-affiliated campaign**, but **the government has not connected Micro-Comm to it** and
+  the FBI reportedly called the intrusion **opportunistic rather than targeted**. **Sitting inside a window is
+  not membership of a campaign**; the two claims are printed apart. Company says **no customer passwords,
+  credentials, or remote-access information** were exposed.
+- 🟢 **CYBER — SIXTEENTH KEV CHECK; NOTHING LATER THAN AUGUST 27 A TENTH CONSECUTIVE TIME.** CISA's own dated
+  alert pages returned for **Aug 11** (three: CVE-2026-20349 Cisco Secure Firewall, CVE-2026-68820 Windows,
+  CVE-2026-72898 Metabase), **Aug 18** (four: CVE-2026-33824, CVE-2026-55040, CVE-2026-59310, CVE-2026-65400),
+  **Aug 20** (two: TrueConf), **Aug 21** (one: Zimbra) and **Aug 26** (six). ⚠ **A THIRD AGGREGATE ARRIVED AND
+  STILL NONE IS ADOPTED:** the "**24 new KEV entries in August**" tracker figure returned again alongside the
+  earlier "**at least 16**"; **with three known gaps across sixteen checks this page certifies no total** and
+  publishes only from individual dated alert pages. **CVE-2026-65400 (Apple macOS Screen Sharing, CVSS 9.8)**
+  and the **Aug 21 federal deadline** on the Aug 18 batch re-confirmed from the same sweep.
+- 🟢 **CYBER — THE TWO DEADLINES DUE TODAY RE-READ AGAINST A 4:36 PM CLOCK AND STILL FALL TODAY:**
+  **CVE-2023-49105 (ownCloud)** and **CVE-2026-53362 (Linux kernel)**, **Sunday August 30**. Countdowns
+  unchanged (**OVERDUE / 0 / 10 / 11**). Per the 3:36 PM rule the Patch Priority *body sentences* were re-read
+  alongside the heading; **no heading/body contradiction this run.**
+- 🟢 **CYBER — NEVADA REFUSED AN EIGHTH TIME, ON SIGHT.** Same listing genre. **ServiceNow re-confirmed with
+  sharper detail and one ID conflict recorded:** the **August 27** advisory carries **four** CVEs, of which
+  **three are CVSS v4.0 10.0 and unauthenticated** — **CVE-2026-18885** (code injection → arbitrary code
+  execution / data access), **CVE-2026-18886** (code injection → privilege escalation) and **CVE-2026-74820**
+  (SQL injection). ⚠ **The fourth, a high-severity sandbox escape, came back as BOTH CVE-2026-6875 and
+  CVE-2026-6876 in the same result set — a support-portal title against a summary body. Neither is published**;
+  the fourth CVE is described without an ID until one source states it unambiguously. ServiceNow says it is
+  **not aware of malicious exploitation**.
+- 🟢 **MARKETS — TWENTY-FIFTH VERIFICATION; Fri Aug 28 closes stand** (S&P **7,711.76 −0.25%**, Nasdaq Composite
+  **26,402.42 −0.52%**, Dow **53,559.99 −9.45 −0.02%**; week: S&P **+0.5%**, Nasdaq **+0.9%**, Dow **+0.5%**,
+  the Dow's **first winning week in three**). **10-year 4.73%** (**4.72% still refused**), **2-year 4.34%**,
+  **WTI $83.44**, **Brent $88.29**. **Nasdaq-100 29,433.43 / −0.70% still recorded and still not promoted.**
+- ⚠ **MARKETS — TWELFTH SEPTEMBER READ, AND KALSHI NOW HAS A PRECISE PAIR THAT WIDENS THE SPLIT RATHER THAN
+  SETTLING IT: 47% hike / 54% hold.** This page has carried Kalshi at **52% hold** and at **48% hike**;
+  **47/54 is a THIRD rendering from the same venue, recorded and not substituted** — no source dates its quote.
+  ⚠ **47 + 54 = 101 and the pair is printed as the source gives it, not reconciled.** The CME side added
+  **"nearly 56%"** and **"nearly 60%, up from 35% the previous day"** to the **57 / 55.7 / 55** already carried;
+  also newly sourced, **before the speech the odds of a hold were "nearly 70%"**. **Printed as a range in the
+  mid-to-high fifties on CME futures against a hold-leaning reading on the prediction markets; no number
+  adopted, for a twelfth consecutive run.** **FOMC September 16** unchanged; **Labor Day = Monday, September 7**
+  sweep enforced.
+- 🟢 **MMA — CHAMPIONS BOARD CROSS-CHECKED AGAINST ESPN'S CURRENT-CHAMPIONS PAGE A NINTH CONSECUTIVE RUN AND IS
+  UNCHANGED** (sixty-sixth consecutive edition). ESPN returned **Aspinall / Ulberg / Strickland / Makhachev /
+  Gaethje / Volkanovski** with the same title dates this file carries, and **Dern** at women's strawweight.
+  The three historically-wrong belts (**Ulberg** LHW, **Strickland** MW, **Volkanovski** FW) correct again;
+  **Pereira, Chimaev and Topuria all asserted absent from the champion column**, now by a check that reads that
+  column specifically rather than the whole table.
+- 🟢 **MMA — TWO BROADCAST WINDOWS SHARPENED, BOTH FROM SOURCES SEEN THIS RUN.** **UFC 333 prelims start at
+  10 AM ET**, ahead of the **2 PM ET** main card this page already carried (Abu Dhabi, Oct 24, Paramount+).
+  **UFC Paris (Sept 5) re-confirmed at prelims 12 PM ET / main card 3 PM ET.** ⚠ **UFC 333's card list returned
+  with Lone'er Kavanagh vs. Ramazan Temirov (125) included — already on this page, checked rather than
+  re-added.** **Shanghai bonuses re-confirmed in full and unchanged**: **$400,000 = four × $100,000** (POTN
+  **Song Yadong** and **Bilal Hasan**; FOTN **Liu Ce** and **Levi Rodrigues Jr.**) **plus five $25,000 finish
+  bonuses — Hector Santiago, Francesco Nuzzi, Rei Tsuruya, Kai Asakura and Denise Gomes**, the same five names
+  from a second independent account. **Yakhyaev spelling checked against the standing entry and matches.**
+- VALIDATION — **`validate_1636.py`: 481 checks, 0 failures** (after three narrowings and one rewrite, each
+  justified above by inspecting the page rather than by loosening the check to pass). Stamp derived from the
+  clock at write time and asserted identical across all five pages, with the narrowed run-stamp assertion
+  (this run's own 4:36 PM prose stamp may not exceed the masthead) and a freshline-equals-publish-time check;
+  five-tab nav with exactly one active tab; masthead ids under the widened `<span[^>]*id=…>` regex; all six
+  TradingView blocks plus the three indices, oil and US10Y, with a no-widgets sweep on the other three pages
+  and archive.html; the three Friday closes and the Nasdaq-100-not-promoted adjacency sweep; the 4.73/4.72
+  rates family; the full new Fed family including the **47/54** pair and the **"sum to 101"** note asserted as
+  a string; the complete Cl0p / Medusa / Micro-Comm families with the **"Not stated"** CVSS cell and the
+  **attribution-refusal** sentence both asserted verbatim; the Cosmos **$2.87 + $2.85 = $5.72** identity in code;
+  a CVE well-formedness sweep with a ≥20 distinct-id liveness check; the narrowed Citrix-9.3 row guard and the
+  LoadMaster-9.6 guard; eleven champion-name assertions plus a **champion-column-only** forbidden-name sweep;
+  the Yakhyaev and Salkilld spellings and the Dariush descriptor sweep; **backwards-anchored** index-card-
+  mirrors-tldr exact-string equality for all three pages; cross-page consistency on the punch count, the index
+  closes and the Cosmos total; per-footer duplicate-href, https-only, ≥6-link and disclaimer checks; and a
+  tag-class-defined sweep.
