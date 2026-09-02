@@ -1,6 +1,8 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Daily Briefings</title><style>:root{--bg:#0b0c0d;--panel:#141618;--panel2:#1b1e21;--line:#262a2e;--fg:#eef1f3;--muted:#7b858c;--muted2:#b6bfc5;--accent:#8fa3b0;--accent2:#cfd8de;--up:#3fbf72;--crit:#e05555;--warn:#e0a13a;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
-
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Daily Briefings</title><style>:root{--bg:#0b0b0d;--panel:#141416;--panel2:#1b1b1f;--line:#2a2a30;--fg:#eeeef2;--muted:#84848f;--muted2:#b8b8c2;--accent:#8f8fa6;--accent2:#b0b0c4;--up:#3fbf72;--crit:#e05555;--warn:#e0a13a;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.c-sec{border-left:3px solid #22d3a8}.c-sec:hover{border-color:#22d3a8}.c-sec .kicker,.c-sec h3{color:#22d3a8}
+.c-mkt{border-left:3px solid #caa64a;font-family:Georgia,"Times New Roman",serif}.c-mkt:hover{border-color:#caa64a}.c-mkt .kicker,.c-mkt h3{color:#caa64a}
+.c-mma{border-left:3px solid #e84545}.c-mma:hover{border-color:#e84545}.c-mma .kicker,.c-mma h3{color:#e84545}
+.c-mkt .kicker,.c-sec .kicker,.c-mma .kicker{font-family:var(--mono)}
 *{box-sizing:border-box}
 body{margin:0;padding:26px 20px 60px;background:var(--bg);color:var(--fg);
  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
@@ -29,11 +31,11 @@ h2{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:u
  color:var(--muted);margin:34px 0 13px;padding-bottom:8px;border-bottom:1px solid var(--line)}
 .panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:14px}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:13px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 17px;
- transition:.16s}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 17px;transition:.16s}
 .card:hover{transform:translateY(-2px);border-color:var(--accent)}
 .card h3{margin:0 0 7px;font-size:15.5px;line-height:1.35}
 .card p{margin:0;font-size:14px;color:var(--muted2)}
+.card p+p{margin-top:8px}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:9px}
 .tag{font-family:var(--mono);font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;
  border-radius:5px;padding:3px 7px;border:1px solid}
@@ -84,19 +86,25 @@ ul.bul li{margin-bottom:9px;font-size:14.5px}
 .cdn .ev{font-size:13.5px;color:var(--muted2)}
 .serif h1,.serif .lead-h{font-family:Georgia,"Times New Roman",serif}
 .lead-h{font-size:21px;margin:0 0 9px;line-height:1.3}
+.big{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:15px}
+.big .card{padding:19px 21px}
+.big .card h3{font-size:18px;margin-bottom:4px}
+.big .kicker{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:9px}
+.big .more{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+ display:inline-block;margin-top:12px}
+</style></head><body><div class="wrap"><div class="masthead"><h1>Daily Briefings</h1><p class="tag">Security, markets and the fight game &mdash; refreshed through the day</p><div class="meta"><span class="pill live"><span class="dot"></span>Live</span><span class="pill" id="edition">&nbsp;</span><span class="pill" id="datestamp">&nbsp;</span><span class="pill">Updated <span id="updated">&nbsp;</span></span></div></div><div class="freshline" id="freshline">&nbsp;</div><nav><a href="index.html" class="on">★ Front Page</a><a href="cyber-briefing.html">⛨ The Cyber Wire</a><a href="wallstreet-briefing.html">▲ The Closing Bell</a><a href="mma-briefing.html">⊘ The Octagon</a><a href="archive.html">🗄 Archive</a></nav><div class="big">
+<div class="card c-sec"><div class="kicker">⛨ The Cyber Wire &middot; The Wire</div>
+<h3>An elapsed deadline outranks a live one</h3>
+<p>The Gentlemen &mdash; the most active ransomware operation of the second quarter of 2026 &mdash; named hospital operator Nutex Health on its leak site as Nutex confirmed to the SEC that patient, employee, provider, business and financial data was stolen; meanwhile the Citrix NetScaler deadline federal agencies were given is now four days past due, the PaperCut pair added to the KEV catalog on August 31 leaves twelve days to patch, and roughly 22,000 Exchange servers remain exposed to a flaw with public exploit code.</p>
+<a class="more" href="cyber-briefing.html">Read the briefing &rarr;</a></div>
 
-.big{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:6px}
-.big .b{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:21px 22px;
- transition:.18s;display:flex;flex-direction:column}
-.big .b:hover{transform:translateY(-3px)}
-.big .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:9px}
-.big .b h2{border:none;margin:0 0 4px;padding:0;font-family:Georgia,serif;font-size:23px;
- letter-spacing:-.2px;text-transform:none;color:var(--fg)}
-.big .b .sub{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
- color:var(--muted);margin-bottom:13px}
-.big .b p{margin:0 0 17px;font-size:14.5px;color:var(--muted2);line-height:1.55;flex:1}
-.big .b a.go{font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase}
-.b.cy{border-top:3px solid #22d3a8}.b.cy .k,.b.cy a.go{color:#22d3a8}.b.cy:hover{border-color:#22d3a8}
-.b.ws{border-top:3px solid #caa64a}.b.ws .k,.b.ws a.go{color:#caa64a}.b.ws:hover{border-color:#caa64a}
-.b.mm{border-top:3px solid #e84545}.b.mm .k,.b.mm a.go{color:#e84545}.b.mm:hover{border-color:#e84545}
-</style></head><body><div class="wrap"><div class="masthead"><h1>Daily Briefings</h1><p class="tag">Three desks, refreshed every 30 minutes &mdash; security, markets and the fight game</p><div class="meta"><span class="pill live"><span class="dot"></span>Live</span><span class="pill" id="edition">&nbsp;</span><span class="pill" id="datestamp">&nbsp;</span><span class="pill">Updated <span id="updated">&nbsp;</span></span></div></div><div class="freshline" id="freshline">&nbsp;</div><nav><a href="index.html" class="on">★ Front Page</a><a href="cyber-briefing.html">⛨ The Cyber Wire</a><a href="wallstreet-briefing.html">▲ The Closing Bell</a><a href="mma-briefing.html">⊘ The Octagon</a><a href="archive.html">🗄 Archive</a></nav><div class="big"><div class="b cy"><div class="k">&#9880; The Cyber Wire</div><h2>The Wire</h2><div class="sub">Breaches &middot; Exploits &middot; Federal deadlines</div><p>The PaperCut chain now has an end-to-end proof and a population that cannot comply with its own deadline: Huntress reproduced pre-authentication remote code execution against a stock PaperCut NG 25.0.11.75758 server, running code as SYSTEM, while about 47% of the roughly 2,500 installs it tracks are on version 23 or earlier with no patch in existence &mdash; against a September 14 federal date &mdash; the JFrog Artifactory auth bypass now has a named mechanism &mdash; instances left without an additional join key are issued a &ldquo;phantom&rdquo; one that attackers forge to mint administrator credentials &mdash; and the most urgent item on the page is still an elapsed one, the Citrix NetScaler flaw CVE-2026-8452, now three days past its August 29 deadline.</p><a class="go" href="cyber-briefing.html">Read the briefing &rarr;</a></div><div class="b ws"><div class="k">&#9650; The Closing Bell</div><h2>The Tape</h2><div class="sub">Indices &middot; Movers &middot; Rates &amp; commodities</div><p>The macro session gave way to an earnings evening: after a global bond sell-off closed all three indices lower &mdash; the Dow down 419.02 points, or 0.79%, to 52,766.88, the S&amp;P 500 down 0.71% to 7,631.47 and the Nasdaq Composite down 1.03% to 26,099.77 &mdash; Dell reported record quarterly revenue of $47 billion, a record $60.9 billion in AI server orders and a record $95 billion backlog and rose roughly 8% to 10% after the bell, GitLab jumped about 16% on a raised full-year outlook, and MongoDB fell by double digits despite beating on both lines, while crude stayed bid on renewed U.S.&ndash;Iran fighting and the U.S. 10-year was quoted as high as 4.81%.</p><a class="go" href="wallstreet-briefing.html">Read the briefing &rarr;</a></div><div class="b mm"><div class="k">&#8856; The Octagon</div><h2>Tale of the Tape</h2><div class="sub">Cards &middot; Results &middot; Champions</div><p>The promotion changed Saturday&rsquo;s Paris card this afternoon &mdash; Mairon Santos is out against Nathaniel Wood with illness and undefeated newcomer Pavel Andrusca, a finisher in seven of eight wins, steps in &mdash; while the main event holds with debutant Salahdine Parnasse a &minus;600 favourite over Dan Hooker on the consensus line &mdash; a price implying 81.8%, though a fourth book fetched this run quotes it as short as &minus;526 &mdash; Contender Series Week 4 is now under way at the Meta APEX with no result yet verified, and a champions list fetched this run is stale for a fourteenth time, wrong in the same single cell as last time.</p><a class="go" href="mma-briefing.html">Read the briefing &rarr;</a></div></div><div class="disc">Daily Briefings is compiled from public reporting. Every figure is checked against a source fetched in the run that produced this edition; attacker claims and betting lines are labelled as such. Nothing here is investment, security or betting advice. Point-in-time snapshots of every edition are kept in the <a href="archive.html">archive</a>.</div></div><script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \u00b7 briefings refresh every 30 minutes, 8 AM\u20136 PM ET';}catch(e){}})();</script></body></html>
+<div class="card c-mkt"><div class="kicker">▲ The Closing Bell &middot; The Tape</div>
+<h3>Oil is writing the bond market&rsquo;s copy</h3>
+<p>Stock futures pointed lower before Wednesday&rsquo;s open as an escalation in the war in Iran pushed Brent crude above $95 a barrel and drove a global bond sell-off &mdash; the U.S. 10-year was quoted at 4.798%, the highest since January 2025 by LSEG data, and as high as 4.814% on the day by a CNBC read &mdash; with ADP payrolls, factory orders and the Fed&rsquo;s Beige Book due, and Broadcom and Snowflake reporting after Tuesday&rsquo;s session left all three indices lower.</p>
+<a class="more" href="wallstreet-briefing.html">Read the briefing &rarr;</a></div>
+
+<div class="card c-mma"><div class="kicker">⊘ The Octagon &middot; Tale of the Tape</div>
+<h3>Five fights, five contracts</h3>
+<p>Contender Series Week 4 went five for five &mdash; every winner at the Meta APEX on Tuesday left with a UFC contract, four of them by finish including a fifteen-second stoppage &mdash; while fight week points to Paris on Saturday, where Dan Hooker meets the former two-time KSW featherweight champion Salahdine Parnasse in the New Zealander&rsquo;s first crack at a debutant who arrives from KSW, not the Contender Series, and is a heavy betting favourite over him.</p>
+<a class="more" href="mma-briefing.html">Read the briefing &rarr;</a></div>
+</div><div class="disc">Each briefing is rebuilt from public reporting fetched at publication time. Figures are reproduced as their sources state them; where sources disagree, both readings are shown rather than averaged. The markets briefing is information only and is not investment advice.</div></div><script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \u00b7 briefings refresh every 30 minutes, 8 AM\u20136 PM ET';}catch(e){}})();</script></body></html>
