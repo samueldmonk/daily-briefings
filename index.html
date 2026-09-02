@@ -1,96 +1,122 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Daily Briefings</title><style>:root{--bg:#0b0b0d;--panel:#141418;--panel2:#1b1b21;--line:#2a2a32;--fg:#eeeef2;--muted:#83838f;--muted2:#b9b9c4;--accent:#8f9bb3;--accent2:#c9d1e0;--up:#3fbf72;--crit:#e05555;--warn:#e0a13a;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Briefings</title>
+<style>
+:root{
+  --bg:#0d0f12; --panel:#15181d; --line:#252a32; --text:#e6e9ee; --muted:#8b94a3;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+  --teal:#22d3a8; --cyan:#36c6ff; --gold:#caa64a; --gold2:#e8c766; --red:#e84545; --orange:#ff8a5c;
+  --up:#3ddc97; --down:#ff6b6b; --crit:#ff5252; --warn:#f0a830;
+}
 *{box-sizing:border-box}
-body{margin:0;padding:26px 20px 60px;background:var(--bg);color:var(--fg);
- font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
- font-size:15.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1080px;margin:0 auto}
-a{color:var(--accent);text-decoration:none}
-a:hover{text-decoration:underline}
-.masthead{border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:4px}
-.masthead h1{margin:0 0 4px;font-size:30px;letter-spacing:-.4px}
-.masthead .tag{color:var(--muted);font-size:13.5px;margin:0 0 11px}
-.meta{display:flex;flex-wrap:wrap;gap:7px;align-items:center}
-.pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;
- background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:4px 10px;color:var(--muted)}
-.pill.live{color:var(--up);border-color:var(--up);display:flex;align-items:center;gap:6px}
-.dot{width:7px;height:7px;border-radius:50%;background:var(--up);display:inline-block;
- animation:pulse 1.8s ease-in-out infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
-.freshline{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.04em;margin:9px 0 16px}
-nav{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 20px}
-nav a{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
- background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:8px 13px;color:var(--muted);
- transition:.15s}
-nav a:hover{border-color:var(--accent);color:var(--fg);text-decoration:none;transform:translateY(-1px)}
-nav a.on{color:var(--accent);border-color:var(--accent);background:var(--panel2)}
-h2{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;
- color:var(--muted);margin:34px 0 13px;padding-bottom:8px;border-bottom:1px solid var(--line)}
-.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:14px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:13px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 17px;transition:.16s}
-.card:hover{transform:translateY(-2px);border-color:var(--accent)}
-.card h3{margin:0 0 7px;font-size:15.5px;line-height:1.35}
-.card p{margin:0;font-size:14px;color:var(--muted2)}
-.card p+p{margin-top:8px}
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:9px}
-.tag{font-family:var(--mono);font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;
- border-radius:5px;padding:3px 7px;border:1px solid}
-.t-new{color:var(--up);border-color:var(--up)}
-.t-a{color:var(--accent);border-color:var(--accent)}
-.t-w{color:var(--warn);border-color:var(--warn)}
-.t-c{color:var(--crit);border-color:var(--crit)}
-table{width:100%;border-collapse:collapse;font-size:14px;background:var(--panel);
- border:1px solid var(--line);border-radius:12px;overflow:hidden}
-th{font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);
- text-align:left;padding:10px 13px;border-bottom:1px solid var(--line);background:var(--panel2)}
-td{padding:10px 13px;border-bottom:1px solid var(--line);vertical-align:top}
-tr:last-child td{border-bottom:none}
-.up{color:var(--up)}.down{color:var(--crit)}.flat{color:var(--muted)}
-ul.bul{margin:0;padding-left:19px}
-ul.bul li{margin-bottom:9px;font-size:14.5px}
-.note{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.03em;margin:8px 0 4px}
-.callout{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--warn);
- border-radius:10px;padding:14px 17px;margin-bottom:14px}
-.callout.crit{border-left-color:var(--crit)}
-.callout h3{margin:0 0 6px;font-size:15px}
-.callout p{margin:0;font-size:14px;color:var(--muted2)}
-.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
- border-radius:10px;padding:11px 15px;margin:6px 0 2px;font-size:14.5px;line-height:1.5}
-.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
- color:var(--accent);margin-right:9px}
-.srcs{font-size:12.5px;color:var(--muted);line-height:1.9}
-.srcs a{color:var(--muted2)}
-.disc{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin-top:26px;padding-top:14px}
-.banner{border-radius:12px;padding:13px 17px;margin-bottom:13px;border:1px solid;display:flex;
- gap:13px;align-items:baseline;flex-wrap:wrap}
-.banner .lvl{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:700}
-.banner .why{font-size:14px;color:var(--muted2)}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:11px;margin-bottom:14px}
-.stat{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:13px 15px}
-.stat .n{font-size:23px;font-weight:600;color:var(--accent);line-height:1.15}
-.stat .l{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
- color:var(--muted);margin-top:5px}
-.livebar{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 8px 4px;margin-bottom:18px}
-.livebar-label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--up);
- display:flex;align-items:center;gap:8px;padding:4px 8px 8px}
-.tickers{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-bottom:6px}
-.ticker{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:6px 10px}
-.cdn{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
- border-radius:10px;padding:11px 15px;margin-bottom:16px;display:flex;gap:12px;flex-wrap:wrap;align-items:baseline}
-.cdn .lab{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
-.cdn .val{font-family:var(--mono);font-size:14px;font-weight:700}
-.cdn .ev{font-size:13.5px;color:var(--muted2)}
-.serif h1,.serif .lead-h{font-family:Georgia,"Times New Roman",serif}
-.lead-h{font-size:21px;margin:0 0 9px;line-height:1.3}
-.big{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:15px}
-.big .card{padding:19px 21px}
-.big .card h3{font-size:18px;margin-bottom:4px}
-.big .kicker{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:9px}
-.big .more{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
- display:inline-block;margin-top:12px}
-.c-sec{border-left:3px solid #22d3a8}.c-sec .kicker{color:#22d3a8}.c-sec:hover{border-color:#22d3a8}
-.c-mkt{border-left:3px solid #caa64a}.c-mkt .kicker{color:#caa64a}.c-mkt:hover{border-color:#caa64a}
-.c-mkt h3{font-family:Georgia,"Times New Roman",serif}
-.c-mma{border-left:3px solid #e84545}.c-mma .kicker{color:#e84545}.c-mma:hover{border-color:#e84545}
-.c-sec .more{color:#22d3a8}.c-mkt .more{color:#caa64a}.c-mma .more{color:#e84545}
-</style></head><body><div class="wrap"><header class="masthead"><h1>Daily Briefings</h1><p class="tag">Security, markets and MMA &mdash; refreshed every 30 minutes, 8 AM&ndash;6 PM ET</p><div class="meta"><span class="pill live"><span class="dot"></span> Live</span><span class="pill" id="edition"></span><span class="pill" id="datestamp"></span><span class="pill">Updated <span id="updated"></span></span></div></header><div class="freshline" id="freshline"></div><nav><a href="index.html" class="on">★ Front Page</a><a href="cyber-briefing.html">⛨ The Cyber Wire</a><a href="wallstreet-briefing.html">▲ The Closing Bell</a><a href="mma-briefing.html">⊘ The Octagon</a><a href="archive.html">🗄 Archive</a></nav><div class="big"><div class="card c-sec"><div class="kicker">⛨ The Cyber Wire &middot; The Wire</div><h3>A federal patch deadline expires today</h3><p>A federal patch deadline for an actively exploited MLflow flaw falls today, while SonicWall’s SMA1000 appliance is dealing with its second pair of exploited zero-days in seven weeks and attackers are minting admin credentials on unpatched JFrog Artifactory servers.</p><a class="more" href="cyber-briefing.html">Read the briefing →</a></div><div class="card c-mkt"><div class="kicker">▲ The Closing Bell &middot; The Tape</div><h3>Higher stocks, higher yields</h3><p>Stocks are narrowly higher at midmorning even as a global bond sell-off pushes the U.S. 10-year Treasury yield to its highest level since November 2023, with Dell up on AI-server demand while Credo Technology, MongoDB and Palo Alto Networks are all down sharply.</p><a class="more" href="wallstreet-briefing.html">Read the briefing →</a></div><div class="card c-mma"><div class="kicker">⊘ The Octagon &middot; Tale of the Tape</div><h3>Five contracts, and one man asking for Saturday</h3><p>Adam Darby headlined Contender Series Week 4 with a third-round doctor stoppage of Patrick Rivera, was one of five fighters handed a UFC contract on the night, and is already asking Dana White to put him on Saturday’s Paris card.</p><a class="more" href="mma-briefing.html">Read the briefing →</a></div></div><div class="disc">Each briefing is rebuilt from live web sources every 30 minutes between 8 AM and 6 PM ET. Every claim on every page traces to a source fetched during that run or to an explicitly labelled sourced entry from an earlier edition. Markets content is for information only and is not investment advice.</div></div><script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \u00b7 briefings refresh every 30 minutes, 8 AM\u20136 PM ET';}catch(e){}})();</script></body></html>
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;font-size:15.5px}
+.wrap{max-width:1080px;margin:0 auto;padding:26px 20px 60px}
+.masthead{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:14px}
+h1.brand{margin:0;font-size:38px;letter-spacing:-.5px;font-weight:800;
+  background:linear-gradient(90deg,var(--teal),var(--gold2) 52%,var(--orange));-webkit-background-clip:text;background-clip:text;color:transparent}
+.tagline{color:var(--muted);font-size:14px;margin-top:4px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);
+  background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:4px 11px}
+.pill.live{color:var(--up);border-color:rgba(61,220,151,.35)}
+.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--up);margin-right:6px;vertical-align:middle}
+nav.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 8px}
+nav.tabs a{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;
+  color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:8px 13px;transition:.15s}
+nav.tabs a:hover{color:var(--text);border-color:#3a424f;transform:translateY(-1px)}
+nav.tabs a.active{color:#0d0f12;background:linear-gradient(90deg,var(--teal),var(--gold2) 55%,var(--orange));border-color:transparent;font-weight:700}
+.freshline{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.06em;margin:10px 0 22px}
+.cards{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:880px){.cards{grid-template-columns:repeat(3,1fr)}}
+.bigcard{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;flex-direction:column;
+  transition:.18s;text-decoration:none;color:inherit}
+.bigcard:hover{transform:translateY(-3px);border-color:#3a424f;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.bigcard .kicker{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase}
+.bigcard h2{margin:8px 0 2px;font-size:23px;letter-spacing:-.2px}
+.bigcard .sub{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.bigcard p{margin:0 0 16px;font-size:14.5px;color:#c9d0da}
+.bigcard .go{margin-top:auto;font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase}
+.c-sec{border-top:3px solid var(--teal)} .c-sec .kicker,.c-sec .go{color:var(--teal)}
+.c-mkt{border-top:3px solid var(--gold)} .c-mkt .kicker,.c-mkt .go{color:var(--gold2)} .c-mkt h2{font-family:Georgia,'Times New Roman',serif}
+.c-mma{border-top:3px solid var(--red)} .c-mma .kicker,.c-mma .go{color:var(--orange)}
+.label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:34px 0 12px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.panel ul{margin:0;padding-left:18px} .panel li{margin:7px 0;font-size:14.5px;color:#c9d0da}
+footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px}
+footer a{color:#7f8b9c}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <h1 class="brand">Daily Briefings</h1>
+    <div class="tagline">Security, markets and the fight game — rebuilt from live sources every 30 minutes.</div>
+    <div class="meta">
+      <span class="pill live"><span class="dot"></span>Live</span>
+      <span class="pill" id="edition">—</span>
+      <span class="pill" id="datestamp">—</span>
+      <span class="pill">Updated <span id="updated">—</span></span>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <a href="index.html" class="active">★ Front Page</a>
+    <a href="cyber-briefing.html">⛨ The Cyber Wire</a>
+    <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
+    <a href="mma-briefing.html">⊘ The Octagon</a>
+    <a href="archive.html">🗄 Archive</a>
+  </nav>
+
+  <div class="freshline" id="freshline">Data as of — ET · briefings refresh every 30 minutes, 8 AM–6 PM ET</div>
+
+  <div class="cards">
+
+    <a class="bigcard c-sec" href="cyber-briefing.html">
+      <div class="kicker">⛨ Security</div>
+      <h2>The Cyber Wire</h2>
+      <div class="sub">The Wire</div>
+      <p>SonicWall is fixing a second pair of actively exploited SMA1000 zero-days in seven weeks — one scored CVSS 10.0 — while the federal deadline to patch the exploited MLflow credential-theft SSRF expires today.</p>
+      <div class="go">Read the briefing →</div>
+    </a>
+
+    <a class="bigcard c-mkt" href="wallstreet-briefing.html">
+      <div class="kicker">▲ Markets</div>
+      <h2>The Closing Bell</h2>
+      <div class="sub">The Tape</div>
+      <p>Stocks are grinding higher at the ~10 AM read — Dow +0.53%, S&amp;P 500 +0.20%, Nasdaq Composite +0.03% — as the oil rally stalls, with Dell up 6.17% after a 6.80% premarket drop and Credo down 17.51%.</p>
+      <div class="go">Read the briefing →</div>
+    </a>
+
+    <a class="bigcard c-mma" href="mma-briefing.html">
+      <div class="kicker">⊘ MMA</div>
+      <h2>The Octagon</h2>
+      <div class="sub">Tale of the Tape</div>
+      <p>Salahdine Parnasse — a two-time KSW featherweight champion who signed with the UFC in late July, not a Contender Series graduate — headlines Paris on debut in three days as a −667 favourite over Dan Hooker.</p>
+      <div class="go">Read the briefing →</div>
+    </a>
+
+  </div>
+
+  <div class="label">How this page is built</div>
+  <div class="panel">
+    <ul>
+      <li>Every claim on all four pages traces to a source fetched during this run, or is labelled explicitly as carried from an earlier edition and not re-fetched.</li>
+      <li>Figures that could not be reconciled across sources this run are printed as a disagreement rather than resolved silently — the refusals appear on the pages themselves.</li>
+      <li>Intraday index levels are not printed. Points and percent changes are, each with the time of the read attached.</li>
+      <li>Every previous edition is kept in the <a href="archive.html" style="color:#8b94a3">Archive</a> as a point-in-time snapshot.</li>
+    </ul>
+  </div>
+
+  <footer>
+    Assembled from public reporting. Nothing here is investment, legal or security advice.
+    Sources are listed in full at the foot of each briefing.
+  </footer>
+
+</div>
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
+</body>
+</html>
