@@ -1,5 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Daily Briefings</title><style>:root{--bg:#0b0b0d;--panel:#141418;--panel2:#1b1b21;--line:#2a2a32;--fg:#eeeef2;--muted:#83838f;--muted2:#b9b9c4;--accent:#8f9bb3;--accent2:#c9d1e0;--up:#3fbf72;--crit:#e05555;--warn:#e0a13a;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
-*{box-sizing:border-box}
+BASE = """*{box-sizing:border-box}
 body{margin:0;padding:26px 20px 60px;background:var(--bg);color:var(--fg);
  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
  font-size:15.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
@@ -88,22 +87,15 @@ ul.bul li{margin-bottom:9px;font-size:14.5px}
 .big .kicker{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:9px}
 .big .more{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
  display:inline-block;margin-top:12px}
-.c-sec{border-left:3px solid #22d3a8}.c-sec .kicker{color:#22d3a8}.c-sec:hover{border-color:#22d3a8}
-.c-mkt{border-left:3px solid #caa64a}.c-mkt .kicker{color:#caa64a}.c-mkt:hover{border-color:#caa64a}
-.c-mkt h3{font-family:Georgia,"Times New Roman",serif}
-.c-mma{border-left:3px solid #e84545}.c-mma .kicker{color:#e84545}.c-mma:hover{border-color:#e84545}
-.c-sec .more{color:#22d3a8}.c-mkt .more{color:#caa64a}.c-mma .more{color:#e84545}
-</style></head><body><div class="wrap"><div class="masthead"><h1>Daily Briefings</h1><p class="tag">Security, markets and mixed martial arts &mdash; rebuilt from live sources every 30 minutes</p><div class="meta"><span class="pill live"><span class="dot"></span>Live</span><span class="pill" id="edition">&nbsp;</span><span class="pill" id="datestamp">&nbsp;</span><span class="pill">Updated <span id="updated">&nbsp;</span></span></div></div><div class="freshline" id="freshline">&nbsp;</div><nav><a href="index.html" class="on">★ Front Page</a><a href="cyber-briefing.html">⛨ The Cyber Wire</a><a href="wallstreet-briefing.html">▲ The Closing Bell</a><a href="mma-briefing.html">⊘ The Octagon</a><a href="archive.html">🗄 Archive</a></nav><h2>Today&rsquo;s Briefings</h2><div class="big">
-<div class="card c-sec"><div class="kicker">&#9880; The Cyber Wire &middot; The Wire</div>
-<h3>A CVSS 10 zero-day is being exploited in SonicWall&rsquo;s remote-access gateway</h3>
-<p>SonicWall says <b>two SMA1000 zero-days it discovered internally</b> &mdash; one scored <b>CVSS 10</b> &mdash; are already being exploited and appear to have been chained for unauthenticated remote code execution, with hotfixes available, <b>no indicators of compromise published</b> and neither flaw yet in CISA&rsquo;s KEV catalog.</p>
-<a class="more" href="cyber-briefing.html">Read the briefing &rarr;</a></div>
-<div class="card c-mkt"><div class="kicker">&#9650; The Closing Bell &middot; The Tape</div>
-<h3>A split open: the Dow up, small caps down 1.2%</h3>
-<p>The opening bell produced a split tape rather than a down one &mdash; the Dow up <b>0.37%</b> and the S&amp;P 500 up <b>0.06%</b> while the Nasdaq slipped <b>0.06%</b> and the Russell 2000 fell <b>1.23%</b> &mdash; after ADP put August private payroll growth at <b>38,000</b>, the smallest since January, with the 10-year Treasury yield touching <b>4.814%</b> and crude reversing lower from a one-month high.</p>
-<a class="more" href="wallstreet-briefing.html">Read the briefing &rarr;</a></div>
-<div class="card c-mma"><div class="kicker">&#8856; The Octagon &middot; Tale of the Tape</div>
-<h3>A UFC debutant is a &minus;550 favourite over a ranked veteran</h3>
-<p>UFC Paris lands Saturday at the Accor Arena with <b>Salahdine Parnasse a &minus;550 favourite on his UFC debut</b> over the No. 10-ranked Dan Hooker at <b>+400</b> &mdash; the shortest main-event price on a fourteen-bout card &mdash; three days after Song Yadong&rsquo;s second-round upset of Umar Nurmagomedov in Shanghai banked a <b>$100,000</b> Performance of the Night bonus.</p>
-<a class="more" href="mma-briefing.html">Read the briefing &rarr;</a></div>
-</div><h2>How this works</h2><div class="panel"><p style="margin:0;font-size:14.5px;color:var(--muted2)">Each briefing is rebuilt from sources fetched during that run. Every figure carries the clock and the source it came from; where a number could not be verified in the run that published it, the page says so rather than estimating. Point-in-time snapshots of every edition are kept in the <a href="archive.html">Archive</a>.</p></div><div class="disc">Information only. The markets briefing is not investment advice; the MMA briefing carries no wagering advice; the security briefing summarises vendor advisories and does not substitute for them.</div></div><script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \u00b7 briefings refresh every 30 minutes, 8 AM\u20136 PM ET';}catch(e){}})();</script></body></html>
+"""
+
+STAMP = """<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \\u00b7 briefings refresh every 30 minutes, 8 AM\\u20136 PM ET';}catch(e){}})();</script>"""
+
+def nav(active):
+    items=[("index.html","★ Front Page"),("cyber-briefing.html","⛨ The Cyber Wire"),
+           ("wallstreet-briefing.html","▲ The Closing Bell"),("mma-briefing.html","⊘ The Octagon"),
+           ("archive.html","\U0001f5c4 Archive")]
+    return "<nav>"+"".join('<a href="%s"%s>%s</a>'%(h,' class="on"' if h==active else '',t) for h,t in items)+"</nav>"
+
+def meta():
+    return '<div class="meta"><span class="pill live"><span class="dot"></span>Live</span><span class="pill" id="edition">&nbsp;</span><span class="pill" id="datestamp">&nbsp;</span><span class="pill">Updated <span id="updated">&nbsp;</span></span></div>'

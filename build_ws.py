@@ -1,94 +1,26 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Closing Bell &mdash; Daily Markets Briefing</title><style>:root{--bg:#0d0c0a;--panel:#17150f;--panel2:#1e1b13;--line:#2e2a1e;--fg:#f2ede0;--muted:#8d876f;--muted2:#c2bba6;--accent:#caa64a;--accent2:#e8c766;--up:#3fbf72;--crit:#e05555;--warn:#e0a13a;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
-*{box-sizing:border-box}
-body{margin:0;padding:26px 20px 60px;background:var(--bg);color:var(--fg);
- font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
- font-size:15.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1080px;margin:0 auto}
-a{color:var(--accent);text-decoration:none}
-a:hover{text-decoration:underline}
-.masthead{border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:4px}
-.masthead h1{margin:0 0 4px;font-size:30px;letter-spacing:-.4px}
-.masthead .tag{color:var(--muted);font-size:13.5px;margin:0 0 11px}
-.meta{display:flex;flex-wrap:wrap;gap:7px;align-items:center}
-.pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;
- background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:4px 10px;color:var(--muted)}
-.pill.live{color:var(--up);border-color:var(--up);display:flex;align-items:center;gap:6px}
-.dot{width:7px;height:7px;border-radius:50%;background:var(--up);display:inline-block;
- animation:pulse 1.8s ease-in-out infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
-.freshline{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.04em;margin:9px 0 16px}
-nav{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 20px}
-nav a{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
- background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:8px 13px;color:var(--muted);
- transition:.15s}
-nav a:hover{border-color:var(--accent);color:var(--fg);text-decoration:none;transform:translateY(-1px)}
-nav a.on{color:var(--accent);border-color:var(--accent);background:var(--panel2)}
-h2{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;
- color:var(--muted);margin:34px 0 13px;padding-bottom:8px;border-bottom:1px solid var(--line)}
-.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:14px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:13px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 17px;transition:.16s}
-.card:hover{transform:translateY(-2px);border-color:var(--accent)}
-.card h3{margin:0 0 7px;font-size:15.5px;line-height:1.35}
-.card p{margin:0;font-size:14px;color:var(--muted2)}
-.card p+p{margin-top:8px}
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:9px}
-.tag{font-family:var(--mono);font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;
- border-radius:5px;padding:3px 7px;border:1px solid}
-.t-new{color:var(--up);border-color:var(--up)}
-.t-a{color:var(--accent);border-color:var(--accent)}
-.t-w{color:var(--warn);border-color:var(--warn)}
-.t-c{color:var(--crit);border-color:var(--crit)}
-table{width:100%;border-collapse:collapse;font-size:14px;background:var(--panel);
- border:1px solid var(--line);border-radius:12px;overflow:hidden}
-th{font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);
- text-align:left;padding:10px 13px;border-bottom:1px solid var(--line);background:var(--panel2)}
-td{padding:10px 13px;border-bottom:1px solid var(--line);vertical-align:top}
-tr:last-child td{border-bottom:none}
-.up{color:var(--up)}.down{color:var(--crit)}.flat{color:var(--muted)}
-ul.bul{margin:0;padding-left:19px}
-ul.bul li{margin-bottom:9px;font-size:14.5px}
-.note{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.03em;margin:8px 0 4px}
-.callout{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--warn);
- border-radius:10px;padding:14px 17px;margin-bottom:14px}
-.callout.crit{border-left-color:var(--crit)}
-.callout h3{margin:0 0 6px;font-size:15px}
-.callout p{margin:0;font-size:14px;color:var(--muted2)}
-.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
- border-radius:10px;padding:11px 15px;margin:6px 0 2px;font-size:14.5px;line-height:1.5}
-.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
- color:var(--accent);margin-right:9px}
-.srcs{font-size:12.5px;color:var(--muted);line-height:1.9}
-.srcs a{color:var(--muted2)}
-.disc{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin-top:26px;padding-top:14px}
-.banner{border-radius:12px;padding:13px 17px;margin-bottom:13px;border:1px solid;display:flex;
- gap:13px;align-items:baseline;flex-wrap:wrap}
-.banner .lvl{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:700}
-.banner .why{font-size:14px;color:var(--muted2)}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:11px;margin-bottom:14px}
-.stat{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:13px 15px}
-.stat .n{font-size:23px;font-weight:600;color:var(--accent);line-height:1.15}
-.stat .l{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
- color:var(--muted);margin-top:5px}
-.livebar{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 8px 4px;margin-bottom:18px}
-.livebar-label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--up);
- display:flex;align-items:center;gap:8px;padding:4px 8px 8px}
-.tickers{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-bottom:6px}
-.ticker{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:6px 10px}
-.cdn{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
- border-radius:10px;padding:11px 15px;margin-bottom:16px;display:flex;gap:12px;flex-wrap:wrap;align-items:baseline}
-.cdn .lab{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
-.cdn .val{font-family:var(--mono);font-size:14px;font-weight:700}
-.cdn .ev{font-size:13.5px;color:var(--muted2)}
-.serif h1,.serif .lead-h{font-family:Georgia,"Times New Roman",serif}
-.lead-h{font-size:21px;margin:0 0 9px;line-height:1.3}
-.big{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:15px}
-.big .card{padding:19px 21px}
-.big .card h3{font-size:18px;margin-bottom:4px}
-.big .kicker{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:9px}
-.big .more{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
- display:inline-block;margin-top:12px}
-</style></head><body class="serif"><div class="wrap"><div class="masthead"><h1>The Closing Bell</h1><p class="tag">Your daily markets briefing &mdash; the tape, the drivers &amp; the calendar</p><div class="meta"><span class="pill live"><span class="dot"></span>Live</span><span class="pill" id="edition">&nbsp;</span><span class="pill" id="datestamp">&nbsp;</span><span class="pill">Updated <span id="updated">&nbsp;</span></span></div></div><div class="tldr"><b>The Tape</b> <span>The opening bell produced a split tape rather than a down one &mdash; the Dow up <b>0.37%</b> and the S&amp;P 500 up <b>0.06%</b> while the Nasdaq slipped <b>0.06%</b> and the Russell 2000 fell <b>1.23%</b> &mdash; after ADP put August private payroll growth at <b>38,000</b>, the smallest since January, with the 10-year Treasury yield touching <b>4.814%</b> and crude reversing lower from a one-month high.</span></div><div class="freshline" id="freshline">&nbsp;</div><nav><a href="index.html">★ Front Page</a><a href="cyber-briefing.html">⛨ The Cyber Wire</a><a href="wallstreet-briefing.html" class="on">▲ The Closing Bell</a><a href="mma-briefing.html">⊘ The Octagon</a><a href="archive.html">🗄 Archive</a></nav><div class="livebar"><div class="livebar-label"><span class="dot"></span> LIVE QUOTES</div><script src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>{"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},{"proName":"FOREXCOM:DJI","title":"Dow 30"},{"proName":"NASDAQ:GTLB","title":"GitLab"},{"proName":"NASDAQ:DELL","title":"Dell"},{"proName":"NASDAQ:MDB","title":"MongoDB"},{"proName":"NASDAQ:AVGO","title":"Broadcom"},{"proName":"NYSE:SNOW","title":"Snowflake"},{"proName":"TVC:USOIL","title":"WTI Crude"},{"proName":"TVC:US10Y","title":"US 10Y"}],"colorTheme":"dark","isTransparent":true,"showSymbolLogo":true,"displayMode":"adaptive","locale":"en"}</script></div><h2>Live Index Quotes &mdash; updates in real time</h2><div class="tickers"><div class="ticker"><script src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"FOREXCOM:SPXUSD","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div><div class="ticker"><script src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"FOREXCOM:NSXUSD","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div><div class="ticker"><script src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"FOREXCOM:DJI","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div></div><div class="note">Quotes stream live (some feeds ~15-min delayed). Editorial below reflects the latest edition; official closes are in the Weekly Scorecard.</div><h2>The Lead</h2><div class="panel">
+# -*- coding: utf-8 -*-
+import sys; sys.path.insert(0,'/tmp')
+from css import BASE, STAMP, nav, meta
+OUT="/sessions/amazing-determined-planck/mnt/outputs/"
+
+ROOT=":root{--bg:#0d0c0a;--panel:#17150f;--panel2:#1e1b13;--line:#2e2a1e;--fg:#f2ede0;--muted:#8d876f;--muted2:#c2bba6;--accent:#caa64a;--accent2:#e8c766;--up:#3fbf72;--crit:#e05555;--warn:#e0a13a;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}\n"
+
+h=[]
+h.append('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Closing Bell &mdash; Daily Markets Briefing</title><style>'+ROOT+BASE+'</style></head><body class="serif"><div class="wrap">')
+h.append('<div class="masthead"><h1>The Closing Bell</h1><p class="tag">Your daily markets briefing &mdash; the tape, the drivers &amp; the calendar</p>'+meta()+'</div>')
+h.append('<div class="tldr"><b>The Tape</b> <span>The opening bell produced a split tape rather than a down one &mdash; the Dow up <b>0.37%</b> and the S&amp;P 500 up <b>0.06%</b> while the Nasdaq slipped <b>0.06%</b> and the Russell 2000 fell <b>1.23%</b> &mdash; after ADP put August private payroll growth at <b>38,000</b>, the smallest since January, with the 10-year Treasury yield touching <b>4.814%</b> and crude reversing lower from a one-month high.</span></div>')
+h.append('<div class="freshline" id="freshline">&nbsp;</div>')
+h.append(nav("wallstreet-briefing.html"))
+
+# BLOCK A
+h.append('<div class="livebar"><div class="livebar-label"><span class="dot"></span> LIVE QUOTES</div><script src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>{"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},{"proName":"FOREXCOM:DJI","title":"Dow 30"},{"proName":"NASDAQ:GTLB","title":"GitLab"},{"proName":"NASDAQ:DELL","title":"Dell"},{"proName":"NASDAQ:MDB","title":"MongoDB"},{"proName":"NASDAQ:AVGO","title":"Broadcom"},{"proName":"NYSE:SNOW","title":"Snowflake"},{"proName":"TVC:USOIL","title":"WTI Crude"},{"proName":"TVC:US10Y","title":"US 10Y"}],"colorTheme":"dark","isTransparent":true,"showSymbolLogo":true,"displayMode":"adaptive","locale":"en"}</script></div>')
+# BLOCK B
+h.append('<h2>Live Index Quotes &mdash; updates in real time</h2><div class="tickers">')
+for s in ["FOREXCOM:SPXUSD","FOREXCOM:NSXUSD","FOREXCOM:DJI"]:
+    h.append('<div class="ticker"><script src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"%s","width":"100%%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div>'%s)
+h.append('</div><div class="note">Quotes stream live (some feeds ~15-min delayed). Editorial below reflects the latest edition; official closes are in the Weekly Scorecard.</div>')
+
+h.append('''<h2>The Lead</h2><div class="panel">
 <h3 class="lead-h">Stocks split at the open as small caps break away from the Dow <span style="color:var(--muted);font-weight:400">(as of ~9:35 AM ET)</span></h3>
 <p><b>The first clean, single-source read of the session is in, and it is wider than &ldquo;mixed&rdquo; suggests.</b> TheStreet&rsquo;s <b>9:35 AM ET</b> opening-bell entry has the <b>S&amp;P 500 up 0.06%</b>, the <b>Dow Jones Industrial Average up 0.37%</b>, the <b>Nasdaq Composite down 0.06%</b> &mdash; and the <b>Russell 2000 down 1.23%</b>. <b>Those four figures come from one source with one clock, and they are moves, not levels.</b> The only index <i>levels</i> anywhere on this page are Tuesday&rsquo;s official closes in the Weekly Scorecard.</p>
 <p class="note" style="border-left:3px solid var(--up);padding-left:11px"><b>The small-cap number is the one that changes the picture.</b> A 1.23% decline in the Russell 2000 against a 0.37% gain in the Dow is a <b>1.6-percentage-point spread inside a single quote board</b>. <b>No source fetched this run explains that spread</b>, and no explanation is offered here &mdash; but a session in which the rate-sensitive end of the market falls while the industrial end rises is consistent with the yield story below, and that consistency is an observation, not a causal claim.</p>
@@ -102,7 +34,9 @@ ul.bul li{margin-bottom:9px;font-size:14.5px}
 <p><b>A policy headline landed seventeen minutes before the open.</b> Commerce Secretary <b>Howard Lutnick</b> told CNBC that the administration is developing <b>a tariff framework for semiconductors</b> and that companies know the tariffs are coming, confirming a Politico report from last week. &ldquo;I think what you&rsquo;re going to see is targeted, thoughtful tariff policy that basically says if you build here, you don&rsquo;t pay, but if you don&rsquo;t build here, expect to pay to enter the greatest market in the world,&rdquo; Lutnick said, adding: &ldquo;We will be successful in semiconductors. They&rsquo;re going to be built in America.&rdquo; <b>No rate, no scope and no start date has been published, and no chip-stock reaction to it was sourced this run</b> &mdash; but it arrives on the morning Broadcom reports.</p>
 <p class="note"><b>On dates and pointers.</b> References to earlier editions of this page are written as absolute timestamps (the 8:19 AM, 8:48 AM, 9:18 AM or 9:53 AM edition) rather than as &ldquo;the previous edition,&rdquo; because a relative pointer written in one edition becomes false in the next without anything on the page changing. Novelty tags are dated the same way.</p>
 <p class="note" style="border-left:3px solid var(--crit);padding-left:11px"><b>A standing hazard, kept on the page because it nearly cost three false claims.</b> A search result offered Medtronic <span class="up">+3%</span>, Nvidia <span class="down">&minus;1.7%</span> and an Apple figure as <i>today&rsquo;s</i> early movers, sourced to Schwab&rsquo;s market-open commentary. Fetching that page showed it was <b>Tuesday&rsquo;s</b> instalment &mdash; &ldquo;Published as of: September 1, 2026, 9:11 a.m. ET&rdquo; &mdash; sitting on a <b>rolling URL</b> that always resolves to the newest piece and had not yet rolled. <b>An evergreen URL is a citation to a slot, not to an article: correct today, silently wrong tomorrow, and the fetched page&rsquo;s own dateline is the only tell.</b> None of the three was published.</p>
-</div><h2>Movers &amp; Drivers</h2><div class="note">Single-stock figures below are <b>pre-market</b> quotes as TheStreet reported them at <b>8:15 AM ET</b> unless a card states otherwise. <b>No September 2 single-stock <i>session</i> move has been sourced this run</b>, so none is published &mdash; a pre-market move is not a session move. &ldquo;New&rdquo; tags mark items absent from the <b>9:53 AM</b> edition.</div><div class="cards">
+</div>''')
+
+h.append('''<h2>Movers &amp; Drivers</h2><div class="note">Single-stock figures below are <b>pre-market</b> quotes as TheStreet reported them at <b>8:15 AM ET</b> unless a card states otherwise. <b>No September 2 single-stock <i>session</i> move has been sourced this run</b>, so none is published &mdash; a pre-market move is not a session move. &ldquo;New&rdquo; tags mark items absent from the <b>9:53 AM</b> edition.</div><div class="cards">
 <div class="card"><div class="tags"><span class="tag t-new">New this run</span><span class="tag t-a">Breadth</span></div>
 <h3>Russell 2000 &mdash; the outlier at the open</h3><p>Down <span class="down">1.23%</span> in TheStreet&rsquo;s <b>9:35 AM ET</b> opening read, against the Dow&rsquo;s <span class="up">+0.37%</span>. <b>This is the largest index move printed on this page for September 2, on the arithmetic of those four figures and on nothing else.</b> No source fetched this run gives a reason for the small-cap underperformance, and none is supplied here.</p></div>
 <div class="card"><div class="tags"><span class="tag t-a">Carried forward</span><span class="tag t-a">The turn is new since 9:24 AM</span><span class="tag t-a">Commodities</span></div>
@@ -127,12 +61,23 @@ ul.bul li{margin-bottom:9px;font-size:14.5px}
 <h3>SpaceX (SPCX)</h3><p>Shares &ldquo;edge up&rdquo; after a Falcon 9 carried <b>27</b> Starlink satellites to orbit from Vandenberg Space Force Base at <b>4:42 a.m. EDT</b> &mdash; the <b>35th</b> flight for that first stage, booster B1063, two short of the reuse record set by B1067 last week. <b>No percentage is published because the source states none.</b> For scale, and dated: the stock debuted at <b>$135</b> on June 12 and reached a record <b>$225.64</b> on June 16.</p></div>
 <div class="card"><div class="tags"><span class="tag t-a">Trade</span></div>
 <h3>Canada &mdash; talks, or a standoff</h3><p>Canadian Prime Minister <b>Mark Carney</b> says the U.S. and Canada could resume trade discussions when Americans &ldquo;stop throwing shade&rdquo; and &ldquo;start being serious&rdquo; about negotiations. Treasury Secretary <b>Scott Bessent</b> downplayed the idea that the U.S. is in a trade war with Canada. <b>No market impact from this exchange was sourced this run and none is asserted.</b></p></div>
-</div><h2>Chart of the Day</h2><div class="cdn"><span class="lab">Chart of the Day</span><span class="val">NASDAQ:GTLB</span><span class="ev">GitLab &mdash; up 21% pre-market on second-quarter results, the largest single-name move printed on this page.</span></div><div class="panel" style="padding:8px"><script src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>{"symbol":"NASDAQ:GTLB","width":"100%","height":240,"locale":"en","dateRange":"1D","colorTheme":"dark","isTransparent":true,"autosize":false}</script></div><h2>Sector Heat &mdash; Live</h2><div class="panel" style="padding:8px"><script src="https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js" async>{"dataSource":"SPX500","blockSize":"market_cap_basic","blockColor":"change","grouping":"sector","locale":"en","colorTheme":"dark","hasTopBar":false,"isDataSetEnabled":false,"isZoomEnabled":true,"hasSymbolTooltip":true,"isMonoSize":false,"width":"100%","height":420}</script></div><div class="note"><b>No September 2 sector figure has been sourced this run and none is asserted</b> &mdash; the map above is live and is the current picture. A search summariser this run offered same-day sector percentages without a date this desk could pin to September 2; <b>they were refused.</b> Editorial reference for Tuesday&rsquo;s completed session: four of eleven S&amp;P 500 sectors closed higher, energy leading at <span class="up">+1.3%</span> and consumer discretionary lagging at <span class="down">&minus;1.9%</span>.</div><h2>The Calendar &mdash; Live</h2><div class="panel" style="padding:8px"><script src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>{"colorTheme":"dark","isTransparent":true,"width":"100%","height":420,"locale":"en","importanceFilter":"0,1","countryFilter":"us"}</script></div><h2>Live Market Headlines &mdash; updates in real time</h2><div class="panel" style="padding:8px"><script src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>{"feedMode":"market","market":"stock","colorTheme":"dark","isTransparent":true,"displayMode":"regular","width":"100%","height":420,"locale":"en"}</script></div><h2>Weekly Scorecard</h2><table>
+</div>''')
+
+h.append('<h2>Chart of the Day</h2><div class="cdn"><span class="lab">Chart of the Day</span><span class="val">NASDAQ:GTLB</span><span class="ev">GitLab &mdash; up 21% pre-market on second-quarter results, the largest single-name move printed on this page.</span></div><div class="panel" style="padding:8px"><script src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>{"symbol":"NASDAQ:GTLB","width":"100%","height":240,"locale":"en","dateRange":"1D","colorTheme":"dark","isTransparent":true,"autosize":false}</script></div>')
+
+h.append('<h2>Sector Heat &mdash; Live</h2><div class="panel" style="padding:8px"><script src="https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js" async>{"dataSource":"SPX500","blockSize":"market_cap_basic","blockColor":"change","grouping":"sector","locale":"en","colorTheme":"dark","hasTopBar":false,"isDataSetEnabled":false,"isZoomEnabled":true,"hasSymbolTooltip":true,"isMonoSize":false,"width":"100%","height":420}</script></div><div class="note"><b>No September 2 sector figure has been sourced this run and none is asserted</b> &mdash; the map above is live and is the current picture. A search summariser this run offered same-day sector percentages without a date this desk could pin to September 2; <b>they were refused.</b> Editorial reference for Tuesday&rsquo;s completed session: four of eleven S&amp;P 500 sectors closed higher, energy leading at <span class="up">+1.3%</span> and consumer discretionary lagging at <span class="down">&minus;1.9%</span>.</div>')
+
+h.append('<h2>The Calendar &mdash; Live</h2><div class="panel" style="padding:8px"><script src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>{"colorTheme":"dark","isTransparent":true,"width":"100%","height":420,"locale":"en","importanceFilter":"0,1","countryFilter":"us"}</script></div>')
+h.append('<h2>Live Market Headlines &mdash; updates in real time</h2><div class="panel" style="padding:8px"><script src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>{"feedMode":"market","market":"stock","colorTheme":"dark","isTransparent":true,"displayMode":"regular","width":"100%","height":420,"locale":"en"}</script></div>')
+
+h.append('''<h2>Weekly Scorecard</h2><table>
 <tr><th>Index</th><th>Sept 1 close</th><th>Change</th><th>Aug 31 close</th></tr>
 <tr><td>S&amp;P 500</td><td>7,631.47</td><td class="down">&minus;0.71%</td><td>7,686.14</td></tr>
 <tr><td>Nasdaq Composite</td><td>26,099.77</td><td class="down">&minus;1.03%</td><td>26,370.89</td></tr>
 <tr><td>Dow Jones Industrial Average</td><td>52,766.88</td><td class="down">&minus;419.02 / &minus;0.79%</td><td>53,185.90</td></tr>
-</table><div class="note">Tuesday&rsquo;s closes. TheStreet describes the same session as the Dow &ldquo;falling more than 400 points&rdquo; amid concerns about the U.S.&ndash;Iran conflict, rising oil prices and surging bond yields &mdash; consistent with the &minus;419.02 above. <b>These are the only index levels published on this page; no September 2 level appears anywhere.</b></div><h2>Rates, Bonds &amp; Commodities</h2><table>
+</table><div class="note">Tuesday&rsquo;s closes. TheStreet describes the same session as the Dow &ldquo;falling more than 400 points&rdquo; amid concerns about the U.S.&ndash;Iran conflict, rising oil prices and surging bond yields &mdash; consistent with the &minus;419.02 above. <b>These are the only index levels published on this page; no September 2 level appears anywhere.</b></div>''')
+
+h.append('''<h2>Rates, Bonds &amp; Commodities</h2><table>
 <tr><th>Instrument</th><th>Level</th><th>Clock &amp; source</th></tr>
 <tr><td>U.S. 10-year Treasury yield</td><td>4.814% <span class="flat">(day high)</span></td><td>Sept 2 day high per CNBC via TheStreet &mdash; &ldquo;highest since November 2023&rdquo;</td></tr>
 <tr><td>U.S. 10-year Treasury yield</td><td>4.798%</td><td>Tuesday Sept 1, LSEG data via <i>The Wall Street Journal</i> &mdash; &ldquo;highest since January 2025&rdquo;</td></tr>
@@ -146,13 +91,17 @@ ul.bul li{margin-bottom:9px;font-size:14.5px}
 <tr><td>Gold futures</td><td>$4,355 <span class="down">&minus;0.94%</span></td><td>Sept 2, early trading, TheStreet</td></tr>
 <tr><td>Silver futures</td><td>$64.26 <span class="down">&minus;1.69%</span></td><td>Sept 2, early trading, TheStreet</td></tr>
 <tr><td>CME FedWatch &mdash; September <b>hike</b> odds</td><td>66%</td><td>Tuesday-dated, Schwab, up from 40% a week earlier &mdash; carried from a sourced standing entry, not re-fetched this run</td></tr>
-</table><div class="note"><b>The 10-year appears twice on purpose.</b> Two sources give two different levels with two different superlatives over two different windows; both are printed with their clocks and neither is folded into the other. <b>No current federal funds target range was verified this run and none is published.</b> One-year-ahead inflation expectations from derivative markets: <b>2.5%</b>, up from below 2% over the past couple of weeks (LSEG).</div><h2>On the Radar</h2><ul class="bul">
+</table><div class="note"><b>The 10-year appears twice on purpose.</b> Two sources give two different levels with two different superlatives over two different windows; both are printed with their clocks and neither is folded into the other. <b>No current federal funds target range was verified this run and none is published.</b> One-year-ahead inflation expectations from derivative markets: <b>2.5%</b>, up from below 2% over the past couple of weeks (LSEG).</div>''')
+
+h.append('''<h2>On the Radar</h2><ul class="bul">
 <li><b>Earnings after today&rsquo;s close:</b> Broadcom (AVGO), Snowflake (SNOW) and Hewlett Packard Enterprise (HPE), plus NetApp, Five Below, Brown-Forman and FuelCell Energy.</li>
 <li><b>Still to come today:</b> July factory orders (consensus <b>+0.6%</b> after <b>&minus;0.3%</b>) and the final reading of July durable goods orders (consensus <b>+1.1%</b>, unchanged from the prior <b>+1.1%</b>). MBA mortgage applications for the week ended Aug. 28 were previously <b>&minus;1%</b>.</li>
 <li><b>Friday:</b> the Labor Department&rsquo;s monthly jobs report &mdash; the release today&rsquo;s 38,000 ADP print is being read as a preview of.</li>
 <li><b>The bond question:</b> LSEG-based pricing has bets rising on a Federal Reserve rate <b>increase</b> in September, not a cut. <b>How a 38,000 payroll print cuts against that pricing is not quantified by anything fetched this run, so nothing is asserted about it.</b></li>
 <li><b>Iran:</b> Trump has threatened to hit Iran &ldquo;much harder&rdquo; if it retaliates against Tuesday&rsquo;s airstrikes; Iran struck Jordan, the UAE and Kuwait overnight. Ole Hansen&rsquo;s &ldquo;$5 move in either direction&rdquo; is the sell-side framing of what happens to crude next.</li>
-</ul><h2>Sources</h2><div class="panel srcs">
+</ul>''')
+
+h.append('''<h2>Sources</h2><div class="panel srcs">
 <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-02-2026">TheStreet &mdash; Stock Market Today, Sept. 2, 2026 (live blog; entries at 6:42, 7:04, 7:09, 7:13, 7:27, 8:15, 8:26, 8:52, 9:07, 9:24, 9:35 AM ET)</a><br>
 <a href="https://finance.yahoo.com/markets/live/stock-market-today-wednesday-september-2-dow-sp-500-nasdaq-082624175.html">Yahoo Finance &mdash; Stock market today, Wednesday September 2 (updated 5:00 AM EDT; includes WSJ/LSEG global-yield extract)</a><br>
 <a href="https://www.cnbc.com/2026/09/02/private-payrolls-rose-by-38000-in-august-fewer-than-expected-adp-reports.html">CNBC &mdash; Private payrolls rose by 38,000 in August, fewer than expected, ADP reports</a><br>
@@ -163,4 +112,8 @@ ul.bul li{margin-bottom:9px;font-size:14.5px}
 <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-1-2026">TheStreet &mdash; Stock Market Today, Sept. 1, 2026 (Tuesday closes)</a><br>
 <a href="https://pro.thestreet.com/market-commentary/a-global-bond-rout-and-a-third-central-bank-turns-hawkish">TheStreet Pro &mdash; A Global Bond Rout and a Third Central Bank Turns Hawkish (DePorre)</a>
 </div>
-<div class="disc"><b>Information only, not investment advice.</b> Every figure on this page carries the clock and the source it came from. Index moves for September 2 are moves, not levels; the only levels published are Tuesday&rsquo;s official closes. Live widgets update continuously; the editorial was fixed at the time shown in the masthead.</div></div><script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \u00b7 briefings refresh every 30 minutes, 8 AM\u20136 PM ET';}catch(e){}})();</script></body></html>
+<div class="disc"><b>Information only, not investment advice.</b> Every figure on this page carries the clock and the source it came from. Index moves for September 2 are moves, not levels; the only levels published are Tuesday&rsquo;s official closes. Live widgets update continuously; the editorial was fixed at the time shown in the masthead.</div>''')
+
+h.append('</div>'+STAMP+'</body></html>')
+open(OUT+"wallstreet-briefing.html","w").write("".join(h))
+print("ws ok", sum(len(x) for x in h))

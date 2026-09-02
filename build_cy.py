@@ -1,110 +1,43 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Cyber Wire &mdash; Daily Security Briefing</title><style>:root{--bg:#080d0c;--panel:#0f1716;--panel2:#14201e;--line:#1f2f2c;--fg:#e6f2ef;--muted:#6f8a85;--muted2:#a9c4be;--accent:#22d3a8;--accent2:#36c6ff;--up:#22d3a8;--crit:#ff5f6d;--warn:#f0b23c;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
-*{box-sizing:border-box}
-body{margin:0;padding:26px 20px 60px;background:var(--bg);color:var(--fg);
- font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
- font-size:15.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1080px;margin:0 auto}
-a{color:var(--accent);text-decoration:none}
-a:hover{text-decoration:underline}
-.masthead{border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:4px}
-.masthead h1{margin:0 0 4px;font-size:30px;letter-spacing:-.4px}
-.masthead .tag{color:var(--muted);font-size:13.5px;margin:0 0 11px}
-.meta{display:flex;flex-wrap:wrap;gap:7px;align-items:center}
-.pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;
- background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:4px 10px;color:var(--muted)}
-.pill.live{color:var(--up);border-color:var(--up);display:flex;align-items:center;gap:6px}
-.dot{width:7px;height:7px;border-radius:50%;background:var(--up);display:inline-block;
- animation:pulse 1.8s ease-in-out infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
-.freshline{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.04em;margin:9px 0 16px}
-nav{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 20px}
-nav a{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
- background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:8px 13px;color:var(--muted);
- transition:.15s}
-nav a:hover{border-color:var(--accent);color:var(--fg);text-decoration:none;transform:translateY(-1px)}
-nav a.on{color:var(--accent);border-color:var(--accent);background:var(--panel2)}
-h2{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;
- color:var(--muted);margin:34px 0 13px;padding-bottom:8px;border-bottom:1px solid var(--line)}
-.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:14px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:13px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 17px;transition:.16s}
-.card:hover{transform:translateY(-2px);border-color:var(--accent)}
-.card h3{margin:0 0 7px;font-size:15.5px;line-height:1.35}
-.card p{margin:0;font-size:14px;color:var(--muted2)}
-.card p+p{margin-top:8px}
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:9px}
-.tag{font-family:var(--mono);font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;
- border-radius:5px;padding:3px 7px;border:1px solid}
-.t-new{color:var(--up);border-color:var(--up)}
-.t-a{color:var(--accent);border-color:var(--accent)}
-.t-w{color:var(--warn);border-color:var(--warn)}
-.t-c{color:var(--crit);border-color:var(--crit)}
-table{width:100%;border-collapse:collapse;font-size:14px;background:var(--panel);
- border:1px solid var(--line);border-radius:12px;overflow:hidden}
-th{font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);
- text-align:left;padding:10px 13px;border-bottom:1px solid var(--line);background:var(--panel2)}
-td{padding:10px 13px;border-bottom:1px solid var(--line);vertical-align:top}
-tr:last-child td{border-bottom:none}
-.up{color:var(--up)}.down{color:var(--crit)}.flat{color:var(--muted)}
-ul.bul{margin:0;padding-left:19px}
-ul.bul li{margin-bottom:9px;font-size:14.5px}
-.note{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.03em;margin:8px 0 4px}
-.callout{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--warn);
- border-radius:10px;padding:14px 17px;margin-bottom:14px}
-.callout.crit{border-left-color:var(--crit)}
-.callout h3{margin:0 0 6px;font-size:15px}
-.callout p{margin:0;font-size:14px;color:var(--muted2)}
-.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
- border-radius:10px;padding:11px 15px;margin:6px 0 2px;font-size:14.5px;line-height:1.5}
-.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
- color:var(--accent);margin-right:9px}
-.srcs{font-size:12.5px;color:var(--muted);line-height:1.9}
-.srcs a{color:var(--muted2)}
-.disc{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin-top:26px;padding-top:14px}
-.banner{border-radius:12px;padding:13px 17px;margin-bottom:13px;border:1px solid;display:flex;
- gap:13px;align-items:baseline;flex-wrap:wrap}
-.banner .lvl{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:700}
-.banner .why{font-size:14px;color:var(--muted2)}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:11px;margin-bottom:14px}
-.stat{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:13px 15px}
-.stat .n{font-size:23px;font-weight:600;color:var(--accent);line-height:1.15}
-.stat .l{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
- color:var(--muted);margin-top:5px}
-.livebar{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 8px 4px;margin-bottom:18px}
-.livebar-label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--up);
- display:flex;align-items:center;gap:8px;padding:4px 8px 8px}
-.tickers{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-bottom:6px}
-.ticker{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:6px 10px}
-.cdn{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
- border-radius:10px;padding:11px 15px;margin-bottom:16px;display:flex;gap:12px;flex-wrap:wrap;align-items:baseline}
-.cdn .lab{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
-.cdn .val{font-family:var(--mono);font-size:14px;font-weight:700}
-.cdn .ev{font-size:13.5px;color:var(--muted2)}
-.serif h1,.serif .lead-h{font-family:Georgia,"Times New Roman",serif}
-.lead-h{font-size:21px;margin:0 0 9px;line-height:1.3}
-.big{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:15px}
-.big .card{padding:19px 21px}
-.big .card h3{font-size:18px;margin-bottom:4px}
-.big .kicker{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:9px}
-.big .more{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
- display:inline-block;margin-top:12px}
-</style></head><body><div class="wrap"><div class="masthead"><h1>The Cyber Wire</h1><p class="tag">Your daily security briefing &mdash; breaches, vulnerabilities &amp; federal deadlines</p><div class="meta"><span class="pill live"><span class="dot"></span>Live</span><span class="pill" id="edition">&nbsp;</span><span class="pill" id="datestamp">&nbsp;</span><span class="pill">Updated <span id="updated">&nbsp;</span></span></div></div><div class="tldr"><b>The Wire</b> <span>SonicWall says <b>two SMA1000 zero-days it discovered internally</b> &mdash; one of them scored <b>CVSS 10</b> &mdash; are already being exploited and appear to have been chained for unauthenticated remote code execution, with hotfixes available, <b>no indicators of compromise published</b> and neither flaw yet in CISA&rsquo;s KEV catalog.</span></div><div class="freshline" id="freshline">&nbsp;</div><nav><a href="index.html">★ Front Page</a><a href="cyber-briefing.html" class="on">⛨ The Cyber Wire</a><a href="wallstreet-briefing.html">▲ The Closing Bell</a><a href="mma-briefing.html">⊘ The Octagon</a><a href="archive.html">🗄 Archive</a></nav><div class="banner" style="border-color:var(--crit);background:rgba(255,95,109,.07)"><span class="lvl" style="color:var(--crit)">Threat Level: High</span><span class="why">A <b>CVSS 10</b> pre-authentication flaw in an internet-facing remote-access gateway is being exploited in the wild <i>today</i>, the vendor has published no IoCs, and the flaw is not yet KEV-listed &mdash; so there is no federal clock forcing the fix.</span></div><div class="stats">
+# -*- coding: utf-8 -*-
+import sys; sys.path.insert(0,'/tmp')
+from css import BASE, STAMP, nav, meta
+OUT="/sessions/amazing-determined-planck/mnt/outputs/"
+ROOT=":root{--bg:#080d0c;--panel:#0f1716;--panel2:#14201e;--line:#1f2f2c;--fg:#e6f2ef;--muted:#6f8a85;--muted2:#a9c4be;--accent:#22d3a8;--accent2:#36c6ff;--up:#22d3a8;--crit:#ff5f6d;--warn:#f0b23c;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}\n"
+
+h=[]
+h.append('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Cyber Wire &mdash; Daily Security Briefing</title><style>'+ROOT+BASE+'</style></head><body><div class="wrap">')
+h.append('<div class="masthead"><h1>The Cyber Wire</h1><p class="tag">Your daily security briefing &mdash; breaches, vulnerabilities &amp; federal deadlines</p>'+meta()+'</div>')
+h.append('<div class="tldr"><b>The Wire</b> <span>SonicWall says <b>two SMA1000 zero-days it discovered internally</b> &mdash; one of them scored <b>CVSS 10</b> &mdash; are already being exploited and appear to have been chained for unauthenticated remote code execution, with hotfixes available, <b>no indicators of compromise published</b> and neither flaw yet in CISA&rsquo;s KEV catalog.</span></div>')
+h.append('<div class="freshline" id="freshline">&nbsp;</div>')
+h.append(nav("cyber-briefing.html"))
+
+h.append('<div class="banner" style="border-color:var(--crit);background:rgba(255,95,109,.07)"><span class="lvl" style="color:var(--crit)">Threat Level: High</span><span class="why">A <b>CVSS 10</b> pre-authentication flaw in an internet-facing remote-access gateway is being exploited in the wild <i>today</i>, the vendor has published no IoCs, and the flaw is not yet KEV-listed &mdash; so there is no federal clock forcing the fix.</span></div>')
+
+h.append('''<div class="stats">
 <div class="stat"><div class="n">10.0</div><div class="l">CVSS &mdash; CVE-2026-83548 (SonicWall)</div></div>
 <div class="stat"><div class="n">17</div><div class="l">SonicWall flaws already in CISA KEV</div></div>
 <div class="stat"><div class="n">9.5M</div><div class="l">People impacted &mdash; Aesto Health</div></div>
 <div class="stat"><div class="n">284M</div><div class="l">Records claimed &mdash; McKesson / ShinyHunters</div></div>
-</div><h2>Top Story</h2><div class="panel">
+</div>''')
+
+h.append('''<h2>Top Story</h2><div class="panel">
 <h3 style="margin:0 0 9px;font-size:20px;line-height:1.3">SonicWall found two SMA1000 zero-days by looking at its own telemetry &mdash; and found them already being exploited</h3>
 <p>SonicWall is urging customers of its <b>SMA1000 series</b> secure remote-access gateway and SSL-VPN appliance to patch <b>two zero-day vulnerabilities that have been exploited in the wild</b>. Per the advisory published Tuesday, <b>both the vulnerabilities and their exploitation were discovered internally</b> &mdash; the vendor found the attacks before anyone reported them.</p>
 <p><b>CVE-2026-83548</b> carries a <b>CVSS score of 10</b> and is described as a <b>pre-authentication SSRF</b> issue in the <b>Appliance Work Place</b> interface. An attacker can exploit it remotely, without authentication, to reach sensitive functionality and conduct unauthorised operations. <b>CVE-2026-83549</b>, scored <b>7.8</b>, is an <b>OS command injection</b> issue in the <b>Appliance Management Console (AMC)</b> that an <i>authenticated</i> attacker can use to run arbitrary OS commands, potentially resulting in remote code execution.</p>
 <p><b>SonicWall says it has observed exploitation of both, which SecurityWeek notes suggests they have been chained in attacks</b> &mdash; the pre-auth flaw supplying what the command-injection flaw needs. <b>That inference is the reporting&rsquo;s, and is printed as an inference rather than as a vendor statement.</b></p>
 <p><b>Affected and not affected, precisely as the vendor scopes it:</b> SMA1000 models <b>6210, 7210 and 8200v</b> are affected. <b>SSL-VPN on SonicWall firewalls and the SMA100 series are not affected.</b> Hotfixes <b>12.4.3-03526</b> and <b>12.5.0-02952</b>, and higher versions, carry the patches.</p>
 <p><b>What is missing is as operationally important as what is present.</b> No details appear to be available on the attacks, and <b>the public advisory does not include indicators of compromise</b> &mdash; defenders can patch but cannot easily hunt. CISA&rsquo;s KEV catalog currently includes <b>17 SonicWall product flaws</b>; <b>CVE-2026-83548 and CVE-2026-83549 have not yet been added</b>, so no federal remediation deadline attaches to either. SecurityWeek notes that SonicWall product vulnerabilities are regularly exploited in the wild, including in ransomware attacks, and that some have been exploited for weeks before a patch existed.</p>
-</div><div class="callout crit"><h3>Patch Priority &mdash; today</h3>
-<p><b>SonicWall SMA1000 &mdash; CVE-2026-83548 (CVSS 10, pre-auth SSRF) and CVE-2026-83549 (CVSS 7.8, OS command injection).</b> Apply hotfix <b>12.4.3-03526</b> or <b>12.5.0-02952</b> or higher to models <b>6210, 7210, 8200v</b>. <b>This ranks first because it is the only item on this page that is simultaneously maximum-severity, internet-facing, pre-authentication and confirmed exploited by the vendor itself.</b> <b>It carries no CISA deadline &mdash; it is not KEV-listed &mdash; so the standing rule that an elapsed or imminent federal deadline outranks a live advisory does not reach it.</b> The nearest actual federal clocks are in the KEV section below. Firewall SSL-VPN and SMA100 customers are out of scope.</p></div><h2>Threat Actor Spotlight</h2><div class="cards">
+</div>''')
+
+h.append('''<div class="callout crit"><h3>Patch Priority &mdash; today</h3>
+<p><b>SonicWall SMA1000 &mdash; CVE-2026-83548 (CVSS 10, pre-auth SSRF) and CVE-2026-83549 (CVSS 7.8, OS command injection).</b> Apply hotfix <b>12.4.3-03526</b> or <b>12.5.0-02952</b> or higher to models <b>6210, 7210, 8200v</b>. <b>This ranks first because it is the only item on this page that is simultaneously maximum-severity, internet-facing, pre-authentication and confirmed exploited by the vendor itself.</b> <b>It carries no CISA deadline &mdash; it is not KEV-listed &mdash; so the standing rule that an elapsed or imminent federal deadline outranks a live advisory does not reach it.</b> The nearest actual federal clocks are in the KEV section below. Firewall SSL-VPN and SMA100 customers are out of scope.</p></div>''')
+
+h.append('''<h2>Threat Actor Spotlight</h2><div class="cards">
 <div class="card"><div class="tags"><span class="tag t-c">Extortion</span><span class="tag t-a">Carried forward</span></div>
 <h3>ShinyHunters</h3><p>The extortion group has claimed the theft of <b>284 million records</b> from McKesson&rsquo;s systems. <b>McKesson has confirmed a breach</b>, saying data was exfiltrated for <b>a subset of its Oncology &amp; Multispecialty and Medical-Surgical customers</b>. <b>The confirmed scope and the claimed scope are different quantities and this page does not reconcile them</b> &mdash; the 284 million figure is the attacker&rsquo;s, and is printed as the attacker&rsquo;s.</p></div>
-</div><h2>Breaches &amp; Incidents</h2><div class="note">&ldquo;New&rdquo; tags mark stories absent from the <b>9:53 AM</b> edition of this page.</div><div class="cards">
+</div>''')
+
+h.append('''<h2>Breaches &amp; Incidents</h2><div class="note">&ldquo;New&rdquo; tags mark stories absent from the <b>9:53 AM</b> edition of this page.</div><div class="cards">
 <div class="card"><div class="tags"><span class="tag t-new">New this run</span><span class="tag t-c">Healthcare</span><span class="tag t-a">Cloud</span></div>
 <h3>Aesto Health &mdash; 9.5 million impacted</h3><p>Hackers stole <b>personal and health information</b> from the healthcare technology company&rsquo;s <b>AWS infrastructure</b>, with <b>9.5 million people</b> impacted. <b>That headcount and that infrastructure detail are the whole of what is sourced here</b>; no threat actor, intrusion date or ransom demand is published because none was fetched.</p></div>
 <div class="card"><div class="tags"><span class="tag t-new">New this run</span><span class="tag t-c">Ransomware</span><span class="tag t-a">SEC filing</span></div>
@@ -117,7 +50,9 @@ ul.bul li{margin-bottom:9px;font-size:14.5px}
 <h3>Australia arrests two alleged TeamPCP hackers</h3><p>Australian and U.S. authorities collaborated to identify and charge the alleged cybercriminals, <b>who face many years in prison</b>. <b>Dated Aug 27 and labelled as such</b> &mdash; it is carried for context, not presented as breaking.</p></div>
 <div class="card"><div class="tags"><span class="tag t-new">New this run</span><span class="tag t-a">Takedown</span></div>
 <h3>A 23-year-old P2P botnet is disrupted</h3><p>The long-running <b>Sality</b> peer-to-peer botnet has been disrupted. The shutdown operation involved <b>peer-list manipulation</b> and a <b>takedown of Sality payload URLs</b>. <b>No attribution, victim count or law-enforcement agency is published</b> because none was fetched this run.</p></div>
-</div><h2>Vulnerability Watch</h2><table>
+</div>''')
+
+h.append('''<h2>Vulnerability Watch</h2><table>
 <tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr>
 <tr><td>CVE-2026-83548</td><td><b class="down">10</b></td><td>SonicWall SMA1000 (6210, 7210, 8200v)</td><td>Pre-auth SSRF in Appliance Work Place. <b>Exploited in the wild</b>, discovered internally by the vendor. Fix: hotfix 12.4.3-03526 / 12.5.0-02952 or higher. <b>Not in KEV.</b></td></tr>
 <tr><td>CVE-2026-83549</td><td>7.8</td><td>SonicWall SMA1000 Appliance Management Console</td><td>Authenticated OS command injection &rarr; possible RCE. <b>Exploited in the wild</b>; reportedly chained with 83548. <b>Not in KEV.</b></td></tr>
@@ -126,7 +61,9 @@ ul.bul li{margin-bottom:9px;font-size:14.5px}
 <tr><td>CVE-2026-82078</td><td class="flat">not sourced this run</td><td>PaperCut NG/MF</td><td>Unsafe reflection. <b>Added to CISA KEV</b>; exploitation escalated to active intrusions. Due date below.</td></tr>
 <tr><td>CVE-2026-81578</td><td class="flat">not sourced this run</td><td>PaperCut NG/MF</td><td>Missing authentication for a critical function. <b>Added to CISA KEV</b> alongside 82078.</td></tr>
 <tr><td>CVE-2026-66384</td><td class="flat">not sourced this run</td><td>JFrog Artifactory</td><td>Path traversal. <b>This</b> is the KEV-listed JFrog flaw. Due date below.</td></tr>
-</table><div class="note"><b>CVSS scores appear only where a vendor or advisory this desk fetched states them.</b> The SonicWall pair is sourced to SonicWall&rsquo;s own advisory via SecurityWeek; for the rest, no authoritative score was fetched this run, so the column says so rather than borrowing a number from a blog. Also patched this week and not scored here: <b>Chrome and Firefox</b> shipped fixes for dozens of flaws including use-after-free, sandbox-escape and privilege-escalation bugs, and <b>WatchGuard</b> patched three critical issues in the Fireware OS <code>iked</code> process that could allow unauthenticated remote code execution.</div><h2>CISA KEV &amp; Federal Deadlines</h2>
+</table><div class="note"><b>CVSS scores appear only where a vendor or advisory this desk fetched states them.</b> The SonicWall pair is sourced to SonicWall&rsquo;s own advisory via SecurityWeek; for the rest, no authoritative score was fetched this run, so the column says so rather than borrowing a number from a blog. Also patched this week and not scored here: <b>Chrome and Firefox</b> shipped fixes for dozens of flaws including use-after-free, sandbox-escape and privilege-escalation bugs, and <b>WatchGuard</b> patched three critical issues in the Fireware OS <code>iked</code> process that could allow unauthenticated remote code execution.</div>''')
+
+h.append('''<h2>CISA KEV &amp; Federal Deadlines</h2>
 <div class="callout"><h3>Disambiguation: there are two JFrog Artifactory stories this week, and only one of them has a federal clock</h3>
 <p><b>CVE-2026-82329</b> is the critical <b>authentication bypass</b>, reportedly exploited in the wild days after disclosure, self-hosted Artifactory only. <b>It is NOT in KEV and has no deadline.</b> <b>CVE-2026-66384</b> is the <b>path traversal</b>, and it <i>is</i> the KEV item, with the due date below. <b>Same vendor, same product, same week, opposite compliance status</b> &mdash; merged, they read as one escalation and the federal clock gets attached to the wrong flaw.</p></div>
 <ul class="bul">
@@ -135,13 +72,17 @@ ul.bul li{margin-bottom:9px;font-size:14.5px}
 <li><b>CVE-2026-66384 &mdash; JFrog Artifactory, path traversal.</b> Federal remediation due <b>September 10, 2026</b> <span id="kev2" class="up"></span>.</li>
 <li><b>CVE-2026-83548 / CVE-2026-83549 &mdash; SonicWall SMA1000.</b> <b>Not in KEV as of the vendor advisory read this run, therefore no deadline.</b> Seventeen other SonicWall flaws already are. <b>The absence of a deadline is not an absence of urgency</b> &mdash; this is the page&rsquo;s Patch Priority precisely because the exploitation is confirmed and the clock is not.</li>
 </ul>
-<div class="note"><b>CISA KEV due dates are assigned per-CVE and are risk-based under BOD 26-04</b> &mdash; the old flat &ldquo;three weeks from the add date&rdquo; heuristic of BOD 22-01 is superseded and is not used to infer any deadline on this page. Every date above is a date a source states. <b>A mid-August KEV batch (CVE-2026-65400, CVE-2026-55040, CVE-2026-59310, CVE-2026-33824) that a search framed as an early-September addition was refused again this run: those were added Aug 18 with an Aug 21 deadline, and are not new.</b></div><h2>Around the Industry</h2><ul class="bul">
+<div class="note"><b>CISA KEV due dates are assigned per-CVE and are risk-based under BOD 26-04</b> &mdash; the old flat &ldquo;three weeks from the add date&rdquo; heuristic of BOD 22-01 is superseded and is not used to infer any deadline on this page. Every date above is a date a source states. <b>A mid-August KEV batch (CVE-2026-65400, CVE-2026-55040, CVE-2026-59310, CVE-2026-33824) that a search framed as an early-September addition was refused again this run: those were added Aug 18 with an Aug 21 deadline, and are not new.</b></div>''')
+
+h.append('''<h2>Around the Industry</h2><ul class="bul">
 <li><b>Palo Alto Networks has acquired AI agent platform Console</b>, announced alongside quarterly results showing a <b>34% increase in revenue</b> and strong growth in next-generation security ARR.</li>
 <li><b>The U.S. Coast Guard has established an Office of Maritime Cybersecurity Policy</b>, which will serve as the central authority for cybersecurity policy covering U.S. ports, vessels and maritime facilities.</li>
 <li><b>Forescout researchers ported a remote-code-execution exploit between WAGO PLC models using AI</b>, and report it took <b>hours and hundreds of dollars</b>. The relevance to defenders is the cost curve, not the specific PLC.</li>
 <li><b>Five Venezuelans have pleaded guilty in U.S. court to ATM jackpotting.</b> The defendants <b>unsuccessfully</b> attempted to physically install malware on ATMs to force them to dispense cash.</li>
 <li><b>OpenAI&rsquo;s Astra</b> has been designated as crossing a &ldquo;critical&rdquo; cybersecurity threshold &mdash; a tier that applies when a model can independently find and exploit zero-day vulnerabilities across many well-defended systems. <b>This is a vendor grading its own product against its own framework;</b> nothing here claims that no other organisation&rsquo;s model is comparable.</li>
-</ul><h2>Sources</h2><div class="panel srcs">
+</ul>''')
+
+h.append('''<h2>Sources</h2><div class="panel srcs">
 <a href="https://www.securityweek.com/sonicwall-warns-of-two-sma1000-zero-days-exploited-in-attacks/">SecurityWeek &mdash; SonicWall Warns of Two SMA1000 Zero-Days Exploited in Attacks (Sept 2, 2026, 1:04 AM ET)</a><br>
 <a href="https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0016">SonicWall PSIRT &mdash; advisory SNWLID-2026-0016</a><br>
 <a href="https://www.securityweek.com/9-5-million-impacted-by-aesto-health-data-breach/">SecurityWeek &mdash; 9.5 Million Impacted by Aesto Health Data Breach</a><br>
@@ -158,4 +99,9 @@ ul.bul li{margin-bottom:9px;font-size:14.5px}
 <a href="https://www.cisa.gov/news-events/alerts/2026/08/31/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA &mdash; Adds Two Known Exploited Vulnerabilities to Catalog (Aug 31, 2026)</a><br>
 <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA &mdash; Known Exploited Vulnerabilities Catalog</a>
 </div>
-<div class="disc"><b>Operational guidance is summarised, not substituted for the vendor advisory.</b> Patch only from the vendor bulletin linked above. CVSS scores, fixed versions and federal due dates on this page appear only where a source fetched this run states them; where a figure was not sourced, the page says so rather than estimating.</div></div><script>(function(){function d(id,due){var el=document.getElementById(id);if(!el)return;var n=new Date();var t=new Date(due+'T23:59:59-04:00');var days=Math.ceil((t-n)/86400000);if(days>0){el.textContent='('+days+' day'+(days==1?'':'s')+' left)';}else{el.textContent=days===0?'(due today)':'(overdue by '+(-days)+' day'+(days==-1?'':'s')+')';el.className='down';}}d('kev1','2026-09-14');d('kev2','2026-09-10');})();</script><script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \u00b7 briefings refresh every 30 minutes, 8 AM\u20136 PM ET';}catch(e){}})();</script></body></html>
+<div class="disc"><b>Operational guidance is summarised, not substituted for the vendor advisory.</b> Patch only from the vendor bulletin linked above. CVSS scores, fixed versions and federal due dates on this page appear only where a source fetched this run states them; where a figure was not sourced, the page says so rather than estimating.</div>''')
+
+CDN = """<script>(function(){function d(id,due){var el=document.getElementById(id);if(!el)return;var n=new Date();var t=new Date(due+'T23:59:59-04:00');var days=Math.ceil((t-n)/86400000);if(days>0){el.textContent='('+days+' day'+(days==1?'':'s')+' left)';}else{el.textContent=days===0?'(due today)':'(overdue by '+(-days)+' day'+(days==-1?'':'s')+')';el.className='down';}}d('kev1','2026-09-14');d('kev2','2026-09-10');})();</script>"""
+h.append('</div>'+CDN+STAMP+'</body></html>')
+open(OUT+"cyber-briefing.html","w").write("".join(h))
+print("cy ok", sum(len(x) for x in h))

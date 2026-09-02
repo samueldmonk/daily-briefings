@@ -1,52 +1,43 @@
 # -*- coding: utf-8 -*-
-# Self-contained archive index generator (no external build module).
-import os, re, io, datetime
-SEC={'cyber':'The Cyber Wire','wallstreet':'The Closing Bell','mma':'The Octagon'}
-ORDER=['cyber','wallstreet','mma']
+import os,re,sys,collections
+sys.path.insert(0,'/tmp')
+from css import BASE, STAMP, nav, meta
+D="/tmp/db_1788357956"
+ROOT=":root{--bg:#0b0b0d;--panel:#141418;--panel2:#1b1b21;--line:#2a2a32;--fg:#eeeef2;--muted:#83838f;--muted2:#b9b9c4;--accent:#8f9bb3;--accent2:#c9d1e0;--up:#3fbf72;--crit:#e05555;--warn:#e0a13a;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}\n"
+LBL={"cyber":"The Cyber Wire","wallstreet":"The Closing Bell","mma":"The Octagon"}
+COL={"cyber":"#22d3a8","wallstreet":"#caa64a","mma":"#e84545"}
 pat=re.compile(r'^(cyber|wallstreet|mma)-(\d{4}-\d{2}-\d{2})-(\d{4})\.html$')
-snaps={}
-for f in os.listdir('archive'):
+snap=collections.defaultdict(lambda: collections.defaultdict(dict))
+for f in sorted(os.listdir(os.path.join(D,"archive"))):
     m=pat.match(f)
-    if not m: continue
-    sec,date,hhmm=m.groups()
-    snaps.setdefault(date,{}).setdefault(hhmm,{})[sec]=f
-MON=['January','February','March','April','May','June','July','August','September','October','November','December']
-def prettydate(d):
-    y,m,dd=[int(x) for x in d.split('-')]
-    return "%s, %s %d, %d"%(datetime.date(y,m,dd).strftime('%A'),MON[m-1],dd,y)
-def prettytime(h):
-    hh,mm=int(h[:2]),h[2:]
-    ap='AM' if hh<12 else 'PM'; d=hh%12 or 12
-    return "%d:%s %s ET"%(d,mm,ap)
-rows=[]
-for date in sorted(snaps,reverse=True):
-    rows.append('<h2 class="sec">%s</h2><div class="panel"><table><tr><th>Time</th><th>Editions</th></tr>'%prettydate(date))
-    for hhmm in sorted(snaps[date],reverse=True):
-        links=[]
-        for s in ORDER:
-            f=snaps[date][hhmm].get(s)
-            if f: links.append('<a href="archive/%s">%s</a>'%(f,SEC[s]))
-        rows.append('<tr><td><b>%s</b></td><td>%s</td></tr>'%(prettytime(hhmm),' &middot; '.join(links) or '&mdash;'))
-    rows.append('</table></div>')
-src=io.open('cyber-briefing.html',encoding='utf-8').read()
-css=src[src.find('<style>'):src.find('</style>')+8]
-stamp=src[src.rfind('<script>'):src.rfind('</script>')+9]
-head=('<!doctype html><html lang="en"><head><meta charset="utf-8">'
- '<meta name="viewport" content="width=device-width,initial-scale=1">'
- '<title>Archive &mdash; Daily Briefings</title>'+css+'</head><body><div class="wrap">'
- '<header><h1>Archive</h1><p class="tag-line">Point-in-time snapshots of every edition</p>'
- '<div class="meta"><span class="pill live"><span class="dot"></span>Live</span>'
- '<span class="pill" id="edition">Afternoon Edition</span>'
- '<span class="pill" id="datestamp">Saturday, August 29, 2026</span>'
- '<span class="pill">Updated <span id="updated">9:42 PM ET</span></span></div></header>'
- '<div class="freshline" id="freshline">Data as of 9:42 PM ET</div>'
- '<nav class="tabs"><a href="index.html">&#9733; Front Page</a>'
- '<a href="cyber-briefing.html">&#9880; The Cyber Wire</a>'
- '<a href="wallstreet-briefing.html">&#9650; The Closing Bell</a>'
- '<a href="mma-briefing.html">&#8856; The Octagon</a>'
- '<a href="archive.html" class="on">&#128451; Archive</a></nav>'
- '<div class="note">Each snapshot is the page exactly as it was published at that time and is '
- 'not updated afterwards. Figures inside a snapshot were current then, not now.</div>')
-foot='</div>'+stamp+'</body></html>'
-io.open('archive.html','w',encoding='utf-8').write(head+''.join(rows)+foot)
-print("archive.html: %d days, %d snapshots"%(len(snaps),sum(len(v) for v in snaps.values())))
+    if m: snap[m.group(2)][m.group(3)][m.group(1)]=f
+def t12(hhmm):
+    h=int(hhmm[:2]);mm=hhmm[2:]
+    ap="AM" if h<12 else "PM"; hh=h%12 or 12
+    return "%d:%s %s ET"%(hh,mm,ap)
+import datetime
+def datehead(d):
+    y,m,dd=map(int,d.split("-"))
+    return datetime.date(y,m,dd).strftime("%A, %B %-d, %Y")
+h=[]
+h.append('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Archive &mdash; Daily Briefings</title><style>'+ROOT+BASE+'.ed{font-family:var(--mono);font-size:12px;color:var(--muted2);white-space:nowrap}.lk{margin-right:14px}</style></head><body><div class="wrap">')
+h.append('<div class="masthead"><h1>Archive</h1><p class="tag">Point-in-time snapshots of every edition &mdash; kept for 21 days</p>'+meta()+'</div>')
+h.append('<div class="freshline" id="freshline">&nbsp;</div>')
+h.append(nav("archive.html"))
+h.append('<div class="note">Each row is one publishing run. Snapshots are <b>point-in-time</b>: the live data widgets inside them still stream current quotes, but all editorial, figures and timestamps are frozen as published. Editions older than 21 days are pruned.</div>')
+tot=0
+for d in sorted(snap.keys(),reverse=True):
+    h.append('<h2>%s</h2><table><tr><th>Edition</th><th>Snapshots</th></tr>'%datehead(d))
+    for hhmm in sorted(snap[d].keys(),reverse=True):
+        cells=[]
+        for sec in ["cyber","wallstreet","mma"]:
+            f=snap[d][hhmm].get(sec)
+            if f:
+                cells.append('<a class="lk" style="color:%s" href="archive/%s">%s</a>'%(COL[sec],f,LBL[sec]))
+                tot+=1
+        h.append('<tr><td class="ed">%s</td><td>%s</td></tr>'%(t12(hhmm),"".join(cells) or '<span class="flat">&mdash;</span>'))
+    h.append('</table>')
+h.append('<div class="disc">%d snapshots across %d days. Archive index is regenerated from the files on disk on every run &mdash; it is never hand-curated.</div>'%(tot,len(snap)))
+h.append('</div>'+STAMP+'</body></html>')
+open(os.path.join(D,"archive.html"),"w").write("".join(h))
+print("archive.html ok:",tot,"snapshots,",len(snap),"days")
