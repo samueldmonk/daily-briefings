@@ -1,0 +1,142 @@
+# shared CSS + chrome for the Daily Briefings pages
+def css(accent, accent2, bg, panel, line, extra=""):
+    return f"""
+:root{{
+  --bg:{bg}; --panel:{panel}; --line:{line};
+  --accent:{accent}; --accent2:{accent2};
+  --text:#e9e6e1; --muted:#948d85;
+  --up:#3fbf7f; --down:#e5544b; --crit:#e5544b; --warn:#e0a13a;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+}}
+*{{box-sizing:border-box}}
+body{{margin:0;background:var(--bg);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}}
+.wrap{{max-width:1080px;margin:0 auto;padding:26px 20px 70px}}
+a{{color:var(--accent);text-decoration:none}}
+a:hover{{text-decoration:underline}}
+header.mast{{border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:6px}}
+.mast h1{{margin:0 0 4px;font-size:34px;letter-spacing:-.02em;line-height:1.15}}
+.mast .tag{{color:var(--muted);font-size:14.5px;margin:0}}
+.meta{{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}}
+.pill{{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;
+  border:1px solid var(--line);border-radius:999px;padding:4px 10px;color:var(--muted);
+  background:var(--panel);white-space:nowrap}}
+.pill.live{{color:var(--up);border-color:var(--up)}}
+.pill.live .dot{{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--up);
+  margin-right:6px;vertical-align:middle}}
+.freshline{{font-family:var(--mono);font-size:11px;color:var(--muted);margin:8px 0 0;letter-spacing:.04em}}
+nav.tabs{{display:flex;flex-wrap:wrap;gap:7px;margin:16px 0 20px;border-bottom:1px solid var(--line);
+  padding-bottom:12px}}
+nav.tabs a{{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);border:1px solid var(--line);border-radius:8px;padding:7px 12px;background:var(--panel);
+  transition:.15s}}
+nav.tabs a:hover{{color:var(--text);border-color:var(--muted);text-decoration:none}}
+nav.tabs a.on{{color:var(--accent);border-color:var(--accent);background:transparent}}
+h2.sec{{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--accent);margin:34px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}}
+.panel{{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:14px}}
+.cards{{display:grid;grid-template-columns:repeat(auto-fit,minmax(288px,1fr));gap:12px}}
+.card{{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 17px;
+  transition:transform .16s,border-color .16s}}
+.card:hover{{transform:translateY(-3px);border-color:var(--accent)}}
+.card h3{{margin:0 0 7px;font-size:16.5px;line-height:1.35}}
+.card p{{margin:0;font-size:14.5px;color:#cfc9c2}}
+.tags{{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:9px}}
+.t{{font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;
+  border-radius:5px;padding:3px 7px;border:1px solid var(--line);color:var(--muted)}}
+.t.new{{color:var(--accent);border-color:var(--accent)}}
+.t.crit{{color:var(--crit);border-color:var(--crit)}}
+.t.warn{{color:var(--warn);border-color:var(--warn)}}
+.t.ok{{color:var(--up);border-color:var(--up)}}
+table{{width:100%;border-collapse:collapse;font-size:14.5px}}
+th{{font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);
+  text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);font-weight:600}}
+td{{padding:10px;border-bottom:1px solid var(--line);vertical-align:top}}
+tr:last-child td{{border-bottom:none}}
+.up{{color:var(--up)}} .down{{color:var(--down)}} .mono{{font-family:var(--mono);font-size:13px}}
+ul.bul{{margin:0;padding-left:19px}} ul.bul li{{margin-bottom:9px;font-size:14.8px}}
+.note{{font-family:var(--mono);font-size:11px;color:var(--muted);margin:9px 0 0;line-height:1.55}}
+.callout{{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--warn);
+  border-radius:10px;padding:14px 17px;margin-bottom:14px}}
+.callout.crit{{border-left-color:var(--crit)}}
+.callout h3{{margin:0 0 7px;font-size:16px}}
+.lead{{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
+  border-radius:12px;padding:18px 20px;margin-bottom:14px}}
+.lead h3{{margin:0 0 9px;font-size:21px;line-height:1.3}}
+.lead p{{margin:0 0 10px;font-size:15.5px}} .lead p:last-child{{margin-bottom:0}}
+.tldr{{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
+  border-radius:10px;padding:11px 15px;margin:6px 0 2px;font-size:14.5px;line-height:1.5}}
+.tldr b{{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--accent);margin-right:9px}}
+.strip{{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:14px}}
+.stat{{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}}
+.stat .n{{font-family:var(--mono);font-size:22px;color:var(--accent);letter-spacing:-.01em}}
+.stat .l{{font-size:12.5px;color:var(--muted);line-height:1.45;margin-top:3px}}
+.banner{{border:1px solid var(--line);border-radius:12px;padding:13px 17px;margin-bottom:14px;
+  background:var(--panel);display:flex;flex-wrap:wrap;gap:12px;align-items:baseline}}
+.banner .lvl{{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--crit);border:1px solid var(--crit);border-radius:6px;padding:3px 9px}}
+.banner .why{{font-size:14.5px;color:#cfc9c2;flex:1;min-width:220px}}
+.livebar{{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 8px 4px;margin-bottom:18px}}
+.livebar-label{{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--up);
+  display:flex;align-items:center;gap:8px;padding:4px 8px 8px}}
+.livebar-label .dot{{width:7px;height:7px;border-radius:50%;background:var(--up);display:inline-block}}
+.tickers{{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:6px}}
+.ticker{{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:6px 10px}}
+footer{{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:13px}}
+footer ol{{padding-left:20px;margin:8px 0 0}} footer li{{margin-bottom:5px;word-break:break-word}}
+footer a{{color:var(--muted)}} footer a:hover{{color:var(--accent)}}
+.disc{{font-size:12.5px;color:var(--muted);margin-top:14px;font-style:italic}}
+.cdn{{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 17px;
+  margin-bottom:16px;display:flex;flex-wrap:wrap;gap:14px;align-items:baseline}}
+.cdn .lbl{{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}}
+.cdn .clk{{font-family:var(--mono);font-size:19px;color:var(--text)}}
+.cdn .ev{{font-size:14px;color:var(--muted);flex:1;min-width:200px}}
+{extra}
+"""
+
+def nav(active, accent):
+    items = [("index.html", "★ Front Page", "index"),
+             ("cyber-briefing.html", "⛨ The Cyber Wire", "cyber"),
+             ("wallstreet-briefing.html", "▲ The Closing Bell", "ws"),
+             ("mma-briefing.html", "⊘ The Octagon", "mma"),
+             ("archive.html", "\U0001f5c4 Archive", "arch")]
+    out = ['<nav class="tabs">']
+    for href, label, key in items:
+        cls = ' class="on"' if key == active else ''
+        out.append(f'<a href="{href}"{cls}>{label}</a>')
+    out.append('</nav>')
+    return "\n".join(out)
+
+META = """<div class="meta">
+<span class="pill live"><span class="dot"></span>Live</span>
+<span class="pill" id="edition">&nbsp;</span>
+<span class="pill" id="datestamp">&nbsp;</span>
+<span class="pill">Updated <span id="updated">&nbsp;</span></span>
+</div>"""
+
+STAMP = """<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \\u00b7 briefings refresh every 30 minutes, 8 AM\\u20136 PM ET';}catch(e){}})();</script>"""
+
+def page(title, accent, accent2, bg, panel, line, body, extra_css="", extra_js=""):
+    return f"""<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{title}</title>
+<style>{css(accent, accent2, bg, panel, line, extra_css)}</style>
+</head><body>
+<div class="wrap">
+{body}
+</div>
+{STAMP}
+{extra_js}
+</body></html>"""
+
+
+def sources(items):
+    out = ['<footer>', '<div style="font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:6px">Sources</div>', '<ol>']
+    for label, url in items:
+        out.append(f'<li>{label} &mdash; <a href="{url}">{url}</a></li>')
+    out.append('</ol>')
+    return "\n".join(out)
