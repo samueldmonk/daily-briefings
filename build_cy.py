@@ -1,107 +1,274 @@
 # -*- coding: utf-8 -*-
-import sys; sys.path.insert(0,'/tmp')
-from css import BASE, STAMP, nav, meta
-OUT="/sessions/amazing-determined-planck/mnt/outputs/"
-ROOT=":root{--bg:#080d0c;--panel:#0f1716;--panel2:#14201e;--line:#1f2f2c;--fg:#e6f2ef;--muted:#6f8a85;--muted2:#a9c4be;--accent:#22d3a8;--accent2:#36c6ff;--up:#22d3a8;--crit:#ff5f6d;--warn:#f0b23c;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}\n"
+import css as C
 
-h=[]
-h.append('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Cyber Wire &mdash; Daily Security Briefing</title><style>'+ROOT+BASE+'</style></head><body><div class="wrap">')
-h.append('<div class="masthead"><h1>The Cyber Wire</h1><p class="tag">Your daily security briefing &mdash; breaches, vulnerabilities &amp; federal deadlines</p>'+meta()+'</div>')
-h.append('<div class="tldr"><b>The Wire</b> <span>SonicWall says <b>two SMA1000 zero-days it discovered internally</b> &mdash; one of them scored <b>CVSS 10</b> &mdash; are already being exploited and appear to have been chained for unauthenticated remote code execution, with hotfixes available, <b>no indicators of compromise published</b> and neither flaw yet in CISA&rsquo;s KEV catalog.</span></div>')
-h.append('<div class="freshline" id="freshline">&nbsp;</div>')
-h.append(nav("cyber-briefing.html"))
+ACCENT, ACCENT2 = "#22d3a8", "#36c6ff"
+CSS = C.base_css(ACCENT, ACCENT2, "#0a0f0e", "#111917", "#1f2c29")
 
-h.append('<div class="banner" style="border-color:var(--crit);background:rgba(255,95,109,.07)"><span class="lvl" style="color:var(--crit)">Threat Level: High</span><span class="why">A <b>CVSS 10</b> pre-authentication flaw in an internet-facing remote-access gateway is being exploited in the wild <i>today</i>, the vendor has published no IoCs, and the flaw is not yet KEV-listed &mdash; so there is no federal clock forcing the fix.</span></div>')
+TLDR = ("CISA added two more exploited flaws to the KEV catalog today, one of them an unauthenticated "
+        "SQL-injection-to-RCE bug in Sangoma Switchvox carrying a three-day federal deadline of "
+        "September 5 — while the MLflow credential-theft flaw added on August 19 runs out of clock today.")
 
-h.append('''<div class="stats">
-<div class="stat"><div class="n">10.0</div><div class="l">CVSS &mdash; CVE-2026-83548 (SonicWall)</div></div>
-<div class="stat"><div class="n">17</div><div class="l">SonicWall flaws already in CISA KEV</div></div>
-<div class="stat"><div class="n">9.5M</div><div class="l">People impacted &mdash; Aesto Health</div></div>
-<div class="stat"><div class="n">284M</div><div class="l">Records claimed &mdash; McKesson / ShinyHunters</div></div>
-</div>''')
+SOURCES = [
+    ("CISA — Known Exploited Vulnerabilities Catalog",
+     "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"),
+    ("CISA — Adds Six Known Exploited Vulnerabilities to Catalog (Aug 26, 2026)",
+     "https://www.cisa.gov/news-events/alerts/2026/08/26/cisa-adds-six-known-exploited-vulnerabilities-catalog"),
+    ("CISA — Adds Four Known Exploited Vulnerabilities to Catalog (Aug 18, 2026)",
+     "https://www.cisa.gov/news-events/alerts/2026/08/18/cisa-adds-four-known-exploited-vulnerabilities-catalog"),
+    ("Horizon3.ai — CVE-2026-9586: Sangoma Switchvox RCE",
+     "https://horizon3.ai/attack-research/disclosures/cve-2026-9586-sangoma-switchvox-rce/"),
+    ("Rapid7 — PaperCut NG/MF Critical Zero-Day Exploited in the Wild",
+     "https://www.rapid7.com/blog/post/etr-papercut-ng-mf-critical-zero-day-exploited-in-the-wild/"),
+    ("SecurityWeek — Microsoft Patches Exploited Entra ID Vulnerability",
+     "https://www.securityweek.com/microsoft-rolls-out-22-fresh-security-patches/"),
+    ("SecurityWeek — Critical VMware vCenter Vulnerability in Attackers' Crosshairs",
+     "https://www.securityweek.com/critical-vmware-vcenter-vulnerability-in-attackers-crosshairs/"),
+    ("HIPAA Journal — ShinyHunters Claims Theft of 284M Records from McKesson",
+     "https://www.hipaajournal.com/mckesson-data-breach/"),
+    ("HIPAA Journal — Boston Scientific Cyberattack Impacting Operations",
+     "https://www.hipaajournal.com/boston-scientific-cyberattack/"),
+    ("Cybernews — Boston Scientific confirms cyber incident knocked systems offline",
+     "https://cybernews.com/news/boston-scientific-confirms-cyber-incident-knocked-systems-offline-disrupting-operations/"),
+    ("The Register — Healthcare cyberattacks hit pacemakers and millions of patient records",
+     "https://www.theregister.com/cyber-crime/2026/08/31/healthcare-cyberattacks-hit-pacemakers-and-millions-of-patient-records/5293537"),
+    ("Senserva — Microsoft CVE List / Open Source Patch Tracker (September 2026)",
+     "https://senserva.com/open-source-patch-tracker.html"),
+    ("Cyber Security News — daily coverage",
+     "https://cybersecuritynews.com/"),
+]
 
-h.append('''<h2>Top Story</h2><div class="panel">
-<h3 style="margin:0 0 9px;font-size:20px;line-height:1.3">SonicWall found two SMA1000 zero-days by looking at its own telemetry &mdash; and found them already being exploited</h3>
-<p>SonicWall is urging customers of its <b>SMA1000 series</b> secure remote-access gateway and SSL-VPN appliance to patch <b>two zero-day vulnerabilities that have been exploited in the wild</b>. Per the advisory published Tuesday, <b>both the vulnerabilities and their exploitation were discovered internally</b> &mdash; the vendor found the attacks before anyone reported them.</p>
-<p><b>CVE-2026-83548</b> carries a <b>CVSS score of 10</b> and is described as a <b>pre-authentication SSRF</b> issue in the <b>Appliance Work Place</b> interface. An attacker can exploit it remotely, without authentication, to reach sensitive functionality and conduct unauthorised operations. <b>CVE-2026-83549</b>, scored <b>7.8</b>, is an <b>OS command injection</b> issue in the <b>Appliance Management Console (AMC)</b> that an <i>authenticated</i> attacker can use to run arbitrary OS commands, potentially resulting in remote code execution.</p>
-<p><b>SonicWall says it has observed exploitation of both, which SecurityWeek notes suggests they have been chained in attacks</b> &mdash; the pre-auth flaw supplying what the command-injection flaw needs. <b>That inference is the reporting&rsquo;s, and is printed as an inference rather than as a vendor statement.</b></p>
-<p><b>Affected and not affected, precisely as the vendor scopes it:</b> SMA1000 models <b>6210, 7210 and 8200v</b> are affected. <b>SSL-VPN on SonicWall firewalls and the SMA100 series are not affected.</b> Hotfixes <b>12.4.3-03526</b> and <b>12.5.0-02952</b>, and higher versions, carry the patches.</p>
-<p><b>What is missing is as operationally important as what is present.</b> No details appear to be available on the attacks, and <b>the public advisory does not include indicators of compromise</b> &mdash; defenders can patch but cannot easily hunt. CISA&rsquo;s KEV catalog currently includes <b>17 SonicWall product flaws</b>; <b>CVE-2026-83548 and CVE-2026-83549 have not yet been added</b>, so no federal remediation deadline attaches to either. SecurityWeek notes that SonicWall product vulnerabilities are regularly exploited in the wild, including in ransomware attacks, and that some have been exploited for weeks before a patch existed.</p>
-</div>''')
+STATS = [
+    ("2", "New CVEs added to the CISA KEV catalog today, September 2 — due September 5 and September 16"),
+    ("1,687", "CVEs confirmed exploited in the wild across ~12,000 Microsoft and CISA KEV entries tracked "
+              "as of September 2 (Senserva)"),
+    ("671", "Of those tracked entries rated Critical severity (Senserva, September 2)"),
+    ("284M", "Patient records ShinyHunters claims to have taken from McKesson, with a ransom demand "
+             "above $55 million"),
+]
 
-h.append('''<div class="callout crit"><h3>Patch Priority &mdash; today</h3>
-<p><b>SonicWall SMA1000 &mdash; CVE-2026-83548 (CVSS 10, pre-auth SSRF) and CVE-2026-83549 (CVSS 7.8, OS command injection).</b> Apply hotfix <b>12.4.3-03526</b> or <b>12.5.0-02952</b> or higher to models <b>6210, 7210, 8200v</b>. <b>This ranks first because it is the only item on this page that is simultaneously maximum-severity, internet-facing, pre-authentication and confirmed exploited by the vendor itself.</b> <b>It carries no CISA deadline &mdash; it is not KEV-listed &mdash; so the standing rule that an elapsed or imminent federal deadline outranks a live advisory does not reach it.</b> The nearest actual federal clocks are in the KEV section below. Firewall SSL-VPN and SMA100 customers are out of scope.</p></div>''')
+CVES = [
+    ("CVE-2026-9586", "—", "Sangoma Switchvox",
+     "Unauthenticated remote SQL injection against the backend PostgreSQL database via a single crafted "
+     "request, extending to remote code execution. Added to KEV today, September 2; federal due date "
+     "September 5. No CVSS was stated by any source fetched this run, so none is printed."),
+    ("CVE-2026-83548", "10.0", "SonicWall SMA1000 (6210 / 7210 / 8200v)",
+     "Pre-authentication SSRF in the Appliance Workplace, confirmed exploited. Advisory SNWLID-2026-0016, "
+     "published September 1. Affects 12.4.3-03453 and earlier and 12.5.0-02835 and earlier; fixed in "
+     "12.4.3-03526 / 12.5.0-02952 and above."),
+    ("CVE-2026-83549", "7.8", "SonicWall SMA1000 AMC",
+     "Authenticated OS command injection, same advisory. Distinct from the July pair (SNWLID-2026-0008, "
+     "CVE-2026-15409 / 15410) — the different scores are different CVEs, not a contradiction."),
+    ("CVE-2026-64849", "9.3", "MLflow, all versions before 3.15.0",
+     "Unauthenticated SSRF that reaches cloud metadata endpoints and exfiltrates live AWS, GCP and Azure "
+     "credentials. KEV-added August 19; federal deadline is today."),
+    ("CVE-2026-21962", "10.0", "Oracle HTTP Server / WebLogic Server Proxy Plug-in",
+     "Improper access control, unauthenticated over HTTP. Patched by Oracle in January 2026. KEV-added "
+     "August 24 with a federal deadline of August 27 — already overdue."),
+    ("CVE-2026-82078", "9.4", "PaperCut NG / PaperCut MF",
+     "Unsafe dynamic class loading, per the vendor advisory of August 27; CISA's catalog entry words it as "
+     "unsafe reflection. Same flaw, two descriptors — both printed."),
+    ("CVE-2026-81578", "8.8", "PaperCut NG / PaperCut MF",
+     "Authentication bypass, per the vendor; CISA words it as missing authentication for a critical "
+     "function. PaperCut confirmed customer incidents when it published on August 27."),
+    ("CVE-2026-69836", "—", "Microsoft Entra ID",
+     "A zero-day exploited in attacks, permitting remote code execution, fixed among 22 security updates "
+     "Microsoft rolled out. No CVSS was stated in what was fetched this run."),
+    ("CVE-2026-59310", "9.8 (reported)", "VMware vCenter",
+     "Directory traversal in the Syslog server leading to remote code execution, now being exploited "
+     "following patching. ⚠ The 9.8 is SecurityWeek's figure and was NOT confirmed against a vendor "
+     "advisory this run — this desk has been burned twice by inflated 9.8s (Citrix 9.3, Progress 9.6), "
+     "so it is attributed, not adopted."),
+]
 
-h.append('''<h2>Threat Actor Spotlight</h2><div class="cards">
-<div class="card"><div class="tags"><span class="tag t-c">Extortion</span><span class="tag t-a">Carried forward</span></div>
-<h3>ShinyHunters</h3><p>The extortion group has claimed the theft of <b>284 million records</b> from McKesson&rsquo;s systems. <b>McKesson has confirmed a breach</b>, saying data was exfiltrated for <b>a subset of its Oncology &amp; Multispecialty and Medical-Surgical customers</b>. <b>The confirmed scope and the claimed scope are different quantities and this page does not reconcile them</b> &mdash; the 284 million figure is the attacker&rsquo;s, and is printed as the attacker&rsquo;s.</p></div>
-</div>''')
+KEV = [
+    ("crit", "<b>CVE-2026-21962</b> — Oracle HTTP Server / WebLogic Server Proxy Plug-in, CVSS 10.0. "
+             "Added August 24, due <b>August 27</b> — <b>overdue by 6 days</b>."),
+    ("crit", "<b>CVE-2026-64849</b> — MLflow SSRF, CVSS 9.3. Added August 19, due <b>today, "
+             "September 2</b> — <b>0 days left</b>."),
+    ("warn", "<b>CVE-2026-9586</b> — Sangoma Switchvox SQL injection. Added <b>today</b>, due "
+             "<b>September 5</b> — <b>3 days left</b>."),
+    ("", "<b>CVE-2021-23758</b> — due <b>September 9</b> — <b>7 days left</b>. The product is still not "
+         "named by anything fetched, and is printed unnamed rather than guessed."),
+    ("", "<b>CVE-2026-66384</b> — due <b>September 10</b> — <b>8 days left</b>. Printed unnamed: one "
+         "earlier edition recorded this as JFrog Artifactory, while a vulnerability tracker instead assigns "
+         "JFrog Artifactory to CVE-2026-82329. The conflict is unresolved and is not decided here."),
+    ("", "<b>CVE-2026-81578</b> — PaperCut NG/MF, due <b>September 14</b> — <b>12 days left</b>."),
+    ("", "<b>CVE-2026-82078</b> — PaperCut NG/MF, due <b>September 14</b> — <b>12 days left</b>."),
+    ("", "<b>CVE-2026-48710</b> — added <b>today</b>, due <b>September 16</b> — <b>14 days left</b>. "
+         "CISA's entry describes an open-source component, third-party library, protocol or proprietary "
+         "implementation used across different products; no specific product was named, so none is printed."),
+    ("", "<b>CVE-2026-8452</b> (Citrix) — <b>no countdown is published, for the fifth consecutive run.</b> "
+         "The August 26 add date and August 29 due date recorded for this CVE cannot be reconciled by "
+         "anything fetched, and a deadline this desk cannot verify is one it will not print."),
+]
 
-h.append('''<h2>Breaches &amp; Incidents</h2><div class="note">&ldquo;New&rdquo; tags mark stories absent from the <b>9:53 AM</b> edition of this page.</div><div class="cards">
-<div class="card"><div class="tags"><span class="tag t-new">New this run</span><span class="tag t-c">Healthcare</span><span class="tag t-a">Cloud</span></div>
-<h3>Aesto Health &mdash; 9.5 million impacted</h3><p>Hackers stole <b>personal and health information</b> from the healthcare technology company&rsquo;s <b>AWS infrastructure</b>, with <b>9.5 million people</b> impacted. <b>That headcount and that infrastructure detail are the whole of what is sourced here</b>; no threat actor, intrusion date or ransom demand is published because none was fetched.</p></div>
-<div class="card"><div class="tags"><span class="tag t-new">New this run</span><span class="tag t-c">Ransomware</span><span class="tag t-a">SEC filing</span></div>
-<h3>Nutex Health &mdash; ransomware gang claims a breach</h3><p>A ransomware gang has claimed a breach at Nutex Health. <b>The company has notified the SEC</b> that hackers accessed <b>patient, employee, provider, business and financial information</b>. <b>No record count, gang name or demand is published here</b> &mdash; the claim and the SEC notification are what is sourced.</p></div>
-<div class="card"><div class="tags"><span class="tag t-a">Carried forward</span><span class="tag t-c">Ransomware</span><span class="tag t-a">Government</span></div>
-<h3>Berlin &mdash; Rhysida claims 5TB, city refuses to pay</h3><p>The <b>Rhysida</b> ransomware group has claimed the exfiltration of <b>over 5TB of data</b> from Berlin, including personal information and credentials. <b>Berlin will not pay the extortion demand.</b> <b>Every quantity in this item is the attacker&rsquo;s claim and is printed as one</b> &mdash; no independent corroboration of the volume has been fetched.</p></div>
-<div class="card"><div class="tags"><span class="tag t-a">Carried forward</span><span class="tag t-c">Extortion</span><span class="tag t-a">Deadline</span></div>
-<h3>McKesson &mdash; breach confirmed as an attacker deadline runs</h3><p>McKesson has <b>confirmed</b> a data breach while ShinyHunters&rsquo; extortion deadline looms. The company confirms exfiltration for <b>a subset of Oncology &amp; Multispecialty and Medical-Surgical customers</b>; the group claims <b>284 million records</b>. <b>An attacker&rsquo;s deadline is not a regulatory one and is not counted down on this page.</b></p></div>
-<div class="card"><div class="tags"><span class="tag t-a">Law enforcement</span><span class="tag t-a">Aug 27</span></div>
-<h3>Australia arrests two alleged TeamPCP hackers</h3><p>Australian and U.S. authorities collaborated to identify and charge the alleged cybercriminals, <b>who face many years in prison</b>. <b>Dated Aug 27 and labelled as such</b> &mdash; it is carried for context, not presented as breaking.</p></div>
-<div class="card"><div class="tags"><span class="tag t-new">New this run</span><span class="tag t-a">Takedown</span></div>
-<h3>A 23-year-old P2P botnet is disrupted</h3><p>The long-running <b>Sality</b> peer-to-peer botnet has been disrupted. The shutdown operation involved <b>peer-list manipulation</b> and a <b>takedown of Sality payload URLs</b>. <b>No attribution, victim count or law-enforcement agency is published</b> because none was fetched this run.</p></div>
-</div>''')
+BREACHES = [
+    ("McKesson", ["ransomware", "extortion", "healthcare"], "new",
+     "ShinyHunters claims to have stolen <b>284 million patient records</b> and has demanded a ransom of "
+     "more than <b>$55 million</b> against a 72-hour deadline. The group used voice phishing to compromise "
+     "employee Okta single sign-on accounts and then pivoted into McKesson's cloud environments; "
+     "exfiltration ran August 21–25. The data is reported to include patient identifiers, Social Security "
+     "numbers, diagnoses, medications and doctor-patient messages. The 284-million figure is new this run; "
+     "earlier editions carried the $55.2M demand without a record count."),
+    ("Boston Scientific", ["disruption", "medical devices", "unattributed"], "",
+     "An <b>August 25</b> attack hit on-premises IT, disrupting manufacturing, order processing and shipping, "
+     "and some cardiac monitor remote activations — pacemakers and other heart devices implanted after "
+     "August 25 cannot deliver remote monitoring as intended. Cloud systems and applications are unaffected. "
+     "CrowdStrike and other third parties are assisting. ⚠ <b>An attribution conflict is left open:</b> the "
+     "sources fetched this run state that no cybercrime group has claimed responsibility, while an earlier "
+     "edition of this page recorded a claim by a pro-Russian group calling itself \"Server Killers.\" Both "
+     "are printed; neither is adopted. Boston Scientific has not said whether ransomware was involved, how "
+     "access occurred, or whether data was taken."),
+    ("Berlin city government", ["Rhysida", "ransomware", "government"], "",
+     "Rhysida claims <b>5.79 TB</b> — contracts, emails, phone numbers, passwords and material described as "
+     "classified — against a demand of 30 BTC, roughly $2.3 million. Berlin publicly refused to pay in a "
+     "joint statement with Interior Senator Iris Spranger reported by Reuters on August 28, weeks before "
+     "the September 20 state election; election infrastructure is said to be unaffected. Carried from an "
+     "earlier edition's fetch and corroborated this run at the \"more than 5 TB\" level."),
+    ("Aesto Health", ["healthcare", "disclosure", "AWS"], "",
+     "<b>9,540,683 individuals</b> notified to HHS after personal and health data — Social Security numbers, "
+     "driver's licences, financial accounts, medical and taxpayer identifiers — was taken from the company's "
+     "AWS infrastructure. ⚠ This is a recent <b>disclosure</b>, not a new intrusion: the incident was "
+     "discovered on December 18, 2025."),
+    ("Nutex Health", ["ransomware claim", "SEC filing"], "",
+     "An <b>8-K filed August 31, 2026</b> discloses exfiltration of patient, employee, provider, business and "
+     "financial data. A ransomware gang has claimed the breach; the actor is not named by the sources "
+     "fetched, and is not named here."),
+]
 
-h.append('''<h2>Vulnerability Watch</h2><table>
-<tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr>
-<tr><td>CVE-2026-83548</td><td><b class="down">10</b></td><td>SonicWall SMA1000 (6210, 7210, 8200v)</td><td>Pre-auth SSRF in Appliance Work Place. <b>Exploited in the wild</b>, discovered internally by the vendor. Fix: hotfix 12.4.3-03526 / 12.5.0-02952 or higher. <b>Not in KEV.</b></td></tr>
-<tr><td>CVE-2026-83549</td><td>7.8</td><td>SonicWall SMA1000 Appliance Management Console</td><td>Authenticated OS command injection &rarr; possible RCE. <b>Exploited in the wild</b>; reportedly chained with 83548. <b>Not in KEV.</b></td></tr>
-<tr><td>CVE-2026-82329</td><td class="flat">not sourced this run</td><td>JFrog Artifactory (self-hosted)</td><td>Critical <b>authentication bypass</b>; exploitation began <b>just days after public disclosure</b>. <b>Not the KEV item</b> &mdash; see the disambiguation note below.</td></tr>
-<tr><td>CVE-2026-0768</td><td class="flat">not sourced this run</td><td>Langflow</td><td>Allows <b>unauthenticated attackers to execute arbitrary Python code remotely</b>. <b>Hackers have started exploiting it.</b></td></tr>
-<tr><td>CVE-2026-82078</td><td class="flat">not sourced this run</td><td>PaperCut NG/MF</td><td>Unsafe reflection. <b>Added to CISA KEV</b>; exploitation escalated to active intrusions. Due date below.</td></tr>
-<tr><td>CVE-2026-81578</td><td class="flat">not sourced this run</td><td>PaperCut NG/MF</td><td>Missing authentication for a critical function. <b>Added to CISA KEV</b> alongside 82078.</td></tr>
-<tr><td>CVE-2026-66384</td><td class="flat">not sourced this run</td><td>JFrog Artifactory</td><td>Path traversal. <b>This</b> is the KEV-listed JFrog flaw. Due date below.</td></tr>
-</table><div class="note"><b>CVSS scores appear only where a vendor or advisory this desk fetched states them.</b> The SonicWall pair is sourced to SonicWall&rsquo;s own advisory via SecurityWeek; for the rest, no authoritative score was fetched this run, so the column says so rather than borrowing a number from a blog. Also patched this week and not scored here: <b>Chrome and Firefox</b> shipped fixes for dozens of flaws including use-after-free, sandbox-escape and privilege-escalation bugs, and <b>WatchGuard</b> patched three critical issues in the Fireware OS <code>iked</code> process that could allow unauthenticated remote code execution.</div>''')
+REFUSALS = (
+    "<b>Three incidents remain refused, and the reason is the same each time: they were real, but "
+    "not recent.</b> No new laundered incident surfaced on the cyber side this run, but the standing "
+    "refusals are republished because the defect recurs — an aggregator's \"recent breaches\" page "
+    "turned into a \"today\" list by a summariser, caught three times so far. Refused on these grounds: "
+    "IDMerit (a February 2026 disclosure of a November 2025 finding), Panera Bread (January 2026, and with "
+    "three irreconcilable record counts), and Vanderbilt University Medical Center / Meow (a 2023 leak-site "
+    "listing plus a July 2026 disclosure of a March 2026 email compromise). The countermeasure that works "
+    "is not scepticism — it is dating every incident before it is allowed onto the page. The standing "
+    "permanent exclusion also holds: the Nevada statewide ransomware incident is <b>August 2025</b> and is "
+    "refused on sight whenever a \"biggest breaches of 2026\" listing surfaces it."
+)
 
-h.append('''<h2>CISA KEV &amp; Federal Deadlines</h2>
-<div class="callout"><h3>Disambiguation: there are two JFrog Artifactory stories this week, and only one of them has a federal clock</h3>
-<p><b>CVE-2026-82329</b> is the critical <b>authentication bypass</b>, reportedly exploited in the wild days after disclosure, self-hosted Artifactory only. <b>It is NOT in KEV and has no deadline.</b> <b>CVE-2026-66384</b> is the <b>path traversal</b>, and it <i>is</i> the KEV item, with the due date below. <b>Same vendor, same product, same week, opposite compliance status</b> &mdash; merged, they read as one escalation and the federal clock gets attached to the wrong flaw.</p></div>
-<ul class="bul">
-<li><b>CVE-2026-82078 &mdash; PaperCut NG/MF, unsafe reflection.</b> Federal remediation due <b>September 14, 2026</b> <span id="kev1" class="up"></span>. Added alongside CVE-2026-81578 on evidence of active exploitation; SecurityWeek reports PaperCut exploitation has <b>escalated to active intrusions</b>.</li>
-<li><b>CVE-2026-81578 &mdash; PaperCut NG/MF, missing authentication for a critical function.</b> Added to KEV in the same action. <b>No due date for this CVE was fetched this run, so none is stated and no countdown is shown</b> &mdash; treat it as governed by the same action until CISA&rsquo;s own entry is read.</li>
-<li><b>CVE-2026-66384 &mdash; JFrog Artifactory, path traversal.</b> Federal remediation due <b>September 10, 2026</b> <span id="kev2" class="up"></span>.</li>
-<li><b>CVE-2026-83548 / CVE-2026-83549 &mdash; SonicWall SMA1000.</b> <b>Not in KEV as of the vendor advisory read this run, therefore no deadline.</b> Seventeen other SonicWall flaws already are. <b>The absence of a deadline is not an absence of urgency</b> &mdash; this is the page&rsquo;s Patch Priority precisely because the exploitation is confirmed and the clock is not.</li>
-</ul>
-<div class="note"><b>CISA KEV due dates are assigned per-CVE and are risk-based under BOD 26-04</b> &mdash; the old flat &ldquo;three weeks from the add date&rdquo; heuristic of BOD 22-01 is superseded and is not used to infer any deadline on this page. Every date above is a date a source states. <b>A mid-August KEV batch (CVE-2026-65400, CVE-2026-55040, CVE-2026-59310, CVE-2026-33824) that a search framed as an early-September addition was refused again this run: those were added Aug 18 with an Aug 21 deadline, and are not new.</b></div>''')
 
-h.append('''<h2>Around the Industry</h2><ul class="bul">
-<li><b>Palo Alto Networks has acquired AI agent platform Console</b>, announced alongside quarterly results showing a <b>34% increase in revenue</b> and strong growth in next-generation security ARR.</li>
-<li><b>The U.S. Coast Guard has established an Office of Maritime Cybersecurity Policy</b>, which will serve as the central authority for cybersecurity policy covering U.S. ports, vessels and maritime facilities.</li>
-<li><b>Forescout researchers ported a remote-code-execution exploit between WAGO PLC models using AI</b>, and report it took <b>hours and hundreds of dollars</b>. The relevance to defenders is the cost curve, not the specific PLC.</li>
-<li><b>Five Venezuelans have pleaded guilty in U.S. court to ATM jackpotting.</b> The defendants <b>unsuccessfully</b> attempted to physically install malware on ATMs to force them to dispense cash.</li>
-<li><b>OpenAI&rsquo;s Astra</b> has been designated as crossing a &ldquo;critical&rdquo; cybersecurity threshold &mdash; a tier that applies when a model can independently find and exploit zero-day vulnerabilities across many well-defended systems. <b>This is a vendor grading its own product against its own framework;</b> nothing here claims that no other organisation&rsquo;s model is comparable.</li>
-</ul>''')
+def build():
+    p = []
+    p.append(C.head("The Cyber Wire — Daily Briefings", CSS))
+    p.append('<div class="masthead"><h1>&#9960; The Cyber Wire</h1>'
+             '<p class="tag">Your daily cybersecurity briefing — breaches, vulnerabilities &amp; federal deadlines</p>'
+             + C.meta_row() + "</div>")
+    p.append('<div class="tldr"><b>The Wire</b> <span>%s</span></div>' % TLDR)
+    p.append('<div class="freshline" id="freshline">&nbsp;</div>')
+    p.append(C.nav("cyber"))
 
-h.append('''<h2>Sources</h2><div class="panel srcs">
-<a href="https://www.securityweek.com/sonicwall-warns-of-two-sma1000-zero-days-exploited-in-attacks/">SecurityWeek &mdash; SonicWall Warns of Two SMA1000 Zero-Days Exploited in Attacks (Sept 2, 2026, 1:04 AM ET)</a><br>
-<a href="https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0016">SonicWall PSIRT &mdash; advisory SNWLID-2026-0016</a><br>
-<a href="https://www.securityweek.com/9-5-million-impacted-by-aesto-health-data-breach/">SecurityWeek &mdash; 9.5 Million Impacted by Aesto Health Data Breach</a><br>
-<a href="https://www.securityweek.com/ransomware-gang-claims-nutex-health-data-breach/">SecurityWeek &mdash; Ransomware Gang Claims Nutex Health Data Breach</a><br>
-<a href="https://www.securityweek.com/papercut-exploitation-escalates-to-active-intrusions/">SecurityWeek &mdash; PaperCut Exploitation Escalates to Active Intrusions</a><br>
-<a href="https://www.securityweek.com/critical-jfrog-artifactory-vulnerability-reportedly-exploited-in-the-wild/">SecurityWeek &mdash; Critical JFrog Artifactory Vulnerability Reportedly Exploited in the Wild</a><br>
-<a href="https://www.securityweek.com/hackers-start-exploiting-critical-langflow-vulnerability/">SecurityWeek &mdash; Hackers Start Exploiting Critical Langflow Vulnerability</a><br>
-<a href="https://www.securityweek.com/mckesson-confirms-data-breach-as-attacker-deadline-looms/">SecurityWeek &mdash; McKesson Confirms Data Breach as Attacker Deadline Looms</a><br>
-<a href="https://www.securityweek.com/berlin-wont-pay-extortion-group-claiming-data-theft/">SecurityWeek &mdash; Berlin Won&rsquo;t Pay Extortion Group Claiming Data Theft</a><br>
-<a href="https://www.securityweek.com/23-year-old-sality-p2p-botnet-disrupted/">SecurityWeek &mdash; 23-Year-Old Sality P2P Botnet Disrupted</a><br>
-<a href="https://www.securityweek.com/chrome-and-firefox-updates-patch-dozens-of-vulnerabilities/">SecurityWeek &mdash; Chrome and Firefox Updates Patch Dozens of Vulnerabilities</a><br>
-<a href="https://www.securityweek.com/watchguard-patches-critical-vulnerabilities/">SecurityWeek &mdash; WatchGuard Patches Critical Vulnerabilities</a><br>
-<a href="https://www.securityweek.com/openais-astra-becomes-first-model-to-cross-critical-cybersecurity-threshold/">SecurityWeek &mdash; OpenAI&rsquo;s Astra Becomes First Model to Cross Critical Cybersecurity Threshold</a><br>
-<a href="https://www.cisa.gov/news-events/alerts/2026/08/31/cisa-adds-two-known-exploited-vulnerabilities-catalog">CISA &mdash; Adds Two Known Exploited Vulnerabilities to Catalog (Aug 31, 2026)</a><br>
-<a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">CISA &mdash; Known Exploited Vulnerabilities Catalog</a>
-</div>
-<div class="disc"><b>Operational guidance is summarised, not substituted for the vendor advisory.</b> Patch only from the vendor bulletin linked above. CVSS scores, fixed versions and federal due dates on this page appear only where a source fetched this run states them; where a figure was not sourced, the page says so rather than estimating.</div>''')
+    p.append('<div class="banner high"><span class="k">Threat Level — High</span>'
+             'Two exploited flaws entered the KEV catalog today, one of them with a three-day federal '
+             'clock; a CVSS 10.0 pre-authentication SonicWall SSRF is under active exploitation with no '
+             'federal deadline attached; and a CVSS 10.0 Oracle flaw is six days past its remediation '
+             'date.</div>')
 
-CDN = """<script>(function(){function d(id,due){var el=document.getElementById(id);if(!el)return;var n=new Date();var t=new Date(due+'T23:59:59-04:00');var days=Math.ceil((t-n)/86400000);if(days>0){el.textContent='('+days+' day'+(days==1?'':'s')+' left)';}else{el.textContent=days===0?'(due today)':'(overdue by '+(-days)+' day'+(days==-1?'':'s')+')';el.className='down';}}d('kev1','2026-09-14');d('kev2','2026-09-10');})();</script>"""
-h.append('</div>'+CDN+STAMP+'</body></html>')
-open(OUT+"cyber-briefing.html","w").write("".join(h))
-print("cy ok", sum(len(x) for x in h))
+    p.append('<div class="stats">' + "".join(
+        '<div class="stat"><div class="n">%s</div><div class="l">%s</div></div>' % s for s in STATS
+    ) + "</div>")
+
+    # TOP STORY
+    p.append('<h2 class="sec">Top Story</h2>')
+    p.append('<div class="panel"><h3>CISA adds two exploited flaws to KEV, and gives federal agencies '
+             'three days on the Sangoma one</h3>'
+             '<p>Two vulnerabilities entered the Known Exploited Vulnerabilities catalog on '
+             '<b>September 2</b>. The more urgent of the two is <b>CVE-2026-9586</b>, a SQL injection '
+             'in <b>Sangoma Switchvox</b> that lets an unauthenticated remote attacker run arbitrary SQL '
+             'against the backend PostgreSQL database from a single crafted request — including database '
+             'operations and, from there, remote code execution. Its federal remediation date is '
+             '<b>September 5</b>, three days out.</p>'
+             '<p>The second addition, <b>CVE-2026-48710</b>, carries a September 16 date. CISA\'s entry '
+             'describes it as affecting an open-source component, third-party library, protocol or '
+             'proprietary implementation that could be used across different products; no specific product '
+             'is named in anything fetched, so this page names none.</p>'
+             '<p>Both entries direct organisations to apply vendor mitigations in line with <b>BOD 26-04, '
+             '"Prioritizing Security Updates Based on Risk."</b> That is worth recording: this desk worked '
+             'from BOD 22-01\'s flat three-week window for a long time, and has watched deadlines of three '
+             'days, two weeks and three weeks all appear since. The directive number now appears in CISA\'s '
+             'own guidance language rather than only in third-party reporting — but no window is assumed '
+             'here regardless. <b>Every deadline on this page is a per-CVE published date, never one '
+             'computed from a rule.</b></p></div>')
+
+    # PATCH PRIORITY
+    p.append('<h2 class="sec">Patch Priority</h2>')
+    p.append('<div class="callout crit"><div class="k">Do this first — clock expires today</div>'
+             '<p><b>CVE-2026-64849 — MLflow SSRF, CVSS 9.3, all versions before 3.15.0.</b> '
+             'Unauthenticated, reaches cloud metadata endpoints, and steals live AWS, GCP and Azure '
+             'credentials — with confirmed downstream resource enumeration, cryptominers and attacker-created '
+             'IAM users and roles. It was added to KEV on <b>August 19</b> and its federal remediation date '
+             'is <b>today, September 2 — zero days left</b>. Upgrade to 3.15.0 or later and rotate any '
+             'credential the instance could reach.</p>'
+             '<p>Two CVSS 10.0 entries sit above it on severity and neither outranks it on urgency. The '
+             '<b>SonicWall SMA1000</b> pre-authentication SSRF is '
+             'CVSS 10.0 and confirmed exploited, but no federal clock has been sourced for it. The '
+             '<b>Oracle CVE-2026-21962</b> is also CVSS 10.0 and its deadline has already passed — six days '
+             'ago — which makes it urgent but no longer a countdown. The newest clock, Sangoma\'s '
+             '<b>CVE-2026-9586</b>, runs to <b>September 5</b>. These are the same dates given in the '
+             'deadlines section below.</p></div>')
+
+    # THREAT ACTOR
+    p.append('<h2 class="sec">Threat Actor Spotlight</h2>')
+    p.append('<div class="card"><div class="k">ShinyHunters</div>'
+             '<h4>Vishing the help desk, then walking into the cloud</h4>'
+             '<p>The group\'s McKesson intrusion is a clean illustration of the pattern that has dominated '
+             'this year\'s large healthcare breaches, and it never touches a vulnerability. Operators phoned '
+             'employees, talked them out of their <b>Okta single sign-on</b> credentials, and used that access '
+             'to pivot into cloud environments — exfiltrating over <b>August 21–25</b> before surfacing a '
+             'ransom demand above <b>$55 million</b> with a 72-hour deadline, and a claim of '
+             '<b>284 million patient records</b>. It is the same shape as the "Spring Ring" campaign this '
+             'page profiled earlier: Teams-based voice phishing, external tenants named things like '
+             '"ITProtectionDepartment," email bombing to manufacture a help-desk call, Quick Assist for the '
+             'foothold, then lateral movement over WinRM. <b>The control that stops both is a help desk that '
+             'will not reset an MFA factor on the strength of a phone call.</b></p></div>')
+
+    # BREACHES
+    p.append('<h2 class="sec">Breaches &amp; Incidents</h2>')
+    cards = []
+    for name, tags, isnew, body in BREACHES:
+        t = '<span class="tag new">New</span>' if isnew == "new" else ""
+        tg = "".join('<span class="tag a">%s</span>' % x for x in tags)
+        cards.append('<div class="card"><h4>%s</h4>%s%s<p>%s</p></div>' % (name, t, tg, body))
+    p.append('<div class="cards">' + "".join(cards) + "</div>")
+    p.append('<div class="note">%s</div>' % REFUSALS)
+
+    # VULN WATCH
+    p.append('<h2 class="sec">Vulnerability Watch</h2>')
+    rows = "".join('<tr><td><b>%s</b></td><td>%s</td><td>%s</td><td>%s</td></tr>' % c for c in CVES)
+    p.append('<div class="tblwrap"><table>'
+             '<tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr>' + rows + "</table></div>")
+
+    # KEV
+    p.append('<h2 class="sec">CISA KEV &amp; Federal Deadlines</h2>')
+    lis = []
+    for cls, txt in KEV:
+        style = ""
+        if cls == "crit":
+            style = ' style="color:#ef4444"'
+        elif cls == "warn":
+            style = ' style="color:#f0a132"'
+        lis.append("<li%s>%s</li>" % (style, txt))
+    p.append('<div class="panel"><ul class="b">' + "".join(lis) + "</ul>"
+             '<div class="note">Countdowns are computed from today, September 2, to each CVE\'s '
+             '<em>published</em> due date. A direct fetch of the CISA KEV catalog page has returned an empty '
+             'body on recent runs, so these dates come from CISA alert pages surfaced in search plus vendor '
+             'security reporting that cites them; that limitation is disclosed rather than papered over. '
+             'Additional context sourced this run: PaperCut published its advisory on August 27 while '
+             'investigating active exploitation with confirmed customer incidents, and roughly 22,000 '
+             'Microsoft Exchange servers remain exposed as an exploit has gone public.</div></div>')
+
+    p.append(C.sources(SOURCES))
+    p.append('<div class="disc">This briefing summarises publicly reported security incidents and '
+             'vulnerabilities. Verify every CVE, CVSS score, fixed version and remediation deadline against '
+             'the vendor advisory and the CISA KEV catalog before acting on it. Nothing here is a substitute '
+             'for your own incident response process.</div></footer>')
+    p.append(C.STAMP_JS)
+    p.append("</div></body></html>")
+    return "".join(p)
+
+
+if __name__ == "__main__":
+    open("cyber-briefing.html", "w").write(build())
+    print("cyber ok")

@@ -1,128 +1,258 @@
 # -*- coding: utf-8 -*-
-import sys; sys.path.insert(0,'/tmp')
-from css import BASE, STAMP, nav, meta
-OUT="/sessions/amazing-determined-planck/mnt/outputs/"
-ROOT=":root{--bg:#100c0c;--panel:#1a1313;--panel2:#221818;--line:#322020;--fg:#f5eae8;--muted:#94736e;--muted2:#cbb3ae;--accent:#e84545;--accent2:#ff8a5c;--up:#3fbf72;--crit:#ff5f5f;--warn:#e0a13a;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}\n"
+import css as C
 
-h=[]
-h.append('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Octagon &mdash; Daily MMA Briefing</title><style>'+ROOT+BASE+'</style></head><body><div class="wrap">')
-h.append('<div class="masthead"><h1>The Octagon</h1><p class="tag">Your daily MMA briefing &mdash; UFC, prospects &amp; the business of fighting</p>'+meta()+'</div>')
-h.append('<div class="tldr"><b>Tale of the Tape</b> <span>UFC Paris lands Saturday at the Accor Arena with <b>Salahdine Parnasse a &minus;550 favourite on his UFC debut</b> over the No. 10-ranked Dan Hooker at <b>+400</b> &mdash; the shortest main-event price on a fourteen-bout card &mdash; three days after Song Yadong&rsquo;s second-round upset of Umar Nurmagomedov in Shanghai banked a <b>$100,000</b> Performance of the Night bonus.</span></div>')
-h.append('<div class="freshline" id="freshline">&nbsp;</div>')
-h.append(nav("mma-briefing.html"))
+ACCENT, ACCENT2 = "#e84545", "#ff8a5c"
+CSS = C.base_css(ACCENT, ACCENT2, "#100c0c", "#1a1313", "#322020") + """
+.cdn{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 17px;
+  margin-bottom:18px;display:flex;flex-wrap:wrap;align-items:baseline;gap:11px}
+.cdn .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.cdn .v{font-family:var(--mono);font-size:19px;color:var(--accent2)}
+.cdn .e{font-size:14px;color:var(--muted)}
+.evdate{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#caa64a;margin-bottom:6px}
+.top{border-left:3px solid var(--accent)}
+"""
 
-h.append('<div class="cdn"><span class="lab">Next Card</span><span class="val" id="ufccdn">&nbsp;</span><span class="ev">UFC Fight Night: Hooker vs Parnasse &mdash; Sat, Sep 5, Accor Arena, Paris. Prelims 12:00 PM ET, main card 3:00 PM ET, Paramount+. Countdown runs to the main-card start.</span></div>')
+TLDR = ("UFC Paris is three days out with Salahdine Parnasse now a −600 favourite over Dan Hooker on his "
+        "promotional debut, a line that has moved roughly 200 points since it opened.")
 
-h.append('''<h2>Top Story</h2><div class="panel" style="border-left:3px solid var(--accent)">
-<h3 style="margin:0 0 9px;font-size:20px;line-height:1.3">A UFC debutant is a &minus;550 favourite in a main event &mdash; over a ranked veteran</h3>
-<p>UFC.com&rsquo;s official card for <b>UFC Fight Night: Hooker vs Parnasse</b> prices the main event at <b>Dan Hooker +400 / Salahdine Parnasse &minus;550</b>. <b>Parnasse is making his UFC debut.</b> Hooker is the <b>No. 10-ranked</b> lightweight on the same page &mdash; UFC.com shows a rank badge beside his name and none beside Parnasse&rsquo;s.</p>
-<p><b>&minus;550 is the shortest price anywhere on the fourteen-bout card</b>, by comparison with the other thirteen prices listed below &mdash; the next shortest are Kurtis Campbell at &minus;390 and Losene Keita at &minus;360. <b>That ranking is this desk&rsquo;s arithmetic across UFC.com&rsquo;s own table, not a claim any source makes.</b></p>
-<p class="note"><b>How the odds were read, because the source is ambiguous row by row.</b> UFC.com renders each bout as a bare pair &mdash; &ldquo;+400 odds &minus;550&rdquo; &mdash; with no stated assignment of price to fighter. Reading the table <b>as a whole</b> resolves it: across the card the <b>first price belongs to the first-named fighter</b> in every row that can be cross-checked against an independently fetched quote, with favourite and underdog matching each time. <b>The ambiguity in one row is resolved by the rest of the table.</b></p>
-<p><b>On Parnasse&rsquo;s provenance, which this page has had to correct before:</b> he is a former <b>two-time KSW featherweight champion and one-time KSW lightweight champion</b> who signed with the UFC in <b>late July 2026</b> after previously turning the promotion down, and was handed a main event on debut. <b>He did not come through Dana White&rsquo;s Contender Series</b> &mdash; an earlier claim to that effect was wrong and is not repeated. He is a debutant, not a UFC veteran, contender or ranked fighter.</p>
-</div>''')
+SOURCES = [
+    ("UFC.com — Fight by Fight Preview: UFC Paris, Hooker vs. Parnasse",
+     "https://www.ufc.com/news/fight-by-fight-preview-ufc-paris-hooker-vs-parnasse"),
+    ("ESPN — UFC Fight Night: Hooker vs. Parnasse fight centre",
+     "https://www.espn.com/mma/fightcenter/_/id/600059993/league/ufc"),
+    ("Tapology — UFC Fight Night: Hooker vs. Parnasse",
+     "https://www.tapology.com/fightcenter/events/144513-ufc-fight-night"),
+    ("Rotowire — Hooker vs Parnasse Sep 5, 2026 odds",
+     "https://www.rotowire.com/betting/mma/fight/salahdine-parnasse-vs-dan-hooker-odds-2026-09-05-5365"),
+    ("MMA Odds Breaker — Opening betting odds for UFC Paris: Hooker vs. Parnasse",
+     "https://www.mmaoddsbreaker.com/fight-odds/opening-odds/161246-opening-betting-odds-for-ufc-paris-hooker-vs-parnasse/"),
+    ("UFC.com — UFC Shanghai results: Nurmagomedov vs Song",
+     "https://www.ufc.com/news/ufc-shanghai-results-nurmagomedov-vs-song"),
+    ("ESPN — UFC Fight Night: Nurmagomedov vs. Song results",
+     "https://www.espn.com/mma/fightcenter/_/id/600060620/league/ufc"),
+    ("Bloody Elbow — Umar Nurmagomedov vs Song Yadong UFC Shanghai result",
+     "https://bloodyelbow.com/2026/08/29/umar-nurmagomedov-vs-song-yadong-ufc-shanghai-result-khabibs-cousin-knocked-out-cold/"),
+    ("ESPN — Current and all-time UFC champions",
+     "https://www.espn.com/mma/story/_/id/14947566/current-all-ufc-champions"),
+    ("UFC.com — Welcome to the UFC: DWCS Season 10, Week 4",
+     "https://www.ufc.com/news/welcome-ufc-dwcs-season-10-week-4"),
+    ("UFC.com — Dana White's Contender Series",
+     "https://www.ufc.com/dwcs"),
+    ("Tapology — UFC 331: Van vs. Pantoja 2",
+     "https://www.tapology.com/fightcenter/events/145652-ufc-331"),
+    ("UFCStats — upcoming events",
+     "http://www.ufcstats.com/statistics/events/upcoming"),
+]
 
-h.append('''<h2>Fight Week &mdash; Upcoming Cards</h2><div class="note">Dates, venues and start times are UFC.com&rsquo;s unless a card says otherwise. <b>Odds are UFC.com&rsquo;s own listed prices</b>, read first-price-to-first-named-fighter as described above.</div><div class="cards">
-<div class="card"><div class="tags"><span class="tag t-a">This Saturday</span><span class="tag t-a">14 bouts</span></div>
-<h3>UFC Fight Night: Hooker vs Parnasse</h3><p class="note" style="color:var(--accent2)">SAT, SEP 5 &middot; ACCOR ARENA, PARIS</p><p><b>Dan Hooker (#10) vs Salahdine Parnasse</b> &mdash; lightweight, five rounds. A ranked New Zealand veteran against a French debutant fighting at home. <b>Odds: Hooker +400 / Parnasse &minus;550 (UFC.com).</b> Prelims 12:00 PM ET, main card 3:00 PM ET, both on Paramount+.</p></div>
-<div class="card"><div class="tags"><span class="tag t-a">Sep 12</span><span class="tag t-w">Title vs card mismatch</span></div>
-<h3>Noche UFC</h3><p class="note" style="color:var(--accent2)">SAT, SEP 12 &middot; DESERT DIAMOND ARENA, GLENDALE, AZ</p><p>Billed as <b>&ldquo;Rodriguez vs Silva,&rdquo;</b> but <b>Yair Rodr&iacute;guez withdrew injured</b> and UFC.com&rsquo;s card has <b>Jean Silva vs Jose Delgado</b>. <b>The event title names a fighter who is not on it</b> &mdash; stated plainly because a reader who trusts the title will get the main event wrong. Thirteen fights; main card <b>5:00 PM ET</b>, prelim start disputed between 1 PM and 2 PM ET across listings and therefore not asserted.</p></div>
-<div class="card"><div class="tags"><span class="tag t-a">Sep 19</span><span class="tag t-a">Numbered card</span></div>
-<h3>UFC 331: Van vs Pantoja 2</h3><p class="note" style="color:var(--accent2)">SAT, SEP 19 &middot; CRYPTO.COM ARENA, LOS ANGELES</p><p>Flyweight champion <b>Joshua Van</b> rematches <b>Alexandre Pantoja</b>, the man he took the belt from at UFC 323. Thirteen fights; the card also carries <b>Renato Moicano vs Brian Ortega</b> and <b>Patricio Pitbull vs Doo Ho Choi</b>. Main card <b>9:00 PM ET</b>; the prelim tiering differs between listings (early prelims ~5 PM and prelims 7 PM in one, prelims 6 PM in another) and <b>only the 9 PM main card is agreed</b>. <b>No odds for this card were sourced this run.</b></p></div>
-<div class="card"><div class="tags"><span class="tag t-a">Sep 26</span></div>
-<h3>UFC Vegas 121: Rosas Jr vs Barcelos</h3><p class="note" style="color:var(--accent2)">SAT, SEP 26 &middot; UFC APEX, LAS VEGAS</p><p><b>Raul Rosas Jr. vs Raoni Barcelos</b> headlines. <b>No venue detail beyond the Apex, no start times and no odds were sourced this run</b>, so none are printed.</p></div>
-<div class="card"><div class="tags"><span class="tag t-a">Developmental</span></div>
-<h3>Dana White&rsquo;s Contender Series &mdash; Weeks 6 and 7</h3><p class="note" style="color:var(--accent2)">TUE, SEP 15 &amp; TUE, SEP 22 &middot; UFC APEX</p><p>Season 10 continues on consecutive Tuesdays. <b>No matchmaking for either week was sourced this run.</b></p></div>
-</div>''')
+CARDS = [
+    ("Sat, Sept 5 · Accor Arena, Paris", "UFC Fight Night: Hooker vs. Parnasse",
+     "Salahdine Parnasse makes his UFC debut in a main event, a lightweight bout against Dan Hooker. "
+     "Fourteen fights. Co-main is an all-French lightweight meeting between Farès Ziam and Axel Sola; "
+     "also booked are Michael Page vs Nursulton Ruziboev, Daniil Donchenko vs Punahele Soriano, "
+     "Morgan Charrière vs Felipe Lima and Losene Keita vs Muhammad Naimov. Prelims 12 PM ET / main card "
+     "3 PM ET on Paramount+ (start times carried from an earlier fetch, not re-sourced this run).",
+     "Odds: Parnasse −600 / Hooker +425; DraftKings −600 / +440. Range across books −500 to −700 and "
+     "+360 to +450.", "new"),
+    ("Sat, Sept 12 · Glendale, Arizona", "Noche UFC: Silva vs. Delgado",
+     "⚠ The billing for this card has now appeared four different ways across editions of this page — "
+     "\"Noche UFC 4,\" \"Noche UFC: Silva vs Delgado,\" \"Noche UFC: Rodriguez vs. Silva\" and "
+     "\"Noche UFC 4: Silva vs Delgado.\" All are printed; none is adopted. Only \"Silva\" is common to "
+     "all four.", "", ""),
+    ("Sat, Sept 19 · Crypto.com Arena, Los Angeles", "UFC 331: Van vs. Pantoja 2",
+     "Joshua Van defends the flyweight championship against Alexandre Pantoja in a rematch of their "
+     "UFC 323 meeting. Thirteen fights. Co-main is Arman Tsarukyan vs Maurício Ruffy at lightweight over "
+     "five rounds; also Renato Moicano vs Brian Ortega and Patrício Pitbull vs Doo Ho Choi.", "", ""),
+    ("Sat, Sept 26 · Las Vegas", "UFC Fight Night: Rosas Jr. vs. Barcelos",
+     "⚠ The name order reverses between listings — one has it Rosas Jr. vs. Barcelos, another Barcelos vs. "
+     "Rosas Jr. Both are printed.", "", ""),
+    ("Sat, Oct 3 · Salt Lake City, Utah", "UFC 332",
+     "No headliner was sourced this run, and none is invented.", "", ""),
+    ("Sat, Oct 24 · Abu Dhabi", "UFC 333: Volkanovski vs. Evloev",
+     "Alexander Volkanovski against Movsar Evloev at featherweight. ⚠ The schedule listing that supplies "
+     "this headliner does <b>not</b> describe it as a title fight; it is understood to be one on the "
+     "strength of this desk's standing record that Volkanovski is the reigning featherweight champion and "
+     "Evloev the number-one contender, and that is said here rather than left to look like the listing's "
+     "claim.", "", ""),
+]
 
-h.append('''<h2>Last Event &mdash; Results</h2><div class="note"><b>UFC Fight Night: Nurmagomedov vs. Song</b> &mdash; Saturday, August 29, 2026, Shanghai Oriental Sports Center, Shanghai. Only bouts for which a winner, opponent and method were all sourced this run appear below.</div><table>
-<tr><th>Result</th><th>Bout</th><th>Method</th></tr>
-<tr><td class="up">Song Yadong</td><td>def. Umar Nurmagomedov</td><td>KO/TKO, R2, 1:48</td></tr>
-<tr><td class="up">Denise Gomes</td><td>def. Yan Xiaonan</td><td>KO/TKO (elbow), R1, 4:49</td></tr>
-<tr><td class="up">Kai Asakura</td><td>def. Aoriqileng</td><td>KO/TKO (punches), R2, 0:34</td></tr>
-<tr><td class="up">Levi Rodrigues Jr.</td><td>def. Liu Ce</td><td>KO/TKO (punch), R1, 4:26</td></tr>
-<tr><td class="up">Bilal Hasan</td><td>def. Nilson Rojas</td><td>KO/TKO (punch), R2, 2:28</td></tr>
-<tr><td class="up">Francesco Nuzzi</td><td>def. Xiao Long</td><td>KO/TKO (punches), R1, 1:00</td></tr>
-</table>
-<div class="callout" style="border-left-color:var(--accent)"><h3>Performance bonuses &mdash; Shanghai</h3><p><b>Performance of the Night ($100,000 each): Song Yadong</b>, for the main-event upset, and <b>Bilal Hasan</b>, for a second-round knockout of fellow debutant Nilson Rojas. <b>Fight of the Night ($100,000 each): Liu Ce vs Levi Rodrigues Jr.</b> Separately, the card&rsquo;s remaining finishers &mdash; Denise Gomes, Kai Asakura, Andre Lima, Rei Tsuruya, Francesco Nuzzi, Hector Santiago and Julia Polastri &mdash; each earned an additional <b>$25,000</b> for their stoppages. <b>Every figure here is stated by the sources; none is inferred.</b></p></div>''')
+RESULTS = [
+    ("win", "Song Yadong def. Umar Nurmagomedov", "KO (right uppercut), R2, 1:48"),
+    ("win", "Denise Gomes def. Yan Xiaonan", "KO (punch), R1, 4:49"),
+]
 
-h.append('''<h2>Prospect Watch</h2><div class="cards">
-<div class="card"><div class="tags"><span class="tag t-new">New this run</span><span class="tag t-new">Contracts</span></div>
-<h3>Five UFC contracts out of DWCS Week 4</h3><p>Dana White&rsquo;s Contender Series Season 10, Week 4 ran <b>Tuesday, September 1</b> at the UFC Apex, and <b>all five winners were offered UFC contracts</b>: <b>Adam Darby</b>, <b>Modestino Rodrigues</b>, <b>Silvestre Sanchez</b>, <b>Adam Livingston</b> and a fifth heavyweight winner whose surname is rendered two different ways across the reports fetched this run &mdash; <b>so his name is not printed here.</b> A misspelt fighter is a worse error than an incomplete list.</p></div>
-<div class="card"><div class="tags"><span class="tag t-new">New this run</span><span class="tag t-new">Prospect</span></div>
-<h3>Adam Darby</h3><p>Beat <b>Patrick Rivera</b> in the Week 4 main event by <b>doctor&rsquo;s stoppage in the third round</b>, earning a UFC contract.</p></div>
-<div class="card"><div class="tags"><span class="tag t-new">New this run</span><span class="tag t-new">Prospect</span></div>
-<h3>Silvestre Sanchez</h3><p>Found momentum in the second round of a lightweight barnburner with <b>Liam McCracken</b> and <b>knocked him out cold in the final round</b>. Contract awarded.</p></div>
-<div class="card"><div class="tags"><span class="tag t-new">New this run</span><span class="tag t-new">Prospect</span></div>
-<h3>Adam Livingston</h3><p>Edged a <b>split decision</b> over <b>Hunter Smith</b> at lightweight, earning a contract <b>in his second Contender Series appearance</b> after a failed attempt last year.</p></div>
-<div class="card"><div class="tags"><span class="tag t-a">Debut Saturday</span><span class="tag t-new">Prospect</span></div>
-<h3>Salahdine Parnasse</h3><p>Former <b>two-time KSW featherweight champion</b> and <b>one-time KSW lightweight champion</b>, <b>14-2 inside KSW</b> with four defences of the lightweight belt. Signed with the UFC in late July 2026 having previously turned it down; his U.S. debut in May 2026 was a <b>first-round stoppage of Kenneth Cross</b> for a fifth straight win. <b>Not a Contender Series signee.</b></p></div>
-</div>''')
+PROSPECTS = [
+    ("Adam Darby", "Signed out of Dana White's Contender Series Season 10, Week 4 on September 1 in "
+                   "Las Vegas after what UFC.com described as a masterclass of distance striking."),
+    ("Gabriel Lorenço", "Demolished Charlie Cleveland in a heavyweight bout to earn his roster spot; Dana "
+                        "White called him \"a new 26-year-old heavyweight beast.\" ⚠ The surname is rendered "
+                        "both \"Lorenço\" and \"Lorenco\" across sources."),
+    ("Modestino Rodrigues, Silvestre Sanchez, Adam Livingston",
+     "The other three Week 4 winners, all signed — the second consecutive week in which all five winners "
+     "were awarded contracts. Fifteen athletes had been added through the first three weeks."),
+]
 
-h.append('''<h2>Around the Sport</h2><ul class="bul">
-<li><b>The Paris card runs fourteen bouts across two tiers</b> &mdash; six on the main card, eight on the prelims &mdash; with <b>no early-prelim section listed on UFC.com</b>.</li>
-<li><b>Three fighters carry rank badges on the Paris card:</b> Dan Hooker at <b>#10</b>, Michael &ldquo;Venom&rdquo; Page at <b>#15</b> and Nora Cornolle at <b>#13</b>. <b>No other bout on the card shows a rank beside either name</b>, including Nathaniel Wood vs Pavel Andrusca.</li>
-<li><b>The card is heavily French.</b> Ziam, Sola, Charriere, Sy, Aljarouj, Cornolle, Duclos and Benouaich all carry the French flag on UFC.com, as does Parnasse &mdash; nine of twenty-eight fighters.</li>
-<li><b>Yan Xiaonan was stopped by an elbow in the first round</b> in Shanghai, one of nine finishes on a card where every result sourced this run ended inside the distance.</li>
-<li><b>A previously reported Paris booking of Kelvin Gastelum vs. Belgaroui was refused again this run</b> &mdash; UFC.com&rsquo;s card does not contain it, and neither man appears on the fourteen-bout listing.</li>
-</ul>''')
+AROUND = [
+    "<b>Song Yadong is staking a claim at bantamweight.</b> His Shanghai knockout of Umar Nurmagomedov — "
+    "as roughly a 4-to-1 underdog — was reported as putting him in line for a title shot. No updated "
+    "official ranking positions were sourced this run, so this page states the result and declines to "
+    "state the ladder.",
+    "<b>A Paris card change:</b> Mairon Santos withdrew with illness from his bout with Nathaniel Wood; "
+    "undefeated newcomer Pavel Andrusca, a former Vendetta FN champion, steps in on debut. Carried from an "
+    "earlier fetch.",
+    "⚠ <b>A widely-surfacing \"Dana White announces\" item was refused.</b> A search return this run "
+    "presented a slate pairing Kayla Harrison with Amanda Nunes, Sean O'Malley with Song Yadong and Alexa "
+    "Grasso with Rose Namajunas as current news. It is undated and describes \"the first slate of fights "
+    "for 2026\" — and this desk's standing record is that the Harrison–Nunes booking for UFC 324 on "
+    "January 24 was <b>cancelled</b> after Harrison withdrew for neck surgery. Nothing from it is "
+    "published. It is the same defect the cyber page catches weekly: a real announcement, re-served as "
+    "today's.",
+    "⚠ <b>The Contender Series calendar disagrees with itself.</b> An earlier fetch put Season 10 Week 5 on "
+    "<b>September 8</b> at the Meta APEX; this run's fetch puts Week 5 on <b>September 15</b>, with Week 7 "
+    "on September 22 and Week 8 on September 29. Both are printed; neither is adopted.",
+]
 
-h.append('''<h2>Rankings &amp; Business</h2><div class="cards">
-<div class="card"><div class="tags"><span class="tag t-a">Rankings</span></div>
-<h3>Rankings movement</h3><p><b>No ranking change was sourced this run</b>, so none is reported. The only rank figures on this page are the badges UFC.com displays on the Paris card &mdash; Hooker #10, Page #15, Cornolle #13.</p></div>
-<div class="card"><div class="tags"><span class="tag t-a">Business</span></div>
-<h3>Business &amp; broadcast</h3><p>Both the Paris prelims and main card stream on <b>Paramount+</b>. <b>No viewership figure, gate, television rating or TKO Group financial number was sourced this run, and none is published.</b> The only dollar figures on this page are the Shanghai bonus amounts, which the sources state.</p></div>
-</div>''')
+BONUSES = ("Performance of the Night, $100,000 each: <b>Song Yadong</b> and <b>Bilal Hasan</b>. Fight of "
+           "the Night, $100,000 each: <b>Levi Rodrigues Jr. vs. Ce Liu</b>. A further $25,000 each went to "
+           "Denise Gomes, Kai Asakura, Andre Lima, Rei Tsuruya, Francesco Nuzzi, Hector Santiago and Julia "
+           "Polastri. Carried from an earlier run's MMA Mania fetch; not re-sourced this run.")
 
-h.append('''<h2>UFC Paris &mdash; full card and prices</h2><table>
-<tr><th>Bout</th><th>Weight</th><th>Odds (UFC.com)</th></tr>
-<tr><td><b>Dan Hooker (#10) vs Salahdine Parnasse</b></td><td>Lightweight</td><td>+400 / &minus;550</td></tr>
-<tr><td>Far&egrave;s Ziam vs Axel Sola</td><td>Lightweight</td><td>&minus;145 / +125</td></tr>
-<tr><td>Michael Venom Page (#15) vs Nursulton Ruziboev</td><td>Middleweight</td><td>&minus;175 / +145</td></tr>
-<tr><td>Daniil Donchenko vs Punahele Soriano</td><td>Welterweight</td><td>&minus;245 / +200</td></tr>
-<tr><td>Kurtis Campbell vs Trevor Peek</td><td>Featherweight</td><td>&minus;390 / +310</td></tr>
-<tr><td>Losene Keita vs Muhammad Naimov</td><td>Featherweight</td><td>&minus;360 / +280</td></tr>
-<tr><td colspan="3" style="background:var(--panel2);font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)">Prelims &mdash; 12:00 PM ET</td></tr>
-<tr><td>Morgan Charriere vs Felipe Lima</td><td>Featherweight</td><td>+155 / &minus;185</td></tr>
-<tr><td>Mario Pinto vs Ryan Spann</td><td>Heavyweight</td><td>&minus;275 / +225</td></tr>
-<tr><td>Oumar Sy vs Modestas Bukauskas</td><td>Light Heavyweight</td><td>&minus;210 / +175</td></tr>
-<tr><td>Nathaniel Wood vs Pavel Andrusca</td><td>Featherweight</td><td>+110 / &minus;130</td></tr>
-<tr><td>Michael Aljarouj vs Fabia Sintes</td><td>Flyweight</td><td>&minus;130 / +110</td></tr>
-<tr><td>Nora Cornolle (#13) vs Klaudia Sygula</td><td>Women&rsquo;s Bantamweight</td><td>&minus;125 / +105</td></tr>
-<tr><td>Matthieu Duclos vs Luis Felipe Dias</td><td>Middleweight</td><td>&minus;115 / &minus;105</td></tr>
-<tr><td>Delphine Benouaich vs Sofia Montenegro</td><td>Women&rsquo;s Strawweight</td><td>&minus;150 / +125</td></tr>
-</table><div class="note"><b>The first six bouts are the main card (3:00 PM ET); the eight below the divider are the prelims (12:00 PM ET).</b> A secondhand listing fetched this run placed <b>Charriere&ndash;Lima on the main card and Campbell&ndash;Peek on the prelims</b>; <b>UFC.com &mdash; last modified Sept 1 at 3:54 PM ET &mdash; has them the other way round, and UFC.com is what is published.</b> Names are spelled as UFC.com spells them.</div>''')
+CHAMPS = [
+    ("Heavyweight", "Tom Aspinall", "Undisputed since June 21, 2025."),
+    ("Interim Heavyweight", "Ciryl Gane", "KO2 over Alex Pereira at Freedom 250, June 14, 2026."),
+    ("Light Heavyweight", "Carlos Ulberg", "Won the vacant belt, KO1 over Jiří Procházka at UFC 327, "
+                                           "April 11, 2026; had ACL surgery afterwards."),
+    ("Middleweight", "Sean Strickland", "Split-decision upset of Khamzat Chimaev at UFC 328, May 9, 2026 "
+                                        "— a two-time champion."),
+    ("Welterweight", "Islam Makhachev", "UD over Jack Della Maddalena, UFC 322. One defence — UD over Ian "
+                                        "Machado Garry, UFC 330, August 15, 2026, his 17th straight "
+                                        "Octagon win."),
+    ("Lightweight", "Justin Gaethje", "TKO4 over Ilia Topuria at Freedom 250, June 14, 2026."),
+    ("Featherweight", "Alexander Volkanovski", "Defended by UD over Diego Lopes at UFC 325, January 31, "
+                                               "2026. Booked against Movsar Evloev at UFC 333."),
+    ("Bantamweight", "Petr Yan", "UD over Merab Dvalishvili, UFC 323, December 6, 2025."),
+    ("Flyweight", "Joshua Van", "TKO1 over Alexandre Pantoja, UFC 323; defended TKO5 over Tatsuro Taira, "
+                                "UFC 328. Rematches Pantoja at UFC 331."),
+    ("Women's Flyweight", "Valentina Shevchenko", "—"),
+    ("Women's Bantamweight", "Kayla Harrison", "Zero defences — the scheduled UFC 324 defence against "
+                                               "Amanda Nunes was cancelled."),
+    ("Women's Strawweight", "Mackenzie Dern", "One defence — UD over Gillian Robertson, UFC 330, "
+                                              "August 15, 2026."),
+    ("Women's Featherweight", "Vacant", "—"),
+]
 
-h.append('''<h2>Champions Board</h2><div class="note"><b>Re-verified against the most recent completed event before publishing.</b> A search result this run again returned <b>middleweight as Khamzat Chimaev</b> &mdash; that is wrong, and it is the eighteenth consecutive edition in which a stale champions list has had to be corrected in that one cell. Sean Strickland took the belt by split decision at UFC 328 on May 9, 2026; two judges scored it 48-47 Strickland, one 48-47 Chimaev.</div><table>
-<tr><th>Division</th><th>Champion</th><th>Note</th></tr>
-<tr><td>Heavyweight</td><td>Tom Aspinall</td><td>Undisputed since June 21, 2025</td></tr>
-<tr><td>Interim Heavyweight</td><td>Ciryl Gane</td><td>KO2 over Alex Pereira, Freedom 250, June 14, 2026</td></tr>
-<tr><td>Light Heavyweight</td><td>Carlos Ulberg</td><td>Won the vacant belt, KO1 over Ji&#345;&iacute; Proch&aacute;zka, UFC 327, April 11, 2026</td></tr>
-<tr><td>Middleweight</td><td>Sean Strickland</td><td><b>Split decision over Khamzat Chimaev, UFC 328, May 9, 2026</b> &mdash; two-time champion; first man to beat Chimaev</td></tr>
-<tr><td>Welterweight</td><td>Islam Makhachev</td><td>UFC 322, Nov 15, 2025; two-division champion. One defence &mdash; decision over Ian Machado Garry, UFC 330, Aug 15, 2026</td></tr>
-<tr><td>Lightweight</td><td>Justin Gaethje</td><td>TKO4 over Ilia Topuria, Freedom 250, June 14, 2026</td></tr>
-<tr><td>Featherweight</td><td>Alexander Volkanovski</td><td>Reclaimed April 12, 2025; defended over Diego Lopes, UFC 325, Jan 31, 2026. <b>Not vacant</b></td></tr>
-<tr><td>Bantamweight</td><td>Petr Yan</td><td>Decision over Merab Dvalishvili, UFC 323, Dec 6, 2025</td></tr>
-<tr><td>Flyweight</td><td>Joshua Van</td><td>TKO1 over Alexandre Pantoja, UFC 323, Dec 6, 2025; one defence. <b>Rematches Pantoja at UFC 331</b></td></tr>
-<tr><td>Women&rsquo;s Bantamweight</td><td>Kayla Harrison</td><td>Sub2 over Julianna Pe&ntilde;a, UFC 316, June 7, 2025; <b>0 defences</b></td></tr>
-<tr><td>Women&rsquo;s Flyweight</td><td>Valentina Shevchenko</td><td>&mdash;</td></tr>
-<tr><td>Women&rsquo;s Strawweight</td><td>Mackenzie Dern</td><td>UFC 321, Oct 25, 2025. One defence &mdash; decision over Gillian Robertson, UFC 330, Aug 15, 2026</td></tr>
-</table>''')
+COUNTDOWN_JS = """<script>(function(){var t=new Date('2026-09-05T12:00:00-04:00');function u(){var el=document.getElementById('ufccdn');if(!el)return;var d=t-new Date();if(d<=0){el.textContent='Fight week \\u2014 live/completed';return;}var dd=Math.floor(d/86400000),hh=Math.floor(d%86400000/3600000),mm=Math.floor(d%3600000/60000);el.textContent=dd+'d '+hh+'h '+mm+'m';}u();setInterval(u,30000);})();</script>"""
 
-h.append('''<h2>Sources</h2><div class="panel srcs">
-<a href="https://www.ufc.com/event/ufc-fight-night-september-05-2026">UFC.com &mdash; UFC Fight Night: Hooker vs Parnasse, official card, odds and start times (last modified Sept 1, 2026, 3:54 PM ET)</a><br>
-<a href="https://www.espn.com/mma/fightcenter/_/id/600060620/league/ufc">ESPN &mdash; UFC Fight Night: Nurmagomedov vs. Song fight results</a><br>
-<a href="https://www.ufc.com/news/ufc-fight-night-shanghai-2026-bonus-coverage">UFC.com &mdash; UFC Shanghai bonus coverage</a><br>
-<a href="https://www.sherdog.com/news/news/UFC-Shanghai-bonuses-Yadong-Song-3-others-earn-36100000-202571">Sherdog &mdash; UFC Shanghai bonuses: Yadong Song, 3 others earn $100,000</a><br>
-<a href="https://www.espn.com/mma/ufc/story/_/id/48728368/strickland-stuns-chimaev-ufc-middleweight-title">ESPN &mdash; Strickland stuns rival Chimaev for UFC middleweight title</a><br>
-<a href="https://www.skysports.com/mma/news/19828/13542189/sean-strickland-defeats-khamzat-chimaev-in-ufc-328-to-regain-middleweight-title-after-split-decision">Sky Sports &mdash; Strickland defeats Chimaev at UFC 328 to regain the middleweight title</a><br>
-<a href="https://www.espn.com/mma/story/_/id/14947566/current-all-ufc-champions">ESPN &mdash; Current and all-time UFC champions</a><br>
-<a href="https://www.si.com/fannation/mma/news/dana-white-s-contender-series-2026-week-4-live-stream-results-highlights">Sports Illustrated &mdash; Dana White&rsquo;s Contender Series 2026 Week 4 results</a><br>
-<a href="https://www.tapology.com/fightcenter/events/142723-contender-series-2026-week-4">Tapology &mdash; Contender Series 2026: Week 4</a><br>
-<a href="https://www.ufc.com/news/10-spotlighting-septembers-most-exciting-matchups">UFC.com &mdash; The 10: Spotlighting September&rsquo;s most exciting matchups</a>
-</div>
-<div class="disc"><b>Cards and bouts are subject to change.</b> Odds are the prices UFC.com listed at the time of the fetch above and move constantly; they are not a recommendation and no wagering advice is offered. Where a name, time or figure was rendered inconsistently across sources, this page says so rather than choosing silently.</div>''')
 
-CDN = """<script>(function(){var el=document.getElementById('ufccdn');if(!el)return;function t(){var n=new Date();var e=new Date('2026-09-05T15:00:00-04:00');var s=Math.floor((e-n)/1000);if(s<=0){el.textContent='Fight week \\u2014 live/completed';return;}var d=Math.floor(s/86400),hh=Math.floor(s%86400/3600),mm=Math.floor(s%3600/60);el.textContent=d+'d '+hh+'h '+mm+'m';}t();setInterval(t,30000);})();</script>"""
-h.append('</div>'+CDN+STAMP+'</body></html>')
-open(OUT+"mma-briefing.html","w").write("".join(h))
-print("mma ok", sum(len(x) for x in h))
+def build():
+    p = []
+    p.append(C.head("The Octagon — Daily Briefings", CSS))
+    p.append('<div class="masthead"><h1>&#8856; The Octagon</h1>'
+             '<p class="tag">Your daily MMA briefing — UFC, prospects &amp; the business of fighting</p>'
+             + C.meta_row() + "</div>")
+    p.append('<div class="tldr"><b>Tale of the Tape</b> <span>%s</span></div>' % TLDR)
+    p.append('<div class="freshline" id="freshline">&nbsp;</div>')
+    p.append(C.nav("mma"))
+
+    p.append('<div class="cdn"><span class="k">Next Card</span>'
+             '<span class="v" id="ufccdn">&nbsp;</span>'
+             '<span class="e">UFC Fight Night: Hooker vs. Parnasse — Saturday, September 5, '
+             'Accor Arena, Paris (prelims 12 PM ET)</span></div>')
+
+    # TOP STORY
+    p.append('<h2 class="sec">Top Story</h2>')
+    p.append('<div class="panel top"><h3>Paris is three days away, and the market has decided the debutant '
+             'is the safe bet</h3>'
+             '<p>Salahdine Parnasse walks into the Accor Arena on Saturday for his first UFC fight — as a '
+             '<b>−600 favourite</b>. Dan Hooker, <b>24-14</b> as a professional and <b>14-10</b> inside the '
+             'Octagon, is the <b>+425</b> underdog in his own opponent\'s promotional debut. '
+             'The line opened around −400/+300 and has moved roughly 200 points toward the Frenchman since; '
+             'DraftKings has it −600/+440 and prices across books run from −500 to −700 and +360 to +450.</p>'
+             '<p>That number is not a novelty act. Parnasse is 23-2, a <b>two-time KSW featherweight '
+             'champion and one-time KSW lightweight champion</b> who went 14-2 in that promotion with four '
+             'defences of the lightweight belt, signed with the UFC in <b>late July 2026</b> having '
+             'previously turned the promotion down, and made his U.S. debut in May with a first-round '
+             'stoppage of Kenneth Cross for a fifth consecutive win. He is a debutant in this promotion and '
+             'nothing more than that — not a UFC veteran, not ranked — but he did not come through the '
+             'Contender Series, and this page has corrected that error once and will not repeat it.</p></div>')
+
+    # CARDS
+    p.append('<h2 class="sec">Fight Week — Upcoming Cards</h2>')
+    cards = []
+    for date, name, note, odds, isnew in CARDS:
+        t = '<span class="tag new">New</span>' if isnew == "new" else ""
+        o = '<p style="margin-top:8px;color:#caa64a">%s</p>' % odds if odds else ""
+        cards.append('<div class="card"><div class="evdate">%s</div><h4>%s</h4>%s<p>%s</p>%s</div>'
+                     % (date, name, t, note, o))
+    p.append('<div class="cards two">' + "".join(cards) + "</div>")
+    p.append('<div class="note">Also on the schedule and sourced this run: <b>October 10</b> — Allen vs. '
+             'Duncan, Las Vegas; <b>October 17</b> — Buckley vs. Malott, Edmonton; <b>October 31</b> — '
+             'Las Vegas, no headliner sourced. Odds are reproduced from source snippets; where a book is '
+             'named it is named, and where none was, none is claimed.</div>')
+
+    # RESULTS
+    p.append('<h2 class="sec">Last Event — Results</h2>')
+    rows = "".join('<tr><td class="%s">Win</td><td>%s</td><td>%s</td></tr>' % r for r in RESULTS)
+    p.append('<div class="tblwrap"><table><tr><th>Result</th><th>Bout</th><th>Method</th></tr>'
+             + rows + "</table></div>")
+    p.append('<div class="note"><b>UFC Fight Night: Nurmagomedov vs. Song</b> — Saturday, August 29, '
+             'Oriental Sports Center, Shanghai; 13 fights. Only bouts confirmed by a source fetched this '
+             'run are tabled, and no undercard result is guessed. Two method variances are preserved rather '
+             'than smoothed over: Song\'s finishing strike reads "right uppercut" in one account and simply '
+             '"punch" in another, and the Gomes finish reads "TKO" in one and "KO" in another. Song entered '
+             'as roughly a 4-to-1 underdog.<br><br><b>Performance bonuses.</b> %s</div>' % BONUSES)
+
+    # PROSPECTS
+    p.append('<h2 class="sec">Prospect Watch</h2>')
+    cards = []
+    for name, body in PROSPECTS:
+        cards.append('<div class="card"><h4>%s</h4><span class="tag new">prospect</span><p>%s</p></div>'
+                     % (name, body))
+    p.append('<div class="cards two">' + "".join(cards) + "</div>")
+
+    # AROUND
+    p.append('<h2 class="sec">Around the Sport</h2>')
+    p.append('<div class="panel"><ul class="b">' + "".join("<li>%s</li>" % a for a in AROUND) + "</ul></div>")
+
+    # RANKINGS & BUSINESS
+    p.append('<h2 class="sec">Rankings &amp; Business</h2>')
+    p.append('<div class="panel">'
+             '<p><b>Rankings movement.</b> No updated official ranking positions were sourced after '
+             'Shanghai. This page states results and declines to state the ladder.</p>'
+             '<p><b>Business &amp; broadcast.</b> Freedom 250 drew <b>34 million total global viewers</b>, '
+             '17 million of them across the United States and Latin America, per TKO Group as reported on '
+             'June 26, 2026. Paramount is in <b>year one of a seven-year, $7.7 billion deal</b>, and the '
+             'Canada expansion beginning in 2027 covers all 13 marquee numbered-event main cards at no '
+             'extra cost to Paramount+ subscribers. All three figures are carried from an earlier run\'s '
+             'fetch and were not re-sourced today. A separately reported Hollywood Reporter figure of '
+             '8 million average viewers for the White House card is an <em>average</em>, not a total, and '
+             'is deliberately not combined with or compared against the TKO numbers.</p></div>')
+
+    # CHAMPIONS
+    p.append('<h2 class="sec">Champions Board</h2>')
+    rows = "".join('<tr><td>%s</td><td class="win">%s</td><td>%s</td></tr>' % c for c in CHAMPS)
+    p.append('<div class="tblwrap"><table><tr><th>Division</th><th>Champion</th><th>Note</th></tr>'
+             + rows + "</table></div>")
+    p.append('<div class="note"><b>The stale champions list returned for a twenty-third time, and it was '
+             'wrong in exactly the same single cell.</b> The list fetched this run gives middleweight to '
+             'Khamzat Chimaev. The correct answer is <b>Sean Strickland</b>, who took the belt by split '
+             'decision at UFC 328 on May 9, 2026. Twelve of the thirteen cells it offered were right — '
+             'which is precisely '
+             'why the error keeps surviving a casual read. Error counts across the last seventeen fetches: '
+             '1, 3, 1, 3, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, <b>1</b>. The board above is the corrected '
+             'one. Two cells were independently confirmed by this run\'s fetches: light heavyweight to '
+             'Ulberg, and "Women\'s Featherweight: Vacant," which is correct and was offered for the sixth '
+             'time.</div>')
+
+    p.append(C.sources(SOURCES))
+    p.append('<div class="disc">Cards and bouts are subject to change — fighters withdraw, bouts are '
+             'rebooked and betting lines move continuously. Odds shown are point-in-time figures from the '
+             'sources listed above, not live prices.</div></footer>')
+    p.append(COUNTDOWN_JS)
+    p.append(C.STAMP_JS)
+    p.append("</div></body></html>")
+    return "".join(p)
+
+
+if __name__ == "__main__":
+    open("mma-briefing.html", "w").write(build())
+    print("mma ok")

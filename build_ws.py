@@ -1,119 +1,305 @@
 # -*- coding: utf-8 -*-
-import sys; sys.path.insert(0,'/tmp')
-from css import BASE, STAMP, nav, meta
-OUT="/sessions/amazing-determined-planck/mnt/outputs/"
+import css as C
 
-ROOT=":root{--bg:#0d0c0a;--panel:#17150f;--panel2:#1e1b13;--line:#2e2a1e;--fg:#f2ede0;--muted:#8d876f;--muted2:#c2bba6;--accent:#caa64a;--accent2:#e8c766;--up:#3fbf72;--crit:#e05555;--warn:#e0a13a;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}\n"
+ACCENT, ACCENT2 = "#caa64a", "#e8c766"
+CSS = C.base_css(ACCENT, ACCENT2, "#0d0c0a", "#171512", "#2b2721") + """
+.masthead h1{font-family:Georgia,'Times New Roman',serif;color:var(--accent2)}
+h3,h2.lead{font-family:Georgia,'Times New Roman',serif}
+.livebar{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 8px 4px;margin-bottom:18px}
+.livebar-label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--up);
+  display:flex;align-items:center;gap:8px;padding:4px 8px 8px}
+.livebar-label .dot{width:7px;height:7px;border-radius:50%;background:var(--up);display:inline-block}
+.tickers{display:grid;gap:11px;grid-template-columns:1fr}
+@media(min-width:700px){.tickers{grid-template-columns:repeat(3,1fr)}}
+.ticker{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:6px 10px}
+"""
 
-h=[]
-h.append('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Closing Bell &mdash; Daily Markets Briefing</title><style>'+ROOT+BASE+'</style></head><body class="serif"><div class="wrap">')
-h.append('<div class="masthead"><h1>The Closing Bell</h1><p class="tag">Your daily markets briefing &mdash; the tape, the drivers &amp; the calendar</p>'+meta()+'</div>')
-h.append('<div class="tldr"><b>The Tape</b> <span>The opening bell produced a split tape rather than a down one &mdash; the Dow up <b>0.37%</b> and the S&amp;P 500 up <b>0.06%</b> while the Nasdaq slipped <b>0.06%</b> and the Russell 2000 fell <b>1.23%</b> &mdash; after ADP put August private payroll growth at <b>38,000</b>, the smallest since January, with the 10-year Treasury yield touching <b>4.814%</b> and crude reversing lower from a one-month high.</span></div>')
-h.append('<div class="freshline" id="freshline">&nbsp;</div>')
-h.append(nav("wallstreet-briefing.html"))
+TLDR = ("Wall Street snapped a three-day losing streak on Wednesday, with the S&amp;P 500 closing up "
+        "0.46%, the Dow up 295.07 points and the Nasdaq Composite up 0.45% — then Snowflake jumped "
+        "and Broadcom fell after the bell.")
 
-# BLOCK A
-h.append('<div class="livebar"><div class="livebar-label"><span class="dot"></span> LIVE QUOTES</div><script src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>{"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},{"proName":"FOREXCOM:DJI","title":"Dow 30"},{"proName":"NASDAQ:GTLB","title":"GitLab"},{"proName":"NASDAQ:DELL","title":"Dell"},{"proName":"NASDAQ:MDB","title":"MongoDB"},{"proName":"NASDAQ:AVGO","title":"Broadcom"},{"proName":"NYSE:SNOW","title":"Snowflake"},{"proName":"TVC:USOIL","title":"WTI Crude"},{"proName":"TVC:US10Y","title":"US 10Y"}],"colorTheme":"dark","isTransparent":true,"showSymbolLogo":true,"displayMode":"adaptive","locale":"en"}</script></div>')
-# BLOCK B
-h.append('<h2>Live Index Quotes &mdash; updates in real time</h2><div class="tickers">')
-for s in ["FOREXCOM:SPXUSD","FOREXCOM:NSXUSD","FOREXCOM:DJI"]:
-    h.append('<div class="ticker"><script src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"%s","width":"100%%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div>'%s)
-h.append('</div><div class="note">Quotes stream live (some feeds ~15-min delayed). Editorial below reflects the latest edition; official closes are in the Weekly Scorecard.</div>')
+SOURCES = [
+    ("TheStreet — Stock Market Today (Sept. 2, 2026) live blog [fetched this run; last modified 2:33 PM ET]",
+     "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-02-2026"),
+    ("CNBC — Stock market news for Sept. 2, 2026",
+     "https://www.cnbc.com/2026/09/01/stock-market-today-live-updates.html"),
+    ("Investing.com — After-Hours Movers: AVGO, SNOW, HPE, NTAP… [published 4:30 PM ET Sept 2]",
+     "https://in.investing.com/news/stock-market-news/afterhours-movers-avgo-snow-hpe-ntap-ntsk-chpt-five-tlys-pvh-rare-432SI-5580445"),
+    ("Yahoo Finance — Stock Market Today (Sept. 2, 2026): Dow edges higher as oil prices…",
+     "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-sept-2-134032621.html"),
+    ("Yahoo Finance — 10-year Treasury touches highest level since 2023 as oil prices stay elevated",
+     "https://finance.yahoo.com/markets/article/10-year-treasury-touches-highest-level-since-2023-as-oil-prices-stay-elevated-134238599.html"),
+    ("Benzinga — Why Is Credo Technology Stock Sinking",
+     "https://www.benzinga.com/trading-ideas/movers/26/09/61568461/why-is-credo-technology-stock-sinking-tuesday-2"),
+    ("Morningstar — Top Stock Market Gainers, Losers and Most Active",
+     "https://www.morningstar.com/markets/movers"),
+    ("Investing.com — S&amp;P 500 sector performance: Energy leads with +42% YTD gain in 2026 [figures refused, see note]",
+     "https://www.investing.com/news/stock-market-news/sp-500-sector-performance-energy-leads-with-42-ytd-gain-in-2026-93CH-4883146"),
+    ("Investing.com — Broadcom, Hewlett Packard Enterprise, Snowflake and more set to report Wednesday",
+     "https://www.investing.com/news/stock-market-news/broadcom-hewlett-packard-enterprise-snowflake-and-more-set-to-report-wednesday-93CH-4884463"),
+    ("CNBC — WTI Crude (Oct'26) quote",
+     "https://www.cnbc.com/quotes/@CL.1"),
+]
 
-h.append('''<h2>The Lead</h2><div class="panel">
-<h3 class="lead-h">Stocks split at the open as small caps break away from the Dow <span style="color:var(--muted);font-weight:400">(as of ~9:35 AM ET)</span></h3>
-<p><b>The first clean, single-source read of the session is in, and it is wider than &ldquo;mixed&rdquo; suggests.</b> TheStreet&rsquo;s <b>9:35 AM ET</b> opening-bell entry has the <b>S&amp;P 500 up 0.06%</b>, the <b>Dow Jones Industrial Average up 0.37%</b>, the <b>Nasdaq Composite down 0.06%</b> &mdash; and the <b>Russell 2000 down 1.23%</b>. <b>Those four figures come from one source with one clock, and they are moves, not levels.</b> The only index <i>levels</i> anywhere on this page are Tuesday&rsquo;s official closes in the Weekly Scorecard.</p>
-<p class="note" style="border-left:3px solid var(--up);padding-left:11px"><b>The small-cap number is the one that changes the picture.</b> A 1.23% decline in the Russell 2000 against a 0.37% gain in the Dow is a <b>1.6-percentage-point spread inside a single quote board</b>. <b>No source fetched this run explains that spread</b>, and no explanation is offered here &mdash; but a session in which the rate-sensitive end of the market falls while the industrial end rises is consistent with the yield story below, and that consistency is an observation, not a causal claim.</p>
-<p><b>The number that arrived before the bell was soft.</b> ADP reports that private U.S. employers added <b>38,000</b> jobs in August, fewer than the <b>47,000</b> Dow Jones consensus and down from July&rsquo;s <b>upwardly revised 46,000</b>. It is the <b>smallest monthly gain since January</b>. The composition is narrower than the headline: <b>education and health services added 45,000</b> and led every category, with health care at the forefront; leisure and hospitality added 16,000 and construction 12,000. Against that, <b>manufacturing lost 17,000</b>, professional and business services shed 16,000, and natural resources and mining and trade, transportation and utilities each fell 5,000. Friday&rsquo;s Labor Department report is the number this one is read as a preview of.</p>
-<p class="note"><b>A conflict on the consensus, printed rather than resolved.</b> TheStreet, citing CNBC and ADP, gives the estimate as <b>47,000</b> with July revised up to <b>46,000</b>. Yahoo Finance&rsquo;s 5:00 AM economic-data list, written <i>before</i> the release, gave <b>+46,000 expected, +44,000 previously</b>. <b>The two are describing different quantities at different times</b> &mdash; a pre-release preview and a post-release write-up &mdash; and the post-release figures are the ones used above. Both are recorded so the discrepancy is visible rather than silently smoothed.</p>
-<p class="note" style="border-left:3px solid var(--up);padding-left:11px"><b>The reversal worth watching is in crude, and it happened inside one source&rsquo;s own timeline.</b> At <b>7:04 AM ET</b> TheStreet had WTI <span class="up">+0.32% at $90.51</span> and Brent <span class="up">+0.57% at $95.19</span>, rising on the overnight strikes. By its <b>9:24 AM ET</b> update the same live blog has oil <b>falling</b> after touching more than one-month highs earlier in the session: <b>WTI <span class="down">&minus;0.71% at $89.58</span></b> and <b>Brent <span class="down">&minus;0.39% at $94.28</span></b>, as traders weighed supply-disruption risk against evidence, per Reuters, that crude is still reaching the market. <b>This is a genuine intraday turn inside one source, not a disagreement between two.</b> Saxo Bank&rsquo;s head of commodity strategy Ole Hansen calls it &ldquo;a binary risk&rdquo;: news of a deal &ldquo;could send prices tumbling, while any escalation would further undermine the prospect of a peace deal,&rdquo; leaving crude volatile with &ldquo;a potential $5 move in either direction.&rdquo;</p>
-<p>The driver underneath all of it is unchanged from Tuesday and louder overnight. Iran&rsquo;s Revolutionary Guards said Wednesday that <b>two oil tankers struck naval mines</b> attempting to transit the Strait of Hormuz, disabling the vessels and forcing their crews off after the ships ignored warnings about an &ldquo;illegal route.&rdquo; Iran targeted Jordan, the United Arab Emirates and Kuwait with missiles and drones overnight in retaliation for the latest American airstrikes, which the U.S. military says hit Iranian military targets. President Trump said he was &ldquo;not trying to force Iran to the bargaining table,&rdquo; reiterating on Truth Social that the U.S. has &ldquo;almost total control&rdquo; over the Strait.</p>
-<p>What makes this a bond story rather than only an energy story is the inflation channel. TheStreet, citing CNBC, has the benchmark 10-year Treasury yield hitting a <b>day high of 4.814%</b>, calling that its highest level since <b>November 2023</b>. Per <i>The Wall Street Journal</i> on LSEG data, the 10-year rose <b>Tuesday</b> to <b>4.798%</b>, the highest since <b>January 2025</b>, and the two-year to <b>4.369%</b> &mdash; what would be its highest settlement in nineteen months &mdash; &ldquo;reflecting rising bets on an interest rate increase by the Federal Reserve in September.&rdquo; <b>Two sources, two different levels, two different superlatives and two different windows; all are printed with attribution and none is reconciled into a single number.</b> One-year-ahead U.S. inflation expectations measured by derivative markets have crept to <b>2.5%</b> from less than 2% over the past couple of weeks, LSEG data show.</p>
-<p>The move is not American. The 10-year Japanese government bond yield crossed <b>3%</b> to a 30-year high, the 10-year German Bund reached <b>3.364%</b> &mdash; unseen since 2011 &mdash; the 10-year U.K. gilt rose to <b>5.255%</b>, its highest since 2008, and the 30-year gilt to levels unseen since 1998. Metzler analyst Leon Ferdinand Bost described global bonds as facing a &ldquo;perfect storm&rdquo; of inflation fears driven by higher energy prices, compounded by fiscal concerns and heavy supply at the long end. Daniela Hathorn of Capital.com framed the loop directly: higher oil feeds inflation worries, which feed yields, which strengthen expectations that the Fed &ldquo;may need to tighten monetary policy further.&rdquo;</p>
-<p><b>Two desk views, both attributed, and they do not agree about where the pressure originates.</b> Kyle Rodda of Capital.com: &ldquo;Renewed hostilities in the Middle East sent crude prices surging, driving Wall Street lower and global bond yields to multi-year &mdash; and in some instances, multi-decade &mdash; highs,&rdquo; adding that markets &ldquo;will be hopeful that the latest flare-up in tensions between the US and Iran is another attempt by the Trump administration to &lsquo;escalate to de-escalate&rsquo;.&rdquo; TheStreet Pro&rsquo;s James &ldquo;Rev Shark&rdquo; DePorre dates the selling differently: &ldquo;The selling that was triggered on Friday by Fed Chair Kevin Warsh continues Wednesday morning, with futures lower again&hellip; The primary pressure is coming from bond markets overseas,&rdquo; and &ldquo;the U.S. is the best house in a deteriorating neighborhood due to the strong earnings and AI growth, but that doesn&rsquo;t mean the market can withstand the pressure of inflation and higher interest rates.&rdquo; <b>One dates the move to Tuesday&rsquo;s strikes, the other to Friday&rsquo;s Fed remarks. Both are quoted; neither is adopted.</b></p>
-<p><b>A policy headline landed seventeen minutes before the open.</b> Commerce Secretary <b>Howard Lutnick</b> told CNBC that the administration is developing <b>a tariff framework for semiconductors</b> and that companies know the tariffs are coming, confirming a Politico report from last week. &ldquo;I think what you&rsquo;re going to see is targeted, thoughtful tariff policy that basically says if you build here, you don&rsquo;t pay, but if you don&rsquo;t build here, expect to pay to enter the greatest market in the world,&rdquo; Lutnick said, adding: &ldquo;We will be successful in semiconductors. They&rsquo;re going to be built in America.&rdquo; <b>No rate, no scope and no start date has been published, and no chip-stock reaction to it was sourced this run</b> &mdash; but it arrives on the morning Broadcom reports.</p>
-<p class="note"><b>On dates and pointers.</b> References to earlier editions of this page are written as absolute timestamps (the 8:19 AM, 8:48 AM, 9:18 AM or 9:53 AM edition) rather than as &ldquo;the previous edition,&rdquo; because a relative pointer written in one edition becomes false in the next without anything on the page changing. Novelty tags are dated the same way.</p>
-<p class="note" style="border-left:3px solid var(--crit);padding-left:11px"><b>A standing hazard, kept on the page because it nearly cost three false claims.</b> A search result offered Medtronic <span class="up">+3%</span>, Nvidia <span class="down">&minus;1.7%</span> and an Apple figure as <i>today&rsquo;s</i> early movers, sourced to Schwab&rsquo;s market-open commentary. Fetching that page showed it was <b>Tuesday&rsquo;s</b> instalment &mdash; &ldquo;Published as of: September 1, 2026, 9:11 a.m. ET&rdquo; &mdash; sitting on a <b>rolling URL</b> that always resolves to the newest piece and had not yet rolled. <b>An evergreen URL is a citation to a slot, not to an article: correct today, silently wrong tomorrow, and the fetched page&rsquo;s own dateline is the only tell.</b> None of the three was published.</p>
-</div>''')
+TICKER = ('<script src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>'
+          '{"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},'
+          '{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},'
+          '{"proName":"FOREXCOM:DJI","title":"Dow 30"},'
+          '{"proName":"NASDAQ:CRDO","title":"Credo"},'
+          '{"proName":"NYSE:SNOW","title":"Snowflake"},'
+          '{"proName":"NASDAQ:AVGO","title":"Broadcom"},'
+          '{"proName":"NYSE:DELL","title":"Dell"},'
+          '{"proName":"NASDAQ:MDB","title":"MongoDB"},'
+          '{"proName":"TVC:USOIL","title":"WTI Crude"},'
+          '{"proName":"TVC:US10Y","title":"US 10Y"}],'
+          '"colorTheme":"dark","isTransparent":true,"showSymbolLogo":true,'
+          '"displayMode":"adaptive","locale":"en"}</script>')
 
-h.append('''<h2>Movers &amp; Drivers</h2><div class="note">Single-stock figures below are <b>pre-market</b> quotes as TheStreet reported them at <b>8:15 AM ET</b> unless a card states otherwise. <b>No September 2 single-stock <i>session</i> move has been sourced this run</b>, so none is published &mdash; a pre-market move is not a session move. &ldquo;New&rdquo; tags mark items absent from the <b>9:53 AM</b> edition.</div><div class="cards">
-<div class="card"><div class="tags"><span class="tag t-new">New this run</span><span class="tag t-a">Breadth</span></div>
-<h3>Russell 2000 &mdash; the outlier at the open</h3><p>Down <span class="down">1.23%</span> in TheStreet&rsquo;s <b>9:35 AM ET</b> opening read, against the Dow&rsquo;s <span class="up">+0.37%</span>. <b>This is the largest index move printed on this page for September 2, on the arithmetic of those four figures and on nothing else.</b> No source fetched this run gives a reason for the small-cap underperformance, and none is supplied here.</p></div>
-<div class="card"><div class="tags"><span class="tag t-a">Carried forward</span><span class="tag t-a">The turn is new since 9:24 AM</span><span class="tag t-a">Commodities</span></div>
-<h3>Crude oil &mdash; up overnight, down by the bell</h3><p>WTI <span class="down">&minus;0.71%</span> to <b>$89.58</b> and Brent <span class="down">&minus;0.39%</span> to <b>$94.28</b> as of TheStreet&rsquo;s <b>9:24 AM ET</b> update, <b>after</b> climbing to more than one-month highs earlier in the same session &mdash; the 7:04 AM prints were $90.51 and $95.19, both higher. Reuters attributes the fade to traders weighing disruption risk against signs that crude is still reaching the market despite overnight U.S. and Iranian strikes. <b>Both ends of the move are printed; neither is averaged into the other.</b></p></div>
-<div class="card"><div class="tags"><span class="tag t-new">New this run</span><span class="tag t-a">Metals</span></div>
-<h3>Gold and silver &mdash; both lower in early trade</h3><p>Gold futures <span class="down">&minus;0.94%</span> at <b>$4,355</b> an ounce and silver futures <span class="down">&minus;1.69%</span> at <b>$64.26</b>, both as TheStreet reported them in <b>early trading</b> (7:09 and 7:13 AM ET respectively). <b>Precious metals falling on a day of escalating hostilities cuts against the reflex safe-haven reading</b>; no source fetched this run explains it, so the observation is left as an observation.</p></div>
-<div class="card"><div class="tags"><span class="tag t-a">Carried forward</span><span class="tag t-a">Largest single-name move on this page</span><span class="tag t-a">Earnings</span></div>
-<h3>GitLab (GTLB)</h3><p>Shares &ldquo;skyrocketed <span class="up">21%</span>&rdquo; pre-market after strong second-quarter results. <b>This is the largest single-name percentage printed anywhere on this page</b>, on the arithmetic and on nothing else.</p></div>
-<div class="card"><div class="tags"><span class="tag t-c">Down</span><span class="tag t-a">Earnings</span></div>
-<h3>MongoDB (MDB)</h3><p>Down <span class="down">12.4%</span> pre-market. TheStreet&rsquo;s framing is the whole puzzle in one sentence: the company <b>beat</b> Wall Street&rsquo;s second-quarter expectations but <b>offered cautious guidance</b>.</p></div>
-<div class="card"><div class="tags"><span class="tag t-a">Earnings</span><span class="tag t-a">Reversal</span></div>
-<h3>Dell Technologies (DELL)</h3><p>Up <span class="up">8.1%</span> pre-market after beating Wall Street&rsquo;s expectations for its fiscal second quarter of 2027 on massive demand for AI servers, having closed Tuesday&rsquo;s regular session at <b>425.00</b>, down <span class="down">31.01 (&minus;6.80%)</span>. <b>The same company fell hard in one session and is bid up before the next; the close and the pre-market move are separate quantities over separate windows and no superlative is attached to either.</b></p></div>
-<div class="card"><div class="tags"><span class="tag t-a">Reports tonight</span></div>
-<h3>Hewlett Packard Enterprise (HPE)</h3><p>Up <span class="up">3.8%</span> pre-market <b>ahead of</b> third-quarter results scheduled for after the closing bell. The move is anticipation, not reaction.</p></div>
-<div class="card"><div class="tags"><span class="tag t-c">Down</span></div>
-<h3>Snowflake (SNOW) &amp; Datadog (DDOG)</h3><p>Snowflake off <span class="down">2.5%</span> ahead of its own second-quarter report, also after the bell. Datadog off <span class="down">2.63%</span> on what TheStreet attributes to escalating geopolitical tensions, climbing Treasury yields and lingering concerns over platform usage cuts &mdash; three causes for one number, none of them separable.</p></div>
-<div class="card"><div class="tags"><span class="tag t-a">Reports tonight</span><span class="tag t-a">Consensus</span></div>
-<h3>Broadcom (AVGO) &mdash; tonight&rsquo;s number</h3><p>Reports after the close. Consensus compiled ahead of the print looks for <b>Q3 revenue of $29.43 billion</b> and <b>GAAP EPS of $2.55</b>; management had previously guided <b>AI semiconductor revenue to grow more than 200% year over year to about $16 billion</b>. <b>These are expectations, not results.</b> Snowflake, also after the bell, is seen at <b>$1.48 billion</b> revenue and <b>$0.45</b> per share.</p></div>
-<div class="card"><div class="tags"><span class="tag t-a">Carried forward</span><span class="tag t-a">Policy</span></div>
-<h3>Chip tariffs &mdash; a framework, not yet a rate</h3><p>Commerce Secretary <b>Howard Lutnick</b> told CNBC at <b>9:07 AM ET</b> that the administration is building <b>a semiconductor tariff framework</b> and that companies are aware the tariffs are coming, confirming a Politico report from last week. The stated principle is &ldquo;if you build here, you don&rsquo;t pay.&rdquo; <b>No rate, no scope and no start date has been published</b>, and no move in any chip stock is attached to it here because none was sourced.</p></div>
-<div class="card"><div class="tags"><span class="tag t-a">Carried forward</span><span class="tag t-a">No figure sourced</span></div>
-<h3>SpaceX (SPCX)</h3><p>Shares &ldquo;edge up&rdquo; after a Falcon 9 carried <b>27</b> Starlink satellites to orbit from Vandenberg Space Force Base at <b>4:42 a.m. EDT</b> &mdash; the <b>35th</b> flight for that first stage, booster B1063, two short of the reuse record set by B1067 last week. <b>No percentage is published because the source states none.</b> For scale, and dated: the stock debuted at <b>$135</b> on June 12 and reached a record <b>$225.64</b> on June 16.</p></div>
-<div class="card"><div class="tags"><span class="tag t-a">Trade</span></div>
-<h3>Canada &mdash; talks, or a standoff</h3><p>Canadian Prime Minister <b>Mark Carney</b> says the U.S. and Canada could resume trade discussions when Americans &ldquo;stop throwing shade&rdquo; and &ldquo;start being serious&rdquo; about negotiations. Treasury Secretary <b>Scott Bessent</b> downplayed the idea that the U.S. is in a trade war with Canada. <b>No market impact from this exchange was sourced this run and none is asserted.</b></p></div>
-</div>''')
 
-h.append('<h2>Chart of the Day</h2><div class="cdn"><span class="lab">Chart of the Day</span><span class="val">NASDAQ:GTLB</span><span class="ev">GitLab &mdash; up 21% pre-market on second-quarter results, the largest single-name move printed on this page.</span></div><div class="panel" style="padding:8px"><script src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>{"symbol":"NASDAQ:GTLB","width":"100%","height":240,"locale":"en","dateRange":"1D","colorTheme":"dark","isTransparent":true,"autosize":false}</script></div>')
+def quote(sym):
+    return ('<div class="ticker"><script src="https://s3.tradingview.com/external-embedding/'
+            'embed-widget-single-quote.js" async>{"symbol":"%s","width":"100%%",'
+            '"colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div>' % sym)
 
-h.append('<h2>Sector Heat &mdash; Live</h2><div class="panel" style="padding:8px"><script src="https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js" async>{"dataSource":"SPX500","blockSize":"market_cap_basic","blockColor":"change","grouping":"sector","locale":"en","colorTheme":"dark","hasTopBar":false,"isDataSetEnabled":false,"isZoomEnabled":true,"hasSymbolTooltip":true,"isMonoSize":false,"width":"100%","height":420}</script></div><div class="note"><b>No September 2 sector figure has been sourced this run and none is asserted</b> &mdash; the map above is live and is the current picture. A search summariser this run offered same-day sector percentages without a date this desk could pin to September 2; <b>they were refused.</b> Editorial reference for Tuesday&rsquo;s completed session: four of eleven S&amp;P 500 sectors closed higher, energy leading at <span class="up">+1.3%</span> and consumer discretionary lagging at <span class="down">&minus;1.9%</span>.</div>')
 
-h.append('<h2>The Calendar &mdash; Live</h2><div class="panel" style="padding:8px"><script src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>{"colorTheme":"dark","isTransparent":true,"width":"100%","height":420,"locale":"en","importanceFilter":"0,1","countryFilter":"us"}</script></div>')
-h.append('<h2>Live Market Headlines &mdash; updates in real time</h2><div class="panel" style="padding:8px"><script src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>{"feedMode":"market","market":"stock","colorTheme":"dark","isTransparent":true,"displayMode":"regular","width":"100%","height":420,"locale":"en"}</script></div>')
+MOVERS = [
+    ("Credo Technology (CRDO)", "down", "−20.69% to $163.87",
+     "Record fiscal Q1 revenue of $479M, up 114.7% year over year, beat both internal and Wall Street "
+     "estimates — but shrinking margins and rising R&amp;D expense drove the selling. The close "
+     "reconciles to the cent against the sourced prior close of $206.63.", "new"),
+    ("MongoDB (MDB)", "down", "−13.84% to $374.64",
+     "Beat second-quarter earnings expectations but issued cautious guidance; the stock was already "
+     "down 12.4% in the premarket at 8:15 AM ET.", ""),
+    ("Palo Alto Networks (PANW)", "down", "−10.82% to $323.08",
+     "Investors focused on slowing growth metrics, margin pressure and elevated expectations rather "
+     "than the headline earnings beat. TheStreet had it −7.8% at 10:36 AM ET.", ""),
+    ("Dell Technologies (DELL)", "up", "+4.7% at 10:36 AM ET",
+     "Beat Wall Street expectations for fiscal Q2 2027 on what the company described as massive demand "
+     "for AI servers. Dell was quoted +8.1% in the 8:15 AM premarket; no closing figure was sourced "
+     "this run, so the timestamped intraday move is what is printed.", ""),
+    ("Reddit (RDDT)", "up", "+7% at 10:36 AM ET",
+     "Bullish analyst coverage, an upcoming wave of AI data-licensing renewals and underlying "
+     "fundamental growth.", ""),
+    ("PG&amp;E (PCG)", "down", "−9.7% at 10:36 AM ET",
+     "The utility slashed its capital spending plans and addressed continuing uncertainty around "
+     "California's wildfire liability framework. Edison International (EIX) fell 7.6% the same hour as "
+     "lawmakers advanced Senate Bill 492 without wildfire liability protections.", ""),
+]
 
-h.append('''<h2>Weekly Scorecard</h2><table>
-<tr><th>Index</th><th>Sept 1 close</th><th>Change</th><th>Aug 31 close</th></tr>
-<tr><td>S&amp;P 500</td><td>7,631.47</td><td class="down">&minus;0.71%</td><td>7,686.14</td></tr>
-<tr><td>Nasdaq Composite</td><td>26,099.77</td><td class="down">&minus;1.03%</td><td>26,370.89</td></tr>
-<tr><td>Dow Jones Industrial Average</td><td>52,766.88</td><td class="down">&minus;419.02 / &minus;0.79%</td><td>53,185.90</td></tr>
-</table><div class="note">Tuesday&rsquo;s closes. TheStreet describes the same session as the Dow &ldquo;falling more than 400 points&rdquo; amid concerns about the U.S.&ndash;Iran conflict, rising oil prices and surging bond yields &mdash; consistent with the &minus;419.02 above. <b>These are the only index levels published on this page; no September 2 level appears anywhere.</b></div>''')
+AFTER_HOURS = [
+    ("Snowflake (SNOW)", "up", "+21%",
+     "Q2 EPS of $0.62 beat the $0.45 estimate on revenue of $1.55 billion, with Q3 revenue guided to "
+     "$1.588–$1.593 billion. Snowflake had been quoted 2.5% lower in the 8:15 AM premarket ahead of "
+     "the report; no regular-session closing figure for SNOW was sourced this run and none is printed.",
+     "new"),
+    ("Broadcom (AVGO)", "down", "−3.5%",
+     "Q3 EPS of $3.32 cleared the $3.21 estimate on $29.59 billion of revenue, but Q4 revenue guidance "
+     "of $34.8 billion came in under the $35.05 billion consensus. Two other summaries put the "
+     "after-hours move at about −6.5% and at −4.14% in extended trading; the −3.5% figure is "
+     "the one carrying a publication time (4:30 PM ET) and the disagreement is printed rather than "
+     "reconciled.", "new"),
+    ("Hewlett Packard Enterprise (HPE)", "down", "−1%",
+     "A clean beat-and-raise — Q3 EPS $1.11 against $0.92 expected on $12.2 billion of revenue, "
+     "full-year FY26 EPS guidance lifted to $3.75–$3.85 and Q4 revenue guided to "
+     "$13.9–$14.8 billion — but profit-taking took hold. HPE had risen 3.8% in the premarket.", "new"),
+]
 
-h.append('''<h2>Rates, Bonds &amp; Commodities</h2><table>
-<tr><th>Instrument</th><th>Level</th><th>Clock &amp; source</th></tr>
-<tr><td>U.S. 10-year Treasury yield</td><td>4.814% <span class="flat">(day high)</span></td><td>Sept 2 day high per CNBC via TheStreet &mdash; &ldquo;highest since November 2023&rdquo;</td></tr>
-<tr><td>U.S. 10-year Treasury yield</td><td>4.798%</td><td>Tuesday Sept 1, LSEG data via <i>The Wall Street Journal</i> &mdash; &ldquo;highest since January 2025&rdquo;</td></tr>
-<tr><td>U.S. 30-year Treasury yield</td><td>5.27%</td><td>Tuesday Sept 1, Yahoo Finance</td></tr>
-<tr><td>U.S. 2-year Treasury yield</td><td>4.369%</td><td>Tuesday Sept 1, LSEG via WSJ &mdash; would be highest settlement in 19 months</td></tr>
-<tr><td>10-year Japanese government bond</td><td>above 3%</td><td>Tuesday, WSJ &mdash; 30-year high</td></tr>
-<tr><td>10-year German Bund</td><td>3.364%</td><td>Tuesday, WSJ &mdash; unseen since 2011</td></tr>
-<tr><td>10-year U.K. gilt</td><td>5.255%</td><td>Tuesday, WSJ &mdash; highest since 2008</td></tr>
-<tr><td>WTI crude</td><td>$89.58 <span class="down">&minus;0.71%</span></td><td>Sept 2, 9:24 AM ET, TheStreet citing Reuters</td></tr>
-<tr><td>Brent crude</td><td>$94.28 <span class="down">&minus;0.39%</span></td><td>Sept 2, 9:24 AM ET, TheStreet citing Reuters</td></tr>
-<tr><td>Gold futures</td><td>$4,355 <span class="down">&minus;0.94%</span></td><td>Sept 2, early trading, TheStreet</td></tr>
-<tr><td>Silver futures</td><td>$64.26 <span class="down">&minus;1.69%</span></td><td>Sept 2, early trading, TheStreet</td></tr>
-<tr><td>CME FedWatch &mdash; September <b>hike</b> odds</td><td>66%</td><td>Tuesday-dated, Schwab, up from 40% a week earlier &mdash; carried from a sourced standing entry, not re-fetched this run</td></tr>
-</table><div class="note"><b>The 10-year appears twice on purpose.</b> Two sources give two different levels with two different superlatives over two different windows; both are printed with their clocks and neither is folded into the other. <b>No current federal funds target range was verified this run and none is published.</b> One-year-ahead inflation expectations from derivative markets: <b>2.5%</b>, up from below 2% over the past couple of weeks (LSEG).</div>''')
+SCORECARD = [
+    ("S&amp;P 500", "7,666.60", "+35.13", "+0.46%", "up"),
+    ("Nasdaq Composite", "26,217.83", "+118.06", "+0.45%", "up"),
+    ("Dow Jones Industrial Average", "53,061.95", "+295.07", "+0.56%", "up"),
+]
 
-h.append('''<h2>On the Radar</h2><ul class="bul">
-<li><b>Earnings after today&rsquo;s close:</b> Broadcom (AVGO), Snowflake (SNOW) and Hewlett Packard Enterprise (HPE), plus NetApp, Five Below, Brown-Forman and FuelCell Energy.</li>
-<li><b>Still to come today:</b> July factory orders (consensus <b>+0.6%</b> after <b>&minus;0.3%</b>) and the final reading of July durable goods orders (consensus <b>+1.1%</b>, unchanged from the prior <b>+1.1%</b>). MBA mortgage applications for the week ended Aug. 28 were previously <b>&minus;1%</b>.</li>
-<li><b>Friday:</b> the Labor Department&rsquo;s monthly jobs report &mdash; the release today&rsquo;s 38,000 ADP print is being read as a preview of.</li>
-<li><b>The bond question:</b> LSEG-based pricing has bets rising on a Federal Reserve rate <b>increase</b> in September, not a cut. <b>How a 38,000 payroll print cuts against that pricing is not quantified by anything fetched this run, so nothing is asserted about it.</b></li>
-<li><b>Iran:</b> Trump has threatened to hit Iran &ldquo;much harder&rdquo; if it retaliates against Tuesday&rsquo;s airstrikes; Iran struck Jordan, the UAE and Kuwait overnight. Ole Hansen&rsquo;s &ldquo;$5 move in either direction&rdquo; is the sell-side framing of what happens to crude next.</li>
-</ul>''')
+RATES = [
+    ("10-year Treasury", "4.77%", "Eased to 4.77% after touching a higher level intraday. The intraday "
+     "high itself carries two irreconcilable descriptors and is deliberately held out of this table — "
+     "see the note below."),
+    ("2-year Treasury", "4.369%", "Tuesday's settlement, reported as the highest in 19 months. Carried "
+     "from a prior fetch; not re-sourced this run."),
+    ("30-year Treasury", "5.27%", "Tuesday. Carried from a prior fetch; not re-sourced this run."),
+    ("Fed funds target", "—", "Not sourced this run; no figure published."),
+    ("WTI crude", "$90.76", "Settled up 0.60%, a third consecutive advancing session. It had been "
+     "$89.58 (−0.71%) at 9:24 AM ET after touching a one-month high overnight."),
+    ("Brent crude", "$94.28", "−0.39% as of 9:24 AM ET — an intraday quote, not a settlement."),
+    ("Gold", "$4,355", "−0.94% in early trading (7:09 AM ET). Silver $64.26, −1.69% (7:13 AM ET)."),
+    ("Bitcoin", "$76,763.96", "−1.43% at 11:04 AM ET."),
+]
 
-h.append('''<h2>Sources</h2><div class="panel srcs">
-<a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-02-2026">TheStreet &mdash; Stock Market Today, Sept. 2, 2026 (live blog; entries at 6:42, 7:04, 7:09, 7:13, 7:27, 8:15, 8:26, 8:52, 9:07, 9:24, 9:35 AM ET)</a><br>
-<a href="https://finance.yahoo.com/markets/live/stock-market-today-wednesday-september-2-dow-sp-500-nasdaq-082624175.html">Yahoo Finance &mdash; Stock market today, Wednesday September 2 (updated 5:00 AM EDT; includes WSJ/LSEG global-yield extract)</a><br>
-<a href="https://www.cnbc.com/2026/09/02/private-payrolls-rose-by-38000-in-august-fewer-than-expected-adp-reports.html">CNBC &mdash; Private payrolls rose by 38,000 in August, fewer than expected, ADP reports</a><br>
-<a href="https://www.cnbc.com/2026/09/02/us-iran-war-trump-hormuz-irgc-jordan-bahrain.html">CNBC &mdash; US&ndash;Iran war: Hormuz, IRGC, Jordan, Bahrain</a><br>
-<a href="https://www.reuters.com/business/energy/oil-up-nearly-1-us-iran-trade-fresh-strikes-2026-09-02/">Reuters &mdash; Oil up nearly 1% as US, Iran trade fresh strikes (Sept 2)</a><br>
-<a href="https://www.cnbc.com/2026/09/02/g20-innovation-ministerial-live-updates.html">CNBC &mdash; Lutnick on a semiconductor tariff framework</a><br>
-<a href="https://www.space.com/space-exploration/launches-spacecraft/spacex-falcon-9-starlink-group-15-23-launch-ocisly">Space.com &mdash; Falcon 9 Starlink launch from Vandenberg, Sept 2</a><br>
-<a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-1-2026">TheStreet &mdash; Stock Market Today, Sept. 1, 2026 (Tuesday closes)</a><br>
-<a href="https://pro.thestreet.com/market-commentary/a-global-bond-rout-and-a-third-central-bank-turns-hawkish">TheStreet Pro &mdash; A Global Bond Rout and a Third Central Bank Turns Hawkish (DePorre)</a>
-</div>
-<div class="disc"><b>Information only, not investment advice.</b> Every figure on this page carries the clock and the source it came from. Index moves for September 2 are moves, not levels; the only levels published are Tuesday&rsquo;s official closes. Live widgets update continuously; the editorial was fixed at the time shown in the masthead.</div>''')
+RADAR = [
+    "<b>Thursday, Sept 3:</b> ISM Services; earnings from Ciena (CIEN) and Lululemon (LULU).",
+    "<b>Friday, Sept 4:</b> August nonfarm payrolls, consensus 45,000. ADP's private-payroll print for "
+    "August came in at +38,000 against a +47,000 estimate, with July revised up to +46,000 — the "
+    "slowest month since January. Education and health services added 45,000; manufacturing shed 17,000 "
+    "and professional and business services 16,000.",
+    "<b>Monday, Sept 7:</b> Labor Day — U.S. markets closed.",
+    "<b>FOMC:</b> September 15–16. CME FedWatch put the odds of a hike at 66.1% as of Monday, up from "
+    "35.4% before Chair Kevin Warsh's remarks.",
+    "<b>Trade:</b> Commerce Secretary Howard Lutnick told CNBC a semiconductor tariff framework is being "
+    "developed — \"if you build here, you don't pay\" — with no rate or date made public.",
+    "<b>Geopolitics:</b> Iran's Revolutionary Guards said two oil tankers struck naval mines attempting to "
+    "transit the Strait of Hormuz; Iran targeted Jordan, the UAE and Kuwait overnight in retaliation for "
+    "U.S. airstrikes. Oil has now advanced for three straight sessions.",
+    "<b>The bear case:</b> Man Group chief market strategist Kristina Hooper told TheStreet at 2:33 PM ET "
+    "that a 10–20% pullback in U.S. equities is \"absolutely still coming.\"",
+]
 
-h.append('</div>'+STAMP+'</body></html>')
-open(OUT+"wallstreet-briefing.html","w").write("".join(h))
-print("ws ok", sum(len(x) for x in h))
+
+def card(name, direction, move, body, tag):
+    t = '<span class="tag new">New</span>' if tag == "new" else ""
+    return ('<div class="card"><div class="k">%s</div>'
+            '<h4><span class="%s">%s</span></h4>%s<p>%s</p></div>'
+            % (name, direction, move, t, body))
+
+
+def build():
+    p = []
+    p.append(C.head("The Closing Bell — Daily Briefings", CSS))
+    p.append('<div class="masthead"><h1>The Closing Bell</h1>'
+             '<p class="tag">Your daily Wall Street briefing — markets, movers &amp; the macro tape</p>'
+             + C.meta_row() + "</div>")
+    p.append('<div class="tldr"><b>The Tape</b> <span>%s</span></div>' % TLDR)
+    p.append('<div class="freshline" id="freshline">&nbsp;</div>')
+    p.append(C.nav("ws"))
+
+    # BLOCK A
+    p.append('<div class="livebar"><div class="livebar-label"><span class="dot"></span> LIVE QUOTES</div>'
+             + TICKER + "</div>")
+
+    # BLOCK B
+    p.append('<h2 class="sec">Live Index Quotes — updates in real time</h2>')
+    p.append('<div class="tickers">%s%s%s</div>' % (quote("FOREXCOM:SPXUSD"), quote("FOREXCOM:NSXUSD"),
+                                                    quote("FOREXCOM:DJI")))
+    p.append('<div class="note">Quotes stream live (some feeds ~15-min delayed). Editorial below reflects '
+             'the latest edition; official closes are in the Weekly Scorecard.</div>')
+
+    # LEAD
+    p.append('<h2 class="sec">The Lead</h2>')
+    p.append('<div class="panel"><h3>Stocks snap a three-day skid at the close, and the after-hours tape '
+             'splits on AI earnings</h3>'
+             '<p>All three major U.S. indexes finished Wednesday, September 2 higher, ending a three-session '
+             'losing streak. The <b>S&amp;P 500 rose 0.46%</b>, the <b>Dow Jones Industrial Average added '
+             '295.07 points, or 0.56%</b>, and the <b>Nasdaq Composite gained 0.45%</b>. Breadth was wide: '
+             'TheStreet counted closer to two-thirds of the market advancing at 1:15 PM ET, and had only 33% '
+             'of U.S. issues declining at 12:41 PM.</p>'
+             '<p>The recovery came despite the pressures that drove the previous three days down. The 10-year '
+             'Treasury yield <b>eased to 4.77% after hitting 4.814%</b> intraday — how far back that high '
+             'reaches is disputed between sources, and the dispute is set out in the rates section rather '
+             'than settled here — and oil advanced for a third straight session as the U.S. and Iran '
+             'traded fresh strikes. ADP\'s August private-payroll count came in soft at +38,000 against a '
+             '+47,000 estimate, the slowest month since January.</p>'
+             '<p>The day\'s real drama landed after the bell, where three large technology reports pulled in '
+             'opposite directions: <b>Snowflake jumped about 21%</b> on a beat-and-raise, while '
+             '<b>Broadcom fell</b> on soft fourth-quarter revenue guidance despite clearing third-quarter '
+             'estimates.</p>'
+             '<div class="note"><b>How this edition was built.</b> Research for this run was fetched between '
+             '4:52 and 5:05 PM ET; the closing figures above are official closes, and each reconciles '
+             'arithmetically against Tuesday\'s verified closes (S&amp;P 7,631.47; Dow 52,766.88; Nasdaq '
+             '26,099.77). TheStreet\'s live blog was re-fetched this run and its last-modified stamp is '
+             '2:33 PM ET — it carries no closing entry, so every figure taken from it is labelled with '
+             'the time it was published. Where the widgets above and this editorial disagree, the widgets '
+             'are right.</div></div>')
+
+    # MOVERS
+    p.append('<h2 class="sec">Movers &amp; Drivers</h2>')
+    p.append('<div class="cards two">' + "".join(card(*m) for m in MOVERS) + "</div>")
+    p.append('<div class="note">Also sourced at the close: AST SpaceMobile (ASTS) +10.93% to $61.89 and '
+             'Eos Energy (EOSE) +20.10% to $3.65 among gainers. Uber (UBER) rose 0.58% to $75.68 at '
+             '10:15 AM ET after announcing it will cut about 10% of its workforce, limiting fully remote '
+             'staff to roughly 1% of headcount; Uber had around 34,000 employees at the end of 2025. '
+             'GitLab (GTLB) was quoted +21% in the 8:15 AM premarket on strong second-quarter results, but '
+             'no regular-session GitLab figure was sourced this run and none is printed as a close.</div>')
+
+    # CHART OF THE DAY
+    p.append('<h2 class="sec">Chart of the Day — Credo Technology (CRDO)</h2>')
+    p.append('<div class="panel" style="padding:8px">'
+             '<script src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" '
+             'async>{"symbol":"NASDAQ:CRDO","width":"100%","height":240,"locale":"en","dateRange":"1D",'
+             '"colorTheme":"dark","isTransparent":true,"autosize":false}</script></div>')
+    p.append('<div class="note"><b>Why this slot.</b> Credo\'s −20.69% close to $163.87 is the largest '
+             'single-name regular-session move sourced this run, and unlike earlier editions it now comes '
+             'with a catalyst: record fiscal Q1 revenue of $479 million, up 114.7% year over year and ahead '
+             'of estimates, undone by shrinking margins and rising R&amp;D spend. One source gives the decline '
+             'as −19.71% and another had the stock down 18% at midday; the −20.69%/$163.87 pair is '
+             'the one that reconciles to the cent against the separately sourced prior close of $206.63, so it '
+             'is what is printed. Snowflake\'s +21% is larger but is an after-hours move and appears in that '
+             'section instead.</div>')
+
+    # SECTOR HEAT
+    p.append('<h2 class="sec">Sector Heat — live</h2>')
+    p.append('<div class="panel" style="padding:8px">'
+             '<script src="https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js" async>'
+             '{"dataSource":"SPX500","blockSize":"market_cap_basic","blockColor":"change","grouping":"sector",'
+             '"locale":"en","colorTheme":"dark","hasTopBar":false,"isDataSetEnabled":false,"isZoomEnabled":true,'
+             '"hasSymbolTooltip":true,"isMonoSize":false,"width":"100%","height":420}</script></div>')
+    p.append('<div class="note"><b>The sector table is refused for a sixth consecutive run, on the same '
+             'ground and one new one.</b> The only sector-bearing source this run reports Tuesday\'s closes '
+             '(Dow 52,766.88, −419.02; S&amp;P 7,631.47, −0.71%) as though they were Wednesday\'s, and '
+             'dates its "energy leads, +1.3%" line to September 1 — a source that mis-dates the index closes '
+             'it leads with does not supply the sector table. Its energy year-to-date figure also still reads '
+             '+42% in the headline and +43% in the body. The one sourced sector statement from Wednesday '
+             'itself is TheStreet\'s 12:05 PM ET note that S&amp;P advances came "from virtually every sector '
+             'but tech, real estate, and utilities." The live heatmap above is the sector read.</div>')
+
+    # CALENDAR
+    p.append('<h2 class="sec">The Calendar — live</h2>')
+    p.append('<div class="panel" style="padding:8px">'
+             '<script src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>'
+             '{"colorTheme":"dark","isTransparent":true,"width":"100%","height":420,"locale":"en",'
+             '"importanceFilter":"0,1","countryFilter":"us"}</script></div>')
+
+    # HEADLINES
+    p.append('<h2 class="sec">Live Market Headlines — updates in real time</h2>')
+    p.append('<div class="panel" style="padding:8px">'
+             '<script src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>'
+             '{"feedMode":"market","market":"stock","colorTheme":"dark","isTransparent":true,'
+             '"displayMode":"regular","width":"100%","height":420,"locale":"en"}</script></div>')
+
+    # AFTER HOURS
+    p.append('<h2 class="sec">After-Hours Movers</h2>')
+    p.append('<div class="cards two">' + "".join(card(*m) for m in AFTER_HOURS) + "</div>")
+    p.append('<div class="note">Figures above are from an after-hours movers report published at 4:30 PM ET, '
+             'roughly half an hour after the close; extended-hours prices move continuously and these are a '
+             'snapshot, not settlements.</div>')
+
+    # SCORECARD
+    p.append('<h2 class="sec">Weekly Scorecard — official closes, Wednesday Sept 2</h2>')
+    rows = "".join('<tr><td>%s</td><td>%s</td><td class="%s">%s</td><td class="%s">%s</td></tr>'
+                   % (n, lvl, d, chg, d, pct) for n, lvl, chg, pct, d in SCORECARD)
+    p.append('<div class="tblwrap"><table><tr><th>Index</th><th>Close</th><th>Change</th><th>%</th></tr>'
+             + rows + "</table></div>")
+    p.append('<div class="note">Levels are published because all three reconcile: adding each index\'s '
+             'point change to Tuesday\'s verified close reproduces Wednesday\'s level exactly '
+             '(7,631.47 + 35.13 = 7,666.60; 52,766.88 + 295.07 = 53,061.95; 26,099.77 + 118.06 = 26,217.83), '
+             'and each percentage checks against those levels. The S&amp;P and Nasdaq point changes are '
+             'derived from that reconciliation rather than quoted directly.</div>')
+
+    # RATES
+    p.append('<h2 class="sec">Rates, Bonds &amp; Commodities</h2>')
+    rows = "".join('<tr><td><b>%s</b></td><td>%s</td><td>%s</td></tr>' % r for r in RATES)
+    p.append('<div class="tblwrap"><table><tr><th>Instrument</th><th>Level</th><th>Note</th></tr>'
+             + rows + "</table></div>")
+    p.append('<div class="note"><b>An unreconciled yield descriptor, printed rather than resolved.</b> '
+             'TheStreet, citing CNBC, has the 10-year hitting 4.814% on the day, "its highest level since '
+             'November 2023." Yahoo and the WSJ excerpt it quotes describe Tuesday\'s 4.79%/4.798% as the '
+             'highest since January 2025. Two descriptors for one yield; both are printed, neither is '
+             'adopted, and 4.814% is deliberately kept out of the table cells above because its session '
+             'framing is ambiguous. Also sourced but not tabled: the 10-year\'s 50-day moving average at '
+             '4.32%; Japan\'s 10-year JGB near a multi-decade high; U.K., German and French yields also rose.</div>')
+
+    # RADAR
+    p.append('<h2 class="sec">On the Radar</h2>')
+    p.append('<div class="panel"><ul class="b">' + "".join("<li>%s</li>" % r for r in RADAR) + "</ul></div>")
+
+    p.append(C.sources(SOURCES))
+    p.append('<div class="disc">For information only. Nothing here is investment advice, a recommendation, '
+             'or an offer to buy or sell any security. Intraday figures are labelled with the time their '
+             'source published them; live widgets are supplied by TradingView and may be delayed.</div>'
+             "</footer>")
+    p.append(C.STAMP_JS)
+    p.append("</div></body></html>")
+    return "".join(p)
+
+
+if __name__ == "__main__":
+    open("wallstreet-briefing.html", "w").write(build())
+    print("wallstreet ok")

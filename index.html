@@ -1,103 +1,113 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Daily Briefings</title><style>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Daily Briefings</title><style>
+:root{
+  --bg:#0b0c0e; --panel:#14161a; --line:#252932;
+  --accent:#8a94a6; --accent2:#b9c2d0;
+  --text:#e8e6e3; --muted:#9aa0a6;
+  --up:#22c55e; --down:#ef4444; --warn:#f0a132; --crit:#ef4444;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+}
 *{box-sizing:border-box}
-:root{--bg:#0c0b0a;--panel:#161513;--line:#272522;--accent:#c8c2b8;--accent2:#e8c766;
---txt:#e9e6e1;--mut:#9a948c;--up:#2fbf71;--dn:#e5484d;--warn:#e0a336;--crit:#e5484d;
---mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace}
-html,body{margin:0;padding:0}
-body{background:var(--bg);color:var(--txt);
-font:16px/1.62 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
--webkit-font-smoothing:antialiased}
-.wrap{max-width:1040px;margin:0 auto;padding:30px 20px 70px}
-header.mast{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:14px}
-h1.brand{margin:0;font-size:35px;letter-spacing:-.6px;font-weight:800}
-h1.brand .ac{color:var(--accent)}
-.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--mut);margin-bottom:9px}
-.tagline{color:var(--mut);font-size:14.5px;margin:7px 0 0}
-.meta{display:flex;flex-wrap:wrap;gap:7px;margin-top:13px}
-.pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;
-border:1px solid var(--line);border-radius:999px;padding:4px 11px;color:var(--mut);background:var(--panel)}
-.pill.live{color:var(--up);border-color:rgba(47,191,113,.4)}
-.pill.live .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--up);margin-right:6px;vertical-align:1px}
-.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
-border-radius:10px;padding:11px 15px;margin:6px 0 2px;font-size:14.5px;line-height:1.5}
-.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-right:9px}
-.freshline{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--mut);margin:9px 2px 16px}
-nav.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px}
-nav.tabs a{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
-text-decoration:none;color:var(--mut);border:1px solid var(--line);border-radius:8px;
-padding:8px 13px;background:var(--panel);transition:.15s}
-nav.tabs a:hover{color:var(--txt);border-color:var(--accent)}
-nav.tabs a.on{color:var(--accent);border-color:var(--accent);background:rgba(255,255,255,.03)}
-h2.sec{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;
-color:var(--accent);margin:34px 0 13px;padding-bottom:7px;border-bottom:1px solid var(--line)}
-.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:17px 19px;margin-bottom:14px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:13px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 17px;transition:.16s}
-.card:hover{transform:translateY(-2px);border-color:var(--accent);box-shadow:0 8px 22px rgba(0,0,0,.34)}
-.card h3{margin:0 0 7px;font-size:16.5px;line-height:1.34}
-.card p{margin:0;color:var(--mut);font-size:14px;line-height:1.55}
-.card p+p{margin-top:8px}
-.tag{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;
-border-radius:5px;padding:3px 7px;margin:0 6px 8px 0;border:1px solid var(--line);color:var(--mut)}
-.tag.new{color:var(--accent);border-color:var(--accent)}
-.tag.crit{color:var(--crit);border-color:rgba(229,72,77,.5)}
-.tag.warn{color:var(--warn);border-color:rgba(224,163,54,.5)}
-.tag.ok{color:var(--up);border-color:rgba(47,191,113,.5)}
-.lead{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
-border-radius:12px;padding:18px 21px;margin-bottom:14px}
-.lead h3{margin:0 0 9px;font-size:21px;line-height:1.3}
-.lead p{margin:0 0 10px;font-size:15px;line-height:1.62}
-.lead p:last-child{margin-bottom:0}
-.callout{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--warn);
-border-radius:12px;padding:16px 19px;margin-bottom:14px}
-.callout.crit{border-left-color:var(--crit)}
-.callout h3{margin:0 0 8px;font-size:16px}
-.callout p{margin:0 0 8px;font-size:14.5px;color:var(--mut);line-height:1.58}
-.callout p:last-child{margin:0}
-table{width:100%;border-collapse:collapse;font-size:14px}
-th{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;
-color:var(--mut);text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);font-weight:600}
-td{padding:10px 11px;border-bottom:1px solid var(--line);vertical-align:top}
-tr:last-child td{border-bottom:none}
-tbody tr:hover{background:rgba(255,255,255,.022)}
-.up{color:var(--up)} .dn{color:var(--dn)} .mono{font-family:var(--mono);font-size:13px}
-ul.bul{margin:0;padding-left:19px} ul.bul li{margin-bottom:9px;font-size:14.5px;line-height:1.58}
-ul.bul li:last-child{margin-bottom:0}
-.note{font-size:12.5px;color:var(--mut);margin:9px 2px 0;line-height:1.5}
-.src{font-size:12.5px;line-height:1.75;color:var(--mut);word-break:break-word}
-.src a{color:var(--accent2);text-decoration:none} .src a:hover{text-decoration:underline}
-footer.dis{margin-top:26px;padding-top:15px;border-top:1px solid var(--line);
-font-size:11.5px;color:var(--mut);line-height:1.6}
-.banner{border-radius:12px;padding:13px 17px;margin-bottom:13px;border:1px solid var(--line);background:var(--panel);
-display:flex;flex-wrap:wrap;align-items:baseline;gap:11px}
-.banner .lvl{font-family:var(--mono);font-size:12px;letter-spacing:.17em;text-transform:uppercase;font-weight:700}
-.banner .why{font-size:14px;color:var(--mut)}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(146px,1fr));gap:11px;margin-bottom:14px}
-.stat{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:13px 15px;transition:.16s}
-.stat:hover{transform:translateY(-2px);border-color:var(--accent)}
-.stat .n{font-family:var(--mono);font-size:21px;font-weight:700;color:var(--accent);letter-spacing:-.4px}
-.stat .l{font-size:11.5px;color:var(--mut);margin-top:4px;line-height:1.4}
-.livebar{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 8px 4px;margin-bottom:18px}
-.livebar-label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--up);display:flex;align-items:center;gap:8px;padding:4px 8px 8px}
-.livebar-label .dot{width:7px;height:7px;border-radius:50%;background:var(--up);display:inline-block}
-.tickers{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:12px;margin-bottom:8px}
-.ticker{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:6px 10px}
-.cdn{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:11px;
-padding:12px 17px;margin-bottom:15px;display:flex;flex-wrap:wrap;align-items:baseline;gap:12px}
-.cdn .lb{font-family:var(--mono);font-size:10.5px;letter-spacing:.17em;text-transform:uppercase;color:var(--accent)}
-.cdn .ev{font-size:14.5px} .cdn .t{font-family:var(--mono);font-size:15px;font-weight:700;color:var(--txt)}
-@media(max-width:620px){h1.brand{font-size:27px}.wrap{padding:22px 14px 50px}}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding:26px 20px 60px}
+a{color:var(--accent2);text-decoration:none}
+a:hover{text-decoration:underline}
 
-.big{display:grid;grid-template-columns:repeat(auto-fit,minmax(292px,1fr));gap:15px}
-.big .card{padding:21px 23px;border-radius:14px}
-.big .card .em{font-size:23px;line-height:1;margin-bottom:11px;display:block}
-.big .card h3{font-size:22px;margin:0 0 5px}
-.big .card .sub{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px}
-.big .card p{font-size:14.7px;color:var(--mut);line-height:1.6}
-.big .card .go{display:inline-block;margin-top:14px;font-family:var(--mono);font-size:11.5px;letter-spacing:.09em;text-decoration:none}
-.cy{--c:#22d3a8} .ws{--c:#caa64a} .mma{--c:#e84545}
-.big .card.cy:hover,.big .card.ws:hover,.big .card.mma:hover{border-color:var(--c)}
-.big .card .em,.big .card .sub,.big .card .go{color:var(--c)}
-.big .card.ws h3{font-family:Georgia,"Times New Roman",serif}
-</style></head><body><div class="wrap"><header class="mast"><div class="kicker">Three briefings, refreshed through the day</div><h1 class="brand">Daily <span class="ac">Briefings</span></h1><p class="tagline">Security, markets and MMA &mdash; rebuilt from live sources every half hour, 8 AM to 6 PM Eastern.</p><div class="meta"><span class="pill live"><span class="dot"></span>Live</span><span class="pill" id="edition">&nbsp;</span><span class="pill" id="datestamp">&nbsp;</span><span class="pill">Updated <span id="updated">&nbsp;</span></span></div></header><div class="freshline" id="freshline">&nbsp;</div><nav class="tabs"><a class="on" href="index.html">★ Front Page</a><a class="" href="cyber-briefing.html">⛨ The Cyber Wire</a><a class="" href="wallstreet-briefing.html">▲ The Closing Bell</a><a class="" href="mma-briefing.html">⊘ The Octagon</a><a class="" href="archive.html">🗄 Archive</a></nav><div class="big"><div class="card cy"><span class="em">&#9960;</span><h3>The Cyber Wire</h3><div class="sub">The Wire</div><p>A maximum-severity Oracle WebLogic flaw is under active exploitation with its federal patch deadline already six days past, while the MLflow cloud-credential-theft bug CVE-2026-64849 comes due for federal agencies today.</p><a class="go" href="cyber-briefing.html">Read the briefing &rarr;</a></div><div class="card ws"><span class="em">&#9650;</span><h3>The Closing Bell</h3><div class="sub">The Tape</div><p>The S&amp;P 500 and the Dow are each up about half a percent heading into the afternoon as stocks rebound from two losing sessions, while the 10-year Treasury yield&rsquo;s touch of 4.814% &mdash; its highest since November 2023 &mdash; keeps the pressure on long-duration tech.</p><a class="go" href="wallstreet-briefing.html">Read the briefing &rarr;</a></div><div class="card mma"><span class="em">&#8856;</span><h3>The Octagon</h3><div class="sub">Tale of the Tape</div><p>UFC Paris fight week is under way ahead of Saturday&rsquo;s Hooker vs. Parnasse main event at the Accor Arena, four days after Song Yadong&rsquo;s second-round knockout of Umar Nurmagomedov headlined UFC Shanghai.</p><a class="go" href="mma-briefing.html">Read the briefing &rarr;</a></div></div><div class="note" style="margin-top:22px">Each briefing is rebuilt from sources fetched at build time. Figures carry the as-of time their source states; where sources disagree, the disagreement is printed on the page rather than averaged away. Point-in-time snapshots of every edition are kept in the <a href="archive.html" style="color:var(--accent2)">Archive</a>.</div><footer class="dis">Daily Briefings is an automated publication assembled from public reporting. It is provided for information only: nothing in the markets briefing is investment advice, nothing in the security briefing is a security assessment of any particular environment, and MMA cards and bouts are subject to change.</footer></div><script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \u00b7 briefings refresh every 30 minutes, 8 AM\u20136 PM ET';}catch(e){}})();</script></body></html>
+.masthead{border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:4px}
+.masthead h1{margin:0 0 2px;font-size:34px;letter-spacing:-.5px;line-height:1.15}
+.masthead .tag{color:var(--muted);font-size:14.5px;margin:0}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:4px 11px;color:var(--muted)}
+.pill.live{color:var(--up);border-color:rgba(34,197,94,.35)}
+.pill.live .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--up);margin-right:6px;vertical-align:middle}
+
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
+  border-radius:10px;padding:11px 15px;margin:6px 0 2px;font-size:14.5px;line-height:1.5}
+.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--accent);margin-right:9px}
+.freshline{font-family:var(--mono);font-size:11px;color:var(--muted);margin:9px 2px 4px;letter-spacing:.03em}
+
+nav.tabs{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 20px;border-bottom:1px solid var(--line);padding-bottom:12px}
+nav.tabs a{font-family:var(--mono);font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;
+  padding:7px 13px;border:1px solid var(--line);border-radius:8px;color:var(--muted);background:var(--panel);
+  transition:.15s}
+nav.tabs a:hover{color:var(--text);border-color:var(--accent);text-decoration:none;transform:translateY(-1px)}
+nav.tabs a.active{color:var(--accent);border-color:var(--accent);background:transparent}
+
+h2.sec{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--accent);margin:34px 0 13px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+h3{margin:0 0 7px;font-size:19px;line-height:1.3}
+h4{margin:0 0 5px;font-size:15.5px;line-height:1.35}
+p{margin:0 0 11px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:17px 19px}
+.note{font-size:12.5px;color:var(--muted);margin-top:9px;line-height:1.5}
+
+.cards{display:grid;gap:13px}
+@media(min-width:700px){.cards.two{grid-template-columns:1fr 1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 17px;transition:.16s}
+.card:hover{transform:translateY(-2px);border-color:var(--accent);box-shadow:0 8px 22px rgba(0,0,0,.3)}
+.card p{margin:0;font-size:14.5px;color:#cfcdc9}
+.card .k{font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+
+.tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase;
+  padding:2.5px 8px;border-radius:999px;margin:0 5px 5px 0;border:1px solid}
+.tag.new{color:#0d1b12;background:var(--up);border-color:var(--up)}
+.tag.a{color:var(--accent);border-color:var(--accent);background:transparent}
+.tag.w{color:var(--warn);border-color:var(--warn);background:transparent}
+.tag.c{color:var(--crit);border-color:var(--crit);background:transparent}
+.tag.m{color:var(--muted);border-color:var(--line);background:transparent}
+
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);
+  text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);font-weight:600}
+td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+td.up,.up{color:var(--up)}
+td.down,.down{color:var(--down)}
+td.win{color:var(--up);font-weight:600}
+td.nc{color:var(--warn);font-weight:600}
+.tblwrap{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:5px 7px;overflow-x:auto}
+
+ul.b{margin:0;padding-left:19px}
+ul.b li{margin-bottom:9px;font-size:14.5px}
+ul.b li:last-child{margin-bottom:0}
+
+.callout{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--warn);
+  border-radius:10px;padding:15px 18px;margin-bottom:6px}
+.callout.crit{border-left-color:var(--crit)}
+.callout .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--warn);margin-bottom:6px}
+.callout.crit .k{color:var(--crit)}
+
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:11px}
+@media(min-width:700px){.stats{grid-template-columns:repeat(4,1fr)}}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:13px 14px}
+.stat .n{font-family:var(--mono);font-size:21px;color:var(--accent);letter-spacing:-.5px;line-height:1.2}
+.stat .l{font-size:11.5px;color:var(--muted);margin-top:4px;line-height:1.4}
+
+.banner{border-radius:11px;padding:13px 17px;margin-bottom:16px;border:1px solid;font-size:14.5px}
+.banner .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+  display:block;margin-bottom:4px}
+.banner.high{background:rgba(239,68,68,.08);border-color:rgba(239,68,68,.4)}
+.banner.high .k{color:var(--crit)}
+
+footer{margin-top:44px;border-top:1px solid var(--line);padding-top:18px;font-size:12.5px;color:var(--muted)}
+footer h5{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);margin:0 0 9px}
+footer ul{margin:0;padding-left:17px}
+footer li{margin-bottom:5px;word-break:break-word}
+.disc{margin-top:16px;font-size:11.5px;color:var(--muted);font-style:italic;line-height:1.5}
+
+.big{display:grid;gap:16px}
+@media(min-width:760px){.big{grid-template-columns:1fr}}
+.bigcard{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 22px;
+  border-left:4px solid var(--c);transition:.16s}
+.bigcard:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(0,0,0,.35)}
+.bigcard .k{font-family:var(--mono);font-size:11px;letter-spacing:.17em;text-transform:uppercase;color:var(--c)}
+.bigcard h3{margin:8px 0 9px;font-size:22px;color:var(--c)}
+.bigcard p{font-size:15px;color:#cfd3d9;margin:0 0 13px}
+.bigcard a.rd{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--c)}
+.serif h3{font-family:Georgia,'Times New Roman',serif}
+</style></head><body><div class="wrap"><div class="masthead"><h1>Daily Briefings</h1><p class="tag">Three desks, refreshed every 30 minutes — security, markets and mixed martial arts</p><div class="meta"><span class="pill live"><span class="dot"></span>Live</span><span class="pill" id="edition">&nbsp;</span><span class="pill" id="datestamp">&nbsp;</span><span class="pill">Updated <span id="updated">&nbsp;</span></span></div></div><div class="freshline" id="freshline">&nbsp;</div><nav class="tabs"><a href="index.html" class="active">&#9733; Front Page</a><a href="cyber-briefing.html">&#9960; The Cyber Wire</a><a href="wallstreet-briefing.html">&#9650; The Closing Bell</a><a href="mma-briefing.html">&#8856; The Octagon</a><a href="archive.html">&#128452; Archive</a></nav><div class="big"><div class="bigcard " style="--c:#22d3a8"><div class="k">&#9960; The Cyber Wire &middot; The Wire</div><h3>&#9960; The Cyber Wire</h3><p>CISA added two more exploited flaws to the KEV catalog today, one of them an unauthenticated SQL-injection-to-RCE bug in Sangoma Switchvox carrying a three-day federal deadline of September 5 — while the MLflow credential-theft flaw added on August 19 runs out of clock today.</p><a class="rd" href="cyber-briefing.html">Read the briefing &rarr;</a></div><div class="bigcard serif" style="--c:#caa64a"><div class="k">&#9650; The Closing Bell &middot; The Tape</div><h3>&#9650; The Closing Bell</h3><p>Wall Street snapped a three-day losing streak on Wednesday, with the S&amp;P 500 closing up 0.46%, the Dow up 295.07 points and the Nasdaq Composite up 0.45% — then Snowflake jumped and Broadcom fell after the bell.</p><a class="rd" href="wallstreet-briefing.html">Read the briefing &rarr;</a></div><div class="bigcard " style="--c:#e84545"><div class="k">&#8856; The Octagon &middot; Tale of the Tape</div><h3>&#8856; The Octagon</h3><p>UFC Paris is three days out with Salahdine Parnasse now a −600 favourite over Dan Hooker on his promotional debut, a line that has moved roughly 200 points since it opened.</p><a class="rd" href="mma-briefing.html">Read the briefing &rarr;</a></div></div><div class="note" style="margin-top:26px">Every figure on these pages is checked against a source fetched during the run that published it, or against this desk's standing corrections file. Where sources disagree, the disagreement is printed rather than resolved by preference; where a number could not be verified, it is left off the page and the omission is stated.</div><script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \u00b7 briefings refresh every 30 minutes, 8 AM\u20136 PM ET';}catch(e){}})();</script></div></body></html>

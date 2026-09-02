@@ -1,43 +1,93 @@
 # -*- coding: utf-8 -*-
-import os,re,sys,collections
-sys.path.insert(0,'/tmp')
-from css import BASE, STAMP, nav, meta
-D="/tmp/db_1788357956"
-ROOT=":root{--bg:#0b0b0d;--panel:#141418;--panel2:#1b1b21;--line:#2a2a32;--fg:#eeeef2;--muted:#83838f;--muted2:#b9b9c4;--accent:#8f9bb3;--accent2:#c9d1e0;--up:#3fbf72;--crit:#e05555;--warn:#e0a13a;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}\n"
-LBL={"cyber":"The Cyber Wire","wallstreet":"The Closing Bell","mma":"The Octagon"}
-COL={"cyber":"#22d3a8","wallstreet":"#caa64a","mma":"#e84545"}
-pat=re.compile(r'^(cyber|wallstreet|mma)-(\d{4}-\d{2}-\d{2})-(\d{4})\.html$')
-snap=collections.defaultdict(lambda: collections.defaultdict(dict))
-for f in sorted(os.listdir(os.path.join(D,"archive"))):
-    m=pat.match(f)
-    if m: snap[m.group(2)][m.group(3)][m.group(1)]=f
-def t12(hhmm):
-    h=int(hhmm[:2]);mm=hhmm[2:]
-    ap="AM" if h<12 else "PM"; hh=h%12 or 12
-    return "%d:%s %s ET"%(hh,mm,ap)
-import datetime
-def datehead(d):
-    y,m,dd=map(int,d.split("-"))
-    return datetime.date(y,m,dd).strftime("%A, %B %-d, %Y")
-h=[]
-h.append('<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Archive &mdash; Daily Briefings</title><style>'+ROOT+BASE+'.ed{font-family:var(--mono);font-size:12px;color:var(--muted2);white-space:nowrap}.lk{margin-right:14px}</style></head><body><div class="wrap">')
-h.append('<div class="masthead"><h1>Archive</h1><p class="tag">Point-in-time snapshots of every edition &mdash; kept for 21 days</p>'+meta()+'</div>')
-h.append('<div class="freshline" id="freshline">&nbsp;</div>')
-h.append(nav("archive.html"))
-h.append('<div class="note">Each row is one publishing run. Snapshots are <b>point-in-time</b>: the live data widgets inside them still stream current quotes, but all editorial, figures and timestamps are frozen as published. Editions older than 21 days are pruned.</div>')
-tot=0
-for d in sorted(snap.keys(),reverse=True):
-    h.append('<h2>%s</h2><table><tr><th>Edition</th><th>Snapshots</th></tr>'%datehead(d))
-    for hhmm in sorted(snap[d].keys(),reverse=True):
-        cells=[]
-        for sec in ["cyber","wallstreet","mma"]:
-            f=snap[d][hhmm].get(sec)
-            if f:
-                cells.append('<a class="lk" style="color:%s" href="archive/%s">%s</a>'%(COL[sec],f,LBL[sec]))
-                tot+=1
-        h.append('<tr><td class="ed">%s</td><td>%s</td></tr>'%(t12(hhmm),"".join(cells) or '<span class="flat">&mdash;</span>'))
-    h.append('</table>')
-h.append('<div class="disc">%d snapshots across %d days. Archive index is regenerated from the files on disk on every run &mdash; it is never hand-curated.</div>'%(tot,len(snap)))
-h.append('</div>'+STAMP+'</body></html>')
-open(os.path.join(D,"archive.html"),"w").write("".join(h))
-print("archive.html ok:",tot,"snapshots,",len(snap),"days")
+"""Rebuild archive.html from scratch from the contents of archive/.
+No splice, no retained head, so there is no boundary that can drift."""
+import os, re, sys, collections
+import css as C
+
+SECTIONS = [("cyber", "The Cyber Wire"), ("wallstreet", "The Closing Bell"), ("mma", "The Octagon")]
+LABEL = dict(SECTIONS)
+CSS = C.base_css("#8a94a6", "#b9c2d0", "#0b0c0e", "#14161a", "#252932") + """
+h2.day{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--accent2);margin:30px 0 11px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+td a{margin-right:14px;white-space:nowrap}
+td.t{font-family:var(--mono);color:var(--muted);white-space:nowrap}
+"""
+
+PAT = re.compile(r"^(cyber|wallstreet|mma)-(\d{4}-\d{2}-\d{2})-(\d{4})\.html$")
+
+
+def h12(hhmm):
+    h, m = int(hhmm[:2]), hhmm[2:]
+    ap = "AM" if h < 12 else "PM"
+    hh = h % 12 or 12
+    return "%d:%s %s ET" % (hh, m, ap)
+
+
+def main(root="."):
+    d = os.path.join(root, "archive")
+    files = sorted(os.listdir(d))
+    files = [f for f in files if f.endswith(".html")]
+    editions = collections.defaultdict(dict)          # (date, hhmm) -> {section: filename}
+    parsed = 0
+    for f in files:
+        m = PAT.match(f)
+        if not m:
+            sys.exit("UNPARSED FILENAME IN archive/: %s" % f)   # never let one vanish silently
+        parsed += 1
+        sec, date, hhmm = m.groups()
+        editions[(date, hhmm)][sec] = f
+    assert parsed == len(files), "parsed %d of %d files" % (parsed, len(files))
+
+    days = sorted({k[0] for k in editions}, reverse=True)
+
+    p = [C.head("Archive — Daily Briefings", CSS)]
+    p.append('<div class="masthead"><h1>Archive</h1>'
+             '<p class="tag">Every edition, as it was published</p>' + C.meta_row() + "</div>")
+    p.append('<div class="freshline" id="freshline">&nbsp;</div>')
+    p.append(C.nav("archive"))
+    p.append('<div class="panel"><p style="margin:0">Each link below is a <b>point-in-time snapshot</b> of '
+             'a briefing exactly as it was published at that timestamp. Figures in an archived edition were '
+             'correct to the sources available at that moment and are <b>not</b> updated afterwards; the '
+             'live briefings are on the other tabs. Snapshots are kept for 21 days.</p></div>')
+
+    intro_end = len(p)
+    n_links = 0
+    for day in days:
+        stamps = sorted([k[1] for k in editions if k[0] == day], reverse=True)
+        p.append('<h2 class="day">%s</h2>' % day)
+        rows = []
+        for s in stamps:
+            got = editions[(day, s)]
+            links = []
+            for sec, label in SECTIONS:
+                if sec in got:
+                    links.append('<a href="archive/%s">%s</a>' % (got[sec], label))
+                    n_links += 1
+            rows.append('<tr><td class="t">%s</td><td>%s</td></tr>' % (h12(s), "".join(links)))
+        p.append('<div class="tblwrap"><table><tr><th>Edition</th><th>Briefings</th></tr>'
+                 + "".join(rows) + "</table></div>")
+
+    p.append('<footer><h5>About</h5><ul><li>%d snapshots across %d editions and %d days.</li></ul>'
+             '<div class="disc">Archived pages are historical records. Do not rely on an archived '
+             'market level, CVE deadline or fight card as current.</div></footer>'
+             % (len(files), len(editions), len(days)))
+    p.append(C.STAMP_JS)
+    p.append("</div></body></html>")
+    out = "".join(p)
+
+    # assertions
+    assert out.count('<h2 class="day">') == len(days), "headings != days"
+    assert out.count("<table>") == len(days), "tables != days"
+    assert n_links == len(files), "links (%d) != files (%d)" % (n_links, len(files))
+    assert out.count('class="active"') == 1, "not exactly one active nav tab"
+    assert len(set(re.findall(r'<h2 class="day">([^<]+)</h2>', out))) == len(days), "duplicate headings"
+    assert out.index('<h2 class="day">') > out.index("Snapshots are kept"), "headings must follow the intro"
+    assert "tradingview.com" not in out, "archive must carry no live widgets"
+
+    open(os.path.join(root, "archive.html"), "w").write(out)
+    print("archive.html: %d days / %d editions / %d snapshots / %d bytes"
+          % (len(days), len(editions), len(files), len(out)))
+
+
+if __name__ == "__main__":
+    main(sys.argv[1] if len(sys.argv) > 1 else ".")
