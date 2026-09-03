@@ -97,47 +97,29 @@ footer a{color:var(--muted)} footer a:hover{color:var(--accent)}
 .cdn .clk{font-family:var(--mono);font-size:19px;color:var(--text)}
 .cdn .ev{font-size:14px;color:var(--muted);flex:1;min-width:200px}
 
-.big{display:grid;grid-template-columns:1fr;gap:15px;margin-top:6px}
-@media(min-width:820px){.big{grid-template-columns:repeat(3,1fr)}}
-.bcard{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 21px;
-  display:flex;flex-direction:column;transition:transform .16s,border-color .16s,box-shadow .16s}
-.bcard:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(0,0,0,.35)}
-.bcard .kick{font-family:var(--mono);font-size:10.5px;letter-spacing:.17em;text-transform:uppercase;
-  margin-bottom:9px}
-.bcard h3{margin:0 0 10px;font-size:20px;line-height:1.25}
-.bcard p{margin:0 0 16px;font-size:14.5px;color:#cfc9c2;flex:1}
-.bcard a.go{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase}
-.c-cy{border-top:3px solid #22d3a8} .c-cy .kick,.c-cy a.go{color:#22d3a8}
-.c-cy:hover{border-color:#22d3a8}
-.c-ws{border-top:3px solid #caa64a} .c-ws .kick,.c-ws a.go{color:#caa64a}
-.c-ws:hover{border-color:#caa64a} .c-ws h3{font-family:Georgia,"Times New Roman",serif}
-.c-mm{border-top:3px solid #e84545} .c-mm .kick,.c-mm a.go{color:#e84545}
-.c-mm:hover{border-color:#e84545}
+
+.big{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.big .card{padding:20px 22px}
+.big .card h3{font-size:20px;margin:0 0 10px}
+.big .card .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:9px}
+.big .card p{font-size:15px;color:#cfc9c2;margin:0 0 14px}
+.big .card a.more{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase}
+.c-sec{border-top:3px solid #22d3a8}.c-sec .kicker,.c-sec h3,.c-sec a.more{color:#22d3a8}
+.c-sec:hover{border-color:#22d3a8}
+.c-mkt{border-top:3px solid #caa64a}.c-mkt .kicker,.c-mkt a.more{color:#caa64a}
+.c-mkt h3{color:#e8c766;font-family:Georgia,'Times New Roman',serif}
+.c-mkt:hover{border-color:#caa64a}
+.c-mma{border-top:3px solid #e84545}.c-mma .kicker,.c-mma h3,.c-mma a.more{color:#ff8a5c}
+.c-mma:hover{border-color:#e84545}
 
 </style>
+
 </head><body>
 <div class="wrap">
-<header class="mast"><h1>Daily Briefings</h1><p class="tag">Three desks, refreshed every 30 minutes &mdash; security, markets and the fight game</p><div class="meta">
+<header class="mast"><h1>Daily Briefings</h1><p class="tag">Security, markets and MMA &mdash; rebuilt from live sources every 30 minutes</p><div class="meta">
 <span class="pill live"><span class="dot"></span>Live</span>
 <span class="pill" id="edition">&nbsp;</span>
 <span class="pill" id="datestamp">&nbsp;</span>
 <span class="pill">Updated <span id="updated">&nbsp;</span></span>
-</div></header>
-<div class="freshline" id="freshline">&nbsp;</div>
-<nav class="tabs">
-<a href="index.html" class="on">★ Front Page</a>
-<a href="cyber-briefing.html">⛨ The Cyber Wire</a>
-<a href="wallstreet-briefing.html">▲ The Closing Bell</a>
-<a href="mma-briefing.html">⊘ The Octagon</a>
-<a href="archive.html">🗄 Archive</a>
-</nav>
-<div class="big">
-<div class="bcard c-cy"><div class="kick">&#9960; The Cyber Wire &middot; The Wire</div><h3>AI dev servers are being emptied of their API keys</h3><p>A critical Langflow flaw is being used to strip OpenAI, Anthropic and cloud API keys out of AI development servers, and five other actively exploited bugs must be remediated across federal networks by Saturday.</p><a class="go" href="cyber-briefing.html">Read the briefing &rarr;</a></div>
-<div class="bcard c-ws"><div class="kick">&#9650; The Closing Bell &middot; The Tape</div><h3>Waller opens the door to a September hold</h3><p>Stocks opened higher across the board after Fed Governor Christopher Waller said he could support holding rates steady this month, while Nvidia confirmed a deal for Hugging Face that sources value between $12.9 billion and roughly $14 billion depending on what is counted.</p><a class="go" href="wallstreet-briefing.html">Read the briefing &rarr;</a></div>
-<div class="bcard c-mm"><div class="kick">&#8856; The Octagon &middot; Tale of the Tape</div><h3>UFC 332 loses its main event</h3><p>Valentina Shevchenko's injury has cost UFC 332 its main event, and the promotion is reportedly building an interim women's flyweight title fight between Natalia Silva and Wang Cong in its place.</p><a class="go" href="mma-briefing.html">Read the briefing &rarr;</a></div>
-</div>
-<footer><div style="font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:6px">About</div><p style="font-size:13px;color:var(--muted);margin:0">Each briefing is rebuilt from live web searches every 30 minutes between 8 AM and 6 PM ET, and every claim is checked against a source fetched in that run. Point-in-time snapshots of past editions are kept in the <a href="archive.html">Archive</a>.</p><p class="disc">Information only. The markets briefing is not investment advice; the security briefing is not a substitute for your own vulnerability management; fight cards are subject to change.</p></footer>
-</div>
-<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \u00b7 briefings refresh every 30 minutes, 8 AM\u20136 PM ET';}catch(e){}})();</script>
-
+</div></header><div class="freshline" id="freshline">&nbsp;</div><nav class="tabs"><a href="index.html" class="on">★ Front Page</a><a href="cyber-briefing.html">⛨ The Cyber Wire</a><a href="wallstreet-briefing.html">▲ The Closing Bell</a><a href="mma-briefing.html">⊘ The Octagon</a><a href="archive.html">🗄 Archive</a></nav><div class="big"><div class="card c-sec"><div class="kicker">⛨ The Cyber Wire · The Wire</div><h3>Court records taken from Thomson Reuters’ C-Track</h3><p>Thomson Reuters has disclosed that an intruder took court files from its C-Track case-management platform across at least a dozen U.S. states, the U.S. Virgin Islands and Canada, and five actively exploited flaws in CISA's latest batch fall due on Saturday.</p><a class="more" href="cyber-briefing.html">Read the briefing →</a></div><div class="card c-mkt"><div class="kicker">▲ The Closing Bell · The Tape</div><h3>Waller opens the door to a September hold</h3><p>Stocks are higher across the board this morning as Treasury yields pull back after Fed Governor Christopher Waller said he is leaning toward holding rates steady in September, with ChargePoint up more than 50% on its quarterly results.</p><a class="more" href="wallstreet-briefing.html">Read the briefing →</a></div><div class="card c-mma"><div class="kicker">⊘ The Octagon · Tale of the Tape</div><h3>UFC 332 still has no main event</h3><p>UFC 332 is four weeks out with no main event after Valentina Shevchenko's withdrawal, and Cris Cyborg has publicly offered to headline it against Amanda Nunes.</p><a class="more" href="mma-briefing.html">Read the briefing →</a></div></div><div class="note" style="margin-top:22px">Every figure on these pages is checked against a source fetched during the run that built them. Where sources disagree, both readings are printed and neither is adopted. Point-in-time snapshots of every edition are kept in the <a href="archive.html">Archive</a>.</div></div><script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \u00b7 briefings refresh every 30 minutes, 8 AM\u20136 PM ET';}catch(e){}})();</script>
 </body></html>
