@@ -6,7 +6,7 @@
 <style>
 :root{
   --bg:#0d0f11; --panel:#14181b; --line:#232a2e;
-  --accent:#caa64a; --accent2:#e8c766;
+  --accent:#c9c2ba; --accent2:#e9e6e1;
   --text:#e9e6e1; --muted:#948d85;
   --up:#3fbf7f; --down:#e5544b; --crit:#e5544b; --warn:#e0a13a;
   --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
@@ -98,12 +98,13 @@ footer a{color:var(--muted)} footer a:hover{color:var(--accent)}
 .cdn .ev{font-size:14px;color:var(--muted);flex:1;min-width:200px}
 
 
+
 .big{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
 .big .card{padding:20px 22px}
-.big .card h3{font-size:20px;margin:0 0 10px}
-.big .card .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:9px}
-.big .card p{font-size:15px;color:#cfc9c2;margin:0 0 14px}
-.big .card a.more{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase}
+.big .card h3{font-size:20px;margin:0 0 10px;line-height:1.28}
+.big .card p{font-size:14.8px;color:#cfc9c2;margin:0 0 14px}
+.kicker{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:9px}
+a.more{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase}
 .c-sec{border-top:3px solid #22d3a8}.c-sec .kicker,.c-sec h3,.c-sec a.more{color:#22d3a8}
 .c-sec:hover{border-color:#22d3a8}
 .c-mkt{border-top:3px solid #caa64a}.c-mkt .kicker,.c-mkt a.more{color:#caa64a}
@@ -113,7 +114,6 @@ footer a{color:var(--muted)} footer a:hover{color:var(--accent)}
 .c-mma:hover{border-color:#e84545}
 
 </style>
-
 </head><body>
 <div class="wrap">
 <header class="mast"><h1>Daily Briefings</h1><p class="tag">Security, markets and MMA &mdash; rebuilt from live sources every 30 minutes</p><div class="meta">
@@ -121,5 +121,5 @@ footer a{color:var(--muted)} footer a:hover{color:var(--accent)}
 <span class="pill" id="edition">&nbsp;</span>
 <span class="pill" id="datestamp">&nbsp;</span>
 <span class="pill">Updated <span id="updated">&nbsp;</span></span>
-</div></header><div class="freshline" id="freshline">&nbsp;</div><nav class="tabs"><a href="index.html" class="on">★ Front Page</a><a href="cyber-briefing.html">⛨ The Cyber Wire</a><a href="wallstreet-briefing.html">▲ The Closing Bell</a><a href="mma-briefing.html">⊘ The Octagon</a><a href="archive.html">🗄 Archive</a></nav><div class="big"><div class="card c-sec"><div class="kicker">⛨ The Cyber Wire · The Wire</div><h3>Court records taken from Thomson Reuters’ C-Track</h3><p>Thomson Reuters has disclosed that an intruder took court files from its C-Track case-management platform across at least a dozen U.S. states, the U.S. Virgin Islands and Canada, and five actively exploited flaws in CISA's latest batch fall due on Saturday.</p><a class="more" href="cyber-briefing.html">Read the briefing →</a></div><div class="card c-mkt"><div class="kicker">▲ The Closing Bell · The Tape</div><h3>Waller opens the door to a September hold</h3><p>Stocks are higher across the board this morning as Treasury yields pull back after Fed Governor Christopher Waller said he is leaning toward holding rates steady in September, with ChargePoint up more than 50% on its quarterly results.</p><a class="more" href="wallstreet-briefing.html">Read the briefing →</a></div><div class="card c-mma"><div class="kicker">⊘ The Octagon · Tale of the Tape</div><h3>UFC 332 still has no main event</h3><p>UFC 332 is four weeks out with no main event after Valentina Shevchenko's withdrawal, and Cris Cyborg has publicly offered to headline it against Amanda Nunes.</p><a class="more" href="mma-briefing.html">Read the briefing →</a></div></div><div class="note" style="margin-top:22px">Every figure on these pages is checked against a source fetched during the run that built them. Where sources disagree, both readings are printed and neither is adopted. Point-in-time snapshots of every edition are kept in the <a href="archive.html">Archive</a>.</div></div><script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \u00b7 briefings refresh every 30 minutes, 8 AM\u20136 PM ET';}catch(e){}})();</script>
+</div></header><div class="freshline" id="freshline">&nbsp;</div><nav class="tabs"><a href="index.html" class="on">★ Front Page</a><a href="cyber-briefing.html">⛨ The Cyber Wire</a><a href="wallstreet-briefing.html">▲ The Closing Bell</a><a href="mma-briefing.html">⊘ The Octagon</a><a href="archive.html">🗄 Archive</a></nav><div class="big"><div class="card c-sec"><div class="kicker">⛨ The Cyber Wire · The Wire</div><h3>SonicWall zero-days chained in live attacks</h3><p>Two SonicWall SMA1000 zero-days are being chained for unauthenticated remote code execution, and federal agencies have until Saturday to fix them and three other flaws CISA added this week.</p><a class="more" href="cyber-briefing.html">Read the briefing →</a></div><div class="card c-mkt"><div class="kicker">▲ The Closing Bell · The Tape</div><h3>Yields fall and stocks rally more than 1%</h3><p>Stocks are up more than 1% across the three main indexes as Treasury yields pull back and traders trim the odds of a September rate hike, with ChargePoint the session&rsquo;s outsized move on its quarterly results.</p><a class="more" href="wallstreet-briefing.html">Read the briefing →</a></div><div class="card c-mma"><div class="kicker">⊘ The Octagon · Tale of the Tape</div><h3>UFC 332 still has no main event</h3><p>UFC 332 is four weeks out with no main event, and Cris Cyborg has publicly offered to headline it against Amanda Nunes.</p><a class="more" href="mma-briefing.html">Read the briefing →</a></div></div><div class="note" style="margin-top:22px">Every figure on these pages is checked against published reporting at the time the page was built. Where sources disagree, both readings are printed and neither is adopted. Point-in-time snapshots of every edition are kept in the <a href="archive.html">Archive</a>.</div></div><script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \u00b7 briefings refresh every 30 minutes, 8 AM\u20136 PM ET';}catch(e){}})();</script>
 </body></html>
