@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Daily Briefings</title><style>
 :root{
-  --bg:#0d0d0e; --panel:#151517; --line:#26262a;
-  --accent:#c9c2b8; --accent2:#e9e6e1;
+  --bg:#0d0f12; --panel:#15181d; --line:#242830;
+  --accent:#c9a84c; --accent2:#e0c877;
   --text:#e8e6e3; --muted:#9aa0a6;
   --up:#22c55e; --down:#ef4444; --warn:#f0a132; --crit:#ef4444;
   --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
@@ -100,18 +100,32 @@ footer ul{margin:0;padding-left:17px}
 footer li{margin-bottom:5px;word-break:break-word}
 .disc{margin-top:16px;font-size:11.5px;color:var(--muted);font-style:italic;line-height:1.5}
 
-.big{display:grid;gap:15px;margin-top:6px}
-@media(min-width:820px){.big{grid-template-columns:repeat(3,1fr)}}
-.bigcard{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 21px;transition:.16s;
-  display:flex;flex-direction:column}
-.bigcard:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,.4)}
-.bigcard .kick{font-family:var(--mono);font-size:10.5px;letter-spacing:.17em;text-transform:uppercase;margin-bottom:9px}
-.bigcard h3{font-size:22px;margin:0 0 4px}
-.bigcard .sub{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
-.bigcard p{font-size:14.5px;color:#cfcdc9;flex:1}
-.bigcard a.more{font-family:var(--mono);font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;margin-top:14px;display:inline-block}
-.cy{--c:#22d3a8}.wsx{--c:#caa64a}.mx{--c:#e84545}
-.bigcard.cy:hover,.bigcard.wsx:hover,.bigcard.mx:hover{border-color:var(--c)}
-.bigcard .kick,.bigcard a.more{color:var(--c)}
-.bigcard.wsx h3{font-family:Georgia,'Times New Roman',serif}
-</style></head><body><div class="wrap"><header class="masthead"><h1>Daily Briefings</h1><p class="tag">Three briefings, refreshed through the day — security, markets and the fight game</p><div class="meta"><span class="pill live"><span class="dot"></span>Live</span><span class="pill" id="edition">&nbsp;</span><span class="pill" id="datestamp">&nbsp;</span><span class="pill">Updated <span id="updated">&nbsp;</span></span></div></header><div class="freshline" id="freshline">&nbsp;</div><nav class="tabs"><a href="index.html" class="active">&#9733; Front Page</a><a href="cyber-briefing.html">&#9960; The Cyber Wire</a><a href="wallstreet-briefing.html">&#9650; The Closing Bell</a><a href="mma-briefing.html">&#8856; The Octagon</a><a href="archive.html">&#128452; Archive</a></nav><div class="big"><div class="bigcard cy"><div class="kick">&#9960; The Cyber Wire</div><h3>The Wire</h3><div class="sub">Security</div><p>A critical JFrog Artifactory authentication bypass rated CVSS 9.8 is being exploited to forge administrator tokens days after disclosure, while Aesto Health told regulators a breach of its AWS infrastructure exposed the health data of 9,540,683 people.</p><a class="more" href="cyber-briefing.html">Read the briefing &rarr;</a></div><div class="bigcard wsx"><div class="kick">&#9650; The Closing Bell</div><h3>The Tape</h3><div class="sub">Markets</div><p>Stocks snapped a losing streak on Wednesday as Treasury yields eased — the S&P 500 closed at 7,666.60 (+0.46%), the Dow at 53,061.95 (+295.07, +0.56%) and the Nasdaq Composite at 26,217.83 (+0.45%) — with Dell up roughly 16% on its AI backlog and Snowflake surging after the bell.</p><a class="more" href="wallstreet-briefing.html">Read the briefing &rarr;</a></div><div class="bigcard mx"><div class="kick">&#8856; The Octagon</div><h3>Tale of the Tape</h3><div class="sub">MMA</div><p>UFC 332 has lost its main event — Valentina Shevchenko withdrew injured from a flyweight title defence against Natália Silva, and Dana White says a replacement announcement is imminent — while Salahdine Parnasse debuts as a heavy favourite in Saturday’s Paris headliner.</p><a class="more" href="mma-briefing.html">Read the briefing &rarr;</a></div></div><footer><h5>About</h5><p style="font-size:12.5px;color:var(--muted)">Each briefing is rebuilt from live web searches every 30 minutes between 8 AM and 6 PM ET. Every figure is checked against a source fetched on the same run before it is published; where sources disagree, the disagreement is printed rather than resolved silently. Past editions are kept in the <a href="archive.html">Archive</a>.</p><div class="disc">Information only — not investment, legal or security advice.</div></footer><script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \u00b7 briefings refresh every 30 minutes, 8 AM\u20136 PM ET';}catch(e){}})();</script></div></body></html>
+.hero{display:grid;gap:14px;margin-top:6px}
+@media(min-width:820px){.hero{grid-template-columns:repeat(3,1fr)}}
+.hcard{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:19px 21px;
+  display:flex;flex-direction:column;transition:.18s;border-top:3px solid var(--line)}
+.hcard:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(0,0,0,.35)}
+.hcard .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:8px}
+.hcard h3{font-size:21px;margin:0 0 4px;letter-spacing:-.3px}
+.hcard .sub{font-size:12.5px;color:var(--muted);font-family:var(--mono);letter-spacing:.08em;
+  text-transform:uppercase;margin-bottom:11px}
+.hcard p{font-size:14.5px;color:#cfcdc9;flex:1;margin:0 0 15px}
+.hcard a.go{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase}
+.hcard.cy{border-top-color:#22d3a8} .hcard.cy .k,.hcard.cy a.go{color:#22d3a8}
+.hcard.cy:hover{border-color:#22d3a8}
+.hcard.ws{border-top-color:#caa64a} .hcard.ws .k,.hcard.ws a.go{color:#caa64a}
+.hcard.ws:hover{border-color:#caa64a} .hcard.ws h3{font-family:Georgia,'Times New Roman',serif}
+.hcard.mm{border-top-color:#e84545} .hcard.mm .k,.hcard.mm a.go{color:#ff8a5c}
+.hcard.mm:hover{border-color:#e84545}
+</style></head><body><div class="wrap">
+<header class="masthead"><h1>Daily Briefings</h1><p class="tag">Security, markets and mixed martial arts &mdash; rebuilt from live sources every 30 minutes, 8 AM&ndash;6 PM ET.</p><div class="meta"><span class="pill live"><span class="dot"></span>Live</span><span class="pill" id="edition">&nbsp;</span><span class="pill" id="datestamp">&nbsp;</span><span class="pill">Updated <span id="updated">&nbsp;</span></span></div></header>
+<div class="freshline" id="freshline">&nbsp;</div>
+<nav class="tabs"><a href="index.html" class="active">&#9733; Front Page</a><a href="cyber-briefing.html">&#9960; The Cyber Wire</a><a href="wallstreet-briefing.html">&#9650; The Closing Bell</a><a href="mma-briefing.html">&#8856; The Octagon</a><a href="archive.html">&#128452; Archive</a></nav>
+<div class="hero">
+<div class="hcard cy"><div class="k">&#9960; The Cyber Wire</div><h3>The Cyber Wire</h3><div class="sub">The Wire</div><p>CISA added seven actively exploited flaws to its Known Exploited Vulnerabilities catalog on September 2 &mdash; including two CVSS 10.0 bugs in SonicWall SMA1000 and Kestra OSS &mdash; with federal agencies due to patch most of them by Saturday, September 5.</p><a class="go" href="cyber-briefing.html">Read the briefing &rarr;</a></div>
+<div class="hcard ws"><div class="k">&#9650; The Closing Bell</div><h3>The Closing Bell</h3><div class="sub">The Tape</div><p>Futures are mixed before the bell as Iran's overnight missile and drone attacks on Jordan, the UAE and Kuwait push Brent back above $95 and lift Treasury yields, while Snowflake jumps more than 24% pre-market on a raised full-year forecast.</p><a class="go" href="wallstreet-briefing.html">Read the briefing &rarr;</a></div>
+<div class="hcard mm"><div class="k">&#8856; The Octagon</div><h3>The Octagon</h3><div class="sub">Tale of the Tape</div><p>UFC 332 is still without a main event after Valentina Shevchenko withdrew injured, with an interim women's flyweight title fight between Natalia Silva and Wang Cong reported as the likely replacement but nothing yet announced.</p><a class="go" href="mma-briefing.html">Read the briefing &rarr;</a></div>
+</div>
+<div class="note" style="margin-top:22px">Every edition is rebuilt from searches run at publication time. Figures appear only where a source fetched in that run states them; disputed readings are printed with their provenance rather than resolved silently. Point-in-time snapshots of past editions live in the <a href="archive.html">Archive</a>.</div>
+<footer><h5>About</h5><ul><li>Automated briefing desk &mdash; built and published by a scheduled agent run.</li><li>Source lists live at the foot of each individual briefing.</li></ul><div class="disc">Information only. Nothing here is investment, security or wagering advice.</div></footer>
+</div><script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \u00b7 briefings refresh every 30 minutes, 8 AM\u20136 PM ET';}catch(e){}})();</script></body></html>
