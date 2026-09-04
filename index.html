@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="utf-8">
+<html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Daily Briefings</title>
 <style>
 :root{
-  --bg:#0d0d0f; --panel:#161619; --line:#26262b;
-  --accent:#c9c4bc; --accent2:#e8e3da;
+  --bg:#0c0d10; --panel:#14161a; --line:#242830;
+  --accent:#8fa3c8; --accent2:#b8c6e0;
   --text:#e9e6e1; --muted:#948d85;
   --up:#3fbf7f; --down:#e5544b; --crit:#e5544b; --warn:#e0a13a;
   --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
@@ -45,6 +44,7 @@ h2.sec{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transfo
 .card:hover{transform:translateY(-3px);border-color:var(--accent)}
 .card h3{margin:0 0 7px;font-size:16.5px;line-height:1.35}
 .card p{margin:0;font-size:14.5px;color:#cfc9c2}
+.card p+p{margin-top:8px}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:9px}
 .t{font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;
   border-radius:5px;padding:3px 7px;border:1px solid var(--line);color:var(--muted)}
@@ -96,62 +96,51 @@ footer a{color:var(--muted)} footer a:hover{color:var(--accent)}
 .cdn .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
 .cdn .clk{font-family:var(--mono);font-size:19px;color:var(--text)}
 .cdn .ev{font-size:14px;color:var(--muted);flex:1;min-width:200px}
-
+.big{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.bigcard{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--line);
+  border-radius:14px;padding:20px 22px;transition:transform .16s,border-color .16s}
+.bigcard:hover{transform:translateY(-4px)}
+.bigcard .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:9px}
+.bigcard h3{margin:0 0 10px;font-size:22px;line-height:1.25}
+.bigcard p{margin:0 0 14px;font-size:14.8px;color:#cfc9c2}
+.bigcard .go{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase}
 </style>
-</head><body>
-<div class="wrap">
-<header class="mast">
-<h1>Daily Briefings</h1>
-<p class="tag">Three desks, refreshed every 30 minutes &mdash; security, markets and the fight game</p>
-<div class="meta">
-<span class="pill live"><span class="dot"></span>Live</span>
-<span class="pill" id="edition">&nbsp;</span>
-<span class="pill" id="datestamp">&nbsp;</span>
-<span class="pill">Updated <span id="updated">&nbsp;</span></span>
-</div>
-</header>
-<div class="freshline" id="freshline">&nbsp;</div>
-<nav class="tabs">
-<a href="index.html" class="on">★ Front Page</a>
-<a href="cyber-briefing.html">⛨ The Cyber Wire</a>
-<a href="wallstreet-briefing.html">▲ The Closing Bell</a>
-<a href="mma-briefing.html">⊘ The Octagon</a>
-<a href="archive.html">🗄 Archive</a>
-</nav>
+</head><body><div class="wrap">
+  <header class="mast">
+    <h1>Daily Briefings</h1>
+    <p class="tag">Security, markets and MMA — refreshed through the day</p>
+    <div class="meta">
+      <span class="pill live"><span class="dot"></span>Live</span>
+      <span class="pill" id="edition">&nbsp;</span>
+      <span class="pill" id="datestamp">&nbsp;</span>
+      <span class="pill">Updated <span id="updated">&nbsp;</span></span>
+    </div>
+  </header>
 
-<div class="cards">
-<div class="card" style="border-left:3px solid #22d3a8">
-<div style="font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#22d3a8;margin-bottom:9px">&#9960; The Cyber Wire &middot; The Wire</div>
-<h3 style="font-size:19px">A federal patch deadline lands tomorrow</h3>
-<p>Five of the seven flaws CISA added to the KEV catalog on Sept 2 must be remediated by
-<b>Sept 5</b> &mdash; one day out &mdash; while attackers keep hammering Langflow's CVSS 9.8
-unauthenticated root RCE to strip OpenAI and AWS keys out of environment variables.</p>
-<p style="margin-top:11px"><a href="cyber-briefing.html" style="color:#22d3a8">Read the briefing &rarr;</a></p>
-</div>
+  <p class="freshline" id="freshline">&nbsp;</p>
+<nav class="tabs"><a class="on" href="index.html">★ Front Page</a><a href="cyber-briefing.html">⛨ The Cyber Wire</a><a href="wallstreet-briefing.html">▲ The Closing Bell</a><a href="mma-briefing.html">⊘ The Octagon</a><a href="archive.html">🗄 Archive</a></nav>
+  <div class="big">
+    <div class="bigcard" style="border-top-color:#22d3a8">
+      <div class="k" style="color:#22d3a8">⛨ The Cyber Wire · The Wire</div>
+      <h3>A camera botnet that survives a factory reset</h3>
+      <p>A single operator quietly took over more than 14,500 Dahua surveillance cameras in 35 days using a backdoor account that survives a factory reset, while five actively exploited flaws in CISA's catalogue — including a SonicWall bug scored 10.0 — fall due tomorrow.</p>
+      <a class="go" style="color:#22d3a8" href="cyber-briefing.html">Read the briefing →</a>
+    </div>
+    <div class="bigcard" style="border-top-color:#caa64a">
+      <div class="k" style="color:#caa64a">▲ The Closing Bell · The Tape</div>
+      <h3 style="font-family:Georgia,'Times New Roman',serif">Payrolls triple the forecast</h3>
+      <p>August payrolls blew past forecasts at 162,000 against a 53,000–55,000 consensus with unemployment steady at 4.1%, and index futures turned lower on the print because a labour market this firm cuts against any case for the Fed easing at its September 15–16 meeting.</p>
+      <a class="go" style="color:#caa64a" href="wallstreet-briefing.html">Read the briefing →</a>
+    </div>
+    <div class="bigcard" style="border-top-color:#e84545">
+      <div class="k" style="color:#e84545">⊘ The Octagon · Tale of the Tape</div>
+      <h3>Paris, and a title fight with no date</h3>
+      <p>UFC Paris lands tomorrow at the Accor Arena with KSW import Salahdine Parnasse a heavy favourite over Dan Hooker on his Octagon debut, while UFC 332 is still without a headliner a month out after Valentina Shevchenko's injury withdrawal.</p>
+      <a class="go" style="color:#e84545" href="mma-briefing.html">Read the briefing →</a>
+    </div>
+  </div>
+  <p class="note" style="margin-top:26px">Three briefings, rebuilt from live sources every 30 minutes between 8 AM and 6 PM ET. Every figure on every page traces to a source fetched in that edition — nothing is carried forward on memory. Point-in-time snapshots of past editions are kept in the <a href="archive.html">Archive</a>.</p>
 
-<div class="card" style="border-left:3px solid #caa64a">
-<div style="font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#caa64a;margin-bottom:9px">&#9650; The Closing Bell &middot; The Tape</div>
-<h3 style="font-size:19px;font-family:Georgia,'Times New Roman',serif">The jobs report is the whole session</h3>
-<p>Futures are steady to modestly higher before the August employment report at <b>8:30 AM ET</b>, the
-print that decides a Fed split 50-50 into Sept 15&ndash;16 &mdash; after Thursday's Waller-driven
-rally handed the Dow its best day since Aug 4.</p>
-<p style="margin-top:11px"><a href="wallstreet-briefing.html" style="color:#caa64a">Read the briefing &rarr;</a></p>
 </div>
-
-<div class="card" style="border-left:3px solid #e84545">
-<div style="font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#e84545;margin-bottom:9px">&#8856; The Octagon &middot; Tale of the Tape</div>
-<h3 style="font-size:19px">Fight eve in Paris</h3>
-<p>Salahdine Parnasse is a heavy favourite over Dan Hooker at the Accor Arena on Saturday, and an
-undefeated short-notice newcomer has moved up a weight class to fill a hole on the card.</p>
-<p style="margin-top:11px"><a href="mma-briefing.html" style="color:#e84545">Read the briefing &rarr;</a></p>
-</div>
-</div>
-
-<div class="note" style="margin-top:22px">Every figure on these pages is checked against a source
-fetched in the same run that published it. Where two outlets disagree, both readings are printed and
-neither is adopted; where nothing could be verified, the item is left off rather than guessed.</div>
-<footer><div class="disc">Independent daily briefings compiled from public reporting. Not investment advice.</div></footer>
-</div>
-<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \u00b7 briefings refresh every 30 minutes, 8 AM\u20136 PM ET';}catch(e){}})();</script>
-
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
 </body></html>

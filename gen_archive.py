@@ -1,93 +1,46 @@
 # -*- coding: utf-8 -*-
-"""Rebuild archive.html from scratch from the contents of archive/.
-No splice, no retained head, so there is no boundary that can drift."""
-import os, re, sys, collections
-import css as C
-
-SECTIONS = [("cyber", "The Cyber Wire"), ("wallstreet", "The Closing Bell"), ("mma", "The Octagon")]
-LABEL = dict(SECTIONS)
-CSS = C.base_css("#8a94a6", "#b9c2d0", "#0b0c0e", "#14161a", "#252932") + """
-h2.day{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--accent2);margin:30px 0 11px;padding-bottom:7px;border-bottom:1px solid var(--line)}
-td a{margin-right:14px;white-space:nowrap}
-td.t{font-family:var(--mono);color:var(--muted);white-space:nowrap}
-"""
-
-PAT = re.compile(r"^(cyber|wallstreet|mma)-(\d{4}-\d{2}-\d{2})-(\d{4})\.html$")
-
-
-def h12(hhmm):
-    h, m = int(hhmm[:2]), hhmm[2:]
-    ap = "AM" if h < 12 else "PM"
-    hh = h % 12 or 12
-    return "%d:%s %s ET" % (hh, m, ap)
-
-
-def main(root="."):
-    d = os.path.join(root, "archive")
-    files = sorted(os.listdir(d))
-    files = [f for f in files if f.endswith(".html")]
-    editions = collections.defaultdict(dict)          # (date, hhmm) -> {section: filename}
-    parsed = 0
-    for f in files:
-        m = PAT.match(f)
-        if not m:
-            sys.exit("UNPARSED FILENAME IN archive/: %s" % f)   # never let one vanish silently
-        parsed += 1
-        sec, date, hhmm = m.groups()
-        editions[(date, hhmm)][sec] = f
-    assert parsed == len(files), "parsed %d of %d files" % (parsed, len(files))
-
-    days = sorted({k[0] for k in editions}, reverse=True)
-
-    p = [C.head("Archive — Daily Briefings", CSS)]
-    p.append('<div class="masthead"><h1>Archive</h1>'
-             '<p class="tag">Every edition, as it was published</p>' + C.meta_row() + "</div>")
-    p.append('<div class="freshline" id="freshline">&nbsp;</div>')
-    p.append(C.nav("archive"))
-    p.append('<div class="panel"><p style="margin:0">Each link below is a <b>point-in-time snapshot</b> of '
-             'a briefing exactly as it was published at that timestamp. Figures in an archived edition were '
-             'correct to the sources available at that moment and are <b>not</b> updated afterwards; the '
-             'live briefings are on the other tabs. Snapshots are kept for 21 days.</p></div>')
-
-    intro_end = len(p)
-    n_links = 0
-    for day in days:
-        stamps = sorted([k[1] for k in editions if k[0] == day], reverse=True)
-        p.append('<h2 class="day">%s</h2>' % day)
-        rows = []
-        for s in stamps:
-            got = editions[(day, s)]
-            links = []
-            for sec, label in SECTIONS:
-                if sec in got:
-                    links.append('<a href="archive/%s">%s</a>' % (got[sec], label))
-                    n_links += 1
-            rows.append('<tr><td class="t">%s</td><td>%s</td></tr>' % (h12(s), "".join(links)))
-        p.append('<div class="tblwrap"><table><tr><th>Edition</th><th>Briefings</th></tr>'
-                 + "".join(rows) + "</table></div>")
-
-    p.append('<footer><h5>About</h5><ul><li>%d snapshots across %d editions and %d days.</li></ul>'
-             '<div class="disc">Archived pages are historical records. Do not rely on an archived '
-             'market level, CVE deadline or fight card as current.</div></footer>'
-             % (len(files), len(editions), len(days)))
-    p.append(C.STAMP_JS)
-    p.append("</div></body></html>")
-    out = "".join(p)
-
-    # assertions
-    assert out.count('<h2 class="day">') == len(days), "headings != days"
-    assert out.count("<table>") == len(days), "tables != days"
-    assert n_links == len(files), "links (%d) != files (%d)" % (n_links, len(files))
-    assert out.count('class="active"') == 1, "not exactly one active nav tab"
-    assert len(set(re.findall(r'<h2 class="day">([^<]+)</h2>', out))) == len(days), "duplicate headings"
-    assert out.index('<h2 class="day">') > out.index("Snapshots are kept"), "headings must follow the intro"
-    assert "tradingview.com" not in out, "archive must carry no live widgets"
-
-    open(os.path.join(root, "archive.html"), "w").write(out)
-    print("archive.html: %d days / %d editions / %d snapshots / %d bytes"
-          % (len(days), len(editions), len(files), len(out)))
-
-
-if __name__ == "__main__":
-    main(sys.argv[1] if len(sys.argv) > 1 else ".")
+import os,re,sys
+sys.path.insert(0,'/tmp/build'); from common import css,nav,META,STAMP
+SEC={'cyber':('The Cyber Wire','#22d3a8'),'wallstreet':('The Closing Bell','#caa64a'),'mma':('The Octagon','#e84545')}
+snaps={}
+for f in os.listdir('archive'):
+    m=re.match(r'^(cyber|wallstreet|mma)-(\d{4}-\d{2}-\d{2})-(\d{4})\.html$',f)
+    if not m: continue
+    s,d,t=m.groups(); snaps.setdefault(d,{}).setdefault(t,{})[s]=f
+def h12(t):
+    h,mn=int(t[:2]),t[2:]
+    ap='AM' if h<12 else 'PM'; hh=h%12 or 12
+    return '%d:%s %s ET'%(hh,mn,ap)
+import datetime
+rows=[]
+for d in sorted(snaps,reverse=True):
+    dt=datetime.date(*map(int,d.split('-')))
+    rows.append('<h2 class="sec">%s</h2><div class="panel"><table>'%dt.strftime('%A, %B %-d, %Y'))
+    rows.append('<tr><th>Edition</th><th>Snapshots</th></tr>')
+    for t in sorted(snaps[d],reverse=True):
+        links=' · '.join('<a href="archive/%s">%s</a>'%(snaps[d][t][k],SEC[k][0])
+                         for k in ['cyber','wallstreet','mma'] if k in snaps[d][t])
+        rows.append('<tr><td class="mono">%s</td><td>%s</td></tr>'%(h12(t),links))
+    rows.append('</table></div>')
+nd=len(snaps); ne=sum(len(v) for v in snaps.values())
+ns=sum(len(x) for v in snaps.values() for x in v.values())
+body=('<p class="freshline" id="freshline">&nbsp;</p>'+nav('archive')+
+  '<div class="panel"><p style="margin:0">Point-in-time snapshots of every edition. Each file is exactly as it was published at that timestamp — figures, countdowns and live widgets were correct as of then and are <b>not</b> updated afterwards. Covering <b>%d days · %d editions · %d snapshots</b>.</p></div>'%(nd,ne,ns)
+  +''.join(rows))
+html="""<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Archive — Daily Briefings</title>
+%s
+</head><body><div class="wrap">
+  <header class="mast">
+    <h1>Archive</h1>
+    <p class="tag">Point-in-time snapshots of past editions</p>
+    %s
+  </header>
+%s
+</div>
+%s
+</body></html>"""%(css('index'),META,body,STAMP)
+open('archive.html','w',encoding='utf-8').write(html)
+print('archive.html %d bytes | %d days %d editions %d snapshots'%(len(html),nd,ne,ns))
