@@ -1,12 +1,11 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Daily Briefings</title><style>
 :root{
-  --bg:#0f0f11; --panel:#17171a; --line:#26262b;
-  --accent:#9aa0a6; --accent2:#cfcdc9;
+  --bg:#0b0d0f; --panel:#141719; --line:#242a2e;
+  --accent:#c9c5bd; --accent2:#e8c766;
   --text:#e8e6e3; --muted:#9aa0a6;
   --up:#22c55e; --down:#ef4444; --warn:#f0a132; --crit:#ef4444;
   --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
 }
-
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--text);
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
@@ -14,7 +13,6 @@ body{margin:0;background:var(--bg);color:var(--text);
 .wrap{max-width:980px;margin:0 auto;padding:26px 20px 60px}
 a{color:var(--accent2);text-decoration:none}
 a:hover{text-decoration:underline}
-
 .masthead{border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:4px}
 .masthead h1{margin:0 0 2px;font-size:34px;letter-spacing:-.5px;line-height:1.15}
 .masthead .tag{color:var(--muted);font-size:14.5px;margin:0}
@@ -24,13 +22,11 @@ a:hover{text-decoration:underline}
 .pill.live{color:var(--up);border-color:rgba(34,197,94,.35)}
 .pill.live .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--up);
   margin-right:6px;vertical-align:middle}
-
 .tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
   border-radius:10px;padding:11px 15px;margin:6px 0 2px;font-size:14.5px;line-height:1.5}
 .tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
   color:var(--accent);margin-right:9px}
 .freshline{font-family:var(--mono);font-size:11px;color:var(--muted);margin:9px 2px 4px;letter-spacing:.03em}
-
 nav.tabs{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 20px;border-bottom:1px solid var(--line);
   padding-bottom:12px}
 nav.tabs a{font-family:var(--mono);font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;
@@ -38,7 +34,6 @@ nav.tabs a{font-family:var(--mono);font-size:11.5px;letter-spacing:.11em;text-tr
   transition:.15s}
 nav.tabs a:hover{color:var(--text);border-color:var(--accent);text-decoration:none;transform:translateY(-1px)}
 nav.tabs a.active{color:var(--accent);border-color:var(--accent);background:transparent}
-
 h2.sec{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;
   color:var(--accent);margin:34px 0 13px;padding-bottom:7px;border-bottom:1px solid var(--line)}
 h3{margin:0 0 7px;font-size:19px;line-height:1.3}
@@ -47,7 +42,6 @@ p{margin:0 0 11px}
 .panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:17px 19px}
 .note{font-size:12.5px;color:var(--muted);margin-top:9px;line-height:1.5}
 .lede{font-size:15px;color:#cfcdc9}
-
 .cards{display:grid;gap:13px}
 @media(min-width:700px){.cards.two{grid-template-columns:1fr 1fr}
   .cards.three{grid-template-columns:repeat(3,1fr)}}
@@ -58,7 +52,6 @@ p{margin:0 0 11px}
   color:var(--muted);margin-bottom:6px}
 .card .more{display:inline-block;margin-top:11px;font-family:var(--mono);font-size:11px;
   letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
-
 .tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase;
   padding:2.5px 8px;border-radius:999px;margin:0 5px 5px 0;border:1px solid}
 .tag.new{color:#0d1b12;background:var(--up);border-color:var(--up)}
@@ -66,7 +59,6 @@ p{margin:0 0 11px}
 .tag.w{color:var(--warn);border-color:var(--warn);background:transparent}
 .tag.c{color:var(--crit);border-color:var(--crit);background:transparent}
 .tag.m{color:var(--muted);border-color:var(--line);background:transparent}
-
 table{width:100%;border-collapse:collapse;font-size:14px}
 th{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);
   text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);font-weight:600}
@@ -77,58 +69,53 @@ td.down,.down{color:var(--down)}
 td.win{color:var(--up);font-weight:600}
 td.nc{color:var(--warn);font-weight:600}
 .tblwrap{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:5px 7px;overflow-x:auto}
-
 ul.b{margin:0;padding-left:19px}
 ul.b li{margin-bottom:9px;font-size:14.5px}
 ul.b li:last-child{margin-bottom:0}
-
 .callout{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--warn);
   border-radius:10px;padding:15px 18px;margin-bottom:6px}
 .callout.crit{border-left-color:var(--crit)}
 .callout .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;
   color:var(--warn);margin-bottom:6px}
 .callout.crit .k{color:var(--crit)}
-
-.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:11px}
+.livebar{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 8px 4px;margin-bottom:18px}
+.livebar-label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--up);display:flex;align-items:center;gap:8px;padding:4px 8px 8px}
+.livebar-label .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--up)}
+.tickers{display:grid;gap:13px;margin-bottom:6px}
+@media(min-width:700px){.tickers{grid-template-columns:repeat(3,1fr)}}
+.ticker{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:6px 10px}
+.banner{border-radius:12px;padding:14px 18px;margin-bottom:14px;border:1px solid var(--line);
+  background:var(--panel);border-left:4px solid var(--warn)}
+.banner .lvl{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--warn)}
+.stats{display:grid;gap:11px;margin-bottom:6px}
 @media(min-width:700px){.stats{grid-template-columns:repeat(4,1fr)}}
-.stat{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:13px 14px}
-.stat .n{font-family:var(--mono);font-size:20px;color:var(--accent);letter-spacing:-.5px;line-height:1.2}
-.stat .l{font-size:11.5px;color:var(--muted);margin-top:4px;line-height:1.4}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 15px}
+.stat .n{font-family:var(--mono);font-size:21px;color:var(--accent);line-height:1.2}
+.stat .l{font-size:12px;color:var(--muted);margin-top:5px;line-height:1.4}
+.cdn{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--accent);
+  border-radius:12px;padding:12px 17px;margin-bottom:16px;display:flex;flex-wrap:wrap;gap:10px;align-items:baseline}
+.cdn .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--accent)}
+.cdn .v{font-family:var(--mono);font-size:15px;color:var(--text)}
+.cdn .s{font-size:13px;color:var(--muted)}
+footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+footer a{color:var(--muted);text-decoration:underline}
+footer ul{padding-left:18px;margin:8px 0}
+footer li{margin-bottom:4px}
+.disc{margin-top:14px;font-size:12px;color:var(--muted);font-style:italic}
 
-.banner{border-radius:11px;padding:13px 17px;margin-bottom:16px;border:1px solid;font-size:14.5px}
-.banner .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
-  display:block;margin-bottom:4px}
-.banner.high{background:rgba(239,68,68,.08);border-color:rgba(239,68,68,.4)}
-.banner.high .k{color:var(--crit)}
-
-.cdn{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:11px 16px;
-  margin-bottom:18px;display:flex;flex-wrap:wrap;align-items:baseline;gap:10px}
-.cdn .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
-.cdn .v{font-family:var(--mono);font-size:17px;color:var(--text)}
-.cdn .w{font-size:13px;color:var(--muted)}
-
-footer{margin-top:44px;border-top:1px solid var(--line);padding-top:18px;font-size:12.5px;color:var(--muted)}
-footer h5{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--muted);margin:0 0 9px}
-footer ul{margin:0;padding-left:17px}
-footer li{margin-bottom:5px;word-break:break-word}
-.disc{margin-top:16px;font-size:11.5px;color:var(--muted);font-style:italic;line-height:1.5}
-
-.bigcard{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 22px;
-  border-top:3px solid var(--line);transition:.16s}
+.big{display:grid;gap:15px;margin-top:6px}
+@media(min-width:820px){.big{grid-template-columns:repeat(3,1fr)}}
+.bigcard{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 21px;transition:.16s;
+  border-top:3px solid var(--line);display:flex;flex-direction:column}
 .bigcard:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(0,0,0,.4)}
-.bigcard h3{font-size:21px;margin:0 0 3px}
-.bigcard .kick{font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:9px}
-.bigcard p{font-size:14.5px;color:#cfcdc9;margin:0}
-.bigcard .more{display:inline-block;margin-top:14px;font-family:var(--mono);font-size:11px;
-  letter-spacing:.13em;text-transform:uppercase}
-.bigcard.cy{border-top-color:#22d3a8}.bigcard.cy .kick,.bigcard.cy .more{color:#22d3a8}
-.bigcard.cy:hover{border-color:#22d3a8}
-.bigcard.ws{border-top-color:#caa64a}.bigcard.ws .kick,.bigcard.ws .more{color:#caa64a}
-.bigcard.ws h3{font-family:Georgia,'Times New Roman',serif;color:#e8c766}
-.bigcard.ws:hover{border-color:#caa64a}
-.bigcard.mm{border-top-color:#e84545}.bigcard.mm .kick,.bigcard.mm .more{color:#ff8a5c}
-.bigcard.mm:hover{border-color:#e84545}
-.grid3{display:grid;gap:15px}
-@media(min-width:860px){.grid3{grid-template-columns:repeat(3,1fr)}}
-</style></head><body><div class="wrap"><div class="masthead"><h1>Daily Briefings</h1><p class="tag">Cybersecurity, Wall Street and MMA &mdash; refreshed every 30 minutes</p><div class="meta"><span class="pill live"><span class="dot"></span>Live</span><span class="pill" id="edition">&nbsp;</span><span class="pill" id="datestamp">&nbsp;</span><span class="pill">Updated <span id="updated">&nbsp;</span></span></div></div><div class="freshline" id="freshline">&nbsp;</div><nav class="tabs"><a href="index.html" class="active">&#9733; Front Page</a><a href="cyber-briefing.html">&#9960; The Cyber Wire</a><a href="wallstreet-briefing.html">&#9650; The Closing Bell</a><a href="mma-briefing.html">&#8856; The Octagon</a><a href="archive.html">&#128452; Archive</a></nav><div class="grid3"><a class="bigcard cy" href="cyber-briefing.html" style="display:block"><div class="kick">⛨ The Cyber Wire &middot; The Wire</div><h3>The zero-day gets a deadline</h3><p>CISA added the actively exploited Chrome V8 zero-day CVE-2026-85046 to its Known Exploited Vulnerabilities catalog today, giving federal agencies until September 18 to patch &mdash; while one flaw from Wednesday&rsquo;s seven-CVE batch, the Sangoma Switchvox SQL injection, comes due tomorrow.</p><span class="more">Read the briefing &rarr;</span></a><a class="bigcard ws" href="wallstreet-briefing.html" style="display:block"><div class="kick">▲ The Closing Bell &middot; The Tape</div><h3>Good news, bad tape</h3><p>Wall Street closed lower on Friday &mdash; Dow &minus;0.51%, S&amp;P 500 &minus;0.38%, Nasdaq &minus;0.29% &mdash; because August payrolls came in at 162,000, roughly triple consensus, pushing September rate-hike odds to 58% and sending the 2- and 5-year Treasury yields to fresh 52-week highs.</p><span class="more">Read the briefing &rarr;</span></a><a class="bigcard mm" href="mma-briefing.html" style="display:block"><div class="kick">⊘ The Octagon &middot; Tale of the Tape</div><h3>A debutant priced like a champion</h3><p>UFC Paris goes tomorrow afternoon from the Accor Arena with UFC debutant Salahdine Parnasse a heavy favourite over Dan Hooker in a main event two sportsbooks now price between &minus;625 and &minus;649.</p><span class="more">Read the briefing &rarr;</span></a></div><div class="note" style="margin-top:20px">Three briefings, rebuilt from live sources every 30 minutes between 8 AM and 6 PM Eastern. Every figure on every page traces to a source fetched in that edition&rsquo;s own run, or is explicitly labelled as carried, disputed or refused. Point-in-time snapshots of past editions are in the <a href="archive.html">Archive</a>.</div><footer><h5>About</h5><ul><li>Friday&rsquo;s session has ended. This is a post-close edition &mdash; official closing levels appear in The Closing Bell&rsquo;s Weekly Scorecard &mdash; and U.S. stock and bond markets are shut Monday, September 7, for Labor Day.</li><li>Where two sources disagree, these pages print the disagreement rather than averaging it or picking silently.</li><li>Where a number could not be verified in this run, it is omitted and the omission is stated.</li></ul><div class="disc">Daily Briefings is an automated news digest compiled from public reporting. It is not investment advice, not security advice and not betting advice.</div></footer></div><script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \u00b7 briefings refresh every 30 minutes, 8 AM\u20136 PM ET';}catch(e){}})();</script></body></html>
+.bigcard .kicker{font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:9px}
+.bigcard h3{font-size:20px;margin:0 0 10px}
+.bigcard p{font-size:14.5px;color:#cfcdc9;margin:0 0 16px;flex:1}
+.bigcard .more{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.c-cy{border-top-color:#22d3a8} .c-cy .kicker,.c-cy .more{color:#22d3a8}
+.c-cy:hover{border-color:#22d3a8}
+.c-ws{border-top-color:#caa64a} .c-ws .kicker,.c-ws .more{color:#caa64a}
+.c-ws:hover{border-color:#caa64a} .c-ws h3{font-family:Georgia,"Times New Roman",serif}
+.c-mma{border-top-color:#e84545} .c-mma .kicker,.c-mma .more{color:#e84545}
+.c-mma:hover{border-color:#e84545}
+</style></head><body><div class="wrap"><header class="masthead"><h1>Daily Briefings</h1><p class="tag">Security, markets and the fight game &mdash; refreshed every 30 minutes, 8 AM&ndash;6 PM ET</p><div class="meta"><span class="pill live"><span class="dot"></span>Live</span><span class="pill" id="edition">&nbsp;</span><span class="pill" id="datestamp">&nbsp;</span><span class="pill">Updated <span id="updated">&nbsp;</span></span></div></header><div class="freshline" id="freshline">&nbsp;</div><nav class="tabs"><a href="index.html" class="active">★ Front Page</a><a href="cyber-briefing.html">⛨ The Cyber Wire</a><a href="wallstreet-briefing.html">▲ The Closing Bell</a><a href="mma-briefing.html">⊘ The Octagon</a><a href="archive.html">🗄 Archive</a></nav><div class="big"><a class="bigcard c-cy" href="cyber-briefing.html" style="text-decoration:none;color:inherit"><div class="kicker">⛨ The Cyber Wire &middot; The Wire</div><h3>A Chrome zero-day becomes a federal item</h3><p>CISA added the actively exploited Chrome V8 zero-day CVE-2026-85046 to its Known Exploited Vulnerabilities catalog on September 4 &mdash; the single addition of the day &mdash; while three ServiceNow AI Platform flaws carrying vendor CVSS 10.0 still have to be patched by hand on self-managed instances.</p><span class="more">Read the briefing &rarr;</span></a><a class="bigcard c-ws" href="wallstreet-briefing.html" style="text-decoration:none;color:inherit"><div class="kicker">▲ The Closing Bell &middot; The Tape</div><h3>Good news, bad day</h3><p>Stocks closed lower on Friday after August payrolls came in at 162,000 against a consensus near 55,000, pushing short-dated Treasury yields to fresh 52-week highs and lifting the odds of a September rate hike &mdash; the Dow fell 0.51% to 53,414.25.</p><span class="more">Read the briefing &rarr;</span></a><a class="bigcard c-mma" href="mma-briefing.html" style="text-decoration:none;color:inherit"><div class="kicker">⊘ The Octagon &middot; Tale of the Tape</div><h3>Five books, one verdict</h3><p>Three more sportsbooks have priced Saturday&rsquo;s UFC Paris main event and all of them agree: debutant Salahdine Parnasse is a heavy favourite &mdash; between &minus;600 and &minus;625 &mdash; over Dan Hooker, who arrives on a two-fight skid.</p><span class="more">Read the briefing &rarr;</span></a></div><h2 class="sec">About this edition</h2><div class="panel"><p style="margin:0">Every figure on these pages is checked against a source fetched in the same run that produced them. Where a number could not be re-confirmed, it is withdrawn rather than carried forward &mdash; this edition drops a KEV due date that appeared yesterday for exactly that reason. Where two sources disagree, both are printed rather than reconciled silently.</p><p class="note">U.S. markets closed at 4:00 PM ET on Friday, September 4, and are shut on Monday, September 7, for Labor Day. Previous editions are kept in the <a href="archive.html">archive</a>.</p></div></div><script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \u00b7 briefings refresh every 30 minutes, 8 AM\u20136 PM ET';}catch(e){}})();</script></body></html>
