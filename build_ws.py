@@ -1,234 +1,224 @@
 # -*- coding: utf-8 -*-
-import shared, io
+import shared, io, os
 
-ACCENT = "#caa64a"; ACCENT2 = "#e8c766"
-EXTRA = """
-.mast h1,.lead h3,.card h3{font-family:Georgia,'Times New Roman',serif;font-weight:600}
-.mast h1{letter-spacing:0}
+ACC, ACC2 = "#caa64a", "#e8c766"
+extra = """
+h1,h2.lead,h3.lead{font-family:Georgia,'Times New Roman',serif}
+.masthead h1{font-family:Georgia,'Times New Roman',serif;font-weight:600}
+h2.lead{font-size:25px;line-height:1.28;margin:0 0 10px;font-weight:600}
+.livebar{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 8px 4px;margin-bottom:18px}
+.livebar-label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--up);display:flex;align-items:center;gap:8px;padding:4px 8px 8px}
+.livebar-label .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--up)}
+.tickers{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-bottom:8px}
+.ticker{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:6px 10px}
+.card h3{font-family:Georgia,'Times New Roman',serif;font-weight:600}
 """
-SUMMARY = ("Wall Street snapped a three-day losing streak on Wednesday, with the S&amp;P 500 closing up "
-           "0.46% at 7,666.60 as Dell surged roughly 16% on record AI-server orders, even as Palo Alto "
-           "Networks fell about 10% to finish worst in the index.")
+css = shared.css(ACC, ACC2, "#0d0d0f", "#17171a", "#2a2a2f", extra)
 
-TAPE = """<script type="application/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>{"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},{"proName":"FOREXCOM:DJI","title":"Dow 30"},{"proName":"NYSE:DELL","title":"Dell"},{"proName":"NASDAQ:PANW","title":"Palo Alto"},{"proName":"NYSE:SNOW","title":"Snowflake"},{"proName":"NASDAQ:AVGO","title":"Broadcom"},{"proName":"NASDAQ:NVDA","title":"NVIDIA"},{"proName":"TVC:USOIL","title":"WTI Crude"},{"proName":"TVC:US10Y","title":"US 10Y"}],"colorTheme":"dark","isTransparent":true,"showSymbolLogo":true,"displayMode":"adaptive","locale":"en"}</script>"""
+TLDR = ("U.S. markets are closed for the Labor Day long weekend after a hot August jobs report "
+        "knocked the three major indexes lower on Friday and pushed bets on a September Fed rate "
+        "hike back toward a coin flip; the next session opens Tuesday, September 8.")
 
-def sq(sym):
-    return ('<div class="ticker"><script type="application/javascript" '
-            'src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>'
-            '{"symbol":"%s","width":"100%%","colorTheme":"dark","isTransparent":true,"locale":"en"}'
-            '</script></div>' % sym)
+TICKER = """<div class="livebar"><div class="livebar-label"><span class="dot"></span> LIVE QUOTES</div>
+<script src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>{"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},{"proName":"FOREXCOM:DJI","title":"Dow 30"},{"proName":"NASDAQ:SNDK","title":"Sandisk"},{"proName":"NASDAQ:MU","title":"Micron"},{"proName":"NASDAQ:WDC","title":"Western Digital"},{"proName":"NASDAQ:KLAC","title":"KLA"},{"proName":"NASDAQ:LULU","title":"Lululemon"},{"proName":"TVC:USOIL","title":"WTI Crude"},{"proName":"TVC:US10Y","title":"US 10Y"}],"colorTheme":"dark","isTransparent":true,"showSymbolLogo":true,"displayMode":"adaptive","locale":"en"}</script></div>"""
 
-body = []
-A = body.append
+def quote(sym):
+    return ('<div class="ticker"><script src="https://s3.tradingview.com/external-embedding/'
+            'embed-widget-single-quote.js" async>{"symbol":"%s","width":"100%%","colorTheme":"dark",'
+            '"isTransparent":true,"locale":"en"}</script></div>' % sym)
 
-A('<header class="mast">')
-A('<h1>&#9650; The Closing Bell</h1>')
-A('<p class="tag">Your daily markets briefing &mdash; indexes, movers, rates &amp; what is next</p>')
-A(shared.META)
-A('</header>')
-A(f'<div class="tldr"><b>The Tape</b> <span>{SUMMARY}</span></div>')
-A('<p class="freshline" id="freshline">&nbsp;</p>')
-A(shared.nav("ws", ACCENT))
+QUOTES = ('<div class="tickers">' + quote("FOREXCOM:SPXUSD") + quote("FOREXCOM:NSXUSD")
+          + quote("FOREXCOM:DJI") + '</div>'
+          + '<div class="note">Quotes stream live (some feeds ~15-min delayed). Editorial below reflects '
+            'the latest edition; official closes are in the Weekly Scorecard.</div>')
 
-# BLOCK A
-A('<div class="livebar"><div class="livebar-label"><span class="dot"></span> LIVE QUOTES</div>')
-A(TAPE)
-A('</div>')
+b = io.StringIO()
+w = b.write
+w(shared.masthead("The Closing Bell", "Your daily markets briefing — Wall Street, rates &amp; the tape"))
+w(f'<div class="tldr"><b>The Tape</b> <span>{TLDR}</span></div>')
+w('<div class="freshline" id="freshline">&nbsp;</div>')
+w(shared.nav("ws"))
+w(TICKER)
 
-# BLOCK B
-A('<h2 class="sec">Live Index Quotes &mdash; updates in real time</h2>')
-A('<div class="tickers">')
-A(sq("FOREXCOM:SPXUSD")); A(sq("FOREXCOM:NSXUSD")); A(sq("FOREXCOM:DJI"))
-A('</div>')
-A('<div class="note">Quotes stream live (some feeds ~15-min delayed). Editorial below reflects the latest '
-  'edition; official closes are in the Weekly Scorecard.</div>')
+w('<h2 class="sec">Live Index Quotes — updates in real time</h2>')
+w(QUOTES)
 
-# The Lead
-A('<h2 class="sec">The Lead</h2>')
-A('<div class="lead">')
-A('<h3>Stocks snap a three-day slide as Dell\'s AI backlog does the heavy lifting &mdash; official close, '
-  '4:00 PM ET</h3>')
-A('<p>The <b>S&amp;P 500 advanced 0.46% to 7,666.60</b>, the <b>Nasdaq Composite gained 0.45% to 26,217.83</b>, '
-  'and the <b>Dow Jones Industrial Average added 295.07 points, or 0.56%, to 53,061.95</b>. All three snapped a '
-  'three-day losing streak, with the gains coming as Treasury yields eased slightly and the dollar weakened.</p>')
-A('<p>The session\'s engine was <b>Dell Technologies</b>, which rose about <b>16%</b> after blowout results: '
-  'sales up <b>58%</b> and adjusted EPS up <b>203%</b> in the quarter, with the AI-optimised server business '
-  'doubling its revenue. The AI unit recorded <b>$61 billion in orders</b> and pushed backlog <b>above $95 '
-  'billion</b>. Cutting the other way, <b>Palo Alto Networks</b> was the worst performer in the S&amp;P 500, '
-  'down about <b>10%</b> despite reporting better-than-expected quarterly results. In the Dow, '
-  '<b>Nvidia</b> was the best performer, up more than <b>3%</b>.</p>')
-A('<p>These closing levels have now come back <b>identical on four independent fetches across four '
-  'editions</b>, and they reconcile against Tuesday\'s closes, so they are published as levels rather than '
-  'as percentage moves alone.</p>')
-A('</div>')
+w('<h2 class="sec">The Lead</h2>')
+w('<div class="panel">')
+w('<h2 class="lead">A hot jobs number closed the week red and put a September rate <em>hike</em> back on the table</h2>')
+w('<p>U.S. equity markets are <strong>closed</strong> — it is Saturday, and Monday, September 7 is the '
+  'Labor Day holiday, with both stock and bond markets shut. The next session opens <strong>Tuesday, '
+  'September 8</strong>. The figures below are Friday’s official close, re-verified this run.</p>')
+w('<p>Friday, September 4: the <strong>Dow</strong> fell <span class="down">271.86 points, or 0.51%</span>, '
+  'to 53,414.25; the <strong>S&amp;P 500</strong> slid <span class="down">0.38%</span> to 7,718.60; the '
+  '<strong>Nasdaq Composite</strong> dropped <span class="down">0.29%</span> to 26,506.99. The trigger was '
+  'the August employment report: nonfarm payrolls grew <strong>162,000</strong>, far above the '
+  '<strong>53,000</strong> expected by economists in CNBC’s Dow Jones survey (TheStreet cites a '
+  '55,000 consensus — both figures are printed here because the two sources differ). The unemployment '
+  'rate was unchanged at <strong>4.1%</strong>. Treasury yields rose and traders raised the odds that the '
+  'Fed raises rates at this month’s meeting.</p>')
+w('<p>The <strong>Russell 2000</strong> rose <span class="up">0.25%</span> — in TheStreet’s '
+  'phrasing, “the one exception” among the major indexes.</p>')
+w('</div>')
 
-# Movers
-A('<h2 class="sec">Movers &amp; Drivers</h2>')
-A('<div class="cards">')
-A('<div class="card"><div class="tags"><span class="t ok">Best in S&amp;P 500</span></div>'
-  '<h3>Dell Technologies &mdash; up about 16%</h3>'
-  '<p>Quarterly sales <b>+58%</b> and adjusted EPS <b>+203%</b>; AI-optimised server revenue doubled. '
-  '<b>$61 billion</b> in AI orders, backlog <b>above $95 billion</b>. Carried from the previous edition and '
-  'reconciled there: a close of <b>$492.00, +15.76%</b>, against a prior close read as $425. Reported adjusted '
-  'EPS of <b>$7.04 &mdash; earnings before certain costs</b> &mdash; versus a $4.92 estimate, on revenue of '
-  '$46.97 billion against $44.92 billion expected.</p></div>')
-A('<div class="card"><div class="tags"><span class="t crit">Worst in S&amp;P 500</span></div>'
-  '<h3>Palo Alto Networks &mdash; down about 10%</h3>'
-  '<p>The index\'s worst performer, <b>down about 10%</b>, <b>despite</b> reporting better-than-expected '
-  'quarterly results. TheStreet attributes the selling to slowing growth metrics, margin pressure and elevated '
-  'expectations rather than the headline beat. The magnitude is disputed across the day: &minus;10.9%, '
-  '&minus;10.82% at $323.08, and &minus;7.8% at 10:36 AM ET &mdash; the only reading carrying a timestamp. '
-  'No fiscal-quarter label is asserted here.</p></div>')
-A('<div class="card"><div class="tags"><span class="t ok">Best in the Dow</span></div>'
-  '<h3>Nvidia &mdash; up more than 3%</h3>'
-  '<p>The best-performing Dow component on the session. No closing level or precise percentage was stated in '
-  'anything fetched this run beyond "more than 3%", so none is printed.</p></div>')
-A('</div>')
+w('<h2 class="sec">Movers &amp; Drivers</h2>')
+w('<div class="cards">')
+w('<div class="card"><div class="tags"><span class="t new">New</span><span class="t">Sectors</span></div>'
+  '<h3>Memory and the semis/AI trade led</h3><p>Friday’s market review describes a very strong day '
+  'overall for semiconductors, with memory names — <strong>SNDK, MU, WDC, SKHY</strong> — out in '
+  'front. This desk’s log carries sourced Friday moves of <strong>Sandisk +8%</strong> and '
+  '<strong>KLA +7%</strong> from an earlier edition.</p></div>')
+w('<div class="card"><div class="tags"><span class="t new">New</span><span class="t">52-week highs</span></div>'
+  '<h3>Tankers and shipping kept surging</h3><p><strong>DHT, GNK, FRO, GSL, LPG, NMM, SB</strong> and '
+  '<strong>NAT</strong> all hit 52-week highs on Friday, extending a run in the shipping complex. No '
+  'percentage moves were stated for the group, so none are printed.</p></div>')
+w('<div class="card"><div class="tags"><span class="t">Decliner</span></div>'
+  '<h3>Lululemon among the losers</h3><p><strong>Lululemon (LULU)</strong> was listed among the notable '
+  'premarket losers for Friday, September 4. The desk publishes it as a premarket screen entry only — '
+  'no closing percentage move for the stock was sourced this run.</p></div>')
+w('</div>')
 
-# Chart of the day  (BLOCK E)
-A('<h2 class="sec">Chart of the Day &mdash; Dell Technologies</h2>')
-A('<div class="panel" style="padding:8px">')
-A('<script type="application/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>{"symbol":"NYSE:DELL","width":"100%","height":240,"locale":"en","dateRange":"1D","colorTheme":"dark","isTransparent":true,"autosize":false}</script>')
-A('</div>')
-A('<p class="note">Dell was the single biggest mover in the S&amp;P 500 this session and the reason the index '
-  'closed green.</p>')
+w('<h2 class="sec">Chart of the Day</h2>')
+w('<div class="panel" style="padding:8px">'
+  '<script src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>'
+  '{"symbol":"NASDAQ:SNDK","width":"100%","height":240,"locale":"en","dateRange":"1D","colorTheme":"dark",'
+  '"isTransparent":true,"autosize":false}</script></div>')
+w('<div class="note"><strong>Sandisk (SNDK)</strong> — the biggest single-name percentage gain this '
+  'desk has a sourced Friday figure for, <strong>+8%</strong>, and part of the memory complex that '
+  'Friday’s market review put at the front of a strong day for semiconductors. It is <em>not</em> '
+  'claimed to be the session’s largest mover overall — no source this run surveyed the whole tape.</div>')
 
-# Sector heat (BLOCK D)
-A('<h2 class="sec">Sector Heat &mdash; live</h2>')
-A('<div class="panel" style="padding:8px">')
-A('<script type="application/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js" async>{"dataSource":"SPX500","blockSize":"market_cap_basic","blockColor":"change","grouping":"sector","locale":"en","colorTheme":"dark","hasTopBar":false,"isDataSetEnabled":false,"isZoomEnabled":true,"hasSymbolTooltip":true,"isMonoSize":false,"width":"100%","height":420}</script>')
-A('</div>')
-A('<p class="note"><b>Materials led, up 1.6%; real estate lagged, down 0.6%.</b> The breadth count is refused '
-  'for a ninth consecutive run because the return contradicts itself: one line says nine of the eleven S&amp;P '
-  'sectors finished higher, while a second line in the same return says advances came from virtually every '
-  'sector <i>except</i> technology, real estate and utilities &mdash; which would be eight higher, not nine. '
-  'Only the leader and laggard are printed. Separately and explicitly as a year-to-date figure, not a daily '
-  'one: XLE is <b>+42.32% YTD</b>.</p>')
+w('<h2 class="sec">Sector Heat — live</h2>')
+w('<div class="panel" style="padding:8px">'
+  '<script src="https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js" async>'
+  '{"dataSource":"SPX500","blockSize":"market_cap_basic","blockColor":"change","grouping":"sector",'
+  '"locale":"en","colorTheme":"dark","hasTopBar":false,"isDataSetEnabled":false,"isZoomEnabled":true,'
+  '"hasSymbolTooltip":true,"isMonoSize":false,"width":"100%","height":420}</script></div>')
+w('<div class="note"><strong>New this edition:</strong> a <em>closing</em> sector read finally landed. '
+  'Friday’s S&amp;P sector winners were <strong>Technology (XLK)</strong>, <strong>Industrials '
+  '(XLI)</strong> and <strong>Utilities (XLU)</strong>; the biggest losers were <strong>Healthcare '
+  '(XLV)</strong>, <strong>Consumer Discretionary (XLY)</strong>, <strong>Communications (XLC)</strong> and '
+  '<strong>Energy (XLE)</strong>. That trio of winners matches the 11:53 AM intraday reading this desk '
+  'published on Friday (Tech +0.44%, Industrials +0.22%, Utilities +0.12%). <strong>No VIX level is '
+  'published</strong> — for a seventh consecutive run only the sourced change, +1.47% on Friday, was '
+  'confirmed.</div>')
 
-# Calendar (BLOCK F)
-A('<h2 class="sec">The Calendar &mdash; live</h2>')
-A('<div class="panel" style="padding:8px">')
-A('<script type="application/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>{"colorTheme":"dark","isTransparent":true,"width":"100%","height":420,"locale":"en","importanceFilter":"0,1","countryFilter":"us"}</script>')
-A('</div>')
+w('<h2 class="sec">The Calendar — live</h2>')
+w('<div class="panel" style="padding:8px">'
+  '<script src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>'
+  '{"colorTheme":"dark","isTransparent":true,"width":"100%","height":420,"locale":"en",'
+  '"importanceFilter":"0,1","countryFilter":"us"}</script></div>')
 
-# Headlines (BLOCK C)
-A('<h2 class="sec">Live Market Headlines &mdash; updates in real time</h2>')
-A('<div class="panel" style="padding:8px">')
-A('<script type="application/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>{"feedMode":"market","market":"stock","colorTheme":"dark","isTransparent":true,"displayMode":"regular","width":"100%","height":420,"locale":"en"}</script>')
-A('</div>')
+w('<h2 class="sec">Live Market Headlines — updates in real time</h2>')
+w('<div class="panel" style="padding:8px">'
+  '<script src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>'
+  '{"feedMode":"market","market":"stock","colorTheme":"dark","isTransparent":true,"displayMode":"regular",'
+  '"width":"100%","height":420,"locale":"en"}</script></div>')
 
-# After hours
-A('<h2 class="sec">After-Hours Movers</h2>')
-A('<div class="cards">')
-A('<div class="card"><div class="tags"><span class="t ok">Up</span></div>'
-  '<h3>Snowflake &mdash; +20%</h3>'
-  '<p>Second-quarter results topped expectations: adjusted earnings of <b>62 cents per share</b> on revenue of '
-  '<b>$1.55 billion</b>, against consensus of 45 cents and $1.48 billion. The size of the move has returned two '
-  'ways: +20% this run, and +21% in a reading carrying a timestamp. Both are printed; neither is adopted.'
-  '</p></div>')
-A('<div class="card"><div class="tags"><span class="t new">New</span><span class="t ok">Up</span></div>'
-  '<h3>Netskope &mdash; +13%</h3>'
-  '<p>The cybersecurity company popped in extended trading. No earnings figures for Netskope were stated in '
-  'anything fetched this run, so none are printed.</p></div>')
-A('<div class="card"><div class="tags"><span class="t ok">Up</span></div>'
-  '<h3>Petco &mdash; +10%</h3>'
-  '<p>Second-quarter adjusted EBITDA margin of <b>8.2%</b> against a StreetAccount consensus of 7.4%; excluding '
-  'a tariff benefit the metric was <b>7.7%</b>, which would still beat estimates.</p></div>')
-A('<div class="card"><div class="tags"><span class="t ok">Up</span></div>'
-  '<h3>Argan &mdash; +8%</h3>'
-  '<p>The engineering and construction company posted better-than-expected second-quarter earnings and '
-  'revenue.</p></div>')
-A('<div class="card"><div class="tags"><span class="t new">New</span><span class="t ok">Beat</span></div>'
-  '<h3>Five Below &mdash; earnings beat</h3>'
-  '<p><b>$1.68 per share</b> on revenue of <b>$1.26 billion</b>, against consensus of $1.40 and $1.22 billion; '
-  'same-store sales also surpassed estimates. <b>No share-price move was stated in anything fetched this run</b>, '
-  'so none is printed.</p></div>')
-A('<div class="card"><div class="tags"><span class="t crit">Down</span></div>'
-  '<h3>Broadcom &mdash; down more than 2%</h3>'
-  '<p>Investors reacted badly to the fourth-quarter revenue forecast of <b>$34.8 billion</b> against a '
-  '<b>$35.03 billion</b> estimate, with non-GAAP operating margin guided to <b>66%</b> versus a 66.5% estimate. '
-  'The magnitude of the after-hours move has now returned five ways across editions &mdash; &minus;3.5% at '
-  '4:30 PM ET (the only timed reading), "more than 2%", &minus;5%, "about &minus;6.5%" and &minus;4.14% &mdash; '
-  'so only the direction is treated as firm.</p></div>')
-A('<div class="card"><div class="tags"><span class="t crit">Down</span></div>'
-  '<h3>Hewlett Packard Enterprise &mdash; &minus;1%</h3>'
-  '<p>HPE guided to earnings growth of <b>16% to 20%</b> for the fiscal year ending October 2027, against a '
-  'FactSet consensus of an <b>18.7%</b> increase.</p></div>')
-A('</div>')
+w('<h2 class="sec">After-Hours Movers</h2>')
+w('<div class="panel"><p style="margin:0"><strong>No after-hours session this edition.</strong> It is '
+  'Saturday evening. The last U.S. cash session closed at 4:00 PM ET on Friday, September 4; Monday, '
+  'September 7 is Labor Day and both the stock and bond markets are closed; the next open is '
+  '<strong>Tuesday, September 8</strong>. This section is stated rather than silently omitted so the '
+  'absence is explicit.</p></div>')
 
-# Weekly scorecard
-A('<h2 class="sec">Weekly Scorecard &mdash; official closes</h2>')
-A('<div class="panel" style="padding:6px 8px"><table>')
-A('<tr><th>Index</th><th>Close</th><th>Change</th><th>Session</th></tr>')
-for n, c, ch, cls, s in [
-    ("S&amp;P 500", "7,666.60", "+0.46%", "up", "Wed, Sep 2 &mdash; snapped a three-day losing streak"),
-    ("Nasdaq Composite", "26,217.83", "+0.45%", "up", "Wed, Sep 2 &mdash; snapped a three-day losing streak"),
-    ("Dow Jones Industrial Average", "53,061.95", "+295.07 (+0.56%)", "up", "Wed, Sep 2 &mdash; snapped a three-day losing streak"),
-]:
-    A(f'<tr><td><b>{n}</b></td><td class="mono">{c}</td><td class="mono {cls}">{ch}</td><td>{s}</td></tr>')
-A('</table></div>')
-A('<p class="note">Levels are published only where the percentage change, the points change and the level are '
-  'mutually consistent and corroborated. These three have now returned identically on four separate fetches.</p>')
+w('<h2 class="sec">Weekly Scorecard</h2>')
+w('<div class="panel"><table>')
+w('<tr><th>Session</th><th>S&amp;P 500</th><th>Nasdaq Composite</th><th>Dow Jones</th></tr>')
+w('<tr><td><strong>Fri, Sep 4</strong> <span class="mut">(latest close)</span></td>'
+  '<td>7,718.60 <span class="down">−0.38%</span></td>'
+  '<td>26,506.99 <span class="down">−0.29%</span></td>'
+  '<td>53,414.25 <span class="down">−271.86 / −0.51%</span></td></tr>')
+w('<tr><td>Thu, Sep 3</td>'
+  '<td>7,747.71 <span class="up">+1.1–1.4%</span></td>'
+  '<td>26,584.06 <span class="up">+1.1–1.4%</span></td>'
+  '<td>53,686.11 <span class="up">+1.1–1.4%</span></td></tr>')
+w('<tr><td>Russell 2000, Fri Sep 4</td><td colspan="3"><span class="up">+0.25%</span> '
+  '<span class="mut">— no level sourced; published as a percentage move only</span></td></tr>')
+w('</table>')
+w('<div class="note"><strong>Arithmetic check:</strong> 53,686.11 − 271.86 = 53,414.25 exactly. '
+  '<strong>Standing trap, and it did not fire this run:</strong> for four consecutive editions a search for '
+  '“stock market news for Sept. 4” returned 7,747.71 / 53,686.11 / 26,584.06 up 1.1–1.4% as '
+  '<em>Friday’s</em> close. Those are <strong>Thursday, September 3’s</strong> figures and they '
+  'appear in the Thursday row only. This run, as last run, the first search returned the correct Friday '
+  'numbers.</div>')
+w('</div>')
 
-# Rates
-A('<h2 class="sec">Rates, Bonds &amp; Commodities</h2>')
-A('<div class="panel" style="padding:6px 8px"><table>')
-A('<tr><th>Instrument</th><th>Level</th><th>Move</th><th>Note</th></tr>')
-A('<tr><td><b>US 10-year Treasury</b></td><td class="mono">4.79%</td><td class="mono down">&minus;0.01 pp</td>'
-  '<td>Eased from the previous session. Intraday high <b>4.814%</b>. The prior edition sourced a close of '
-  '4.799% and a session range of 4.765%&ndash;4.820%.</td></tr>')
-A('<tr><td><b>Crude oil</b></td><td class="mono">~$95</td><td class="mono">&mdash;</td>'
-  '<td>Oil jumped close to $95 a barrel, pushing long-dated yields higher worldwide on inflation concerns. No '
-  'settlement price or percentage move was stated this run, so none is printed.</td></tr>')
-A('</table></div>')
-A('<p class="note">The "highest since" descriptor for the 10-year now disagrees three ways across editions: '
-  '<b>November 2023</b> (this run and CNBC/TheStreet), <b>October 2023</b> (Trading Economics) and '
-  '<b>January 2025</b> (Yahoo/WSJ). None appears in a table cell above; the level and the intraday high do, '
-  'because both are stated figures.</p>')
+w('<h2 class="sec">Rates, Bonds &amp; Commodities</h2>')
+w('<div class="panel"><table>')
+w('<tr><th>Instrument</th><th>Level</th><th>Note</th></tr>')
+w('<tr><td>10-year Treasury</td><td>~4.79%</td><td>Rose nearly 3 bps Friday after the jobs data. The 10-year '
+  'topped <strong>4.80%</strong> on September 2 — its highest since November 2023.</td></tr>')
+w('<tr><td>2-year Treasury</td><td>4.374%</td><td>+4 bps, a new 52-week high (3:29 PM ET Friday reading).</td></tr>')
+w('<tr><td>5-year Treasury</td><td>4.545%</td><td>+3.6 bps, also a new 52-week high (3:29 PM ET Friday).</td></tr>')
+w('<tr><td>20-year Treasury</td><td>5.247%</td><td>3:29 PM ET Friday reading.</td></tr>')
+w('<tr><td>30-year Treasury</td><td>5.243%</td><td>Unchanged (3:29 PM ET Friday).</td></tr>')
+w('<tr><td>WTI crude</td><td class="mut">—</td><td>No Friday settle was confirmed this run. Crude was '
+  'sourced only as “on track for a strong weekly gain”; early-trading quotes seen in a prior '
+  'edition were explicitly not settles, so no oil price is printed.</td></tr>')
+w('<tr><td>Brent crude</td><td class="mut">—</td><td>Same refusal. One dated September 1 return had '
+  'Brent clearing $92, which is not a September 4 settle and is not published as one.</td></tr>')
+w('<tr><td>Fed funds target</td><td class="mut">—</td><td>No target range was sourced this run, so none '
+  'is asserted.</td></tr>')
+w('<tr><td>VIX</td><td class="mut">—</td><td>No level sourced for a seventh consecutive run. Only the '
+  'change is published: <strong>+1.47%</strong> on Friday.</td></tr>')
+w('</table></div>')
 
-# On the radar
-A('<h2 class="sec">On the Radar</h2>')
-A('<div class="panel"><ul class="bul">')
-A('<li><b>Friday, September 4 &mdash; August non-farm payrolls.</b> The consensus is genuinely disputed: this '
-  'desk has sourced <b>58,000</b>, <b>55,000</b> and <b>45,000</b> across editions, with one bank at '
-  '<b>&minus;25,000</b>. Unemployment is expected at <b>4.1%</b>; July printed <b>&minus;23,000</b>.</li>')
-A('<li><b>ADP set a soft tone.</b> Private payrolls rose <b>38,000</b> against a 47,000 estimate &mdash; the '
-  'slowest since January &mdash; with July revised up to +46,000. Education and health added 45,000 and leisure '
-  '16,000, while manufacturing shed 17,000 and professional/business services 16,000. Sourced in the previous '
-  'edition, carried here.</li>')
-A('<li><b>Oil is the macro variable to watch.</b> With crude near $95, the move in long-dated yields worldwide '
-  'is being read as an inflation signal rather than a growth one &mdash; which is why a 0.46% equity gain '
-  'arrived alongside a 10-year sitting near its highest level in nearly three years.</li>')
-A('<li><b>Carried, not re-sourced this run:</b> the FOMC meeting on September 15&ndash;16, and calendar items '
-  'previously logged for September 3 and September 7.</li>')
-A('</ul></div>')
+w('<h2 class="sec">On the Radar</h2>')
+w('<div class="panel"><ul class="bul">')
+w('<li><strong>Monday, September 7 — markets closed.</strong> Labor Day; both the stock and bond '
+  'markets are shut. Next open: Tuesday, September 8.</li>')
+w('<li><strong>Tuesday, September 8 — GameStop Q2 earnings.</strong> The company guided to net income '
+  'of <strong>$290–310 million</strong> against $168.6 million a year earlier, with its $1.4 billion '
+  'convertible-notes exchange amended to roughly $358.4 million in cash plus ~55.5 million shares.</li>')
+w('<li><strong>Thursday, September 10 — PPI</strong> before the opening bell.</li>')
+w('<li><strong>Friday, September 11 — August CPI, 8:30 AM ET.</strong> Reporting frames this as the '
+  'week’s main event, landing days before the Fed meets. Consumer inflation accelerated in July after '
+  'decelerating in June.</li>')
+w('<li><span class="t new" style="margin-right:7px">New</span><strong>FOMC: September 15–16, decision '
+  'Wednesday, September 16 at 2:00 PM ET</strong>, press conference 2:30 PM ET. The Fed’s '
+  '<strong>quiet period began Saturday, September 5</strong> and runs through Thursday, September 17. Prior '
+  'editions of this page declined to assert an FOMC date; it is sourced now.</li>')
+w('<li><strong>Rate-path readings — reported separately, not chained.</strong> One return this run puts '
+  'the probability of a 25 bp September <em>hike</em> at roughly <strong>50%</strong>, down from about 63% a '
+  'day earlier. A different return puts it at <strong>57.5%</strong>, up from 35.4% a day earlier following '
+  'Chair <strong>Kevin Warsh’s</strong> hawkish Jackson Hole remarks. <strong>The two cannot both be a '
+  'current reading, and this desk does not resolve which is</strong> — they are snapshots from different '
+  'moments, and this desk’s own log records a roughly 50% reading in late August after Warsh’s first major '
+  'speech as Chair. Note also that Warsh is the <em>Chair</em>; Governor <strong>Chris Waller</strong> is a '
+  'different person whose dovish comments produced a separate reading. The readings are printed side by '
+  'side and never strung into one arrow-chain.</li>')
+w('<li><strong>Norway’s $2.3 trillion sovereign wealth fund</strong> has proposed cutting government '
+  'bonds in its benchmark from 70% to 50%, which a Reuters calculation puts at roughly $80 billion off about '
+  '$215 billion of Treasuries. Any change is unlikely before well into 2027; the fund owns about 1.5% of '
+  'every listed company globally.</li>')
+w('</ul></div>')
 
-A(shared.sources([
- ("CNBC &mdash; Stock market news for Sept. 2, 2026",
-  "https://www.cnbc.com/2026/09/01/stock-market-today-live-updates.html"),
- ("TheStreet &mdash; Stock Market Today (Sept. 2, 2026)",
-  "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-02-2026"),
- ("The Motley Fool &mdash; Stock Market Today, Sept. 2: Dell Surges 16% on Soaring AI Backlog",
-  "https://www.fool.com/coverage/stock-market-today/2026/09/02/stock-market-today-sept-2-dell-surges-16-on-soaring-ai-backlog/"),
- ("CNBC &mdash; Stocks making the biggest moves after hours: Snowflake, Broadcom, Netskope, Five Below",
-  "https://www.cnbc.com/2026/09/02/stocks-making-the-biggest-moves-after-hours-snow-avgo-ntsk-five.html"),
- ("CNBC &mdash; Stocks making the biggest moves midday: PG&amp;E, Dell, GitLab, Credo",
-  "https://www.cnbc.com/2026/09/02/stocks-making-the-biggest-moves-midday-pcg-dell-gtlb-crdo-bfb.html"),
- ("Investing.com &mdash; Palo Alto Networks, Dell among market cap stock movers on Wednesday",
-  "https://www.investing.com/news/stock-market-news/palo-alto-networks-dell-among-market-cap-stock-movers-on-wednesday-93CH-4782176"),
- ("Yahoo Finance &mdash; 10-year Treasury touches highest level since 2023 as oil prices stay elevated",
-  "https://finance.yahoo.com/markets/article/10-year-treasury-touches-highest-level-since-2023-as-oil-prices-stay-elevated-134238599.html"),
- ("Trading Economics &mdash; US 10 Year Treasury Note Yield",
-  "https://tradingeconomics.com/united-states/government-bond-yield"),
- ("Yahoo Finance &mdash; Stock market today: Wednesday, September 2",
-  "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-september-2-dow-sp-500-nasdaq-082624175.html"),
-]))
-A('<p class="disc">Nothing here is investment advice. This briefing is compiled from public reporting for '
-  'information only; figures move and reporting is revised. Verify prices and levels with a live quote before '
-  'making any decision.</p>')
-A('</footer>')
+w('<h2 class="sec">Sources</h2>')
+w('<div class="panel srcs">')
+w('Fetched or returned this run: '
+  '<a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-04-2026">TheStreet — Stock Market Today, Sept. 4 2026</a> · '
+  '<a href="https://www.cnbc.com/2026/09/03/stock-market-today-live-updates.html">CNBC — Stock market news for Sept. 4, 2026</a> · '
+  '<a href="https://www.washingtonpost.com/business/2026/09/04/stock-market-dow-nasdaq-jobs/b9e994e6-a89f-11f1-9e38-f705d048bd5a_story.html">Washington Post — How major US stock indexes fared Friday 9/4/2026</a> · '
+  '<a href="https://finance.yahoo.com/markets/stocks/articles/stock-market-today-sept-4-133716564.html">Yahoo Finance — S&amp;P 500 edges lower after key jobs report</a> · '
+  '<a href="https://investrade.com/market-review-september-04-2026/">Investrade — Market Review: September 04, 2026</a> (closing sector winners/losers, tankers, memory) · '
+  '<a href="https://www.chartmill.com/news/TMCWW/Chartmill-54400-Premarket-Stock-Movers-for-Friday-September-4-2026-Top-Gainers-and-Losers">ChartMill — Premarket movers, Sept. 4 2026</a> · '
+  '<a href="https://tradersagency.com/blog/10-year-treasury-yield-479-fed-rate-hike-odds">Traders Agency — 10-year at 4.79%, Fed odds</a> · '
+  '<a href="https://tradingeconomics.com/united-states/government-bond-yield">Trading Economics — US 10-Year yield</a> · '
+  '<a href="https://www.capitalstreetfx.com/market-analysis/us-10-year-yield-tops-4-80-1-september-2026/">Capital Street FX — 10-year tops 4.80%, Sept 1 2026</a> · '
+  '<a href="https://intellectia.ai/blog/fed-rate-hike-september-2026">Intellectia — Fed rate hike September 2026</a> · '
+  '<a href="https://www.kiplinger.com/investing/economy/this-weeks-economic-calendar">Kiplinger — Economic data this week (Sept 7–11)</a> · '
+  '<a href="https://www.whendomarketsopen.com/economic-calendar/">When Do Markets Open — CPI &amp; FOMC dates</a> · '
+  '<a href="https://www.schwab.com/learn/story/stock-market-update-open">Schwab — Hot Jobs Report Hurts Stocks, Lifts Rate Hike Odds</a>.')
+w('</div>')
 
-html = shared.page("The Closing Bell &mdash; Daily Briefings", ACCENT, ACCENT2,
-                   "#100e0a", "#191610", "#2c2619", "\n".join(body), EXTRA)
-io.open("wallstreet-briefing.html", "w", encoding="utf-8").write(html)
-print("ws ok", len(html))
+w('<div class="disc"><strong>Refusals this edition:</strong> no WTI or Brent settle; no VIX level; no Fed '
+  'funds target range; no closing percentage move for Lululemon; no percentage moves for the shipping '
+  'group. A Trading Economics piece quoting the 10-year at 4.25% was checked and found to be dated March 13, '
+  '2026 in an earlier edition, and remains discarded. Nothing on this page is investment advice; it is '
+  'information only, assembled from public reporting, and may contain errors.</div>')
+
+os.makedirs("/tmp/build_1788656196/out", exist_ok=True)
+html = shared.page("The Closing Bell — Daily Markets Briefing", css, b.getvalue())
+open("/tmp/build_1788656196/out/wallstreet-briefing.html","w",encoding="utf-8").write(html)
+print("ws bytes", len(html))
