@@ -1,0 +1,7 @@
+index                demoted 2 'this edition' -> 'the 12:45 edition'
+cyber-briefing       demoted 3 'this edition' -> 'the 12:45 edition'
+wallstreet-briefing  demoted 1 'this edition' -> 'the 12:45 edition'
+mma-briefing         demoted 3 'this edition' -> 'the 12:45 edition'
+cyber-briefing       stripped stale New tag on CVE-2026-84147 (was new at 12:45)
+cyber-briefing       inserted Tengu card (New) at the head of Breaches & Incidents
+cyber-briefing       rewrote new-tag ledger note (1 new: Tengu; 0 markets, 0 MMA)
