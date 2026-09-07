@@ -1,23 +1,10 @@
-#!/usr/bin/env python3
-"""Two real defects found by validate_1536: duplicate footer source links introduced
-by this run's edits (the same URLs were already in the footers), and nothing else.
-Drops the LATER duplicate of each href inside <footer>, keeping the first."""
-import re, sys, io, os
-
-D = sys.argv[1]
-for fn in ['cyber-briefing.html', 'wallstreet-briefing.html', 'mma-briefing.html']:
-    p = os.path.join(D, fn)
-    h = io.open(p, encoding='utf-8').read()
-    i = h.find('<footer>')
-    head, foot = h[:i], h[i:]
-    seen = set(); removed = []
-    # each source is an <a ...>...</a> optionally followed by <br>
-    def keep(m):
-        url = m.group(1)
-        if url in seen:
-            removed.append(url); return ''
-        seen.add(url); return m.group(0)
-    foot2 = re.sub(r'<a href="([^"]+)">.*?</a>(?:<br>)?', keep, foot, flags=re.S)
-    io.open(p, 'w', encoding='utf-8').write(head + foot2)
-    print(f'{fn}: removed {len(removed)} duplicate footer links')
-    for u in removed: print('   -', u)
+# -*- coding: utf-8 -*-
+import io,re
+f='mma-briefing.html'; s=io.open(f,encoding='utf-8').read()
+old=('at UFC&nbsp;325 on 31 January 2026, and this page carries the result')
+new=('at <b>UFC&nbsp;325</b> on <b>31 January 2026</b> &mdash; it is the <b>one defence</b> the champions board below already credits to Volkanovski, '
+     'though the board names his <b>UFC&nbsp;314</b> win over Lopes rather than the rematch')
+assert old in s, "anchor missing"
+s=s.replace(old,new,1)
+io.open(f,'w',encoding='utf-8').write(s)
+print("ok")
