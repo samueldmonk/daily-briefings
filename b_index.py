@@ -25,20 +25,20 @@ BODY = """@@MAST@@
 <div class="big">
 <div class="card c-cy">
 <div class="kick">&#9880; The Cyber Wire &middot; The Wire</div>
-<h3>Routers are being taken over by attackers who got a head start on the patch</h3>
-<p>An SSH authentication bypass in MikroTik RouterOS, chained for full administrative takeover and exploited in the wild since 2 September, is now the most urgent unpatched exposure on the internet-facing edge, with more than 122,000 devices showing exposed SSH interfaces.</p>
+<h3>The biggest Patch Tuesday ever shipped, and two of its flaws were already being used</h3>
+<p>Microsoft&#39;s September release landed this afternoon with 973 CVEs, described as its largest to date, including two Windows elevation-of-privilege zero-days confirmed exploited in the wild &mdash; while the MikroTik router takeover chain runs on unpatched with more than 122,000 exposed devices.</p>
 <a class="go" href="cyber-briefing.html">Read the briefing &rarr;</a>
 </div>
 <div class="card c-ws">
 <div class="kick">&#9650; The Closing Bell &middot; The Tape</div>
-<h3>Two unrelated shocks, one lower market</h3>
-<p>Stocks are lower across the board into Tuesday afternoon with the Dow much the weakest of the three, as Houthi strikes on Saudi energy facilities push Brent toward $100 and a failed Novartis heart-drug trial drags the health care sector down more than 2%.</p>
+<h3>The Dow gives up 500 points as two unrelated shocks bite</h3>
+<p>A midday read has the Dow down around 500 points &mdash; roughly one percent, and consistent with the other reads of this session &mdash; as Houthi strikes on Saudi energy facilities push Brent toward $100 and a failed Novartis heart-drug trial drags health care down more than 2%.</p>
 <a class="go" href="wallstreet-briefing.html">Read the briefing &rarr;</a>
 </div>
 <div class="card c-mm">
 <div class="kick">&#8856; The Octagon &middot; Tale of the Tape</div>
-<h3>A win on Saturday, off the rankings by Monday</h3>
-<p>Michael Page has been pulled from the UFC rankings less than two days after winning at UFC Paris with a release reportedly looming, while Valentina Shevchenko has been stripped of the women&#39;s flyweight title after telling the promotion she would be unable to compete for at least a year.</p>
+<h3>A win on Saturday, off the rankings Monday, off the roster by Tuesday</h3>
+<p>Two outlets now report that Michael Page has actually been released by the UFC, three days after his win at UFC Paris and a day after being pulled from the rankings, though the promotion itself has announced nothing.</p>
 <a class="go" href="mma-briefing.html">Read the briefing &rarr;</a>
 </div>
 </div>

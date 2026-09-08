@@ -93,7 +93,8 @@ for m in re.finditer("three-week", cy):
 
 # --- required literals -----------------------------------------------------
 REQ={
- "wallstreet-briefing.html":["1:25&ndash;1:50 PM ET","Dow down 1%","down roughly 0.4%","7,707","7,718.60","26,506.99","53,414.25",
+ "wallstreet-briefing.html":["2:23&ndash;2:35 PM ET","500 points","53,000","Dow Jones","Strait of Hormuz",
+   "Oman","8:30 AM ET","2:00 PM ET","2:30 PM ET","January 2025","3.20%","bifurcated","56,000","Thursday 10 September","Dow down 1%","down roughly 0.4%","7,707","7,718.60","26,506.99","53,414.25",
    "271.86","$137.63","$394.38","2.46%","$97.99","$99.46","$92.90","11:28 a.m. ET","Jazan","73 civilians",
    "$20 billion","15% to 50%","18-month-old","4.3810%","October 2023","58.7%","49&ndash;66%","162,000","4.1%",
    "3.50&ndash;3.75%","$1.67","10 September","11 September","pelacarsen","Ionis","olpasiran","BMO Capital Markets",
@@ -102,7 +103,10 @@ REQ={
    "3 September","2 September","CERT Polska","1,079,819","Metabase","10 August","27 August","Framework","Kilo Code",
    "CVE-2026-83548","10.0","CVE-2026-83549","CVE-2026-59822","8.8","CVE-2026-81578","CVE-2026-82078","31 August",
    "CVE-2026-85046","The Gentlemen","ArmCorp","269 victims","2,000 victim listings","Check Point","410","14%",
-   "$310,000","CVE-2026-68820","afd.sys","421","398","751","BOD 26-04","1:00 PM ET","9.2"],
+   "$310,000","CVE-2026-68820","afd.sys","421","398","751","BOD 26-04","9.2",
+   "973","113","CVE-2026-85880","CVE-2026-81963","KB5122871","KB5122876","Windows Update Stack",
+   "Advanced Local Procedure Call","CVE-2026-6471","PostGREShell","AssetMark","570,000","7,551","24.9%",
+   "723","943","8 September"],
  "mma-briefing.html":["Michael Page","Nursulton Ruziboev","John Morgan","No. 15","No. 8","Meta rankings",
    "24-2","24-15","2:35","Axel Sola","Losene Keita","Mario Pinto","Muhammad Naimov","Ryan Spann","Fares Ziam",
    "$100,000","$25,000","Jean Silva","Jose Delgado","13 bouts","2 p.m. ET","5 p.m. ET","Curtis Blaydes",
@@ -110,15 +114,21 @@ REQ={
    "Delta Center","CBS","14-fight win streak","Tracy Cortez","UFC 329","stripped","Quentin Pasley","Arlind Berisha",
    "Reginaldo Geraldo Jr.","Isaac Moreno","Martin Kozak","Christian Echols","Apollo Gomes","Won Il Kwon",
    "Christian Natividad","Colton Loud","8.2 million","17 million","34 million","4.96 million","$7.7 billion",
-   "20 times","12 December","Adam Darby","Cage Warriors"],
- "index.html":["The Cyber Wire","The Closing Bell","The Octagon","122,000","Novartis","Michael Page","Shevchenko","Archive"],
+   "20 times","12 December","Adam Darby","Cage Warriors",
+   "welterweight","39-year-old","December 2023","5-1 across six appearances","Yair Rodriguez",
+   "&minus;450","+350","&minus;425","+355","17-3","12-2","Delphine Benouaich","Matthieu Duclos",
+   "Modestas Bukauskas","Kurtis Campbell","Magomed Ankalaev","Paulo Costa","Bogdan Guskov",
+   "early next year","ACL","Punahele Soriano","Trevor Peek"],
+ "index.html":["The Cyber Wire","The Closing Bell","The Octagon","122,000","Novartis","Michael Page","Archive","973","500 points"],
 }
 for p,lits in REQ.items():
     for l in lits: ck(l in PAGES[p], "%s: missing literal %r"%(p,l))
 
 # --- stale-phrase bans -----------------------------------------------------
 STALE=["Labor Day long weekend opened","Dow futures","pre-open","market holiday today","after today&#39;s close",
-       "10:35 AM ET","Intel leads the tape","NASDAQ:INTC","+5.2%"]
+       "10:35 AM ET","Intel leads the tape","NASDAQ:INTC","+5.2%","1:25&ndash;1:50 PM ET",
+       "UFC middleweight <b>Michael","release is reportedly looming","no September CVE count",
+       "No September CVE count","had not shipped at publication"]
 for p,h in PAGES.items():
     for s in STALE: ck(s not in h, "%s: stale phrase %r"%(p,s))
 # refused figures must not appear as live claims
@@ -133,6 +143,16 @@ for p in ("cyber-briefing.html","wallstreet-briefing.html","mma-briefing.html"):
     ck('class="disc"' in PAGES[p], p+": disclaimer")
 ck("not investment advice" in ws, "ws: investment-advice disclaimer")
 ck("subject to change" in mm, "mma: cards-subject-to-change disclaimer")
+
+# --- edition-specific guards ----------------------------------------------
+ck("973 vulnerabilities" in cy or "973 CVEs" in cy, "cyber: September total stated")
+ck("9 CVEs, 9 Critical" not in cy or "refused" in cy, "cyber: template count refused not asserted")
+ck(cy.count("Top Story")>=1, "cyber: top story heading")
+ck("middleweight" not in mm.split("Michael &ldquo;Venom&rdquo; Page")[1][:400], "mma: Page not called a middleweight")
+ck("Alex Pereira" in mm and "<td>Alex Pereira</td>" not in mm, "mma: Pereira named only as a refusal")
+ck("refused" in mm.lower(), "mma: refusal stated in print")
+ck("Whatfinger" in ws or "500 points" in ws, "ws: 500-point read attributed")
+ck("53,000" in ws and "Dow Jones" in ws, "ws: payrolls consensus attributed")
 
 print("checks:", n, "failures:", len(fails))
 for f in fails: print("  FAIL:", f)

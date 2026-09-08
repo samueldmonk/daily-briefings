@@ -38,6 +38,13 @@ SRC = [
  ("Coinpedia - Fed Rate Hike Odds Climb Ahead of FOMC Meeting in September", "https://coinpedia.org/news/fed-rate-hike-odds-climb-ahead-of-fomc-meeting-in-september/"),
  ("Trading Economics - US 10 Year Treasury Note Yield", "https://tradingeconomics.com/united-states/government-bond-yield"),
  ("StreetStats - U.S. Treasury yield curve", "https://streetstats.finance/rates/treasuries"),
+ ("Whatfinger Business & Money - Market Midday: Stocks Slide, Dow Loses 500 Points, Oil Moves Higher (9/8/26)", "https://money.whatfinger.com/2026/09/08/market-midday-stocks-slide-dow-loses-500-points-oil-moves-higher-9-8-26/"),
+ ("CNBC - Stock market news for Sept. 4, 2026", "https://www.cnbc.com/2026/09/03/stock-market-today-live-updates.html"),
+ ("The Washington Post - How major US stock indexes fared Friday 9/4/2026", "https://www.washingtonpost.com/business/2026/09/04/stock-market-dow-nasdaq-jobs/b9e994e6-a89f-11f1-9e38-f705d048bd5a_story.html"),
+ ("Gotrade - Week Ahead: August CPI & Oracle Earnings in Focus", "https://www.heygotrade.com/en/news/weekly-economic-outlook-2026-09-07/"),
+ ("Yahoo Finance - Inflation data, Oracle earnings, and an energy supply crunch: What to watch this week", "https://finance.yahoo.com/economy/article/inflation-data-oracle-earnings-and-an-energy-supply-crunch-what-to-watch-this-week-120429533.html"),
+ ("Finance Calendar - US CPI Report September 2026: Date, Time & What to Expect", "https://www.financecalendar.com/event/us-cpi-report-september-2026/"),
+ ("StockMarketWatch - Tech Resilience Amidst Broader Market Softness: Afternoon Update", "https://stockmarketwatch.com/live/stock-market-today"),
 ]
 
 def srcblock():
@@ -54,7 +61,7 @@ def quote(sym):
 QUOTES = '<div class="tickers">' + quote("FOREXCOM:SPXUSD") + quote("FOREXCOM:NSXUSD") + quote("FOREXCOM:DJI") + '</div>'
 
 BODY = """@@MAST@@
-<div class="tldr"><b>The Tape</b> <span>Stocks are lower across the board into Tuesday afternoon with the Dow much the weakest of the three, as Houthi strikes on Saudi energy facilities push Brent toward $100 and a failed Novartis heart-drug trial drags the health care sector down more than 2%.</span></div>
+<div class="tldr"><b>The Tape</b> <span>A midday read has the Dow down around 500 points, roughly a one-percent decline, as Houthi strikes on Saudi energy facilities push Brent toward $100 and a failed Novartis heart-drug trial drags health care down more than 2%, with an August payrolls print of 162,000 against a 53,000 consensus keeping a September Fed hike in play.</span></div>
 <div class="freshline" id="freshline">&nbsp;</div>
 @@NAV@@
 
@@ -66,13 +73,14 @@ BODY = """@@MAST@@
 
 <h2 class="sec">The Lead</h2>
 <div class="panel" style="border-left:4px solid var(--accent)">
-<h3 style="margin:0 0 8px;font-size:20px">As of reads taken ~1:25&ndash;1:50 PM ET: the selling deepens, with two separate shocks &mdash; oil and a failed drug trial &mdash; hitting different ends of the market</h3>
-<p style="margin:0 0 10px">The first regular session after the Labor Day long weekend has deteriorated as it has gone on. Two reads of it were available at the time of this edition and both are printed here rather than smoothed into one:</p>
+<h3 style="margin:0 0 8px;font-size:20px">As of reads taken ~2:23&ndash;2:35 PM ET: a midday wire puts the Dow down about 500 points, and the two shocks driving the session &mdash; oil and a failed drug trial &mdash; are still unrelated to each other</h3>
+<p style="margin:0 0 10px">The first regular session after the Labor Day long weekend has deteriorated as it has gone on. Three reads of it were available at the time of this edition and all three are printed here rather than smoothed into one:</p>
 <ul class="bul">
-<li>A Tuesday session summary has the <b>Dow down 1%</b>, the <b>S&amp;P 500 down roughly 0.4%</b> and the <b>Nasdaq Composite down 0.1%</b> as the trading day progressed. <span class="mut">Each of those is worse than, or equal to, an earlier read of this same session, which had &minus;0.8% / &minus;0.2% / &minus;0.1%. The deterioration is the direction of travel this edition adds.</span></li>
+<li><b>New this edition:</b> a <b>midday</b> market wire dated today reports the <b>Dow down 500 points</b>, with stocks sliding and oil moving higher. <span class="mut">That is a headline figure from a single outlet, stated in points rather than as a percentage, and it is a midday read rather than a 2:35 p.m. one. On a Dow that closed Friday at 53,414.25, 500 points is roughly 0.9% &mdash; so this read <b>corroborates</b> the &minus;1% carried below rather than showing further deterioration. The two agree; they are not a sequence.</span></li>
+<li>A Tuesday session summary carried from the 1:50 p.m. edition has the <b>Dow down 1%</b>, the <b>S&amp;P 500 down roughly 0.4%</b> and the <b>Nasdaq Composite down 0.1%</b> as the trading day progressed. <span class="mut">Re-confirmed rather than re-dated this run. Taken together with the 500-point read above, the Dow has been sitting near a one-percent decline since the middle of the session; the earlier &minus;0.8% read at 10:48 a.m. is the only materially lighter figure this briefing has recorded today.</span></li>
 <li>A separate index tracker has the <b>S&amp;P 500 at 7,707, down 0.15%</b> from the previous session &mdash; arithmetically consistent with Friday&#39;s close of 7,718.60.</li>
 </ul>
-<p style="margin:10px 0 0">What both reads agree on: all three major indices are lower and the Dow is decisively the weakest. Two distinct shocks are doing the work, and they are unrelated to each other. <b>Houthi attacks on Saudi energy facilities</b> have pushed Brent toward $100 and put a risk premium back into crude; separately, <b>Novartis&#39;s pelacarsen failed its pivotal Phase III trial</b>, taking the whole health care sector down more than 2%. Both are detailed below. A midday desk note describes the divergence plainly: the broad market struggled to find its footing while a resurgence in technology and semiconductor shares cushioned the tech-heavy indexes. That is consistent with the spread on the page &mdash; the Nasdaq down a tenth of a percentage point against the Dow down a full one &mdash; though no source read this run draws that link explicitly.</p>
+<p style="margin:10px 0 0">What both reads agree on: all three major indices are lower and the Dow is decisively the weakest. Two distinct shocks are doing the work, and they are unrelated to each other. <b>Houthi attacks on Saudi energy facilities</b> have pushed Brent toward $100 and put a risk premium back into crude; separately, <b>Novartis&#39;s pelacarsen failed its pivotal Phase III trial</b>, taking the whole health care sector down more than 2%. Both are detailed below. An afternoon desk note read this run describes U.S. equities as <b>bifurcated</b> on Tuesday afternoon: technology showed resilience while the broader averages struggled to hold momentum, with investors balancing optimism on artificial intelligence against caution over the inflation data ahead and a softening industrial outlook. That is consistent with the spread on the page &mdash; the Nasdaq down a tenth of a percentage point against the Dow down a full one &mdash; though no source read this run draws that link explicitly.</p>
 </div>
 
 <h2 class="sec">Movers &amp; Drivers</h2>
@@ -84,7 +92,7 @@ BODY = """@@MAST@@
 <p style="margin:9px 0 0"><b>This is Novartis&#39;s second failed trial in the run-up to today&#39;s session, not its only one.</b> A sector note read this run describes health care weakness led by Novartis after &ldquo;not one but two failed drug trials in different drugs&rdquo;. The other, carried from this briefing&#39;s earlier edition today, is <b>del-desiran</b>, whose Phase 3 results showed no significant improvement in patients with <b>myotonic dystrophy type 1</b>. The fall has deepened through the day: this briefing&#39;s <b>11:44 a.m. ET</b> snapshot carried <b>&minus;12%</b>, against <b>&minus;14%</b> in the read above.</p>
 </div>
 <div class="card">
-<div class="tags"><span class="t new">New</span><span class="t hot">Health care</span></div>
+<div class="tags"><span class="t">Carried</span><span class="t hot">Health care</span></div>
 <h3>Health care is now the worst sector on the board</h3>
 <p><b>Amgen (AMGN) is down 10% to $394.38 at midday</b>, interrupting a 23% year-to-date gain heading into the session; a second read has it <b>down over 8% and on track for its worst single day since 2016</b>. Amgen is developing <b>olpasiran</b>, an Lp(a)-lowering siRNA therapy in the Phase III OCEAN(a)-Outcomes study, and the Novartis miss forces investors to mark down its odds. <b>BMO Capital Markets downgraded Amgen the same day.</b> The whole sector followed: <b>health care is down over 2%</b>, with the <b>Health Care Select Sector SPDR (XLV) off 2.46%</b> and <b>DYN</b> and <b>SRPT</b> also pressured.</p>
 </div>
@@ -99,6 +107,16 @@ BODY = """@@MAST@@
 <p>Canada&#39;s counter-tariffs came into force <b>just after midnight Tuesday</b> as Prime Minister <b>Mark Carney</b> escalated an <b>18-month-old trade war</b>. New detail this run: the measures cover <b>$20 billion of U.S. goods at duties ranging from 15% to 50%</b> &mdash; a range, where earlier editions of this briefing had only &ldquo;up to 50%&rdquo; &mdash; across products from steel and furniture to clothing and electronics. Talks collapsed last month; Carney has said Canada would match Washington&#39;s new tariffs dollar for dollar.</p>
 </div>
 <div class="card">
+<div class="tags"><span class="t new">New</span><span class="t gold">Hormuz</span></div>
+<h3>A second oil story: Iran and Oman on the Strait of Hormuz</h3>
+<p>Alongside the Saudi strikes, this run&#39;s reads name a separate driver of the crude bid: <b>Iran said it was close to a deal with Oman to manage traffic through the Strait of Hormuz</b>. Against that backdrop <b>Brent crept toward $100 a barrel</b> and <b>WTI neared $93</b>. <span class="mut">Those two levels come from the same read and sit inside &mdash; not on top of &mdash; the Brent and WTI figures in the commodities table below, which were taken at 11:28 a.m. ET and from a separate afternoon read. No source read this run says whether the Oman talks are supporting prices or capping them, so no direction is attributed to them here.</span></p>
+</div>
+<div class="card">
+<div class="tags"><span class="t new">New</span><span class="t">Jobs</span></div>
+<h3>The payrolls consensus resolves to 53,000</h3>
+<p>Friday&#39;s August employment report is the reason a September hike is being priced at all, and this run pins down the number it beat. <b>Nonfarm payrolls grew 162,000</b> against the <b>53,000</b> expected by economists polled by <b>Dow Jones</b> &mdash; roughly three times the consensus &mdash; with the <b>unemployment rate unchanged at 4.1%</b>, as expected. <b>Treasury yields rose on the report, and the 2-year hit its highest level since January 2025.</b> <span class="mut">Earlier editions of this briefing printed 53,000, 55,000 and 56,000 side by side because three consensus figures had returned. This run attaches 53,000 to a named poll, so it is used as the consensus; a separate read giving 56,000 is noted below rather than dropped, since different surveys legitimately differ.</span></p>
+</div>
+<div class="card">
 <div class="tags"><span class="t">Carried</span><span class="t">Rates</span></div>
 <h3>The bond leg: 4.8% touched, then given back</h3>
 <p>The <b>10-year Treasury yield topped 4.8% on Tuesday, its highest since October 2023</b>, but a desk note later in the session has <b>10-year yields easing from those early highs</b> &mdash; the first read this run to describe the move rather than just the level. The <b>2-year</b> was flat at <b>4.3810%</b>. Rising yields and rising crude are named together as the reason major indexes fell early.</p>
@@ -107,6 +125,7 @@ BODY = """@@MAST@@
 <div class="tags"><span class="t">Refused</span><span class="t">Method</span></div>
 <h3>What is not on this page, and why</h3>
 <p>A named-decliner block (<b>Apple &minus;2.55%, Alphabet &minus;2.10%, Microsoft &minus;2.05%</b>, with Caterpillar, Honeywell and Home Depot leading gainers) returned again this run <b>byte-identical to the block that returned during Monday&#39;s market holiday</b>, when U.S. equity markets were shut all day. A set of percentages that has not moved across a closed session and an open one is not a current number, so it is refused again rather than carried. A mid-morning semiconductor list refused in an earlier edition &mdash; on the evidence that one of its figures was a verified 4 September move &mdash; also remains off the page.</p>
+<p style="margin:9px 0 0"><b>Also refused this run:</b> a sector-performance tool page giving <b>energy down 3.20%</b> &ldquo;as of the afternoon session&rdquo;. It carries no date on the figure itself and it contradicts every other read of this session, in which energy is the leading sector on a crude rally that has Brent near $100. An undated number that points the opposite way from the day&#39;s central story is not a correction to it, so no energy sector percentage is printed on this page.</p>
 </div>
 </div>
 
@@ -140,14 +159,14 @@ BODY = """@@MAST@@
 <tr><td>Nasdaq Composite</td><td>26,506.99</td><td class="down">&minus;0.29%</td></tr>
 <tr><td>Dow Jones Industrial Average</td><td>53,414.25</td><td class="down">&minus;271.86 (&minus;0.51%)</td></tr>
 </table>
-<p class="note">These are the most recent official closes, re-verified against source this run: Monday 7 September was Labor Day and U.S. stock and bond markets were shut all day. Today&#39;s session is still open, so no close is published for 8 September. Precise levels appear only in this table; the editorial above uses percentage moves and attributed figures.</p>
+<p class="note">Re-verified against source again this edition, unchanged to the cent. These are the most recent official closes: Monday 7 September was Labor Day and U.S. stock and bond markets were shut all day. Today&#39;s session is still open, so no close is published for 8 September. Precise levels appear only in this table; the editorial above uses percentage moves and attributed figures.</p>
 </div>
 
 <h2 class="sec">Rates, Bonds &amp; Commodities</h2>
 <div class="panel">
 <table>
 <tr><th>Instrument</th><th>Level</th><th>Note</th></tr>
-<tr><td>Fed funds target range</td><td>3.50&ndash;3.75%</td><td>The <b>15&ndash;16 September FOMC</b> is the next decision. Readings gathered this run put a <b>25 basis point hike</b> at <b>58.7% on CME FedWatch as of 7 September</b> and at <b>roughly 58&ndash;60%</b> after Friday&#39;s jobs report; one reading has a hold at <b>50.6%</b> against a hike at <b>49.4%</b>, and a <b>31 August</b> read gave <b>66%</b>. The band printed on this page therefore widens this edition to <b>49&ndash;66%</b>, and is printed as a range rather than averaged.</td></tr>
+<tr><td>Fed funds target range</td><td>3.50&ndash;3.75%</td><td>The <b>15&ndash;16 September FOMC</b> is the next decision. Readings gathered this run put a <b>25 basis point hike</b> at <b>58.7% on CME FedWatch as of 7 September</b> and at <b>roughly 58&ndash;60%</b> after Friday&#39;s jobs report; one reading has a hold at <b>50.6%</b> against a hike at <b>49.4%</b>, and a <b>31 August</b> read gave <b>66%</b>. A fresh read this run puts it at <b>roughly 60%</b> for a 25 basis point hike &ldquo;next week&rdquo;, which falls inside the existing band. The band printed on this page therefore holds at <b>49&ndash;66%</b> and is printed as a range rather than averaged. <b>The decision itself is Wednesday 16 September at 2:00 PM ET, with the chair&#39;s press conference at 2:30 PM ET.</b></td></tr>
 <tr><td>10-year Treasury (today)</td><td>above 4.8%, then easing</td><td>The 10-year <b>topped 4.8% on Tuesday, its highest since October 2023</b>, before easing from those early highs later in the session. The bond market was shut Monday for Labor Day, so this is the first 8 September curve read available.</td></tr>
 <tr><td>2-year Treasury (today)</td><td>4.3810%</td><td>Flat on the session.</td></tr>
 <tr><td>1-year Treasury</td><td>4.12%</td><td rowspan="4" class="mut">Remainder of the curve as of Friday 4 September. The 10-year rose nearly 3 basis points to 4.79% that day on the stronger-than-expected jobs report. No full 8 September curve was published in returns read this run.</td></tr>
@@ -164,10 +183,10 @@ BODY = """@@MAST@@
 <h2 class="sec">On the Radar</h2>
 <div class="panel">
 <ul class="bul">
-<li><b>August CPI, Friday 11 September</b> &mdash; described this run as the pivotal input for the hike-versus-hold argument. <b>PPI and Treasury auctions</b> are also on the week&#39;s slate, and investors returned from the long weekend awaiting all three.</li>
+<li><b>August CPI lands Friday 11 September at 8:30 AM ET</b> &mdash; five days before the Fed decides, which is why this run&#39;s reads call it the most market-sensitive data point on the autumn calendar and the pivotal input for the hike-versus-hold argument. <b>PPI and Treasury auctions</b> are also on the week&#39;s slate.</li>
 <li><b>The sell side has been moving toward hikes.</b> <b>UBS, BofA and Deutsche Bank</b> have shifted forecasts toward increases in <b>September and December</b>, on resilient labour conditions plus energy-driven inflation tied to Middle East developments. One counter-view read this run: on a soft enough CPI print, September hike odds could fall to zero.</li>
-<li><b>Oracle&#39;s fiscal Q1 2027 report lands 10 September</b>, with an estimated EPS of <b>$1.67</b>.</li>
-<li><b>The August payrolls consensus still has three numbers attached to it.</b> The actual print was <b>162,000</b> jobs &mdash; about three times expected growth &mdash; with unemployment unchanged at <b>4.1%</b> and average hourly earnings up <b>3.1%</b> year over year. A source this run gives the consensus as <b>55,000</b>; the figure this desk verified repeatedly in earlier editions is <b>53,000</b>; <b>56,000</b> has also returned. All three are printed with what each is, because a fresh number that contradicts a verified one is often a different statistic rather than a correction.</li>
+<li><b>Oracle reports Thursday 10 September</b> &mdash; its fiscal Q1 2027, with an estimated EPS of <b>$1.67</b>. This run&#39;s reads frame it as a bellwether for the state of AI financing, given the company&#39;s turn toward debt.</li>
+<li><b>The payrolls consensus now has a name attached to it.</b> The actual August print was <b>162,000</b> jobs, with unemployment unchanged at <b>4.1%</b> and average hourly earnings up <b>3.1%</b> year over year. This run gives the consensus as <b>53,000</b> from economists polled by <b>Dow Jones</b> &mdash; the figure this desk had verified repeatedly &mdash; while a separate read this run gives <b>56,000</b> and an earlier edition saw <b>55,000</b>. The 53,000 is the one now tied to a named survey, so it is the one used; the others are kept on the page because different surveys legitimately produce different consensus numbers.</li>
 <li><b>Middle East supply risk is now the market&#39;s main variable.</b> Alongside the Saudi strikes, this run&#39;s reads name tit-for-tat strikes between Iran and the U.S. as part of the same headwind that lifted crude and yields together.</li>
 </ul>
 </div>
