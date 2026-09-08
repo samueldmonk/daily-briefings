@@ -18,149 +18,172 @@ h2.sec{font-family:var(--mono)}
 CSS = css(ACC, ACC2, "#0d0c09", "#171510", "#2b2618", EXTRA)
 
 SRC = [
- ("Yahoo Finance — Stock Market Today (Sept. 8, 2026): S&P 500 edges lower as oil prices climb, Mideast tensions rise", "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-sept-8-133744027.html"),
- ("Yahoo Finance — Live: Dow, S&P 500 slip as oil prices rise, US-Canada trade war escalates (Tuesday, September 8)", "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-september-8-dow-sp-500-nasdaq-080440338.html"),
- ("TheStreet — Stock Market Today (Sept. 8, 2026)", "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-08-2026"),
- ("Bloomberg — Stock Market Today: Dow, S&P Live Updates for September 8", "https://www.bloomberg.com/news/articles/2026-09-07/stock-market-today-dow-s-p-live-updates"),
- ("CNBC — Stock market Tuesday: live updates", "https://www.cnbc.com/2026/09/07/stock-market-tuesday-live-updates.html"),
- ("Trading Economics — United States Stock Market Index (US500)", "https://tradingeconomics.com/united-states/stock-market"),
- ("StockMarketWatch — Energy and commodities surge as Dow slumps", "https://stockmarketwatch.com/live/stock-market-today"),
- ("Traders Agency — Stock Market Today: Energy leads while S&P 500 slips", "https://tradersagency.com/blog/stock-market-today-energy-leads-while-sandp-500-slips"),
- ("TipRanks — Stock Market News Today, 9/8/2026", "https://www.tipranks.com/news/stock-market-news-today-9-8-2026-futures-fall-on-rising-geopolitical-worries-oil-prices-climb"),
- ("Investrade — Morning Preview: September 08, 2026", "https://investrade.com/morning-preview-september-08-2026/"),
- ("Trading Economics — US 10 Year Treasury Note Yield", "https://tradingeconomics.com/united-states/government-bond-yield"),
- ("StreetStats — U.S. Treasury yield curve", "https://streetstats.finance/rates/treasuries"),
- ("Federal Reserve — H.15 Selected Interest Rates (Daily), September 04, 2026", "https://www.federalreserve.gov/releases/h15/"),
- ("Trading Economics — Treasury yields continue to advance", "https://tradingeconomics.com/united-states/government-bond-yield/news/532986"),
+ ("Yahoo Finance - Stock Market Today (Sept. 8, 2026): S&P 500 edges lower as oil prices climb, Mideast tensions rise", "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-sept-8-133744027.html"),
+ ("Yahoo Finance - Live: Dow, S&P 500, Nasdaq fall as oil prices rise, US-Canada trade war escalates (Tuesday, September 8)", "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-september-8-dow-sp-500-nasdaq-080440338.html"),
+ ("TheStreet - Stock Market Today (Sept. 8, 2026)", "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-08-2026"),
+ ("TheStreet - Stock Market Today (Sept. 4, 2026): Yields jump, stocks fall after jobs report surprises to upside", "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-04-2026"),
+ ("Charles Schwab - Short Week Packs a Punch: Stocks Down Early on Oil", "https://www.schwab.com/learn/story/stock-market-update-open"),
+ ("CNBC - Brent crude oil hits $98 after Iran's Houthi allies attack multiple Saudi energy facilities", "https://www.cnbc.com/2026/09/08/oil-prices-today-brent-wti-hormuz-iran-war.html"),
+ ("NBC News - Oil nears $100 after Saudi Arabia says energy infrastructure was attacked", "https://www.nbcnews.com/business/energy/oil-prices-iran-war-saudi-arabia-rcna596558"),
+ ("UPI - Oil prices approaching $100 per barrel as Houthis attack Saudi sites", "https://www.upi.com/Top_News/World-News/2026/09/08/houthis-attack-saudi-arabia-energy-oil-gas-prices-iran-war/4101788875653"),
+ ("CNBC - Novartis trial failure raises stakes for Amgen and Eli Lilly in Lp(a) drug race", "https://www.cnbc.com/2026/09/08/novartis-cholesterol-setback-drug-race-eli-lilly-amgen.html"),
+ ("24/7 Wall St. - Amgen Falls 10% as Novartis Trial Failure Clouds a Cholesterol Drug Class; NVS Stock Drops 14%", "https://247wallst.com/investing/2026/09/08/amgen-falls-10-as-novartis-trial-failure-clouds-a-cholesterol-drug-class-nvs-stock-drops-14/"),
+ ("Seeking Alpha - Amgen drops on Novartis trial setback, BMO cuts", "https://seekingalpha.com/news/4640808-amgen-drops-novartis-trial-setback-bmo-cuts"),
+ ("StockMarketWatch - Tech Resilience Amidst Broader Market Softness: Midday Update", "https://stockmarketwatch.com/live/stock-market-today"),
+ ("NBC News - Canada's retaliatory tariffs take effect after U.S. trade talks stall", "https://www.nbcnews.com/business/economy/canada-tariffs-trump-carney-rcna596573"),
+ ("The Washington Post - What to know about Canada's escalating trade war with the US as Carney retaliates with tariffs", "https://www.washingtonpost.com/business/2026/09/08/canada-trump-carney-trade-war-tariffs/46a09c5c-ab3b-11f1-b498-8697f35a6743_story.html"),
+ ("Trading Economics - United States Stock Market Index (US500)", "https://tradingeconomics.com/united-states/stock-market"),
+ ("Forbes - CME FedWatch Provides A 66% Chance Fed Will Hike Rates In September", "https://www.forbes.com/sites/digital-assets/2026/08/31/cme-fedwatch-provides-a-66-chance-fed-will-hike-rates-in-september/"),
+ ("Traders Agency - 10-Year Treasury Yield Hits 4.79%, Fed Odds Spike", "https://tradersagency.com/blog/10-year-treasury-yield-479-fed-rate-hike-odds"),
+ ("Coinpedia - Fed Rate Hike Odds Climb Ahead of FOMC Meeting in September", "https://coinpedia.org/news/fed-rate-hike-odds-climb-ahead-of-fomc-meeting-in-september/"),
+ ("Trading Economics - US 10 Year Treasury Note Yield", "https://tradingeconomics.com/united-states/government-bond-yield"),
+ ("StreetStats - U.S. Treasury yield curve", "https://streetstats.finance/rates/treasuries"),
 ]
 
 def srcblock():
     return "".join('<div style="margin-bottom:7px">%s &mdash; <a href="%s">%s</a></div>' % (t, u, u) for t, u in SRC)
 
 TICKER = """<div class="livebar"><div class="livebar-label"><span class="dot"></span> LIVE QUOTES</div>
-<script src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>{"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},{"proName":"FOREXCOM:DJI","title":"Dow 30"},{"proName":"NASDAQ:INTC","title":"Intel"},{"proName":"NASDAQ:MU","title":"Micron"},{"proName":"NASDAQ:NVDA","title":"NVIDIA"},{"proName":"NYSE:ORCL","title":"Oracle"},{"proName":"AMEX:XLE","title":"Energy Sector"},{"proName":"TVC:USOIL","title":"WTI Crude"},{"proName":"TVC:US10Y","title":"US 10Y"}],"colorTheme":"dark","isTransparent":true,"showSymbolLogo":true,"displayMode":"adaptive","locale":"en"}</script>
+<script src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>{"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},{"proName":"FOREXCOM:DJI","title":"Dow 30"},{"proName":"NYSE:NVS","title":"Novartis"},{"proName":"NASDAQ:AMGN","title":"Amgen"},{"proName":"AMEX:XLV","title":"Health Care"},{"proName":"AMEX:XLE","title":"Energy Sector"},{"proName":"TVC:UKOIL","title":"Brent Crude"},{"proName":"TVC:USOIL","title":"WTI Crude"},{"proName":"TVC:US10Y","title":"US 10Y"}],"colorTheme":"dark","isTransparent":true,"showSymbolLogo":true,"displayMode":"adaptive","locale":"en"}</script>
 </div>"""
 
 def quote(sym):
     return ('<div class="ticker"><script src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>'
-            '{"symbol":"%s","width":"100%%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div>' % sym)
+            '{"symbol":"' + sym + '","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div>')
 
-QUOTES = '<div class="tickers">%s%s%s</div>' % (quote("FOREXCOM:SPXUSD"), quote("FOREXCOM:NSXUSD"), quote("FOREXCOM:DJI"))
+QUOTES = '<div class="tickers">' + quote("FOREXCOM:SPXUSD") + quote("FOREXCOM:NSXUSD") + quote("FOREXCOM:DJI") + '</div>'
 
-BODY = """
-%s
-<div class="tldr"><b>The Tape</b> <span>Stocks are lower across the board in Tuesday morning trade with the Dow much the weakest of the three, as a renewed crude rally lifts energy to the top of the board and Canada&#39;s retaliatory tariffs on about $20 billion of U.S. goods take effect.</span></div>
+BODY = """@@MAST@@
+<div class="tldr"><b>The Tape</b> <span>Stocks are lower across the board into Tuesday afternoon with the Dow much the weakest of the three, as Houthi strikes on Saudi energy facilities push Brent toward $100 and a failed Novartis heart-drug trial drags the health care sector down more than 2%.</span></div>
 <div class="freshline" id="freshline">&nbsp;</div>
-%s
+@@NAV@@
 
-%s
+@@TICKER@@
 
 <h2 class="sec">Live Index Quotes &mdash; updates in real time</h2>
-%s
+@@QUOTES@@
 <div class="note">Quotes stream live (some feeds ~15-min delayed). Editorial below reflects the latest edition; official closes are in the Weekly Scorecard.</div>
 
 <h2 class="sec">The Lead</h2>
 <div class="panel" style="border-left:4px solid var(--accent)">
-<h3 style="margin:0 0 8px;font-size:20px">As of ~10:35 AM ET: stocks slip on all three indices, the Dow much the hardest hit, as oil climbs and the Canada tariffs bite</h3>
-<p style="margin:0 0 10px">The first regular session after the Labor Day long weekend opened with a cautious, mixed tone, with investors balancing a resurgence in the energy sector against broader weakness in blue-chip industrials and financials. Three separate reads of the morning were available at the time of this edition and they are printed here rather than smoothed into one:</p>
+<h3 style="margin:0 0 8px;font-size:20px">As of reads taken ~1:25&ndash;1:50 PM ET: the selling deepens, with two separate shocks &mdash; oil and a failed drug trial &mdash; hitting different ends of the market</h3>
+<p style="margin:0 0 10px">The first regular session after the Labor Day long weekend has deteriorated as it has gone on. Two reads of it were available at the time of this edition and both are printed here rather than smoothed into one:</p>
 <ul class="bul">
-<li>A Tuesday session summary has the <b>Dow down 0.8%%</b>, the <b>S&amp;P 500 down 0.2%%</b> and the <b>Nasdaq Composite down 0.1%%</b>.</li>
-<li>A separate point read, from a different moment in the same session, gives the <b>Dow at 52,800.65, down 613.60 points or 1.15%%</b>, and the <b>Nasdaq Composite at 26,379.01, down 127.98 points or 0.48%%</b>. Both are arithmetically consistent with Friday&#39;s closes, so the level, the point change and the percentage agree in each case.</li>
-<li>Early-trading ETF proxies put the <b>Dow (DIA) at &minus;1.09%%</b>, the <b>S&amp;P 500 (SPY) at &minus;0.45%%</b>, the <b>Nasdaq 100 (QQQ) at &minus;0.31%%</b> and small caps (<b>IWM</b>) at <b>&minus;0.47%%</b>.</li>
+<li>A Tuesday session summary has the <b>Dow down 1%</b>, the <b>S&amp;P 500 down roughly 0.4%</b> and the <b>Nasdaq Composite down 0.1%</b> as the trading day progressed. <span class="mut">Each of those is worse than, or equal to, an earlier read of this same session, which had &minus;0.8% / &minus;0.2% / &minus;0.1%. The deterioration is the direction of travel this edition adds.</span></li>
+<li>A separate index tracker has the <b>S&amp;P 500 at 7,707, down 0.15%</b> from the previous session &mdash; arithmetically consistent with Friday&#39;s close of 7,718.60.</li>
 </ul>
-<p style="margin:10px 0 0">What every read agrees on: all three major indices are lower, and the Dow is decisively the weakest of the three. What they do not agree on is magnitude, which is what you would expect from snapshots taken minutes apart in a session moving on an oil headline. A separate index tracker has the <b>S&amp;P 500 at 7,707, down 0.15%%</b> from the previous session &mdash; also consistent with Friday&#39;s close.</p>
+<p style="margin:10px 0 0">What both reads agree on: all three major indices are lower and the Dow is decisively the weakest. Two distinct shocks are doing the work, and they are unrelated to each other. <b>Houthi attacks on Saudi energy facilities</b> have pushed Brent toward $100 and put a risk premium back into crude; separately, <b>Novartis&#39;s pelacarsen failed its pivotal Phase III trial</b>, taking the whole health care sector down more than 2%. Both are detailed below. A midday desk note describes the divergence plainly: the broad market struggled to find its footing while a resurgence in technology and semiconductor shares cushioned the tech-heavy indexes. That is consistent with the spread on the page &mdash; the Nasdaq down a tenth of a percentage point against the Dow down a full one &mdash; though no source read this run draws that link explicitly.</p>
 </div>
 
 <h2 class="sec">Movers &amp; Drivers</h2>
 <div class="cards">
 <div class="card">
-<div class="tags"><span class="t new">New</span><span class="t pro">+5.2%%</span></div>
-<h3>Intel leads the tape on heavy volume</h3>
-<p><b>Intel (INTC) has jumped 5.2%%</b> on high volume &mdash; the largest single-name move named in any return read this run. Semiconductors more broadly are providing the cushion under the Nasdaq: the <b>VanEck Semiconductor ETF (SMH) is trading 1%% higher</b>, with <b>Micron (MU) up 2.0%%</b> and <b>Nvidia (NVDA) up 1.2%%</b>.</p>
+<div class="tags"><span class="t">Expanded</span><span class="t hot">&minus;14%</span></div>
+<h3>Novartis is the day&#39;s biggest single-name move</h3>
+<p><b>Novartis (NVS) is down 14% to $137.63</b> in Tuesday afternoon trade after <b>pelacarsen</b>, an experimental heart drug developed with <b>Ionis Pharmaceuticals</b>, failed its pivotal Phase III study. The drug did lower <b>lipoprotein(a)</b> &mdash; the lipid particle it targets &mdash; but did not reduce the risk of cardiovascular death, heart attack or stroke against placebo. Novartis announced the result on <b>4 September</b>.</p>
+<p style="margin:9px 0 0"><b>This is Novartis&#39;s second failed trial in the run-up to today&#39;s session, not its only one.</b> A sector note read this run describes health care weakness led by Novartis after &ldquo;not one but two failed drug trials in different drugs&rdquo;. The other, carried from this briefing&#39;s earlier edition today, is <b>del-desiran</b>, whose Phase 3 results showed no significant improvement in patients with <b>myotonic dystrophy type 1</b>. The fall has deepened through the day: this briefing&#39;s <b>11:44 a.m. ET</b> snapshot carried <b>&minus;12%</b>, against <b>&minus;14%</b> in the read above.</p>
 </div>
 <div class="card">
-<div class="tags"><span class="t new">New</span><span class="t gold">Energy</span></div>
-<h3>Crude rally puts energy at the top of the board</h3>
-<p>The energy sector is the clear standout performer. The <b>Energy Select Sector SPDR (XLE) is up 1.7%%</b>, the <b>United States Oil Fund (USO) up 2.1%%</b>, the <b>Oil &amp; Gas Exploration &amp; Production ETF (XOP) up 2.41%%</b>, and the <b>Global X Uranium ETF (URA) has surged 4.3%%</b>. Military activity is described as maintaining a significant risk premium in energy markets on the possibility of deeper and more protracted disruptions to global supply.</p>
+<div class="tags"><span class="t new">New</span><span class="t hot">Health care</span></div>
+<h3>Health care is now the worst sector on the board</h3>
+<p><b>Amgen (AMGN) is down 10% to $394.38 at midday</b>, interrupting a 23% year-to-date gain heading into the session; a second read has it <b>down over 8% and on track for its worst single day since 2016</b>. Amgen is developing <b>olpasiran</b>, an Lp(a)-lowering siRNA therapy in the Phase III OCEAN(a)-Outcomes study, and the Novartis miss forces investors to mark down its odds. <b>BMO Capital Markets downgraded Amgen the same day.</b> The whole sector followed: <b>health care is down over 2%</b>, with the <b>Health Care Select Sector SPDR (XLV) off 2.46%</b> and <b>DYN</b> and <b>SRPT</b> also pressured.</p>
+</div>
+<div class="card">
+<div class="tags"><span class="t">Expanded</span><span class="t gold">Energy</span></div>
+<h3>Houthi strikes on Saudi energy sites put Brent near $100</h3>
+<p>Saudi Arabia paused operations at some energy facilities near the Yemen border after attacks by Iran-aligned Houthis, who claimed the <b>400,000-barrel-a-day Jazan refinery</b> and other domestic-market facilities. The Saudi Press Agency attributed the strikes to the Houthis; <b>73 civilians were injured</b>. <b>Brent rose 1% to $97.99 by 11:28 a.m. ET after a session high of $99.46</b>; U.S. crude rose <b>more than 2.5% to nearly $94</b>, while a second read has <b>WTI up 1.55% at $92.90</b>. Both crude reads agree on direction and disagree on level, so both are shown.</p>
 </div>
 <div class="card">
 <div class="tags"><span class="t">Expanded</span><span class="t hot">Trade</span></div>
-<h3>Canada&#39;s retaliatory tariffs take effect today</h3>
-<p>Canada&#39;s retaliatory tariffs kicked in Tuesday, covering about <b>$20 billion in U.S. imports</b> at duties of up to <b>50%%</b>, after trade talks collapsed. New detail this run: the affected goods include <b>cheese and other dairy products, wood products, toilet paper and metal items</b>. The escalating trade war is named alongside oil as a driver of the mixed open.</p>
+<h3>Canada&#39;s retaliatory tariffs took effect after midnight</h3>
+<p>Canada&#39;s counter-tariffs came into force <b>just after midnight Tuesday</b> as Prime Minister <b>Mark Carney</b> escalated an <b>18-month-old trade war</b>. New detail this run: the measures cover <b>$20 billion of U.S. goods at duties ranging from 15% to 50%</b> &mdash; a range, where earlier editions of this briefing had only &ldquo;up to 50%&rdquo; &mdash; across products from steel and furniture to clothing and electronics. Talks collapsed last month; Carney has said Canada would match Washington&#39;s new tariffs dollar for dollar.</p>
 </div>
 <div class="card">
-<div class="tags"><span class="t">Carried</span><span class="t">Blue chips</span></div>
-<h3>The drag is in industrials and financials</h3>
-<p>The weakness is concentrated in blue-chip industrials and financial stocks, which is the mechanical reason a price-weighted Dow is falling roughly twice as fast as the S&amp;P 500, or worse, in every read above. <span class="mut">Named single-name decliners were available only from a tracker that does not identify which session its component moves belong to, so none are printed here.</span></p>
+<div class="tags"><span class="t">Carried</span><span class="t">Rates</span></div>
+<h3>The bond leg: 4.8% touched, then given back</h3>
+<p>The <b>10-year Treasury yield topped 4.8% on Tuesday, its highest since October 2023</b>, but a desk note later in the session has <b>10-year yields easing from those early highs</b> &mdash; the first read this run to describe the move rather than just the level. The <b>2-year</b> was flat at <b>4.3810%</b>. Rising yields and rising crude are named together as the reason major indexes fell early.</p>
+</div>
+<div class="card">
+<div class="tags"><span class="t">Refused</span><span class="t">Method</span></div>
+<h3>What is not on this page, and why</h3>
+<p>A named-decliner block (<b>Apple &minus;2.55%, Alphabet &minus;2.10%, Microsoft &minus;2.05%</b>, with Caterpillar, Honeywell and Home Depot leading gainers) returned again this run <b>byte-identical to the block that returned during Monday&#39;s market holiday</b>, when U.S. equity markets were shut all day. A set of percentages that has not moved across a closed session and an open one is not a current number, so it is refused again rather than carried. A mid-morning semiconductor list refused in an earlier edition &mdash; on the evidence that one of its figures was a verified 4 September move &mdash; also remains off the page.</p>
 </div>
 </div>
 
 <h2 class="sec">Chart of the Day</h2>
 <div class="panel" style="padding:8px">
-<script src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>{"symbol":"NASDAQ:INTC","width":"100%%","height":240,"locale":"en","dateRange":"1D","colorTheme":"dark","isTransparent":true,"autosize":false}</script>
+<script src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>{"symbol":"NYSE:NVS","width":"100%","height":240,"locale":"en","dateRange":"1D","colorTheme":"dark","isTransparent":true,"autosize":false}</script>
 </div>
-<p class="note">Intel, up 5.2%% on high volume, is the session&#39;s single biggest named mover in returns read this run.</p>
+<p class="note">Novartis, down 14% on the pelacarsen Phase III failure, is the largest single-name move verified anywhere in this run&#39;s returns &mdash; larger than Amgen&#39;s 10% fall, which is the same story&#39;s second casualty. The chart replaces Amgen, which held this slot in the previous edition.</p>
 
 <h2 class="sec">Sector Heat &mdash; live</h2>
 <div class="panel" style="padding:8px">
-<script src="https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js" async>{"dataSource":"SPX500","blockSize":"market_cap_basic","blockColor":"change","grouping":"sector","locale":"en","colorTheme":"dark","hasTopBar":false,"isDataSetEnabled":false,"isZoomEnabled":true,"hasSymbolTooltip":true,"isMonoSize":false,"width":"100%%","height":420}</script>
+<script src="https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js" async>{"dataSource":"SPX500","blockSize":"market_cap_basic","blockColor":"change","grouping":"sector","locale":"en","colorTheme":"dark","hasTopBar":false,"isDataSetEnabled":false,"isZoomEnabled":true,"hasSymbolTooltip":true,"isMonoSize":false,"width":"100%","height":420}</script>
 </div>
-<p class="note">Leading: energy, on the crude rally, with semiconductors cushioning the Nasdaq. Lagging: blue-chip industrials and financials. Longer view: eight of the eleven S&amp;P sectors are higher year to date, energy leading at about +43%%.</p>
+<p class="note">Lagging today: health care, down over 2% on the Novartis trial failure, with XLV off 2.46%. Leading: energy, on the crude rally, with early strength in power and utility names; technology and semiconductors are described as cushioning the tech-heavy indexes. Longer view: energy leads the S&amp;P sectors year to date at about +42%.</p>
 
 <h2 class="sec">The Calendar &mdash; live</h2>
 <div class="panel" style="padding:8px">
-<script src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>{"colorTheme":"dark","isTransparent":true,"width":"100%%","height":420,"locale":"en","importanceFilter":"0,1","countryFilter":"us"}</script>
+<script src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>{"colorTheme":"dark","isTransparent":true,"width":"100%","height":420,"locale":"en","importanceFilter":"0,1","countryFilter":"us"}</script>
 </div>
 
 <h2 class="sec">Live Market Headlines &mdash; updates in real time</h2>
 <div class="panel" style="padding:8px">
-<script src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>{"feedMode":"market","market":"stock","colorTheme":"dark","isTransparent":true,"displayMode":"regular","width":"100%%","height":420,"locale":"en"}</script>
+<script src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>{"feedMode":"market","market":"stock","colorTheme":"dark","isTransparent":true,"displayMode":"regular","width":"100%","height":420,"locale":"en"}</script>
 </div>
 
 <h2 class="sec">Weekly Scorecard</h2>
 <div class="panel">
 <table>
 <tr><th>Index</th><th>Last official close (Fri 4 Sep)</th><th>Change</th></tr>
-<tr><td>S&amp;P 500</td><td>7,718.60</td><td class="down">&minus;0.38%%</td></tr>
-<tr><td>Nasdaq Composite</td><td>26,506.99</td><td class="down">&minus;0.29%%</td></tr>
-<tr><td>Dow Jones Industrial Average</td><td>53,414.25</td><td class="down">&minus;271.86 (&minus;0.51%%)</td></tr>
+<tr><td>S&amp;P 500</td><td>7,718.60</td><td class="down">&minus;0.38%</td></tr>
+<tr><td>Nasdaq Composite</td><td>26,506.99</td><td class="down">&minus;0.29%</td></tr>
+<tr><td>Dow Jones Industrial Average</td><td>53,414.25</td><td class="down">&minus;271.86 (&minus;0.51%)</td></tr>
 </table>
-<p class="note">These are the most recent official closes: Monday 7 September was Labor Day and U.S. stock and bond markets were shut all day. Today&#39;s session is still open, so no close is published for 8 September. Precise levels appear only in this table; the editorial above uses percentage moves and attributed figures.</p>
+<p class="note">These are the most recent official closes, re-verified against source this run: Monday 7 September was Labor Day and U.S. stock and bond markets were shut all day. Today&#39;s session is still open, so no close is published for 8 September. Precise levels appear only in this table; the editorial above uses percentage moves and attributed figures.</p>
 </div>
 
 <h2 class="sec">Rates, Bonds &amp; Commodities</h2>
 <div class="panel">
 <table>
 <tr><th>Instrument</th><th>Level</th><th>Note</th></tr>
-<tr><td>Fed funds target range</td><td>3.50&ndash;3.75%%</td><td>Markets price a roughly <b>52%%</b> chance of a <b>25 basis point increase</b> this month; readings across sources this week span <b>50&ndash;63%%</b>, so the range is printed rather than averaged.</td></tr>
-<tr><td>1-year Treasury</td><td>4.12%%</td><td rowspan="5" class="mut">Full curve as of Friday 4 September. The 10-year rose nearly 3 basis points to 4.79%% on Friday following a stronger-than-expected jobs report. The bond market was closed Monday for Labor Day; no 8 September curve was published in returns read this run.</td></tr>
-<tr><td>2-year Treasury</td><td>4.37%%</td></tr>
-<tr><td>5-year Treasury</td><td>4.55%%</td></tr>
-<tr><td>10-year Treasury</td><td>4.79%%</td></tr>
-<tr><td>30-year Treasury</td><td>5.25%%</td></tr>
-<tr><td>Brent crude</td><td>$99.73 (+1.45%%) &nbsp;<span class="mut">/</span>&nbsp; near $98.50 (about +2.3%%)</td><td>Two reads from different moments this morning. Both have Brent up on the day; they do not agree on the level.</td></tr>
-<tr><td>WTI crude</td><td>$94.28 (+1.50%%) &nbsp;<span class="mut">/</span>&nbsp; about $94.00 (+2.7%%)</td><td>Same two reads. Crude is at a six-week high as investors assess the impact of the U.S.&ndash;Iran conflict on global supply.</td></tr>
+<tr><td>Fed funds target range</td><td>3.50&ndash;3.75%</td><td>The <b>15&ndash;16 September FOMC</b> is the next decision. Readings gathered this run put a <b>25 basis point hike</b> at <b>58.7% on CME FedWatch as of 7 September</b> and at <b>roughly 58&ndash;60%</b> after Friday&#39;s jobs report; one reading has a hold at <b>50.6%</b> against a hike at <b>49.4%</b>, and a <b>31 August</b> read gave <b>66%</b>. The band printed on this page therefore widens this edition to <b>49&ndash;66%</b>, and is printed as a range rather than averaged.</td></tr>
+<tr><td>10-year Treasury (today)</td><td>above 4.8%, then easing</td><td>The 10-year <b>topped 4.8% on Tuesday, its highest since October 2023</b>, before easing from those early highs later in the session. The bond market was shut Monday for Labor Day, so this is the first 8 September curve read available.</td></tr>
+<tr><td>2-year Treasury (today)</td><td>4.3810%</td><td>Flat on the session.</td></tr>
+<tr><td>1-year Treasury</td><td>4.12%</td><td rowspan="4" class="mut">Remainder of the curve as of Friday 4 September. The 10-year rose nearly 3 basis points to 4.79% that day on the stronger-than-expected jobs report. No full 8 September curve was published in returns read this run.</td></tr>
+<tr><td>2-year Treasury (4 Sep)</td><td>4.37%</td></tr>
+<tr><td>5-year Treasury</td><td>4.55%</td></tr>
+<tr><td>30-year Treasury</td><td>5.25%</td></tr>
+<tr><td>Brent crude</td><td>$97.99 (+1%, 11:28 a.m. ET) &nbsp;<span class="mut">/</span>&nbsp; session high $99.46</td><td>Approaching $100 after the Houthi attacks on Saudi energy facilities.</td></tr>
+<tr><td>WTI crude</td><td>nearly $94 (+2.5%+) &nbsp;<span class="mut">/</span>&nbsp; $92.90 (+1.55%)</td><td>Two reads from different moments this session. Both have WTI up; they do not agree on the level.</td></tr>
 <tr><td>U.S. retail diesel</td><td>$5.85 / gal</td><td>A record set on Friday 4 September, past the $5.816 June 2022 peak.</td></tr>
 </table>
-<p class="note">The two crude reads moved in opposite directions against each other on the level while agreeing on direction, so both are shown with their percentages rather than one being picked. Anyone using a single number should take it from the live ticker above, not from this table.</p>
+<p class="note">Where two reads of the same instrument disagreed on level while agreeing on direction, both are shown with their percentages rather than one being picked. Anyone who needs a single number should take it from the live ticker above, not from this table.</p>
 </div>
 
 <h2 class="sec">On the Radar</h2>
 <div class="panel">
 <ul class="bul">
-<li><b>Oracle&#39;s fiscal Q1 2027 report lands 10 September</b>, with an estimated EPS of <b>$1.67</b>. <span class="mut">This corrects an earlier edition of this briefing, which said the report was due after today&#39;s close.</span></li>
-<li><b>August CPI, Friday 11 September.</b> The inflation print that will do most to settle the hike-versus-hold argument now running at 50&ndash;63%% odds.</li>
-<li><b>The August payrolls consensus still has three numbers attached to it.</b> The actual print was <b>162,000</b> jobs, with unemployment at <b>4.1%%</b> and average hourly earnings up <b>3.1%%</b> year over year. The forecast this desk has verified repeatedly is <b>53,000</b>; a return this run gives <b>56,000</b>, and <b>55,000</b> is separately the June-plus-July revision total. All three are printed with what each is, because a fresh number that contradicts a verified one is often a different statistic rather than a correction.</li>
-<li><b>Middle East risk stays in the oil price.</b> Iran has issued a fresh threat to the U.S. over its newly upgraded ballistic missile, with officials warning the country will act against any threat &ldquo;even before it is carried out&rdquo;.</li>
+<li><b>August CPI, Friday 11 September</b> &mdash; described this run as the pivotal input for the hike-versus-hold argument. <b>PPI and Treasury auctions</b> are also on the week&#39;s slate, and investors returned from the long weekend awaiting all three.</li>
+<li><b>The sell side has been moving toward hikes.</b> <b>UBS, BofA and Deutsche Bank</b> have shifted forecasts toward increases in <b>September and December</b>, on resilient labour conditions plus energy-driven inflation tied to Middle East developments. One counter-view read this run: on a soft enough CPI print, September hike odds could fall to zero.</li>
+<li><b>Oracle&#39;s fiscal Q1 2027 report lands 10 September</b>, with an estimated EPS of <b>$1.67</b>.</li>
+<li><b>The August payrolls consensus still has three numbers attached to it.</b> The actual print was <b>162,000</b> jobs &mdash; about three times expected growth &mdash; with unemployment unchanged at <b>4.1%</b> and average hourly earnings up <b>3.1%</b> year over year. A source this run gives the consensus as <b>55,000</b>; the figure this desk verified repeatedly in earlier editions is <b>53,000</b>; <b>56,000</b> has also returned. All three are printed with what each is, because a fresh number that contradicts a verified one is often a different statistic rather than a correction.</li>
+<li><b>Middle East supply risk is now the market&#39;s main variable.</b> Alongside the Saudi strikes, this run&#39;s reads name tit-for-tat strikes between Iran and the U.S. as part of the same headwind that lifted crude and yields together.</li>
 </ul>
 </div>
 
 <h2 class="sec">Sources</h2>
 <div class="panel srcs">
-%s
+@@SRCS@@
 </div>
 <p class="disc">Compiled automatically from public reporting gathered during this run; nothing was fetched first-hand. Live widgets on this page stream from TradingView and are independent of the editorial text, which is stamped with its own as-of time. Every figure above traces to a source listed here or to a standing sourced correction. Where two sources disagreed, both reads are shown. This is information, not investment advice, and nothing here is investment advice; markets move, and quotes on this page may be delayed.</p>
-""" % (masthead("The Closing Bell", "Your daily markets briefing &mdash; indices, movers, rates &amp; the calendar"), nav("ws"), TICKER, QUOTES, srcblock())
+"""
+
+BODY = (BODY.replace("@@MAST@@", masthead("The Closing Bell", "Your daily markets briefing &mdash; indices, movers, rates &amp; the calendar"))
+            .replace("@@NAV@@", nav("ws"))
+            .replace("@@TICKER@@", TICKER)
+            .replace("@@QUOTES@@", QUOTES)
+            .replace("@@SRCS@@", srcblock()))
 
 html = page("The Closing Bell &mdash; Daily Briefings", CSS, BODY)
 io.open(os.path.join(OUT, "wallstreet-briefing.html"), "w", encoding="utf-8").write(html)

@@ -5,103 +5,107 @@ from shared import css, masthead, nav, page
 
 OUT = os.path.dirname(os.path.abspath(__file__))
 ACC, ACC2 = "#22d3a8", "#36c6ff"
-CSS = css(ACC, ACC2, "#0b0f0e", "#121a18", "#1e2c29")
+CSS = css(ACC, ACC2, "#080d0c", "#0f1716", "#1d2c2a")
 
 SRC = [
- ("The Hacker News — Google releases Chrome update to patch actively exploited V8 zero-day", "https://thehackernews.com/2026/09/google-releases-chrome-update-to-patch.html"),
- ("SharkStriker — Top data breaches of September 2026 (updated daily)", "https://sharkstriker.com/blog/september-2026-data-breaches/"),
- ("CISA — Adds Seven Known Exploited Vulnerabilities to Catalog (2 Sep 2026)", "https://www.cisa.gov/news-events/alerts/2026/09/02/cisa-adds-seven-known-exploited-vulnerabilities-catalog"),
- ("CISA — Known Exploited Vulnerabilities Catalog", "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"),
- ("CISA — Adds Two Known Exploited Vulnerabilities to Catalog (31 Aug 2026)", "https://www.cisa.gov/news-events/alerts/2026/08/31/cisa-adds-two-known-exploited-vulnerabilities-catalog"),
- ("securityonline.info — Weekly CVE report: 10 exploited vulnerabilities hit CISA KEV", "https://securityonline.info/weekly-cve-report-10-exploited-vulnerabilities-hit-cisa-kev/"),
- ("securityonline.info — September 2026 SAP Security Patch Day fixes critical flaws", "https://securityonline.info/september-2026-sap-security-patch-day/"),
- ("cyberpress.org — SAP Security Patch Day fixes 19 new vulnerabilities across NetWeaver, S/4HANA and cloud products", "https://cyberpress.org/sap-security-patch-day-fixes-19-new-vulnerabilities/"),
- ("gbhackers — SAP September 2026 security update fixes 4 critical vulnerabilities and 15 other flaws", "https://gbhackers.com/sap-september-2026-security-update/"),
- ("Onapsis — SAP Security Notes: September 2026 Patch Day", "https://onapsis.com/blog/sap-security-patch-day-september-2026/"),
- ("Black Kite — 2026 Ransomware Report: 7,551 victims, up 24.9%", "https://blackkite.com/reports/2026-ransomware-report"),
- ("Industrial Cyber — Ransomware reaches elevated 'new normal' as attack volumes hold steady into 2026", "https://industrialcyber.co/reports/ransomware-reaches-elevated-new-normal-as-attack-volumes-hold-steady-into-2026-reshape-baseline-risk-expectations/"),
- ("CISA — #StopRansomware: Gunra Ransomware (AA26-222A)", "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-222a"),
- ("Senserva — Patch Tuesday September 2026: date, live coverage, what to expect", "https://senserva.com/patch-tuesday-2026-09.html"),
- ("Malwarebytes — August 2026 Patch Tuesday: 421 flaws, including three zero-days", "https://www.malwarebytes.com/blog/bugs/2026/08/patch-tuesday-update-now-to-fix-421-flaws-including-three-zero-days"),
- ("UpGuard — Biggest data breaches in telecommunications (updated September 2026)", "https://www.upguard.com/blog/biggest-data-breaches-in-telecommunications"),
- ("Trinetri — Microsoft Patch Tuesday September 2026", "https://trinetriops.com/resources/patch-tuesday/september-2026"),
+ ("Help Net Security - Hackers exploit RouterOS flaws to hijack MikroTik devices without authentication", "https://www.helpnetsecurity.com/2026/09/07/mikrotik-routeros-ssh-vulnerabilities-exploited/"),
+ ("BleepingComputer - Hackers exploit new MikroTik RouterOS flaws to hijack routers", "https://www.bleepingcomputer.com/news/security/hackers-exploit-new-mikrotik-routeros-flaws-to-hijack-routers/"),
+ ("SOC Prime - CVE-2026-67276: MikroTik RouterOS SSH Zero-Day", "https://socprime.com/blog/cve-2026-67276-mikrotik-routeros-ssh-zero-day/"),
+ ("SecurityOnline - MikroTrick PoC: RouterOS Admin Rights Exploited In Wild", "https://securityonline.info/mikrotik-routeros-mikrotrick-cve-2026-67276/"),
+ ("Help Net Security - Mathspace breach exposes data on over a million students and parents", "https://www.helpnetsecurity.com/2026/09/08/mathspace-data-breach-metabase-vulnerability/"),
+ ("BleepingComputer - Mathspace discloses data breach affecting over 1 million people", "https://www.bleepingcomputer.com/news/security/mathspace-discloses-data-breach-affecting-over-1-million-people/"),
+ ("The Hacker News - CISA Adds Seven Exploited Flaws as Attackers Deploy Reverse Shells and Crypto Miners", "https://thehackernews.com/2026/09/cisa-adds-seven-exploited-flaws-as.html"),
+ ("CISA - Adds Seven Known Exploited Vulnerabilities to Catalog (2 September 2026)", "https://www.cisa.gov/news-events/alerts/2026/09/02/cisa-adds-seven-known-exploited-vulnerabilities-catalog"),
+ ("CISA - Adds One Known Exploited Vulnerability to Catalog (4 September 2026)", "https://www.cisa.gov/news-events/alerts/2026/09/04/cisa-adds-one-known-exploited-vulnerability-catalog"),
+ ("CISA - Adds Two Known Exploited Vulnerabilities to Catalog (31 August 2026)", "https://www.cisa.gov/news-events/alerts/2026/08/31/cisa-adds-two-known-exploited-vulnerabilities-catalog"),
+ ("CISA - Known Exploited Vulnerabilities Catalog", "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"),
+ ("CVE Brief - September 8, 2026", "https://cvebrief.com/archive/2026/09/08/"),
+ ("SecurityWeek - August 2026 Patch Tuesday: Microsoft Fixes 421 CVEs, One Exploited Zero-Day", "https://www.securityweek.com/august-2026-patch-tuesday-microsoft-fixes-421-cves-one-exploited-zero-day/"),
+ ("BleepingComputer - Microsoft August 2026 Patch Tuesday fixes 400 flaws, 3 zero-days", "https://www.bleepingcomputer.com/news/microsoft/microsoft-august-2026-patch-tuesday-fixes-400-flaws-3-zero-days/"),
+ ("The Hacker News - Microsoft Patches 398 Flaws Including a Windows Driver Zero-Day Under Active Attack", "https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html"),
+ ("Unit 42 (Palo Alto Networks) - No Manners Here: The Ruthless Rise of The Gentlemen Ransomware", "https://unit42.paloaltonetworks.com/the-gentlemen-ransomware/"),
+ ("Silent Push - Following a Serial Ransomware Affiliate from LockBit, Black Basta, and Qilin to The Gentlemen", "https://www.silentpush.com/blog/gentlemen-ransomware/"),
+ ("Halcyon - Threat Assessment: The Gentlemen Ransomware Group Is Scaling Faster Than Any Other Group on Record", "https://www.halcyon.ai/ransomware-research-reports/threat-assessment-the-gentlemen-ransomware-group"),
+ ("Becker's Hospital Review - Healthcare ransomware attacks up 14%: 5 things to know", "https://www.beckershospitalreview.com/healthcare-information-technology/cybersecurity/healthcare-ransomware-attacks-up-14-5-things-to-know/"),
+ ("Help Net Security - Cybersecurity News and Expert Analysis", "https://www.helpnetsecurity.com/"),
 ]
 
 def srcblock():
     return "".join('<div style="margin-bottom:7px">%s &mdash; <a href="%s">%s</a></div>' % (t, u, u) for t, u in SRC)
 
-BODY = """
-%s
-<div class="tldr"><b>The Wire</b> <span>Adobe&#39;s maximum-severity Magento flaw CVE-2026-75650 remains the day&#39;s defining incident with exploitation running since 4 September, and SAP has just patched a second CVSS 10.0 flaw of its own &mdash; while three federal remediation deadlines stay open, the nearest in six days.</span></div>
+BODY = """@@MAST@@
+<div class="tldr"><b>The Wire</b> <span>An SSH authentication bypass in MikroTik RouterOS, chained for full administrative takeover and exploited in the wild since 2 September, is now the most urgent unpatched exposure on the internet-facing edge, with more than 122,000 devices showing exposed SSH interfaces.</span></div>
 <div class="freshline" id="freshline">&nbsp;</div>
-%s
+@@NAV@@
 
 <div class="banner">
 <span class="lvl">Threat Level: High</span>
-<span style="font-size:14px">Two separate CVSS 10.0 flaws are in play at once &mdash; one in Adobe Commerce, confirmed exploited in the wild since 4 September; one in SAP Extended Passport Processing, patched today &mdash; with three CISA remediation deadlines still open.</span>
+<span>Eight CVEs are under confirmed active exploitation as of today, an actively exploited router auth-bypass chain has more than 122,000 candidate targets, and three federal remediation deadlines fall inside the next ten days.</span>
 </div>
 
 <div class="stats">
-<div class="stat"><div class="n">10.0</div><div class="l">CVSS of CVE-2026-75650, the actively exploited Adobe Commerce / Magento flaw (Adobe APSB26-146)</div></div>
-<div class="stat"><div class="n">19 + 1</div><div class="l">New SAP security notes plus one update to a previously issued note, released on today&#39;s SAP Security Patch Day</div></div>
-<div class="stat"><div class="n">10</div><div class="l">CVEs under active exploitation in the most recent weekly KEV tally, including SonicWall SMA1000, JFrog Artifactory and PaperCut</div></div>
-<div class="stat"><div class="n">7,551</div><div class="l">Ransomware victims counted in Black Kite&#39;s 2026 report, up 24.9%%</div></div>
+<div class="stat"><div class="n">122,000+</div><div class="l">MikroTik devices with exposed SSH interfaces, the candidate target set for the MikroTrick chain</div></div>
+<div class="stat"><div class="n">8</div><div class="l">CVEs showing confirmed active exploitation as of 8 September, including Kestra, Sangoma Switchvox, LiteLLM and Starlette</div></div>
+<div class="stat"><div class="n">1,079,819</div><div class="l">People exposed in the Mathspace breach, all in Australia and New Zealand</div></div>
+<div class="stat"><div class="n">410</div><div class="l">Ransomware incidents against U.S. healthcare organisations in H1 2026, up 14%</div></div>
 </div>
 
 <h2 class="sec">Top Story</h2>
 <div class="panel" style="border-left:4px solid var(--accent)">
-<h3 style="margin:0 0 8px;font-size:19px">StyleSmuggler: Adobe&#39;s CVSS 10.0 Magento zero-day is patched, but patching does not clean a compromised store</h3>
-<p style="margin:0 0 10px">Adobe released security patches for a maximum-severity flaw affecting Adobe Commerce and Magento Open Source that has come under active exploitation in the wild, tracked as <b>CVE-2026-75650</b> with a <b>CVSS score of 10.0</b>. The bulletin is <b>APSB26-146</b>, published 7 September with Adobe&#39;s priority rating 1. Sansec, which discovered the zero-day and named it <b>StyleSmuggler</b>, dates exploitation to <b>4 September 2026</b>.</p>
-<p style="margin:0 0 10px">The mechanism is PHP code injection through Magento&#39;s template system, triggered when a &ldquo;Payment Transaction Failed Reminder&rdquo; email is generated. Sansec reproduced the full unauthenticated chain on clean Magento Open Source 2.4.7, 2.4.8 and 2.4.9; the internal reference is <b>VULN-39341</b>, and every version from 2.4.4 through 2.4.9 is affected. Fixed patch levels are <b>2.4.4-p18, 2.4.5-p17, 2.4.6-p15, 2.4.7-p10, 2.4.8-p5 and 2.4.9</b>, with the remedy for older branches shipping as a composer hotfix rather than a release. Observed payloads: a Rust-based Linux backdoor beaconing to an external server, and a PHP dropper that writes an arbitrary-PHP web shell.</p>
-<p style="margin:0">The operational point worth repeating: applying the patch closes the door but does not evict anyone already inside. A storefront that was exposed on or after 4 September needs a compromise assessment, not just an update.</p>
+<h3 style="margin:0 0 8px;font-size:20px">&ldquo;MikroTrick&rdquo;: attackers are taking full administrative control of MikroTik routers over SSH, and they started before the patch shipped</h3>
+<p style="margin:0 0 10px"><b>CVE-2026-67276</b> is an SSH authentication bypass in MikroTik RouterOS caused by <b>incomplete validation of RSA public keys</b>. An attacker who knows a username and the public modulus of that user&#39;s key can craft a different key and log in <b>without the legitimate private key</b>. On its own that is an unauthenticated foothold; chained with <b>CVE-2026-86060</b>, an SSH privilege-escalation flaw triggered by a specially crafted username, it yields <b>full administrative privileges</b> on the device.</p>
+<p style="margin:0 0 10px">Poland&#39;s CERT Polska named the chain <b>MikroTrick</b> and warned it is being actively exploited. The timeline is the uncomfortable part: <b>exploitation began as early as 2 September</b>, one day <i>before</i> MikroTik released patched builds on <b>3 September</b>. Observed attacks created an <b>&ldquo;ops&rdquo; account</b> from <b>82.192.72.4</b>, with the SSH username <b>&ldquo;-2&rdquo;</b> as an indicator of compromise. <span class="mut">Those three indicators are carried from this briefing&#39;s standing sourced record of the CERT Polska advisory; the sources read this run describe the chain and its exploitation but do not restate the IOCs.</span></p>
+<p style="margin:0"><b>Fixed builds:</b> RouterOS <b>7.25beta3, 7.24.2, 7.23.4 and 6.49.21</b>, all released 3 September. The updates add a compromise-detection mechanism that checks at startup for known signs of unauthorised configuration change, disables malicious entries and logs a critical warning &mdash; which means patching also gives you a detection you did not previously have. <b>Over 122,000 devices have exposed SSH interfaces.</b> <span class="mut">No CVSS was stated for CVE-2026-86060 in anything read this run, so none is printed. Neither CVE is in the CISA KEV catalog.</span></p>
 </div>
 
+<h2 class="sec">Patch Priority</h2>
 <div class="callout crit">
-<h3>Patch Priority</h3>
-<p style="margin:0 0 8px"><b>CVE-2026-75650 &mdash; Adobe Commerce / Magento Open Source.</b> Maximum severity, confirmed exploited in the wild, patch available. This box is crit-rated because a CVSS 10.0 flaw is being used against internet-facing storefronts right now &mdash; <b>not</b> because of a deadline: <span class="mut">no federal remediation deadline for this CVE was confirmed in anything read this run.</span></p>
-<p style="margin:0"><b>Nearest open federal deadline:</b> PaperCut NG/MF, <b>14 September</b> &mdash; <b>6 days left</b>. That is the same date used in the KEV section below.</p>
+<h3>Do this first</h3>
+<p style="margin:0 0 9px"><b>The nearest federal deadline: PaperCut.</b> <b>CVE-2026-81578</b> and <b>CVE-2026-82078</b> entered the CISA KEV catalog on <b>31 August</b> and carry a remediation due date of <b>14 September &mdash; six days from today</b>. That is the tightest verified clock on this page and it matches the KEV section below exactly.</p>
+<p style="margin:0 0 9px"><b>The most urgent item without a deadline: MikroTik RouterOS.</b> The MikroTrick chain above is confirmed exploited in the wild against internet-exposed routers, the patches have been available since 3 September, and the exposed population is over 122,000. It is not in KEV, so no federal clock applies &mdash; which makes it easier to defer and no less dangerous. Upgrade to 7.25beta3 / 7.24.2 / 7.23.4 / 6.49.21 and hunt for an <b>&ldquo;ops&rdquo;</b> account and the SSH username <b>&ldquo;-2&rdquo;</b>.</p>
+<p style="margin:0"><b>The highest severity currently exploited: SonicWall SMA1000.</b> <b>CVE-2026-83548</b>, a pre-authentication server-side request forgery at <b>CVSS 10.0</b>, chains to <b>CVE-2026-83549</b> for unauthenticated remote code execution. SonicWall has said it investigated a case indicating active exploitation of both. KEV due <b>16 September &mdash; eight days from today</b>.</p>
 </div>
 
 <h2 class="sec">Threat Actor Spotlight</h2>
 <div class="cards">
 <div class="card">
-<div class="tags"><span class="t new">New</span><span class="t hot">Ransomware</span></div>
-<h3>Qilin &mdash; one in every five to six victims</h3>
-<p>Ransomware-tracking research read this run puts <b>Qilin</b> alone at roughly one in every five to six victims in the dataset, having grown from <b>250 victims to 1,358</b> and operating across <b>more than 50 countries</b>. The broader pattern in the same research: threat actors are increasingly abandoning encryption-based attacks in favour of data theft and extortion-only operations, which cuts operational complexity while keeping pressure on victims through the threat of exposure.</p>
-</div>
-<div class="card">
-<div class="tags"><span class="t new">New</span><span class="t">Runner-up</span></div>
-<h3>The Gentlemen, and a newcomer</h3>
-<p><b>The Gentlemen</b>, which appeared in August 2025, expanded from <b>35 victims in the fourth quarter of 2025 to 182 in the first quarter of 2026</b> &mdash; the second most active group in the same dataset. Separately, an operation branding itself <b>Majinahanashi</b> has claimed <b>18 victims across 12 countries</b> since first activity in early July 2026, using a double-extortion model and a <code>.majin</code> encryption extension.</p>
-</div>
-<div class="card">
-<div class="tags"><span class="t">CISA advisory</span></div>
-<h3>Gunra: a RaaS that recruits its own access brokers</h3>
-<p>Per CISA&#39;s <b>#StopRansomware: Gunra</b> advisory (<b>AA26-222A</b>), the FBI first observed Gunra ransomware in <b>April 2025</b>, and as of <b>January 2026</b> the group launched a formal ransomware-as-a-service affiliate programme on dark-web forums. It has commercialised further since by actively recruiting penetration testers and ethical hackers to serve as initial access brokers.</p>
+<div class="tags"><span class="t">Expanded</span><span class="t hot">Ransomware</span></div>
+<h3>The Gentlemen &mdash; and the Qilin affiliate it broke away from</h3>
+<p><b>The Gentlemen</b> (also tracked as <i>hastalamuerte</i>) is a double-extortion operation <b>first observed in July 2025</b>, assessed as a mature RaaS platform or a rebranded actor with ties to the DevMan and Qilin ecosystems. Its operators were likely active earlier as a Qilin RaaS affiliate known as <b>ArmCorp</b>, and the group appears to have <b>formed following a payment dispute with Qilin</b>. Since mid-2025 it has claimed <b>nearly 300 organisations across more than 66 countries and 20 industry verticals</b>, making it one of the fastest-scaling ransomware threats on record; it <b>surged to 269 victims and overtook Qilin during June 2026</b>. By July, <b>Qilin and The Gentlemen each accounted for roughly 14%</b> of publicly reported ransomware victim postings tracked by Check Point &mdash; and Qilin itself had published <b>more than 2,000 victim listings</b> on its leak site as of July 2026. <span class="mut">An earlier edition of this briefing dated The Gentlemen&#39;s appearance to August 2025; this run&#39;s reads give July 2025, and the conflict is stated rather than resolved.</span></p>
 </div>
 </div>
 
 <h2 class="sec">Breaches &amp; Incidents</h2>
 <div class="cards">
 <div class="card">
-<div class="tags"><span class="t new">New</span><span class="t">Supply chain</span></div>
-<h3>Trezor: another 67,000 US customers hit through its shipping provider</h3>
-<p>Trezor disclosed that a further <b>67,000 customers from the U.S.</b> were affected by a breach at its shipping provider <b>ShipMonk</b>. The exposed information includes customer names, email addresses, phone numbers, shipping addresses and order numbers, covering orders placed between <b>November 2019 and August 2021</b>.</p>
-</div>
-<div class="card">
-<div class="tags"><span class="t new">New</span><span class="t gold">Vendor patch</span></div>
-<h3>Broadcom patches a critical VMware desktop flaw</h3>
-<p>Broadcom released security updates for two flaws affecting <b>VMware Workstation and Fusion</b>, including a critical bug tracked as <b>CVE-2026-59346</b> with a <b>CVSS score of 9.3</b>. It is an integer-overflow vulnerability that a <b>local attacker with elevated privileges</b> can exploit to run arbitrary code &mdash; that privilege requirement is why this is a patch-soon item rather than an emergency.</p>
-</div>
-<div class="card">
 <div class="tags"><span class="t">Expanded</span><span class="t hot">Education</span></div>
-<h3>The PaperCut campaign keeps running against schools</h3>
-<p>The chain behind the nearest KEV deadline &mdash; <b>CVE-2026-81578</b> (authentication bypass) plus <b>CVE-2026-82078</b> (remote code execution) &mdash; has been used against targets from K-12 through major universities, most cases in the U.S. plus Denmark and Ireland, with post-exploitation using registry-hive collection tooling and Metasploit/Meterpreter Java payloads. Detection advice keys on interpreters spawned by <code>pc-app.exe</code>. PaperCut has issued emergency patches.</p>
+<h3>Mathspace: 1,079,819 students, parents and staff</h3>
+<p>The maths-learning platform confirmed on <b>3 September</b> that unauthorised parties accessed an internal reporting system and downloaded information on students, their parents or guardians and school staff. <b>1,079,819 people</b> were affected, <b>all in Australia and New Zealand</b>. The entry point was an <b>unpatched Metabase flaw</b>; access dates back to <b>10 August</b>, with data confirmed downloaded from the Australian reporting database on <b>27 August</b>. Exposed: usernames, first and last names, email addresses, country, time zone, user type, email-verification status, last-active and last-login dates and date joined. <b>Not exposed:</b> academic records, assessment results, passwords, authentication tokens or API credentials. The reporting system has been taken offline; Mathspace began emailing school contacts on <b>4 September</b>.</p>
 </div>
 <div class="card">
-<div class="tags"><span class="t">Sector context</span></div>
-<h3>Telecoms remain the standing exposure</h3>
-<p>A telecommunications breach tracker updated for September 2026 counts the <b>32 largest telecom data breaches</b> to date, with Salt Typhoon and AT&amp;T among them. Carried here as sector context, not as a new incident.</p>
+<div class="tags"><span class="t new">New</span><span class="t">Pattern</span></div>
+<h3>Self-hosted Metabase is the common thread</h3>
+<p>Mathspace is the fourth company named in this pattern. <b>Framework, Tally and Kilo Code</b> all disclosed similar breaches in <b>August 2026</b> after attackers exploited the <b>same SQL injection flaw in their Metabase instances</b>, and this run&#39;s reporting places the Mathspace incident in that same trend. If you run Metabase yourself, the exposed asset is your internal analytics database, and the entry point in every named case was an instance that had not been patched. <span class="mut">The reporting groups these four; it does not claim they are the complete set of victims, and no such claim is made here.</span></p>
+</div>
+<div class="card">
+<div class="tags"><span class="t new">New</span><span class="t hot">Healthcare</span></div>
+<h3>Healthcare ransomware up 14% in the first half</h3>
+<p><b>410 incidents</b> hit U.S. hospitals, clinics and healthcare businesses in <b>H1 2026</b>, up <b>14%</b>. <b>Qilin</b> and <b>The Gentlemen</b> were the most active strains against healthcare providers; four of Qilin&#39;s confirmed U.S. attacks hit <b>Rocky Mountain Care, FMRS Health Systems, Orthopaedic Specialists of Massachusetts</b> and <b>Aroostook Mental Health Services</b>. Median ransom demands: <b>$310,000</b> for healthcare providers and <b>$300,000</b> for healthcare businesses globally.</p>
+</div>
+<div class="card">
+<div class="tags"><span class="t">Carried</span><span class="t hot">Router</span></div>
+<h3>MikroTik: exploitation confirmed in the wild</h3>
+<p>Carried and re-confirmed this run from two further sources: hackers are exploiting the new RouterOS flaws to hijack devices <b>without authentication</b>, with the exploitation window opening before the fix shipped. Full detail in the Top Story above.</p>
+</div>
+<div class="card">
+<div class="tags"><span class="t">Carried</span><span class="t">AI</span></div>
+<h3>An AI-agent-run intrusion, start to finish in under ten hours</h3>
+<p>A human operator using frontier models and agentic frameworks breached an enterprise network in <b>under ten hours</b>, against roughly two weeks for human operators, and left the victim an <b>80-page security audit</b> (2 September). Carried from the previous edition; nothing this run refreshed it.</p>
+</div>
+<div class="card">
+<div class="tags"><span class="t">Carried</span><span class="t">Supply chain</span></div>
+<h3>Trezor, via a shipping provider</h3>
+<p>A further <b>67,000 U.S. customers</b> exposed through shipping provider <b>ShipMonk</b>, covering orders placed <b>November 2019 to August 2021</b>. Carried from the previous edition.</p>
 </div>
 </div>
 
@@ -109,42 +113,55 @@ BODY = """
 <div class="panel">
 <table>
 <tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr>
-<tr><td>CVE-2026-75650</td><td class="down">10.0</td><td>Adobe Commerce / Magento Open Source 2.4.4&ndash;2.4.9</td><td>&ldquo;StyleSmuggler&rdquo;. Unauthenticated RCE via the template system. Exploited in the wild from 4 Sep; APSB26-146, priority rating 1.</td></tr>
-<tr><td>CVE-2026-44756</td><td class="down">10.0</td><td>SAP Extended Passport Processing &mdash; KERNEL 7.22, 7.53, 7.54, 7.77, 7.89, 7.93, 8.04 and 9.16 through 9.20</td><td>Memory corruption; the most severe item on today&#39;s SAP Patch Day. SAP Note 3747649. No exploitation reported in anything read this run.</td></tr>
-<tr><td>CVE-2026-83548</td><td class="down">10.0</td><td>SonicWall SMA1000 appliances</td><td>Pre-authentication SSRF. Chains with the command-injection bug CVE-2026-83549 to reach unauthenticated remote code execution. In the 2 September KEV batch.</td></tr>
-<tr><td>CVE-2026-58240</td><td class="down">9.8</td><td>SAP NetWeaver Message Server</td><td>Missing authentication check. SAP Note 3759472.</td></tr>
-<tr><td>CVE-2026-76969</td><td class="down">9.4</td><td>SAP Cloud Application Programming Model &mdash; library <code>sap/cds-mtxs</code>, versions up to 1.18.3, 2.7.6, 3.9.6 and 4.0.2</td><td>Credential disclosure in multitenant applications.</td></tr>
-<tr><td>CVE-2026-59346</td><td class="down">9.3</td><td>VMware Workstation and Fusion</td><td>Integer overflow; arbitrary code execution by a local attacker with elevated privileges.</td></tr>
-<tr><td>CVE-2026-85046</td><td class="mut">Not stated in any return read this run</td><td>Google Chrome (V8 engine)</td><td>Actively exploited zero-day; Chrome update released. Added to KEV 4 September, remediation due 18 September.</td></tr>
+<tr><td>CVE-2026-67276</td><td>9.2</td><td>MikroTik RouterOS</td><td>SSH auth bypass via incomplete RSA public-key validation. <b>Exploited in the wild from 2 September.</b> Fixed 3 September.</td></tr>
+<tr><td>CVE-2026-86060</td><td class="mut">not stated</td><td>MikroTik RouterOS</td><td>SSH privilege escalation via crafted username; chains with the above for full admin. <span class="mut">No CVSS appeared in any source read this run.</span></td></tr>
+<tr><td>CVE-2026-83548</td><td>10.0</td><td>SonicWall SMA1000</td><td>Pre-auth server-side request forgery. In KEV; SonicWall investigated a case indicating active exploitation.</td></tr>
+<tr><td>CVE-2026-83549</td><td class="mut">not stated</td><td>SonicWall SMA1000</td><td>OS command injection; chains with CVE-2026-83548 for unauthenticated RCE. In KEV.</td></tr>
+<tr><td>CVE-2026-59822</td><td>8.8</td><td>BerriAI LiteLLM</td><td>Improper authentication on the MCP Streamable HTTP endpoint &mdash; an unauthenticated attacker can establish an authenticated MCP session with an arbitrary Bearer token. In KEV.</td></tr>
+<tr><td>CVE-2026-9586</td><td class="mut">not stated</td><td>Sangoma Switchvox</td><td>SQL injection. Weaponised alongside CVE-2026-82329 to deploy reverse shells and mint admin tokens for follow-on enumeration of users, groups, credential sets and federated access topologies. In KEV.</td></tr>
+<tr><td>CVE-2026-82329</td><td class="mut">not stated</td><td>JFrog Artifactory</td><td>Improper authentication. See above. In KEV.</td></tr>
+<tr><td>CVE-2026-48710</td><td class="mut">not stated</td><td>Kludex Starlette</td><td>HTTP request/response smuggling. In KEV.</td></tr>
+<tr><td>CVE-2026-49869</td><td class="mut">not stated</td><td>Kestra OSS</td><td>OS command injection. In KEV.</td></tr>
+<tr><td>CVE-2026-85046</td><td class="mut">not stated</td><td>Google Chromium V8</td><td>Type confusion. Added to KEV 4 September.</td></tr>
+<tr><td>CVE-2026-75650</td><td>10.0</td><td>Adobe Commerce (APSB26-146)</td><td>&ldquo;StyleSmuggler&rdquo;. Exploited from 4 September. Carried and re-confirmed as one of the maximum-severity items of the past week.</td></tr>
+<tr><td>CVE-2026-44756</td><td>10.0</td><td>SAP Extended Passport Processing</td><td>Memory corruption; SAP Note 3747649. From SAP Security Patch Day, 8 September.</td></tr>
+<tr><td>CVE-2026-58240</td><td>9.8</td><td>SAP NetWeaver Message Server</td><td>Missing authentication check; SAP Note 3759472.</td></tr>
+<tr><td>CVE-2026-76969</td><td>9.4</td><td>SAP <code>sap/cds-mtxs</code></td><td>Credential disclosure up to 1.18.3 / 2.7.6 / 3.9.6 / 4.0.2.</td></tr>
+<tr><td>CVE-2026-66768</td><td>9.0</td><td>SAP GUI for Java</td><td>Improper access control.</td></tr>
+<tr><td>CVE-2026-59346</td><td>9.3</td><td>VMware Workstation / Fusion</td><td>Integer overflow. <b>Requires a local attacker with elevated privileges</b> &mdash; stated so the 9.3 is not read as an emergency.</td></tr>
+<tr><td>CVE-2026-68820</td><td class="mut">not stated</td><td>Windows afd.sys (WinSock)</td><td>Use-after-free; the one exploited zero-day in Microsoft&#39;s August release.</td></tr>
 </table>
-<p class="note">A CVSS figure is printed here only where a source read this run states it, and vendor or CISA figures are preferred over third-party summaries. A breach round-up read in an earlier edition attributed StyleSmuggler to a different identifier and a 9.8 score, contradicting both Adobe and the discoverer on identifier, score and mechanism; that attribution is refused and is used nowhere on this page.</p>
+<p class="note">Where a source read this run did not state a CVSS score, none is printed. Vendor and CISA scores are preferred over figures quoted in blog coverage.</p>
 </div>
 
 <h2 class="sec">CISA KEV &amp; Federal Deadlines</h2>
 <div class="panel">
 <ul class="bul">
-<li><b>PaperCut NG/MF &mdash; CVE-2026-81578 and CVE-2026-82078</b>, added to KEV on <b>31 August</b>. Remediation due <b>14 September</b> &mdash; <b class="down">6 days left</b>. The nearest open deadline; PaperCut has shipped emergency patches.</li>
-<li><b>The 2 September batch of seven.</b> CISA added seven vulnerabilities on evidence of active exploitation, covering <b>Sangoma Switchvox, Kludex Starlette, Kestra OSS, BerriAI LiteLLM, JFrog Artifactory and SonicWall SMA1000 appliances</b> &mdash; the SonicWall pair being CVE-2026-83548 and CVE-2026-83549. Due <b>16 September</b> &mdash; <b style="color:var(--warn)">8 days left</b>.</li>
-<li><b>Google Chrome V8 &mdash; CVE-2026-85046</b>, added to KEV on <b>4 September</b>, requiring Federal Civilian Executive Branch agencies to apply patches by <b>18 September 2026</b> &mdash; <b style="color:var(--warn)">10 days left</b>.</li>
-<li><b>Nothing newer surfaced.</b> No KEV addition dated after 4 September appeared in any return read this run, so no fourth countdown is published here.</li>
+<li><b>PaperCut &mdash; CVE-2026-81578 and CVE-2026-82078.</b> Added to KEV <b>31 August</b>; remediation due <b>14 September</b>. <b class="down">(6 days left)</b></li>
+<li><b>The 2 September batch of seven.</b> Sangoma Switchvox (CVE-2026-9586), Kludex Starlette (CVE-2026-48710), Kestra OSS (CVE-2026-49869), BerriAI LiteLLM (CVE-2026-59822), JFrog Artifactory (CVE-2026-82329) and the SonicWall SMA1000 pair (CVE-2026-83548, CVE-2026-83549). Remediation due <b>16 September</b>. <b class="down">(8 days left)</b></li>
+<li><b>Google Chromium V8 &mdash; CVE-2026-85046.</b> Added to KEV <b>4 September</b>; remediation due <b>18 September</b>, a date stated outright by a source rather than inferred. <b class="down">(10 days left)</b></li>
+<li><b>No KEV addition after 4 September surfaced in anything read this run</b>, so no fourth countdown has been invented. The three above are the complete set of live federal clocks on this page, and the same three dates appear in the Patch Priority box.</li>
+<li><span class="mut"><b>Two conflicting deadline claims were refused this run.</b> A source stated a <b>5 September</b> federal deadline for the SonicWall flaws and a <b>9 September</b> deadline for &ldquo;the rest&rdquo; of a batch. Neither is reconcilable with the 2 September add date and the 16 September due date verified above, and a date that has already passed cannot be presented as a live clock, so both were dropped rather than picked between.</span></li>
+<li><span class="mut">Federal remediation timing runs under <b>BOD 26-04: Prioritizing Security Updates Based on Risk</b>, which sets vulnerability-management requirements for Federal Civilian Executive Branch agencies. The older three-week shorthand from BOD 22-01 is <b>not</b> what produced the dates above; each due date here comes from the catalog entry or from a source stating it.</span></li>
 </ul>
-<p class="note"><b>On the governing directive.</b> The shorthand that a KEV deadline falls three weeks from the add date is <b>not</b> the text of BOD 22-01 and should not be used to derive dates. <b>BOD 26-04</b> (issued 10 June 2026), &ldquo;Prioritizing Security Updates Based on Risk&rdquo;, establishes vulnerability management requirements for Federal Civilian Executive Branch agencies, with five remediation tiers and windows of 3, 14 or 60 calendar days. Every countdown above is measured from today, 8 September, to a due date stated by a source &mdash; never inferred from an interval.</p>
 </div>
 
-<h2 class="sec">Also Landing Today</h2>
+<h2 class="sec">Patch Tuesday</h2>
 <div class="panel">
-<ul class="bul">
-<li><b>SAP Security Patch Day, 8 September.</b> SAP released <b>19 new security notes and one update</b> to a previously issued note, spanning SAP NetWeaver, Extended Passport Processing, the Cloud Application Programming Model, S/4HANA, Integration Suite and Commerce Cloud. A second tally read this run frames the same release as four critical flaws plus fifteen others. Priority attention goes to internet-facing SAP services and NetWeaver Message Server instances.</li>
-<li><b>Microsoft&#39;s September Patch Tuesday has not landed yet as this edition publishes.</b> The release is scheduled for <b>today at 10:00 AM PT / 1:00 PM ET / 6:00 PM UTC</b>. <span class="mut">Two pre-publication pages read this run give sharply different expected volumes &mdash; one says nine CVEs, another says 150 to 300 or more &mdash; so no count is printed here.</span> For scale: August 2026 delivered <b>421 vulnerabilities</b>, the highest monthly total in Microsoft&#39;s patching history, <b>42</b> of them classified critical, and included three zero-days.</li>
-</ul>
+<p style="margin:0 0 10px"><b>Microsoft&#39;s September 2026 release ships today, 8 September, at 1:00 PM ET</b> &mdash; effectively at the moment of this edition. <b>No September CVE count or zero-day detail had appeared in anything read this run, so none is printed here.</b> A count will appear in a later edition once the release is actually documented.</p>
+<p style="margin:0"><b>The August baseline is itself disputed, and the spread has widened this run.</b> Four sources give four tallies for the same release: <b>421 CVEs</b> (two sources, and the figure this desk carries), <b>400 flaws</b>, <b>398 flaws</b>, and <b>751 CVEs across 67 updates with 108 critical</b>. The critical count remains dropped rather than picked between &mdash; earlier editions carried 42, a later source gave 62, and this run adds 108 on a different denominator. What is agreed: the release contained an exploited zero-day, <b>CVE-2026-68820</b>, a use-after-free in the Ancillary Function Driver for WinSock (afd.sys), alongside publicly disclosed zero-days.</p>
 </div>
 
 <h2 class="sec">Sources</h2>
 <div class="panel srcs">
-%s
+@@SRCS@@
 </div>
-<p class="disc">Compiled automatically from public reporting gathered during this run. Every figure above traces to a source listed here or to a standing sourced correction; items that could not be confirmed this run were dropped rather than carried. No source was fetched first-hand this run &mdash; everything came from search returns. CVSS scores, patch levels and remediation deadlines should be confirmed against the vendor advisory or the CISA catalogue before you act on them. This briefing is informational and is not security advice for any specific environment.</p>
-""" % (masthead("The Cyber Wire", "Your daily cybersecurity briefing &mdash; breaches, exploits &amp; federal deadlines"), nav("cyber"), srcblock())
+<p class="disc">Compiled automatically from public reporting gathered during this run; nothing was fetched first-hand. Every CVE, CVSS score, deadline and figure above traces to a source listed here or to a standing sourced correction; where a score or date was not stated in a source read this run, it is marked as not stated rather than estimated. Countdowns are computed from today&#39;s date to the verified due date. This is a summary for awareness, not a substitute for your vendor&#39;s advisory or your own risk assessment.</p>
+"""
+
+BODY = (BODY.replace("@@MAST@@", masthead("The Cyber Wire", "Your daily security briefing &mdash; breaches, CVEs, KEV deadlines &amp; threat actors"))
+            .replace("@@NAV@@", nav("cyber"))
+            .replace("@@SRCS@@", srcblock()))
 
 html = page("The Cyber Wire &mdash; Daily Briefings", CSS, BODY)
 io.open(os.path.join(OUT, "cyber-briefing.html"), "w", encoding="utf-8").write(html)

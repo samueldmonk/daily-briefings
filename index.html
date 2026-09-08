@@ -4,8 +4,8 @@
 <title>Daily Briefings</title>
 <style>
 :root{
-  --bg:#0b0c0e; --panel:#14171a; --line:#242a30;
-  --accent:#9aa7b4; --accent2:#c8d2dc;
+  --bg:#0b0c0e; --panel:#141619; --line:#242830;
+  --accent:#8b93a1; --accent2:#c8cdd6;
   --txt:#e9e6e2; --muted:#9aa0a6;
   --up:#22c55e; --down:#ef4444; --warn:#f0b429; --crit:#ef4444;
   --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
@@ -75,26 +75,22 @@ ul.bul{margin:0;padding-left:19px} ul.bul li{margin-bottom:9px}
 .disc{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin-top:26px;padding-top:14px}
 
 .big{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px;margin-top:6px}
-.bcard{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 21px;transition:.16s;
-  display:flex;flex-direction:column}
-.bcard:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(0,0,0,.4)}
-.bcard .kick{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:9px}
-.bcard h2{margin:0 0 4px;font-size:22px;letter-spacing:-.3px}
-.bcard .sub2{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
-.bcard p{margin:0 0 16px;font-size:14.5px;color:#cfcbc6;line-height:1.55;flex:1}
-.bcard a.read{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
-.bcard.cy{border-top:3px solid #22d3a8}.bcard.cy .kick,.bcard.cy a.read{color:#22d3a8}
-.bcard.mk{border-top:3px solid #caa64a}.bcard.mk .kick,.bcard.mk a.read{color:#caa64a}
-.bcard.mk h2{font-family:Georgia,'Times New Roman',serif}
-.bcard.mm{border-top:3px solid #e84545}.bcard.mm .kick,.bcard.mm a.read{color:#e84545}
+.big .card{padding:20px 21px;border-top:3px solid var(--line)}
+.big .card .kick{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:9px}
+.big .card h3{font-size:20px;margin:0 0 9px}
+.big .card p{font-size:14.5px;color:#cfcbc6;margin:0 0 14px}
+.big .card a.go{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.c-cy{border-top-color:#22d3a8} .c-cy .kick,.c-cy a.go{color:#22d3a8}
+.c-ws{border-top-color:#caa64a} .c-ws .kick,.c-ws a.go{color:#caa64a} .c-ws h3{font-family:Georgia,'Times New Roman',serif}
+.c-mm{border-top-color:#e84545} .c-mm .kick,.c-mm a.go{color:#e84545}
+.c-cy:hover{border-color:#22d3a8} .c-ws:hover{border-color:#caa64a} .c-mm:hover{border-color:#e84545}
 
 @media(max-width:640px){.masthead h1{font-size:26px}.wrap{padding:18px 14px 50px}}
 </style>
 </head><body><div class="wrap">
-
 <header class="masthead">
 <h1>Daily Briefings</h1>
-<p class="sub">Security, markets and mixed martial arts &mdash; refreshed through the day</p>
+<p class="sub">Security, markets and MMA &mdash; refreshed every 30 minutes, 8 AM&ndash;6 PM ET</p>
 <div class="meta">
 <span class="pill live"><span class="dot"></span>Live</span>
 <span class="pill" id="edition">&nbsp;</span>
@@ -106,34 +102,31 @@ ul.bul{margin:0;padding-left:19px} ul.bul li{margin-bottom:9px}
 <nav class="tabs"><a href="index.html" class="active">★ Front Page</a><a href="cyber-briefing.html">⛨ The Cyber Wire</a><a href="wallstreet-briefing.html">▲ The Closing Bell</a><a href="mma-briefing.html">⊘ The Octagon</a><a href="archive.html">🗄 Archive</a></nav>
 
 <div class="big">
-
-<div class="bcard cy">
-<div class="kick">&#9960; The Cyber Wire &middot; The Wire</div>
-<h2>A third exploited campaign: MikroTik routers</h2>
-<div class="sub2">Breaches &middot; Exploits &middot; Federal deadlines</div>
-<p>Two exploited maximum-severity RCEs still lead the day &mdash; N-able N-central and Adobe Commerce &mdash; and a third live campaign surfaced this run: &ldquo;MikroTrick&rdquo;, an exploited MikroTik RouterOS chain that has been taking over internet-exposed routers since 2 September, with Microsoft&#39;s September Patch Tuesday due at 1 PM ET today and three federal deadlines open, the nearest in six days.</p>
-<a class="read" href="cyber-briefing.html">Read the briefing &rarr;</a>
+<div class="card c-cy">
+<div class="kick">&#9880; The Cyber Wire &middot; The Wire</div>
+<h3>Routers are being taken over by attackers who got a head start on the patch</h3>
+<p>An SSH authentication bypass in MikroTik RouterOS, chained for full administrative takeover and exploited in the wild since 2 September, is now the most urgent unpatched exposure on the internet-facing edge, with more than 122,000 devices showing exposed SSH interfaces.</p>
+<a class="go" href="cyber-briefing.html">Read the briefing &rarr;</a>
 </div>
-
-<div class="bcard mk">
+<div class="card c-ws">
 <div class="kick">&#9650; The Closing Bell &middot; The Tape</div>
-<h2>Crude climbs and the 10-year tops 4.8%</h2>
-<div class="sub2">Indices &middot; Movers &middot; Rates &middot; Calendar</div>
-<p>Stocks are lower across the board in late Tuesday morning trade with the Dow much the weakest of the three, as Houthi strikes on southern Saudi Arabia push crude higher, energy leads the board and the 10-year Treasury yield tops 4.8% for the first time since October 2023.</p>
-<a class="read" href="wallstreet-briefing.html">Read the briefing &rarr;</a>
+<h3>Two unrelated shocks, one lower market</h3>
+<p>Stocks are lower across the board into Tuesday afternoon with the Dow much the weakest of the three, as Houthi strikes on Saudi energy facilities push Brent toward $100 and a failed Novartis heart-drug trial drags the health care sector down more than 2%.</p>
+<a class="go" href="wallstreet-briefing.html">Read the briefing &rarr;</a>
 </div>
-
-<div class="bcard mm">
+<div class="card c-mm">
 <div class="kick">&#8856; The Octagon &middot; Tale of the Tape</div>
-<h2>A UFC main card goes free on CBS</h2>
-<div class="sub2">UFC &middot; Prospects &middot; The business of fighting</div>
-<p>UFC 332 on 3 October will put its entire main card live and free on CBS for the first time ever, headlined by Nat&aacute;lia Silva (20-5-1) against Wang Cong (10-1) for the vacant women&#39;s flyweight title, while Contender Series Week 5 puts five more contract fights on at the Meta APEX tonight.</p>
-<a class="read" href="mma-briefing.html">Read the briefing &rarr;</a>
+<h3>A win on Saturday, off the rankings by Monday</h3>
+<p>Michael Page has been pulled from the UFC rankings less than two days after winning at UFC Paris with a release reportedly looming, while Valentina Shevchenko has been stripped of the women&#39;s flyweight title after telling the promotion she would be unable to compete for at least a year.</p>
+<a class="go" href="mma-briefing.html">Read the briefing &rarr;</a>
+</div>
 </div>
 
+<h2 class="sec">About these briefings</h2>
+<div class="panel">
+<p style="margin:0 0 9px">Three briefings, rebuilt from live web search every thirty minutes between 8 AM and 6 PM Eastern. Each page carries its own as-of stamp, its own source list, and its own record of what it refused to publish and why.</p>
+<p style="margin:0" class="note">Nothing on any of these pages is fetched first-hand; everything is compiled from public reporting gathered during the run that produced it. Where two sources disagreed, both reads are shown rather than averaged. Point-in-time snapshots of every edition are kept in the <a href="archive.html">Archive</a>. The markets page is information only and is not investment advice.</p>
 </div>
-
-<p class="disc">Three briefings, rebuilt from live sources every thirty minutes between 8 AM and 6 PM Eastern. Each page carries its own sources and its own as-of time; point-in-time snapshots of every edition are kept in the <a href="archive.html">Archive</a>. Nothing on these pages is investment advice or security advice for any specific environment.</p>
 
 </div>
 <script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \u00b7 briefings refresh every 30 minutes, 8 AM\u20136 PM ET';}catch(e){}})();</script>
