@@ -118,14 +118,14 @@ ck("3, 14 or 60 calendar days" in F["cy"], "cy: BOD 26-04 windows")
 
 # ---------- required literals ----------
 REQ = {
- "cy": ["CVE-2026-75650","APSB26-146","CVE-2026-86218","N-able N-central","2026.3.1.14","CWE-96","23.234.64.0/18","Hotfix 4","Boston Scientific","25 August 2026","28 October","Rhysida","295 organisations","14 August","Homeland Security Information Network","ShinyHunters","2.2 million","StyleSmuggler","4 September 2026","VULN-39341",
+ "cy": ["CVE-2026-67276","CVE-2026-86060","MikroTrick","82.192.72.4","7.25beta3","CERT Polska","Mathspace","80-page security audit","CVE-2026-68820","CVE-2026-66768","CVE-2026-75650","APSB26-146","CVE-2026-86218","N-able N-central","2026.3.1.14","CWE-96","23.234.64.0/18","Hotfix 4","Boston Scientific","25 August 2026","28 October","Rhysida","295 organisations","14 August","Homeland Security Information Network","ShinyHunters","2.2 million","StyleSmuggler","4 September 2026","VULN-39341",
         "2.4.4-p18","CVE-2026-44756","SAP Note 3747649","CVE-2026-58240","SAP Note 3759472","CVE-2026-76969",
         "CVE-2026-59346","CVE-2026-85046","18 September 2026","CVE-2026-81578","CVE-2026-82078","31 August",
         "CVE-2026-83548","CVE-2026-83549","Sangoma Switchvox","Kludex Starlette","Kestra OSS","BerriAI LiteLLM",
         "JFrog Artifactory","SonicWall SMA1000","19 new security notes","Qilin","1,358","The Gentlemen",
         "Majinahanashi","AA26-222A","67,000","ShipMonk","7,551","24.9","421 vulnerabilities","1:00 PM ET",
         "Threat Level: High","pc-app.exe"],
- "ws": ["11:05 AM ET","Amgen (AMGN) is down 8%","BMO Capital","Bloom Energy (BE) is up 8%","21 September","Corning (GLW) is up 4%","Roivant","Novartis","mosliciguat","del-desiran","Peloton","Houthis","more than 70 people","60.4%","52,800.65","613.60","26,379.01","127.98","7,707","7,718.60","26,506.99","53,414.25",
+ "ws": ["11:35 AM ET","4.3810%","highest since October 2023","15&ndash;16 September FOMC","58%","$98.71","$94.20","Sandisk up 11.9%","Amgen (AMGN) is down 8%","BMO Capital","Bloom Energy (BE) is up 8%","21 September","Corning (GLW) is up 4%","Roivant","Novartis","mosliciguat","del-desiran","Peloton","Houthis","more than 70 people","60.4%","52,800.65","613.60","26,379.01","127.98","7,707","7,718.60","26,506.99","53,414.25",
         "271.86","Intel (INTC) has jumped 5.2","SMH","Micron (MU) up 2.0","Nvidia (NVDA) up 1.2","XLE",
         "URA","XOP","4.12","4.37","4.55","4.79","5.25","3.50&ndash;3.75","52","50&ndash;63","99.73","94.28",
         "98.50","5.85","5.816","10 September","1.67","11 September","162,000","4.1","53,000","56,000","55,000",
