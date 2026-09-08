@@ -1,128 +1,178 @@
 # -*- coding: utf-8 -*-
-import re, os, datetime, sys
-D="/tmp/build_1788656196/out"
-PREV="/tmp/db_1788643981/archive"
-F={k:open(os.path.join(D,f),encoding="utf-8").read() for k,f in
-   [("ix","index.html"),("cy","cyber-briefing.html"),("ws","wallstreet-briefing.html"),("mm","mma-briefing.html")]}
-fails=[]; n=0
-def ck(cond,msg):
-    global n; n+=1
-    if not cond: fails.append(msg)
+import io, os, re, datetime, sys
+D = os.path.dirname(os.path.abspath(__file__))
+F = {}
+for k, fn in [("ix","index.html"),("cy","cyber-briefing.html"),("ws","wallstreet-briefing.html"),("mm","mma-briefing.html")]:
+    F[k] = io.open(os.path.join(D, fn), encoding="utf-8").read()
 
-# structure
-for k,t in F.items():
-    ck(len(t)>8000, f"{k}: too short")
-    for href in ["index.html","cyber-briefing.html","wallstreet-briefing.html","mma-briefing.html","archive.html"]:
-        ck(f'href="{href}"' in t, f"{k}: missing nav link {href}")
-    for pid in ['id="edition"','id="datestamp"','id="updated"','id="freshline"']:
-        ck(pid in t, f"{k}: missing {pid}")
-    ck('Intl.DateTimeFormat' in t, f"{k}: missing stamp JS")
-    ck('class="pill live"' in t, f"{k}: missing LIVE pill")
-    ck(not re.search(r'&[A-Za-z]+>', t), f"{k}: malformed entity")
-    ck(t.count('<a class="active"')==0, f"{k}: bad active markup")
-ck(F["ix"].count('nav.tabs a.active')>=0,"noop")
-for k,act in [("ix","index.html"),("cy","cyber-briefing.html"),("ws","wallstreet-briefing.html"),("mm","mma-briefing.html")]:
-    ck(f'<a href="{act}" class="active">' in F[k], f"{k}: active tab not self")
+N = [0]; FAIL = []
+def ck(cond, label):
+    N[0] += 1
+    if not cond: FAIL.append(label)
 
-# tldr
-for k in ("cy","ws","mm"): ck(F[k].count('class="tldr"')==1, f"{k}: tldr count != 1")
-ck(F["ix"].count('class="tldr"')==0, "ix: has tldr")
-ck('>The Tape<' in F["ws"], "ws: label"); ck('>The Wire<' in F["cy"], "cy: label")
-ck('>Tale of the Tape<' in F["mm"], "mm: label")
+# ---------- structure ----------
+for k, v in F.items():
+    ck(v.startswith("<!DOCTYPE html>"), k+": doctype")
+    ck(v.rstrip().endswith("</html>"), k+": closing html")
+    ck('<meta charset="utf-8">' in v, k+": charset")
+    ck('name="viewport"' in v, k+": viewport")
+    for tag in ["div","p","table","tr","td","h2","h3","span","ul","li","script","header","nav"]:
+        o = len(re.findall(r"<%s[ >]" % tag, v)); c = len(re.findall(r"</%s>" % tag, v))
+        ck(o == c, "%s: balanced <%s> (%d/%d)" % (k, tag, o, c))
 
-# index cards verbatim on target pages
-CY=("A maximum-severity SonicWall SMA 1000 flaw is confirmed exploited in the wild and can be "
-    "chained to remote code execution, while a Chromium V8 zero-day carries a September 18 federal "
-    "patch deadline — and Unit 42 has published the anatomy of an AI-directed intrusion that took "
-    "root in under ten hours.")
-WS=("U.S. markets are closed for the Labor Day long weekend after a hot August jobs report "
-    "knocked the three major indexes lower on Friday and pushed bets on a September Fed rate "
-    "hike back toward a coin flip; the next session opens Tuesday, September 8.")
-MM=("Salahdine Parnasse stopped Dan Hooker in the first round of his UFC debut in Paris, took "
-    "Performance of the Night and called for Max Holloway — and UFC.com says the win puts him "
-    "straight into the lightweight top 15.")
-for txt,k in ((CY,"cy"),(WS,"ws"),(MM,"mm")):
-    ck(txt in F["ix"], f"ix: card text missing ({k})")
-    ck(txt in F[k], f"{k}: index card text not verbatim on page")
+# ---------- nav ----------
+TABS = ["index.html","cyber-briefing.html","wallstreet-briefing.html","mma-briefing.html","archive.html"]
+for k, v in F.items():
+    nv = v.split('<nav class="tabs">')[1].split("</nav>")[0]
+    for t in TABS: ck('href="%s"' % t in nv, "%s: nav link %s" % (k, t))
+    ck(nv.count("<a ") == 5, k+": exactly five tabs")
+    ck(nv.count('class="active"') == 1, k+": exactly one active tab")
+    for lab in ["Front Page","The Cyber Wire","The Closing Bell","The Octagon","Archive"]:
+        ck(lab in nv, "%s: nav label %s" % (k, lab))
+ck('href="index.html" class="active"' in F["ix"], "ix: active tab is Front Page")
+ck('href="cyber-briefing.html" class="active"' in F["cy"], "cy: active tab is Cyber")
+ck('href="wallstreet-briefing.html" class="active"' in F["ws"], "ws: active tab is Closing Bell")
+ck('href="mma-briefing.html" class="active"' in F["mm"], "mm: active tab is Octagon")
 
-# WS live blocks A-F
-for name,needle in [("A","embed-widget-ticker-tape.js"),("B","embed-widget-single-quote.js"),
-                    ("C","embed-widget-timeline.js"),("D","embed-widget-stock-heatmap.js"),
-                    ("E","embed-widget-mini-symbol-overview.js"),("F","embed-widget-events.js")]:
-    ck(needle in F["ws"], f"ws: missing block {name}")
-ck(F["ws"].count("embed-widget-single-quote.js")==3, "ws: need 3 single quotes")
+# ---------- masthead / stamp ----------
+for k, v in F.items():
+    ck('class="pill live"' in v, k+": live pill")
+    ck('id="edition"' in v, k+": edition pill")
+    ck('id="datestamp"' in v, k+": datestamp pill")
+    ck('id="updated"' in v, k+": updated pill")
+    ck('id="freshline"' in v, k+": freshline element")
+    ck("America/New_York" in v, k+": stamp uses ET")
+    ck("'Morning Edition'" in v, k+": edition bucket morning")
+    ck("'Midday Edition'" in v, k+": edition bucket midday")
+    ck("'Afternoon Edition'" in v, k+": edition bucket afternoon")
+    ck("briefings refresh every 30 minutes" in v, k+": freshline text")
+
+# ---------- tldr ----------
+ck('<div class="tldr"><b>The Wire</b>' in F["cy"], "cy: tldr label The Wire")
+ck('<div class="tldr"><b>The Tape</b>' in F["ws"], "ws: tldr label The Tape")
+ck('<div class="tldr"><b>Tale of the Tape</b>' in F["mm"], "mm: tldr label Tale of the Tape")
+ck('class="tldr"' not in F["ix"], "ix: no tldr strip (cards instead)")
+for k in ["cy","ws","mm"]:
+    ck(F[k].count('class="tldr"') == 1, k+": exactly one tldr")
+
+# ---------- live widgets ----------
+W = ["embed-widget-ticker-tape.js","embed-widget-single-quote.js","embed-widget-timeline.js",
+     "embed-widget-stock-heatmap.js","embed-widget-mini-symbol-overview.js","embed-widget-events.js"]
+for w in W: ck(w in F["ws"], "ws: widget "+w)
+ck(F["ws"].count("embed-widget-single-quote.js") == 3, "ws: exactly three single-quote widgets")
 for s in ["FOREXCOM:SPXUSD","FOREXCOM:NSXUSD","FOREXCOM:DJI","TVC:USOIL","TVC:US10Y"]:
-    ck(s in F["ws"], f"ws: ticker missing {s}")
-ck('class="livebar"' in F["ws"], "ws: livebar")
-ck("Quotes stream live" in F["ws"], "ws: note line")
-ck(re.search(r'VIX\s*[:\-]?\s*\d', F["ws"]) is None, "ws: published a VIX level")
-ck("No after-hours session this edition" in F["ws"], "ws: after-hours panel")
-ck("53,414.25" in F["ws"] and "7,718.60" in F["ws"] and "26,506.99" in F["ws"], "ws: Friday closes")
-ck("53,686.11" in F["ws"], "ws: Thursday row")
-ck("162,000" in F["ws"], "ws: payrolls")
+    ck(s in F["ws"], "ws: ticker symbol "+s)
+ck('"symbol":"NASDAQ:INTC"' in F["ws"], "ws: chart-of-the-day symbol is Intel")
+ck('class="livebar"' in F["ws"] and "LIVE QUOTES" in F["ws"], "ws: livebar wrapper")
+ck("Quotes stream live" in F["ws"], "ws: note line under quotes")
+for k in ["ix","cy","mm"]:
+    ck("tradingview.com" not in F[k], k+": carries no live widget")
 
-# cyber
-ck('callout crit' in F["cy"], "cy: patch priority not crit")
-REF="CISA’s own alert page returned empty on fetch for a third consecutive run"
-ck(REF in F["cy"], "cy: patch-priority refusal string")
-ck("CISA’s own page returned empty" in F["cy"], "cy: KEV refusal string")
-ck("September 18" in F["cy"], "cy: chrome due date")
-left=(datetime.date(2026,9,18)-datetime.date(2026,9,5)).days
-ck(f"({left} days left)" in F["cy"], "cy: countdown")
-ck("CVE-2026-83548" in F["cy"] and "10.0" in F["cy"], "cy: sonicwall")
-ck("intrusion, and not a ransomware attack" in F["cy"], "cy: unit42 correction")
-ck("152.0.7977.82" in F["cy"], "cy: chrome fixed version")
+# ---------- MMA countdown ----------
+ck('id="ufccdn"' in F["mm"], "mm: countdown element")
+ck("2026-09-12T17:00:00-04:00" in F["mm"], "mm: countdown target datetime")
+ck("Fight week" in F["mm"], "mm: countdown elapsed text")
 
-# mma champions
-mrow=re.search(r'<h2 class="sec">Champions Board</h2>.*?</table>', F["mm"], re.S).group(0)
-ck(mrow.count("<tr>")==13, f"mm: champions rows = {mrow.count('<tr>')} (want 13 incl header)")
-ck("Carlos Ulberg" in mrow and "Sean Strickland" in mrow, "mm: LHW/MW champs")
-ck("Alexander Volkanovski" in mrow, "mm: FW champ")
-ck("Justin Gaethje" in mrow, "mm: LW champ")
-ck(not re.search(r'Light Heavyweight</td><td><strong>Alex Pereira', mrow), "mm: Pereira LHW regression")
-ck(not re.search(r'Middleweight</td><td><strong>Khamzat', mrow), "mm: Chimaev MW regression")
-ck(re.search(r"Featherweight</td><td><strong>\s*[Vv]acant", mrow) is None, "mm: featherweight listed vacant")
-ck("<strong>Not vacant.</strong>" in mrow, "mm: featherweight not-vacant note missing")
-ck("Contender Series" not in F["mm"].split("Dana White’s Contender Series, Season 10")[0].split("Top Story")[1][:2500] or "did not come through Dana White’s Contender Series" in F["mm"], "mm: Parnasse DWCS attribution")
-ck("did not come through Dana White’s Contender Series" in F["mm"], "mm: Parnasse DWCS denial missing")
-ck("Salahdine Parnasse" in F["mm"] and "Saladhine" not in F["mm"], "mm: Parnasse spelling")
-ck("Quillan" not in F["mm"] or "Cody Salkilld" not in F["mm"], "mm: Salkilld name")
-res=re.search(r'<h2 class="sec">Last Event — Results</h2>.*?</table>', F["mm"], re.S).group(0)
-ck(res.count("<tr>")==15, f"mm: result rows = {res.count('<tr>')} (want 15 incl header)")
-ck("TKO, R1 2:35" in F["mm"], "mm: main event method")
-ck("Performance of the Night" in F["mm"], "mm: bonuses")
-ck("$4,365,335" in F["mm"] and "15,687" in F["mm"], "mm: gate/attendance")
-ck("ufccdn" in F["mm"] and "2026-09-12T00:00:00-04:00" in F["mm"], "mm: countdown")
-# loser-name consistency: Wood must not be described as hunting a win in prospect card
-pw=re.search(r'<h2 class="sec">Prospect Watch</h2>.*?<h2 class="sec">', F["mm"], re.S).group(0)
-ck("beat</strong> Nathaniel" in pw or "<strong>beat</strong> Nathaniel Wood" in pw, "mm: Andrusca card contradicts table")
+# ---------- champions: refusals and required seats ----------
+CH = F["mm"].split("Champions Board")[1]
+for banned in ["<td>Alex Pereira</td>","<td>Valentina Shevchenko</td>","<td>Khamzat Chimaev</td>","<td>Ilia Topuria</td>"]:
+    ck(banned not in CH, "mm: banned champion cell "+banned)
+for name in ["Tom Aspinall","Carlos Ulberg","Sean Strickland","Islam Makhachev","Justin Gaethje",
+             "Alexander Volkanovski","Petr Yan","Joshua Van","Kayla Harrison","Mackenzie Dern"]:
+    ck("<td>%s</td>" % name in CH, "mm: seated champion "+name)
+ck('<td class="mut">Vacant</td>' in CH, "mm: women's flyweight vacant")
+ck("refused" in CH, "mm: refusals stated in print")
 
-# weekday calendar guard
-CAL=[("Saturday",datetime.date(2026,9,5)),("Friday",datetime.date(2026,9,4)),
-     ("Thursday",datetime.date(2026,9,3)),("Monday",datetime.date(2026,9,7)),
-     ("Tuesday",datetime.date(2026,9,8)),("Thursday",datetime.date(2026,9,10)),
-     ("Friday",datetime.date(2026,9,11)),("Friday",datetime.date(2026,9,18)),
-     ("Saturday",datetime.date(2026,9,12)),("Saturday",datetime.date(2026,9,19)),
-     ("Saturday",datetime.date(2026,9,26)),("Saturday",datetime.date(2026,10,17)),
-     ("Wednesday",datetime.date(2026,9,16))]
-for wd,d in CAL:
-    ck(d.strftime("%A")==wd, f"calendar: {d} is {d.strftime('%A')}, page says {wd}")
+# ---------- name-spelling guards from past regressions ----------
+ck("Salahdine Parnasse" in F["mm"], "mm: Parnasse present")
+for bad in ["Saladhine","Paransse","Cody Salkilld","Kerry Hatley’s","Diamond Desert Arena</div>"]:
+    ck(bad not in F["mm"].replace("&ldquo;Kerry Hatley&rdquo;",""), "mm: bad spelling "+bad)
+ck("did not come through Dana White&#39;s Contender Series" in F["mm"], "mm: Parnasse DWCS denial")
+ck("Desert Diamond Arena" in F["mm"], "mm: correct venue name")
+ck("Patrick Rivera" in F["mm"] and "1 September 2026" in F["mm"], "mm: Darby opponent+date corrected")
 
-# "New" tags vs prior snapshot
-import glob
-def prev(sec):
-    g=sorted(glob.glob(os.path.join(PREV,f"{sec}-2026-09-05-*.html")))
-    return open(g[-1],encoding="utf-8").read() if g else ""
-NEW={"cy":["McKesson confirms a breach"],
-     "ws":["Memory and the semis/AI trade led","Tankers and shipping kept surging","FOMC: September 15–16"],
-     "mm":["Gross total revenue","Salahdine Parnasse — debut","Axel Sola — back-to-back finishes"]}
-secmap={"cy":"cyber","ws":"wallstreet","mm":"mma"}
-for k,items in NEW.items():
-    p=prev(secmap[k])
-    for it in items:
-        ck(it in F[k], f"{k}: New item text missing: {it}")
-        if p: ck(it not in p, f"{k}: tagged New but present in prior snapshot: {it}")
+# ---------- KEV countdown arithmetic ----------
+TODAY = datetime.date(2026, 9, 8)
+for due, days, label in [((2026,9,14), 6, "PaperCut"), ((2026,9,16), 8, "2 Sep batch"), ((2026,9,18), 10, "Chrome V8")]:
+    d = (datetime.date(*due) - TODAY).days
+    ck(d == days, "arith: %s should be %d days, computed %d" % (label, days, d))
+ck("<b class=\"down\">6 days left</b>" in F["cy"], "cy: PaperCut 6 days left")
+ck(">8 days left</b>" in F["cy"], "cy: 2 Sep batch 8 days left")
+ck(">10 days left</b>" in F["cy"], "cy: Chrome V8 10 days left")
+for bad in ["5 days left","7 days left","9 days left","11 days left","overdue"]:
+    ck(bad not in F["cy"], "cy: off-by-one / stale countdown "+bad)
+# patch priority must agree with KEV section
+pp = F["cy"].split("Patch Priority")[1].split("</div>")[0] + F["cy"].split("Patch Priority")[1][:1400]
+ck("14 September" in pp and "6 days left" in pp, "cy: patch priority matches KEV deadline")
+ck("callout crit" in F["cy"], "cy: patch priority is crit-bordered")
 
-print(f"CHECKS: {n}   FAILURES: {len(fails)}")
-for f_ in fails: print("  FAIL:", f_)
-sys.exit(1 if fails else 0)
+# ---------- BOD wording guard ----------
+i = F["cy"].find("three weeks from the add date")
+ck(i == -1 or ("not</b> the text of BOD 22-01" in F["cy"][i:i+200]), "cy: three-week shorthand only next to its negation")
+ck("BOD 26-04" in F["cy"], "cy: BOD 26-04 named")
+ck("3, 14 or 60 calendar days" in F["cy"], "cy: BOD 26-04 windows")
+
+# ---------- required literals ----------
+REQ = {
+ "cy": ["CVE-2026-75650","CVSS score of 10.0","APSB26-146","StyleSmuggler","4 September 2026","VULN-39341",
+        "2.4.4-p18","CVE-2026-44756","SAP Note 3747649","CVE-2026-58240","SAP Note 3759472","CVE-2026-76969",
+        "CVE-2026-59346","CVE-2026-85046","18 September 2026","CVE-2026-81578","CVE-2026-82078","31 August",
+        "CVE-2026-83548","CVE-2026-83549","Sangoma Switchvox","Kludex Starlette","Kestra OSS","BerriAI LiteLLM",
+        "JFrog Artifactory","SonicWall SMA1000","19 new security notes","Qilin","1,358","The Gentlemen",
+        "Majinahanashi","AA26-222A","67,000","ShipMonk","7,551","24.9","421 vulnerabilities","1:00 PM ET",
+        "Threat Level: High","pc-app.exe"],
+ "ws": ["10:35 AM ET","52,800.65","613.60","26,379.01","127.98","7,707","7,718.60","26,506.99","53,414.25",
+        "271.86","Intel (INTC) has jumped 5.2","SMH","Micron (MU) up 2.0","Nvidia (NVDA) up 1.2","XLE",
+        "URA","XOP","4.12","4.37","4.55","4.79","5.25","3.50&ndash;3.75","52","50&ndash;63","99.73","94.28",
+        "98.50","5.85","5.816","10 September","1.67","11 September","162,000","4.1","53,000","56,000","55,000",
+        "$20 billion","toilet paper","Labor Day","Weekly Scorecard","not investment advice"],
+ "mm": ["UFC 332","Nat&aacute;lia Silva","Wang Cong","3 October","CBS","vacant","Delta Center",
+        "Noche UFC","Jean Silva","Jose Delgado","Desert Diamond Arena","Yair Rodr&iacute;guez",
+        "&minus;428","+324","&minus;425","+355","&minus;450","+350","UFC 331","Crypto.com Arena",
+        "Alexandre Pantoja","+100","&minus;120","&minus;105","&minus;115","Arman Tsarukyan","&minus;380",
+        "+305","Gable Steveson","&minus;1500","+600","Accor Arena","5 September","Dan Hooker","2:35",
+        "Axel Sola","Fares Ziam","Mario Pinto","Ryan Spann","Losene Keita","Delphine Benouaich",
+        "Matthieu Duclos","Modestas Bukauskas","Kurtis Campbell","24-2","Adam Darby","Cage Warriors",
+        "7-1","Joaquin Buckley","Mike Malott","Raul Rosas Jr.","Raoni Barcelos","34 million","7.0 million",
+        "UFC 327","subject to change"],
+ "ix": ["Daily Briefings","The Cyber Wire","The Closing Bell","The Octagon","The Wire","The Tape",
+        "Tale of the Tape","Read the briefing"],
+}
+for k, lits in REQ.items():
+    for lit in lits: ck(lit in F[k], "%s: literal %r" % (k, lit))
+
+# ---------- index cards ----------
+ck(F["ix"].count('class="bcard') == 3, "ix: three big cards")
+ck(F["ix"].count('class="read"') == 3, "ix: three read links")
+for h in ["cyber-briefing.html","wallstreet-briefing.html","mma-briefing.html"]:
+    ck(F["ix"].count('href="%s"' % h) >= 2, "ix: card+nav link to "+h)
+
+# ---------- sources ----------
+for k in ["cy","ws","mm"]:
+    ck("<h2 class=\"sec\">Sources</h2>" in F[k], k+": sources section")
+    n = len(re.findall(r'<a href="https?://', F[k].split("Sources</h2>")[1]))
+    ck(n >= 12, "%s: >=12 source URLs (found %d)" % (k, n))
+    ck('class="disc"' in F[k], k+": disclaimer")
+ck("Nothing here is investment advice" in F["ws"] or "not investment advice" in F["ws"], "ws: investment disclaimer")
+ck("not security advice" in F["cy"], "cy: security disclaimer")
+ck("subject to change" in F["mm"], "mm: cards-change disclaimer")
+
+# ---------- stale-phrase bans ----------
+BAN_ALL = ["Labor Day, U.S. stock AND bond markets CLOSED","futures halt","pre-market movers as of 8:04",
+           "after today&#39;s close</b>, est","Freedom 250 is underway","fetched directly this run"]
+for k, v in F.items():
+    for b in BAN_ALL: ck(b not in v, "%s: stale phrase %r" % (k, b))
+ck("Oracle&#39;s fiscal Q1 2027 report lands 10 September" in F["ws"], "ws: Oracle date corrected")
+# the phrase may appear ONLY inside the sentence that corrects the earlier edition
+_j = F["ws"].find("after today&#39;s close")
+ck(F["ws"].count("after today&#39;s close") <= 1, "ws: 'after today's close' appears more than once")
+ck(_j == -1 or "This corrects an earlier edition" in F["ws"][max(0,_j-200):_j],
+   "ws: Oracle 'after today's close' only inside its correction")
+# markets are open: page must not describe the session as closed or pre-open
+for b in ["markets are closed","pre-open","PRE-OPEN","market is closed today"]:
+    ck(b not in F["ws"], "ws: stale closed/pre-open framing %r" % b)
+ck("Dow futures" not in F["ws"], "ws: no futures framing during an open session")
+
+print("checks:", N[0], "failures:", len(FAIL))
+for f in FAIL: print("  FAIL:", f)
+sys.exit(1 if FAIL else 0)

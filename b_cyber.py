@@ -1,96 +1,40 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>The Cyber Wire &mdash; Daily Briefings</title>
-<style>
-:root{
-  --bg:#0b0f0e; --panel:#121a18; --line:#1e2c29;
-  --accent:#22d3a8; --accent2:#36c6ff;
-  --txt:#e9e6e2; --muted:#9aa0a6;
-  --up:#22c55e; --down:#ef4444; --warn:#f0b429; --crit:#ef4444;
-  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--txt);
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  font-size:15.5px;line-height:1.62;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1000px;margin:0 auto;padding:26px 20px 70px}
-a{color:var(--accent2);text-decoration:none}
-a:hover{text-decoration:underline}
-.masthead{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:14px}
-.masthead h1{margin:0 0 4px;font-size:34px;letter-spacing:-.5px}
-.masthead .sub{color:var(--muted);font-size:14px;margin:0}
-.meta{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
-.pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;
-  background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:4px 11px;color:var(--muted)}
-.pill.live{color:var(--up);border-color:rgba(34,197,94,.35)}
-.pill.live .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--up);margin-right:6px;vertical-align:middle}
-nav.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 20px}
-nav.tabs a{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
-  background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:8px 13px;color:var(--muted);transition:.15s}
-nav.tabs a:hover{color:var(--txt);border-color:var(--accent);text-decoration:none;transform:translateY(-1px)}
-nav.tabs a.active{color:var(--accent);border-color:var(--accent);background:rgba(255,255,255,.03)}
-.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
-  border-radius:10px;padding:11px 15px;margin:6px 0 2px;font-size:14.5px;line-height:1.5}
-.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-right:9px}
-.freshline{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--muted);margin:9px 0 2px}
-h2.sec{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--accent);margin:34px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
-.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:14px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:13px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 16px;transition:.16s}
-.card:hover{transform:translateY(-2px);border-color:var(--accent);box-shadow:0 8px 22px rgba(0,0,0,.34)}
-.card h3{margin:0 0 7px;font-size:16px;line-height:1.32}
-.card p{margin:0;font-size:14px;color:#cfcbc6}
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:9px}
-.t{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
-  border-radius:5px;padding:3px 7px;border:1px solid var(--line);color:var(--muted)}
-.t.new{color:var(--accent);border-color:var(--accent)}
-.t.hot{color:var(--crit);border-color:rgba(239,68,68,.45)}
-.t.pro{color:var(--up);border-color:rgba(34,197,94,.45)}
-.t.gold{color:var(--warn);border-color:rgba(240,180,41,.45)}
-table{width:100%;border-collapse:collapse;font-size:14px}
-th{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
-  text-align:left;padding:9px 10px;border-bottom:1px solid var(--line)}
-td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top}
-tr:last-child td{border-bottom:none}
-.up{color:var(--up)} .down{color:var(--down)} .mut{color:var(--muted)}
-ul.bul{margin:0;padding-left:19px} ul.bul li{margin-bottom:9px}
-.callout{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--warn);
-  border-radius:10px;padding:14px 17px;margin-bottom:14px}
-.callout.crit{border-left-color:var(--crit)}
-.callout h3{margin:0 0 7px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--warn)}
-.callout.crit h3{color:var(--crit)}
-.banner{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 17px;margin-bottom:14px;
-  display:flex;flex-wrap:wrap;align-items:center;gap:13px}
-.banner .lvl{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;
-  padding:5px 12px;border-radius:7px;border:1px solid var(--crit);color:var(--crit)}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:11px;margin-bottom:14px}
-.stat{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:13px 15px}
-.stat .n{font-family:var(--mono);font-size:21px;color:var(--accent);letter-spacing:-.5px}
-.stat .l{font-size:11.5px;color:var(--muted);margin-top:3px;line-height:1.4}
-.note{font-size:12.5px;color:var(--muted);margin:9px 0 0}
-.srcs{font-size:12.5px;color:var(--muted);word-break:break-word}
-.srcs a{color:var(--muted)}
-.disc{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin-top:26px;padding-top:14px}
+# -*- coding: utf-8 -*-
+import io, os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from shared import css, masthead, nav, page
 
-@media(max-width:640px){.masthead h1{font-size:26px}.wrap{padding:18px 14px 50px}}
-</style>
-</head><body><div class="wrap">
+OUT = os.path.dirname(os.path.abspath(__file__))
+ACC, ACC2 = "#22d3a8", "#36c6ff"
+CSS = css(ACC, ACC2, "#0b0f0e", "#121a18", "#1e2c29")
 
-<header class="masthead">
-<h1>The Cyber Wire</h1>
-<p class="sub">Your daily cybersecurity briefing &mdash; breaches, exploits &amp; federal deadlines</p>
-<div class="meta">
-<span class="pill live"><span class="dot"></span>Live</span>
-<span class="pill" id="edition">&nbsp;</span>
-<span class="pill" id="datestamp">&nbsp;</span>
-<span class="pill">Updated <span id="updated">&nbsp;</span></span>
-</div>
-</header>
+SRC = [
+ ("The Hacker News — Google releases Chrome update to patch actively exploited V8 zero-day", "https://thehackernews.com/2026/09/google-releases-chrome-update-to-patch.html"),
+ ("SharkStriker — Top data breaches of September 2026 (updated daily)", "https://sharkstriker.com/blog/september-2026-data-breaches/"),
+ ("CISA — Adds Seven Known Exploited Vulnerabilities to Catalog (2 Sep 2026)", "https://www.cisa.gov/news-events/alerts/2026/09/02/cisa-adds-seven-known-exploited-vulnerabilities-catalog"),
+ ("CISA — Known Exploited Vulnerabilities Catalog", "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"),
+ ("CISA — Adds Two Known Exploited Vulnerabilities to Catalog (31 Aug 2026)", "https://www.cisa.gov/news-events/alerts/2026/08/31/cisa-adds-two-known-exploited-vulnerabilities-catalog"),
+ ("securityonline.info — Weekly CVE report: 10 exploited vulnerabilities hit CISA KEV", "https://securityonline.info/weekly-cve-report-10-exploited-vulnerabilities-hit-cisa-kev/"),
+ ("securityonline.info — September 2026 SAP Security Patch Day fixes critical flaws", "https://securityonline.info/september-2026-sap-security-patch-day/"),
+ ("cyberpress.org — SAP Security Patch Day fixes 19 new vulnerabilities across NetWeaver, S/4HANA and cloud products", "https://cyberpress.org/sap-security-patch-day-fixes-19-new-vulnerabilities/"),
+ ("gbhackers — SAP September 2026 security update fixes 4 critical vulnerabilities and 15 other flaws", "https://gbhackers.com/sap-september-2026-security-update/"),
+ ("Onapsis — SAP Security Notes: September 2026 Patch Day", "https://onapsis.com/blog/sap-security-patch-day-september-2026/"),
+ ("Black Kite — 2026 Ransomware Report: 7,551 victims, up 24.9%", "https://blackkite.com/reports/2026-ransomware-report"),
+ ("Industrial Cyber — Ransomware reaches elevated 'new normal' as attack volumes hold steady into 2026", "https://industrialcyber.co/reports/ransomware-reaches-elevated-new-normal-as-attack-volumes-hold-steady-into-2026-reshape-baseline-risk-expectations/"),
+ ("CISA — #StopRansomware: Gunra Ransomware (AA26-222A)", "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-222a"),
+ ("Senserva — Patch Tuesday September 2026: date, live coverage, what to expect", "https://senserva.com/patch-tuesday-2026-09.html"),
+ ("Malwarebytes — August 2026 Patch Tuesday: 421 flaws, including three zero-days", "https://www.malwarebytes.com/blog/bugs/2026/08/patch-tuesday-update-now-to-fix-421-flaws-including-three-zero-days"),
+ ("UpGuard — Biggest data breaches in telecommunications (updated September 2026)", "https://www.upguard.com/blog/biggest-data-breaches-in-telecommunications"),
+ ("Trinetri — Microsoft Patch Tuesday September 2026", "https://trinetriops.com/resources/patch-tuesday/september-2026"),
+]
+
+def srcblock():
+    return "".join('<div style="margin-bottom:7px">%s &mdash; <a href="%s">%s</a></div>' % (t, u, u) for t, u in SRC)
+
+BODY = """
+%s
 <div class="tldr"><b>The Wire</b> <span>Adobe&#39;s maximum-severity Magento flaw CVE-2026-75650 remains the day&#39;s defining incident with exploitation running since 4 September, and SAP has just patched a second CVSS 10.0 flaw of its own &mdash; while three federal remediation deadlines stay open, the nearest in six days.</span></div>
 <div class="freshline" id="freshline">&nbsp;</div>
-<nav class="tabs"><a href="index.html">★ Front Page</a><a href="cyber-briefing.html" class="active">⛨ The Cyber Wire</a><a href="wallstreet-briefing.html">▲ The Closing Bell</a><a href="mma-briefing.html">⊘ The Octagon</a><a href="archive.html">🗄 Archive</a></nav>
+%s
 
 <div class="banner">
 <span class="lvl">Threat Level: High</span>
@@ -101,7 +45,7 @@ ul.bul{margin:0;padding-left:19px} ul.bul li{margin-bottom:9px}
 <div class="stat"><div class="n">10.0</div><div class="l">CVSS of CVE-2026-75650, the actively exploited Adobe Commerce / Magento flaw (Adobe APSB26-146)</div></div>
 <div class="stat"><div class="n">19 + 1</div><div class="l">New SAP security notes plus one update to a previously issued note, released on today&#39;s SAP Security Patch Day</div></div>
 <div class="stat"><div class="n">10</div><div class="l">CVEs under active exploitation in the most recent weekly KEV tally, including SonicWall SMA1000, JFrog Artifactory and PaperCut</div></div>
-<div class="stat"><div class="n">7,551</div><div class="l">Ransomware victims counted in Black Kite&#39;s 2026 report, up 24.9%</div></div>
+<div class="stat"><div class="n">7,551</div><div class="l">Ransomware victims counted in Black Kite&#39;s 2026 report, up 24.9%%</div></div>
 </div>
 
 <h2 class="sec">Top Story</h2>
@@ -197,10 +141,11 @@ ul.bul{margin:0;padding-left:19px} ul.bul li{margin-bottom:9px}
 
 <h2 class="sec">Sources</h2>
 <div class="panel srcs">
-<div style="margin-bottom:7px">The Hacker News — Google releases Chrome update to patch actively exploited V8 zero-day &mdash; <a href="https://thehackernews.com/2026/09/google-releases-chrome-update-to-patch.html">https://thehackernews.com/2026/09/google-releases-chrome-update-to-patch.html</a></div><div style="margin-bottom:7px">SharkStriker — Top data breaches of September 2026 (updated daily) &mdash; <a href="https://sharkstriker.com/blog/september-2026-data-breaches/">https://sharkstriker.com/blog/september-2026-data-breaches/</a></div><div style="margin-bottom:7px">CISA — Adds Seven Known Exploited Vulnerabilities to Catalog (2 Sep 2026) &mdash; <a href="https://www.cisa.gov/news-events/alerts/2026/09/02/cisa-adds-seven-known-exploited-vulnerabilities-catalog">https://www.cisa.gov/news-events/alerts/2026/09/02/cisa-adds-seven-known-exploited-vulnerabilities-catalog</a></div><div style="margin-bottom:7px">CISA — Known Exploited Vulnerabilities Catalog &mdash; <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">https://www.cisa.gov/known-exploited-vulnerabilities-catalog</a></div><div style="margin-bottom:7px">CISA — Adds Two Known Exploited Vulnerabilities to Catalog (31 Aug 2026) &mdash; <a href="https://www.cisa.gov/news-events/alerts/2026/08/31/cisa-adds-two-known-exploited-vulnerabilities-catalog">https://www.cisa.gov/news-events/alerts/2026/08/31/cisa-adds-two-known-exploited-vulnerabilities-catalog</a></div><div style="margin-bottom:7px">securityonline.info — Weekly CVE report: 10 exploited vulnerabilities hit CISA KEV &mdash; <a href="https://securityonline.info/weekly-cve-report-10-exploited-vulnerabilities-hit-cisa-kev/">https://securityonline.info/weekly-cve-report-10-exploited-vulnerabilities-hit-cisa-kev/</a></div><div style="margin-bottom:7px">securityonline.info — September 2026 SAP Security Patch Day fixes critical flaws &mdash; <a href="https://securityonline.info/september-2026-sap-security-patch-day/">https://securityonline.info/september-2026-sap-security-patch-day/</a></div><div style="margin-bottom:7px">cyberpress.org — SAP Security Patch Day fixes 19 new vulnerabilities across NetWeaver, S/4HANA and cloud products &mdash; <a href="https://cyberpress.org/sap-security-patch-day-fixes-19-new-vulnerabilities/">https://cyberpress.org/sap-security-patch-day-fixes-19-new-vulnerabilities/</a></div><div style="margin-bottom:7px">gbhackers — SAP September 2026 security update fixes 4 critical vulnerabilities and 15 other flaws &mdash; <a href="https://gbhackers.com/sap-september-2026-security-update/">https://gbhackers.com/sap-september-2026-security-update/</a></div><div style="margin-bottom:7px">Onapsis — SAP Security Notes: September 2026 Patch Day &mdash; <a href="https://onapsis.com/blog/sap-security-patch-day-september-2026/">https://onapsis.com/blog/sap-security-patch-day-september-2026/</a></div><div style="margin-bottom:7px">Black Kite — 2026 Ransomware Report: 7,551 victims, up 24.9% &mdash; <a href="https://blackkite.com/reports/2026-ransomware-report">https://blackkite.com/reports/2026-ransomware-report</a></div><div style="margin-bottom:7px">Industrial Cyber — Ransomware reaches elevated 'new normal' as attack volumes hold steady into 2026 &mdash; <a href="https://industrialcyber.co/reports/ransomware-reaches-elevated-new-normal-as-attack-volumes-hold-steady-into-2026-reshape-baseline-risk-expectations/">https://industrialcyber.co/reports/ransomware-reaches-elevated-new-normal-as-attack-volumes-hold-steady-into-2026-reshape-baseline-risk-expectations/</a></div><div style="margin-bottom:7px">CISA — #StopRansomware: Gunra Ransomware (AA26-222A) &mdash; <a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-222a">https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-222a</a></div><div style="margin-bottom:7px">Senserva — Patch Tuesday September 2026: date, live coverage, what to expect &mdash; <a href="https://senserva.com/patch-tuesday-2026-09.html">https://senserva.com/patch-tuesday-2026-09.html</a></div><div style="margin-bottom:7px">Malwarebytes — August 2026 Patch Tuesday: 421 flaws, including three zero-days &mdash; <a href="https://www.malwarebytes.com/blog/bugs/2026/08/patch-tuesday-update-now-to-fix-421-flaws-including-three-zero-days">https://www.malwarebytes.com/blog/bugs/2026/08/patch-tuesday-update-now-to-fix-421-flaws-including-three-zero-days</a></div><div style="margin-bottom:7px">UpGuard — Biggest data breaches in telecommunications (updated September 2026) &mdash; <a href="https://www.upguard.com/blog/biggest-data-breaches-in-telecommunications">https://www.upguard.com/blog/biggest-data-breaches-in-telecommunications</a></div><div style="margin-bottom:7px">Trinetri — Microsoft Patch Tuesday September 2026 &mdash; <a href="https://trinetriops.com/resources/patch-tuesday/september-2026">https://trinetriops.com/resources/patch-tuesday/september-2026</a></div>
+%s
 </div>
 <p class="disc">Compiled automatically from public reporting gathered during this run. Every figure above traces to a source listed here or to a standing sourced correction; items that could not be confirmed this run were dropped rather than carried. No source was fetched first-hand this run &mdash; everything came from search returns. CVSS scores, patch levels and remediation deadlines should be confirmed against the vendor advisory or the CISA catalogue before you act on them. This briefing is informational and is not security advice for any specific environment.</p>
+""" % (masthead("The Cyber Wire", "Your daily cybersecurity briefing &mdash; breaches, exploits &amp; federal deadlines"), nav("cyber"), srcblock())
 
-</div>
-<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \u00b7 briefings refresh every 30 minutes, 8 AM\u20136 PM ET';}catch(e){}})();</script>
-</body></html>
+html = page("The Cyber Wire &mdash; Daily Briefings", CSS, BODY)
+io.open(os.path.join(OUT, "cyber-briefing.html"), "w", encoding="utf-8").write(html)
+print("cyber ok", len(html))
