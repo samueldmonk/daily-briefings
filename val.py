@@ -62,7 +62,11 @@ for w in W: ck(w in F["ws"], "ws: widget "+w)
 ck(F["ws"].count("embed-widget-single-quote.js") == 3, "ws: exactly three single-quote widgets")
 for s in ["FOREXCOM:SPXUSD","FOREXCOM:NSXUSD","FOREXCOM:DJI","TVC:USOIL","TVC:US10Y"]:
     ck(s in F["ws"], "ws: ticker symbol "+s)
-ck('"symbol":"NASDAQ:INTC"' in F["ws"], "ws: chart-of-the-day symbol is Intel")
+ck('"symbol":"NASDAQ:AMGN"' in F["ws"], "ws: chart-of-the-day symbol is Amgen")
+import re as _re
+_mini=_re.search(r"embed-widget-mini-symbol-overview.js\" async>\{[^}]*\}",F["ws"]).group(0)
+ck("NASDAQ:AMGN" in _mini and "INTC" not in _mini, "ws: chart-of-the-day block pinned to AMGN only")
+ck('{"proName":"NASDAQ:AMGN"' in F["ws"] and '"proName":"TVC:USOIL"' in F["ws"] and '"proName":"TVC:US10Y"' in F["ws"], "ws: ticker tape refreshed and keeps oil + 10Y")
 ck('class="livebar"' in F["ws"] and "LIVE QUOTES" in F["ws"], "ws: livebar wrapper")
 ck("Quotes stream live" in F["ws"], "ws: note line under quotes")
 for k in ["ix","cy","mm"]:
@@ -114,19 +118,19 @@ ck("3, 14 or 60 calendar days" in F["cy"], "cy: BOD 26-04 windows")
 
 # ---------- required literals ----------
 REQ = {
- "cy": ["CVE-2026-75650","CVSS score of 10.0","APSB26-146","StyleSmuggler","4 September 2026","VULN-39341",
+ "cy": ["CVE-2026-75650","APSB26-146","CVE-2026-86218","N-able N-central","2026.3.1.14","CWE-96","23.234.64.0/18","Hotfix 4","Boston Scientific","25 August 2026","28 October","Rhysida","295 organisations","14 August","Homeland Security Information Network","ShinyHunters","2.2 million","StyleSmuggler","4 September 2026","VULN-39341",
         "2.4.4-p18","CVE-2026-44756","SAP Note 3747649","CVE-2026-58240","SAP Note 3759472","CVE-2026-76969",
         "CVE-2026-59346","CVE-2026-85046","18 September 2026","CVE-2026-81578","CVE-2026-82078","31 August",
         "CVE-2026-83548","CVE-2026-83549","Sangoma Switchvox","Kludex Starlette","Kestra OSS","BerriAI LiteLLM",
         "JFrog Artifactory","SonicWall SMA1000","19 new security notes","Qilin","1,358","The Gentlemen",
         "Majinahanashi","AA26-222A","67,000","ShipMonk","7,551","24.9","421 vulnerabilities","1:00 PM ET",
         "Threat Level: High","pc-app.exe"],
- "ws": ["10:35 AM ET","52,800.65","613.60","26,379.01","127.98","7,707","7,718.60","26,506.99","53,414.25",
+ "ws": ["11:05 AM ET","Amgen (AMGN) is down 8%","BMO Capital","Bloom Energy (BE) is up 8%","21 September","Corning (GLW) is up 4%","Roivant","Novartis","mosliciguat","del-desiran","Peloton","Houthis","more than 70 people","60.4%","52,800.65","613.60","26,379.01","127.98","7,707","7,718.60","26,506.99","53,414.25",
         "271.86","Intel (INTC) has jumped 5.2","SMH","Micron (MU) up 2.0","Nvidia (NVDA) up 1.2","XLE",
         "URA","XOP","4.12","4.37","4.55","4.79","5.25","3.50&ndash;3.75","52","50&ndash;63","99.73","94.28",
         "98.50","5.85","5.816","10 September","1.67","11 September","162,000","4.1","53,000","56,000","55,000",
         "$20 billion","toilet paper","Labor Day","Weekly Scorecard","not investment advice"],
- "mm": ["UFC 332","Nat&aacute;lia Silva","Wang Cong","3 October","CBS","vacant","Delta Center",
+ "mm": ["Muhammad Naimov","11 April 2026","3:45 of round one","early 2027","Magomed Ankalaev","Paulo Costa","20 contracts across eight divisions","Modestino Rodrigues","Silvestre Sanchez","Gabriel Loren&ccedil;o","Adam Livingston","UFC 335 in Las Vegas on 12 December","Renato Moicano","Brian Ortega 2","Doo Ho Choi","Marlon Vera","Prelims 6 PM ET, main card 9 PM ET","24-15","$12,000 to show","UFC 332","Nat&aacute;lia Silva","Wang Cong","3 October","CBS","vacant","Delta Center",
         "Noche UFC","Jean Silva","Jose Delgado","Desert Diamond Arena","Yair Rodr&iacute;guez",
         "&minus;428","+324","&minus;425","+355","&minus;450","+350","UFC 331","Crypto.com Arena",
         "Alexandre Pantoja","+100","&minus;120","&minus;105","&minus;115","Arman Tsarukyan","&minus;380",
