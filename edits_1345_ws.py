@@ -1,52 +1,60 @@
-# -*- coding: utf-8 -*-
-import io
-P='wallstreet-briefing.html'
-s=io.open(P,encoding='utf-8').read(); orig=s
-def rep(a,b):
-    global s
-    assert s.count(a)>=1, "MISSING: "+a[:130]
-    s=s.replace(a,b,1)
+#!/usr/bin/env python3
+# Wall Street edits, run 2026-09-09 ~1:45pm ET (Midday Edition, third run of the day)
+import io, sys
+P = "/sessions/sharp-bold-tesla/mnt/outputs/wallstreet-briefing.html"
+s = io.open(P, encoding="utf-8").read()
+n = 0
+def rep(old, new):
+    global s, n
+    assert s.count(old) == 1, ("NOT-UNIQUE/MISSING: " + old[:110])
+    s = s.replace(old, new); n += 1
 
-# provenance demotion of inherited claims
-for a,b in [
- ('A sixth reading arrived this edition, and it is the widest of the six.',
-  'A sixth reading arrived the 1:15 edition, and it is the widest of the six.'),
- ('This run EnergyNow, fetched directly, gives ',
-  'EnergyNow, fetched directly in an earlier edition, gives '),
- ('This run&rsquo;s week-ahead return repeated the same CPI forecasts this page already carries',
-  'The 1:15 edition&rsquo;s week-ahead return repeated the same CPI forecasts this page already carries'),
- ('This edition corrects it.','The 12:45 edition corrected it.'),
- ('Re-confirmed this edition.','Re-confirmed the 1:15 edition.'),
- ('the 162,000 payroll print re-confirmed this edition','the 162,000 payroll print re-confirmed the 1:15 edition'),
-]:
-    rep(a,b)
+# ---------- 1. TL;DR ----------
+rep('<div class="tldr"><b>The Tape</b> <span>Brent crude broke back above $100 a barrel for the first time since July after U.S.&ndash;Iran strikes escalated, and selling broadened through the late morning &mdash; the Dow down 413 points, or 0.8%, as of 12:07 p.m. ET, with 78% of the S&amp;P 500 in the red.</span></div>',
+    '<div class="tldr"><b>The Tape</b> <span>Brent crude broke back above $100 a barrel for the first time since July after U.S.&ndash;Iran strikes escalated, and all three major indexes were lower into the early afternoon &mdash; the Dow off 321.52 points (&minus;0.61%), the Nasdaq Composite &minus;0.60% and the S&amp;P 500 &minus;0.42% on a live quote board read at about 1:35 p.m. ET.</span></div>')
 
-# THE CME HALT HAS NOW PASSED — this is the freshness fix of the edition
-old = (u'So the live ticker at the top of this page has roughly two hours of matched trading left in it as the 12:16 edition publishes, '
-       u'and then a quiet screen that is not the same thing as a flat market.')
-new = (u'<b>That halt has now happened.</b> The 12:16 edition said the live ticker at the top of this page had roughly two hours of matched trading left in it; '
-       u'as this edition publishes at about <b>1:45 PM ET</b>, the 1:00 PM ET halt is <b>about three quarters of an hour in the past</b>, so the equity-index quotes in the tape above are '
-       u'<b>the last matched prices of a shortened holiday session, not a live market</b> &mdash; a quiet screen, which is not the same thing as a flat one. '
-       u'<span class="mut">The halt time is the sourced fact and the arithmetic against the clock is this desk&rsquo;s; the reopen is 5:00 p.m. CT, 6:00 PM ET. '
-       u'Nothing here asserts a level or a move for the futures session, because no settlement will be published for it.</span>')
-rep(old,new)
+# ---------- 2. The Lead ----------
+rep('<h3>Oil back over $100 broadens the selling &mdash; Dow &minus;413 points at 12:07 p.m. ET, 78% of the S&amp;P 500 red</h3>',
+    '<h3>Oil back over $100 keeps the tape red &mdash; Dow &minus;321.52 points on a 1:35 p.m. ET quote board, after a 12:07 p.m. low of &minus;413</h3>')
 
-# tldr: keep the diesel/Brent lead, add the futures-halt clause at the end
-tl_old = u'as the U.S. and Iran exchange strikes around Hormuz.'
-tl_new = (u'as the U.S. and Iran exchange strikes around Hormuz. '
-          u'The one thing that changed on the screen since the last edition is that CME&rsquo;s equity-index futures hit their <b>1:00 PM ET holiday halt</b>, '
-          u'so the tape at the top of this page is now showing the last matched prices of a shortened session rather than a live one.')
-rep(tl_old,tl_new)
+rep('<p>Brent crude futures passed <b>$100 a barrel for the first time since July</b> on Wednesday, and Wall Street went with it. The Associated Press put the <b>Dow down 413 points, or 0.8%, as of 12:07 p.m. Eastern</b>, with crude the proximate cause.</p>',
+    '<p>Brent crude futures passed <b>$100 a barrel for the first time since July</b> on Wednesday, and Wall Street went with it. The latest reading this run comes from the live quote board on a Motley Fool market page fetched at about <b>1:35 p.m. ET</b>: <b>S&amp;P 500 7,641.46, &minus;32.06 (&minus;0.42%)</b>; <b>Nasdaq Composite 26,262.83, &minus;158.58 (&minus;0.60%)</b>; <b>Dow Jones Industrial Average 52,464.55, &minus;321.52 (&minus;0.61%)</b>. Earlier, the Associated Press had put the <b>Dow down 413 points, or 0.8%, as of 12:07 p.m. Eastern</b> &mdash; so the index has clawed back part of the midday hole without turning positive.</p>')
 
-# sources
-src = u'<h2 class="sec">Sources</h2>'
-assert src in s
-add = (u'<h2 class="sec">Sources</h2><p class="note" style="margin:-2px 0 10px"><b>Re-checked the 1:45 PM ET edition, none fetched first-hand:</b> '
- u'<span class="mut">a futures-holiday schedule return re-stating the CME equity-index halt at 12:00 p.m. CT / 1:00 PM ET with the usual evening Globex reopen; '
- u'Benzinga on the NYSE and Nasdaq being shut all day with the normal session resuming Tuesday 8&nbsp;September; '
- u'and a week-ahead return placing <b>PPI before Thursday&rsquo;s open and August CPI before Friday&rsquo;s</b>, with the FOMC quiet period running from Saturday 5&nbsp;September through Thursday 17&nbsp;September &mdash; '
- u'all of which this page already carried, so nothing on the markets beat is tagged New.</span></p>')
-s=s.replace(src,add,1)
+rep('<p>The escalation is military. The U.S. struck <b>five Iranian tankers on Tuesday, sinking one</b>, after Iran fired ballistic missiles at a U.S. Navy warship. Iran retaliated against a U.S.-used base in Jordan &mdash; Jordan says it <b>intercepted 18 Iranian missiles</b> with no casualties &mdash; and said it had targeted vessels crossing the Strait of Hormuz. The U.K. Maritime Trade Operations centre reported several merchant vessels in the Northern Arabian Gulf and the Gulf of Oman hit by &ldquo;disabling fire.&rdquo;</p>',
+    '<p>The escalation is military. The U.S. struck <b>five Iranian tankers on Tuesday, sinking one</b>, after Iran fired ballistic missiles at a U.S. Navy warship. <b>Tehran said on Wednesday that its forces had struck two American vessels and eight oil tankers in the Gulf</b> in retaliation for the destruction of the five Iranian crude carriers. Iran also retaliated against a U.S.-used base in Jordan &mdash; Jordan says it <b>intercepted 18 Iranian missiles</b> with no casualties &mdash; and said it had targeted vessels crossing the Strait of Hormuz. The U.K. Maritime Trade Operations centre reported several merchant vessels in the Northern Arabian Gulf and the Gulf of Oman hit by &ldquo;disabling fire.&rdquo;</p>')
 
-assert s!=orig
-io.open(P,'w',encoding='utf-8').write(s); print('ws OK',len(s))
+rep('<p class="note">An earlier opening-bell read gave the S&amp;P 500 &minus;0.24%, the Dow &minus;0.58%, the Nasdaq &minus;0.35% and the Russell 2000 &minus;0.52% at 9:35 a.m. ET. All three snapshots are shown with their times rather than blended; the 12:07 p.m. Dow figure is the latest timed number found this run. Against Tuesday&rsquo;s close of 52,786.07, 413 points is 0.78% &mdash; self-consistent with the reported 0.8%.</p>',
+    '<p class="note"><b>Four timed snapshots, none blended.</b> 9:35 a.m. ET &mdash; S&amp;P &minus;0.24%, Dow &minus;0.58%, Nasdaq &minus;0.35%, Russell 2000 &minus;0.52%. 11:40 a.m. &mdash; S&amp;P &minus;0.52%, with 68.6% of all U.S. issues and 78% of the S&amp;P 500 declining. 11:43 a.m. &mdash; S&amp;P &minus;0.48%, Dow &minus;0.73% at 52,399.06. <b>~1:35 p.m.</b> &mdash; the quote-board figures in the paragraph above. <b>Why the 1:35 figures are published as levels:</b> all three reproduce exactly against Tuesday&rsquo;s verified closes &mdash; 52,786.07 &minus; 321.52 = 52,464.55; 26,421.41 &minus; 158.58 = 26,262.83; 7,673.52 &minus; 32.06 = 7,641.46 &mdash; and each point change divides back to the stated percent. One earlier figure is <b>refused</b>: the 11:43 a.m. article gave the Nasdaq Composite a level identical to the S&amp;P&rsquo;s, plainly a copy error, so only its percentage is carried.</p>')
+
+# ---------- 3. Movers ----------
+rep('<div class="card"><span class="t new">New</span><span class="t tag">Product</span><div class="kv">Meta Platforms &middot; META</div><h4>Muse launch lifts Meta against a falling tape</h4><p>Up <b>5.4%</b> in the session after the Facebook and Instagram parent launched <b>Muse</b>, a personal AI agent for users 18 and over aimed at scheduling, shopping and turning long-term goals into plans. It runs in a dedicated app and directly inside WhatsApp. Meta had climbed <b>4.9%</b> premarket on the same news.</p></div>',
+    '<div class="card"><span class="t new">New</span><span class="t tag">Product</span><div class="kv">Meta Platforms &middot; META</div><h4>Muse launch lifts Meta against a falling tape &mdash; and the gain has widened</h4><p>Quoted at <b>$650.56, +6.04% (+$37.08)</b> on the 1:35 p.m. board, after the Facebook and Instagram parent launched <b>Muse</b>, a personal AI agent for users 18 and over aimed at scheduling, shopping and turning long-term goals into plans. It runs in a dedicated app and directly inside WhatsApp. The move has built through the day: <b>4.9%</b> premarket, <b>5.4%</b> at 10:25 a.m., <b>6.0%</b> now. It is the standout gainer on a red tape.</p></div>')
+
+rep('<div class="card"><span class="t new">New</span><span class="t tag">Earnings</span><div class="kv">Casey&rsquo;s General Stores &middot; CASY</div><h4>The biggest single-name drop of the session</h4><p>Down <b>16.5%</b> in the session &mdash; steeper than the <b>12.2%</b> premarket slide &mdash; after the convenience-store chain posted disappointing same-store sales growth and left its full-year outlook unchanged. It is the largest verified move in either direction on the day.</p></div>',
+    '<div class="card"><span class="t new">New</span><span class="t tag">Earnings</span><div class="kv">Casey&rsquo;s General Stores &middot; CASY</div><h4>The biggest single-name drop of the session</h4><p>Down <b>16.5%</b> at 10:25 a.m. &mdash; steeper than the <b>12.2%</b> premarket slide &mdash; after the convenience-store chain posted disappointing same-store sales growth and left its full-year outlook unchanged. A midday read describes the fall as <b>&ldquo;almost 15%&rdquo; despite an earnings beat</b>; both readings are shown, and the difference is consistent with the stock recovering some ground through the morning. It remains the largest verified single-name decline on the day.</p></div>')
+
+rep('<div class="card"><span class="t carried">Carried</span><span class="t tag">Sector</span><div class="kv">Energy</div><h4>The one group working</h4><p>Energy shares pushed higher after Brent topped $100 &mdash; the clear leadership on a down tape, against weakness in mega-cap technology. Per-sector percentage moves circulating on aggregator sites could not be corroborated this run and are not printed.</p></div>',
+    '<div class="card"><span class="t new">New</span><span class="t tag">Sector</span><div class="kv">Energy &amp; utilities</div><h4>The only two groups working</h4><p>A midday read this run is more specific than the page had been able to be: <b>energy and utility stocks are the only sector gainers</b>, while <b>industrials and consumer cyclicals have fallen the most</b> &mdash; industrials because they burn the oil, and higher-beta names because higher crude feeds the rate-hike case. Per-sector percentage moves circulating on aggregator sites still could not be corroborated this run and are not printed.</p></div>')
+
+rep('<div class="card"><span class="t carried">Carried</span><span class="t tag">Earnings</span><div class="kv">Signet Jewelers &middot; SIG</div>',
+    '<div class="card"><span class="t new">New</span><span class="t tag">Event</span><div class="kv">Apple &middot; AAPL</div><h4>Slightly lower into the first Ternus keynote</h4><p>Quoted at <b>$313.72, &minus;0.8% (&minus;$2.50)</b> on the 1:35 p.m. board as Apple&rsquo;s annual event got under way at <b>10:00 a.m. Pacific</b> &mdash; the first product keynote under chief executive <b>John Ternus</b>, who took over from Tim Cook on 1 September. The iPhone 18 Pro and Pro Max are expected, with a rumoured foldable. The move is small; the tape, not the keynote, is doing most of the work.</p></div>\n<div class="card"><span class="t carried">Carried</span><span class="t tag">Earnings</span><div class="kv">Signet Jewelers &middot; SIG</div>')
+
+# ---------- 4. Rates / commodities table ----------
+rep('<tr><td>10-year Treasury</td><td>topped 4.80%</td><td>CNBC: highest since October 2023. A separate read has it rising for a fifth straight session to ~4.77%, touching 4.798% intraday, and calls that the highest since January 2025. Both framings are shown; the level is the same.</td></tr>',
+    '<tr><td>10-year Treasury</td><td>4.81%&ndash;4.84%</td><td>A midday read has it <b>up 4 basis points to 4.84%</b>; a separate read has the 10-year <b>hovering near 4.81%, close to a three-year peak</b> reached last week. Both are printed; they bracket the same move. Bloomberg&rsquo;s framing: Treasuries weakened as soaring oil prices revived rate-hike worries. The 2-year yield is also rising as crude tops $100.</td></tr>')
+
+rep('<tr><td>Brent crude</td><td>above $100</td><td>Jumped ~<b>2.96% to $100.8</b> in early trading, above $100 for the first time since July. Goldman Sachs sees rising probability of $120+.</td></tr>\n<tr><td>WTI crude</td><td>$95.39</td><td class="up">+2.54% in early trading</td></tr>\n<tr><td>Gold futures</td><td>$4,447.40</td><td class="up">+0.19% in early Wednesday trading</td></tr>',
+    '<tr><td>Brent crude</td><td>$100.71</td><td class="up">+2.85% on the day, above $100 for the first time since July. An early-trading read gave $100.8 / +2.96%; the two agree to within a rounding. Goldman Sachs sees a rising probability of $120+ if the conflict intensifies and shipping disruption continues.</td></tr>\n<tr><td>WTI crude</td><td>~$95</td><td class="up">Extended gains Wednesday, adding more than 2% to trade around $95 a barrel; an early-trading read gave $95.39 / +2.54%.</td></tr>\n<tr><td>Gold futures</td><td>$4,447.20</td><td class="up">+0.18% as of 11:43 a.m. ET; an early-trading read gave $4,447.40 / +0.19%.</td></tr>')
+
+rep('traders saw a <b>60% chance of a 25 bp hike this month</b> per CME Group, up slightly from a day earlier &mdash; the first such figure this page has been able to attribute; other reads found this run still conflict, so it is presented as one source&rsquo;s number and not as consensus.',
+    'traders saw a <b>60% chance of a 25 bp hike this month</b> per CME Group, up slightly from a day earlier. A <b>second, independent read this run</b> puts the probability of a rate increase at the Fed&rsquo;s meeting <b>next week</b> at <b>over 60%</b> &mdash; so the figure is no longer a single source&rsquo;s number. It is still a market-implied probability, not a forecast.')
+
+# ---------- 5. On the Radar ----------
+rep('<li><b>Apple event, today.</b> 10:00 a.m. Pacific. First product event under CEO <b>John Ternus</b>, who took over on 1 September. The iPhone 18 Pro and Pro Max are expected, with a rumoured foldable. Apple slipped nearly <b>1% to $313.12</b> as the event got underway.</li>\n',
+    '')
+
+rep('<li><b>Oil is the macro variable.</b>',
+    '<li><b>Gasoline &mdash; carried at headline depth only.</b> A same-day headline seen this run states that gasoline prices have <b>hit new records and are still rising</b>. The article was not read in full, so nothing beyond that sentence is asserted &mdash; no price, no state, no year-on-year figure. It is noted because pump prices are the channel through which $100 Brent reaches households, which is why an oil supply shock is trading as an inflation story rather than an energy-sector story.</li>\n<li><b>Oil is the macro variable.</b>')
+
+io.open(P, "w", encoding="utf-8").write(s)
+print("wallstreet OK, %d edits" % n)

@@ -1,104 +1,91 @@
-# -*- coding: utf-8 -*-
-import io,sys
-P='cyber-briefing.html'
-s=io.open(P,encoding='utf-8').read()
-orig=s
-def rep(a,b,n=1):
-    global s
-    assert s.count(a)>=1, "MISSING: "+a[:120]
-    s=s.replace(a,b,n)
+#!/usr/bin/env python3
+# Cyber edits, run 2026-09-09 ~1:45pm ET (Midday Edition, third run of the day)
+import io
+P = "/sessions/sharp-bold-tesla/mnt/outputs/cyber-briefing.html"
+s = io.open(P, encoding="utf-8").read()
+n = 0
+def rep(old, new):
+    global s, n
+    assert s.count(old) == 1, ("NOT-UNIQUE/MISSING: " + old[:110])
+    s = s.replace(old, new); n += 1
 
-# 1) provenance demotion: inherited "this edition" -> "the 1:15 edition"
-for a,b in [
- ('the one genuinely new item this edition is not a vulnerability',
-  'the one genuinely new item the 1:15 edition was not a vulnerability'),
- ('the underlying vendor research was not fetched first-hand this edition, and this card says so',
-  'the underlying vendor research was not fetched first-hand in any edition, and this card says so'),
- ('</b> in any return read this edition',
-  '</b> in any return read for this page'),
- ('Sources this edition: search returns citing the 7&nbsp;September analysis',
-  'Sources: search returns citing the 7&nbsp;September analysis'),
- ('This edition reads the primary.','The 12:16 edition read the primary.'),
- ('the KEV set below re-confirmed by title this edition','the KEV set below re-confirmed by title the 1:15 edition'),
-]:
-    rep(a,b)
+# ---------- 0. TL;DR + banner + strip: soften the exploitation claim, fix the score label ----------
+rep('<div class="tldr"><b>The Wire</b> <span>CISA has given federal agencies until <b>11 September</b> to patch CVE-2026-86218, a CVSS 10.0 pre-authentication remote-code-execution flaw in N-able N-central that is being exploited in the wild against the platforms managed service providers use to reach every one of their customers.</span></div>',
+    '<div class="tldr"><b>The Wire</b> <span>CISA has given federal agencies until <b>11 September</b> to patch CVE-2026-86218, a CVSS 10.0 pre-authentication remote-code-execution flaw in the N-able N-central platform managed service providers use to reach every one of their customers &mdash; and N-able&rsquo;s own release notes and incident notice flatly contradict each other on whether it has been exploited yet.</span></div>')
 
-# 2) Tengu tag New -> Carried
-rep('<div class="tags"><span class="t new">New</span><span class="t hot">Linux / IoT</span>',
-    '<div class="tags"><span class="t">Carried</span><span class="t hot">Linux / IoT</span>')
+rep('<div class="why">Two separate CVSS 10.0 pre-authentication RCEs are under confirmed active exploitation at the same time, and one of them now carries a federal remediation deadline two days out.</div>',
+    '<div class="why">Two separate CVSS 10.0 pre-authentication RCEs are KEV-listed at the same time, one with a federal deadline two days out; five more KEV entries are already past their federal due date; and the vendor of one of the two contradicts itself on whether exploitation has been observed.</div>')
 
-# 3) rewrite the novelty ledger note
-old_start = s.find('<p class="note" style="margin:-4px 0 12px"><b>One item is tagged New this edition')
-old_end   = s.find('</p>', old_start)+4
-assert old_start>0 and old_end>old_start
-ledger = (u'<p class="note" style="margin:-4px 0 12px"><b>Two items are tagged New this edition and both are on this page: '
- u'the <b>Natural Resources Wales</b> disclosure immediately below, and the <b>Advantech WISE&#8209;6610</b> pair in the '
- u'vulnerability table. The MMA page carries one new item &mdash; the 10&nbsp;October Las Vegas card &mdash; and the Wall Street page carries none.</b> '
- u'<span class="mut">Measured against <code>archive/cyber-2026-09-07-1313.html</code>, <code>archive/wallstreet-2026-09-07-1313.html</code> and '
- u'<code>archive/mma-2026-09-07-1313.html</code>, counting the markup these pages actually emit (<code>class=&quot;t new&quot;</code>) and asserting '
- u'<b>placement per page</b> rather than a bare total. The 1:15 snapshots carried <b>one</b> New tag in total &mdash; the <b>Tengu</b> analysis on this page &mdash; '
- u'and that item is still here and still correct, but it was in the previous archived edition, so its tag now reads <b>Carried</b>. '
- u'Natural Resources Wales, Advantech, and the string <code>79697</code> each return zero matches in all three 1:15 snapshots, which is the test that earns the tag. '
- u'A tag is a statement about the previous snapshot, not about how recently the underlying event happened.</span> '
- u'<b>The markets beat produced no new item this edition</b> &mdash; U.S. exchanges are shut for Labor Day &mdash; '
- u'<span class="mut">and an edition with two new items is reported as two.</span></p>')
-s = s[:old_start] + ledger + s[old_end:]
+rep('<div class="stat"><div class="n">10.0</div><div class="l">CVSSv3 for both N-able CVE-2026-86218 and StyleSmuggler (CVE-2026-75650)</div></div>',
+    '<div class="stat"><div class="n">10.0</div><div class="l">Maximum CVSS for both N-able CVE-2026-86218 (v4.0, vendor-assigned) and StyleSmuggler CVE-2026-75650 (v3)</div></div>')
 
-# 4) insert the NRW breach card ahead of the Tengu card
-anchor = '<div class="card">\n<div class="tags"><span class="t">Carried</span><span class="t hot">Linux / IoT</span>'
-assert anchor in s, 'tengu card anchor missing'
-nrw = (u'<div class="card">\n'
- u'<div class="tags"><span class="t new">New</span><span class="t">Public sector</span><span class="t">Human error</span></div>\n'
- u'<h3>Natural Resources Wales published its own staff diversity data to its own website &mdash; and it was not a break-in</h3>\n'
- u'<p><b>Natural Resources Wales has confirmed a personal data breach affecting former and current employees, and the cause it gives is human error rather than intrusion.</b> '
- u'A spreadsheet containing employee information was <b>inadvertently published on the agency&rsquo;s own website</b>, where it was accessible until an internal investigation identified '
- u'the problem and it was taken down. The data relates to people who worked for the agency between <b>April 2013 and March 2018</b>, and the fields at risk are the most sensitive an '
- u'employer holds: <b>diversity monitoring information</b> covering ethnicity, disability status, religion or belief, sexual orientation, Welsh language ability and caring responsibilities. '
- u'NRW says it has <b>found no evidence that the exposed information has been misused</b>, has <b>notified the Information Commissioner&rsquo;s Office</b>, and is examining the controls '
- u'that allowed the file to go out.</p>\n'
- u'<p class="note"><b>Why a desk that spends its day on exploited CVEs is leading a breach card with a spreadsheet.</b> '
- u'<span class="mut">Every other item on this page is someone else&rsquo;s code failing. This one is a publishing workflow, and it produced a disclosure of protected-characteristic data '
- u'that no patch cycle would have prevented and no exploit detection would have caught &mdash; the file was served deliberately, by the victim, over its own web server. '
- u'The affected window closed more than eight years ago, which is the second lesson: retention is an attack surface, and a spreadsheet nobody needed since 2018 is the reason this is a breach '
- u'rather than a near miss. <b>No attacker, no ransom demand, no CVE and no federal deadline attach to this item</b>, and none is printed. '
- u'Sourced from reporting dated 6&ndash;7&nbsp;September (DataBreaches.net, Water Magazine, Cybersecurity News, GBHackers, plus the agency&rsquo;s own statement notice as relayed); '
- u'none of those pages was fetched first-hand. <b>No count of affected individuals was stated in any return, so none is given here.</b></span></p>\n'
- u'</div>\n')
-s = s.replace(anchor, nrw + anchor, 1)
+# ---------- 1. Stat strip: add the newly sourced 16 Sep deadline ----------
+rep('<div class="stat"><div class="n">964&ndash;974</div><div class="l">CVEs in Microsoft&rsquo;s September Patch Tuesday &mdash; four trackers, four counts</div></div>',
+    '<div class="stat"><div class="n">16 Sep</div><div class="l">CISA deadline for the Starlette and LiteLLM flaws &mdash; <span id="kev2cdn">&nbsp;</span></div></div>\n<div class="stat"><div class="n">964&ndash;974</div><div class="l">CVEs in Microsoft&rsquo;s September Patch Tuesday &mdash; four trackers, four counts</div></div>')
 
-# 5) Advantech row into the Vulnerability Watch table, right after the header row
-hdr = '<tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr>\n'
-assert hdr in s
-adv = (u'<tr><td><span class="t new">New</span> CVE-2026-79697<br><span class="mut">with CVE-2026-79698</span></td>'
- u'<td class="down"><b>9.9 (Critical)</b><br><span class="mut">VulDB</span></td>'
- u'<td>Advantech <b>WISE-6610</b> series LoRaWAN gateways, firmware <b>1.2.1_20251110</b></td>'
- u'<td><b>Unauthenticated command injection in the Basic Station certificate-deletion handler.</b> '
- u'The <code>basicstation_apply</code> routine passes its <code>act</code> argument through to a shell, and <b>no authentication is required</b> to reach it &mdash; '
- u'network access to the gateway is the whole prerequisite. <b>CVE-2026-79698</b> is the same defect in a different handler, <code>nodered_lib_apply</code> in the Node-RED library component; '
- u'VulDB records it against the identical firmware build, and <b>no separate score is asserted for it here</b> because only the daily CVE brief supplied one. '
- u'The affected list runs across the <b>NB, EB, TB, JB, CB and EL variants plus the P-series</b> (WISE-6610P-DEA, -DNA, -DTA). '
- u'<b>Fixed in firmware 1.2.4_20260821</b>, hosted at advantech.com; VulDB records that the vendor was contacted early and shipped the fix. '
- u'<b>Disclosed, not exploited: no proof-of-concept, no in-the-wild claim, and NOT in the CISA KEV catalog</b> &mdash; the 2 and 4 September KEV additions listed below do not include it, '
- u'so <b>no federal deadline and no countdown attach to this row.</b> '
- u'<span class="mut">Two routes to the record: the VulDB entries for both CVEs, and a 7&nbsp;September daily CVE brief that lists the pair at 9.9; a third write-up describes the Basic Station '
- u'flaw as critical RCE without printing a score. Neither Advantech&rsquo;s bulletin nor NVD was fetched first-hand, and the score is attributed to VulDB rather than to the vendor.</span></td></tr>\n')
-s = s.replace(hdr, hdr + adv, 1)
+# ---------- 2. Top Story: hotfix date correction + the vendor contradiction ----------
+rep('It is patched in <b>N-central 2026.3 Hotfix 4</b>, released <b>5 September</b>.</p>',
+    'It is patched in <b>N-central 2026.3 Hotfix 4</b> (build <b>2026.3.1.14</b>), which shipped in the <b>early hours of 6 September UTC</b> &mdash; late on 5 September Eastern, which is why several reports date it to the 5th. It affects <b>every N-central build below 2026.3.1.14</b>, including servers updated to Hotfix 3 (2026.3.1.13) a little over eight hours earlier.</p>')
 
-# 6) tldr: append the new-item clause
-old_tl = u'and the one genuinely new item the 1:15 edition was not a vulnerability at all but a piece of malware, the <b>Tengu</b> Linux bot, freshly analysed today and built to reboot the machine when defenders kill it.'
-new_tl = (u'and the two genuinely new items this edition sit either side of the usual security story: '
- u'a <b>Natural Resources Wales</b> disclosure caused by publishing a staff spreadsheet to its own website rather than by any intruder, '
- u'and an unauthenticated command-injection pair in <b>Advantech WISE-6610</b> LoRaWAN gateways, scored 9.9 by VulDB, already fixed in firmware and not exploited.')
-rep(old_tl,new_tl)
+rep('In its own <b>&ldquo;urgent&rdquo; notice to customers</b>, N-able said the flaw &ldquo;has been observed being exploited in the wild,&rdquo; that it is &ldquo;actively investigating this matter and [has] taken additional steps to help protect customer environments,&rdquo; and urged immediate application of the hotfix.</p>',
+    'In its <b>incident notice</b> on its uptime status page, N-able said the flaw &ldquo;has been observed being exploited in the wild,&rdquo; that it is &ldquo;actively investigating this matter and [has] taken additional steps to help protect customer environments,&rdquo; and urged immediate application of the hotfix.</p>\n<p><b>N-able&rsquo;s own channels contradict each other on that point, and this page now says so.</b> The Hotfix 4 <b>release notes and status post</b> state that the flaw was <b>responsibly disclosed</b> by a third party and that N-able has <b>&ldquo;no confirmations that this vulnerability has been exploited in production environments.&rdquo;</b> The same release notes also call it a &ldquo;critical zero-day vulnerability,&rdquo; a term the company does not define. The <b>incident notice</b> says the opposite &mdash; observed exploitation in the wild &mdash; without saying who observed it, where, or when, and with no attribution to any actor. Huntress&rsquo;s cybersecurity advisor <b>Ben Bernstein</b> has confirmed that Huntress&rsquo;s own &ldquo;actively exploited&rdquo; description is <b>based entirely on N-able&rsquo;s statements</b>; Huntress has <b>not reproduced CVE-2026-86218</b> and has <b>not observed exploitation definitively attributable to it</b> in its telemetry. Earlier editions of this page reported the vendor confirmation flatly; that was too clean a reading of a split record.</p>')
 
-# 7) sources
-src_anchor = u'<h2 class="sec">Sources</h2>'
-assert src_anchor in s
-add = (u'<h2 class="sec">Sources</h2><p class="note" style="margin:-2px 0 10px"><b>Added the 1:45 PM ET edition, and none of these was fetched first-hand:</b> '
- u'<span class="mut">search returns for Natural Resources Wales (DataBreaches.net, 6&nbsp;Sep; Water Magazine, 7&nbsp;Sep; Cybersecurity News; GBHackers; Cyberpress; the agency statement notice as relayed) '
- u'and for the Advantech WISE-6610 pair (VulDB entries for CVE-2026-79697 and CVE-2026-79698; a 7&nbsp;September daily CVE brief; TheHackerWire).</span></p>')
-s = s.replace(src_anchor, add, 1)
+rep('<p class="note">Two other flaws are in the frame for that intrusion. <b>CVE-2026-86206</b> and <b>CVE-2026-86207</b> &mdash; found and reported by Rapid7&rsquo;s Stephen Fewer &mdash; can be chained to let a remote unauthenticated attacker bypass authentication and create an attacker-controlled System Administrator account on the server. They were patched the same day in <b>Hotfix 3</b>. This is N-able&rsquo;s fourth N-central hotfix in five weeks.</p>',
+    '<p class="note">Two other flaws are in the frame for that intrusion. <b>CVE-2026-86206</b> (CVSS <b>6.9</b>, Medium &mdash; unauthorised access to internal APIs through the access-control filter) and <b>CVE-2026-86207</b> (CVSS <b>7.7</b>, High &mdash; authentication bypass in internal-only APIs), both found and reported by <b>Rapid7&rsquo;s Stephen Fewer</b>, can be chained to let a remote unauthenticated attacker bypass authentication and create an attacker-controlled System Administrator account. They were fixed in <b>Hotfix 3 on 5 September</b>. Huntress says it reproduced a proof-of-concept chain against build 2026.3.1.10 that <b>may use one or both of these two</b>. This is N-able&rsquo;s fourth N-central hotfix since 2 August and covers the third distinct set of vulnerabilities. Because the flaw is a pre-authentication RCE, Bernstein says, &ldquo;an internet-exposed console is the primary attack vector&rdquo; &mdash; hence Huntress&rsquo;s advice to restrict inbound access by IP allowlist or VPN, and to consider taking an internet-reachable server offline until the hotfix is on.</p>')
 
-assert s!=orig
-io.open(P,'w',encoding='utf-8').write(s)
-print("cyber OK", len(s))
+# ---------- 3. Patch Priority: second deadline + the exploitation caveat ----------
+rep('CVE-2026-86218 is a CVSS 10.0 unauthenticated RCE, confirmed exploited in the wild by the vendor, KEV-listed on 8 September with a federal remediation deadline of <b>11 September 2026</b>',
+    'CVE-2026-86218 is a CVSS 10.0 unauthenticated RCE, KEV-listed on 8 September &mdash; which is CISA&rsquo;s own determination that it is being exploited &mdash; with a federal remediation deadline of <b>11 September 2026</b>')
+
+rep('<p style="margin:0 0 8px">Immediately after it: <b>Adobe Hotfix VULN-39341</b> for Adobe Commerce, Commerce B2B and Magento Open Source (StyleSmuggler, <b>CVE-2026-75650</b>, also CVSS 10.0, exploited from 4 September &mdash; three days before any patch existed).</p>',
+    '<p style="margin:0 0 8px">Immediately after it: <b>Adobe Hotfix VULN-39341</b> for Adobe Commerce, Commerce B2B and Magento Open Source (StyleSmuggler, <b>CVE-2026-75650</b>, also CVSS 10.0, exploited from 4 September &mdash; three days before any patch existed).</p>\n<p style="margin:0 0 8px"><b>Then the two flaws with next Wednesday&rsquo;s clock on them.</b> A CISA-stated deadline of <b>16 September 2026</b> <span class="down"><b>(<span id="kev2cdn2">&nbsp;</span>)</b></span> applies to <b>CVE-2026-48710</b> (Kludex Starlette, request smuggling) and <b>CVE-2026-59822</b> (BerriAI LiteLLM, MCP authentication bypass). The other five in that 2 September batch &mdash; SonicWall &times;2, Switchvox, Artifactory, Kestra &mdash; were <b>due 5 September</b> and are therefore <span class="down"><b>already overdue</b></span> for federal agencies.</p>')
+
+rep('<b>No due date is asserted for the other three CVEs added the same day</b>, including CVE-2026-75650 &mdash; the previous edition found the 11 September date attributed to both, and only the N-able attribution has been corroborated since. The old flat three-week BOD 22-01 arithmetic is no longer safe to apply, because <b>BOD 26-04</b> sets risk-tiered remediation deadlines instead.</p>',
+    '<b>No due date is asserted for the other three CVEs added the same day</b>, including CVE-2026-75650 &mdash; an earlier run found the 11 September date attributed to both, and only the N-able attribution has been corroborated since. The <b>5 September and 16 September</b> dates for the 2 September batch are different and better: they come from The Hacker News reporting that names the directive by number and splits the batch into two tiers, which is exactly the shape a risk-based assignment takes. The old flat three-week BOD 22-01 arithmetic remains unsafe to apply, because <b>BOD 26-04</b> sets remediation deadlines tiered by risk instead &mdash; and this batch, five days versus fourteen for the same add date, is the demonstration.</p>')
+
+# ---------- 4. Breaches: add the American Tower refusal ----------
+rep('<div class="card"><span class="t carried">Context</span><span class="t tag">Federal</span><h4>What is <i>not</i> being carried as news</h4><p>The DHS <b>Homeland Security Information Network</b> intrusion keeps resurfacing in roundups, but the reporting dates the breach to <b>late May&ndash;early June 2026</b> and the confirmation to <b>July</b>. It is a two-month-old story appearing in fresh aggregations, not a new incident, and is not presented as one.</p></div>',
+    '<div class="card"><span class="t new">Context</span><span class="t tag">Refused</span><h4>A ShinyHunters claim that is three months old, not six days old</h4><p>A 2026 breach tracker read this run shelves the <b>American Tower Corporation</b> intrusion &mdash; ShinyHunters claiming more than <b>5.2 million records</b> including customer and landowner PII, tower GPS coordinates and plaintext gate codes &mdash; under <b>3 September 2026</b>. The underlying reporting dates the claim to <b>12 June 2026</b>, with a leak-site countdown that expired on <b>15 June</b>. Same actor as the Florida DMV story above, three months earlier. It is <b>not</b> carried as current, and the 5.2 million figure is in any case the attacker&rsquo;s claim: curated breach collections that have since circulated the data describe a verified subset in the low hundreds of thousands.</p></div>\n<div class="card"><span class="t carried">Context</span><span class="t tag">Federal</span><h4>What else is <i>not</i> being carried as news</h4><p>The DHS <b>Homeland Security Information Network</b> intrusion keeps resurfacing in roundups, but the reporting dates the breach to <b>late May&ndash;early June 2026</b> and the confirmation to <b>July</b>. It is a two-month-old story appearing in fresh aggregations, not a new incident, and is not presented as one.</p></div>')
+
+# ---------- 5. Vulnerability Watch rows ----------
+rep('<td>CWE-96 static code injection; pre-authentication RCE, no credentials or user interaction. Vendor confirms in-the-wild exploitation. Fixed in <b>2026.3 Hotfix 4</b> (released 5 Sep). KEV-listed 8 Sep, <b>federal due date 11 Sep</b>.</td>',
+    '<td>CWE-96 static code injection; pre-authentication RCE, no credentials or user interaction. CVSS 4.0 score assigned by N-able as CNA. KEV-listed 8 Sep, <b>federal due date 11 Sep</b>. Fixed in <b>2026.3 Hotfix 4</b>, build <b>2026.3.1.14</b> (early hours 6 Sep UTC). <b>Exploitation status is contested by the vendor itself</b> &mdash; see the top story.</td>')
+
+rep('<tr><td>CVE-2026-86206<br>CVE-2026-86207</td><td>not stated</td><td>N-able N-central</td><td>Chained authentication bypass allowing a remote unauthenticated attacker to create a System Administrator account. Reported by Rapid7&rsquo;s Stephen Fewer; fixed in <b>Hotfix 3</b>. Not KEV-listed. No CVSS stated in anything read this run.</td></tr>',
+    '<tr><td>CVE-2026-86206<br>CVE-2026-86207</td><td><b>6.9</b><br><b>7.7</b></td><td>N-able N-central</td><td>Chained authentication bypass allowing a remote unauthenticated attacker to create a System Administrator account. Reported by Rapid7&rsquo;s Stephen Fewer; fixed in <b>Hotfix 3</b> (2026.3.1.13, 5 Sep). Not KEV-listed. <b>Scores now sourced</b> from N-able&rsquo;s own CVE records &mdash; 86206 Medium, 86207 High &mdash; superseding the &ldquo;not stated&rdquo; this table carried in earlier editions.</td></tr>\n<tr><td>CVE-2026-49869</td><td class="down"><b>10.0</b></td><td>Kestra OSS</td><td>OS command injection; an unauthenticated remote attacker can create and execute arbitrary workflows without credentials. Microsoft assesses it was likely exploited in late June 2026 to open a reverse shell, enumerate the Docker environment, deploy a cryptocurrency miner and harvest data. KEV-listed 2 Sep, <b>due 5 Sep &mdash; overdue</b>.</td></tr>\n<tr><td>CVE-2026-82329</td><td class="down"><b>9.8</b></td><td>JFrog Artifactory</td><td>Improper authentication; under default configuration an unauthenticated attacker with network access can obtain administrative privileges. watchTowr reports minted admin tokens used to enumerate users, groups, credential sets and federated access topologies. KEV-listed 2 Sep, <b>due 5 Sep &mdash; overdue</b>.</td></tr>\n<tr><td>CVE-2026-9586</td><td class="down"><b>9.3</b></td><td>Sangoma Switchvox</td><td>SQL injection; a single crafted request lets an unauthenticated remote attacker run arbitrary SQL against the backend PostgreSQL database, up to remote code execution. Horizon3.ai reports reverse shells deployed. KEV-listed 2 Sep, <b>due 5 Sep &mdash; overdue</b>.</td></tr>\n<tr><td>CVE-2026-59822</td><td>8.8</td><td>BerriAI LiteLLM</td><td>Improper authentication on the Model Context Protocol streamable-HTTP endpoint: an unauthenticated attacker can establish an authenticated MCP session with an arbitrary Bearer token. Wiz has seen probing of model-enumeration endpoints against its honeypots. KEV-listed 2 Sep, <b>due 16 Sep</b>.</td></tr>\n<tr><td>CVE-2026-48710</td><td>6.5</td><td>Kludex Starlette</td><td>HTTP request/response smuggling &mdash; a path injected into the host portion can prepend the real path, breaking authentication that relies on the reconstructed URL. Chainable with CVE-2026-42271 (CVSS 8.7) for authentication bypass and RCE against LiteLLM. KEV-listed 2 Sep, <b>due 16 Sep</b>. The lowest score on this table and one of only two with time left on the clock &mdash; severity and urgency are not the same axis.</td></tr>')
+
+# ---------- 6. KEV section ----------
+rep('<li><b>2 September &mdash; seven added.</b> Covering Sangoma Switchvox, Kludex Starlette, Kestra OSS, BerriAI LiteLLM, JFrog Artifactory and SonicWall SMA1000 appliances. <span class="down"><b>No due date verified this run.</b></span></li>',
+    '<li><b>2 September &mdash; seven added, and this run finally has their deadlines.</b> Under <b>BOD 26-04</b>, FCEB agencies were told to patch <b>five of the seven by 5 September</b> &mdash; SonicWall SMA 1000 <b>CVE-2026-83548</b> (CVSS 10.0, unauthenticated SSRF) and <b>CVE-2026-83549</b> (7.8, post-auth OS command injection), Sangoma Switchvox <b>CVE-2026-9586</b> (9.3), JFrog Artifactory <b>CVE-2026-82329</b> (9.8) and Kestra OSS <b>CVE-2026-49869</b> (10.0). Those five are now <span class="down"><b>overdue</b></span>. The remaining two, Kludex Starlette <b>CVE-2026-48710</b> (6.5) and BerriAI LiteLLM <b>CVE-2026-59822</b> (8.8), are <b>due 16 September 2026</b> <span class="down"><b>(<span id="kev2cdn3">&nbsp;</span>)</b></span>. Earlier editions printed &ldquo;no due date verified&rdquo; for this whole batch; that gap is now closed.</li>\n<li><b>What the split tells you about the new directive.</b> One add date, one alert, <b>two different clocks</b> &mdash; three days for the maximum-severity network appliances and repository servers, fourteen for the two library-level flaws. That is BOD 26-04 working as designed, and it is the clearest available proof that the old flat three-week window can no longer be assumed for anything.</li>')
+
+rep('<li><b>Why only one countdown.</b> Previous editions ran a three-week clock from the add date under BOD 22-01. <b>BOD 26-04</b> has since replaced that flat window with remediation deadlines tiered by risk, so that arithmetic no longer holds &mdash; and CISA&rsquo;s own pages returned empty bodies on direct fetch again this run. The single countdown above is printed because a date was read this run; the rest are not guessed. <b>Operationally, treat both CVSS 10.0 flaws as due now.</b></li>',
+    '<li><b>Why only two countdowns.</b> Previous editions ran a three-week clock from the add date under BOD 22-01. <b>BOD 26-04</b> has since replaced that flat window with deadlines tiered by risk, so that arithmetic no longer holds &mdash; and CISA&rsquo;s own pages returned empty bodies on direct fetch again this run. The two countdowns on this page are printed because both dates were read in reporting this run that names the directive and links the CISA alert; every other date is left blank rather than guessed. <b>Operationally, treat both CVSS 10.0 flaws in the 8 September batch as due now.</b></li>')
+
+rep('<li><b>Volume check.</b> Twelve CVEs entered the catalogue in the last seven days &mdash; a heavy week by any measure.</li>',
+    '<li><b>Volume check.</b> Twelve CVEs entered the catalogue in the last seven days &mdash; a heavy week by any measure. Of those twelve, <b>five are past their federal due date</b>, two are due next Wednesday, one is due Friday, and four carry no due date this page has been able to verify.</li>')
+
+# ---------- 7. Around the Industry: AI infrastructure theme ----------
+rep('<li><b>Headline-level items, carried only as far as their headlines go.</b>',
+    '<li><b>The 2 September KEV batch is mostly an AI-infrastructure story.</b> Three of the seven &mdash; Kestra, LiteLLM and Starlette &mdash; sit in the AI plumbing layer, and Microsoft and Wiz both report the same pattern behind them: credential collection, durable access, and monetisation through cryptomining. Attackers are hitting <b>LiteLLM gateways</b> via CVE-2026-42271 and CVE-2026-48710 to drop an <b>XMRig</b> miner, fingerprinting the host and killing competing miners first, then reaching the LiteLLM-backed PostgreSQL tier to harvest model configuration, upstream provider key material and proxy-issued virtual keys, with persistence via <code>~/.ssh/authorized_keys</code>. Threat actors associated with <b>Qilin</b> (also known as Agenda) ransomware are linked to exploitation of that chain. Microsoft&rsquo;s conclusion is the useful one for defenders: <i>&ldquo;monitor AI workloads according to their control-plane role, not only as isolated applications.&rdquo;</i></li>\n<li><b>Headline-level items, carried only as far as their headlines go.</b>')
+
+# ---------- 8. Second countdown JS ----------
+rep("['kevcdn','kevcdn2','kevcdn3'].forEach(function(id){var el=document.getElementById(id);if(el)el.textContent=txt;});}u();setInterval(u,600000);})();</script>",
+    "['kevcdn','kevcdn2','kevcdn3'].forEach(function(id){var el=document.getElementById(id);if(el)el.textContent=txt;});"
+    "var due2=new Date('2026-09-16T23:59:59-04:00');var d2=Math.ceil((due2-new Date())/86400000);"
+    "var t2=d2>1?(d2+' days left'):(d2===1?'1 day left':(d2===0?'due today':'overdue'));if(d2<0)t2='overdue';"
+    "['kev2cdn','kev2cdn2','kev2cdn3'].forEach(function(id){var el=document.getElementById(id);if(el)el.textContent=t2;});"
+    "}u();setInterval(u,600000);})();</script>")
+
+# ---------- 9. Sources ----------
+rep('<div class="disc">Information only, not security advice',
+    '<div><a href="https://thehackernews.com/2026/09/cisa-adds-seven-exploited-flaws-as.html">https://thehackernews.com/2026/09/cisa-adds-seven-exploited-flaws-as.html</a></div>'
+    '<div><a href="https://thehackernews.com/2026/09/n-able-issues-fourth-n-central-hotfix.html">https://thehackernews.com/2026/09/n-able-issues-fourth-n-central-hotfix.html</a></div>'
+    '<div><a href="https://status.n-able.com/2026/09/06/n-central-2026-3-hotfix-4-cve-2026-86218/">https://status.n-able.com/2026/09/06/n-central-2026-3-hotfix-4-cve-2026-86218/</a></div>'
+    '<div><a href="https://uptime.n-able.com/event/201814/">https://uptime.n-able.com/event/201814/</a></div>'
+    '<div><a href="https://www.microsoft.com/en-us/security/blog/2026/08/26/when-ai-infrastructure-becomes-target-securing-gateways-control-points/">https://www.microsoft.com/en-us/security/blog/2026/08/26/when-ai-infrastructure-becomes-target-securing-gateways-control-points/</a></div>'
+    '<div><a href="https://www.wiz.io/blog/ai-infrastructure-honeypot">https://www.wiz.io/blog/ai-infrastructure-honeypot</a></div>'
+    '<div><a href="https://www.bitsight.com/underground/data-breaches">https://www.bitsight.com/underground/data-breaches</a></div>'
+    '<div class="disc">Information only, not security advice')
+
+io.open(P, "w", encoding="utf-8").write(s)
+print("cyber OK, %d edits" % n)
