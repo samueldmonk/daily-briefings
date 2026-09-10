@@ -1,56 +1,48 @@
-# -*- coding: utf-8 -*-
-import io
-P='/tmp/db_1788305419/wallstreet-briefing.html'
-s=io.open(P,encoding='utf-8').read(); n=0
-def rep(old,new,label):
-    global s,n
-    c=s.count(old)
-    if c!=1: print(('MISS: ' if c==0 else 'AMBIG(%d): '%c)+label); return False
-    s=s.replace(old,new); n+=1; print('ok:',label); return True
+D='/sessions/youthful-laughing-hamilton/mnt/outputs/'
+p=D+'mma-briefing.html'; h=open(p).read()
 
-# ---------- W4: Chart of the Day note -> add the LUMUS catalyst + why Dell does not take the slot
-rep('Fervo and GoPro both remain in the movers list above.</div>',
- 'Fervo and GoPro both remain in the movers list above. '
- '&#9888;&#9888; <b>The move now has a cause, which it did not have when the slot was assigned.</b> Alumis announced before the opening bell that its '
- '<b>Phase 2b LUMUS trial of envudeucitinib in moderate-to-severe systemic lupus erythematosus missed both its primary and its key secondary endpoints in the overall trial population</b>; '
- 'the stock was <b>halted pending the news</b> and reopened sharply lower. A <b>prespecified subgroup with a high interferon gene signature (IFNGS-high) did respond</b> across the primary and key secondary endpoints, '
- 'and the company says it <b>intends to discuss a Phase 3 programme in that biomarker-selected population with regulators</b>. '
- '&#9888; <b>A second clock on the same collapse:</b> one read has the stock <b>down 54.2% pre-open</b> against the <b>&minus;57.75%</b> session figure this slot was assigned on &mdash; '
- 'pre-open and session are different windows, both are printed, neither is adopted as the other. '
- '&#9888; <b>And the slot does not move to Dell tonight.</b> Dell is by some distance the largest single-name move on this page, but it happened <i>after the close</i>; '
- 'this slot is defined by the session, the session is over, and an after-hours gap does not retroactively become the session&rsquo;s biggest move. It is covered in After-Hours Movers instead.</div>',
- 'W4 chart note')
+def sub(old,new):
+    global h
+    assert h.count(old)==1,(old[:70],h.count(old))
+    h=h.replace(old,new)
 
-# ---------- W5: rates rows ----------
-rep('Schwab adds the 10-year is now &ldquo;a stone&rsquo;s throw from 5%.&rdquo;</td>',
- 'Schwab adds the 10-year is now &ldquo;a stone&rsquo;s throw from 5%.&rdquo; '
- 'A <b>fourth</b> Tuesday mark landed after the close: Trading Economics now quotes the 10-year at <b>4.81%</b> &mdash; the highest reading this page has carried today, '
- 'and above every earlier print rather than in conflict with them. A separate read frames the same move as the benchmark yield rising <b>toward 4.78%</b>. '
- '&#9888; <b>Five clocks, one direction, no adoption</b> &mdash; the row header is a range for exactly this reason.</td>',
- 'W5a 10y')
+# odds refresh
+sub('<b>Odds:</b> Silva &minus;450 / Delgado +350 at <b>Caesars</b>; &minus;428 / +324 as an average across 20 books tracked by UFCalendar. The line opened near &minus;425 and has traded in a &minus;400 to &minus;450 band. Silva&rsquo;s implied win probability sits around <b>80&ndash;82%</b>.',
+ '<b>Odds, re-read for this edition:</b> Silva <b>&minus;440</b> / Delgado <b>+340</b> at <b>DraftKings</b>, and <b>&minus;430 / +335</b> at <b>Bovada</b>. Reads earlier today gave &minus;450 / +350 at Caesars and a &minus;428 / +324 average across 20 books tracked by UFCalendar, so the line has drifted a little toward the underdog without leaving the <b>&minus;400 to &minus;450</b> band it opened in near &minus;425. Silva&rsquo;s implied win probability sits around <b>80&ndash;82%</b>. This is the one card on the page with anything new attached to it tonight, which is why it alone is tagged Updated.')
 
-rep('The two are not the same record and are not merged here.</td>',
- 'The two are not the same record and are not merged here. '
- 'A post-close read adds a <b>third</b> September 1 mark, <b>5.28%</b> (Trading Economics), again the highest this page has carried today and still below the 5.34% level record; '
- 'the same read describes <b>30-year bonds reaching levels not seen since 2006</b>, which corroborates the duration framing above from a second source. '
- '&#9888; <b>Note what that corroboration does and does not do:</b> it supports the &ldquo;worst stretch since 2006&rdquo; characterisation, it does not restate the 55-day count, and it is not merged into it.</td>',
- 'W5b 30y')
+# tag on that card -> Updated (highlighted)
+sub('<div class="card"><span class="t carried">Updated</span><div class="kv">Sat 12 September &middot; Desert Diamond Arena',
+    '<div class="card"><span class="t new">Updated</span><div class="kv">Sat 12 September &middot; Desert Diamond Arena')
+h=h.replace('<span class="t carried">Updated</span>','<span class="t carried">Carried</span>')
 
-rep('<td>Japan 10-year government bond</td><td>~3%</td><td class="up">Briefly touched <b>3% for the first time in 30 years</b> &mdash; the leg of the sell-off that makes it global rather than domestic</td></tr>',
- '<td>Japan 10-year government bond</td><td>~3%</td><td class="up">Briefly touched <b>3% for the first time in 30 years</b> &mdash; the leg of the sell-off that makes it global rather than domestic. '
- 'A read fetched this run dates it precisely: the yield <b>jumped more than six basis points to 3% for the first time since 1996</b>, which is the same claim with a year attached rather than a rounded interval.</td></tr>'
- '<tr><td>Japan 2-year government bond</td><td>1.81%</td><td class="up">New this run: the Japanese <b>two-year</b> yield touched a <b>31-year high of 1.81%</b>. '
- '&#9888; It is listed because it answers an objection to the 10-year line &mdash; a single long-maturity print can be a technical event, whereas the short end moving to a multi-decade high alongside it is a policy-expectations move.</td></tr>',
- 'W5c japan')
+# top story attribution
+sub('<p>Asked on <b>9 September</b> for an update on the heavyweight champion&rsquo;s health, UFC chief executive Dana White said:',
+ '<p>Speaking at a Contender Series press conference, in remarks reported on <b>9 September</b>, UFC chief executive Dana White gave this update on the heavyweight champion&rsquo;s health:')
 
-rep("<td>WTI crude</td><td>$86.57 &ndash; above $89</td>",
-    "<td>WTI crude</td><td>$86.57 &ndash; above $95</td>", "W5d0 wti header")
-rep('Trading Economics later at $86.57 (+0.94%)</td>',
- 'Trading Economics later at $86.57 (+0.94%); a post-close read has WTI at <b>$90.82, up 5.90% on the session</b> and <b>up 13.05% over the past month</b> (Trading Economics), '
- 'while a Yahoo Finance session headline has <b>oil topping $95</b>. '
- '&#9888;&#9888; <b>Those last two do not reconcile and are not made to.</b> A $90.82 quote and an &ldquo;above $95&rdquo; headline are more than four dollars apart on the same day &mdash; '
- 'a gap that different contracts, different benchmarks or different clocks can each explain, and this desk cannot tell which without a source that says so. '
- '<b>Both are printed with their attributions; neither is adopted, and no midpoint is invented.</b> The direction &mdash; sharply higher on renewed U.S.&ndash;Iran fighting &mdash; is the part every read agrees on.</td>',
- 'W5d wti')
+# around the sport: callouts bullet
+sub('<li><b>Roster churn cuts both ways.</b>',
+ '<li><b>The heavyweight callouts have started.</b> With no Aspinall timeline to wait on, <b>Alex Pereira, Ciryl Gane and Josh Hokit have spent recent days calling each other out on social media</b> &mdash; which is what a division does when its champion has no return date and an interim belt is already in the room. Gane holds that interim title; Pereira lost to him for it at Freedom 250. Carried as reported: <b>no bout involving any of the three has been announced</b>.</li>\n<li><b>Roster churn cuts both ways.</b>')
 
-io.open(P,'w',encoding='utf-8').write(s); print('applied',n)
+# tags note
+sub('<b>On the &ldquo;Carried&rdquo; tags.</b> Five editions of this page have published today, at 12:57, 1:15, 1:50, 6:15 p.m. and now, after 8 p.m. <b>No fight result, booking, signing or withdrawal landed in the latest interval</b> &mdash; a search for the day&rsquo;s UFC news returned only that no event is scheduled for Wednesday and that Noche UFC on Saturday is next &mdash; so <b>every card is tagged Carried and none is tagged New or Updated</b>. The two cards marked Updated last edition were demoted before tagging. Tagging an unchanged card &ldquo;New&rdquo; because the page was rebuilt would be a lie about the news, not about the build.',
+ '<b>On the tags.</b> Six editions of this page have published today &mdash; at 12:57, 1:15, 1:50, 6:15, 8:29 p.m. and now. <b>No fight result, booking, signing or withdrawal has landed since the last one</b>: a fresh search for the day&rsquo;s UFC news again returned only that no event was scheduled for Wednesday and that Noche UFC on Saturday is next. So <b>no card is tagged New</b>, and every card carried from the previous edition was demoted before tagging. <b>One card is tagged Updated</b> &mdash; the Noche UFC main event, whose odds were re-read from two sportsbooks for this edition and have moved slightly. Tagging an unchanged card &ldquo;New&rdquo; because the page was rebuilt would be a lie about the news, not about the build.')
+
+# champions note block
+i=h.find('<div class="note"><b>How this board was checked this run.')
+j=h.find('</div>',h.find('discrepancy stays flagged'))+6
+assert i>0 and j>i
+newnote=('<div class="note"><b>How this board was checked this run.</b> Every belt was re-checked against a fresh current-champions read for this edition, and this time <b>ten of the eleven rows matched exactly on champion and date</b> &mdash; Aspinall 21 Jun 2025, <b>Ulberg 11 Apr 2026</b>, Strickland 9 May 2026, Makhachev 15 Nov 2025, Gaethje 14 Jun 2026, Volkanovski 12 Apr 2025, Yan 6 Dec 2025, Van 6 Dec 2025, Harrison 7 Jun 2025 and Dern 25 Oct 2025. <b>The Pereira-at-205 regression that the previous edition had to refuse did not recur in this read:</b> light heavyweight came back as Carlos Ulberg, correctly. That is worth stating plainly, because it shows the failure is a property of individual reads rather than of the sport &mdash; two hours ago a read seated Pereira at light heavyweight and had to be refused; this one does not. Neither read seated Chimaev at middleweight, and neither called featherweight vacant.'
+ '<br><br><b>One row was refused, and it is the same row as last time.</b> The read seats <b>Valentina Shevchenko at women&rsquo;s flyweight, dated 14 September 2024, with two defences</b>. She <b>vacated</b> that title while sidelined by injury, and <b>Nat&aacute;lia Silva vs. Wang Cong contest the vacant belt at UFC 332 on 3 October</b> &mdash; corroborated by the UFC 332 card itself, which bills the bout as being for the vacant title. The row was not carried; the belt stays <b>vacant</b> above. Ten correct rows do not license the eleventh, which is exactly why every belt is checked against the latest event results rather than copied from a list.'
+ '<br><br><b>An open conflict this page keeps flagging rather than resolving.</b> This run&rsquo;s read again carried defence tallies, and again reproduced the disagreement: it lists <b>0 defences for both Joshua Van and Mackenzie Dern</b>, and 0 for Aspinall, Strickland, Gaethje, Yan and Harrison, with <b>1 each for Volkanovski and Makhachev</b>. The event record says otherwise for two of those &mdash; Van TKO5 Tatsuro Taira at UFC 328 and Dern UD Gillian Robertson at UFC 330 each look like a title defence, and the table above counts them as such. That is now the third consecutive read to reproduce the conflict, so it is a live disagreement between the reference list and the event record, not an artefact of one stale page, and it stays flagged rather than silently resolved in either direction.</div>')
+h=h[:i]+newnote+h[j:]
+
+# sources
+marker='<footer><h5>Sources</h5>'
+urls=['https://sports.yahoo.com/articles/dana-white-heavyweight-division-keep-110000289.html',
+ 'https://sports.yahoo.com/articles/noche-ufc-4-odds-betting-171123912.html',
+ 'https://www.mmaoddsbreaker.com/fight-odds/opening-odds/161244-opening-betting-odds-for-noche-ufc-silva-vs-delgado/',
+ 'https://www.sherdog.com/news/news/Noche-UFC-4-odds-Alexa-Grasso-an-underdog-massive-850-favorite-emerges-202727',
+ 'https://www.rotowire.com/mma/article/ufc-best-bets-today-picks-odds-predictions-for-noche-ufc-133214']
+add=''.join(f'<div><a href="{u}">{u}</a></div>' for u in urls if u not in h)
+h=h.replace(marker,marker+add,1)
+open(p,'w').write(h); print('mma ok')
