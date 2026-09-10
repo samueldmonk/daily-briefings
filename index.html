@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Daily Briefings</title>
 <style>
-:root{--bg:#0d0d0f;--panel:#171719;--line:#2a2a2e;--accent:#d8d4cd;--accent2:#9fb6c9;--fg:#e9e6e1;--mut:#8e8a84;--up:#3ecf8e;--down:#ef5f6b;--crit:#ef5f6b;--warn:#e8b44a;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+:root{--bg:#0d0d0f;--panel:#17171b;--line:#282830;--accent:#b9b6c8;--accent2:#d7d4e4;--fg:#e9e7ec;--mut:#8a8794;--up:#3ecf8e;--down:#ef5f6b;--crit:#ef5f6b;--warn:#e8b44a;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
 
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.62 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
@@ -28,6 +28,7 @@ h2.sec{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transfo
 .panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
 .lead h3{margin:0 0 8px;font-size:21px;line-height:1.3}
 .lead p{margin:0 0 10px;color:#cdc9c3}
+.lead p:last-child{margin-bottom:0}
 .lead{border-left:3px solid var(--accent)}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(288px,1fr));gap:13px}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 17px;transition:transform .16s,border-color .16s}
@@ -37,6 +38,7 @@ h2.sec{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transfo
 .kv{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent2);margin-bottom:6px}
 .t{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;border-radius:5px;padding:2.5px 7px;margin:0 5px 7px 0;border:1px solid}
 .t.new{color:#0d1512;background:var(--up);border-color:var(--up);font-weight:700}
+.t.upd{color:#1a1408;background:#e8b44a;border-color:#e8b44a;font-weight:700}
 .t.carried{color:var(--mut);border-color:var(--line)}
 .t.crit{color:#fff;background:var(--down);border-color:var(--down);font-weight:700}
 .t.warn{color:#1a1408;background:#e8b44a;border-color:#e8b44a;font-weight:700}
@@ -84,46 +86,46 @@ footer h5{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-tra
 .big p{font-size:14px;color:#c3bfb9;margin:0 0 14px;line-height:1.6}
 .big .go{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase}
 @media(max-width:600px){.brand{font-size:24px}.wrap{padding:18px 14px 50px}}
-</style>
-</head><body><div class="wrap">
+
+.brand{font-family:Georgia,'Times New Roman',serif}
+.bc.cy{border-top:3px solid #22d3a8}.bc.cy .ico,.bc.cy .sub,.bc.cy .go{color:#22d3a8}.bc.cy:hover{border-color:#22d3a8}
+.bc.ws{border-top:3px solid #caa64a}.bc.ws .ico,.bc.ws .sub,.bc.ws .go{color:#caa64a}.bc.ws:hover{border-color:#caa64a}.bc.ws h3{font-family:Georgia,'Times New Roman',serif}
+.bc.mm{border-top:3px solid #e84545}.bc.mm .ico,.bc.mm .sub,.bc.mm .go{color:#e84545}.bc.mm:hover{border-color:#e84545}
+</style></head>
+<body><div class="wrap">
 <header class="masthead">
 <h1 class="brand">Daily Briefings</h1>
-<p class="tagline">Security, markets and MMA — refreshed every 30 minutes, 8 AM–6 PM ET</p>
+<p class="tagline">Three desks, refreshed every 30 minutes — security, markets and mixed martial arts</p>
 <div class="meta"><span class="pill live"><span class="dot"></span>Live</span><span class="pill" id="edition">&nbsp;</span><span class="pill" id="datestamp">&nbsp;</span><span class="pill">Updated <span id="updated">&nbsp;</span></span></div>
 </header>
 <div class="freshline" id="freshline">&nbsp;</div>
-<nav><a href="index.html" class="on">★ Front Page</a><a href="cyber-briefing.html">⛨ The Cyber Wire</a><a href="wallstreet-briefing.html">▲ The Closing Bell</a><a href="mma-briefing.html">⊘ The Octagon</a><a href="archive.html">🗄 Archive</a></nav>
-
+<nav><a class="on" href="index.html">★ Front Page</a><a href="cyber-briefing.html">⛨ The Cyber Wire</a><a href="wallstreet-briefing.html">▲ The Closing Bell</a><a href="mma-briefing.html">⊘ The Octagon</a><a href="archive.html">🗄 Archive</a></nav>
 <div class="big">
-<a class="bc" href="cyber-briefing.html" style="border-left:3px solid #22d3a8">
-<div class="ico" style="color:#22d3a8">&#9880;</div>
-<div class="sub" style="color:#22d3a8">The Cyber Wire &middot; The Wire</div>
-<h3 style="color:#22d3a8">Security</h3>
-<p>CISA has given federal agencies until 11 September to patch CVE-2026-86218, a CVSS 10.0 pre-authentication remote-code-execution flaw in the N-able N-central platform managed service providers use to reach every one of their customers &mdash; and N-able&rsquo;s own release notes and incident notice flatly contradict each other on whether it has been exploited yet.</p>
-<div class="go" style="color:#36c6ff">Read the briefing &rarr;</div></a>
+<a class="bc cy" href="cyber-briefing.html">
+<div class="ico">⛨</div>
+<h3>The Cyber Wire</h3>
+<div class="sub">The Wire</div>
+<p>CISA has given federal agencies until Saturday to patch a CVSS 10.0 authentication bypass in Cisco’s firewall manager — three calendar days from listing, the shortest tier of its new risk-based directive.</p>
+<div class="go">Read the briefing →</div></a>
 
-<a class="bc" href="wallstreet-briefing.html" style="border-left:3px solid #caa64a">
-<div class="ico" style="color:#caa64a">&#9650;</div>
-<div class="sub" style="color:#caa64a">The Closing Bell &middot; The Tape</div>
-<h3 style="color:#caa64a;font-family:Georgia,'Times New Roman',serif">Markets</h3>
-<p>Stocks closed lower for a third straight session as Brent crude settled at $101 and the 10-year Treasury yield hit its highest level since November 2023 &mdash; the Dow ending down 405.41 points (&minus;0.77%) at 52,380.66, the S&amp;P 500 &minus;0.48% at 7,636.36 and the Nasdaq Composite &minus;0.64% at 26,253.34, and the Russell 2000 worst of all at &minus;1.31%.</p>
-<div class="go" style="color:#e8c766">Read the briefing &rarr;</div></a>
+<a class="bc ws" href="wallstreet-briefing.html">
+<div class="ico">▲</div>
+<h3>The Closing Bell</h3>
+<div class="sub">The Tape</div>
+<p>Stocks are heading for a fourth straight decline as oil tops $100 a barrel and August wholesale inflation runs 5.4% year over year, pushing the odds of a Fed rate hike next week to nearly 70%.</p>
+<div class="go">Read the briefing →</div></a>
 
-<a class="bc" href="mma-briefing.html" style="border-left:3px solid #e84545">
-<div class="ico" style="color:#e84545">&#8856;</div>
-<div class="sub" style="color:#e84545">The Octagon &middot; Tale of the Tape</div>
-<h3 style="color:#e84545">MMA</h3>
-<p>Dana White says heavyweight champion Tom Aspinall is still hurt with no return date &mdash; &ldquo;the heavyweight division will just keep rolling&rdquo; &mdash; three days out from Noche UFC in Glendale, where the late replacement in the main event is now confirmed to have come in for an injured Yair Rodr&iacute;guez.</p>
-<div class="go" style="color:#ff8a5c">Read the briefing &rarr;</div></a>
+<a class="bc mm" href="mma-briefing.html">
+<div class="ico">⊘</div>
+<h3>The Octagon</h3>
+<div class="sub">Tale of the Tape</div>
+<p>Noche UFC lands Saturday in Glendale with a late-notice main event — Jean Silva is a −440 favourite over short-notice replacement Jose Delgado.</p>
+<div class="go">Read the briefing →</div></a>
 </div>
-
 <h2 class="sec">About these briefings</h2>
-<div class="panel">
-<p style="margin:0 0 10px">Three briefings, rebuilt from live web search every 30 minutes between 8 AM and 6 PM Eastern. Every claim, figure, name and date on each page is checked against a source fetched in the same run; anything that cannot be verified is dropped, and conflicts between sources are printed as conflicts rather than resolved silently.</p>
-<p style="margin:0" class="note">Point-in-time snapshots of every edition are kept in the <a href="archive.html">Archive</a>.</p>
-</div>
-
-<footer><h5>Sources</h5><div><a href="https://www.greynoise.io/blog/ai-orchestrated-campaign-against-papercut-ng-mf">https://www.greynoise.io/blog/ai-orchestrated-campaign-against-papercut-ng-mf</a></div><div><a href="https://cybersecuritynews.com/veradigm-patient-data-breach/">https://cybersecuritynews.com/veradigm-patient-data-breach/</a></div><div><a href="https://investrade.com/market-review-september-09-2026/">https://investrade.com/market-review-september-09-2026/</a></div><div><a href="https://sports.yahoo.com/articles/dana-white-heavyweight-division-keep-110000289.html">https://sports.yahoo.com/articles/dana-white-heavyweight-division-keep-110000289.html</a></div><div><a href="https://www.local10.com/business/2026/09/09/stocks-fall-on-wall-street-as-oil-prices-jump-back-above-100-a-barrel-after-iran-war-escalates/">https://www.local10.com/business/2026/09/09/stocks-fall-on-wall-street-as-oil-prices-jump-back-above-100-a-barrel-after-iran-war-escalates/</a></div><div><a href="https://www.tenable.com/blog/stylesmuggler-cve-2026-75650-frequently-asked-questions-about-adobe-commerce-and-magento-zero">https://www.tenable.com/blog/stylesmuggler-cve-2026-75650-frequently-asked-questions-about-adobe-commerce-and-magento-zero</a></div><div><a href="https://www.cisa.gov/news-events/alerts/2026/09/08/cisa-adds-four-known-exploited-vulnerabilities-catalog">https://www.cisa.gov/news-events/alerts/2026/09/08/cisa-adds-four-known-exploited-vulnerabilities-catalog</a></div><div><a href="https://thebodylockmma.com/ufc/news-ufc/dana-white-makes-major-announcements-aspinall-health-new-contracts-and-pages-future/">https://thebodylockmma.com/ufc/news-ufc/dana-white-makes-major-announcements-aspinall-health-new-contracts-and-pages-future/</a></div><div><a href="https://www.cnbc.com/2026/09/09/stocks-making-the-biggest-moves-premarket-aapl-casy-sig.html">https://www.cnbc.com/2026/09/09/stocks-making-the-biggest-moves-premarket-aapl-casy-sig.html</a></div><div><a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-09-2026">https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-09-2026</a></div><div><a href="https://thehackernews.com/2026/09/n-able-n-central-pre-auth-rce-flaw.html">https://thehackernews.com/2026/09/n-able-n-central-pre-auth-rce-flaw.html</a></div><div><a href="https://bloodyelbow.com/2026/09/09/dana-white-insists-the-heavyweight-division-will-just-keep-rolling-in-new-tom-aspinall-update/">https://bloodyelbow.com/2026/09/09/dana-white-insists-the-heavyweight-division-will-just-keep-rolling-in-new-tom-aspinall-update/</a></div><div><a href="https://www.fool.com/coverage/stock-market-today/2026/09/09/stock-market-midday-sept-9-stocks-slide-as-oil-surges-past-usd100-while-meta-gains/">https://www.fool.com/coverage/stock-market-today/2026/09/09/stock-market-midday-sept-9-stocks-slide-as-oil-surges-past-usd100-while-meta-gains/</a></div><div><a href="https://thehackernews.com/2026/09/n-able-issues-fourth-n-central-hotfix.html">https://thehackernews.com/2026/09/n-able-issues-fourth-n-central-hotfix.html</a></div><div><a href="https://en.wikipedia.org/wiki/UFC_Fight_Night:_Silva_vs._Delgado">https://en.wikipedia.org/wiki/UFC_Fight_Night:_Silva_vs._Delgado</a></div><div><a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-september-2026-patch-tuesday-fixes-966-flaws-2-zero-days/">https://www.bleepingcomputer.com/news/microsoft/microsoft-september-2026-patch-tuesday-fixes-966-flaws-2-zero-days/</a></div><div><a href="https://aicybr.com/blog/stylesmuggler-magento-adobe-commerce-zero-day-rce">https://aicybr.com/blog/stylesmuggler-magento-adobe-commerce-zero-day-rce</a></div><div><a href="https://www.espn.com/mma/story/_/id/14947566/current-all-ufc-champions">https://www.espn.com/mma/story/_/id/14947566/current-all-ufc-champions</a></div><div class="disc">Each card summarises that briefing's own verified lead. Nothing here is investment or security advice.</div></footer>
+<div class="panel"><p style="margin:0 0 10px;color:#c6c3cd">Each desk is rebuilt from live web search every thirty minutes between 8 AM and 6 PM Eastern. Every claim, figure, deadline and name is checked against a source fetched during that same run; anything that cannot be confirmed is dropped rather than carried forward on memory. Standing corrections — the UFC champions board in particular — are re-verified against primary sources on every single run.</p>
+<p style="margin:0;color:#c6c3cd">Past editions are preserved in the <a href="archive.html">archive</a> as point-in-time snapshots.</p></div>
+<footer><h5>Sources</h5><div><a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-10-2026">https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-10-2026</a></div><div><a href="https://thehackernews.com/2026/09/cisa-flags-exploited-cisco-citrix.html">https://thehackernews.com/2026/09/cisa-flags-exploited-cisco-citrix.html</a></div><div><a href="https://www.cisa.gov/news-events/alerts/2026/09/09/cisa-adds-four-known-exploited-vulnerabilities-catalog">https://www.cisa.gov/news-events/alerts/2026/09/09/cisa-adds-four-known-exploited-vulnerabilities-catalog</a></div><div><a href="https://www.espn.com/mma/story/_/id/14947566/current-all-ufc-champions">https://www.espn.com/mma/story/_/id/14947566/current-all-ufc-champions</a></div><div><a href="https://www.rotowire.com/betting/mma/fight/jose-delgado-vs-jean-silva-odds-2026-09-12-5614">https://www.rotowire.com/betting/mma/fight/jose-delgado-vs-jean-silva-odds-2026-09-12-5614</a></div><div><a href="https://www.bls.gov/news.release/ppi.nr0.htm">https://www.bls.gov/news.release/ppi.nr0.htm</a></div><div class="disc">Summaries above restate the lead of each briefing and carry the same sourcing. Markets content is information only and is not investment advice; security advisories should be verified against the vendor bulletin; fight cards are subject to change.</div></footer>
 </div>
 <script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \u00b7 briefings refresh every 30 minutes, 8 AM\u20136 PM ET';}catch(e){}})();</script>
 </body></html>
