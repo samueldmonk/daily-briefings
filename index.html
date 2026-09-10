@@ -56,15 +56,15 @@ footer{margin-top:44px;border-top:1px solid var(--line);padding-top:18px;font-si
 
 <header class="masthead">
   <h1>Daily <span class="a">B</span><span class="b">r</span><span class="c">i</span>efings</h1>
-  <div class="tagline">Three desks, refreshed through the day — security, markets and the fight game.</div>
+  <div class="tagline">Three desks, refreshed through the day &mdash; security, markets and the fight game.</div>
   <div class="meta">
     <span class="pill live"><span class="dot"></span>Live</span>
-    <span class="pill" id="edition">—</span>
-    <span class="pill" id="datestamp">—</span>
-    <span class="pill">Updated <span id="updated">—</span></span>
+    <span class="pill" id="edition">&mdash;</span>
+    <span class="pill" id="datestamp">&mdash;</span>
+    <span class="pill">Updated <span id="updated">&mdash;</span></span>
   </div>
 </header>
-<div class="freshline" id="freshline">—</div>
+<div class="freshline" id="freshline">&mdash;</div>
 
 <nav class="tabs">
   <a href="index.html" class="on">★ Front Page</a>
@@ -77,32 +77,32 @@ footer{margin-top:44px;border-top:1px solid var(--line);padding-top:18px;font-si
 <div class="deck">
 
   <div class="big sec">
-    <div class="kicker">⛨ The Cyber Wire · The Wire</div>
-    <h2>A two-day federal clock on three exploited edge flaws</h2>
-    <p>CISA has given federal agencies until Saturday to patch three actively exploited perimeter flaws — including a maximum-severity Cisco firewall-management bypass that Cisco says attackers began hitting in August.</p>
-    <a class="go" href="cyber-briefing.html">Read the briefing →</a>
+    <div class="kicker">⛨ The Cyber Wire &middot; The Wire</div>
+    <h2>A one-day federal clock on two maximum-severity flaws</h2>
+    <p>Two maximum-severity flaws in Adobe Commerce and N-able N-central carry a federal patch deadline of tomorrow, and researchers found nearly one in ten exposed LiteLLM AI gateways still accepting the example admin key printed in the product's own setup guide.</p>
+    <a class="go" href="cyber-briefing.html">Read the briefing &rarr;</a>
   </div>
 
   <div class="big mkt">
-    <div class="kicker">▲ The Closing Bell · The Tape</div>
-    <h2>A fourth straight decline as crude tops $105</h2>
-    <p>All three major indexes closed lower for a fourth straight session as Brent crude pushed past $105 and traders priced roughly a 70% chance the Fed raises rates next week.</p>
-    <a class="go" href="wallstreet-briefing.html">Read the briefing →</a>
+    <div class="kicker">▲ The Closing Bell &middot; The Tape</div>
+    <h2>The fourth straight decline settles on the tape</h2>
+    <p>Thursday's fourth straight decline is settled at the tape — the S&amp;P 500 closed at 7,591.70, down 0.58% — with Treasury yields setting fresh 52-week highs at every maturity from one year to thirty.</p>
+    <a class="go" href="wallstreet-briefing.html">Read the briefing &rarr;</a>
   </div>
 
   <div class="big mma">
-    <div class="kicker">⊘ The Octagon · Tale of the Tape</div>
-    <h2>A late call-up headlines Noche UFC on Saturday</h2>
-    <p>Jean Silva is a heavy favourite over late replacement Jose Delgado at Noche UFC on Saturday, one week before Joshua Van defends the flyweight belt against Alexandre Pantoja in Los Angeles.</p>
-    <a class="go" href="mma-briefing.html">Read the briefing →</a>
+    <div class="kicker">⊘ The Octagon &middot; Tale of the Tape</div>
+    <h2>The heavyweight division stops waiting on Aspinall</h2>
+    <p>Dana White says the heavyweight division will “keep rolling” without the injured Tom Aspinall, two days before Jean Silva headlines Noche UFC as a heavy favourite over late replacement Jose Delgado.</p>
+    <a class="go" href="mma-briefing.html">Read the briefing &rarr;</a>
   </div>
 
 </div>
 
 <footer>Each briefing is rebuilt from live web sources every 30 minutes between 8 AM and 6 PM ET. Point-in-time snapshots of every edition are kept in the <a href="archive.html" style="color:var(--muted)">Archive</a>.</footer>
 
-</div>
 
-<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
+</div>
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \u00b7 briefings refresh every 30 minutes, 8 AM\u20136 PM ET';}catch(e){}})();</script>
 </body>
 </html>
