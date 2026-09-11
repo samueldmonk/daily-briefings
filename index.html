@@ -4,8 +4,8 @@
 <title>Daily Briefings</title>
 <style>
 :root{
-  --bg:#0b0c0d; --panel:#141618; --line:#252a2e;
-  --accent:#9aa7b4; --accent2:#c3ced9;
+  --bg:#0a0b0d; --panel:#141619; --line:#242830;
+  --accent:#9aa6b2; --accent2:#c3cdd8;
   --txt:#e9e6e2; --muted:#9aa0a6;
   --up:#22c55e; --down:#ef4444; --warn:#f0b429; --crit:#ef4444;
   --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
@@ -74,26 +74,29 @@ ul.bul{margin:0;padding-left:19px} ul.bul li{margin-bottom:9px}
 .srcs a{color:var(--muted)}
 .disc{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin-top:26px;padding-top:14px}
 
-.big{display:grid;grid-template-columns:1fr;gap:16px;margin-top:6px}
-@media(min-width:820px){.big{grid-template-columns:repeat(3,1fr)}}
-.bc{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 21px;transition:.17s;
-  display:flex;flex-direction:column}
-.bc:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(0,0,0,.36)}
-.bc .kk{font-family:var(--mono);font-size:10.5px;letter-spacing:.17em;text-transform:uppercase;margin-bottom:9px}
-.bc h3{margin:0 0 10px;font-size:21px;line-height:1.22}
-.bc p{margin:0 0 16px;font-size:14.5px;color:#cfcbc6;line-height:1.55;flex:1}
-.bc .go{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase}
-.bc.cy{border-top:3px solid #22d3a8} .bc.cy .kk,.bc.cy .go{color:#22d3a8} .bc.cy:hover{border-color:#22d3a8}
-.bc.ws{border-top:3px solid #caa64a} .bc.ws .kk,.bc.ws .go{color:#caa64a} .bc.ws:hover{border-color:#caa64a}
-.bc.ws h3{font-family:Georgia,'Times New Roman',serif}
-.bc.mm{border-top:3px solid #e84545} .bc.mm .kk,.bc.mm .go{color:#e84545} .bc.mm:hover{border-color:#e84545}
+.big{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px}
+.big .card{padding:20px 21px}
+.big .kicker{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:9px}
+.big .card h3{font-size:21px;margin:0 0 11px;line-height:1.28}
+.big .card p{font-size:14.5px;color:#cfcbc6;margin:0 0 14px}
+.big .go{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase}
+.c-sec{border-left:3px solid #22d3a8}
+.c-sec .kicker,.c-sec .go{color:#22d3a8}
+.c-sec:hover{border-color:#22d3a8}
+.c-mkt{border-left:3px solid #caa64a}
+.c-mkt .kicker,.c-mkt .go{color:#caa64a}
+.c-mkt h3{font-family:Georgia,'Times New Roman',serif}
+.c-mkt:hover{border-color:#caa64a}
+.c-mma{border-left:3px solid #e84545}
+.c-mma .kicker,.c-mma .go{color:#e84545}
+.c-mma:hover{border-color:#e84545}
 
 @media(max-width:640px){.masthead h1{font-size:26px}.wrap{padding:18px 14px 50px}}
 </style>
 </head><body><div class="wrap">
 <header class="masthead">
 <h1>Daily Briefings</h1>
-<p class="sub">Cybersecurity, markets and MMA &mdash; compiled fresh from live sources</p>
+<p class="sub">Security, markets and the fight game &mdash; refreshed every thirty minutes</p>
 <div class="meta">
 <span class="pill live"><span class="dot"></span>Live</span>
 <span class="pill" id="edition">&nbsp;</span>
@@ -104,32 +107,16 @@ ul.bul{margin:0;padding-left:19px} ul.bul li{margin-bottom:9px}
 <div class="freshline" id="freshline">&nbsp;</div>
 <nav class="tabs"><a href="index.html" class="active">★ Front Page</a><a href="cyber-briefing.html">⛨ The Cyber Wire</a><a href="wallstreet-briefing.html">▲ The Closing Bell</a><a href="mma-briefing.html">⊘ The Octagon</a><a href="archive.html">🗄 Archive</a></nav>
 
-<div class="big">
+<div class="big"><div class="card c-sec"><div class="kicker">⛨ The Cyber Wire &middot; The Wire</div><h3>Security</h3><p>CISA has given federal agencies until tomorrow to patch a maximum-severity Cisco firewall-management flaw that ransomware crews and state-linked clusters are already exploiting, one of three edge-device bugs sharing a 12 September deadline.</p><a class="go" href="cyber-briefing.html">Read the briefing &rarr;</a></div><div class="card c-mkt"><div class="kicker">▲ The Closing Bell &middot; The Tape</div><h3>Markets</h3><p>Wall Street is on course to snap a four-day losing streak, with all three major indexes up around 1.1% on reads through 2:18 PM ET after crude settled sharply lower and an in-line August CPI left a Fed hike next Wednesday all but priced.</p><a class="go" href="wallstreet-briefing.html">Read the briefing &rarr;</a></div><div class="card c-mma"><div class="kicker">⊘ The Octagon &middot; Tale of the Tape</div><h3>MMA</h3><p>Noche UFC lands in Glendale on Saturday with Jean Silva a heavy &minus;430 favourite over Jose Miguel Delgado, a short-notice replacement who took the fight on twenty-four days&rsquo; notice and has never faced a ranked opponent.</p><a class="go" href="mma-briefing.html">Read the briefing &rarr;</a></div></div>
 
-<a class="bc cy" href="cyber-briefing.html">
-<div class="kk">&#9960; The Cyber Wire &middot; The Wire</div>
-<h3>Record Patch Tuesday, two exploited Windows zero-days</h3>
-<p>Microsoft shipped the largest Patch Tuesday on record &mdash; about 974 CVEs &mdash; including two Windows privilege-escalation flaws already exploited as zero-days and twenty bugs that could be classed as wormable, while the maximum-severity N-able N-central flaw reaches its federal remediation deadline today.</p>
-<div class="go">Read the briefing &rarr;</div>
-</a>
-
-<a class="bc ws" href="wallstreet-briefing.html">
-<div class="kk">&#9650; The Closing Bell &middot; The Tape</div>
-<h3>The four-day slide ends as oil retreats and CPI lands in line</h3>
-<p>Wall Street is snapping a four-day losing streak, with all three major indexes up around 1.1% on reads through 2:18 PM ET as oil retreats and an in-line August CPI leaves a Fed hike next Wednesday all but priced &mdash; even as Treasury yields set fresh 52-week highs across the curve.</p>
-<div class="go">Read the briefing &rarr;</div>
-</a>
-
-<a class="bc mm" href="mma-briefing.html">
-<div class="kk">&#8856; The Octagon &middot; Tale of the Tape</div>
-<h3>Thirteen bouts, no misses: Noche UFC makes weight in Glendale</h3>
-<p>Every fighter on the thirteen-bout Noche UFC card made weight in Glendale, where Jean Silva headlines against short-notice replacement Jose Miguel Delgado on Saturday, a week after Salahdine Parnasse&rsquo;s first-round TKO of Dan Hooker topped the highest-grossing event in Accor Arena history.</p>
-<div class="go">Read the briefing &rarr;</div>
-</a>
-
+<h2 class="sec">About these briefings</h2>
+<div class="panel">
+<p style="margin:0 0 10px">Three briefings, rebuilt from live web searches every thirty minutes between 8 AM and
+6 PM Eastern. Each one leads with the single most important thing that has changed since the last edition, and every
+figure on every page is carried only if a source read for that edition states it.</p>
+<p style="margin:0">Earlier editions are kept as point-in-time snapshots in the <a href="archive.html">Archive</a>, so
+you can see what the page said at any given hour rather than only what it says now.</p>
 </div>
-
-<p class="disc">Three briefings, rebuilt from live sources every 30 minutes between 8 AM and 6 PM ET. Each page carries its own sources and as-of times; every claim traces to a source fetched during that run or to a standing sourced correction. Point-in-time snapshots of previous editions are kept in the <a href="archive.html">Archive</a>. Market content is information, not investment advice.</p>
 
 </div>
 <script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \u00b7 briefings refresh every 30 minutes, 8 AM\u20136 PM ET';}catch(e){}})();</script>
