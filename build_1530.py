@@ -1,95 +1,72 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>The Cyber Wire &mdash; Daily Briefings</title>
-<style>
-:root{
-  --bg:#080d0c; --panel:#0f1716; --line:#1d2b29;
-  --accent:#22d3a8; --accent2:#36c6ff;
-  --txt:#e9e6e2; --muted:#9aa0a6;
-  --up:#22c55e; --down:#ef4444; --warn:#f0b429; --crit:#ef4444;
-  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--txt);
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  font-size:15.5px;line-height:1.62;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1000px;margin:0 auto;padding:26px 20px 70px}
-a{color:var(--accent2);text-decoration:none}
-a:hover{text-decoration:underline}
-.masthead{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:14px}
-.masthead h1{margin:0 0 4px;font-size:34px;letter-spacing:-.5px}
-.masthead .sub{color:var(--muted);font-size:14px;margin:0}
-.meta{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
-.pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;
-  background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:4px 11px;color:var(--muted)}
-.pill.live{color:var(--up);border-color:rgba(34,197,94,.35)}
-.pill.live .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--up);margin-right:6px;vertical-align:middle}
-nav.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 20px}
-nav.tabs a{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
-  background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:8px 13px;color:var(--muted);transition:.15s}
-nav.tabs a:hover{color:var(--txt);border-color:var(--accent);text-decoration:none;transform:translateY(-1px)}
-nav.tabs a.active{color:var(--accent);border-color:var(--accent);background:rgba(255,255,255,.03)}
-.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
-  border-radius:10px;padding:11px 15px;margin:6px 0 2px;font-size:14.5px;line-height:1.5}
-.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-right:9px}
-.freshline{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--muted);margin:9px 0 2px}
-h2.sec{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--accent);margin:34px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
-.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:14px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:13px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 16px;transition:.16s}
-.card:hover{transform:translateY(-2px);border-color:var(--accent);box-shadow:0 8px 22px rgba(0,0,0,.34)}
-.card h3{margin:0 0 7px;font-size:16px;line-height:1.32}
-.card p{margin:0;font-size:14px;color:#cfcbc6}
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:9px}
-.t{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
-  border-radius:5px;padding:3px 7px;border:1px solid var(--line);color:var(--muted)}
-.t.new{color:var(--accent);border-color:var(--accent)}
-.t.hot{color:var(--crit);border-color:rgba(239,68,68,.45)}
-.t.pro{color:var(--up);border-color:rgba(34,197,94,.45)}
-.t.gold{color:var(--warn);border-color:rgba(240,180,41,.45)}
-table{width:100%;border-collapse:collapse;font-size:14px}
-th{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
-  text-align:left;padding:9px 10px;border-bottom:1px solid var(--line)}
-td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top}
-tr:last-child td{border-bottom:none}
-.up{color:var(--up)} .down{color:var(--down)} .mut{color:var(--muted)}
-ul.bul{margin:0;padding-left:19px} ul.bul li{margin-bottom:9px}
-.callout{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--warn);
-  border-radius:10px;padding:14px 17px;margin-bottom:14px}
-.callout.crit{border-left-color:var(--crit)}
-.callout h3{margin:0 0 7px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--warn)}
-.callout.crit h3{color:var(--crit)}
-.banner{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 17px;margin-bottom:14px;
-  display:flex;flex-wrap:wrap;align-items:center;gap:13px}
-.banner .lvl{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;
-  padding:5px 12px;border-radius:7px;border:1px solid var(--crit);color:var(--crit)}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:11px;margin-bottom:14px}
-.stat{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:13px 15px}
-.stat .n{font-family:var(--mono);font-size:21px;color:var(--accent);letter-spacing:-.5px}
-.stat .l{font-size:11.5px;color:var(--muted);margin-top:3px;line-height:1.4}
-.note{font-size:12.5px;color:var(--muted);margin:9px 0 0}
-.srcs{font-size:12.5px;color:var(--muted);word-break:break-word}
-.srcs a{color:var(--muted)}
-.disc{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin-top:26px;padding-top:14px}
+# -*- coding: utf-8 -*-
+import io, os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from shared import css, masthead, nav, page
 
-@media(max-width:640px){.masthead h1{font-size:26px}.wrap{padding:18px 14px 50px}}
-</style>
-</head><body><div class="wrap">
-<header class="masthead">
-<h1>The Cyber Wire</h1>
-<p class="sub">Your daily cybersecurity briefing &mdash; breaches, exploited flaws &amp; federal deadlines</p>
-<div class="meta">
-<span class="pill live"><span class="dot"></span>Live</span>
-<span class="pill" id="edition">&nbsp;</span>
-<span class="pill" id="datestamp">&nbsp;</span>
-<span class="pill">Updated <span id="updated">&nbsp;</span></span>
-</div>
-</header>
-<div class="tldr"><b>The Wire</b> <span>Microsoft shipped the largest Patch Tuesday on record &mdash; about 974 CVEs &mdash; including two Windows privilege-escalation flaws already exploited as zero-days and twenty bugs that could be classed as wormable, while the maximum-severity N-able N-central flaw reaches its federal remediation deadline today.</span></div>
-<div class="freshline" id="freshline">&nbsp;</div>
-<nav class="tabs"><a href="index.html">★ Front Page</a><a href="cyber-briefing.html" class="active">⛨ The Cyber Wire</a><a href="wallstreet-briefing.html">▲ The Closing Bell</a><a href="mma-briefing.html">⊘ The Octagon</a><a href="archive.html">🗄 Archive</a></nav>
+OUT = os.path.dirname(os.path.abspath(__file__))
+
+# ---------------- summaries (must be byte-identical on index cards) ----------------
+S_CY = ("Microsoft shipped the largest Patch Tuesday on record &mdash; about 974 CVEs &mdash; including two Windows "
+        "privilege-escalation flaws already exploited as zero-days and twenty bugs that could be classed as wormable, "
+        "while the maximum-severity N-able N-central flaw reaches its federal remediation deadline today.")
+S_WS = ("Wall Street is snapping a four-day losing streak, with all three major indexes up around 1.1% on reads through "
+        "2:18 PM ET as oil retreats and an in-line August CPI leaves a Fed hike next Wednesday all but priced &mdash; "
+        "even as Treasury yields set fresh 52-week highs across the curve.")
+S_MMA = ("Every fighter on the thirteen-bout Noche UFC card made weight in Glendale, where Jean Silva headlines against "
+         "short-notice replacement Jose Miguel Delgado on Saturday, a week after Salahdine Parnasse&rsquo;s first-round TKO "
+         "of Dan Hooker topped the highest-grossing event in Accor Arena history.")
+
+def tldr(label, text, ):
+    return '<div class="tldr"><b>%s</b> <span>%s</span></div>' % (label, text)
+
+FRESH = '<div class="freshline" id="freshline">&nbsp;</div>'
+
+def srcblock(items):
+    return "".join('<div style="margin-bottom:7px">%s &mdash; <a href="%s">%s</a></div>' % (t, u, u) for t, u in items)
+
+# =================================================================== CYBER
+CY_ACC, CY_ACC2 = "#22d3a8", "#36c6ff"
+CY_CSS = css(CY_ACC, CY_ACC2, "#080d0c", "#0f1716", "#1d2b29")
+
+CY_SRC = [
+ ("Help Net Security - September 2026 Patch Tuesday: Record patch count, 2 zero-days, and a SigRed successor",
+  "https://www.helpnetsecurity.com/2026/09/09/september-2026-patch-tuesday-zero-days-sigred-successor/"),
+ ("SecurityWeek - Microsoft Patches Record 974 Vulnerabilities, Including Two Exploited Zero-Days",
+  "https://www.securityweek.com/microsoft-patches-record-974-vulnerabilities-including-two-exploited-zero-days/"),
+ ("Security Affairs - Microsoft's Biggest Patch Tuesday: 974 CVEs, 2 Zero-Days and 20 Wormable Bugs",
+  "https://securityaffairs.com/198705/security/microsofts-biggest-patch-tuesday-974-cves-2-zero-days-and-20-wormable-bugs.html"),
+ ("CrowdStrike - September 2026 Patch Tuesday: Updates and Analysis",
+  "https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-september-2026/"),
+ ("Zero Day Initiative - The September 2026 Security Update Review",
+  "https://www.zerodayinitiative.com/blog/2026/9/8/the-september-2026-security-update-review"),
+ ("The Hacker News - Attackers Exploit PaperCut Flaws to Steal Credentials From Schools and Universities",
+  "https://thehackernews.com/2026/09/attackers-exploit-papercut-flaws-to.html"),
+ ("Arctic Wolf Adversary Research - PaperCut CVE exploitation alert pack",
+  "https://github.com/rtkwlf/wolf-tools/tree/main/pack_alerts/202609-papercut-cve-exploitation"),
+ ("The Hacker News - CISA Adds Seven Exploited Flaws as Attackers Deploy Reverse Shells and Crypto Miners",
+  "https://thehackernews.com/2026/09/cisa-adds-seven-exploited-flaws-as.html"),
+ ("CISA - CISA Adds Seven Known Exploited Vulnerabilities to Catalog (Sept 2, 2026)",
+  "https://www.cisa.gov/news-events/alerts/2026/09/02/cisa-adds-seven-known-exploited-vulnerabilities-catalog"),
+ ("Microsoft Security Blog - When AI infrastructure becomes a target: securing gateways and control points",
+  "https://www.microsoft.com/en-us/security/blog/2026/08/26/when-ai-infrastructure-becomes-target-securing-gateways-control-points/"),
+ ("Wiz - AI infrastructure honeypot research",
+  "https://www.wiz.io/blog/ai-infrastructure-honeypot"),
+ ("The Hacker News - N-able N-central Pre-Auth RCE Flaw Exploited in the Wild",
+  "https://thehackernews.com/2026/09/n-able-n-central-pre-auth-rce-flaw.html"),
+ ("Help Net Security - Cisco FMC bugs exploited by nation-state and ransomware actors (CVE-2026-20079, CVE-2026-20316)",
+  "https://www.helpnetsecurity.com/2026/09/10/cisco-fmc-exploited-cve-2026-20079-cve-2026-20316/"),
+ ("The Hacker News - Google Releases Chrome Update to Patch Actively Exploited V8 Zero-Day",
+  "https://thehackernews.com/2026/09/google-releases-chrome-update-to-patch.html"),
+ ("CISA - Known Exploited Vulnerabilities Catalog",
+  "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"),
+ ("Senserva - CISA KEV Additions This Week: 11 New Exploited CVEs (September 2026)",
+  "https://senserva.com/exploited-this-week.html"),
+]
+
+CY_BODY = """@@MAST@@
+@@TLDR@@
+@@FRESH@@
+@@NAV@@
 
 <div class="banner">
 <span class="lvl">Threat level: High</span>
@@ -212,10 +189,16 @@ ul.bul{margin:0;padding-left:19px} ul.bul li{margin-bottom:9px}
 
 <h2 class="sec">Sources</h2>
 <div class="panel srcs">
-<div style="margin-bottom:7px">Help Net Security - September 2026 Patch Tuesday: Record patch count, 2 zero-days, and a SigRed successor &mdash; <a href="https://www.helpnetsecurity.com/2026/09/09/september-2026-patch-tuesday-zero-days-sigred-successor/">https://www.helpnetsecurity.com/2026/09/09/september-2026-patch-tuesday-zero-days-sigred-successor/</a></div><div style="margin-bottom:7px">SecurityWeek - Microsoft Patches Record 974 Vulnerabilities, Including Two Exploited Zero-Days &mdash; <a href="https://www.securityweek.com/microsoft-patches-record-974-vulnerabilities-including-two-exploited-zero-days/">https://www.securityweek.com/microsoft-patches-record-974-vulnerabilities-including-two-exploited-zero-days/</a></div><div style="margin-bottom:7px">Security Affairs - Microsoft's Biggest Patch Tuesday: 974 CVEs, 2 Zero-Days and 20 Wormable Bugs &mdash; <a href="https://securityaffairs.com/198705/security/microsofts-biggest-patch-tuesday-974-cves-2-zero-days-and-20-wormable-bugs.html">https://securityaffairs.com/198705/security/microsofts-biggest-patch-tuesday-974-cves-2-zero-days-and-20-wormable-bugs.html</a></div><div style="margin-bottom:7px">CrowdStrike - September 2026 Patch Tuesday: Updates and Analysis &mdash; <a href="https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-september-2026/">https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-september-2026/</a></div><div style="margin-bottom:7px">Zero Day Initiative - The September 2026 Security Update Review &mdash; <a href="https://www.zerodayinitiative.com/blog/2026/9/8/the-september-2026-security-update-review">https://www.zerodayinitiative.com/blog/2026/9/8/the-september-2026-security-update-review</a></div><div style="margin-bottom:7px">The Hacker News - Attackers Exploit PaperCut Flaws to Steal Credentials From Schools and Universities &mdash; <a href="https://thehackernews.com/2026/09/attackers-exploit-papercut-flaws-to.html">https://thehackernews.com/2026/09/attackers-exploit-papercut-flaws-to.html</a></div><div style="margin-bottom:7px">Arctic Wolf Adversary Research - PaperCut CVE exploitation alert pack &mdash; <a href="https://github.com/rtkwlf/wolf-tools/tree/main/pack_alerts/202609-papercut-cve-exploitation">https://github.com/rtkwlf/wolf-tools/tree/main/pack_alerts/202609-papercut-cve-exploitation</a></div><div style="margin-bottom:7px">The Hacker News - CISA Adds Seven Exploited Flaws as Attackers Deploy Reverse Shells and Crypto Miners &mdash; <a href="https://thehackernews.com/2026/09/cisa-adds-seven-exploited-flaws-as.html">https://thehackernews.com/2026/09/cisa-adds-seven-exploited-flaws-as.html</a></div><div style="margin-bottom:7px">CISA - CISA Adds Seven Known Exploited Vulnerabilities to Catalog (Sept 2, 2026) &mdash; <a href="https://www.cisa.gov/news-events/alerts/2026/09/02/cisa-adds-seven-known-exploited-vulnerabilities-catalog">https://www.cisa.gov/news-events/alerts/2026/09/02/cisa-adds-seven-known-exploited-vulnerabilities-catalog</a></div><div style="margin-bottom:7px">Microsoft Security Blog - When AI infrastructure becomes a target: securing gateways and control points &mdash; <a href="https://www.microsoft.com/en-us/security/blog/2026/08/26/when-ai-infrastructure-becomes-target-securing-gateways-control-points/">https://www.microsoft.com/en-us/security/blog/2026/08/26/when-ai-infrastructure-becomes-target-securing-gateways-control-points/</a></div><div style="margin-bottom:7px">Wiz - AI infrastructure honeypot research &mdash; <a href="https://www.wiz.io/blog/ai-infrastructure-honeypot">https://www.wiz.io/blog/ai-infrastructure-honeypot</a></div><div style="margin-bottom:7px">The Hacker News - N-able N-central Pre-Auth RCE Flaw Exploited in the Wild &mdash; <a href="https://thehackernews.com/2026/09/n-able-n-central-pre-auth-rce-flaw.html">https://thehackernews.com/2026/09/n-able-n-central-pre-auth-rce-flaw.html</a></div><div style="margin-bottom:7px">Help Net Security - Cisco FMC bugs exploited by nation-state and ransomware actors (CVE-2026-20079, CVE-2026-20316) &mdash; <a href="https://www.helpnetsecurity.com/2026/09/10/cisco-fmc-exploited-cve-2026-20079-cve-2026-20316/">https://www.helpnetsecurity.com/2026/09/10/cisco-fmc-exploited-cve-2026-20079-cve-2026-20316/</a></div><div style="margin-bottom:7px">The Hacker News - Google Releases Chrome Update to Patch Actively Exploited V8 Zero-Day &mdash; <a href="https://thehackernews.com/2026/09/google-releases-chrome-update-to-patch.html">https://thehackernews.com/2026/09/google-releases-chrome-update-to-patch.html</a></div><div style="margin-bottom:7px">CISA - Known Exploited Vulnerabilities Catalog &mdash; <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">https://www.cisa.gov/known-exploited-vulnerabilities-catalog</a></div><div style="margin-bottom:7px">Senserva - CISA KEV Additions This Week: 11 New Exploited CVEs (September 2026) &mdash; <a href="https://senserva.com/exploited-this-week.html">https://senserva.com/exploited-this-week.html</a></div>
+@@SRCS@@
 </div>
 <p class="disc">Compiled automatically from public reporting gathered during this run. Every claim above traces to a source listed here or to a standing sourced correction; where a CVSS, deadline or attribution was not stated by a primary source, this page says so rather than supplying one. This is a news summary, not security advice &mdash; verify against your own vendor advisories before acting.</p>
+"""
 
-</div>
-<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \u00b7 briefings refresh every 30 minutes, 8 AM\u20136 PM ET';}catch(e){}})();</script>
-</body></html>
+CY_BODY = (CY_BODY.replace("@@MAST@@", masthead("The Cyber Wire", "Your daily cybersecurity briefing &mdash; breaches, exploited flaws &amp; federal deadlines"))
+                  .replace("@@TLDR@@", tldr("The Wire", S_CY))
+                  .replace("@@FRESH@@", FRESH)
+                  .replace("@@NAV@@", nav("cyber"))
+                  .replace("@@SRCS@@", srcblock(CY_SRC)))
+io.open(os.path.join(OUT, "cyber-briefing.html"), "w", encoding="utf-8").write(
+    page("The Cyber Wire &mdash; Daily Briefings", CY_CSS, CY_BODY))
+print("cyber ok")

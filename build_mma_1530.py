@@ -1,109 +1,64 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>The Octagon &mdash; Daily Briefings</title>
-<style>
-:root{
-  --bg:#100c0c; --panel:#1a1313; --line:#322020;
-  --accent:#e84545; --accent2:#ff8a5c;
-  --txt:#e9e6e2; --muted:#9aa0a6;
-  --up:#22c55e; --down:#ef4444; --warn:#f0b429; --crit:#ef4444;
-  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--txt);
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  font-size:15.5px;line-height:1.62;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1000px;margin:0 auto;padding:26px 20px 70px}
-a{color:var(--accent2);text-decoration:none}
-a:hover{text-decoration:underline}
-.masthead{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:14px}
-.masthead h1{margin:0 0 4px;font-size:34px;letter-spacing:-.5px}
-.masthead .sub{color:var(--muted);font-size:14px;margin:0}
-.meta{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
-.pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;
-  background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:4px 11px;color:var(--muted)}
-.pill.live{color:var(--up);border-color:rgba(34,197,94,.35)}
-.pill.live .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--up);margin-right:6px;vertical-align:middle}
-nav.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 20px}
-nav.tabs a{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
-  background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:8px 13px;color:var(--muted);transition:.15s}
-nav.tabs a:hover{color:var(--txt);border-color:var(--accent);text-decoration:none;transform:translateY(-1px)}
-nav.tabs a.active{color:var(--accent);border-color:var(--accent);background:rgba(255,255,255,.03)}
-.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
-  border-radius:10px;padding:11px 15px;margin:6px 0 2px;font-size:14.5px;line-height:1.5}
-.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-right:9px}
-.freshline{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--muted);margin:9px 0 2px}
-h2.sec{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--accent);margin:34px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
-.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:14px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:13px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 16px;transition:.16s}
-.card:hover{transform:translateY(-2px);border-color:var(--accent);box-shadow:0 8px 22px rgba(0,0,0,.34)}
-.card h3{margin:0 0 7px;font-size:16px;line-height:1.32}
-.card p{margin:0;font-size:14px;color:#cfcbc6}
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:9px}
-.t{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
-  border-radius:5px;padding:3px 7px;border:1px solid var(--line);color:var(--muted)}
-.t.new{color:var(--accent);border-color:var(--accent)}
-.t.hot{color:var(--crit);border-color:rgba(239,68,68,.45)}
-.t.pro{color:var(--up);border-color:rgba(34,197,94,.45)}
-.t.gold{color:var(--warn);border-color:rgba(240,180,41,.45)}
-table{width:100%;border-collapse:collapse;font-size:14px}
-th{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
-  text-align:left;padding:9px 10px;border-bottom:1px solid var(--line)}
-td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top}
-tr:last-child td{border-bottom:none}
-.up{color:var(--up)} .down{color:var(--down)} .mut{color:var(--muted)}
-ul.bul{margin:0;padding-left:19px} ul.bul li{margin-bottom:9px}
-.callout{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--warn);
-  border-radius:10px;padding:14px 17px;margin-bottom:14px}
-.callout.crit{border-left-color:var(--crit)}
-.callout h3{margin:0 0 7px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--warn)}
-.callout.crit h3{color:var(--crit)}
-.banner{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 17px;margin-bottom:14px;
-  display:flex;flex-wrap:wrap;align-items:center;gap:13px}
-.banner .lvl{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;
-  padding:5px 12px;border-radius:7px;border:1px solid var(--crit);color:var(--crit)}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:11px;margin-bottom:14px}
-.stat{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:13px 15px}
-.stat .n{font-family:var(--mono);font-size:21px;color:var(--accent);letter-spacing:-.5px}
-.stat .l{font-size:11.5px;color:var(--muted);margin-top:3px;line-height:1.4}
-.note{font-size:12.5px;color:var(--muted);margin:9px 0 0}
-.srcs{font-size:12.5px;color:var(--muted);word-break:break-word}
-.srcs a{color:var(--muted)}
-.disc{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin-top:26px;padding-top:14px}
+# -*- coding: utf-8 -*-
+import io, os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from shared import css, masthead, nav, page
+from build_1530 import S_MMA, tldr, FRESH, srcblock
 
+OUT = os.path.dirname(os.path.abspath(__file__))
+ACC, ACC2 = "#e84545", "#ff8a5c"
+EXTRA = """
 .cdn{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:11px;
   padding:12px 16px;margin-bottom:16px;display:flex;flex-wrap:wrap;align-items:baseline;gap:12px}
 .cdn .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
 .cdn .v{font-family:var(--mono);font-size:18px;color:var(--txt);letter-spacing:-.3px}
 .cdn .w{font-size:13.5px;color:var(--muted)}
 .dtv{font-family:var(--mono);font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--warn);margin-bottom:6px}
+"""
+CSS = css(ACC, ACC2, "#100c0c", "#1a1313", "#322020", EXTRA)
 
-@media(max-width:640px){.masthead h1{font-size:26px}.wrap{padding:18px 14px 50px}}
-</style>
-</head><body><div class="wrap">
-<header class="masthead">
-<h1>The Octagon</h1>
-<p class="sub">Your daily MMA briefing &mdash; UFC, prospects &amp; the business of fighting</p>
-<div class="meta">
-<span class="pill live"><span class="dot"></span>Live</span>
-<span class="pill" id="edition">&nbsp;</span>
-<span class="pill" id="datestamp">&nbsp;</span>
-<span class="pill">Updated <span id="updated">&nbsp;</span></span>
-</div>
-</header>
-<div class="tldr"><b>Tale of the Tape</b> <span>Every fighter on the thirteen-bout Noche UFC card made weight in Glendale, where Jean Silva headlines against short-notice replacement Jose Miguel Delgado on Saturday, a week after Salahdine Parnasse&rsquo;s first-round TKO of Dan Hooker topped the highest-grossing event in Accor Arena history.</span></div>
-<div class="freshline" id="freshline">&nbsp;</div>
-<nav class="tabs"><a href="index.html">★ Front Page</a><a href="cyber-briefing.html">⛨ The Cyber Wire</a><a href="wallstreet-briefing.html">▲ The Closing Bell</a><a href="mma-briefing.html" class="active">⊘ The Octagon</a><a href="archive.html">🗄 Archive</a></nav>
+SRC = [
+ ("UFC.com - Official Weigh-In Results | Noche UFC (Sept. 11, 2026)",
+  "https://www.ufc.com/news/noche-ufc-silva-delgado-official-weigh-in-results"),
+ ("UFC.com - Main Card Results | UFC Paris (Hooker vs Parnasse)",
+  "https://www.ufc.com/news/ufc-paris-results-hooker-vs-parnasse"),
+ ("UFC.com - Bonus Coverage | UFC Paris",
+  "https://www.ufc.com/news/bonus-coverage-ufc-fight-night-paris-2026"),
+ ("UFC.com - Women's Flyweight Championship Leads Showcase Of Rising Stars In UFC Return To Salt Lake City",
+  "https://www.ufc.com/news/womens-flyweight-championship-leads-showcase-rising-stars-ufc-return-salt-lake-city"),
+ ("UFC.com - Fighters On The Rise | Noche UFC (McMillen, Rongzhu, Tarin)",
+  "https://www.ufc.com/news/fighters-on-the-rise-noche-ufc-mcmillen-rongzhu-tarin"),
+ ("UFC.com - UFC Fight Night: Silva vs Delgado event page",
+  "https://www.ufc.com/event/ufc-fight-night-september-12-2026"),
+ ("Wikipedia - UFC Fight Night: Silva vs. Delgado",
+  "https://en.wikipedia.org/wiki/UFC_Fight_Night:_Silva_vs._Delgado"),
+ ("Wikipedia - UFC 331", "https://en.wikipedia.org/wiki/UFC_331"),
+ ("Yahoo Sports - UFC 331 fight card revealed, Van vs. Pantoja 2 leads loaded lineup",
+  "https://sports.yahoo.com/articles/ufc-331-fight-card-revealed-235537467.html"),
+ ("Yahoo Sports - Noche UFC preview and predictions: Can Jose Delgado actually upset Jean Silva?",
+  "https://ca.sports.yahoo.com/news/noche-ufc-preview-and-predictions-can-jose-delgado-actually-upset-jean-silva-173056798.html"),
+ ("Yahoo Sports - Noche UFC video: Jean Silva, Jose Delgado make weight in Arizona",
+  "https://ca.sports.yahoo.com/news/noche-ufc-video-jean-silva-162920602.html"),
+ ("CBS Sports - Noche UFC predictions: Jean Silva vs. Jose Delgado fight card, odds and expert picks",
+  "https://www.cbssports.com/ufc/news/noche-ufc-fight-card-predictions-jean-silva-jose-delgado-odds/"),
+ ("RotoWire - Silva vs Delgado Sep 12, 2026 Odds",
+  "https://www.rotowire.com/betting/mma/fight/jose-delgado-vs-jean-silva-odds-2026-09-12-5614"),
+ ("ESPN - Current and all-time UFC champions",
+  "https://www.espn.com/mma/story/_/id/14947566/current-all-ufc-champions"),
+]
 
-<div class="cdn">
+CDN = """<div class="cdn">
 <span class="k">Next card</span>
 <span class="v" id="ufccdn">&nbsp;</span>
 <span class="w">Noche UFC: Silva vs Delgado &mdash; Sat 12 Sept, Desert Diamond Arena, Glendale, AZ. Prelims 2 PM ET, main card 5 PM ET, Paramount+.</span>
 </div>
-<script>(function(){var t=new Date('2026-09-12T14:00:00-04:00');function u(){var e=document.getElementById('ufccdn');if(!e)return;var d=t-new Date();if(d<=0){e.textContent='Fight week \u2014 live/completed';return;}var dd=Math.floor(d/864e5),hh=Math.floor(d%864e5/36e5),mm=Math.floor(d%36e5/6e4);e.textContent=dd+'d '+hh+'h '+mm+'m';}u();setInterval(u,3e4);})();</script>
+<script>(function(){var t=new Date('2026-09-12T14:00:00-04:00');function u(){var e=document.getElementById('ufccdn');if(!e)return;var d=t-new Date();if(d<=0){e.textContent='Fight week \\u2014 live/completed';return;}var dd=Math.floor(d/864e5),hh=Math.floor(d%864e5/36e5),mm=Math.floor(d%36e5/6e4);e.textContent=dd+'d '+hh+'h '+mm+'m';}u();setInterval(u,3e4);})();</script>"""
+
+BODY = """@@MAST@@
+@@TLDR@@
+@@FRESH@@
+@@NAV@@
+
+@@CDN@@
 
 <h2 class="sec">Top Story</h2>
 <div class="panel" style="border-left:4px solid var(--accent)">
@@ -251,10 +206,18 @@ ul.bul{margin:0;padding-left:19px} ul.bul li{margin-bottom:9px}
 
 <h2 class="sec">Sources</h2>
 <div class="panel srcs">
-<div style="margin-bottom:7px">UFC.com - Official Weigh-In Results | Noche UFC (Sept. 11, 2026) &mdash; <a href="https://www.ufc.com/news/noche-ufc-silva-delgado-official-weigh-in-results">https://www.ufc.com/news/noche-ufc-silva-delgado-official-weigh-in-results</a></div><div style="margin-bottom:7px">UFC.com - Main Card Results | UFC Paris (Hooker vs Parnasse) &mdash; <a href="https://www.ufc.com/news/ufc-paris-results-hooker-vs-parnasse">https://www.ufc.com/news/ufc-paris-results-hooker-vs-parnasse</a></div><div style="margin-bottom:7px">UFC.com - Bonus Coverage | UFC Paris &mdash; <a href="https://www.ufc.com/news/bonus-coverage-ufc-fight-night-paris-2026">https://www.ufc.com/news/bonus-coverage-ufc-fight-night-paris-2026</a></div><div style="margin-bottom:7px">UFC.com - Women's Flyweight Championship Leads Showcase Of Rising Stars In UFC Return To Salt Lake City &mdash; <a href="https://www.ufc.com/news/womens-flyweight-championship-leads-showcase-rising-stars-ufc-return-salt-lake-city">https://www.ufc.com/news/womens-flyweight-championship-leads-showcase-rising-stars-ufc-return-salt-lake-city</a></div><div style="margin-bottom:7px">UFC.com - Fighters On The Rise | Noche UFC (McMillen, Rongzhu, Tarin) &mdash; <a href="https://www.ufc.com/news/fighters-on-the-rise-noche-ufc-mcmillen-rongzhu-tarin">https://www.ufc.com/news/fighters-on-the-rise-noche-ufc-mcmillen-rongzhu-tarin</a></div><div style="margin-bottom:7px">UFC.com - UFC Fight Night: Silva vs Delgado event page &mdash; <a href="https://www.ufc.com/event/ufc-fight-night-september-12-2026">https://www.ufc.com/event/ufc-fight-night-september-12-2026</a></div><div style="margin-bottom:7px">Wikipedia - UFC Fight Night: Silva vs. Delgado &mdash; <a href="https://en.wikipedia.org/wiki/UFC_Fight_Night:_Silva_vs._Delgado">https://en.wikipedia.org/wiki/UFC_Fight_Night:_Silva_vs._Delgado</a></div><div style="margin-bottom:7px">Wikipedia - UFC 331 &mdash; <a href="https://en.wikipedia.org/wiki/UFC_331">https://en.wikipedia.org/wiki/UFC_331</a></div><div style="margin-bottom:7px">Yahoo Sports - UFC 331 fight card revealed, Van vs. Pantoja 2 leads loaded lineup &mdash; <a href="https://sports.yahoo.com/articles/ufc-331-fight-card-revealed-235537467.html">https://sports.yahoo.com/articles/ufc-331-fight-card-revealed-235537467.html</a></div><div style="margin-bottom:7px">Yahoo Sports - Noche UFC preview and predictions: Can Jose Delgado actually upset Jean Silva? &mdash; <a href="https://ca.sports.yahoo.com/news/noche-ufc-preview-and-predictions-can-jose-delgado-actually-upset-jean-silva-173056798.html">https://ca.sports.yahoo.com/news/noche-ufc-preview-and-predictions-can-jose-delgado-actually-upset-jean-silva-173056798.html</a></div><div style="margin-bottom:7px">Yahoo Sports - Noche UFC video: Jean Silva, Jose Delgado make weight in Arizona &mdash; <a href="https://ca.sports.yahoo.com/news/noche-ufc-video-jean-silva-162920602.html">https://ca.sports.yahoo.com/news/noche-ufc-video-jean-silva-162920602.html</a></div><div style="margin-bottom:7px">CBS Sports - Noche UFC predictions: Jean Silva vs. Jose Delgado fight card, odds and expert picks &mdash; <a href="https://www.cbssports.com/ufc/news/noche-ufc-fight-card-predictions-jean-silva-jose-delgado-odds/">https://www.cbssports.com/ufc/news/noche-ufc-fight-card-predictions-jean-silva-jose-delgado-odds/</a></div><div style="margin-bottom:7px">RotoWire - Silva vs Delgado Sep 12, 2026 Odds &mdash; <a href="https://www.rotowire.com/betting/mma/fight/jose-delgado-vs-jean-silva-odds-2026-09-12-5614">https://www.rotowire.com/betting/mma/fight/jose-delgado-vs-jean-silva-odds-2026-09-12-5614</a></div><div style="margin-bottom:7px">ESPN - Current and all-time UFC champions &mdash; <a href="https://www.espn.com/mma/story/_/id/14947566/current-all-ufc-champions">https://www.espn.com/mma/story/_/id/14947566/current-all-ufc-champions</a></div>
+@@SRCS@@
 </div>
 <p class="disc">Compiled automatically from public reporting gathered during this run. Cards and bouts are subject to change &mdash; fighters withdraw, bouts are rebooked and betting lines move, sometimes within hours of publication. Records, methods, odds and financial figures appear only where a source read this run states them; where a figure was absent, this page says so rather than supplying one.</p>
+"""
 
-</div>
-<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \u00b7 briefings refresh every 30 minutes, 8 AM\u20136 PM ET';}catch(e){}})();</script>
-</body></html>
+BODY = (BODY.replace("@@MAST@@", masthead("The Octagon", "Your daily MMA briefing &mdash; UFC, prospects &amp; the business of fighting"))
+            .replace("@@TLDR@@", tldr("Tale of the Tape", S_MMA))
+            .replace("@@FRESH@@", FRESH)
+            .replace("@@NAV@@", nav("mma"))
+            .replace("@@CDN@@", CDN)
+            .replace("@@SRCS@@", srcblock(SRC)))
+
+io.open(os.path.join(OUT, "mma-briefing.html"), "w", encoding="utf-8").write(
+    page("The Octagon &mdash; Daily Briefings", CSS, BODY))
+print("mma ok")
