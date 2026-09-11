@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Cyber Wire — Daily Briefings</title>
+<style>
+:root{
+  --bg:#0a0e0e; --panel:#141a1a; --panel2:#18201f; --line:#25302f;
+  --ink:#e4ecea; --mute:#8fa3a0; --accent:#22d3a8; --accent2:#36c6ff;
+  --up:#22d3a8; --warn:#e0a13a; --crit:#e2544c;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;line-height:1.6;font-size:15.5px}
+.wrap{max-width:1020px;margin:0 auto;padding:26px 20px 60px}
+.masthead{border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:14px}
+.masthead h1{font-size:38px;line-height:1.1;margin:0 0 4px;letter-spacing:-.7px;color:var(--accent)}
+.masthead .tagline{color:var(--mute);font-size:14px;margin:0 0 11px}
+.meta{display:flex;flex-wrap:wrap;gap:7px}
+.pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:4px 10px;color:var(--mute)}
+.pill.live{color:var(--accent);border-color:#1c5a4a}
+.pill.live .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);margin-right:6px;vertical-align:middle}
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;padding:11px 15px;margin:6px 0 2px;font-size:14.5px;line-height:1.5}
+.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-right:9px}
+.freshline{font-family:var(--mono);font-size:11px;color:var(--mute);letter-spacing:.05em;margin:9px 2px 16px}
+nav.tabs{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 18px}
+nav.tabs a{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--mute);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:7px 12px;transition:.15s}
+nav.tabs a:hover{color:var(--ink);border-color:#364745}
+nav.tabs a.active{color:var(--accent);border-color:var(--accent);background:#0f2622}
+.threat{display:flex;flex-wrap:wrap;align-items:center;gap:12px;background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--crit);border-radius:12px;padding:13px 17px;margin-bottom:12px}
+.threat .lvl{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--crit);font-weight:700}
+.threat .why{font-size:14px;color:#c3d1cf}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin-bottom:20px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 15px}
+.stat .n{font-family:var(--mono);font-size:23px;color:var(--accent2);line-height:1.2}
+.stat .l{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin-top:5px}
+h2.sec{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:30px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:14px}
+.lead h3{font-size:25px;line-height:1.25;margin:0 0 10px}
+.lead p{margin:0 0 10px}
+.lead p:last-child{margin-bottom:0}
+.callout{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--crit);border-radius:12px;padding:16px 19px;margin-bottom:14px}
+.callout h3{margin:0 0 8px;font-size:17px;color:var(--crit)}
+.callout p{margin:0;font-size:14.5px;color:#c9d6d4}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 17px;transition:transform .15s,border-color .15s}
+.card:hover{transform:translateY(-3px);border-color:#3a4d4a}
+.card h3{font-size:16px;margin:0 0 7px;line-height:1.35}
+.card p{margin:0;font-size:14px;color:#c3d1cf}
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:8px}
+.t{font-family:var(--mono);font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;padding:3px 7px;border-radius:5px;background:#11302b;color:var(--accent);border:1px solid #1c5a4a}
+.t.new{background:#0e2b3a;color:var(--accent2);border-color:#1d4f68}
+.t.crit{background:#2c1715;color:var(--crit);border-color:#5a2723}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);font-weight:400}
+td{padding:9px 10px;border-bottom:1px solid #1e2726;vertical-align:top}
+tr:last-child td{border-bottom:none}
+td.num{font-family:var(--mono);font-size:13.5px}
+ul.kev{margin:0;padding-left:19px}
+ul.kev li{margin-bottom:10px}
+ul.kev li:last-child{margin-bottom:0}
+.cd{font-family:var(--mono);font-size:11.5px;padding:1px 6px;border-radius:5px;background:#11302b;color:var(--accent);border:1px solid #1c5a4a;white-space:nowrap}
+.cd.crit{background:#2c1715;color:var(--crit);border-color:#5a2723}
+.cd.warn{background:#2e2312;color:var(--warn);border-color:#5b451a}
+.foot{margin-top:34px;border-top:1px solid var(--line);padding-top:16px;font-size:12.5px;color:var(--mute)}
+.foot a{color:#7f9490;word-break:break-all;text-decoration:none}
+.foot a:hover{color:var(--accent)}
+.foot .srcline{margin-bottom:7px}
+.disc{margin-top:14px;font-style:italic;font-size:12.5px;color:#748885}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="masthead">
+    <h1>The Cyber Wire</h1>
+    <p class="tagline">Your daily briefing on breaches, exploited vulnerabilities and the people behind them</p>
+    <div class="meta">
+      <span class="pill live"><span class="dot"></span>Live</span>
+      <span class="pill" id="edition">Afternoon Edition</span>
+      <span class="pill" id="datestamp">Friday, September 11, 2026</span>
+      <span class="pill">Updated <span id="updated">—</span></span>
+    </div>
+  </div>
+
+  <div class="tldr"><b>The Wire</b> <span>The federal patch deadline for the exploited Cisco, Citrix and Fortinet trio falls tomorrow, 12 September; separately CISA confirmed ransomware gangs are exploiting a critical WatchGuard Firebox flaw, and identity vendor IDScan confirmed a breach after 153 million driver's licences leaked to the dark web.</span></div>
+  <div class="freshline" id="freshline">Data as of — ET</div>
+
+  <nav class="tabs">
+    <a href="index.html">★ Front Page</a>
+    <a href="cyber-briefing.html" class="active">⛨ The Cyber Wire</a>
+    <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
+    <a href="mma-briefing.html">⊘ The Octagon</a>
+    <a href="archive.html">🗄 Archive</a>
+  </nav>
+
+  <div class="threat">
+    <span class="lvl">Threat Level — High</span>
+    <span class="why">A maximum-severity, unauthenticated file-read flaw in GitLab is being probed across the internet, and a hard federal remediation deadline for three actively exploited edge-device bugs expires tomorrow.</span>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="n">10.0</div><div class="l">GitLab CVSS (vendor-assigned)</div></div>
+    <div class="stat"><div class="n">1 day</div><div class="l">to the 12 Sep KEV deadline</div></div>
+    <div class="stat"><div class="n">1,079,819</div><div class="l">people in the Mathspace breach</div></div>
+    <div class="stat"><div class="n">153M</div><div class="l">driver's licences leaked (IDScan)</div></div>
+  </div>
+
+  <h2 class="sec">Top Story</h2>
+  <div class="panel lead">
+    <h3>GitLab CVE-2026-85706 — CVSS 10.0, unauthenticated file read, probed in the wild a day after disclosure</h3>
+    <p>A path-traversal flaw in the <b>repository commits API</b> of GitLab Community and Enterprise Edition lets an <b>unauthenticated</b> user read arbitrary files off the server. GitLab assigned it <b>CVSS 10.0</b> — the maximum. The root cause is improper path confinement combined with missing authentication enforcement on the endpoint.</p>
+    <p>Affected builds are <b>18.7 through 19.1.7</b>, <b>19.2 before 19.2.6</b> and <b>19.3 before 19.3.2</b>. GitLab shipped fixes on <b>10 September</b> in <b>19.1.8, 19.2.6 and 19.3.2</b>.</p>
+    <p>Exploitation followed within a day. watchTowr reports behavioural probes against its global honeypot network, meaning attackers have already reverse-engineered and reproduced the bug; CyberScoop describes internet-wide scanning. There is <b>no CISA remediation deadline</b> attached to this CVE — it is not in the KEV catalogue as of the reads taken this run — but self-hosted GitLab servers reachable from the internet should be treated as a same-day patch.</p>
+  </div>
+
+  <div class="callout">
+    <h3>⚑ Patch Priority — Cisco Secure Firewall Management Center, CVE-2026-20079 (CVSS 10.0) — federal deadline tomorrow, 12 September</h3>
+    <p>The authentication-bypass flaw in Cisco Secure FMC is the most urgent item with a hard date attached. It sits in the CISA KEV batch whose remediation deadline for federal civilian agencies is <b>Saturday 12 September 2026 — one day from today</b>, alongside Citrix NetScaler ADC/Gateway (CVE-2026-19490) and Fortinet FortiOS (CVE-2025-25249). <b>Cisco Talos reports that two recently patched Secure FMC flaws have been exploited by three separate threat clusters</b>, tied to both ransomware operations and state-sponsored activity — which is why this batch, not the louder GitLab bug, holds the priority slot. GitLab's CVSS 10.0 carries no federal deadline but is under active probing, so treat it as the same tier of urgency operationally.</p>
+  </div>
+
+  <h2 class="sec">Also Confirmed Today</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="tags"><span class="t new">New</span><span class="t">ransomware</span><span class="t">firewall</span></div>
+      <h3>CISA: ransomware gangs are exploiting a critical WatchGuard Firebox flaw</h3>
+      <p>CISA confirmed that <b>ransomware operators</b> are exploiting <b>CVE-2025-14733</b>, an <b>out-of-bounds write</b> in WatchGuard Firebox that lets an <b>unauthenticated</b> attacker execute code remotely in a low-complexity attack. This is not a new KEV addition — CISA first catalogued the flaw in <b>December 2025</b> — but the ransomware confirmation changes its priority for anyone who deferred the patch. Affected: <b>Fireware OS 11.x and later</b> (including 11.12.4_Update1), <b>12.x and later</b> (including 12.11.5), and <b>2025.1 through 2025.1.3</b>. A perimeter firewall reachable from the internet and running unpatched Fireware should be treated as the same tier of urgency as the 12 September batch below.</p>
+    </div>
+  </div>
+
+  <h2 class="sec">Threat Actor Spotlight</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="tags"><span class="t">extortion</span><span class="t">hardcoded credentials</span></div>
+      <h3>FulcrumSec — the "Hardcoded Horrorshow"</h3>
+      <p>The cyber-extortion group has built a campaign, which it named itself, around a single technique: finding <b>hardcoded credentials left in public-facing IT infrastructure</b> and using them to walk in. Named victims include <b>Novo Nordisk</b>, England's <b>Manchester Airports Group</b>, London consultancy <b>Arup Group</b> and Singapore's <b>Global Schools Group</b>. FulcrumSec began extorting Novo Nordisk in <b>June</b> and later released more than <b>1 terabyte</b> of stolen data after the Danish drugmaker refused to pay; reporting this week ties that intrusion to <b>stolen GitHub access tokens</b>. The transferable point is the same one the group keeps proving: a credential committed to a repository or shipped in client-side code is a key left in the door, and its exposure window starts the day the code went out.</p>
+    </div>
+    <div class="card">
+      <div class="tags"><span class="t">extortion</span><span class="t">data theft</span></div>
+      <h3>ShinyHunters — the Metabase campaign</h3>
+      <p>The extortion group added <b>Metabase</b> to its dark-web leak site on <b>11 August</b>, and the fallout is still landing a month later. Mathspace's stolen data came out of a self-hosted Metabase instance; separately, ShinyHunters has been linked to the intrusion at hardware-wallet maker <b>Trezor</b>, whose affected-customer count grew from roughly <b>14,000 to 81,000</b> in a matter of weeks, and to the <b>AdaptHealth</b> attack. The group's model is exfiltration and extortion rather than encryption.</p>
+    </div>
+  </div>
+
+  <h2 class="sec">Breaches &amp; Incidents</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="tags"><span class="t new">New</span><span class="t">identity documents</span><span class="t">dark web</span></div>
+      <h3>IDScan: 153 million driver's licences on the dark web</h3>
+      <p>The identity-verification vendor <b>confirmed a breach</b> after <b>153 million driver's licences</b> were leaked to a dark-web forum. The count is what makes this the largest single figure on the page — scanned government identity documents are not credentials that can be rotated, and they are the raw material for account-opening fraud rather than for account takeover. <b>No ransom demand, intrusion vector or disclosure timeline appeared in any source read this run</b>, so none is stated here.</p>
+    </div>
+    <div class="card">
+      <div class="tags"><span class="t">education</span><span class="t">sql injection</span></div>
+      <h3>Mathspace: 1,079,819 students, staff and parents</h3>
+      <p>The online maths-learning platform disclosed a breach affecting <b>1,079,819</b> students, teachers, staff and parents or guardians across <b>Australia and New Zealand</b>. Attackers compromised its self-hosted <b>Metabase</b> internal reporting system using <b>CVE-2026-72898</b>, a <b>CVSS 10.0</b> SQL-injection flaw patched on <b>6 August</b>; the intrusion was discovered roughly three weeks later. Taken: names, user IDs, usernames, email addresses, verification status, time zone, country and join/login dates.</p>
+    </div>
+    <div class="card">
+      <div class="tags"><span class="t">phishing</span><span class="t">supply chain</span></div>
+      <h3>Trezor: 347,000 addresses targeted, 2,500 clicked</h3>
+      <p>Phishing against Trezor customers reached <b>347,000 email addresses</b>, and <b>2,500 users</b> clicked the embedded malicious link. The campaign has been tied to ShinyHunters, and the count of affected customers has climbed from about <b>14,000 to 81,000</b> as the investigation has widened.</p>
+    </div>
+    <div class="card">
+      <div class="tags"><span class="t">healthcare</span><span class="t">third party</span></div>
+      <h3>Veradigm: vendor API credentials, patient SSNs</h3>
+      <p>The health-tech firm formerly known as Allscripts told the <b>SEC</b> that an attacker took credentials from a <b>vendor's environment</b> for a Veradigm customer-services <b>API</b> and used them to copy patient data including <b>Social Security numbers</b>. Clinical and medical data were not affected, and the credentials reached no other part of the environment. <b>The Gentlemen</b> claimed the intrusion on 5 September, alleges <b>3.5 million</b> patient records and threatened to leak today.</p>
+    </div>
+    <div class="card">
+      <div class="tags"><span class="t">exposure</span><span class="t">travel</span></div>
+      <h3>220M+ passenger and crew records exposed</h3>
+      <p>An Advance Passenger Information System database was left exposed, spanning <b>January 2017 to April 2026</b> and including passport and travel-document numbers. Found by <b>Kinryū Labs</b> on <b>3 June</b> and disclosed <b>8 September</b>; the IP traces to <b>Viettel</b>, Vietnam's state-owned telco. Two misconfigurations were involved, one a cloud path accepting <b>default credentials</b>.</p>
+    </div>
+    <div class="card">
+      <div class="tags"><span class="t">ransomware</span><span class="t">government</span></div>
+      <h3>Spain's national weather agency hit by Panzer ransomware</h3>
+      <p><b>Agencia Estatal de Meteorología (AEMET)</b>, the Spanish state meteorological agency, was listed as a Panzer ransomware victim in an incident surfaced on <b>11 September</b>. Two other victims appeared in the same window: a US medical department store, also surfaced 11 September, and <b>CO-OP URBAN BANK LTD</b> in India, claimed by the Global Secret Group on <b>10 September</b>. No record counts, ransom demands or organisational confirmations appeared in the reads taken this run, and none is supplied here.</p>
+    </div>
+    <div class="card">
+      <div class="tags"><span class="t">healthcare</span><span class="t">shinyhunters</span></div>
+      <h3>AdaptHealth: 4.1 million people</h3>
+      <p>The home-medical-equipment provider confirmed that data on <b>4.1 million</b> people was exposed in a cyberattack discovered in <b>July</b>, attributed to the <b>ShinyHunters</b> threat group.</p>
+    </div>
+    <div class="card">
+      <div class="tags"><span class="t">availability</span><span class="t">patch tuesday</span></div>
+      <h3>September Windows Server updates break Remote Desktop Services</h3>
+      <p>Session hosts on <b>Windows Server 2019, 2022 and 2025</b> begin freezing hours after boot, leaving RDP connections stuck at "Connecting…" and preventing clean logoff. Three cumulative updates are implicated: <b>KB5122876</b> (2019), <b>KB5122882</b> (2022) and <b>KB5122871</b> (2025). Microsoft says it is investigating. Rolling back restores stability but strips the security fixes shipped in the same package — including two actively exploited zero-days.</p>
+    </div>
+  </div>
+
+  <h2 class="sec">Vulnerability Watch</h2>
+  <div class="panel" style="padding:6px 10px">
+  <table>
+    <tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr>
+    <tr><td class="num">CVE-2025-14733</td><td class="num">Not stated in sources read</td><td>WatchGuard Firebox — Fireware OS 11.x+, 12.x+, 2025.1–2025.1.3</td><td>Out-of-bounds write; unauthenticated remote code execution. In KEV since December 2025; CISA confirmed ransomware exploitation this week.</td></tr>
+    <tr><td class="num">CVE-2026-85706</td><td class="num">10.0</td><td>GitLab CE/EE 18.7–19.1.7, 19.2&lt;19.2.6, 19.3&lt;19.3.2</td><td>Path traversal in the repository commits API; unauthenticated arbitrary file read. Fixed 19.1.8 / 19.2.6 / 19.3.2. Probed in the wild.</td></tr>
+    <tr><td class="num">CVE-2026-20079</td><td class="num">10.0</td><td>Cisco Secure Firewall Management Center</td><td>Authentication bypass. KEV; federal deadline 12 September.</td></tr>
+    <tr><td class="num">CVE-2026-19490</td><td class="num">9.3</td><td>Citrix NetScaler ADC and NetScaler Gateway</td><td>Authentication bypass. KEV; federal deadline 12 September.</td></tr>
+    <tr><td class="num">CVE-2025-25249</td><td class="num">7.3</td><td>Fortinet FortiOS</td><td>Heap-based buffer overflow. KEV; federal deadline 12 September.</td></tr>
+    <tr><td class="num">CVE-2026-72898</td><td class="num">10.0</td><td>Metabase (self-hosted)</td><td>SQL injection, patched 6 August. The route into Mathspace's reporting system.</td></tr>
+    <tr><td class="num">CVE-2026-67277</td><td class="num">Not stated</td><td>MikroTik RouterOS</td><td>Missing authentication (CWE-306) in the bandwidth-test (btest) service; kernel memory disclosure and DoS. Fixed 3 September in 6.49.21, 7.23.4 and 7.24.2.</td></tr>
+    <tr><td class="num">CVE-2026-86060</td><td class="num">Not stated</td><td>MikroTik RouterOS</td><td>Improper neutralisation of argument delimiters (CWE-88); manipulation of the trusted policy mask leading to privilege escalation. Same fixed builds.</td></tr>
+  </table>
+  </div>
+
+  <h2 class="sec">CISA KEV &amp; Federal Deadlines</h2>
+  <div class="panel">
+    <ul class="kev">
+      <li><b>Added 9 September — due 12 September</b> <span class="cd crit">1 day left</span><br>CVE-2026-20079 (Cisco Secure Firewall Management Center), CVE-2026-19490 (Citrix NetScaler ADC/Gateway), CVE-2025-25249 (Fortinet FortiOS). A fourth CVE carrying the same 12 September date, <b>CVE-2026-87491</b> (Google Chromium V8), was sourced separately.</li>
+      <li><b>Added 10 September — due 13 September</b> <span class="cd warn">2 days left</span><br>CVE-2026-67277 and CVE-2026-86060 (MikroTik RouterOS). Neither carries a CVSS score in any source read this run.</li>
+      <li><b>Added 2 September — due 5 September</b> <span class="cd crit">Overdue by 6 days</span><br>CVE-2026-83548 (SonicWall Appliance Work Place, unauthenticated SSRF, CVSS 10.0) and CVE-2026-83549 (SonicWall SMA1000 AMC, OS command injection, CVSS 7.8). Both are exploited in the wild and chain to unauthenticated RCE.</li>
+      <li><b>Added 8 September — no published due date read this run</b><br>CVE-2026-75650 (Adobe Commerce and Magento), CVE-2026-81963 (Microsoft Windows Update stack), CVE-2026-85880 (Microsoft Windows Advanced Local Procedure Call) and CVE-2026-86218 (N-able N-central). The two Windows entries are the zero-days addressed in this month's Patch Tuesday — the same rollout that broke Remote Desktop Services. No deadline is inferred here because none was published in the sources read.</li>
+    </ul>
+  </div>
+
+  <h2 class="sec">What is not on this page</h2>
+  <div class="panel">
+    <p style="margin:0;font-size:14px;color:#b6c4c2">Two things were deliberately left out. The <b>Nevada statewide ransomware incident</b> is an <b>August 2025</b> event and is excluded on sight whenever a "2026 breaches" roundup surfaces it. And <b>no remediation deadline is stated for the 8 September KEV batch</b>: CISA now assigns due dates per CVE on a risk basis, so the retired flat three-week heuristic is not used to fill the gap.</p>
+  </div>
+
+  <div class="foot">
+    <div class="srcline"><b>Sources read this run</b></div>
+    <div class="srcline">BleepingComputer — CISA: WatchGuard RCE flaw now exploited in ransomware attacks — <a href="https://www.bleepingcomputer.com/news/security/cisa-watchguard-rce-flaw-now-exploited-in-ransomware-attacks/">https://www.bleepingcomputer.com/news/security/cisa-watchguard-rce-flaw-now-exploited-in-ransomware-attacks/</a></div>
+    <div class="srcline">CISA — Known Exploited Vulnerabilities Catalog — <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">https://www.cisa.gov/known-exploited-vulnerabilities-catalog</a></div>
+    <div class="srcline">Privacy Guides — Data Breach Roundup (Sep 4–10, 2026) — <a href="https://www.privacyguides.org/news/2026/09/11/data-breach-roundup-sep-4-10-2026/">https://www.privacyguides.org/news/2026/09/11/data-breach-roundup-sep-4-10-2026/</a></div>
+    <div class="srcline">The Hacker News — GitLab CVSS 10 File-Read Flaw Draws In-the-Wild Probes After Disclosure — <a href="https://thehackernews.com/2026/09/gitlab-cvss-10-file-read-flaw-draws-in.html">https://thehackernews.com/2026/09/gitlab-cvss-10-file-read-flaw-draws-in.html</a></div>
+    <div class="srcline">watchTowr — Rapid Reaction: GitLab Path Traversal Vulnerability (CVE-2026-85706) — <a href="https://watchtowr.com/resources/rapid-reaction-gitlab-critical-path-traversal-vulnerability-cve-2026-85706/">https://watchtowr.com/resources/rapid-reaction-gitlab-critical-path-traversal-vulnerability-cve-2026-85706/</a></div>
+    <div class="srcline">SecurityWeek — GitLab Vulnerability Exploited One Day After Disclosure — <a href="https://www.securityweek.com/gitlab-vulnerability-exploited-one-day-after-disclosure/">https://www.securityweek.com/gitlab-vulnerability-exploited-one-day-after-disclosure/</a></div>
+    <div class="srcline">CyberScoop — GitLab's critical flaws are already drawing internet-wide probes — <a href="https://cyberscoop.com/gitlab-critical-flaws-path-traversal-scans/">https://cyberscoop.com/gitlab-critical-flaws-path-traversal-scans/</a></div>
+    <div class="srcline">The Hacker News — CISA Flags Exploited Cisco, Citrix, Fortinet Flaws, Sets Sept. 12 Federal Patch Deadline — <a href="https://thehackernews.com/2026/09/cisa-flags-exploited-cisco-citrix.html">https://thehackernews.com/2026/09/cisa-flags-exploited-cisco-citrix.html</a></div>
+    <div class="srcline">CISA — Adds Four Known Exploited Vulnerabilities to Catalog (8 Sep 2026) — <a href="https://www.cisa.gov/news-events/alerts/2026/09/08/cisa-adds-four-known-exploited-vulnerabilities-catalog">https://www.cisa.gov/news-events/alerts/2026/09/08/cisa-adds-four-known-exploited-vulnerabilities-catalog</a></div>
+    <div class="srcline">CISA — Known Exploited Vulnerabilities Catalog — <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">https://www.cisa.gov/known-exploited-vulnerabilities-catalog</a></div>
+    <div class="srcline">BleepingComputer — Mathspace discloses data breach affecting over 1 million people — <a href="https://www.bleepingcomputer.com/news/security/mathspace-discloses-data-breach-affecting-over-1-million-people/">https://www.bleepingcomputer.com/news/security/mathspace-discloses-data-breach-affecting-over-1-million-people/</a></div>
+    <div class="srcline">Help Net Security — Mathspace breach exposes data on over a million students and parents — <a href="https://www.helpnetsecurity.com/2026/09/08/mathspace-data-breach-metabase-vulnerability/">https://www.helpnetsecurity.com/2026/09/08/mathspace-data-breach-metabase-vulnerability/</a></div>
+    <div class="srcline">BleepingComputer — September Windows Server updates break Remote Desktop Services — <a href="https://www.bleepingcomputer.com/news/microsoft/september-windows-server-updates-break-remote-desktop-services/">https://www.bleepingcomputer.com/news/microsoft/september-windows-server-updates-break-remote-desktop-services/</a></div>
+    <div class="srcline">Privacy Guides — Data Breach Roundup (Sep 4–10, 2026) — <a href="https://www.privacyguides.org/news/2026/09/11/data-breach-roundup-sep-4-10-2026/">https://www.privacyguides.org/news/2026/09/11/data-breach-roundup-sep-4-10-2026/</a></div>
+    <div class="srcline">BankInfoSecurity — Novo Nordisk Data Breach Tied to Stolen GitHub Access Tokens — <a href="https://www.bankinfosecurity.com/novo-nordisk-data-breach-tied-to-stolen-github-access-tokens-a-32802">https://www.bankinfosecurity.com/novo-nordisk-data-breach-tied-to-stolen-github-access-tokens-a-32802</a></div>
+    <div class="srcline">GovInfoSecurity — Novo Nordisk Data Breach Tied to Stolen GitHub Access Tokens — <a href="https://www.govinfosecurity.com/novo-nordisk-data-breach-tied-to-stolen-github-access-tokens-a-32802">https://www.govinfosecurity.com/novo-nordisk-data-breach-tied-to-stolen-github-access-tokens-a-32802</a></div>
+    <div class="srcline">Security Boulevard — Daily OT Security News: September 11, 2026 — <a href="https://securityboulevard.com/2026/09/daily-ot-security-news-september-11-2026-2/">https://securityboulevard.com/2026/09/daily-ot-security-news-september-11-2026-2/</a></div>
+    <div class="srcline">Ransomware.live — victim tracker — <a href="https://www.ransomware.live/">https://www.ransomware.live/</a></div>
+    <div class="srcline">CYFIRMA — Weekly Intelligence Report, 11 Sep 2026 — <a href="https://www.cyfirma.com/news/weekly-intelligence-report-11-sep-2026/">https://www.cyfirma.com/news/weekly-intelligence-report-11-sep-2026/</a></div>
+    <div class="disc">Severity scores are the vendor's or CISA's where one is published; where no score appeared in any source read this run, the cell says so rather than carrying a third-party estimate. Remediation deadlines are CISA-stated, never inferred.</div>
+  </div>
+
+</div>
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
+</body>
+</html>

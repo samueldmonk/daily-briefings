@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Closing Bell — Daily Briefings</title>
+<style>
+:root{
+  --bg:#0c0c0e; --panel:#16161a; --panel2:#1b1b20; --line:#2a2a31;
+  --ink:#e9e6df; --mute:#9b978d; --accent:#caa64a; --accent2:#e8c766;
+  --up:#3fbf7f; --down:#e2544c; --warn:#e0a13a; --crit:#e2544c;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;line-height:1.6;font-size:15.5px}
+.wrap{max-width:1020px;margin:0 auto;padding:26px 20px 60px}
+.masthead{border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:14px}
+.masthead h1{font-family:Georgia,"Times New Roman",serif;font-size:40px;line-height:1.1;margin:0 0 4px;letter-spacing:-.5px;color:var(--accent2)}
+.masthead .tagline{color:var(--mute);font-size:14px;margin:0 0 11px}
+.meta{display:flex;flex-wrap:wrap;gap:7px}
+.pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:4px 10px;color:var(--mute)}
+.pill.live{color:var(--up);border-color:#245c41}
+.pill.live .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--up);margin-right:6px;vertical-align:middle}
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;padding:11px 15px;margin:6px 0 2px;font-size:14.5px;line-height:1.5}
+.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-right:9px}
+.freshline{font-family:var(--mono);font-size:11px;color:var(--mute);letter-spacing:.05em;margin:9px 2px 16px}
+nav.tabs{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 18px}
+nav.tabs a{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--mute);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:7px 12px;transition:.15s}
+nav.tabs a:hover{color:var(--ink);border-color:#3a3a44}
+nav.tabs a.active{color:var(--accent2);border-color:var(--accent);background:#1f1a10}
+.livebar{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 8px 4px;margin-bottom:18px}
+.livebar-label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--up);display:flex;align-items:center;gap:8px;padding:4px 8px 8px}
+.livebar-label .dot{width:7px;height:7px;border-radius:50%;background:var(--up);display:inline-block}
+h2.sec{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:30px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:14px}
+.lead h3{font-family:Georgia,"Times New Roman",serif;font-size:27px;line-height:1.25;margin:0 0 10px;color:var(--ink)}
+.lead p{margin:0 0 10px}
+.lead p:last-child{margin-bottom:0}
+.tickers{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-bottom:10px}
+.ticker{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:6px 10px}
+.note{font-family:var(--mono);font-size:11px;color:var(--mute);margin:0 2px 6px;line-height:1.5}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 17px;transition:transform .15s,border-color .15s}
+.card:hover{transform:translateY(-3px);border-color:#3d3d49}
+.card h3{font-size:16px;margin:0 0 7px;line-height:1.35}
+.card p{margin:0;font-size:14px;color:#cdc9c0}
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:8px}
+.t{font-family:var(--mono);font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;padding:3px 7px;border-radius:5px;background:#241f14;color:var(--accent2);border:1px solid #453917}
+.t.new{background:#12301f;color:var(--up);border-color:#245c41}
+.t.dn{background:#2c1715;color:var(--down);border-color:#5a2723}
+.up{color:var(--up)}.down{color:var(--down)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);font-weight:400}
+td{padding:9px 10px;border-bottom:1px solid #222228}
+tr:last-child td{border-bottom:none}
+td.num{font-family:var(--mono);font-size:13.5px}
+ul.radar{margin:0;padding-left:19px}
+ul.radar li{margin-bottom:9px}
+ul.radar li:last-child{margin-bottom:0}
+.foot{margin-top:34px;border-top:1px solid var(--line);padding-top:16px;font-size:12.5px;color:var(--mute)}
+.foot a{color:#8d8577;word-break:break-all;text-decoration:none}
+.foot a:hover{color:var(--accent2)}
+.foot .srcline{margin-bottom:7px}
+.disc{margin-top:14px;font-style:italic;font-size:12.5px;color:#7d7a72}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="masthead">
+    <h1>The Closing Bell</h1>
+    <p class="tagline">Your daily briefing on Wall Street, rates and the tape</p>
+    <div class="meta">
+      <span class="pill live"><span class="dot"></span>Live</span>
+      <span class="pill" id="edition">Afternoon Edition</span>
+      <span class="pill" id="datestamp">Friday, September 11, 2026</span>
+      <span class="pill">Updated <span id="updated">—</span></span>
+    </div>
+  </div>
+
+  <div class="tldr"><b>The Tape</b> <span>Stocks ended a losing week on a high note — the Dow rose 509.19 points, or 0.98%, snapping a four-day slide with nine of the eleven S&amp;P sectors green as crude settled sharply lower — but all three major averages still finished the week down, and CME FedWatch now puts the odds of a Fed hike on Wednesday at 85.6%.</span></div>
+  <div class="freshline" id="freshline">Data as of — ET</div>
+
+  <nav class="tabs">
+    <a href="index.html">★ Front Page</a>
+    <a href="cyber-briefing.html">⛨ The Cyber Wire</a>
+    <a href="wallstreet-briefing.html" class="active">▲ The Closing Bell</a>
+    <a href="mma-briefing.html">⊘ The Octagon</a>
+    <a href="archive.html">🗄 Archive</a>
+  </nav>
+
+  <div class="livebar">
+    <div class="livebar-label"><span class="dot"></span> LIVE QUOTES</div>
+<script src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>{"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},{"proName":"FOREXCOM:DJI","title":"Dow 30"},{"proName":"NASDAQ:ACVA","title":"ACV Auctions"},{"proName":"NYSE:HPE","title":"HPE"},{"proName":"NYSE:DELL","title":"Dell"},{"proName":"NASDAQ:CSCO","title":"Cisco"},{"proName":"NASDAQ:STX","title":"Seagate"},{"proName":"TVC:USOIL","title":"WTI Crude"},{"proName":"TVC:US10Y","title":"US 10Y"}],"colorTheme":"dark","isTransparent":true,"showSymbolLogo":true,"displayMode":"adaptive","locale":"en"}</script>
+  </div>
+
+  <h2 class="sec">Live Index Quotes — updates in real time</h2>
+  <div class="tickers">
+    <div class="ticker"><script src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"FOREXCOM:SPXUSD","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div>
+    <div class="ticker"><script src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"FOREXCOM:NSXUSD","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div>
+    <div class="ticker"><script src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"FOREXCOM:DJI","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div>
+  </div>
+  <div class="note">Quotes stream live (some feeds ~15-min delayed). Editorial below reflects the latest edition; official closes are in the Weekly Scorecard.</div>
+
+  <h2 class="sec">The Lead</h2>
+  <div class="panel lead">
+    <h3>Dow adds 509 points to end a losing week on a high note as crude cools and rate-hike odds reach 85.6%</h3>
+    <p>All three major averages finished Friday higher, ending a four-session losing streak. The Dow Jones Industrial Average advanced <b>509.19 points, or 0.98%</b>, the S&amp;P 500 gained <b>0.86%</b> and the Nasdaq Composite rose <b>0.96%</b>. Closing levels are in the Weekly Scorecard below; four independent reads of the tape now agree on them and each reconciles to the cent against Thursday's close. Friday's bounce did not rescue the week, however — <b>all three major averages still posted weekly declines</b>, so the session is best read as a losing week ending on a high note rather than as a turn.</p>
+    <p>The driver was energy, not inflation. Iranian state media said Tehran will sit down with Gulf states in <b>Oman</b> next week to discuss the Strait of Hormuz, and the headline knocked the war premium out of crude: <b>WTI settled down 2.4% at $100.05</b> and <b>Brent down 2.8% at $104.61</b>, after Brent had peaked near $108 and WTI above $104 on Thursday. Falling oil took the edge off the week's inflation anxiety even though both benchmarks still posted sharp weekly gains.</p>
+    <p>August CPI, out at 8:30 a.m. ET, was in line on the headline — <b>+0.4% month over month</b> and <b>3.4% year over year</b>, both matching the Dow Jones consensus — but <b>core CPI rose 0.3%</b>, up from 0.2% in July and a tenth above forecast. Analysts read the print as still too hot to ignore ahead of the <b>15–16 September FOMC</b>, with a decision due Wednesday from a target range of 3.50–3.75% under Chair Kevin Warsh.</p>
+    <p>The hike probability now has a named source and a precise number: <b>CME FedWatch puts the odds of a hike at Wednesday's meeting at 85.6%</b>. That is the figure this page leads with, because it is attributed to the futures tool itself rather than to a summary of it. The looser reads still in circulation bracket it — one has traders at <b>roughly 90%, up from about 70%</b> before Friday morning's CPI, another puts futures pricing at <b>about 71%</b>, a third at <b>above 65%</b> — and every one of them shares the direction: a hike, not a cut, and firmer after the release.</p>
+    <p>Breadth backed the rally rather than a handful of megacaps: <b>nine of the eleven S&amp;P 500 sectors finished higher</b>, with technology, industrials and communication services each up more than 1% and only health care and utilities lagging.</p>
+  </div>
+
+  <h2 class="sec">Movers &amp; Drivers</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="tags"><span class="t">earnings</span><span class="t">index leader</span></div>
+      <h3>HPE <span class="up">≈ +11%</span></h3>
+      <p>The best performer in the S&amp;P 500 on the session. Record quarterly revenue of <b>$12.2B, up 34%</b>, including <b>$9.0B</b> from Cloud &amp; AI. An earlier read this run put the move at +9.08%; the later read gives "up nearly 11%", so it is printed as an approximation.</p>
+    </div>
+    <div class="card">
+      <div class="tags"><span class="t">dow leader</span></div>
+      <h3>Cisco <span class="up">+4.1%</span></h3>
+      <p>The biggest percentage gainer in the Dow Jones Industrial Average — a quieter contribution than the AI-hardware names, but a direct one to the index that carried the session's headline.</p>
+    </div>
+    <div class="card">
+      <div class="tags"><span class="t dn">index laggard</span></div>
+      <h3>Seagate <span class="down">−3.4%</span></h3>
+      <p>The worst-performing stock in both the S&amp;P 500 and the Nasdaq Composite — the notable dissent from a tape in which storage and server peers were bid hard.</p>
+    </div>
+    <div class="card">
+      <div class="tags"><span class="t">initiation</span></div>
+      <h3>Dell <span class="up">+11.28%</span></h3>
+      <p>RBC initiated coverage at <b>Outperform</b>, and the stock rode a broad bid for AI-server and infrastructure names that carried the technology sector.</p>
+    </div>
+    <div class="card">
+      <div class="tags"><span class="t">top gainer</span></div>
+      <h3>Vicor <span class="up">+11.84%</span></h3>
+      <p>Among the best large-cap performers on the session, on a board read at 11:50 a.m. ET.</p>
+    </div>
+    <div class="card">
+      <div class="tags"><span class="t">m&amp;a</span></div>
+      <h3>Skyworks <span class="up">+8.04%</span></h3>
+      <p>CEO Phil Brace said the <b>$22B</b> Qorvo merger is in its final stages and should close by year-end.</p>
+    </div>
+    <div class="card">
+      <div class="tags"><span class="t">semis</span></div>
+      <h3>Flex <span class="up">+7.94%</span> · SMCI <span class="up">+6.1%</span></h3>
+      <p>Contract manufacturing and AI-server supply chains rode the same tape; SMH closed up 2.0%.</p>
+    </div>
+    <div class="card">
+      <div class="tags"><span class="t">grocery</span></div>
+      <h3>Kroger <span class="up">+2.1%</span></h3>
+      <p>Quarterly EPS of <b>$1.09</b> against <b>$1.06</b> expected.</p>
+    </div>
+    <div class="card">
+      <div class="tags"><span class="t dn">nuclear</span></div>
+      <h3>Oklo <span class="down">−7.10%</span> · X-Energy <span class="down">−5.12%</span></h3>
+      <p>Oklo fell after launching a <b>$1B</b> at-the-market equity programme through ten agents.</p>
+    </div>
+    <div class="card">
+      <div class="tags"><span class="t dn">downgrade</span></div>
+      <h3>Chewy <span class="down">−4.89%</span></h3>
+      <p>JPMorgan moved to Neutral and cut its price target to <b>$24</b> from <b>$29</b>.</p>
+    </div>
+    <div class="card">
+      <div class="tags"><span class="t">cloud</span></div>
+      <h3>Oracle traded flat</h3>
+      <p>Adjusted EPS <b>$1.92 (+30%)</b> on revenue of <b>$19.35B</b> vs $19.14B expected; total cloud revenue <b>+62% to $11.6B</b> with infrastructure <b>+121% to $7.4B</b>, RPO up <b>$209B</b> year on year to <b>$664B</b>, more than <b>$30B</b> of AI contracts signed across a diverse set of customers, and FY capex guided to <b>$90–95B</b> — and the stock still went nowhere.</p>
+    </div>
+  </div>
+
+  <h2 class="sec">Chart of the Day — ACV Auctions (NASDAQ:ACVA)</h2>
+  <div class="panel" style="padding:8px">
+<script src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>{"symbol":"NASDAQ:ACVA","width":"100%","height":240,"locale":"en","dateRange":"1D","colorTheme":"dark","isTransparent":true,"autosize":false}</script>
+  </div>
+  <div class="note">The session's single biggest sourced mover: ACV Auctions finished the regular session up 44.8% on Copart's agreed buyout, and held a gain of roughly 44% after hours.</div>
+
+  <h2 class="sec">Sector Heat — live</h2>
+  <div class="panel" style="padding:8px">
+<script src="https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js" async>{"dataSource":"SPX500","blockSize":"market_cap_basic","blockColor":"change","grouping":"sector","locale":"en","colorTheme":"dark","hasTopBar":false,"isDataSetEnabled":false,"isZoomEnabled":true,"hasSymbolTooltip":true,"isMonoSize":false,"width":"100%","height":420}</script>
+  </div>
+  <div class="note">Nine of the eleven S&amp;P 500 sectors finished higher. Technology led — XLK +1.7% — with communication services (XLC +1.3%) and industrials (XLI +1.2%) behind it; health care (XLV, −0.2%) and utilities lagged. The VIX fell 11.7%.</div>
+
+  <h2 class="sec">The Calendar — live</h2>
+  <div class="panel" style="padding:8px">
+<script src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>{"colorTheme":"dark","isTransparent":true,"width":"100%","height":420,"locale":"en","importanceFilter":"0,1","countryFilter":"us"}</script>
+  </div>
+
+  <h2 class="sec">Live Market Headlines — updates in real time</h2>
+  <div class="panel" style="padding:8px">
+<script src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>{"feedMode":"market","market":"stock","colorTheme":"dark","isTransparent":true,"displayMode":"regular","width":"100%","height":420,"locale":"en"}</script>
+  </div>
+
+  <h2 class="sec">After-Hours Movers</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="tags"><span class="t">buyout</span></div>
+      <h3>ACV Auctions <span class="up">≈ +44%</span></h3>
+      <p>Copart agreed to acquire the online wholesale auto marketplace for <b>$10.50 a share in cash</b>, a deal reported at roughly <b>$1.9B</b>. The stock also finished the regular session up 44.8%.</p>
+    </div>
+    <div class="card">
+      <div class="tags"><span class="t">earnings</span></div>
+      <h3>Frequency Electronics <span class="up">+27.3%</span></h3>
+      <p>To <b>$79</b> from a <b>$62.06</b> regular-session close. Fiscal Q1 EPS of <b>$0.41</b> on revenue of <b>$23.5M</b> against <b>$0.29</b> and <b>$19.25M</b> expected — record revenue, with backlog at <b>$129M</b>.</p>
+    </div>
+    <div class="card">
+      <div class="tags"><span class="t dn">guidance</span></div>
+      <h3>Zumiez <span class="down">−14.7%</span></h3>
+      <p>To <b>$14.25</b> after hours, on an adjusted loss of <b>$0.17</b> on revenue of <b>$209M</b> versus a <b>$0.11</b> loss on <b>$213.1M</b> expected — after already falling 4.8% in regular trading.</p>
+    </div>
+  </div>
+
+  <h2 class="sec">Weekly Scorecard</h2>
+  <div class="panel" style="padding:6px 10px">
+  <table>
+    <tr><th>Index</th><th>Close (Fri 11 Sep 2026)</th><th>Change</th></tr>
+    <tr><td>S&amp;P 500</td><td class="num">7,656.98</td><td class="num up">+65.28 · +0.86%</td></tr>
+    <tr><td>Nasdaq Composite</td><td class="num">26,333.04</td><td class="num up">+251.32 · +0.96%</td></tr>
+    <tr><td>Dow Jones Industrial Average</td><td class="num">52,573.29</td><td class="num up">+509.19 · +0.98%</td></tr>
+  </table>
+  </div>
+  <div class="note">Official closes only. Each reconciles against Thursday's close: 7,591.70 + 65.28 · 26,081.72 + 251.32 · 52,064.10 + 509.19.</div>
+
+  <h2 class="sec">Rates, Bonds &amp; Commodities</h2>
+  <div class="panel" style="padding:6px 10px">
+  <table>
+    <tr><th>Instrument</th><th>Level</th><th>Note</th></tr>
+    <tr><td>US 10-year Treasury</td><td class="num">4.92–4.98%</td><td>Three reads now, and they disagree by six basis points: two settle-day reads at 4.92% and 4.93%, and a session read of <b>4.975%</b> described as the highest intraday yield since October 2023. The range is printed rather than a pick</td></tr>
+    <tr><td>US 2-year Treasury</td><td class="num">≈ 4.65%</td><td>Topped 4.60% and touched its highest level since <b>July 2024</b> as hike pricing firmed — the front end, not the long end, is where the CPI print landed</td></tr>
+    <tr><td>US 30-year Treasury</td><td class="num">5.25%</td><td>Most recent published read, 10 September</td></tr>
+    <tr><td>Fed funds target range</td><td class="num">3.50–3.75%</td><td>FOMC meets 15–16 September; decision Wednesday 16 September, 2:00 p.m. ET, with an SEP</td></tr>
+    <tr><td>WTI crude</td><td class="num">$100.05</td><td class="down">Settled −2.4%; week-to-date gain of 9.4%</td></tr>
+    <tr><td>Brent crude</td><td class="num">$104.61</td><td class="down">Settled −2.8%; weekly gain of 8.7%, holding above $100</td></tr>
+    <tr><td>VIX</td><td class="num">−11.7%</td><td>Volatility crushed as the index rally broadened</td></tr>
+  </table>
+  </div>
+  <div class="note">No gold figure is printed: the feeds read this week disagreed on direction, so the line was dropped rather than guessed.</div>
+
+  <h2 class="sec">On the Radar</h2>
+  <div class="panel">
+    <ul class="radar">
+      <li><b>FOMC, 15–16 September.</b> The decision lands Wednesday at 2:00 p.m. ET alongside a Summary of Economic Projections. After Friday's core CPI overshoot, futures are leaning toward a 25-basis-point hike from the 3.50–3.75% range; CME FedWatch puts the probability at <b>85.6%</b>; looser reads this run run from above 65% to roughly 90%, so the FedWatch figure is the one asserted and the rest are shown as the bracket around it.</li>
+      <li><b>The Oman track on Hormuz.</b> Tehran's talks with Gulf states are scheduled for next week. Crude's whole risk premium is riding on them; a breakdown would put the week's $108 Brent high back in play, and with it the energy pass-through that has been driving headline CPI.</li>
+      <li><b>The labour backdrop.</b> August non-farm payrolls came in at <b>162,000</b> with unemployment at <b>4.1%</b> — resilient enough that the Fed's hawks are not being restrained by the jobs side of the mandate.</li>
+      <li><b>The long end.</b> A global bond selloff pushed the 10-year to the edge of 5% this week before Friday's small pullback. Duration, not equities, is where the inflation story is being expressed most cleanly.</li>
+    </ul>
+  </div>
+
+  <div class="foot">
+    <div class="srcline"><b>Sources read this run</b></div>
+    <div class="srcline">Yahoo Finance — Stock market today: Dow, S&amp;P 500, Nasdaq end losing week on a high note as Fed rate-hike bets jump — <a href="https://ca.finance.yahoo.com/news/stock-market-today-friday-september-11-dow-sp-500-nasdaq-cpi-inflation-082201751.html">https://ca.finance.yahoo.com/news/stock-market-today-friday-september-11-dow-sp-500-nasdaq-cpi-inflation-082201751.html</a></div>
+    <div class="srcline">CNBC — Oil prices fall Friday, but post sharp weekly gains as tensions in the Middle East rise — <a href="https://www.cnbc.com/2026/09/11/oil-price-today-iran-brent-wti-trump.html">https://www.cnbc.com/2026/09/11/oil-price-today-iran-brent-wti-trump.html</a></div>
+    <div class="srcline">CNBC — Stock market news for Sept. 11, 2026 — <a href="https://www.cnbc.com/2026/09/10/stock-market-today-live-updates.html">https://www.cnbc.com/2026/09/10/stock-market-today-live-updates.html</a></div>
+    <div class="srcline">CNBC — Oil prices fall Friday, but post sharp weekly gains as tensions in the Middle East rise — <a href="https://www.cnbc.com/2026/09/11/oil-price-today-iran-brent-wti-trump.html">https://www.cnbc.com/2026/09/11/oil-price-today-iran-brent-wti-trump.html</a></div>
+    <div class="srcline">TheStreet — Stock Market Today (Sept. 11, 2026) — <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-11-2026">https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-11-2026</a></div>
+    <div class="srcline">Yahoo Finance — U.S. 10-year Treasury yield pulls back after August CPI data — <a href="https://finance.yahoo.com/economy/policy/articles/u-10-treasury-yield-pulls-172206453.html">https://finance.yahoo.com/economy/policy/articles/u-10-treasury-yield-pulls-172206453.html</a></div>
+    <div class="srcline">Bloomberg — Global Bond Selloff Sends 10-Year Treasury Yields to Cusp of 5% — <a href="https://www.bloomberg.com/news/articles/2026-09-11/global-bond-selloff-sends-10-year-treasury-yields-to-cusp-of-5">https://www.bloomberg.com/news/articles/2026-09-11/global-bond-selloff-sends-10-year-treasury-yields-to-cusp-of-5</a></div>
+    <div class="srcline">Forbes Advisor — Treasury Rates Today: September 10, 2026 — <a href="https://www.forbes.com/advisor/investing/treasury-rates/">https://www.forbes.com/advisor/investing/treasury-rates/</a></div>
+    <div class="srcline">TechTimes — August CPI: Core Overshoot Lifts September Fed Hike Probability Above 65% — <a href="https://www.techtimes.com/articles/327358/20260911/august-cpi-core-overshoot-lifts-september-fed-hike-probability-above-65.htm">https://www.techtimes.com/articles/327358/20260911/august-cpi-core-overshoot-lifts-september-fed-hike-probability-above-65.htm</a></div>
+    <div class="srcline">Investrade — Market Review: September 11, 2026 — <a href="https://investrade.com/market-review-september-11-2026/">https://investrade.com/market-review-september-11-2026/</a></div>
+    <div class="srcline">Stock Analysis — Today's After Hours Stock Movers — <a href="https://stockanalysis.com/markets/afterhours/">https://stockanalysis.com/markets/afterhours/</a></div>
+    <div class="srcline">Investrade — Mid-Morning Look: September 11, 2026 — <a href="https://investrade.com/mid-morning-look-september-11-2026/">https://investrade.com/mid-morning-look-september-11-2026/</a></div>
+    <div class="srcline">Trading Economics — US 10 Year Treasury Note Yield — <a href="https://tradingeconomics.com/united-states/government-bond-yield">https://tradingeconomics.com/united-states/government-bond-yield</a></div>
+    <div class="srcline">Schwab — Stocks Up on Oil Prices as CPI Sets Stage for Fed — <a href="https://www.schwab.com/learn/story/stock-market-update-open">https://www.schwab.com/learn/story/stock-market-update-open</a></div>
+    <div class="disc">Information only — not investment advice. Live widgets are supplied by TradingView and may be delayed. Figures are published only where a source read this run states them; where feeds disagreed, the figure was dropped rather than averaged.</div>
+  </div>
+
+</div>
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
+</body>
+</html>

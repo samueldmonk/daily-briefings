@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Octagon — Daily Briefings</title>
+<style>
+:root{
+  --bg:#100c0c; --panel:#1a1313; --panel2:#201818; --line:#322020;
+  --ink:#f0e6e4; --mute:#a89592; --accent:#e84545; --accent2:#ff8a5c;
+  --up:#3fbf7f; --gold:#e0b84a; --crit:#e2544c;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;line-height:1.6;font-size:15.5px}
+.wrap{max-width:1020px;margin:0 auto;padding:26px 20px 60px}
+.masthead{border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:14px}
+.masthead h1{font-size:38px;line-height:1.1;margin:0 0 4px;letter-spacing:-.7px;color:var(--accent2)}
+.masthead .tagline{color:var(--mute);font-size:14px;margin:0 0 11px}
+.meta{display:flex;flex-wrap:wrap;gap:7px}
+.pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:4px 10px;color:var(--mute)}
+.pill.live{color:var(--up);border-color:#245c41}
+.pill.live .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--up);margin-right:6px;vertical-align:middle}
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;padding:11px 15px;margin:6px 0 2px;font-size:14.5px;line-height:1.5}
+.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-right:9px}
+.freshline{font-family:var(--mono);font-size:11px;color:var(--mute);letter-spacing:.05em;margin:9px 2px 16px}
+nav.tabs{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 18px}
+nav.tabs a{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--mute);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:7px 12px;transition:.15s}
+nav.tabs a:hover{color:var(--ink);border-color:#4a3030}
+nav.tabs a.active{color:var(--accent2);border-color:var(--accent);background:#2a1414}
+.cdbar{display:flex;flex-wrap:wrap;align-items:center;gap:14px;background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:13px 17px;margin-bottom:18px}
+.cdbar .lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+.cdbar .ev{font-size:15px}
+.cdbar .clock{font-family:var(--mono);font-size:19px;color:var(--accent2);margin-left:auto}
+h2.sec{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:30px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:14px}
+.lead{border-left:4px solid var(--accent)}
+.lead h3{font-size:25px;line-height:1.25;margin:0 0 10px}
+.lead p{margin:0 0 10px}
+.lead p:last-child{margin-bottom:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 17px;transition:transform .15s,border-color .15s}
+.card:hover{transform:translateY(-3px);border-color:#4d3030}
+.card h3{font-size:16.5px;margin:0 0 7px;line-height:1.35}
+.card p{margin:0;font-size:14px;color:#d6c7c4}
+.card .dv{font-family:var(--mono);font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.card .odds{font-family:var(--mono);font-size:12px;color:var(--accent2);margin-top:8px}
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:8px}
+.t{font-family:var(--mono);font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;padding:3px 7px;border-radius:5px;background:#2d1a1a;color:var(--accent2);border:1px solid #5a2e2e}
+.t.new{background:#12301f;color:var(--up);border-color:#245c41}
+.t.pros{background:#12301f;color:var(--up);border-color:#245c41}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);font-weight:400}
+td{padding:9px 10px;border-bottom:1px solid #271a1a;vertical-align:top}
+tr:last-child td{border-bottom:none}
+.win{color:var(--up);font-weight:600}
+.nc{color:var(--gold);font-weight:600}
+ul.bul{margin:0;padding-left:19px}
+ul.bul li{margin-bottom:9px}
+ul.bul li:last-child{margin-bottom:0}
+.foot{margin-top:34px;border-top:1px solid var(--line);padding-top:16px;font-size:12.5px;color:var(--mute)}
+.foot a{color:#96807c;word-break:break-all;text-decoration:none}
+.foot a:hover{color:var(--accent2)}
+.foot .srcline{margin-bottom:7px}
+.disc{margin-top:14px;font-style:italic;font-size:12.5px;color:#8a7572}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="masthead">
+    <h1>The Octagon</h1>
+    <p class="tagline">Your daily MMA briefing — UFC, prospects &amp; the business of fighting</p>
+    <div class="meta">
+      <span class="pill live"><span class="dot"></span>Live</span>
+      <span class="pill" id="edition">Afternoon Edition</span>
+      <span class="pill" id="datestamp">Friday, September 11, 2026</span>
+      <span class="pill">Updated <span id="updated">—</span></span>
+    </div>
+  </div>
+
+  <div class="tldr"><b>Tale of the Tape</b> <span>Noche UFC lands Saturday at Glendale's Desert Diamond Arena with all 26 fighters on weight and Jean Silva, ranked No. 6 at featherweight, a −450 favourite over short-notice replacement Jose Miguel Delgado, who is 4-1 in the UFC.</span></div>
+  <div class="freshline" id="freshline">Data as of — ET</div>
+
+  <nav class="tabs">
+    <a href="index.html">★ Front Page</a>
+    <a href="cyber-briefing.html">⛨ The Cyber Wire</a>
+    <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
+    <a href="mma-briefing.html" class="active">⊘ The Octagon</a>
+    <a href="archive.html">🗄 Archive</a>
+  </nav>
+
+  <div class="cdbar">
+    <span class="lbl">Next Card</span>
+    <span class="ev"><b>Noche UFC: Silva vs. Delgado</b> — Sat 12 Sept, Desert Diamond Arena, Glendale AZ · prelims 2 PM ET</span>
+    <span class="clock" id="ufccdn">—</span>
+  </div>
+
+  <h2 class="sec">Top Story</h2>
+  <div class="panel lead">
+    <h3>Noche UFC returns for a fourth year — Jean Silva headlines Glendale against a short-notice Jose Miguel Delgado</h3>
+    <p>The fourth annual <b>Noche UFC</b>, the promotion's Mexican Independence Day card, takes place <b>Saturday 12 September</b> at the <b>Desert Diamond Arena in Glendale, Arizona</b> — the UFC's first event at the venue — with a lineup stacked with Mexican and Latin American talent. Prelims start at <b>2 p.m. ET</b>, the main card at <b>5 p.m. ET</b>, all on Paramount+.</p>
+    <p>Top featherweight contender <b>Jean Silva (17-3)</b> headlines. He was booked against former interim featherweight champion <b>Yair Rodriguez</b>, who withdrew injured; <b>Jose Miguel Delgado</b> steps in on short notice with a chance to establish himself at 145 pounds. Silva enters off a win over Arnold Allen and is roughly a four-to-one favourite: <b>Caesars has it Silva −450 / Delgado +350</b>, <b>DraftKings −440 / +340</b>, and a third book read this run has it <b>−425 / +355</b>. The spread across books is the story: nobody has Delgado shorter than +340.</p>
+    <p>Silva sits <b>No. 6 at 145 pounds</b> in the MMA Fighting Global Rankings and has won <b>six of his seven UFC fights</b>; the unranked Delgado is <b>4-1 in the UFC</b> and took the booking on <b>less than a month's notice</b>.</p>
+    <p>In the co-main event, former flyweight champion <b>Brandon Moreno</b> tries to snap a two-fight skid against <b>Joseph Morales</b>, winner of The Ultimate Fighter 33. All <b>26 fighters made weight</b> at Friday's official weigh-ins: <b>Silva hit 145 pounds on the nose</b>, the championship limit, while <b>Delgado used the one-pound non-title allowance at 145.5</b>.</p>
+  </div>
+
+  <h2 class="sec">Fight Week — Upcoming Cards</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="dv">Sat 12 Sept · Desert Diamond Arena, Glendale AZ</div>
+      <h3>Noche UFC: Silva vs. Delgado</h3>
+      <p>Jean Silva (17-3) vs. Jose Miguel Delgado in a featherweight main event, with Brandon Moreno vs. Joseph Morales underneath. All 26 fighters made weight — Silva 145, Delgado 145.5. Prelims 2 PM ET, main card 5 PM ET, Paramount+.</p>
+      <div class="odds">Odds: Silva −450 / Delgado +350 (Caesars) · −440 / +340 (DraftKings)</div>
+    </div>
+    <div class="card">
+      <div class="dv">Tue 15 Sept · Meta APEX, Las Vegas</div>
+      <div class="tags"><span class="t">contender series</span></div>
+      <h3>Dana White's Contender Series, Season 10 Week 6</h3>
+      <p>Four bouts at 7 p.m. ET: Mayton Perea vs. Zevan Hunt, Igor Cavalcanti vs. Oscar Ravello, Akbar Abdullaev vs. Ednilson Santos, and Hugo Guillon vs. Luis Hernandez.</p>
+    </div>
+    <div class="card">
+      <div class="dv">Sat 19 Sept · Crypto.com Arena, Los Angeles</div>
+      <h3>UFC 331: Van vs. Pantoja 2</h3>
+      <p>Flyweight champion <b>Joshua Van</b> defends in a rematch with former champion <b>Alexandre Pantoja</b>. In the co-main, No. 2-ranked lightweight <b>Arman Tsarukyan</b> meets Brazilian knockout artist <b>Mauricio Ruffy</b> over five rounds with title implications; <b>Marlon Vera vs. Charles Jourdain</b> is also booked. Thirteen fights.</p>
+    </div>
+    <div class="card">
+      <div class="dv">Sat 3 Oct · Delta Center, Salt Lake City</div>
+      <h3>UFC 332: Silva vs. Wang</h3>
+      <p><b>Natália Silva vs. Wang Cong</b> for the <b>vacant</b> women's flyweight title. Also booked: Deiveson Figueiredo vs. Payton Talbott at 135, King Green vs. Esteban Ribovics at 155, Khaos Williams vs. Roberto Soldic at 170 — the Croatian knockout artist, added to the roster on 4 September, has <b>18 of his 21 wins by knockout</b> and Ateba Gautier vs. Roman Kopylov at 185. The first numbered UFC event with its main card on <b>CBS</b>.</p>
+    </div>
+  </div>
+
+  <h2 class="sec">Last Event — Results</h2>
+  <div class="panel" style="padding:6px 10px">
+  <table>
+    <tr><th>Result</th><th>Bout</th><th>Method</th></tr>
+    <tr><td class="win">Quentin Pasley</td><td>def. Arlind Berisha</td><td>KO (elbows), R1 4:41 — contract awarded</td></tr>
+    <tr><td class="win">Isaac Moreno</td><td>def. Reginaldo Geraldo Jr.</td><td>Unanimous decision, 29-28 ×3 — contract awarded</td></tr>
+    <tr><td class="win">Martin Kozák</td><td>def. Christian Echols</td><td>TKO (punches), R2 1:32 — contract awarded</td></tr>
+    <tr><td class="win">Christian Natividad</td><td>def. Colton Loud</td><td>KO (body punch), R1 1:10 — contract awarded</td></tr>
+    <tr><td class="win">Apollo Gomes</td><td>def. Kwon Won-il</td><td>Unanimous decision — not signed</td></tr>
+  </table>
+  </div>
+  <div class="freshline" id="lastevnote" style="margin:8px 2px 0">Dana White's Contender Series, Season 10 Week 5 — Tuesday 8 September 2026, Meta APEX, Las Vegas. Four contracts awarded. No performance bonuses are published for Contender Series cards.</div>
+
+  <h2 class="sec">Prospect Watch</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="tags"><span class="t pros">prospect</span></div>
+      <h3>Quentin Pasley — light heavyweight</h3>
+      <p>A highly touted prospect out of Connecticut with just <b>two professional fights</b>, signed after knocking out Arlind Berisha with two flush elbows in the first round.</p>
+    </div>
+    <div class="card">
+      <div class="tags"><span class="t pros">prospect</span></div>
+      <h3>Isaac Moreno — welterweight</h3>
+      <p>Twenty-eight years old, into the Contender Series off a pair of TKOs at Fury FC, and through it on a hard-earned 29-28 decision.</p>
+    </div>
+    <div class="card">
+      <div class="tags"><span class="t pros">prospect</span></div>
+      <h3>Martin Kozák — middleweight</h3>
+      <p>A 6-foot-4 middleweight who took his contract with a second-round TKO.</p>
+    </div>
+    <div class="card">
+      <div class="tags"><span class="t pros">prospect</span></div>
+      <h3>Christian Natividad — flyweight</h3>
+      <p>Finished Colton Loud in 70 seconds with a body shot for the quickest stoppage of the night.</p>
+    </div>
+  </div>
+
+  <h2 class="sec">Around the Sport</h2>
+  <div class="panel">
+    <ul class="bul">
+      <li><b>Yair Rodriguez's withdrawal reshapes the Noche main event.</b> The former interim featherweight champion pulled out injured, handing Jose Miguel Delgado a short-notice main-event slot against a top contender — and the widest main-event line on any card in the current schedule.</li>
+      <li><b>Brandon Moreno's stretch.</b> The former flyweight champion has lost two in a row and meets a TUF 33 winner in Morales; a third straight defeat would be the longest skid of his UFC run.</li>
+      <li><b>Arman Tsarukyan is back.</b> The No. 2-ranked lightweight returns at UFC 331 against Mauricio Ruffy in a five-rounder billed with major title implications — a signal that the queue behind Justin Gaethje is being sorted out in the cage rather than on the microphone.</li>
+      <li><b>The women's flyweight belt is contested in three weeks.</b> Valentina Shevchenko vacated the title while sidelined for roughly a year; Natália Silva and Wang Cong fight for the vacant belt at UFC 332 on 3 October. The UFC has said Shevchenko is guaranteed a title shot once she is cleared.</li>
+      <li><b>Contender Series rolls on Tuesdays.</b> Week 5 produced four contracts on 8 September; Week 6 is 15 September at the Meta APEX.</li>
+    </ul>
+  </div>
+
+  <h2 class="sec">Rankings &amp; Business</h2>
+  <div class="panel">
+    <p style="margin:0 0 10px"><b>Rankings movement.</b> Jean Silva enters Saturday as a top featherweight contender in a division whose champion, Alexander Volkanovski, is booked to defend at UFC 333 in Abu Dhabi on 24 October. At lightweight, Arman Tsarukyan sits at No. 2 and fights on 19 September. No rankings changes are asserted here beyond what the bookings themselves establish.</p>
+    <p style="margin:0"><b>Business &amp; broadcast.</b> Noche UFC streams on <b>Paramount+</b>. The notable structural item is <b>UFC 332 on 3 October becoming the first numbered UFC event with its main card on CBS</b>. No viewership, gate or TKO Group financial figures are published on this page — none appeared in any source read this run.</p>
+  </div>
+
+  <h2 class="sec">Champions Board</h2>
+  <div class="panel" style="padding:6px 10px">
+  <table>
+    <tr><th>Division</th><th>Champion</th><th>Note</th></tr>
+    <tr><td>Heavyweight</td><td><b>Tom Aspinall</b></td><td>Undisputed since 21 June 2025. Interim: <b>Ciryl Gane</b> (KO2 Pereira, Freedom 250, 14 June 2026)</td></tr>
+    <tr><td>Light Heavyweight</td><td><b>Carlos Ulberg</b></td><td>KO1 Jiří Procházka for the vacant belt, UFC 327, 11 April 2026 — 0 defences</td></tr>
+    <tr><td>Middleweight</td><td><b>Sean Strickland</b></td><td>Split decision over Khamzat Chimaev, UFC 328, 9 May 2026 — two-time champion, 0 defences</td></tr>
+    <tr><td>Welterweight</td><td><b>Islam Makhachev</b></td><td>UD over Jack Della Maddalena, UFC 322, 15 Nov 2025 — 1 defence (UD Ian Machado Garry, UFC 330)</td></tr>
+    <tr><td>Lightweight</td><td><b>Justin Gaethje</b></td><td>TKO4 Ilia Topuria, UFC Freedom 250, 14 June 2026 — 0 defences</td></tr>
+    <tr><td>Featherweight</td><td><b>Alexander Volkanovski</b></td><td>UD over Diego Lopes, UFC 314, 12 April 2025 — 1 defence; booked to defend at UFC 333, 24 Oct</td></tr>
+    <tr><td>Bantamweight</td><td><b>Petr Yan</b></td><td>UD over Merab Dvalishvili, UFC 323, 6 Dec 2025</td></tr>
+    <tr><td>Flyweight</td><td><b>Joshua Van</b></td><td>TKO1 Alexandre Pantoja, UFC 323 — 1 defence; rematches Pantoja at UFC 331, 19 Sept</td></tr>
+    <tr><td>Women's Flyweight</td><td class="nc"><b>Vacant</b></td><td>Valentina Shevchenko <b>vacated</b> while injured; Natália Silva vs. Wang Cong contest the vacant belt at UFC 332, 3 Oct</td></tr>
+    <tr><td>Women's Bantamweight</td><td><b>Kayla Harrison</b></td><td>Sub2 Julianna Peña, UFC 316, 7 June 2025 — 0 defences</td></tr>
+    <tr><td>Women's Strawweight</td><td><b>Mackenzie Dern</b></td><td>UD over Virna Jandiroba, UFC 321, 25 Oct 2025 — 1 defence (UD Gillian Robertson, UFC 330)</td></tr>
+  </table>
+  </div>
+
+  <div class="foot">
+    <div class="srcline"><b>Sources read this run</b></div>
+    <div class="srcline">UFC.com — Official Weigh-In Results | Noche UFC — <a href="https://www.ufc.com/news/noche-ufc-silva-delgado-official-weigh-in-results">https://www.ufc.com/news/noche-ufc-silva-delgado-official-weigh-in-results</a></div>
+    <div class="srcline">ESPN — Current and all-time UFC champions — <a href="https://www.espn.com/mma/story/_/id/14947566/current-all-ufc-champions">https://www.espn.com/mma/story/_/id/14947566/current-all-ufc-champions</a></div>
+    <div class="srcline">UFC.com — Official Weigh-In Results | Noche UFC — <a href="https://www.ufc.com/news/noche-ufc-silva-delgado-official-weigh-in-results">https://www.ufc.com/news/noche-ufc-silva-delgado-official-weigh-in-results</a></div>
+    <div class="srcline">CBS Sports — Noche UFC predictions: Jean Silva vs. Jose Delgado, fight card, odds and expert picks — <a href="https://www.cbssports.com/ufc/news/noche-ufc-fight-card-predictions-jean-silva-jose-delgado-odds/">https://www.cbssports.com/ufc/news/noche-ufc-fight-card-predictions-jean-silva-jose-delgado-odds/</a></div>
+    <div class="srcline">Wikipedia — UFC Fight Night: Silva vs. Delgado — <a href="https://en.wikipedia.org/wiki/UFC_Fight_Night:_Silva_vs._Delgado">https://en.wikipedia.org/wiki/UFC_Fight_Night:_Silva_vs._Delgado</a></div>
+    <div class="srcline">ESPN — Current and all-time UFC champions — <a href="https://www.espn.com/mma/story/_/id/14947566/current-all-ufc-champions">https://www.espn.com/mma/story/_/id/14947566/current-all-ufc-champions</a></div>
+    <div class="srcline">Wikipedia — UFC 331 — <a href="https://en.wikipedia.org/wiki/UFC_331">https://en.wikipedia.org/wiki/UFC_331</a></div>
+    <div class="srcline">UFC.com — UFC 332: Silva vs Wang — <a href="https://www.ufc.com/event/ufc-332">https://www.ufc.com/event/ufc-332</a></div>
+    <div class="srcline">CBS Sports — Dana White's Contender Series 2026 Week 5 results — <a href="https://www.cbssports.com/ufc/news/dana-whites-contender-series-2026-week-5-results-winners-highlights-contracts/">https://www.cbssports.com/ufc/news/dana-whites-contender-series-2026-week-5-results-winners-highlights-contracts/</a></div>
+    <div class="srcline">UFC.com — Week 5 Results + Scorecards | Dana White's Contender Series, Season 10 — <a href="https://www.ufc.com/news/dana-whites-contender-series-season-10-week-5-results">https://www.ufc.com/news/dana-whites-contender-series-season-10-week-5-results</a></div>
+    <div class="srcline">Yahoo Sports — UFC 331 fight card revealed, Van vs. Pantoja 2 leads loaded lineup — <a href="https://sports.yahoo.com/articles/ufc-331-fight-card-revealed-235537467.html">https://sports.yahoo.com/articles/ufc-331-fight-card-revealed-235537467.html</a></div>
+    <div class="srcline">ESPN — Noche UFC: Silva vs. Delgado Fight Center — <a href="https://www.espn.com/mma/fightcenter/_/id/600060772/league/ufc">https://www.espn.com/mma/fightcenter/_/id/600060772/league/ufc</a></div>
+    <div class="srcline">Bloody Elbow — Full UFC 332 card finalized with star signing Roberto Soldic’s debut — <a href="https://bloodyelbow.com/2026/09/05/full-ufc-332-card-finalized-with-star-signing-roberto-soldics-debut-among-main-card-additions/">https://bloodyelbow.com/2026/09/05/full-ufc-332-card-finalized-with-star-signing-roberto-soldics-debut-among-main-card-additions/</a></div>
+    <div class="srcline">Combat Press — Noche UFC: Silva vs. Delgado Preview and Predictions — <a href="https://combatpress.com/2026/09/noche-ufc-silva-vs-delgado-preview-and-predictions/">https://combatpress.com/2026/09/noche-ufc-silva-vs-delgado-preview-and-predictions/</a></div>
+    <div class="disc">Cards and bouts are subject to change. Betting lines are quoted with the book that published them and move constantly. No viewership, gate or purse figure is printed unless a source read this run states it.</div>
+  </div>
+
+</div>
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
+<script>(function(){var el=document.getElementById('ufccdn');if(!el)return;var target=new Date('2026-09-12T14:00:00-04:00').getTime();function tick(){var d=target-Date.now();if(d<=0){el.textContent='Fight week — live/completed';return;}var days=Math.floor(d/86400000),h=Math.floor(d%86400000/3600000),m=Math.floor(d%3600000/60000);el.textContent=days+'d '+h+'h '+m+'m';}tick();setInterval(tick,30000);})();</script>
+</body>
+</html>
