@@ -21516,3 +21516,104 @@ deleting and report how many days were removed.
 - 🔵 **BUILD — FILENAME-DATE PRUNE RAN A TWELFTH TIME.** **708 snapshots across 22 days, 236 editions**, oldest
   2026-08-22 at exactly 21 days, **0 pruned** (rule is strictly greater than 21). Archive regenerated with
   post-generation assertions matching the inventory (22 / 236 / 708), five-tab nav with Archive active, no live widgets.
+
+## Added 2026-09-12 (Saturday — clone ~5:35pm ET, research 5:36–5:50pm, build 5:50–5:58pm, validated 256/256, read-through 6:00pm, published ~6:02pm — AFTERNOON EDITION, markets CLOSED for the weekend, Noche UFC main card live, TWENTIETH run of the day; archive stamp 2026-09-12-1750)
+- 🟢🟢🟢 **MMA — THE PRELIM CARD CLOSED AT SEVEN OF SEVEN, AND THE "PHANTOM" SCORECARDS WERE TRUE IN EVERY DIGIT.**
+  Both surviving refusals fell to per-bout Cageside Press recaps **fetched in full this run**:
+  *"Official Result: **Ignacio Bahamondes def. Muslim Salikhov by Unanimous Decision (30-27, 30-27, 29-28)**"* and
+  *"Official Result: **Tim Elliott def. Edgar Chairez by unanimous decision (29-28, 29-28, 29-28)**"*. The Bahamondes line
+  is **character-for-character** the one refused across four editions as a phantom — including all three individual cards.
+  ⭐ **THE STANDING LESSON, NOW PROVEN TWICE: the answer to a blind live blog is a per-bout recap.** Of the FIVE prelim
+  refusals this site has now retired on this card, **every single one was a true statement**. The standard withheld
+  nothing false here; the defect was source-list breadth, not strictness. Cageside Press / LowKickMMA / MMA Mania
+  per-bout posts are now load-bearing and must be searched FIRST on any live card.
+- ⚠️ **MMA — Elliott–Chairez: the AI-prediction page landed on the right man on its SECOND attempt.** It said Cháirez one
+  edition and Elliott the next; Elliott is correct. Refusing it was still right — a source that names either man across
+  two runs is naming neither — but record it honestly: the refusal was correct on the source's properties, not on the
+  outcome. Do NOT retroactively credit Athlon Sports.
+- 🔴🔴 **MMA — NEW TRAP, CAUGHT ONLY BY A BYLINE DATE. REFUSE ON SIGHT IN FUTURE RUNS.** A search for tonight's results
+  returned CBS Sports, *"Noche UFC results, highlights: **Diego Lopes knocks out Jean Silva** with spinning elbow that
+  causes massive gash"* — detailed, plausible, with finish/round/time (TKO 4:48 R2). It is **bylined 13 September 2025**:
+  LAST YEAR's Noche UFC, in **San Antonio**. **Jean Silva headlines Noche UFC in consecutive years**, which is exactly why
+  the old article outranks the new one. Also returned and refused: an SI headline *"Grasso and Shevchenko Battle To A
+  Draw"* = the **2023** Noche UFC. ⭐ **RULE ADDED: on an annual event with a returning headliner, check the byline year
+  before reading the body.** Nothing from either article was published.
+- 🟢 **MMA — verified results, all seven prelims (Noche UFC / UFC Fight Night 288, Desert Diamond Arena, Glendale AZ):**
+  Tarin def. Aldrich (UD 29-28x3) · King III def. Rosas (KO slam R1 0:36) · Zhu Rong/Rongzhu def. Rafa García (dec.) ·
+  Gantt def. Klose (sub, reverse triangle, R3 2:46) · Belgaroui def. Santos (TKO/KO R1, "punches 4:25" search-level) ·
+  **Bahamondes def. Salikhov (UD 30-27, 30-27, 29-28)** · **Elliott def. Chairez (UD 29-28x3)**. Main card (6 bouts:
+  Martinez–Ige, Cortes Acosta–Blaydes, Fiorot–Grasso, McMillen–Rahiki, Moreno–Morales, Silva–Delgado) STILL UNDECIDED at
+  publish — main card began 5:00 PM ET. **NO bonuses announced in anything read.**
+- 🟢 **MMA — new sourced colour:** Bahamondes **29** vs Salikhov **42** (13-yr gap), Bahamondes's **welterweight debut**
+  off a **two-fight skid**, Salikhov off a loss to **Uros Medic**; Chairez arrived on a **three-fight win streak**, dropped
+  Elliott in the opening seconds, and Elliott absorbed **two eye pokes the referee missed**. ⚠️ Cageside's own article
+  **contradicts itself on the quote attribution** ("Toughest guy I've ever fought" credited to Elliott in the headline,
+  to "Edgar" — i.e. Chairez, about himself — in the body). Printed as unsettled; do not assign the quote.
+- ⚠️ **MMA — W-FLW REGRESSED FOR A FOURTH CONSECUTIVE EDITION.** The champions cross-check (ESPN + FIGHTMAG, returned by
+  search this run) again seats **Valentina Shevchenko** at women's flyweight. REFUSED — she **vacated**; **Natalia Silva
+  vs Wang Cong** contest it at **UFC 332, 3 Oct**. GOOD NEWS: the **light-heavyweight regression did NOT recur** — the page
+  correctly seats **Carlos Ulberg** (11 Apr 2026), and **all eight men's belts matched** (Aspinall, Ulberg, Strickland
+  9 May 2026, Makhachev, Gaethje 14 Jun 2026, Volkanovski, Yan, Van 6 Dec 2025).
+- ⚠️ **MMA — wording drift corrected.** An Around-the-Sport note had the page "declining to characterise" how the W-FLW
+  belt came to be vacant, while its own Champions Board and UFC 332 card both said **vacated** two sections below. Per this
+  file: publish **vacated**; the lone "stripped" rendering is a minority wording, not adopted. Contradiction removed.
+- 🟢 **CYBER — SANDWORM ATTRIBUTION SHARPENED, plus mechanism and a longer timeline.** A second independent search return
+  gives Cisco Talos's finding as **three distinct actor clusters** on the FMC management plane — **financially motivated
+  groups** plus the **Russian Sandworm / GRU**, the latter deploying **Cyclops Blink**. NEW: root cause is an **improperly
+  created boot-time system process, CWE-288**, reached by **crafted HTTP requests**; Cisco PSIRT confirmed exploitation
+  **August 2026** but **IOCs reach back to 23 July 2026**. All search-level — SecurityWeek/Talos not fetched at source.
+- 🟢 **CYBER — Sept 12 KEV deadline RE-CONFIRMED** by The Hacker News headline returned this run ("…Sets Sept. 12 Federal
+  Patch Deadline") plus a second return stating agencies have until end of **12 September** for CVE-2026-20079.
+  **Alert inventory re-verified: 2 Sep = seven, 4 Sep = one, 8 Sep = four.** The 8 Sep four are **Adobe Commerce +
+  Microsoft Windows + N-able N-central** — independent corroboration of last edition's 11-vs-22 September split.
+  **cisa.gov again returned EMPTY on fetch** (JS-gated) — sixth consecutive run.
+- ⚠️ **CYBER — DIRECTIVE-NUMBER DISAGREEMENT, printed not resolved.** A search return this run says KEV deadlines bind FCEB
+  agencies under **BOD 22-01**; this site's fuller derivation has 22-01 **revoked** and replaced by **BOD 26-04** (10 Jun
+  2026, 16-tier matrix). Kept 26-04 as the reading (it carries date, title and structure) but printed the conflict.
+  Operationally moot: **take the date CISA states per CVE; never derive it.**
+- 🔴 **CYBER — new refusals:** (1) **"700 boxes exposed"** for Cisco FMC — aggregator headline, no scan methodology, no
+  scanning provider named. (2) A third leak-site name, **Shelco Filters**, alongside the already-refused **DiamondLease**
+  and **Imperial Healthcare Solutions** — a leak-site listing is an *attacker's claim*, not a confirmed breach.
+  (3) An unnamed "automated manufacturing firm" IoT breach — no victim, no vendor. (4) **FIFTH** sighting of the Texas
+  water-plant item / **CVE-2026-12345** in the same daily OT roundup; five sightings in one place is still one sighting.
+- 🟢 **MARKETS — Friday 11 Sep closes re-confirmed a NINETEENTH time and re-derived arithmetically:** S&P 500 **7,656.98
+  +65.28 +0.86%**, Dow **52,573.29 +509.19 +0.98%**, Nasdaq **26,333.04 +251.31 +0.96%**; week **Dow −1.6%, S&P −0.8%,
+  Nasdaq ≈−0.7%** (independently restated this run, matches the AP table). Markets CLOSED (weekend).
+- 🟢 **MARKETS — GOLD FIGURE REPLACED (this site's own datum retired).** Carried **$4,321 / −2.45% weekly** came from a note
+  published **04:18 UK Friday — before the US settle**. Dated settle now sourced: **gold +$1.60 to $4,408.90/oz**;
+  **December silver +$0.26 / +0.4% to $65.19** (NEW row); **both metals lower on the week**. Use $4,408.90 as the Friday
+  settle; $4,321 is RETIRED. Search-level, no metals page fetched. 10-yr **4.96%** / 2-yr **4.63%** re-confirmed; WTI
+  settle **$100.05** unchanged.
+- 🟢 **MARKETS — the pre-CPI/post-CPI clock is now CORROBORATED by a second source.** It states hike odds **jumped to ~90%
+  from roughly 70% beforehand** on a **hotter-than-expected core CPI of +0.3% m/m** (vs **+0.2%** expected and +0.2% in
+  July). This independently confirms last edition's correction that ~70% is PRE-print, not a rival current read — and closes
+  the loop, since the week-ahead note had named **0.3% m/m as the market's final confirmation of a hike**. The **~71%** read
+  is unmentioned by the new source and stays printed as the unreconciled figure. Fed decision **Wed 16 Sep 2 PM ET**;
+  funds range **3.50–3.75%** (unchanged 29 Jul, 9-3).
+- ⚠️⚠️⚠️ **PROCESS — VALIDATION PASSED 256/256 AND THE READ-THROUGH STILL FOUND 16 REAL DEFECTS. TENTH CONSECUTIVE RUN, AND
+  AGAIN EVERY LARGEST-CATEGORY DEFECT WAS "this run" ON CARRIED WORK.** Repaired before publish — MMA (6): FIGHTMAG,
+  Sherdog, F4W and the **Gantt Cageside recap** all labelled fetched/re-fetched "this run" when all four were earlier
+  editions; the MMA Mania Belgaroui headline likewise; Sherdog's forward calendar labelled "as it lists it this run".
+  CYBER (7): both AiCybr entries, Cybersecurity News, THN-GitLab and Help Net Security labelled "returned this run";
+  the GitLab KEV bullet claimed "re-confirmed at source this run, with new detail" when it was untouched; the disclaimer's
+  "Re-verified this run"; "What to actually install, newly sourced this run" (previous edition — only the six Cisco
+  branches were restated). MARKETS (3): the AP wire "read in full this run"; the Warsh week-ahead note "read this run";
+  the VIX pair "dated for the first time this run"; the Brent/WTI refusals "returned by a rates-and-oil search this run"
+  (they did not reappear). Also fixed: a **loose time claim** ("blind for six hours" / "four hours after the last prelim")
+  replaced with times that are exactly true — prelims from 2 PM ET, last recap 5:05 PM ET, page wrong about the first for
+  ~4h and the last for ~1h; and the **rankings bullet** rescoped, since this run's UFC.com copy gives Grasso only as
+  "former champion" and Moreno only as "Top 10" with **no numbers** (No. 3 / No. 8 are carried, not re-confirmed).
+  ⭐ *Tenth run running. The mechanism is stable and so is the fix: **provenance labels do not survive a copy-forward.**
+  Every "this run" on a carried page is false the moment the run ends. Re-audit EVERY provenance claim against a list of
+  what was actually fetched and searched THIS run — not against what the page says about itself.*
+- 🔵 **NEW-TAG LEDGER — MMA 0 cards (both promotions went into the existing results table and Top Story), CYBER 0, MARKETS 0.**
+  One MMA stat/stat-strip swap on cyber (Trezor 347,000 → the 23 July / three-clusters figure).
+- 🔵 **VALIDATION — 256 checks, 0 failures, after fixing FOUR VALIDATOR BUGS (not page bugs):** the one-sentence TL;DR test
+  counted decimal points as sentence stops; the "no literal 'days left'" test did not strip `<script>`, so it flagged the
+  countdown correctly computing it; the Patch-Priority block regex stopped at a nested `</div>`; and the champion
+  regression guard matched "Not Chimaev" in a Note cell. Guard now tests the **champion column only**, and separately
+  requires every banned name appearing anywhere in that table to sit inside a negating clause.
+- 🔵 **BUILD — FILENAME-DATE PRUNE RAN A THIRTEENTH TIME.** **711 snapshots across 22 days, 237 editions**, oldest
+  2026-08-22 at exactly 21 days, **0 pruned** (rule is strictly greater than 21). Archive regenerated by
+  `gen_archive_1750.py` with post-generation assertions matching the inventory (22 / 237 / 711), five-tab nav with
+  Archive active, no live widgets.
