@@ -16,7 +16,41 @@ Three belts were published WRONG for weeks (Pereira at LHW, Chimaev at MW, feath
 - **Flyweight:** Joshua Van (TKO1 Alexandre Pantoja, UFC 323, Dec 6 2025; DEFENDED TKO5 Tatsuro Taira, UFC 328, May 9 2026 — 1 defense).
 - **Women's Flyweight:** **VACANT.** ⚠ **UPDATED 2026-09-08 (eighth run) — Shevchenko is NO LONGER champion and this line supersedes every earlier one seating her.** **Valentina Shevchenko VACATED the belt**: she is injured and sidelined for roughly a year, and was to have defended against Natalia Silva. **Natalia Silva vs. Wang Cong contest the VACANT title at UFC 332, Salt Lake City, 3 October 2026.** The UFC has said Shevchenko is guaranteed a title shot when she is cleared. WORDING: four sources read 2026-09-08 say **vacated** (one: “forced to vacate”); a single earlier read said **stripped**. Publish **vacated** — “stripped” implies a promotional sanction no source alleges. Any “current champions” list seating Shevchenko at 125 lb is STALE and must be refused. Sources: Yahoo Sports “Valentina Shevchenko Vacates UFC Women’s Flyweight Title”; Yahoo Sports “UFC 332 Has A New Main Event, And A Champion Has Vacated”; Forbes (2026-09-05); SportBible (2026-09-06); Heavy.com. **Women's Bantamweight:** Kayla Harrison (Sub2 Julianna Peña, UFC 316, Jun 7 2025; **0 defenses** — the scheduled UFC 324 defense vs Amanda Nunes on Jan 24 2026 was CANCELED after Harrison withdrew for neck surgery/herniated-disc repair; ESPN champions page lists 0 defenses; a Nunes bout is now targeted for Sept but is unconfirmed. Do NOT credit Harrison with a Nunes defense. Verified 2026-07-03 vs ESPN + Bloody Elbow/MMA Weekly/Heavy). **Women's Strawweight:** Mackenzie Dern (UD over Virna Jandiroba, UFC 321, Oct 25 2025). **1 DEFENCE** — UD Gillian Robertson, UFC 330, Aug 15 2026 (was 0). [updated 2026-08-22]
 Sources: ESPN "Current and all-time UFC champions" (living article, reflects the Jun 14 result); UFC.com UFC 327 & UFC 328 official pages; Al Jazeera (UFC 325).
+⚠ **2026-09-12 (ninth run) — THE ESPN CHAMPIONS PAGE NOW REGRESSES ON TWO BELTS, NOT ONE.** The read this
+run seated **Alex Pereira at light heavyweight** on his "Oct. 4, 2025 TKO1 over Magomed Ankalaev" — an entry
+that predates **UFC 327 (11 April 2026)**, where **Carlos Ulberg** won the vacated belt by KO1 over Jiří
+Procházka — **and** again seated **Valentina Shevchenko at women's flyweight** (vacated; Silva vs. Wang
+contest it at UFC 332 on 3 October). The other seven men's divisions matched. That is the **third consecutive
+run** with a W-FLW regression and the **first** recorded LHW regression since the June block was written.
+RULE: treat that page as a cross-check, never as the source of truth, and re-derive every belt from the most
+recent title-changing card. Both regressions were refused and named on-page this run.
+
 NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Khamzat Chimaev", "Featherweight VACANT", or "Champions board verified" with the OLD names is OUTDATED — THIS BLOCK WINS.
+
+## ⚠ KEV DEADLINES — AUTHORITATIVE (promoted to the top 2026-09-12, ninth run, from the CISA directive page itself)
+**BOD 22-01 IS REVOKED. Do NOT compute KEV deadlines as "three weeks from the add date."**
+CISA issued **BOD 26-04, "Prioritizing Security Updates Based on Risk," on 10 June 2026**, and it
+**supersedes and revokes BOD 19-02 and BOD 22-01**. It replaces the uniform window with a **16-tier
+remediation matrix** keyed to three factors: whether the asset is publicly exposed, whether the CVE is
+in KEV, and whether exploitation can be fully automated. **The most dangerous tier must be remediated
+within THREE DAYS, with mandatory forensic triage**; low-risk items can defer to the next upgrade cycle.
+Agencies must be operating to these timelines by **7 December 2026**.
+CONSEQUENCES for this site, and the reason this block is promoted:
+- A **same-week KEV deadline is now normal and must NOT be "corrected" to three weeks.** Verified this
+  run: MikroTik CVE-2026-67277 and CVE-2026-86060 were **added 10 September and are due 13 September**
+  — a three-day window — and CISA flagged **86060 as requiring forensic triage under BOD 26-04**
+  explicitly. Source fetched IN FULL this run: GBHackers, 11 September 2026.
+- **Deadlines in the SAME bulletin can differ.** The 8 September batch of four split between 11 and
+  22 September. Always take the CISA-stated date per CVE; never derive it.
+- Several 2026-06 entries further down this file say "BOD 26-04 unverified — IGNORED" and force a
+  3-week window. **Those entries are OBSOLETE and this block wins.** The directive is real; its own
+  CISA page and implementation-guidance page were returned this run, and Tenable, Datadog, FedTech,
+  Nucleus and FedRAMP all describe the same 16-tier matrix.
+- Corollary worth stating on the page: **KEV entry requires evidence of exploitation**, so a severe
+  flaw with no confirmed exploitation carries **no federal deadline at all** — e.g. the two CVSS 9.8
+  Check Point VPN flaws below. Absence from KEV is not a severity judgement.
+Sources: CISA "BOD 26-04: Prioritizing Security Updates Based on Risk"; CISA "BOD 26-04: Implementation
+Guidance"; Tenable BOD 26-04 FAQ; GBHackers (MikroTik, fetched in full 2026-09-12).
 
 ## ⚠ RESOLVED 2026-09-10 (2245): DWCS Season 10 Week 5 was TUESDAY 8 SEPTEMBER 2026
 Combat Press (fetched in full, 2026-09-10) dates Week 5 to **Tuesday, Sep. 8** at the Meta Apex, with four
@@ -20280,3 +20314,89 @@ deleting and report how many days were removed.
 - 🔵 **VALIDATION — 221 checks, 0 failures.** Tag balance across 20 element types on all four pages; doctype and tail; four masthead ids and three timezone refs per page; five-tab nav with exactly one active tab matching the page's own filename; **eight TradingView scripts on Wall Street only** (zero on the other three), three single-quote widgets, six required symbols, NYSE:HPE as Chart of the Day; three index levels each asserted exactly once inside the Scorecard with all three points/percent pairs arithmetically reconciled; 17 CVE rows, 5 CVSS-10.0 cells, 7 not-stated cells, anchored countdown checks; ten champion names plus all four regression guards; the tonight-results refusal enforced as an absence check on result strings; and three checks that each index.html card sentence is **byte-identical** to its page's own summary strip.
 - ⚠ **VALIDATION — ALL FOUR "FAILURES" WERE VALIDATOR BUGS AND THE CHECKS WERE TIGHTENED, NOT THE PAGES LOOSENED.** (1) `"~$99" not in ws` fired on the cell that explicitly labels ~$99 as **superseded** — rewritten to require exactly one occurrence inside the supersedes clause. (2) `"stripped" not in mma` fired on **"vacated rather than stripped"**, the clause that REJECTS the word — the same trap the previous run documented, re-encountered because the check was rewritten from scratch; now requires exactly one occurrence inside that clause. (3) and (4) were stale expectations carried from the previous run's table (4 vs 5 CVSS-10.0 cells, 8 vs 7 not-stated) that this run's added row changed. ⭐ *A prior run's ledger warned about the "stripped" trap and it still recurred — a documented trap is only avoided if the NEXT validator inherits the check, not the prose.*
 - ⚠ **BUILD — THE FILENAME-DATE PRUNE RAN CORRECTLY A SECOND TIME.** 675 snapshots across 22 days, oldest **2026-08-22 at exactly 21 days**, **0 pruned** — correct, since the rule is strictly greater than 21. The `-mtime` version in the spec remains a no-op on a fresh clone; do not revert to it.
+
+## Added 2026-09-12 (Saturday ~12:05pm ET — MIDDAY EDITION, markets CLOSED for the weekend, NINTH run of the day; archive stamp 2026-09-12-1205)
+- 🟢🟢 **CYBER — CHECK POINT VPN IS THE RUN'S BIGGEST ADDITION, AND IT IS A PRE-EXPLOITATION STORY.** The Dutch
+  **NCSC** warns exploitation of **CVE-2026-85102** and **CVE-2026-85103** is **imminent**. Both **CVSS 9.8**,
+  both **unauthenticated RCE**: 85102 = improper validation of certificate data during VPN negotiation
+  (Security Gateway, Spark Firewall, site-to-site or remote-access VPN); 85103 = **heap overflow in the VPN
+  certificate ASN.1 decoding flow**, also reaching Security Management Server. Check Point's own research team
+  found them, reports **no exploitation and no public PoC**, and began **Live Patch rollout 9 September**.
+  Published as a New Breaches card, two new CVE-table rows, a "next in the queue" paragraph under Patch
+  Priority, and a stat-strip figure. Sources: The Hacker News, SecurityWeek, SC Media, NCSC relay.
+- ⭐ **CYBER — THE KEV SECTION NOW STATES THE ABSENCE EXPLICITLY.** A new bullet says the two Check Point CVEs
+  are *deliberately* not in the federal-deadline list, because KEV entry requires evidence of exploitation —
+  so two 9.8 unauth-RCE flaws a national CERT expects to be attacked carry **no deadline at all**. Worth keeping:
+  readers otherwise infer that absence from the list means low severity.
+- 🟢 **CYBER — BOD 26-04 PROMOTED TO A TOP-OF-FILE STANDING BLOCK (see above).** BOD 22-01 is **revoked**;
+  the three-week heuristic in the task spec is obsolete and must not be re-applied. Confirmed from CISA's own
+  directive pages plus Tenable/Datadog/FedTech/FedRAMP, and demonstrated by the MikroTik 3-day window.
+- 🟢 **CYBER — FULCRUMSEC REPLACES SANDWORM AT THE TOP OF THE SPOTLIGHT (Sandworm retained, demoted).**
+  "**Hardcoded Horrorshow**" / "**steal and squeeze**": no encryption, ever. Against **Novo Nordisk** it lifted a
+  **GitHub PAT and Azure container-registry credentials out of client-side JavaScript** on two subdomains in
+  **March 2026**, cloned hundreds of private repos, pivoted on secrets committed inside them; **$25M demand,
+  ~1.3TB** claimed, **4,750 repos**, **~163,000 employees**, **11,500 pseudonymised trial patients**; Novo Nordisk
+  **refused to pay**. Dated carefully — the intrusion is March/June, only the analysis is this week.
+- ⚠ **CYBER — A SENTENCE I WROTE FAILED MY OWN ARITHMETIC CHECK AND WAS REWRITTEN, NOT DELETED.** I first
+  called BleepingComputer's **966 flaws / 105 critical** the one tally that "reconciles." Its own itemisation —
+  **81 RCE + 20 EoP + 2 info-disclosure + 1 security-feature bypass** — sums to **104**, one short of 105. The
+  page now says so and treats the gap as the point: the most granular count available does not close against
+  itself. Trackers published: **964** (Tenable, 104 critical), **966** (BleepingComputer, 105), **973** (one
+  breaking out 113 critical), **974**. ⭐ *Check your own editorial arithmetic, not just the sources'.*
+- 🟢 **CYBER — ANTHROPIC'S 10 SEPTEMBER THREAT REPORT ADDED TO "ALSO NOTABLE."** Covers **Dec 2025–Aug 2026**
+  across **seven harm areas**; Iran-linked naval-targeting and surveillance requests, Houthi-tied rocket/missile
+  research attempts, Chinese labs routing hundreds of thousands of queries to extract capabilities; framing is
+  that misuse moved from prompt-level help to **agentic execution and operational orchestration**.
+- ⚠ **CYBER — AN EDITORIAL GENERALISATION WAS CAUGHT IN THE FINAL READ-THROUGH AND REPLACED.** The threat
+  banner had claimed "three of the last four weeks of critical bugs have landed on network-edge appliances" —
+  no source states that. Rewritten to a claim the page itself evidences: every actively-exploited flaw on the
+  page today sits on an edge appliance rather than an endpoint. ⭐ *A plausible-sounding statistic is still a
+  fabricated statistic.*
+- 🟢 **MARKETS — FRIDAY'S CLOSES RE-CONFIRMED AN ELEVENTH TIME; A CONFLICTING WEEKLY LEVEL WAS REFUSED IN
+  PRINT.** S&P **7,656.98 (+65.28, +0.86%)**, Nasdaq **26,333.04 (+251.31, +0.96%)**, Dow **52,573.29 (+509.19,
+  +0.98%)**, all validator-reconciled. One read gave the weekly S&P decline as **−0.68%** (vs the carried
+  −0.8%) **and** a weekly closing level of **"7,666"**. Both weekly percents are printed; the **7,666 level is
+  named and explicitly NOT published**, because it cannot be reconciled with the points/percent pair every wire
+  gives. ⭐ *Refuse a number in the open rather than silently.*
+- 🟢 **MARKETS — FOMC NOW CARRIES A TIME AND A PROJECTIONS ROUND.** Decision **Wednesday 16 September,
+  2 PM ET**, with a **Summary of Economic Projections**. Hike odds **~90%** (one read: **85–90%**). Full week-ahead
+  added: Empire State + ADP Tuesday; import/export prices, retail sales, business inventories, NAHB and the FOMC
+  Wednesday; claims, housing starts, permits, pending home sales Thursday. No holiday in the week.
+- 🟢 **MARKETS — THE SECTOR LEADER IS DISPUTED AND BOTH READS ARE PRINTED.** Read A: communication services
+  ~**1.35%** ahead of consumer discretionary ~**1.13%**. Read B: **technology, industrials and communication
+  services** each up more than 1%. Both agree nine of eleven sectors rose and that **health care and utilities
+  lagged**. CPI detail sharpened: headline **+0.4% m/m** (July +0.1%), **3.4% y/y** unchanged; core **+0.3%** vs
+  **0.2%** consensus — the core miss, not the headline, is why hike odds jumped.
+- 🟢🟢 **MMA — WEIGH-INS ARE IN AND CLEAN; STILL ZERO RESULTS PUBLISHED.** **All 26 fighters made weight.**
+  Silva **145**, Delgado **145.5**; Fiorot and Grasso both **125**; Moreno and Morales both **125.5**. One face-off
+  produced a **near-slap**, carried by two outlets under the same headline. Build ran ~12:05pm ET, before the
+  2 PM prelims — the page says so and a validator asserts no result strings appear. Countdown still targets
+  2026-09-12T17:00:00-04:00.
+- 🟢 **MMA — CURTIS BLAYDES SIGNED A NEW EIGHT-FIGHT DEAL AND OPENS IT TONIGHT.** **No. 10** at heavyweight;
+  revealed it himself in an interview rather than via the promotion; fights **Waldo Cortes-Acosta**, a bout moved
+  up a week from UFC 331. **No dollar terms stated in sources read — none published.** Added as a New business
+  card and an Around-the-Sport line. Roster churn also added: signings **Roberto Soldic, Sean King, Gabriel
+  Lorenco**; releases **Edson Barboza, Darren Elkins, Bruno Lopes, Aoriqileng**.
+- ⚠ **MMA — SEE THE CHAMPIONS-BLOCK ADDENDUM ABOVE: THE SOURCE REGRESSED ON *TWO* BELTS THIS RUN.** LHW
+  (Pereira, stale to Oct 2025) and W-FLW (Shevchenko, vacated). Both refused; the on-page note now names both
+  regressions and the dates that disprove them, instead of only the flyweight one.
+- 🔵 **NEW-TAG LEDGER — CYBER 3, MMA 1, WALL STREET 0.** Issued: **Check Point VPN**, **Novo Nordisk /
+  FulcrumSec** (breach card) and **FulcrumSec** (spotlight) on cyber; **Blaydes re-signs for eight** on MMA.
+  Retired: **BlueMoon** and **TA412** both demoted from New to **Carried** (in the 1142 snapshot);
+  **ON Semiconductor** demoted to Carried on Wall Street. Wall Street issued none — markets have been shut
+  since Friday's close, so there is no new mover to tag, and saying so is more honest than manufacturing one.
+- 🔵 **VALIDATION — 236 checks, 0 failures.** Tag balance across 20 element types on four pages; doctype and
+  tail; four masthead ids and three timezone refs per page; five-tab nav with exactly one active tab matching
+  the page's own filename; **eight TradingView scripts on Wall Street only** (zero elsewhere), three single-quote
+  widgets, six required symbols, NYSE:HPE as Chart of the Day; three index levels each asserted exactly once
+  inside the Scorecard with all three points/percent pairs arithmetically reconciled, plus a check that **7,666
+  appears only inside its refusal clause**; **19 CVE rows** (17 + 2 Check Point), 5 CVSS-10.0 cells, 3 CVSS-9.8
+  cells, 7 not-stated cells; the "0 days left, due today" string constrained to exactly two occurrences; ten
+  champion names plus four regression guards including the **"stripped" trap** (count must be 1, inside the
+  clause that rejects the word); an absence check that no Noche UFC result string appears; and three checks that
+  each index.html card sentence is **byte-identical** to its page's own summary strip.
+- ⚠ **PROCESS — A CLEAN FIRST VALIDATOR RUN IS A REASON TO LOOK HARDER, NOT TO SHIP.** 236/236 passed on the
+  first execution; the two real defects this run (the 105-vs-104 arithmetic and the invented "three of the last
+  four weeks" statistic) were both found by the **manual line-by-line read-through afterwards**, because neither
+  was a claim any automated check was written to test. ⭐ *The validator tests what a previous run already knew
+  to doubt; the read-through is what catches this run's new prose.*
