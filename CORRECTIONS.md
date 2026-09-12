@@ -20854,3 +20854,138 @@ deleting and report how many days were removed.
   `gen_archive_1417.py`, again regenerating **every** day section from the snapshot directory, anchored on
   `<h3 class="day">` and `<footer>`, with post-generation assertions that day-section, row and link counts equal
   the snapshot inventory (22 / 230 / 690).
+
+## Added 2026-09-12 (Saturday — clone ~2:35pm ET, research 2:36–2:52pm, build 2:52–3:05pm, validated 3:06pm, published ~3:10pm — MIDDAY EDITION, markets CLOSED for the weekend, Noche UFC prelims LIVE, FOURTEENTH run of the day; archive stamp 2026-09-12-1449)
+- 🟢🟢🟢 **MMA — A SEARCH RESULT RETURNED ALL SEVEN PRELIM WINNERS. EVERY ONE WAS FABRICATED, AND THE MECHANISM IS NOW
+  IDENTIFIED.** A general results search returned the seven Noche UFC prelim winners stated flatly and **in the correct
+  bout order** — the most convincing false result set any run has seen. Both live pages were fetched minutes earlier and
+  both were blank: **UFC.com's "Prelim Results"** carries all seven bouts as matchup previews, and **Sherdog's
+  play-by-play** shows an "Official Result" heading under all thirteen bouts with every one empty. Tracing the claim to
+  source settles it: it comes from an **Athlon Sports page titled "Noche UFC Prediction, Results and Highlights,"
+  headlined "What AI Predicted and What Happened?", published 2:15 PM ET today** — fifteen minutes into the prelims. The
+  page contains **no result whatsoever**. It contains a prediction model's table: *Regina Tarin, unanimous decision,
+  55% winner confidence, 47% method confidence*, annotated "This is a coin-flip tier call." The "29-28, 29-28, 29-28
+  unanimous decision" that came back as a result **is the model's projected method.**
+  ⭐ **THE STANDING LESSON, AND IT IS NEW: a page can be titled "Results", dated today, written entirely in the PAST
+  TENSE ("Aldrich entered 15-7", "Tarin entered 8-0"), and contain only a forecast.** Past tense is a convention of
+  pre-fight tale-of-the-tape copy, not evidence a fight happened; "results" in a headline and URL is search placement,
+  not reporting. **Tense and headline are never evidence. The only acceptable check is a result field on a live page
+  that is actually filled in.** RULE for future runs: during any live event, refuse every result that does not come
+  from a filled result field on UFC.com or Sherdog, however specific, however well-ordered, however many outlets
+  appear to carry it. The refusal and its trace are published on the page with the Athlon URL cited so it is checkable.
+- 🟢🟢 **MARKETS — A PRIOR REFUSAL WAS RIGHT IN OUTCOME AND WRONG IN REASONING. IT WAS A TIMEZONE.** Runs 11 and 12
+  refused a week-ahead preview "because it schedules the Federal Reserve decision for Thursday 17 September." Reading
+  that source **in full** this run shows it is **IG Australia**, and it lists the Fed at "**Thursday, 17 September at
+  4.00am AEST**". **4:00am AEST Thursday = 2:00 PM ET Wednesday 16 September** — the correct time. The source was never
+  wrong; the earlier reading of it was. Its **BoE (Thu 17, 9.00pm AEST = 7am ET Thu)** and **BoJ (Fri 18, 1.00pm AEST =
+  11pm ET Thu)** entries convert cleanly too. Wednesday 16 September at 2 PM ET is still what is published, now for the
+  right reason, and the page explains the conversion. ⭐ *Before recording a source as wrong about a date, check what
+  timezone it publishes in — especially a non-US outlet. A refusal with a wrong reason propagates as a false
+  reliability judgement about a good source.*
+- ⚠⚠ **MARKETS — THE CARRIED DOW WEEKLY FIGURE IS ARITHMETICALLY IMPOSSIBLE AND IS RETIRED.** Editions carried a weekly
+  Dow move of **−1.51%**; this run's source gives **−426 points**. Against Friday's close of 52,573.29 those cannot
+  both be true — **1.51% of this index is roughly 800 points, not 426**. The sourced points figure is published with
+  the percentage derived from it (**≈−0.80%**) and marked approximate; **−1.51% is retired**. Note this survived
+  fourteen runs inside a validator that reconciles *daily* points/percent pairs but never checked the *weekly* row.
+- ⚠⚠ **MARKETS — AN UNSOURCED SUPERLATIVE CONTRADICTED THIS SITE'S OWN PRIOR EDITION.** The first draft called ACV
+  Auctions **+44%** "the session's single largest mover." Run 12 published **Tenon Medical +53.8%** for the same
+  session. Rewritten to "the largest whose driver is established", with Tenon named and flagged as not re-sourced this
+  run. ⭐ *A superlative is a claim about everything you did not publish, including what you published yesterday.*
+- 🟢 **MARKETS — NEWLY SOURCED, AND ONE CARRIED LINE RETIRED PROPERLY.** The **ACVA +44%** move now has its cause:
+  **Copart (CPRT) agreed to acquire it for $10.50 per share in cash**. "Nine of eleven sectors higher" is **re-sourced**
+  after several editions carried it, alongside **advancers over decliners ~2.1 to 1**. New this run: **VIX 17.85 from
+  14.52**, **gold $4,321 (−2.45% wk)**, **bitcoin $76,687 (−4.50% wk)**, **DXY 99.08 (−0.08% wk)**, **Aug PPI 5.4% y/y
+  from 4.8%** (core 4.6% from 4.2%), **jobless claims −1,000 to 205,000**, **ECB +25bp**, **HPE and Dell double-digit
+  gains** (no percentage stated, so none published). Comm Services is printed as **~1.35% (this run) against ~1.6%
+  (earlier this week)** — both shown, not averaged. Friday's three closes re-confirmed a **fifteenth** time.
+- ⚠ **MARKETS — A WTI WEEKLY FIGURE THAT PREDATES THE SETTLEMENT IS NOT THE SETTLEMENT.** The same IG piece gives WTI
+  "**+12.68% this week to $103.07**" but was **published Friday 04:18 UK time, before the US session settled**. The
+  settled **$100.05 / −2.4% / +9.4% weekly** is what the table carries; the $103.07 snapshot is disclosed in the
+  sourcing notes rather than presented as a close. The **7,666** weekly S&P "level" guard is retained for a **sixth**
+  edition.
+- 🟢🟢 **CYBER — NEW TOP STORY: AI AGENTS RAN A GLOBAL PAPERCUT CAMPAIGN, AND THE TIMINGS ARE THE STORY.** GreyNoise,
+  via BleepingComputer (10 Sept, Bill Toulas), fetched in full: a **likely Russian-speaking** actor used **hundreds of
+  AI agents** — **OpenAI's Codex harness plus a DeepSeek model** and commodity offensive tooling, targets from
+  **Netlas** — to exploit **CVE-2026-81578** and **CVE-2026-82078** (auth bypass + RCE chain) in **PaperCut NG/MF**.
+  **≥440 instances, 395 organisations, 48 countries.** Credentials from **280** victims, OS/domain secrets from **147**,
+  admin at **12**. Education ~half of victims; US most targeted, then UK, France, Spain, Canada. **Empty workspace to
+  first RCE in under four hours; first domain admin two hours later; 11 organisations in 26 seconds once launched; one
+  US high school from initial access to domain admin in seven minutes.** Three paths: LSASS/registry dump +
+  pass-the-hash; **noPac** (CVE-2021-42278/42287); direct Domain Admins add. **DCSync → full NTDS.DIT** in all cases.
+  Toolkit: Ligolo-ng, Mimikatz, Certipy, BloodHound, Rubeus, Impacket, NetExec, custom Rust collectors. **Two things
+  NOT claimed on the page: any named ransomware brand, and an objective — GreyNoise could not determine one.** The
+  actor's country avoid-list (RU, CN, IR, UA, BY, MD, BR, ZA) was **not consistently followed by the agents**.
+- 🟢🟢 **CYBER — NEW KEV ADD NO PRIOR EDITION CARRIED, AND IT IS A CVSS 10.0.** **CVE-2026-85706**, GitLab CE/EE
+  **path traversal in the repository commits API**, **CVSS 10.0**: improper path confinement plus missing authentication
+  enforcement lets an **unauthenticated** attacker read arbitrary files from the server. **Added 11 September, due
+  14 September** (three days). Fixed in **19.3.2 / 19.2.6 / 19.1.8**, released 10 September. CVE table now **15 rows**.
+- ⭐ **CYBER — BOD 26-04's PER-VULNERABILITY CLOCK NOW HAS FIVE ADD DATES AND THE PATTERN HOLDS.** 4 Sept → 14 days;
+  8 Sept → 14; **9 Sept → BOTH 3 and 14 from the same alert**; 10 Sept → 3; **11 Sept → 3 (GitLab)**. The descriptive
+  pattern is restated and still fenced as observation, not rule: **three-day windows have attached to perimeter
+  network/security appliances and to unauthenticated maximum-severity flaws; fourteen-day ones to browser and
+  local-privilege bugs.** GitLab fits the first. The read-through **cut "internet-facing"** from the GitLab
+  description — not stated in the sources read; "exploitable without authentication" is.
+- 🟢 **CYBER — THE PATCH TUESDAY RANGE IS RESOLVED TO A NUMBER.** Prior editions published the sourced range
+  **966–997**. BleepingComputer's own headline and body give **966 flaws and 2 actively exploited zero-days**, with
+  **105 Critical** (81 RCE, 20 EoP, 2 info disclosure, 1 SFB), **excluding 204 flaws fixed earlier in the month** —
+  which is what generated the competing counts. **966 published.** The two zero-days are the already-carried
+  **CVE-2026-81963** (Windows Update Stack → SYSTEM) and **CVE-2026-85880** (ALPC heap overflow, AppContainer escape →
+  SYSTEM), CISA-added the same day, due 22 Sept. Also new: **AdaptHealth confirms 4.1 million** exposed in the July
+  attack (a confirmed count where earlier editions had none), and **36,000+ exposed Plex servers** unpatched.
+- ⚠⚠ **CYBER — TWO NEW REFUSALS.** (1) **FulcrumSec's "Hardcoded Horrorshow" with Novo Nordisk as a victim** — a single
+  aggregator summary, no corroboration anywhere else read, no victim statement. Refused. (2) **The "270GB" Harley-
+  Davidson figure** — appeared in an aggregator headline, absent from every page fetched. The **Cl0p listing itself is
+  published, graded as an unconfirmed claim** with the company's silence stated; **the number is not**. ⭐ *A leak-site
+  listing and a data volume are two different claims with two different evidence bars; publishing the first does not
+  license the second.* **Summit Pathology (2024)**, **Imperial Healthcare Solutions**, **DiamondLease**,
+  **CVE-2026-12345**, **Mantax Otax** and **Nevada 2025** all remain refused; a validator asserts each appears only in
+  the refusal block or in the footer citations that date it.
+- 🔵 **NEW-TAG LEDGER — CYBER 4, MARKETS 3, MMA 2.** Issued: **PaperCut** (top story + threat-actor spotlight),
+  **GitLab CVE-2026-85706**, **Harley-Davidson/Cl0p**, **AdaptHealth 4.1M**, **Plex exposure**, **ACVA/Copart cause**,
+  **the breadth card**, **HPE/Dell**, **Noche UFC live** (top story), **Regina Tarin** (prospect), **Parnasse rankings**.
+  Retired this run: **IDScan**, **Florida DAVID**, **Cisco FMC exploitation**, **Check Point/NCSC**, **ShieldCrash** and
+  **the weekly breadth card** all demoted to **Carried**; **UFC 331/332/FN289/FN290** all now Carried.
+- 🔵 **VALIDATION — 190 checks, 0 failures after repair; ALL TEN initial failures were in the validator, none in the
+  pages.** Tag balance across 14 element types; doctype and tail; four masthead ids and timezone refs per page;
+  five-tab nav with exactly one active tab matching the page's own filename; **eight TradingView scripts on Wall Street
+  only** (zero elsewhere), three single-quote widgets, five required symbols, **NASDAQ:ACVA** as Chart of the Day;
+  three index levels asserted inside the Scorecard with all points/percent pairs reconciled against the implied prior
+  close, plus the 7,666 guard; **15 CVE rows** with CVSS cell counts pinned (two 10.0, one 9.3, two 7.8, eight
+  not-stated); **KEV countdown math recomputed from today's date** against 12/13/14/18/22/23 September; absence checks
+  for six refused strings scoped to refusal-block-plus-footer; **champion CELL parsing across 11 divisions** with all
+  four regression guards and the "stripped" trap; a **13-row "Not yet contested"** assertion; result-string absence
+  checks on all four pages; footer URL de-duplication; and three checks that each index.html card sentence is
+  **byte-identical** to its page's own summary strip.
+- ⚠⚠ **VALIDATION — THE "0 days left" TRAP RECURRED A SIXTH TIME, BACK IN ITS ORIGINAL GUISE.** Raw count was **2**
+  against **1** rendered instance, and the extra was **"1*0 days left*"** — the substring inside **"10 days left"**.
+  Runs 9–11 diagnosed exactly this and prescribed `(?<![0-9])`; run 12 shifted to script-stripping; run 13's ledger
+  said the constant, not the method, was what failed to propagate. This run **neither** guard was carried over: a
+  freshly written validator reproduced the *first* version of the bug. ⭐ *Six runs. The fix keeps being rediscovered
+  because the validator is rewritten from scratch each time, so every accumulated guard is lost by default. The
+  durable answer is not another regex — it is that **the KEV countdown check must be written against the rendered body
+  with a digit anchor, and that requirement belongs in this file, not in a script that does not survive the run.***
+- ⚠ **VALIDATION — THE OTHER NINE FAILURES WERE BLUNT-CHECK FALSE POSITIVES, TWO OF THEM PREDICTED BY PRIOR LEDGERS.**
+  A refusal-scoping regex `<h2>Refused This Run</h2>.*?</div>` stopped at the **first** `</div>` — which closes the
+  heading div — truncating the block to nothing and firing on all six refused strings plus FulcrumSec; rewritten to
+  run to `<footer>` and to allow the **footer citations that date the refusals**, exactly the false positive run 13
+  recorded. A page-wide ban on `TKO\d` fired on **three legitimate historical title-change methods on the Champions
+  Board** (Gaethje TKO4, Van TKO1, Van TKO5) — now scoped above the board and paired with an assertion that those
+  strings appear **only** there, mirroring the existing `submission (round` fix. And the not-stated CVSS count was
+  pinned at 7 when the page has 8 — **a constant copied rather than re-derived, the precise failure run 13 named.**
+- ⚠⚠ **PROCESS — 190/190 PASSED FIRST TIME AND THE READ-THROUGH THEN FOUND TEN REAL DEFECTS. FIFTH CONSECUTIVE RUN.**
+  (1) the ACVA superlative contradicting our own prior edition; (2) the Dow −426pts/−1.51% impossibility; (3) "executed
+  at a tempo no human team matches" — GreyNoise says "very tight response margins", so the source's own words replaced
+  it; (4) "at the campaign's peak" for the 26-second figure, which the source ties to *once the campaign launched*;
+  (5) "internet-facing" for GitLab; (6) "Friday's bounce reads as relief rather than reversal" — pure editorial framing,
+  cut; (7) **"three independent sources" for the thirteen-bout count when the official page lists only the seven
+  prelims** — corrected to two enumerating sources, with the official page credited for the half it covers;
+  (8) asserting Parnasse **won** at UFC Paris when only a rankings *headline* was read — rewritten to say the method
+  and official result were not in anything read this run; (9) **"regressed on five of the last six checks"** — an
+  unverified count of this site's own archive, the same defect run 13 flagged, replaced with the occurrences actually
+  logged in this file; (10) "print-management" kept but "the speed is the story" retained only as explicit framing.
+  ⭐ *Five runs running, every defect the validator missed was a sentence that sounded like analysis — and this run the
+  two worst were a superlative and an arithmetic impossibility that had both been sitting in the template for weeks.*
+- 🔵 **BUILD — FILENAME-DATE PRUNE RAN A SEVENTH TIME.** **231 editions across 22 days**, oldest **2026-08-22 at exactly
+  21 days**, **0 pruned** (rule is strictly greater than 21). Archive generator rewritten as `gen_archive_1449.py`,
+  regenerating **every** day section from the snapshot directory, with post-generation assertions that day-section, row
+  and link counts equal the snapshot inventory (**22 / 231 / 693**).
