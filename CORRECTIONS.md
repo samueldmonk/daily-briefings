@@ -20726,3 +20726,131 @@ deleting and report how many days were removed.
   again regenerating **every** day section from the snapshot directory rather than editing the existing table,
   anchored on `<h3 class="day">` and `<footer>`, with post-generation assertions that the day-section and row counts
   equal the snapshot inventory.
+
+## Added 2026-09-12 (Saturday — clone ~2:05pm ET, research 2:06–2:12pm, build 2:12–2:16pm, validated 2:17pm, published ~2:20pm — MIDDAY EDITION, markets CLOSED for the weekend, Noche UFC prelims LIVE, THIRTEENTH run of the day; archive stamp 2026-09-12-1417)
+- 🟢🟢 **MMA — THE CARD-SIZE DISPUTE IS RESOLVED AT SOURCE AND "SIXTEEN" IS RETIRED.** Editions have printed
+  **thirteen** (official event page) against a separate listing's **sixteen** for several runs without resolving it.
+  Sherdog's play-by-play page, fetched this run, enumerates the card bout by bout with each fighter's weigh-in
+  figure and contains exactly **thirteen**: seven prelims and six main-card bouts. Thirteen published; sixteen
+  appears on the page only inside the clause retiring it. ⭐ *A dispute between two summaries is often settled by
+  a third source that enumerates instead of counting.*
+- 🟢🟢 **MMA — SIX MAIN-CARD BOUTS PUBLISHED FOR THE FIRST TIME; THE TABLE IS NOW COMPLETE AT 13 ROWS.** Every prior
+  edition carried the **seven prelims only**. Newly added from Sherdog with weigh-in figures: **McMillen 145 /
+  Rahiki 145.5**, **Fiorot 125 / Grasso 125**, **Blaydes 260 / Cortes-Acosta 262**, **Ige 135.5 / Martinez 135**,
+  plus weights for Moreno/Morales (125.5/125.5) and Silva/Delgado (145/145.5, five rounds). Division labels are
+  used only where UFC.com gave them; the main-card rows carry the **poundage** instead, because inferring a
+  division from a weight is a guess the page does not need to make. Sherdog: **all fighters made weight**.
+- 🟢🟢 **MMA — ZERO RESULTS AGAIN, AND THIS TIME VERIFIED AT TWO INDEPENDENT LIVE PAGES.** Build ran just after the
+  **2 PM ET** prelim start, so the card was **in progress**, not pending. Both fetched at **2:08 PM ET**: UFC.com's
+  "Prelim Results" carries its seven bouts as previews only; Sherdog's play-by-play lays out every round-scoring
+  block and an **"Official Result"** heading per bout with **all of them blank**, including the opening
+  Aldrich–Tarin fight. Stronger than the prior run's single-source check. **A trap is named on the page for future
+  runs:** Sherdog already links a "full Noche UFC 4 post-fight press conference" item — a pre-staged placeholder,
+  NOT evidence the card finished. Do not read it as one.
+- 🟢🟢 **MMA — UFC 331 ADDED WITH ODDS, AND THE TWO BOOKS DISAGREE ON WHO IS FAVOURED.** **Sat 19 September,
+  Crypto.com Arena, Los Angeles.** Flyweight champion **Joshua Van** vs **Alexandre Pantoja**. **DraftKings: Van
+  +100 / Pantoja −120. BetOnline: Van −105 / Pantoja −115.** Both printed, neither averaged — the books disagree
+  on the *direction* of the favouritism, which is exactly when averaging would destroy the information. Co-main
+  **Tsarukyan −380** over **Ruffy**; **Gable Steveson −1500** vs **Sean Sharaf +600** is the card's widest line.
+  Also newly sourced: **UFC Fight Night 289, 26 Sept, Barcelos vs Rosas Jr.** and **UFC Fight Night 290, 10 Oct,
+  Allen vs Duncan**. **Buckley vs Malott (17 Oct) is now explicitly marked CARRIED** — Sherdog's calendar shows
+  only five events and stops at 10 October, so it neither confirms nor contradicts that date, and the page says so.
+- ⚠⚠ **MMA — THE ESPN CHAMPIONS PAGE RETURNED *NO CONTENT* FOR THE SECOND CONSECUTIVE RUN.** Reported on the page
+  as an unavailable check, not dressed up as agreement. Board published from the standing block. **Two rows did
+  pick up independent corroboration from coverage that was not about champions at all:** UFC 331 odds pieces
+  repeatedly call **Joshua Van** the current flyweight champion and Pantoja the *former* titleholder, and Sherdog
+  describes **Ilia Topuria** as having taken **the first UFC loss of his career** — consistent with Gaethje holding
+  lightweight since Freedom 250. ⭐ *When the dedicated source is down, corroboration often arrives sideways, from
+  coverage of something else entirely. Look for it before declaring the check impossible.*
+- 🟢🟢 **CYBER — A NEW KEV BATCH NO PRIOR EDITION CARRIED: 8 SEPTEMBER, DUE 22 SEPTEMBER.** **CVE-2026-85880**
+  (Windows ALPC heap overflow) and **CVE-2026-81963** (Windows Update Stack, link following), **both CVSS 7.8**,
+  both local escalation to **SYSTEM**, both **exploited before a patch existed**, both fixed in the 8 September
+  Patch Tuesday. Same batch: **CVE-2026-75650** (Adobe Commerce/Magento) and **CVE-2026-86218** (N-able N-central).
+  Editions had carried the 2, 4 and 9 September adds but **missed 8 September entirely**. Now 14 CVE rows.
+- ⭐ **CYBER — BOD 26-04's PER-VULNERABILITY CLOCK NOW HAS A FOURTH OBSERVATION ACROSS THREE ADD DATES, AND IT HOLDS.**
+  9 Sept → **three days** (Cisco/Citrix/Fortinet) and **fourteen** (Chromium) from the *same alert*; 4 Sept →
+  fourteen; 8 Sept → fourteen. The interval tracks the individual CVE, not the batch. **A descriptive pattern is
+  offered and explicitly fenced:** three-day deadlines have so far attached to perimeter network/security
+  appliances, fourteen-day ones to browser and local-privilege bugs — stated as four observations, not a CISA rule.
+  The read-through **cut an earlier version** of that sentence which called the three-day group "unauthenticated
+  flaws": true of Cisco and Citrix in the sources read, **not established for Fortinet**.
+- ⚠⚠ **CYBER — A 2024 BREACH CAME BACK AS TODAY'S NEWS AND WAS REFUSED. THIS IS THE EXACT FAILURE MODE THE LEDGER
+  WARNS ABOUT.** A general "cybersecurity news today" search returned **Summit Pathology, 1,813,538 patients** as a
+  live item. Following it to source: intrusion **detected 18 April 2024**, HHS notified **18 October 2024**,
+  lawsuits filed within 48 hours of the patient notice — all 2024 coverage, Medusa only *suspected*. Refused and
+  documented **on the page**, with the two dating sources cited in the footer so the refusal is checkable. ⭐ *The
+  standing warning says heavily-covered OLD events outrank newer ones in search. This run it happened with a real,
+  accurate, verifiable 1.8M-record breach — which is precisely what makes it dangerous: nothing about the item
+  looks wrong except its date.* Also refused again: **Imperial Healthcare Solutions** and **DiamondLease**
+  (NightSpire), both leak-site listings with no victim statement, filing or record count. A validator now asserts
+  all four strings appear **only** in the refusal block and the footer citations, never in editorial.
+- 🟢 **CYBER — TWO NEW ITEMS, GRADED DIFFERENTLY ON PURPOSE.** Dutch **NCSC** warned **11 September** of *imminent*
+  exploitation of **CVE-2026-85102 / 85103** (Check Point VPN, RCE) — published as a warning about expected
+  exploitation, not a report of it, and flagged as absent from every KEV batch read. Separately, a Defender
+  zero-day exploit **"ShieldCrash"** from a researcher using the handle **Nightmare Eclipse** is carried with an
+  explicit **single-source** grade: no vendor advisory, no CVE, no severity asserted, and deliberately **excluded
+  from the CVE table** while appearing in the cards. Patch Tuesday count published as the **sourced range 966–997**
+  with the sourced *reason* (how external and Chromium bugs are counted) — and the read-through added that
+  Tenable's **964** sits just below even that range, so "not a disagreement" was cut as overstated.
+- 🟢🟢 **MARKETS — THE CARRIED SECTOR LINE IS RETIRED AND REPLACED WITH SOURCED DETAIL.** Prior editions carried
+  "nine of eleven sectors higher, health care and utilities lagging", never re-sourced. This run:
+  **Communication Services, Consumer Discretionary and Information Technology** led, **Comm Services +1.6%** paced
+  the table, **T-Mobile +3.5%** led it. Friday's three closes re-confirmed a **fourteenth** time with all three
+  points/percent pairs validator-reconciled (S&P +65.28 → 7,656.98; Dow +509.19 → 52,573.29; Nasdaq +251.31 →
+  26,333.04). The **7,666** weekly "level" guard retained for a fifth edition.
+- 🟢 **MARKETS — THE TWO-YEAR YIELD DISPUTE NARROWS.** The dated Friday snapshot gives the two-year finishing
+  **11 September at 4.63%**, in the same sentence as the **4.96%** ten-year already published. **4.63% published**;
+  the carried **4.396%** cannot describe that session and is **retired**; **4.65%** is named as sitting two
+  hundredths away. The read-through **cut** a claim that 4.65% was "the same close rounded differently" — two
+  hundredths is not rounding, and the page now declines to assert the two are the same figure.
+- ⚠ **MARKETS — FED HIKE ODDS ARE IN GENUINE DISPUTE AND BOTH ARE PRINTED.** A post-CPI read gives **~71%, up from
+  61%**; the carried CME FedWatch read gives **~90%**. Not averaged. Newly sourced and pointing the other way from
+  the monthly print: **annual core CPI slowed to 2.4%**, its lowest since 2021, against **core +0.3% m/m** (up from
+  +0.2%). **Wednesday 16 September at 2 PM ET** independently re-confirmed by a second week-ahead source, which
+  strengthens the previous run's refusal of the Thursday-FOMC preview.
+- ⚠ **MARKETS — A −94.8% "MOVER" WAS NAMED AND REFUSED.** A market-review list gave **Tenon Medical +53.8%** and
+  **ACV Auctions +44.8%** (both published) alongside **Gauzy Ltd. −94.8%**. The last is not published as a price
+  move: a fall that size in one session usually has a corporate action behind it and **no source read says what
+  happened**. The read-through **cut** the first draft's "almost always reflects a reverse split or re-listing" —
+  an unsourced statistical generalisation used to justify a refusal. The refusal stands; the justification is now
+  simply that the cause is unknown. ⭐ *Refusing a figure does not entitle you to invent the reason it is wrong.*
+- 🔵 **NEW-TAG LEDGER — CYBER 2, MARKETS 2, MMA 3.** Issued: **Check Point / NCSC**, **ShieldCrash**, **T-Mobile /
+  sector leadership**, **the small-cap movers card**, **UFC 331**, **UFC Fight Night 289**, **UFC Fight Night 290**.
+  Second edition and due to retire next run: IDScan, Florida DAVID, Cisco FMC exploitation, the weekly breadth
+  card, UFC 332 on CBS. Retired this run: **Buckley vs Malott** demoted to a **Carried** card.
+- 🔵 **VALIDATION — 249 checks, 0 failures after repair.** Tag balance across 14 element types on four pages;
+  doctype and tail; four masthead ids and timezone refs per page; five-tab nav with exactly one active tab matching
+  the page's own filename; **eight TradingView scripts on Wall Street only** (zero elsewhere), three single-quote
+  widgets, five required symbols, NYSE:HPE as Chart of the Day; index levels reconciled against implied prior
+  closes; **14 CVE rows** with CVSS cell counts pinned; a **four-way KEV countdown check** computed from today's
+  date against 12/18/22/23 September; **champion CELL parsing across 11 divisions** with all four regression guards;
+  a 13-row "Not yet contested" assertion; result-string absence checks; footer URL de-duplication; and three checks
+  that each index.html card sentence is **byte-identical** to its page's own summary strip.
+- ⚠⚠ **VALIDATION — THE "0 days left" TRAP RECURRED A FIFTH TIME, AND THE FAILURE WAS IN THE PINNED NUMBER, NOT THE
+  TECHNIQUE.** The 12th run's ledger prescribed the fix exactly: strip `<script>` blocks before counting **and** pin
+  both the raw and rendered counts. This run's validator **inherited the technique** — script-stripping and the
+  digit anchor were both present — but pinned raw at **1** when the KEV countdown script makes it **2**. ⭐ *Five
+  runs, and the lesson has now shifted: the method did propagate this time. What did not propagate was the
+  constant. A pinned number is a fact about the page, and it has to be re-derived when the page changes, not copied.*
+- ⚠ **VALIDATION — THE OTHER FOUR FAILURES WERE THE USUAL BLUNT-CHECK FALSE POSITIVES, INCLUDING ONE THE LEDGER
+  PREDICTED.** `7,656.98` "appears once" fired on its **legitimate second occurrence inside the 7,666 refusal
+  clause** — the 12th ledger recorded this exact false positive and the check was still written blind; now split
+  into scorecard-table vs refusal-note assertions. `Summit Pathology` "only in the refusal block" fired on the
+  **footer citations that date the refusal**. A page-wide ban on `submission (round` fired on **Kayla Harrison's
+  2025 title win** on the champions board — now scoped to the region above the board.
+- ⚠⚠ **PROCESS — 249/249 PASSED FIRST TIME AND THE READ-THROUGH THEN FOUND NINE REAL DEFECTS. FOURTH CONSECUTIVE RUN.**
+  (1) "the one Friday mover on this page with nothing to do with AI hardware" — **false against this page's own
+  small-cap card**; (2) the Gauzy "almost always" generalisation; (3) 4.65% as "the same close rounded differently";
+  (4) "Treasury Secretary Bessent" — the source gives no title; (5) oil's "$100 weekly close" asserted as fact when
+  the source framed it **prospectively** ("poised to"); (6) an unsourced claim about diesel reaching freight and
+  food bills; (7) the MMA footer still describing ESPN as a cross-check with an entry refused, **contradicting the
+  verification note two inches above it** that says ESPN returned nothing; (8) "five of the **six** preceding runs"
+  — an unverified count of our own archive, the same failure the 12th ledger flagged; (9) ShieldCrash published
+  "the day after" Patch Tuesday, a specific the source does not give. ⭐ *Four runs running, every defect the
+  validator missed was a sentence that sounds like analysis — and this run two of them were internal
+  contradictions the page could have caught by reading itself.*
+- 🔵 **BUILD — FILENAME-DATE PRUNE RAN A SIXTH TIME.** **230 editions across 22 days**, oldest **2026-08-22 at
+  exactly 21 days**, **0 pruned** (rule is strictly greater than 21). Archive generator rewritten as
+  `gen_archive_1417.py`, again regenerating **every** day section from the snapshot directory, anchored on
+  `<h3 class="day">` and `<footer>`, with post-generation assertions that day-section, row and link counts equal
+  the snapshot inventory (22 / 230 / 690).
