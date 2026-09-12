@@ -20494,3 +20494,104 @@ deleting and report how many days were removed.
   the page no longer uses (it now uses `<h3 class="day">` + a `.panel` table, and a real `<footer>`). Replaced with
   `gen_archive_1242.py`, which anchors on `<h3 class="day">` and `<footer>`. ⭐ *A generator that "keeps the existing
   shell" silently rots every time the shell is restyled — anchor it on markup the page actually still has.*
+
+## Added 2026-09-12 (Saturday — clone ~1:05pm ET, research 1:06–1:20pm, build 1:20–1:33pm, validated 1:34pm, published ~1:38pm — MIDDAY EDITION, markets CLOSED for the weekend, ELEVENTH run of the day; archive stamp 2026-09-12-1315)
+- 🟢🟢 **CYBER — NEW TOP STORY: METABASE IS THE COMMON ROOT CAUSE UNDER TWO BREACHES THIS PAGE WAS ALREADY CARRYING SEPARATELY.**
+  **CVE-2026-72898**, **CVSS 10.0**, unauthenticated SQL injection in **Metabase**, reachable via the public
+  **POST /api/session/reset_password** endpoint; injects into Metabase's own application database, manipulates the auth data
+  stored there and yields **administrator**, which confers **the stored credentials for every connected database**. Affected
+  range **0.58/1.58 through 0.63.4** (IONIX). Exploited as a **zero-day**; Metabase disclosed the attack on its **Cloud**
+  environment **6 August 2026**; **CISA added it to KEV 11 August 2026**. One account puts the companies breached through it at
+  **five**. Sources fetched this run: Wiz, OffSec, IONIX, The Hacker News, Horizon3, TechTimes.
+- ⭐ **CYBER — THE TWO LINKS TO THAT ROOT CAUSE ARE OF DIFFERENT STRENGTHS AND ARE PUBLISHED THAT WAY.** For **Mathspace**,
+  BleepingComputer states directly that the data was taken **after breaching its Metabase internal reporting system** — platform
+  named, CVE not. For **ShipMonk** (the Trezor supplier), the attribution to **CVE-2026-72898 specifically** comes from a
+  **single vendor analysis (Rescana)**, not from ShipMonk or Trezor, and the page says so in the top story, in the tldr and in
+  the breach card. ⭐ *Two victims of "the same bug" can rest on two very different evidentiary footings; grade each link where
+  the reader can see it.*
+- 🟢🟢 **CYBER — SIX NEW BREACH ITEMS, ALL BleepingComputer-SOURCED VIA THE PRIVACY GUIDES ROUNDUP (fetched in full).**
+  **Trezor/ShipMonk**: +**67,000 US customers**, total **81,000** after an initial **~14,000** disclosed **13 August**; ShipMonk
+  notified Trezor **10 August 2026**; names, emails, phones, shipping addresses, order numbers for orders **Nov 2019–Aug 2021**;
+  Trezor had **repeatedly requested deletion and received written confirmation** that never happened. **Trezor/Brevo** (separate):
+  **347,000 addresses** phished, **2,500 clicked**, fake "critical security alert" from **help@trezor.io** claiming an **STM32**
+  microcontroller flaw could expose seeds. **APIS leak**: **220M+** passenger/crew records, Vietnam-linked, reached via a cloud
+  path using **default credentials**, spanning **Jan 2017–April 2026**, including passport numbers and full itinerary data.
+  **Veradigm**: third-party vendor incident, actor **claims 3.5M patient records** incl. SSNs. **AdaptHealth**: **4.1M people
+  confirmed**, July attack, attributed to **ShinyHunters**.
+- ⚠ **CYBER — A "7.6 MILLION PATIENT RECORDS" TOTAL I WROTE IN THE TLDR WAS REMOVED IN THE READ-THROUGH.** It summed
+  AdaptHealth's **confirmed 4.1M** with Veradigm's **threat-actor-claimed 3.5M**. Those are not the same kind of number and must
+  not be added. The tldr now cites the confirmed 4.1M only. ⭐ *Never total a confirmed figure with a claimed one — the sum
+  inherits the weaker provenance but reads with the authority of the stronger.*
+- ⚠ **CYBER — "REMAINS UNPATCHED IN THE FIELD" WAS AN UNSOURCED PRESENT-TENSE INFERENCE AND WAS REPLACED WITH THE DATED FACT.**
+  The new KEV bullet instead says what is sourced: the **Mathspace compromise ran 10–27 August**, beginning the day before the
+  KEV listing and continuing a fortnight after it. Same point, evidenced.
+- 🟢🟢 **MARKETS — WTI FINALLY HAS A SOURCED FRIDAY SETTLEMENT, AND IT IS THE FIRST THIS PAGE HAS EVER CARRIED.**
+  **WTI settled $100.05, −2.4%**; **Brent settled $104.61, −2.8%** (CNBC, fetched this run). Weekly: **Brent +8.7%, WTI +9.4%**.
+  Cause named: **Iranian state media said Tehran will meet Gulf states in Oman to discuss the Strait of Hormuz** — the first
+  diplomacy after a week of escalation. The carried **$104.42 / −2.98%** Brent read and the **$104.02 WTI open** are both
+  **named on the page as superseded** rather than silently swapped out.
+- ⭐ **MARKETS — THE NEW BRENT SETTLE RECONCILES AGAINST THE CARRIED PRIOR CLOSE, AND THE PAGE SHOWS THE WORKING.**
+  $104.61 after a 2.8% fall implies a prior close of **~$107.62**; the carried 10 September close is **$107.63**. Stated on the
+  page as a check, not as colour. ⭐ *When a new figure independently reconstructs an old one, say so — it is the cheapest
+  corroboration available.*
+- ⚠ **MARKETS — AN INTRADAY OIL PAIR IS STILL CIRCULATING AS "FRIDAY" AND IS PRINTED AS INTRADAY, NOT COLLAPSED.** A week-ahead
+  preview written **during** Friday's session has oil *extending* gains at **Brent Nov $108.21 (+0.54%)** and **WTI Oct $102.96
+  (+0.47%)**. Both then settled lower. Both pairs are on the page with the distinction stated. The tldr originally called this a
+  "reversal"; that is an inference across two sources, so the tldr now states only the settle and the On the Radar bullet carries
+  the full intraday-vs-settle explanation. **NEW:** the **Fed, Bank of England and Bank of Japan all decide next week** — three
+  central banks, not one. Fed hike odds **~90%** (CME FedWatch as of 11 Sep), target **3.50–3.75%**, Chair **Kevin Warsh**.
+- 🟢🟢 **MMA — THE 1 PM / 2 PM PRELIM CONFLICT IS RESOLVED AT ITS SOURCE AND 1 PM ET IS RETIRED.** Earlier editions printed both
+  because **UFC.com itself was the origin of the 1 PM figure**. UFC.com's own Noche UFC coverage, fetched this run, now states
+  **twice**: "prelims start at **2pm ET/11am PT**, followed by the main card at **5pm ET/2pm PT**." The outlier corrected itself.
+  1 PM ET now appears on the page **only inside the clause retiring it**, and a validator pins that count at 2.
+- 🟢🟢 **MMA — ZERO RESULTS, AND FOR THE FIRST TIME THE ABSENCE IS VERIFIED AGAINST THE PROMOTION'S OWN LIVE PAGE.** UFC.com's
+  **"Prelim Results | Noche UFC"** article, fetched at **1:10 PM ET**, carries its seven prelim bouts as **matchup previews only**
+  — no winner, method or round anywhere — and its metadata sets publication at **2:00 PM ET today**. Previous runs inferred
+  "too early" from the clock; this one checked. A Build Note panel states this on the page. ⭐ *"It hasn't happened yet" is a
+  claim like any other — verify it at the source instead of deriving it from the time.*
+- 🟢 **MMA — FULL PRELIM CARD WITH RECORDS, PLUS MAIN-EVENT CONTEXT, ALL FROM UFC.COM THIS RUN.** Elliott (22-14-1, TUF S24
+  winner) vs Chairez (14-6, 1 NC) at **catchweight**; Bahamondes (17-7) vs Salikhov (22-6) WW; Belgaroui (10-3, five-fight
+  streak) vs Santos (11-3) MW; Klose (16-3-1, out of Glendale) vs Gantt (12-0, 1 NC); García (19-4) vs Rongzhu (28-6); King III
+  (6-0) vs Rosas (8-1); No. 15 Aldrich (15-7) vs Tarin (8-0, 21, debut win in February). Main event: **Silva 17-3, No. 6 FW**,
+  off a decision win over **Arnold Allen** in January following the first KO loss of his career; **Delgado 12-2**, **Arizona
+  native**, first main event, **four of his first five** UFC wins incl. **Andre Fili** and **Austin Bashi**; replacement for
+  injured former interim champion **Yair Rodriguez**. Co-main: two-time champ **Moreno** on a **two-fight skid** vs **Morales**.
+- ⚠⚠ **MMA — THE ESPN CHAMPIONS PAGE RETURNED *NO CONTENT* THIS RUN, AND THAT IS REPORTED RATHER THAN DRESSED UP AS A CLEAN
+  CHECK.** No cross-check was possible. The board is published from the standing block, derived from the most recent
+  title-changing card per division, and the on-page note says explicitly that verification was unavailable and names the four
+  preceding runs' regressions (Pereira at LHW twice, Shevchenko at W-FLW three times). ⭐ *A source that returns nothing is not a
+  source that agrees with you.*
+- 🔵 **NEW-TAG LEDGER — CYBER 5, MARKETS 0, MMA 0.** Issued: **Metabase/CVE-2026-72898** (top story), **Trezor/ShipMonk**,
+  **Trezor/Brevo phishing**, **APIS 220M**, **Veradigm + AdaptHealth**. Retired: **Check Point VPN**, **Novo Nordisk/FulcrumSec**
+  and **Blaydes re-signs** (all second edition at 1242, retire now); **BlueMoon** demoted from Top Story to a **Carried** card.
+  Markets and MMA issued none — markets have been shut since Friday's close, and everything new on MMA is detail on Noche UFC,
+  which the 1242 snapshot already carried.
+- 🔵 **VALIDATION — 216 checks, 0 failures.** Tag balance across 14 element types on four pages; doctype and tail; four masthead
+  ids and three timezone refs per page; five-tab nav with exactly one active tab matching the page's own filename; **eight
+  TradingView scripts on Wall Street only** (zero elsewhere), three single-quote widgets, five required symbols; three index
+  levels each asserted exactly once inside the Scorecard with all three points/percent pairs arithmetically reconciled, plus the
+  7,666 refusal guard; **20 CVE rows**; anchored KEV countdown checks; **champion CELL parsing across 11 divisions** with the
+  Pereira/Chimaev/Shevchenko/vacant-featherweight guards and the "stripped" trap; an absence check on Noche UFC result strings;
+  and three checks that each index.html card sentence is **byte-identical** to its page's own summary strip.
+- ⚠⚠ **VALIDATION — THE "0 days left" SUBSTRING TRAP RECURRED FOR THE THIRD CONSECUTIVE TIME, EXACTLY AS PREDICTED.** The 1044
+  ledger documented it, the 1242 ledger warned that "a documented trap is only avoided if the NEXT validator inherits the check,"
+  and this validator — written fresh again — again counted **3** where 2 were meant, the third being **"1*0 days left*"**. Now
+  fixed with `(?<![0-9])0 days left` **plus a companion assertion that the RAW count is 3 and the anchored count is 2**, so the
+  trap is pinned rather than merely dodged. ⭐ *Three runs have now independently rediscovered the same bug. The lesson is not
+  about substrings; it is that prose in a ledger does not propagate — only a check that is carried forward does.*
+- ⚠ **VALIDATION — THE OTHER SIX "FAILURES" WERE ALL BLUNT CHECKS FIRING ON CLAUSES THAT SAY THE OPPOSITE.** `"not published"`
+  missed `is <b>not</b> published` (markup between the words); `104.02` and `1 PM ET` fired on the clauses that **name them as
+  superseded**, which is required practice here; `BOD 22-01` fired on the sentence disapplying it; `"not investment advice"`
+  missed "Nothing here is investment advice". Worst of the six: a blunt `"Pereira" not in champions_table` fired on the
+  **legitimate** interim-heavyweight note "Ciryl Gane (KO2 Pereira)", and `"Shevchenko" not in table` on the VACANT row's own
+  explanation. Both rewritten to parse the **champion cell per division** instead of scanning the table for a surname.
+  ⭐ *On a page whose editorial rule is "name what you superseded", every absence check is a false-positive waiting to happen —
+  check the cell, not the page.*
+- ⚠ **PROCESS — 216/216 PASSED FIRST TIME AND THE READ-THROUGH STILL FOUND FOUR REAL DEFECTS.** The 7.6M sum, the unsourced
+  "remains unpatched in the field", the inferential "reversed an intraday gain", and an unverified "three earlier editions"
+  count of our own archive. None was a claim any check had been written to test. Second consecutive run where the clean
+  validator pass preceded the genuine defects.
+- 🔵 **BUILD — FILENAME-DATE PRUNE RAN A FOURTH TIME.** 684 snapshots across 22 days, oldest **2026-08-22 at exactly 21 days**,
+  **0 pruned** (rule is strictly greater than 21). Archive generator rewritten again as `gen_archive_1335.py`, this time
+  regenerating **every** day section from the snapshot directory rather than editing the existing table, anchored on
+  `<h3 class="day">` and `<footer>`.
