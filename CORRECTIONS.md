@@ -24,6 +24,16 @@ contest it at UFC 332 on 3 October). The other seven men's divisions matched. Th
 run** with a W-FLW regression and the **first** recorded LHW regression since the June block was written.
 RULE: treat that page as a cross-check, never as the source of truth, and re-derive every belt from the most
 recent title-changing card. Both regressions were refused and named on-page this run.
+⚠ **2026-09-12 (fifteenth run) — THE ESPN PAGE IS BACK AND THE LIGHT-HEAVYWEIGHT REGRESSION IS GONE; THE
+WOMEN'S-FLYWEIGHT ONE IS NOT.** After two consecutive runs returning no content, the page returned this run and
+**agrees with all eight men's divisions in this block, light heavyweight included — Carlos Ulberg, UFC 327,
+11 April 2026**. The LHW regression logged earlier today is therefore **RESOLVED at source**. It **still seats
+Valentina Shevchenko at women's flyweight** on a 14 September 2024 UD over Alexa Grasso — a **fourth consecutive**
+run with that regression, refused again, and independently contradicted this run by **UFC.com's own Noche UFC event
+copy, which calls Grasso a FORMER women's 125-pound champion**. Two further lags, resolved against THIS block and not
+against ESPN: the page lists **0 defences for Mackenzie Dern** (she has the UFC 330 UD over Gillian Robertson,
+15 Aug 2026) and **0 for Joshua Van** (TKO5 Tatsuro Taira, UFC 328, 9 May 2026). ⭐ *A source that regresses on one
+row can be right on ten others; re-derive per belt, never accept or reject the page wholesale.*
 
 NOTE: Any earlier line in this file showing "Pereira (205)/retains 205", "MW Khamzat Chimaev", "Featherweight VACANT", or "Champions board verified" with the OLD names is OUTDATED — THIS BLOCK WINS.
 
@@ -20989,3 +20999,152 @@ deleting and report how many days were removed.
   21 days**, **0 pruned** (rule is strictly greater than 21). Archive generator rewritten as `gen_archive_1449.py`,
   regenerating **every** day section from the snapshot directory, with post-generation assertions that day-section, row
   and link counts equal the snapshot inventory (**22 / 231 / 693**).
+
+## Added 2026-09-12 (Saturday — clone ~3:05pm ET, research 3:06–3:18pm, build 3:18–3:21pm, validated 3:21pm, published ~3:25pm — AFTERNOON EDITION, markets CLOSED for the weekend, Noche UFC prelims LIVE, FIFTEENTH run of the day; archive stamp 2026-09-12-1521)
+- 🟢🟢🟢 **MMA — THE FIRST OFFICIAL RESULT OF NOCHE UFC IS PUBLISHED, AND IT IS THE RESULT THE LAST RUN REFUSED.**
+  **Regina Tarin def. JJ Aldrich, unanimous decision 29-28 / 29-28 / 29-28**, the card opener. It is published because
+  Yahoo Sports/Uncrowned's round-by-round live blog, fetched in full, carries a **filled result field** — a
+  `RESULT:` heading timestamped **6:34 PM UTC (2:34 PM ET)** — and rewrites that one line of its own card list from a
+  matchup into a result while leaving the other twelve as matchups. Tarin came in **8-0** (UFC.com) off a February debut
+  win and as a **−300** favourite; Aldrich is **15-7** and **No. 15 ranked**. Record published as **9-0**, with the
+  derivation from 8-0 stated on the page rather than implied.
+  ⭐ **THE LESSON, AND IT IS THE INVERSE OF RUN 14's.** Run 14 refused exactly this result after tracing it to an
+  Athlon Sports prediction table ("Regina Tarin, unanimous decision, 55% winner confidence, coin-flip tier"). **The
+  prediction was correct. The refusal was still right.** At the time no filled result field existed anywhere, and a
+  forecast that later comes true was never evidence of anything — the model picked the −300 favourite and the −300
+  favourite won. The six other calls from that same table **remain unpublished**, because they remain unconfirmed.
+  *A refusal is judged on the evidence available when it is made, not on how the event turns out. Do not let a
+  vindicated guess retroactively license the method that produced it.*
+- ⚠⚠ **MMA — A SECOND FABRICATED-LOOKING RESULT ARRIVED IN THE SAME SEARCH AND WAS REFUSED.** The same search that
+  surfaced Tarin also returned **"Sean King III def. Jessie Rosas via KO (slam) at 0:36 of R1"** — a method and a
+  fight time, maximally specific. Refused: the live blog that carried Tarin's official result, timestamped **minutes
+  later at 6:40 PM UTC**, lists King–Rosas as **"Next Up"**, and UFC.com's prelim-results and scorecards pages both
+  carry it as a matchup. ⭐ *One search return can mix a real filled result with an unreal one. Verify each result
+  individually against a result field; never accept a set because one member of it checks out.*
+- 🟢🟢 **MMA — THE THIRTEEN-BOUT COUNT NOW HAS THREE GENUINELY ENUMERATING SOURCES, WHICH RUN 14 COULD NOT CLAIM.**
+  Run 14's read-through cut "three independent sources" because UFC.com's *prelim* page lists only the seven prelims.
+  This run the claim is true: **UFC.com's OFFICIAL SCORECARDS page enumerates all thirteen** (seven prelims, six main
+  card, with "Co-Main Event" and "Main Event" labels), as do **MMA Weekly's live-results page** and **Yahoo's live blog**.
+  "Sixteen" is retired permanently. Division labels taken from Yahoo (incl. **Martinez–Ige = bantamweight**, consistent
+  with the 135/135.5 weigh-ins); **Elliott–Chairez = catchweight 130 lb** from both UFC.com and Yahoo.
+- 🟢🟢 **MMA — FIOROT vs GRASSO IS AN OFFICIAL TITLE ELIMINATOR, CONFIRMED ON THE BROADCAST.** Winner faces the
+  **Natalia Silva vs Wang Cong** UFC 332 winner for the vacant belt (Bloody Elbow 12 Sept; Yahoo). Also newly sourced:
+  UFC.com rankings for this card (**Silva #6 FW, Fiorot #2 / Grasso #3 W-FLW, Cortes Acosta #5 / Blaydes #6 HW,
+  Moreno #8 FLW, Aldrich #15 W-FLW** — seven names across **five** of the thirteen bouts, corrected from a first-draft
+  "six"); full **prelim betting lines** from the live blog's picks list; **Delgado 12-2**, Arizona native, first main
+  event on short notice, four wins in his first five UFC fights including **Andre Fili** and **Austin Bashi** in 2026;
+  and prelim records for all fourteen prelim fighters. **No bonuses published** — the card is in progress.
+- 🟢🟢🟢 **MARKETS — THE DOW'S WEEKLY FIGURE IS SETTLED AT SOURCE, AND BOTH PRIOR VERSIONS WERE WRONG.** The AP wire
+  (via ABC News, published 11 Sept 4:16 PM ET), fetched in full, gives the week as **S&P 500 −61.62 pts / −0.8%**,
+  **Dow −840.96 pts / −1.6%**, **Nasdaq −173.95 pts / −0.7%**, **Russell 2000 −71.70 / −2.4%**. Run 14 retired a carried
+  **−1.51%** as "arithmetically impossible" on the strength of a sourced **−426 points** and published a derived
+  **≈−0.80%**. The AP table reconciles against Friday's close (52,573.29 + 840.96 = 53,414.25; 840.96/53,414.25 = 1.57%):
+  **the percentage was roughly right and the POINTS figure was the bad datum.** Both −1.51% and −426 pts / ≈−0.80% are
+  retired, and this site's own error is named in the refusal block on the page. ⭐ *When two figures disagree, run the
+  arithmetic in BOTH directions before deciding which one to retire. Run 14 tested the percentage against the points and
+  concluded the percentage was impossible; testing the points against the percentage would have reached the opposite,
+  correct answer.*
+- 🟢🟢 **MARKETS — ONE WIRE TABLE NOW SUPPLIES THE WHOLE SCORECARD, INCLUDING A FOURTH INDEX AND A YEAR-TO-DATE
+  COLUMN NO EDITION HAS CARRIED.** Friday, weekly and YTD columns all come from the same AP table, so they are internally
+  consistent rather than stitched. New: **Russell 2000** throughout (**Friday +13.00 / +0.4% to 2,903.94**); YTD
+  **S&P +811.48 / +11.9%**, **Dow +4,510 / +9.4%**, **Nasdaq +3,091.05 / +13.3%**, **Russell +422.04 / +17%**. Friday's
+  three headline closes re-confirmed a **sixteenth** time, and the validator now reconciles **all twelve** points/percent
+  pairs against each implied prior close — the *weekly* row included, which run 14 noted had never been checked and is
+  exactly where the −426 error had been hiding. AP's stated drivers: **Brent down nearly 3%** and **CPI close to
+  expectations**, with **bond-market hike expectations strengthening in the same session**. The **7,666** weekly S&P
+  "level" guard is retained for a **seventh** edition, with its justification softened from "cannot be a close this week"
+  to "is not Friday's close and no source read dates it".
+- 🟢 **MARKETS — FED HIKE ODDS GET A THIRD READ AND TWO OF THREE NOW CLUSTER.** Newly sourced: **about 70% for next
+  week**, with a move **fully priced in by October instead of December**. Printed alongside the carried **~71% (up from
+  61%)** and **~90% (CME FedWatch)**; none averaged. New and sourced only as headlines: **US diesel past $6 a gallon**
+  and a **$6 billion Treasury bond buyback plan attributed to Bessent** (no official title in the source, so none
+  asserted — the same restraint run 14's read-through imposed). **Wednesday 16 September, 2 PM ET** stands.
+- ⚠ **MARKETS — FOUR STALE-BUT-REAL FIGURES WERE NAMED AND REFUSED AS CURRENT.** A rates-and-oil search returned
+  **Brent $107.63 (+6.3%)**, **WTI $102.48 (+6.7%)**, **10-year 4.922%** and **4.845%**. All are real earlier-week
+  sessions, superseded by Friday's settle, and are disclosed on the page rather than published. **Gauzy −94.8%** remains
+  refused with no invented reason. **No Fed funds target level is published**: the June 3.50–3.75% band has not been
+  re-sourced, and a rate this page cannot date is a rate it will not print.
+- 🟢🟢🟢 **CYBER — NEW TOP STORY: A SEVEN-FLAW KEV BATCH NO EDITION HAS CARRIED, AND IT IS AN AI-INFRASTRUCTURE
+  BATCH.** The Hacker News piece on the **2 September** CISA addition, fetched in full: **CVE-2026-83548** (SonicWall
+  SMA 1000, **10.0**, SSRF) and **CVE-2026-83549** (**7.8**, post-auth OS command injection); **CVE-2026-9586** (Sangoma
+  Switchvox, **9.3**, SQLi → RCE via a single crafted request); **CVE-2026-82329** (JFrog Artifactory, **9.8**, improper
+  auth → admin under default config); **CVE-2026-49869** (Kestra OSS, **10.0**, unauth OS command injection);
+  **CVE-2026-59822** (Berri LiteLLM MCP Streamable HTTP, **8.8**, arbitrary bearer token → authenticated MCP session);
+  **CVE-2026-48710** (Kludex Starlette, **6.5**, request smuggling → path-dependent auth bypass). Deadlines: **5 September
+  for five of the seven** (now past), **16 September for Starlette and LiteLLM** — a carve-out *within one batch*, which
+  is the cleanest confirmation yet that BOD 26-04's clock is per-CVE. Exploitation detail: reverse shells and minted admin
+  tokens (Horizon3.ai, watchTowr); Kestra **likely exploited late June 2026** for a reverse shell, Docker discovery,
+  defence evasion and a **cryptocurrency miner** (Microsoft); LiteLLM chained with **CVE-2026-42271 (8.7)** to RCE,
+  **XMRig** via an ELF binary, PostgreSQL harvesting of provider key material and proxy-issued virtual keys, persistence
+  via `~/.ssh/authorized_keys`. CVE table now **21 rows**. **Threat Actor Spotlight rewritten to Qilin (aka Agenda)**,
+  which Wiz links to active exploitation of the LiteLLM chain — with the page explicitly *not* claiming a ransomware
+  payload in those intrusions, only exploitation and mining.
+  ⚠ **The read-through caught a category error here:** the first draft called **three of the seven "AI-adjacent"**,
+  including Starlette. **Starlette is a general-purpose ASGI framework, not an AI product**; it is in this story because
+  it chains into LiteLLM. Corrected to **two AI-specific flaws plus one framework flaw that chains into them**.
+- 🟢🟢 **CYBER — THE PATCH PRIORITY DEADLINE IS TODAY, FOR THE FIRST TIME ON THIS SITE.** **CVE-2026-20079**
+  (Cisco Secure Firewall Management Center, **CVSS 10.0**, unauth bypass → root) is **due 12 September — today**, with
+  **Citrix CVE-2026-19490 (9.3)** and a Fortinet flaw on the same date. The countdown renders **(0 days left)** in crit
+  colour, and a validator asserts the Patch Priority box, the KEV section and the countdown all carry the same date.
+  Seven distinct due dates now on the page (12/13/14/16/18/22/23 Sept) across **six** add dates, with both three-day and
+  fourteen-day intervals observed — and the claim that both appeared in one alert was corrected from "twice" to **once**
+  (the 9 September alert) during the read-through.
+- 🟢 **CYBER — ONE NEW BREACH, TWO NEW LISTINGS, AND ONE REFUSAL THAT SURVIVED A SECOND SIGHTING.** New:
+  **Veradigm** disclosed a breach originating at **a third-party vendor** (no record count, no vendor name read, so
+  neither published). New listings, both dated **11 September**: **Dustin Group** on the **FulcrumSec** leak site and
+  **Tuboaços da Amazônia Ltda.** on **NightSpire** — both graded as extortion-site claims. **FulcrumSec's "Hardcoded
+  Horrorshow" with Novo Nordisk resurfaced in a second aggregator roundup and is STILL REFUSED.** ⭐ *Two aggregator
+  summaries are not corroboration. Repetition by a second outlet summarising the same place does not move a claim across
+  the evidence bar; a victim statement, a filing or a named researcher does.*
+- 🔵 **NEW-TAG LEDGER — CYBER 3, MARKETS 2, MMA 6.** Issued: the **2 September seven-flaw batch** (top story),
+  **Qilin/Agenda** (spotlight), **Veradigm**, **Dustin Group + Tuboaços listings**, the **Russell 2000 card**, **Tarin's
+  result** (top story), **Noche UFC tonight** card, **Regina Tarin**, **Sean King III**, **Thomas Gantt** and
+  **Yousri Belgaroui** (prospects). Retired to **Carried** this run: **PaperCut** (demoted from top story to the second
+  spotlight card), **GitLab CVE-2026-85706**, **Harley-Davidson/Cl0p**, **AdaptHealth 4.1M**, **Plex exposure**,
+  **ACVA/Copart**, **the breadth card**, **HPE/Dell**.
+- 🔵 **VALIDATION — 254 checks, 0 failures after repair; all 8 initial failures were in the validator.** Tag balance
+  across 20 element types on four pages; doctype and tail; four masthead ids, timezone refs and edition buckets per page;
+  five-tab nav in fixed order with exactly one active tab matching the page's own filename; **eight TradingView scripts on
+  Wall Street only** (zero elsewhere), three single-quote widgets, five required symbols, **NASDAQ:ACVA** as Chart of the
+  Day, all six widget blocks present; **all twelve points/percent pairs in the Scorecard reconciled against implied prior
+  closes**; **21 CVE rows** with CVSS cell counts pinned (four 10.0, three 9.8, two 9.3, one 8.8, one 8.7, three 7.8, one
+  6.5, six not-stated) and an assertion that no Note cell cross-references a CVE absent from the table; **KEV countdown
+  math recomputed from today's date against all seven due dates**, with a check that none has already passed; **champion
+  CELL parsing across 11 divisions** with all four regression guards plus the "stripped" trap; a 13-row results table with
+  **exactly one winner cell and twelve "Not yet official"**; `TKO\d` and `submission in round` scoped below the champions
+  board; footer URL de-duplication and an all-HTTPS assertion; and three checks that each index.html card sentence is
+  **byte-identical** to its page's own summary strip and appears exactly once.
+- 🟢🟢 **VALIDATION — THE "0 days left" TRAP DID NOT RECUR, FOR THE FIRST TIME IN SEVEN RUNS, BECAUSE THE
+  REQUIREMENT WAS READ OUT OF THIS FILE RATHER THAN REINVENTED.** Run 14's ledger concluded that the durable fix belongs in
+  CORRECTIONS.md, not in a script that does not survive the run — and that is what happened: the countdown check was
+  written **against the script-stripped rendered body with a digit anchor `(?<![0-9])`**, asserting **zero literal
+  occurrences** in the body (the string is JS-generated) and exactly one generator branch. ⭐ *Seven runs. The thing that
+  finally worked was writing the requirement where the next run will read it. Keep it there.*
+- ⚠ **VALIDATION — THE EIGHT INITIAL FAILURES WERE BLUNT-CHECK FALSE POSITIVES, THREE OF THEM PREDICTED BY PRIOR
+  LEDGERS.** (1) `7,656.98` "appears once" fired on its **legitimate second occurrence in the Lead** — the third run in a
+  row this exact check has misfired; now split into scorecard-region, Lead-region and total assertions. (2) CVE-id
+  uniqueness fired on **two Note cells legitimately cross-referencing other CVEs**; now scoped to the first column.
+  (3) `270GB` and (4) `Athlon` "only in the refusal block" fired on occurrences **inside refusing clauses in editorial**;
+  replaced with a context check that each occurrence sits within a clause containing a refusal word. (5) `FulcrumSec`
+  fired on the **Dustin Group listing, which is published on purpose** — the refused string is **Novo Nordisk**, and that
+  is what the check now pins. (6–8) three women's-division champion rows came back `None` because the validator compared
+  **U+2019 apostrophes against the page's ASCII ones**. ⭐ *A string-identity check across a page you also wrote is a
+  check on your own typography as much as on the facts. Normalise before comparing.*
+- ⚠⚠ **PROCESS — 254/254 PASSED FIRST TIME AND THE READ-THROUGH THEN FOUND NINE REAL DEFECTS. SIXTH CONSECUTIVE RUN.**
+  (1) **"Six ranked fighters … is the reason this card was built around an eliminator"** — both an unverified count (it
+  is seven names in five bouts) **and** an unsourced causal claim about UFC matchmaking; (2) **"Topuria's first
+  PROFESSIONAL loss"** when the source says **first UFC loss** — a materially different claim; (3) Starlette as
+  "AI-adjacent"; (4) **VIX 17.85 "accompanied the week's slide, not Friday's rebound"** — neither reading is dated in the
+  source; (5) "the clearest signal yet" for the KEV batch; (6) "the week's clearest reminder" for Veradigm — a superlative
+  plus a generalisation about healthcare IT; (7) Qilin working an AI gateway **"rather than"** a VPN, implying an
+  exclusivity the sources do not support; (8) "twice from the same alert" for BOD 26-04 intervals when the log shows once;
+  (9) the 7,666 guard asserting the level **"cannot be a close for this week"**, which is stronger than what is known.
+  ⭐ *Six runs running. Every defect was a sentence that sounded like analysis — and this run **four of the nine were
+  counts of things on the page or in this file** (five bouts, once not twice, seven names, two not three). The validator
+  counts rows and cells; it does not count the nouns inside prose. Any number written in a sentence rather than a cell is
+  unchecked by construction.*
+- 🔵 **BUILD — FILENAME-DATE PRUNE RAN AN EIGHTH TIME.** **696 snapshots across 22 days, 232 editions**, oldest
+  **2026-08-22 at exactly 21 days**, **0 pruned** (rule is strictly greater than 21). Archive generator rewritten as
+  `gen_archive_1521.py`, regenerating **every** day section from the snapshot directory, with post-generation assertions
+  that day-section, row and link counts equal the snapshot inventory (**22 / 232 / 696**) and that the nav carries five
+  tabs with Archive active.
