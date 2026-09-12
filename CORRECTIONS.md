@@ -21265,3 +21265,108 @@ deleting and report how many days were removed.
   rewritten as `gen_archive_1605.py`, regenerating every day section from the snapshot directory, with
   post-generation assertions that day-section, row and link counts equal the snapshot inventory
   (**22 / 233 / 699**) and that the nav carries five tabs with Archive active.
+
+## Added 2026-09-12 (Saturday — clone ~4:05pm ET, research 4:06–4:35pm, build 4:35–4:50pm, validated 4:52pm, read-through 4:55pm, published ~5:05pm — AFTERNOON EDITION, markets CLOSED for the weekend, Noche UFC prelims LIVE, SEVENTEENTH run of the day; archive stamp 2026-09-12-1617)
+- 🟢🟢🟢 **CYBER — NEW TOP STORY, AND IT IS ONE THIS SITE HAD BEEN CARRYING AS A BARE NUMBER FOR EDITIONS.** BleepingComputer's
+  Patch Tuesday piece, **fetched in full**: **966 flaws — Microsoft's largest security update ever**, against **570 in July**
+  and **400 in August**, with **204 more fixed earlier in the month excluded from the count**. Breakdown: **438 elevation of
+  privilege, 258 RCE, 173 information disclosure, 56 DoS, 19 security feature bypass, 16 spoofing**; **105 Critical** of which
+  **81 RCE, 20 EoP, 2 info disclosure, 1 SFB**. The two actively exploited zero-days are **described at source for the first
+  time on this site**: **CVE-2026-81963**, Windows Update Stack EoP, *improper link resolution before file access ("link
+  following")* → SYSTEM, credited to **Romain Deperne** and **MSTIC**; **CVE-2026-85880**, **heap-based buffer overflow in
+  Windows ALPC** → SYSTEM, discovered by **Volexity** and **Mark Kelly, David Galazin and Jeremy Hedges of Proofpoint**.
+  Microsoft published no exploitation detail for either. Source attributes the record volume to Microsoft's **AI-powered
+  vulnerability discovery system**. Other-vendor list in the same piece: SAP max-severity **"OVERPASS"** kernel flaw, **N-able
+  N-central** emergency hotfix, **ConnectWise ScreenConnect** unpatched, **CrowdStrike** researcher-released zero-day, Chrome
+  **V8** zero-day + 11, **MikroTik** RouterOS, **HPE ArubaOS-CX**, **SonicWall SMA1000**. StyleSmuggler demoted to Second Read,
+  AI-infrastructure batch to Third Read. ⭐ *The CVE ids had been on the page for editions on the strength of a KEV entry
+  alone. Knowing an identifier is not knowing a vulnerability.*
+- 🟢🟢 **CYBER — FIVE NEW BREACH CARDS, ALL FROM BLEEPINGCOMPUTER'S FRONT PAGE FETCHED THIS RUN.**
+  **Florida DHSMV** confirms its **DAVID** driver database was breached **using credentials of a police-department employee**
+  (no record count read, none published). **IDScan** confirms attackers accessed customer data in its cloud platform, days
+  after reports linked it to a database of **more than 153 million driver's-licence scans** — the read-through split these
+  into two claims after a first draft's stat strip said IDScan had "confirmed attackers reached" the 153m database, which it
+  did not. **Trezor**: **347,000** addresses targeted, **2,500** clicked, after the **Brevo** breach — the first draft
+  asserted the addresses "came out of" Brevo and called it Trezor's email provider; neither is stated in what was read, and
+  both were cut. **JFrog Artifactory** flaws chained in the wild to deploy a **Rust backdoor**, which attaches live intrusion
+  activity to **CVE-2026-82329** (9.8) from the 2 September batch. **Surfshark** internal test/proxy servers reached after a
+  **configuration error** exposed one to the internet.
+- 🟢 **CYBER — A REFUSAL RETIRED, EXPLICITLY. Mantax Otax** (Android ransomware+spyware) has been on the refusal list
+  as aggregator-only; **BleepingComputer carries it bylined and dated 10 September**, so it is **no longer refused** and the
+  page says so in the refusal block. ⭐ *A refusal is a claim about the evidence available when it was made. When the
+  evidence arrives, withdraw it as explicitly as you made it.* Also upgraded: **"ShieldCrash"** (Microsoft Defender zero-day
+  → SYSTEM) now has BleepingComputer behind it rather than an aggregator — still **no CVE and no CVSS**, so still out of
+  the CVE table; the upgrade is in the sourcing, not the technical detail.
+- ⚠ **CYBER — THIRD AGGREGATOR SIGHTING OF CVE-2026-12345 AND THE TEXAS WATER PLANT. Both still refused.** Same daily
+  OT-security roundup, same summary. ⭐ *Three sightings of a thing in one place is one sighting.* Novo Nordisk/FulcrumSec,
+  Summit Pathology (2024), Imperial Healthcare, DiamondLease, Nevada 2025 all remain refused. **CVE-2026-20316** added to the
+  table as the weakest-sourced row on the page, from a Help Net Security *headline* returned by search, with the Note cell
+  saying so; the **Sandworm** cluster attribution is likewise attributed to a search result, not to a named outlet (the first
+  draft credited SecurityWeek specifically and claimed the vendor pages were "not reachable", when they simply were not
+  fetched).
+- 🟢🟢🟢 **MMA — THE PHANTOM-RESULT TRAP ESCALATED, AND THE PICKS LIST NO LONGER EXPLAINS IT.**
+  Search returned **five** further prelim winners this run, **three with a method and two of those with a fight time to the
+  second**: *Belgaroui def. Santos, TKO (punches), 4:25 of R1*; *Gantt def. Klose, submission (reverse triangle choke), 2:46
+  of R3*; *Rongzhu def. Garcia, UD 29-28 all*; plus *Bahamondes def. Salikhov* and *Cháirez def. Elliott*. **All five refused.**
+  Three match, in order, lines from the Yahoo/Uncrowned **"Prelim Picks"** block (still posted at 5:35 PM UTC, still naming the
+  same winners) — but **that block contains no methods and no round times**, so it cannot explain *"reverse triangle choke at
+  2:46"*. The page says explicitly that it does not know where that detail came from and will not guess. ⭐ *A method stated
+  to the second is not more credible for being more specific; specificity is a property of the sentence, not of the evidence.*
+- ⚠⚠ **MMA — SIX LIVE PAGES FETCHED, AND THE SITE IS BLIND. Every one is cached behind the arena:** Yahoo/MMA Mania
+  **6:58 PM UTC**, Yahoo/Uncrowned **6:40**, Yahoo/Forbes **6:37**; **UFC.com's prelim-results page, UFC.com's official
+  scorecards page and Sherdog's play-by-play carry NO results at all**. Still **two of thirteen** official. The read-through
+  caught the first draft saying "every one of them still shows the same two results" — false for three of the six — and
+  "the card is well past its opening bouts", which this page cannot see and now does not claim.
+- 🟢 **MMA — NEW SOURCED DETAIL.** **Sean King III is 22**, was **originally booked for Dana White's Contender Series**
+  and took this bout on **nine days' notice** (Forbes). **A 0:36 / "33-second" discrepancy is recorded rather than smoothed:**
+  MMA Mania's filled *"Official decision"* field says **0:36**; Forbes's prose says a **"33-second win"**. The page prints the
+  result field and notes the prose. **Shevchenko: "vacated" vs "stripped".** This site has said she **vacated**; Forbes says
+  she was **"stripped of the title due to injury"**. No source read settles it, so the Champions Board row now asserts only
+  the **vacancy**, which both renderings agree on. Also: card is **UFC Fight Night 288 / Noche UFC 4**; Sherdog gives bout-by-bout
+  weigh-ins (Cháirez 130 / Elliott 130 catchweight; Blaydes 260 / Cortes-Acosta 262; Silva 145 / Delgado 145.5).
+- ⚠⚠ **MARKETS — THE PAGE CLAIMED A RE-CONFIRMATION IT DID NOT EARN, AND THE READ-THROUGH CAUGHT IT.** The first draft
+  said Friday's three closes were "re-confirmed for an **eighteenth** edition". **They were not re-sourced this run at all** —
+  no markets page was fetched (the CNBC week-ahead returned empty) and only the week-ahead framing came back, via search.
+  The lead now says the closes **stand on the AP wire read in the previous edition** and that this is **not** another
+  confirmation. ⭐ *An edition counter is a running tally of work actually done. Incrementing it for a run that did no work
+  is how a carried figure launders itself into a verified one.* Re-confirmed by search this run and unchanged: **Kevin Warsh**
+  likely to hike Wednesday, **Fed / BoE / BoJ** all deciding, **~90% CME FedWatch dated 11 September**, S&P's **deepest
+  four-day decline since June** with **WTI above $100** and the **10-year closing on 5%**. Empty refusal ledger, second run
+  running. **Fed Wednesday 16 September, 2 PM ET** stands.
+- 🔵 **NEW-TAG LEDGER — CYBER 6, MARKETS 0, MMA 0.** Issued: the **966-flaw Patch Tuesday** (top story), **Florida
+  DMV**, **IDScan**, **Trezor/Brevo**, **Artifactory Rust backdoor**, **Surfshark**. Retired to **Carried/Second Read**:
+  **StyleSmuggler** (top story → Second Read), **the StyleSmuggler operators** (spotlight New → unchanged text, still the
+  first card), the **AI-infrastructure batch** (Second → Third Read), and every markets and MMA New tag from run 16, since
+  nothing new cleared the bar on either page.
+- 🔵 **VALIDATION — 415 checks, 0 failures after one repair; the single failure was real, not a validator bug.**
+  Four MMA footer URLs were **duplicated** because the new richer source lines were prepended above the previous run's lines
+  for the same pages; the older four were dropped. Checks: tag balance across 20 element types on four pages; doctype/tail;
+  masthead ids, timezone refs and three edition buckets per page; five-tab nav in fixed order with exactly one active tab
+  matching the filename; **eight TradingView scripts on Wall Street only** (zero elsewhere), three single-quote widgets, five
+  required symbols, all six widget blocks, **NASDAQ:ACVA** as Chart of the Day; Friday's three closes **re-derived
+  arithmetically** from points and percent against each implied prior close; retired figures (−1.51%, −426 pts) and refused
+  figures (107.63, 102.48, 94.8, 4.922) required to sit inside a retirement/refusal clause in **tag-stripped** prose;
+  **24 CVE rows** with CVSS counts pinned (five 10.0, three 9.8, two 9.3, three 7.8, seven not-stated), CVE-id uniqueness in
+  column one, and every Note-cell cross-reference required to exist in column one; **nine data-due spans over eight distinct
+  dates** with **zero literal "N days left"** in the script-stripped body and exactly one generator; Patch Priority, KEV row
+  and countdown asserted on the same 12 September date; **champion CELL parsing across 11 divisions** with all four
+  regression guards (Pereira, Chimaev, Topuria, Shevchenko) applied to the champion cell only; results table asserted at
+  **exactly two winner cells and eleven "Not yet official"**, with the five refused names asserted absent from winner cells;
+  footer URL de-duplication and all-HTTPS; three byte-identity checks between index cards and page summary strips.
+- ⚠⚠ **PROCESS — 415/415 PASSED AND THE READ-THROUGH THEN FOUND FIFTEEN REAL DEFECTS. EIGHTH CONSECUTIVE RUN.**
+  (1) the Third Read still said "read in full **this run**" for a block carried from run 15; (2) the demoted Second Read still
+  said "the timeline is the reason this **leads**"; (3) **CVSS 7.8 asserted as if sourced this run** when it is carried, plus
+  a causal claim that the 14-day window "**is** BOD 26-04's risk tiering doing exactly what it says"; (4) the spotlight's
+  "anything read **this run**" on carried Sansec material; (5) Sandworm credited to **SecurityWeek** specifically and the
+  pages called "**not reachable**" when they were simply not fetched; (6) the IDScan stat strip conflating the confirmation
+  with the 153m figure; (7) Trezor's supply-chain path **inferred**; (8) "**the most useful kind of breach note there is**";
+  (9) "the card is **well past its opening bouts**"; (10) "**every one** of them still shows the same two results"; (11) the
+  same error repeated in the results note; (12) "three independent sources" **counted rather than named**, one of them
+  described as "a live-results page" that was not fetched; (13) a "**Tonight**" tag on a 5 PM ET card; (14) and (15) the
+  markets re-confirmation counter. ⭐ *Eight runs running. This time the largest category was **"this run" attached to work
+  done in a previous run** (four of fifteen) — a demoted or carried block keeps its original provenance language unless
+  someone rewrites it. When you move a block, re-read its tense.*
+- 🔵 **BUILD — FILENAME-DATE PRUNE RAN A TENTH TIME.** **702 snapshots across 22 days, 234 editions**, oldest
+  **2026-08-22 at exactly 21 days**, **0 pruned** (rule is strictly greater than 21; the mtime rule still does not work on a
+  fresh clone). Archive regenerated by `gen_archive_1617.py` from the snapshot directory with post-generation assertions that
+  day-section, row and link counts equal the inventory (**22 / 234 / 702**) and that the nav carries five tabs with Archive active.
