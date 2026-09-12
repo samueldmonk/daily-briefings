@@ -20400,3 +20400,97 @@ deleting and report how many days were removed.
   four weeks" statistic) were both found by the **manual line-by-line read-through afterwards**, because neither
   was a claim any automated check was written to test. ⭐ *The validator tests what a previous run already knew
   to doubt; the read-through is what catches this run's new prose.*
+
+## Added 2026-09-12 (Saturday — clone ~12:35pm ET, research 12:36–12:52pm, build 12:52–12:58pm, validated 12:58pm, published ~1:05pm — MIDDAY EDITION, markets CLOSED for the weekend, TENTH run of the day; archive stamp 2026-09-12-1242)
+- 🟢🟢 **CYBER — THE THIRD STAGE OF THE BLUEMOON CHAIN NOW HAS A SCORE AND A FEDERAL DEADLINE OF ITS OWN.**
+  **CVE-2026-87491** (Chromium V8) was carried in the prior edition with *no* CVSS and no KEV entry. Verified this
+  run: **CVSS 8.8**, out-of-bounds write in V8 — arbitrary code execution **inside the sandbox** via a crafted HTML
+  page; the **seventh actively exploited Chrome zero-day of 2026**; fixed in **Chrome 153.0.8010.36 or later**;
+  **added to KEV 9 September, due 23 September 2026** (11 days left). The CVE table cell, the stat strip, the top
+  story and a new KEV bullet all carry the same figures. Sources: CISA "Adds four KEV" alert (09/09), Security
+  Affairs, The Hacker News, AiCybr.
+- ⭐ **CYBER — THE SAME KEV BULLETIN SPLIT ITS DEADLINES BY ELEVEN DAYS, WHICH IS THE STRONGEST BOD 26-04 PROOF YET.**
+  CISA's **9 September** batch added both **Fortinet CVE-2025-25249 (due 12 September — today)** and **Chromium
+  CVE-2026-87491 (due 23 September)**. Same alert, same add date, eleven days apart. The page now makes that the
+  explicit demonstration that BOD 26-04 sets the clock **per vulnerability**, superseding the earlier Chromium and
+  Windows examples. ⭐ *The cleanest evidence for a rule is two rows of the same table disagreeing.*
+- ⚠⚠ **CYBER — THE "INC RANSOM — 5.7 TB" CARD WAS A 2025 STORY AND HAS BEEN REMOVED. DO NOT RE-ADD IT.**
+  Two breach-tracker snippets surfaced it as current. Traced this run to its primary: the victim is the
+  **Pennsylvania Office of the Attorney General**; the attack surfaced in **August** and knocked out the website,
+  email and phone lines for roughly **three weeks**; INC Ransom claimed **5.7 TB** (figure via Comparitech, never
+  confirmed by the office, which did not pay); the OAG's review found files that for some individuals contained
+  **names, Social Security numbers and medical information** — and it **notified affected individuals by email on
+  14 November 2025**. A notification dated November 2025 cannot belong to a September 2026 incident. The carried
+  card also attached a **"Department of Health and Human Services investigation"** to it, which no source read this
+  run supports for this victim — that was a tracker conflating two entries. Card deleted; a validator check now
+  asserts neither "INC Ransom" nor the HHS string reappears on the page.
+  ⭐ *Aggregator "recent breaches" pages re-date old incidents to the day you read them. Always walk one link back
+  to the notification letter before publishing a breach as current.*
+- 🟢 **CYBER — A FIFTH AND SIXTH CRITICAL COUNT FOR THE SAME PATCH TUESDAY.** The **973** total is now reported with
+  **two different critical subsets**: **113** (Trinetri) and **119** (a second read this run). Published as "four
+  totals, four critical counts, one bulletin," alongside Tenable's 964/104 and BleepingComputer's 966/105 — whose
+  own itemisation still sums to 104. Nothing collapsed to a single number.
+- 🟢 **MARKETS — DELL'S FRIDAY CLOSE IS NOW A DATED LEVEL, AND IT WAS A RECORD.** **$567.13**, an **all-time high**,
+  newly sourced this run. The percentage is reported two ways — **11.5%** on one tally, "roughly 12%" on another —
+  and both are printed rather than averaged. **RBC Capital**'s initiation at **Outperform, price target $640** is
+  now on the card. Friday's index closes re-confirmed a **twelfth** time (S&P **7,656.98 +65.28 +0.86%**, Nasdaq
+  **26,333.04 +251.31 +0.96%**, Dow **52,573.29 +509.19 +0.98%**), all three pairs validator-reconciled.
+- 🟢 **MARKETS — SUPER MICRO'S SMALLER MOVE NOW HAS ITS MECHANISM.** SVP **Mike Staiger** flagged a **$60 billion
+  order book** at a **Goldman Sachs conference on Thursday**, a day before the Oracle read-through — which is why
+  its 7% lagged HPE's and Dell's 11–12%. No new mover was sourced this run; markets have been shut since Friday's
+  close and the page says so rather than manufacturing one.
+- ⚠ **MARKETS — DELL'S "$95B AI BACKLOG" WAS REFUSED.** One read attributes a **$95 billion** figure to Dell's own
+  AI **backlog**; another attributes **$90–95 billion** to **Oracle's FY2027 capex**. Those are different quantities
+  one digit apart, and at least one tracker appears to have conflated them. Only the Oracle capex figure — which has
+  a named CFO source (**Hilary Maxson**) — is published. ⭐ *Two near-identical numbers attached to two different
+  companies is a conflation signal, not a corroboration.*
+- 🟢🟢 **MMA — NOCHE UFC HAD STILL NOT BEGUN AT BUILD TIME AND ZERO RESULTS ARE PUBLISHED.** Build ran ~12:55pm ET
+  against a **2 PM ET** prelim start. A results search this run returned only preview and live-blog shells with no
+  outcomes; the page states plainly that it was built before the card began, and a validator asserts that no
+  result string appears. Countdown still targets 2026-09-12T17:00:00-04:00.
+- 🟢 **MMA — THE EVENT'S OFFICIAL DESIGNATION AND A CARD-SIZE CONFLICT, BOTH NEW.** The event is carried on the
+  books as **UFC Fight Night 288** and billed as **Noche UFC 4**. Card size is reported **two ways**: the event page
+  gives **thirteen** bouts, a listing read this run says **sixteen are scheduled**. Both printed, neither resolved.
+  Odds widened to a third quote: **−425 / +325** alongside DraftKings' **−425 / +330** and the **−410 / +320**
+  elsewhere. New sourced descriptors: **Curtis Blaydes** is a **former interim heavyweight title challenger** and
+  **Waldo Cortes-Acosta** a **former LFA heavyweight champion**.
+- ⚠ **MMA — THE CHAMPIONS SOURCE REGRESSED A FOURTH CONSECUTIVE TIME, BUT ON A DIFFERENT BELT THAN LAST READ.**
+  This run returned **all eight men's divisions correctly**, including **Carlos Ulberg** at light heavyweight — the
+  entry that had regressed to **Alex Pereira** on the ninth run. It again seated **Valentina Shevchenko at women's
+  flyweight** ("won title Sept. 14, 2024"). Refused; published **VACANT** per the standing block. The on-page note
+  now says which belt it got right *and* which it got wrong, and draws the lesson explicitly: **which division the
+  list gets wrong changes from read to read, so one clean division proves nothing about the rest.** All four
+  regression guards retained and validator-enforced.
+- 🔵 **NEW-TAG LEDGER — CYBER 0, MARKETS 0, MMA 0 ISSUED THIS RUN.** Everything verified this run is new **detail**
+  on items the 1215 snapshot already carried: the 87491 score and deadline, the fifth/sixth critical counts, the
+  Dell close and RBC target, the Super Micro order book, the UFC Fight Night 288 designation and the card-size
+  conflict. By the standing rule, new detail on a carried item earns no tag. Check Point VPN, Novo Nordisk/
+  FulcrumSec and the Blaydes contract keep the New tags issued at 1205 (this is their second edition — they retire
+  next run). One item was **removed** rather than tagged: INC Ransom, above.
+- 🔵 **VALIDATION — 231 checks, 0 failures.** Tag balance across 20 element types on four pages; doctype and tail;
+  four masthead ids and three timezone refs per page; five-tab nav with exactly one active tab matching the page's
+  own filename; **eight TradingView scripts on Wall Street only** (zero elsewhere), three single-quote widgets, six
+  required symbols, NYSE:HPE as Chart of the Day; three index levels each asserted exactly once inside the
+  Scorecard with all three points/percent pairs arithmetically reconciled against the implied prior close, plus the
+  7,666 refusal guard; **19 CVE rows, 5 CVSS-10.0 cells, 3 CVSS-9.8 cells, 1 CVSS-8.8 cell, 6 not-stated cells**;
+  anchored countdown checks; absence checks for "INC Ransom" and the HHS string; ten champion names, all four
+  regression guards and the "stripped" trap; an absence check on Noche UFC result strings; a footer-duplicate check
+  on the MMA sources list; and three checks that each index.html card sentence is **byte-identical** to its page's
+  own summary strip.
+- ⚠ **VALIDATION — THE 973 SUBSTRING TRAP RECURRED EXACTLY AS THE 1044 LEDGER PREDICTED IT WOULD.** `count("973")`
+  returned **5** against 4 real mentions, because **CVE-2026-697*30*** contains it. The 1044 run documented this
+  trap for "0 days left" and warned that a documented trap is only avoided if the **next validator inherits the
+  check**. This validator was written fresh and did not. It now uses an anchored `(?<![0-9])n(?![0-9])` tally for
+  every Patch Tuesday figure, **plus a companion check that asserts the raw count is 5 and the anchored count is 4**
+  — so the trap itself is now pinned rather than merely avoided. The other two failures were stale expectations
+  (odds string count, and a source link this run appended that the dedupe pass had already kept).
+- ⚠ **PROCESS — THE FINAL READ-THROUGH CAUGHT AN EDITORIAL CLAIM THE VALIDATOR COULD NOT.** The champions note as
+  first drafted said the regression "moved between divisions between reads" — true of our own record, but phrased
+  as a pattern claim the sources do not make. Rewritten to the plain, checkable version. ⭐ *A validator checks that
+  a sentence is present; only a person checks that it is warranted.*
+- ⚠ **BUILD — FILENAME-DATE PRUNE RAN A THIRD TIME; ARCHIVE GENERATOR HAD TO BE REWRITTEN.** 681 snapshots across
+  22 days, oldest **2026-08-22 at exactly 21 days**, **0 pruned** (rule is strictly greater than 21). Separately,
+  `gen_archive_2245.py` **crashed** on the current archive.html: it expects an `<h2 class="day">` + newline layout
+  the page no longer uses (it now uses `<h3 class="day">` + a `.panel` table, and a real `<footer>`). Replaced with
+  `gen_archive_1242.py`, which anchors on `<h3 class="day">` and `<footer>`. ⭐ *A generator that "keeps the existing
+  shell" silently rots every time the shell is restyled — anchor it on markup the page actually still has.*
