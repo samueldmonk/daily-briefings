@@ -20218,3 +20218,16 @@ Any earlier entry dating Week 5 to 9 September is SUPERSEDED. DWCS airs Tuesdays
 - 🔵 **NEW-TAG LEDGER — CYBER 3, MMA 2, WALL STREET 1.** Issued: **Trezor/Brevo**, **Windows Server RDS regression**, **Mantax Otax** on cyber; **Noche UFC tonight** and **DWCS Week 6** on MMA; **HPE** on Wall Street. NOT issued: the three newly verified CVSS 10.0 scores, the Yair Rodriguez withdrawal, the Fiorot–Grasso co-main detail, the CPI breakdown and the Dell/T-Mobile moves — all new DETAIL on items already carried, which by standing rule earns no tag.
 - 🔵 **VALIDATION — 247 checks, 0 failures.** Tag balance across 20 element types on all four pages; doctype and tail; four masthead ids and the stamp script per page; five-tab nav with exactly one correctly-active tab; **eight TradingView scripts on Wall Street only** (zero on the other three), three single-quote widgets, required symbols plus NYSE:HPE; three index levels each appearing exactly twice (tldr + Scorecard) with the Dow's points and percent reconciled; **16 CVE rows, 5 numeric 10.0 cells, 9 "Not stated in sources read", Citrix 9.3 asserted once, 9.8 permitted once and only in the corrective note**; seven KEV countdown strings including two 1-day-overdue entries; BOD 22-01 confined to its retirement sentence; ten positive champion assertions plus four regression guards; the tonight-results refusal; the countdown element and its target datetime; and three checks that each index.html card sentence is **byte-identical** to its page's own summary strip.
 - ⚠ **VALIDATION — TWO FAILURES WERE VALIDATOR BUGS, NOT CONTENT BUGS, AND THE CHECKS WERE TIGHTENED RATHER THAN THE PAGES LOOSENED.** `>10.0<` matched the Patch Priority callout's legitimate restatement of the Cisco score as well as the five table cells; the check now counts `class="critc">10.0<` for cells and asserts the callout restates it exactly once. A blanket `"stripped" not in page` check fired on the clause that explicitly REJECTS the word ("vacated rather than stripped"); it now requires exactly one occurrence, inside that clause. ⭐ *When a check fails, establish whether the page or the check is wrong before editing either.*
+
+## ⚠ BUILD CAVEAT (recorded 2026-09-12, fifth run): THE ARCHIVE PRUNE COMMAND DOES NOT WORK ON A FRESH CLONE
+The spec's prune step is `find archive -name '*.html' -type f -mtime +21 -delete`. **`-mtime` reads the
+filesystem modification time, and a fresh `git clone` sets every file's mtime to the moment of the clone** —
+so on every run all snapshots look zero days old and NOTHING is ever pruned. The command has been silently
+no-op'ing for the life of the repo.
+Today this happened to be harmless: the oldest snapshot day is **2026-08-22, exactly 21 days old**, so nothing
+was due for deletion and none was performed. It will NOT stay harmless — from the next run onward, days will
+age past 21 and the archive will grow without bound.
+**Future runs: prune by the DATE IN THE FILENAME, not by mtime.** Filenames are `section-YYYY-MM-DD-HHMM.html`;
+compute the age from that date against today in ET and delete files older than 21 days. Verify the list before
+deleting and report how many days were removed.
+⭐ *A cleanup command that never errors is not the same as a cleanup command that works.*
