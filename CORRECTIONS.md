@@ -52,6 +52,18 @@ CONSEQUENCES for this site, and the reason this block is promoted:
   explicitly. Source fetched IN FULL this run: GBHackers, 11 September 2026.
 - **Deadlines in the SAME bulletin can differ.** The 8 September batch of four split between 11 and
   22 September. Always take the CISA-stated date per CVE; never derive it.
+  ⚠⚠ **2026-09-12 (sixteenth run) — THE SPLIT IS NOW PINNED TO A CVE, BECAUSE THE PAGE HAD IT WRONG FOR
+  DAYS.** The 11-September member of that batch is **CVE-2026-75650 (Adobe Commerce / Commerce B2B /
+  Magento Open Source, "StyleSmuggler", Adobe CVSS **10.0**, Priority 1, CWE-1336 template-engine
+  injection to unauthenticated RCE)**: **added 8 September, due 11 September** — a three-day window.
+  The other three (**CVE-2026-85880**, **CVE-2026-81963**, **CVE-2026-86218**) are **due 22 September**.
+  Every edition up to and including the fifteenth run listed all four at 22 September, i.e. eleven days
+  late on the most severe of them. The line above was in this file the whole time and the page never
+  applied it. ⭐ *A correction recorded in this file is not applied until something on the page changes.
+  When a batch is carried as one row, the split is invisible by construction — enumerate per CVE.*
+  Also pinned this run: **CVE-2025-25249 (Fortinet FortiOS / FortiSwitchManager / FortiSASE) CVSS is
+  **7.3** (THN reading the CISA alert), and the Chromium V8 entry due 23 September is
+  **CVE-2026-87491** (fixed in Chrome 153.0.8010.36).
 - Several 2026-06 entries further down this file say "BOD 26-04 unverified — IGNORED" and force a
   3-week window. **Those entries are OBSOLETE and this block wins.** The directive is real; its own
   CISA page and implementation-guidance page were returned this run, and Tenable, Datadog, FedTech,
@@ -21148,3 +21160,108 @@ deleting and report how many days were removed.
   `gen_archive_1521.py`, regenerating **every** day section from the snapshot directory, with post-generation assertions
   that day-section, row and link counts equal the snapshot inventory (**22 / 232 / 696**) and that the nav carries five
   tabs with Archive active.
+
+## Added 2026-09-12 (Saturday — clone ~3:35pm ET, research 3:36–3:52pm, build 3:52–4:02pm, validated 4:03pm, read-through 4:04pm, published ~4:10pm — AFTERNOON EDITION, markets CLOSED for the weekend, Noche UFC prelims LIVE, SIXTEENTH run of the day; archive stamp 2026-09-12-1546)
+- 🟢🟢🟢 **CYBER — NEW TOP STORY, AND IT EXISTS BECAUSE THIS SITE HAD A DEADLINE ELEVEN DAYS WRONG.**
+  **CVE-2026-75650, "StyleSmuggler"** — Adobe Commerce, Adobe Commerce B2B and Magento Open Source,
+  **Adobe CVSS 10.0**, **Priority 1**, **CWE-1336**, unauthenticated arbitrary code execution. Attacker data
+  reaches Magento's template engine through `styles` properties and executes during server-side rendering of
+  the **Payment Transaction Failed Reminder** email — **no recipient interaction required**. Sansec saw the
+  **first confirmed exploitation on 4 September**, published **5 September**, and Adobe's emergency bulletin
+  **APSB26-146** with hotfix **VULN-39341** did not land until **7 September**: three days of exploitation
+  before a patch existed. Sansec's first identified victim ran **2.4.6-p15 with the July and August 2026
+  updates installed**. A **second, separate actor** dropped a **PHP web shell** under `pub/media`. The
+  remediation trap, stated on the page: Adobe's regular September release **APSB26-138 (8 Sept) still
+  requires VULN-39341** — a `2026-sep` build is not fixed — and Adobe warns that **rotating the Commerce
+  encryption key does not invalidate credentials already taken**. The KEV correction is promoted into the
+  authoritative block above.
+- 🟢🟢 **CYBER — THE PATCH-PRIORITY TRIO ALL GAINED SOURCED EXPLOITATION DETAIL.** From The Hacker News,
+  fetched in full: **Cisco updated its own advisory** for **CVE-2026-20079** to record awareness of active
+  exploitation in **August 2026** and **three post-compromise clusters — UAT-12197, UAT-11823, UAT-11988** —
+  deploying web shells and malware. **Citrix CVE-2026-19490** has drawn **56 attempts on Previdian honeypots
+  since 3 September, 36 on 8 September alone**. **Fortinet CVE-2025-25249 (CVSS 7.3)** is the vector for the
+  **PivotC2** Node.js RAT (SOCRadar): **3,000+ IPs targeted, 178 devices infected**, US-concentrated,
+  financially motivated Russian-speaking actor, earliest exploitation **July 2026**. CVE table **21 → 23 rows**.
+- ⚠ **CYBER — TWO REFUSALS, ONE OF THEM A SECOND SIGHTING.** A daily OT-security roundup returned a **Texas
+  water-treatment ransomware attack** and a **Siemens SIMATIC S7 flaw tracked as CVE-2026-12345** in the same
+  summary. **CVE-2026-12345 is already on this file's permanent refusal list** and this is its second
+  aggregator appearance; the water-plant item names no utility and has no advisory or corroboration anywhere
+  else read. Both refused and named on-page. Novo Nordisk / FulcrumSec, 270GB, Summit Pathology, Nevada 2025,
+  Imperial Healthcare, DiamondLease and Mantax Otax all remain refused.
+- 🟢🟢🟢 **MMA — THE REFUSED RESULT IS NOW OFFICIAL, AND THE FABRICATION MECHANISM IS FINALLY NAMED.**
+  **Sean King III def. Jessie Rosas by KO (slam), round 1, 0:36** — published because **MMA Mania's live blog
+  (via Yahoo, fetched in full, page-stamped 6:58 PM UTC)** carries it under a filled **"Official decision"**
+  heading with a round-by-round account (King ducked under and slammed Rosas; "Rosas hit his head on the canvas
+  and was out before King could follow up with punches"). King **6-0 → 7-0** (derivation stated), Rosas 8-1,
+  King was **−200**. Tarin's decision re-confirmed from the same page. **UFC.com's prelim page and Sherdog's
+  play-by-play were both fetched this run and remain entirely unfilled** — the official site is NOT the fastest
+  source during a live card, which is why the rule is "a filled result field", not "an official page".
+  ⭐⭐ **THE MECHANISM, AND IT IS NEW: A BETTING-PICKS LIST IS WRITTEN IN THE SAME SYNTAX AS A RESULTS LIST.**
+  The Yahoo/Uncrowned live blog contains a pre-card block headed **"Prelim Picks"** whose every line reads
+  *"Thomas Gantt (−450) def. Drakkar Klose (+350)"*, *"Rong Zhu (−180) def. Rafa García (+145)"*, *"Ignacio
+  Bahamondes (−600) def. Muslim Salikhov (+425)"*. **Every phantom "result" a search returned this run is a
+  line from that list**, and the "29-28, 29-28, 29-28" attached to the Rongzhu line is character-for-character
+  Tarin's real scoreline. Run 14 traced a fabricated set to a prediction table on an outside site; **this run
+  the same trap was inside the live blog that also carries a genuine result.** RULE for future runs: the verb
+  "def." carries no evidential weight, a set in correct bout order is what a picks list looks like **by
+  construction**, and favourites winning is not confirmation.
+- ⚠ **MMA — ESPN'S CHAMPIONS PAGE RETURNED NO CONTENT THIS RUN.** No cross-check either way; the board stands
+  on derivation, and the previous run's findings are carried forward explicitly rather than restated as fresh.
+  Note added on-page: **no title is contested at Noche UFC**, so nothing tonight can change a belt — the one
+  bout with championship consequences (Fiorot–Grasso) is an eliminator.
+- 🟢 **MARKETS — FRIDAY RE-CONFIRMED A SEVENTEENTH TIME, NOW TO TWO DECIMALS.** WTOP/AP: **S&P 500 +0.86% to
+  7,656.98**, **Dow +509.19 / +0.98% to 52,573.29**, **Nasdaq +0.96% to 26,333.04**. Each reconciles against
+  the AP points figures and against AP's rounded "0.9%"/"1%". Newly sourced (IG week-ahead, CNBC): the S&P was
+  **on track for its deepest four-day decline since June** with **WTI above $100** and the **10-year closing in
+  on 5%** before Friday's buyers halted it; the losing week is attributed to a **warmer-than-expected PPI**,
+  energy and yields; **Chairman Kevin Warsh** is named as likely to hike Wednesday; the **~90% CME FedWatch**
+  read is now explicitly dated to **11 September**. **Fed Wednesday 16 September, 2 PM ET** stands. Nothing new
+  refused; the 7,666 guard is retained for an **eighth** edition.
+- 🔵 **NEW-TAG LEDGER — CYBER 3, MARKETS 1, MMA 2.** Issued: **StyleSmuggler** (top story), **the StyleSmuggler
+  operators** (spotlight), the **Fortinet/Citrix/Cisco exploitation detail**; the **two-decimal Friday
+  percentages + week-ahead framing**; **Sean King III's result** (top story) and **the picks-list refusal**.
+  Retired to **Carried**: the **2 September seven-flaw batch** (demoted from top story to a "Second Read"
+  section, kept in full), **Qilin/Agenda**, **Veradigm**, the **Dustin Group / Tuboaços listings**, the
+  **Russell 2000 card**, **Tarin's result**.
+- 🔵 **VALIDATION — 277 checks, 0 failures after repair; ALL SIX initial failures were in the validator.**
+  Tag balance across 20 element types on four pages; doctype/tail; masthead ids, timezone refs and edition
+  buckets; five-tab nav in fixed order with one active tab matching the filename; **eight TradingView scripts
+  on Wall Street only**, three single-quote widgets, five symbols, all six widget blocks, NASDAQ:ACVA as Chart
+  of the Day; **all twelve Scorecard points/percent pairs reconciled** against implied prior closes;
+  **23 CVE rows** with CVSS counts pinned (five 10.0, three 9.8, two 9.3, one 8.8, one 8.7, three 7.8, one 7.3,
+  one 6.5, six not-stated), CVE-id uniqueness, and every Note-cell cross-reference required to exist in column
+  one; **nine data-due spans over eight distinct dates**, with the countdown asserted absent from the rendered
+  body; **champion cell parsing across 11 divisions** with the four regression guards and the "stripped" trap;
+  a results table asserted at **exactly two winners and eleven "Not yet official"**; refusal-context checks;
+  footer URL de-duplication and all-HTTPS; and three byte-identity checks between index cards and page strips.
+- 🟢🟢 **VALIDATION — THE "0 days left" TRAP DID NOT RECUR, AN EIGHTH RUN, AND AGAIN BECAUSE THE REQUIREMENT
+  WAS READ OUT OF THIS FILE.** Written against the **script-stripped rendered body with `(?<![0-9])`**. The six
+  initial failures were validator bugs of the exact kinds this file already predicts: **a copied constant**
+  (`7,656.98` pinned at 3 when the page legitimately has 2 — now split into Lead-region, Scorecard-region and
+  total assertions, the fix run 15 prescribed and run 16 had to rediscover anyway); a **span regex that
+  captured the wrong script block** when looking for the countdown generator; a **blunt Pereira ban** that
+  fired on the Champions Board's own legitimate *"**Not** Alex Pereira"* negation and on the heavyweight row's
+  historical "KO2 Alex Pereira"; and a **refusal-context check that compared against un-stripped HTML**, so
+  `is <strong>not</strong> published` did not match the refusal word list. ⭐ *Strip tags before matching prose,
+  and never pin a count you did not re-derive from the page in front of you.*
+- ⚠⚠ **PROCESS — 277/277 PASSED FIRST TIME AND THE READ-THROUGH THEN FOUND NINE REAL DEFECTS. SEVENTH
+  CONSECUTIVE RUN.** (1) **"the rule this page publishes two sections further down"** — it is six sections down;
+  replaced with a name, not a count. (2) **"three central banks in four days"** — Fed Wednesday 2 PM ET to BoJ
+  Thursday 11 PM ET is about 33 hours; the count was invented and is cut. (3) the Wall Street summary strip
+  printed **"about 90%"** as *the* hike odds when the page's own Radar prints three disputed reads — rewritten
+  to a **70–90% range**, and the index card with it. (4) **"ransomware staging"** in the AI-infrastructure
+  headline, which the section's own final paragraph explicitly declines to claim — changed to **credential
+  theft**. (5) **"the only live page then available"** for last run's King refusal — there were two.
+  (6) **"Rosas was out on impact"** — the source says he hit his head and was out before the follow-up;
+  the source's words replaced the inference. (7) the Rongzhu scoreline described as **"borrowed from a
+  different fight"**, an assertion of provenance — replaced with the observable fact that it is
+  character-for-character Tarin's. (8) **"inside the source that carries the genuine results"** — that blog
+  carries one. (9) **"UFC.com lists him as Thomas Gantt; he is billed as Tommy"** — UFC.com's copy says Tommy
+  and its own athlete link says Thomas; both renderings and their sources now stated.
+  ⭐ *Seven runs running. Three of the nine were numbers written in prose (two sections, four days, one blog),
+  and three were verbs doing more work than the source allowed (staging, on impact, borrowed).*
+- 🔵 **BUILD — FILENAME-DATE PRUNE RAN A NINTH TIME.** **699 snapshots across 22 days, 233 editions**, oldest
+  **2026-08-22 at exactly 21 days**, **0 pruned** (rule is strictly greater than 21). Archive generator
+  rewritten as `gen_archive_1605.py`, regenerating every day section from the snapshot directory, with
+  post-generation assertions that day-section, row and link counts equal the snapshot inventory
+  (**22 / 233 / 699**) and that the nav carries five tabs with Archive active.
