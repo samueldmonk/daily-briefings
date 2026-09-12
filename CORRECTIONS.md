@@ -20595,3 +20595,134 @@ deleting and report how many days were removed.
   **0 pruned** (rule is strictly greater than 21). Archive generator rewritten again as `gen_archive_1335.py`, this time
   regenerating **every** day section from the snapshot directory rather than editing the existing table, anchored on
   `<h3 class="day">` and `<footer>`.
+
+## Added 2026-09-12 (Saturday — clone ~1:35pm ET, research 1:36–1:50pm, build 1:50–2:00pm, validated 2:02pm, published ~2:05pm — MIDDAY EDITION, markets CLOSED for the weekend, TWELFTH run of the day; archive stamp 2026-09-12-1349)
+- 🟢🟢 **MARKETS — THE WEEK'S REAL STORY WAS BREADTH, AND IT IS NEWLY SOURCED.** Friday's +0.86%/+0.96%/+0.98%
+  rally was carried accurately, but the **weekly** numbers reframe it: **S&P 500 −0.68%**, **Dow −1.51%**,
+  **small caps −2.38%**, **equal-weight S&P 500 −1.87%**. The cap-weighted index fell about **1.2 points less
+  than its own equal-weight version**, i.e. a handful of mega-caps masked a much broader decline — a reading the
+  source states explicitly rather than one inferred here. This is now the Lead, the tldr and a new Movers card,
+  and the equal-weight line is a fourth row in the Weekly Scorecard. Friday's three index closes re-confirmed a
+  **thirteenth** time, all three points/percent pairs validator-reconciled.
+- ⚠⚠ **MARKETS — A WEEK-AHEAD PREVIEW PUT THE FOMC ON THE WRONG DAY AND WAS REFUSED.** One preview read this run
+  schedules the **Federal Reserve decision for Thursday 17 September**, alongside the Bank of England. The
+  **Federal Reserve's own meeting calendar** puts September's FOMC at **15–16 September with the announcement
+  Wednesday 16 September at 2 PM ET** plus a Summary of Economic Projections; a dedicated FOMC calendar source
+  agrees. **Wednesday 16 September is published**; the Thursday date appears on the page only inside the clause
+  retiring it. The same preview's **BoE Thursday 17** and **BoJ Friday 18** are kept — both match those banks'
+  own conventions, and only the Fed entry is contradicted. ⭐ *A source can be right about three central banks
+  and wrong about the fourth; check the one whose date you are actually going to print.*
+- 🟢 **MARKETS — THE HORMUZ DIPLOMACY NOW HAS A DATE.** Gulf Cooperation Council diplomats are expected to meet
+  their Iranian counterpart **Monday** on a possible **temporary arrangement for managing shipping through the
+  Strait of Hormuz**. WTI **$100.05 −2.4%** and Brent **$104.61 −2.8%** settlements re-confirmed, weekly **+9.4%**
+  and **+8.7%**. The **7,666** weekly "level" surfaced **again** from the same family of sources and was refused
+  for a fourth edition; the guard is retained.
+- ⚠ **MARKETS — CARRIED FIGURES ARE NOW LABELLED AS CARRIED.** The read-through found several numbers inherited
+  from the prior edition and presented as though re-sourced: the **weekly Nasdaq −0.7%**, the **nine-of-eleven
+  sector line**, **Fed funds effective 3.63%**, and the 30-year row. The source read this run gave weekly moves
+  for the S&P, Dow, small caps and equal-weight index **but not the Nasdaq**. All are now explicitly marked
+  carried. ⭐ *Carrying a figure is legitimate; carrying it silently is what makes the page look better sourced
+  than it is.*
+- 🟢🟢 **CYBER — NEW TOP STORY: IDSCAN CONFIRMS THE BREACH BEHIND 153 MILLION DRIVER'S LICENCE SCANS.**
+  Identity-verification firm **IDScan** confirmed an unauthorised third party accessed customer data in its cloud
+  platform; it learned **on or around 1 September** and disclosed in a **4 September** notice. **Brian Krebs**
+  reported **1 September** that a Russia-linked dark-web platform, **Nexus**, was advertising **153M+** US and
+  Canadian licence scans, plus **10M ID cards**, **3M travel documents** and **579,000 medical cards**, and
+  verified samples with consent. IDScan's notification carried a **noindex directive**; **TechCrunch** spotted it.
+  **FBI** investigating; lawsuits filed; Nexus offline but the data presumed retained. Exposed: full names and
+  licence/government ID numbers. Sources fetched this run: BleepingComputer (10 Sept, Lawrence Abrams), Krebs,
+  TechCrunch, IDScan's own notice.
+- 🟢🟢 **CYBER — FLORIDA'S DAVID BREACH: THE VICTIM AND THE ATTACKER GIVE DIFFERENT ACCESS STORIES, BOTH PUBLISHED.**
+  **FLHSMV** confirmed on **11 September** a breach of the **DAVID** driver database, learned of **4 September**.
+  Its investigation blames **compromised credentials of a single Plant City Police Department user**, improperly
+  stored on a personal device. **ShinyHunters** instead claims a **password reset flaw** reaching multiple DAVID
+  accounts including an **FBI agent's**, iterating record IDs from **3 September**, and claims **200,000+** records
+  — a figure the state has **not** confirmed. Proof-of-breach was a DAVID record for **Jeffrey Epstein**. Both
+  accounts are on the page, graded. ⭐ *When the breached party and the extortion group describe different entry
+  points, that disagreement is the story — do not resolve it for them.*
+- 🟢🟢 **CYBER — NEW PATCH PRIORITY, AND IT EXPIRES TODAY.** **CVE-2026-20079**, **CVSS 10.0**, Cisco **Secure
+  Firewall Management Center**: unauthenticated auth bypass executing scripts **as root** (CWE-288). **KEV 9 Sept,
+  federal deadline 12 September — today, 0 days left.** Cisco Talos attributes exploitation to **three clusters**:
+  **UAT-11988** (**Qilin** ransomware affiliates), **UAT-11823** (tooling overlapping **Sandworm**, deploying a
+  **Cyclops Blink** variant via a Netcat reverse shell in `license.tmp` run as root through `package_info.pl`) and
+  **UAT-12197** (JSP web shell, `cmd.jar`). Companion flaw **CVE-2026-20316**, **CVSS 5.3** but rated **High** by
+  Cisco because it chains — and it is the one Qilin actually used for entry. Hot fixes cover branches **7.0, 7.2,
+  7.4, 7.6, 7.7, 10.0**; affected branches are **6.4, 7.0, 7.1, 7.2, 7.3, 7.4, 7.6, 7.7, 10.0**, so **6.4, 7.1 and
+  7.3 are not on the hot-fix list** — stated alongside Cisco's note that a comprehensive release follows next week,
+  so the observation is not left implying abandonment. **Hot fixes do not remediate an existing compromise**, which
+  the page states in bold.
+- ⭐ **CYBER — BOD 26-04's PER-VULNERABILITY CLOCK NOW HAS THREE INTERVALS, NOT TWO.** The **9 September** bulletin
+  gave **Cisco 20079, Citrix 19490 and Fortinet 25249 a three-day deadline (12 Sept)** and **Chromium 87491
+  fourteen days (23 Sept)** — same alert, same add date, **eleven days apart**. The **4 September** Chromium add
+  (**CVE-2026-85046**) also got **fourteen days (18 Sept)**. So the interval tracks severity-and-exploitation of the
+  individual CVE, not the batch, and emphatically not BOD 22-01's uniform three weeks. This supersedes the prior
+  run's two-interval framing as the strongest available demonstration.
+- ⚠⚠ **CYBER — AN AGGREGATOR SERVED A PLACEHOLDER CVE AND TWO UNVERIFIABLE VICTIMS. ALL REFUSED; DO NOT RE-ADD.**
+  A general cyber-news search returned "**CVE-2026-12345**" attached to a Siemens SIMATIC S7 PLC flaw. That is a
+  **sequential placeholder ID**, not a real identifier, and its presence is a reliability signal about the whole
+  item. The same result set carried "**Imperial Healthcare Solutions**" (leak-site mention, no detail) and an
+  Android malware strain "**Mantax Otax**", neither corroborated anywhere else read this run. All three refused;
+  validator now asserts none appears on the page. ⭐ *A CVE that reads 12345 is the cheapest fabrication tell there
+  is — treat every other claim in the same article as unsourced until proven otherwise.*
+- ⚠⚠ **MMA — THE CHAMPIONS SOURCE REGRESSED A FIFTH CONSECUTIVE TIME, ON THE SAME BELT AS LAST RUN.** ESPN's page
+  returned **all eight men's divisions correctly**, including **Carlos Ulberg** at light heavyweight, and correct
+  entries for women's bantamweight and strawweight. It again seated **Valentina Shevchenko** at women's flyweight
+  on a **"won title Sept. 14, 2024"** entry predating her vacating the belt. Refused; **VACANT** published, with
+  Natália Silva vs Wang Cong at UFC 332 on 3 October. Five consecutive runs, four of them on W-FLW. All four
+  regression guards retained; the validator now parses the **champion cell per division** rather than scanning the
+  table for surnames.
+- 🟢🟢 **MMA — ZERO RESULTS AGAIN, VERIFIED AT THE PROMOTION'S OWN LIVE PAGE AT 1:44 PM ET.** UFC.com's "Prelim
+  Results | Noche UFC" was fetched this run and carries all **seven** prelim bouts as **matchup previews only** —
+  no winner, method or round — with publication metadata of **2:00 PM ET today**. Build ran ~1:50 PM against a
+  **2 PM ET** prelim start. A Build Note says so on the page and a validator asserts no result string appears on
+  any of the four pages. Full prelim card with records published from UFC.com; **2 PM / 5 PM ET** start times
+  confirmed twice on that page.
+- 🟢 **MMA — UFC 332 WILL BE THE FIRST NUMBERED EVENT WITH ITS MAIN CARD ON CBS.** Newly sourced; the only New tag
+  issued on this page. Also carried forward: **UFC 333, 24 October, Abu Dhabi, two title fights** (Volkanovski and
+  Yan both booked), and **Buckley vs Malott, 17 October** (venue not stated, so not published).
+- 🔵 **NEW-TAG LEDGER — CYBER 3, MARKETS 1, MMA 1.** Issued: **IDScan** (top story), **Florida DAVID**, **Cisco FMC
+  exploitation**, **the weekly breadth card**, **UFC 332 on CBS**. Retired: **Metabase/CVE-2026-72898** demoted from
+  Top Story to a Carried card; **Trezor/ShipMonk**, **Trezor/Brevo**, **APIS 220M**, **Veradigm + AdaptHealth** all
+  second edition, retire next run. The **Windows Server RDS** item is new this run but is an availability story, not
+  a breach, and is tagged New in the Breaches section accordingly.
+- 🔵 **VALIDATION — 226 checks, 0 failures after repair.** Tag balance across 14 element types on four pages; doctype
+  and tail; four masthead ids and timezone refs per page; five-tab nav with exactly one active tab matching the
+  page's own filename; **eight TradingView scripts on Wall Street only** (zero elsewhere), three single-quote
+  widgets, five required symbols, NYSE:HPE as Chart of the Day; three index levels each asserted exactly once
+  **inside** the Scorecard with all three points/percent pairs reconciled against the implied prior close, plus the
+  7,666 refusal guard; **9 CVE rows**, two CVSS-10.0 cells, one 8.8, one 5.3, five not-stated; anchored KEV
+  countdown checks and a **five-way deadline-consistency check** on 12 September; absence checks for the placeholder
+  CVE and the two unverifiable victims; **champion CELL parsing across 11 divisions** with all four regression
+  guards and the "stripped" trap; a nine-row "Not yet contested" assertion and result-string absence checks on all
+  four pages; footer URL de-duplication; and three checks that each index.html card sentence is **byte-identical**
+  to its page's own summary strip.
+- ⚠⚠ **VALIDATION — THE "0 days left" TRAP RECURRED FOR A FOURTH TIME, IN A NEW GUISE THE ANCHORING DOES NOT CATCH.**
+  Previous runs found it as a numeric prefix ("1*0 days left*") and fixed it with `(?<![0-9])`. This run the raw
+  count was **2** against **1** rendered instance — and the extra was the **string literal inside the countdown
+  `<script>`**, which no digit-anchor can exclude. Fixed by stripping `<script>` blocks before counting **and**
+  pinning both numbers (raw 2, rendered 1). ⭐ *Four runs have now rediscovered this bug in three different forms.
+  The durable lesson is not the regex: it is that a page which both renders and generates the same string needs its
+  checks run against the rendered body, not the file.*
+- ⚠ **VALIDATION — THE "not investment advice" FALSE POSITIVE RECURRED EXACTLY AS THE PRIOR LEDGER PREDICTED.** The
+  11th-run ledger recorded that this check misses "Nothing here is investment advice". A freshly written validator
+  reproduced the identical failure. Now negation-tolerant. Five of the seven initial failures were blunt checks
+  firing on clauses that say the opposite or on legitimate extra occurrences — the 4th timezone ref added by the
+  countdown formatter, the second **7,656.98** inside the 7,666 refusal clause, the 6th "Not stated in sources read"
+  in its own explanatory note, and the 3rd `ufccdn` in a CSS selector. ⭐ *Every failure this run was in the
+  validator, none in the pages — which is the expected ratio once a checklist is mature, and is itself the signal
+  to go read the prose instead.*
+- ⚠⚠ **PROCESS — 226/226 PASSED FIRST TIME AND THE READ-THROUGH THEN FOUND SIX REAL DEFECTS. THIRD CONSECUTIVE RUN.**
+  All six were unsourced editorial claims no check was written to test: (1) a headline calling it "the worst week for
+  the average S&P stock **in months**" — no prior-week comparison was ever sourced; (2) "**six days' notice**" for
+  Delgado — invented, no source states a notice period; (3) Belgaroui's streak as "**the longest anywhere on the
+  prelims**" — never checked against the other six bouts; (4) the Elliott–Chairez catchweight explained as "the bout
+  **did not make its original limit**" — UFC.com states the catchweight and gives no reason; (5) "a main-event win
+  would be Delgado's **first against a top-10 opponent**" — his opponents' rankings were never sourced; (6) "both sit
+  under the **Paramount arrangement that replaced pay-per-view**" — not stated anywhere read this run. All six
+  rewritten to the plain sourced version or deleted. ⭐ *The pattern is now unmistakable across three runs: the
+  validator protects the numbers, and every single defect it misses is a sentence that sounds like analysis.*
+- 🔵 **BUILD — FILENAME-DATE PRUNE RAN A FIFTH TIME.** **229 editions across 22 days**, oldest **2026-08-22 at exactly
+  21 days**, **0 pruned** (rule is strictly greater than 21). Archive generator rewritten as `gen_archive_1349.py`,
+  again regenerating **every** day section from the snapshot directory rather than editing the existing table,
+  anchored on `<h3 class="day">` and `<footer>`, with post-generation assertions that the day-section and row counts
+  equal the snapshot inventory.
