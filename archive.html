@@ -109,7 +109,6 @@ footer li{margin-bottom:5px}
 <body>
 <div class="wrap">
 
-
 <div class="masthead">
   <div>
     <h1><span class="ic">&#128452;</span> Archive</h1>
@@ -131,10 +130,24 @@ footer li{margin-bottom:5px}
   <a href="mma-briefing.html">&#8856; The Octagon</a>
   <a href="archive.html" class="active">&#128452; Archive</a>
 </nav>
-<div class="panel" style="margin-bottom:20px"><p style="margin:0;font-size:14.5px">Each row below is a <strong>frozen snapshot</strong> of a briefing exactly as it was published at that moment &mdash; the figures, deadlines and countdowns are the ones that were current then, and are <strong>not</strong> updated afterwards. <strong>717 snapshots</strong> across <strong>239 editions</strong> and <strong>22 days</strong>. Snapshots older than 21 days are pruned automatically. For the current briefings use the tabs above.</p></div>
+
+<div class="panel" style="margin-bottom:8px">
+  <p style="margin:0;font-size:14px">Every snapshot below is a <strong>point-in-time capture</strong> of a briefing exactly as it was
+  published at that timestamp. Snapshots are never edited after the fact, so figures inside them are correct <em>as of that edition</em>
+  and may have been superseded &mdash; including by later editions on the same day. Live quote widgets in archived market pages will
+  still stream current prices; the editorial text around them does not. Snapshots are kept for <strong>21 days</strong>.</p>
+</div>
+
+<div class="stats" style="margin:16px 0 6px">
+  <div class="stat"><div class="v">720</div><div class="k">Snapshots held</div></div>
+  <div class="stat"><div class="v">240</div><div class="k">Editions archived</div></div>
+  <div class="stat"><div class="v">22</div><div class="k">Days covered</div></div>
+  <div class="stat"><div class="v">2026-08-23</div><div class="k">Oldest day held</div></div>
+</div>
 <h2>September 13, 2026</h2>
 <table>
 <tr><th>Edition</th><th>The Cyber Wire</th><th>The Closing Bell</th><th>The Octagon</th></tr>
+<tr><td class="mono">4:45 PM ET</td><td><a href="archive/cyber-2026-09-13-1645.html" style="color:#22d3a8;text-decoration:none">Open &rarr;</a></td><td><a href="archive/wallstreet-2026-09-13-1645.html" style="color:#caa64a;text-decoration:none">Open &rarr;</a></td><td><a href="archive/mma-2026-09-13-1645.html" style="color:#e84545;text-decoration:none">Open &rarr;</a></td></tr>
 <tr><td class="mono">4:24 PM ET</td><td><a href="archive/cyber-2026-09-13-1624.html" style="color:#22d3a8;text-decoration:none">Open &rarr;</a></td><td><a href="archive/wallstreet-2026-09-13-1624.html" style="color:#caa64a;text-decoration:none">Open &rarr;</a></td><td><a href="archive/mma-2026-09-13-1624.html" style="color:#e84545;text-decoration:none">Open &rarr;</a></td></tr>
 <tr><td class="mono">4:10 PM ET</td><td><a href="archive/cyber-2026-09-13-1610.html" style="color:#22d3a8;text-decoration:none">Open &rarr;</a></td><td><a href="archive/wallstreet-2026-09-13-1610.html" style="color:#caa64a;text-decoration:none">Open &rarr;</a></td><td><a href="archive/mma-2026-09-13-1610.html" style="color:#e84545;text-decoration:none">Open &rarr;</a></td></tr>
 <tr><td class="mono">3:56 PM ET</td><td><a href="archive/cyber-2026-09-13-1556.html" style="color:#22d3a8;text-decoration:none">Open &rarr;</a></td><td><a href="archive/wallstreet-2026-09-13-1556.html" style="color:#caa64a;text-decoration:none">Open &rarr;</a></td><td><a href="archive/mma-2026-09-13-1556.html" style="color:#e84545;text-decoration:none">Open &rarr;</a></td></tr>
@@ -461,13 +474,16 @@ footer li{margin-bottom:5px}
 </table>
 
 <footer>
-  <h5>Sources &mdash; every link below was returned by a search run for this edition</h5>
-  <ul>
-  <li><a href="https://samueldmonk.github.io/daily-briefings/">https://samueldmonk.github.io/daily-briefings/</a></li>
-  </ul>
-  <p class="disc">Archived editions are historical records and are not corrected after publication. Figures, deadlines and countdowns reflect what was verifiable at the time each snapshot was taken.</p>
+<h5>About this archive</h5>
+<ul>
+  <li>Generated automatically from the contents of <code>archive/</code> &mdash; never hand-curated.</li>
+  <li>Filenames follow <code>&lt;section&gt;-YYYY-MM-DD-HHMM.html</code>; times are US Eastern.</li>
+  <li>Snapshots older than 21 days are pruned on each run.</li>
+</ul>
+<div class="disc">Archived briefings are historical records. Market figures inside them are not current, security deadlines inside them may have passed, and fight cards inside them may have changed. Nothing in this archive is investment advice.</div>
 </footer>
 </div>
+
 <script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \u00b7 briefings refresh every 30 minutes, 8 AM\u20136 PM ET';}catch(e){}})();</script>
 </body>
 </html>

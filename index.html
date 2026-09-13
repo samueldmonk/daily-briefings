@@ -109,7 +109,6 @@ footer li{margin-bottom:5px}
 <body>
 <div class="wrap">
 
-
 <div class="masthead">
   <div>
     <h1><span class="ic">&#9733;</span> Daily Briefings</h1>
@@ -122,7 +121,6 @@ footer li{margin-bottom:5px}
     <span class="pill">Updated <span id="updated">&mdash;</span></span>
   </div>
 </div>
-
 <div class="freshline" id="freshline">Data as of &mdash; ET</div>
 <nav class="tabs">
   <a href="index.html" class="active">&#9733; Front Page</a>
@@ -131,71 +129,58 @@ footer li{margin-bottom:5px}
   <a href="mma-briefing.html">&#8856; The Octagon</a>
   <a href="archive.html">&#128452; Archive</a>
 </nav>
-
-<h2>Today&rsquo;s Briefings</h2>
 <div class="bigcards">
-
   <div class="bigcard cy">
     <div class="kicker">&#9912; The Cyber Wire</div>
     <h3>The Wire</h3>
-    <div class="sub">Breaches &middot; exploited flaws &middot; federal deadlines</div>
-    <p>Microsoft&rsquo;s September Patch Tuesday is the largest in its history at <strong>973 CVEs</strong> &mdash; including a
-    <strong>wormable, CVSS 9.8 Windows DNS Server RCE</strong> and two flaws already exploited &mdash; while the same update cycle is
-    breaking Remote Desktop on Windows Server, and a <strong>CVSS 10.0 Cisco firewall bypass</strong> used by three separate attacker
-    clusters is now <strong>past its federal patch deadline</strong>.</p>
+    <div class="sub">Threat level &mdash; High</div>
+    <p>Microsoft says four tracked crews &mdash; ShinyHunters, Helix, Storm-3121 and Storm-3032 &mdash; are phoning employees as the IT
+    help desk and using a <strong>passkey update</strong> pretext to walk them into adversary-in-the-middle sign-in pages, then draining
+    SharePoint, OneDrive and Outlook; separately a <strong>CVSS 10.0</strong> Cisco firewall bypass is now <strong>a day past its
+    federal deadline</strong> and a <strong>CVSS 10.0</strong> GitLab path traversal is due <strong>tomorrow</strong>.</p>
     <a class="read" href="cyber-briefing.html">Read the briefing &rarr;</a>
   </div>
-
   <div class="bigcard ws">
     <div class="kicker">&#9650; The Closing Bell</div>
     <h3>The Tape</h3>
-    <div class="sub">Indexes &middot; movers &middot; rates &middot; the week ahead</div>
-    <p>Wall Street is closed for the weekend, so the tape is still Friday 11 September&rsquo;s &mdash; all three major indexes snapped
-    four-session losing streaks, S&amp;P 500 <strong>+0.86% to 7,656.98</strong>, Dow <strong>+0.98% to 52,573.29</strong>, Nasdaq Composite
-    <strong>+0.96% to 26,333.04</strong> &mdash; but the 10-year yield still ended the week at <strong>4.97%</strong>, and rate-futures odds
-    of a Fed <em>hike</em> on Wednesday jumped to roughly <strong>90%</strong>.</p>
+    <div class="sub">Markets closed &mdash; weekend</div>
+    <p>Markets are <strong>closed for the weekend</strong>; Friday&rsquo;s session snapped a four-day losing streak with the S&amp;P 500
+    <strong>+0.86%</strong>, but the week still finished lower &mdash; and everything now points at <strong>Wednesday&rsquo;s FOMC
+    decision</strong>, where futures have swung to roughly <strong>80&ndash;90% odds of a rate <em>hike</em></strong> after a
+    hotter-than-expected August core CPI.</p>
     <a class="read" href="wallstreet-briefing.html">Read the briefing &rarr;</a>
   </div>
-
   <div class="bigcard mma">
     <div class="kicker">&#8856; The Octagon</div>
     <h3>Tale of the Tape</h3>
-    <div class="sub">UFC &middot; prospects &middot; the business of fighting</div>
-    <p>Noche UFC&rsquo;s bonus sheet is settled &mdash; <strong>$100,000</strong> each to <strong>Jean Silva</strong> and
-    <strong>Sean King III</strong>, Fight of the Night to <strong>Tommy McMillen vs. Marwan Rahiki</strong> &mdash; and this edition
-    <strong>corrects its own previous one</strong>: McMillen&rsquo;s 252-significant-strike three-round record was set in an
-    <em>earlier</em> bout, not against Rahiki.</p>
+    <div class="sub">Next card &mdash; UFC 331, 19 September</div>
+    <p><strong>Jean Silva</strong> submitted Jose Miguel Delgado with a one-arm choke in the Noche UFC main event and immediately
+    demanded the featherweight belt &mdash; and the UFC&rsquo;s first official rankings update of the Paramount+ era has him at
+    <strong>No. 6</strong>, behind the <strong>Volkanovski&ndash;Evloev</strong> title fight he says he wants the winner of.</p>
     <a class="read" href="mma-briefing.html">Read the briefing &rarr;</a>
   </div>
-
 </div>
 
-<h2>How this site works</h2>
+<h2>How this page works</h2>
 <div class="panel">
-  <p style="margin:0 0 10px;font-size:14.5px">Every claim on all four pages is checked against a source fetched during the run that produced it, or
-  against a sourced entry in this site&rsquo;s standing correction log. Anything that cannot be verified in the run is <strong>dropped</strong>, and each
-  briefing carries a <strong>Refused This Run</strong> block naming what was left out and why.</p>
-  <p style="margin:0;font-size:14.5px">Point-in-time snapshots of every edition are kept in the <a href="archive.html" style="color:var(--accent2)">Archive</a>.
-  Live market widgets on The Closing Bell stream independently of the editorial text; official closes are published only in its Weekly Scorecard.</p>
+  <p style="margin:0 0 10px;font-size:14.5px">Each briefing is rebuilt from live web search every 30 minutes between 8 AM and 6 PM ET.
+  Nothing is carried forward from a previous edition unless a source confirms it again in the current run &mdash; figures that cannot be
+  re-verified are dropped rather than restated, and each page keeps a short block naming what it refused to publish and why.</p>
+  <p style="margin:0;font-size:14.5px">Every past edition is preserved. The <a href="archive.html" style="color:var(--accent2)">Archive</a>
+  holds a point-in-time snapshot of all three briefings at every timestamp, going back three weeks.</p>
 </div>
-
-
 <footer>
-  <h5>Sources &mdash; every link below was returned by a search run for this edition</h5>
-  <ul>
-  <li><a href="https://www.tenable.com/blog/microsofts-september-2026-patch-tuesday-addresses-964-cves-cve-2026-81963-cve-2026-85880">https://www.tenable.com/blog/microsofts-september-2026-patch-tuesday-addresses-964-cves-cve-2026-81963-cve-2026-85880</a></li>
-  <li><a href="https://www.bleepingcomputer.com/news/microsoft/september-windows-server-updates-break-remote-desktop-services/">https://www.bleepingcomputer.com/news/microsoft/september-windows-server-updates-break-remote-desktop-services/</a></li>
-  <li><a href="https://thehackernews.com/2026/09/cisa-flags-exploited-cisco-citrix.html">https://thehackernews.com/2026/09/cisa-flags-exploited-cisco-citrix.html</a></li>
-  <li><a href="https://www.cnbc.com/2026/09/10/stock-market-today-live-updates.html">https://www.cnbc.com/2026/09/10/stock-market-today-live-updates.html</a></li>
-  <li><a href="https://finance.yahoo.com/markets/stocks/articles/stock-market-today-futures-rise-103943781.html">https://finance.yahoo.com/markets/stocks/articles/stock-market-today-futures-rise-103943781.html</a></li>
-  <li><a href="https://www.investing.com/news/economy-news/global-bond-selloff-pushes-10year-us-yield-toward-5-on-oil-ratehike-fears-4897226">https://www.investing.com/news/economy-news/global-bond-selloff-pushes-10year-us-yield-toward-5-on-oil-ratehike-fears-4897226</a></li>
-  <li><a href="https://www.ufc.com/news/bonus-coverage-noche-ufc-glendale-2026">https://www.ufc.com/news/bonus-coverage-noche-ufc-glendale-2026</a></li>
-  <li><a href="https://sports.yahoo.com/articles/tommy-mcmillen-weathers-early-storm-232802883.html">https://sports.yahoo.com/articles/tommy-mcmillen-weathers-early-storm-232802883.html</a></li>
-  <li><a href="https://www.cbssports.com/ufc/news/noche-ufc-tommy-mcmillen-marwan-rahiki-results-highlights/">https://www.cbssports.com/ufc/news/noche-ufc-tommy-mcmillen-marwan-rahiki-results-highlights/</a></li>
-  </ul>
-  <p class="disc">Daily Briefings is an automated news digest assembled from public web sources and refreshed every 30 minutes between 8 AM and 6 PM ET. Figures are reproduced as stated by the linked sources and may be revised. Nothing here is investment, security or betting advice.</p>
+<h5>Sources &mdash; every one fetched or returned this run</h5>
+<ul>
+  <li>The Cyber Wire &mdash; today&rsquo;s security briefing &mdash; <a href="cyber-briefing.html">cyber-briefing.html</a></li>
+  <li>The Closing Bell &mdash; today&rsquo;s markets briefing &mdash; <a href="wallstreet-briefing.html">wallstreet-briefing.html</a></li>
+  <li>The Octagon &mdash; today&rsquo;s MMA briefing &mdash; <a href="mma-briefing.html">mma-briefing.html</a></li>
+  <li>Archive &mdash; every past edition &mdash; <a href="archive.html">archive.html</a></li>
+</ul>
+<div class="disc">Each briefing carries its own full source list, with a link for every fact on the page. Markets content is information only and is <strong>not investment advice</strong>; security content is not professional security advice; fight cards and bouts are subject to change.</div>
 </footer>
 </div>
+
 <script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \u00b7 briefings refresh every 30 minutes, 8 AM\u20136 PM ET';}catch(e){}})();</script>
 </body>
 </html>
