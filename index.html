@@ -11,6 +11,7 @@
   --oninv:#14150e;
   --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
 }
+
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
 .wrap{max-width:1040px;margin:0 auto;padding:26px 20px 60px}
@@ -83,6 +84,8 @@ footer li{margin-bottom:5px}
 .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--up)}
 .tickers{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
 .ticker{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:6px 10px}
+
+
 .bigcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px}
 .big{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px 24px;transition:.16s;display:flex;flex-direction:column}
 .big:hover{transform:translateY(-4px);box-shadow:0 10px 26px rgba(0,0,0,.45)}
@@ -95,7 +98,6 @@ footer li{margin-bottom:5px}
 .c-mkt{border-left:4px solid #caa64a} .c-mkt .kick,.c-mkt a.go{color:#caa64a} .c-mkt:hover{border-color:#caa64a}
 .c-mkt h3{font-family:Georgia,"Times New Roman",serif}
 .c-mma{border-left:4px solid #e84545} .c-mma .kick,.c-mma a.go{color:#e84545} .c-mma:hover{border-color:#e84545}
-
 </style>
 </head>
 <body>
@@ -103,8 +105,8 @@ footer li{margin-bottom:5px}
 
 <div class="masthead">
   <div>
-    <h1><span class="ic">★</span> Daily Briefings</h1>
-    <p class="tag-sub">Three briefings, rebuilt from live sources every 30 minutes — 8 AM to 6 PM ET</p>
+    <h1><span class="ic">&#9733;</span> Daily Briefings</h1>
+    <p class="tag-sub">Three briefings, rebuilt from live sources every 30 minutes &mdash; 8 AM to 6 PM ET</p>
   </div>
   <div class="meta">
     <span class="pill live">Live</span>
@@ -117,20 +119,20 @@ footer li{margin-bottom:5px}
 <div class="freshline" id="freshline">Data as of &mdash; ET</div>
 
 <nav class="tabs">
-  <a href="index.html" class="active">★ Front Page</a>
-  <a href="cyber-briefing.html">⛨ The Cyber Wire</a>
-  <a href="wallstreet-briefing.html">▲ The Closing Bell</a>
-  <a href="mma-briefing.html">⊘ The Octagon</a>
-  <a href="archive.html">🗄 Archive</a>
+  <a href="index.html" class="active">&#9733; Front Page</a>
+  <a href="cyber-briefing.html">&#9912; The Cyber Wire</a>
+  <a href="wallstreet-briefing.html">&#9650; The Closing Bell</a>
+  <a href="mma-briefing.html">&#8856; The Octagon</a>
+  <a href="archive.html">&#128452; Archive</a>
 </nav>
 
 <div class="bigcards">
 
   <div class="big c-sec">
-    <div class="kick">&#9960; The Cyber Wire &middot; The Wire</div>
-    <h3>Patch GitLab today</h3>
+    <div class="kick">&#9912; The Cyber Wire &middot; The Wire</div>
+    <h3>Three crews, one firewall bug</h3>
     <p class="sub">Security</p>
-    <p>A maximum-severity GitLab path-traversal flaw, <strong>CVE-2026-85706 (CVSS 10.0)</strong>, drew in-the-wild probes within hours of disclosure and CISA has given federal agencies until <strong>tomorrow, 14 September</strong>, to fix it &mdash; with forensic triage required, on the assumption servers may already have been read.</p>
+    <p>Three separate threat clusters &mdash; one of them Russia&rsquo;s <strong>Sandworm</strong>, another the <strong>Qilin</strong> ransomware crew &mdash; are actively exploiting a <strong>CVSS 10.0</strong> authentication bypass in Cisco&rsquo;s Secure Firewall Management Center whose federal patch deadline passed <strong>yesterday</strong>, while a second maximum-severity flaw, in GitLab, comes due <strong>tomorrow</strong>.</p>
     <a class="go" href="cyber-briefing.html">Read the briefing &rarr;</a>
   </div>
 
@@ -138,15 +140,15 @@ footer li{margin-bottom:5px}
     <div class="kick">&#9650; The Closing Bell &middot; The Tape</div>
     <h3>A reprieve, then the Fed</h3>
     <p class="sub">Markets</p>
-    <p>Wall Street is shut for the weekend, so the tape is Friday 11 September's: all three major indexes snapped four-session losing streaks &mdash; S&amp;P 500 <strong>+0.86%</strong>, Dow <strong>+0.98%</strong>, Nasdaq composite <strong>+0.96%</strong> &mdash; as oil paused just above $100 on news of Iran&ndash;Gulf talks, and the week ahead belongs to the <strong>Fed, deciding Wednesday</strong> with futures pricing roughly a <strong>70% chance of a hike</strong>.</p>
+    <p>Wall Street is shut for the weekend, so the tape is Friday 11 September&rsquo;s: all three major indexes snapped four-session losing streaks &mdash; S&amp;P 500 <strong>+0.86%</strong>, Dow <strong>+0.98%</strong>, Nasdaq composite <strong>+0.96%</strong> &mdash; on a pullback in oil and an in-line August CPI, and the whole week now points at Wednesday&rsquo;s Fed decision.</p>
     <a class="go" href="wallstreet-briefing.html">Read the briefing &rarr;</a>
   </div>
 
   <div class="big c-mma">
     <div class="kick">&#8856; The Octagon &middot; Tale of the Tape</div>
-    <h3>Silva takes a number</h3>
+    <h3>Silva calls his shot</h3>
     <p class="sub">MMA</p>
-    <p>Jean Silva choked out Jose Miguel Delgado in the third round to headline Noche UFC and immediately demanded the featherweight title &mdash; naming <strong>Movsar Evloev</strong> as his pick to take the belt from Alexander Volkanovski at UFC 333 &mdash; while on the same card <strong>Tommy McMillen landed 252 significant strikes</strong>, breaking Nate Diaz's three-round UFC record.</p>
+    <p>Jean Silva choked out Jose Miguel Delgado in the third round to headline Noche UFC and immediately demanded the featherweight title; he has since revealed he was <strong>knocked out several times in camp</strong>, and the next stop is <strong>UFC 331 on Saturday</strong>, where champion Joshua Van opens as close to a coin flip against Alexandre Pantoja.</p>
     <a class="go" href="mma-briefing.html">Read the briefing &rarr;</a>
   </div>
 
@@ -154,7 +156,7 @@ footer li{margin-bottom:5px}
 
 <div class="panel" style="margin-top:26px">
   <div style="font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:8px">How these pages are built</div>
-  <div style="font-size:14px;color:var(--ink2)">Each briefing is rebuilt from scratch every thirty minutes from live web searches. Nothing is carried from memory: every claim, number, date, score and name on all four pages has to trace to a source fetched in that run or to a standing, sourced correction. Where two sources disagree, both figures are printed rather than averaged. Where a claim could not be confirmed, the page says so by name instead of quietly dropping it. Point-in-time snapshots of every edition are kept in the <a href="archive.html" style="color:var(--accent2)">Archive</a>.</div>
+  <div style="font-size:14px;color:var(--ink2)">Each briefing is rebuilt from scratch every thirty minutes from live web searches. Nothing is carried from memory: every claim, number, date, score and name on all four pages has to trace to a source fetched in that run or to a standing, sourced corrections file that travels with the site. Where two sources disagree, both figures are printed and neither is averaged. Where a claim could not be verified, it is left out &mdash; and where something was actively refused, each briefing names it in a &ldquo;Refused This Run&rdquo; block rather than dropping it quietly.</div>
 </div>
 
 <footer>
@@ -167,7 +169,6 @@ footer li{margin-bottom:5px}
 </ul>
 <div class="disc">Full source lists sit in the footer of each briefing. All three pages are provided for information only: nothing on The Closing Bell is investment advice, nothing on The Cyber Wire replaces your own vulnerability management process, and MMA cards and bouts are subject to change.</div>
 </footer>
-
 </div>
 <script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \u00b7 briefings refresh every 30 minutes, 8 AM\u20136 PM ET';}catch(e){}})();</script>
 
