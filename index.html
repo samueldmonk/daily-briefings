@@ -1,11 +1,11 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Daily Briefings</title><style>
+
 :root{
-  --bg:#0c0c0e; --panel:#16161a; --line:#26262c; --accent:#8fa2ff; --accent2:#b9c4ff;
+  --bg:#0c0c0e; --panel:#16161a; --line:#26262c; --accent:#caa64a; --accent2:#e8c766;
   --ink:#e9edf2; --muted:#93a0ae; --up:#2ecc71; --down:#ff5c5c;
   --crit:#ff4d4d; --warn:#f0a63a;
-  --cyber:#22d3a8; --gold:#caa64a; --mma:#e84545;
   --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
 }
 
@@ -106,17 +106,27 @@ footer a:hover{text-decoration:underline}
 .bigcard .sub{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
 .bigcard p{margin:0 0 15px;font-size:14px;color:#cdd6e0;line-height:1.6}
 .bigcard a.more{font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;text-decoration:none}
+
+
+.masthead h1{font-size:46px}
+.bigcard.sec1{border-top-color:#22d3a8}.bigcard.sec1:hover{border-color:#22d3a8}
+.bigcard.sec1 .kicker,.bigcard.sec1 a.more{color:#22d3a8}
+.bigcard.sec2{border-top-color:#caa64a}.bigcard.sec2:hover{border-color:#caa64a}
+.bigcard.sec2 .kicker,.bigcard.sec2 a.more{color:#e8c766}
+.bigcard.sec2 h3{font-family:Georgia,'Times New Roman',serif;color:#e8c766}
+.bigcard.sec3{border-top-color:#e84545}.bigcard.sec3:hover{border-color:#e84545}
+.bigcard.sec3 .kicker,.bigcard.sec3 a.more{color:#ff8a5c}
 </style></head><body><div class="wrap">
 <div class="masthead"><h1>Daily Briefings</h1>
 <div class="tag">Three briefings, refreshed every 30 minutes &mdash; security, markets and the fight game</div><div class="meta"><span class="pill live"><span class="dot"></span>Live</span><span class="pill" id="edition"></span><span class="pill" id="datestamp"></span><span class="pill">Updated <span id="updated"></span></span></div></div>
 <div class="freshline" id="freshline"></div>
-<nav class="tabs"><a href="index.html" class="active">★ Front Page</a><a href="cyber-briefing.html">⛨ The Cyber Wire</a><a href="wallstreet-briefing.html">▲ The Closing Bell</a><a href="mma-briefing.html">⊘ The Octagon</a><a href="archive.html">🗄 Archive</a></nav>
-<div class="bigcards">
-<div class="bigcard" style="border-top-color:var(--cyber)"><div class="kicker" style="color:var(--cyber)">⛨ The Cyber Wire</div><h3 style="color:var(--cyber)">The Wire</h3><div class="sub">Breaches, exploits &amp; the patch queue</div><p>A CVSS 9.8 flaw in Cisco Secure Email Gateway is under active exploitation with a federal patch deadline of tomorrow, and two earlier KEV deadlines have already lapsed.</p><a class="more" href="cyber-briefing.html" style="color:var(--cyber)">Read the briefing →</a></div>
-<div class="bigcard" style="border-top-color:var(--gold)"><div class="kicker" style="color:var(--gold)">▲ The Closing Bell</div><h3 style="color:var(--gold);font-family:Georgia,'Times New Roman',serif">The Tape</h3><div class="sub">Wall Street, rates &amp; the day’s tape</div><p>Stocks are trading higher on Fed decision day, with CME FedWatch pricing a 92.5% chance of the first U.S. rate hike since 2023 when the FOMC reports at 2 p.m. ET, after all three indexes closed lower on Tuesday.</p><a class="more" href="wallstreet-briefing.html" style="color:var(--gold)">Read the briefing →</a></div>
-<div class="bigcard" style="border-top-color:var(--mma)"><div class="kicker" style="color:var(--mma)">⊘ The Octagon</div><h3 style="color:var(--mma)">Tale of the Tape</h3><div class="sub">UFC, prospects &amp; the business of fighting</div><p>Tom Aspinall has vacated the UFC heavyweight title on medical grounds, leaving interim champion Ciryl Gane in line to be elevated, three days before Joshua Van defends the flyweight belt against Alexandre Pantoja at UFC 331 in Los Angeles.</p><a class="more" href="mma-briefing.html" style="color:var(--mma)">Read the briefing →</a></div>
+<nav class="tabs"><a href="index.html" class="active">★ Front Page</a><a href="cyber-briefing.html">⛨ The Cyber Wire</a><a href="wallstreet-briefing.html">▲ The Closing Bell</a><a href="mma-briefing.html">⊘ The Octagon</a><a href="archive.html">🗄 Archive</a></nav><h2 class="sec">Today&rsquo;s Briefings</h2><div class="bigcards">
+<div class="bigcard sec1"><div class="kicker">&#9960; Security</div><h3>The Cyber Wire</h3><div class="sub">The Wire</div><p>A critical JWT-bypass flaw in WSO2 API Manager, CVE-2026-5430, is under active in-the-wild exploitation with forged administrator tokens, while two KEV entries &mdash; Starlette and LiteLLM &mdash; hit their federal remediation deadline today.</p><a class="more" href="cyber-briefing.html">Read the briefing &rarr;</a></div>
+<div class="bigcard sec2"><div class="kicker">&#9650; Markets</div><h3>The Closing Bell</h3><div class="sub">The Tape</div><p>Stocks opened higher on Fed decision day &mdash; the S&amp;P 500 up 0.25%, the Dow up 0.15% and the Nasdaq up 0.44% at the 9:32 a.m. ET bell &mdash; with CME FedWatch putting the odds of the first U.S. rate hike since 2023 at 93% ahead of the 2 p.m. ET decision, while small caps lagged badly.</p><a class="more" href="wallstreet-briefing.html">Read the briefing &rarr;</a></div>
+<div class="bigcard sec3"><div class="kicker">&#8856; MMA</div><h3>The Octagon</h3><div class="sub">Tale of the Tape</div><p>UFC 331 lands Saturday at Crypto.com Arena with Joshua Van defending the flyweight title against Alexandre Pantoja in a rematch the betting market has flipped into a coin toss, on a night that also sets up the next lightweight title shot.</p><a class="more" href="mma-briefing.html">Read the briefing &rarr;</a></div>
 </div>
-<h2 class="sec">About this page</h2><div class="panel"><ul class="bul"><li>Each briefing is rebuilt from live web searches every 30 minutes between 8 AM and 6 PM ET. Every claim, figure and name is checked against a source fetched on that run; anything that cannot be verified is dropped rather than carried forward.</li><li>Point-in-time snapshots of every edition are kept in the <a href="archive.html" style="color:var(--accent2)">Archive</a> for 21 days.</li><li>The markets page carries live streaming widgets; the editorial around them is stamped with the time its sources published.</li></ul></div>
-<footer><h5>The three briefings</h5><ul><li><a href="cyber-briefing.html">The Cyber Wire</a> &mdash; cybersecurity</li><li><a href="wallstreet-briefing.html">The Closing Bell</a> &mdash; markets</li><li><a href="mma-briefing.html">The Octagon</a> &mdash; MMA</li><li><a href="archive.html">Archive</a> &mdash; past editions</li></ul><div class="disc">Automatically compiled from public reporting. Not investment advice; not a security assessment of your environment. See each briefing for its own sources and disclaimer.</div></footer>
+<h2 class="sec">About</h2><div class="panel"><p style="margin:0;color:#cdd6e0;font-size:14px">Each briefing is rebuilt from live web search every 30 minutes between 8 a.m. and 6 p.m. ET. Every claim, figure and date is checked against a source fetched in that same run; anything that cannot be verified is left off the page rather than carried over. Past editions are kept in the <a href="archive.html" style="color:var(--accent2)">Archive</a>.</p></div>
+<footer><h5>Sources</h5><ul><li>Each briefing carries its own full source list in its footer. Site: <a href="https://samueldmonk.github.io/daily-briefings/">https://samueldmonk.github.io/daily-briefings/</a></li><li><a href="cyber-briefing.html">The Cyber Wire &rarr;</a></li><li><a href="wallstreet-briefing.html">The Closing Bell &rarr;</a></li><li><a href="mma-briefing.html">The Octagon &rarr;</a></li></ul><div class="disc">Information only. The markets briefing is not investment advice; the security briefing is for situational awareness and should be verified against vendor advisories; MMA cards and bouts are subject to change.</div></footer>
+</div>
 <script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \u00b7 briefings refresh every 30 minutes, 8 AM\u20136 PM ET';}catch(e){}})();</script>
-</div></body></html>
+</body></html>
