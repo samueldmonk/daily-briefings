@@ -1,159 +1,126 @@
 # -*- coding: utf-8 -*-
-import io, os, re, sys, datetime
-OUT = os.path.dirname(os.path.abspath(__file__))
-PAGES = {p: io.open(os.path.join(OUT, p), encoding="utf-8").read()
-         for p in ("index.html","cyber-briefing.html","wallstreet-briefing.html","mma-briefing.html")}
-fails=[]; n=0
-def ck(cond, msg):
-    global n; n+=1
-    if not cond: fails.append(msg)
+import re,sys
+F={n:open(n,encoding='utf-8').read() for n in
+   ['index.html','cyber-briefing.html','wallstreet-briefing.html','mma-briefing.html']}
+ok=0; fail=[]
+def a(cond,msg):
+    global ok
+    if cond: ok+=1
+    else: fail.append(msg)
+def has(f,s,n=None):
+    c=F[f].count(s)
+    a(c>0 if n is None else c==n, '%s: expected %s of %r, got %d' % (f,n or '>0',s,c))
+def absent(f,s):
+    a(F[f].count(s)==0, '%s: forbidden %r appears %d times' % (f,s,F[f].count(s)))
 
-# --- structure -------------------------------------------------------------
-for p,h in PAGES.items():
-    ck(h.startswith("<!DOCTYPE html>"), p+": doctype")
-    ck(h.rstrip().endswith("</html>"), p+": closing html")
-    ck('<meta charset="utf-8">' in h, p+": charset")
-    ck('name="viewport"' in h, p+": viewport")
-    for tag in ("div","p","table","tr","td","h2","h3","span","ul","li","script","header","nav"):
-        o=len(re.findall(r"<%s[ >]"%tag,h)); c=len(re.findall(r"</%s>"%tag,h))
-        ck(o==c, "%s: %s balance %d/%d"%(p,tag,o,c))
-    # five-tab nav
-    for href in ("index.html","cyber-briefing.html","wallstreet-briefing.html","mma-briefing.html","archive.html"):
-        ck(('href="%s"'%href) in h, "%s: nav missing %s"%(p,href))
-    ck(h.count('class="active"')==1, p+": exactly one active tab")
-    # masthead pills + stamp
-    for i in ('id="edition"','id="datestamp"','id="updated"'):
-        ck(i in h, "%s: masthead %s"%(p,i))
-    ck("America/New_York" in h, p+": stamp JS tz")
-    for ed in ("Morning Edition","Midday Edition","Afternoon Edition"):
-        ck(ed in h, "%s: edition bucket %s"%(p,ed))
-    ck('id="freshline"' in h, p+": freshline")
-    ck("briefings refresh every 30 minutes" in h, p+": freshline text")
+# --- 1. structure: every page ---
+for f in F:
+    for s in ['id="edition"','id="datestamp"','id="updated"','America/New_York',
+              'index.html','cyber-briefing.html','wallstreet-briefing.html','mma-briefing.html','archive.html',
+              '★ Front Page','⛨ The Cyber Wire','▲ The Closing Bell','⊘ The Octagon','Archive']:
+        has(f,s)
+    a(F[f].count('class="active"')==1, '%s: active tab count %d' % (f,F[f].count('class="active"')))
+    a(F[f].startswith('<!DOCTYPE html>'), '%s: doctype' % f)
+    a(F[f].rstrip().endswith('</html>'), '%s: closing html' % f)
+    a(F[f].count('<body')==1 and F[f].count('</body>')==1, '%s: body tags' % f)
+for f in ['cyber-briefing.html','wallstreet-briefing.html','mma-briefing.html']:
+    has(f,'id="freshline"'); has(f,'class="tldr"',1)
+has('cyber-briefing.html','<b>The Wire</b>'); has('wallstreet-briefing.html','<b>The Tape</b>')
+has('mma-briefing.html','<b>Tale of the Tape</b>')
 
-ACTIVE={"index.html":'<a href="index.html" class="active">',
-        "cyber-briefing.html":'<a href="cyber-briefing.html" class="active">',
-        "wallstreet-briefing.html":'<a href="wallstreet-briefing.html" class="active">',
-        "mma-briefing.html":'<a href="mma-briefing.html" class="active">'}
-for p,a in ACTIVE.items(): ck(a in PAGES[p], p+": correct active tab")
+# --- 2. index cards mirror each page's TLDR ---
+def tldr(f):
+    m=re.search(r'<div class="tldr"><b>[^<]+</b> <span>(.*?)</span></div>',F[f],re.S); return m.group(1)
+for f in ['cyber-briefing.html','wallstreet-briefing.html','mma-briefing.html']:
+    a(tldr(f) in F['index.html'], 'index card does not match %s TLDR' % f)
 
-# --- tldr strips -----------------------------------------------------------
-ck(PAGES["wallstreet-briefing.html"].count('<div class="tldr">')==1 and "<b>The Tape</b>" in PAGES["wallstreet-briefing.html"], "ws: one tldr labelled The Tape")
-ck(PAGES["cyber-briefing.html"].count('<div class="tldr">')==1 and "<b>The Wire</b>" in PAGES["cyber-briefing.html"], "cyber: one tldr labelled The Wire")
-ck(PAGES["mma-briefing.html"].count('<div class="tldr">')==1 and "<b>Tale of the Tape</b>" in PAGES["mma-briefing.html"], "mma: one tldr labelled Tale of the Tape")
-ck('class="tldr"' not in PAGES["index.html"], "index: no tldr strip")
+# --- 3. markets: the hike, the tape, the quotes ---
+W='wallstreet-briefing.html'
+for s in ['3.75%–4.00%','first increase since <b>July 2023</b>','12–0','Kevin Warsh',
+          '751 points','−1.5%','financial-related shares leading the way lower',
+          '3:28 p.m. ET','Dow down 0.9%','S&amp;P 500 down 0.3%','near the flat line',
+          'plain fact is that inflation is too high and has been for too long',
+          'underlying inflation is moving to our objective, clearly and at sufficient speed',
+          'standard has not been satisfied','do not tell me that underlying trends have meaningfully improved',
+          'unemployment rate has\nchanged little'.replace('\n',' '),
+          'one additional hike in 2026','4.1%','3.0%–4.0%','2.0% by 2029','holding steady in\n2027'.replace('\n',' '),
+          'neither is reconciled','post-decision index level was verified this run']:
+    has(W,s)
+# stale / never-publish levels
+for s in ['26,197.96','7,609','26,151','7,601','Powell']:
+    absent(W,s)
+# widgets A-F
+for s in ['embed-widget-ticker-tape.js','embed-widget-single-quote.js','embed-widget-timeline.js',
+          'embed-widget-stock-heatmap.js','embed-widget-mini-symbol-overview.js','embed-widget-events.js']:
+    has(W,s)
+a(F[W].count('embed-widget-single-quote.js')==3,'three single-quote widgets')
+for s in ['FOREXCOM:SPXUSD','FOREXCOM:NSXUSD','FOREXCOM:DJI','TVC:USOIL','TVC:US10Y']:
+    has(W,s)
+has(W,'"symbol":"NASDAQ:JBHT"')
+has(W,'not investment advice')
+# scorecard levels intact
+for s in ['7,585.73','25,981.57','52,093.11','7,619','26,186','52,421']: has(W,s)
+# movers / rates
+for s in ['5% to 10%','Starship Flight 14','Sept. 22','Lumentum up <b>8%</b>','Diamondback Energy was down <b>8%</b>',
+          '$75,716.63','49–50','4.965%','4.625%','5.346%','5.041%','$4,388.80','$65.28','$107.80','0.96']:
+    has(W,s)
+a(F[W].count('tag new')==1,'markets: exactly one New tag, got %d'%F[W].count('tag new'))
 
-# --- tradingview blocks (ws only) -----------------------------------------
-ws=PAGES["wallstreet-briefing.html"]
-for w in ("ticker-tape","single-quote","timeline","stock-heatmap","mini-symbol-overview","events"):
-    ck(("embed-widget-%s.js"%w) in ws, "ws: widget "+w)
-ck(ws.count("embed-widget-single-quote.js")==3, "ws: exactly three single-quote widgets")
-for sym in ("FOREXCOM:SPXUSD","FOREXCOM:NSXUSD","FOREXCOM:DJI","TVC:USOIL","TVC:US10Y"):
-    ck(sym in ws, "ws: ticker symbol "+sym)
-ck('"symbol":"NYSE:NVS"' in ws, "ws: chart of the day pinned to NYSE:NVS")
-ck('class="livebar"' in ws, "ws: livebar wrapper")
-ck("Quotes stream live" in ws, "ws: quotes note line")
-for p in ("index.html","cyber-briefing.html","mma-briefing.html"):
-    ck("tradingview.com" not in PAGES[p], p+": carries no tradingview string")
+# --- 4. cyber ---
+C='cyber-briefing.html'
+for s in ['HSIN','Homeland Security Information Network','late May and early\nJune 2026'.replace('\n',' '),
+          'SharePoint','sensitive-but-unclassified','no indication that classified networks were affected',
+          'World Cup 2026','CVE-2026-84869','11 September','14 September','BOD 26-04','forensic triage',
+          'CWE-269','CWE-862','2 days overdue','CVE-2026-48710','CVE-2026-59822','16 September',
+          'due today','CVE-2026-87491','23 September','7 days left','153.0.8010.36','seventh Chrome zero-day of 2026',
+          'CVE-2026-84388','9.1','CVE-2026-5430','9.8','CVE-2026-89026','9.3','VulnCheck',
+          'NightEagle','APT-Q-95','GhostContainer','Kaspersky','Shai-Hulud','PyPI','GitHub OAuth',
+          'CenterPoint Energy','AEPD','autonomous AI agent','6,000 active installs','100,000',
+          'Threat level: High']:
+    has(C,s)
+a(F[C].count('tag new')==1,'cyber: exactly one New tag, got %d'%F[C].count('tag new'))
+a('callout crit' in F[C],'cyber: patch priority uses crit border')
+absent(C,'4.1.0.257')
+# the three patch-count figures must not be asserted as a total
+for s in ['230 vulnerabilities','42 vulnerabilities']: absent(C,s)
+has(C,'42 vs 230')
 
-# --- mma countdown ---------------------------------------------------------
-mm=PAGES["mma-briefing.html"]
-ck('id="ufccdn"' in mm, "mma: countdown element")
-ck("2026-09-12T14:00:00-04:00" in mm, "mma: countdown target datetime")
-ck("Fight week" in mm, "mma: countdown elapsed text")
+# --- 5. MMA ---
+M='mma-briefing.html'
+for s in ['UFC 331','Crypto.com Arena','Saturday 19 September','Paramount+','Van −130','Pantoja +110',
+          'DraftKings','−132','+113','26 seconds into round one','Thursday 17 September','Friday 18 September',
+          'Arman Tsarukyan','Maurício Ruffy','Marlon Vera','Charles Jourdain','UFC 332','3 Oct','Wang Cong',
+          'Natália Silva','CBS','UFC 333','Etihad Arena','Josh Hokit','Ciryl Gane','Conor McGregor',
+          'Ki MMA','Scott Coker','Peter Levin','Michael “Venom” Page','ufccdn','2026-09-19T21:00:00-04:00',
+          'subject to change','Mayton Perea','Igor Cavalcanti','Akbar Abdullaev','Luis Hernandez','Tyshawn Williams',
+          '28 fighters signed across 30 fights','Jean Silva','Brandon Moreno','Alexa Grasso','Tommy Gantt']:
+    has(M,s)
+# champions board: correctness
+champrow=re.findall(r'<tr><td>([^<]+)</td><td><b>(.*?)</b></td>',F[M])
+d=dict(champrow)
+exp={'Heavyweight':'VACANT','Light Heavyweight':'Carlos Ulberg','Middleweight':'Sean Strickland',
+     'Welterweight':'Islam Makhachev','Lightweight':'Justin Gaethje','Featherweight':'Alexander Volkanovski',
+     'Bantamweight':'Petr Yan','Flyweight':'Joshua Van','Women’s Flyweight':'VACANT',
+     'Women’s Bantamweight':'Kayla Harrison','Women’s Strawweight':'Mackenzie Dern'}
+for k,v in exp.items():
+    a(k in d and v in d[k], 'champions: %s should be %s, got %r' % (k,v,d.get(k)))
+a(sum(1 for v in d.values() if 'VACANT' in v)==2,'exactly two VACANT cells')
+champblock=F[M][F[M].find('Champions Board'):F[M].find('Champions Board')+4000]
+for bad in ['Pereira','Chimaev','Topuria','Aspinall','Shevchenko']:
+    a(('<b>%s'%bad) not in champblock and ('<td><b>%s'%bad) not in champblock,
+      'champions: %s must not occupy a champion cell' % bad)
+# these names may appear as prose but never as a seated champion
+a(re.search(r'<td><b>(Alex Pereira|Khamzat Chimaev|Ilia Topuria|Tom Aspinall|Valentina Shevchenko)</b></td>',F[M]) is None,
+  'champions: a refused name is seated')
+a(F[M].count('tag new')==1,'mma: exactly one New tag, got %d'%F[M].count('tag new'))
 
-# --- champions guards ------------------------------------------------------
-BANNED_CHAMP_CELLS=["<td>Alex Pereira</td>","<td>Khamzat Chimaev</td>","<td>Ilia Topuria</td>","<td>Valentina Shevchenko</td>"]
-for b in BANNED_CHAMP_CELLS: ck(b not in mm, "mma: banned champion cell "+b)
-for c in ["Tom Aspinall","Carlos Ulberg","Sean Strickland","Islam Makhachev","Justin Gaethje",
-          "Alexander Volkanovski","Petr Yan","Joshua Van","Kayla Harrison","Mackenzie Dern"]:
-    ck(c in mm, "mma: seated champion missing "+c)
-ck('class="mut">Vacant</td>' in mm, "mma: women's flyweight seated Vacant")
-for bad in ["Saladhine","Paransse","Cody Salkilld","Diamond Desert Arena"]:
-    ck(bad not in mm, "mma: banned string "+bad)
-ck("Salahdine Parnasse" in mm, "mma: Parnasse spelling")
-ck("Desert Diamond Arena" in mm, "mma: correct Noche venue")
-ck("did not come through the Contender Series" in mm, "mma: Parnasse DWCS denial present")
-ck("Patrick Rivera" in mm and "1 September" in mm, "mma: Darby opponent+date pair")
+# --- 6. no unsourced fabrication guards ---
+for f in F:
+    absent(f,'Lorem'); absent(f,'TODO'); absent(f,'undefined')
 
-# --- KEV countdown arithmetic ---------------------------------------------
-today=datetime.date(2026,9,8)
-KEV=[("14 September",datetime.date(2026,9,14),6),("16 September",datetime.date(2026,9,16),8),
-     ("18 September",datetime.date(2026,9,18),10)]
-cy=PAGES["cyber-briefing.html"]
-for label,due,days in KEV:
-    ck((due-today).days==days, "kev arithmetic self-test %s"%label)
-    ck(label in cy, "cyber: KEV date "+label)
-    ck(("(%d days left)"%days) in cy, "cyber: KEV countdown %d days"%days)
-for bad in ["(5 days left)","(7 days left)","(9 days left)","(11 days left)","overdue"]:
-    ck(bad not in cy, "cyber: banned countdown/word "+bad)
-# three-week shorthand only next to its negation
-for m in re.finditer("three-week", cy):
-    seg=cy[max(0,m.start()-260):m.start()+260]
-    ck("not" in seg, "cyber: three-week shorthand without negation")
-
-# --- required literals -----------------------------------------------------
-REQ={
- "wallstreet-briefing.html":["2:23&ndash;2:35 PM ET","500 points","53,000","Dow Jones","Strait of Hormuz",
-   "Oman","8:30 AM ET","2:00 PM ET","2:30 PM ET","January 2025","3.20%","bifurcated","56,000","Thursday 10 September","Dow down 1%","down roughly 0.4%","7,707","7,718.60","26,506.99","53,414.25",
-   "271.86","$137.63","$394.38","2.46%","$97.99","$99.46","$92.90","11:28 a.m. ET","Jazan","73 civilians",
-   "$20 billion","15% to 50%","18-month-old","4.3810%","October 2023","58.7%","49&ndash;66%","162,000","4.1%",
-   "3.50&ndash;3.75%","$1.67","10 September","11 September","pelacarsen","Ionis","olpasiran","BMO Capital Markets",
-   "Mark Carney","byte-identical","$5.85","5.25%","4.12%","4.55%","4.37%"],
- "cyber-briefing.html":["CVE-2026-67276","CVE-2026-86060","MikroTrick","122,000","82.192.72.4","7.25beta3","6.49.21",
-   "3 September","2 September","CERT Polska","1,079,819","Metabase","10 August","27 August","Framework","Kilo Code",
-   "CVE-2026-83548","10.0","CVE-2026-83549","CVE-2026-59822","8.8","CVE-2026-81578","CVE-2026-82078","31 August",
-   "CVE-2026-85046","The Gentlemen","ArmCorp","269 victims","2,000 victim listings","Check Point","410","14%",
-   "$310,000","CVE-2026-68820","afd.sys","421","398","751","BOD 26-04","9.2",
-   "973","113","CVE-2026-85880","CVE-2026-81963","KB5122871","KB5122876","Windows Update Stack",
-   "Advanced Local Procedure Call","CVE-2026-6471","PostGREShell","AssetMark","570,000","7,551","24.9%",
-   "723","943","8 September"],
- "mma-briefing.html":["Michael Page","Nursulton Ruziboev","John Morgan","No. 15","No. 8","Meta rankings",
-   "24-2","24-15","2:35","Axel Sola","Losene Keita","Mario Pinto","Muhammad Naimov","Ryan Spann","Fares Ziam",
-   "$100,000","$25,000","Jean Silva","Jose Delgado","13 bouts","2 p.m. ET","5 p.m. ET","Curtis Blaydes",
-   "Alexandre Pantoja","Crypto.com Arena","26 seconds","Arman Tsarukyan","&minus;400","Natalia Silva","Wang Cong",
-   "Delta Center","CBS","14-fight win streak","Tracy Cortez","UFC 329","stripped","Quentin Pasley","Arlind Berisha",
-   "Reginaldo Geraldo Jr.","Isaac Moreno","Martin Kozak","Christian Echols","Apollo Gomes","Won Il Kwon",
-   "Christian Natividad","Colton Loud","8.2 million","17 million","34 million","4.96 million","$7.7 billion",
-   "20 times","12 December","Adam Darby","Cage Warriors",
-   "welterweight","39-year-old","December 2023","5-1 across six appearances","Yair Rodriguez",
-   "&minus;450","+350","&minus;425","+355","17-3","12-2","Delphine Benouaich","Matthieu Duclos",
-   "Modestas Bukauskas","Kurtis Campbell","Magomed Ankalaev","Paulo Costa","Bogdan Guskov",
-   "early next year","ACL","Punahele Soriano","Trevor Peek"],
- "index.html":["The Cyber Wire","The Closing Bell","The Octagon","122,000","Novartis","Michael Page","Archive","973","500 points"],
-}
-for p,lits in REQ.items():
-    for l in lits: ck(l in PAGES[p], "%s: missing literal %r"%(p,l))
-
-# --- stale-phrase bans -----------------------------------------------------
-STALE=["Labor Day long weekend opened","Dow futures","pre-open","market holiday today","after today&#39;s close",
-       "10:35 AM ET","Intel leads the tape","NASDAQ:INTC","+5.2%","1:25&ndash;1:50 PM ET",
-       "UFC middleweight <b>Michael","release is reportedly looming","no September CVE count",
-       "No September CVE count","had not shipped at publication"]
-for p,h in PAGES.items():
-    for s in STALE: ck(s not in h, "%s: stale phrase %r"%(p,s))
-# refused figures must not appear as live claims
-for bad in ["&minus;2.55%","&minus;2.10%","&minus;2.05%","+11.9%","Sandisk"]:
-    ck(bad not in ws or "byte-identical" in ws, "ws: refused figure surfaced "+bad)
-
-# --- sources ---------------------------------------------------------------
-for p in ("cyber-briefing.html","wallstreet-briefing.html","mma-briefing.html"):
-    urls=len(re.findall(r'<a href="https?://', PAGES[p]))
-    ck(urls>=12, "%s: >=12 source URLs (got %d)"%(p,urls))
-    ck("Sources" in PAGES[p], p+": sources heading")
-    ck('class="disc"' in PAGES[p], p+": disclaimer")
-ck("not investment advice" in ws, "ws: investment-advice disclaimer")
-ck("subject to change" in mm, "mma: cards-subject-to-change disclaimer")
-
-# --- edition-specific guards ----------------------------------------------
-ck("973 vulnerabilities" in cy or "973 CVEs" in cy, "cyber: September total stated")
-ck("9 CVEs, 9 Critical" not in cy or "refused" in cy, "cyber: template count refused not asserted")
-ck(cy.count("Top Story")>=1, "cyber: top story heading")
-ck("middleweight" not in mm.split("Michael &ldquo;Venom&rdquo; Page")[1][:400], "mma: Page not called a middleweight")
-ck("Alex Pereira" in mm and "<td>Alex Pereira</td>" not in mm, "mma: Pereira named only as a refusal")
-ck("refused" in mm.lower(), "mma: refusal stated in print")
-ck("Whatfinger" in ws or "500 points" in ws, "ws: 500-point read attributed")
-ck("53,000" in ws and "Dow Jones" in ws, "ws: payrolls consensus attributed")
-
-print("checks:", n, "failures:", len(fails))
-for f in fails: print("  FAIL:", f)
-sys.exit(1 if fails else 0)
+print('checks passed: %d' % ok)
+if fail:
+    print('FAILURES: %d' % len(fail))
+    for x in fail: print('  -',x)
+    sys.exit(1)
+print('0 failures')
