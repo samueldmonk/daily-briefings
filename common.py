@@ -1,28 +1,7 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Daily Briefings</title>
-<style>
+# -*- coding: utf-8 -*-
+"""Shared chrome for the Daily Briefings pages."""
 
-:root{
-  --bg:#0a0a0b; --panel:#141414; --line:#262626;
-  --accent:#d8d2c6; --accent2:#e8c766;
-  --txt:#ece9e3; --muted:#9b9690;
-  --up:#22c55e; --down:#ef4444; --warn:#f0b429; --crit:#ef4444;
-  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-}
-.big{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px;margin-top:6px}
-.bigcard{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--c);
-  border-radius:14px;padding:20px 21px;transition:.16s;display:flex;flex-direction:column}
-.bigcard:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(0,0,0,.4);border-color:var(--c)}
-.bigcard .kicker{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--c)}
-.bigcard h2{margin:8px 0 3px;font-size:23px;letter-spacing:-.3px}
-.bigcard .strap{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:11px}
-.bigcard p{margin:0 0 16px;font-size:14.5px;color:#cfcbc6;flex:1}
-.bigcard a.go{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--c)}
-.serif h2{font-family:Georgia,'Times New Roman',serif}
-
-
+BASE_CSS = """
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--txt);
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
@@ -87,22 +66,50 @@ ul.bul{margin:0;padding-left:19px} ul.bul li{margin-bottom:9px}
 .srcs a{color:var(--muted)}
 .disc{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin-top:26px;padding-top:14px}
 @media(max-width:640px){.masthead h1{font-size:26px}.wrap{padding:18px 14px 50px}}
+"""
 
-</style>
-</head><body><div class="wrap">
-<header class="masthead">
-<h1>Daily Briefings</h1>
-<p class="sub">Three desks, refreshed every 30 minutes &mdash; security, markets and the fight game</p>
-<div class="meta">
-<span class="pill live"><span class="dot"></span>Live</span>
-<span class="pill" id="edition">&nbsp;</span>
-<span class="pill" id="datestamp">&nbsp;</span>
-<span class="pill">Updated <span id="updated">&nbsp;</span></span>
-</div>
-</header>
-<div class="freshline" id="freshline">&nbsp;</div>
-<nav class="tabs"><a href="index.html" class="active">★ Front Page</a><a href="cyber-briefing.html">⛨ The Cyber Wire</a><a href="wallstreet-briefing.html">▲ The Closing Bell</a><a href="mma-briefing.html">⊘ The Octagon</a><a href="archive.html">🗄 Archive</a></nav><div class="big"><div class="bigcard" style="--c:#22d3a8"><div class="kicker">⛨ The Cyber Wire</div><h2>The Cyber Wire</h2><div class="strap">The Wire</div><p>Cisco shipped a firewall hardening release on 16 September carrying eight vulnerability classes up to CVSS 9.9 &mdash; two of them already exploited in the wild &mdash; while a separate Cisco email-gateway flaw hits its federal patch deadline today.</p><a class="go" href="cyber-briefing.html">Read the briefing &rarr;</a></div><div class="bigcard serif" style="--c:#caa64a"><div class="kicker">▲ The Closing Bell</div><h2>The Closing Bell</h2><div class="strap">The Tape</div><p>Stocks rebounded broadly on Thursday &mdash; the S&amp;P 500 up 1.12% and the Dow up 0.73% on the latest read &mdash; as Treasury yields and oil both eased a day after the Federal Reserve&rsquo;s first rate rise since 2023.</p><a class="go" href="wallstreet-briefing.html">Read the briefing &rarr;</a></div><div class="bigcard" style="--c:#e84545"><div class="kicker">⊘ The Octagon</div><h2>The Octagon</h2><div class="strap">Tale of the Tape</div><p>UFC 331 lands Saturday in Los Angeles with Joshua Van defending the flyweight title against Alexandre Pantoja in a rematch, while the heavyweight belt sits vacant after Tom Aspinall gave it up on 14 September.</p><a class="go" href="mma-briefing.html">Read the briefing &rarr;</a></div></div>
-<p class="disc">Each briefing is rebuilt from live sources every 30 minutes between 8 a.m. and 6 p.m. ET. Figures are stated with the hour they describe. Point-in-time snapshots of every edition are kept in the <a href="archive.html">Archive</a>. Markets coverage is for information only and is not investment advice.</p>
-</div>
-<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \u00b7 briefings refresh every 30 minutes, 8 AM\u20136 PM ET';}catch(e){}})();</script>
-</body></html>
+TABS = [
+    ("index.html", "★ Front Page", "index"),
+    ("cyber-briefing.html", "⛨ The Cyber Wire", "cyber"),
+    ("wallstreet-briefing.html", "▲ The Closing Bell", "ws"),
+    ("mma-briefing.html", "⊘ The Octagon", "mma"),
+    ("archive.html", "\U0001f5c4 Archive", "archive"),
+]
+
+
+def nav(active):
+    out = ['<nav class="tabs">']
+    for href, label, key in TABS:
+        cls = ' class="active"' if key == active else ""
+        out.append('<a href="%s"%s>%s</a>' % (href, cls, label))
+    out.append("</nav>")
+    return "".join(out)
+
+
+def masthead(title, sub):
+    return (
+        '<header class="masthead">\n'
+        '<h1>%s</h1>\n'
+        '<p class="sub">%s</p>\n'
+        '<div class="meta">\n'
+        '<span class="pill live"><span class="dot"></span>Live</span>\n'
+        '<span class="pill" id="edition">&nbsp;</span>\n'
+        '<span class="pill" id="datestamp">&nbsp;</span>\n'
+        '<span class="pill">Updated <span id="updated">&nbsp;</span></span>\n'
+        "</div>\n</header>\n" % (title, sub)
+    )
+
+
+STAMP_JS = """<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \\u00b7 briefings refresh every 30 minutes, 8 AM\\u20136 PM ET';}catch(e){}})();</script>"""
+
+
+def head(title, palette_css):
+    return (
+        '<!DOCTYPE html>\n<html lang="en"><head><meta charset="utf-8">\n'
+        '<meta name="viewport" content="width=device-width,initial-scale=1">\n'
+        "<title>%s</title>\n<style>\n%s\n%s\n</style>\n</head><body><div class=\"wrap\">\n"
+        % (title, palette_css, BASE_CSS)
+    )
+
+
+FOOT = '</div>\n%s\n</body></html>\n'
