@@ -1,79 +1,11 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>The Closing Bell &mdash; Daily Markets Briefing</title>
-<style>
-:root{
-  --bg:#0c0b09; --panel:#17150f; --line:#2b2720;
-  --accent:#caa64a; --accent2:#e8c766;
-  --txt:#e9e6e2; --muted:#9aa0a6;
-  --up:#22c55e; --down:#ef4444; --warn:#f0b429; --crit:#ef4444;
-  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--txt);
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  font-size:15.5px;line-height:1.62;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1000px;margin:0 auto;padding:26px 20px 70px}
-a{color:var(--accent2);text-decoration:none}
-a:hover{text-decoration:underline}
-.masthead{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:14px}
-.masthead h1{margin:0 0 4px;font-size:34px;letter-spacing:-.5px}
-.masthead .sub{color:var(--muted);font-size:14px;margin:0}
-.meta{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
-.pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;
-  background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:4px 11px;color:var(--muted)}
-.pill.live{color:var(--up);border-color:rgba(34,197,94,.35)}
-.pill.live .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--up);margin-right:6px;vertical-align:middle}
-nav.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 20px}
-nav.tabs a{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
-  background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:8px 13px;color:var(--muted);transition:.15s}
-nav.tabs a:hover{color:var(--txt);border-color:var(--accent);text-decoration:none;transform:translateY(-1px)}
-nav.tabs a.active{color:var(--accent);border-color:var(--accent);background:rgba(255,255,255,.03)}
-.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
-  border-radius:10px;padding:11px 15px;margin:6px 0 2px;font-size:14.5px;line-height:1.5}
-.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-right:9px}
-.freshline{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--muted);margin:9px 0 2px}
-h2.sec{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--accent);margin:34px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
-.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:14px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:13px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 16px;transition:.16s}
-.card:hover{transform:translateY(-2px);border-color:var(--accent);box-shadow:0 8px 22px rgba(0,0,0,.34)}
-.card h3{margin:0 0 7px;font-size:16px;line-height:1.32}
-.card p{margin:0;font-size:14px;color:#cfcbc6}
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:9px}
-.t{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
-  border-radius:5px;padding:3px 7px;border:1px solid var(--line);color:var(--muted)}
-.t.new{color:var(--accent);border-color:var(--accent)}
-.t.hot{color:var(--crit);border-color:rgba(239,68,68,.45)}
-.t.pro{color:var(--up);border-color:rgba(34,197,94,.45)}
-.t.gold{color:var(--warn);border-color:rgba(240,180,41,.45)}
-table{width:100%;border-collapse:collapse;font-size:14px}
-th{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
-  text-align:left;padding:9px 10px;border-bottom:1px solid var(--line)}
-td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top}
-tr:last-child td{border-bottom:none}
-.up{color:var(--up)} .down{color:var(--down)} .mut{color:var(--muted)}
-ul.bul{margin:0;padding-left:19px} ul.bul li{margin-bottom:9px}
-.callout{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--warn);
-  border-radius:10px;padding:14px 17px;margin-bottom:14px}
-.callout.crit{border-left-color:var(--crit)}
-.callout h3{margin:0 0 7px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--warn)}
-.callout.crit h3{color:var(--crit)}
-.banner{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 17px;margin-bottom:14px;
-  display:flex;flex-wrap:wrap;align-items:center;gap:13px}
-.banner .lvl{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;
-  padding:5px 12px;border-radius:7px;border:1px solid var(--crit);color:var(--crit)}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:11px;margin-bottom:14px}
-.stat{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:13px 15px}
-.stat .n{font-family:var(--mono);font-size:21px;color:var(--accent);letter-spacing:-.5px}
-.stat .l{font-size:11.5px;color:var(--muted);margin-top:3px;line-height:1.4}
-.note{font-size:12.5px;color:var(--muted);margin:9px 0 0}
-.srcs{font-size:12.5px;color:var(--muted);word-break:break-word}
-.srcs a{color:var(--muted)}
-.disc{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin-top:26px;padding-top:14px}
+# -*- coding: utf-8 -*-
+import io, os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from shared import css, masthead, nav, page
 
+OUT = os.path.dirname(os.path.abspath(__file__))
+
+EXTRA = """
 .livebar{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 8px 4px;margin-bottom:18px}
 .livebar-label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--up);display:flex;align-items:center;gap:8px;padding:4px 8px 8px}
 .livebar-label .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--up)}
@@ -81,28 +13,28 @@ ul.bul{margin:0;padding-left:19px} ul.bul li{margin-bottom:9px}
 .ticker{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:6px 10px}
 h2.sec,.card h3,.masthead h1,.panel h3{font-family:Georgia,'Times New Roman',serif}
 h2.sec{font-family:var(--mono)}
+"""
+CSS = css("#caa64a", "#e8c766", "#0c0b09", "#17150f", "#2b2720", EXTRA)
 
-@media(max-width:640px){.masthead h1{font-size:26px}.wrap{padding:18px 14px 50px}}
-</style>
-</head><body><div class="wrap">
-<header class="masthead">
-<h1>The Closing Bell</h1>
-<p class="sub">Your daily markets briefing &mdash; the tape, the movers and what moves it</p>
-<div class="meta">
-<span class="pill live"><span class="dot"></span>Live</span>
-<span class="pill" id="edition">&nbsp;</span>
-<span class="pill" id="datestamp">&nbsp;</span>
-<span class="pill">Updated <span id="updated">&nbsp;</span></span>
-</div>
-</header>
-<div class="tldr"><b>The Tape</b> <span>Stocks are extending Wednesday's rebound &mdash; the S&amp;P 500 is up 1.12% and the Dow 0.73% as of about 2:50 p.m. ET, with Treasury yields easing right across the curve and crude slipping, while Generac remains the day's outsized single-name move on its Amazon generator deal.</span></div>
+TLDR = ("Stocks are extending Wednesday's rebound &mdash; the S&amp;P 500 is up 1.12% and the Dow 0.73% "
+        "as of about 2:50 p.m. ET, with Treasury yields easing right across the curve and crude slipping, "
+        "while Generac remains the day's outsized single-name move on its Amazon generator deal.")
+
+TAPE_A = """<script src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>{"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},{"proName":"FOREXCOM:DJI","title":"Dow 30"},{"proName":"NYSE:GNRC","title":"Generac"},{"proName":"NYSE:HPE","title":"HPE"},{"proName":"NASDAQ:MRNA","title":"Moderna"},{"proName":"NASDAQ:FLNC","title":"Fluence"},{"proName":"NYSE:CTRA","title":"Coterra"},{"proName":"TVC:USOIL","title":"WTI Crude"},{"proName":"TVC:US10Y","title":"US 10Y"}],"colorTheme":"dark","isTransparent":true,"showSymbolLogo":true,"displayMode":"adaptive","locale":"en"}</script>"""
+
+def quote(sym):
+    return ('<div class="ticker"><script src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>'
+            '{"symbol":"%s","width":"100%%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div>' % sym)
+
+BODY = """@@MAST@@
+<div class="tldr"><b>The Tape</b> <span>@@TLDR@@</span></div>
 <div class="freshline" id="freshline">&nbsp;</div>
-<nav class="tabs"><a href="index.html">★ Front Page</a><a href="cyber-briefing.html">⛨ The Cyber Wire</a><a href="wallstreet-briefing.html" class="active">▲ The Closing Bell</a><a href="mma-briefing.html">⊘ The Octagon</a><a href="archive.html">🗄 Archive</a></nav>
+@@NAV@@
 
-<div class="livebar"><div class="livebar-label"><span class="dot"></span> LIVE QUOTES</div><script src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>{"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},{"proName":"FOREXCOM:DJI","title":"Dow 30"},{"proName":"NYSE:GNRC","title":"Generac"},{"proName":"NYSE:HPE","title":"HPE"},{"proName":"NASDAQ:MRNA","title":"Moderna"},{"proName":"NASDAQ:FLNC","title":"Fluence"},{"proName":"NYSE:CTRA","title":"Coterra"},{"proName":"TVC:USOIL","title":"WTI Crude"},{"proName":"TVC:US10Y","title":"US 10Y"}],"colorTheme":"dark","isTransparent":true,"showSymbolLogo":true,"displayMode":"adaptive","locale":"en"}</script></div>
+<div class="livebar"><div class="livebar-label"><span class="dot"></span> LIVE QUOTES</div>@@TAPE@@</div>
 
 <h2 class="sec">Live Index Quotes &mdash; updates in real time</h2>
-<div class="tickers"><div class="ticker"><script src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"FOREXCOM:SPXUSD","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div><div class="ticker"><script src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"FOREXCOM:NSXUSD","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div><div class="ticker"><script src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"FOREXCOM:DJI","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div></div>
+<div class="tickers">@@Q1@@@@Q2@@@@Q3@@</div>
 <div class="note">Quotes stream live (some feeds ~15-min delayed). Editorial below reflects the latest edition; official closes are in the Weekly Scorecard.</div>
 
 <h2 class="sec">The Lead</h2>
@@ -221,7 +153,16 @@ h2.sec{font-family:var(--mono)}
 </div>
 
 <div class="disc">Information only. Nothing on this page is investment advice, a recommendation, or an offer to buy or sell any security. Intraday figures carry the time at which the source stated them and are not aged forward; where two sources disagreed, both reads are shown rather than averaged, and figures no source stated are left out rather than estimated. Live widgets are supplied by TradingView and may lag.</div>
+"""
 
-</div>
-<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \u00b7 briefings refresh every 30 minutes, 8 AM\u20136 PM ET';}catch(e){}})();</script>
-</body></html>
+BODY = (BODY.replace("@@MAST@@", masthead("The Closing Bell", "Your daily markets briefing &mdash; the tape, the movers and what moves it"))
+            .replace("@@NAV@@", nav("ws"))
+            .replace("@@TLDR@@", TLDR)
+            .replace("@@TAPE@@", TAPE_A)
+            .replace("@@Q1@@", quote("FOREXCOM:SPXUSD"))
+            .replace("@@Q2@@", quote("FOREXCOM:NSXUSD"))
+            .replace("@@Q3@@", quote("FOREXCOM:DJI")))
+
+html = page("The Closing Bell &mdash; Daily Markets Briefing", CSS, BODY)
+io.open(os.path.join(OUT, "wallstreet-briefing.html"), "w", encoding="utf-8").write(html)
+print("ws ok", len(html))

@@ -1,97 +1,56 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>The Cyber Wire &mdash; Daily Security Briefing</title>
-<style>
-:root{
-  --bg:#080b0b; --panel:#111716; --line:#1e2a27;
-  --accent:#22d3a8; --accent2:#36c6ff;
-  --txt:#e9e6e2; --muted:#9aa0a6;
-  --up:#22c55e; --down:#ef4444; --warn:#f0b429; --crit:#ef4444;
-  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--txt);
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  font-size:15.5px;line-height:1.62;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1000px;margin:0 auto;padding:26px 20px 70px}
-a{color:var(--accent2);text-decoration:none}
-a:hover{text-decoration:underline}
-.masthead{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:14px}
-.masthead h1{margin:0 0 4px;font-size:34px;letter-spacing:-.5px}
-.masthead .sub{color:var(--muted);font-size:14px;margin:0}
-.meta{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
-.pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;
-  background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:4px 11px;color:var(--muted)}
-.pill.live{color:var(--up);border-color:rgba(34,197,94,.35)}
-.pill.live .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--up);margin-right:6px;vertical-align:middle}
-nav.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 20px}
-nav.tabs a{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
-  background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:8px 13px;color:var(--muted);transition:.15s}
-nav.tabs a:hover{color:var(--txt);border-color:var(--accent);text-decoration:none;transform:translateY(-1px)}
-nav.tabs a.active{color:var(--accent);border-color:var(--accent);background:rgba(255,255,255,.03)}
-.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
-  border-radius:10px;padding:11px 15px;margin:6px 0 2px;font-size:14.5px;line-height:1.5}
-.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-right:9px}
-.freshline{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--muted);margin:9px 0 2px}
-h2.sec{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--accent);margin:34px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
-.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:14px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:13px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 16px;transition:.16s}
-.card:hover{transform:translateY(-2px);border-color:var(--accent);box-shadow:0 8px 22px rgba(0,0,0,.34)}
-.card h3{margin:0 0 7px;font-size:16px;line-height:1.32}
-.card p{margin:0;font-size:14px;color:#cfcbc6}
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:9px}
-.t{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
-  border-radius:5px;padding:3px 7px;border:1px solid var(--line);color:var(--muted)}
-.t.new{color:var(--accent);border-color:var(--accent)}
-.t.hot{color:var(--crit);border-color:rgba(239,68,68,.45)}
-.t.pro{color:var(--up);border-color:rgba(34,197,94,.45)}
-.t.gold{color:var(--warn);border-color:rgba(240,180,41,.45)}
-table{width:100%;border-collapse:collapse;font-size:14px}
-th{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
-  text-align:left;padding:9px 10px;border-bottom:1px solid var(--line)}
-td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top}
-tr:last-child td{border-bottom:none}
-.up{color:var(--up)} .down{color:var(--down)} .mut{color:var(--muted)}
-ul.bul{margin:0;padding-left:19px} ul.bul li{margin-bottom:9px}
-.callout{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--warn);
-  border-radius:10px;padding:14px 17px;margin-bottom:14px}
-.callout.crit{border-left-color:var(--crit)}
-.callout h3{margin:0 0 7px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--warn)}
-.callout.crit h3{color:var(--crit)}
-.banner{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 17px;margin-bottom:14px;
-  display:flex;flex-wrap:wrap;align-items:center;gap:13px}
-.banner .lvl{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;
-  padding:5px 12px;border-radius:7px;border:1px solid var(--crit);color:var(--crit)}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:11px;margin-bottom:14px}
-.stat{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:13px 15px}
-.stat .n{font-family:var(--mono);font-size:21px;color:var(--accent);letter-spacing:-.5px}
-.stat .l{font-size:11.5px;color:var(--muted);margin-top:3px;line-height:1.4}
-.note{font-size:12.5px;color:var(--muted);margin:9px 0 0}
-.srcs{font-size:12.5px;color:var(--muted);word-break:break-word}
-.srcs a{color:var(--muted)}
-.disc{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin-top:26px;padding-top:14px}
+# -*- coding: utf-8 -*-
+import io, os, sys, datetime
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from shared import css, masthead, nav, page
 
+OUT = os.path.dirname(os.path.abspath(__file__))
+TODAY = datetime.date(2026, 9, 17)
+
+def countdown(y, m, d):
+    due = datetime.date(y, m, d)
+    n = (due - TODAY).days
+    if n > 1:
+        return '<span class="mut">(%d days left)</span>' % n, due
+    if n == 1:
+        return '<span class="mut">(1 day left)</span>', due
+    if n == 0:
+        return '<span style="color:var(--crit)">(0 days left &mdash; today)</span>', due
+    return '<span style="color:var(--crit)">(overdue by %d days)</span>', due
+
+def cd(y, m, d):
+    due = datetime.date(y, m, d)
+    n = (due - TODAY).days
+    label = due.strftime("%-d %B %Y") if hasattr(due, "strftime") else str(due)
+    if n > 1:
+        tag = '<span class="mut">(%d days left)</span>' % n
+    elif n == 1:
+        tag = '<span class="mut">(1 day left)</span>'
+    elif n == 0:
+        tag = '<span style="color:var(--crit)">(0 days left &mdash; due today)</span>'
+    else:
+        tag = '<span style="color:var(--crit)">(overdue by %d days)</span>' % (-n)
+    return label, tag
+
+D_CISCO_EMAIL = cd(2026, 9, 17)
+D_SCREEN      = cd(2026, 9, 14)
+D_ISE         = cd(2026, 9, 19)
+D_ACRONIS     = cd(2026, 9, 19)
+D_VCENTER     = cd(2026, 8, 21)
+SAT19 = datetime.date(2026, 9, 19).strftime("%A")
+
+EXTRA = """
 .banner .lvl{border-color:var(--crit);color:var(--crit)}
+"""
+CSS = css("#22d3a8", "#36c6ff", "#080b0b", "#111716", "#1e2a27", EXTRA)
 
-@media(max-width:640px){.masthead h1{font-size:26px}.wrap{padding:18px 14px 50px}}
-</style>
-</head><body><div class="wrap">
-<header class="masthead">
-<h1>The Cyber Wire</h1>
-<p class="sub">Your daily security briefing &mdash; breaches, exploited bugs and the deadlines that matter</p>
-<div class="meta">
-<span class="pill live"><span class="dot"></span>Live</span>
-<span class="pill" id="edition">&nbsp;</span>
-<span class="pill" id="datestamp">&nbsp;</span>
-<span class="pill">Updated <span id="updated">&nbsp;</span></span>
-</div>
-</header>
-<div class="tldr"><b>The Wire</b> <span>CISA says ransomware crews have now joined the attacks on a critical VMware vCenter flaw, while the federal remediation deadline for an actively exploited Cisco email-gateway zero-day that hands an attacker root expires today.</span></div>
+TLDR = ("CISA says ransomware crews have now joined the attacks on a critical VMware vCenter flaw, "
+        "while the federal remediation deadline for an actively exploited Cisco email-gateway zero-day "
+        "that hands an attacker root expires today.")
+
+BODY = """@@MAST@@
+<div class="tldr"><b>The Wire</b> <span>@@TLDR@@</span></div>
 <div class="freshline" id="freshline">&nbsp;</div>
-<nav class="tabs"><a href="index.html">★ Front Page</a><a href="cyber-briefing.html" class="active">⛨ The Cyber Wire</a><a href="wallstreet-briefing.html">▲ The Closing Bell</a><a href="mma-briefing.html">⊘ The Octagon</a><a href="archive.html">🗄 Archive</a></nav>
+@@NAV@@
 
 <div class="banner">
 <span class="lvl">Threat level: High</span>
@@ -119,7 +78,7 @@ ul.bul{margin:0;padding-left:19px} ul.bul li{margin-bottom:9px}
 <h3>Do this first &mdash; deadline expires today</h3>
 <p style="margin:0 0 8px"><strong>CVE-2026-76461 &mdash; Cisco Secure Email Gateway.</strong> A <strong>CVSS 9.8</strong> zero-day in the email-parsing logic of <strong>Cisco AsyncOS</strong>: insufficient validation lets a specially crafted email carry SQL statements that the gateway processes, ending in arbitrary command execution <strong>as root</strong>, unauthenticated. An attacker needs only to send mail to a vulnerable device. Cisco PSIRT confirmed attacks in the wild in September.</p>
 <p style="margin:0 0 8px"><strong>Affected:</strong> AsyncOS <strong>16.5, 16.0, and 15.5 and earlier</strong>, on on-premises physical and virtual Secure Email Gateway appliances. <strong>Fixed releases:</strong> <strong>15.5.5-014</strong>, <strong>16.0.4-302</strong>, or <strong>16.5.0-780</strong> (Cisco prefers the last).</p>
-<p style="margin:0"><strong>Federal deadline: 17 September 2026 <span style="color:var(--crit)">(0 days left &mdash; due today)</span>.</strong> This is the same date carried in the KEV section below.</p>
+<p style="margin:0"><strong>Federal deadline: @@D_CISCO_EMAIL_L@@ @@D_CISCO_EMAIL_T@@.</strong> This is the same date carried in the KEV section below.</p>
 </div>
 
 <h2 class="sec">Threat Actor Spotlight</h2>
@@ -188,11 +147,11 @@ ul.bul{margin:0;padding-left:19px} ul.bul li{margin-bottom:9px}
 <h2 class="sec">CISA KEV &amp; Federal Deadlines</h2>
 <div class="panel">
 <ul class="bul">
-<li><strong>CVE-2026-76461</strong> &mdash; Cisco Secure Email Gateway, CVSS 9.8. Added 14 Sep, due <strong>17 September 2026</strong> <span style="color:var(--crit)">(0 days left &mdash; due today)</span>. This is the clock that governs today's Patch Priority.</li>
-<li><strong>CVE-2026-84869</strong> &mdash; ConnectWise ScreenConnect, CVSS 9.9. Added 11 Sep, due <strong>14 September 2026</strong> <span style="color:var(--crit)">(overdue by 3 days)</span>.</li>
-<li><strong>CVE-2026-76460</strong> &mdash; Cisco Identity Services Engine, CVSS 10.0. Added 16 Sep, due <strong>19 September 2026</strong> <span class="mut">(2 days left)</span> &mdash; a Saturday.</li>
-<li><strong>CVE-2026-87886</strong> &mdash; Acronis Backup plugin for cPanel &amp; WHM / Plesk. Added 16 Sep, due <strong>19 September 2026</strong> <span class="mut">(2 days left)</span>.</li>
-<li><strong>CVE-2026-59310</strong> &mdash; VMware vCenter Server, CVSS 9.8. Added 18 Aug, remediation date reported as <strong>21 August 2026</strong> <span style="color:var(--crit)">(overdue by 27 days)</span>. Re-listed as ransomware-exploited on 15 Sep.</li>
+<li><strong>CVE-2026-76461</strong> &mdash; Cisco Secure Email Gateway, CVSS 9.8. Added 14 Sep, due <strong>@@D_CISCO_EMAIL_L@@</strong> @@D_CISCO_EMAIL_T@@. This is the clock that governs today's Patch Priority.</li>
+<li><strong>CVE-2026-84869</strong> &mdash; ConnectWise ScreenConnect, CVSS 9.9. Added 11 Sep, due <strong>@@D_SCREEN_L@@</strong> @@D_SCREEN_T@@.</li>
+<li><strong>CVE-2026-76460</strong> &mdash; Cisco Identity Services Engine, CVSS 10.0. Added 16 Sep, due <strong>@@D_ISE_L@@</strong> @@D_ISE_T@@ &mdash; a @@SAT19@@.</li>
+<li><strong>CVE-2026-87886</strong> &mdash; Acronis Backup plugin for cPanel &amp; WHM / Plesk. Added 16 Sep, due <strong>@@D_ACRONIS_L@@</strong> @@D_ACRONIS_T@@.</li>
+<li><strong>CVE-2026-59310</strong> &mdash; VMware vCenter Server, CVSS 9.8. Added 18 Aug, remediation date reported as <strong>@@D_VCENTER_L@@</strong> @@D_VCENTER_T@@. Re-listed as ransomware-exploited on 15 Sep.</li>
 <li>CISA's own 16 September alert is titled <em>CISA Adds Two Known Exploited Vulnerabilities to Catalog</em> and lists only the Cisco ISE and Acronis entries. One vendor headline this run bundled a <strong>Google Pixel</strong> flaw into the same batch; it is not attached to that alert on CISA's page, so it is not counted here.</li>
 </ul>
 </div>
@@ -220,7 +179,18 @@ ul.bul{margin:0;padding-left:19px} ul.bul li{margin-bottom:9px}
 </div>
 
 <div class="disc">Compiled from public reporting gathered during this run. Severity scores and remediation deadlines are the ones the vendor or CISA stated; where a figure was not stated, the page says so rather than estimating. Countdowns are computed at build time and are accurate to the day, not the hour. This is a news summary, not a substitute for your own vulnerability management process.</div>
+"""
 
-</div>
-<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \u00b7 briefings refresh every 30 minutes, 8 AM\u20136 PM ET';}catch(e){}})();</script>
-</body></html>
+BODY = (BODY.replace("@@MAST@@", masthead("The Cyber Wire", "Your daily security briefing &mdash; breaches, exploited bugs and the deadlines that matter"))
+            .replace("@@NAV@@", nav("cyber"))
+            .replace("@@TLDR@@", TLDR)
+            .replace("@@D_CISCO_EMAIL_L@@", D_CISCO_EMAIL[0]).replace("@@D_CISCO_EMAIL_T@@", D_CISCO_EMAIL[1])
+            .replace("@@D_SCREEN_L@@", D_SCREEN[0]).replace("@@D_SCREEN_T@@", D_SCREEN[1])
+            .replace("@@D_ISE_L@@", D_ISE[0]).replace("@@D_ISE_T@@", D_ISE[1])
+            .replace("@@D_ACRONIS_L@@", D_ACRONIS[0]).replace("@@D_ACRONIS_T@@", D_ACRONIS[1])
+            .replace("@@D_VCENTER_L@@", D_VCENTER[0]).replace("@@D_VCENTER_T@@", D_VCENTER[1])
+            .replace("@@SAT19@@", SAT19))
+
+html = page("The Cyber Wire &mdash; Daily Security Briefing", CSS, BODY)
+io.open(os.path.join(OUT, "cyber-briefing.html"), "w", encoding="utf-8").write(html)
+print("cyber ok", len(html))
