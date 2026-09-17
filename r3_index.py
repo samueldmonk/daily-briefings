@@ -1,0 +1,70 @@
+# -*- coding: utf-8 -*-
+import io, os, re, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from shared import css, masthead, nav, page
+
+OUT = os.path.dirname(os.path.abspath(__file__))
+EXTRA = """
+.big{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px;margin-top:6px}
+.big .card{padding:20px 21px;border-top:3px solid var(--line)}
+.big .card .kick{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:9px}
+.big .card h3{font-size:20px;margin:0 0 9px}
+.big .card p{font-size:14.5px;color:#cfcbc6;margin:0 0 14px}
+.big .card a.go{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.c-cy{border-top-color:#22d3a8} .c-cy .kick,.c-cy a.go{color:#22d3a8}
+.c-ws{border-top-color:#caa64a} .c-ws .kick,.c-ws a.go{color:#caa64a} .c-ws h3{font-family:Georgia,'Times New Roman',serif}
+.c-mm{border-top-color:#e84545} .c-mm .kick,.c-mm a.go{color:#e84545}
+.c-cy:hover{border-color:#22d3a8} .c-ws:hover{border-color:#caa64a} .c-mm:hover{border-color:#e84545}
+"""
+CSS = css("#8b93a1", "#c8cdd6", "#0b0c0e", "#141619", "#242830", EXTRA)
+
+# pull each TLDR verbatim out of the built briefing so the cards cannot drift
+def tldr(fn):
+    s = io.open(os.path.join(OUT, fn), encoding="utf-8").read()
+    m = re.search(r'<div class="tldr"><b>[^<]*</b> <span>(.*?)</span></div>', s, re.S)
+    assert m, fn
+    return m.group(1)
+
+CY = tldr("cyber-briefing.html")
+WS = tldr("wallstreet-briefing.html")
+MM = tldr("mma-briefing.html")
+
+BODY = """@@MAST@@
+<div class="freshline" id="freshline">&nbsp;</div>
+@@NAV@@
+
+<div class="big">
+<div class="card c-cy">
+<div class="kick">&#9960; The Cyber Wire &middot; The Wire</div>
+<h3>A screenshot service leaks 23.62 million accounts as two Cisco deadlines bite</h3>
+<p>@@CY@@</p>
+<a class="go" href="cyber-briefing.html">Read the briefing &rarr;</a>
+</div>
+<div class="card c-ws">
+<div class="kick">&#9650; The Closing Bell &middot; The Tape</div>
+<h3>The tape turns back up, one day after the hike</h3>
+<p>@@WS@@</p>
+<a class="go" href="wallstreet-briefing.html">Read the briefing &rarr;</a>
+</div>
+<div class="card c-mm">
+<div class="kick">&#8856; The Octagon &middot; Tale of the Tape</div>
+<h3>A title rematch in Los Angeles, priced as close to even as they come</h3>
+<p>@@MM@@</p>
+<a class="go" href="mma-briefing.html">Read the briefing &rarr;</a>
+</div>
+</div>
+
+<h2 class="sec">About these briefings</h2>
+<div class="panel">
+<p style="margin:0 0 9px">Three briefings, rebuilt from live web search every thirty minutes between 8 AM and 6 PM Eastern. Each page carries its own as-of stamp, its own source list, and its own record of what it refused to publish and why.</p>
+<p style="margin:0" class="note">Nothing on any of these pages is fetched first-hand; everything is compiled from public reporting gathered during the run that produced it. Where two sources disagreed, both reads are shown rather than averaged, and figures no source stated are left blank rather than estimated. Point-in-time snapshots of every edition are kept in the <a href="archive.html">Archive</a>. The markets page is information only and is not investment advice.</p>
+</div>
+"""
+
+BODY = (BODY.replace("@@MAST@@", masthead("Daily Briefings", "Security, markets and MMA &mdash; refreshed every 30 minutes, 8 AM&ndash;6 PM ET"))
+            .replace("@@NAV@@", nav("index"))
+            .replace("@@CY@@", CY).replace("@@WS@@", WS).replace("@@MM@@", MM))
+
+html = page("Daily Briefings", CSS, BODY)
+io.open(os.path.join(OUT, "index.html"), "w", encoding="utf-8").write(html)
+print("index ok", len(html))
