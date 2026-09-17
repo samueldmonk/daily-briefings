@@ -4,206 +4,153 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from shared import css, masthead, nav, page
 
 OUT = os.path.dirname(os.path.abspath(__file__))
-ACC, ACC2 = "#caa64a", "#e8c766"
+
 EXTRA = """
-.masthead h1{font-family:Georgia,'Times New Roman',serif;font-weight:700}
-h2.sec{font-family:var(--mono)}
-.card h3,.panel h3{font-family:Georgia,'Times New Roman',serif}
 .livebar{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 8px 4px;margin-bottom:18px}
 .livebar-label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--up);display:flex;align-items:center;gap:8px;padding:4px 8px 8px}
-.livebar-label .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--up)}
-.tickers{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:6px}
+.livebar-label .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--up)}
+.tickers{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
 .ticker{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:6px 10px}
+h2.sec,.card h3,.masthead h1,.panel h3{font-family:Georgia,'Times New Roman',serif}
+h2.sec{font-family:var(--mono)}
 """
-CSS = css(ACC, ACC2, "#0d0c09", "#171510", "#2b2618", EXTRA)
+CSS = css("#caa64a", "#e8c766", "#0c0b09", "#17150f", "#2b2720", EXTRA)
 
-SRC = [
- ("Yahoo Finance - Stock Market Today (Sept. 8, 2026): S&P 500 edges lower as oil prices climb, Mideast tensions rise", "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-sept-8-133744027.html"),
- ("Yahoo Finance - Live: Dow, S&P 500, Nasdaq fall as oil prices rise, US-Canada trade war escalates (Tuesday, September 8)", "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-september-8-dow-sp-500-nasdaq-080440338.html"),
- ("TheStreet - Stock Market Today (Sept. 8, 2026)", "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-08-2026"),
- ("TheStreet - Stock Market Today (Sept. 4, 2026): Yields jump, stocks fall after jobs report surprises to upside", "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-04-2026"),
- ("Charles Schwab - Short Week Packs a Punch: Stocks Down Early on Oil", "https://www.schwab.com/learn/story/stock-market-update-open"),
- ("CNBC - Brent crude oil hits $98 after Iran's Houthi allies attack multiple Saudi energy facilities", "https://www.cnbc.com/2026/09/08/oil-prices-today-brent-wti-hormuz-iran-war.html"),
- ("NBC News - Oil nears $100 after Saudi Arabia says energy infrastructure was attacked", "https://www.nbcnews.com/business/energy/oil-prices-iran-war-saudi-arabia-rcna596558"),
- ("UPI - Oil prices approaching $100 per barrel as Houthis attack Saudi sites", "https://www.upi.com/Top_News/World-News/2026/09/08/houthis-attack-saudi-arabia-energy-oil-gas-prices-iran-war/4101788875653"),
- ("CNBC - Novartis trial failure raises stakes for Amgen and Eli Lilly in Lp(a) drug race", "https://www.cnbc.com/2026/09/08/novartis-cholesterol-setback-drug-race-eli-lilly-amgen.html"),
- ("24/7 Wall St. - Amgen Falls 10% as Novartis Trial Failure Clouds a Cholesterol Drug Class; NVS Stock Drops 14%", "https://247wallst.com/investing/2026/09/08/amgen-falls-10-as-novartis-trial-failure-clouds-a-cholesterol-drug-class-nvs-stock-drops-14/"),
- ("Seeking Alpha - Amgen drops on Novartis trial setback, BMO cuts", "https://seekingalpha.com/news/4640808-amgen-drops-novartis-trial-setback-bmo-cuts"),
- ("StockMarketWatch - Tech Resilience Amidst Broader Market Softness: Midday Update", "https://stockmarketwatch.com/live/stock-market-today"),
- ("NBC News - Canada's retaliatory tariffs take effect after U.S. trade talks stall", "https://www.nbcnews.com/business/economy/canada-tariffs-trump-carney-rcna596573"),
- ("The Washington Post - What to know about Canada's escalating trade war with the US as Carney retaliates with tariffs", "https://www.washingtonpost.com/business/2026/09/08/canada-trump-carney-trade-war-tariffs/46a09c5c-ab3b-11f1-b498-8697f35a6743_story.html"),
- ("Trading Economics - United States Stock Market Index (US500)", "https://tradingeconomics.com/united-states/stock-market"),
- ("Forbes - CME FedWatch Provides A 66% Chance Fed Will Hike Rates In September", "https://www.forbes.com/sites/digital-assets/2026/08/31/cme-fedwatch-provides-a-66-chance-fed-will-hike-rates-in-september/"),
- ("Traders Agency - 10-Year Treasury Yield Hits 4.79%, Fed Odds Spike", "https://tradersagency.com/blog/10-year-treasury-yield-479-fed-rate-hike-odds"),
- ("Coinpedia - Fed Rate Hike Odds Climb Ahead of FOMC Meeting in September", "https://coinpedia.org/news/fed-rate-hike-odds-climb-ahead-of-fomc-meeting-in-september/"),
- ("Trading Economics - US 10 Year Treasury Note Yield", "https://tradingeconomics.com/united-states/government-bond-yield"),
- ("StreetStats - U.S. Treasury yield curve", "https://streetstats.finance/rates/treasuries"),
- ("Whatfinger Business & Money - Market Midday: Stocks Slide, Dow Loses 500 Points, Oil Moves Higher (9/8/26)", "https://money.whatfinger.com/2026/09/08/market-midday-stocks-slide-dow-loses-500-points-oil-moves-higher-9-8-26/"),
- ("CNBC - Stock market news for Sept. 4, 2026", "https://www.cnbc.com/2026/09/03/stock-market-today-live-updates.html"),
- ("The Washington Post - How major US stock indexes fared Friday 9/4/2026", "https://www.washingtonpost.com/business/2026/09/04/stock-market-dow-nasdaq-jobs/b9e994e6-a89f-11f1-9e38-f705d048bd5a_story.html"),
- ("Gotrade - Week Ahead: August CPI & Oracle Earnings in Focus", "https://www.heygotrade.com/en/news/weekly-economic-outlook-2026-09-07/"),
- ("Yahoo Finance - Inflation data, Oracle earnings, and an energy supply crunch: What to watch this week", "https://finance.yahoo.com/economy/article/inflation-data-oracle-earnings-and-an-energy-supply-crunch-what-to-watch-this-week-120429533.html"),
- ("Finance Calendar - US CPI Report September 2026: Date, Time & What to Expect", "https://www.financecalendar.com/event/us-cpi-report-september-2026/"),
- ("StockMarketWatch - Tech Resilience Amidst Broader Market Softness: Afternoon Update", "https://stockmarketwatch.com/live/stock-market-today"),
-]
+TLDR = ("Stocks are rebounding the day after the Fed's first rate hike in three years, with the "
+        "S&amp;P 500 up 1.04% and the Nasdaq Composite up 1.45% as of noon ET on falling oil and easing "
+        "yields, while Generac soars on an Amazon data-centre supply deal.")
 
-def srcblock():
-    return "".join('<div style="margin-bottom:7px">%s &mdash; <a href="%s">%s</a></div>' % (t, u, u) for t, u in SRC)
-
-TICKER = """<div class="livebar"><div class="livebar-label"><span class="dot"></span> LIVE QUOTES</div>
-<script src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>{"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},{"proName":"FOREXCOM:DJI","title":"Dow 30"},{"proName":"NYSE:NVS","title":"Novartis"},{"proName":"NASDAQ:AMGN","title":"Amgen"},{"proName":"AMEX:XLV","title":"Health Care"},{"proName":"AMEX:XLE","title":"Energy Sector"},{"proName":"TVC:UKOIL","title":"Brent Crude"},{"proName":"TVC:USOIL","title":"WTI Crude"},{"proName":"TVC:US10Y","title":"US 10Y"}],"colorTheme":"dark","isTransparent":true,"showSymbolLogo":true,"displayMode":"adaptive","locale":"en"}</script>
-</div>"""
+TAPE_A = """<script src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>{"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},{"proName":"FOREXCOM:DJI","title":"Dow 30"},{"proName":"NYSE:GNRC","title":"Generac"},{"proName":"NASDAQ:FLNC","title":"Fluence"},{"proName":"NASDAQ:NBIS","title":"Nebius"},{"proName":"NYSE:LEN","title":"Lennar"},{"proName":"NASDAQ:NVDA","title":"NVIDIA"},{"proName":"TVC:USOIL","title":"WTI Crude"},{"proName":"TVC:US10Y","title":"US 10Y"}],"colorTheme":"dark","isTransparent":true,"showSymbolLogo":true,"displayMode":"adaptive","locale":"en"}</script>"""
 
 def quote(sym):
     return ('<div class="ticker"><script src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>'
-            '{"symbol":"' + sym + '","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div>')
-
-QUOTES = '<div class="tickers">' + quote("FOREXCOM:SPXUSD") + quote("FOREXCOM:NSXUSD") + quote("FOREXCOM:DJI") + '</div>'
+            '{"symbol":"%s","width":"100%%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div>' % sym)
 
 BODY = """@@MAST@@
-<div class="tldr"><b>The Tape</b> <span>A midday read has the Dow down around 500 points, roughly a one-percent decline, as Houthi strikes on Saudi energy facilities push Brent toward $100 and a failed Novartis heart-drug trial drags health care down more than 2%, with an August payrolls print of 162,000 against a 53,000 consensus keeping a September Fed hike in play.</span></div>
+<div class="tldr"><b>The Tape</b> <span>@@TLDR@@</span></div>
 <div class="freshline" id="freshline">&nbsp;</div>
 @@NAV@@
 
-@@TICKER@@
+<div class="livebar"><div class="livebar-label"><span class="dot"></span> LIVE QUOTES</div>@@TAPE@@</div>
 
 <h2 class="sec">Live Index Quotes &mdash; updates in real time</h2>
-@@QUOTES@@
+<div class="tickers">@@Q1@@@@Q2@@@@Q3@@</div>
 <div class="note">Quotes stream live (some feeds ~15-min delayed). Editorial below reflects the latest edition; official closes are in the Weekly Scorecard.</div>
 
 <h2 class="sec">The Lead</h2>
 <div class="panel" style="border-left:4px solid var(--accent)">
-<h3 style="margin:0 0 8px;font-size:20px">As of reads taken ~2:23&ndash;2:35 PM ET: a midday wire puts the Dow down about 500 points, and the two shocks driving the session &mdash; oil and a failed drug trial &mdash; are still unrelated to each other</h3>
-<p style="margin:0 0 10px">The first regular session after the Labor Day long weekend has deteriorated as it has gone on. Three reads of it were available at the time of this edition and all three are printed here rather than smoothed into one:</p>
-<ul class="bul">
-<li><b>New this edition:</b> a <b>midday</b> market wire dated today reports the <b>Dow down 500 points</b>, with stocks sliding and oil moving higher. <span class="mut">That is a headline figure from a single outlet, stated in points rather than as a percentage, and it is a midday read rather than a 2:35 p.m. one. On a Dow that closed Friday at 53,414.25, 500 points is roughly 0.9% &mdash; so this read <b>corroborates</b> the &minus;1% carried below rather than showing further deterioration. The two agree; they are not a sequence.</span></li>
-<li>A Tuesday session summary carried from the 1:50 p.m. edition has the <b>Dow down 1%</b>, the <b>S&amp;P 500 down roughly 0.4%</b> and the <b>Nasdaq Composite down 0.1%</b> as the trading day progressed. <span class="mut">Re-confirmed rather than re-dated this run. Taken together with the 500-point read above, the Dow has been sitting near a one-percent decline since the middle of the session; the earlier &minus;0.8% read at 10:48 a.m. is the only materially lighter figure this briefing has recorded today.</span></li>
-<li>A separate index tracker has the <b>S&amp;P 500 at 7,707, down 0.15%</b> from the previous session &mdash; arithmetically consistent with Friday&#39;s close of 7,718.60.</li>
-</ul>
-<p style="margin:10px 0 0">What both reads agree on: all three major indices are lower and the Dow is decisively the weakest. Two distinct shocks are doing the work, and they are unrelated to each other. <b>Houthi attacks on Saudi energy facilities</b> have pushed Brent toward $100 and put a risk premium back into crude; separately, <b>Novartis&#39;s pelacarsen failed its pivotal Phase III trial</b>, taking the whole health care sector down more than 2%. Both are detailed below. An afternoon desk note read this run describes U.S. equities as <b>bifurcated</b> on Tuesday afternoon: technology showed resilience while the broader averages struggled to hold momentum, with investors balancing optimism on artificial intelligence against caution over the inflation data ahead and a softening industrial outlook. That is consistent with the spread on the page &mdash; the Nasdaq down a tenth of a percentage point against the Dow down a full one &mdash; though no source read this run draws that link explicitly.</p>
+<h3 style="margin:0 0 9px;font-size:21px">The tape turns back up: S&amp;P 500 +1.04% as of 12:00 p.m. ET, with the Nasdaq doing most of the lifting</h3>
+<p style="margin:0 0 10px">A day after the Federal Reserve raised rates for the first time in three years, the selling has reversed. At the bell the S&amp;P 500 was <strong>+0.94%</strong> &mdash; a 71-point gain that put it back above 7,600 &mdash; and by <strong>12:00 p.m. ET</strong> it stood at <strong>+1.04%</strong>, with the index at <strong>7,631</strong>. The <strong>Nasdaq Composite was +1.45%</strong>, more than three times the <strong>Dow's +0.42%</strong>: technology and growth are carrying this leg while value-heavy and industrial names lag. A closely watched gauge of chipmakers climbed <strong>3%</strong>.</p>
+<p style="margin:0 0 10px">The two things doing the work are <strong>falling oil</strong> and <strong>easing bond-market pressure</strong>. The 10-year Treasury yield, which had climbed back to 5% on the decision itself, was <strong>more than six basis points lower at 4.943%</strong>, and the 2-year slipped more than five basis points to <strong>4.675%</strong>. Brent fell to <strong>$103.61</strong>, down 2.10%.</p>
+<p style="margin:0 0 10px">Wednesday's decision was unanimous: all twelve FOMC members approved a <strong>25 basis point</strong> increase to a target range of <strong>3.75%&ndash;4.00%</strong>, the first rise since July 2023, with officials forecasting one further hike in 2026 before holding through 2027. It was that decision together with Chair Kevin Warsh's talk of persistent inflation that unnerved investors and sent equities down on the day.</p>
+<p style="margin:0 0 10px">The morning's data helped rather than hurt. Initial jobless claims for the week ending 12 September fell <strong>10,000 to 196,000</strong>, roughly 11,000 below a consensus near 207,000. Housing was the offsetting note: <strong>August housing starts fell 2.6%</strong> to a seasonally adjusted annual rate of 1.275 million. Europe closed green across the board &mdash; the FTSE 100 finished <strong>+0.93% at 14,433</strong>, the DAX <strong>+1.06%</strong> and the CAC 40 <strong>+0.69%</strong>.</p>
+<p style="margin:0" class="note">A later read of the same publisher's quote strip, taken around 1:35 p.m. ET, showed the S&amp;P 500 at 7,636.90 &ldquo;+0.94%&rdquo; and the Dow at 51,847.40 &ldquo;+0.59%&rdquo; under an <em>At close</em> label while the session was still open. Neither pair reconciles against Wednesday's settled closes &mdash; those levels imply +1.13% and +0.75% &mdash; so they are not published here as current. The 12:00 p.m. ET figures above do reconcile: 7,551.81 &times; 1.0104 = 7,630.4.</p>
 </div>
 
 <h2 class="sec">Movers &amp; Drivers</h2>
 <div class="cards">
 <div class="card">
-<div class="tags"><span class="t">Expanded</span><span class="t hot">&minus;14%</span></div>
-<h3>Novartis is the day&#39;s biggest single-name move</h3>
-<p><b>Novartis (NVS) is down 14% to $137.63</b> in Tuesday afternoon trade after <b>pelacarsen</b>, an experimental heart drug developed with <b>Ionis Pharmaceuticals</b>, failed its pivotal Phase III study. The drug did lower <b>lipoprotein(a)</b> &mdash; the lipid particle it targets &mdash; but did not reduce the risk of cardiovascular death, heart attack or stroke against placebo. Novartis announced the result on <b>4 September</b>.</p>
-<p style="margin:9px 0 0"><b>This is Novartis&#39;s second failed trial in the run-up to today&#39;s session, not its only one.</b> A sector note read this run describes health care weakness led by Novartis after &ldquo;not one but two failed drug trials in different drugs&rdquo;. The other, carried from this briefing&#39;s earlier edition today, is <b>del-desiran</b>, whose Phase 3 results showed no significant improvement in patients with <b>myotonic dystrophy type 1</b>. The fall has deepened through the day: this briefing&#39;s <b>11:44 a.m. ET</b> snapshot carried <b>&minus;12%</b>, against <b>&minus;14%</b> in the read above.</p>
+<div class="tags"><span class="t gold">Power &amp; AI</span><span class="t">NYSE:GNRC</span></div>
+<h3>Generac and the $8 billion generator order</h3>
+<p>Generac and <strong>Amazon</strong> have signed a long-term supply agreement for up to <strong>$8 billion</strong> of backup power generators for Amazon data centres, with <strong>initial deliveries of $2.4 billion across 2027 and 2028</strong>. Generac also issued Amazon a <strong>warrant for up to roughly 1.69 million shares</strong> at an exercise price of about <strong>$200.93</strong>. The moves quoted for it differ by session and are not averaged here: shares jumped <strong>as much as 45% in after-market trading</strong> on Wednesday's announcement, one Thursday read has the stock <strong>+34%</strong>, and another Thursday read headlines <strong>+16%</strong>. Citi's Vikram Bagri called the deal &ldquo;substantially larger than expected&rdquo; while arguing the price-to-revenue multiple had run too far.</p>
 </div>
 <div class="card">
-<div class="tags"><span class="t">Carried</span><span class="t hot">Health care</span></div>
-<h3>Health care is now the worst sector on the board</h3>
-<p><b>Amgen (AMGN) is down 10% to $394.38 at midday</b>, interrupting a 23% year-to-date gain heading into the session; a second read has it <b>down over 8% and on track for its worst single day since 2016</b>. Amgen is developing <b>olpasiran</b>, an Lp(a)-lowering siRNA therapy in the Phase III OCEAN(a)-Outcomes study, and the Novartis miss forces investors to mark down its odds. <b>BMO Capital Markets downgraded Amgen the same day.</b> The whole sector followed: <b>health care is down over 2%</b>, with the <b>Health Care Select Sector SPDR (XLV) off 2.46%</b> and <b>DYN</b> and <b>SRPT</b> also pressured.</p>
+<div class="tags"><span class="t hot">Guidance cut</span><span class="t">NASDAQ:FLNC</span></div>
+<h3>Fluence Energy slashes the year</h3>
+<p>Fluence cut FY2026 revenue guidance to about <strong>$2.4 billion</strong> from roughly <strong>$3.0 billion</strong>, and widened the projected adjusted EBITDA loss to about <strong>$200 million</strong> from around <strong>$10 million</strong>. One read put the stock <strong>down 16%</strong>; a mid-morning read on Thursday had it <strong>down 22.1%</strong>. Analysts turned bearish alongside the guidance.</p>
 </div>
 <div class="card">
-<div class="tags"><span class="t">Expanded</span><span class="t gold">Energy</span></div>
-<h3>Houthi strikes on Saudi energy sites put Brent near $100</h3>
-<p>Saudi Arabia paused operations at some energy facilities near the Yemen border after attacks by Iran-aligned Houthis, who claimed the <b>400,000-barrel-a-day Jazan refinery</b> and other domestic-market facilities. The Saudi Press Agency attributed the strikes to the Houthis; <b>73 civilians were injured</b>. <b>Brent rose 1% to $97.99 by 11:28 a.m. ET after a session high of $99.46</b>; U.S. crude rose <b>more than 2.5% to nearly $94</b>, while a second read has <b>WTI up 1.55% at $92.90</b>. Both crude reads agree on direction and disagree on level, so both are shown.</p>
+<div class="tags"><span class="t pro">Pricing power</span><span class="t">Neocloud</span></div>
+<h3>Nebius raises prices, and the stock likes it</h3>
+<p>Nebius Group advanced <strong>8% in premarket trading</strong> after the neocloud provider announced price increases &mdash; a straightforward read-through on how tight AI compute capacity currently is.</p>
 </div>
 <div class="card">
-<div class="tags"><span class="t">Expanded</span><span class="t hot">Trade</span></div>
-<h3>Canada&#39;s retaliatory tariffs took effect after midnight</h3>
-<p>Canada&#39;s counter-tariffs came into force <b>just after midnight Tuesday</b> as Prime Minister <b>Mark Carney</b> escalated an <b>18-month-old trade war</b>. New detail this run: the measures cover <b>$20 billion of U.S. goods at duties ranging from 15% to 50%</b> &mdash; a range, where earlier editions of this briefing had only &ldquo;up to 50%&rdquo; &mdash; across products from steel and furniture to clothing and electronics. Talks collapsed last month; Carney has said Canada would match Washington&#39;s new tariffs dollar for dollar.</p>
-</div>
-<div class="card">
-<div class="tags"><span class="t new">New</span><span class="t gold">Hormuz</span></div>
-<h3>A second oil story: Iran and Oman on the Strait of Hormuz</h3>
-<p>Alongside the Saudi strikes, this run&#39;s reads name a separate driver of the crude bid: <b>Iran said it was close to a deal with Oman to manage traffic through the Strait of Hormuz</b>. Against that backdrop <b>Brent crept toward $100 a barrel</b> and <b>WTI neared $93</b>. <span class="mut">Those two levels come from the same read and sit inside &mdash; not on top of &mdash; the Brent and WTI figures in the commodities table below, which were taken at 11:28 a.m. ET and from a separate afternoon read. No source read this run says whether the Oman talks are supporting prices or capping them, so no direction is attributed to them here.</span></p>
-</div>
-<div class="card">
-<div class="tags"><span class="t new">New</span><span class="t">Jobs</span></div>
-<h3>The payrolls consensus resolves to 53,000</h3>
-<p>Friday&#39;s August employment report is the reason a September hike is being priced at all, and this run pins down the number it beat. <b>Nonfarm payrolls grew 162,000</b> against the <b>53,000</b> expected by economists polled by <b>Dow Jones</b> &mdash; roughly three times the consensus &mdash; with the <b>unemployment rate unchanged at 4.1%</b>, as expected. <b>Treasury yields rose on the report, and the 2-year hit its highest level since January 2025.</b> <span class="mut">Earlier editions of this briefing printed 53,000, 55,000 and 56,000 side by side because three consensus figures had returned. This run attaches 53,000 to a named poll, so it is used as the consensus; a separate read giving 56,000 is noted below rather than dropped, since different surveys legitimately differ.</span></p>
-</div>
-<div class="card">
-<div class="tags"><span class="t">Carried</span><span class="t">Rates</span></div>
-<h3>The bond leg: 4.8% touched, then given back</h3>
-<p>The <b>10-year Treasury yield topped 4.8% on Tuesday, its highest since October 2023</b>, but a desk note later in the session has <b>10-year yields easing from those early highs</b> &mdash; the first read this run to describe the move rather than just the level. The <b>2-year</b> was flat at <b>4.3810%</b>. Rising yields and rising crude are named together as the reason major indexes fell early.</p>
-</div>
-<div class="card">
-<div class="tags"><span class="t">Refused</span><span class="t">Method</span></div>
-<h3>What is not on this page, and why</h3>
-<p>A named-decliner block (<b>Apple &minus;2.55%, Alphabet &minus;2.10%, Microsoft &minus;2.05%</b>, with Caterpillar, Honeywell and Home Depot leading gainers) returned again this run <b>byte-identical to the block that returned during Monday&#39;s market holiday</b>, when U.S. equity markets were shut all day. A set of percentages that has not moved across a closed session and an open one is not a current number, so it is refused again rather than carried. A mid-morning semiconductor list refused in an earlier edition &mdash; on the evidence that one of its figures was a verified 4 September move &mdash; also remains off the page.</p>
-<p style="margin:9px 0 0"><b>Also refused this run:</b> a sector-performance tool page giving <b>energy down 3.20%</b> &ldquo;as of the afternoon session&rdquo;. It carries no date on the figure itself and it contradicts every other read of this session, in which energy is the leading sector on a crude rally that has Brent near $100. An undated number that points the opposite way from the day&#39;s central story is not a correction to it, so no energy sector percentage is printed on this page.</p>
+<div class="tags"><span class="t">Housing</span><span class="t">NYSE:LEN</span></div>
+<h3>Lennar misses, and the miss is wide</h3>
+<p>The homebuilder reported third-quarter earnings of <strong>$1.19 per share</strong> against the <strong>$1.28</strong> expected by analysts polled by FactSet &mdash; and nearly half what it earned in the same quarter last year. Shares were <strong>1.2% lower</strong>. It lands the same morning as a 2.6% drop in August housing starts.</p>
 </div>
 </div>
 
-<h2 class="sec">Chart of the Day</h2>
-<div class="panel" style="padding:8px">
-<script src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>{"symbol":"NYSE:NVS","width":"100%","height":240,"locale":"en","dateRange":"1D","colorTheme":"dark","isTransparent":true,"autosize":false}</script>
-</div>
-<p class="note">Novartis, down 14% on the pelacarsen Phase III failure, is the largest single-name move verified anywhere in this run&#39;s returns &mdash; larger than Amgen&#39;s 10% fall, which is the same story&#39;s second casualty. The chart replaces Amgen, which held this slot in the previous edition.</p>
+<h2 class="sec">Chart of the Day &mdash; Generac (GNRC)</h2>
+<div class="panel" style="padding:8px"><script src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>{"symbol":"NYSE:GNRC","width":"100%","height":240,"locale":"en","dateRange":"1D","colorTheme":"dark","isTransparent":true,"autosize":false}</script></div>
+<p class="note">The session's marquee single-name move. The chart is live; the percentages in the card above are the ones sources actually stated, each with its own clock.</p>
 
 <h2 class="sec">Sector Heat &mdash; live</h2>
-<div class="panel" style="padding:8px">
-<script src="https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js" async>{"dataSource":"SPX500","blockSize":"market_cap_basic","blockColor":"change","grouping":"sector","locale":"en","colorTheme":"dark","hasTopBar":false,"isDataSetEnabled":false,"isZoomEnabled":true,"hasSymbolTooltip":true,"isMonoSize":false,"width":"100%","height":420}</script>
-</div>
-<p class="note">Lagging today: health care, down over 2% on the Novartis trial failure, with XLV off 2.46%. Leading: energy, on the crude rally, with early strength in power and utility names; technology and semiconductors are described as cushioning the tech-heavy indexes. Longer view: energy leads the S&amp;P sectors year to date at about +42%.</p>
+<div class="panel" style="padding:8px"><script src="https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js" async>{"dataSource":"SPX500","blockSize":"market_cap_basic","blockColor":"change","grouping":"sector","locale":"en","colorTheme":"dark","hasTopBar":false,"isDataSetEnabled":false,"isZoomEnabled":true,"hasSymbolTooltip":true,"isMonoSize":false,"width":"100%","height":420}</script></div>
+<p class="note">One sourced line on breadth: a closely watched gauge of chipmakers climbed <strong>3%</strong>, and at midday the Nasdaq Composite's 1.45% gain was more than triple the Dow's &mdash; growth leading, old-economy blue chips lagging. Sector-level percentages circulating today came without a stated measurement window, so none is printed.</p>
 
 <h2 class="sec">The Calendar &mdash; live</h2>
-<div class="panel" style="padding:8px">
-<script src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>{"colorTheme":"dark","isTransparent":true,"width":"100%","height":420,"locale":"en","importanceFilter":"0,1","countryFilter":"us"}</script>
-</div>
+<div class="panel" style="padding:8px"><script src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>{"colorTheme":"dark","isTransparent":true,"width":"100%","height":420,"locale":"en","importanceFilter":"0,1","countryFilter":"us"}</script></div>
 
 <h2 class="sec">Live Market Headlines &mdash; updates in real time</h2>
-<div class="panel" style="padding:8px">
-<script src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>{"feedMode":"market","market":"stock","colorTheme":"dark","isTransparent":true,"displayMode":"regular","width":"100%","height":420,"locale":"en"}</script>
-</div>
+<div class="panel" style="padding:8px"><script src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>{"feedMode":"market","market":"stock","colorTheme":"dark","isTransparent":true,"displayMode":"regular","width":"100%","height":420,"locale":"en"}</script></div>
 
 <h2 class="sec">Weekly Scorecard</h2>
-<div class="panel">
+<div class="panel" style="padding:4px 0">
 <table>
-<tr><th>Index</th><th>Last official close (Fri 4 Sep)</th><th>Change</th></tr>
-<tr><td>S&amp;P 500</td><td>7,718.60</td><td class="down">&minus;0.38%</td></tr>
-<tr><td>Nasdaq Composite</td><td>26,506.99</td><td class="down">&minus;0.29%</td></tr>
-<tr><td>Dow Jones Industrial Average</td><td>53,414.25</td><td class="down">&minus;271.86 (&minus;0.51%)</td></tr>
+<tr><th>Session</th><th>S&amp;P 500</th><th>Nasdaq Composite</th><th>Dow Jones Industrial Average</th></tr>
+<tr><td>Wed 16 Sep &mdash; close</td><td class="down">7,551.81 &nbsp;&minus;0.45%</td><td class="down">25,978.42 &nbsp;&minus;0.01%</td><td class="down">51,461.90 &nbsp;&minus;631.21 (&minus;1.21%)</td></tr>
+<tr><td>Thu 17 Sep</td><td class="mut" colspan="3">Session in progress &mdash; no close to publish. Latest verified intraday read: 12:00 p.m. ET, S&amp;P 500 +1.04% (7,631), Nasdaq Composite +1.45%, Dow +0.42%.</td></tr>
 </table>
-<p class="note">Re-verified against source again this edition, unchanged to the cent. These are the most recent official closes: Monday 7 September was Labor Day and U.S. stock and bond markets were shut all day. Today&#39;s session is still open, so no close is published for 8 September. Precise levels appear only in this table; the editorial above uses percentage moves and attributed figures.</p>
 </div>
+<p class="note">Only settled closes appear as levels. Wednesday's Dow reconciles exactly: 52,093.11 &minus; 631.21 = 51,461.90. One publisher's closing card described the Dow's loss as &ldquo;622 points, a 1.2% drop&rdquo;; the 631.21 figure is the one consistent with the level, so that is the one carried here, with the disagreement noted rather than split.</p>
 
 <h2 class="sec">Rates, Bonds &amp; Commodities</h2>
-<div class="panel">
+<div class="panel" style="padding:4px 0">
 <table>
-<tr><th>Instrument</th><th>Level</th><th>Note</th></tr>
-<tr><td>Fed funds target range</td><td>3.50&ndash;3.75%</td><td>The <b>15&ndash;16 September FOMC</b> is the next decision. Readings gathered this run put a <b>25 basis point hike</b> at <b>58.7% on CME FedWatch as of 7 September</b> and at <b>roughly 58&ndash;60%</b> after Friday&#39;s jobs report; one reading has a hold at <b>50.6%</b> against a hike at <b>49.4%</b>, and a <b>31 August</b> read gave <b>66%</b>. A fresh read this run puts it at <b>roughly 60%</b> for a 25 basis point hike &ldquo;next week&rdquo;, which falls inside the existing band. The band printed on this page therefore holds at <b>49&ndash;66%</b> and is printed as a range rather than averaged. <b>The decision itself is Wednesday 16 September at 2:00 PM ET, with the chair&#39;s press conference at 2:30 PM ET.</b></td></tr>
-<tr><td>10-year Treasury (today)</td><td>above 4.8%, then easing</td><td>The 10-year <b>topped 4.8% on Tuesday, its highest since October 2023</b>, before easing from those early highs later in the session. The bond market was shut Monday for Labor Day, so this is the first 8 September curve read available.</td></tr>
-<tr><td>2-year Treasury (today)</td><td>4.3810%</td><td>Flat on the session.</td></tr>
-<tr><td>1-year Treasury</td><td>4.12%</td><td rowspan="4" class="mut">Remainder of the curve as of Friday 4 September. The 10-year rose nearly 3 basis points to 4.79% that day on the stronger-than-expected jobs report. No full 8 September curve was published in returns read this run.</td></tr>
-<tr><td>2-year Treasury (4 Sep)</td><td>4.37%</td></tr>
-<tr><td>5-year Treasury</td><td>4.55%</td></tr>
-<tr><td>30-year Treasury</td><td>5.25%</td></tr>
-<tr><td>Brent crude</td><td>$97.99 (+1%, 11:28 a.m. ET) &nbsp;<span class="mut">/</span>&nbsp; session high $99.46</td><td>Approaching $100 after the Houthi attacks on Saudi energy facilities.</td></tr>
-<tr><td>WTI crude</td><td>nearly $94 (+2.5%+) &nbsp;<span class="mut">/</span>&nbsp; $92.90 (+1.55%)</td><td>Two reads from different moments this session. Both have WTI up; they do not agree on the level.</td></tr>
-<tr><td>U.S. retail diesel</td><td>$5.85 / gal</td><td>A record set on Friday 4 September, past the $5.816 June 2022 peak.</td></tr>
+<tr><th>Instrument</th><th>Level</th><th>Move</th><th>As of / source</th></tr>
+<tr><td>US 10-year Treasury yield</td><td>4.943%</td><td class="up">&minus;6 bp or more</td><td>17 Sep, CNBC</td></tr>
+<tr><td>US 2-year Treasury yield</td><td>4.675%</td><td class="up">&minus;5 bp or more</td><td>17 Sep, CNBC</td></tr>
+<tr><td>Fed funds target range</td><td>3.75%&ndash;4.00%</td><td class="down">+25 bp, 12&ndash;0</td><td>16 Sep FOMC decision</td></tr>
+<tr><td>Brent crude</td><td>$103.61</td><td class="up">&minus;2.10%</td><td>17 Sep, Trading Economics</td></tr>
+<tr><td>WTI crude</td><td>$102.13</td><td class="up">&minus;0.29%</td><td>17 Sep, Trading Economics</td></tr>
 </table>
-<p class="note">Where two reads of the same instrument disagreed on level while agreeing on direction, both are shown with their percentages rather than one being picked. Anyone who needs a single number should take it from the live ticker above, not from this table.</p>
 </div>
+<p class="note">Falls in yields and oil are shown in green because that is the direction helping equities today, not because lower is inherently better. The 30-year yield, gold, silver and bitcoin are omitted: no source fetched this run gave a current level for them. One-month rolling correlation between front-month WTI and the 10-year yield has reached <strong>0.96</strong>, per BMO Capital Markets &mdash; which is why the oil tape is being read as a rates tape.</p>
 
 <h2 class="sec">On the Radar</h2>
 <div class="panel">
 <ul class="bul">
-<li><b>August CPI lands Friday 11 September at 8:30 AM ET</b> &mdash; five days before the Fed decides, which is why this run&#39;s reads call it the most market-sensitive data point on the autumn calendar and the pivotal input for the hike-versus-hold argument. <b>PPI and Treasury auctions</b> are also on the week&#39;s slate.</li>
-<li><b>The sell side has been moving toward hikes.</b> <b>UBS, BofA and Deutsche Bank</b> have shifted forecasts toward increases in <b>September and December</b>, on resilient labour conditions plus energy-driven inflation tied to Middle East developments. One counter-view read this run: on a soft enough CPI print, September hike odds could fall to zero.</li>
-<li><b>Oracle reports Thursday 10 September</b> &mdash; its fiscal Q1 2027, with an estimated EPS of <b>$1.67</b>. This run&#39;s reads frame it as a bellwether for the state of AI financing, given the company&#39;s turn toward debt.</li>
-<li><b>The payrolls consensus now has a name attached to it.</b> The actual August print was <b>162,000</b> jobs, with unemployment unchanged at <b>4.1%</b> and average hourly earnings up <b>3.1%</b> year over year. This run gives the consensus as <b>53,000</b> from economists polled by <b>Dow Jones</b> &mdash; the figure this desk had verified repeatedly &mdash; while a separate read this run gives <b>56,000</b> and an earlier edition saw <b>55,000</b>. The 53,000 is the one now tied to a named survey, so it is the one used; the others are kept on the page because different surveys legitimately produce different consensus numbers.</li>
-<li><b>Middle East supply risk is now the market&#39;s main variable.</b> Alongside the Saudi strikes, this run&#39;s reads name tit-for-tat strikes between Iran and the U.S. as part of the same headwind that lifted crude and yields together.</li>
+<li><strong>Still to come today:</strong> the Philadelphia Fed Manufacturing Index and pending home sales, alongside the building-permits detail that accompanies the housing-starts release.</li>
+<li><strong>One more in 2026.</strong> The Fed's own forecast points to a further hike this year before a hold through 2027 &mdash; so every inflation print between now and December is a policy print.</li>
+<li><strong>Central banks abroad.</strong> The Bank of England is expected to hold at 3.75%; the Bank of Japan is expected to lift its policy rate to a three-decade high.</li>
+<li><strong>Oil is the swing factor.</strong> With crude and the 10-year moving together at a 0.96 correlation, an energy headline is now a bond headline and therefore an equity headline.</li>
 </ul>
 </div>
 
 <h2 class="sec">Sources</h2>
 <div class="panel srcs">
-@@SRCS@@
+<a href="https://247wallst.com/cards/tech-is-doing-the-heavy-lifting-at-midday-the-nasdaq-s-1-45-gspc-market-bell-01m2r1pgh0014krfmnx2pd7d96">24/7 Wall St. midday card, 12:00pm ET</a> &middot;
+<a href="https://247wallst.com/cards/">24/7 Wall St. market updates feed</a> &middot;
+<a href="https://finance.yahoo.com/markets/live/stock-market-today-thursday-september-17-dow-sp-500-nasdaq-081248626.html">Yahoo Finance live blog, 17 Sep</a> &middot;
+<a href="https://finance.yahoo.com/markets/stocks/articles/stock-market-today-sept-16-133949098.html">Yahoo Finance, 16 Sep close</a> &middot;
+<a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-16-2026">TheStreet, 16 Sep</a> &middot;
+<a href="https://www.cnbc.com/2026/09/17/treasury-yields-move-lower-after-fed-kicks-off-hiking-cycle.html">CNBC on Treasury yields, 17 Sep</a> &middot;
+<a href="https://www.cnbc.com/2026/09/16/treasury-yield-bond-market-fed-decision.html">CNBC on the Fed decision</a> &middot;
+<a href="https://www.cnbc.com/2026/09/17/generac-shares-surge-on-amazon-deal-wall-street-thinks-it-has-more-to-go-.html">CNBC on Generac</a> &middot;
+<a href="https://www.cnbc.com/2026/09/16/amazon-obtains-right-to-buy-up-to-340m-of-generac-boosting-stock-.html">CNBC on the Amazon warrant</a> &middot;
+<a href="https://seekingalpha.com/news/4643652-generac-soars-as-analysts-see-earnings-upside-from-amazon-deal">Seeking Alpha</a> &middot;
+<a href="https://247wallst.com/investing/2026/09/17/generac-holdings-surges-16-on-2-4b-amazon-data-center-generator-deal-caterpillar-ticks-up-cummins-sits-out-the-rally/">24/7 Wall St. on Generac</a> &middot;
+<a href="https://stockstotrade.com/news/fluence-energy-inc-flnc-news-2026_09_17/">StocksToTrade on Fluence</a> &middot;
+<a href="https://www.cnbc.com/2026/09/17/stocks-making-the-biggest-moves-premarket-gnrc-len-nke.html">CNBC premarket movers</a> &middot;
+<a href="https://www.bloomberg.com/news/articles/2026-09-17/us-jobless-claims-fall-to-196-000-continuing-applications-drop">Bloomberg on jobless claims</a> &middot;
+<a href="https://tradingeconomics.com/commodity/brent-crude-oil">Trading Economics, Brent</a> &middot;
+<a href="https://tradingeconomics.com/commodity/crude-oil">Trading Economics, WTI</a> &middot;
+<a href="https://www.cnbc.com/2026/09/15/oil-us-treasurys-stocks-pressure.html">CNBC on the oil&ndash;yield correlation</a> &middot;
+<a href="https://ng.investing.com/news/stock-market-news/building-permits-jobless-claims-and-pending-home-sales-due-thursday-93CH-2698711">Investing.com on today's calendar</a>
 </div>
-<p class="disc">Compiled automatically from public reporting gathered during this run; nothing was fetched first-hand. Live widgets on this page stream from TradingView and are independent of the editorial text, which is stamped with its own as-of time. Every figure above traces to a source listed here or to a standing sourced correction. Where two sources disagreed, both reads are shown. This is information, not investment advice, and nothing here is investment advice; markets move, and quotes on this page may be delayed.</p>
+
+<div class="disc">Information only. Nothing on this page is investment advice, a recommendation, or an offer to buy or sell any security. Intraday figures carry the time at which the source stated them and are not aged forward; where two sources disagreed, both reads are shown rather than averaged, and figures no source stated are left out rather than estimated. Live widgets are supplied by TradingView and may lag.</div>
 """
 
-BODY = (BODY.replace("@@MAST@@", masthead("The Closing Bell", "Your daily markets briefing &mdash; indices, movers, rates &amp; the calendar"))
+BODY = (BODY.replace("@@MAST@@", masthead("The Closing Bell", "Your daily markets briefing &mdash; the tape, the movers and what moves it"))
             .replace("@@NAV@@", nav("ws"))
-            .replace("@@TICKER@@", TICKER)
-            .replace("@@QUOTES@@", QUOTES)
-            .replace("@@SRCS@@", srcblock()))
+            .replace("@@TLDR@@", TLDR)
+            .replace("@@TAPE@@", TAPE_A)
+            .replace("@@Q1@@", quote("FOREXCOM:SPXUSD"))
+            .replace("@@Q2@@", quote("FOREXCOM:NSXUSD"))
+            .replace("@@Q3@@", quote("FOREXCOM:DJI")))
 
-html = page("The Closing Bell &mdash; Daily Briefings", CSS, BODY)
+html = page("The Closing Bell &mdash; Daily Markets Briefing", CSS, BODY)
 io.open(os.path.join(OUT, "wallstreet-briefing.html"), "w", encoding="utf-8").write(html)
 print("ws ok", len(html))

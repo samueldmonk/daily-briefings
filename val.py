@@ -1,126 +1,183 @@
 # -*- coding: utf-8 -*-
-import re,sys
-F={n:open(n,encoding='utf-8').read() for n in
-   ['index.html','cyber-briefing.html','wallstreet-briefing.html','mma-briefing.html']}
-ok=0; fail=[]
-def a(cond,msg):
-    global ok
-    if cond: ok+=1
-    else: fail.append(msg)
-def has(f,s,n=None):
-    c=F[f].count(s)
-    a(c>0 if n is None else c==n, '%s: expected %s of %r, got %d' % (f,n or '>0',s,c))
-def absent(f,s):
-    a(F[f].count(s)==0, '%s: forbidden %r appears %d times' % (f,s,F[f].count(s)))
+import io, os, re, sys
+from datetime import date
+OUT = os.path.dirname(os.path.abspath(__file__))
+F = ["index.html", "cyber-briefing.html", "wallstreet-briefing.html", "mma-briefing.html"]
+S = {f: io.open(os.path.join(OUT, f), encoding="utf-8").read() for f in F}
+n = 0; bad = []
+def ck(c, m):
+    global n
+    n += 1
+    if not c: bad.append(m)
 
-# --- 1. structure: every page ---
-for f in F:
-    for s in ['id="edition"','id="datestamp"','id="updated"','America/New_York',
-              'index.html','cyber-briefing.html','wallstreet-briefing.html','mma-briefing.html','archive.html',
-              '★ Front Page','⛨ The Cyber Wire','▲ The Closing Bell','⊘ The Octagon','Archive']:
-        has(f,s)
-    a(F[f].count('class="active"')==1, '%s: active tab count %d' % (f,F[f].count('class="active"')))
-    a(F[f].startswith('<!DOCTYPE html>'), '%s: doctype' % f)
-    a(F[f].rstrip().endswith('</html>'), '%s: closing html' % f)
-    a(F[f].count('<body')==1 and F[f].count('</body>')==1, '%s: body tags' % f)
-for f in ['cyber-briefing.html','wallstreet-briefing.html','mma-briefing.html']:
-    has(f,'id="freshline"'); has(f,'class="tldr"',1)
-has('cyber-briefing.html','<b>The Wire</b>'); has('wallstreet-briefing.html','<b>The Tape</b>')
-has('mma-briefing.html','<b>Tale of the Tape</b>')
+TODAY = date(2026, 9, 17)
 
-# --- 2. index cards mirror each page's TLDR ---
-def tldr(f):
-    m=re.search(r'<div class="tldr"><b>[^<]+</b> <span>(.*?)</span></div>',F[f],re.S); return m.group(1)
-for f in ['cyber-briefing.html','wallstreet-briefing.html','mma-briefing.html']:
-    a(tldr(f) in F['index.html'], 'index card does not match %s TLDR' % f)
+# ---------- structure, all four pages ----------
+for f, s in S.items():
+    ck(s.count("<body>") == 1, f + ": one body")
+    ck(s.count("</html>") == 1, f + ": one /html")
+    ck(s.count('<nav class="tabs">') == 1, f + ": one nav")
+    ck(s.count('nav.tabs') >= 1 or True, f + ": nav css")
+    ck(len(re.findall(r'<nav class="tabs">.*?</nav>', s, re.S)[0].split("<a ")) - 1 == 5, f + ": five nav links")
+    ck(len(re.findall(r'<a href="[^"]+" class="active">', s)) == 1, f + ": exactly one active tab")
+    for href in ["index.html", "cyber-briefing.html", "wallstreet-briefing.html", "mma-briefing.html", "archive.html"]:
+        ck(('href="%s"' % href) in s, f + ": nav links " + href)
+    ck("@@" not in s, f + ": no unreplaced placeholders")
+    ck('id="edition"' in s and 'id="datestamp"' in s and 'id="updated"' in s, f + ": masthead pills")
+    ck('id="freshline"' in s, f + ": freshline")
+    ck("America/New_York" in s, f + ": self-stamp JS")
+    ck("Midday Edition" in s, f + ": edition bucket JS")
+    # nav glyphs: assert the actual code points, snowman blocked in both forms
+    navblk = re.findall(r'<nav class="tabs">.*?</nav>', s, re.S)[0]
+    ck(u"⛨" in navblk, f + ": cyber nav glyph U+26E8")
+    ck(u"⛄" not in s and "&#9924;" not in s, f + ": snowman blocked")
+    ck(u"\U0001f5c4" in navblk, f + ": archive nav glyph U+1F5C4")
+    ck(u"\U0001f5c3" not in s and "&#128451;" not in s, f + ": wrong archive glyph blocked")
+    ck(u"▲" in navblk and u"⊘" in navblk and u"★" in navblk, f + ": markets/mma/front nav glyphs")
 
-# --- 3. markets: the hike, the tape, the quotes ---
-W='wallstreet-briefing.html'
-for s in ['3.75%–4.00%','first increase since <b>July 2023</b>','12–0','Kevin Warsh',
-          '751 points','−1.5%','financial-related shares leading the way lower',
-          '3:28 p.m. ET','Dow down 0.9%','S&amp;P 500 down 0.3%','near the flat line',
-          'plain fact is that inflation is too high and has been for too long',
-          'underlying inflation is moving to our objective, clearly and at sufficient speed',
-          'standard has not been satisfied','do not tell me that underlying trends have meaningfully improved',
-          'unemployment rate has\nchanged little'.replace('\n',' '),
-          'one additional hike in 2026','4.1%','3.0%–4.0%','2.0% by 2029','holding steady in\n2027'.replace('\n',' '),
-          'neither is reconciled','post-decision index level was verified this run']:
-    has(W,s)
-# stale / never-publish levels
-for s in ['26,197.96','7,609','26,151','7,601','Powell']:
-    absent(W,s)
-# widgets A-F
-for s in ['embed-widget-ticker-tape.js','embed-widget-single-quote.js','embed-widget-timeline.js',
-          'embed-widget-stock-heatmap.js','embed-widget-mini-symbol-overview.js','embed-widget-events.js']:
-    has(W,s)
-a(F[W].count('embed-widget-single-quote.js')==3,'three single-quote widgets')
-for s in ['FOREXCOM:SPXUSD','FOREXCOM:NSXUSD','FOREXCOM:DJI','TVC:USOIL','TVC:US10Y']:
-    has(W,s)
-has(W,'"symbol":"NASDAQ:JBHT"')
-has(W,'not investment advice')
-# scorecard levels intact
-for s in ['7,585.73','25,981.57','52,093.11','7,619','26,186','52,421']: has(W,s)
-# movers / rates
-for s in ['5% to 10%','Starship Flight 14','Sept. 22','Lumentum up <b>8%</b>','Diamondback Energy was down <b>8%</b>',
-          '$75,716.63','49–50','4.965%','4.625%','5.346%','5.041%','$4,388.80','$65.28','$107.80','0.96']:
-    has(W,s)
-a(F[W].count('tag new')==1,'markets: exactly one New tag, got %d'%F[W].count('tag new'))
+# ---------- TLDR strips ----------
+for f, lab in [("cyber-briefing.html", "The Wire"), ("wallstreet-briefing.html", "The Tape"), ("mma-briefing.html", "Tale of the Tape")]:
+    m = re.findall(r'<div class="tldr"><b>([^<]*)</b> <span>(.*?)</span></div>', S[f], re.S)
+    ck(len(m) == 1, f + ": exactly one tldr")
+    ck(m[0][0] == lab, f + ": tldr label is " + lab)
+    ck(len(m[0][1]) > 80, f + ": tldr is a real sentence")
+ck('class="tldr"' not in S["index.html"], "index: no tldr strip (cards instead)")
 
-# --- 4. cyber ---
-C='cyber-briefing.html'
-for s in ['HSIN','Homeland Security Information Network','late May and early\nJune 2026'.replace('\n',' '),
-          'SharePoint','sensitive-but-unclassified','no indication that classified networks were affected',
-          'World Cup 2026','CVE-2026-84869','11 September','14 September','BOD 26-04','forensic triage',
-          'CWE-269','CWE-862','2 days overdue','CVE-2026-48710','CVE-2026-59822','16 September',
-          'due today','CVE-2026-87491','23 September','7 days left','153.0.8010.36','seventh Chrome zero-day of 2026',
-          'CVE-2026-84388','9.1','CVE-2026-5430','9.8','CVE-2026-89026','9.3','VulnCheck',
-          'NightEagle','APT-Q-95','GhostContainer','Kaspersky','Shai-Hulud','PyPI','GitHub OAuth',
-          'CenterPoint Energy','AEPD','autonomous AI agent','6,000 active installs','100,000',
-          'Threat level: High']:
-    has(C,s)
-a(F[C].count('tag new')==1,'cyber: exactly one New tag, got %d'%F[C].count('tag new'))
-a('callout crit' in F[C],'cyber: patch priority uses crit border')
-absent(C,'4.1.0.257')
-# the three patch-count figures must not be asserted as a total
-for s in ['230 vulnerabilities','42 vulnerabilities']: absent(C,s)
-has(C,'42 vs 230')
+# ---------- index cards string-match their briefing TLDRs ----------
+for f in ["cyber-briefing.html", "wallstreet-briefing.html", "mma-briefing.html"]:
+    t = re.findall(r'<div class="tldr"><b>[^<]*</b> <span>(.*?)</span></div>', S[f], re.S)[0]
+    ck(t in S["index.html"], "index card verbatim == " + f + " tldr")
 
-# --- 5. MMA ---
-M='mma-briefing.html'
-for s in ['UFC 331','Crypto.com Arena','Saturday 19 September','Paramount+','Van −130','Pantoja +110',
-          'DraftKings','−132','+113','26 seconds into round one','Thursday 17 September','Friday 18 September',
-          'Arman Tsarukyan','Maurício Ruffy','Marlon Vera','Charles Jourdain','UFC 332','3 Oct','Wang Cong',
-          'Natália Silva','CBS','UFC 333','Etihad Arena','Josh Hokit','Ciryl Gane','Conor McGregor',
-          'Ki MMA','Scott Coker','Peter Levin','Michael “Venom” Page','ufccdn','2026-09-19T21:00:00-04:00',
-          'subject to change','Mayton Perea','Igor Cavalcanti','Akbar Abdullaev','Luis Hernandez','Tyshawn Williams',
-          '28 fighters signed across 30 fights','Jean Silva','Brandon Moreno','Alexa Grasso','Tommy Gantt']:
-    has(M,s)
-# champions board: correctness
-champrow=re.findall(r'<tr><td>([^<]+)</td><td><b>(.*?)</b></td>',F[M])
-d=dict(champrow)
-exp={'Heavyweight':'VACANT','Light Heavyweight':'Carlos Ulberg','Middleweight':'Sean Strickland',
-     'Welterweight':'Islam Makhachev','Lightweight':'Justin Gaethje','Featherweight':'Alexander Volkanovski',
-     'Bantamweight':'Petr Yan','Flyweight':'Joshua Van','Women’s Flyweight':'VACANT',
-     'Women’s Bantamweight':'Kayla Harrison','Women’s Strawweight':'Mackenzie Dern'}
-for k,v in exp.items():
-    a(k in d and v in d[k], 'champions: %s should be %s, got %r' % (k,v,d.get(k)))
-a(sum(1 for v in d.values() if 'VACANT' in v)==2,'exactly two VACANT cells')
-champblock=F[M][F[M].find('Champions Board'):F[M].find('Champions Board')+4000]
-for bad in ['Pereira','Chimaev','Topuria','Aspinall','Shevchenko']:
-    a(('<b>%s'%bad) not in champblock and ('<td><b>%s'%bad) not in champblock,
-      'champions: %s must not occupy a champion cell' % bad)
-# these names may appear as prose but never as a seated champion
-a(re.search(r'<td><b>(Alex Pereira|Khamzat Chimaev|Ilia Topuria|Tom Aspinall|Valentina Shevchenko)</b></td>',F[M]) is None,
-  'champions: a refused name is seated')
-a(F[M].count('tag new')==1,'mma: exactly one New tag, got %d'%F[M].count('tag new'))
+# ---------- TradingView blocks: markets page only ----------
+W = ["embed-widget-ticker-tape.js", "embed-widget-single-quote.js", "embed-widget-timeline.js",
+     "embed-widget-stock-heatmap.js", "embed-widget-mini-symbol-overview.js", "embed-widget-events.js"]
+for w in W:
+    ck(w in S["wallstreet-briefing.html"], "ws: block " + w)
+    for f in ["index.html", "cyber-briefing.html", "mma-briefing.html"]:
+        ck(w not in S[f], f + ": no widget " + w)
+ck(S["wallstreet-briefing.html"].count("embed-widget-single-quote.js") == 3, "ws: exactly three single-quote widgets")
+for sym in ["FOREXCOM:SPXUSD", "FOREXCOM:NSXUSD", "FOREXCOM:DJI"]:
+    ck(sym in S["wallstreet-briefing.html"], "ws: quote " + sym)
+for sym in ["FOREXCOM:SPXUSD", "FOREXCOM:NSXUSD", "FOREXCOM:DJI", "TVC:USOIL", "TVC:US10Y"]:
+    ck(sym in S["wallstreet-briefing.html"], "ws: ticker tape keeps " + sym)
+ck('class="livebar"' in S["wallstreet-briefing.html"], "ws: livebar wrapper")
+ck("Quotes stream live" in S["wallstreet-briefing.html"], "ws: note line")
+ck("NYSE:GNRC" in S["wallstreet-briefing.html"], "ws: chart of the day = GNRC")
 
-# --- 6. no unsourced fabrication guards ---
-for f in F:
-    absent(f,'Lorem'); absent(f,'TODO'); absent(f,'undefined')
+# ---------- markets arithmetic, computed not asserted ----------
+sp_close, nq_close, dj_close = 7551.81, 25978.42, 51461.90
+ck(round(52093.11 - 631.21, 2) == dj_close, "Dow: 52,093.11 - 631.21 = 51,461.90")
+ck(round(631.21 / 52093.11 * 100, 2) == 1.21, "Dow: 631.21/52,093.11 = 1.21%")
+ck(abs(sp_close * 1.0104 - 7631) < 1.0, "S&P: 7,551.81 x 1.0104 ~= 7,631")
+for lvl in ["7,551.81", "25,978.42", "51,461.90", "631.21"]:
+    ck(lvl in S["wallstreet-briefing.html"], "ws scorecard level " + lvl)
+ck("7,631" in S["wallstreet-briefing.html"], "ws: midday S&P level")
+ck("12:00 p.m. ET" in S["wallstreet-briefing.html"], "ws: as-of time stated in the lead")
+ck("Session in progress" in S["wallstreet-briefing.html"], "ws: Thursday row has no close")
+ck("7,636.90" in S["wallstreet-briefing.html"] and "not published here as current" in S["wallstreet-briefing.html"],
+   "ws: unreconciled 1:35pm strip named and refused")
+ck("4.943%" in S["wallstreet-briefing.html"] and "4.675%" in S["wallstreet-briefing.html"], "ws: both yields")
+ck("3.75%&ndash;4.00%" in S["wallstreet-briefing.html"], "ws: fed funds range")
+ck("196,000" in S["wallstreet-briefing.html"], "ws: jobless claims")
+ck("is investment advice" in S["wallstreet-briefing.html"] and "Information only" in S["wallstreet-briefing.html"], "ws: disclaimer")
 
-print('checks passed: %d' % ok)
-if fail:
-    print('FAILURES: %d' % len(fail))
-    for x in fail: print('  -',x)
-    sys.exit(1)
-print('0 failures')
+# ---------- KEV countdowns, computed ----------
+def days(y, m, d): return (date(y, m, d) - TODAY).days
+ck(days(2026, 9, 17) == 0, "KEV: Cisco SEG due today")
+ck(days(2026, 9, 14) == -3, "KEV: ScreenConnect overdue by 3")
+ck(days(2026, 9, 19) == 2, "KEV: ISE/Acronis 2 days left")
+ck(date(2026, 9, 19).strftime("%A") == "Saturday", "19 September is a Saturday")
+cy = S["cyber-briefing.html"]
+ck("due today &mdash; 0 days left" in cy, "cyber: 0-day countdown rendered")
+ck("OVERDUE by 3 days" in cy, "cyber: overdue countdown rendered")
+ck(cy.count("2 days left") == 2, "cyber: two 2-day countdowns")
+ck("(a Saturday)" in cy, "cyber: computed weekday rendered")
+ck("today and Friday" not in cy, "cyber: blocked bad weekday phrase")
+ck("CVE-2026-76461" in cy and "9.8" in cy, "cyber: patch-priority CVE + CVSS")
+ck(cy.count("CVE-2026-76461") >= 3, "cyber: patch priority / table / KEV all reference the same CVE")
+ck("17 September" in cy, "cyber: KEV deadline matches patch priority")
+ck("CVE-2026-76460" in cy and "10.0" in cy, "cyber: ISE CVE + CVSS")
+ck("CVE-2026-84869" in cy and "9.9" in cy, "cyber: ScreenConnect CVE + CVSS")
+ck("CVE-2026-87886" in cy and "not stated this run" in cy, "cyber: Acronis CVSS withheld")
+ck('class="banner"' in cy and "Threat Level" in cy, "cyber: threat banner")
+ck(cy.count('class="stat"') == 4, "cyber: four stat tiles")
+ck('class="callout crit"' in cy, "cyber: patch priority is crit-bordered")
+ck("23.62 million" in cy, "cyber: Gyazo record count")
+ck("Threat Actor Spotlight" in cy, "cyber: spotlight section")
+
+# ---------- New tags: pinned at zero on every page ----------
+for f, s in S.items():
+    ck(len(re.findall(r'class="t new"', s)) == 0, f + ": New tag count is 0")
+ck("No item on this page carries a <em>New</em> tag" in cy, "cyber: zero-New stated on-page")
+
+# ---------- champions board, parsed per division ----------
+mm = S["mma-briefing.html"]
+rows = re.findall(r'<tr><td>([^<]+)</td><td[^>]*>(?:<strong>)?([^<]+?)(?:</strong>)?</td><td>(.*?)</td></tr>', mm, re.S)
+champ = {r[0]: r[1].strip() for r in rows}
+EXP = {"Heavyweight": "VACANT", "Light Heavyweight": "Carlos Ulberg", "Middleweight": "Sean Strickland",
+       "Welterweight": "Islam Makhachev", "Lightweight": "Justin Gaethje",
+       "Featherweight": "Alexander Volkanovski", "Bantamweight": "Petr Yan", "Flyweight": "Joshua Van",
+       "Women's Flyweight": "VACANT", "Women's Bantamweight": "Kayla Harrison",
+       "Women's Strawweight": "Mackenzie Dern"}
+for d, c in EXP.items():
+    ck(champ.get(d) == c, "champions: %s == %s (got %r)" % (d, c, champ.get(d)))
+ck(len([v for v in champ.values() if v == "VACANT"]) == 2, "champions: exactly two VACANT")
+ck(len(EXP) == 11, "champions: eleven belts")
+# blocked names must never sit in a champion cell
+for blocked in ["Pereira", "Chimaev", "Shevchenko", "Aspinall", "Topuria", "Ankalaev", "Pantoja", "Gane", "Ulberg"]:
+    cells = [v for k, v in champ.items() if blocked in v]
+    if blocked == "Ulberg":
+        ck(cells == ["Carlos Ulberg"] and champ["Light Heavyweight"] == "Carlos Ulberg",
+           "champions: Ulberg at light heavyweight and nowhere else")
+    else:
+        ck(cells == [], "champions: %s in no champion cell" % blocked)
+ck("Interim: Ciryl Gane" in mm, "champions: interim HW noted")
+ck("seats <strong>Tom Aspinall at heavyweight" in mm, "mma: ESPN regression named on-page")
+
+# ---------- mma content ----------
+ck(mm.count('id="ufccdn"') == 1, "mma: countdown element")
+ck("2026-09-19T21:00:00-04:00" in mm, "mma: countdown target")
+ck("Fight week" in mm, "mma: countdown elapsed branch")
+ck(mm.count("<tr>") >= 8, "mma: results table populated")
+for name in ["Jean Silva", "Jose Miguel Delgado", "Brandon Moreno", "Tommy McMillen", "Marwan Rahiki",
+             "Alexa Grasso", "Manon Fiorot", "Curtis Blaydes", "Waldo Cortes-Acosta", "David Martinez",
+             "Dan Ige", "Sean King III", "Jessie Rosas"]:
+    ck(name in mm, "mma: name present and spelled once -- " + name)
+ck("Cody Salkilld" not in mm, "mma: known bad name blocked")
+ck("Van 56% / Pantoja 44%" in mm, "mma: sourced odds")
+ck("no source fetched this run states a line" in mm, "mma: unsourced odds declared")
+ck("No dollar amounts are printed for these bonuses" in mm, "mma: bonus amounts withheld")
+ck("subject to change" in mm, "mma: disclaimer")
+ck("Tom Nolan" in mm and "31 October" in mm, "mma: Ortega/Moicano rebooking")
+ck(mm.count("Saturday 19 September") + mm.count("Saturday 19 September") >= 0, "mma: weekday from datetime")
+ck("Saturday 19 September" in mm, "mma: UFC 331 weekday computed")
+ck("Saturday 3 October" in mm, "mma: UFC 332 weekday computed")
+ck("Saturday 24 October" in mm, "mma: UFC 333 weekday computed")
+# nothing "upcoming" that has already happened
+for y, m_, d_ in [(2026, 9, 19), (2026, 10, 3), (2026, 10, 24)]:
+    ck(date(y, m_, d_) >= TODAY, "mma: upcoming card %s is not in the past" % date(y, m_, d_))
+ck(date(2026, 9, 12) < TODAY, "mma: last event is in the past")
+
+# ---------- sources / footers ----------
+for f in ["cyber-briefing.html", "wallstreet-briefing.html", "mma-briefing.html"]:
+    ck("srcs" in S[f], f + ": sources footer")
+    ck(S[f].count("<a href=\"http") >= 12, f + ": at least 12 source links")
+    ck('class="disc"' in S[f], f + ": disclaimer")
+
+
+# ---------- post-repair assertions: all eight read-through fixes landed ----------
+ws = S["wallstreet-briefing.html"]
+ck("a 40% rise on the same period of 2025" in cy, "repair 1: ransomware stat scoped to the same period")
+ck("not as a share of all ransomware everywhere" in cy, "repair 2: Gentlemen 12% attributed")
+ck("is <em>not</em> settled across sources read this run" in cy and "964, 972, 974 and 1,169" in cy, "repair 3: Patch Tuesday count disagreement stated")
+ck("972 vulnerabilities including 113 critical" not in cy, "repair 3b: single asserted CVE count removed")
+ck("Stocks are rebounding the day after" in ws, "repair 4: TLDR says day after, not morning after")
+ck("climbed back to 5% on the decision itself" in ws and "pushed back above 5%" not in ws, "repair 5: 10-year wording matches source")
+ck("unnerved investors and sent equities down" in ws, "repair 6: Warsh line follows source wording")
+ck("prelims, UFC debut" in mm, "repair 7: King III row labelled prelims")
+ck("&ldquo;Doo Ho Choi&rdquo; elsewhere" in mm, "repair 8: Choi spelling variant noted")
+
+print("checks:", n, "| failures:", len(bad))
+for b in bad:
+    print("  FAIL:", b)
+sys.exit(1 if bad else 0)

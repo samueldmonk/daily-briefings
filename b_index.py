@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import io, os, sys
+import io, os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from shared import css, masthead, nav, page
 
@@ -18,27 +18,37 @@ EXTRA = """
 """
 CSS = css("#8b93a1", "#c8cdd6", "#0b0c0e", "#141619", "#242830", EXTRA)
 
+def tldr(fn):
+    s = io.open(os.path.join(OUT, fn), encoding="utf-8").read()
+    m = re.search(r'<div class="tldr"><b>[^<]*</b> <span>(.*?)</span></div>', s, re.S)
+    assert m, fn
+    return m.group(1)
+
+CY = tldr("cyber-briefing.html")
+WS = tldr("wallstreet-briefing.html")
+MM = tldr("mma-briefing.html")
+
 BODY = """@@MAST@@
 <div class="freshline" id="freshline">&nbsp;</div>
 @@NAV@@
 
 <div class="big">
 <div class="card c-cy">
-<div class="kick">&#9880; The Cyber Wire &middot; The Wire</div>
-<h3>The biggest Patch Tuesday ever shipped, and two of its flaws were already being used</h3>
-<p>Microsoft&#39;s September release landed this afternoon with 973 CVEs, described as its largest to date, including two Windows elevation-of-privilege zero-days confirmed exploited in the wild &mdash; while the MikroTik router takeover chain runs on unpatched with more than 122,000 exposed devices.</p>
+<div class="kick">&#9960; The Cyber Wire &middot; The Wire</div>
+<h3>A Cisco deadline expires today, and a ScreenConnect one already has</h3>
+<p>@@CY@@</p>
 <a class="go" href="cyber-briefing.html">Read the briefing &rarr;</a>
 </div>
 <div class="card c-ws">
 <div class="kick">&#9650; The Closing Bell &middot; The Tape</div>
-<h3>The Dow gives up 500 points as two unrelated shocks bite</h3>
-<p>A midday read has the Dow down around 500 points &mdash; roughly one percent, and consistent with the other reads of this session &mdash; as Houthi strikes on Saudi energy facilities push Brent toward $100 and a failed Novartis heart-drug trial drags health care down more than 2%.</p>
+<h3>The tape turns back up, one day after the hike</h3>
+<p>@@WS@@</p>
 <a class="go" href="wallstreet-briefing.html">Read the briefing &rarr;</a>
 </div>
 <div class="card c-mm">
 <div class="kick">&#8856; The Octagon &middot; Tale of the Tape</div>
-<h3>A win on Saturday, off the rankings Monday, off the roster by Tuesday</h3>
-<p>Two outlets now report that Michael Page has actually been released by the UFC, three days after his win at UFC Paris and a day after being pulled from the rankings, though the promotion itself has announced nothing.</p>
+<h3>A title rematch in Los Angeles, and a withdrawal that did not happen</h3>
+<p>@@MM@@</p>
 <a class="go" href="mma-briefing.html">Read the briefing &rarr;</a>
 </div>
 </div>
@@ -46,12 +56,13 @@ BODY = """@@MAST@@
 <h2 class="sec">About these briefings</h2>
 <div class="panel">
 <p style="margin:0 0 9px">Three briefings, rebuilt from live web search every thirty minutes between 8 AM and 6 PM Eastern. Each page carries its own as-of stamp, its own source list, and its own record of what it refused to publish and why.</p>
-<p style="margin:0" class="note">Nothing on any of these pages is fetched first-hand; everything is compiled from public reporting gathered during the run that produced it. Where two sources disagreed, both reads are shown rather than averaged. Point-in-time snapshots of every edition are kept in the <a href="archive.html">Archive</a>. The markets page is information only and is not investment advice.</p>
+<p style="margin:0" class="note">Nothing on any of these pages is fetched first-hand; everything is compiled from public reporting gathered during the run that produced it. Where two sources disagreed, both reads are shown rather than averaged, and figures no source stated are left blank rather than estimated. Point-in-time snapshots of every edition are kept in the <a href="archive.html">Archive</a>. The markets page is information only and is not investment advice.</p>
 </div>
 """
 
 BODY = (BODY.replace("@@MAST@@", masthead("Daily Briefings", "Security, markets and MMA &mdash; refreshed every 30 minutes, 8 AM&ndash;6 PM ET"))
-            .replace("@@NAV@@", nav("index")))
+            .replace("@@NAV@@", nav("index"))
+            .replace("@@CY@@", CY).replace("@@WS@@", WS).replace("@@MM@@", MM))
 
 html = page("Daily Briefings", CSS, BODY)
 io.open(os.path.join(OUT, "index.html"), "w", encoding="utf-8").write(html)
