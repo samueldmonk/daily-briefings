@@ -1,101 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Daily Briefings</title>
 <style>
-:root{--bg:#0c0e12;--panel:#141821;--panel2:#1a1f2a;--line:#232a36;--fg:#e9edf4;--fg2:#c0c8d6;--muted:#7d8798;--accent:#8ab4ff;--accent2:#caa64a;--up:#4ecb7d;--crit:#ff5f56;--warn:#e8b64c;
+:root{--bg:#0b0b0d;--panel:#141418;--line:#26262e;--txt:#eceaf0;--muted:#8a8898;
+--accent:#9aa0ff;--accent2:#c3b6ff;--up:#22c55e;--down:#ef4444;--crit:#ef4444;--warn:#f0b429;
 --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.big{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px}
+.big .card{padding:20px 21px;border-top:3px solid var(--line)}
+.big .card.cy{border-top-color:#22d3a8}
+.big .card.ws{border-top-color:#caa64a}
+.big .card.mm{border-top-color:#e84545}
+.big .card .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:9px}
+.big .card.cy .k{color:#22d3a8}
+.big .card.ws .k{color:#caa64a}
+.big .card.mm .k{color:#e84545}
+.big .card h3{font-size:21px;margin-bottom:10px}
+.big .card.ws h3{font-family:Georgia,'Times New Roman',serif}
+.big .card p{font-size:14.5px;line-height:1.55;margin-bottom:13px}
+.big .card a.rd{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.big .card.cy a.rd{color:#22d3a8}
+.big .card.ws a.rd{color:#caa64a}
+.big .card.mm a.rd{color:#e84545}
 
 *{box-sizing:border-box}
-body{margin:0;padding:26px 18px 60px;background:var(--bg);color:var(--fg);
- font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
- font-size:15.5px;line-height:1.62;-webkit-font-smoothing:antialiased}
-.wrap{max-width:960px;margin:0 auto}
-a{color:var(--accent);text-decoration:none}
+body{margin:0;background:var(--bg);color:var(--txt);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:15.5px;line-height:1.62;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin:0 auto;padding:26px 20px 70px}
+a{color:var(--accent2);text-decoration:none}
 a:hover{text-decoration:underline}
-header.mast{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:6px}
-h1.title{margin:0 0 4px;font-size:34px;letter-spacing:-.5px}
-.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
-.tagline{color:var(--muted);font-size:14px;margin:0 0 12px}
-.meta{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
-.pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;
- background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:4px 10px;color:var(--muted)}
-.pill.live{color:var(--up);border-color:var(--up)}
+.masthead{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:14px}
+.masthead h1{margin:0 0 4px;font-size:34px;letter-spacing:-.5px}
+.masthead .sub{color:var(--muted);font-size:14px;margin:0}
+.meta{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+.pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;
+  background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:4px 11px;color:var(--muted)}
+.pill.live{color:var(--up);border-color:rgba(34,197,94,.35)}
 .pill.live .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--up);margin-right:6px;vertical-align:middle}
-nav.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 20px}
+nav.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 20px}
 nav.tabs a{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
- background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:8px 13px;color:var(--muted);
- transition:transform .12s ease,border-color .12s ease}
-nav.tabs a:hover{transform:translateY(-1px);border-color:var(--accent);text-decoration:none}
-nav.tabs a.active{color:var(--accent);border-color:var(--accent);background:var(--panel2)}
-.freshline{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--muted);margin:8px 0 2px}
-section{margin:28px 0}
+  background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:8px 13px;color:var(--muted);transition:.15s}
+nav.tabs a:hover{color:var(--txt);border-color:var(--accent);text-decoration:none;transform:translateY(-1px)}
+nav.tabs a.active{color:var(--accent);border-color:var(--accent);background:rgba(255,255,255,.03)}
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
+  border-radius:10px;padding:11px 15px;margin:6px 0 2px;font-size:14.5px;line-height:1.5}
+.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-right:9px}
+.freshline{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--muted);margin:9px 0 2px}
 h2.sec{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;
- color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:7px;margin:0 0 14px}
-.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
-.panel h3{margin:0 0 8px;font-size:19px;line-height:1.3}
-.panel p{margin:0 0 10px}
-.panel p:last-child{margin-bottom:0}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:13px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;
- transition:transform .13s ease,border-color .13s ease}
-.card:hover{transform:translateY(-2px);border-color:var(--accent)}
-.card h4{margin:0 0 6px;font-size:16px;line-height:1.32}
-.card p{margin:0;font-size:14px;color:var(--fg2)}
-.tag{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;
- border-radius:5px;padding:2px 7px;margin:0 6px 7px 0;border:1px solid}
-.tag.n{color:var(--up);border-color:var(--up)}
-.tag.c{color:var(--crit);border-color:var(--crit)}
-.tag.w{color:var(--warn);border-color:var(--warn)}
-.tag.i{color:var(--accent);border-color:var(--accent)}
+  color:var(--accent);margin:34px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:14px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:13px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 16px;transition:.16s}
+.card:hover{transform:translateY(-2px);border-color:var(--accent);box-shadow:0 8px 22px rgba(0,0,0,.34)}
+.card h3{margin:0 0 7px;font-size:16px;line-height:1.32}
+.card p{margin:0;font-size:14px;color:#cfcbc6}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:9px}
+.t{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
+  border-radius:5px;padding:3px 7px;border:1px solid var(--line);color:var(--muted)}
+.t.new{color:var(--accent);border-color:var(--accent)}
+.t.hot{color:var(--crit);border-color:rgba(239,68,68,.45)}
+.t.pro{color:var(--up);border-color:rgba(34,197,94,.45)}
+.t.gold{color:var(--warn);border-color:rgba(240,180,41,.45)}
 table{width:100%;border-collapse:collapse;font-size:14px}
 th{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
- text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
-td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  text-align:left;padding:9px 10px;border-bottom:1px solid var(--line)}
+td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top}
 tr:last-child td{border-bottom:none}
-.up{color:var(--up)}
-.down{color:var(--crit)}
-.flat{color:var(--muted)}
-.mono{font-family:var(--mono)}
-ul.bul{margin:0;padding-left:19px}
-ul.bul li{margin-bottom:9px}
-ul.bul li:last-child{margin-bottom:0}
-.note{font-size:12.5px;color:var(--muted);margin-top:11px;line-height:1.55}
-.callout{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--warn);
- border-radius:10px;padding:14px 17px}
+.up{color:var(--up)} .down{color:var(--down)} .mut{color:var(--muted)}
+ul.bul{margin:0;padding-left:19px} ul.bul li{margin-bottom:9px}
+.callout{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--warn);
+  border-radius:10px;padding:14px 17px;margin-bottom:14px}
 .callout.crit{border-left-color:var(--crit)}
-.callout h3{margin:0 0 7px;font-size:17px}
-.tldr{background:var(--panel);border:1px solid var(--line);border-radius:10px;
- padding:11px 15px;margin:6px 0 2px;font-size:14.5px;line-height:1.5}
-.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;margin-right:9px}
-.livebar{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 8px 4px;margin-bottom:18px}
-.livebar-label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--up);display:flex;align-items:center;gap:8px;padding:4px 8px 8px}
-.tickers{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:12px;margin-bottom:8px}
-.ticker{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:6px 10px}
-.cdbar{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
- border-radius:10px;padding:11px 15px;margin-bottom:18px;display:flex;flex-wrap:wrap;gap:10px;align-items:baseline}
-.cdbar b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
-.cdbar .cd{font-family:var(--mono);font-size:15px;color:var(--fg)}
-footer{margin-top:44px;border-top:1px solid var(--line);padding-top:16px;font-size:12.5px;color:var(--muted)}
-footer h2{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:0 0 9px}
-footer ul{margin:0;padding-left:18px}
-footer li{margin-bottom:5px;word-break:break-word}
-.disclaim{margin-top:16px;font-size:11.5px;color:var(--muted);font-style:italic}
+.callout h3{margin:0 0 7px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--warn)}
+.callout.crit h3{color:var(--crit)}
+.banner{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 17px;margin-bottom:14px;
+  display:flex;flex-wrap:wrap;align-items:center;gap:13px}
+.banner .lvl{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+  padding:5px 12px;border-radius:7px;border:1px solid var(--crit);color:var(--crit)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:11px;margin-bottom:14px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:13px 15px}
+.stat .n{font-family:var(--mono);font-size:21px;color:var(--accent);letter-spacing:-.5px}
+.stat .l{font-size:11.5px;color:var(--muted);margin-top:3px;line-height:1.4}
+.note{font-size:12.5px;color:var(--muted);margin:9px 0 0}
+.srcs{font-size:12.5px;color:var(--muted);word-break:break-word}
+.srcs a{color:var(--muted)}
+.disc{font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin-top:26px;padding-top:14px}
+@media(max-width:640px){.masthead h1{font-size:26px}.wrap{padding:18px 14px 50px}}
 
 </style>
-</head>
-<body>
-<div class="wrap">
-<header class="mast"><div class="kicker">&#9733; Daily</div><h1 class="title">Daily Briefings</h1><p class="tagline">Security, markets and mixed martial arts &mdash; three desks, refreshed every half hour.</p><div class="meta"><span class="pill live"><span class="dot"></span>Live</span><span class="pill" id="edition">&nbsp;</span><span class="pill" id="datestamp">&nbsp;</span><span class="pill">Updated <span id="updated">&nbsp;</span></span></div></header><div class="freshline" id="freshline">&nbsp;</div><nav class="tabs"><a href="index.html" class="active">&#9733; Front Page</a><a href="cyber-briefing.html">&#9960; The Cyber Wire</a><a href="wallstreet-briefing.html">&#9650; The Closing Bell</a><a href="mma-briefing.html">&#8856; The Octagon</a><a href="archive.html">&#128452; Archive</a></nav><section><h2 class="sec">Today&rsquo;s briefings</h2><div class="cards" style="grid-template-columns:1fr"><div class="card" style="border-left:3px solid #22d3a8;padding:18px 20px"><div class="mono" style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#22d3a8;margin-bottom:6px">&#9960; The Cyber Wire &middot; The Wire</div><h4 style="font-size:20px;margin-bottom:8px">Cisco ISE, one day from the deadline</h4><p style="font-size:14.5px;line-height:1.55;margin-bottom:12px">Eight to ten vulnerabilities crossed into CISA&rsquo;s exploited catalog in seven days &mdash; the tracker&rsquo;s own count still disagrees with itself &mdash; and the one carrying a federal deadline of 19 September is the CVSS 10.0 authentication bypass in Cisco Identity Services Engine, now one day out.</p><a href="cyber-briefing.html" style="color:#22d3a8;font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase">Read the briefing &rarr;</a></div><div class="card" style="border-left:3px solid #caa64a;padding:18px 20px"><div class="mono" style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#caa64a;margin-bottom:6px">&#9650; The Closing Bell &middot; The Tape</div><h4 style="font-size:20px;margin-bottom:8px">The close finally posted</h4><p style="font-size:14.5px;line-height:1.55;margin-bottom:12px">Stocks closed a volatile week mixed &mdash; the S&amp;P 500 up 0.17% to 7,650.50 and the Nasdaq Composite up 0.39% to 26,522.55, the Dow down 0.18% to 51,682.64 and more than 1.5% for the week &mdash; as the 10-year Treasury yield climbed back to 5.01% and Warren Buffett stepped down as Berkshire&rsquo;s chairman.</p><a href="wallstreet-briefing.html" style="color:#caa64a;font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase">Read the briefing &rarr;</a></div><div class="card" style="border-left:3px solid #e84545;padding:18px 20px"><div class="mono" style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#e84545;margin-bottom:6px">&#8856; The Octagon &middot; Tale of the Tape</div><h4 style="font-size:20px;margin-bottom:8px">A title settled in 26 seconds gets a rematch</h4><p style="font-size:14.5px;line-height:1.55;margin-bottom:12px">Joshua Van and Alexandre Pantoja both made 125 pounds in Los Angeles and settle the flyweight title tomorrow night at UFC 331, with Van a modest &minus;138 favourite in a rematch of a fight that lasted 26 seconds.</p><a href="mma-briefing.html" style="color:#e84545;font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase">Read the briefing &rarr;</a></div></div></section><section><h2 class="sec">What changed this edition</h2><div class="panel"><ul class="bul">
-<li><b>Markets:</b> Friday&rsquo;s official close is published for the first time, after four consecutive editions today refused it. The refusal held because the only figures on offer were an opening-bell print relabelled as a close &mdash; a trap that fired again this run and was refused again.</li>
-<li><b>Cyber:</b> the Cisco ISE deadline is now <b>one day out</b>, and its <b>16 September KEV add date</b> is newly confirmed from CISA&rsquo;s own alert index rather than carried.</li>
-<li><b>MMA:</b> UFC 331 is <b>tomorrow</b>, not tonight. Everyone made weight, and the ESPN champions page regressed for a fifth consecutive run &mdash; refused and named on the page.</li>
-</ul></div></section><footer><h2>About</h2>
-<p>Four pages, rebuilt from live sources every thirty minutes between 8 AM and 6 PM Eastern. Every figure on every page traces to a source fetched in that run or to a dated entry in this site&rsquo;s standing corrections file; anything that could not be verified is named as refused rather than quietly dropped. Point-in-time snapshots of each edition are kept in the <a href="archive.html">Archive</a>.</p>
-<p class="disclaim">Information only. Not investment advice, not security advice. Cards and bouts are subject to change.</p></footer></div>
+</head><body><div class="wrap">
+<header class="masthead">
+<h1>Daily Briefings</h1>
+<p class="sub">Three desks, rebuilt from live sources every thirty minutes, 8 AM&ndash;6 PM ET</p>
+<div class="meta">
+<span class="pill live"><span class="dot"></span>Live</span>
+<span class="pill" id="edition">&nbsp;</span>
+<span class="pill" id="datestamp">&nbsp;</span>
+<span class="pill">Updated <span id="updated">&nbsp;</span></span>
+</div>
+</header>
+<div class="freshline" id="freshline">&nbsp;</div>
+<nav class="tabs"><a href="index.html" class="active">★ Front Page</a><a href="cyber-briefing.html">⛨ The Cyber Wire</a><a href="wallstreet-briefing.html">▲ The Closing Bell</a><a href="mma-briefing.html">⊘ The Octagon</a><a href="archive.html">🗄 Archive</a></nav><div class="big"><div class="card cy"><div class="k">&#9960; The Cyber Wire &middot; The Wire</div><h3>Two federal patch deadlines inside a day</h3><p>Two federal patch deadlines land inside twenty-four hours &mdash; the actively exploited Chrome V8 zero-day CVE-2026-85046 is due today and the CVSS&nbsp;10.0 Cisco ISE bypass CVE-2026-76460 is due tomorrow &mdash; while the KEV tracker still cannot agree with itself on whether this week brought eight new exploited flaws or ten.</p><a class="rd" href="cyber-briefing.html">Read the briefing &rarr;</a></div><div class="card ws"><div class="k">&#9650; The Closing Bell &middot; The Tape</div><h3>A split close to a triple-witching week</h3><p>Wall Street closed a volatile, triple-witching week split &mdash; the Nasdaq up 0.39%, the S&amp;P&nbsp;500 up 0.17% and the Dow down 0.18% &mdash; with the 10-year yield back at 5.00% and Warren Buffett stepping down as Berkshire chairman.</p><a class="rd" href="wallstreet-briefing.html">Read the briefing &rarr;</a></div><div class="card mm"><div class="k">&#8856; The Octagon &middot; Tale of the Tape</div><h3>UFC 331 is tomorrow, and everyone made weight</h3><p>UFC&nbsp;331 is tomorrow night in Los Angeles with all twenty-four fighters on weight and Joshua Van a narrow favourite to keep the flyweight belt against Alexandre Pantoja, whose first meeting ended in twenty-six seconds.</p><a class="rd" href="mma-briefing.html">Read the briefing &rarr;</a></div></div>
+<h2 class="sec">About this edition</h2>
+<div class="panel"><p>Each desk is rebuilt from live web sources on every run. Nothing is published unless a source read during that run states it, or a standing correction in this site&rsquo;s ledger records it with a source. Figures that could not be reconciled are printed side by side or withheld, and the refusal is named on the page rather than quietly dropped. Point-in-time snapshots of every edition are kept in the <a href="archive.html">archive</a>.</p></div>
+<p class="disc">Information only. The markets desk is not investment advice; the security desk is not a substitute for vendor advisories; fight cards are subject to change.</p>
+</div>
 <script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \u00b7 briefings refresh every 30 minutes, 8 AM\u20136 PM ET';}catch(e){}})();</script>
-
-</body>
-</html>
+</body></html>
