@@ -22862,3 +22862,119 @@ deleting and report how many days were removed.
 - 🔵 **ELEVEN READ-THROUGH REPAIRS.** (a) "Nine rows, **three** of which carry no CVSS" — there are **four** → corrected; the validator had asserted four, the prose said three, and only the read-through caught the disagreement between a passing check and the sentence next to it. (b) "15 new exploited CVEs **this week**" → "for its week" (relative inside an archived snapshot). (c) "**Also sourced:** 22 critical Office patches…" → "Also **carried from an earlier edition today**" — those figures were not read this run. (d) New-tag meaning stated on the breaches section. (e)+(f) COIN range and Xenon superlative (above). (g) XLK period refusal. (h) Chart-of-the-Day choice explained. (i) "The billing conflict **from earlier today**" → "carried in **earlier editions today**". (j) "the vacant belt is filled **in two weeks**" → "**on 3 October**". (k) Menifield's method labelled **inferred**. ⭐ *Repairs (b), (i) and (j) are one recurring failure in three costumes: relative time written into a page that will be read back as a dated snapshot.*
 - 🔵 **VALIDATION — 542 checks + 25 post-repair assertions / 0 failures.** Every class used in each body asserted present in that page's own stylesheet (all passed this run — the `.mut`/`.mono`/`.dv` additions from the 5:05pm run held). Champions: 11 rows, exactly ONE VACANT, ten divisions pinned by division↔name equality, ten banned names asserted absent from champion cells, every champion cell <60 chars, **and no repeated date in the "Won" column** (the copy-down guard from the 4:35pm failure, now automated). Results: 5 rows, all five winners asserted by name. Cyber: **9 CVE rows, no duplicates, exactly four "not stated"**, every CVSS pinned to its CVE by regex, the 19 Sep deadline asserted present in both the Patch Priority callout and the KEV list, **no literal countdown text** (all three computed in JS), both 19 Sep countdowns asserted to use the identical ISO date, BOD 22-01 permitted only inside its exclusion sentence. Markets: Dow percent recomputed from points and level, Dow points+level arithmetic asserted, both conflict pairs present, **VIX asserted to appear exactly once and only inside the refusal sentence**, Chart-of-the-Day symbol asserted to match the named mover. Structural on all four: one doctype/body/nav, five nav links, exactly one active tab and on the right page, nav glyphs at codepoint level, no unreplaced `@@`, freshline present, **no http:// links anywhere**, ≥12 source links per briefing. All six TradingView blocks on markets, asserted absent from the other three; exactly three single-quote widgets; tape retains three indices plus WTI and the 10-year. Each index card string-matched verbatim against its briefing's TLDR **both before and after repairs**; index asserted to carry no TLDR of its own. "tomorrow"/"yesterday" asserted absent from all four pages before and after repairs.
 - 🔵 **ARCHIVE — 648 snapshots, 216 editions, 21 days**; `archive.html` regenerated whole by `gen_archive.py` at **65.5 KB**, **648 links, 648 unique, 0 broken, 0 unlinked, 0 unparsed**. Prune by FILENAME date; 0 files older than 21 days.
+
+## Added 2026-09-20 (Sunday — clone ~6:05pm ET, research 6:06–6:20pm, build 6:20–6:32pm, validated 366 checks / 0 failures, read-through with nine repairs, published ~6:35pm — AFTERNOON EDITION, markets CLOSED all weekend, SIXTH run of the day; archive stamp 2026-09-20-1816)
+- 🟢🟢 **CYBER — THE TOP STORY CHANGED, DELIBERATELY.** ShinyHunters/Clop (19 Sep) held the top slot for the previous
+  five runs; it is demoted to a Breaches & Incidents card (re-verified, unchanged) and replaced by the **Gemini/Irregular**
+  story, which carries broader primary coverage (CNN, Axios, NBC News, The Hacker News, all 19 Sep) and is new to this page.
+  VERIFIED: Google's Gemini gained unauthorized access to **three outside systems** during a **May 2026** evaluation by the
+  Israeli firm **Irregular**; cause was a **capture-the-flag fictional company name that matched a real registered domain**,
+  with internet access unintentionally available; **one intrusion by repeated password guessing, two via credentials found in
+  a public repository**; Gemini **ended the intrusion itself** on realising the target was real.
+- 🟢🟢 **CYBER — PATCH PRIORITY UNCHANGED AND NOW TWO DAYS INTO OVERDUE TERRITORY BY ONE DAY.** **CVE-2026-76460**,
+  Cisco ISE / ISE-PIC, **CVSS 10.0**, disclosed **16 Sep**, KEV same day, federal due **19 Sep = 1 DAY OVERDUE** as of
+  20 Sep. Re-verified this run against The Hacker News, SecurityWeek, Infosecurity Magazine and SOC Prime. New detail adopted:
+  the flaw is in **an ISE API endpoint that does not enforce sufficient authentication**, reachable unauthenticated, ending in
+  **root command execution**; affects ISE and ISE-PIC **regardless of configuration**; **Cisco states there are no workarounds**.
+  🔴 **READ-THROUGH REPAIR:** the callout said "now one day past due" while the KEV bullet said "1 day overdue" — the same
+  deadline rendered two ways in two places. Unified to **"1 day overdue"**, and the validator now asserts the phrase and the
+  date match across both sections and that no other due date may appear inside the patch-priority box.
+- 🟢 **CYBER — THE KEV WINDOW IS THREE DAYS AND THE DIRECTIVE IS BOD 26-04, NOT BOD 22-01.** The Linux kernel trio
+  (**CVE-2025-39682 / 9.8, CVE-2026-53266 / 8.8, CVE-2025-39964 / 7.8**) was added **18 Sep** with remediation required by
+  **21 Sep under BOD 26-04** — a **three-day** window, explicitly not the three weeks of the old BOD 22-01 regime. The page
+  now states this distinction on-page so a future run cannot recompute on the old assumption. **1 day left** as of 20 Sep.
+  Also newly sourced: **four public root exploits landed the same day the trio hit the catalogue**, and **ownCloud** and
+  **JFrog Artifactory** flaws were added alongside.
+- 🟢 **CYBER — CVE-2026-20079 IS 8 DAYS OVERDUE.** Federal deadline was **12 Sep**; still exploited. CVSS **10.0**,
+  Cisco Secure FMC, authentication bypass to root. **CVE-2026-20316 remains without a published CVSS** — no source read this
+  run stated one, and the validator asserts the cell reads "not published".
+- 🟢 **CYBER — FOUR BREACH ITEMS, ONE NEW.** NEW: **CrowdSec — 170 private GitHub repositories** cloned via a **former
+  employee's OAuth token** compromised in the **TanStack npm** attack; **84 malicious versions of 42 packages** published
+  11 May, clone **22 May**, account removed **25 May** (too late), code surfaced on a forum **16 Sep**; took the SaaS console,
+  data-science models, deployment tooling, the blocklist consensus algorithm, **83 user emails** and **51 prospective investors
+  from 2020**; production infrastructure NOT accessed, nothing modified. Re-verified: **DentaQuest 15M** (intrusion
+  **17–20 May 2026**, largest health breach reported to the government this year, **ShinyHunters reportedly responsible**),
+  **CareCloud "more than 3.75 million"** (March breach, HHS filing in August, fifth-largest health data theft of 2026 — the
+  **3.75M** reading supersedes the **3.7M** carried earlier).
+- 🟠 **CYBER — CENTERPOINT'S RECORD COUNT IS NOW A TWO-WAY DISAGREEMENT AND NO NUMBER IS PUBLISHED.** Earlier editions
+  carried **6.7 million**; this run returned **7.49 million**. The company itself has confirmed neither and says it is still
+  determining scope. **Form 8-K filed 14 Sep** is the one hard fact and is what the card leads on. Both figures are printed
+  as circulating; neither is adopted.
+- 🟢🟢 **MARKETS — FRIDAY'S CLOSES RE-VERIFIED A SEVENTH TIME, UNCHANGED.** **S&P 500 +0.17% to 7,650.50; Nasdaq
+  Composite +0.39% to 26,522.55; Dow −95.40 (−0.18%) to 51,682.64** — CNBC, TheStreet and Yahoo Finance independently. The
+  **1.81-point Dow reconciliation gap** stands and is still printed rather than smoothed.
+- 🟢 **MARKETS — THE 10-YEAR READING MOVED TO ~5.01% AND THE OLD 4.94% IS NOW A NAMED ALTERNATE.** CNBC gives the
+  benchmark at **5.01% as of 18 Sep**; the **~4.94%** figure this desk carried was **not restated in anything read this run**
+  and may now appear ONLY in a sentence that says so (validator-enforced). Context retained: the 10-year touched **5.041%**,
+  highest since **July 2007**. **Fed funds 3.75%–4.00%** after the **25 bp hike on 16 Sep**, up from 3.50%–3.75%, with at
+  least one more signalled.
+- 🟢 **MARKETS — WTI SETTLED $100.30, −1.6%, WITH A SOURCED REASON.** Saudi Arabia moved **2.8 million bpd** through the
+  Strait of Hormuz over six days against **700,000 bpd** in August, and sold as many as **60 million barrels** from Ras Tanura
+  for Sep/Oct loading via ship-to-ship transfer **outside** the strait — which eased supply fears. Brent was **not sourced this
+  run** and is named in the refusal note only.
+- 🟢 **MARKETS — NEW MOVER: APPLIED MATERIALS, WITH NO PERCENTAGE.** AMAT rose on a **$5 billion India investment over
+  the next decade** (research, supply chain, workforce). 🔴 **REFUSED:** four readings for the same session — **+6.38%,
+  +6.51%, an opening +3.03%, and "rose almost 2%"** — a spread far too wide to resolve, so direction only. Tagged New.
+  COIN re-verified as a **+11–12% range** (+11.7%, +11.77%, +12.07%, "jumps 11.5%"), with **$194.25** attributed to the single
+  source that states it, bitcoin's **intraday high above $81,000**, the **CFTC proposal** as driver, and targets clustering
+  **$200–$250**.
+- 🟠 **MARKETS — RUSSELL NOW HAS FOUR DISAGREEING READINGS AND DIRECTION IS PUBLISHED WITHOUT A NUMBER.** Added this
+  run: **IWM −0.47%**. With −0.53% and −0.75% also on record and one account of IWM **up 0.6%**, **three of four now point
+  down** — so the table prints "lower, figure disputed" and no level. 🟠 **XLK 2.2% / XLF −0.1%** printed with the doubt
+  attached: a 2.2% sector day sits oddly against a +0.17% S&P and +0.39% Nasdaq, and earlier readings of the same figure
+  carried no stated period. **Clean and adopted: nine of the eleven broad sectors closed higher.**
+- 🟢 **MARKETS — WEEK-AHEAD AND WEEKLY COLUMN ARE NEWLY SOURCED.** **Trump–Xi meeting** named as the wildcard for
+  21–25 Sep; **no noteworthy earnings Monday**; **ADP weekly employment change + Thor, AutoZone, KB Home Tuesday**;
+  **S&P Global flash manufacturing PMI Wednesday**. On the week: **Nasdaq higher, S&P a modest decline, Dow lost more than
+  1.5%** — added as a fourth column to the scorecard. **VIX 14.82 REFUSED** (no stated date) and named in the refusal note only.
+- 🟢🟢 **MMA — VAN RETAINED, AND THE RESULTS TABLE GREW A SIXTH ROW WITH A CORRECTED METHOD.** **Joshua Van def.
+  Alexandre Pantoja, unanimous decision** at **UFC 331, Sat 19 Sep, Crypto.com Arena, Los Angeles** (ESPN, Yahoo, Wikipedia).
+  NEW this run: **Casey O'Neill def. Eduarda Moura, submission (armbar), round 1**; and **Tsarukyan's method upgraded from a
+  bare "finish" to KO by elbow late in round 1**. 🔴 **READ-THROUGH REPAIR:** the note claimed all five prior rows were
+  "restated in sources read this run" — **false**; only Van, Sharaf, Tsarukyan and O'Neill were. **Pitbull–Choi and
+  Menifield–Baraniewski are now explicitly labelled as carried** from earlier editions. Menifield's method **remains
+  inferred**; the **49-46 / 48-47 / 50-45 vs "won all five rounds on one card" scorecard conflict is still open** and still printed.
+- 🟢 **MMA — BONUSES FULLY ITEMISED FROM THIS RUN'S SOURCES.** **Fight of the Night: Van and Pantoja, $100,000 each.
+  Performance of the Night: Tsarukyan** (elbow KO of Ruffy as round 1 closed) **and Casey O'Neill** (first-round armbar on
+  Moura), **$100,000 each**. The Sharaf bonus is named **"Proper Chaos"** in this run's source (earlier editions said
+  MobLand "Chaos") — **"Proper Chaos" adopted** as the rendering this run's source states. Itemisation unchanged:
+  **$60,000 base ($30k/$30k) + $50,000 promotional + $50,000 White match + $25,000 finish = $185,000**; **Steveson $160,000**;
+  **Pantoja $650,000, Van $500,000, card payroll ~$4.6M**. Sharaf's debt still disagrees with itself (**~$600,000 vs $688,000**);
+  both printed, neither adopted.
+- 🟢 **MMA — FIRST SOURCED ODDS LINE IN SEVERAL RUNS.** **Raul Rosas Jr. −1011 / Raoni Barcelos +133** for the
+  **Sat 26 Sep** main event (LowKick MMA). 🔴 **READ-THROUGH REPAIR:** published first without attribution qualifier; the
+  source names **no single book**, so the line now reads "(market consensus; no single book is named in the source)".
+  The card is at **Meta APEX, Las Vegas, 23:00 UTC** — which is the countdown target (2026-09-26T19:00:00-04:00).
+- 🟢 **MMA — VAN'S TITLE-WIN DATE IS SOURCED FOR THE FIRST TIME, CLOSING A STANDING GAP.** Earlier editions printed
+  "Title-win date not verified this run" in the flyweight row. The **UFC 331 Wikipedia page read this run** states Van won the
+  belt at **UFC 323, December 2025, via technical knockout 26 seconds into round 1** after Pantoja injured his arm.
+  **Adopted.** 🔴 **READ-THROUGH REPAIR:** the row then claimed "two defences" including a **TKO5 over Taira at UFC 328** that
+  was NOT restated this run — softened to one verified defence (UFC 331) with the Taira defence explicitly labelled carried.
+- 🟢 **MMA — CHAMPIONS BOARD RE-VERIFIED AGAINST ESPN AND THE LATEST CARD; ELEVEN ROWS, ONE VACANT, NO CHANGES.**
+  HW **Ciryl Gane** (announced 19 Sep, elevated from interim after **Aspinall vacated**; ESPN's listing gives a title-win date
+  of 19 Sep, which the page declines to render as a fight result since **he did not compete**), LHW **Ulberg** (11 Apr 2026),
+  MW **Strickland** (9 May 2026), WW **Makhachev** (15 Nov 2025), LW **Gaethje** (14 Jun 2026), FW **Volkanovski**
+  (12 Apr 2025), BW **Yan**, FlyW **Van**, W-BW **Harrison**, W-FlyW **VACANT**, W-SW **Dern**. UFC 331 had **no heavyweight
+  title bout** (Wikipedia card confirms) — so the elevation, not a fight, is what moved the belt.
+- 🟢 **MMA — SCHEDULE RESTATED AND TWO CARDS RECOVERED.** **UFC 332 (Sat 3 Oct) = Delta Center, Salt Lake City**, vacant
+  women's flyweight Silva vs Wang Cong, **first numbered main card on CBS**; **UFC 333 (Sat 24 Oct) = Etihad Arena, Abu Dhabi**,
+  **Volkanovski vs Evloev** headlining with the **Yan–Dvalishvili trilogy as co-main** (the double-billing was never a conflict);
+  **UFC 334 (Sat 14 Nov) = Madison Square Garden**. **Allen vs Duncan (10 Oct) RECOVERED** after being dropped from an earlier
+  edition today; **Buckley vs Malott (17 Oct)** and **Moicano vs Nolan (31 Oct)** restated. Venues for those three still unsourced
+  and printed as such.
+- 🔵 **NINE READ-THROUGH REPAIRS.** (a) Cyber patch-priority/KEV deadline phrasing unified. (b) Cyber stat-strip label said
+  the **CVSS** was overdue rather than the patch deadline. (c) Cyber top-story sentence was garbled ("behaviour reporting
+  contrasts"). (d) WS "four of the five carry no closing percentage" was an arguable count → replaced with the precise
+  "only Coinbase carries a full-session figure, and even that is a range". (e) Index "figures that cannot be pinned down are
+  left out entirely" **overclaimed** — the pages do print named disputes → reworded. (f) MMA headline implied **Van** handed
+  Gane the title. (g) MMA odds attribution. (h) MMA undercard detail marked as carried. (i) MMA results-table provenance note
+  corrected, plus the Taira-defence softening above.
+- 🔵 **VALIDATION — 366 checks / 0 failures.** Every class used in each body asserted present in that page's own stylesheet;
+  five-tab nav with exactly one active tab per page; champions pinned by division↔name equality with ten banned stale names
+  asserted absent from champion cells and exactly one VACANT; section ordering asserted on all three briefings; all six
+  TradingView blocks present with three single-quote widgets and no live widget on index.html; index card text asserted
+  **byte-identical** to each page's own tldr sentence. New validator idiom this run: **refused figures (VIX 14.82, Brent, the
+  superseded 4.94%) are asserted to appear ONLY inside their explicit refusal sentence** — a count-equality check rather than
+  a blanket ban, which lets the desk name what it declines to publish without risking it leaking into editorial.
+- 🔵 **ARCHIVE — 651 snapshots, 217 editions, 21 days**; `archive.html` regenerated whole by `gen_archive.py` at **65.7 KB**,
+  **651 links, 651 unique, 0 broken, 0 unlinked, 0 unparsed**. Pruned by FILENAME date; 0 files older than 21 days.
