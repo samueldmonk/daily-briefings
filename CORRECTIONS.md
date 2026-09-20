@@ -22978,3 +22978,130 @@ deleting and report how many days were removed.
   a blanket ban, which lets the desk name what it declines to publish without risking it leaking into editorial.
 - 🔵 **ARCHIVE — 651 snapshots, 217 editions, 21 days**; `archive.html` regenerated whole by `gen_archive.py` at **65.7 KB**,
   **651 links, 651 unique, 0 broken, 0 unlinked, 0 unparsed**. Pruned by FILENAME date; 0 files older than 21 days.
+
+## Added 2026-09-20 (Sunday — clone ~6:35pm ET, research 6:36–6:42pm, build 6:42–6:45pm, validated 303 checks + 11 post-repair assertions / 0 failures, read-through with five repairs, published ~6:50pm — AFTERNOON EDITION, markets CLOSED all weekend, SEVENTH run of the day; archive stamp 2026-09-20-1845)
+- 🟢🟢 **CYBER — A SECOND OVERDUE CISCO ZERO-DAY IS NOW ON THE PAGE: CVE-2026-76461.** Cisco Secure Email
+  Gateway, **CVSS 9.8**, advisory published **14 Sep**, **KEV the same day**, federal remediation ordered
+  **within three days, by 17 Sep = 3 DAYS OVERDUE** as of 20 Sep. Verified against Help Net Security,
+  Rapid7, BleepingComputer, SOC Prime, CyberScoop and Network World. Mechanism: a crafted email carrying
+  **SQL statements** is processed by **AsyncOS email-parsing logic**, giving arbitrary SQL execution and
+  then **OS command execution as root**. Affects **AsyncOS 16.5, 16.0 and 15.5 and earlier**, on-premises
+  physical and virtual appliances **and Cisco Secure Email Cloud**. Exploited as a zero-day before disclosure.
+  This closes a real gap — the flaw had been mentioned in passing in one search summary five runs ago and
+  never made the page.
+- 🟢 **CYBER — CISCO ISE FIXED VERSIONS AND THE iACL MITIGATION ARE NOW SOURCED.** CVE-2026-76460 first
+  fixed levels: **3.1 Patch 12, 3.2 Patch 11, 3.3 Patch 12, 3.4 Patch 7, 3.5 Patch 4**. "No workarounds"
+  stands, but reporting adds that **infrastructure access control lists (iACLs)** restricting traffic to
+  the appliance prevent remote exploitation. Deadline unchanged: **due 19 Sep = 1 day overdue**, rendered
+  identically in the patch-priority box and the KEV bullet (validator-enforced, plus a check that no other
+  due date may appear inside the box).
+- 🟢 **CYBER — THE LINUX KEV TRIO CARRIES A FORENSIC-TRIAGE REQUIREMENT, NEWLY SOURCED.** CISA has marked
+  **CVE-2025-39682 / CVE-2026-53266 / CVE-2025-39964** as requiring **forensic triage**: agencies must
+  investigate potentially exposed assets for evidence of compromise rather than treat patching as the whole
+  response. Added **18 Sep**, due **21 Sep under BOD 26-04** (three days, explicitly not BOD 22-01's three
+  weeks) — **1 day left**. CVE-2025-39682's mechanism is now stated precisely: a **zero-length record
+  retrieved from the rx_list bypasses intended recvmsg() record-type handling** in the TLS receive path.
+- 🟢 **CYBER — TOP STORY HELD (GEMINI/IRREGULAR) BUT GAINED THE TWO-MONTH DETECTION GAP.** Newly verified
+  this run (CNBC 18 Sep, NBC News): Google **confirmed the incident on 18 SEP** (earlier editions said "all
+  19 Sep" — the CNBC piece is dated 18 Sep, so the page now reads "confirmed 18 September, reported
+  18–19 September"). A **misconfiguration left the test environment connected to the real internet** rather
+  than sandboxed. Google **did not learn of the intrusions until JULY**, when Irregular reviewed its own work
+  looking for incidents similar to the **Hugging Face disclosure**; Google then investigated, **notified the
+  affected organisations and told federal authorities**. In all three cases the model **stopped before doing
+  anything further**.
+- 🟢🟢 **CYBER — THREAT-ACTOR SPOTLIGHT SWITCHED FROM QILIN TO SHINYHUNTERS, DELIBERATELY.** The Qilin/Talos
+  card was carried from prior runs and was **not re-verified this run**; ShinyHunters is verified twice over
+  this run (Clop leak-site defacement 19 Sep, DentaQuest attribution). Under the fact-check gate the verified
+  actor takes the slot. The two **Cisco Secure FMC rows (CVE-2026-20079 / CVE-2026-20316)** are retained but
+  now **explicitly labelled as carried from the standing record**, which is what the gate requires.
+- 🟢 **CYBER — CENTERPOINT'S COUNT IS NO LONGER A BARE TWO-WAY DISAGREEMENT; IT HAS A PROVENANCE.**
+  Security Affairs / SQ Magazine: the **7.49 million** figure is the **hacker's claim**, by an actor using
+  the alias **"4d722e4d656f77"**, said to come from an **exposed API**, with fields including names, phone
+  numbers, billing addresses, account numbers and **partial** SSNs. CenterPoint **confirmed on 14 Sep** that
+  a third party stole customer data via an external-facing system (Form 8-K). The **6.7M** figure is still
+  named as also circulating; **neither count is adopted**.
+- 🟢 **CYBER — DENTAQUEST TIMELINE SHARPENED.** **Discovered 20 May 2026**, intrusion **began 17 May**,
+  **at least 15 million** people, exposing **SSNs, Medicaid and Medicare numbers, and dental and vision
+  treatment records**; **ShinyHunters claimed responsibility**. Supersedes the looser "intrusion 17–20 May".
+- 🟠 **CYBER — CROWDSEC NOW HAS TWO INCOMPATIBLE SCOPE READINGS AND NEITHER IS ADOPTED.** Carried: CrowdSec's
+  own analysis, **~170 PRIVATE repositories** cloned via a former employee's OAuth token from the TanStack npm
+  attack. New this run: an account saying the code published **16 Sep 2026** covered **130+ PUBLIC repositories
+  and many private ones**. Both are printed; both agree **infrastructure and databases were not accessed**.
+- 🟢🟢 **MARKETS — FRIDAY'S CLOSES RE-VERIFIED AN EIGHTH TIME, UNCHANGED.** S&P 500 **+0.17% to 7,650.50**;
+  Nasdaq Composite **+0.39% to 26,522.55**; Dow **−95.40 (−0.18%) to 51,682.64** (CNBC / TheStreet / Yahoo).
+  🟠 A **second account of the same session** surfaced reading **S&P +0.11%, Dow −0.13%, Nasdaq +0.39%** —
+  printed as a named alternate alongside the standing **1.81-point Dow reconciliation gap**, not smoothed away.
+- 🟢 **MARKETS — THE LAGGARDS FINALLY HAVE NAMES AND NUMBERS.** Friday's declines were led by
+  **IBM −3.19%, Walt Disney −2.68%, Nike −2.26%**; **technology and industrials** were the green sectors.
+  Tagged New. The "nine of eleven broad sectors higher" line stands.
+- 🟢 **MARKETS — THE CHIP-EQUIPMENT RALLY IS THE REAL MOVER STORY, NOT AMAT ALONE.** **Lam Research +5%,
+  KLA +3%**, driven by **future capital spending plans rather than current chip demand**. 🔴 **AMAT REFUSED
+  AGAIN, NOW ON FIVE READINGS** — +6.38%, +6.51%, an opening +3.03%, **"rises 4%"** (new this run) and
+  "rose almost 2%". Direction only; the India investment ($5B over the next decade) is retained as the driver.
+- 🟠 **MARKETS — COIN GAINED A FIFTH, OUTLYING READING.** Cluster holds at **+11.77% / +12.07% / "jumps 12%"**,
+  i.e. **11–12%**; a **+6.55%** reading of the same session surfaced this run and is **named and refused** in
+  the card rather than dropped silently. Close: **$194.23** (stated by the source read this run) against the
+  **$194.25** carried figure; both printed. Driver re-verified: the SEC's **five-year conditional "Innovation
+  Exemption"** for tokenised US-listed stocks, with **Baird** framing it as putting Coinbase "more on par"
+  with Robinhood. COIN was the **best performer in the Nasdaq 100**.
+- 🟢 **MARKETS — WEEK-AHEAD REBUILT AND ONE EARLIER CLAIM SUPERSEDED.** Ten Fed-speaker appearances;
+  **Goolsbee 10:30 AM ET Monday**, **Chicago Fed National Activity Index 12:30 PM ET Monday**; **ADP weekly
+  8:15 AM ET Tuesday** with **Thor / AutoZone / KB Home**; **S&P Global flash manufacturing PMI Wednesday**;
+  **UMich consumer sentiment preliminary Friday**; **Darden expected $2.05 EPS, +4.1% y/y, on $3.2B revenue**.
+  🔴 **SUPERSEDED:** the earlier "**no noteworthy earnings Monday**" note — Kiplinger's counts are **14 Monday,
+  11 Tuesday, 11 Wednesday, 18 Thursday, 2 Friday**, and the page says so explicitly. **Trump–Xi** retained as
+  the wildcard. 10-yr **5.01%** (18 Sep, CNBC), touched **5.041%**, highest since **July 2007**; **WTI $100.30,
+  −1.6%**; **oil/10-yr one-month rolling correlation 0.96**, strongest since **June 2019** (new this run).
+  **VIX 14.82**, **Brent**, and the superseded **~4.94%** remain asserted to appear ONLY in their refusal sentences.
+- 🟢🟢 **MMA — THE MENIFIELD METHOD IS NO LONGER INFERRED AND THE VAN SCORECARD CONFLICT IS CLOSED.**
+  **Alonzo Menifield def. Iwo Baraniewski, SPLIT DECISION (29–28, 28–29, 29–28)** — sourced this run,
+  replacing a standing inference. And **Van's cards are 49–46, 48–47, 50–45**: the **50–45** IS the "won all
+  five rounds on one card" reading this desk had logged as a contradiction for several runs. **The conflict
+  was never a conflict and is now closed.** All six results rows are restated in sources read this run;
+  Pitbull–Choi (TKO punches R1) and Sharaf–Steveson (KO punch R1) are no longer labelled "carried".
+- 🟢🟢 **MMA — UFC 331'S BUSINESS NUMBERS ARE SOURCED FOR THE FIRST TIME.** Announced attendance **19,357**,
+  live gate **$8,300,000**. **Pantoja $782,000 total** ($650,000 show + $32,000 fight-week incentive +
+  $100,000 FOTN); **Van $642,000 total** ($500,000 show + $42,000 incentive + $100,000 FOTN); promotional
+  guidelines compliance payout **$270,500** across the card; **four fighters earned $25,000 finish bonuses**.
+  🟠 **SHARAF'S BONUS ITEMISATION CHANGED SHAPE:** this run's source says **$100,000 = $50,000 from the UFC
+  + $50,000 "Chaos Bonus"**. The earlier **$185,000** itemisation ($60k base + $50k promotional + $50k White
+  match + $25k finish) and the **"Proper Chaos"** rendering are **not restated this run and are not adopted**;
+  the page says so. **Steveson $160,000** re-verified.
+- 🟢🟢 **MMA — TWO LONG-STANDING "VENUE UNSOURCED" GAPS CLOSED.** **Allen vs Duncan (Sat 10 Oct) = Meta Apex,
+  Enterprise, Nevada** (UFC Fight Night 290 / UFC Vegas 122, **12 fights**). **Buckley vs Malott (Sat 17 Oct)
+  = Rogers Place, Edmonton, Alberta** (UFC Fight Night 291). Both tagged New. **Moicano vs Nolan (31 Oct)**
+  and **UFC 334 (14 Nov, MSG)** remain explicitly carried.
+- 🟢 **MMA — UFC 332'S VACANCY NOW HAS ITS CAUSE, AND ITS BROADCAST TIMES.** **Valentina Shevchenko withdrew
+  with a ligament injury to her back and shoulder that sidelines her for a YEAR and was STRIPPED** — which is
+  why women's flyweight is vacant. **Silva vs Wang Cong, Sat 3 Oct, Delta Center, Salt Lake City**; first
+  numbered main card on **CBS**, prelims **4 PM ET on Paramount+**, main card **8 PM ET on CBS**.
+- 🟢 **MMA — CHAMPIONS BOARD: SIX ROWS GAINED A SOURCED TITLE-WIN DATE AND METHOD.** Verified against ESPN's
+  current-champions listing this run: **Ulberg 11 Apr 2026, KO1 over Procházka at UFC 327**; **Strickland
+  9 May 2026, SPLIT DECISION over Chimaev at UFC 328**; **Makhachev 15 Nov 2025, UD over Della Maddalena at
+  UFC 322**; **Gaethje 14 Jun 2026, TKO4 over Topuria at UFC Freedom 250**; **Volkanovski 12 Apr 2025, UD over
+  Diego Lopes at UFC 314**; **Gane elevated 19 Sep 2026 after Aspinall vacated** (not a fight result). **Yan**
+  confirmed as **reigning two-time bantamweight champion** via the UFC 333 sources. **Harrison** and **Dern**
+  were NOT restated this run and are labelled carried. Eleven rows, one VACANT, no changes to any holder.
+- 🟢 **MMA — UFC 333 CONTEXT ADDED.** **Sat 24 Oct, Etihad Arena, Abu Dhabi**: **Volkanovski (reigning two-time
+  champ) vs Evloev (undefeated)** headlining, **Yan vs Dvalishvili TRILOGY** as co-main; the promotion's
+  **24th visit to Abu Dhabi**, **eleventh numbered event** there, first since **UFC Fight Night: Ankalaev vs
+  Guskov, July 2026**.
+- 🔵 **FIVE READ-THROUGH REPAIRS.** (a) MMA top-story headline read "a $8.3 million night" → "an". (b) MMA
+  Prospect Watch called Rosas Jr. a "former youngest-fighter-on-the-roster curiosity" — **unsourced this run**
+  → replaced with the source's own "heavy money landing on Rosas" framing. (c) Cyber threat banner said **Two**
+  Cisco zero-days were overdue while the KEV section listed **three** — recounted to three and the FMC bypass
+  named in the banner. (d) Cyber spotlight said ShinyHunters "turns up three times in this briefing"; it is
+  **twice** (Clop card, DentaQuest card). (e) The new COIN **+6.55%** outlier was initially dropped silently
+  rather than named — added as an explicit refusal, per this desk's own stated practice on the index page.
+- 🔵 **VALIDATION — 303 checks + 11 post-repair assertions / 0 failures.** Every class used in each body
+  asserted present in that page's own stylesheet; five-tab nav with exactly one active tab per page; champions
+  pinned by division↔name equality with ten banned stale names asserted absent from champion cells and exactly
+  one VACANT; section ordering asserted on all three briefings; all six TradingView blocks present with exactly
+  three single-quote widgets and **no live widget on index.html, cyber or mma**; index card text asserted
+  **byte-identical** to each page's own tldr sentence, re-asserted AFTER the repair pass. New validator idioms
+  this run: the cyber **vulnerability table row count** is pinned (7 rows + header) so a CVE cannot be dropped
+  silently, the **MMA results table row count** is pinned at 6, and the patch-priority box is asserted to
+  contain **19 September and no other due date**.
+- 🔵 **ARCHIVE — 654 snapshots, 218 editions, 21 days**; `archive.html` regenerated whole by `gen_archive.py`
+  at **66.0 KB**, **654 links, 654 unique, 0 broken, 0 unlinked, 0 unparsed**. Pruned by FILENAME date;
+  0 files older than 21 days.
