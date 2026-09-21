@@ -6,7 +6,7 @@ fought again since), update the entry in the same commit.
 
 ## ⚠ CHAMPIONS BOARD — AUTHORITATIVE (verified 2026-06-18 vs ESPN + UFC.com; RE-VERIFIED 2026-09-01 — Ulberg named reigning LHW champ in Sept 1 injury coverage; Strickland's UFC 328 split-decision win over Chimaev and Gaethje's Freedom 250 TKO4 of Topuria confirmed via CBS Sports/ESPN 2026 reviews; Volkanovski and Yan both booked to DEFEND at UFC 333, Oct 24 Abu Dhabi. SUPERSEDES every earlier champion claim in this file)
 Three belts were published WRONG for weeks (Pereira at LHW, Chimaev at MW, featherweight "vacant"). The CURRENT verified UFC champions are:
-- **Heavyweight:** **CIRYL GANE — UNDISPUTED. UPDATED 2026-09-21 (first run of the day). This line SUPERSEDES every earlier one marking heavyweight VACANT or seating Gane as INTERIM champion.** The UFC **promoted Gane from interim to undisputed heavyweight champion** and booked his **first defence of the full title against JOSH HOKIT at UFC 334, Madison Square Garden, 14 November 2026**, announced during Saturday’s UFC 331 broadcast (CBS Sports, 2026-09-19 10:04pm ET, fetched this run; Yahoo Sports; ESPN headline “UFC names Gane undisputed champ, books 1st title defense against Hokit”). Gane won interim gold over Alex Pereira at Freedom 250 in June and was elevated after **Tom Aspinall vacated** with eye injuries. Gane and Gaethje are the only fighters to win interim UFC titles twice; Gane is undefeated in his last four, a run that includes the no-contest whose eye pokes caused Aspinall’s long-term damage, and he has faced Ngannou, Jones, Aspinall and Pereira in four years. **Any “current champions” list showing heavyweight VACANT, or Gane as merely interim, is STALE from 19–21 Sep 2026 onward and must be refused.** **Co-main at UFC 334: Kayla Harrison vs Amanda Nunes** for the women’s bantamweight title — first booked for UFC 324 in January, delayed 11 months by Harrison’s neck injury. UFC 334 is the promotion’s **tenth MSG show** (tradition began 2016 after MMA was legalised in New York; 2020 lost to the pandemic).
+- **Heavyweight:** **CIRYL GANE — UNDISPUTED. UPDATED 2026-09-21 (first run of the day). This line SUPERSEDES every earlier one marking heavyweight VACANT or seating Gane as INTERIM champion.** The UFC **promoted Gane from interim to undisputed heavyweight champion** and booked his **first defence of the full title against JOSH HOKIT at UFC 334, Madison Square Garden, 14 November 2026**, announced during Saturday’s UFC 331 broadcast (CBS Sports, 2026-09-19 10:04pm ET, fetched this run; Yahoo Sports; ESPN headline “UFC names Gane undisputed champ, books 1st title defense against Hokit”). Gane won interim gold over Alex Pereira at Freedom 250 in June and was elevated after **Tom Aspinall vacated** with eye injuries. Gane and Gaethje are the only fighters to win interim UFC titles twice; Gane is undefeated in his last four, a run that includes the no-contest whose eye pokes caused Aspinall’s long-term damage, and he has faced Ngannou, Jones, Aspinall and Pereira in four years. **Any “current champions” list showing heavyweight VACANT, or Gane as merely interim, is STALE from 19–21 Sep 2026 onward and must be refused.** **Co-main at UFC 334: Kayla Harrison vs Amanda Nunes** for the women’s bantamweight title — first booked for UFC 324 in January, delayed 11 months by Harrison’s neck injury. UFC 334 is the promotion’s **13th visit to New York City**, its **first since UFC 322 (November 2025)** — sourced 2026-09-21 (second run) and **SUPERSEDING the earlier “tenth MSG show” figure**, which was not restated at source and is dropped, not carried. **Aspinall VACATED on 14 September 2026** from ongoing complications of an eye injury caused by an illegal poke from Gane at **UFC 321, October 2025**.
 - **Light Heavyweight:** CARLOS ULBERG — won the VACANT belt KO1 over Jiří Procházka at UFC 327 (Miami, Apr 11 2026); had ACL surgery after. Alex PEREIRA is NO LONGER LHW champ — he vacated to campaign at heavyweight and LOST the interim-HW bid to Gane. Do NOT list Pereira as LHW champ.
 - **Middleweight:** SEAN STRICKLAND — split-decision upset of Khamzat Chimaev at UFC 328 (Newark, May 9 2026); two-time champ. Khamzat CHIMAEV is NO LONGER MW champ. Do NOT list Chimaev as MW champ.
 - **Welterweight:** Islam Makhachev (UD over Jack Della Maddalena, UFC 322, Nov 15 2025; two-division champ, vacated LW). **1 DEFENCE** — UD Ian Machado Garry, UFC 330, Aug 15 2026 (17th straight UFC win, a record for consecutive Octagon victories). [updated 2026-08-22]
@@ -23204,3 +23204,105 @@ deleting and report how many days were removed.
   deletes nothing, because cloning the repo resets every file's mtime to the clone time. The archive had drifted to **22 days**.
   Pruned **by FILENAME date** instead (cutoff 2026-08-31), removing **39** stale snapshots. ⭐ *File mtime is meaningless in a
   fresh clone; prune by the date in the name.*
+
+## Added 2026-09-21 (Monday — clone ~10:29am ET, research 10:30–10:55am, build 10:55–11:05am, validated 318 checks / 0 failures, read-through with five repairs, published ~11:10am — MORNING EDITION, markets OPEN, SECOND run of the day; archive stamp 2026-09-21-1040)
+- 🟢🟢 **MARKETS — THE MISSING YIELDS ARE BACK, FROM THE FED'S OWN RELEASE, AND TWO CARRIED FIGURES ARE SUPERSEDED.** The previous
+  edition OMITTED the 2-year and 30-year because no source stated them. This run fetched the **Federal Reserve H.15** release
+  (dated **18 September**, latest data column **17 September**) in full: **2-year 4.67%, 10-year 4.94%, 30-year 5.29%, 20-year
+  5.32%**, **fed funds effective 3.88%** (from 3.63% pre-hike), **bank prime 7.00%** (from 6.75%), **discount window primary
+  credit 4.00%**. 🔴 **SUPERSEDED:** the **10-year 5.01% "as of 18 September"** carried by earlier editions is in fact
+  H.15's **16 September** print — 17 September reads **4.94%**. 🔴 **REFUSED:** a third-party table giving **2-year 4.75%
+  and 30-year 5.33% "as of 18 September"** matches **no column** in H.15 (17 Sep = 4.67/5.29; 16 Sep = 4.74/5.35); named on the
+  page, not published. ⭐ *When a secondary summary and the primary release disagree about a government statistic, the release
+  wins and the summary gets named.*
+- 🟢 **MARKETS — THE OPENING BELL HELD, WITH A SECOND, UNTIMED READING PRINTED BESIDE IT.** Lead remains **Dow +0.61%,
+  S&P 500 +0.67%, Nasdaq +0.77%, Russell 2000 −0.50%** (TheStreet opening-bell entry, 9:31am ET). New this run: a second account
+  of the same morning carrying **S&P +0.6%, Nasdaq +0.8–0.9%, Dow +153 points (+0.3%)** and crude **−3% to above $96**
+  — it **stated no time**, so it is printed as a second reading, not substituted. Also new and sourced: **PHLX Semiconductor
+  Index +2%, highest since 9 September**; **Brent's fourth straight daily decline, longest streak in three months**; **VIX 14.85
+  (+0.27%)**; Yahoo's ~9:05am strip (**S&P fut +0.64%, Dow fut +0.78%, Nasdaq fut +1.05%, Crude Nov $93.49 −2.70%, Gold
+  $4,392.30 −0.74%**). 🟠 **BITCOIN NOW HAS A THIRD READING OF THE SAME MORNING**: **$85,244.52 (+5.86%)** at ~9:05am,
+  alongside the standing **$84,402.56 (+5.13%)** at 7:16am and **$81,840.98 (+2.01%)** at ~4:05am. All three printed.
+- 🟢 **MARKETS — FRIDAY'S CLOSES RE-VERIFIED A TENTH TIME, UNCHANGED.** S&P 500 **+0.17% to 7,650.50**; Nasdaq Composite
+  **+0.39% to 26,522.55**; Dow **−95.40 (−0.18%) to 51,682.64**; third straight weekly Dow loss. Points/percent/level
+  reconcile. Validator pins each level to **exactly one** appearance, inside the Weekly Scorecard.
+- 🟢 **MARKETS — MONDAY'S CALENDAR, AND A DISAGREEMENT LEFT STANDING.** **Chicago Fed National Activity Index, August:
+  −0.06 expected, −0.08 previously.** Yahoo's Monday entry reads **"no notable earnings"**; the Kiplinger week-ahead count
+  carried from 20 Sep said **14**. Both printed, neither reconciled. **Trump–Xi summit confirmed for Thursday 24 September.**
+  **Bessent proposed a US–China AI safety notification mechanism**; Xinhua acknowledged only that AI was discussed.
+- 🟢🟢 **CYBER — NEW TOP STORY, VERIFIED AT SOURCE: ORKES CONDUCTOR CVE-2026-58138.** The Hacker News piece was
+  **fetched in full** this run. **CVSS v3.1 9.8 / v4 9.3**, unauthenticated RCE, **Orkes Conductor 3.21.21 before 3.30.2**,
+  fixed in **3.30.2** (June). Exploit path: inline workflow definitions carrying JavaScript or Python expressions hit
+  **unsandboxed GraalVM evaluators** with `HostAccess.ALL` / `allowAllAccess(true)` via **INLINE, LAMBDA, DO_WHILE, SWITCH**
+  task types. Fortinet blocked **1,290 attempts in 24h as of 9 Sep (+132% daily)**, **~7,000 between 2–9 Sep**; origins
+  **Germany, Hong Kong, Indonesia, U.A.E., India**. Previdian: 3 honeypot attempts since **24 July** from two IPs (France, US);
+  Empirical Security: in-the-wild as recently as **21 August**. PoC published early August. This **replaces the SparroWocky /
+  FamousSparrow top story**, which was **not re-verified this run**.
+- 🟢🟢 **CYBER — THE LINUX KEV "TRIO" IS NOW FULLY SOURCED BY IDENTIFIER AND SCORE, CLOSING A GAP THE PREVIOUS RUN
+  DECLARED.** All three named this run: **CVE-2025-39682 (CVSS 9.8**, kTLS receive path, `net/tls/tls_sw.c`, zero-length rx_list
+  record bypasses recvmsg() record-type handling—memory disclosure or DoS**)**, **CVE-2026-53266 (CVSS 8.8**, ebtables SNAT ARP
+  rewrite out-of-bounds write — DoS or local privilege escalation**)**, **CVE-2025-39964 (CVSS 7.8**, race condition on concurrent
+  writes to the same AF_ALG socket — crash or corrupted cryptographic results**)**. Added **18 Sep**, due **21 Sep under BOD 26-04**
+  — **0 days left**, all three requiring **forensic triage**. ⚠ CISA's own alert page for 18 Sep is titled **"Adds One"** and
+  **returned empty on direct fetch**; secondary coverage the same day describes **three** and lists all three IDs — the page says so.
+  🔴 **REFUSED:** one headline putting the deadline at **"Sunday" (20 Sep)**; every other account read this run says 21 Sep.
+- 🟢 **CYBER — FOUR GENUINELY NEW INCIDENTS, AND A NEW SPOTLIGHT.** **Revolut** confirmed disclosing data on **~700
+  customers** (one account: **680**, framed as high-value crypto accounts; both printed) after fraudulent requests arrived via
+  Italy's **PEC** certified-email system; the attacker claims **six months** of access to Italian law-enforcement mailboxes obtained
+  by **infostealer**, demands **$3M in Monero**, and separately claims a **147 GB** police-systems haul. **Rapuncel** loads a
+  **Microsoft-attested kernel driver** (BYOVD) to kill **145** security processes. **Remus** (underground since **March 2026**)
+  removes syscall hooks and now harvests **AI assistant credential folders** — access tokens, MCP configs, prompt histories —
+  naming **Claude, Cursor, OpenCode** and OpenAI/Anthropic API tokens (SpyCloud Labs). **CVE-2026-59310** (VMware vCenter Syslog
+  directory traversal, patched July) is now **exploited by ransomware crews** per CISA; **no CVSS stated, so none printed**.
+  Threat-actor spotlight switched from ShinyHunters to **the PEC impersonator**, which is what this run actually verified.
+- 🟢 **CYBER — VULN TABLE GREW TO EIGHT ROWS.** Added **CVE-2026-87886 (Acronis Backup, KEV 16 Sep** — due date not stated
+  in anything read this run, so **none asserted)** and **CVE-2026-59310**. Cisco countdowns rolled: **CVE-2026-76460 due 19 Sep =
+  2 days overdue**; **CVE-2026-76461 due 17 Sep = 4 days overdue**. Both Cisco rows explicitly **labelled carried**.
+- 🟢🟢 **MMA — THE ASPINALL VACATUR NOW HAS ITS CAUSE AND ITS DATE, AND THE MSG COUNT WAS WRONG.**
+  **Tom Aspinall vacated on 14 September 2026** from ongoing complications of an eye injury caused by **an illegal poke from Gane at
+  UFC 321, October 2025**. 🔴 **SUPERSEDED:** the **"tenth MSG show"** figure this desk published on 21 Sep (first run) was not
+  restated in anything read this run; the sourced measure is **UFC 334 = the promotion's 13th visit to New York City, first since
+  UFC 322 (November 2025)**. The MSG-specific count is **dropped, not carried**. **Harrison confirmed as reigning women's
+  bantamweight champion; Nunes as former two-time champion.**
+- 🟢🟢 **MMA — WIKIPEDIA'S CURRENT-CHAMPIONS LIST IS A TRAP AND IS NAMED AS ONE.** Fetched in full this run, it
+  **corroborates eight of eleven rows exactly**, names the **wrong holder in two** (still **Aspinall** at heavyweight, still
+  **Shevchenko** at women's flyweight) and gives **Van 1 defence** rather than 2. ⚠ **ESPN's current-champions page returned empty
+  on direct fetch AGAIN — the FOURTH distinct failure mode this month.** Belts were re-derived from the most recent event that could
+  have changed each; a separate published current-champions listing read this run independently gives **Gane at heavyweight, title
+  date 19 September 2026**. ⭐ *A "current champions" page is only as current as the last card; check the card, not the list.*
+- 🟢 **MMA — UFC 331 RESULTS COMPLETED AND PAYOUTS EXTENDED.** The sixth result finally has its opponent: **Marlon "Chito"
+  Vera def. Charles Jourdain, TKO (strikes) 2:02 R3** (Jourdain is the fighter in the 21 Sep trending story about losing eyesight).
+  Bonuses re-confirmed: **FOTN Van vs Pantoja**; **POTN Arman Tsarukyan and Casey O'Neill (armbar of Eduarda Moura), $100,000 each**;
+  **MobLand Bonus to Sean Sharaf**. Payouts extended: **Pantoja $650,000, Van a flat $500,000, Pitbull and Vera $400,000 apiece,
+  Steveson $160,000**. Business figures retained: **19,357 announced, SOLD OUT, gross total revenue $8,228,105**, highest-grossing
+  event in Crypto.com Arena history.
+- 🟠 **MMA — THE ROSAS ODDS PAIR CAME IN INCOHERENT FOR A SECOND CONSECUTIVE RUN AND IS REFUSED AGAIN.** Published:
+  **Rosas Jr. −210 / Barcelos +177** (opening line, MMAOddsBreaker). The **−1011 / +133** pairing resurfaced this run; a −1011
+  favourite cannot sit opposite a +133 underdog in the same two-way market. Refused. Full 26 Sep card added by name
+  (Vieira–Bryczek, Nakamura–Hiestand, Akylbek–Osmanli, Black–Amaya, Brener–Harrell, Bellato–Edwards).
+- 🟢 **MMA — PROSPECT WATCH REBUILT FROM CONTENDER SERIES SEASON 10.** Week 5 (**9 Sep**): **Quentin Pasley** (LHW, two pro
+  fights, KO by two flush elbows over **Arlind Berisha**), **Isaac Moreno** (28, WW, decision over Reginaldo Junior), **Martin Kozak**
+  (6'4" MW, R2 TKO of Christian Echols), **Christian Natividad** (R1 TKO of Colton Loud). Week 6 (**16 Sep**): four signed, led by
+  **Igor Cavalcanti's 98-second finish of Oscar Ravello**, plus **Akbar Abdullaev** and **Mayton Perea**. Week 7 is **Tuesday 22 Sep**;
+  **28 athletes** signed this season. 🔴 A "12 events left on the 2026 calendar" count is reproduced **as the listing's own figure**
+  and explicitly not as events still to come, since the count predates cards already fought.
+- 🔵 **FIVE READ-THROUGH REPAIRS.** (a) WS lead headline said "as of ~9:58 AM ET" while citing the **9:31 open** — now reads
+  "figures as of the 9:31 AM ET open". (b) MMA Around-the-Sport said "both men came out of losing efforts" and then said Menifield
+  **won** — rewritten. (c) MMA champions note said Wikipedia corroborates **nine** rows; the arithmetic is **eight** exact, two wrong
+  holders, one wrong defence count. (d) Cyber patch box claimed "four other accounts" state 21 Sep — a count this desk could not
+  defend; reworded. (e) The MMA scorecard refusal **printed the refused numeral inside its own refusal sentence** while asserting the
+  reading "appears nowhere on this page" — the numeral is now omitted entirely, and the validator enforces its absence.
+- 🔵 **VALIDATION — 318 checks / 0 failures.** Every class used in each body asserted present in that page's own stylesheet;
+  five-tab nav with exactly one active tab per page, and the active tab asserted to be the page itself; masthead pill ids, freshline
+  and self-stamp JS asserted on all four; tldr labels pinned per page (**The Tape / The Wire / Tale of the Tape**); index card text
+  asserted **byte-identical** to each page's own tldr and to appear **exactly once**; all six TradingView blocks on Wall Street with
+  **exactly three** single-quote widgets and **no tradingview.com reference at all** on index, cyber or mma; section ordering asserted
+  by heading markup on all three briefings; cyber vuln table pinned at **8 rows + header** with all eight CVE IDs asserted present;
+  MMA results table pinned at **6 rows + header**; champions pinned by **division↔name equality** across all eleven rows with
+  **twelve** banned stale names asserted absent from champion cells and exactly one VACANT; index levels asserted to appear exactly
+  once and only inside the Weekly Scorecard; upcoming card dates asserted to be in the future. **New idioms this run:** the
+  patch-priority box is asserted to contain **21 September and no other due date**, and **KEV countdowns are recomputed from today's
+  date against each due date** and asserted to match the text — so a stale countdown fails the build rather than the read-through.
+- 🔵 **ARCHIVE — 621 snapshots, 207 editions, 21 days**; `archive.html` regenerated whole by `gen_archive.py` at **63.2 KB**,
+  **621 links, 621 unique, 0 broken, 0 unlinked, 0 unparsed**. Pruned **by FILENAME date** (cutoff 2026-08-31) per the 21 Sep lesson;
+  **0** files were stale.
