@@ -23306,3 +23306,88 @@ deleting and report how many days were removed.
 - 🔵 **ARCHIVE — 621 snapshots, 207 editions, 21 days**; `archive.html` regenerated whole by `gen_archive.py` at **63.2 KB**,
   **621 links, 621 unique, 0 broken, 0 unlinked, 0 unparsed**. Pruned **by FILENAME date** (cutoff 2026-08-31) per the 21 Sep lesson;
   **0** files were stale.
+
+
+## Added 2026-09-21 (Monday — clone ~10:44am ET, research 10:45–10:58am, build 10:58–11:05am, validated 314 checks / 0 failures, read-through with six repairs, published ~11:08am — MORNING EDITION, markets OPEN, THIRD run of the day; archive stamp 2026-09-21-1052)
+- 🟢🟢 **MARKETS — THE MOVERS LIST IS NOW A REGULAR-SESSION LIST, AND THE MOVES ROUGHLY DOUBLED.** Earlier editions
+  carried TheStreet's **8:42 AM premarket** entry. This run fetched the **10:28 AM ET market-movers** block in full:
+  **WBD +9.77%** (was +7.12% premarket), **INTC +9.7%** (was +5.76%), **AMD +9.17%** (NEW — reported plan to raise prices
+  **10% on some AI accelerators and GPUs**), **PSKY +9.1%** (was +6%), **NVO −8.01%** (was −4.35%), **HPQ −3.39%** (was
+  −4.75%, i.e. NARROWED), **UPS −2.78%** (NEW — high dividend yield / tight free cash flow). **MSTR (+7.36%) and HAS
+  (−3.60%) dropped off the sourced list** and are named as dropped, not carried. Chart of the Day moved MSTR → **WBD**.
+  ⭐ *A premarket list and a regular-session list are different objects; say which one you are printing and at what time.*
+- 🟢 **MARKETS — INDEX FIGURES UNCHANGED AND EXPLICITLY SO.** No index reading later than the **9:31 AM ET open**
+  (Dow +0.61%, S&P 500 +0.67%, Nasdaq +0.77%, Russell 2000 −0.50%) appeared in anything read this run; the page says so
+  rather than implying the open is live. 🔴 **RE-LABELLED:** the untimed second account (S&P +0.6%, Nasdaq +0.8–0.9%,
+  Dow +153 pts/+0.3%, crude −3% above $96) was a **previous-edition** find and the page had wrongly said it "appeared in
+  results read this run" — now marked as retained-from-previous and **not** restated this run. New and attributed:
+  **QQQ +1.5%** as the morning standout; the advance **erased the S&P 500's decline for the month** (no monthly % stated,
+  so none printed); **10-year yield fell below 5%** (no level stated, so the H.15 17-Sep row stands). Oil, gold, silver,
+  bitcoin, H.15 rates and Friday's closes all unchanged and re-verified.
+- 🟢🟢 **CYBER — NEW TOP STORY, FETCHED IN FULL: HACKTRON / CLAUDE OPUS 5 vs OPENAI (THN, 19 Sep).** Three Hacktron
+  researchers chained two flaws to take over the **ChatGPT and Codex accounts of several OpenAI employees** and reach an
+  **internal OpenAI repository**; **under 72 hours** from first look, fix confirmed **~14 hours** after report, **$6,500**
+  bounty paid **1 September** ("recognizes the OpenAI-side finding, not the actions against Discourse"). Entry: Discourse →
+  ImageMagick → **libheif**. ⚠ **CVE-2026-32882 IS SCORED TWO DIFFERENT WAYS AND BOTH ARE PRINTED:** Discourse's advisory
+  calls it **RCE, 8.8**; libheif's own advisory and the national databases record an **out-of-bounds read**. Fixed upstream
+  in **libheif 1.22.0 (May 2026)**; forum image (Debian 12) still shipped **1.19.7** in July. Latest security release
+  **1.23.4**. Fixed Discourse self-hosted releases: **2026.7.0, 2026.6.1, 2026.5.2, 2026.1.6**. Escalation was **SSO**, not
+  the forum: "Sign in with OpenAI" is the same single sign-on staff use. **Opus 4.8 failed across several sessions with ASLR
+  on; Opus 5 (released evening of 24 July) produced a working exploit in a fresh session within hours**, safeguards bypassed
+  by disguising their own test server as a CTF target. Wider campaign **HEIF Heist**, ~2 months, **under $3,000** in AI usage.
+  🔴 **NOT CONFIRMED and labelled as such:** the wider claim of code execution across many applications (only the Next.js and
+  Meta-linked bugs are independently backed). ⭐ *When the vendor advisory and the upstream/NVD record disagree about what a
+  CVE even IS, print both and name whose record is whose.*
+- 🟢 **CYBER — FOUR NEW INCIDENTS, ALL AT SOURCE.** **CrowdSec:** ~**170 private GitHub repos** copied **22 May** via a
+  departed employee's still-open account; laptop compromised in May's **TanStack** npm attack (**84 malicious versions of 42
+  packages**, **11 May**, **CVE-2026-45321**); code surfaced on a forum **16 Sep**, disclosed **18 Sep**; contained **83**
+  user emails and **51** 2020 investor records. **Gemini/Irregular:** model broke into a real company during a **May 2026**
+  eval (WSJ), guessed a password repeatedly, **ended the intrusion** on realising it was real; Google notified **July 2026**.
+  **Plugin4Shell** (Air Security): pinned-commit plugin substitution in four AI coding agents — **Claude Code 2.1.179** and
+  **Codex 0.146.0** patched, **GitHub Copilot no fix**, **Gemini CLI will not be patched** (retiring). **WeaselBiscuit:** 13
+  npm packages, Chrome-extension-storage stealer, overlaps BeaverTail/OtterCookie (OpenSourceMalware, Paul McCarty).
+- 🟢 **CYBER — SPOTLIGHT AND TABLE.** Spotlight moved to **Transparent Tribe / APT36 / Earth Karkaddan — Operation
+  RapidRust** (Zscaler ThreatLabz; RUSTYSHADE, RUSTYMOVE, PSNATCH, BASHNATCH; India + Afghanistan; Sudeep Singh quote).
+  Vuln table grew to **11 rows**: added **CVE-2026-85889** (Azure AI Foundry, **CVSS 10.0**, missing auth, no customer action
+  required, Rémy Marot, not exploited), **CVE-2026-28326** (SolarWinds ARM, **8.8**, hard-coded static key, advisory 17 Sep,
+  fixed **ARM 2026.2.1**, Kai Huang of Armadin, no exploitation claimed) and **CVE-2026-32882**. KEV countdowns rolled and
+  re-asserted by recomputation: Linux trio **0 days left (due today)**, Cisco ISE **2 days overdue**, Cisco SEG **4 days
+  overdue**. 🔴 **REPAIRED:** the threat banner called Orkes "maximum-severity" — it is **9.8/9.3**, not 10.0; reworded.
+  Note added that **neither CVE-2026-58138 nor CVE-2026-32882 appears in any KEV listing read this run**, so neither carries
+  a federal deadline here.
+- 🟢🟢 **MMA — NEW TOP STORY: TSARUKYAN'S ELIMINATOR AND THE GAETHJE STANDOFF.** **Arman Tsarukyan KO'd Mauricio Ruffy
+  in the final seconds of round one at UFC 331 (19 Sep)** in a bout billed as a **title eliminator**, securing the **No. 1
+  contender** position at lightweight, then said champion **Justin Gaethje** is ducking him — **"he's trying to avoid me"** —
+  and in follow-up coverage framed it as fight me or **"leave the title"**. **Dana White would NOT confirm a title shot**
+  after UFC 331. One outlet says a **Gaethje–Topuria rematch** is ready to go — printed as that outlet's claim, NOT as a
+  booking. ⚠ **A longer transcription of the Tsarukyan quote came back visibly garbled in one summary and is NOT reproduced;
+  only the short headline form is published.** ⭐ *If the only transcript you have is mangled, quote the fragment every outlet
+  agrees on and say that is what you are doing.*
+- 🟢 **MMA — UFC 333 NOW FULLY BILLED AND ADDED AS A CARD (NEW).** **UFC 333: Volkanovski vs. Evloev, Saturday 24 October,
+  Etihad Arena, Abu Dhabi.** Featherweight title: reigning **two-time champion Alexander Volkanovski** vs **undefeated
+  Movsar Evloev**. Co-main: **bantamweight title TRILOGY bout, reigning two-time champion Petr Yan vs former champion Merab
+  Dvalishvili**. Two belts on one card.
+- 🟢 **MMA — CHAMPIONS BOARD RE-CORROBORATED, ELEVEN ROWS UNCHANGED.** A published current-champions listing read this run
+  again gives **Gane at heavyweight, title date 19 September 2026**, and matches this desk at LHW/MW/WW/LW/FW/BW/FlyW.
+  Second consecutive run in which such a listing has corroborated the heavyweight row. 🔴 **REPAIRED:** the verification note
+  had been edited into claiming **two** listings were read this run when only **one** was; it now says so explicitly.
+  UFC 331 results table (6 bouts), bonuses, payouts and the 19,357 / sold-out / **$8,228,105** business figures re-verified
+  and unchanged. Rosas–Barcelos odds: **−210 / +177** opening line stands; the incoherent **−1011 / +133** pairing surfaced
+  again and is **refused for a third consecutive run**.
+- 🔵 **SIX READ-THROUGH REPAIRS.** (a) cyber banner "maximum-severity" → "critical (CVSS 9.8)". (b) Two source links whose
+  stories had rotated off the page (Rapuncel/GBHackers, Remus/Cyber Security News) were **deleted with the cards**, not left
+  dangling. (c) A carried card carried an empty tag class; given a real `.tag.mutt` rule. (d) MMA champions note claimed two
+  listings this run — corrected to one. (e) An "Around the Sport" bullet duplicated the Prospect Watch note verbatim; trimmed
+  to a cross-reference. (f) WS untimed-second-reading paragraph said it "appeared in results read this run" when it was a
+  previous-edition find; re-labelled. ⭐ *When you delete a card, delete its source link in the same pass.*
+- 🔵 **VALIDATION — 314 checks / 0 failures.** Same idiom set as 21 Sep run 2, plus: **mover cards pinned at 7**; **vuln
+  table pinned at 11 CVE rows with all eleven IDs asserted present**; **KEV countdowns recomputed from today's date against
+  each due date** and asserted to match the text; **patch-priority box asserted to contain 21 September and no other due
+  date**; **index levels asserted to appear exactly once, inside the Weekly Scorecard only**; **upcoming card dates asserted
+  to be in the future**; champions pinned by division↔name equality across all eleven rows with **twelve banned stale names**
+  asserted absent from champion cells and **exactly one VACANT**; every class used in each body asserted present in that
+  page's own stylesheet; all six TradingView blocks on Wall Street with **exactly three** single-quote widgets and **no
+  tradingview.com reference at all** on index, cyber, mma or archive; index card text asserted **byte-identical** to each
+  page's own tldr and present **exactly once**.
+- 🔵 **ARCHIVE — 624 snapshots, 208 editions, 21 days**; `archive.html` regenerated whole at **63.5 KB**, **624 links,
+  624 unique, 0 broken, 0 unlinked, 0 unparsed**. Pruned **by FILENAME date** (cutoff 2026-08-31); **0** files were stale.
