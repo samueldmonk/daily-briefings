@@ -1,9 +1,12 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Daily Briefings</title><style>:root{--bg:#0b0b0c;--panel:#131315;--line:#26262b;--fg:#e9e6e2;--mut:#9aa0a6;--acc:#8ab4f8;--acc2:#36c6ff;--up:#3ecf8e;--down:#ef5a5a;--crit:#ff5f56;--warn:#e8b24a;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+# -*- coding: utf-8 -*-
+"""Shared chrome for the daily briefings (run 7, 2026-09-20)."""
+
+CSS = """:root{--bg:%(bg)s;--panel:%(panel)s;--line:%(line)s;--fg:#e9e6e2;--mut:#9aa0a6;--acc:%(acc)s;--acc2:%(acc2)s;--up:#3ecf8e;--down:#ef5a5a;--crit:#ff5f56;--warn:#e8b24a;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
 .wrap{max-width:980px;margin:0 auto;padding:26px 20px 60px}
 .masthead{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;margin-bottom:10px}
-.masthead h1{font-size:30px;margin:0;letter-spacing:-.4px}
+.masthead h1{font-size:30px;margin:0;letter-spacing:-.4px%(mhx)s}
 .masthead .tag{color:var(--mut);font-size:14px}
 .meta{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 4px}
 .pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:3px 9px;color:var(--mut);background:var(--panel)}
@@ -21,7 +24,7 @@ h2.sec{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transfo
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:13px}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;transition:transform .15s ease,border-color .15s ease}
 .card:hover{transform:translateY(-2px);border-color:var(--acc)}
-.card h3{margin:0 0 6px;font-size:15.5px;line-height:1.35}
+.card h3{margin:0 0 6px;font-size:15.5px;line-height:1.35%(cdx)s}
 .card p{margin:0;font-size:14px;color:#cfcbc6}
 .tag{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;padding:2px 7px;border-radius:999px;margin:0 5px 7px 0;border:1px solid var(--line);color:var(--mut)}
 .tag.new{color:#0d0d0d;background:var(--acc);border-color:var(--acc);font-weight:700}
@@ -30,7 +33,7 @@ h2.sec{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transfo
 .tag.warnt{color:var(--warn);border-color:var(--warn)}
 .tag.good{color:var(--up);border-color:var(--up)}
 .lead{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:12px;padding:17px 20px}
-.lead h3{margin:0 0 9px;font-size:20px;line-height:1.3}
+.lead h3{margin:0 0 9px;font-size:20px;line-height:1.3%(ldx)s}
 .lead p{margin:0 0 10px;font-size:15px}
 .lead p:last-child{margin-bottom:0}
 table{width:100%;border-collapse:collapse;font-size:14px}
@@ -73,5 +76,95 @@ footer a:hover{color:var(--acc)}
 .bigcard a.go{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none}
 .mut{color:var(--mut)}
 .mono{font-family:var(--mono)}
-.dv{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#e8c766;margin-bottom:6px}
-</style></head><body><div class="wrap"><div class="masthead"><h1>Daily Briefings</h1><span class="tag">Three desks, rebuilt from live sources every 30 minutes</span></div><div class="meta"><span class="pill live"><span class="dot"></span>Live</span><span class="pill" id="edition">&nbsp;</span><span class="pill" id="datestamp">&nbsp;</span><span class="pill">Updated <span id="updated">&nbsp;</span></span></div><div class="freshline" id="freshline">&nbsp;</div><nav class="tabs"><a href="index.html" class="active">&#9733; Front Page</a><a href="cyber-briefing.html">&#9960; The Cyber Wire</a><a href="wallstreet-briefing.html">&#9650; The Closing Bell</a><a href="mma-briefing.html">&#8856; The Octagon</a><a href="archive.html">&#128452; Archive</a></nav><div class="bigcards"><div class="bigcard" style="border-left:3px solid #22d3a8"><div class="kic" style="color:#22d3a8">&#9960; The Cyber Wire &middot; The Wire</div><h3 style="color:#22d3a8">Security</h3><p>Federal agencies reach today&rsquo;s deadline on three actively exploited Linux kernel flaws, and Japan&rsquo;s Helpfeel has confirmed that an attacker who exploited its Gyazo image-upload server took 23.62 million user records.</p><a class="go" style="color:#22d3a8" href="cyber-briefing.html">Read the briefing &rarr;</a></div><div class="bigcard" style="border-left:3px solid #caa64a"><div class="kic" style="color:#caa64a">&#9650; The Closing Bell &middot; The Tape</div><h3 style="color:#caa64a;font-family:Georgia,'Times New Roman',serif">Markets</h3><p>Wall Street opened the week higher on retreating oil and the rally widened through mid-morning &mdash; Warner Bros. Discovery, Intel and AMD were each up more than 9% as of 10:28&nbsp;AM ET, with no later index print published.</p><a class="go" style="color:#caa64a" href="wallstreet-briefing.html">Read the briefing &rarr;</a></div><div class="bigcard" style="border-left:3px solid #e84545"><div class="kic" style="color:#e84545">&#8856; The Octagon &middot; Tale of the Tape</div><h3 style="color:#e84545">MMA</h3><p>Arman Tsarukyan knocked out Mauricio Ruffy in a lightweight title eliminator at UFC 331, but champion Justin Gaethje says both his hands are still hurt and he will not fight again until 2027.</p><a class="go" style="color:#e84545" href="mma-briefing.html">Read the briefing &rarr;</a></div></div><h2 class="sec">How these pages are made</h2><div class="panel"><p style="margin:0 0 10px;font-size:14.5px">Every edition is rebuilt from live web searches run at publication time. Nothing appears on these pages unless a source fetched in that same run states it, or a standing correction in this desk&rsquo;s own record covers it. Where two sources disagree, both readings are printed and named rather than averaged into one number; where a figure could not be verified, the page says so instead of guessing.</p><p style="margin:0;font-size:14.5px" class="mut">Editions are snapshotted to the <a href="archive.html" style="color:inherit">Archive</a> and kept for 21 days.</p></div><footer><div class="dv">Daily Briefings</div><div class="srcs">Each briefing carries its own sourced footnotes and disclaimers. Market figures are information only and not investment advice; security deadlines should be verified against your own vendor advisories; fight cards are subject to change.</div></footer></div><script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET \u00b7 briefings refresh every 30 minutes, 8 AM\u20136 PM ET';}catch(e){}})();</script></body></html>
+.dv{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:%(dvc)s;margin-bottom:6px}
+"""
+
+PALETTES = {
+    "index": dict(bg="#0b0b0c", panel="#131315", line="#26262b", acc="#8ab4f8",
+                  acc2="#36c6ff", mhx="", cdx="", ldx="", dvc="#e8c766"),
+    "cyber": dict(bg="#080c0b", panel="#0e1514", line="#1c2a27", acc="#22d3a8",
+                  acc2="#36c6ff", mhx="", cdx="", ldx="", dvc="#e8c766"),
+    "ws": dict(bg="#0c0b08", panel="#15130e", line="#2a251a", acc="#caa64a",
+               acc2="#e8c766", mhx=";font-family:Georgia,'Times New Roman',serif",
+               cdx=";font-family:Georgia,'Times New Roman',serif",
+               ldx=";font-family:Georgia,'Times New Roman',serif", dvc="#e8c766"),
+    "mma": dict(bg="#100c0c", panel="#1a1313", line="#322020", acc="#e84545",
+                acc2="#ff8a5c", mhx="", cdx="", ldx="", dvc="#e8c766"),
+}
+
+
+def css(key):
+    out = CSS
+    for k, v in PALETTES[key].items():
+        out = out.replace("%(" + k + ")s", v)
+    return out
+
+
+TABS = [
+    ("index.html", "&#9733; Front Page", "index"),
+    ("cyber-briefing.html", "&#9960; The Cyber Wire", "cyber"),
+    ("wallstreet-briefing.html", "&#9650; The Closing Bell", "ws"),
+    ("mma-briefing.html", "&#8856; The Octagon", "mma"),
+    ("archive.html", "&#128452; Archive", "archive"),
+]
+
+
+def nav(active):
+    out = ['<nav class="tabs">']
+    for href, label, key in TABS:
+        cls = ' class="active"' if key == active else ''
+        out.append('<a href="%s"%s>%s</a>' % (href, cls, label))
+    out.append('</nav>')
+    return "".join(out)
+
+
+META = ('<div class="meta"><span class="pill live"><span class="dot"></span>Live</span>'
+        '<span class="pill" id="edition">&nbsp;</span>'
+        '<span class="pill" id="datestamp">&nbsp;</span>'
+        '<span class="pill">Updated <span id="updated">&nbsp;</span></span></div>')
+
+STAMP = ("<script>(function(){try{var n=new Date();"
+         "var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);"
+         "var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);"
+         "var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);"
+         "var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');"
+         "document.getElementById('datestamp').textContent=et;"
+         "document.getElementById('updated').textContent=t+' ET';"
+         "document.getElementById('edition').textContent=ed;"
+         "var fl=document.getElementById('freshline');"
+         "if(fl)fl.textContent='Data as of '+t+' ET \\u00b7 briefings refresh every 30 minutes, 8 AM\\u20136 PM ET';"
+         "}catch(e){}})();</script>")
+
+
+def head(title, key):
+    return ('<!doctype html><html lang="en"><head><meta charset="utf-8">'
+            '<meta name="viewport" content="width=device-width,initial-scale=1">'
+            '<title>%s</title><style>%s</style></head><body><div class="wrap">'
+            % (title, css(key)))
+
+
+TAIL = "</div>%s</body></html>" % STAMP
+
+
+def masthead(h1, tagline):
+    return ('<div class="masthead"><h1>%s</h1><span class="tag">%s</span></div>'
+            % (h1, tagline))
+
+
+def tldr(label, sentence):
+    return ('<div class="tldr"><b>%s</b> <span>%s</span></div>'
+            '<div class="freshline" id="freshline">&nbsp;</div>' % (label, sentence))
+
+
+def sec(t):
+    return '<h2 class="sec">%s</h2>' % t
+
+
+def srcs(pairs):
+    items = ['<a href="%s">%s</a>' % (u, t) for u, t in pairs]
+    return ('<h2 class="sec">Sources</h2><div class="panel"><div class="srcs">%s</div></div>'
+            % ' &middot; '.join(items))
+
+
+def footer(disc):
+    return '<footer><div class="disc">%s</div></footer>' % disc

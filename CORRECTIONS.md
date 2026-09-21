@@ -23391,3 +23391,132 @@ deleting and report how many days were removed.
   page's own tldr and present **exactly once**.
 - 🔵 **ARCHIVE — 624 snapshots, 208 editions, 21 days**; `archive.html` regenerated whole at **63.5 KB**, **624 links,
   624 unique, 0 broken, 0 unlinked, 0 unparsed**. Pruned **by FILENAME date** (cutoff 2026-08-31); **0** files were stale.
+
+
+## Added 2026-09-21 (Monday — clone ~11:05am ET, research 11:05–11:10am, build 11:10–11:16am, validated 277 checks / 0 failures, read-through with ten repairs, published ~11:18am — MORNING EDITION, markets OPEN, FOURTH run of the day; archive stamp 2026-09-21-1116)
+- 🟢🟢 **CYBER — NEW TOP STORY, PUBLISHED THE DAY IT BROKE AND FETCHED IN FULL: THE GYAZO BREACH.** Help Net Security,
+  **published 2026-09-21 08:57 UTC**, fetched whole this run. Japanese software company **Helpfeel** confirmed an attacker
+  exploited a vulnerability in **Gyazo's image upload server** on **11 September** to gain unauthorised access and run
+  arbitrary commands; suspicious activity detected that evening, access routes blocked by the early hours of **12 September**.
+  **≈23.62 million user records** taken — names, email addresses, **password hashes**, user IDs, device IDs, **login session
+  IDs**, X integration tokens, Google SSO email addresses, profile information, language preferences, registration/login
+  timestamps, subscription plans, billing status. **No payment information.** Image metadata **≈490 million records**, mostly
+  images uploaded in or before **January 2019**, **14.4%** of all image data; a further **2.4 million images** pulled via
+  specific filtering; that metadata includes upload IPs, user agents, **EXIF location data**, **OCR text**, titles, source URLs
+  and hashed passphrases for private images. Helpfeel **obtained-list caveat**: the third party got a list identifying private
+  images and the company cannot rule out that some were viewed. Reported to Japan's **Personal Information Protection
+  Commission** on **15 September**. No sign of data taken from Helpfeel or Cosense. This **replaces the Hacktron / Claude Opus
+  5 vs OpenAI top story**, which was **not re-verified this run**.
+- 🟢🟢 **CYBER — THE HBO MAX / PASTESWITCH OPERATION IS NOW SOURCED IN FULL, NOT FROM SUMMARY.** Help Net Security
+  (15 Sep) fetched whole. Verified figures: **u/hbomax**, verified official account; **108 distinct ClickFix ads in 48 hours**;
+  split **46** HBO Max lure, **36** fake OpenAI Codex, **15** fake macOS disk utility, **11** other developer tools. macOS chain
+  pipes `curl` into `zsh`; payloads **MacSync** (browser credentials, Gecko profiles, Telegram data, Apple Notes, macOS
+  passwords, staged in a hidden zip), **AMOS Helper** (persistent background process disguised as a system service), and fake
+  **Ledger / Trezor Suite / Exodus** wallet apps harvesting **12- and 24-word BIP39** phrases. Windows chain: `mshta` →
+  PowerShell → in-memory loader → **Amatera**. Clippers **AnimateClipper** and **ZigClipper** hold the attacker wallet address
+  **in Binance Smart Chain smart contracts**; **36 mainnet changes March–July 2026** by one controller address. A Reddit user
+  reported the ads on **6 September**; Reddit has paused the ads and secured the account. Threat-actor spotlight moved from the
+  PEC impersonator / APT36 to **the PasteSwitch operators**, which is what this run actually verified.
+- 🟢 **CYBER — THE LINUX KEV TRIO RE-VERIFIED AT ITS DEADLINE.** **CVE-2025-39682 (9.8**, kTLS receive path, zero-length
+  rx_list record bypasses recvmsg() record-type handling**)**, **CVE-2026-53266 (8.8**, netfilter bridge ebtables SNAT
+  out-of-bounds write**)**, **CVE-2025-39964 (7.8**, AF_ALG concurrent-write race**)** — added **18 Sep**, due **21 Sep** under
+  **BOD 26-04**, all three requiring **forensic triage**. Re-confirmed this run against The Hacker News and secondary coverage.
+  **0 days left**; the patch box, the KEV bullet and the vuln table all carry 21 September and no other due date, enforced by
+  the validator. Cisco countdowns rolled by recomputation: **CVE-2026-76460 due 19 Sep = 2 days overdue** (and still listed
+  today among actively exploited CVEs), **CVE-2026-76461 due 17 Sep = 4 days overdue** (labelled carried).
+- 🟢 **CYBER — SEPTEMBER KEV CADENCE VERIFIED AS A SET.** 2 Sep seven (Sangoma Switchvox, Kludex Starlette, Kestra OSS,
+  BerriAI LiteLLM, JFrog Artifactory, SonicWall SMA1000); 9 Sep four (Fortinet, Citrix NetScaler, Google Chromium V8, Cisco
+  Firewall Management Center); 11 Sep one (**CVE-2026-85706**, GitLab); 16 Sep two (Cisco ISE, Acronis Backup). 🔴 **No due
+  date for the Acronis entry appears in anything read this run, so none is asserted.**
+- 🟢 **CYBER — VULN TABLE REBUILT AT NINE ROWS FROM TODAY'S DISCLOSURE BRIEF.** Added **CVE-2026-94097 (Netcore NBR200V2
+  router, CVSS 10.0**, one of five critical Netcore entries**)**, **CVE-2026-55366 (Google Android, 9.8)**, **CVE-2026-86462
+  (Apache Airflow FAB provider, 9.1**, authentication layer exposed**)** and **CVE-2026-58704 (Google Pixel**, named among six
+  actively exploited CVEs; **no CVSS stated, so none printed)**. Brief totals: **87 disclosures, 15 critical, 72 high priority,
+  6 actively exploited**. ⚠ **cvebrief.com returned EMPTY on direct fetch**; figures are from the brief's own summary text as
+  returned in search, and the page says so. The Orkes, Discourse/libheif, Azure AI Foundry and SolarWinds rows are **dropped,
+  not carried** — none was restated this run.
+- 🟢 **CYBER — TWO GENUINELY NEW INCIDENTS, BOTH FROM VICTIM LISTINGS AND LABELLED AS SUCH.** **AnMed** (nonprofit health
+  system, upstate South Carolina and northeast Georgia) temporarily closed **dozens of medical offices** responding to a weekend
+  attack, per an **18 September** entry; no family, record count or timeline stated, so none printed. **Settra** listed as
+  hitting **Hansler Smith Limited**, **Teletek Structures Inc.** and **MedEvolve** all on **4 September**, with **Engefitas**
+  (Vexy) and **Petrocare Construction** (Storm) the same day. ⭐ *A ransomware victim listing is not a company confirmation;
+  print it as a listing.*
+- 🟢🟢 **MARKETS — THE LEAD CHANGED SHAPE: THE CHAMPION OF THIS RUN IS THE MOVERS BLOCK, NOT THE INDEX PRINT.**
+  TheStreet's live blog was fetched in full and its **last update is 10:28 AM ET** (page modified 14:28Z) — a market-movers
+  block, **not a fresh index print**. So the lead still carries the **9:31 AM ET open** (**Dow +0.61%, S&P 500 +0.67%,
+  Nasdaq +0.77%, Russell 2000 −0.50%**) and the page says explicitly that no later index reading appeared. Movers unchanged
+  from the 10:28 block and **none is new**, so **no mover carries a New tag** — the first edition today in which the movers
+  list turned over zero names. Chart of the Day stays **NASDAQ:WBD** (+9.77%, largest sourced move).
+- 🟢 **MARKETS — SUBSTANTIAL NEW SOURCED MATERIAL FROM THE SAME FETCH.** **Oura IPO**: seeking up to **$2.2 billion**,
+  **50 million shares at $40–$44** (Oura 13.5m, selling holders 36.5m), up to **$14.1 billion** valuation vs ~$11 billion in the
+  2025 Series E, ticker **OURA**, **3.6 million rings** sold in the past year at **$399–$499**, led by Goldman Sachs, Morgan
+  Stanley, JPMorgan, Allen & Company and Jefferies. **Oil supply**: Saudi Arabia expects to restore about **half its East-West
+  pipeline capacity within days**; exports past **4 million b/d** this month vs a **13-year low of 2.4 million** in August;
+  Hormuz flows at a **six-month high**; **JPMorgan: 17.1 million b/d** Gulf flows over the past 10 days. **Paramount–WBD**:
+  **Bonta** leads the 12-state coalition and is pressing to settle; **Letitia James** resisting and seeking worker protections;
+  **Connecticut and at least two other states** have reservations (CNN). **Press pool**: the four remaining TV-pool members
+  (NBC, ABC, CBS, Fox News) will stop covering the President's events after CNN was barred as designated pooler; CNN, MS NOW and
+  Politico are suing. **Capital.com's Daniela Hathorn** quoted on oil as "the biggest source of relief".
+- 🟢 **MARKETS — FRIDAY'S CLOSES AND THE H.15 ROW BOTH HELD.** S&P 500 **7,650.50 (+0.17%)**, Nasdaq Composite
+  **26,522.55 (+0.39%)**, Dow **51,682.64, −95.40 (−0.18%)**; the **third straight weekly Dow loss** was restated in coverage
+  read this run, and the three levels are labelled as carried from the ledger. H.15 (17 Sep column) unchanged: **2-yr 4.67%,
+  10-yr 4.94%, 20-yr 5.32%, 30-yr 5.29%, fed funds effective 3.88%, bank prime 7.00%**. Bitcoin now has **three readings of the
+  same morning**, all printed (**$84,402.56 +5.13%** at 7:16 AM; **$85,244.52 +5.86%** on the ~9:05 AM Yahoo strip; a third
+  account saying it **topped $85,000**), with the **CLARITY Act 49–50 cloture** failure and **~$300M of ~$313M (≈96%)**
+  short-side liquidations as the shared driver.
+- 🟢🟢 **MMA — THE TOP STORY GAINED THE FACT THAT CHANGES IT: GAETHJE IS OUT UNTIL 2027.** **Justin Gaethje will not
+  fight again until 2027**, telling Sports Illustrated **"I still can't punch anything. Both of my hands are still hurt from the
+  fight so I'm just going to enjoy being the champion for the rest of the year because I fought two times already in the first
+  six months."** Damage dates to the June win over Topuria. This **supersedes the earlier framing** in which Tsarukyan's
+  complaint was that Gaethje was "trying to avoid" him — the champion's own stated reason is injury, and the page now leads with
+  it. Tsarukyan's finish gained its precision: **KO by elbow at 4:56 of round one**. White at the post-fight presser:
+  **"We'll see"**, and **"we don't know what Gaethje is thinking yet. We'll see where his head is at."** White separately says
+  Tsarukyan **"completely flipped"** the script. **Joe Rogan** has backed Tsarukyan. A **Gaethje–Topuria rematch** remains on
+  the table with White undecided. ⭐ *When a standoff turns out to have a medical explanation, lead with the explanation.*
+- 🟢 **MMA — THE 26 SEPTEMBER CARD IS NOW FULLY BILLED.** **UFC Fight Night: Rosas Jr. vs. Barcelos**, also **UFC Fight
+  Night 289 / UFC Vegas 121**, **Meta APEX, Enterprise, Nevada**, **8:00 PM ET**, **12 bouts**, on **Paramount+**; the
+  **bantamweight and women's strawweight finals of The Ultimate Fighter: Team Cormier vs. Team Bisping** are on the card.
+  🔴 **THE ROSAS ODDS PAIR IS REFUSED FOR A FOURTH CONSECUTIVE RUN** — the same incoherent pairing resurfaced; published line
+  remains **Rosas Jr. −210 / Barcelos +177** (opening, MMAOddsBreaker), and the refused numerals appear **nowhere** on the page,
+  enforced by the validator.
+- 🟢 **MMA — PROSPECT WATCH REBUILT ON WEEK 7, VERIFIED AT UFC.COM.** **Week 7 of Dana White's Contender Series season 10**
+  is **Tuesday 22 September** at the Meta APEX, headlined by lightweights **Callum Connor vs. Piero Guaylupo** with
+  **19 consecutive wins between them**; five more pairs fight, hoping to join the **28 athletes** signed this season. The
+  week-5/week-6 roster of names is **dropped, not carried**.
+- 🟠 **MMA — THE GATE FIGURE MOVED AND THE OLDER ONE IS DROPPED, NOT RECONCILED.** This run's purse listing states
+  **announced attendance 19,357** for a **live gate of $8,300,000**. The **$8,228,105 "gross total revenue"** figure carried by
+  earlier editions was **not restated this run** and is dropped; the page says so. Bonuses re-verified: **FOTN Van and Pantoja
+  $100,000 each**; **POTN Arman Tsarukyan $100,000** and **Casey O'Neill $100,000** for a first-round submission of Eduarda
+  Moura; one outlet's headline additionally credits **Sean Sharaf** with $100,000 for the Steveson KO, and is attributed as a
+  headline. ⭐ *Two figures that measure different things are not a contradiction to average — name which one you are printing.*
+- 🟢 **MMA — CHAMPIONS BOARD CORROBORATED A THIRD CONSECUTIVE RUN.** A published current-champions listing read this run
+  gives **Gane at heavyweight, title date 19 September 2026**, and independently matches this board at **light heavyweight,
+  middleweight, welterweight, lightweight and featherweight**. UFC 332 (vacant women's flyweight, Silva vs. Wang Cong, 3 Oct),
+  UFC 333 (Volkanovski vs. Evloev + Yan vs. Dvalishvili trilogy, 24 Oct, Etihad Arena) and UFC 334 (Gane vs. Hokit, MSG,
+  14 Nov) were each restated in sources read this run. Shevchenko wording this run: she **"informed the promotion she would be
+  unavailable for at least a year"** — published as that, not as "stripped".
+- 🔵 **TEN READ-THROUGH REPAIRS.** (a) The Sector Heat note repeated the lead's sector sentence **verbatim**; it is now a
+  cross-reference plus the VIX. (b) The CoinDesk source link was in the footer with nothing on the page citing it; the CLARITY
+  Act / liquidation detail was added to the bitcoin row rather than the link being left dangling. (c) The Oura bullet did not
+  state the **$2.2 billion** figure its own source link is titled with. (d) The cyber callout heading duplicated its section
+  heading ("Patch Priority — deadline is today" under "Patch Priority"); shortened. (e) "per a 18 September entry" → "an".
+  (f) The 9 Sep and 11 Sep CISA additions were asserted in the KEV cadence bullet with no source links; both added.
+  (g) **Joe Rogan appeared twice**, closing the MMA top story and again in Around the Sport; kept once. (h) A Prospect Watch
+  card said "See the odds refusal **below the cards**" when the refusal is in Around the Sport; re-pointed. (i) "UFC 331 was the
+  promotion's 790th event" overstated the source, which says **790 events had been held as of UFC 331**; reworded. (j) UFC 334
+  was described in a card with **no UFC 334 source link** in the footer; added. ⭐ *A source link with nothing citing it is the
+  same defect as a claim with no source — check the footer in both directions.*
+- 🔵 **VALIDATION — 277 checks / 0 failures.** Idiom set retained: every class used in each body asserted present in that
+  page's own stylesheet; five-tab nav with exactly one active tab, asserted to be the page itself; masthead pill ids, freshline
+  and stamp JS on all four; tldr labels pinned per page (**The Tape / The Wire / Tale of the Tape**) and **index asserted to
+  carry no tldr strip**; index card text asserted **byte-identical** to each page's own tldr and present **exactly once**; all
+  six TradingView blocks on Wall Street with **exactly three** single-quote widgets and **no tradingview.com reference at all**
+  on index, cyber or mma; section ordering asserted by heading markup **and by heading count** on all three briefings; vuln
+  table pinned at **9 CVE rows** with all nine IDs present; MMA results table pinned at **6 rows**; champions pinned by
+  **division↔name equality** across all eleven rows with **twelve banned stale names** asserted absent from champion cells and
+  exactly one VACANT; **KEV countdowns recomputed from today's date** against each due date and asserted to match the text;
+  patch box asserted to contain 21 September and no other due date; index levels asserted to appear **exactly once**, inside the
+  Weekly Scorecard only; mover cards pinned at **7**; upcoming card dates asserted to be in the future; refused odds numerals
+  asserted absent from the MMA page entirely.
+- 🔵 **ARCHIVE — 627 snapshots, 209 editions, 21 days**; `archive.html` regenerated whole at **63.7 KB**, **627 links,
+  627 unique, 0 broken, 0 unlinked, 0 unparsed**. Pruned **by FILENAME date** (cutoff 2026-08-31); **0** files were stale.
