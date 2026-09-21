@@ -6,7 +6,7 @@ fought again since), update the entry in the same commit.
 
 ## ⚠ CHAMPIONS BOARD — AUTHORITATIVE (verified 2026-06-18 vs ESPN + UFC.com; RE-VERIFIED 2026-09-01 — Ulberg named reigning LHW champ in Sept 1 injury coverage; Strickland's UFC 328 split-decision win over Chimaev and Gaethje's Freedom 250 TKO4 of Topuria confirmed via CBS Sports/ESPN 2026 reviews; Volkanovski and Yan both booked to DEFEND at UFC 333, Oct 24 Abu Dhabi. SUPERSEDES every earlier champion claim in this file)
 Three belts were published WRONG for weeks (Pereira at LHW, Chimaev at MW, featherweight "vacant"). The CURRENT verified UFC champions are:
-- **Heavyweight:** ⚠ **VACANT — UPDATED 2026-09-14 (fourth run of the day). This line SUPERSEDES every earlier one seating Tom Aspinall.** Aspinall **VACATED** the undisputed heavyweight title on **14 September 2026** (statement carried by MMA Weekly, published 2026-09-14T09:06:07Z / 5:06am ET; also Sky Sports, Yahoo Sports and Bloody Elbow the same day). Reason: ongoing complications with his eyes; he cannot be medically cleared, has had multiple surgeries, accidents and infections, and suffered further damage to his RIGHT eye in an accident after agreeing a fight date and returning to sparring. He is **NOT retiring** and intends to return once cleared. Root cause traces to the eye pokes in his **no-contest with Ciryl Gane at UFC 321** in October 2025; the absence was approaching the year mark and had prompted rumblings of discontent inside the UFC (cf. MMA Weekly, 'Dana White urges Tom Aspinall to vacate UFC title'). **Interim HW: Ciryl Gane** (KO2 Pereira, Freedom 250, Jun 14 2026) — unchanged. Any 'current champions' list seating Aspinall at heavyweight is STALE from 14 Sep 2026 onward and must be refused. [ESPN STATUS UPDATED 2026-09-14, sixth run, ~5:05pm ET: ESPN's page now shows heavyweight VACANT and has caught up. It had still been seating Aspinall at the 1656 run.] NOTE: this site's own 2026-09-14-1319 edition published Aspinall as reigning champion and was wrong by roughly eight hours.
+- **Heavyweight:** **CIRYL GANE — UNDISPUTED. UPDATED 2026-09-21 (first run of the day). This line SUPERSEDES every earlier one marking heavyweight VACANT or seating Gane as INTERIM champion.** The UFC **promoted Gane from interim to undisputed heavyweight champion** and booked his **first defence of the full title against JOSH HOKIT at UFC 334, Madison Square Garden, 14 November 2026**, announced during Saturday’s UFC 331 broadcast (CBS Sports, 2026-09-19 10:04pm ET, fetched this run; Yahoo Sports; ESPN headline “UFC names Gane undisputed champ, books 1st title defense against Hokit”). Gane won interim gold over Alex Pereira at Freedom 250 in June and was elevated after **Tom Aspinall vacated** with eye injuries. Gane and Gaethje are the only fighters to win interim UFC titles twice; Gane is undefeated in his last four, a run that includes the no-contest whose eye pokes caused Aspinall’s long-term damage, and he has faced Ngannou, Jones, Aspinall and Pereira in four years. **Any “current champions” list showing heavyweight VACANT, or Gane as merely interim, is STALE from 19–21 Sep 2026 onward and must be refused.** **Co-main at UFC 334: Kayla Harrison vs Amanda Nunes** for the women’s bantamweight title — first booked for UFC 324 in January, delayed 11 months by Harrison’s neck injury. UFC 334 is the promotion’s **tenth MSG show** (tradition began 2016 after MMA was legalised in New York; 2020 lost to the pandemic).
 - **Light Heavyweight:** CARLOS ULBERG — won the VACANT belt KO1 over Jiří Procházka at UFC 327 (Miami, Apr 11 2026); had ACL surgery after. Alex PEREIRA is NO LONGER LHW champ — he vacated to campaign at heavyweight and LOST the interim-HW bid to Gane. Do NOT list Pereira as LHW champ.
 - **Middleweight:** SEAN STRICKLAND — split-decision upset of Khamzat Chimaev at UFC 328 (Newark, May 9 2026); two-time champ. Khamzat CHIMAEV is NO LONGER MW champ. Do NOT list Chimaev as MW champ.
 - **Welterweight:** Islam Makhachev (UD over Jack Della Maddalena, UFC 322, Nov 15 2025; two-division champ, vacated LW). **1 DEFENCE** — UD Ian Machado Garry, UFC 330, Aug 15 2026 (17th straight UFC win, a record for consecutive Octagon victories). [updated 2026-08-22]
@@ -23105,3 +23105,102 @@ deleting and report how many days were removed.
 - 🔵 **ARCHIVE — 654 snapshots, 218 editions, 21 days**; `archive.html` regenerated whole by `gen_archive.py`
   at **66.0 KB**, **654 links, 654 unique, 0 broken, 0 unlinked, 0 unparsed**. Pruned by FILENAME date;
   0 files older than 21 days.
+
+
+## Added 2026-09-21 (Monday — clone ~8:05am ET, research 8:06–10:20am, build 10:20–10:25am, validated 295 checks + 37 post-repair assertions / 0 failures, read-through with eight repairs, published ~10:30am — MORNING EDITION, markets OPEN, FIRST run of the day and the first since 20 Sep; archive stamp 2026-09-21-1026)
+- 🟢🟢🟢 **MMA — THE HEAVYWEIGHT TITLE IS NO LONGER VACANT AND GANE IS NO LONGER INTERIM.** The champions block
+  above has been rewritten: **Ciryl Gane is UNDISPUTED heavyweight champion**, promoted from interim after Aspinall vacated,
+  with his **first defence against Josh Hokit at UFC 334, MSG, 14 Nov**. Verified this run against **CBS Sports** (fetched in
+  full) and **Yahoo Sports**, with **ESPN's headline agreeing**. ⚠ ESPN's current-champions page **returned empty on direct
+  fetch** this run — the third distinct failure mode that page has shown this month — so the belt was re-derived from the
+  event that changed it rather than read off a list. The page says so in its own champions note.
+- 🟢🟢 **MMA — THE UFC 331 BONUS ITEMISATION THIS DESK PUBLISHED WAS WRONG, AND THE OFFICIAL PAGE SAYS SO.**
+  UFC.com's own bonus page (fetched this run) gives: **Performance of the Night — CASEY O'NEILL** (armbar of Eduarda Moura)
+  **and ARMAN TSARUKYAN**; **Fight of the Night — Van vs Pantoja**; and a special **“MOBLAND BONUS”** to **SEAN SHARAF**,
+  awarded to whichever fighter caused the most chaos in the Octagon to mark the second season of “Mobland”. Earlier editions
+  put **Sharaf in Performance of the Night and omitted O'Neill entirely**. ⭐ *The “Chaos Bonus” rendering logged on 20 Sep was
+  the right idea with the wrong name; the official name is the MobLand Bonus.* The page carries the correction on its face.
+- 🟢🟢 **MMA — THE UFC 331 GATE FIGURE IS SUPERSEDED BY THE PROMOTION'S OWN NUMBER.** UFC.com states
+  **gross total revenue $8,228,105** on announced attendance **19,357**, **SOLD OUT**, and the **highest-grossing event in
+  Crypto.com Arena history**. This **supersedes the “$8,300,000 live gate”** carried since 20 Sep. The “four fighters earned
+  $25,000 finish bonuses” line was **not restated** this run and is **not published**. Payouts retained from MMA Mania:
+  **Pantoja $650,000**, **Steveson $160,000**.
+- 🟢 **MMA — VAN'S SCORECARDS CONFIRMED AT SOURCE, AND A FRESH MISREADING REFUSED.** UFC.com's official scorecards page
+  gives **49–46, 48–47, 50–45**, confirming the 20 Sep entry. A search summary this run rendered the middle card as **49–47**;
+  that is refused and the page asserts 49–47 appears nowhere. Full card verified at source: Tsarukyan KO (elbows) 4:56 R1,
+  Pitbull KO (strikes) 3:28 R1, Sharaf KO (left hand) 0:12 R1, Menifield SD (28–29, 29–28, 29–28), Vera TKO (strikes) 2:02 R3.
+- 🟠 **MMA — THE ROSAS JR. ODDS CAME IN AS AN INCOHERENT PAIR AND ARE NAMED, NOT DROPPED.** Published: **Rosas Jr. −210 /
+  Barcelos +177** (opening line, MMAOddsBreaker). A later summary paired **−1011 with +133** — a −1011 favourite cannot sit
+  opposite a +133 underdog in the same two-way market. Refused on the page, with the reason stated.
+- 🟢 **MMA — NEXT-CARD COUNTDOWN RETARGETED.** **UFC Fight Night: Rosas Jr. vs Barcelos, Sat 26 Sep, Meta APEX,
+  Enterprise, Nevada** (UFC Fight Night 289 / UFC Vegas 121). Countdown targets **2026-09-26T21:00:00Z**, derived from the AXS
+  event time of 2:00 PM PT. UFC 334 added to the card list and tagged New; Allen–Duncan and Buckley–Malott are explicitly
+  labelled carried, not restated.
+- 🟢🟢 **CYBER — THE LINUX KEV TRIO IS DUE TODAY, AND THAT IS THE PATCH PRIORITY.** **CVE-2025-39682** (Linux kernel
+  kTLS receive path, `net/tls/tls_sw.c`) was added **18 Sep** with federal remediation required **21 Sep under BOD 26-04** —
+  **0 days left**, verified this run. All three of the trio additionally require **forensic triage**. ⚠ Only **CVE-2025-39682**
+  was named **by identifier** in sources read this run; **CVE-2026-53266** and **CVE-2025-39964** are carried from this desk's
+  standing record, and both the patch box and the KEV bullet now say so rather than implying all three were re-sourced.
+- 🟢 **CYBER — BOTH CISCO ZERO-DAYS RE-VERIFIED AND THEIR COUNTDOWNS ROLLED.** **CVE-2026-76460** (Cisco ISE / ISE-PIC,
+  **CVSS 10.0**, fixed in 3.1 P12 / 3.2 P11 / 3.3 P12 / 3.4 P7 / 3.5 P4) added 16 Sep, due **19 Sep = 2 days overdue**.
+  **CVE-2026-76461** (Cisco Secure Email Gateway, **CVSS 9.8**, SQL injection via a crafted email → root) added 14 Sep, due
+  **17 Sep = 4 days overdue**. Both re-confirmed against Rapid7, SOC Prime and Help Net Security this run. Validator pins the
+  patch-priority box to **21 September and no other due date**.
+- 🟢🟢 **CYBER — NEW TOP STORY, PUBLISHED THE SAME MORNING.** ESET named **SparroWocky**, a modular **C++** backdoor
+  used by the China-aligned **FamousSparrow** group against Latin American governments (Hackread, published **2026-09-21**).
+  **~90% of targets** mid-2025 into 2026 were in Latin America; government entities hit in **Argentina, Ecuador, Guatemala,
+  Honduras, Panama, Peru, Puerto Rico and Venezuela**. Trident loader via **DLL sideloading**; payload and config pulled from a
+  `.dat` file; **MZ and PE magic values stripped** before reflective loading; **COFF Loader** for Beacon Object Files;
+  **SilentMoonwalk** for call-stack spoofing; exfil over **TLS with RC4**. Named for the **Jabberwocky** stanza found in early
+  samples, itself from **Mbed TLS** test vectors. Replaces **SparrowDoor**. This replaces the Gemini/Irregular top story, which
+  was **not re-verified this run**.
+- 🟢 **CYBER — THE FLORIDA DMV STORY GAINED ITS OFFICIAL COUNT AND ITS CAVEAT.** Hackread's analysis: archive **~52.3 GB**,
+  six folders, **612,982 ZIP files** (416,042 in the first folder alone) — **explicitly NOT a headcount**, and the page says so.
+  FLHSMV learned of it **4 Sep**, traced it to **one Plant City Police Department user's credentials improperly housed on a
+  personal device**, and filed notice under **§501.171**. ShinyHunters says initial access came from an **infostealer log**, not a
+  password-reset exploit, and that the reset mechanism only **widened** access afterwards.
+- 🟢 **CYBER — IDSCAN.NET ADDED, WITH THE COMPANY'S TIMELINE.** Received word data may have been accessed **on or around
+  1 Sep**, posted notice **4 Sep**. Dark-web collection: **153M+ driver's licences, 10M ID cards, 3M travel documents,
+  579,000 medical cards**. **FBI New Orleans** opened a formal investigation. Tagged New.
+- 🟢🟢 **MARKETS — THE RUN STRADDLED THE OPEN, AND THE PAGE LEADS WITH THE OPEN, NOT THE FUTURES.** Research began
+  pre-market at 8:05am and was **re-run after 9:30**. Published lead: **Dow +0.61%, S&P 500 +0.67%, Nasdaq +0.77%, Russell 2000
+  −0.50%** (TheStreet opening-bell entry, 9:31am ET). 🔴 **FOUR INCOMPATIBLE PRE-OPEN FUTURES READINGS** were collected
+  (+0.58/+0.60/+0.86 at ~4am; +0.5/+0.5/+0.8; +0.6/+0.8; +0.7/+0.7/+1.0) — all four are **named on the page and refused** in
+  favour of the single opening-bell reading. ⭐ *When the run crosses the open, the open is the cleaner fact than any futures print.*
+- 🟢 **MARKETS — FRIDAY'S CLOSES RE-VERIFIED A NINTH TIME, UNCHANGED.** S&P 500 **+0.17% to 7,650.50**; Nasdaq Composite
+  **+0.39% to 26,522.55**; Dow **−95.40 (−0.18%) to 51,682.64**. Dow's **third straight weekly loss**. Validator asserts each
+  level appears **exactly once**, inside the Weekly Scorecard, and nowhere in the editorial.
+- 🟢 **MARKETS — MOVERS ARE ALL FRESH AND ALL SOURCED TO ONE TIMESTAMPED ENTRY.** From TheStreet's 8:42am ET premarket
+  block: **WBD +7.12%** (WSJ progress on legal opposition to the **$81B** Paramount Skydance merger; **PSKY +6%**),
+  **MSTR +7.36%**, **INTC +5.76%** (AUO Optronics, Micro LED advanced packaging), **HPQ −4.75%** (global PC units to shrink
+  **mid-single digits in calendar 2027**), **NVO −4.35%**, **HAS −3.60%**. Chart of the Day set to **NASDAQ:MSTR**, the largest
+  move on that list. The AMAT cluster and the COIN cluster are **gone from the page entirely** — neither was restated this run.
+- 🟠 **MARKETS — BITCOIN HAS TWO READINGS OF THE SAME MORNING AND BOTH ARE PRINTED.** **$84,402.56, +5.13%** at 7:16am ET
+  (TheStreet) against **$81,840.98, +2.01%** on a quote strip read at ~4:05am. Neither is smoothed away. Driver re-verified:
+  the **CLARITY Act** stalled on a **49–50** cloture vote, short of 60, and CoinDesk/CoinGlass put **~$300M of ~$313M** in crypto
+  liquidations on **short sellers (~96%)**. Similarly, the **$94.12 November WTI** strip print is named as a **different contract
+  month** from the **$97.79** front-month figure, not a contradiction.
+- 🟢 **MARKETS — RATES AND THE FED RESTATED FROM PRIMARY COVERAGE.** Fed funds **3.75%–4.00%**, raised **25bp on 16 Sep**,
+  **first hike since July 2023**, **12–0**, at least one more signalled this year. **10-year 5.01%** (18 Sep), near 20-year highs.
+  **WTI $97.79 −2.50%**, **Brent $101.30 −2.49%**, **gold $4,396.60 −0.64%**, **silver $66.80 −0.52%**, each with its own
+  as-of time. 🔴 **2-year and 30-year yields were NOT stated in any source read this run and are OMITTED**, not carried.
+- 🔵 **EIGHT READ-THROUGH REPAIRS.** (a) Bitcoin's second reading added in both the mover card and the rates table.
+  (b) Press-pool boycott corrected to the President's **events**. (c)–(d) The two carried Linux CVE identifiers labelled as
+  carried, in both the patch box and the KEV bullet. (e) The −1011/+133 odds refusal given its actual reason rather than an
+  assertion about markets. (f)–(g) The champions-board provenance corrected: ESPN's page did **not** render, so the claim
+  “verified against … ESPN” was overclaiming and now reads as a headline match. (h) A sentence added recording that every
+  other belt was re-derived from the most recent event that could have changed it.
+- 🔵 **VALIDATION — 295 checks + 37 post-repair assertions / 0 failures.** Every class used in each body asserted present in
+  that page's own stylesheet; five-tab nav with exactly one active tab per page; section ordering asserted on all three
+  briefings **by heading markup** (an earlier ordering check false-positived on the phrase “Weekly Scorecard” appearing inside
+  the live-quotes note — the check, not the page, was wrong); champions pinned by division↔name equality with eleven banned
+  stale names asserted absent from champion cells and exactly one VACANT; cyber vulnerability table pinned at 7 rows, MMA
+  results table at 6; all six TradingView blocks present on Wall Street with exactly three single-quote widgets and **no live
+  widget on index, cyber or mma**; index card text asserted **byte-identical** to each page's own tldr sentence, re-asserted
+  after the repair pass. New idioms this run: **upcoming card dates asserted to be in the future** against today's date, and
+  **index levels asserted to appear exactly once, inside the Weekly Scorecard only**.
+- 🔵 **ARCHIVE — 618 snapshots, 206 editions, 21 days**; `archive.html` regenerated whole at **65.6 KB**, **618 links,
+  618 unique, 0 broken, 0 unlinked, 0 unparsed**. ⚠ **Pruning had silently stopped working:** the `find -mtime +21` step
+  deletes nothing, because cloning the repo resets every file's mtime to the clone time. The archive had drifted to **22 days**.
+  Pruned **by FILENAME date** instead (cutoff 2026-08-31), removing **39** stale snapshots. ⭐ *File mtime is meaningless in a
+  fresh clone; prune by the date in the name.*
