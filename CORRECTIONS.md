@@ -23520,3 +23520,52 @@ deleting and report how many days were removed.
   asserted absent from the MMA page entirely.
 - 🔵 **ARCHIVE — 627 snapshots, 209 editions, 21 days**; `archive.html` regenerated whole at **63.7 KB**, **627 links,
   627 unique, 0 broken, 0 unlinked, 0 unparsed**. Pruned **by FILENAME date** (cutoff 2026-08-31); **0** files were stale.
+
+## Added 2026-09-23 (Wednesday — clone ~12:37pm ET, research 12:37–1:10pm, build 1:10–1:20pm, published ~1:25pm ET — MIDDAY EDITION, markets OPEN)
+- 🟢 **CYBER — NEW TOP STORY: SHINYHUNTERS CLAIMS FBI BREACH.** ShinyHunters told BleepingComputer it used a new,
+  previously-unknown Oracle PeopleSoft RCE zero-day to access FBI systems and move laterally into FBI-managed AWS
+  GovCloud infrastructure, claiming 2–3 TB of personnel data (names, agent statuses, emails, addresses, sometimes SSNs).
+  Axios: FBI is investigating the claims; not independently confirmed. Presented as a claim, not a confirmed breach.
+- 🟢 **CYBER — KEV: BOD 26-04's THREE-DAY WINDOW RE-CONFIRMED TWICE MORE THIS RUN.** CVE-2026-7273 (Zyxel GS1900,
+  CVSS 8.8) added Sept 21, due **Sept 24** (BleepingComputer: "CISA orders feds to patch... by Thursday" — confirmed
+  directly). CVE-2026-93952 (Arista VeloCloud, CVSS 10.0), CVE-2026-94127 (F5 BIG-IP APM, CVSS 9.8, zero-day RCE,
+  confirmed via SecurityWeek direct fetch), and CVE-2026-85102/93616 (Check Point Quantum Gateway, CVSS 9.8) all added
+  Sept 22, due **Sept 25**. This is now three separate runs (Sept 18→21 Linux trio, and this run's two examples)
+  confirming BOD 26-04 = 3-day federal remediation window, not BOD 22-01's 3 weeks.
+- 🟢 **CYBER — NEW INCIDENTS.** IDScan.net confirmed a breach (disclosed Sept 4, confirmed ~Sept 10-11) tied to a
+  dark-web database of 153 million U.S./Canadian driver's-license scans; FBI New Orleans field office investigating.
+  Microsoft disclosed two cloud-phishing campaigns: an AI-drafted CEO-fraud ACH scam (>1M emails, Aug 3–5) and an
+  ongoing (since May 2026) passkey-themed help-desk social-engineering campaign against cloud identities.
+- 🟢 **MARKETS — SEPT 23 SESSION.** Opened lower (9:32am ET: S&P -0.10%, Dow -0.30%, Nasdaq -0.15%, Russell +0.51%)
+  on rising oil/yields; by 10:32am ET (TheStreet, fetched in full) S&P had slid to roughly -0.59% as oil reversed higher
+  and the 10-yr yield pushed back above 5%; tech/chipmakers cited as the main drag, energy the lone bright spot.
+  Context: US-Iran talks (3hr, Qatari-mediated, Trump called "very good/productive") at UNGA; Trump-Xi summit and
+  Thursday dinner (Huang/Altman/Pichai) this week. Movers (TheStreet, all sourced): IonQ +11.35% premarket (quantum
+  error-correction decoder), Cracker Barrel +7.88% (Q4 beat), Maplebear/Instacart +4.84% (Gopuff integration), Disney
+  +0.31% (Disney+ price-hike chatter ~13%), WillScot -3.98% (debt leverage), AppLovin -3.79% (Edgewater: share-growth
+  stalled), SpaceX -0.76% to $153.55 (Trump July trade disclosure). IonQ trades **NYSE:IONQ**, not NASDAQ — corrected
+  before publish.
+- 🟢 **MARKETS — WEEKLY SCORECARD (all closes cross-checked point/percent/level consistent):** Thu Sep17 S&P 7,551.81
+  (-0.5%), Nasdaq 25,978.43 (flat), Dow 51,461.90 (-1.2%). Fri Sep18 S&P 7,637.76 (+1.1%), Nasdaq 26,418.30 (+1.7%),
+  Dow 51,778.04 (+0.6%). Mon Sep21 S&P 7,764.70 (+1.49%), Nasdaq 27,122.09 (+2.26%, record), Dow 52,048.83 (+0.71%).
+  Tue Sep22 S&P 7,764.64 (-0.06pt), Nasdaq 27,244.28 (+0.5%, fresh record), Dow 51,863.69 (-0.4%).
+- 🟢 **MMA — CHAMPIONS BOARD RE-VERIFIED, ALL ELEVEN DIVISIONS UNCHANGED FROM the 2026-09-21 record.** Fresh UFC-331
+  results fetch (CBS Sports/ESPN/Yahoo) matches this file exactly: Van UD Pantoja (49-46/48-47/50-45), Tsarukyan KO1
+  (elbows, 4:56) over Ruffy. Women's strawweight champion **Mackenzie Dern** newly added to this board (won UFC 320,
+  Oct 2025 over Jandiroba; defended UD over Gillian Robertson, UFC 330, Aug 15 2026) — corroborated via CBS
+  Sports/Yahoo Sports/Wikipedia this run; not previously listed in this file's champions section as read this run.
+- 🟢 **MMA — TOP STORY UPDATED (Sept 22 color).** Tsarukyan says he was told his next fight is for the title but is
+  skeptical Gaethje will take it soon ("Maybe Gaethje's going to say, 'I don't want to fight anymore'"); Gaethje's
+  manager Ali Abdelaziz says only "I have some ideas." Sportsbooks already list a hypothetical Tsarukyan (-450) vs.
+  Gaethje (+350) line. Confirms 2026-09-21 entry that Gaethje will not fight again until 2027 (SI: hand injuries).
+- 🟢 **MMA — PROSPECT WATCH REBUILT ON CONTENDER SERIES WEEK 7 (Sept 22, most recent).** Six contracts awarded:
+  Alvi Dasuyev, Marcos Degli, Piero Guaylupo, Damian Piwowarczyk (winners) plus Callum Connor and Jaden Ortega
+  (despite losses, "instant classics"). No contract in the headliner (Novenyi Jr. beat Haig). Week-5 roster from the
+  prior record is dropped, not carried.
+- 🟢 **MMA — NEW UPCOMING CARD CONFIRMED.** UFC Fight Night: Buckley vs. Malott, Oct 17, Rogers Place, Edmonton
+  (welterweight, "UFC return to Edmonton") — added to the Fight Week rotation alongside UFC 332 (Oct 3, Salt Lake
+  City, Silva vs. Wang Cong for vacant women's flyweight) and UFC 333 (Oct 24, Etihad Arena, Volkanovski vs. Evloev +
+  Yan/Dvalishvili trilogy).
+- 🔵 **ARCHIVE — pruned by FILENAME date (cutoff 2026-09-02, 21-day window from this run's date); 63 stale files
+  from 2026-08-31–09-01 removed. 567 snapshots remain across 189 editions / 20 days after adding this run's three
+  snapshots. archive.html regenerated whole from the pruned set (no hand-curation).**
