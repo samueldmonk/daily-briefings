@@ -23569,3 +23569,23 @@ deleting and report how many days were removed.
 - 🔵 **ARCHIVE — pruned by FILENAME date (cutoff 2026-09-02, 21-day window from this run's date); 63 stale files
   from 2026-08-31–09-01 removed. 567 snapshots remain across 189 editions / 20 days after adding this run's three
   snapshots. archive.html regenerated whole from the pruned set (no hand-curation).**
+
+## Added 2026-09-23 (Wednesday — clone ~1:33pm ET, MIDDAY EDITION, markets OPEN)
+- 🔴 **MARKETS — WEEKLY SCORECARD ROWS WERE MISLABELLED IN THE 12:50 EDITION AND THE ENTRY ABOVE. FIXED.** The rows printed
+  as "Thu Sep17 7,551.81 / 25,978.43 / 51,461.90" and "Fri Sep18 7,637.76 / 26,418.30 / 51,778.04" are actually **Wed Sep 16**
+  and **Thu Sep 17**. **Fri Sep 18 closed S&P 7,650.50 (+12.74, +0.17%), Nasdaq 26,522.55 (+104.24, +0.39%), Dow 51,682.64
+  (−95.40, −0.18%)** — re-confirmed this run (Yahoo Finance Sept 18 wrap / TheStreet) and consistent with Monday's +1.49% /
+  +2.26% / +0.71%. ⭐ *Always chain-check each row against the next day's percent change, not just within the row.*
+- 🟢 **MARKETS — SEPT 23 MIDDAY.** CNBC midday: S&P −0.7%, Nasdaq −1.2%, Dow −318 (−0.6%). Flash US Composite PMI 58.4
+  (from 56.0; highest since July 2021, Reuters). 10-yr 5.104% (highest since July 2007), 2-yr 4.914% (highest since May 2024),
+  30-yr 5.389% (CNBC). October hike odds 73% (from 55%, CME FedWatch via CNBC). Reuters late-morning: WTI $91.87 +1.49%,
+  Brent $101.62 +2.39%, spot gold $4,287.05 −1.55%. Movers (CNBC midday): MCD −5%+ (worst day since Apr 4 2025; investor-day
+  inflation/traffic warning; 50,000-store target pushed to 2028), PAYX almost −7%, BABA −4%, CBRL +5%, WOR +4%; TheStreet
+  midday: Securitize +13.03%, IonQ +5.89%.
+- 🟢 **CYBER — CHECK POINT PAIR RE-DESCRIBED (Help Net Security, fetched in full).** CVE-2026-85102 = Security Gateway / Spark
+  firewall auth-bypass RCE (exploitation attempts since Sept 12); **CVE-2026-93616 = Management Server pre-auth path traversal**,
+  exploited as far back as July 23 — NOT a second Quantum Gateway bug. Both due Sept 25 with Arista/F5. New item: Microsoft-led
+  EvilTokens takedown (12,000+ inboxes, 10,000+ orgs, 50 sites seized, 150+ domains). Japan Digital Agency (246,000 records,
+  disclosed Sept 11) and VL Prosperity tanker incident now sourced to SecurityWeek.
+- 🟢 **MMA — ESPN champions listing this run matches the board (Gane dated Sept 19; Ulberg, Strickland, Gaethje, Volkanovski
+  all correct). No belt changes.**
