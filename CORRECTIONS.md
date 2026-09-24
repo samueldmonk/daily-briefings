@@ -23589,3 +23589,24 @@ deleting and report how many days were removed.
   disclosed Sept 11) and VL Prosperity tanker incident now sourced to SecurityWeek.
 - 🟢 **MMA — ESPN champions listing this run matches the board (Gane dated Sept 19; Ulberg, Strickland, Gaethje, Volkanovski
   all correct). No belt changes.**
+
+## Added 2026-09-23 (Wednesday — clone ~7:57pm ET, AFTERNOON EDITION, markets CLOSED; archive stamp 2026-09-23-2001)
+- 🟢 **MARKETS — SEPT 23 OFFICIAL CLOSE (Yahoo Finance quote strip + CNBC, consistent vs Sept 22 levels):** S&P 500 7,706.03
+  (−58.61, −0.75%), Nasdaq 26,936.04 (−308.24, −1.13%; broke a four-day win streak), Dow 51,511.59 (−352.10, −0.68%), Russell
+  2000 −1.77%. 10-yr 5.135% (highest since July 2007), 2-yr 4.947% (highest since May 2024) per CNBC evening; 5-yr topped 5% for
+  first time since 2007 (TheStreet). October hike odds now ">68%" (CNBC evening) — SUPERSEDES the midday 73% reading. Fed Gov.
+  Barr: "further policy adjustments are likely to be needed" (Yahoo). Futures flat Wednesday night (S&P +0.02%, Nasdaq-100 +0.08%).
+  No sourced single-stock after-hours movers found. WTI $92.71 (+2.42%) per Trading Economics. RCL −~3% to 52-wk low on $3B
+  50% stake in Sandals/Beaches parent (CNBC midday). MCD midday detail re-sourced: 7th straight weekly decline on pace, longest
+  since Aug 2014 (CNBC); $8.5B investment through 2036 (Yahoo). Dropped (not re-verified this run): euro level, CBRL EPS/revenue
+  figures, SECZ reason, Thursday-dinner attendee names.
+- 🟢 **CYBER — NEW:** CVE-2026-87902 WordPress core unauthenticated path traversal → RCE under conditions, WordPress security
+  team score **9.2**, fixed in **7.1.2** (backported to 4.7), exploitation since 17:44 UTC Sept 22 (Patchstack via BleepingComputer,
+  fetched in full). NOT in KEV as of this run. BigDiskBuster (Abdelhamid Naceri) Defender-update-blocking PoC, GitHub Sept 19,
+  no CVE/patch. FBI statement re ShinyHunters: "aware of claims regarding unauthorized activity affecting FBIjobs.gov"; group gave
+  FBI one week to correct/remove its May FLASH report. KEV deadlines re-confirmed: Zyxel CVE-2026-7273 due Sept 24; Sept 22 four
+  due Sept 25 (Security Affairs / CISA alert).
+- 🟢 **MMA — champions board unchanged** (search-level ESPN rendering matches Gane/Ulberg/Strickland/Makhachev/Gaethje/
+  Volkanovski/Van; ESPN page empty on direct fetch). New item: Volkov sarcastic reaction to Hokit title shot (CBS Sports/BJPenn).
+  Rosas Jr. −180 / Barcelos +150 (DraftKings) re-confirmed.
+- 🔧 **ARCHIVE — gen_archive_2245.py fails on the current archive.html shell (regex miss); gen_archive.py works. Use gen_archive.py.**
