@@ -1,0 +1,141 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Octagon &mdash; Daily MMA Briefing</title><style>:root{--bg:#100c0c;--panel:#1a1313;--line:#322020;--fg:#e9e6e2;--mut:#9aa0a6;--acc:#e84545;--acc2:#ff8a5c;--up:#3ecf8e;--down:#ef5a5a;--crit:#ff5f56;--warn:#e8b24a;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:26px 20px 60px}
+.masthead{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;margin-bottom:10px}
+.masthead h1{font-size:30px;margin:0;letter-spacing:-.4px}
+.masthead .tag{color:var(--mut);font-size:14px}
+.meta{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 4px}
+.pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:3px 9px;color:var(--mut);background:var(--panel)}
+.pill.live{color:var(--up);border-color:rgba(62,207,142,.4)}
+.pill.live .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--up);margin-right:5px;vertical-align:middle}
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:10px;padding:11px 15px;margin:6px 0 2px;font-size:14.5px;line-height:1.5}
+.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);margin-right:9px}
+.freshline{font-family:var(--mono);font-size:11px;color:var(--mut);margin:8px 0 14px;letter-spacing:.04em}
+nav.tabs{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 20px;border-bottom:1px solid var(--line);padding-bottom:10px}
+nav.tabs a{text-decoration:none;color:var(--mut);font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;padding:6px 11px;border:1px solid transparent;border-radius:8px}
+nav.tabs a:hover{color:var(--fg);border-color:var(--line)}
+nav.tabs a.active{color:var(--acc);border-color:var(--line);background:var(--panel)}
+h2.sec{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);margin:34px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:13px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;transition:transform .15s ease,border-color .15s ease}
+.card:hover{transform:translateY(-2px);border-color:var(--acc)}
+.card h3{margin:0 0 6px;font-size:15.5px;line-height:1.35}
+.card p{margin:0;font-size:14px;color:#cfcbc6}
+.tag{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;padding:2px 7px;border-radius:999px;margin:0 5px 7px 0;border:1px solid var(--line);color:var(--mut)}
+.tag.new{color:#0d0d0d;background:var(--acc);border-color:var(--acc);font-weight:700}
+.tag.prospect{color:var(--up);border-color:var(--up)}
+.tag.crit{color:var(--crit);border-color:var(--crit)}
+.tag.warnt{color:var(--warn);border-color:var(--warn)}
+.tag.good{color:var(--up);border-color:var(--up)}
+.lead{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:12px;padding:17px 20px}
+.lead h3{margin:0 0 9px;font-size:20px;line-height:1.3}
+.lead p{margin:0 0 10px;font-size:15px}
+.lead p:last-child{margin-bottom:0}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);padding:8px 10px;border-bottom:1px solid var(--line);font-weight:600}
+td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+.up{color:var(--up)}.down{color:var(--down)}.critc{color:var(--crit)}.warnc{color:var(--warn)}.accc{color:var(--acc)}
+ul.bul{margin:0;padding-left:20px}
+ul.bul li{margin-bottom:9px;font-size:14.5px}
+.note{font-size:12.5px;color:var(--mut);margin-top:9px;line-height:1.5}
+footer{margin-top:42px;border-top:1px solid var(--line);padding-top:16px}
+footer a{color:var(--mut);font-size:12.5px;text-decoration:none;border-bottom:1px dotted var(--line)}
+footer a:hover{color:var(--acc)}
+.srcs{font-size:12.5px;color:var(--mut);line-height:2}
+.disc{font-size:12px;color:var(--mut);margin-top:14px;line-height:1.6}
+.dv{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc2);margin-bottom:6px}
+.mut{color:var(--mut)}
+.mono{font-family:var(--mono)}
+.cdn{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 16px;display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;margin-bottom:18px}
+.cdn .lab{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc)}
+.cdn .t{font-family:var(--mono);font-size:16px;font-weight:700}
+</style></head><body><div class="wrap">
+<div class="masthead"><h1>The Octagon</h1><span class="tag">Your daily MMA briefing &mdash; UFC, prospects &amp; the business of fighting</span></div>
+<div class="meta"><span class="pill live"><span class="dot"></span>Live</span><span class="pill" id="edition">&nbsp;</span><span class="pill" id="datestamp">&nbsp;</span><span class="pill">Updated <span id="updated">&nbsp;</span></span></div>
+<div class="tldr"><b>Tale of the Tape</b><span>Arman Tsarukyan&rsquo;s first-round elbow knockout of Mauricio Ruffy at UFC 331 has bookmakers already installing him a &minus;450 favorite over champion Justin Gaethje, who says both hands are still hurt and he won&rsquo;t fight again until 2027.</span></div>
+<div class="freshline" id="freshline">&nbsp;</div>
+<nav class="tabs"><a href="index.html">&#9733; Front Page</a><a href="cyber-briefing.html">&#9960; The Cyber Wire</a><a href="wallstreet-briefing.html">&#9650; The Closing Bell</a><a href="mma-briefing.html" class="active">&#8856; The Octagon</a><a href="archive.html">&#128452; Archive</a></nav>
+
+<div class="cdn"><span class="lab">Next Card</span><span class="t" id="ufccdn">&nbsp;</span><span class="mut">UFC Fight Night: Rosas Jr. vs. Barcelos &middot; Sept 26, 8:00 PM ET &middot; Meta APEX, Las Vegas</span></div>
+
+<h2 class="sec">Top Story</h2>
+<div class="lead" style="border-left-color:var(--acc)"><h3>Tsarukyan&rsquo;s elbow KO puts him next in line &mdash; but Gaethje says he&rsquo;s done for the year</h3>
+<p>Arman Tsarukyan finished Mauricio Ruffy with elbows at 4:56 of round one at UFC 331 on September 19, his sixth straight UFC win, and says he was told before and after the fight that his next bout will be for lightweight gold. Champion Justin Gaethje, however, told Sports Illustrated he &ldquo;still can&rsquo;t punch anything&rdquo; and that both hands remain hurt from his June win over Ilia Topuria, adding he will &ldquo;enjoy being champion for the rest of the year&rdquo; after fighting twice in the first half of 2026 &mdash; meaning he is not expected to compete again until 2027. Tsarukyan is skeptical a fight will happen soon, joking Gaethje might retire rather than face him. Gaethje&rsquo;s manager, Ali Abdelaziz, responded only that he has &ldquo;some ideas.&rdquo; Bookmakers have already posted odds on a hypothetical matchup: Tsarukyan (24-3) a &minus;450 favorite over Gaethje (28-5) at +350.</p>
+<p class="note">Sources: <a href="https://sports.yahoo.com/mma/article/arman-tsarukyan-suspects-justin-gaethje-may-retire-rather-than-fight-him-after-ufc-331-knockout-231322343.html" style="color:var(--acc2)">Yahoo Sports</a> &middot; <a href="https://bloodyelbow.com/2026/09/22/justin-gaethjes-manager-gives-update-on-potential-clash-with-arman-tsarukyan-i-have-some-ideas/" style="color:var(--acc2)">Bloody Elbow</a></p></div>
+
+<h2 class="sec">Fight Week &mdash; Upcoming Cards</h2>
+<div class="cards">
+<div class="card"><div class="mono" style="color:var(--acc2);font-size:12px;margin-bottom:4px">SEPT 26 &middot; META APEX, LAS VEGAS</div><h3>Rosas Jr. vs. Barcelos</h3><p>UFC Fight Night 289 / UFC Vegas 121, 12 bouts, Paramount+. Raul Rosas Jr. headlines his first UFC main event against veteran Raoni Barcelos at bantamweight; the bantamweight and women&rsquo;s strawweight finals of The Ultimate Fighter: Team Cormier vs. Team Bisping also air. Odds: Rosas Jr. &minus;180 / Barcelos +150 (DraftKings).</p></div>
+<div class="card"><div class="mono" style="color:var(--acc2);font-size:12px;margin-bottom:4px">OCT 3 &middot; SALT LAKE CITY</div><h3>UFC 332: Silva vs. Wang Cong</h3><p>Natalia Silva and Wang Cong meet for the vacant women&rsquo;s flyweight title after Valentina Shevchenko vacated the belt due to injury.</p></div>
+<div class="card"><div class="mono" style="color:var(--acc2);font-size:12px;margin-bottom:4px">OCT 17 &middot; ROGERS PLACE, EDMONTON</div><h3>Buckley vs. Malott</h3><p>A welterweight bout between Joaquin Buckley and Mike Malott headlines the UFC&rsquo;s return to Edmonton.</p></div>
+<div class="card"><div class="mono" style="color:var(--acc2);font-size:12px;margin-bottom:4px">OCT 24 &middot; ETIHAD ARENA, ABU DHABI</div><h3>UFC 333: Volkanovski vs. Evloev + Yan vs. Dvalishvili 3</h3><p>Featherweight champion Alexander Volkanovski defends against Movsar Evloev while bantamweight champion Petr Yan runs it back with Merab Dvalishvili in a trilogy bout.</p></div>
+</div>
+<p class="note">Sources: <a href="https://www.ufc.com/event/ufc-fight-night-september-26-2026" style="color:var(--acc2)">UFC.com</a> &middot; <a href="https://www.rotowire.com/betting/mma/fight/raoni-barcelos-vs-raul-rosas-odds-2026-09-26-5570" style="color:var(--acc2)">RotoWire</a> &middot; <a href="https://www.ufc.com/news/pivotal-welterweight-bout-between-joaquin-buckley-and-mike-malott-headlines-ufc-return" style="color:var(--acc2)">UFC.com (Buckley-Malott)</a></p>
+
+<h2 class="sec">Last Event &mdash; Results</h2>
+<div class="panel"><div class="mono" style="color:var(--acc2);font-size:12px;margin-bottom:8px">UFC 331: VAN VS. PANTOJA 2 &middot; SEPT 19 &middot; CRYPTO.COM ARENA, LOS ANGELES</div>
+<table><tr><th>Result</th><th>Bout</th><th>Method</th></tr>
+<tr><td class="up">Van def. Pantoja</td><td>Flyweight title</td><td>UD (49-46, 48-47, 50-45)</td></tr>
+<tr><td class="up">Tsarukyan def. Ruffy</td><td>Lightweight</td><td>KO (elbows), 4:56 R1</td></tr>
+<tr><td class="up">Pitbull def. Doo Ho Choi</td><td>Featherweight</td><td>TKO (strikes), 3:28 R1</td></tr>
+<tr><td class="up">Sharaf def. Steveson</td><td>Heavyweight</td><td>KO (punch), :12 R1</td></tr>
+<tr><td class="up">Menifield def. Baraniewski</td><td>Light heavyweight</td><td>Split decision</td></tr>
+<tr><td class="up">Vera def. Jourdain</td><td>Bantamweight</td><td>TKO (punch), 2:02 R3</td></tr>
+<tr><td class="up">Despaigne def. Tuivasa</td><td>Heavyweight</td><td>Split decision</td></tr>
+</table>
+<p class="note">Bonuses: Fight of the Night &mdash; Van &amp; Pantoja ($100,000 each). Performance of the Night &mdash; Arman Tsarukyan and Casey O&rsquo;Neill (first-round submission of Eduarda Moura), $100,000 each; one outlet additionally credited Sean Sharaf for his KO of Steveson. Announced attendance 19,357; live gate approximately $8,300,000.</p>
+<p class="note">Sources: <a href="https://www.cbssports.com/ufc/news/ufc-331-fight-card-joshua-van-alexandre-pantoja-results-winners/" style="color:var(--acc2)">CBS Sports</a> &middot; <a href="https://www.espn.com/mma/story/_/id/49953092/ufc-331-live-results-analysis-joshua-van-vs-alexandre-pantoja-2" style="color:var(--acc2)">ESPN</a></p>
+</div>
+
+<h2 class="sec">Prospect Watch</h2>
+<div class="cards">
+<div class="card"><span class="tag prospect">Prospect</span><h3>Six contracts from Contender Series Week 7</h3><p>At the September 22 taping, Dana White awarded UFC contracts to winners Alvi Dasuyev, Marcos Degli, Piero Guaylupo and Damian Piwowarczyk &mdash; plus Callum Connor and Jaden Ortega despite their losses, after their bouts were called instant classics. Degli submitted Paris Moran via rear-naked choke to extend his win streak to 13; Piwowarczyk stopped previously unbeaten Emilio Quissua by first-round TKO. No contract was awarded in the headliner, won by Norbert Novenyi Jr. over Theo Haig.</p></div>
+</div>
+<p class="note">Source: <a href="https://cagesidepress.com/2026/09/22/dana-whites-contender-series-season-10-week-7-results/" style="color:var(--acc2)">Cageside Press</a> &middot; <a href="https://dknetwork.draftkings.com/2026/09/22/which-fighters-got-ufc-contracts-on-dwcs-week-7-season-10/" style="color:var(--acc2)">DraftKings Network</a></p>
+
+<h2 class="sec">Around the Sport</h2>
+<div class="panel"><ul class="bul">
+<li>Alexander Volkov, passed over for Ciryl Gane&rsquo;s first undisputed defense, sarcastically praised the UFC on <i>The Ariel Helwani Show</i> for giving Josh Hokit the UFC 334 title shot: &ldquo;It&rsquo;s a noble thing for UFC to do for him with his mental problem.&rdquo; Hokit earned the slot with 2026 wins over Derrick Lewis and Curtis Blaydes (CBS Sports / BJPenn.com).</li>
+<li>Justin Gaethje says he will not fight again until 2027, citing lingering hand damage from his June win over Ilia Topuria at Freedom 250.</li>
+<li>Arman Tsarukyan has been told his next fight is for the title but is publicly skeptical Gaethje will take it soon; sportsbooks have already posted a &minus;450/+350 line on the hypothetical matchup.</li>
+<li>Dana White&rsquo;s Contender Series season 10 continues weekly on Paramount+ through October, with 28 total contracts targeted for the season.</li>
+</ul></div>
+
+<h2 class="sec">Rankings &amp; Business</h2>
+<div class="panel"><p style="margin:0 0 10px"><b>Business &amp; broadcast:</b> UFC segment revenue rose 29% to $535.7 million in TKO Group&rsquo;s second quarter of 2026 on the strength of the Paramount media deal; TKO&rsquo;s first-quarter 2026 revenue reached $1.597 billion, up 26% year over year, with UFC and WWE both contributing. Freedom 250 (June 2026) drew roughly 17 million Paramount+ viewers in the U.S. and Latin America, with international audiences pushing the estimated global total to about 34 million &mdash; among the most-watched events in UFC history. Paramount&rsquo;s seven-year rights deal with TKO, averaging $1.1 billion annually, carries all 13 numbered events and 30 Fight Nights on Paramount+, with select numbered events simulcast on CBS.</p>
+<p style="margin:0" class="note">Sources: <a href="https://investor.tkogrp.com/news/news-details/2026/UFC-Freedom-250-Delivers-34-Million-Total-Global-Viewers/default.aspx" style="color:var(--acc2)">TKO Group investor release</a> &middot; <a href="https://www.hollywoodreporter.com/business/business-news/tko-earnings-rise-paramount-ufc-deal-1236588117/" style="color:var(--acc2)">Hollywood Reporter</a></p></div>
+
+<h2 class="sec">Champions Board</h2>
+<div class="panel"><table><tr><th>Division</th><th>Champion</th><th>Note</th></tr>
+<tr><td>Heavyweight</td><td>Ciryl Gane</td><td>Undisputed since Sept 19; defends vs. Josh Hokit, UFC 334, Nov 14 (MSG)</td></tr>
+<tr><td>Light Heavyweight</td><td>Carlos Ulberg</td><td>Won vacant title, KO1 Procházka, UFC 327 (Apr 11)</td></tr>
+<tr><td>Middleweight</td><td>Sean Strickland</td><td>Split decision over Khamzat Chimaev, UFC 328 (May 9)</td></tr>
+<tr><td>Welterweight</td><td>Islam Makhachev</td><td>UD over Ian Machado Garry, UFC 330 (Aug 15); 17 straight Octagon wins</td></tr>
+<tr><td>Lightweight</td><td>Justin Gaethje</td><td>TKO4 Ilia Topuria, Freedom 250 (Jun 14); not fighting again until 2027</td></tr>
+<tr><td>Featherweight</td><td>Alexander Volkanovski</td><td>Won title vs. Diego Lopes, UFC 314 (Apr 2025), one defense since (ESPN); defends vs. Movsar Evloev, UFC 333 (Oct 24)</td></tr>
+<tr><td>Bantamweight</td><td>Petr Yan</td><td>UD over Merab Dvalishvili, UFC 323 (Dec 6); trilogy vs. Dvalishvili, UFC 333 (Oct 24)</td></tr>
+<tr><td>Flyweight</td><td>Joshua Van</td><td>UD over Alexandre Pantoja, UFC 331 (Sept 19); second title defense</td></tr>
+<tr><td>Women&rsquo;s Bantamweight</td><td>Kayla Harrison</td><td>Defends vs. Amanda Nunes, UFC 334, Nov 14 (MSG)</td></tr>
+<tr><td>Women&rsquo;s Flyweight</td><td class="warnc">Vacant</td><td>Valentina Shevchenko vacated (injury); Natalia Silva vs. Wang Cong contest it, UFC 332 (Oct 3)</td></tr>
+<tr><td>Women&rsquo;s Strawweight</td><td>Mackenzie Dern</td><td>Won title UFC 320 (Oct 2025); defended UD over Gillian Robertson, UFC 330 (Aug 15)</td></tr>
+</table>
+<p class="note">Cross-checked this run against ESPN&rsquo;s current-champions listing (which dates Gane&rsquo;s undisputed title to Sept 19), ESPN/Yahoo Sports coverage of Gane&rsquo;s promotion and UFC 334 booking, and this desk&rsquo;s standing corrections record.</p></div>
+
+<footer><div class="dv">The Octagon</div><div class="srcs">
+Sources: <a href="https://www.bjpenn.com/mma-news/alexander-volkov/alexander-volkov-insists-josh-hokit-mental-illness-title-shot/" style="color:inherit">BJPenn.com (Volkov)</a> &middot; <a href="https://www.cbssports.com/ufc/news/ufc-heavyweight-division-title-picture-tom-aspinall-ciryl-gane-josh-hokit-alex-pereira-alexander-volkov/" style="color:inherit">CBS Sports (HW picture)</a> &middot; <a href="https://www.rotowire.com/betting/mma/fight/raoni-barcelos-vs-raul-rosas-odds-2026-09-26-5570" style="color:inherit">RotoWire (odds)</a> &middot; <a href="https://www.cbssports.com/ufc/news/ufc-331-fight-card-joshua-van-alexandre-pantoja-results-winners/" style="color:inherit">CBS Sports (UFC 331)</a> &middot;
+<a href="https://www.espn.com/mma/story/_/id/49953092/ufc-331-live-results-analysis-joshua-van-vs-alexandre-pantoja-2" style="color:inherit">ESPN (UFC 331)</a> &middot;
+<a href="https://sports.yahoo.com/mma/article/arman-tsarukyan-suspects-justin-gaethje-may-retire-rather-than-fight-him-after-ufc-331-knockout-231322343.html" style="color:inherit">Yahoo Sports (Tsarukyan/Gaethje)</a> &middot;
+<a href="https://www.ufc.com/event/ufc-fight-night-september-26-2026" style="color:inherit">UFC.com (Rosas-Barcelos)</a> &middot;
+<a href="https://cagesidepress.com/2026/09/22/dana-whites-contender-series-season-10-week-7-results/" style="color:inherit">Cageside Press (DWCS Wk7)</a> &middot;
+<a href="https://investor.tkogrp.com/news/news-details/2026/UFC-Freedom-250-Delivers-34-Million-Total-Global-Viewers/default.aspx" style="color:inherit">TKO Group</a> &middot;
+<a href="https://sports.yahoo.com/articles/mackenzie-dern-says-ufc-gold-201556630.html" style="color:inherit">Yahoo Sports (Dern)</a>
+</div>
+<div class="disc">Cards and bouts are subject to change. Odds and bonuses are as reported by named sources at publication time and may move before the event.</div>
+</footer>
+</div>
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();
+(function(){try{var target=new Date('2026-09-26T20:00:00-04:00').getTime();function tick(){var now=new Date().getTime();var d=target-now;var el=document.getElementById('ufccdn');if(!el)return;if(d<=0){el.textContent='Fight week — live/completed';return;}var days=Math.floor(d/86400000);var hrs=Math.floor((d%86400000)/3600000);var mins=Math.floor((d%3600000)/60000);el.textContent=days+'d '+hrs+'h '+mins+'m';}tick();setInterval(tick,60000);}catch(e){}})();</script>
+</body></html>

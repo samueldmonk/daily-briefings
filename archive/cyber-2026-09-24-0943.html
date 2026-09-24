@@ -1,0 +1,138 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Cyber Wire &mdash; Daily Cybersecurity Briefing</title><style>:root{--bg:#080c0b;--panel:#0e1514;--line:#1c2a27;--fg:#e9e6e2;--mut:#9aa0a6;--acc:#22d3a8;--acc2:#36c6ff;--up:#3ecf8e;--down:#ef5a5a;--crit:#ff5f56;--warn:#e8b24a;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:26px 20px 60px}
+.masthead{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;margin-bottom:10px}
+.masthead h1{font-size:30px;margin:0;letter-spacing:-.4px}
+.masthead .tag{color:var(--mut);font-size:14px}
+.meta{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 4px}
+.pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:3px 9px;color:var(--mut);background:var(--panel)}
+.pill.live{color:var(--up);border-color:rgba(62,207,142,.4)}
+.pill.live .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--up);margin-right:5px;vertical-align:middle}
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:10px;padding:11px 15px;margin:6px 0 2px;font-size:14.5px;line-height:1.5}
+.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);margin-right:9px}
+.freshline{font-family:var(--mono);font-size:11px;color:var(--mut);margin:8px 0 14px;letter-spacing:.04em}
+nav.tabs{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 20px;border-bottom:1px solid var(--line);padding-bottom:10px}
+nav.tabs a{text-decoration:none;color:var(--mut);font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;padding:6px 11px;border:1px solid transparent;border-radius:8px}
+nav.tabs a:hover{color:var(--fg);border-color:var(--line)}
+nav.tabs a.active{color:var(--acc);border-color:var(--line);background:var(--panel)}
+h2.sec{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);margin:34px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:13px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;transition:transform .15s ease,border-color .15s ease}
+.card:hover{transform:translateY(-2px);border-color:var(--acc)}
+.card h3{margin:0 0 6px;font-size:15.5px;line-height:1.35}
+.card p{margin:0;font-size:14px;color:#cfcbc6}
+.tag{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;padding:2px 7px;border-radius:999px;margin:0 5px 7px 0;border:1px solid var(--line);color:var(--mut)}
+.tag.new{color:#0d0d0d;background:var(--acc);border-color:var(--acc);font-weight:700}
+.tag.acc{color:var(--acc);border-color:var(--acc)}
+.tag.crit{color:var(--crit);border-color:var(--crit)}
+.tag.warnt{color:var(--warn);border-color:var(--warn)}
+.tag.good{color:var(--up);border-color:var(--up)}
+.lead{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:12px;padding:17px 20px}
+.lead h3{margin:0 0 9px;font-size:20px;line-height:1.3}
+.lead p{margin:0 0 10px;font-size:15px}
+.lead p:last-child{margin-bottom:0}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);padding:8px 10px;border-bottom:1px solid var(--line);font-weight:600}
+td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+.up{color:var(--up)}.down{color:var(--down)}.critc{color:var(--crit)}.warnc{color:var(--warn)}.accc{color:var(--acc)}
+ul.bul{margin:0;padding-left:20px}
+ul.bul li{margin-bottom:9px;font-size:14.5px}
+.note{font-size:12.5px;color:var(--mut);margin-top:9px;line-height:1.5}
+.callout{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--warn);border-radius:12px;padding:15px 18px}
+.callout.crit{border-left-color:var(--crit)}
+.callout h3{margin:0 0 7px;font-size:16px}
+.callout p{margin:0;font-size:14.5px}
+.banner{border-radius:12px;padding:13px 17px;border:1px solid var(--line);background:var(--panel);display:flex;flex-wrap:wrap;gap:12px;align-items:baseline}
+.banner .lvl{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:700}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:11px;margin-top:13px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:11px 13px}
+.stat .n{font-size:22px;font-weight:700;color:var(--acc);line-height:1.2}
+.stat .l{font-family:var(--mono);font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--mut);margin-top:3px}
+footer{margin-top:42px;border-top:1px solid var(--line);padding-top:16px}
+footer a{color:var(--mut);font-size:12.5px;text-decoration:none;border-bottom:1px dotted var(--line)}
+footer a:hover{color:var(--acc)}
+.srcs{font-size:12.5px;color:var(--mut);line-height:2}
+.disc{font-size:12px;color:var(--mut);margin-top:14px;line-height:1.6}
+.dv{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc2);margin-bottom:6px}
+.mut{color:var(--mut)}
+.mono{font-family:var(--mono)}
+</style></head><body><div class="wrap">
+<div class="masthead"><h1>The Cyber Wire</h1><span class="tag">Your daily cybersecurity briefing &mdash; breaches, vulnerabilities &amp; the defenders&rsquo; to-do list</span></div>
+<div class="meta"><span class="pill live"><span class="dot"></span>Live</span><span class="pill" id="edition">&nbsp;</span><span class="pill" id="datestamp">&nbsp;</span><span class="pill">Updated <span id="updated">&nbsp;</span></span></div>
+<div class="tldr"><b>The Wire</b><span>Today is the federal deadline to patch the actively-exploited Zyxel GS1900 switch flaw, with four more exploited Arista VeloCloud, F5 BIG-IP and Check&nbsp;Point bugs due tomorrow, as ShinyHunters&rsquo; unconfirmed claim of an FBI breach via a PeopleSoft zero-day remains under FBI investigation.</span></div>
+<div class="freshline" id="freshline">&nbsp;</div>
+<nav class="tabs"><a href="index.html">&#9733; Front Page</a><a href="cyber-briefing.html" class="active">&#9960; The Cyber Wire</a><a href="wallstreet-briefing.html">&#9650; The Closing Bell</a><a href="mma-briefing.html">&#8856; The Octagon</a><a href="archive.html">&#128452; Archive</a></nav>
+
+<div class="banner"><span class="lvl" style="color:var(--crit)">&#9888; Threat Level: High</span><span class="mut">Two actively-exploited, near-maximum-severity network appliance flaws (CVSS 10.0 and 9.8) carry a federal three-day patch window, and a major cybercrime group claims a breach of the FBI itself.</span>
+<div class="stats">
+<div class="stat"><div class="n">3 TB</div><div class="l">Data ShinyHunters claims stolen from the FBI</div></div>
+<div class="stat"><div class="n">10.0</div><div class="l">CVSS of the actively-exploited Arista VeloCloud flaw</div></div>
+<div class="stat"><div class="n">996</div><div class="l">Zyxel switches compromised since Aug&nbsp;17 (48 countries)</div></div>
+<div class="stat"><div class="n">153M</div><div class="l">Driver&rsquo;s-license scans exposed in the IDScan.net breach</div></div>
+</div></div>
+
+<h2 class="sec">Top Story</h2>
+<div class="lead"><h3>ShinyHunters claims it breached the FBI through a new Oracle PeopleSoft zero-day</h3>
+<p>The extortion group ShinyHunters told BleepingComputer it used a previously unknown remote-code-execution flaw in Oracle PeopleSoft to access FBI systems Monday night and move laterally into FBI-managed AWS GovCloud infrastructure. The group claims to have stolen between 2 and 3 terabytes of data on current and former FBI employees and job applicants &mdash; including names, agent statuses, emails, phone numbers, home addresses and, in some cases, spouse information and Social Security numbers. The FBI told BleepingComputer it is &ldquo;aware of claims regarding unauthorized activity affecting FBIjobs.gov and is currently investigating,&rdquo; but did not confirm that systems were breached or data stolen; the group shared a screenshot of the apply.fbijobs.gov site defaced with its logo. ShinyHunters says the FBI was targeted in retaliation for a May 2026 bureau advisory that detailed the group&rsquo;s earlier targeting of the Canvas learning-management system and urged victims not to pay ransoms. In a statement on its leak site, the group gave the FBI one week to correct or remove that advisory, and claims it is now using the same alleged PeopleSoft zero-day against other organizations, including Fortune 500 companies. BleepingComputer has not independently verified the zero-day, the lateral movement or the volume of stolen data.</p>
+<p class="note">Sources: <a href="https://www.bleepingcomputer.com/news/security/shinyhunters-claims-fbi-hack-data-theft-in-peoplesoft-zero-day-breach/" style="color:var(--acc2)">BleepingComputer</a> &middot; <a href="https://www.axios.com/2026/09/22/shinyhunters-fbi-employees-data-hack" style="color:var(--acc2)">Axios</a> &middot; <a href="https://thehackernews.com/2026/09/shinyhunters-claims-fbi-breach-says-it.html" style="color:var(--acc2)">The Hacker News</a></p>
+</div>
+
+<h2 class="sec">Patch Priority</h2>
+<div class="callout crit"><h3>Zyxel GS1900 switch flaw is due today &mdash; four more exploited flaws due tomorrow</h3>
+<p><b>CVE-2026-7273</b> (Zyxel GS1900 series switches, CVSS 8.8, stack-based buffer overflow enabling unauthenticated OS command execution) is actively exploited &mdash; a suspected Chinese-speaking actor has compromised 996 devices across 48 countries since August 17 &mdash; and carries a federal remediation deadline of <b>September 24, 2026 (0 days left &mdash; due today)</b> under Binding Operational Directive 26-04&rsquo;s new three-day window. One day later, on <b>September 25 (1 day left)</b>, the deadline lands for four more actively-exploited, near-maximum-severity flaws: Arista VeloCloud Orchestrator (CVE-2026-93952, CVSS 10.0), F5 BIG-IP APM (CVE-2026-94127, CVSS 9.8) and two Check Point flaws &mdash; a Security Gateway / Spark firewall authentication-bypass RCE (CVE-2026-85102, CVSS 9.8) and a Management Server pre-auth path traversal (CVE-2026-93616) exploited as far back as July 23. All five deadlines match the KEV section below.</p></div>
+
+<h2 class="sec">Threat Actor Spotlight</h2>
+<div class="card"><h3>Suspected Chinese-speaking actor behind the Zyxel GS1900 campaign</h3><p>Per Help Net Security, GreyNoise first spotted exploitation of CVE-2026-7273 on September 17. Since August 17, the actor has weaponized a stack-based buffer overflow in the switch&rsquo;s CGI program to compromise and exfiltrate data from 996 Zyxel GS1900 switches across 48 countries, including Italy, the U.S., Taiwan, France and South Korea. CISA added the flaw to its KEV catalog on September 21 after confirming active exploitation.</p>
+<p class="note">Source: <a href="https://www.helpnetsecurity.com/2026/09/22/zyxel-switches-cve-2026-7273-vulnerability-exploited/" style="color:var(--acc2)">Help Net Security</a> &middot; <a href="https://www.securityweek.com/recent-zyxel-switch-vulnerability-exploited-by-chinese-hackers/" style="color:var(--acc2)">SecurityWeek</a></p></div>
+
+<h2 class="sec">Breaches &amp; Incidents</h2>
+<div class="cards">
+<div class="card"><span class="tag new">New</span> <span class="tag crit">600K cards</span><h3>AI agents run a card-skimming campaign against online retailers</h3><p>Security startup Gambit says a financially motivated, apparently Chinese operator used open-source AI agent frameworks (Strix for scanning, Cairn for exploitation, Hermes for orchestration) to attack online retailers, stealing more than 600,000 valid card records from two companies and planting skimmers on at least 119 websites. Between September 10 and 15 the attacker launched 105 attack waves, succeeding to varying degrees on at least 27; victims include a Fortune 500 hospitality company and a major U.S. airline. The agents also wiped card data from Magento databases after exfiltration, disrupting some retailers. Gambit estimates total AI costs of $12,000&ndash;$18,000, about $25 per target.</p><p class="note"><a href="https://www.bleepingcomputer.com/news/security/malicious-ai-agents-steal-600k-credit-cards-infect-100-plus-sites-with-skimmers/" style="color:var(--acc2)">BleepingComputer</a></p></div>
+<div class="card"><span class="tag new">New</span> <span class="tag warnt">ClickFix</span><h3>Placeholder domain from dev docs now serves ClickFix attacks</h3><p>The &ldquo;third-party.com&rdquo; domain, commonly used as a placeholder in developer documentation and code examples, is serving a fake Cloudflare verification page that tries to trick Windows users into running PowerShell commands.</p><p class="note"><a href="https://www.bleepingcomputer.com/news/security/placeholder-domain-used-in-dev-docs-now-serves-clickfix-attacks/" style="color:var(--acc2)">BleepingComputer</a></p></div>
+<div class="card"><span class="tag crit">Exploited</span><h3>WordPress core flaw exploited within hours of patch</h3><p>Attackers moved from probing to exploiting CVE-2026-87902, an unauthenticated path-traversal bug in WordPress core that can lead to remote code execution under certain conditions (WordPress security team score 9.2). Patchstack saw the first malicious requests at 17:44 UTC on September 22, less than five hours after WordPress 7.1.2 shipped; traffic has since risen tenfold and now includes payloads that write shell-executing files to /tmp and /var/tmp. Fixes were backported to every branch down to 4.7.</p><p class="note">BleepingComputer &middot; The Hacker News</p></div>
+<div class="card"><span class="tag warnt">Zero-day PoC</span><h3>&ldquo;BigDiskBuster&rdquo; blocks Microsoft Defender updates</h3><p>Researcher Abdelhamid Naceri (&ldquo;Nightmare Eclipse&rdquo;) published a tool on GitHub on September 19 that stops Microsoft Defender from installing platform and signature updates by filling all available disk space, leaving detection content stale. It works on all supported Windows versions and has no patch, no CVE and no Microsoft advisory.</p><p class="note">BleepingComputer &middot; The Hacker News</p></div>
+<div class="card"><span class="tag">Takedown</span><h3>Microsoft disrupts EvilTokens phishing service &mdash; 12,000 inboxes</h3><p>A Microsoft-led coalition, acting under an order from the U.S. District Court for the Eastern District of Virginia, seized 50 websites and disabled more than 150 domains behind EvilTokens, an AI-assisted device-code phishing-as-a-service platform that compromised more than 12,000 inboxes at over 10,000 organizations. Sold on Telegram for a $1,500 signup fee plus $500 a month, it used an AI chatbot to mine victims&rsquo; mailboxes for payment conversations.</p><p class="note"><a href="https://www.helpnetsecurity.com/2026/09/23/microsoft-eviltokens-phishing-service-disrupted/" style="color:var(--acc2)">Help Net Security</a> &middot; <a href="https://thehackernews.com/2026/09/microsoft-takes-down-eviltokens-device.html" style="color:var(--acc2)">The Hacker News</a> &middot; <a href="https://www.axios.com/2026/09/22/microsoft-eviltokens-court-takedown" style="color:var(--acc2)">Axios</a></p></div>
+<div class="card"><span class="tag crit">153M records</span><h3>IDScan.net &mdash; 153 million driver&rsquo;s licenses</h3><p>The ID-verification vendor, used by car-rental firms, retailers and cannabis dispensaries, confirmed unauthorized cloud-platform access after a dark-web database surfaced allowing lookups of over 150 million U.S. and Canadian driver&rsquo;s licenses, including photos. Names and government ID numbers are exposed; the FBI&rsquo;s New Orleans field office has opened an investigation.</p><p class="note">Help Net Security &middot; BleepingComputer &middot; TechCrunch &middot; Krebs on Security</p></div>
+<div class="card"><span class="tag">Phishing</span><h3>Microsoft discloses two cloud phishing campaigns</h3><p>Microsoft detailed a CEO-fraud campaign that blasted over one million AI-drafted emails (Aug 3&ndash;5) impersonating executives to trick accounts-payable teams into ACH transfers for a fake ServiceNow renewal, plus a separate, ongoing (since May 2026) passkey-themed social-engineering campaign in which callers pose as IT help desks to get victims to reset MFA/passkey settings, then harvest cloud identities via proxy infrastructure.</p><p class="note">Microsoft Security Blog &middot; The Hacker News</p></div>
+<div class="card"><span class="tag">Government</span><h3>Japan&rsquo;s Digital Agency &mdash; 246,000 records</h3><p>Japan&rsquo;s Digital Agency, which runs the Government Solution Service used by multiple ministries, disclosed on September 11 that attackers exploited a known vulnerability in a VPN appliance around late May, then used a maintenance account to access files at scale. Roughly 246,000 records &mdash; names and contact details of government officials and contractors &mdash; were exposed; financial data was not affected.</p><p class="note"><a href="https://www.securityweek.com/240000-hit-by-data-breach-at-japans-digital-agency/" style="color:var(--acc2)">SecurityWeek</a> &middot; CybersecAsia</p></div>
+<div class="card"><span class="tag warnt">Maritime</span><h3>Cyberattacks disrupt two Texas-bound oil tankers</h3><p>Onboard systems on two tankers were disrupted by cyberattacks during voyages to the U.S.; on the Liberian-flagged VL Prosperity, the August 7 attack interfered with engine-room systems and cut communications for more than a day. The Coast Guard and FBI boarded the vessels and confirmed malicious cyber activity; the Coast Guard has not attributed the attack.</p><p class="note"><a href="https://www.securityweek.com/cyberattacks-on-two-oil-tankers-prompt-coast-guard-fbi-to-board-vessels/" style="color:var(--acc2)">SecurityWeek</a> &middot; <a href="https://techcrunch.com/2026/09/18/fbi-coast-guard-boarded-hacked-oil-tankers-heading-towards-us-coast/" style="color:var(--acc2)">TechCrunch</a></p></div>
+</div>
+
+<h2 class="sec">Vulnerability Watch</h2>
+<div class="panel"><table><tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr>
+<tr><td class="mono">CVE-2026-93952</td><td class="critc">10.0</td><td>Arista VeloCloud Orchestrator (on-prem)</td><td>Improper input validation lets an unauthenticated remote attacker reach privileged internal functionality; actively exploited.</td></tr>
+<tr><td class="mono">CVE-2026-94127</td><td class="critc">9.8</td><td>F5 BIG-IP APM 17.1.0&ndash;17.1.3, 17.5.0&ndash;17.5.1, 21.1.0</td><td>Heap-based buffer overflow when an OAuth profile is paired with an access policy; unauthenticated RCE, exploited as a zero-day. Vendor hotfixes released.</td></tr>
+<tr><td class="mono">CVE-2026-85102</td><td class="critc">9.8</td><td>Check Point Security Gateway / Spark Firewalls</td><td>Improper certificate-trust validation during VPN negotiation allows an unauthenticated attacker to reach code execution.</td></tr>
+<tr><td class="mono">CVE-2026-87902</td><td class="critc">9.2</td><td>WordPress core (fixed in 7.1.2; backported to 4.7+)</td><td>Unauthenticated path traversal in page-template resolution; RCE under certain conditions. Exploited in the wild since Sept 22. KEV listing not confirmed by a CISA source this run.</td></tr>
+<tr><td class="mono">CVE-2026-7273</td><td class="warnc">8.8</td><td>Zyxel GS1900 series switches (10 models)</td><td>Stack-based buffer overflow in the CGI program; LAN-adjacent, unauthenticated OS command execution. 996 devices compromised since Aug 17.</td></tr>
+</table></div>
+
+<h2 class="sec">CISA KEV &amp; Federal Deadlines</h2>
+<div class="panel"><ul class="bul">
+<li><b>CVE-2026-7273</b> (Zyxel GS1900) &mdash; added Sept 21 &mdash; due <b>Sept 24</b> <span class="critc">(0 days left &mdash; due today)</span></li>
+<li><b>CVE-2026-93952</b> (Arista VeloCloud Orchestrator, CVSS 10.0) &mdash; added Sept 22 &mdash; due <b>Sept 25</b> <span class="critc">(1 day left)</span></li>
+<li><b>CVE-2026-94127</b> (F5 BIG-IP APM) &mdash; added Sept 22 &mdash; due <b>Sept 25</b> <span class="critc">(1 day left)</span></li>
+<li><b>CVE-2026-85102 &amp; CVE-2026-93616</b> (Check Point Security Gateway / Management Server) &mdash; added Sept 22 &mdash; due <b>Sept 25</b> <span class="critc">(1 day left)</span></li>
+</ul>
+<p class="note">All five deadlines fall under Binding Operational Directive 26-04, which sets a three-day remediation window &mdash; a sharp change from the older three-week BOD 22-01 standard.</p></div>
+
+<footer><div class="dv">The Cyber Wire</div><div class="srcs">
+Sources: <a href="https://www.bleepingcomputer.com/news/security/malicious-ai-agents-steal-600k-credit-cards-infect-100-plus-sites-with-skimmers/" style="color:inherit">BleepingComputer (AI skimming)</a> &middot; <a href="https://www.bleepingcomputer.com/news/security/placeholder-domain-used-in-dev-docs-now-serves-clickfix-attacks/" style="color:inherit">BleepingComputer (ClickFix)</a> &middot; <a href="https://windowsforum.com/news/cisa-kev-f5-check-point-and-arista-flaws-due-september-25.445484/" style="color:inherit">WindowsForum (Sept 25 KEV)</a> &middot; <a href="https://cyberinsider.com/shinyhunters-claims-fbi-breach/" style="color:inherit">CyberInsider (ShinyHunters)</a> &middot; <a href="https://www.bleepingcomputer.com/news/security/hackers-start-exploiting-critical-wordpress-flaw-for-code-execution/" style="color:inherit">BleepingComputer (WordPress)</a> &middot; <a href="https://thehackernews.com/2026/09/wordpress-issues-patch-for-critical.html" style="color:inherit">The Hacker News (WordPress)</a> &middot; <a href="https://www.bleepingcomputer.com/news/security/new-windows-defender-zero-day-blocks-microsoft-antivirus-updates/" style="color:inherit">BleepingComputer (BigDiskBuster)</a> &middot; <a href="https://thehackernews.com/2026/09/researcher-drops-bigdiskbuster-zero-day.html" style="color:inherit">The Hacker News (BigDiskBuster)</a> &middot; <a href="https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-actively-exploited-zyxel-flaw-by-thursday/" style="color:inherit">BleepingComputer (Zyxel, due Sept 24)</a> &middot; <a href="https://www.cisa.gov/news-events/alerts/2026/09/22/cisa-adds-four-known-exploited-vulnerabilities-catalog" style="color:inherit">CISA (Sept 22 KEV alert)</a> &middot; <a href="https://securityaffairs.com/199631/hacking/u-s-cisa-adds-check-point-arista-velocloud-orchestrator-and-f5-big-ip-apm-flaws-to-its-known-exploited-vulnerabilities-catalog.html" style="color:inherit">Security Affairs (Sept 25 deadline)</a> &middot; 
+<a href="https://www.bleepingcomputer.com/news/security/shinyhunters-claims-fbi-hack-data-theft-in-peoplesoft-zero-day-breach/" style="color:inherit">BleepingComputer</a> &middot;
+<a href="https://www.axios.com/2026/09/22/shinyhunters-fbi-employees-data-hack" style="color:inherit">Axios</a> &middot;
+<a href="https://thehackernews.com/2026/09/shinyhunters-claims-fbi-breach-says-it.html" style="color:inherit">The Hacker News</a> &middot;
+<a href="https://www.securityweek.com/critical-f5-big-ip-vulnerability-exploited-as-zero-day/" style="color:inherit">SecurityWeek (F5)</a> &middot;
+<a href="https://www.securityweek.com/recent-zyxel-switch-vulnerability-exploited-by-chinese-hackers/" style="color:inherit">SecurityWeek (Zyxel)</a> &middot;
+<a href="https://www.helpnetsecurity.com/2026/09/22/zyxel-switches-cve-2026-7273-vulnerability-exploited/" style="color:inherit">Help Net Security</a> &middot;
+<a href="https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-actively-exploited-zyxel-flaw-by-thursday/" style="color:inherit">BleepingComputer (Zyxel KEV)</a> &middot;
+<a href="https://www.helpnetsecurity.com/2026/09/11/idscan-net-data-breach-153-million-drivers-licenses/" style="color:inherit">Help Net Security (IDScan)</a> &middot;
+<a href="https://www.microsoft.com/en-us/security/blog/2026/09/09/passkey-themed-social-engineering-leads-identity-cloud-compromise/" style="color:inherit">Microsoft Security Blog</a> &middot; <a href="https://www.helpnetsecurity.com/2026/09/23/check-point-f5-big-ip-apm-zero-days-targeted/" style="color:inherit">Help Net Security (Check Point/F5, Sept 23)</a> &middot; <a href="https://www.helpnetsecurity.com/2026/09/23/microsoft-eviltokens-phishing-service-disrupted/" style="color:inherit">Help Net Security (EvilTokens)</a> &middot; <a href="https://www.securityweek.com/240000-hit-by-data-breach-at-japans-digital-agency/" style="color:inherit">SecurityWeek (Japan)</a> &middot; <a href="https://www.securityweek.com/cyberattacks-on-two-oil-tankers-prompt-coast-guard-fbi-to-board-vessels/" style="color:inherit">SecurityWeek (tankers)</a>
+</div>
+<div class="disc">This briefing is assembled from open-source reporting fetched at publication time for general awareness. It is not a substitute for your own vendor advisories, official CISA KEV entries or internal incident-response guidance. Verify all deadlines and CVSS scores against primary sources before acting.</div>
+</footer>
+</div>
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
+</body></html>

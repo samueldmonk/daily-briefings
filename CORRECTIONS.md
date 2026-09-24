@@ -23610,3 +23610,24 @@ deleting and report how many days were removed.
   Volkanovski/Van; ESPN page empty on direct fetch). New item: Volkov sarcastic reaction to Hokit title shot (CBS Sports/BJPenn).
   Rosas Jr. −180 / Barcelos +150 (DraftKings) re-confirmed.
 - 🔧 **ARCHIVE — gen_archive_2245.py fails on the current archive.html shell (regex miss); gen_archive.py works. Use gen_archive.py.**
+
+## Added 2026-09-24 (Thursday — clone ~9:00am ET, MORNING EDITION, pre-open/at-open; archive stamp 2026-09-24-0943)
+- 🟢 **MARKETS — SEPT 24 PRE-MARKET (sourced):** TheStreet/Yahoo: Dow futures −0.3%, S&P 500 futures −0.6%, Nasdaq-100 −1%
+  (Yahoo's 4 AM text had −0.2/−0.4/−0.5 — superseded). Benzinga ~5 AM: 10-yr 5.14%, 2-yr 4.9%, FedWatch 70.9% October hike odds,
+  WTI ~$94.35 (+2.38%), gold ~$4,265.59 (−0.51%), DXY 101.116. Bessent: US–China "Busan Agreement" truce (was to end Nov 10)
+  extended to Jan 10 (Yahoo). Jobless claims 197,000, fewest since mid-July, prior revised 198,000; 4-wk avg 202,250 (AP).
+  Premarket movers: MGM −9%+ (Barry Diller's People withdrew bid), DRI −6.6% (EPS $2.05 in line, rev $3.20B vs $3.21B), META −2%
+  (after ~12% week-to-date gain on Muse), BB +2% (adj EPS 7c vs 4c) — CNBC; SFIX −18.44%, ORCL −1.56% (Sicilia sold $3.42M) — Benzinga.
+  Costco reports after close (est. $6.53 EPS / $94.82B rev). Opening-bell moves NOT sourced this run.
+- 🔴 **MARKETS — PAGE-BUILD TRAP:** a string-replace anchored on the first "Sources: <a href=...sept-23" matched the Weekly Scorecard
+  note, not the footer, and silently deleted Rates + On the Radar. Anchor footer edits AFTER '<footer>'. Caught in read-through.
+- 🟢 **CYBER — KEV deadlines re-confirmed this run:** Zyxel CVE-2026-7273 due Sept 24 = TODAY (BleepingComputer/CISA Sept 21 alert,
+  BOD 26-04); CVE-2026-93952/94127/85102/93616 due Sept 25 (Security Affairs/WindowsForum/CISA Sept 22 alert). No Sept 23 CISA KEV
+  alert found. WordPress CVE-2026-87902 KEV status CONFLICTING in search summaries — published as "not confirmed by a CISA source".
+  Dropped the "2 on Sept 16" KEV-cadence line (a CISA Sept 18 alert lists the two Linux kernel CVEs).
+- 🟢 **CYBER — NEW:** Gambit/BleepingComputer (Sept 23): AI-agent (Strix/Cairn/Hermes) skimming campaign, >600,000 cards from two
+  companies, ≥119 sites skimmed, 105 attack waves Sept 10–15 with ≥27 successes, AI cost $12k–$18k (~$25/target). ClickFix via
+  "third-party.com" placeholder domain (BleepingComputer).
+- 🟢 **MMA — champions unchanged;** UFC 332 vacant women's flyweight (Shevchenko vacated, back/shoulder ligament injury) re-confirmed
+  (Wikipedia/CBS/Yahoo). ESPN snippet: Volkanovski won the title vs. Diego Lopes at UFC 314 (Apr 12, 2025), one defense — board note
+  reworded to match. Rosas Jr. −180 / Barcelos +150 (DraftKings) re-confirmed; another book −155/+130.
