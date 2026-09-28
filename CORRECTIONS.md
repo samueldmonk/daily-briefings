@@ -23895,3 +23895,9 @@ deleting and report how many days were removed.
 - 🟢 MARKETS: Sept 28 closes re-confirmed (TheStreet/CNBC via search; Investing.com quote strip: Dow 51,481.51 −347.11 −0.67%, Nasdaq 26,820.38 −248.34 −0.92%). Page carried.
 - 🟢 CYBER: Citrix CVE-2026-88771/88772 KEV due Sept 30 re-confirmed (search summary citing CISA); no newer KEV adds found. "New" tag on Clop card removed (in 1736 snapshot).
 - 🟢 MMA: ESPN champions summary matched Gane (HW, Sept 19), Ulberg (LHW), Strickland (MW), Makhachev (WW), Gaethje (LW), Volkanovski (FW); latest event remains Rosas Jr. vs. Barcelos (Sept 26). Page carried.
+
+## Added 2026-09-28 (Monday — clone ~6:34pm ET, AFTERNOON EDITION, markets CLOSED; archive stamp 2026-09-28-1835)
+- 🆕 MMA: UFC 332 odds UPDATED — Natalia Silva −198 / Wang Cong +164 (DraftKings, per CBS Sports fight-card article dated Sept 28, 2026, fetched in full). SUPERSEDES the Sept 9 LowKick −210/+180 line as the current number; opening −250 retained. The "−205/+170" DraftKings figure still appears only in a search summary — NOT published.
+- 🟢 MARKETS: Sept 28 closes re-confirmed (CNBC via search): S&P 500 7,683.69 (−0.77%), Nasdaq 26,820.38 (−0.92%), Dow 51,481.51 (−347.11, −0.67%). 2-yr "4.93%, ~+8bp" and Bloomberg "10-yr as much as +11bp to 5.27%" seen only in search summaries — NOT published. After-hours ChartMill-style movers (MSGY/NVTS/TPC/KNRX) again REFUSED (unverifiable date). Page carried.
+- 🟢 CYBER: No KEV additions after the Sept 27 Citrix pair (CISA alert listing via search); Citrix due Sept 30 stands. THN "three Linux kernel flaws" KEV item is from Sept 19 (due Sept 21) — NOT new. Page carried.
+- 🟢 MMA: ESPN champions summary matched Gane (HW, Sept 19), Ulberg (LHW, Apr 11), Strickland (MW, May 9), Makhachev (WW), Gaethje (LW, June 14), Volkanovski (FW) + Dern. Latest event remains Rosas Jr. vs. Barcelos (Sept 26).
