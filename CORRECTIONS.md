@@ -24075,3 +24075,8 @@ deleting and report how many days were removed.
 - 🆕 CYBER: OpenAI disrupted a distillation/reasoning-extraction campaign attributed (no technical evidence cited) to individuals associated with Moonshot AI; began July 1, 2026, spiked July 24–25 to 16,000 attempted requests (The Hacker News, Oct 1, fetched). THN re-confirms Cisco CVE-2026-76504 CVSS 9.8, added to KEV Wednesday Sept 30. No KEV adds newer than Sept 30 found.
 - 🟢 MMA: no new fetched items; UFC 332 Sat Oct 3 Delta Center SLC (Silva vs Wang Cong, vacant W-FLW; Sopaj out → McGhee vs Romero) re-confirmed via search. Board unchanged.
 - 🔧 PROCESS: gen_archive.py requires the repo path as argv[1] (python3 gen_archive.py /tmp/$D).
+
+## Added 2026-10-01 (Thursday — clone ~2:42pm ET, AFTERNOON EDITION, markets OPEN; archive stamp 2026-10-01-1443)
+- 🟢 MARKETS: no fresher verified index read than the 2:25 PM TE CFD table (TE page re-fetched — same values; Yahoo live page still 1:25 PM cache; TheStreet blog modified 1:42 PM; CNBC page empty). REFUSED: search summary "S&P flatline / Dow −41 after falling as much as 359 / R2K +0.8% / S&P +0.4%" — untimed, internally inconsistent, CNBC unfetched. MongoDB −15–26% CEO-exit drop is MONDAY Sept 28 news — NOT today's mover. Stale "New" tags (2:25 lead block, GOOG, MU) removed.
+- 🆕 CYBER: Google Gemini 4 Argon rolled out to trusted cyber defenders via Fairwind Program; guardrail-free version planned (The Hacker News homepage, Oct 1, fetched). No KEV adds newer than Sept 30 found. Stale "New" on OpenAI/Moonshot removed.
+- 🟢 MMA: UFC 332 Sat Oct 3 Delta Center SLC; press conference 5:55 PM ET today (MMA Crossfire via search) — unchanged. Board unchanged.
