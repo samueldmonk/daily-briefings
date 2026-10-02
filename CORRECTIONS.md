@@ -24213,3 +24213,9 @@ deleting and report how many days were removed.
 - 🟢 MARKETS: Friday official closes unchanged (AP, verified prior edition). AFTER HOURS: search-summary-only list (VCIG +22.63%, SDEV, NNNN, SILO, FEBO; DRCT −25.28%) — unfetched, NOT printed. Stale "New" tags removed.
 - 🟢 CYBER: CISA search — latest alert listing still shows Oct 1 FortiMail; Zammad Oct 2 add (due Oct 5) stands. Search-only items (FBI jobs portal claim, Asymmetric Security rogue AI agent) unfetched — NOT published. Stale "New" tags removed.
 - 🟢 MMA: search re-confirms UFC 332 Sat Oct 3 Delta Center SLC, vacant W-FLW (Silva vs. Wang). ESPN champions page fetched EMPTY again; search-level listing (Oct 2026) matches board on all 10 occupied belts (Van, Yan, Volkanovski, Gaethje, Makhachev, Strickland, Ulberg, Gane, Dern, Harrison). Board unchanged.
+
+## Added 2026-10-02 (Friday — clone ~6:33pm ET, AFTERNOON EDITION, markets CLOSED; archive stamp 2026-10-02-1834)
+- 🟢 MARKETS: Friday official closes re-confirmed this run by search (TheStreet/Yahoo Oct 2): S&P 500 7,722.72 +56.27 (+0.73%), Dow 51,176.96 +250.40 (+0.49%), Nasdaq Composite 27,190.86 +319.27 (+1.19%) — matches AP row already on page. AFTER HOURS: search-summary-only list again (VCIG +22.63%, SDEV, NNNN, SMMT, NVTS; DRCT −25.28%) — unfetched, NOT printed.
+- 🟢 CYBER: CISA alert search — latest listed alert still Oct 1 FortiMail CVE-2026-104286; Zammad Oct 2 add (due Oct 5) stands. Search-only items (INC Ransom / RansomHouse / Storm leak-site listings, Europol KillSec, Microsoft report) unfetched — NOT published.
+- 🟢 MMA: search re-confirms UFC 332 Sat Oct 3, Delta Center SLC, vacant W-FLW (Natalia Silva vs. Wang Cong), main card 8 p.m. ET on CBS. Board unchanged.
+- Pages carried forward unchanged from the 6:04 PM edition (no new verified facts); run fired after the 6 PM window.
