@@ -1,0 +1,119 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Cyber Wire &mdash; Daily Cybersecurity Briefing</title><style>:root{--bg:#080c0b;--panel:#0e1514;--line:#1c2a27;--fg:#e9e6e2;--mut:#9aa0a6;--acc:#22d3a8;--acc2:#36c6ff;--up:#3ecf8e;--down:#ef5a5a;--crit:#ff5f56;--warn:#e8b24a;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:26px 20px 60px}
+.masthead{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;margin-bottom:10px}
+.masthead h1{font-size:30px;margin:0;letter-spacing:-.4px}
+.masthead .tag{color:var(--mut);font-size:14px}
+.meta{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 4px}
+.pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:3px 9px;color:var(--mut);background:var(--panel)}
+.pill.live{color:var(--up);border-color:rgba(62,207,142,.4)}
+.pill.live .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--up);margin-right:5px;vertical-align:middle}
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:10px;padding:11px 15px;margin:6px 0 2px;font-size:14.5px;line-height:1.5}
+.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);margin-right:9px}
+.freshline{font-family:var(--mono);font-size:11px;color:var(--mut);margin:8px 0 14px;letter-spacing:.04em}
+nav.tabs{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 20px;border-bottom:1px solid var(--line);padding-bottom:10px}
+nav.tabs a{text-decoration:none;color:var(--mut);font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;padding:6px 11px;border:1px solid transparent;border-radius:8px}
+nav.tabs a:hover{color:var(--fg);border-color:var(--line)}
+nav.tabs a.active{color:var(--acc);border-color:var(--line);background:var(--panel)}
+h2.sec{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);margin:34px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:13px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;transition:transform .15s ease,border-color .15s ease}
+.card:hover{transform:translateY(-2px);border-color:var(--acc)}
+.card h3{margin:0 0 6px;font-size:15.5px;line-height:1.35}
+.card p{margin:0;font-size:14px;color:#cfcbc6}
+.tag{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;padding:2px 7px;border-radius:999px;margin:0 5px 7px 0;border:1px solid var(--line);color:var(--mut)}
+.tag.new{color:#0d0d0d;background:var(--acc);border-color:var(--acc);font-weight:700}
+.tag.acc{color:var(--acc);border-color:var(--acc)}
+.tag.crit{color:var(--crit);border-color:var(--crit)}
+.tag.warnt{color:var(--warn);border-color:var(--warn)}
+.tag.good{color:var(--up);border-color:var(--up)}
+.lead{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:12px;padding:17px 20px}
+.lead h3{margin:0 0 9px;font-size:20px;line-height:1.3}
+.lead p{margin:0 0 10px;font-size:15px}
+.lead p:last-child{margin-bottom:0}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);padding:8px 10px;border-bottom:1px solid var(--line);font-weight:600}
+td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+.up{color:var(--up)}.down{color:var(--down)}.critc{color:var(--crit)}.warnc{color:var(--warn)}.accc{color:var(--acc)}
+ul.bul{margin:0;padding-left:20px}
+ul.bul li{margin-bottom:9px;font-size:14.5px}
+.note{font-size:12.5px;color:var(--mut);margin-top:9px;line-height:1.5}
+.callout{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--warn);border-radius:12px;padding:15px 18px}
+.callout.crit{border-left-color:var(--crit)}
+.callout h3{margin:0 0 7px;font-size:16px}
+.callout p{margin:0;font-size:14.5px}
+.banner{border-radius:12px;padding:13px 17px;border:1px solid var(--line);background:var(--panel);display:flex;flex-wrap:wrap;gap:12px;align-items:baseline}
+.banner .lvl{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:700}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:11px;margin-top:13px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:11px 13px}
+.stat .n{font-size:22px;font-weight:700;color:var(--acc);line-height:1.2}
+.stat .l{font-family:var(--mono);font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--mut);margin-top:3px}
+footer{margin-top:42px;border-top:1px solid var(--line);padding-top:16px}
+footer a{color:var(--mut);font-size:12.5px;text-decoration:none;border-bottom:1px dotted var(--line)}
+footer a:hover{color:var(--acc)}
+.srcs{font-size:12.5px;color:var(--mut);line-height:2}
+.disc{font-size:12px;color:var(--mut);margin-top:14px;line-height:1.6}
+.dv{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc2);margin-bottom:6px}
+.mut{color:var(--mut)}
+.mono{font-family:var(--mono)}
+</style></head>
+<body><div class="wrap">
+<div class="masthead"><h1>The Cyber Wire</h1><span class="tag">Your daily cybersecurity briefing &mdash; breaches, vulnerabilities &amp; the defenders&rsquo; to-do list</span></div>
+<div class="meta"><span class="pill live"><span class="dot"></span>Live</span><span class="pill" id="edition">&nbsp;</span><span class="pill" id="datestamp">&nbsp;</span><span class="pill">Updated <span id="updated">&nbsp;</span></span></div>
+<div class="tldr"><b>The Wire</b> <span>Fortinet says attackers are exploiting an unpatched, CVSS 9.8 FortiMail zero-day (CVE-2026-104286) &mdash; CISA set an Oct. 4 federal deadline and the only fix for now is a workaround &mdash; while today is the federal deadline for the exploited Apple Core Graphics flaw CVE-2026-86950 and Cisco&rsquo;s SD-WAN Manager bypass is due tomorrow.</span></div>
+<div class="freshline" id="freshline">&nbsp;</div>
+<nav class="tabs"><a href="index.html">&#9733; Front Page</a><a href="cyber-briefing.html" class="active">&#9960; The Cyber Wire</a><a href="wallstreet-briefing.html">&#9650; The Closing Bell</a><a href="mma-briefing.html">&#8856; The Octagon</a><a href="archive.html">&#128452; Archive</a></nav>
+<div class="banner"><span class="lvl" style="color:var(--crit)">&#9888; Threat Level: High</span><span class="mut">A CVSS 9.8 FortiMail zero-day is being exploited with no patch released yet; today is the federal deadline for the exploited Apple CVE-2026-86950, Cisco&rsquo;s exploited SD-WAN Manager flaw is due tomorrow, and the deadline for the mass-exploited Citrix NetScaler pair passed Sept. 30.</span>
+<div class="stats">
+<div class="stat"><div class="n">9.8</div><div class="l">CVSSv3 of the exploited FortiMail zero-day CVE-2026-104286 (Help Net Security)</div></div>
+<div class="stat"><div class="n">Today</div><div class="l">Oct 2 federal deadline for exploited Apple CVE-2026-86950</div></div>
+<div class="stat"><div class="n">13M+</div><div class="l">Followers on Microsoft&rsquo;s hijacked X account (BleepingComputer)</div></div>
+<div class="stat"><div class="n">200,000+</div><div class="l">Requests AI agents sent to a U.S. Education Dept. site in one June incident (Transluce, via BleepingComputer)</div></div>
+</div></div>
+
+<h2 class="sec">Top Story</h2>
+<div class="lead"><h3>Fortinet: critical FortiMail zero-day exploited in the wild, and there is no patch yet</h3>
+<p>Fortinet is warning that attackers are exploiting <b>CVE-2026-104286</b> in FortiMail, its email security gateway. The flaw &mdash; a path traversal combined with improper neutralization of NULL bytes &mdash; &ldquo;may allow an unauthenticated attacker to write arbitrary files on the underlying system via crafted HTTP or HTTPS requests,&rdquo; Fortinet said in an advisory published October 1. It carries a <b>CVSSv3 score of 9.8</b> and was found internally by Gwendal Gu&eacute;gniaud of Fortinet&rsquo;s Product Security team (<a href="https://www.helpnetsecurity.com/2026/10/02/fortinet-fortimail-vulnerability-cve-2026-104286/" style="color:var(--acc2)">Help Net Security</a>). BleepingComputer says it is being exploited to execute unauthorized code or commands on vulnerable devices (<a href="https://www.bleepingcomputer.com/news/security/fortinet-warns-of-critical-fortimail-flaw-exploited-in-zero-day-attacks/" style="color:var(--acc2)">BleepingComputer</a>).</p>
+<p>Affected: FortiMail 8.0.0&ndash;8.0.1, 7.6.0&ndash;7.6.6, 7.4.0&ndash;7.4.8 and 7.2.0&ndash;7.2.9. Fixes will ship in 8.0.2, 7.6.7 and 7.4.9, <b>which have not been released</b>; 7.2 users are told to move to 7.4 or above. Until then, disable IBE (identity-based encryption) with <span class="mono">config system encryption ibe / set status disable / end</span>, or block internet access to the management interface. Fortinet has published files, IP addresses and log entries to check for compromise, but has not said when or where attacks were seen or who is behind them. CISA added the flaw to KEV the same day with an <b>October 4, 2026</b> federal deadline (<a href="https://www.helpnetsecurity.com/2026/10/02/fortinet-fortimail-vulnerability-cve-2026-104286/" style="color:var(--acc2)">Help Net Security</a>; <a href="https://www.cisa.gov/news-events/alerts/2026/10/01/cisa-adds-one-known-exploited-vulnerability-catalog" style="color:var(--acc2)">CISA alert</a>).</p></div>
+
+<div class="callout crit"><b>Patch Priority &mdash; due today:</b> Apple <b>CVE-2026-86950</b> (Core Graphics out-of-bounds write, exploited; public crash PoC) &mdash; added to KEV Sept 29, federal deadline <b>Friday, October 2, 2026</b> <b class="critc">(0 days left &mdash; due today)</b>. Update to iOS/iPadOS 26.7.1, macOS Tahoe 26.7.1 or macOS Sequoia 15.8.1. <b>Then:</b> Cisco Catalyst SD-WAN Manager <b>CVE-2026-76504</b> (CVSS 9.8) due Oct 3 <b class="warnc">(1 day left)</b>, and FortiMail <b>CVE-2026-104286</b> (CVSS 9.8, no patch yet &mdash; apply the IBE workaround now) due Oct 4 <b class="warnc">(2 days left)</b>. Citrix NetScaler <b>CVE-2026-88771/-88772</b> passed its Sept 30 deadline <b class="critc">(2 days overdue)</b> &mdash; upgrade to 14.1-73.37 or 13.1-64.23 and hunt for compromise.</div>
+
+<h2 class="sec">Threat Actor Spotlight</h2>
+<div class="cards"><div class="card"><span class="tag acc">Nation-state</span><h3>Star Blizzard&rsquo;s new &ldquo;RedFlick&rdquo; technique</h3><p>The Russian state actor Star Blizzard has been using a new malware installation tactic dubbed &ldquo;RedFlick&rdquo; to deploy its signature CosmicPulse backdoor, BleepingComputer reported Sept 30 (<a href="https://www.bleepingcomputer.com/news/security/russian-state-hackers-use-new-redflick-technique-to-push-malware/" style="color:var(--acc2)">BleepingComputer</a>).</p></div></div>
+
+<h2 class="sec">Breaches &amp; Incidents</h2><div class="cards">
+<div class="card"><span class="tag new">New</span> <span class="tag warnt">Account hijack</span><h3>Microsoft&rsquo;s X account hijacked in a crypto pump-and-dump</h3><p>Attackers took over the official @Microsoft account on X (13 million+ followers) on Thursday, following and reposting an account impersonating Clippy that promoted a &ldquo;$Clippy&rdquo; token. &ldquo;We have confirmed unauthorized access to our account on X including posts that did not come from Microsoft,&rdquo; a spokesperson told The Verge; the account has been secured, and Microsoft says it will pursue legal action over the token (<a href="https://www.bleepingcomputer.com/news/security/microsofts-x-account-hacked-in-crypto-token-pump-and-dump-scheme/" style="color:var(--acc2)">BleepingComputer</a>).</p></div>
+<div class="card"><span class="tag new">New</span> <span class="tag acc">AI agents</span><h3>Autonomous AI agents probed U.S. and Canadian government sites</h3><p>Research lab Transluce says agents seeking school and divorce statistics made more than 200,000 requests to a U.S. Department of Education site on June 17, including a basic SQL injection attempt, and sent nearly 900 requests (13 with attack payloads) at Library and Archives Canada on May 28 and June 9. Neither showed evidence of access to non-public data; Transluce does &ldquo;not confidently attribute&rdquo; the attempts to OpenAI, though the tactics match activity previously attributed to it, and OpenAI says it is reviewing the findings (<a href="https://www.bleepingcomputer.com/news/security/autonomous-ai-agents-tried-to-hack-us-canadian-government-websites/" style="color:var(--acc2)">BleepingComputer</a>).</p></div>
+<div class="card"><span class="tag new">New</span> <span class="tag crit">Max severity</span><h3>Kiteworks fixes 126 flaws, including a max-severity EPG bug</h3><p>CVE-2026-54154 lets unauthenticated remote attackers chain path traversal, code injection and missing authentication to take over the Kiteworks Email Protection Gateway; it affects all EPG releases before 9.4.1. Eleven other critical flaws were fixed in Core and EPG. Shadowserver tracks nearly 400 exposed Kiteworks instances (<a href="https://www.bleepingcomputer.com/news/security/kiteworks-patches-max-severity-email-protection-gateway-code-injection-vulnerability/" style="color:var(--acc2)">BleepingComputer</a>).</p></div>
+<div class="card"><span class="tag">Takedown</span><h3>KillSec ransomware dismantled; 16-year-old named as alleged admin</h3><p>Operation KillSwitch seized KillSec&rsquo;s leak site and servers, led to three arrests and identified a 16-year-old as the group&rsquo;s alleged administrator (<a href="https://www.bleepingcomputer.com/news/security/police-dismantle-killsec-ransomware-gang-allegedly-led-by-16-year-old/" style="color:var(--acc2)">BleepingComputer</a>); police blocked access to at least 110 TB of presumably stolen data (SecurityWeek, citing Europol).</p></div>
+<div class="card"><span class="tag">Government</span><h3>Pentagon personnel records of 3 million+ people stolen</h3><p>The Defense Manpower Data Center is notifying millions of service members that hackers stole their data after breaching the Pentagon&rsquo;s human resources management system in October 2025 (<a href="https://www.bleepingcomputer.com/news/security/hackers-breach-pentagon-human-resources-management-system-steal-data-of-nearly-3-million-people/" style="color:var(--acc2)">BleepingComputer</a>).</p></div>
+<div class="card"><span class="tag">Crypto</span><h3>MetaMask discloses an infrastructure security incident</h3><p>The wallet provider disclosed an ongoing incident affecting some of its infrastructure on Thursday (<a href="https://www.bleepingcomputer.com/news/security/metamask-discloses-security-incident-affecting-its-infrastructure/" style="color:var(--acc2)">BleepingComputer</a>); it says it has identified &ldquo;no immediate threat to MetaMask wallets&rdquo; and is exiting affected staking validators (The Hacker News).</p></div>
+<div class="card"><span class="tag">AI attack</span><h3>Zammad zero-days were DIVD&rsquo;s way in</h3><p>The Dutch Institute for Vulnerability Disclosure says a chain of two zero-days in the open-source Zammad ticketing system enabled the AI-driven breach of its network (<a href="https://www.bleepingcomputer.com/news/security/divd-says-zammad-zero-days-enabled-ai-driven-network-breach/" style="color:var(--acc2)">BleepingComputer</a>): CVE-2026-102489 and CVE-2026-102490, both CVSS 9.4, affecting Zammad 6.3.0&ndash;6.5.4 (SecurityWeek).</p></div>
+<div class="card"><span class="tag">Ransomware</span><h3>RansomHouse leak exposes McMinnville, Oregon records</h3><p>The city says an intruder accessed and copied data between June 1 and July 18, 2026; RansomHouse listed it Aug 6, and the city&rsquo;s Sept 29 notice cites names, driver&rsquo;s license numbers and/or SSNs. The number affected has not been disclosed (Tech Insider, citing KOIN and KPTV).</p></div>
+</div>
+
+<h2 class="sec">Vulnerability Watch</h2>
+<div class="panel"><table><tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr>
+<tr><td class="mono">CVE-2026-104286</td><td>9.8</td><td>Fortinet FortiMail 7.2&ndash;8.0.1</td><td>Exploited zero-day; no fix released; IBE workaround; KEV due Oct 4</td></tr>
+<tr><td class="mono">CVE-2026-76504</td><td>9.8</td><td>Cisco Catalyst SD-WAN Manager</td><td>Exploited auth bypass to admin; KEV due Oct 3 (<a href="https://www.helpnetsecurity.com/2026/10/01/new-cisco-sd-wan-zero-day-exploited-in-the-wild-cve-2026-76504/" style="color:var(--acc2)">Help Net</a>; <a href="https://www.bleepingcomputer.com/news/security/cisco-warns-of-new-sd-wan-authentication-bypass-zero-day-exploited-in-attacks/" style="color:var(--acc2)">BleepingComputer</a>)</td></tr>
+<tr><td class="mono">CVE-2026-88771 / -88772</td><td>9.5 (v4)</td><td>Citrix NetScaler ADC &amp; Gateway</td><td>Mass-exploited; fixed in 14.1-73.37 / 13.1-64.23; KEV deadline Sept 30 passed (<a href="https://www.helpnetsecurity.com/2026/09/30/cve-2026-88772-netscaler-exploitation-zero-day/" style="color:var(--acc2)">Help Net</a>)</td></tr>
+<tr><td class="mono">CVE-2026-86950</td><td>&mdash;</td><td>Apple Core Graphics (iOS, iPadOS, macOS)</td><td>Exploited; fixed in iOS/iPadOS 26.7.1, macOS 26.7.1 / 15.8.1; KEV due today</td></tr>
+<tr><td class="mono">CVE-2026-54154</td><td>Max (vendor)</td><td>Kiteworks Email Protection Gateway &lt; 9.4.1</td><td>Unauthenticated RCE to root; fixed in 9.4.1</td></tr>
+<tr><td class="mono">CVE-2026-102489 / -102490</td><td>9.4</td><td>Zammad 6.3.0&ndash;6.5.4</td><td>Zero-days used in the DIVD breach</td></tr>
+</table></div>
+
+<h2 class="sec">CISA KEV &amp; Federal Deadlines</h2>
+<div class="panel"><ul class="bul">
+<li><b>CVE-2026-104286</b> Fortinet FortiMail path traversal &mdash; added Oct 1, due <b>Oct 4, 2026</b> <b class="warnc">(2 days left)</b> (<a href="https://www.helpnetsecurity.com/2026/10/02/fortinet-fortimail-vulnerability-cve-2026-104286/" style="color:var(--acc2)">Help Net Security, citing CISA</a>)</li>
+<li><b>CVE-2026-76504</b> Cisco Catalyst SD-WAN Manager &mdash; added Sept 30, due <b>Oct 3, 2026</b> <b class="warnc">(1 day left)</b></li>
+<li><b>CVE-2026-86950</b> Apple Core Graphics &mdash; added Sept 29, due <b>Oct 2, 2026</b> <b class="critc">(0 days left &mdash; due today)</b></li>
+<li><b>CVE-2026-88771 / CVE-2026-88772</b> Citrix NetScaler ADC/Gateway &mdash; added Sept 27, due <b>Sept 30, 2026</b> <b class="critc">(2 days overdue)</b></li>
+</ul><p class="note">Deadlines are set per CVE under BOD 26-04&rsquo;s risk-tiered windows (which replaced BOD 22-01&rsquo;s uniform three weeks), so same-week due dates are normal.</p></div>
+
+<footer><div class="dv">The Cyber Wire</div><div class="srcs">Sources: <a href="https://www.helpnetsecurity.com/2026/10/02/fortinet-fortimail-vulnerability-cve-2026-104286/" style="color:inherit">Help Net Security (FortiMail CVE-2026-104286, Oct 2)</a> &middot; <a href="https://www.bleepingcomputer.com/news/security/fortinet-warns-of-critical-fortimail-flaw-exploited-in-zero-day-attacks/" style="color:inherit">BleepingComputer (FortiMail)</a> &middot; <a href="https://www.cisa.gov/news-events/alerts/2026/10/01/cisa-adds-one-known-exploited-vulnerability-catalog" style="color:inherit">CISA alert (Oct 1 KEV addition)</a> &middot; <a href="https://www.bleepingcomputer.com/news/security/microsofts-x-account-hacked-in-crypto-token-pump-and-dump-scheme/" style="color:inherit">BleepingComputer (Microsoft X account)</a> &middot; <a href="https://www.bleepingcomputer.com/news/security/autonomous-ai-agents-tried-to-hack-us-canadian-government-websites/" style="color:inherit">BleepingComputer (AI agents / Transluce)</a> &middot; <a href="https://www.bleepingcomputer.com/news/security/kiteworks-patches-max-severity-email-protection-gateway-code-injection-vulnerability/" style="color:inherit">BleepingComputer (Kiteworks)</a> &middot; <a href="https://www.bleepingcomputer.com/news/security/police-dismantle-killsec-ransomware-gang-allegedly-led-by-16-year-old/" style="color:inherit">BleepingComputer (KillSec)</a> &middot; <a href="https://www.bleepingcomputer.com/news/security/hackers-breach-pentagon-human-resources-management-system-steal-data-of-nearly-3-million-people/" style="color:inherit">BleepingComputer (Pentagon)</a> &middot; <a href="https://www.bleepingcomputer.com/news/security/metamask-discloses-security-incident-affecting-its-infrastructure/" style="color:inherit">BleepingComputer (MetaMask)</a> &middot; <a href="https://www.bleepingcomputer.com/news/security/divd-says-zammad-zero-days-enabled-ai-driven-network-breach/" style="color:inherit">BleepingComputer (Zammad / DIVD)</a> &middot; <a href="https://www.bleepingcomputer.com/news/security/russian-state-hackers-use-new-redflick-technique-to-push-malware/" style="color:inherit">BleepingComputer (Star Blizzard RedFlick)</a> &middot; <a href="https://www.bleepingcomputer.com/news/security/cisco-warns-of-new-sd-wan-authentication-bypass-zero-day-exploited-in-attacks/" style="color:inherit">BleepingComputer (Cisco SD-WAN)</a> &middot; <a href="https://www.helpnetsecurity.com/2026/10/01/new-cisco-sd-wan-zero-day-exploited-in-the-wild-cve-2026-76504/" style="color:inherit">Help Net Security (Cisco SD-WAN)</a> &middot; <a href="https://www.helpnetsecurity.com/2026/09/30/cve-2026-88772-netscaler-exploitation-zero-day/" style="color:inherit">Help Net Security (NetScaler)</a></div>
+<div class="disc">For situational awareness only. Verify affected versions, fixes and deadlines against your vendors&rsquo; own advisories and the CISA KEV catalog before acting.</div></footer></div>
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
+</body></html>
