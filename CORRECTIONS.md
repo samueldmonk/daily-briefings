@@ -24208,3 +24208,8 @@ deleting and report how many days were removed.
 - 🆕 CYBER: CISA Oct 2 alert added Zammad CVE-2026-102489 (session fixation → RCE as zammad) + CVE-2026-102490 (improper privilege management → root) to KEV; due **Oct 5, 2026** (HOL citing KEV catalog dateAdded 2026-10-02 / dueDate 2026-10-05; WindowsForum citing the CISA alert — both fetched; cisa.gov alert not fetchable). ⚠ The page's older Zammad card said "both CVSS 9.4" — WRONG: DIVD rates 102489 8.7 alone / 9.4 chained, 102490 8.5 (HOL). Fixed. Zammad recommends 7.2.0.
 - 🟢 AFTER HOURS: no individual AH moves verified (search-only lists: VCIG, SDEV, NNNN, SILO, FEBO — unfetched, NOT printed).
 - 🟢 MMA: search re-confirms UFC 332 Sat Oct 3 Delta Center SLC; Silva 125 / Wang 124.5; vacant W-FLW. Page unchanged. Board unchanged.
+
+## Added 2026-10-02 (Friday — clone ~6:03pm ET, AFTERNOON EDITION, markets CLOSED; archive stamp 2026-10-02-1804)
+- 🟢 MARKETS: Friday official closes unchanged (AP, verified prior edition). AFTER HOURS: search-summary-only list (VCIG +22.63%, SDEV, NNNN, SILO, FEBO; DRCT −25.28%) — unfetched, NOT printed. Stale "New" tags removed.
+- 🟢 CYBER: CISA search — latest alert listing still shows Oct 1 FortiMail; Zammad Oct 2 add (due Oct 5) stands. Search-only items (FBI jobs portal claim, Asymmetric Security rogue AI agent) unfetched — NOT published. Stale "New" tags removed.
+- 🟢 MMA: search re-confirms UFC 332 Sat Oct 3 Delta Center SLC, vacant W-FLW (Silva vs. Wang). ESPN champions page fetched EMPTY again; search-level listing (Oct 2026) matches board on all 10 occupied belts (Van, Yan, Volkanovski, Gaethje, Makhachev, Strickland, Ulberg, Gane, Dern, Harrison). Board unchanged.
