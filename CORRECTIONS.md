@@ -24240,3 +24240,9 @@ deleting and report how many days were removed.
 - ⚠ FIX: the Vulnerability Watch row for Apple CVE-2026-86950 said "KEV due today" — WRONG (due Oct 2, passed, as the KEV list already said). Corrected.
 - 🟢 MARKETS: weekend; Friday Oct 2 AP closes stand. A search summary said "S&P 500 slipped 0.3 percent to close at 7,722.72 on Friday" — conflates the WEEKLY −0.3% with Friday's +0.73% day; NOT printed.
 - 🟢 MMA: UFC 332 Silva def. Wang Cong UD 48-47, 48-47, 49-46 re-confirmed (ESPN/CBS/Bloody Elbow search). Search-only items (Shevchenko "keep my belt warm", Talbott calling out O'Malley, Pavlovich favored over Pereira) unfetched — NOT printed. Board unchanged.
+
+## Added 2026-10-04 (Sunday — clone ~6:04pm ET, AFTERNOON EDITION, markets CLOSED weekend; archive stamp 2026-10-04-1806)
+- 🟢 Carry-forward run. Re-confirmed by search this run: Friday Oct 2 closes (S&P 500 7,722.72 +56.27 / +0.73%; Dow 51,176.96 +250.40 / +0.49%; Nasdaq Composite 27,190.86 +319.27); CISA Oct 4 KEV add CVE-2026-88779 (Citrix NetScaler SAML, DoS, CVSS v4 8.7, fixed 14.1-73.41 / 13.1-64.28) per cisa.gov alert listing + HOL; UFC 332 Silva def. Wang Cong UD 48-47, 48-47, 49-46 (ESPN/CBS/Yahoo). Zack Whittaker "this week in security" Oct 4 re-fetched — consistent with page.
+- ⚠ TRAP: a search summary framed the **ATF / Qilin breach** as Oct 4 news — SecurityWeek (fetched) dates ATF's confirmation to **Aug 28, 2026** (leak-site listing Aug 26). Not news this week; NOT added.
+- ⚠ Allen vs. Duncan "−160 / +135" again appeared only in a search summary; Tapology page fetched EMPTY — NOT printed.
+- "New" tag removed from the CVE-2026-88779 card (already in the 1735 snapshot).
