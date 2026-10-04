@@ -24246,3 +24246,7 @@ deleting and report how many days were removed.
 - ⚠ TRAP: a search summary framed the **ATF / Qilin breach** as Oct 4 news — SecurityWeek (fetched) dates ATF's confirmation to **Aug 28, 2026** (leak-site listing Aug 26). Not news this week; NOT added.
 - ⚠ Allen vs. Duncan "−160 / +135" again appeared only in a search summary; Tapology page fetched EMPTY — NOT printed.
 - "New" tag removed from the CVE-2026-88779 card (already in the 1735 snapshot).
+
+## Added 2026-10-04 (Sunday — clone ~6:34pm ET, AFTERNOON EDITION, markets CLOSED weekend; archive stamp 2026-10-04-1834)
+- 🟢 Carry-forward run (fired after the 6 PM window). Re-confirmed by search this run: CISA Oct 4 alert adds CVE-2026-88779 (Citrix NetScaler, cisa.gov alert listing); UFC 332 Silva def. Wang Cong UD 48-47, 48-47, 49-46 (CBS/Yahoo/MMAMania). KEV countdowns on page remain correct for Oct 4.
+- ⚠ Sunday-evening futures ("Dow futures +53 pts / +0.1%, S&P and Nasdaq-100 +0.1%") appeared ONLY in a search summary of CNBC's Oct 4 live page; the CNBC page fetched EMPTY — NOT printed. The same summary's "10-year yield at highest level in more than two decades" is unverified (reads like recycled 2023 copy) — NOT printed.
