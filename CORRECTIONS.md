@@ -24349,3 +24349,8 @@ deleting and report how many days were removed.
 - 🟢 CYBER: KEV search shows latest add = CVE-2026-88779 (dateAdded Oct 4, due Oct 7); a summary again said "added October 5" while its own text says Oct 4 — refused. Dell CVE-2026-86360 (root privesc) seen in search summary only — NOT added. Zammad pair due today.
 - 🟢 MMA: Sherdog Oct 5 blog fetched — calendar unchanged (UFC Fight Night 290 Allen vs. Duncan Oct 10; FN 291 Buckley vs. Malott Oct 17; UFC 333 Volkanovski vs. Evloev Oct 24; FN 292 Moicano vs. Nolan Oct 31; FN 293 Bonfim vs. Brady Nov 7); "Natalia Silva wins UFC flyweight title" re-confirms W-FLW row. ⚠ fightnews.com titles Oct 10 card "UFC Las Vegas 122" vs Sherdog "Fight Night 290" — page wording unchanged. Board unchanged.
 - No "New" tags (no new verified items).
+
+## Added 2026-10-05 (Monday — clone ~6:33pm ET, AFTERNOON EDITION, markets CLOSED; archive stamp 2026-10-05-1834)
+- 🟢 Carry-forward run (fired after the 6 PM window). TheStreet Oct 5 wrap re-fetched (modified 20:07Z, unchanged): S&P 500 7,773.99 (+0.66%), Nasdaq Comp 27,477.31 (+1.05%, record), Dow 51,267.90 stand. ⚠ Search summary again gave S&P "7,773.95" and the unfetched AH list (XEL +7.30%, SYY +4.93%, SPG +4.01%; WBD/NVDA/AAPL most-active) — NOT printed.
+- 🟢 CYBER: CISA alert listing (search) — latest KEV add still CVE-2026-88779 (Oct 4, due Oct 7); Zammad pair (Oct 2) due today. Search summaries (Pentagon breach, Warlock, Star Blizzard, South Africa ATC) unfetched — NOT added.
+- 🟢 MMA: Sherdog Oct 5 blog fetched — calendar and headlines (Silva W-FLW title, Oliveira–Lopes UFC 335, Barcelos brain swelling) consistent with page. Board unchanged. No "New" tags.
