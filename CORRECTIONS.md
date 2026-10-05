@@ -24307,3 +24307,7 @@ deleting and report how many days were removed.
 - 🟢 Back-to-back run (prior edition 1239). Re-fetched Yahoo Finance live page (strip still ~12:05 PM ET: S&P +0.47%, Dow −0.04%, Nasdaq +0.72%; body updated 11:50 AM) and TheStreet live blog (modified 12:36 PM, latest item = midday winners list) — NO index read newer than ~12:05 PM ET verified; page now says so in a note line. CNBC Oct 4/5 live page and Bloomberg wrap fetched EMPTY. ⚠ Search summary "12:31 PM Dow 51,223.13 +46.17" again unfetched — NOT printed.
 - 🟢 CYBER: KEV search shows no adds newer than Oct 4 (Zammad pair due today Oct 5; Citrix 88779 due Oct 7). MMA: Sherdog Oct 5 blog consistent with page (Allen vs. Duncan Oct 10; UFC 335 Oliveira–Lopes; Teixeira on Barcelos). Boards unchanged.
 - All "New" tags removed (every tagged item was already in the 1239 snapshot).
+
+## Added 2026-10-05 (Midday ~1:05 PM ET)
+- ISM Services PMI for September 2026 = **54.9** (down from 55.4) per ISM's own report (PR Newswire) and Benzinga 12:43 PM. Yahoo Finance's live blog printed "55.9 ... above the consensus of 55.7" — that is a Yahoo error; do NOT publish 55.9.
+- Midday read (Benzinga, 12:43 PM ET): Dow +0.20%, S&P 500 +0.62%, Nasdaq +0.84%; materials +1.2% led, real estate −0.1%; oil −1% to $90.17; Vaxcyte +40% at $79.00; CHRW −11% at $140.19; Camping World −10% to $4.52 (FY26 adj. EBITDA below low end of $230M–$270M guide). Source: https://www.benzinga.com/markets/market-summary/26/10/62169936/dow-gains-100-points-ism-services-pmi-falls-in-september
