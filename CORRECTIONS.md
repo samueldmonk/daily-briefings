@@ -24273,3 +24273,8 @@ deleting and report how many days were removed.
 - 🟢 CYBER: KEV search shows no adds newer than Oct 4 (Zammad pair due today; FortiMail overdue; Citrix 88779 due Oct 7). Pentagon DMDC breach already on page. Unchanged.
 - 🟢 MMA: Vitor Petrino callout of Curtis Blaydes for UFC 335 is search-summary only — NOT printed. Unchanged.
 - "New" tags: prior 0906 tags removed; only the new 9:35 AM paragraph tagged.
+
+## Added 2026-10-05 (Monday — clone ~10:04am ET, MORNING EDITION, markets OPEN; archive stamp 2026-10-05-1006)
+- 🆕 MARKETS: TheStreet live blog fetched (modified 9:59 AM ET): **Opening bell 9:35 AM — S&P 500 +0.18%, Dow −0.21%, Nasdaq +0.42%, Russell 2000 +0.94%** ("stocks mixed"); DePorre "two markets" quote. **Brazil (9:59 AM, citing Reuters): real +4%+ past 5.00/USD from ~5.22; Flavio Bolsonaro 47% vs Lula ~45% in first round, runoff this month; Ibovespa futures +8%+, Frankfurt MSCI Brazil ETF +16%+.** SUPERSEDES the 0936 "no verified opening-bell read". ⚠ A search summary claimed "Dow −299.88 (−0.59%) as of 9:55 AM" — unfetched, NOT printed. Yahoo live page fetched but still the 6 AM version.
+- 🆕 CYBER: SecurityWeek Oct 5 (fetched): Clover Health Investments 138,677 + AngMar Management Services 126,196 affected (Interlock claimed AngMar, 700+ GB). No KEV adds newer than Oct 4 found. Search-summary items (KillSec leak-site seizure, TeamCity CVE-2026-63077 ransomware) unfetched — NOT added.
+- 🆕 MMA: Athlon Sports via Yahoo (fetched, Oct 5): **Joe Pyfer (16-3) vs. Bo Nickal** added to UFC 335 (Dec 12, T-Mobile Arena), announced at end of UFC 332 broadcast; Nickal TKO'd Kyle Daukaus 4:34 R1 at Freedom 250. Board unchanged.
