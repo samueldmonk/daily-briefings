@@ -24266,3 +24266,10 @@ deleting and report how many days were removed.
 - ⚠ TRAP: Simply Wall St "Morning Bull" on Yahoo (4:07 AM) says "E-mini S&P 500 contracts up about 0.7%" — CONTRADICTED by the futures strip on its own page (S&P fut −0.09%) and by Yahoo/TheStreet; NOT printed. Its movers (TER +8%, HPE +7.36%, SPCX +7.35%, WDC −10.22%, STX −10.21%, ACN −6.31%) are stale/unlabeled sessions — NOT printed. Search summary "RXO +23.31%" unfetched — NOT printed.
 - 🟢 CYBER: no KEV add newer than Oct 4 found; page carried forward (Zammad due today, FortiMail 1 day overdue, Citrix 88779 due Oct 7).
 - 🟢 MMA: search-level champions listing (Oct 2026) matched all men's rows + Harrison + Dern but showed W-FLW "vacant" — STALE (Silva won Oct 3); refused. Board unchanged.
+
+## Added 2026-10-05 (Monday — clone ~9:34am ET, MORNING EDITION, markets just OPENED; archive stamp 2026-10-05-0936)
+- 🆕 MARKETS: TheStreet live blog re-fetched (modified 9:08 AM ET): **Hon Hai (Foxconn) Sept-quarter sales NT$3.03T ($95.4B), +47%, vs NT$2.83T expected** (citing Bloomberg); shares up ~10% YTD. Earnings this week per TheStreet: STZ, LEVI, PEP, DAL. PTC deal terms **$205/share cash, 42% premium** (GuruFocus/Quartz/TipRanks search snippets); Schneider shares fell in Paris — snippets DISAGREE on size (~7% / 9% / 10%), so published qualitatively only. NO verified opening-bell index read at ~9:35 AM ET; page says so and keeps the pre-market read labeled.
+- ⚠ TRAP: a search summary claimed Oct 5 "Dow +250.40 (0.49%), S&P +56.26 (0.73%), Nasdaq-100 +1.00%… closed higher on October 5" — those are FRIDAY OCT 2 figures; refused. Trading Economics "US500 7708, −0.19%" (unfetched CFD read) not printed. A Benzinga/sundayguardian "futures pointed to green open (NQ +0.98%, ES +0.69%)" snippet contradicts Yahoo/TheStreet — refused.
+- 🟢 CYBER: KEV search shows no adds newer than Oct 4 (Zammad pair due today; FortiMail overdue; Citrix 88779 due Oct 7). Pentagon DMDC breach already on page. Unchanged.
+- 🟢 MMA: Vitor Petrino callout of Curtis Blaydes for UFC 335 is search-summary only — NOT printed. Unchanged.
+- "New" tags: prior 0906 tags removed; only the new 9:35 AM paragraph tagged.
