@@ -24585,3 +24585,8 @@ deleting and report how many days were removed.
 - Post-close Yahoo strip: WTI Nov 1.08 (+3.17%); 10-yr 5.23 (−0.05); VIX 15.57 (+3.25%); gold ,155.60 (+0.36%); BTC 1,786 (−1.92%). Yahoo blog: Bitcoin fell 2% to ~$81,000, lowest in ~3 weeks; COIN/MSTR/HOOD ~−1%; CoinGlass $974M liquidations/24h.
 - ⚠ After-hours: search snippets (REGN/CRL/FDS/RCL/WAT/AMP; TDIC/STAK/GEMI/GNSS) undated or from other dates — NOT printed. TRAP: a search summary placed "UFC 332 on October 10 at Etihad Arena, Abu Dhabi" — WRONG (UFC 332 was Oct 3, Salt Lake City); ignored.
 - Cyber/MMA: nothing newer verified; carried forward unchanged.
+
+## Added 2026-10-08 (Thursday — clone ~5:03pm ET, AFTERNOON EDITION, markets CLOSED; archive stamp 2026-10-08-1704)
+- ⚠ TRAP: a search summary said "Wolfspeed (WOLF) shares surged 27% in extended trading" on Oct 8 — that was WEDNESDAY Oct 7's after-hours move (Reuters via SRN, per FinanceFeeds, fetched; 8-K stamped 16:18 Oct 7; Thursday 8:20 AM premarket $35.70, +13.80%). NOT a Thursday after-hours mover; not printed as one.
+- After-hours: no Thursday Oct 8 extended-trading moves verified (search returned only undated aggregator pages) — After-Hours note re-stamped ~5:05 PM ET. Search summary again placed "UFC 332 Oct 10 Abu Dhabi" — FALSE (UFC 332 was Oct 3, Salt Lake City); refused. KEV search: nothing newer than Oct 4. Cyber/MMA carried forward unchanged; Board unchanged.
+- "New" tags: Official close paragraph tag removed (was in the 1634 snapshot); no new items this edition.
