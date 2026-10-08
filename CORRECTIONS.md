@@ -24601,3 +24601,8 @@ deleting and report how many days were removed.
 ## Added 2026-10-08 (Thursday — clone ~6:03pm ET, AFTERNOON EDITION, markets CLOSED; archive stamp 2026-10-08-1804)
 - 🟢 Final run of the day. After-hours search returned only spam/undated aggregator pages — no new verified Thursday extended-trading movers; HUM/ALHC/telecoms/AXP cards (verified 1735) stand. KEV search: nothing newer than Oct 4; countdowns unchanged (same day). MMA: search summary AGAIN placed "UFC 332 Oct 10 Etihad Arena, Abu Dhabi" — FALSE (UFC 332 was Oct 3, Salt Lake City); refused. Fight Night Oct 10 (Camilo–Herbert on card) unchanged. Board unchanged.
 - "New" tags: four after-hours card tags removed (were in the 1735 snapshot); no New tags this edition.
+
+## Added 2026-10-08 (Thursday — clone ~6:33pm ET, AFTERNOON EDITION, markets CLOSED; archive stamp 2026-10-08-1834)
+- 🟢 Carry-forward run (fired after the 6 PM window). After-hours search returned only spam/undated aggregator pages — no new verified Thursday extended-trading movers; Oct 8 closes (Yahoo: S&P 500 7,765.36 −0.47%, Nasdaq 27,193.34 −1.25%, Dow 51,231.64 +0.10%) and HUM/ALHC/telecoms/AXP AH cards (verified 1735) stand.
+- 🟢 CYBER: KEV search surfaced nothing newer than Oct 4; dmarcreport Berlin Rhysida/McKesson summary again unfetched — NOT added. MMA: UFC.com/Cageside search re-confirms Allen (#4, 27-7) vs Duncan (#10, 15-2), Sat Oct 10, Meta Apex, 8 PM EDT Paramount+. Board unchanged.
+- "New" tags: none (1804 snapshot had none).
