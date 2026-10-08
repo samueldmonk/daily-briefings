@@ -24597,3 +24597,7 @@ deleting and report how many days were removed.
 - ⚠ The search-summary REGN/CRL/FDS/RCL/WAT/AMP list remains unfetched — NOT printed. Investing.com sidebar closes (S&P 7,765.47 −0.47%, Nasdaq 27,193.34 −1.25%, Dow 51,231.70 +0.10%) corroborate the Yahoo final %s; Scorecard keeps Yahoo's levels.
 - 🟢 CYBER: KEV search surfaced nothing newer than Oct 4; Sangoma Switchvox CVE-2026-9586 (digg/SecurityWeek snippet) unfetched — NOT added. MMA: UFC.com/Cageside search re-confirms Allen (#4) vs Duncan (#10), Oct 10, Meta Apex; search summary again placed "UFC 332 Oct 10 Abu Dhabi" — FALSE, refused. Board unchanged.
 - "New" tags: New only on the four after-hours cards (HUM, ALHC, telecoms, AXP).
+
+## Added 2026-10-08 (Thursday — clone ~6:03pm ET, AFTERNOON EDITION, markets CLOSED; archive stamp 2026-10-08-1804)
+- 🟢 Final run of the day. After-hours search returned only spam/undated aggregator pages — no new verified Thursday extended-trading movers; HUM/ALHC/telecoms/AXP cards (verified 1735) stand. KEV search: nothing newer than Oct 4; countdowns unchanged (same day). MMA: search summary AGAIN placed "UFC 332 Oct 10 Etihad Arena, Abu Dhabi" — FALSE (UFC 332 was Oct 3, Salt Lake City); refused. Fight Night Oct 10 (Camilo–Herbert on card) unchanged. Board unchanged.
+- "New" tags: four after-hours card tags removed (were in the 1735 snapshot); no New tags this edition.
