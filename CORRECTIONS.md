@@ -24744,3 +24744,9 @@ deleting and report how many days were removed.
 - 🟢 CYBER: KEV search surfaced only September govdelivery bulletins — nothing newer than the Oct 8 Flax Typhoon adds (due Oct 11); countdowns unchanged (same day). Breach/ransomware search returned only Aug–Sept roundups — not added.
 - 🟢 MMA: UFC Vegas 122 (Allen vs Duncan, Sat Oct 10, Meta Apex) re-confirmed via search; no results yet. Board unchanged.
 - "New" tags: 1704 tag removed (after-hours ETF card); nothing new verified this run, so no New tags.
+
+## Added 2026-10-09 (Friday — clone ~6:03pm ET, AFTERNOON EDITION (archive stamp 2026-10-09-1804), markets CLOSED)
+- 🟢 MARKETS: Friday Oct 9 closes stand as verified at 1635/1704 (TheStreet wrap; Yahoo "At close"). This run's close/after-hours searches surfaced only Oct 6–7 items, a Sept 24 AP recap and the armenpress 2025 trap — nothing newer; Scorecard unchanged. After-hours note re-stamped "re-checked ~6:05 PM ET"; no large-cap after-hours movers verified.
+- 🟢 CYBER: KEV search surfaced only September govdelivery bulletins — nothing newer than the Oct 8 Flax Typhoon adds (due Oct 11); breach search returned only mid-2026 aggregators — not added. Countdowns unchanged (same day).
+- 🟢 MMA: UFC Vegas 122 (Brendan Allen vs Christian Leroy Duncan, Sat Oct 10, Meta Apex) re-confirmed via Cageside Press/Heavy search results; no results yet. Board unchanged.
+- "New" tags: none (nothing new verified this run).
