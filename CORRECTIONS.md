@@ -24731,3 +24731,10 @@ deleting and report how many days were removed.
 - After-hours: search returned only undated aggregator/spam pages — none verified; note re-stamped ~4:35 PM ET.
 - 🟢 CYBER/MMA: KEV search surfaced nothing newer than the Oct 8 Flax Typhoon adds (due Oct 11); countdowns unchanged (same day). UFC Vegas 122 (Allen vs Duncan, Sat Oct 10, Meta Apex) unchanged; no results yet. Board unchanged.
 - "New" tags: 1605 tags removed (prelim close, Flax Typhoon KEV card/bullet, weigh-in paragraph); New on the official-close and weekly Lead paragraphs.
+
+## Added 2026-10-09 (Friday — clone ~5:03pm ET, AFTERNOON EDITION (archive stamp 2026-10-09-1704), markets CLOSED)
+- ✅ CLOSE RE-VERIFIED: TheStreet Oct 9 blog re-fetched (modified 20:22Z, "Market Wrap" figures 7,811 / 27,366 / 51,655 unchanged). Yahoo live blog (fetched; "At close: 4:37 PM EDT"): S&P 500 7,811.54 (+46.18, +0.59%), Dow 51,654.95 (+423.31, +0.83%), Nasdaq 27,366.17 — reconcile with Oct 8 Yahoo closes; differ from TheStreet by cents only (S&P .51 vs .54, Dow .01 vs 51,654.95). Percentages identical. Scorecard keeps TheStreet's levels (as at 1635).
+- 🆕 AFTER-HOURS: StockAnalysis.com (fetched; "Oct 9, 2026 - After-hours"): SPY +0.02%, QQQ +0.02%, DIA +0.03%, IWM +0.03%; gainers/losers lists are micro-caps only (YMAT, ZYBT, POM, DKI…) — not printed as movers. Added one index-ETF card (New).
+- ⚠ Search summary "SpaceX +2.3% after hours to $164.30" is undated (likely Thursday) — NOT printed.
+- 🟢 CYBER: searches surfaced nothing dated Oct 9 beyond carried items (Veradigm/Warlock/Advantest snippets unfetched — NOT added); KEV: nothing newer than Oct 8 Flax Typhoon adds (due Oct 11); countdowns unchanged (same day). MMA: UFC.com event page listing re-confirms Fight Night Allen vs Duncan, Sat Oct 10, Meta APEX, main card 8 PM EDT; Bloody Elbow Oct 9 headlines (search summary only; homepage fetch returned 2025 content) NOT added. Board unchanged.
+- "New" tags: 1635 tags removed (official close, weekly); New only on the after-hours index-ETF card.
