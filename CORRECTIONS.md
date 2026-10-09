@@ -24738,3 +24738,9 @@ deleting and report how many days were removed.
 - ⚠ Search summary "SpaceX +2.3% after hours to $164.30" is undated (likely Thursday) — NOT printed.
 - 🟢 CYBER: searches surfaced nothing dated Oct 9 beyond carried items (Veradigm/Warlock/Advantest snippets unfetched — NOT added); KEV: nothing newer than Oct 8 Flax Typhoon adds (due Oct 11); countdowns unchanged (same day). MMA: UFC.com event page listing re-confirms Fight Night Allen vs Duncan, Sat Oct 10, Meta APEX, main card 8 PM EDT; Bloody Elbow Oct 9 headlines (search summary only; homepage fetch returned 2025 content) NOT added. Board unchanged.
 - "New" tags: 1635 tags removed (official close, weekly); New only on the after-hours index-ETF card.
+
+## Added 2026-10-09 (Friday — clone ~5:33pm ET, AFTERNOON EDITION (archive stamp 2026-10-09-1734), markets CLOSED)
+- 🟢 MARKETS: Friday Oct 9 closes stand as verified at 1635/1704 (TheStreet wrap; Yahoo "At close"). A close search this run surfaced only Oct 5–7 items (incl. the armenpress 2025 trap) — nothing newer; Scorecard unchanged. After-hours search returned only undated/spam aggregator pages; StockAnalysis after-hours page not fetchable this run — 1704 index-ETF card kept as the earlier read, New tag removed.
+- 🟢 CYBER: KEV search surfaced only September govdelivery bulletins — nothing newer than the Oct 8 Flax Typhoon adds (due Oct 11); countdowns unchanged (same day). Breach/ransomware search returned only Aug–Sept roundups — not added.
+- 🟢 MMA: UFC Vegas 122 (Allen vs Duncan, Sat Oct 10, Meta Apex) re-confirmed via search; no results yet. Board unchanged.
+- "New" tags: 1704 tag removed (after-hours ETF card); nothing new verified this run, so no New tags.
