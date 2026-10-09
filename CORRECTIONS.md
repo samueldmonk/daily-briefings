@@ -24655,3 +24655,9 @@ deleting and report how many days were removed.
 - 🔧 Fixed a garbled Lead note ("FridayFriday’s … ;rsquo;s") carried from 1035.
 - 🟢 CYBER: KEV search returned only catalog index pages (nothing newer verified); BeyondTrust CVE-2026-1731 KEV ransomware-flag item (SecurityWeek search listing) undated/unfetched — NOT added. Countdowns unchanged (same day). MMA: UFC Vegas 122 weigh-in results still not in results; Allen vs Duncan Sat Oct 10, Meta Apex unchanged. Board unchanged.
 - "New" tags: 1035 tags removed (UMich, ~9:46 strip, Middle East); New on the ~10:34 strip and 10:46 movers Lead paragraphs and the MRNA, SWKS, HPQ cards.
+
+## Added 2026-10-09 (Friday — clone ~11:33am ET, MORNING EDITION (archive stamp 2026-10-09-1135), markets OPEN)
+- 🆕 MARKETS: TheStreet Oct 9 blog (fetched; header 11:09 AM ET, modified 15:09:03Z). New 11:09 AM item: Hurricane Isaias has shut in nearly 63% of Gulf of America daily oil production (1,282,879 bpd; 121 platforms + 5 rigs evacuated) per the Marine Minerals Administration, up from ~25% Wednesday (CBS 12 News); Isaias Cat 3, 120 mph; NHC landfall late Friday near the Alabama–Florida line. Added to Lead (New) + Radar (New). Lead headline keeps "As of ~10:34 AM ET" index figures — no fresher index read from a fetched source (Yahoo live blog still cached at ~9:46 AM strip; Baltimore Sun/AP "record-breaking week" page fetched empty — NOT used).
+- ⚠ TRAP: a search summary gave "Oct 9" closes Dow 46,358.42 (−0.52%), S&P 6,735.11 (−0.28%), Nasdaq 23,024.63 — those are OCTOBER 9, 2025 levels (armenpress); refused.
+- 🟢 CYBER: KEV search returned only September govdelivery bulletins — nothing newer verified; countdowns unchanged (same day). MMA: UFC Vegas 122 weigh-in results still not published in results; Allen vs Duncan Sat Oct 10, Meta Apex unchanged. Board unchanged.
+- "New" tags: 1105 tags removed (~10:34 strip, 10:46 movers, MRNA/SWKS/HPQ cards); New only on the Isaias Lead paragraph and Radar bullet.
