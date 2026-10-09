@@ -24667,3 +24667,10 @@ deleting and report how many days were removed.
 - ⚠ A search summary gave "S&P 500 7,797.11, +31.75 (+0.41%) as of 12:02:24 PM EDT" — source page not fetched; NOT printed.
 - 🟢 CYBER: search surfaced only undated/carried items (BeyondTrust CVE-2026-1731 KEV ransomware flag, Splunk CVE-2026-20253, Klue breach — none dated/fetched this run → NOT added). KEV countdowns unchanged (same day). MMA: UFC Vegas 122 (Allen vs Duncan, Sat Oct 10, Meta Apex) re-confirmed via search; weigh-in results not yet published. Board unchanged.
 - "New" tags: 1135 tags removed (Isaias Lead paragraph + Radar bullet); New only on the 11:42 AM S&P 500 watch paragraph.
+
+## Added 2026-10-09 (Friday — clone ~12:33pm ET, MIDDAY EDITION (archive stamp 2026-10-09-1235), markets OPEN)
+- 🆕 MARKETS: TheStreet Oct 9 blog (fetched; modified 16:13:20Z = 12:13 PM ET). New 12:13 PM "Midday Movers: $ASTS, $TMUS, $VZ, $T, $VOD decline": telecom giants falling after SpaceX procured spectrum licenses; T-Mobile −12.26%, Verizon −10.92%, AT&T −10.92% (AT&T and Verizon printed identically by TheStreet — reproduced "as listed", not smoothed). Added as New Lead paragraph; telecom mover card updated (New). Lead headline → "As of ~12:13 PM ET"; index figure remains TheStreet's 11:42 AM S&P +0.43%.
+- ⚠ A search summary gave "S&P 500 7,808.30, +42.94 (+0.55%) as of 12:31:53 PM EDT" and Dow 51,592.38 (+0.70%) — source page not fetched (both Yahoo pages re-fetched still show ~9:46/~10:34 strips); NOT printed.
+- ⚠ TRAP: a search summary said CISA added MikroTik CVE-2026-67277 / CVE-2026-86060 to KEV "on October 9, 2026" — those were added 10 SEPTEMBER (see KEV block above). Refused; cyber unchanged.
+- 🟢 MMA: UFC Vegas 122 (Allen vs Duncan, Sat Oct 10, Meta Apex) re-confirmed via search; weigh-ins not yet published. Board unchanged.
+- "New" tags: 1205 tag removed (11:42 S&P watch); New only on the 12:13 PM midday-movers paragraph and telecom card.
