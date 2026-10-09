@@ -24694,3 +24694,9 @@ deleting and report how many days were removed.
 - NEW (Yahoo, ~1:13 PM): Trump established a committee to investigate allegations against Fed governor Lisa Cook (mortgage fraud; whether legal "cause" for removal); SCOTUS ruled in June she can keep serving, didn't rule on merits. Added with New tag.
 - TheStreet blog modified 17:35Z (1:35 PM) — only a Qualcomm CFO interview feature added; no new market data.
 - CYBER/MMA: no new verified items. Search surfaced the dmarcreport "Berlin/Rhysida, McKesson, Boston Scientific" roundup — it is dated 1 SEPTEMBER 2026 (events late Aug); NOT current news, not added. UFC Vegas 122 weigh-in results still not published.
+
+## Added 2026-10-09 (Friday — clone ~2:33pm ET, MIDDAY EDITION (archive stamp 2026-10-09-1434), markets OPEN)
+- 🟢 MARKETS: Yahoo Finance Oct 9 live blog re-fetched — still updated 1:15 PM, strip "close in 2h 12m" (~1:48 PM) — unchanged; TheStreet blog re-fetched — still modified 17:35Z (1:35 PM), no new items; Yahoo syndication of TheStreet still shows the ~10:34 AM strip. Lead stays "As of ~1:48 PM ET".
+- ⚠ A search summary gave "S&P 500 7,812.84, +47.48 (+0.61%) as of 2:32:48 PM EDT" — source page not fetched; NOT printed. Same summary's "Dow +0.8%, S&P +0.7%, Nasdaq +0.5%" is Yahoo's body text that contradicts its own strip — refused (as at 1405).
+- 🟢 CYBER: KEV search surfaced only generic catalog pages — nothing newer verified; countdowns unchanged (same day). MMA: UFC Vegas 122 (Allen vs Duncan, Sat Oct 10, Meta Apex) re-confirmed via search; weigh-in results still not published. Board unchanged.
+- "New" tags: 1405 tags removed (~1:48 strip paragraph, Lisa Cook committee paragraph); nothing new verified this run, so no New tags.
