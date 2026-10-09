@@ -24750,3 +24750,9 @@ deleting and report how many days were removed.
 - 🟢 CYBER: KEV search surfaced only September govdelivery bulletins — nothing newer than the Oct 8 Flax Typhoon adds (due Oct 11); breach search returned only mid-2026 aggregators — not added. Countdowns unchanged (same day).
 - 🟢 MMA: UFC Vegas 122 (Brendan Allen vs Christian Leroy Duncan, Sat Oct 10, Meta Apex) re-confirmed via Cageside Press/Heavy search results; no results yet. Board unchanged.
 - "New" tags: none (nothing new verified this run).
+
+## Added 2026-10-09 (Friday — clone ~6:39pm ET, AFTERNOON EDITION (archive stamp 2026-10-09-1839), markets CLOSED)
+- 🟢 MARKETS: Friday Oct 9 closes stand as verified at 1635/1704. After-hours search returned only undated/spam aggregator pages — nothing verified; note re-stamped "re-checked ~6:40 PM ET".
+- 🟢 CYBER: KEV search surfaced nothing newer than the Oct 8 Flax Typhoon adds (due Oct 11); countdowns unchanged (same day).
+- 🟢 MMA: UFC Vegas 122 (Brendan Allen vs Christian Leroy Duncan, Sat Oct 10, Meta Apex) re-confirmed via Cageside Press/Heavy search results; no results yet. Board unchanged.
+- "New" tags: none.
