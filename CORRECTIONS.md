@@ -24700,3 +24700,10 @@ deleting and report how many days were removed.
 - ⚠ A search summary gave "S&P 500 7,812.84, +47.48 (+0.61%) as of 2:32:48 PM EDT" — source page not fetched; NOT printed. Same summary's "Dow +0.8%, S&P +0.7%, Nasdaq +0.5%" is Yahoo's body text that contradicts its own strip — refused (as at 1405).
 - 🟢 CYBER: KEV search surfaced only generic catalog pages — nothing newer verified; countdowns unchanged (same day). MMA: UFC Vegas 122 (Allen vs Duncan, Sat Oct 10, Meta Apex) re-confirmed via search; weigh-in results still not published. Board unchanged.
 - "New" tags: 1405 tags removed (~1:48 strip paragraph, Lisa Cook committee paragraph); nothing new verified this run, so no New tags.
+
+## Added 2026-10-09 (Friday — clone ~3:03pm ET, AFTERNOON EDITION (archive stamp 2026-10-09-1505), markets OPEN)
+- 🆕 MARKETS: Yahoo Finance Oct 9 live blog fetched — updated 2:12 PM; strip "close in 1h 12m" (~2:48 PM); ^GSPC/^DJI stamped "As of 2:48:32 PM EDT": S&P 500 7,812.61 +47.25 (+0.61%), Dow 51,698.26 +466.62 (+0.91%), Nasdaq 27,366.70 +173.36 (+0.64%), R2K +0.57%, 10Y 5.25 (+0.02), VIX 14.87 (−3.50%), gold 4,219.20 (+1.50%), Nov WTI 91.68 (+0.21%) — all point changes reconcile with Oct 8 closes. Lead now "As of ~2:48 PM ET". Body: oil pared losses, Brent ~$104.
+- 🆕 Yahoo (~2 PM, Sozzi): Truist's Keith Lerner — 11th bull market since the 1950s on track to be the 7th to complete ≥4 full years on Oct 12; 119% advance vs 401% (2009–2020) and 582% (1987–2000). Added (New).
+- ⚠ TRAP (again): search summaries gave "Oct 9" closes Dow 46,358.42 / S&P 6,735.11 / Nasdaq 23,024.63 — OCTOBER 9, 2025 (armenpress); refused. Search summary again claimed MikroTik CVE-2026-67277/86060 KEV adds "October 9" — they were added 10 SEPT; refused. TheStreet blog unchanged since 1:35 PM.
+- 🟢 CYBER/MMA: no new verified items; KEV countdowns unchanged (same day). UFC Vegas 122 weigh-in results still not in search results; Allen vs Duncan Sat Oct 10, Meta Apex unchanged. Board unchanged.
+- "New" tags: none carried from 1434; New on the ~2:48 PM strip and Truist bull-market Lead paragraphs.
