@@ -24682,3 +24682,9 @@ deleting and report how many days were removed.
 - ⚠ A search summary said "By close of trading: S&P +0.44%, Dow +0.65%, NDX +0.22%" — at ~1 PM, no close existed; summarizer artifact, REFUSED.
 - 🟢 CYBER: search surfaced only a stale aggregator recap (CVE-2026-35273 KEV add is the JUNE 12 item) — NOT added; KEV countdowns unchanged (same day). MMA: UFC Vegas 122 (Allen vs Duncan, Sat Oct 10, Meta Apex) re-confirmed via search; weigh-in results not yet published. Board unchanged.
 - "New" tags: 1235 tags removed (12:13 midday-movers paragraph, telecom card); New on the ~12:48 PM strip and 12:54 PM movers Lead paragraphs and the Moderna card.
+
+## Added 2026-10-09 (Friday — clone ~1:34pm ET, MIDDAY EDITION (archive stamp 2026-10-09-1334), markets OPEN)
+- 🟢 MARKETS: Yahoo Finance Oct 9 live blog re-fetched — still updated 12:44 PM, strip "close in 3h 12m" (~12:48 PM) — unchanged; TheStreet blog re-fetched — still modified 16:54:48Z (12:54 PM), no new items; TheStreet syndication strip still ~10:34 AM. Lead stays "As of ~12:48 PM ET".
+- ⚠ A search summary gave "S&P 500 7,806.71, +41.35 (+0.53%) as of 1:32:49 PM EDT", Dow 51,606.92 (+0.73%), Nasdaq 27,343.33 (+0.55%) — source page not fetched; NOT printed. Same summary's "S&P 500 rising 0.7%, Nasdaq and Dow each 0.5%" contradicts Yahoo's body (Dow/S&P +0.3%, Nasdaq +0.5%) — refused.
+- 🟢 CYBER: KEV search surfaced only Sept govdelivery bulletins (Zyxel CVE-2026-7273, Sept 21) — nothing newer verified; countdowns unchanged (same day). SecurityWeek search returned nothing dated Oct 9 beyond carried items. MMA: UFC Vegas 122 weigh-in results still not published; Allen vs Duncan Sat Oct 10, Meta Apex re-confirmed via search. Board unchanged.
+- "New" tags: all 1305 tags removed (~12:48 strip, 12:54 movers paragraph, Moderna card); nothing new verified this run, so no New tags.
