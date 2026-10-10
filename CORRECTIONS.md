@@ -24783,3 +24783,9 @@ deleting and report how many days were removed.
 - 🟢 MARKETS: week-ahead search again surfaced only the calendar preview + a JPM Oct 13 calendar listing (not fetched — not printed). Friday Oct 9 closes stand. Weekend Lead re-stamped "re-checked ~4:15 PM".
 - 🟢 MMA: UFC Vegas 122 (Brendan Allen vs Christian Leroy Duncan) TONIGHT, Meta APEX, prelims 5 PM / main card 8 PM ET (SI/Yahoo/UFC.com previews in results); no results yet. Board unchanged (no title-changing card since UFC 332, Oct 3).
 - "New" tags: IDCF Cloud card, AT&T settlement card.
+
+## Added 2026-10-10 (Saturday — clone ~4:33pm ET, AFTERNOON EDITION (archive stamp 2026-10-10-1635), markets CLOSED for the weekend)
+- 🆕 CYBER: BleepingComputer (fetched; Oct 7, Lawrence Abrams): MonsterCloud owner Zohar Pinhasi, 50, indicted EDNY Sept 23 (1 count conspiracy to commit wire fraud, 2 counts wire fraud); alleged scheme June 2018–June 2023; paid ~$8,200 / charged ~$150,000 in one case; >$8M ransoms facilitated, >$19M charged; surrendered Wed Oct 7, pleaded not guilty, $2M bond. Added (New) — allegations only. Search-summary items (Everest/Flydubai/Boeing, NightSpire Oct 9 listings, Veradigm) NOT fetched — not printed. KEV search: nothing dated October beyond carried items; countdowns unchanged (same day).
+- 🟢 MARKETS: week-ahead search again surfaced only the calendar preview (Sept CPI, bank earnings, Columbus Day bonds-shut Monday) and the TheStreet JPM Oct 13 note (not fetched — not printed). Friday Oct 9 closes stand. Weekend Lead re-stamped "re-checked ~4:40 PM".
+- 🟢 MMA: UFC Vegas 122 (Brendan Allen vs Christian Leroy Duncan) TONIGHT, Meta APEX, main card 8 PM ET; weigh-ins Allen 186 / Duncan 185 re-confirmed (Cageside Press/MMA Weekly in results); results pages (Yahoo/Sherdog/MMA Mania) contain no outcomes yet. Board unchanged.
+- "New" tags: 1611 tags removed (IDCF Cloud, AT&T settlement); New on the MonsterCloud card only.
