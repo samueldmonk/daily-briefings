@@ -24807,3 +24807,9 @@ deleting and report how many days were removed.
 - 🟢 MARKETS: no new close/after-hours coverage found; Friday Oct 9 closes stand as verified at 1635/1704. Weekend Lead re-stamped "re-checked ~6:05 PM".
 - 🟢 CYBER: KEV search surfaced nothing dated October beyond carried items; breach search nothing dated Oct 10. Countdowns unchanged (same day: Flax Typhoon five due Oct 11 = 1 day left).
 - "New" tags: only the UFC Vegas 122 early-results line (replaces the 1734 "Under way" line).
+
+## Added 2026-10-10 (Saturday — clone ~6:33pm ET, AFTERNOON EDITION (archive stamp 2026-10-10-1834), markets CLOSED for the weekend)
+- 🆕 MMA: UFC Vegas 122 prelim (Cageside Press, fetched; Jay Anderson, published 22:09 UTC): **Allen Frye Jr. def. RJ Harris by KO (Punches), Round 1, 2:59** — Frye's first UFC win, now 7-1; Harris 6-1. Sherdog highlight headline calls Harris "Richard" — page uses "RJ Harris" (Cageside/UFC). Sherdog play-by-play fetched with no official results filled in. Franco vs. Ribeiro: no result found — not printed. Summary lines (MMA + index) updated. Board unchanged (non-title card).
+- 🟢 MARKETS: no new coverage; Friday Oct 9 closes stand. Weekend Lead re-stamped "re-checked ~6:35 PM".
+- 🟢 CYBER: breach search nothing dated Oct 10; KEV search latest bulletin still Sept 21 — nothing new; countdowns unchanged (same day: Flax Typhoon five due Oct 11 = 1 day left).
+- "New" tags: UFC Vegas 122 results line keeps its New tag (Frye KO newly added); no other New tags.
