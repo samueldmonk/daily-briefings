@@ -24789,3 +24789,9 @@ deleting and report how many days were removed.
 - 🟢 MARKETS: week-ahead search again surfaced only the calendar preview (Sept CPI, bank earnings, Columbus Day bonds-shut Monday) and the TheStreet JPM Oct 13 note (not fetched — not printed). Friday Oct 9 closes stand. Weekend Lead re-stamped "re-checked ~4:40 PM".
 - 🟢 MMA: UFC Vegas 122 (Brendan Allen vs Christian Leroy Duncan) TONIGHT, Meta APEX, main card 8 PM ET; weigh-ins Allen 186 / Duncan 185 re-confirmed (Cageside Press/MMA Weekly in results); results pages (Yahoo/Sherdog/MMA Mania) contain no outcomes yet. Board unchanged.
 - "New" tags: 1611 tags removed (IDCF Cloud, AT&T settlement); New on the MonsterCloud card only.
+
+## Added 2026-10-10 (Saturday — clone ~5:03pm ET, AFTERNOON EDITION (archive stamp 2026-10-10-1704), markets CLOSED for the weekend)
+- 🟢 MARKETS: week-ahead search again returned only the calendar preview (Sept CPI, bank earnings, Columbus Day bonds-shut Monday) and the Sept newsletter naming JPMorgan Oct 13 as the unofficial Q3 kickoff (not fetched — not printed). Friday Oct 9 closes stand. Weekend Lead re-stamped "re-checked ~5:05 PM".
+- 🟢 CYBER: breach/ransomware search returned nothing dated Oct 10 (newest = Oct 1 September roundup). KEV search: latest govdelivery bulletin still Sept 21 (Zyxel CVE-2026-7273) — nothing new; countdowns unchanged (same day: Flax Typhoon five due Oct 11 = 1 day left).
+- 🟢 MMA: UFC Vegas 122 (Allen vs Duncan) prelims began 5 PM ET; results pages (Yahoo/Sherdog/MMA Mania) indexed with no outcomes yet. Search notes Brendson Ribeiro missed weight (Sherdog) and some outlets disagree on prelim pairings — not printed (page carries no prelim list). Board unchanged (no title-changing card since UFC 332, Oct 3).
+- "New" tags: MonsterCloud tag (added 1635) removed — it was in the prior snapshot; nothing newly verified this run.
