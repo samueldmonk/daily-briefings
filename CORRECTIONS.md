@@ -24874,3 +24874,9 @@ deleting and report how many days were removed.
 - 🟢 MMA: Buckley vs. Malott (Sat Oct 17, Rogers Place) — still model projections only (Combat Edge, UFCalendar); no sportsbook line — none printed. Unreliable schedule pages (UFC 331 Oct 24 / "UFC 316" Oct 17 MSG) refused. Board unchanged.
 - 🟢 CYBER: KEV search latest govdelivery bulletin still Sept 21; breach/zero-day searches nothing dated Oct 10–11. Countdowns unchanged (same day: Flax Typhoon five due Oct 11 = 0 days).
 - "New" tags: Record backdrop tag removed (in 1134 snapshot); New only on the Rate-hike odds paragraph.
+
+## Added 2026-10-11 (Sunday — clone ~12:33pm ET, MIDDAY EDITION (archive stamp 2026-10-11-1234), markets CLOSED for the weekend)
+- 🆕 MARKETS: investingLive "Week ahead" (fetched in full; Greg Michalowski, published Oct 9 20:05 GMT): Sept CPI Wed Oct 14 8:30 AM ET — headline exp. +0.6% m/m (prior +0.4%), 3.6% y/y (prior 3.4%); core +0.2% m/m (prior +0.3%), 2.5% y/y (prior 2.4%). Thu Oct 15 8:30 AM: PPI +0.5% m/m exp. (prior +0.4%), core PPI +0.3%; retail sales +0.3% (prior +1.2%), ex-autos +0.5% (prior +1.4%); Philly Fed 26.5 (prior 37.8); initial claims 195K (prior 197K). Fed Chair Kevin Warsh speaks Thu 11:30 PM ET; import/export prices Fri 8:30 AM. Added as New "Data consensus" paragraph + source. Week-ahead re-stamped "~12:40 PM ET". Friday Oct 9 closes stand.
+- 🟢 MMA: Buckley vs. Malott (Sat Oct 17, Rogers Place) — UFC.com still anchor; model projections only (UFCalendar 49/51, Combat Edge, Roster.watch); no sportsbook line — none printed. Board unchanged.
+- 🟢 CYBER: breach search nothing dated Oct 10–11 (latest roundups Sept/early Oct); KEV search latest dated govdelivery bulletin Sept 10 in results — nothing new. Countdowns unchanged (same day: Flax Typhoon five due Oct 11 = 0 days).
+- "New" tags: Rate-hike odds tag removed (in 1204 snapshot); New only on Data consensus paragraph.
