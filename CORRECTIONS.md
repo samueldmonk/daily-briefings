@@ -24838,3 +24838,9 @@ deleting and report how many days were removed.
 - 🟢 CYBER: breach/ransomware/exploited-CVE/KEV searches returned nothing dated October beyond carried items (latest KEV govdelivery bulletin in results still Sept 21). A Senserva page dates October Patch Tuesday to Oct 13 — future-dated, not printed. Countdowns unchanged (same day: Flax Typhoon five due Oct 11 = 0 days, due TODAY).
 - "New" tags: Herbert row tag removed (it was in the 0835 snapshot); nothing newly verified, so no New tags.
 - NOTE: gen_archive_2245.py fails on the current archive.html shell; gen_archive_r5.py works (python3 gen_archive_r5.py <repo dir>).
+
+## Added 2026-10-11 (Sunday — clone ~9:33am ET, MORNING EDITION, markets CLOSED for the weekend)
+- 🟢 MARKETS: week-ahead search re-surfaced Kitco/Reuters Oct 9 piece + CMC Markets preview (CPI Wed Oct 14; Fed Oct 27–28; 10-yr ~5.23%) — consistent with page. Week-ahead re-stamped "~9:40 AM ET". Friday Oct 9 closes stand.
+- 🟢 MMA: Buckley vs. Malott re-confirmed (UFC.com result: Sat Oct 17, Rogers Place); still model projections only, no sportsbook line — none printed. UFCalendar's Oct 18 still conflicts — refused. Board unchanged.
+- 🟢 CYBER: breach/KEV searches returned nothing dated October beyond carried items (latest KEV govdelivery bulletin still Sept 21). Countdowns unchanged (same day).
+- "New" tags: none (nothing newly verified).
