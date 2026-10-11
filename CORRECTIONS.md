@@ -24850,3 +24850,9 @@ deleting and report how many days were removed.
 - 🟢 MARKETS: week-ahead search re-surfaced Kitco/Reuters + CMC/XTB/Saxo Oct 9 previews — consistent with page. Re-stamped "~10:05 AM ET". Friday Oct 9 closes stand.
 - 🟢 CYBER: breach search nothing dated October; KEV search latest govdelivery bulletin still Sept 21. Countdowns unchanged (same day: Flax Typhoon five due Oct 11 = 0 days).
 - "New" tags: Blanchfield–Jasudavicius co-main line only.
+
+## Added 2026-10-11 (Sunday — clone ~10:33am ET, MORNING EDITION (archive stamp 2026-10-11-1035), markets CLOSED for the weekend)
+- 🆕 MARKETS: CMC Markets "The Week Ahead" (fetched; Michael J Kramer, published Fri Oct 9 12.30pm UK): JPMorgan Q3 EPS expected +16.4% to $5.90, revenue +8.8% to $51.3bn; options imply ~3.3% post-earnings move; cash Treasury market closed Mon Oct 12 (Columbus Day), equities and Treasury futures open. Added as New "JPMorgan bar" paragraph under the week-ahead Lead; CMC added to Sources. Week-ahead re-stamped "~10:40 AM ET". Friday Oct 9 closes stand.
+- 🟢 MMA: Buckley vs. Malott still model projections only (UFCalendar 49/51, Combat Edge 40/60, Roster.watch 59/41) — no sportsbook line; none printed. Board unchanged.
+- 🟢 CYBER: breach search nothing dated October; KEV search latest govdelivery bulletin still Sept 21. Countdowns unchanged (same day: Flax Typhoon five due Oct 11 = 0 days).
+- "New" tags: Blanchfield–Jasudavicius tag removed (in 1004 snapshot); New only on the JPMorgan paragraph.
