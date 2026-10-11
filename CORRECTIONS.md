@@ -24939,3 +24939,9 @@ deleting and report how many days were removed.
 - 🟢 MMA: Buckley vs. Malott (Sat Oct 17, Rogers Place per UFC.com) — odds fields still placeholders; model projections only (UFCalendar 49/51, Combat Edge 40/60, Roster.watch 59/41) — none printed. Search-summary "Buckley on a two-fight losing streak / Malott four-fight win streak" unfetched — NOT printed. Board unchanged.
 - 🟢 CYBER: breach search nothing dated Oct 10–11 (newest July 2026 Comparitech items); KEV search latest govdelivery bulletin Sept 21 (Zyxel CVE-2026-7273). Countdowns unchanged (same day: Flax Typhoon five due Oct 11 = 0 days).
 - "New" tags: none (nothing newly verified).
+
+## Added 2026-10-11 (Sunday — clone ~6:03pm ET, AFTERNOON EDITION (archive stamp 2026-10-11-1805), markets CLOSED for the weekend)
+- 🟢 MARKETS: Sunday-evening futures search returned no Oct 11 futures report yet; Friday Oct 9 closes and week-ahead content stand. Re-stamped "~6:05 PM ET".
+- 🟢 MMA: Buckley vs. Malott — still no sportsbook moneyline in search (model projections only, not printed). Board unchanged.
+- 🟢 CYBER: no breach items dated Oct 10–11; KEV search newest govdelivery bulletin still Sept 21. Countdowns unchanged. Fixed a stray double comma in the Threat-Level line.
+- "New" tags: none.
