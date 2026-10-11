@@ -24927,3 +24927,9 @@ deleting and report how many days were removed.
 - 🟢 MMA: Buckley vs. Malott (Sat Oct 17, Rogers Place per UFC.com) — still model projections only (Combat Edge 46/55 & 40/60, UFCalendar 49/51); no sportsbook line — none printed. UFCalendar Oct 18 date refused. "UFC news Oct 11" search returned only auto-generated filler pages with contradictory UFC 329/330/331 dates — all refused. Board unchanged.
 - 🟢 CYBER: breach search nothing dated Oct 10–11 (latest CM-Alliance Sept roundup, Oct 1); KEV search latest govdelivery bulletin Sept 21 (Zyxel CVE-2026-7273). Countdowns unchanged (same day: Flax Typhoon five due Oct 11 = 0 days).
 - "New" tags: UFC.com event-page tag removed (in 1604 snapshot); nothing newly verified, so no New tags.
+
+## Added 2026-10-11 (Sunday — clone ~5:03pm ET, AFTERNOON EDITION (archive stamp per run), markets CLOSED for the weekend)
+- 🟢 MARKETS: week-ahead search re-surfaced Kitco/Reuters Oct 9 + CMC/investingLive previews (JPM Q3 EPS exp. +16.4% to $5.90, revenue +8.8% to $51.3bn; CPI Wed; Fed Oct 27–28; 10-yr ~5.23%; cash Treasuries closed Columbus Day, equities open) — consistent with page. FXEmpire id 1615629 (Aug 9) resurfaced — still STALE, refused. Re-stamped "~5:10 PM ET". Friday Oct 9 closes stand.
+- 🟢 MMA: Buckley vs. Malott (Sat Oct 17, Rogers Place) — still model projections only (Combat Edge 40/60 & 46/55, UFCalendar 49/51); no sportsbook line — none printed. "UFC news Oct 11" returned only filler pages (UFC 332 Oct 10 Abu Dhabi / "UFC 316" Oct 17 MSG) — refused. Board unchanged.
+- 🟢 CYBER: breach search nothing dated Oct 10–11 (newest July 2026 Comparitech items); KEV search latest govdelivery bulletin Sept 10 in results — nothing new. Countdowns unchanged (same day: Flax Typhoon five due Oct 11 = 0 days).
+- "New" tags: none (nothing newly verified).
