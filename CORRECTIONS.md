@@ -24856,3 +24856,9 @@ deleting and report how many days were removed.
 - 🟢 MMA: Buckley vs. Malott still model projections only (UFCalendar 49/51, Combat Edge 40/60, Roster.watch 59/41) — no sportsbook line; none printed. Board unchanged.
 - 🟢 CYBER: breach search nothing dated October; KEV search latest govdelivery bulletin still Sept 21. Countdowns unchanged (same day: Flax Typhoon five due Oct 11 = 0 days).
 - "New" tags: Blanchfield–Jasudavicius tag removed (in 1004 snapshot); New only on the JPMorgan paragraph.
+
+## Added 2026-10-11 (Sunday — clone ~11:03am ET, MIDDAY EDITION, markets CLOSED for the weekend)
+- 🟢 MARKETS: week-ahead search re-surfaced CMC Markets (JPM Q3 EPS exp. +16.4% to $5.90, revenue +8.8% to $51.3bn; cash Treasuries closed Mon, equities open) + Kitco/Reuters Oct 9 (10-yr ~5.23%; Fed Oct 27–28) — consistent with page. Re-stamped "~11:05 AM ET". Friday Oct 9 closes stand.
+- 🟢 MMA: Buckley vs. Malott (Sat Oct 17, Rogers Place) — UFC.com still the anchor; only model projections (UFCalendar 49/51, Combat Edge) found, no sportsbook line — none printed. UFCalendar Oct 18 date still refused. ESPN champions page fetched EMPTY again. Board unchanged (no title-changing card since UFC 332).
+- 🟢 CYBER: KEV search — latest govdelivery bulletin in results still Sept 21; breach/CVE searches nothing dated October 10–11. Senserva Oct 13 Patch Tuesday page still future-dated — refused. Countdowns unchanged (same day: Flax Typhoon five due Oct 11 = 0 days).
+- "New" tags: JPMorgan paragraph tag removed (in 1035 snapshot); nothing newly verified, so no New tags.
