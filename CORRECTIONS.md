@@ -24844,3 +24844,9 @@ deleting and report how many days were removed.
 - 🟢 MMA: Buckley vs. Malott re-confirmed (UFC.com result: Sat Oct 17, Rogers Place); still model projections only, no sportsbook line — none printed. UFCalendar's Oct 18 still conflicts — refused. Board unchanged.
 - 🟢 CYBER: breach/KEV searches returned nothing dated October beyond carried items (latest KEV govdelivery bulletin still Sept 21). Countdowns unchanged (same day).
 - "New" tags: none (nothing newly verified).
+
+## Added 2026-10-11 (Sunday — clone ~10:03am ET, MORNING EDITION, markets CLOSED for the weekend)
+- 🆕 MMA: UFC.com announcement (fetched; Aug 11): UFC Fight Night Buckley vs. Malott, Sat Oct 17, Rogers Place; co-main **Erin Blanchfield vs. Jasmine Jasudavicius** (women's flyweight). Added as New line on the Edmonton card (no rankings/records printed — the announcement's figures date to Aug 11). A search summary said the bout was "originally scheduled for UFC 330" — not fetched, not printed. Still no sportsbook line (model projections only). Board unchanged.
+- 🟢 MARKETS: week-ahead search re-surfaced Kitco/Reuters + CMC/XTB/Saxo Oct 9 previews — consistent with page. Re-stamped "~10:05 AM ET". Friday Oct 9 closes stand.
+- 🟢 CYBER: breach search nothing dated October; KEV search latest govdelivery bulletin still Sept 21. Countdowns unchanged (same day: Flax Typhoon five due Oct 11 = 0 days).
+- "New" tags: Blanchfield–Jasudavicius co-main line only.
