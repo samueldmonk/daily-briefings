@@ -24868,3 +24868,9 @@ deleting and report how many days were removed.
 - 🟢 MMA: Buckley vs. Malott (Sat Oct 17, Rogers Place) — still model projections only, no sportsbook line. Scores24 Oct 1 champions listing matches the board except W-FLW "vacant" (stale since Silva won Oct 3) — refused. Board unchanged.
 - 🟢 CYBER: KEV search latest govdelivery bulletin still Sept 21; breach/zero-day searches nothing dated Oct 10–11. Countdowns unchanged (same day: Flax Typhoon five due Oct 11 = 0 days).
 - "New" tags: only the Record backdrop paragraph.
+
+## Added 2026-10-11 (Sunday — clone ~12:03pm ET, MIDDAY EDITION (archive stamp 2026-10-11-1204), markets CLOSED for the weekend)
+- 🆕 MARKETS: Kitco/Reuters Oct 9 re-fetched in full: "Traders have reduced expectations the Fed will increase rates again at its October 27-28 meeting"; hotter data (PPI, retail sales next week) "could revive hiking bets going forward". Added as New "Rate-hike odds" paragraph. Week-ahead re-stamped "~12:10 PM ET". Search-summary TSMC/BNY/Schwab/PNC earnings items NOT in the fetched Reuters text — not printed. Friday Oct 9 closes stand.
+- 🟢 MMA: Buckley vs. Malott (Sat Oct 17, Rogers Place) — still model projections only (Combat Edge, UFCalendar); no sportsbook line — none printed. Unreliable schedule pages (UFC 331 Oct 24 / "UFC 316" Oct 17 MSG) refused. Board unchanged.
+- 🟢 CYBER: KEV search latest govdelivery bulletin still Sept 21; breach/zero-day searches nothing dated Oct 10–11. Countdowns unchanged (same day: Flax Typhoon five due Oct 11 = 0 days).
+- "New" tags: Record backdrop tag removed (in 1134 snapshot); New only on the Rate-hike odds paragraph.
