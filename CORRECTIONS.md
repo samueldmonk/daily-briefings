@@ -24831,3 +24831,10 @@ deleting and report how many days were removed.
 - 🟢 CYBER: KEV search latest govdelivery bulletin still Sept 21; breach search nothing dated Oct 10–11. Countdowns unchanged (same day: Flax Typhoon five due Oct 11 = 0 days, due TODAY).
 - "New" tags: 0806 tags removed (Allen top story, Edmonton broadcast line, results panel, WS week-ahead paragraph); New only on the Herbert result row.
 
+
+## Added 2026-10-11 (Sunday — clone ~9:03am ET, MORNING EDITION (archive stamp 2026-10-11-0905), markets CLOSED for the weekend)
+- ✅ MMA: Herbert def. Camilo re-confirmed this run (Cageside Press, "Black Country Banger Turns Back Matheus Camilo in UFC Vegas 122 Co-Headliner", Oct 10). Buckley vs. Malott re-confirmed via UFC.com (fetched): Sat Oct 17, Rogers Place, Edmonton; prelims 6 PM ET, main card 8 PM ET, Sportsnet/TVA Sports; still no sportsbook line found (model projections only) — none printed. Board unchanged (no title-changing card since UFC 332).
+- 🟢 MARKETS: Kitco/Reuters Oct 9 week-ahead re-fetched — page's week-ahead paragraph consistent (JPM/GS/C/WFC Tue; MS/BAC Wed; CPI exp. 3.6%, core 2.5%; Fed Oct 27–28; 10-yr ~5.23%). Re-stamped "re-checked ~9:10 AM ET". Friday Oct 9 closes stand.
+- 🟢 CYBER: breach/ransomware/exploited-CVE/KEV searches returned nothing dated October beyond carried items (latest KEV govdelivery bulletin in results still Sept 21). A Senserva page dates October Patch Tuesday to Oct 13 — future-dated, not printed. Countdowns unchanged (same day: Flax Typhoon five due Oct 11 = 0 days, due TODAY).
+- "New" tags: Herbert row tag removed (it was in the 0835 snapshot); nothing newly verified, so no New tags.
+- NOTE: gen_archive_2245.py fails on the current archive.html shell; gen_archive_r5.py works (python3 gen_archive_r5.py <repo dir>).
