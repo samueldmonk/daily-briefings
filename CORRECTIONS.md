@@ -24910,3 +24910,9 @@ deleting and report how many days were removed.
 - 🟢 MMA: Buckley vs. Malott (Sat Oct 17, Rogers Place per UFC.com) — still model projections only (UFCalendar 49/51, Combat Edge 40/60 & 46/55, Roster.watch 59/41); no sportsbook line — none printed. UFC Vegas 122 (Allen vs. Duncan, Oct 10) remains the last event. Board unchanged.
 - 🟢 CYBER: breach search nothing dated Oct 10–11 (latest CM-Alliance Sept roundup, Oct 1); KEV search latest govdelivery bulletin Sept 21 (Zyxel CVE-2026-7273). Countdowns unchanged (same day: Flax Typhoon five due Oct 11 = 0 days).
 - "New" tags: Saxo tag removed (in 1434 snapshot); nothing newly verified, so no New tags.
+
+## Added 2026-10-11 (Sunday — clone ~3:33pm ET, AFTERNOON EDITION (archive stamp per run), markets CLOSED for the weekend)
+- 🟢 MARKETS: week-ahead search re-surfaced Kitco/Reuters Oct 9 + CMC/XTB/Saxo previews (JPM/GS/C/WFC Tue; MS/BAC Wed; CPI Wed exp. 3.6% from 3.4%; JPM Q3 EPS exp. +16.4% to $5.90; cash Treasuries closed Columbus Day, equities open) — consistent with page. Re-stamped "~3:40 PM ET". Friday Oct 9 closes stand.
+- 🟢 MMA: Buckley vs. Malott (Sat Oct 17, Rogers Place per UFC.com) — UFC.com odds fields still placeholders; model projections only (UFCalendar 49/51, Roster.watch 59/41) — none printed. A search summary claiming Buckley "has not won since 2024" is unfetched — NOT printed. Search-level "HW vacant / Gane interim" note STALE (Gane undisputed since Sept 19) — refused. Board unchanged.
+- 🟢 CYBER: breach search nothing dated Oct 10–11 (newest July 2026 items); KEV search latest govdelivery bulletin Sept 21 (Zyxel CVE-2026-7273). SonicWall SMA1000 CVE-2026-15409/15410 summary undated/unfetched — not added. Countdowns unchanged (same day: Flax Typhoon five due Oct 11 = 0 days).
+- "New" tags: none (nothing newly verified).
