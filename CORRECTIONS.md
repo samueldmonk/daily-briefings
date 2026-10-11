@@ -24904,3 +24904,9 @@ deleting and report how many days were removed.
 - 🟢 MMA: Buckley vs. Malott (Sat Oct 17, Rogers Place) — still model projections only; no sportsbook line — none printed. UFC 333 (Oct 24, Etihad Arena) Volkanovski vs. Evloev / Yan vs. Dvalishvili 3 re-confirmed in search (Cageside/The National/theScore). WAM page fetched empty. Board unchanged.
 - 🟢 CYBER: breach search nothing dated Oct 10–11 (latest CM-Alliance Sept roundup, Oct 1); KEV search latest govdelivery bulletin Sept 21. Countdowns unchanged (same day: Flax Typhoon five due Oct 11 = 0 days).
 - "New" tags: Saxo paragraph only.
+
+## Added 2026-10-11 (Sunday — clone ~3:03pm ET, AFTERNOON EDITION (archive stamp per run), markets CLOSED for the weekend)
+- 🟢 MARKETS: week-ahead search re-surfaced Kitco/Reuters Oct 9 + CMC Markets (JPM/GS/C/WFC Tue; MS/BAC Wed; JPM Q3 EPS exp. +16.4% to $5.90, revenue +8.8% to $51.3bn, ~3.3% implied move; S&P record close Tue Oct 6, YTD >13%; cash Treasuries closed Columbus Day, equities open) — consistent with page. TRAP: Fox Business "Bank earnings, CPI inflation data, IMF meeting top week ahead" surfaced in Oct 12 week-ahead search but is dated APRIL 9, 2023 (Easter week, BBBY, First Republic) — STALE, refused. Re-stamped "~3:10 PM ET". Friday Oct 9 closes stand.
+- 🟢 MMA: Buckley vs. Malott (Sat Oct 17, Rogers Place per UFC.com) — still model projections only (UFCalendar 49/51, Combat Edge 40/60 & 46/55, Roster.watch 59/41); no sportsbook line — none printed. UFC Vegas 122 (Allen vs. Duncan, Oct 10) remains the last event. Board unchanged.
+- 🟢 CYBER: breach search nothing dated Oct 10–11 (latest CM-Alliance Sept roundup, Oct 1); KEV search latest govdelivery bulletin Sept 21 (Zyxel CVE-2026-7273). Countdowns unchanged (same day: Flax Typhoon five due Oct 11 = 0 days).
+- "New" tags: Saxo tag removed (in 1434 snapshot); nothing newly verified, so no New tags.
