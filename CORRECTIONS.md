@@ -24945,3 +24945,9 @@ deleting and report how many days were removed.
 - 🟢 MMA: Buckley vs. Malott — still no sportsbook moneyline in search (model projections only, not printed). Board unchanged.
 - 🟢 CYBER: no breach items dated Oct 10–11; KEV search newest govdelivery bulletin still Sept 21. Countdowns unchanged. Fixed a stray double comma in the Threat-Level line.
 - "New" tags: none.
+
+## Added 2026-10-11 (Sunday — clone ~6:33pm ET, AFTERNOON EDITION (archive stamp per run), markets CLOSED for the weekend)
+- 🆕 MARKETS: CNBC "S&P 500 futures are little changed with big banks set to kick off earnings season: Live updates" (Oct 11; direct fetch returned empty, figures confirmed by TWO independent search renderings): S&P 500 futures +0.12%, Nasdaq 100 futures +0.24% (6:23 PM EDT update); FactSet's John Butters projects 29.6% S&P 500 Q3 EPS growth; Brent last above $104. Added as New "Sunday-night futures" paragraph; Tape + index card append the S&P futures figure. Dow futures point figure (single snippet) NOT printed. A snippet's Friday Dow "+423.31" conflicts with the page's TheStreet +423.37 — page figure stands.
+- 🟢 MMA: Buckley vs. Malott still model projections only (no sportsbook line) — none printed. Board unchanged.
+- 🟢 CYBER: breach search nothing dated Oct 10–11; KEV search newest govdelivery bulletin still Sept 21. Countdowns unchanged (same day).
+- "New" tags: Sunday-night futures paragraph only.
