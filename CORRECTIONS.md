@@ -24886,3 +24886,9 @@ deleting and report how many days were removed.
 - 🟢 MMA: Buckley vs. Malott (Sat Oct 17, Rogers Place) — still model projections only (UFCalendar 49/51, Roster.watch 59/41, Combat Edge Malott 55–60%); no sportsbook line — none printed. Oct 18 listing refused. Board unchanged.
 - 🟢 CYBER: breach search nothing dated Oct 10–11 (latest roundups Sept/Oct 1); KEV search latest govdelivery bulletin Sept 21. Countdowns unchanged (same day: Flax Typhoon five due Oct 11 = 0 days).
 - "New" tags: Data consensus tag removed (in 1234 snapshot); New only on the Sector scoreboard paragraph.
+
+## Added 2026-10-11 (Sunday — clone ~1:33pm ET, MIDDAY EDITION (archive stamp 2026-10-11-1334), markets CLOSED for the weekend)
+- 🟢 MARKETS: week-ahead search re-surfaced CMC Markets + Kitco/Reuters Oct 9 (CPI Wed Oct 14; JPM Tue Oct 13; Fed Oct 27–28; 10-yr ~5.23%; cash Treasuries closed Mon) — consistent with page. TRAP: FXEmpire "The Week Ahead: CPI and Earnings Test the Stock Market Rally Near Record Highs" (id 1615629) surfaced in Oct 12 week-ahead search but is dated AUG 9, 2026 (CoreWeave/Cisco/AMAT, July payrolls) — STALE, refused. Re-stamped "~1:40 PM ET". Friday Oct 9 closes stand.
+- 🟢 MMA: Buckley vs. Malott (Sat Oct 17, Rogers Place) — still model projections only (Combat Edge, UFCalendar 49/51); no sportsbook line — none printed. Board unchanged.
+- 🟢 CYBER: breach search nothing dated October (latest CM-Alliance Sept roundup, Oct 1); KEV search latest govdelivery bulletin Sept 21. Countdowns unchanged (same day: Flax Typhoon five due Oct 11 = 0 days).
+- "New" tags: Sector scoreboard tag removed (in 1304 snapshot); nothing newly verified, so no New tags.
