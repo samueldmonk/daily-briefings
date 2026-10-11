@@ -24862,3 +24862,9 @@ deleting and report how many days were removed.
 - 🟢 MMA: Buckley vs. Malott (Sat Oct 17, Rogers Place) — UFC.com still the anchor; only model projections (UFCalendar 49/51, Combat Edge) found, no sportsbook line — none printed. UFCalendar Oct 18 date still refused. ESPN champions page fetched EMPTY again. Board unchanged (no title-changing card since UFC 332).
 - 🟢 CYBER: KEV search — latest govdelivery bulletin in results still Sept 21; breach/CVE searches nothing dated October 10–11. Senserva Oct 13 Patch Tuesday page still future-dated — refused. Countdowns unchanged (same day: Flax Typhoon five due Oct 11 = 0 days).
 - "New" tags: JPMorgan paragraph tag removed (in 1035 snapshot); nothing newly verified, so no New tags.
+
+## Added 2026-10-11 (Sunday — clone ~11:33am ET, MIDDAY EDITION (archive stamp 2026-10-11-1134), markets CLOSED for the weekend)
+- 🆕 MARKETS: Kitco/Reuters Oct 9 (re-fetched in full): S&P 500 hit an all-time closing high Tue Oct 6, first since mid-August; YTD gain "more than 13% despite declines on Wednesday and Thursday". Added as New "Record backdrop" paragraph. Week-ahead re-stamped "~11:40 AM ET". Search-summary items (Brent "well above $100", TSMC earnings, JPM trading income −18.4% to $5.8bn) NOT fetched this run — not printed. Friday Oct 9 closes stand.
+- 🟢 MMA: Buckley vs. Malott (Sat Oct 17, Rogers Place) — still model projections only, no sportsbook line. Scores24 Oct 1 champions listing matches the board except W-FLW "vacant" (stale since Silva won Oct 3) — refused. Board unchanged.
+- 🟢 CYBER: KEV search latest govdelivery bulletin still Sept 21; breach/zero-day searches nothing dated Oct 10–11. Countdowns unchanged (same day: Flax Typhoon five due Oct 11 = 0 days).
+- "New" tags: only the Record backdrop paragraph.
