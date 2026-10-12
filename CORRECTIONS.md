@@ -25047,3 +25047,9 @@ deleting and report how many days were removed.
 - 🟢 CYBER: breach search nothing dated Oct 12 beyond items carried; KEV search newest govdelivery bulletin still Sept 21. Unchanged; countdowns unchanged (same day).
 - 🟢 MMA: Buckley vs. Malott — search returned only model projections; SportsLine DraftKings Malott −142 / Buckley +120 stands. "UFC news Oct 12" returned only auto-generated schedule pages with conflicting dates — REFUSED. Board unchanged.
 - "New" tags: none (Monday-close paragraph tag removed — it was in the 1635 snapshot).
+
+## Added 2026-10-12 (Monday Columbus Day — clone ~5:33pm ET, AFTERNOON EDITION (archive stamp per run), regular session CLOSED; cash bond market CLOSED)
+- 🟢 MARKETS: "stock market close today October 12 2026" search surfaced only Friday Oct 9 closes (S&P +0.6% to 7,811.54; Dow +0.8% to 51,654.95; Nasdaq +0.6% to 27,366.17 — consistent with the Friday baseline already carried); no newer Oct 12 close source than the Investrade/Hammerstone 4:08 PM recap. After-hours search returned only undated/old Chartmill/Benzinga and spam pages — none printed; the After-Hours section keeps the no-data note. StockAnalysis after-hours page not fetchable this run (not in search results).
+- 🟢 CYBER: breach search surfaced only September roundups (already older than items carried); KEV search newest dated govdelivery bulletin still Sept 21 (CVE-2026-7273 Zyxel). Unchanged; countdowns unchanged (same day).
+- 🟢 MMA: "UFC news Oct 12" returned only auto-generated schedule pages with conflicting UFC 329 dates/venues — REFUSED. Board unchanged.
+- "New" tags: none.
