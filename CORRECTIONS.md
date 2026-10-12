@@ -25059,3 +25059,10 @@ deleting and report how many days were removed.
 - 🟢 CYBER: KEV search surfaced only bulletins dated Sept 10 and earlier in summary (older than items carried) — nothing newer; carried unchanged; countdowns unchanged (same day).
 - 🟢 MMA: "UFC news Oct 12" returned only spam/aggregator pages; a summary again claimed HW "vacant after Aspinall relinquished" — STALE, REFUSED (Gane undisputed HW per champions block). A "UFC 335 Dec 12 Pavlovich–Pereira" listing unverified — NOT printed. Board unchanged.
 - "New" tags: none.
+
+## Added 2026-10-12 (Monday Columbus Day — clone ~6:33pm ET, AFTERNOON EDITION (archive stamp per run), regular session CLOSED; cash bond market CLOSED)
+- ⚠ PROCESS: sandbox root disk (/tmp) was FULL (prior run clone dirs non-removable) — clone made under the session volume instead. Future runs: if /tmp clone fails with "No space left on device", clone elsewhere.
+- 🟢 MARKETS: after-hours search returned only undated Chartmill/Benzinga and spam pages — none printed; After-Hours note re-stamped ~6:35 PM. Investrade/Hammerstone 4:08 PM close stands.
+- 🟢 CYBER: breach search returned nothing dated Oct 12 (newest dated item July 2026 Comparitech roundup — older than items carried); KEV search newest govdelivery bulletin still Sept 21 (CVE-2026-7273 Zyxel). Carried unchanged; countdowns unchanged (same day).
+- 🟢 MMA: "UFC news Oct 12" returned only spam/aggregator pages and a stale pre-fight snapshot of UFC Vegas 122 (Allen vs. Duncan) showing bouts "Upcoming" — results already carried (Allen sub R5) stand. Board unchanged.
+- "New" tags: none.
