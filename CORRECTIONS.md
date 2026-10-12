@@ -25029,3 +25029,8 @@ deleting and report how many days were removed.
 - 🟢 CYBER: KEV search newest govdelivery results still Sept; no dated Oct 12 breach items. Unchanged; countdowns unchanged (same day).
 - 🟢 MMA: "UFC news Oct 12" search returned only stale/undated pages; a betting page's "HW title vacant after Aspinall relinquished" claim is STALE vs the champions block (Gane undisputed HW) — REFUSED. Board unchanged.
 - "New" tags: TheStreet 2:47 PM/Yahoo ~1:52 PM paragraph and Meta card only (prior New tags on Motley Fool paragraph and FIGS card removed).
+
+## Added 2026-10-12 (Monday Columbus Day — clone ~4:03pm ET, AFTERNOON EDITION (archive stamp per run), regular session CLOSED 4:00 PM; cash bond market CLOSED)
+- ⚠ MARKETS: No official Oct. 12 closes on any fetched source at build time — TheStreet live blog modified 19:33Z (3:33 PM ET), latest index item 2:47 PM (S&P −0.12%); Yahoo live page still 1:48 PM text / 1:51:11 PM DJI box. Search-summary "Yahoo 4:03 PM Dow 51,850.55 +195.60 (+0.38%), S&P −0.06%, Nasdaq −0.44%" NOT on the fetched Yahoo page — REFUSED; Sunday Guardian/AP "~215 points" unfetched — REFUSED. StockAnalysis after-hours board still dated Oct 9 — no after-hours movers printed. Lead/Tape/index card reworded to "after the close, official closes pending"; After-Hours Movers section added with a no-data note. Close direction NOT asserted.
+- ⚠ PROCESS: WebSearch weekly limit hit mid-run (resets 7pm Indianapolis time) — cyber and MMA could not be re-searched this run; both pages carried forward unchanged from the 3:33 PM edition (no claims added). Next run must re-verify.
+- "New" tags: after-the-bell paragraph only (prior New tags on the 2:47 PM paragraph and Meta card removed).
