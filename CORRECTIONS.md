@@ -25122,3 +25122,10 @@ deleting and report how many days were removed.
 - 🟢 CYBER: no KEV bulletin newer than Sept 21 surfaced; no Oct 13-dated breach items beyond those carried (Palo Alto CVE-2026-0257 already carried). Unchanged.
 - 🟢 MMA: "UFC news Oct 13" returned only spam/aggregator pages with conflicting UFC 316/331/332 listings — REFUSED. Unchanged.
 - "New" tags: Wall Street ~1:30 PM paragraph + 1:25 PM winners card only (prior New tag removed).
+
+## Added 2026-10-13 (Tuesday — clone ~2:12pm ET, MIDDAY EDITION (archive stamp 2026-10-13-1414), regular session OPEN)
+- ⚠ PROCESS: /tmp root disk FULL (14M free); shallow clone under /sessions/<session>/work; helper scripts outside the repo; archive.html regenerated with gen_archive_r5.py (h3.day layout — gen_archive_h2.py no longer matches the page).
+- 🆕 MARKETS: Yahoo Finance live page (Dow quote "As of 2:13:18 PM EDT"; strip "close in 1h 47m"): S&P 500 7,806.27 −0.97 (−0.01%), Dow 51,679.78 −170.77 (−0.33%), Nasdaq 27,214.77 −31.13 (−0.11%), R2K −0.54%, 10Y 5.22 (−0.02), VIX 15.54 (+2.17%), WTI Nov $94.17 (+0.46%), gold $4,173.40 (−0.41%) — all three reconcile exactly to Monday closes. Yahoo blog (Ferré): BofA fund manager survey — a 5.9% 10-yr yield required to flip allocation from stocks to bonds; Sozzi: AI-bubble worriers should watch supply risk. Yahoo blog HEADLINE text "Dow −0.5%, S&P −0.2%, Nasdaq −0.3%" is older than its own 2:13 PM quote — NOT used. Yahoo ^GSPC page fetch was cached at 1:36 PM — superseded.
+- 🟢 CYBER: KEV search newest bulletin found still Sept 25 or earlier; no Oct 13 items. Unchanged.
+- 🟢 MMA: "UFC news Oct 13" returned only aggregator/low-quality pages (one listing a conflicting "UFC 316 Oct 17 MSG") — REFUSED. Unchanged.
+- "New" tags: Wall Street ~2:13 PM paragraph + BofA survey card only (prior New tags removed).
