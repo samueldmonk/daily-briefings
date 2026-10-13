@@ -25141,3 +25141,8 @@ deleting and report how many days were removed.
 - TRAP: 247wallst card "S&P 500 closes nearly flat as tech sells off" is OCT 12 (and its 7,804.81 S&P close conflicts with the verified 7,807.24) — never use it for Oct 13.
 - 🟢 CYBER: KEV search newest bulletin still Sept 21; unchanged. 🟢 MMA: search returned only spam/aggregator pages; unchanged.
 - "New" tags: Wall Street "Into the bell" paragraph only.
+
+## Added 2026-10-13 (Tuesday — clone ~4:07pm ET, AFTERNOON EDITION (archive stamp per run), regular session CLOSED)
+- 🟡 MARKETS: official Oct 13 closes STILL NOT VERIFIED on a fetched page. Yahoo live page re-fetched = cached 2:13 PM; ^GSPC = cached 3:01 PM; ^DJI = cached 10:10 AM; TheStreet blog latest 3:45 PM headline; Bloomberg fetch empty; no AP "How major US stock indexes fared Tuesday 10/13/2026" found. Search-summary "close" (S&P 7,805.45 −1.79 / Dow 51,670.10 −180.45 "at close 4:06:57 PM" / Nasdaq 27,204.38 −41.52) and Bloomberg "semis gauge −1.2%, fifth straight day" seen ONLY in summaries — NOT printed. Note: this summary's S&P (7,805.45) differs from the 3:47 run's summary (7,805.61) — another reason to wait for a fetched close. "Into the bell" New tag removed; After-Hours note restamped ~4:10 PM.
+- 🟢 CYBER: KEV search newest bulletin still Sept 25 (SharePoint CVE-2026-65660 / MikroTik CVE-2026-67279 per summary); a summary claim that "BOD 26-04" replaced BOD 22-01 is UNVERIFIED — not adopted. Unchanged.
+- 🟢 MMA: "UFC news Oct 13" returned spam/aggregator pages; one calendar summary listed Buckley vs. Malott Oct 18 — conflicts with the reconfirmed Sat Oct 17 Rogers Place date (UFC.com/theScore) — REFUSED. Unchanged.
