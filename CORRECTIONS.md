@@ -25129,3 +25129,8 @@ deleting and report how many days were removed.
 - 🟢 CYBER: KEV search newest bulletin found still Sept 25 or earlier; no Oct 13 items. Unchanged.
 - 🟢 MMA: "UFC news Oct 13" returned only aggregator/low-quality pages (one listing a conflicting "UFC 316 Oct 17 MSG") — REFUSED. Unchanged.
 - "New" tags: Wall Street ~2:13 PM paragraph + BofA survey card only (prior New tags removed).
+
+## Added 2026-10-13 (Tuesday — clone ~2:34pm ET, MIDDAY EDITION (archive stamp 2026-10-13-1435), regular session OPEN)
+- 🟡 MARKETS: NO index read newer than the 2:13 PM Yahoo quote could be verified on a fetched page. Yahoo live page re-fetched still shows "As of 2:13:18 PM EDT" (blog updated 1:59 PM); ^GSPC page cached at 1:36 PM; ^DJI page cached at 10:10 AM; TheStreet blog latest entry still 1:25 PM. A search-summary "~2:33 PM" read (Dow 51,719.02 −131.53, S&P 7,804.95 −2.29) reconciles arithmetically to Monday's closes but was NOT on any fetched page — NOT printed. Lead/as-of left at 2:13 PM; prior-edition "New" tags removed (nothing new verified).
+- 🟢 CYBER: KEV search newest govdelivery bulletin still Sept 21 (Zyxel CVE-2026-7273); no Oct 13 additions found. Unchanged.
+- 🟢 MMA: Buckley vs. Malott, Sat Oct 17, Rogers Place, Edmonton reconfirmed (theScore/UFC.com/UFCalendar via search). Board unchanged.
