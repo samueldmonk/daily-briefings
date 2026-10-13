@@ -25115,3 +25115,10 @@ deleting and report how many days were removed.
 - 🟢 CYBER: no KEV bulletin newer than Sept 21 surfaced; no Oct 13 breach disclosures found. Unchanged.
 - 🟢 MMA: Buckley vs. Malott, Sat Oct 17, Rogers Place, Edmonton reconfirmed (UFC.com/theScore via search). Unchanged.
 - "New" tags: Wall Street ~12:58 PM paragraph only.
+
+## Added 2026-10-13 (Tuesday — clone ~1:33pm ET, MIDDAY EDITION (archive stamp 2026-10-13-1334), regular session OPEN)
+- ⚠ PROCESS: /tmp root disk FULL (old /tmp/db_* dirs undeletable, 14M free); shallow clone under /sessions/<session>/db_<ts>; helper scripts outside the repo; archive pruned by filename date.
+- 🆕 MARKETS: Yahoo Finance ^GSPC quote page "As of 1:30:50 PM EDT": S&P 500 7,796.64 −10.60 (−0.14%), range 7,786.11–7,814.15; strip ("close in 2h 29m"): Dow 51,672.29 −178.26 (−0.34%), Nasdaq 27,173.03 −72.87 (−0.27%), R2K −0.52%, 10Y 5.22 (−0.02), 30Y 5.57, VIX 15.50 (+1.91%), WTI Nov $94.29 (+0.59%), gold $4,179.30 (−0.27%) — all three reconcile exactly to Monday closes. TheStreet 1:25 PM midday winners (≥$2B, "dominated by energy and comm services players"): tickers FRMI, EFXT, PBF, INFY, VG — no % moves or company names stated in text, so only tickers printed. Search-summary "12:24 PM" Yahoo / "12:17 PM" CNN levels NOT used.
+- 🟢 CYBER: no KEV bulletin newer than Sept 21 surfaced; no Oct 13-dated breach items beyond those carried (Palo Alto CVE-2026-0257 already carried). Unchanged.
+- 🟢 MMA: "UFC news Oct 13" returned only spam/aggregator pages with conflicting UFC 316/331/332 listings — REFUSED. Unchanged.
+- "New" tags: Wall Street ~1:30 PM paragraph + 1:25 PM winners card only (prior New tag removed).
