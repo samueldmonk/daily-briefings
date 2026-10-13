@@ -25094,3 +25094,10 @@ deleting and report how many days were removed.
 - 🟢 CYBER: KEV search newest govdelivery bulletin still Sept 21; no dated Oct 13 breach items beyond those carried. Unchanged; countdowns unchanged (same day).
 - 🟢 MMA: "UFC news Oct 13" returned only spam/aggregator pages; board and cards unchanged.
 - "New" tags: Wall Street ~11:05 AM paragraph + four 11:11 AM mover cards only (prior New tags removed).
+
+## Added 2026-10-13 (Tuesday — clone ~12:01pm ET, MIDDAY EDITION (archive stamp 2026-10-13-1203), regular session OPEN)
+- ⚠ PROCESS: /tmp root disk still FULL; shallow clone under /sessions/<session>/w; archive pruned by filename date (cut = today − 21 days); helper scripts kept outside the repo.
+- 🆕 MARKETS: The Canadian Press (BNN Bloomberg, published 11:42 AM ET): Dow −71.98 at 51,778.57, S&P −11.75 at 7,795.49, Nasdaq −60.81 at 27,185.09 — all reconcile exactly to Monday's closes; % moves (−0.14/−0.15/−0.22) are COMPUTED and labelled as such. Nov crude +$0.15 $93.89; Dec gold −$1.80 $4,188.80. Yahoo bank recap: JPM avg card loans +7%, card charge-offs 2.91% from 3.15%; WFC card charge-offs 3.73% from 4.02%; Citi & WFC raised total provisions. Yahoo live page + TheStreet blog unchanged since prior run (Yahoo strip still "close in 4h 55m" = cached; TheStreet latest 11:11 AM). AP story on BNN still the 9:35 AM text.
+- 🟢 CYBER: KEV search newest govdelivery bulletin still Sept 21; no new dated Oct 13 items. Unchanged; countdowns unchanged (same day).
+- 🟢 MMA: Buckley vs. Malott (Oct 17, Rogers Place) reconfirmed (UFCalendar); BetOnline/Polymarket lines seen only in search summary — NOT printed. Board unchanged.
+- "New" tags: Wall Street 11:42 AM paragraph only (prior New tags removed).
