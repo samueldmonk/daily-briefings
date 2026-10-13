@@ -25080,3 +25080,10 @@ deleting and report how many days were removed.
 - 🟢 CYBER: KEV search confirms Oct 1 (FortiMail CVE-2026-104286), Oct 2 (Zammad 102489/102490), Oct 8 (CVE-2023-22894 forensic triage, due Oct 11) — all already carried. Carried unchanged.
 - 🟢 MMA: Buckley vs. Malott Oct 17 Rogers Place confirmed (UFC.com/ufcalendar); a BetOnline line (Malott −151 / Buckley +131) seen only in search summary — NOT printed; DraftKings line already carried stands. Board unchanged.
 - "New" tags: Wall Street late-morning + after-open paragraphs, Marvell and Wells Fargo cards; all prior-edition New tags removed.
+
+## Added 2026-10-13 (Tuesday — clone ~11:02am ET, MIDDAY EDITION (archive stamp 2026-10-13-1103), regular session OPEN)
+- ⚠ PROCESS: /tmp still FULL; shallow clone under /sessions/<session>/work; archive pruned by filename date (cut = today − 21 days).
+- 🆕 MARKETS: TheStreet live blog 10:31 AM ET — Micron −3.97%, SK Hynix −4.29%, Samsung −7.39% on CXMT "key progress" (4F² DRAM structure by year-end, per Morningstar; CXMT president Cao Kanyu); Broadcom CEO Hock Tan "casino" remarks (Bloomberg). Fed speakers Tuesday: Waller, Barkin, Collins; existing-home sales due. Yahoo live page fetched again was CACHED (strip "close in 6h 29m" = ~9:31 AM; Dow 52,245.14 +0.76%) — NOT used as current. No index read newer than CNN 10:39 AM was verifiable → lead/as-of unchanged.
+- 🟢 CYBER: search surfaced Palo Alto CVE-2026-0257 ransomware exploitation (GBHackers Oct 12) — already carried. Prior-edition "New" tags removed. Carried unchanged.
+- 🟢 MMA: search returned only spam/aggregator pages; board and cards unchanged.
+- "New" tags: Wall Street TheStreet 10:31 AM chip paragraph + SK Hynix card only.
