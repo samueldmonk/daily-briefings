@@ -25087,3 +25087,10 @@ deleting and report how many days were removed.
 - 🟢 CYBER: search surfaced Palo Alto CVE-2026-0257 ransomware exploitation (GBHackers Oct 12) — already carried. Prior-edition "New" tags removed. Carried unchanged.
 - 🟢 MMA: search returned only spam/aggregator pages; board and cards unchanged.
 - "New" tags: Wall Street TheStreet 10:31 AM chip paragraph + SK Hynix card only.
+
+## Added 2026-10-13 (Tuesday — clone ~11:32am ET, MIDDAY EDITION (archive stamp 2026-10-13-1139), regular session OPEN)
+- ⚠ PROCESS: /tmp root disk still FULL; shallow clone under /sessions/<session>/work; archive pruned by filename date (cut = today − 21 days); helper scripts kept in a run-unique dir outside the repo.
+- 🆕 MARKETS: Yahoo Finance live page quote strip (fetched; "U.S. markets close in 4h 55m" = ~11:05 AM ET): S&P 500 7,798.25 −8.99 (−0.12%), Dow 51,798.98 −51.57 (−0.10%), Nasdaq 27,184.49 −61.41 (−0.23%), R2K −0.51%, 10Y 5.22 (−0.02), VIX 15.25, WTI Nov $93.84 (+0.11%) — all three reconcile exactly to Monday's 7,807.24 / 51,850.55 / 27,245.90 closes. This RESOLVES the 10:59 run's Dow dispute for this read: the Dow was NEGATIVE at ~11:05 (the blog text "Dow +0.7%" is still the 10:52 AM text). TheStreet 11:11 AM movers: FUN −14.47% (Goliath coaster fatality, Six Flags Over Georgia — no other outlet surfaced in search; attributed to TheStreet only), FLEX −6.24% (Axiom Solutions International spin-off), JNJ −5.34%, MU −5.19%, HPQ +3.63%, CTSH +3.45% (TD Cowen PT $60 from $54), META +3.43%. Solomon "no succession transition or timeline underway"; Citi U.S. card spending +11%, charge-offs 3.6% from 4.0% (Yahoo). Search-summary "11:21 AM S&P 7,797.38 / Dow 51,801.77" NOT on a fetched page — NOT printed. Chart of the Day → NYSE:FUN.
+- 🟢 CYBER: KEV search newest govdelivery bulletin still Sept 21; no dated Oct 13 breach items beyond those carried. Unchanged; countdowns unchanged (same day).
+- 🟢 MMA: "UFC news Oct 13" returned only spam/aggregator pages; board and cards unchanged.
+- "New" tags: Wall Street ~11:05 AM paragraph + four 11:11 AM mover cards only (prior New tags removed).
