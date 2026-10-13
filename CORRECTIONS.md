@@ -25108,3 +25108,10 @@ deleting and report how many days were removed.
 - 🟢 CYBER: KEV search newest govdelivery bulletin still Sept 21; breach search returned nothing dated Oct 13. Unchanged; countdowns unchanged (same day).
 - 🟢 MMA: "UFC news Oct 13" returned only spam/aggregator pages with conflicting UFC 316/329/330 listings — REFUSED. Board and cards unchanged.
 - "New" tags: Wall Street ~12:11 PM midday paragraph + Pershing Square/Cipher/ChronoScale card only (prior New tag removed).
+
+## Added 2026-10-13 (Tuesday — clone ~1:03pm ET, MIDDAY EDITION (archive stamp per run), regular session OPEN)
+- ⚠ PROCESS: /tmp root disk FULL again (old /tmp/db_* dirs undeletable); shallow clone under /sessions/<session>/work; helper scripts kept outside the repo.
+- 🆕 MARKETS: Yahoo Finance ^GSPC quote page "As of 12:58:07 PM EDT": S&P 500 7,802.83 −4.41 (−0.06%), open 7,795.27, range 7,786.11–7,814.15; strip ("close in 3h 3m"): Dow 51,679.30 −171.25 (−0.33%), Nasdaq 27,211.86 −34.05 (−0.12%), R2K −0.45%, 10Y 5.23 (−0.01), 30Y 5.58, VIX 15.41 (+1.31%), WTI Nov $94.32 (+0.62%), gold $4,180.20 (−0.25%). S&P & Dow reconcile exactly to Monday closes. Motley Fool midday (pub 12:14 PM): communication led sectors, industrials & tech lagged; SOX −1.50% (morning; +68.20% YTD); JNJ ~−6%; MU >−5%; UNH slightly down after early gain. Fool's own index line ("as of 11:318 AM", S&P −0.25% to 7,788) is internally inconsistent with its quote widget — NOT printed. Yahoo live blog & TheStreet blog unchanged (latest 10:52 AM / 12:41 PM).
+- 🟢 CYBER: no KEV bulletin newer than Sept 21 surfaced; no Oct 13 breach disclosures found. Unchanged.
+- 🟢 MMA: Buckley vs. Malott, Sat Oct 17, Rogers Place, Edmonton reconfirmed (UFC.com/theScore via search). Unchanged.
+- "New" tags: Wall Street ~12:58 PM paragraph only.
