@@ -25101,3 +25101,10 @@ deleting and report how many days were removed.
 - 🟢 CYBER: KEV search newest govdelivery bulletin still Sept 21; no new dated Oct 13 items. Unchanged; countdowns unchanged (same day).
 - 🟢 MMA: Buckley vs. Malott (Oct 17, Rogers Place) reconfirmed (UFCalendar); BetOnline/Polymarket lines seen only in search summary — NOT printed. Board unchanged.
 - "New" tags: Wall Street 11:42 AM paragraph only (prior New tags removed).
+
+## Added 2026-10-13 (Tuesday — clone ~12:41pm ET, MIDDAY EDITION (archive stamp per run), regular session OPEN)
+- ⚠ PROCESS: /tmp root disk still FULL; shallow clone under /sessions/<session>/w; archive pruned by filename date (cut = today − 21 days); helper scripts kept outside the repo.
+- 🆕 MARKETS: Yahoo Finance live page quote strip (fetched; "U.S. markets close in 3h 49m" = ~12:11 PM ET — fresh, not the cached 4h 55m strip): S&P 500 7,795.69 −11.55 (−0.15%), Dow 51,670.13 −180.42 (−0.35%), Nasdaq 27,201.48 −44.42 (−0.16%), R2K 2,776.22 −18.26 (−0.65%), 10Y 5.23 (−0.02), VIX 15.44 (+1.51%), gold $4,180.80 (−0.23%), WTI Nov $94.02 (+0.30%) — all three indexes reconcile exactly to Monday's closes. TheStreet 12:11 PM: S&P −0.12%, >60% of U.S. issues declining (FinViz), 222/503 (44.1%) advancing, health care & industrials the larger decliners. TheStreet 12:41 PM midday losers (≥$2B mkt cap, "very tech and healthcare-heavy"): Pershing Square −12%, Cipher Digital −11.7%, ChronoScale Holdings Corp −11.41%. Yahoo blog text "Dow +0.7%" is still the 10:52 AM text — superseded. Search-summary CNN "12:17–12:30 PM" levels (Dow ~51,694, S&P ~7,804) NOT confirmed — CNN markets page returned stale Feb 2026 content on fetch — NOT printed.
+- 🟢 CYBER: KEV search newest govdelivery bulletin still Sept 21; breach search returned nothing dated Oct 13. Unchanged; countdowns unchanged (same day).
+- 🟢 MMA: "UFC news Oct 13" returned only spam/aggregator pages with conflicting UFC 316/329/330 listings — REFUSED. Board and cards unchanged.
+- "New" tags: Wall Street ~12:11 PM midday paragraph + Pershing Square/Cipher/ChronoScale card only (prior New tag removed).
