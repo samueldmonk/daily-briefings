@@ -25245,3 +25245,10 @@ deleting and report how many days were removed.
 - 🟡 AFTER-HOURS: search summary repeated Kass-diary STT −8.5% / BLK +5% / BAC −4.5% / LQDA +41% / BMEA −20% as "after-hours" — these are PREMARKET (earnings before the open) per prior entries; Morningstar movers (BSP, LQDA, HUT, DOCN) undated/regular-session — NOT published. After-Hours block: none verified (re-checked ~6:05 PM ET).
 - 🟢 MMA: Scores24 "October 2026" champions list matches board except women's flyweight shown vacant — STALE (Silva won Oct 3), refused. Buckley vs. Malott Oct 17 Rogers Place reconfirmed. 🟢 CYBER: no Oct 14-dated items surfaced; CVE-2026-96951 due Oct 16 (2 days left) unchanged.
 - "New" tags: Wall Street AP-confirmation paragraph only.
+
+## Added 2026-10-14 (Wednesday — clone ~6:33pm ET, AFTERNOON EDITION (archive stamp 2026-10-14-1834), regular session CLOSED)
+- 🟢 MARKETS: final Oct 14 closes (TheStreet wrap/CNBC/AP, see 4:33pm & 6:03pm entries) unchanged; a fresh close search returned only Oct 9/Oct 12 items — no conflicting data.
+- 🟡 AFTER-HOURS: search surfaced only undated Chartmill/Benzinga lists and TheStreet Pro "No stocks passed the filters" — NOT published. After-Hours block: none verified (re-checked ~6:38 PM ET).
+- 🟢 CYBER: KEV search's newest dated bulletin Sept 10; no Oct 14-dated breach items; CVE-2026-96951 due Oct 16 (2 days left) unchanged.
+- 🟢 MMA: Buckley vs. Malott, Sat Oct 17, Rogers Place reconfirmed (UFC.com/SportsLine). UFCalendar lists BetOnline Buckley +131 / Malott −151 and Polymarket Buckley −138 / Malott −127 (search summary only) — NOT printed; page keeps attributed DraftKings Malott −142 / Buckley +120 (SportsLine). Champions search: fightmag shows Aspinall HW champ/Gane interim and scores24 shows women's flyweight vacant — both STALE vs. standing Gane-UNDISPUTED and Silva (Oct 3) entries, refused. Board unchanged.
+- "New" tags: none this edition (AP-confirmation tag removed — carried in the 6:05 PM edition).
