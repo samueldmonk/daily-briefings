@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import os,re,collections
-REPO='/tmp/db_1789660241'
+REPO='/tmp/db_1792006427'
 SEC={'cyber':('The Cyber Wire','cyber-briefing.html'),
      'wallstreet':('The Closing Bell','wallstreet-briefing.html'),
      'mma':('The Octagon','mma-briefing.html')}

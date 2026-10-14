@@ -25206,3 +25206,9 @@ deleting and report how many days were removed.
 - TRAP: search summary "Yahoo 3:02:37 PM EDT Nasdaq 26,631.94 −572.44 (−2.10%), S&P 7,700.72 (−1.3%), Dow 51,458.72 (−0.4%)" — Yahoo live page and Yahoo-syndicated TheStreet page re-fetched = still cached (11:19/11:22 AM and ~9:39 AM strips); NOT on any fetched page; NOT printed. Same summary mislabeled TheStreet's 12:02 PM check-in figures as "2:25 PM" — wrong.
 - 🟢 CYBER: KEV search newest bulletin found Sept 25; nothing dated Oct 14; CVE-2026-96951 due Oct 16 (2 days left) unchanged. 🟢 MMA: Buckley vs. Malott, Sat Oct 17, Rogers Place reconfirmed (UFC.com/theScore/Cageside in search); Blanchfield vs. Jasudavicius co-main; unchanged.
 - "New" tags: Wall Street 2:25 PM paragraph only (Apple card New tag removed).
+
+## Added 2026-10-14 (Wednesday — clone ~3:33pm ET, AFTERNOON EDITION (archive stamp 2026-10-14-1534), regular session OPEN)
+- 🆕 MARKETS: TheStreet live blog (fetched; modified 19:17Z) new entry 3:17 PM ET "Oil Watch": U.S. crude $95.07/bbl; Brent crude SPOT $108/bbl ("modest move lower today"), ~$13 premium; CPI acceleration "owes a lot to oil prices". Added as New Lead paragraph + Brent row note (spot vs. the 7:19 AM $106.50 futures figure — different instruments, both attributed). Latest verified index LEVELS remain the ~1:35 PM Motley Fool read.
+- TRAP: search summary labelled TheStreet's 12:00/12:02 PM check-in figures (S&P 7,733.82 −0.92%, etc.) as "about 3:17 PM" — WRONG (3:17 entry is the oil item only); NOT used. Yahoo live page re-fetched = still cached 11:19/11:22 AM.
+- 🟢 CYBER: KEV search newest bulletin found Sept 21; nothing dated Oct 14; CVE-2026-96951 due Oct 16 (2 days left) unchanged. 🟢 MMA: "UFC news Oct 14" returned spam/aggregator pages only; unchanged.
+- "New" tags: Wall Street 3:17 PM oil paragraph only (2:25 PM New tag removed).
