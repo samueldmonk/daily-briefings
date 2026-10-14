@@ -25219,3 +25219,10 @@ deleting and report how many days were removed.
 - 🟡 AFTER-HOURS: no Oct 14 extended-hours movers verified (search surfaced only Oct 13 lists) — After-Hours block says none verified.
 - 🟢 CYBER: nothing dated Oct 14 surfaced; CVE-2026-96951 due Oct 16 (2 days left) unchanged. 🟢 MMA: Buckley vs. Malott, Sat Oct 17, Rogers Place reconfirmed (UFC.com/theScore/Cageside); a search summary again claimed heavyweight "vacant" — REFUSED per Gane-UNDISPUTED entry. Unchanged.
 - "New" tags: Wall Street close paragraph only (3:17 PM oil New tag removed).
+
+## Added 2026-10-14 (Wednesday — clone ~4:33pm ET, AFTERNOON EDITION (archive stamp per run), regular session CLOSED)
+- 🔁 MARKETS — OCT 14 CLOSES CORRECTED TO FINAL: TheStreet live blog (fetched; modified 20:33Z) "Market Wrap" 4:00 PM ET: Dow 51,621.48 −48.62 (−0.09%); S&P 500 7,718.94 −86.51 (−1.11%); Nasdaq 26,692.87 −511.51 (−1.88%); Russell 2000 2,729.53 −53.84 (−1.93%); VIX +10% to 16.82. Corroborated by CNBC live blog (search snippet: S&P −1.11% to 7,718.94, Nasdaq −1.88% to 26,692.87, Dow −48.62 to 51,621.48). All reconcile exactly to Oct 13 closes. These SUPERSEDE the preliminary Yahoo "At close: 4:00:40 PM" read (S&P 7,719.54 −1.10%, Dow 51,621.78, R2K −2.17%, VIX 16.90) — do NOT reuse those. Scorecard row corrected.
+- 🆕 Sector closes (TheStreet wrap): Health care +2.44%, Consumer staples +2.21%, Energy +0.65%; IT −3.00%, Comm Svcs −1.32%, Industrials −0.96% (eight sectors declined).
+- 🟡 AFTER-HOURS: a CNBC snippet said BAC "dipped more than 2% in extended trading" after the $1.2B penalty — the penalty broke Tue evening, so the session is ambiguous (likely Oct 13) — NOT published. Benzinga/Chartmill "Wolfspeed +27%" lists have inconsistent dates — NOT published. After-Hours block: none verified.
+- 🟢 CYBER: KEV search surfaced nothing newer (summary again cited "BOD 26-04" — still UNVERIFIED). CVE-2026-96951 due Oct 16 (2 days left) unchanged. 🟢 MMA: Buckley vs. Malott, Sat Oct 17, Rogers Place reconfirmed (UFC.com/theScore/Cageside); unchanged.
+- "New" tags: Wall Street final-close paragraph only.
