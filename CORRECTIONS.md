@@ -25188,3 +25188,9 @@ deleting and report how many days were removed.
 - TRAP: search summary "1:33 PM EDT Nasdaq 26,708.64 −1.82%" and "Yahoo S&P 7,711.77 −1.20%" — NOT on any fetched page; NOT printed. Yahoo live page re-fetched = still cached 11:19/11:22 AM.
 - 🟢 CYBER: no items dated Oct 14 surfaced; unchanged. 🟢 MMA: Buckley vs. Malott Sat Oct 17 Rogers Place reconfirmed (UFC.com/theScore/Cageside in search); no fight-week news; unchanged.
 - "New" tags: Wall Street ~1:35 PM paragraph + CoreWeave card only (12:34 New tag removed).
+
+## Added 2026-10-14 (Wednesday — clone ~2:04pm ET, MIDDAY EDITION (archive stamp per run), regular session OPEN)
+- 🆕 MARKETS: TheStreet live blog (fetched; modified 17:57Z) headline updated 1:57 PM ET: "Russell 2000, Nasdaq fall 2% on hot inflation data." 1:48 PM midday winners: AstraZeneca +4.29%, Merck +4.09%, Bristol-Myers Squibb +3.99%, AbbVie +3.94%, Eli Lilly +3.90%, Pfizer +3.89%. Lead/headline/TL;DR updated with these; latest verified index LEVELS remain the ~1:35 PM Motley Fool read.
+- TRAP: search summary "~2 PM Yahoo widget: S&P 7,698.25 −1.37%, Dow 51,398.15 −0.53%, Nasdaq 26,647.03" — Yahoo live page re-fetched still cached at 11:19/11:22 AM; NOT on any fetched page; NOT printed.
+- 🟢 CYBER: KEV search newest bulletin still Sept 21; CVE-2026-96951 due Oct 16 (2 days left) unchanged. 🟢 MMA: Buckley vs. Malott, Sat Oct 17, Rogers Place reconfirmed (theScore/Cageside/UFCalendar via search); unchanged.
+- "New" tags: Wall Street 1:48–1:57 PM paragraph + health-care winners card only (1:35 PM/CoreWeave New tags removed).
