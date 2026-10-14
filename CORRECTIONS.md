@@ -25182,3 +25182,9 @@ deleting and report how many days were removed.
 - TRAP: a search summary quoted "Nasdaq 26,801.04 −403.34 (−1.48%) as of 1:01 PM; S&P 7,728.45 −0.99%; Dow 51,523.91 −0.28%" — NOT on any fetched page; NOT printed.
 - 🟢 CYBER: KEV search surfaced nothing dated Oct 14 (a summary again cited "BOD 26-04" — still UNVERIFIED, not adopted); unchanged. 🟢 MMA: "UFC news Oct 14" returned spam/aggregator pages only; unchanged.
 - "New" tags: Wall Street 12:34 PM paragraph only (11:39 Benzinga New tags removed).
+
+## Added 2026-10-14 (Wednesday — clone ~1:33pm ET, MIDDAY EDITION (archive stamp per run), regular session OPEN)
+- 🆕 MARKETS: Motley Fool "Stock Market Midday, Oct. 14" page (fetched ~1:35 PM ET; Cache-Control max-age=300) live quote strip: S&P 500 7,718.61 −86.84, Dow 51,488.15 −181.95, Nasdaq 26,747.31 −457.07 — all reconcile EXACTLY to verified Oct 13 closes (7,805.45 / 51,670.10 / 27,204.38) → −1.11% / −0.35% / −1.68%. Published as "~1:35 PM ET" with the fetch-time caveat stated. Fool article body (11:38 AM read): CoreWeave −15% (bond yield hit 15%), Nebius >−9%, 10Y +2bp 5.24% (differs from Yahoo/CNBC/Benzinga — different timestamps; not printed). TheStreet blog new 1:09 PM entry: midday losers list led by SKYD, CRWV, DOCN, DELL, AFRM (no %s given — none printed).
+- TRAP: search summary "1:33 PM EDT Nasdaq 26,708.64 −1.82%" and "Yahoo S&P 7,711.77 −1.20%" — NOT on any fetched page; NOT printed. Yahoo live page re-fetched = still cached 11:19/11:22 AM.
+- 🟢 CYBER: no items dated Oct 14 surfaced; unchanged. 🟢 MMA: Buckley vs. Malott Sat Oct 17 Rogers Place reconfirmed (UFC.com/theScore/Cageside in search); no fight-week news; unchanged.
+- "New" tags: Wall Street ~1:35 PM paragraph + CoreWeave card only (12:34 New tag removed).
