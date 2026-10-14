@@ -25212,3 +25212,10 @@ deleting and report how many days were removed.
 - TRAP: search summary labelled TheStreet's 12:00/12:02 PM check-in figures (S&P 7,733.82 −0.92%, etc.) as "about 3:17 PM" — WRONG (3:17 entry is the oil item only); NOT used. Yahoo live page re-fetched = still cached 11:19/11:22 AM.
 - 🟢 CYBER: KEV search newest bulletin found Sept 21; nothing dated Oct 14; CVE-2026-96951 due Oct 16 (2 days left) unchanged. 🟢 MMA: "UFC news Oct 14" returned spam/aggregator pages only; unchanged.
 - "New" tags: Wall Street 3:17 PM oil paragraph only (2:25 PM New tag removed).
+
+## Added 2026-10-14 (Wednesday — clone ~4:04pm ET, AFTERNOON EDITION (archive stamp per run), regular session CLOSED)
+- 🆕 MARKETS — OCT 14 CLOSES VERIFIED: Yahoo Finance ^GSPC quote page (fetched) "At close: 4:00:40 PM EDT": S&P 500 7,719.54 −85.91 (−1.10%), range 7,693.31–7,789.15, prev close 7,805.45; strip: Dow 51,621.78 −48.32 (−0.09%), Nasdaq 26,692.87 −511.51 (−1.88%), R2K 2,723.00 −60.37 (−2.17%), VIX 16.90 (+10.67%), 10Y 5.19 (−0.03), 30Y 5.53, WTI Nov $95.12 (+1.04%), gold $4,123.10 (−1.30%), BTC $81,729.82 (−1.77%) — all reconcile exactly to verified Oct 13 closes. Scorecard row for Wed Oct 14 added.
+- TRAP: search summary "S&P 7,718.95" and 24/7 Wall St. "at close 7,716.10 (−1.28%)" do NOT match the fetched Yahoo close 7,719.54 — NOT used. TheStreet blog still modified 19:17Z (no close wrap yet); CNBC/Washington Times fetches returned empty.
+- 🟡 AFTER-HOURS: no Oct 14 extended-hours movers verified (search surfaced only Oct 13 lists) — After-Hours block says none verified.
+- 🟢 CYBER: nothing dated Oct 14 surfaced; CVE-2026-96951 due Oct 16 (2 days left) unchanged. 🟢 MMA: Buckley vs. Malott, Sat Oct 17, Rogers Place reconfirmed (UFC.com/theScore/Cageside); a search summary again claimed heavyweight "vacant" — REFUSED per Gane-UNDISPUTED entry. Unchanged.
+- "New" tags: Wall Street close paragraph only (3:17 PM oil New tag removed).
