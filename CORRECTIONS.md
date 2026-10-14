@@ -25170,3 +25170,9 @@ deleting and report how many days were removed.
 - TRAP: a search summary quoted "Yahoo 12:01 p.m. Nasdaq 26,824.25 −1.40%" — NOT on any fetched page; NOT used.
 - 🟢 CYBER: searches surfaced nothing newer than carried items; unchanged. 🟢 MMA: Buckley vs. Malott Sat Oct 17 Rogers Place reconfirmed (UFC.com/theScore results); no new fight-week items; unchanged.
 - "New" tags: Wall Street 12:02 PM paragraph + DELL/PGR/gainers cards only (11:22 New tag removed).
+
+## Added 2026-10-14 (Wednesday — clone ~12:33pm ET, MIDDAY EDITION (archive stamp per run), regular session OPEN)
+- 🟡 MARKETS: NO index read newer than TheStreet's 12:02 PM check-in verified on a fetched page (TheStreet blog latest entry still 12:00/12:02 PM; Yahoo live page still cached 11:19/11:22 AM). A search summary quoted "Yahoo 12:30 p.m.: Nasdaq 26,746.21 −1.68%, S&P 7,720.00 −1.09%, Dow 51,522.78 −0.29%" — NOT on any fetched page; NOT printed. Lead/Tape left at 12:02 PM.
+- 🆕 MARKETS (Benzinga, fetched, 11:39 AM ET): XLV +1.6% led sectors, XLP +0.7%, XLE +0.2%; XLK −1.6% weakest; XLF/XLU −1.3%; SOXX −2.3%, 7th straight session, ~10% below Oct 5 close; 2Y +14bp 4.93%, 10Y +10bp 5.31% (differs from Yahoo 5.27%/CNBC 5.278% — different timestamps; both attributed); DXY 18-month high ~102.75; 45% odds of an Oct 28 hike; Hassett: core "a blip". Movers: CoreWeave −13.8% (supersedes 24/7's −10% as the later read), TeraWulf −9.3%, DigitalOcean −10.0%, IREN −8.5%, Affirm −9.2%, SoFi/HOOD −6.2%, Oracle −6.5%, BAC −7.7%, Halozyme +7.2%, AbbVie +3.0%, UNH +2.5%, GlobalFoundries +5.0% (two NY fabs, U.S.–Japan initiative).
+- 🟢 CYBER: searches surfaced nothing dated Oct 14; unchanged. 🟢 MMA: "UFC news Oct 14" returned aggregator pages only (one listed "UFC 316 Oct 17 MSG" — conflicts with Buckley vs. Malott, REFUSED); unchanged.
+- "New" tags: Wall Street Benzinga sector paragraph + defensives/fintech cards + CoreWeave update only (12:02 New tags removed).
