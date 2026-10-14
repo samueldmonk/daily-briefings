@@ -25200,3 +25200,9 @@ deleting and report how many days were removed.
 - 🆕 MARKETS (Yahoo live blog, fetched): Apple rose more than 1% while the rest of tech slumped (~11:54 AM entry). New card added.
 - 🟢 CYBER: KEV search surfaced nothing newer (a summary again cited "BOD 26-04" — still UNVERIFIED). CVE-2026-96951 due Oct 16 unchanged. 🟢 MMA: Buckley vs. Malott, Sat Oct 17, Rogers Place reconfirmed (UFC.com/theScore/Cageside in search); no card changes; unchanged.
 - "New" tags: Wall Street Apple card only (1:48–1:57 PM paragraph + health-care card New tags removed).
+
+## Added 2026-10-14 (Wednesday — clone ~3:04pm ET, AFTERNOON EDITION (archive stamp per run), regular session OPEN)
+- 🆕 MARKETS: TheStreet live blog (fetched; modified 18:25Z) entry 2:25 PM ET: Russell 2000 −2.2% "taking the brunt of today's CPI report" on fresh rate-hike bets; only 332 holdings advancing, mostly health care. Lead/Tape/index card moved to 2:25 PM; latest verified index LEVELS remain the ~1:35 PM Motley Fool read.
+- TRAP: search summary "Yahoo 3:02:37 PM EDT Nasdaq 26,631.94 −572.44 (−2.10%), S&P 7,700.72 (−1.3%), Dow 51,458.72 (−0.4%)" — Yahoo live page and Yahoo-syndicated TheStreet page re-fetched = still cached (11:19/11:22 AM and ~9:39 AM strips); NOT on any fetched page; NOT printed. Same summary mislabeled TheStreet's 12:02 PM check-in figures as "2:25 PM" — wrong.
+- 🟢 CYBER: KEV search newest bulletin found Sept 25; nothing dated Oct 14; CVE-2026-96951 due Oct 16 (2 days left) unchanged. 🟢 MMA: Buckley vs. Malott, Sat Oct 17, Rogers Place reconfirmed (UFC.com/theScore/Cageside in search); Blanchfield vs. Jasudavicius co-main; unchanged.
+- "New" tags: Wall Street 2:25 PM paragraph only (Apple card New tag removed).
