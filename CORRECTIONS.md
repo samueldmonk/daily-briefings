@@ -25164,3 +25164,9 @@ deleting and report how many days were removed.
 - TRAP: a search summary attributed TheStreet's 9:38 AM opening figures (S&P −0.45%) to "11:08 AM" and said JPM/GS/C/WFC reported today — both wrong (those banks reported Tue Oct 13). NOT used.
 - 🟢 CYBER: KEV search surfaced nothing newer than carried items; unchanged. 🟢 MMA: "UFC news Oct 14" returned only spam/aggregator pages with conflicting schedules — REFUSED; unchanged.
 - "New" tags: Wall Street ~11:22 AM paragraph only (prior New tags removed).
+
+## Added 2026-10-14 (Wednesday — clone ~12:03pm ET, MIDDAY EDITION (archive stamp per run), regular session OPEN)
+- 🆕 MARKETS: TheStreet live blog "P.M. Check-In" 12:02 PM ET (fetched): Dow 51,622.24 −47.86 (−0.09%), S&P 7,733.82 −71.63 (−0.92%), Nasdaq 26,832.95 −371.44 (−1.37%), R2K 2,737.11 −46.26 (−1.66%); 73.6% of U.S. issues declining — reconciles to verified Oct 13 closes. TheStreet 11:08 AM movers: DELL −8.28% (Barclays cut DELL/HPE/NTAP to Equal Weight), PGR −8.01% (Q3 miss), CBOE +3.58%, LLY +3.38% (Prelude Therapeutics trial collaboration), AMGN +3.18% (UBS upgrade). Yahoo live page re-fetched = still cached 11:19/11:22 AM.
+- TRAP: a search summary quoted "Yahoo 12:01 p.m. Nasdaq 26,824.25 −1.40%" — NOT on any fetched page; NOT used.
+- 🟢 CYBER: searches surfaced nothing newer than carried items; unchanged. 🟢 MMA: Buckley vs. Malott Sat Oct 17 Rogers Place reconfirmed (UFC.com/theScore results); no new fight-week items; unchanged.
+- "New" tags: Wall Street 12:02 PM paragraph + DELL/PGR/gainers cards only (11:22 New tag removed).
