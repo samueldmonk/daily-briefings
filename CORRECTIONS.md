@@ -25194,3 +25194,9 @@ deleting and report how many days were removed.
 - TRAP: search summary "~2 PM Yahoo widget: S&P 7,698.25 −1.37%, Dow 51,398.15 −0.53%, Nasdaq 26,647.03" — Yahoo live page re-fetched still cached at 11:19/11:22 AM; NOT on any fetched page; NOT printed.
 - 🟢 CYBER: KEV search newest bulletin still Sept 21; CVE-2026-96951 due Oct 16 (2 days left) unchanged. 🟢 MMA: Buckley vs. Malott, Sat Oct 17, Rogers Place reconfirmed (theScore/Cageside/UFCalendar via search); unchanged.
 - "New" tags: Wall Street 1:48–1:57 PM paragraph + health-care winners card only (1:35 PM/CoreWeave New tags removed).
+
+## Added 2026-10-14 (Wednesday — clone ~2:33pm ET, MIDDAY EDITION (archive stamp 2026-10-14-1435), regular session OPEN)
+- 🟡 MARKETS: NO index read newer than the ~1:35 PM Motley Fool strip verified on a fetched page. Newly fetched Yahoo live page "stock-market-today-hot-inflation-report-drops-tech-drives-sp-500-nasdaq-down-152206632" is cached at ~12:44 PM (strip "close in 3h 16m"; quotes "As of 12:44:07 PM EDT": S&P 7,728.21 −0.99%, Dow 51,513.60 −0.30%, Nasdaq 26,801.09 −1.48%, R2K −1.91%, VIX 16.55 +8.37%, 10Y 5.24) — OLDER than the 1:35 read, not used as current. TheStreet/Fool URLs not surfaced by search this run (fetch blocked by provenance). Lead note restamped "re-checked ~2:35 PM ET".
+- 🆕 MARKETS (Yahoo live blog, fetched): Apple rose more than 1% while the rest of tech slumped (~11:54 AM entry). New card added.
+- 🟢 CYBER: KEV search surfaced nothing newer (a summary again cited "BOD 26-04" — still UNVERIFIED). CVE-2026-96951 due Oct 16 unchanged. 🟢 MMA: Buckley vs. Malott, Sat Oct 17, Rogers Place reconfirmed (UFC.com/theScore/Cageside in search); no card changes; unchanged.
+- "New" tags: Wall Street Apple card only (1:48–1:57 PM paragraph + health-care card New tags removed).
