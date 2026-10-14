@@ -25233,3 +25233,9 @@ deleting and report how many days were removed.
 - TRAP: search summary again claimed UFC heavyweight "vacant" after Aspinall relinquished — REFUSED per Gane-UNDISPUTED entry. Search summary again cited "BOD 26-04" — still UNVERIFIED.
 - 🟢 CYBER: no Oct 14 items surfaced; newest KEV bulletin in search Sept 21; CVE-2026-96951 due Oct 16 (2 days left) unchanged. 🟢 MMA: Buckley vs. Malott, Sat Oct 17, Rogers Place, Blanchfield vs. Jasudavicius co-main reconfirmed (UFC.com/theScore/Cageside in search); unchanged.
 - "New" tags: none this edition (final-close paragraph was already in the 4:33 PM edition; New tag removed).
+
+## Added 2026-10-14 (Wednesday — clone ~5:33pm ET, AFTERNOON EDITION (archive stamp per run), regular session CLOSED)
+- 🟢 MARKETS: final Oct 14 closes (TheStreet wrap/CNBC, see 4:33pm entry) unchanged; a fresh close search returned only Oct 9 items — no conflicting data.
+- 🟡 AFTER-HOURS: a search summary cited a Seeking Alpha note "Stocks making big moves after hours: SANM, KEYS, AIZ" (said to be 4:52 PM Oct 14) — page fetch returned EMPTY, no % moves or direction stated, and a follow-up search surfaced only older-dated SANM/KEYS items (Investing.com KEYS listing "51 days ago") — NOT published. Chartmill RKLB −7.85% / DLTR +3.61% "after-hours" items are undated — NOT published. After-Hours block: none verified (re-checked ~5:35 PM ET).
+- 🟢 CYBER: no Oct 14-dated items surfaced (newest dated result Sept 16 newsletter); CVE-2026-96951 due Oct 16 (2 days left) unchanged. 🟢 MMA: Buckley vs. Malott, Sat Oct 17, Rogers Place, Edmonton reconfirmed (UFCalendar/Cageside/MMASucka in search); unchanged.
+- "New" tags: none this edition.
