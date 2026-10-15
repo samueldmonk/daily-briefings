@@ -25302,3 +25302,10 @@ deleting and report how many days were removed.
 - TRAP: search summary cited Yahoo ^GSPC "7,747.38 +0.37% as of 3:29:40 PM EDT" (page age unclear) — the fetched ^GSPC page served a 2:48 PM cache instead; NOT published. Yahoo live-blog search title "Dow jumps 600 points" — fetched copy was a 9:28 AM cache; time unknown, NOT published. Yahoo ^GSPC /chart/ served a 2023 cache — NOT used.
 - 🟢 CYBER: searches surfaced nothing dated Oct 15; Oct 16 / Oct 17 KEV deadlines unchanged. 🟢 MMA: Buckley vs. Malott, Sat Oct 17, Rogers Place reconfirmed (theScore/UFC.com/Cageside in search); board unchanged.
 - "New" tags: Wall Street closing-bell note and 3:19 PM Treasury-curve paragraph only (yields/rotation, homebuilders, apparel, CoreWeave tags removed).
+
+## Added 2026-10-15 (Thursday — clone ~4:03pm ET, AFTERNOON EDITION (archive stamp 2026-10-15-1604), regular session CLOSED)
+- 🆕 MARKETS (pre-close, NOT closes): Yahoo ^DJI quote page (fetched) "As of 3:52:08 PM EDT": Dow 52,193.45 +571.97 (+1.11%), range 51,681.37–52,250.18, prev close 51,621.48; strip ("close in 8m"): S&P 500 7,742.92 +23.98 (+0.31%), Nasdaq 26,706.95 +14.08 (+0.05%) — Nasdaq TURNED POSITIVE late — R2K +1.35%, 10Y 5.09 (−0.10), VIX 16.47 (−2.37%), WTI Nov $96.31 (+2.57%), gold $4,187.60 (+1.94%). All reconcile exactly to Oct 14 closes.
+- 🆕 Yahoo day-gainers screen (fetched; "close in 31m" ⇒ ~3:29 PM): KRMN +11.65%, APPN +11.63%, KD +10.94%, ERIC +10.75%, Z +9.97%, TRU +9.68%, PAG +8.81%.
+- ⚠ OFFICIAL OCT 15 CLOSE STILL NOT VERIFIED: TheStreet live blog still modified 3:21 PM; Yahoo ^GSPC page served 2:48 PM cache; searches returned no closing wrap. NEXT RUN MUST LEAD WITH THE VERIFIED CLOSE and add an Oct 15 scorecard row. No sourced after-hours movers yet.
+- 🟢 CYBER: no Oct 15 KEV additions surfaced; Oct 16 / Oct 17 deadlines unchanged. 🟢 MMA: Buckley vs. Malott Sat Oct 17 Rogers Place reconfirmed (theScore/UFC.com/Cageside); board unchanged.
+- "New" tags: Wall Street 3:52 PM read paragraph and late-gainers card only (closing-bell note and 3:19 PM Treasury tags removed).
