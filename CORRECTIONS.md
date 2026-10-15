@@ -25322,3 +25322,9 @@ deleting and report how many days were removed.
 - 🆕 CYBER: CISA added Atlassian CVE-2026-21589 (Data Center file read, CVSS 4.0 9.3; Cloud patched) to KEV on Oct 15 — WindowsForum (fetched in full, published 16:10 EDT) citing CISA's Oct 15 alert and Atlassian's Oct 5 advisory. KEV DUE DATE UNVERIFIED (cisa.gov not fetchable) — page says so; do not invent one. Proofpoint–Varonis deal added as cyber M&A card.
 - 🟢 MMA: Buckley vs. Malott, Sat Oct 17, Rogers Place, Edmonton reconfirmed (theScore/UFC.com/Cagesidepress); no newer news; board unchanged.
 - "New" tags: Wall Street four after-hours cards; cyber Atlassian KEV row/bullet and Varonis card only (all earlier tags removed).
+
+## Added 2026-10-15 (Thursday — clone ~7:19pm ET, AFTERNOON EDITION (archive stamp 2026-10-15-1925), regular session CLOSED; run fired outside the 8 AM–6 PM window)
+- 🟢 No new verifiable facts this run. Searches for Oct 15 closes, after-hours movers, KEV additions and UFC Edmonton returned nothing newer than the 5:44pm entry. Oct 15 closes (AP, 4:33pm entry) and CNBC after-hours movers (5:44pm entry) carried unchanged.
+- ⚠ Atlassian CVE-2026-21589 KEV DUE DATE STILL UNVERIFIED. Early-Oct SOCRadar/Rescana pages say "not in KEV". They PREDATE the Oct 15 add (WindowsForum, 5:44pm entry) and do not contradict it.
+- 🟢 MMA: Buckley vs. Malott, Sat Oct 17, Rogers Place, Edmonton reconfirmed (theScore/UFC.com/Cagesidepress); Blanchfield vs. Jasudavicius co-main; board unchanged.
+- "New" tags: NONE. All items were already in the 1857 snapshot, so the tags were removed.
