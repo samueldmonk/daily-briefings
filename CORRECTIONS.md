@@ -25282,3 +25282,9 @@ deleting and report how many days were removed.
 - TRAP: search summary cited S&P 7,740.38 +0.28% / Dow 52,167.99 +1.06% "~1:55 PM" from an unidentified Yahoo article — NOT published; page uses the fetched 2:01:11 PM quote page.
 - 🟢 CYBER: KEV search's newest dated bulletin Sept 21 (Zyxel CVE-2026-7273); nothing newer than the Oct 14 batch. Page unchanged; countdowns (Oct 16 = 1 day, Oct 17 = 2 days) correct. 🟢 MMA: Buckley vs. Malott Sat Oct 17 Rogers Place reconfirmed (theScore/UFC.com/Cageside); SportsLine Malott −142 reconfirmed; board unchanged.
 - "New" tags: Wall Street afternoon-read paragraph and Vertiv card only (12:57 PM paragraph and midday-winners tags removed).
+
+## Added 2026-10-15 (Thursday — clone ~2:16pm ET, MIDDAY EDITION (archive stamp 2026-10-15-1418), regular session OPEN)
+- 🟢 MARKETS: no index read newer than the fetched Yahoo ^GSPC "As of 2:01:11 PM EDT" quote (2:14pm entry) was verifiable this run. Yahoo's syndication of the Motley Fool midday report (fetched) carried a strip "U.S. markets close in 2h 3m" (⇒ ~1:57 PM ET): S&P 500 7,740.25 +21.31 (+0.28%), Dow 52,163.39 +541.91 (+1.05%), Nasdaq 26,666.60 −26.27 (−0.10%), R2K +0.90%, 10Y 5.09, VIX 16.56, WTI Nov $96.51 (+2.78%) — reconciles to Oct 14 closes; this is the source of the 2:14pm-entry "TRAP" figures (now identified, ~1:57 PM). It PREDATES the 2:01 PM read, so the page keeps 2:01 PM as latest. Yahoo TheStreet syndication still cached (~11:56 AM strip).
+- 🆕 Motley Fool midday report (fetched): Abercrombie & Fitch "just hit a 52-week high" — added as New card, no % printed.
+- 🟢 CYBER: KEV search surfaced no Oct 15-dated additions; Oct 16 / Oct 17 deadlines unchanged. 🟢 MMA: Buckley vs. Malott, Sat Oct 17, Rogers Place, Edmonton; Blanchfield vs. Jasudavicius co-main reconfirmed (UFC.com/theScore/Cageside in search); board unchanged.
+- "New" tags: Wall Street Abercrombie card only (2:01 PM paragraph and Vertiv tags removed).
