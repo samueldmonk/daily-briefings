@@ -25416,3 +25416,9 @@ deleting and report how many days were removed.
 - TRAP: Yahoo Scout blurb said S&P "-1.28%" while the page quote showed −1.41% — blurb figure NOT used. Coinpaper "3:06" morning snapshot again surfaced — NOT used.
 - 🟢 CYBER: no Oct 16 KEV additions or new verifiable incidents found; deadlines unchanged. 🟢 MMA: Buckley vs. Malott Sat Oct 17 Rogers Place reconfirmed (theScore/UFC.com/Cageside in search); board unchanged.
 - "New" tags: WS 3:06 PM + energy-winners paragraphs, 3 PM check and midday-winners cards only (2:33 PM tags removed).
+
+## Added 2026-10-16 (Friday — clone ~3:37pm ET, AFTERNOON EDITION (archive stamp 2026-10-16-1539), regular session OPEN)
+- 🆕 MARKETS (intraday, NOT closes): Yahoo ^GSPC quote page (fetched via %5Egspc) "As of 3:37:58 PM EDT. Market Open.": S&P 500 7,648.87 −95.19 (−1.23%), range 7,631.77–7,756.84 (new session low after 3:06), 5D −2.08%; strip ("close in 22m"): Dow 51,922.12 −255.57 (−0.49%), Nasdaq 26,100.24 −612.79 (−2.29%), R2K 2,722.80 −44.46 (−1.61%), 10Y 5.10 (+0.01), VIX 20.34 (+3.88, +23.56%), gold 4,186.80 (+0.40%), WTI Nov 98.95 (+2.45, +2.54%), BTC 81,297.86 (−1.22%). All reconcile exactly to Oct 15 closes.
+- TRAP: Yahoo Scout blurb said S&P "fell 1.14%" while the page quote showed −1.23% — blurb figure NOT used. Coinpaper "3:06" morning snapshot surfaced again — NOT used. hdfcsky "close" page not used (not verified as today's close).
+- 🟢 CYBER: no Oct 16 KEV additions found in search; deadlines unchanged. 🟢 MMA: Buckley vs. Malott Sat Oct 17 Rogers Place reconfirmed (UFC.com/theScore/Cageside in search); board unchanged.
+- "New" tags: WS 3:37 PM paragraph and 3:30 PM check card only (3:06 PM tags removed). Index Markets card synced to Tape.
