@@ -25451,3 +25451,8 @@ deleting and report how many days were removed.
 - 🟢 MARKETS: Oct 16 final closes unchanged from the 4:33 PM entry. After-hours search returned no dated Oct 16 coverage — NO Friday after-hours movers verified; note updated to ~6:05 PM.
 - 🟢 CYBER: KEV search surfaced no Oct 16 additions; deadlines unchanged. 🟢 MMA: Buckley vs. Malott Sat Oct 17 Rogers Place reconfirmed (theScore/UFC.com/Cageside); no results yet; board unchanged. TRAP: theScore lists prelims 6 PM ET on Sportsnet/TVA (Canadian broadcast) — differs from the Paramount+ 5 PM ET prelim time in the standing entry; page left unchanged.
 - "New" tags: none.
+
+## Added 2026-10-16 (Friday — clone ~6:32pm ET, AFTERNOON EDITION, regular session CLOSED; run fired outside the 8 AM–6 PM window)
+- 🟢 MARKETS: Oct 16 final closes unchanged from the 4:33 PM entry. After-hours search returned only undated Chartmill/Benzinga roundups — NO Friday after-hours movers verified; note updated to ~6:35 PM.
+- 🟢 CYBER: KEV search surfaced nothing newer than the standing Oct 14 entry; no new verifiable incidents; deadlines unchanged. 🟢 MMA: Buckley vs. Malott Sat Oct 17 Rogers Place reconfirmed (UFC.com/theScore/Cageside); no results yet; board unchanged. TRAP: search summary cited Malott "No. 11" (theScore) / "No. 12" (Cageside media panel) — conflicts with standing UFC.com #13; page left unchanged.
+- "New" tags: none.
