@@ -25359,3 +25359,11 @@ deleting and report how many days were removed.
 - 🆕 MMA: Cageside (fetched) — official weigh-ins 11 AM ET Fri; full main card listed. TRAP: HotTakes "weigh-ins go off without a hitch" (published 10:06 AM, BEFORE the 11 AM weigh-in; its sources are MMA Junkie's 2024 Moreno–Albazi Edmonton weigh-in) — NOT published; no weigh-in results verified yet.
 - 🟢 CYBER: no Oct 16 KEV adds found; deadlines unchanged. Board unchanged.
 - "New" tags: WS 11:08 AM + banks-vs-chips paragraphs, bank-rally and chip-slide cards; MMA weigh-in bullet.
+
+## Added 2026-10-16 (Friday — clone ~11:33am ET, MIDDAY EDITION (archive stamp per run), regular session OPEN)
+- 🟢 MARKETS: Yahoo ^GSPC quote page re-fetched — STILL cached "As of 11:08:35 AM EDT" (no fresher read); Lead/Tape stay at 11:08 AM.
+- 🆕 Reuters via The Sunday Guardian (fetched, published 11:13 AM ET; snapshot time NOT stated): Dow +0.43% to 52,401.89 (highest in more than a month), S&P 500 −0.09% at 7,736.76, Nasdaq −0.70% at 26,527.14 — all reconcile to Oct 15 closes. Published as an attributed "morning snapshot", NOT as the current read.
+- 🆕 Yahoo Finance live blog (fetched; page quotes as of ~9:54 AM): ~4-in-5 S&P stocks advancing (~400 vs ~100), 10 of 11 sectors up led by financials & energy; record highs V, MA, MET, MCK, EXPD, COP, BOX; SOXX −2%+ toward a 9th straight loss (first since 2006); 57 of 60 in Yahoo semis basket down. Truist adj EPS $1.16 vs $1.19 est. (RBC); reported $0.56 incl. $1.4B bond-sale loss. MSCI final list Nov 11, rules effective after close Nov 30.
+- 🆕 CYBER: Forescout ClickFix → Lorem Ipsum Loader → Python tunnel (Cyber Security News Oct 15, fetched): stopped before ransomware; tooling matched Vice Society (Rhysida-associated) — attribution NOT confirmed; 5 Lorem Ipsum + 39 AxolotlLoader samples. No Oct 16 KEV additions found; deadlines unchanged.
+- 🆕 MMA: MMA Junkie official weigh-in results (via Yahoo Sports, fetched) list 13 bouts; records Buckley 21-8 (11-6 UFC), Malott 14-2-1 (7-1), Blanchfield 14-2 (8-1), Jasudavicius 15-4 (9-3); Paramount+ main 8 PM / prelims 5 PM ET. Fetched copy had BLANK weights — no weights or "missed weight" claims published. Board unchanged.
+- "New" tags: WS breadth/Reuters paragraph + record-highs card; cyber ClickFix card; MMA weigh-in bullet.
