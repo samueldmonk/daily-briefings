@@ -25401,3 +25401,11 @@ deleting and report how many days were removed.
 - TRAP: Yahoo Scout blurb said S&P "fell 1.00%" while the same page's quote showed −1.19% — blurb figure NOT used. Yahoo live blog fetched again served a 9:53 AM cache — nothing newer.
 - 🟢 CYBER: no Oct 16 KEV additions or new verifiable incidents found; deadlines unchanged. 🟢 MMA: Buckley vs. Malott Sat Oct 17 Rogers Place reconfirmed (theScore/UFC.com/Cageside in search); board unchanged.
 - "New" tags: WS 2:03 PM + Warsh paragraphs and 2 PM check card only (1:31 PM tags removed).
+
+## Added 2026-10-16 (Friday — clone ~2:33pm ET, MIDDAY EDITION (archive stamp 2026-10-16-1434), regular session OPEN)
+- 🆕 MARKETS (intraday, NOT closes): Yahoo ^GSPC quote page (fetched via %5Egspc) "As of 2:33:40 PM EDT. Market Open.": S&P 500 7,650.99 −93.07 (−1.20%), range 7,643.10–7,756.84 (new session low), 5D −2.06%; strip ("close in 1h 27m"): Dow 51,895.84 −281.85 (−0.54%), Nasdaq 26,130.94 −582.09 (−2.18%), R2K 2,719.67 −47.60 (−1.72%), 10Y 5.10 (+0.02), VIX 20.84 (+4.38, +26.59%), gold 4,182.50 (+0.30%), WTI Nov 98.81 (+2.31, +2.39%), BTC 81,311.26 (−1.22%). All reconcile exactly to Oct 15 closes.
+- 🆕 TheStreet live blog (fetched, modified 2:01 PM ET): "Midday Movers" losers among ≥$2B caps — Bending Spoons −14.86%, Twilio −12.59%, Fastly −12.11% ("extremely tech heavy"; headline also names CRWV, DOCN — no % for those). Chart of the Day → NYSE:TWLO (Bending Spoons' exchange not confirmed, so not charted).
+- TRAP: search summary cited a Coinpaper "3:06 p.m." snapshot (Dow +0.43%, S&P +0.05%) as closest to 2:30 — that is the MORNING read (standing entry); NOT used. Motley Fool S&P −1.18% / 7,652.55 had no timestamp — NOT used.
+- 🟢 CYBER: no Oct 16 KEV additions or new verifiable incidents found; deadlines unchanged. 🟢 MMA: Buckley vs. Malott Sat Oct 17 Rogers Place reconfirmed (theScore/UFC.com/Cageside in search); board unchanged.
+- Index Markets card was stale (1:31 PM) — synced to the Tape line.
+- "New" tags: WS 2:33 PM + tech-losers paragraphs, 2:30 PM check and midday-losers cards only (2:03 PM / Warsh tags removed).
