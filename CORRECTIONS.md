@@ -25409,3 +25409,10 @@ deleting and report how many days were removed.
 - 🟢 CYBER: no Oct 16 KEV additions or new verifiable incidents found; deadlines unchanged. 🟢 MMA: Buckley vs. Malott Sat Oct 17 Rogers Place reconfirmed (theScore/UFC.com/Cageside in search); board unchanged.
 - Index Markets card was stale (1:31 PM) — synced to the Tape line.
 - "New" tags: WS 2:33 PM + tech-losers paragraphs, 2:30 PM check and midday-losers cards only (2:03 PM / Warsh tags removed).
+
+## Added 2026-10-16 (Friday — clone ~3:06pm ET, AFTERNOON EDITION (archive stamp 2026-10-16-1511), regular session OPEN)
+- 🆕 MARKETS (intraday, NOT closes): Yahoo ^GSPC quote page (fetched via %5Egspc) "As of 3:06:47 PM EDT. Market Open.": S&P 500 7,635.20 −108.86 (−1.41%), range 7,635.20–7,756.84 (at new session low), 5D −2.26%; strip ("close in 54m"): Dow 51,862.89 −314.80 (−0.60%), Nasdaq 26,035.38 −677.64 (−2.54%), R2K 2,719.65 −47.61 (−1.72%), 10Y 5.10 (+0.01), 30Y 5.44, VIX 20.53 (+4.07, +24.71%), gold 4,178.20 (+0.19%), WTI Nov 98.97 (+2.47, +2.56%), BTC 80,973.03 (−1.61%). All reconcile exactly to Oct 15 closes.
+- 🆕 TheStreet live blog (fetched, modified 2:34 PM ET): "Midday Movers" WINNERS mostly energy — PAYP, CRGY, MTDR, KRMN, EQNR named (no % given); 2:01 PM losers post also lists CoreWeave −11.82%, Nebius −11.24%.
+- TRAP: Yahoo Scout blurb said S&P "-1.28%" while the page quote showed −1.41% — blurb figure NOT used. Coinpaper "3:06" morning snapshot again surfaced — NOT used.
+- 🟢 CYBER: no Oct 16 KEV additions or new verifiable incidents found; deadlines unchanged. 🟢 MMA: Buckley vs. Malott Sat Oct 17 Rogers Place reconfirmed (theScore/UFC.com/Cageside in search); board unchanged.
+- "New" tags: WS 3:06 PM + energy-winners paragraphs, 3 PM check and midday-winners cards only (2:33 PM tags removed).
