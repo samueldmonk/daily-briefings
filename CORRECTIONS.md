@@ -25343,3 +25343,11 @@ deleting and report how many days were removed.
 - 🟢 MMA: Buckley vs. Malott, Sat Oct 17, Rogers Place; Blanchfield vs. Jasudavicius co-main reconfirmed (theScore/UFC.com/Cageside). Board unchanged.
 - Index Markets card was stale ("Stocks closed higher…") — now synced to the Tape line.
 - "New" tags: WS 9:45 AM paragraph and bank/insurer premarket card; cyber skynox7 card only (premarket paragraphs/cards and MMA Basharat tags removed).
+
+## Added 2026-10-16 (Friday — clone ~10:26am ET, MORNING EDITION (archive stamp 2026-10-16-1120), regular session OPEN)
+- 🆕 MARKETS (intraday, NOT closes): Yahoo ^GSPC quote page (fetched) "As of 10:48:11 AM EDT. Market Open.": S&P 500 7,749.21 +5.15 (+0.07%), range 7,730.31–7,756.84; strip ("close in 5h 13m"): Dow 52,364.59 +186.90 (+0.36%), Nasdaq 26,603.80 −109.22 (−0.41%), R2K −0.14%, 10Y 5.09, 30Y 5.43, VIX 15.95 (−3.10%), gold 4,211.70 (+1.00%), WTI Nov 95.55 (−0.98%). All reconcile to Oct 15 closes. Dow gave back part of its 9:45 gain (+0.59% → +0.36%).
+- 🆕 TheStreet Oct 16 live blog (fetched, modified 10:31 AM): open 9:33 AM S&P +0.19%, Dow +0.14%, Nasdaq −0.24%, R2K +1.38%; 9:59 AM movers: MRNA −10% (intismeran Phase 3 data later this month), TWLO −8%, COHR −5.59%, HONA +4%, HST +3.44%, NUE +2.64%. Huang: "CoreWeave's financial strength is improving every day." Chart of the Day → NASDAQ:MRNA.
+- TRAP: Sunday Guardian (AP-attributed) gave Thursday closes as Dow 52,180.93 (+559.45), S&P 7,744.07, Nasdaq 26,711.24 — PRELIMINARY figures; AP/TradingKey finals (52,177.69 / 7,744.06 / 26,713.03) stand in the Scorecard.
+- 🆕 MMA: RG.org (fetched, Oct 15 12:12 PM): DraftKings Malott −135 / Buckley +114; FanDuel Malott −125 / Buckley −102; BetRivers −133/+108; Buckley opened −300. SUPERSEDES the SportsLine Oct 11 −142/+120 line as the headline odds. Champions board re-checked vs Scores24 "October 2026" (men's rows + Dern + Harrison match; W-FLW "vacant" stale, refused). Board unchanged.
+- 🟢 CYBER: no Oct 16 KEV additions found (Senserva, updated Oct 16: 7 KEV adds in last 7 days, 36 in 30 days). CVE-2026-21589 (Atlassian) KEV due date STILL UNVERIFIED — a search summary claimed Oct 18 but no fetched page stated it; cisa.gov KEV catalog returned EMPTY again. Not published.
+- "New" tags: WS 10:48 AM + 9:33 AM paragraphs and two TheStreet mover cards only; cyber skynox7 tag removed.
