@@ -25394,3 +25394,10 @@ deleting and report how many days were removed.
 - TRAP: hdfcsky "…Close" Oct 16 URL again surfaced pre-close — NOT used. Coinpaper "3:06" snapshot (Dow +0.43%) is a morning read with unclear time zone — NOT used as current.
 - 🟢 CYBER: no Oct 16 KEV additions or new verifiable incidents found; deadlines unchanged. 🟢 MMA: Buckley vs. Malott Sat Oct 17 Rogers Place reconfirmed (theScore/UFC.com in search); board unchanged.
 - "New" tags: WS 1:31 PM paragraph + 1:30 PM check card only; all earlier tags removed.
+
+## Added 2026-10-16 (Friday — clone ~2:03pm ET, MIDDAY EDITION (archive stamp per run), regular session OPEN)
+- 🆕 MARKETS (intraday, NOT closes): Yahoo ^GSPC quote page (fetched via the %5Egspc URL variant — the %5EGSPC/ variant served the stale 1:31 PM cache) "As of 2:03:46 PM EDT. Market Open.": S&P 500 7,652.20 −91.86 (−1.19%), range 7,651.56–7,756.84 (at session low), 5D −2.04%; strip ("close in 1h 57m"): Dow 51,915.48 −262.21 (−0.50%), Nasdaq 26,136.37 −576.65 (−2.16%), R2K 2,726.77 −40.50 (−1.46%), 10Y 5.10 (+0.02), VIX 19.35 (+2.89, +17.59% — DOWN from 21.50 at 1:31), gold 4,182.80 (+0.30%), WTI Nov 98.77 (+2.27, +2.35%), BTC 81,104.28 (−1.47%). All reconcile to Oct 15 closes.
+- 🆕 FED: Quartz (fetched, Oct 16, citing CNBC/Euronews): Warsh at IMF Bangkok with Georgieva — "I don't prejudge meetings"; quiet period starts Saturday; CME FedWatch 72.3% no change in October (via CNBC); ~90% odds of a December increase (Euronews). This DIFFERS from FXEmpire's 85% earlier Friday — both published with attribution; neither is "the" figure. Fed funds 3.75–4% after 25 bp hike Sept 16 (12-0 vote) — consistent with standing record.
+- TRAP: Yahoo Scout blurb said S&P "fell 1.00%" while the same page's quote showed −1.19% — blurb figure NOT used. Yahoo live blog fetched again served a 9:53 AM cache — nothing newer.
+- 🟢 CYBER: no Oct 16 KEV additions or new verifiable incidents found; deadlines unchanged. 🟢 MMA: Buckley vs. Malott Sat Oct 17 Rogers Place reconfirmed (theScore/UFC.com/Cageside in search); board unchanged.
+- "New" tags: WS 2:03 PM + Warsh paragraphs and 2 PM check card only (1:31 PM tags removed).
