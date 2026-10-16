@@ -25446,3 +25446,8 @@ deleting and report how many days were removed.
 - 🟢 MARKETS: Oct 16 final closes unchanged from the 4:33 PM entry. After-hours searches (CNBC/StockAnalysis) still returned only the Oct 15 roundup — NO Friday after-hours movers verified; note updated to ~5:35 PM.
 - 🟢 CYBER: latest CISA KEV alert found is still Oct 14 (four adds, due Oct 17); no Oct 16 adds or new verifiable incidents. Unverified aggregator items (Flax Typhoon domain seizure, Meta GitHub breach) NOT published. 🟢 MMA: Buckley vs. Malott Sat Oct 17 Rogers Place reconfirmed (theScore/UFC.com/Cageside); no results yet; board unchanged.
 - "New" tags: none — nothing new verified this edition.
+
+## Added 2026-10-16 (Friday — clone ~6:04pm ET, AFTERNOON EDITION, regular session CLOSED)
+- 🟢 MARKETS: Oct 16 final closes unchanged from the 4:33 PM entry. After-hours search returned no dated Oct 16 coverage — NO Friday after-hours movers verified; note updated to ~6:05 PM.
+- 🟢 CYBER: KEV search surfaced no Oct 16 additions; deadlines unchanged. 🟢 MMA: Buckley vs. Malott Sat Oct 17 Rogers Place reconfirmed (theScore/UFC.com/Cageside); no results yet; board unchanged. TRAP: theScore lists prelims 6 PM ET on Sportsnet/TVA (Canadian broadcast) — differs from the Paramount+ 5 PM ET prelim time in the standing entry; page left unchanged.
+- "New" tags: none.
