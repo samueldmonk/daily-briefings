@@ -25429,3 +25429,10 @@ deleting and report how many days were removed.
 - 🔧 FIX: index.html Security card had been showing a MARKETS sentence (2:03 PM read) — replaced with the cyber page's Wire line. Always sync all three index cards to their pages' summary lines.
 - 🟢 CYBER: no Oct 16 KEV adds found; deadlines unchanged. 🟢 MMA: Buckley vs. Malott Sat Oct 17 Rogers Place reconfirmed (theScore/UFC.com/Cageside in search); board unchanged.
 - "New" tags: WS closing paragraph + closing-bell card only (3:37 PM tags removed).
+
+## Added 2026-10-16 (Friday — clone ~4:33pm ET, AFTERNOON EDITION, regular session CLOSED)
+- ✅ MARKETS — OCT 16 FINAL CLOSES VERIFIED: S&P 500 7,659.44 (−84.61, −1.09%); Nasdaq Composite 26,140.03 (−572.99, −2.14%); Dow 52,002.41 (−175.28, −0.34%) — CNBC live-blog closing text via search; all changes reconcile exactly to Oct 15 closes (7,744.06 / 26,713.03 / 52,177.69); AP (BNN Bloomberg, updated 4:14 PM ET, fetched) confirms −1.1% / −2.1% / −0.3%. Scorecard row ADDED.
+- Weekly (computed vs Oct 9 closes 7,811.51 / 27,366.17 / 51,655.01): S&P −1.95%, Nasdaq −4.48% (~4.5%, matches ts2.tech "4.5% weekly slide"; the earlier "4.6%" is NOT used), Dow +0.67%. AP: S&P and Nasdaq both worst week since June.
+- AP close: Micron −5.6%, Intel −5.8%; 10-yr slipped to 5.09% from 5.10%; Brent +3.7% settle $109.86. AP 3:14 PM read: AMD −5.4%, AVGO −4.1%, META −4.4%, XOM +2.2%, CVX +2.4%, TSLA −3.3%, NFLX −3%. CME December hike odds 74.3% per AP (differs from Quartz/Euronews ~90% — attribute if used).
+- TRAP: PRNewswire "Nasdaq posts worst weekly drop" item carried levels 7,699.50 / 26,370.53 / 52,134.63 — NOT the close; not used. No Friday after-hours movers verified.
+- 🟢 MMA: VSiN preview (fetched) lists Malott −135 / Buckley +115; Malott opened underdog, now favorite at Circa, total 3.5 rds. VSiN calls Malott "ranked 11th" — conflicts with UFC.com #13; UFC.com kept. No new KEV adds found; cyber unchanged. Board unchanged.
