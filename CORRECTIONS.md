@@ -25422,3 +25422,10 @@ deleting and report how many days were removed.
 - TRAP: Yahoo Scout blurb said S&P "fell 1.14%" while the page quote showed −1.23% — blurb figure NOT used. Coinpaper "3:06" morning snapshot surfaced again — NOT used. hdfcsky "close" page not used (not verified as today's close).
 - 🟢 CYBER: no Oct 16 KEV additions found in search; deadlines unchanged. 🟢 MMA: Buckley vs. Malott Sat Oct 17 Rogers Place reconfirmed (UFC.com/theScore/Cageside in search); board unchanged.
 - "New" tags: WS 3:37 PM paragraph and 3:30 PM check card only (3:06 PM tags removed). Index Markets card synced to Tape.
+
+## Added 2026-10-16 (Friday — clone ~4:04pm ET, AFTERNOON EDITION (archive stamp per run), regular session CLOSED)
+- 🆕 MARKETS — OCT 16 PRELIMINARY CLOSE (percentages only): Yahoo Finance closing table via search: S&P 500 −1.09% (7,659.45 / 7,659.44, −84.61), Dow −0.34% (52,002.05 / 52,002.41), Nasdaq −2.14% (26,140.03, −572.99) — levels varied between reads, so LEVELS NOT PUBLISHED and NO Oct 16 scorecard row yet. Yahoo wrap: S&P −1.95% week (reconciles to Oct 9 close 7,811.51), Dow +0.7% week (reconciles), Nasdaq "−4.6%" week / worst since early June — the 4.6% does NOT reconcile with −2.14% (implies ~−4.48%), so the Nasdaq weekly % was NOT published; "worst week since early June" corroborated by CNBC live-blog headline. NEXT RUN: verify final Oct 16 levels and add the scorecard row.
+- Fetched Yahoo ^GSPC page served a 3:39 PM cache (7,650.18 −1.21%); Yahoo live blog served a 9:53 AM cache; TheStreet live blog last modified 2:34 PM; AP (union-bulletin) copy was a 12:23 PM read; CNBC page returned empty. No Friday after-hours movers verified.
+- 🔧 FIX: index.html Security card had been showing a MARKETS sentence (2:03 PM read) — replaced with the cyber page's Wire line. Always sync all three index cards to their pages' summary lines.
+- 🟢 CYBER: no Oct 16 KEV adds found; deadlines unchanged. 🟢 MMA: Buckley vs. Malott Sat Oct 17 Rogers Place reconfirmed (theScore/UFC.com/Cageside in search); board unchanged.
+- "New" tags: WS closing paragraph + closing-bell card only (3:37 PM tags removed).
