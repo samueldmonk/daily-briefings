@@ -25388,3 +25388,9 @@ deleting and report how many days were removed.
 - TRAP: hdfcsky "…Close" Oct 16 page again surfaced pre-close with Oct 15 figures — NOT used.
 - 🟢 CYBER: searches surfaced no Oct 16 KEV additions or new verifiable incidents; deadlines unchanged. 🟢 MMA: Buckley vs. Malott Sat Oct 17 Rogers Place reconfirmed (theScore/UFC.com/Cageside in search); board unchanged.
 - "New" tags: WS 1:03 PM + FXEmpire rotation paragraphs, 1 PM check and chip-week cards only; cyber Japan tag removed; MMA none.
+
+## Added 2026-10-16 (Friday — clone ~1:33pm ET, MIDDAY EDITION (archive stamp per run), regular session OPEN)
+- 🆕 MARKETS (intraday, NOT closes): Yahoo ^GSPC quote page (fetched) "As of 1:31:08 PM EDT. Market Open.": S&P 500 7,668.82 −75.24 (−0.97%), day's range 7,651.91–7,756.84 (new session low; below FXEmpire's 7,669.66 level), 5D −1.83%; strip ("close in 2h 30m"): Dow 51,977.07 −200.62 (−0.38%), Nasdaq 26,209.06 −503.96 (−1.89%), R2K 2,722.32 −44.95 (−1.62%), 10Y 5.11 (+0.02), VIX 21.50 (+5.04, +30.75%), gold 4,181.00 (+0.26%), WTI Nov 98.41 (+1.91, +1.98%), BTC 80,903.83 (−1.74%). All reconcile to Oct 15 closes. Yahoo Scout AI blurb said S&P "fell 1.19%" — a differing/unstamped figure, NOT published as a level; only its qualitative rotation description used. TheStreet live blog re-fetched: latest entry 12:35 PM (S&P −0.66%) — nothing newer.
+- TRAP: hdfcsky "…Close" Oct 16 URL again surfaced pre-close — NOT used. Coinpaper "3:06" snapshot (Dow +0.43%) is a morning read with unclear time zone — NOT used as current.
+- 🟢 CYBER: no Oct 16 KEV additions or new verifiable incidents found; deadlines unchanged. 🟢 MMA: Buckley vs. Malott Sat Oct 17 Rogers Place reconfirmed (theScore/UFC.com in search); board unchanged.
+- "New" tags: WS 1:31 PM paragraph + 1:30 PM check card only; all earlier tags removed.
