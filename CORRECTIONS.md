@@ -25351,3 +25351,11 @@ deleting and report how many days were removed.
 - 🆕 MMA: RG.org (fetched, Oct 15 12:12 PM): DraftKings Malott −135 / Buckley +114; FanDuel Malott −125 / Buckley −102; BetRivers −133/+108; Buckley opened −300. SUPERSEDES the SportsLine Oct 11 −142/+120 line as the headline odds. Champions board re-checked vs Scores24 "October 2026" (men's rows + Dern + Harrison match; W-FLW "vacant" stale, refused). Board unchanged.
 - 🟢 CYBER: no Oct 16 KEV additions found (Senserva, updated Oct 16: 7 KEV adds in last 7 days, 36 in 30 days). CVE-2026-21589 (Atlassian) KEV due date STILL UNVERIFIED — a search summary claimed Oct 18 but no fetched page stated it; cisa.gov KEV catalog returned EMPTY again. Not published.
 - "New" tags: WS 10:48 AM + 9:33 AM paragraphs and two TheStreet mover cards only; cyber skynox7 tag removed.
+
+## Added 2026-10-16 (Friday — clone ~11:21am ET, MORNING EDITION (archive stamp 2026-10-16-1122), regular session OPEN)
+- 🆕 MARKETS (intraday, NOT closes): Yahoo ^GSPC quote page (fetched) "As of 11:08:35 AM EDT. Market Open.": S&P 500 7,724.83 −19.23 (−0.25%), range 7,724.46–7,756.84, 5D −1.11%; strip ("close in 4h 52m"): Dow 52,372.76 +195.07 (+0.37%), Nasdaq 26,434.07 −278.95 (−1.04%), R2K −0.22%, 10Y 5.09, 30Y 5.43, VIX 15.88 (−3.53%), gold 4,205.90 (+0.86%), WTI Nov 95.70 (−0.83%). All reconcile to Oct 15 closes.
+- 🆕 Coinpaper (fetched, 11:06 AM ET, cites Reuters): Dow one-month high; JPM ~+2.3%, GS +2.0% (~150 of a 315-pt Dow gain in one snapshot); GS Q3 profit $5.29B, equities trading rev +72% to $6.44B; SOX ~−1.8% (AMD, Micron); Alphabet/Meta ~−1%; CoreWeave fell as much as 7.6%.
+- TRAP: search summary quoted a Yahoo board "S&P 7,738.58 (−0.07%), Dow 52,543.40 (+0.70%), Nasdaq 26,511.49" with NO timestamp — NOT published.
+- 🆕 MMA: Cageside (fetched) — official weigh-ins 11 AM ET Fri; full main card listed. TRAP: HotTakes "weigh-ins go off without a hitch" (published 10:06 AM, BEFORE the 11 AM weigh-in; its sources are MMA Junkie's 2024 Moreno–Albazi Edmonton weigh-in) — NOT published; no weigh-in results verified yet.
+- 🟢 CYBER: no Oct 16 KEV adds found; deadlines unchanged. Board unchanged.
+- "New" tags: WS 11:08 AM + banks-vs-chips paragraphs, bank-rally and chip-slide cards; MMA weigh-in bullet.
