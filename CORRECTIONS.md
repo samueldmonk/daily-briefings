@@ -25436,3 +25436,8 @@ deleting and report how many days were removed.
 - AP close: Micron −5.6%, Intel −5.8%; 10-yr slipped to 5.09% from 5.10%; Brent +3.7% settle $109.86. AP 3:14 PM read: AMD −5.4%, AVGO −4.1%, META −4.4%, XOM +2.2%, CVX +2.4%, TSLA −3.3%, NFLX −3%. CME December hike odds 74.3% per AP (differs from Quartz/Euronews ~90% — attribute if used).
 - TRAP: PRNewswire "Nasdaq posts worst weekly drop" item carried levels 7,699.50 / 26,370.53 / 52,134.63 — NOT the close; not used. No Friday after-hours movers verified.
 - 🟢 MMA: VSiN preview (fetched) lists Malott −135 / Buckley +115; Malott opened underdog, now favorite at Circa, total 3.5 rds. VSiN calls Malott "ranked 11th" — conflicts with UFC.com #13; UFC.com kept. No new KEV adds found; cyber unchanged. Board unchanged.
+
+## Added 2026-10-16 (Friday — clone ~5:02pm ET, AFTERNOON EDITION, regular session CLOSED)
+- 🟢 MARKETS: Oct 16 final closes unchanged from the 4:33 PM entry. StockAnalysis after-hours page (fetched ~5:03 PM) still showed "Updated Oct 15, 2026"; CNBC after-hours search returned only the Oct 15 roundup — NO Friday after-hours movers verified; note updated to ~5:05 PM.
+- 🟢 CYBER: searches surfaced no Oct 16 KEV additions or new verifiable incidents; deadlines unchanged. 🟢 MMA: Buckley vs. Malott Sat Oct 17 Rogers Place reconfirmed (UFC.com/theScore/Cageside in search); no new news; board unchanged.
+- "New" tags: all removed — nothing new verified this edition.
