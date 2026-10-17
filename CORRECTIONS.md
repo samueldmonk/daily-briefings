@@ -25522,3 +25522,9 @@ deleting and report how many days were removed.
 - TRAP (again): Bloomingbit (en.bloomingbit.io/feed/news/122309) labels Dow +1.08% to 52,177.69 / Nasdaq 26,713.03 as Friday Oct 16 — THURSDAY Oct 15 closes; not used.
 - 🟢 MMA: UFC Edmonton (Buckley No. 10 vs. Malott No. 13, Rogers Place) tonight — UFC.com/Cageside/Combat Edge previews only, no results; co-main Blanchfield vs. Jasudavicius reconfirmed. Search summary again lists prelims 6 PM ET (Sportsnet/TVA, Canadian broadcast) vs. 5 PM ET Paramount+ on page — page unchanged. Board unchanged (no title fights since UFC 332).
 - "New" tags: none.
+
+## Added 2026-10-17 (Saturday — clone ~2:37pm ET, MIDDAY EDITION (archive stamp 2026-10-17-1454), WEEKEND — U.S. markets CLOSED)
+- ✅ MARKETS: Oct 16 closes RE-VERIFIED this run — AP "How major US stock indexes fared Friday 10/16/2026" (ABC News, 4:17 PM, fetched this run): S&P 500 7,659.44 (−84.62, −1.1%), Dow 52,002.41 (−175.28, −0.3%), Nasdaq 26,140.03 (−572.99, −2.1%), R2K 2,721.37 (−45.90, −1.7%); week S&P −1.9%, Dow +0.7%, Nasdaq −4.5%; MU −5.6%, INTC −5.8%. Scorecard note reworded to "re-verified this edition, ~2:40 PM ET". TRAP: hdfcsky.com "Dow +556 to 52,177.69" labelled Oct 16 is THURSDAY's close — not used.
+- ✅ CYBER: search summary of the CISA KEV catalog reconfirms CVE-2026-102764 (BeyondTrust Remote Support) added 2026-10-16, due 2026-10-19 (BOD 26-04 forensic triage: Yes), paired with CVE-2025-61624 (Fortinet). Direct fetch of cisa.gov KEV page returned empty. No new Oct 17 incidents surfaced.
+- 🟢 MMA: UFC Edmonton (Malott 14-2-1 vs. Buckley 21-8, Rogers Place) tonight — previews only, no results. Board unchanged (no title fights since UFC 332).
+- "New" tags: none.
