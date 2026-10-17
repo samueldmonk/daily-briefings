@@ -25510,3 +25510,9 @@ deleting and report how many days were removed.
 - ⚠ R2K LEVEL CONFLICT: AP 2,721.37 (−1.7%) vs TheStreet 4:08 PM wrap 2,719.57 (−1.72%) — both attributed on page; neither asserted as final.
 - 🟢 CYBER: no new dated Oct 17 items or KEV additions surfaced; previously-fetched Security Affairs/Help Net URLs not re-surfaced by search (fetch blocked) — KEV content rests on the sourced Oct 17 entries above. 🟢 MMA: UFC Edmonton (Buckley vs. Malott, Rogers Place) tonight; search found previews only; board unchanged (no title fights since UFC 332).
 - "New" tags: none.
+
+## Added 2026-10-17 (Saturday — clone ~1:06pm ET, MIDDAY EDITION (archive stamp per run), WEEKEND — U.S. markets CLOSED)
+- 🟢 No new verifiable items this run. Oct 16 closes rest on the sourced entries above (AP via ABC News / BNN Bloomberg, TheStreet 4:08 PM); the ABC News URL was not re-surfaced by search so could not be re-fetched — scorecard note reworded from "re-confirmed this edition" to "re-verified in the 12:46 PM ET edition".
+- TRAP: Bloomingbit (en.bloomingbit.io/feed/news/122309) labels Dow +1.08% to 52,177.69 / S&P +0.33% / Nasdaq 26,713.03 as "Friday Oct 16" — those are THURSDAY Oct 15 closes; not used.
+- 🟢 CYBER: searches surfaced no Oct 17 incidents or new KEV adds (search index only showed Sept 2026 bulletins); deadlines/countdowns unchanged (Oct 17 = today, Oct 18 = 1 day, Oct 19 = 2 days). 🟢 MMA: UFC Edmonton (Buckley vs. Malott, Rogers Place) tonight — search found previews only, no results; UFC 333 Oct 24 Etihad Arena reconfirmed (theScore/Cageside/The National). Board unchanged (no title fights since UFC 332).
+- "New" tags: none.
