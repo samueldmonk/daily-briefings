@@ -25504,3 +25504,9 @@ deleting and report how many days were removed.
 - TRAP: commbank.com.au/AAP "Nasdaq ends down as chipmakers fall" (fetched) is the TUESDAY Oct 13 session (S&P 7,805.45, −0.02%; Dow 51,670.10; Nasdaq 27,204.38) — NOT Friday; not used. Search summaries again returned Oct 9/12 closes and an Oct 16 **2025** Armenpress item for "Oct 16 2026" queries — not used.
 - 🟢 MMA: UFC Edmonton (Buckley vs. Malott, Rogers Place) is tonight; search found only previews, no results. A search summary listed prelims at 6 PM ET (Sportsnet/TVA) vs the 5 PM ET Paramount+ time on page (MMA Fighting/Sherdog, standing entries) — page unchanged. Board unchanged (no title fights since UFC 332).
 - CYBER: "New" tags on CenterPoint Energy and F5 NGINX cards removed (new in the 11:46 edition).
+
+## Added 2026-10-17 (Saturday — clone ~12:46pm ET, MIDDAY EDITION (archive stamp 2026-10-17-1304), WEEKEND — U.S. markets CLOSED)
+- ✅ MARKETS: Oct 16 closes RE-VERIFIED this run from AP "How major US stock indexes fared Friday 10/16/2026" (ABC News, 4:17 PM, fetched): S&P 500 7,659.44 (−84.62, −1.1%), Dow 52,002.41 (−175.28, −0.3%), Nasdaq 26,140.03 (−572.99, −2.1%); Russell 2000 2,721.37 (−45.90, −1.7%). Week: S&P −152.10 (−1.9%), Dow +347.46 (+0.7%), Nasdaq −1,226.14 (−4.5%), R2K −85.61 (−3%). YTD: S&P +11.9%, Dow +8.2%, Nasdaq +12.5%, R2K +9.6%. AP: S&P and Nasdaq "worst week since JUNE" — page wording changed from "late June" to "June" to match this fetched AP text.
+- ⚠ R2K LEVEL CONFLICT: AP 2,721.37 (−1.7%) vs TheStreet 4:08 PM wrap 2,719.57 (−1.72%) — both attributed on page; neither asserted as final.
+- 🟢 CYBER: no new dated Oct 17 items or KEV additions surfaced; previously-fetched Security Affairs/Help Net URLs not re-surfaced by search (fetch blocked) — KEV content rests on the sourced Oct 17 entries above. 🟢 MMA: UFC Edmonton (Buckley vs. Malott, Rogers Place) tonight; search found previews only; board unchanged (no title fights since UFC 332).
+- "New" tags: none.
