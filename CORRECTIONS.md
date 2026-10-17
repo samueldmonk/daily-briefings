@@ -25516,3 +25516,9 @@ deleting and report how many days were removed.
 - TRAP: Bloomingbit (en.bloomingbit.io/feed/news/122309) labels Dow +1.08% to 52,177.69 / S&P +0.33% / Nasdaq 26,713.03 as "Friday Oct 16" — those are THURSDAY Oct 15 closes; not used.
 - 🟢 CYBER: searches surfaced no Oct 17 incidents or new KEV adds (search index only showed Sept 2026 bulletins); deadlines/countdowns unchanged (Oct 17 = today, Oct 18 = 1 day, Oct 19 = 2 days). 🟢 MMA: UFC Edmonton (Buckley vs. Malott, Rogers Place) tonight — search found previews only, no results; UFC 333 Oct 24 Etihad Arena reconfirmed (theScore/Cageside/The National). Board unchanged (no title fights since UFC 332).
 - "New" tags: none.
+
+## Added 2026-10-17 (Saturday — clone ~1:33pm ET, MIDDAY EDITION (archive stamp 2026-10-17-1427), WEEKEND — U.S. markets CLOSED)
+- 🟢 No new verifiable items this run. Searches for Oct 16 closes, Oct 16–17 KEV additions and UFC Edmonton returned no new dated items; previously fetched AP/ABC, Security Affairs and Help Net Security URLs were not re-surfaced by search, so they could not be re-fetched — page content rests on the sourced Oct 17 entries above (closes re-verified 12:46 PM edition; KEV Oct 14/15/16 adds verified 8:03–10:45 AM editions).
+- TRAP (again): Bloomingbit (en.bloomingbit.io/feed/news/122309) labels Dow +1.08% to 52,177.69 / Nasdaq 26,713.03 as Friday Oct 16 — THURSDAY Oct 15 closes; not used.
+- 🟢 MMA: UFC Edmonton (Buckley No. 10 vs. Malott No. 13, Rogers Place) tonight — UFC.com/Cageside/Combat Edge previews only, no results; co-main Blanchfield vs. Jasudavicius reconfirmed. Search summary again lists prelims 6 PM ET (Sportsnet/TVA, Canadian broadcast) vs. 5 PM ET Paramount+ on page — page unchanged. Board unchanged (no title fights since UFC 332).
+- "New" tags: none.
