@@ -25640,3 +25640,9 @@ deleting and report how many days were removed.
 - No new verified items this run: searches for Oct 19 after-hours movers, closes, cyber incidents, KEV adds and UFC news returned only older/undated material (STLD hits were Q3 2024/2025 — NOT used; KEV search returned September 2026 bulletins only). Oct 19 closes from the 4:17pm entry stand; no STLD after-hours % move verified — none published.
 - CYBER: Oct 19 KEV batch still due today; no adds after Oct 16. MMA: UFC 333 (Oct 24, Etihad Arena) card unchanged; Pico vs. Losene Keita reconfirmed (Cageside Press, Sept 18); champions board unchanged.
 - "New" tags: all removed (every tagged item was in the 1645 snapshot).
+
+## Added 2026-10-19 (Monday — clone ~5:03pm ET, AFTERNOON EDITION (archive stamp 2026-10-19-1704), POST-CLOSE)
+- ✅ MARKETS — OCT 19 CLOSES RE-VERIFIED from AP's own closing table (KRMG, fetched in full; published 3:20 PM CDT = 4:20 PM ET): S&P 500 +31.29 (+0.4%) 7,690.73; Dow −36.38 (−0.1%) 51,966.03; Nasdaq +290.85 (+1.1%) 26,430.89; R2K +6.93 (+0.3%) 2,728.30 — all reconcile to Oct 16 closes. YTD: S&P +12.3%, Dow +8.1%, Nasdaq +13.7%, R2K +9.9%. AP: majority of U.S. stocks outside AI/tech fell; Dow swung before closing lower; Europe fell >1% after weekend protests; yields higher worldwide. Added New lead paragraph; Scorecard note now cites AP.
+- TRAP: StockAnalysis after-hours gainers (SAFX ~+92%, VCIG ~+44%) are thin micro-caps — not published. Investing.com after-hours page (NVDA/MU/LRCX) undated — not used. Undated BleepingComputer headline list on Muck Rack (SharePoint/Dell/SonicWall) — not used. No STLD after-hours % verified.
+- CYBER/MMA: no new verified items; no KEV adds after Oct 16 found; Oct 19 batch due today; champions board unchanged (no title fight since UFC 332).
+- "New" tags: only the AP closing-table paragraph.
