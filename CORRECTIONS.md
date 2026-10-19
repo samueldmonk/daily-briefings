@@ -25623,3 +25623,8 @@ deleting and report how many days were removed.
 - CYBER: Ivanti CVE-2026-104935, BAE Systems, PAN-OS, Collabora, ConnectWise already on page; no KEV adds after Oct 16 found (CISA alert listing). No changes; countdowns unchanged.
 - 🆕 MMA: MMA Knockout on SI (fetched, Oct 19 1:23 PM ET): Yanez hospitalized per Instagram, no details; replacement for Juan Diaz unclear, card could drop to 12 fights; earlier withdrawals Sadykhov and Nascimento (one bout lost), Susurkaev out vs Donte Johnson, César Almeida in. Added New. Champions board unchanged (no title fight since UFC 332).
 - "New" tags: prior WS tags removed; New only on items above.
+
+## Added 2026-10-19 (Monday — clone ~3:37pm ET, AFTERNOON EDITION (archive stamp 2026-10-19-1606), REGULAR SESSION, pre-close)
+- 🆕 MARKETS (intraday, NOT closes): TheStreet live blog (fetched; modified 3:42 PM ET): oil up ~2.36% on the day after Houthi forces claimed six attacks on Saudi oil and airport targets over two days, reversing an earlier retreat after the U.S. lifted Russian fuel sanctions; WTI futures ~$103.73. 2:43 PM ET entry: SanDisk +5.5%+ at ~$1,370.85. Added New (lead paragraph + oil mover card); Tape and index Markets card updated.
+- No index snapshot timed after Benzinga 12:58 PM ET found (searches returned only midday reads) — page says so explicitly; Weekly Scorecard / Rates tables unchanged (closes only). TheStreet 9:33 "Russell 2000 fell 1.66%" still NOT published.
+- CYBER / MMA: no new verified items this run; KEV Oct 19 batch still due today; champions board unchanged (no title fight since UFC 332). All prior "New" tags removed (they were in the 1527 snapshot).
