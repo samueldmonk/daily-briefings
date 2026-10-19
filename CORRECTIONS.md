@@ -25587,3 +25587,10 @@ deleting and report how many days were removed.
 - TRAP: ts2.tech (09:44–09:59 readings) says Goldman CoreWeave target "cut from $139" — contradicts TheStreet ($139 from $106); NOT used. Quartz/CNBC "Anthropic Q3 $16.8B" is unnamed-source — NOT used.
 - CYBER: no new Oct 19 items or KEV adds found; countdowns unchanged. MMA: no new fight-week items beyond UFC 333 odds already on page; champions board unchanged (no title fight since UFC 332).
 - "New" tags: all prior tags removed; new only on QQQ/BofA/Quartz items.
+
+## Added 2026-10-19 (Monday — clone ~12:03pm ET, MIDDAY EDITION, REGULAR SESSION)
+- MARKETS: no index snapshot newer than Sunday Guardian ~10:16 AM ET verified. TheStreet live blog re-fetched (modified 11:28 AM ET) — no newer entries. BigGo Finance (fetched, 9:35 AM ET open): Dow −75.93 to 51,926.48, Nasdaq +270.23 to 26,410.26 — opening read only, not published as current. Lead adds a labeled "Noon check" line pointing readers to live quotes.
+- TRAP: search-summary "CNBC: tech index +1.7%, S&P +0.8%" — CNBC live page fetch EMPTY; NOT published. Investing.com "Dow 52,126.63 +0.24% (10:36 AM)" vs other −0.14% readings — conflicting, NOT published.
+- 🆕 CYBER: The Record (fetched, Oct 16): Anne Arundel County, Md. confirms August 28 intrusion; files copied; Rhysida claimed, 2.6 TB leak threat, $2M ransom; separate 2025 incident's notification letters going out Oct 19. Added as New.
+- 🆕 MMA: AgentMMA (fetched, Oct 16): Adrian Yanez out of UFC 334 bout vs. Juan Diaz, no reason/replacement given; Oct 19 AgentMMA headline (via Bloody Elbow) says Yanez confirmed from hospital bed. Headline-level: BKFC signs Derek Brunson (Nov 20 Myrtle Beach debut); UFC allows Robelis Despaigne to defend Karate Combat title in December. Champions board unchanged (no title fight since UFC 332).
+- "New" tags: prior tags removed; new only on items above.
