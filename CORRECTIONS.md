@@ -25581,3 +25581,9 @@ deleting and report how many days were removed.
 - 🆕 CYBER: Cybernews (fetched, updated Oct 16): H&M extortion claim — 3-day leak threat; samples linked to GreyOrange warehouse software (H&M a listed client); actors likely not ShinyHunters; H&M says no indication of compromise. No new KEV adds since Oct 16 found (CISA Oct 15/16 alerts listed in search).
 - 🆕 MMA: MMA News (fetched, Oct 19): UFC 333 Sat Oct 24 Etihad Arena — early prelims 10 a.m. ET, prelims noon, main card 2 p.m. ET, Paramount+; also Kavanagh vs. Temirov, Volkov vs. Kuniev, Pico vs. Losene Keita (main card), Murzakanov vs. Reyes, Krylov vs. Yakhyaev (prelims). Countdown now targets 2026-10-24 2:00 PM ET. Champions board unchanged (no title fight since UFC 332).
 - "New" tags: prior-edition tags removed; new only on the items above.
+
+## Added 2026-10-19 (Monday — clone ~11:39am ET, MIDDAY EDITION, REGULAR SESSION)
+- 🆕 MARKETS (intraday, NOT closes): TheStreet live blog (fetched; modified 11:28 AM ET): QQQ +1.90% to $723.27 (11:28 AM); BofA CEO Moynihan on $1.2B penalty for failing to report >$5B suspicious transactions (11:14 AM). Quartz (fetched, 9:41 AM ET, citing CNBC): Nasdaq −4.5% last week ending 4-week win streak; S&P worst week since end of June; IT sector −6%+, roughest since April 2025. No full index snapshot newer than Sunday Guardian ~10:16 AM ET verified — lead keeps that read, labeled.
+- TRAP: ts2.tech (09:44–09:59 readings) says Goldman CoreWeave target "cut from $139" — contradicts TheStreet ($139 from $106); NOT used. Quartz/CNBC "Anthropic Q3 $16.8B" is unnamed-source — NOT used.
+- CYBER: no new Oct 19 items or KEV adds found; countdowns unchanged. MMA: no new fight-week items beyond UFC 333 odds already on page; champions board unchanged (no title fight since UFC 332).
+- "New" tags: all prior tags removed; new only on QQQ/BofA/Quartz items.
