@@ -25646,3 +25646,8 @@ deleting and report how many days were removed.
 - TRAP: StockAnalysis after-hours gainers (SAFX ~+92%, VCIG ~+44%) are thin micro-caps — not published. Investing.com after-hours page (NVDA/MU/LRCX) undated — not used. Undated BleepingComputer headline list on Muck Rack (SharePoint/Dell/SonicWall) — not used. No STLD after-hours % verified.
 - CYBER/MMA: no new verified items; no KEV adds after Oct 16 found; Oct 19 batch due today; champions board unchanged (no title fight since UFC 332).
 - "New" tags: only the AP closing-table paragraph.
+
+## Added 2026-10-19 (Monday — clone ~5:33pm ET, AFTERNOON EDITION (archive stamp 2026-10-19-1735), POST-CLOSE)
+- 🆕 MARKETS — AFTER HOURS: Tradeweb (TW) +3.7% after hours (Investing.com, fetched; published 5:14 PM ET) after agreeing to buy Trumid Holdings for ~$1.97B ($1.75B business + ~$220M tax assets; ~$1.89B cash + $82M equity; close targeted 1H 2027; accretive to adj. EPS in first full year; call Oct 20 8:30 AM EDT) — terms verified against Tradeweb's press release, SEC 8-K Ex. 99.1 (fetched). Added New card; AP closing-table "New" tag removed (was in 1704 snapshot). Oct 19 closes unchanged.
+- TRAP: search summary listing "Arnold Allen vs. Aaron Pico" at UFC 333 again contradicts MMA News (Pico vs. Losene Keita) — not used. StockAnalysis micro-cap after-hours gainers (SAFX/RUBI) — not published.
+- CYBER/MMA: no new verified items; latest CISA KEV alert still Oct 16 (CVE-2025-61624, CVE-2026-102764 due Oct 19 = today; SC World Oct 19 brief); champions board unchanged (no title fight since UFC 332).
