@@ -25635,3 +25635,8 @@ deleting and report how many days were removed.
 - CNBC bonds/oil (search snippet; page fetch EMPTY): Nov WTI settled +2.22% at $103.66; Brent −0.28% $109.55; 10-yr up >4bp to 5.146%. A "5.36% intraday high" in CNBC metadata NOT used.
 - 🆕 After-hours: Steel Dynamics Q3 2026 (search snippet of company release; IR page fetch EMPTY): net sales $6.5B, net income $756M, $5.26/diluted share vs $5.40 est.; Sept 17 guidance $5.34–5.38 (SEC 8-K fetched). No after-hours % move verified — none published.
 - CYBER/MMA: no new verified items; no KEV adds after Oct 16 (CISA alert listing); Oct 19 batch due today; champions board unchanged (no title fight since UFC 332).
+
+## Added 2026-10-19 (Monday — clone ~4:46pm ET, AFTERNOON EDITION, POST-CLOSE)
+- No new verified items this run: searches for Oct 19 after-hours movers, closes, cyber incidents, KEV adds and UFC news returned only older/undated material (STLD hits were Q3 2024/2025 — NOT used; KEV search returned September 2026 bulletins only). Oct 19 closes from the 4:17pm entry stand; no STLD after-hours % move verified — none published.
+- CYBER: Oct 19 KEV batch still due today; no adds after Oct 16. MMA: UFC 333 (Oct 24, Etihad Arena) card unchanged; Pico vs. Losene Keita reconfirmed (Cageside Press, Sept 18); champions board unchanged.
+- "New" tags: all removed (every tagged item was in the 1645 snapshot).
