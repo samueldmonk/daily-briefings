@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>The Octagon</title><style>:root{--bg:#100c0c;--panel:#1a1313;--line:#322020;--fg:#e9e6e2;--mut:#9aa0a6;--acc:#e84545;--acc2:#ff8a5c;--up:#3ecf8e;--down:#ef5a5a;--crit:#ff5f56;--warn:#e8b24a;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:26px 20px 60px}
+.masthead{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;margin-bottom:10px}
+.masthead h1{font-size:30px;margin:0;letter-spacing:-.4px}
+.masthead .tag{color:var(--mut);font-size:14px}
+.meta{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 4px}
+.pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:3px 9px;color:var(--mut);background:var(--panel)}
+.pill.live{color:var(--up);border-color:rgba(62,207,142,.4)}
+.pill.live .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--up);margin-right:5px;vertical-align:middle}
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:10px;padding:11px 15px;margin:6px 0 2px;font-size:14.5px;line-height:1.5}
+.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);margin-right:9px}
+.freshline{font-family:var(--mono);font-size:11px;color:var(--mut);margin:8px 0 14px;letter-spacing:.04em}
+nav.tabs{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 20px;border-bottom:1px solid var(--line);padding-bottom:10px}
+nav.tabs a{text-decoration:none;color:var(--mut);font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;padding:6px 11px;border:1px solid transparent;border-radius:8px}
+nav.tabs a:hover{color:var(--fg);border-color:var(--line)}
+nav.tabs a.active{color:var(--acc);border-color:var(--line);background:var(--panel)}
+h2.sec{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);margin:34px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:13px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;transition:transform .15s ease,border-color .15s ease}
+.card:hover{transform:translateY(-2px);border-color:var(--acc)}
+.card h3{margin:0 0 6px;font-size:15.5px;line-height:1.35}
+.card p{margin:0;font-size:14px;color:#cfcbc6}
+.tag{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;padding:2px 7px;border-radius:999px;margin:0 5px 7px 0;border:1px solid var(--line);color:var(--mut)}
+.tag.new{color:#0d0d0d;background:var(--acc);border-color:var(--acc);font-weight:700}
+.tag.prospect{color:var(--up);border-color:var(--up)}
+.tag.crit{color:var(--crit);border-color:var(--crit)}
+.tag.warnt{color:var(--warn);border-color:var(--warn)}
+.tag.good{color:var(--up);border-color:var(--up)}
+.lead{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:12px;padding:17px 20px}
+.lead h3{margin:0 0 9px;font-size:20px;line-height:1.3}
+.lead p{margin:0 0 10px;font-size:15px}
+.lead p:last-child{margin-bottom:0}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);padding:8px 10px;border-bottom:1px solid var(--line);font-weight:600}
+td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+.up{color:var(--up)}.down{color:var(--down)}.critc{color:var(--crit)}.warnc{color:var(--warn)}.accc{color:var(--acc)}
+ul.bul{margin:0;padding-left:20px}
+ul.bul li{margin-bottom:9px;font-size:14.5px}
+.note{font-size:12.5px;color:var(--mut);margin-top:9px;line-height:1.5}
+footer{margin-top:42px;border-top:1px solid var(--line);padding-top:16px}
+footer a{color:var(--mut);font-size:12.5px;text-decoration:none;border-bottom:1px dotted var(--line)}
+footer a:hover{color:var(--acc)}
+.srcs{font-size:12.5px;color:var(--mut);line-height:2}
+.disc{font-size:12px;color:var(--mut);margin-top:14px;line-height:1.6}
+.dv{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc2);margin-bottom:6px}
+.mut{color:var(--mut)}
+.mono{font-family:var(--mono)}
+.cdn{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 16px;display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;margin-bottom:18px}
+.cdn .lab{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc)}
+.cdn .t{font-family:var(--mono);font-size:16px;font-weight:700}
+</style></head>
+<body><div class="wrap">
+<div class="masthead"><h1>The Octagon</h1><span class="tag">Your daily MMA briefing &mdash; UFC, prospects &amp; the business of fighting</span></div>
+<div class="meta"><span class="pill live"><span class="dot"></span>Live</span><span class="pill" id="edition">&nbsp;</span><span class="pill" id="datestamp">&nbsp;</span><span class="pill">Updated <span id="updated">&nbsp;</span></span></div>
+<div class="tldr"><b>Tale of the Tape</b> <span>UFC 333 fight week is here: Alexander Volkanovski defends the featherweight title against unbeaten Movsar Evloev in Abu Dhabi on Saturday in a main event Kalshi prices at 50-50, with Petr Yan a 59% favourite over Merab Dvalishvili in their bantamweight trilogy.</span></div>
+<div class="freshline" id="freshline">&nbsp;</div>
+<nav class="tabs"><a href="index.html">&#9733; Front Page</a><a href="cyber-briefing.html">&#9960; The Cyber Wire</a><a href="wallstreet-briefing.html">&#9650; The Closing Bell</a><a href="mma-briefing.html" class="active">&#8856; The Octagon</a><a href="archive.html">&#128452; Archive</a></nav>
+<div class="cdn"><span class="lab">Next Card</span><span class="t" id="ufccdn">&nbsp;</span><span class="mut">UFC 333: Volkanovski vs. Evloev + Yan vs. Dvalishvili 3 &middot; Sat Oct 24 &middot; Etihad Arena, Abu Dhabi &middot; main card 2 p.m. ET (early prelims 10 a.m., prelims noon ET; Paramount+, per <a href="https://www.mmanews.com/article/mma-events-week-of-2026-10-19" style="color:var(--acc2)">MMA News</a>) &mdash; countdown to the main card</span></div>
+
+<h2 class="sec">Top Story</h2>
+<div class="lead" style="border-left-color:var(--acc)"><h3>UFC 333 fight week: Volkanovski vs. Evloev is a coin flip, and the champion is promising a finish</h3>
+<p>Two title fights headline Saturday&rsquo;s UFC 333 at Etihad Arena in Abu Dhabi. Featherweight champion Alexander Volkanovski, coming off a title defense against Diego Lopes, puts his belt on the line against Movsar Evloev, who is 20-0 after beating Lerone Murphy in March; Kalshi prices the main event at <b>50% / 50%</b>, per Covers. In the co-main, bantamweight champion Petr Yan defends the title he took from Merab Dvalishvili at UFC 323 last December, with Kalshi at <b>Yan 59% / Dvalishvili 41%</b> (<a href="https://www.covers.com/ufc/333-odds-saturday-oct-24-2026" style="color:var(--acc2)">Covers</a>).</p>
+<p>&ldquo;I believe I can get a finish. I believe I can do it inside five,&rdquo; Volkanovski told MMA Junkie. &ldquo;Trying to out-grapple me for 25 minutes? I can&rsquo;t see it&hellip; I think I can get my hand raised and I think I can do it in pretty wild fashion.&rdquo; SB Nation notes Evloev&rsquo;s 10 UFC wins have all come by decision and that Volkanovski is now 38 (<a href="https://sports.yahoo.com/articles/alexander-volkanovski-plans-finish-movsar-123554516.html" style="color:var(--acc2)">SB Nation via Yahoo Sports</a>).</p>
+<p><b>Fight-week schedule (UFC.com):</b> open workout Wed. Oct. 21, 6 p.m. GST at Yas Mall; press conference Thu. Oct. 22, 5 p.m. GST at Etihad Arena; ceremonial weigh-ins Fri. Oct. 23, 6 p.m. GST; main card 10 p.m. GST Saturday (<a href="https://www.ufc.com/ufc-333-fight-week-guide" style="color:var(--acc2)">UFC.com Fight Week Guide</a>).</p></div>
+
+<h2 class="sec">Fight Week &mdash; Upcoming Cards</h2>
+<div class="cards">
+<div class="card"><div class="dv">OCT 24 &middot; ETIHAD ARENA, ABU DHABI</div><h3>UFC 333: Volkanovski vs. Evloev + Yan vs. Dvalishvili 3</h3><p>Featherweight and bantamweight title fights; the card also includes Alexander Volkov vs. Rizvan Kuniev at heavyweight (<a href="https://www.covers.com/ufc/333-odds-saturday-oct-24-2026" style="color:var(--acc2)">Covers</a>). <b>Odds:</b> Volkanovski 50% / Evloev 50%; Yan 59% / Dvalishvili 41% (Kalshi, via <a href="https://www.covers.com/ufc/333-odds-saturday-oct-24-2026" style="color:var(--acc2)">Covers</a>).</p></div>
+<div class="card"><div class="dv">OCT 31 &middot; VENUE NOT VERIFIED HERE</div><h3>UFC Fight Night 292: Moicano vs. Nolan</h3><p>Listed main event; venue and odds not confirmed this edition (Sherdog event listings, desk record).</p></div>
+<div class="card"><div class="dv">NOV 7 &middot; VENUE NOT VERIFIED HERE</div><h3>UFC Fight Night 293: Bonfim vs. Brady</h3><p>Listed main event; venue and odds not confirmed this edition (Sherdog event listings, desk record).</p></div>
+<div class="card"><div class="dv">NOV 14 &middot; MADISON SQUARE GARDEN, NEW YORK</div><h3>UFC 334: Gane vs. Hokit + Harrison vs. Nunes</h3><p>Ciryl Gane makes his first defense of the undisputed heavyweight title against Josh Hokit; Kayla Harrison defends the women&rsquo;s bantamweight title against Amanda Nunes (desk record).</p></div>
+<div class="card"><div class="dv">NOV 21 &middot; DOHA, QATAR</div><h3>UFC Fight Night 294: Prochazka vs. Stirling</h3><p>Jiri Prochazka headlines against Navajo Stirling in Doha (<a href="https://www.sportbible.com/ufc/dana-white-saudi-arabia-houthis-conflict-decision-720885-20261019" style="color:var(--acc2)">SPORTbible</a>); arena and odds not confirmed this edition.</p></div>
+<div class="card"><div class="dv">DEC 12 &middot; T-MOBILE ARENA, LAS VEGAS</div><h3>UFC 335: Oliveira vs. Lopes (BMF) + Pavlovich vs. Pereira</h3><p>Sergei Pavlovich vs. Alex Pereira is a five-round heavyweight co-main (<a href="https://www.sherdog.com/news/news/Alex-Pereira-and-Sergei-Pavlovich-react-after-promo-video-confirms-their-UFC-335-fight-203093" style="color:var(--acc2)">Sherdog</a>). Opening odds: Oliveira &minus;172 / Lopes +146; Pavlovich &minus;130 / Pereira +111 (BetOnline, via <a href="https://www.sherdog.com/news/news/Alex-Pereira-Diego-Lopes-open-as-underdogs-for-UFC-335-203074" style="color:var(--acc2)">Sherdog</a>).</p></div>
+<div class="card"><div class="dv">2027 &middot; TORONTO</div><h3>UFC 336 heads to Toronto</h3><p>The UFC will open its 2027 numbered-event schedule with UFC 336 in Toronto &mdash; its first Toronto card since UFC 297 in January 2024 and its eighth there, per Ontario officials. &ldquo;I love Canada,&rdquo; Dana White said; no fights have been signed yet (<a href="https://sports.yahoo.com/articles/ufc-reveals-early-details-ufc-120005293.html" style="color:var(--acc2)">MMA Knockout on SI via Yahoo Sports</a>).</p></div>
+</div>
+
+<h2 class="sec">Last Event &mdash; Results</h2>
+<div class="panel"><div class="dv">UFC FIGHT NIGHT: BUCKLEY VS. MALOTT &middot; OCT 17 &middot; ROGERS PLACE, EDMONTON</div>
+<table><tr><th>Result</th><th>Bout</th><th>Method</th></tr>
+<tr><td class="up">Malott def. Buckley</td><td>Welterweight (main event)</td><td>KO (knee), R2</td></tr>
+<tr><td class="up">Jasudavicius def. Blanchfield</td><td>Women&rsquo;s flyweight (co-main)</td><td>UD (29-28, 29-28, 29-28)</td></tr>
+<tr><td class="up">Perez def. Nelson</td><td>Main card</td><td>TKO, R1 (27 seconds, per Cageside Press)</td></tr>
+<tr><td class="up">Barriault def. Daukaus</td><td>Middleweight</td><td>TKO, R1</td></tr>
+<tr><td class="up">Cuamba def. Jourdain</td><td>Main card</td><td>SUB (rear-naked choke), R2</td></tr>
+<tr><td class="up">Nallo def. Landwehr</td><td>Main card</td><td>TKO, R2</td></tr>
+</table>
+<p class="note">Bonuses: no Fight of the Night; $100,000 Performance of the Night to Mike Malott, Marc-Andre Barriault, Mandel Nallo and Joel Faglier; $25,000 to each of the other eight finishers (<a href="https://cagesidepress.com/2026/10/18/ufc-edmonton-finish-heavy-night-produces-four-performance-bonuses/" style="color:var(--acc2)">Cageside Press</a>). Results: <a href="https://www.cbssports.com/ufc/news/ufc-fight-night-results-live-updates-joaquin-buckley-mike-malott/live/" style="color:var(--acc2)">CBS Sports</a>; <a href="https://cagesidepress.com/2026/10/19/whats-next-ufc-edmonton-winners/" style="color:var(--acc2)">Cageside Press</a> (12 finishes in 13 bouts). Finish times differ by outlet and are omitted. No title fight &mdash; no belt changed.</p></div>
+
+<h2 class="sec">Prospect Watch</h2>
+<div class="cards">
+<div class="card"><span class="tag good">prospect</span><h3>Cristian P&eacute;rez: 27-second UFC debut</h3><p>Two months after earning a contract on Dana White&rsquo;s Contender Series, P&eacute;rez knocked out veteran Kyle Nelson in 27 seconds; Cageside Press suggests Charlie Campbell next (<a href="https://cagesidepress.com/2026/10/19/whats-next-ufc-edmonton-winners/" style="color:var(--acc2)">Cageside Press</a>).</p></div>
+<div class="card"><span class="tag good">prospect</span><h3>Mike Malott: five straight, eyeing a big name</h3><p>Malott, 34, has two main events, two finishes and two Performance of the Night bonuses in 2026; Cageside Press pitches former champion Jack Della Maddalena next (<a href="https://cagesidepress.com/2026/10/19/whats-next-ufc-edmonton-winners/" style="color:var(--acc2)">Cageside Press</a>).</p></div>
+<div class="card"><span class="tag good">contender</span><h3>Jasmine Jasudavicius in the 125-lb title mix</h3><p>Back-to-back wins capped by the Blanchfield upset make her, in Cageside Press&rsquo;s view, the front-runner to be new champion Nat&aacute;lia Silva&rsquo;s first challenger (<a href="https://cagesidepress.com/2026/10/19/whats-next-ufc-edmonton-winners/" style="color:var(--acc2)">Cageside Press</a>).</p></div>
+</div>
+
+<h2 class="sec">Around the Sport</h2>
+<div class="panel"><ul class="bul">
+<li><span class="tag new">New</span> Retired lightweight Paul Felder will replace Joe Rogan on color commentary at UFC 333, per MMA Junkie, as Rogan no longer takes overseas assignments; Brendan Fitzgerald joins Din Thomas at the analyst desk, John Gooden handles backstage reporting in place of Megan Olivi, and Bruce Buffer handles walkouts and results (<a href="https://sports.yahoo.com/articles/irish-dragon-steps-joe-rogan-140445457.html" style="color:var(--acc2)">MMA Mania via Yahoo Sports, Oct. 20</a>).</li>
+<li>Petr Yan told The Ariel Helwani Show on Oct. 19 that his coach&rsquo;s written plan for Merab Dvalishvili has grown from one page to five; he rejected Dvalishvili calling him rude (&ldquo;I was just being real&rdquo;) and declined to name a next challenger, saying he will defend against whoever the UFC considers most deserving (<a href="https://middleeasy.com/mma-news/petr-yan-five-page-merab-dvalishvili-plan-ufc-333" style="color:var(--acc2)">MiddleEasy</a>).</li>
+<li>Asked after UFC Edmonton whether Middle East events would go ahead after Houthi strikes on Riyadh&rsquo;s King Khalid airport, Dana White said: &ldquo;I go to Abu Dhabi on Tuesday; I have like six events in the next 30 days in Saudi, Qatar, and Abu Dhabi.&rdquo; SPORTbible lists Prochazka vs. Stirling in Doha on Nov. 21 and a Fight Night in Saudi Arabia on Dec. 5, though conflicting reports say the December event could move to Qatar (<a href="https://www.sportbible.com/ufc/dana-white-saudi-arabia-houthis-conflict-decision-720885-20261019" style="color:var(--acc2)">SPORTbible, Oct. 19</a>).</li>
+<li>Marc-Andr&eacute; Barriault, who had lost five of his previous six, earned his fourth consecutive bonus with the Daukaus finish; Cageside Press suggests Gilbert Urbina next (<a href="https://cagesidepress.com/2026/10/19/whats-next-ufc-edmonton-winners/" style="color:var(--acc2)">Cageside Press</a>).</li>
+<li>Mandel Nallo, 37, earned his first UFC win by second-round TKO of Nate Landwehr (<a href="https://cagesidepress.com/2026/10/19/whats-next-ufc-edmonton-winners/" style="color:var(--acc2)">Cageside Press</a>).</li>
+<li>Canadian UFC fans will get all events on Paramount+ at no extra cost from next year, mirroring the U.S. deal in place since January (<a href="https://sports.yahoo.com/articles/ufc-reveals-early-details-ufc-120005293.html" style="color:var(--acc2)">MMA Knockout on SI via Yahoo Sports</a>).</li>
+<li>Dana White on Sean Strickland&rsquo;s pay complaints: &ldquo;Sean Strickland just signed a new contract in May&hellip; The number that he claimed he made is not true&rdquo; (<a href="https://www.sherdog.com/news/news/Dana-White-fires-back-at-Sean-Strickland-over-UFC-pay-cites-new-deal-203206" style="color:var(--acc2)">Sherdog, Oct. 14</a>).</li>
+</ul></div>
+
+<h2 class="sec">Rankings &amp; Business</h2>
+<div class="panel"><ul class="bul">
+<li><b>Rankings:</b> CBS Sports expects Malott to assume Buckley&rsquo;s No. 10 welterweight spot after UFC Edmonton; Buckley is winless in his last three (<a href="https://www.cbssports.com/ufc/news/ufc-fight-night-results-live-updates-joaquin-buckley-mike-malott/live/" style="color:var(--acc2)">CBS Sports</a>). Official rankings were not re-checked this edition.</li>
+<li><b>Business &amp; broadcast:</b> UFC 336 will be the promotion&rsquo;s 38th card in Canada since UFC 83 in Montreal in April 2008; Ontario&rsquo;s sport minister cited eliminated gate fees and lower promoter costs (<a href="https://sports.yahoo.com/articles/ufc-reveals-early-details-ufc-120005293.html" style="color:var(--acc2)">MMA Knockout on SI via Yahoo Sports</a>).</li>
+</ul></div>
+
+<h2 class="sec">Champions Board</h2>
+<div class="panel"><table><tr><th>Division</th><th>Champion</th><th>Note</th></tr>
+<tr><td>Heavyweight</td><td>Ciryl Gane</td><td>Undisputed since Sept. 19; defends vs. Josh Hokit, UFC 334, Nov. 14</td></tr>
+<tr><td>Light Heavyweight</td><td>Carlos Ulberg</td><td>Won vacant title, KO1 Ji&#345;&iacute; Proch&aacute;zka, UFC 327 (Apr. 11)</td></tr>
+<tr><td>Middleweight</td><td>Sean Strickland</td><td>Split decision over Khamzat Chimaev, UFC 328 (May 9)</td></tr>
+<tr><td>Welterweight</td><td>Islam Makhachev</td><td>UD Jack Della Maddalena, UFC 322; defended vs. Ian Machado Garry, UFC 330 (Aug. 15)</td></tr>
+<tr><td>Lightweight</td><td>Justin Gaethje</td><td>TKO4 Ilia Topuria, Freedom 250 (June 14)</td></tr>
+<tr><td>Featherweight</td><td>Alexander Volkanovski</td><td>Defends vs. Movsar Evloev, UFC 333 (Oct. 24)</td></tr>
+<tr><td>Bantamweight</td><td>Petr Yan</td><td>UD Merab Dvalishvili, UFC 323 (Dec. 6); trilogy at UFC 333 (Oct. 24)</td></tr>
+<tr><td>Flyweight</td><td>Joshua Van</td><td>Two defenses; UD Alexandre Pantoja, UFC 331 (Sept. 19)</td></tr>
+<tr><td>Women&rsquo;s Bantamweight</td><td>Kayla Harrison</td><td>Defends vs. Amanda Nunes, UFC 334 (Nov. 14)</td></tr>
+<tr><td>Women&rsquo;s Flyweight</td><td>Nat&aacute;lia Silva</td><td>Won vacant title, UD Wang Cong, UFC 332 (Oct. 3)</td></tr>
+<tr><td>Women&rsquo;s Strawweight</td><td>Mackenzie Dern</td><td>Defended vs. Gillian Robertson, UFC 330 (Aug. 15)</td></tr>
+</table><p class="note">Re-checked Tue. Oct. 20: no title fight since UFC 332 (UFC Edmonton was non-title), so no belt changed; board follows this desk&rsquo;s verified standing record. ESPN&rsquo;s champions page (<a href="https://www.espn.com/mma/story/_/id/14947566/current-all-ufc-champions" style="color:var(--acc2)">ESPN</a>) returned no content on direct fetch this edition. Covers this run confirms Volkanovski and Yan as the featherweight and bantamweight champions.</p></div>
+
+<footer><div class="dv">The Octagon</div><div class="srcs">Sources: <a href="https://sports.yahoo.com/articles/irish-dragon-steps-joe-rogan-140445457.html" style="color:var(--acc2)">MMA Mania via Yahoo Sports &mdash; Felder replaces Rogan at UFC 333</a> &middot; <a href="https://middleeasy.com/mma-news/petr-yan-five-page-merab-dvalishvili-plan-ufc-333" style="color:var(--acc2)">MiddleEasy &mdash; Petr Yan details five-page Dvalishvili plan (Oct. 19)</a> &middot; <a href="https://www.sportbible.com/ufc/dana-white-saudi-arabia-houthis-conflict-decision-720885-20261019" style="color:var(--acc2)">SPORTbible &mdash; White on Middle East events (Oct. 19)</a> &middot; <a href="https://www.covers.com/ufc/333-odds-saturday-oct-24-2026" style="color:var(--acc2)">Covers &mdash; UFC 333 odds</a> &middot; <a href="https://sports.yahoo.com/articles/alexander-volkanovski-plans-finish-movsar-123554516.html" style="color:var(--acc2)">SB Nation via Yahoo Sports &mdash; Volkanovski (Oct. 19)</a> &middot; <a href="https://sports.yahoo.com/articles/ufc-reveals-early-details-ufc-120005293.html" style="color:var(--acc2)">MMA Knockout on SI via Yahoo Sports &mdash; UFC 336 (Oct. 19)</a> &middot; <a href="https://cagesidepress.com/2026/10/19/whats-next-ufc-edmonton-winners/" style="color:var(--acc2)">Cageside Press &mdash; What&rsquo;s Next: UFC Edmonton Winners (Oct. 19)</a> &middot; <a href="https://cagesidepress.com/2026/10/18/ufc-edmonton-finish-heavy-night-produces-four-performance-bonuses/" style="color:var(--acc2)">Cageside Press &mdash; UFC Edmonton bonuses</a> &middot; <a href="https://www.cbssports.com/ufc/news/ufc-fight-night-results-live-updates-joaquin-buckley-mike-malott/live/" style="color:var(--acc2)">CBS Sports &mdash; UFC Edmonton results</a> &middot; <a href="https://www.mmanews.com/article/mma-events-week-of-2026-10-19" style="color:var(--acc2)">MMA News &mdash; events this week</a> &middot; <a href="https://www.ufc.com/ufc-333-fight-week-guide" style="color:var(--acc2)">UFC.com &mdash; UFC 333 Fight Week Guide</a> &middot; <a href="https://www.sherdog.com/news/news/Alex-Pereira-and-Sergei-Pavlovich-react-after-promo-video-confirms-their-UFC-335-fight-203093" style="color:var(--acc2)">Sherdog &mdash; Pavlovich vs. Pereira</a> &middot; <a href="https://www.sherdog.com/news/news/Alex-Pereira-Diego-Lopes-open-as-underdogs-for-UFC-335-203074" style="color:var(--acc2)">Sherdog &mdash; UFC 335 odds</a> &middot; <a href="https://www.sherdog.com/news/news/Dana-White-fires-back-at-Sean-Strickland-over-UFC-pay-cites-new-deal-203206" style="color:var(--acc2)">Sherdog &mdash; Dana White on Strickland</a> &middot; <a href="https://www.espn.com/mma/story/_/id/14947566/current-all-ufc-champions" style="color:var(--acc2)">ESPN &mdash; Current UFC champions</a></div>
+<div class="disc">Cards and bouts are subject to change. Odds and probabilities are for information only.</div></footer>
+</div>
+<script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script>
+<script>(function(){try{var target=new Date('2026-10-24T14:00:00-04:00').getTime();function tick(){var d=target-Date.now();var el=document.getElementById('ufccdn');if(!el)return;if(d<=0){el.textContent='Fight week — live/completed';return;}var days=Math.floor(d/86400000);var hrs=Math.floor((d%86400000)/3600000);var mins=Math.floor((d%3600000)/60000);el.textContent=days+'d '+hrs+'h '+mins+'m';}tick();setInterval(tick,60000);}catch(e){}})();</script>
+</body></html>
