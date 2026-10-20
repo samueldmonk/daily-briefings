@@ -25792,3 +25792,9 @@ deleting and report how many days were removed.
 - NOT published: MarketChameleon ~4:13 PM AH snapshot (MUFG +4.9%, ISUL −22.8%, TKNO −22.3%) — single unverified snapshot. Newsweek Volkanovski retirement piece is Aug 21 — not new. WAM UFC 333 countdown page fetch empty — not used.
 - Plex KEV due dates still NOT confirmed from CISA — no countdown printed. MMA: no new verified items; champions board unchanged (no title fight since UFC 332).
 - "New" tags: none carried from 1738; New only on PHP (patch line, card, table row), Zeabur card, NFLX card.
+
+## Added 2026-10-20 (Tuesday — clone ~6:33pm ET, AFTERNOON EDITION (archive stamp 2026-10-20-1834), POST-CLOSE, post-window catch-up run)
+- Confirming refresh: searches this run (after-hours movers Oct 20, CISA KEV/Plex Oct 20, UFC 333 news Oct 20, cyber breach/ransomware Oct 20, Netflix after-hours) returned NO new verifiable items — results were generic/stale (Netflix Q2 July 2026 items, undated Chartmill pages, Aug–Sep UFC 333 announcements). Page content carried unchanged from the 6:03pm edition, every item previously sourced.
+- TRAP: Netflix search surfaced the JULY 16 2026 Q2 after-hours drop (−7.2% to $69.02; "~$3B ad revenue" outlook) — that is Q2, superseded by the Oct 20 Q3 report (ad outlook cut to ~$2.7B). Not used.
+- Plex KEV due dates STILL not confirmed from CISA — no countdown printed. Champions board unchanged (no title fight since UFC 332).
+- "New" tags: all 1806 tags removed (PHP, Zeabur, NFLX); nothing new this run.
