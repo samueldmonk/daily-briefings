@@ -25778,3 +25778,9 @@ deleting and report how many days were removed.
 - TRAP: Investing.com's NFLX paragraph states Q3 revenue "$13.44 billion" — that is the Q4 GUIDE; Q3 revenue was $12.874B (TheStreet). Not used. Its UAL consensus ($2.58) differs from Benzinga's $2.59 — Benzinga's printed. Investing.com "SPCX consensus $0.15" vs Benzinga $0.12 — Benzinga's kept. Marketchameleon "NFLX +0.2%" conflicts — not used. A search summary pairing Paul Felder with "Jon Anik and Daniel Cormier" conflicts with the verified MMA Mania/MMA Junkie lineup — not used.
 - CYBER: no new verified items; Plex KEV due dates still NOT confirmed from CISA (catalog URL not fetchable this run) — no countdown printed. "New" tags from 1637 removed.
 - 🆕 MMA: MMA Knockout on SI (fetched, Oct 20 17:36 UTC): Jose Aldo told MMA Fighting he would cut Evloev ("doesn't sell", "boring fights"); Evloev 20-0, 10-0 UFC, decision in every UFC fight. Gugnon vs. Steele is an Oct 5 addition — not new. Champions board unchanged (no title fight since UFC 332).
+
+## Added 2026-10-20 (Tuesday — clone ~5:37pm ET, AFTERNOON EDITION (archive stamp 2026-10-20-1738), POST-CLOSE)
+- Confirming refresh: searches this run (after-hours movers, CISA KEV/Plex, cyber news, UFC 333 news/odds) returned NO new verifiable items. Page content carried unchanged from the 5:02pm edition, every item previously sourced.
+- Plex KEV due dates STILL not confirmed from CISA (search found no KEV listing; cisa.gov catalog URL not fetchable) — no countdown printed.
+- Odds: Heavy opening line Volkanovski −115 / Evloev −105 and Yan −166 / Dvalishvili +140 are OPENING lines; Sherdog Oct 15 headline calls the main event even. Page keeps Kalshi 50-50 / Yan 59% framing.
+- "New" tags: all 1730 tags removed (UAL, SMCI/COF, ISRG/PEGA, Aldo-Evloev); nothing new this run.
