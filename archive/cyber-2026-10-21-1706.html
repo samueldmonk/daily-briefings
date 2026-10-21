@@ -1,0 +1,114 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Cyber Wire</title><style>:root{--bg:#080c0b;--panel:#0e1514;--line:#1c2a27;--fg:#e9e6e2;--mut:#9aa0a6;--acc:#22d3a8;--acc2:#36c6ff;--up:#3ecf8e;--down:#ef5a5a;--crit:#ff5f56;--warn:#e8b24a;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+a{color:var(--acc2)}
+.wrap{max-width:980px;margin:0 auto;padding:26px 16px 60px}
+.masthead{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;margin-bottom:6px}
+.masthead h1{font-size:30px;margin:0;letter-spacing:-.4px}
+.masthead .sub{color:var(--mut);font-size:14px}
+.meta{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 8px}
+.pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:3px 9px;color:var(--mut);background:var(--panel)}
+.pill.live{color:var(--up);border-color:rgba(62,207,142,.4)}
+.dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--up);margin-right:5px;vertical-align:middle;animation:p 1.6s infinite}
+@keyframes p{50%{opacity:.3}}
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:10px;padding:11px 15px;margin:6px 0 2px;font-size:14.5px;line-height:1.5}
+.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);margin-right:9px}
+.freshline{font-family:var(--mono);font-size:11px;color:var(--mut);margin:8px 0 6px;letter-spacing:.04em}
+nav.tabs{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 20px;border-bottom:1px solid var(--line);padding-bottom:10px}
+nav.tabs a{text-decoration:none;color:var(--mut);font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;padding:6px 11px;border:1px solid transparent;border-radius:8px}
+nav.tabs a:hover{color:var(--fg);border-color:var(--line)}
+nav.tabs a.active{color:var(--acc);border-color:var(--acc);background:var(--panel)}
+h2.sec{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);margin:34px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.panel p{margin:0 0 10px} .panel p:last-child{margin:0}
+.lead{border-left:3px solid var(--acc)}
+.lead h3{margin:0 0 8px;font-size:21px;line-height:1.3}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:13px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;transition:transform .15s ease,border-color .15s ease}
+.card:hover{transform:translateY(-2px);border-color:var(--acc)}
+.card h3{margin:0 0 6px;font-size:15.5px;line-height:1.35}
+.card p{margin:0;font-size:14px;color:#cfcbc6}
+.when{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#e8c766;margin-bottom:6px}
+.tag{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;padding:2px 7px;border-radius:999px;margin:0 5px 7px 0;border:1px solid var(--line);color:var(--mut)}
+.tag.new{color:#0d0d0d;background:var(--acc);border-color:var(--acc);font-weight:700}
+.tag.up{color:var(--up);border-color:rgba(62,207,142,.45)} .tag.down{color:var(--down);border-color:rgba(239,90,90,.45)}
+.tag.crit{color:var(--crit);border-color:rgba(255,95,86,.5)} .tag.pros{color:var(--up);border-color:rgba(62,207,142,.45)}
+.up{color:var(--up)} .down{color:var(--down)} .crit{color:var(--crit);font-weight:700} .warn{color:var(--warn)}
+.tblwrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);font-weight:500}
+ul.bul{margin:0;padding-left:20px} ul.bul li{margin:0 0 8px}
+.note{font-size:12.5px;color:var(--mut);margin:8px 2px 0}
+.callout{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--warn);border-radius:12px;padding:14px 18px}
+.callout.crit{border-left-color:var(--crit);font-weight:400}
+.banner{background:var(--panel);border:1px solid rgba(255,95,86,.45);border-radius:12px;padding:12px 16px;margin-bottom:12px}
+.banner b{font-family:var(--mono);letter-spacing:.14em;color:var(--crit);margin-right:8px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.stat .n{font-size:26px;font-weight:700;color:var(--acc)} .stat .l{font-size:13px;color:#cfcbc6}
+.livebar{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 8px 4px;margin-bottom:18px}
+.livebar-label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--up);display:flex;align-items:center;gap:8px;padding:4px 8px 8px}
+.tickers{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
+.ticker{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:6px;min-height:110px}
+.cdbar{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:12px;padding:12px 16px;display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center}
+.cdbar .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc2)}
+.cdbar .cd{font-family:var(--mono);font-size:20px;font-weight:700;color:var(--fg)}
+footer{margin-top:40px;border-top:1px solid var(--line);padding-top:14px;font-size:12.5px;color:var(--mut)}
+footer ol{padding-left:18px;margin:6px 0 12px} footer li{margin:0 0 4px;word-break:break-word}
+.disc{font-size:12px;color:var(--mut);margin-top:10px}
+.big{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px}
+.big a.card{text-decoration:none;color:var(--fg);display:block;padding:20px}
+.big .kick{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:8px}
+.big h3{font-size:22px;margin:0 0 10px}
+.big .go{font-family:var(--mono);font-size:12px;letter-spacing:.1em;margin-top:14px;display:block}
+@media (max-width:600px){.masthead h1{font-size:25px}}
+</style></head><body><div class="wrap"><header class="masthead"><h1>The Cyber Wire</h1><span class="sub">Your daily cybersecurity briefing — breaches, vulnerabilities &amp; the defenders’ to-do list</span></header>
+<div class="meta"><span class="pill live"><span class="dot"></span>Live</span><span class="pill" id="edition">Afternoon Edition</span><span class="pill" id="datestamp">Wednesday, October 21, 2026</span><span class="pill">Updated <span id="updated">5:05 PM ET</span></span></div><div class="tldr"><b>The Wire</b> <span>PHP has shipped emergency fixes (8.5.12, 8.4.27, 8.3.36, 8.2.35) for the two “PHP2Shell” remote-code-execution flaws, rated CVSS v4.0 9.2, with attacks logged before the patch landed — while federal agencies face an Oct. 23 deadline for three of the Plex2Shell and SiteGuard flaws CISA added to KEV.</span></div><div class="freshline" id="freshline">Data as of 5:05 PM ET · briefings refresh every 30 minutes, 8 AM–6 PM ET</div><nav class="tabs"><a href="index.html">★ Front Page</a><a href="cyber-briefing.html" class="active">⛨ The Cyber Wire</a><a href="wallstreet-briefing.html">▲ The Closing Bell</a><a href="mma-briefing.html">⊘ The Octagon</a><a href="archive.html">🗄 Archive</a></nav><div class="banner"><b>⚠ THREAT LEVEL: HIGH</b> Unauthenticated RCE in PHP itself is under attack as fixes roll out; ransomware crews are exploiting Palo Alto GlobalProtect; and a KEV deadline lands in two days.</div>
+<div class="stats">
+<div class="stat"><div class="n">9.2</div><div class="l">CVSS v4.0 for both PHP2Shell flaws (<a href="https://finance.yahoo.com/technology/articles/php-patches-critical-flaw-hitting-151052535.html">Investing.com via Yahoo</a>)</div></div>
+<div class="stat"><div class="n">~70%</div><div class="l">Estimated share of the world’s websites running affected PHP (<a href="https://finance.yahoo.com/technology/articles/php-patches-critical-flaw-hitting-151052535.html">Investing.com</a>)</div></div>
+<div class="stat"><div class="n">6</div><div class="l">Exploited flaws CISA flagged Oct. 20 — four Plex, one Siemens, one SiteGuard (<a href="https://thehackernews.com/2026/10/cisa-orders-federal-agencies-to-patch.html">THN</a>)</div></div>
+<div class="stat"><div class="n">5</div><div class="l">OVHcloud CLI releases (v0.11.0–v0.15.0) laced with an info-stealer (<a href="https://www.helpnetsecurity.com/2026/10/21/ovhcloud-cli-github-malware/">Help Net Security</a>)</div></div>
+</div>
+
+<h2 class="sec">Top Story</h2>
+<div class="panel lead"><h3>PHP2Shell: emergency PHP patches for two pre-auth RCE flaws, with attacks already logged</h3>
+<p>The PHP team released 8.5.12, 8.4.27, 8.3.36 and 8.2.35 to fix CVE-2026-109618 (RCE via out-of-memory corruption) and CVE-2026-109619 (RCE via stale global state). Every PHP installation serving web requests is affected — PHP-FPM, Apache mod_php (greatest danger), php-cgi, FrankenPHP and LiteSpeed — and a working exploit shows a single unauthenticated request can trigger the attack before any application code runs (<a href="https://www.helpnetsecurity.com/2026/10/21/php2shell-php-vulnerabilities-patched-cve-2026-109618-cve-2026-109619/">Help Net Security</a>).</p>
+<p>Details leaked on Oct. 20, a day ahead of the embargo; Cloudflare logged the first attacks at 07:43 UTC on Oct. 21, hours before the ~14:00 UTC patch window, and has pushed WAF rules to all customers — which its CTO calls “a STOPGAP only.” Reuters reported cybersecurity-agency websites in the Netherlands and Finland went dark as a precaution (<a href="https://finance.yahoo.com/technology/articles/php-patches-critical-flaw-hitting-151052535.html">Investing.com via Yahoo</a>).</p>
+<p>PHP 8.1 and earlier get no official fix; the team published minimal source backports for 7.4, 8.0 and 8.1. The UK NCSC urges taking offline any system that can’t be fixed right away. “It’s one of the biggest vulns in years,” said Kevin Beaumont (<a href="https://www.helpnetsecurity.com/2026/10/21/php2shell-php-vulnerabilities-patched-cve-2026-109618-cve-2026-109619/">Help Net Security</a>). PHP says there is no complete mitigation short of updating (<a href="https://github.com/php/php-src/releases">php-src releases</a>).</p></div>
+
+<h2 class="sec">Patch Priority</h2>
+<div class="callout crit"><p><b>Patch now: PHP — CVE-2026-109618 / CVE-2026-109619 (CVSS v4.0 9.2).</b> Upgrade to 8.5.12, 8.4.27, 8.3.36 or 8.2.35; check your distro/LTS vendor for packages; consider taking unpatchable systems offline (<a href="https://www.helpnetsecurity.com/2026/10/21/php2shell-php-vulnerabilities-patched-cve-2026-109618-cve-2026-109619/">Help Net Security</a>). Not yet in CISA’s KEV, so no federal deadline applies.</p>
+<p style="margin-top:10px"><b>Federal deadline:</b> Plex Media Server <b>CVE-2026-96656</b> and <b>CVE-2026-96654</b> (the Plex2Shell chain) plus SiteGuard Server Edition <b>CVE-2026-106931</b> — due <b>Friday, Oct. 23, 2026</b> <span class="warn">(2 days left)</span>. Fixed in Plex Media Server 1.43.3.10861 (<a href="https://thehackernews.com/2026/10/cisa-orders-federal-agencies-to-patch.html">THN</a>).</p></div>
+
+<h2 class="sec">Threat Actor Spotlight</h2>
+<div class="card"><span class="tag crit">Ransomware</span><h3>Qilin — riding a Palo Alto VPN bypass into networks</h3><p>Unit 42 updated its threat brief on Oct. 19 naming Qilin and Inc among operators exploiting CVE-2026-0257, a PAN-OS GlobalProtect authentication bypass patched in May; ReliaQuest also tracks Qilin and Settra. In one case attackers went from the VPN gateway to vCenter, disabled ESXi security controls and pulled credentials offline from a domain controller’s virtual disk. ReliaQuest: “Patching alone may not remove access established before remediation” — end active GlobalProtect sessions after patching (<a href="https://www.helpnetsecurity.com/2026/10/21/ransomware-groups-exploit-palo-alto-globalprotect-cve-2026-0257/">Help Net Security</a>).</p></div>
+
+<h2 class="sec">Breaches &amp; Incidents</h2><div class="cards"><div class="card"><span class="tag new">New</span><span class="tag crit">Ransomware</span><h3>Exposed INC / The Gentlemen affiliate servers show AI-assisted intrusions</h3><p>SOCRadar found seven exposed servers tied to INC and The Gentlemen affiliates holding 8,257 AI messages across 133 OpenCode sessions, stolen credentials and 46 INC encryptor builds prepared for six victims; operator records name 62 organizations (36 in the U.S.) and claim exploitation of cPanel CVE-2026-41940, SimpleHelp CVE-2024-57727 and FortiClient EMS CVE-2026-35616 — figures from the attackers’ own records, not independently verified. Session logs show humans approving each AI step (<a href="https://hackread.com/inc-the-gentlemen-ransomware-affiliates-ai-messages/">Hackread</a>).</p></div>
+<div class="card"><span class="tag crit">Supply chain</span><h3>ConnectWise pulls Cloud Backup after Microsoft 365 abuse</h3><p>A compromised ConnectWise Cloud Backup credential was used to reach customers’ Microsoft 365 tenants; Microsoft says attackers likely abused permissions such as Directory.ReadWrite.All. Huntress saw unauthorized sign-ins in 162 tenants after attacks began around Oct. 15. Cloud Backup, SaaS Security and Cloud Management are suspended with no restoration timeline; ConnectWise says there is “no indication” backup data was compromised (<a href="https://therecord.media/connectwise-suspends-cloud-backup-service-supply-chain-attack">The Record, Oct. 19</a>).</p></div>
+<div class="card"><span class="tag">Supply chain</span><h3>OVHcloud CLI releases swapped for an info-stealer</h3><p>A hacker used a developer’s GitHub account to replace binaries on five releases (v0.11.0–v0.15.0) on Oct. 19; CEO Octave Klaba urges affected users to change every secret on the machine. OpenSourceMalware ties it to GlassWorm (<a href="https://www.helpnetsecurity.com/2026/10/21/ovhcloud-cli-github-malware/">Help Net Security</a>).</p></div>
+<div class="card"><span class="tag">Supply chain</span><h3>AOMEI Backupper update servers hijacked (UNC7017)</h3><p>Google/Mandiant attribute minutes-long tampering windows (May 28, July 16, July 20) to UNC7017, delivering the CROSSROAD downloader and SHINYROAD backdoor; infected machines stay compromised after AOMEI’s server fix (<a href="https://www.bleepingcomputer.com/news/security/hackers-hijack-aomei-update-servers-to-secretly-spread-malware/">BleepingComputer</a>) (<a href="https://labs.cloudsecurityalliance.org/research/csa-research-note-aomei-backupper-update-server-tampering-20/">CSA</a>).</p></div>
+<div class="card"><span class="tag crit">Ransomware</span><h3>GlobalProtect intrusions across sectors since June</h3><p>Healthcare, education, government and energy victims; attackers chained Veeam CVE-2023-27532 in some cases (<a href="https://www.helpnetsecurity.com/2026/10/21/ransomware-groups-exploit-palo-alto-globalprotect-cve-2026-0257/">Help Net Security</a>).</p></div>
+<div class="card"><span class="tag">Exploitation</span><h3>Plex2Shell used to drop miners and proxy malware</h3><p>Researcher boredhackerblog found the chained Plex flaws weaponized to deploy cryptocurrency miners and proxy malware, prompting CISA’s KEV listing (<a href="https://thehackernews.com/2026/10/cisa-orders-federal-agencies-to-patch.html">THN</a>).</p></div>
+</div>
+
+<h2 class="sec">Vulnerability Watch</h2>
+<div class="tblwrap"><table><tr><th>CVE</th><th>CVSS</th><th>Affected</th><th>Note</th></tr>
+<tr><td>CVE-2026-109618</td><td class="crit">9.2 (v4.0)</td><td>PHP (all web SAPIs)</td><td>RCE via OOM corruption; fixed 8.5.12/8.4.27/8.3.36/8.2.35</td></tr>
+<tr><td>CVE-2026-109619</td><td class="crit">9.2 (v4.0)</td><td>PHP (all web SAPIs)</td><td>RCE via stale global state; same fixed versions</td></tr>
+<tr><td>CVE-2026-96656</td><td>8.6</td><td>Plex Media Server</td><td>File name/path control; KEV, due Oct. 23</td></tr>
+<tr><td>CVE-2026-106931</td><td>8.5</td><td>EG Secure Solutions SiteGuard Server Edition</td><td>Command injection; KEV, due Oct. 23</td></tr>
+<tr><td>CVE-2026-110936</td><td>8.4</td><td>Siemens Software Center</td><td>DLL sideloading abused in ClickFix attacks; KEV, due Nov. 3</td></tr>
+<tr><td>CVE-2026-96654</td><td>6.9</td><td>Plex Media Server</td><td>Encoded-URI neutralization; KEV, due Oct. 23</td></tr>
+<tr><td>CVE-2026-0257</td><td>vendor: medium (initial)</td><td>PAN-OS GlobalProtect, Prisma Access</td><td>Auth bypass; exploited by ransomware groups</td></tr></table></div>
+<div class="note">PHP scores per the PHP security team as reported by Investing.com/Help Net Security; Plex, SiteGuard and Siemens scores as listed by The Hacker News.</div>
+
+<h2 class="sec">CISA KEV &amp; Federal Deadlines</h2>
+<div class="panel"><ul class="bul">
+<li><b>CVE-2026-96656, CVE-2026-96654 (Plex Media Server), CVE-2026-106931 (SiteGuard)</b> — added Oct. 20; due <b>Oct. 23, 2026</b> <span class="warn">(2 days left)</span> (<a href="https://thehackernews.com/2026/10/cisa-orders-federal-agencies-to-patch.html">THN</a>).</li>
+<li><b>CVE-2026-96652, CVE-2026-96655 (Plex Media Server), CVE-2026-110936 (Siemens Software Center)</b> — added Oct. 20; due <b>Nov. 3, 2026</b> (13 days left) (<a href="https://thehackernews.com/2026/10/cisa-orders-federal-agencies-to-patch.html">THN</a>).</li>
+<li><b>PHP2Shell (CVE-2026-109618/-109619)</b> — not in KEV as of this edition; a listing would trigger a federal deadline (<a href="https://finance.yahoo.com/technology/articles/php-patches-critical-flaw-hitting-151052535.html">Investing.com</a>).</li></ul>
+<div class="note">Due dates as reported by The Hacker News from CISA’s Oct. 20 additions; a KEV mirror agrees on Plex CVE-2026-96652 (Nov. 3) (<a href="https://sara-open.sirp.io/free-tools/kev-browser">KEV browser</a>). CISA’s own catalog page could not be loaded this run (<a href="https://www.cisa.gov/news-events/alerts/2026/10/20/cisa-adds-six-known-exploited-vulnerabilities-catalog">CISA alert</a>).</div></div>
+<footer><b>Sources (read this edition)</b><ol><li><a href="https://hackread.com/inc-the-gentlemen-ransomware-affiliates-ai-messages/">Hackread — INC and The Gentlemen affiliates expose 8,257 AI messages (Oct. 21)</a></li><li><a href="https://therecord.media/connectwise-suspends-cloud-backup-service-supply-chain-attack">The Record — ConnectWise suspends Cloud Backup (Oct. 19)</a></li><li><a href="https://www.helpnetsecurity.com/2026/10/21/php2shell-php-vulnerabilities-patched-cve-2026-109618-cve-2026-109619/">Help Net Security — PHP2Shell patched</a></li><li><a href="https://finance.yahoo.com/technology/articles/php-patches-critical-flaw-hitting-151052535.html">Investing.com via Yahoo Finance — PHP patches critical flaw</a></li><li><a href="https://github.com/php/php-src/releases">php-src releases (GitHub)</a></li><li><a href="https://thehackernews.com/2026/10/php-issues-emergency-patches-for-two.html">The Hacker News — PHP emergency patches</a></li><li><a href="https://thehackernews.com/2026/10/cisa-orders-federal-agencies-to-patch.html">The Hacker News — CISA orders patching of Plex2Shell, Siemens, SiteGuard</a></li><li><a href="https://www.cisa.gov/news-events/alerts/2026/10/20/cisa-adds-six-known-exploited-vulnerabilities-catalog">CISA — Six KEVs added Oct. 20</a></li><li><a href="https://sara-open.sirp.io/free-tools/kev-browser">KEV browser (mirror)</a></li><li><a href="https://www.helpnetsecurity.com/2026/10/21/ransomware-groups-exploit-palo-alto-globalprotect-cve-2026-0257/">Help Net Security — GlobalProtect ransomware</a></li><li><a href="https://www.helpnetsecurity.com/2026/10/21/ovhcloud-cli-github-malware/">Help Net Security — OVHcloud CLI malware</a></li><li><a href="https://www.bleepingcomputer.com/news/security/hackers-hijack-aomei-update-servers-to-secretly-spread-malware/">BleepingComputer — AOMEI</a></li><li><a href="https://labs.cloudsecurityalliance.org/research/csa-research-note-aomei-backupper-update-server-tampering-20/">Cloud Security Alliance — AOMEI note</a></li></ol><div class="disc">For awareness only. Always confirm versions and deadlines against vendor advisories and the CISA KEV catalog before acting.</div></footer></div><script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script></body></html>
