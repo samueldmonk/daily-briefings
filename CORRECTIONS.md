@@ -26032,3 +26032,10 @@ deleting and report how many days were removed.
 - FIX: archive.html note claimed archived pages carry no live widgets — false (snapshots keep the TradingView embeds). Note reworded.
 - CYBER: no new verified items; no CISA KEV alert dated Oct 21/22 found. Plex/SiteGuard due Oct 23 → 1 day left. MMA: no new verified items; Champions board unchanged (UFC 333 Sat Oct 24).
 - "New" tags: prior removed; New only on WS WDC and NEM after-hours results items.
+
+## Added 2026-10-22 (Thursday — clone ~5:17pm ET, AFTERNOON EDITION (archive stamp 2026-10-22-1807), POST-CLOSE)
+- 🆕 FINAL THURSDAY CLOSES (Reuters, Culp/Lakshmi, via Yahoo, 1:47 PM PDT, fetched): Dow +11.89 (+0.02%) to 52,867.98; S&P 500 −93.74 (−1.21%) to 7,663.43; Nasdaq Comp −694.00 (−2.60%) to 26,008.86 (steepest drop since early June). ⭐ SUPERSEDES the 4:07pm entry's S&P 7,663.45 / −93.72 (preliminary 4:03 PM Yahoo strip). Yahoo final strip agrees (7,663.43 −93.74); Russell 2000 FINAL +0.11% (NOT −0.20%); VIX final 19.03 +14.09% (NOT 19.82); WTI Dec 99.08 +1.99%.
+- Reuters final: SOX −6.7% (biggest since June 23), >26% off June 22 record, +51.5% YTD; S&P +11.9% YTD; META −7.0%, TSLA −3.1%, PG +5.6%, BX +8.4%, LMT +7.0% (raised annual forecast), SPOT +11.1%, UNP +3.6%; INTC/AMD/SNDK/MRVL each >−8%; Houthi strikes on Saudi targets → crude five-month high; NYSE adv/dec 1.01-to-1; Nasdaq decliners 1.37-to-1; volume 18.79B vs 17.19B 20-day avg. Yahoo: jobless claims 194,000, fewest in three months.
+- AFTER-HOURS (Yahoo live blog quotes): META 645.74 −0.48% (5:07:50 PM); TSLA 373.25 −0.36% (5:07:30 PM); BX 118.66 −0.08% (5:04:32 PM; BX close 118.75 +8.38%). WDC/NEM post-close reactions still NOT verified — search results only surfaced Aug (fiscal Q4) WDC after-hours drops (~−10%); TRAP, not tonight.
+- CYBER/MMA: no new verified items (searches returned only older items; UFC 333 search again repeated Allen–Pico summary context, Keita replacement stands). Champions board unchanged.
+- "New" tags: prior removed; New only on WS final-close paragraphs and 5:07 PM after-hours quotes.
