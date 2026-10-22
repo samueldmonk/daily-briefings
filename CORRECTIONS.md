@@ -25934,3 +25934,11 @@ deleting and report how many days were removed.
 - 🆕 MMA (DraftKings Network, Ryan Wohl, Oct 21, fetched): UFC 333 press conference Thu Oct 22, 9:00 AM ET / 6:00 AM PT, Etihad Arena; Volkanovski, Evloev, Yan, Dvalishvili. Champions board unchanged (no title fight since UFC 332; UFC 333 Sat Oct 24).
 - ARCHIVE: pruning now done by FILENAME date (mtime is reset on every clone, so `find -mtime +21` never pruned); Sep 29–30 snapshots removed.
 - "New" tags: prior removed; New on WS latest-read/wider-selling paragraphs + AAL/NVEC cards, Cyber LiteLLM card, MMA press-conference item.
+
+## Added 2026-10-22 (Thursday — clone ~9:04am ET, MORNING EDITION (archive stamp 2026-10-22-0906), PRE-OPEN)
+- 🆕 JOBLESS CLAIMS (Reuters via Investing.com, fetched; investingLive, Greg Michalowski, 12:30 UTC, fetched): initial claims −6,000 to 194,000 s.a., week ended Oct 17; Reuters poll 200,000; prior week 199K per investingLive (search summary says revised to 200K — revision NOT printed); Reuters: "near 57-year lows"; unemployment rate 4.2% in September. Continuing claims (1.728M per search summary) NOT on a fetched page — not printed.
+- 🆕 Stocktwits (Harshita Tyagi, 7:16 AM ET, fetched): Nasdaq-100 fut −1.9%, S&P −1.1%, Dow nearly −0.7%; Dec Brent topped $112.20; Trump said Washington not negotiating with Tehran; NYT: US/Israeli plans for possible renewed Iran strikes after midterms, no decision. TYPO TRAP: same article says Brent "rose over 31%" — obviously a typo, NOT printed.
+- No newer futures quote than the 8:35 AM Yahoo strip could be fetched (CNBC live page and Invezz returned EMPTY) — page keeps "as of ~8:35 AM ET" for futures.
+- 🆕 CYBER (Cyber Security News, Tushar Subhra Dutta, Oct 21, fetched; Acronis TRU research): The Gentlemen RaaS (Go, emerged 2025; Windows/Linux/NAS/BSD) disables Defender, stops backup services, deletes VSS, clears logs, ChaCha20 + ECC; EDR killer via vulnerable drivers (Safetica ProcessMonitorDriver / CVE-2025-70795; Lenovo BootRepair.sys); claims >800 victims (group's claim). No CISA KEV alert dated Oct 22 found (latest Oct 20).
+- MMA: no new verified items; UFC 333 press conference (9 AM ET today) wording changed to "was scheduled". Champions board unchanged (no title fight since UFC 332; UFC 333 Sat Oct 24).
+- "New" tags: prior removed; New only on WS jobless-claims paragraph and Cyber Gentlemen card.
