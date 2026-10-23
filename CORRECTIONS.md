@@ -26063,3 +26063,10 @@ deleting and report how many days were removed.
 - KEV: no CISA KEV alert dated Oct 21–23 found (latest Oct 20, six CVEs). Plex/SiteGuard due Oct 23 → 0 days left.
 - MMA: no new verified items this run; champions board unchanged (UFC 333 Sat Oct 24). Weigh-in New tags removed (were in prior edition).
 - "New" tags: prior removed; New on WS late-morning/UMich paragraphs + RHI/CCI/RNG/BE/FIX/DECK/AXP cards + UMich radar item; Cyber Mirai paragraph + Tor/PingCAP/Bullhorn/APT28 cards.
+
+## Added 2026-10-23 (Friday — clone ~12:26pm ET, MIDDAY EDITION (archive stamp 2026-10-23-1247), REGULAR SESSION)
+- 🆕 MARKETS ~MIDDAY (Yahoo live blog strip "U.S. markets close in 3h 55m", ^DJI "as of 12:05:26 PM EDT", fetched): S&P 7,652.91 −10.52 (−0.14%); Dow 52,359.82 −508.16 (−0.96%); Nasdaq 26,080.48 +71.63 (+0.28%) — reconcile vs Thu closes (Nasdaq ±0.01 rounding); Russell 2,774.70 −0.33%; 10-yr 4.999 +0.046; VIX 19.34 +1.63%; gold 4,016.60 −1.08%; BTC 81,598.46 +0.52%; WTI Dec 103.01 +3.56%; Brent "hovering near $112" (Yahoo text). SPCX 147.66 +2.01%, TSLA 373.08 −0.40% at 12:05.
+- Yahoo (Blikre): Apple briefly topped Nvidia in market value (fifth time), each ~$5.1T; Nvidia since back in lead; $1,999 iPhone Duo hit stores. TheStreet 12:14 PM (Reuters): AAPL −0.22% early afternoon; new CEO John Ternus.
+- Yahoo: Amex cuts = 3,500 roles (spokesperson); Q3 revenue +9% to $14.5B vs $14.8B est; adj EPS +13% to $4.68; stock −3%. Meta raised LOW END of capex range to $135–145B from $130–145B (Yahoo) — Rodda's "left unchanged" kept only as his attributed quote, with Yahoo clarification beside it.
+- CYBER/MMA: no new verified items this run (GitLab CVE-2026-110264, HPE AOS, PHP2Shell already on page). UFC 333 odds still conflicting across books (Volk −115/−105/−112/+100; FanDuel both −113) — keep unsourced-current odds OFF unless page already attributes a specific book. Champions board unchanged.
+- "New" tags: prior removed; New on WS midday paragraph, Apple/Nvidia paragraph, Meta capex clarification, Amex detail. Cyber/MMA: none.
