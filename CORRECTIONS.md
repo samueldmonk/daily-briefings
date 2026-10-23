@@ -26070,3 +26070,10 @@ deleting and report how many days were removed.
 - Yahoo: Amex cuts = 3,500 roles (spokesperson); Q3 revenue +9% to $14.5B vs $14.8B est; adj EPS +13% to $4.68; stock −3%. Meta raised LOW END of capex range to $135–145B from $130–145B (Yahoo) — Rodda's "left unchanged" kept only as his attributed quote, with Yahoo clarification beside it.
 - CYBER/MMA: no new verified items this run (GitLab CVE-2026-110264, HPE AOS, PHP2Shell already on page). UFC 333 odds still conflicting across books (Volk −115/−105/−112/+100; FanDuel both −113) — keep unsourced-current odds OFF unless page already attributes a specific book. Champions board unchanged.
 - "New" tags: prior removed; New on WS midday paragraph, Apple/Nvidia paragraph, Meta capex clarification, Amex detail. Cyber/MMA: none.
+
+## Added 2026-10-23 (Friday — clone ~12:50pm ET, MIDDAY EDITION, REGULAR SESSION)
+- 🆕 MARKETS EARLY AFTERNOON (Yahoo live blog strip "U.S. markets close in 3h 9m", ^DJI "as of 12:51:12 PM EDT", fetched): S&P 7,647.16 −16.27 (−0.21%); Dow 52,367.92 −500.06 (−0.95%); Nasdaq 26,051.19 +42.33 (+0.16%) — all reconcile vs Thu closes; Russell 2,776.43 −0.27%; 10-yr 4.992 +0.039; VIX 19.51 +2.52%; gold 4,017.00 −1.07%; BTC 81,661.13 +0.60%; WTI Dec 102.80 +3.35%. SPCX 147.49 +1.89%, TSLA 372.69 −0.50% at 12:51.
+- 🆕 Yahoo (Blikre): SK Hynix shelved US listing of Solidigm (aimed $10–15B raise at up to $150B valuation, WSJ-cited estimates); SKHY priced US shares $149 in July ($26.5B, biggest US listing by a foreign company), still below that, ~a third below Sept record.
+- FIX: index.html Markets card headline said "11:43 AM" while its summary said 12:05 — headline and summary now both 12:51 PM.
+- CYBER/MMA: no new verified items (latest KEV alerts found still Oct 21 Plex2Shell batch; UFC 333 Sat Oct 24 unchanged, no results yet). Champions board unchanged.
+- "New" tags: prior removed; New only on WS 12:51 PM paragraph and SK Hynix paragraph.
