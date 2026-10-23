@@ -26077,3 +26077,9 @@ deleting and report how many days were removed.
 - FIX: index.html Markets card headline said "11:43 AM" while its summary said 12:05 — headline and summary now both 12:51 PM.
 - CYBER/MMA: no new verified items (latest KEV alerts found still Oct 21 Plex2Shell batch; UFC 333 Sat Oct 24 unchanged, no results yet). Champions board unchanged.
 - "New" tags: prior removed; New only on WS 12:51 PM paragraph and SK Hynix paragraph.
+
+## Added 2026-10-23 (Friday — clone ~1:04pm ET, MIDDAY EDITION, REGULAR SESSION)
+- 🆕 MARKETS ~1:07 PM (Yahoo live blog, Ferré/Hollerith, updated 1:00 PM EDT; strip "U.S. markets close in 2h 54m"; ^DJI "as of 1:07:24 PM EDT", fetched): S&P 7,636.86 −26.57 (−0.35%); Dow 52,285.68 −582.30 (−1.10%); Nasdaq 26,016.37 +7.51 (+0.03%) — all reconcile vs Thu closes; Russell 2,776.29 −0.28%; 10-yr 4.990 +0.037; VIX 19.83 +4.20%; gold 4,013.80 −1.15%; BTC 81,654.95 +0.69%; WTI Dec 102.77 +3.32%. SPCX 147.16 +1.66% (1:07:24), TSLA 371.82 −0.74% (1:07:22).
+- 🆕 Moderna (Yahoo, Ferré): opened lower Friday, climbed into positive territory. ⚠ CONFLICT: same Yahoo item says Thursday's drop was "more than 17%… worst single-day performance since Aug. 20", vs the Oct 22 entry's "−20%+, worst day since Dec 2018 IPO" (Yahoo 3:33 PM intraday). Neither stat re-printed this run; reconcile with a closing figure before citing.
+- CYBER/MMA: no new verified items (no KEV alert dated Oct 23 found; UFC 333 Sat Oct 24 unchanged — Keita replaced Allen vs Pico). Champions board unchanged.
+- "New" tags: prior removed; New only on WS 1:07 PM paragraph and Moderna paragraph.
