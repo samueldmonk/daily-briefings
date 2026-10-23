@@ -26039,3 +26039,9 @@ deleting and report how many days were removed.
 - AFTER-HOURS (Yahoo live blog quotes): META 645.74 −0.48% (5:07:50 PM); TSLA 373.25 −0.36% (5:07:30 PM); BX 118.66 −0.08% (5:04:32 PM; BX close 118.75 +8.38%). WDC/NEM post-close reactions still NOT verified — search results only surfaced Aug (fiscal Q4) WDC after-hours drops (~−10%); TRAP, not tonight.
 - CYBER/MMA: no new verified items (searches returned only older items; UFC 333 search again repeated Allen–Pico summary context, Keita replacement stands). Champions board unchanged.
 - "New" tags: prior removed; New only on WS final-close paragraphs and 5:07 PM after-hours quotes.
+
+## Added 2026-10-22 (Thursday — clone ~7:11pm ET, AFTERNOON EDITION (archive stamp 2026-10-22-1948), POST-CLOSE, POST-WINDOW CATCH-UP RUN)
+- 🆕 RINGCENTRAL Q3 2026 (Investing.com, Jaiveer Shekhawat, published Oct 22 4:35 PM, fetched): RNG +15.2% after hours to $91.50; regular session −3.64%; adj. EPS $1.33 vs $1.28 consensus; revenue $676M (+5.9% y/y); 2026 EPS guide raised to $5.07–$5.12 (consensus $5.03); FY revenue guide $2.56B–$2.57B vs $2.64B expected. ⚠ TRAPS: same AI-generated article says the S&P was "essentially flat" and Nasdaq "marginally lower" — FALSE (S&P −1.21%, Nasdaq −2.60%); not used. Search summaries offered conflicting revenue ($653M) and AH % (13.7%/14.45%) — only the fetched 15.2%/$91.50 printed.
+- Investing.com ticker strip on that page agrees with final closes (Dow 52,867.98 +0.02%, Nasdaq 26,008.86 −2.60%, S&P −1.21%).
+- CYBER/MMA: no new verified items (SafePay advisory already on page; no KEV alert dated Oct 22 found; UFC 333 Sat Oct 24 unchanged). Plex/SiteGuard KEV due Oct 23 → 1 day left. Champions board unchanged.
+- "New" tags: WDC reversal tag removed; New only on RNG after-hours item.
