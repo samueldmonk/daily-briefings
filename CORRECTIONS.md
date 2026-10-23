@@ -26091,3 +26091,9 @@ deleting and report how many days were removed.
 - CYBER/MMA: no new verified items (no KEV alert dated Oct 23 found; UFC 333 Sat Oct 24 unchanged; Kalshi 50/50 per Covers Oct 19). Champions board unchanged. Cyber/MMA pages not modified this run.
 - archive.html regenerated with gen_archive.py (930 snapshots, 0 broken).
 - "New" tags: prior removed; New only on WS 1:52 PM paragraph, cyber-stocks paragraph, Starlink paragraph.
+
+## Added 2026-10-23 (Friday — clone ~2:04pm ET, MIDDAY EDITION (archive stamp 2026-10-23-1405), REGULAR SESSION)
+- 🆕 MARKETS ~2:04 PM (Yahoo live blog, Ferré/Hollerith, updated 1:50 PM EDT; strip "U.S. markets close in 1h 56m"; ^DJI quote "as of 2:04:07 PM EDT" 52,268.33 −599.65 −1.13%, fetched): strip S&P 7,631.49 −31.94 (−0.42%); Dow 52,262.52 −605.46 (−1.15%); Nasdaq 25,996.20 −12.66 (−0.05%) — all reconcile vs Thu closes; Russell 2,774.66 −0.34%; 10-yr 4.988 +0.035; VIX 20.01 +5.15%; gold 4,011.60 −1.20%; BTC 81,442.37 +0.22%; WTI Dec 103.07 +3.62%. SPCX 147.99 +2.23%, TSLA 372.10 −0.66% (2:04:07). Yahoo text: 10-yr "held below the 5% threshold".
+- Moderna conflict (">17%, worst since Aug. 20" vs Oct 22 "−20%+") still unresolved; not printed.
+- CYBER/MMA: no new verified items (no KEV alert dated Oct 23 found; cyber news search returned nothing dated Oct 23; UFC 333 Sat Oct 24 unchanged). Champions board unchanged.
+- "New" tags: prior removed; New only on WS 2:04 PM paragraph.
