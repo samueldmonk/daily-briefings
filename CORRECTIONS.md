@@ -26083,3 +26083,11 @@ deleting and report how many days were removed.
 - 🆕 Moderna (Yahoo, Ferré): opened lower Friday, climbed into positive territory. ⚠ CONFLICT: same Yahoo item says Thursday's drop was "more than 17%… worst single-day performance since Aug. 20", vs the Oct 22 entry's "−20%+, worst day since Dec 2018 IPO" (Yahoo 3:33 PM intraday). Neither stat re-printed this run; reconcile with a closing figure before citing.
 - CYBER/MMA: no new verified items (no KEV alert dated Oct 23 found; UFC 333 Sat Oct 24 unchanged — Keita replaced Allen vs Pico). Champions board unchanged.
 - "New" tags: prior removed; New only on WS 1:07 PM paragraph and Moderna paragraph.
+
+## Added 2026-10-23 (Friday — clone ~1:51pm ET, MIDDAY EDITION (archive stamp 2026-10-23-1354), REGULAR SESSION)
+- 🆕 MARKETS ~1:52 PM (Yahoo live blog, Ferré/Hollerith, updated 1:50 PM EDT; strip "U.S. markets close in 2h 9m"; ^DJI "as of 1:52:24 PM EDT", fetched): S&P 7,633.87 −29.56 (−0.39%); Dow 52,274.14 −593.84 (−1.12%); Nasdaq 25,999.80 −9.06 (−0.03%) — all reconcile vs Thu closes. ⚠ Nasdaq has slipped to fractionally NEGATIVE though Yahoo's headline still says "Nasdaq rises" — print the strip figure, not the headline. Russell 2,773.68 −0.37%; 10-yr 4.988 +0.035; VIX 20.17 +6.00%; gold 4,006.20 −1.33%; BTC 81,488.87 +0.49%; WTI Dec 103.11 +3.66%. SPCX 146.90 +1.48%, TSLA 371.31 −0.87% (1:52:24).
+- 🆕 Yahoo: cybersecurity stocks SAIL, NET, PANW each rose more than 5% Friday; NVDA/AMD edged higher; CoreWeave/neoclouds pressured. SpaceX Q3 Connectivity revenue (mostly Starlink) +69% to $5.2B; Starlink +1.6M subs in quarter to just under 14M (Shotwell, via Pras Subramanian).
+- Moderna: Yahoo still says Thursday drop "more than 17%… worst since Aug. 20" — conflict with Oct 22 "−20%+" entry unresolved; neither printed.
+- CYBER/MMA: no new verified items (no KEV alert dated Oct 23 found; UFC 333 Sat Oct 24 unchanged; Kalshi 50/50 per Covers Oct 19). Champions board unchanged. Cyber/MMA pages not modified this run.
+- archive.html regenerated with gen_archive.py (930 snapshots, 0 broken).
+- "New" tags: prior removed; New only on WS 1:52 PM paragraph, cyber-stocks paragraph, Starlink paragraph.
