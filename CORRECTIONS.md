@@ -26176,3 +26176,10 @@ deleting and report how many days were removed.
 - MMA: Yan–Dvalishvili (BW title) and Volkanovski–Evloev (FW title) — NO official result at ~4:10 PM ET: Sherdog play-by-play (fetched) shows empty round scores and empty "Official Result" lines for both; CBS live page fetched was cached pre-fight; searches returned only previews. A Wikipedia snippet about "Dvalishvili def. Yan by UD" refers to their March 2023 first fight — NOT UFC 333; refused. Champions board unchanged — FW/BW may change; re-check next runs.
 - CYBER: no KEV alert dated Oct 24 found (search surfaced only older govdelivery bulletins). Collabora CVE-2026-110447 due Oct 26 → 2 days left. MARKETS: closed; Friday Oct 23 closes carried unchanged.
 - "New" tags: MMA main-card New removed (content already in 1536 snapshot); no New tags this edition.
+
+## Added 2026-10-24 (Saturday — clone ~4:34pm ET, AFTERNOON EDITION (archive stamp 2026-10-24-1636), MARKETS CLOSED FOR WEEKEND)
+- 🆕 MMA — BANTAMWEIGHT BELT VERIFIED: **Petr Yan def. Merab Dvalishvili, unanimous decision (48-47, 48-47, 48-47), UFC 333 co-main, Oct 24 2026 — Yan RETAINS.** Dvalishvili won R1–R2; Yan won R3–R5 (Heavy, Adam Martin, published 4:32 PM ET, fetched in full: https://heavy.com/sports/ufc/petr-yan-successfully-defends-ufc-333/). Search summaries (Yahoo/Uncrowned live) agree on the 48-47 ×3 cards. Champions board: Bantamweight = Petr Yan (defended vs Dvalishvili at UFC 333). Any listing seating Dvalishvili at 135 is WRONG.
+- ⚠ TRAP: an MMA Mania quick-results snippet reads "Alexander Volkanovski vs. Merab Dvalishvili by unanimous decision (48-47 x3)" — a garbled line (wrong pairing); it is the Yan–Dvalishvili result and says NOTHING about the main event. Refused.
+- Volkanovski–Evloev (FW title): NO verified result at ~4:40 PM ET (Sherdog PBP and Yahoo live pages fetched were cached pre-fight). Featherweight row unchanged (Volkanovski) — re-check next run.
+- CYBER: search surfaced nothing dated Oct 24 — no new items. MARKETS: closed; Friday Oct 23 closes carried unchanged.
+- "New" tags: only the MMA Yan-result paragraph.
