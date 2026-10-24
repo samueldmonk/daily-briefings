@@ -26164,3 +26164,10 @@ deleting and report how many days were removed.
 - Volkov vs. Kuniev in progress at ~3:10 PM ET (no official result); Kavanagh–Temirov, Yan–Dvalishvili, Volkanovski–Evloev pending. Champions board unchanged — FW/BW may change; re-check next runs.
 - CYBER: no new items dated Oct 24 found. MARKETS: closed; Friday Oct 23 closes carried unchanged.
 - "New" tags: only the MMA main-card paragraph; UFC 336 New removed (in 1435 snapshot).
+
+## Added 2026-10-24 (Saturday — clone ~3:34pm ET, AFTERNOON EDITION, MARKETS CLOSED FOR WEEKEND)
+- 🆕 MMA (MMA Junkie via Yahoo, Farah Hannoun, 19:21 UTC, fetched; Sherdog PBP official line, fetched): OFFICIAL — Alexander Volkov def. Rizvan Kuniev, UD (29-28, 30-27, 30-27); Volkov asked Dana White for a title shot after his third straight win. Records (41-11 / 15-4-1) appear only in search summaries — NOT printed.
+- 🆕 MMA (SSBCrack News, 15:33 ET, fetched; CBS live snippet + Yahoo snippet agree): Lone'er Kavanagh def. Ramazan Temirov, TKO R1 4:28 (left uppercut then punches). Sherdog PBP had no official line for this bout yet at ~3:40 PM ET. Kavanagh "improves to 11-2" in a snippet only — NOT printed.
+- Yan–Dvalishvili and Volkanovski–Evloev: NO result at ~3:45 PM ET (Sherdog official-result lines empty). Champions board unchanged — FW/BW may change; re-check next runs.
+- CYBER: no new KEV/news dated Oct 24 found (search surfaced only old govdelivery bulletins). Collabora due Oct 26 → 2 days left. MARKETS: closed; Friday Oct 23 closes carried unchanged.
+- "New" tags: only MMA main-card paragraph (rewritten to lead with Kavanagh/Volkov).
