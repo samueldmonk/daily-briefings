@@ -26197,3 +26197,11 @@ deleting and report how many days were removed.
 - SPELLING: page had "Abdul-Rakhman Yakhyaev" (Sherdog) — reverted to the standing UFC.com form **Abdul Rakhman Yakhyaev** (also how Uncrowned/Yahoo renders it this run).
 - CYBER/MARKETS: nothing new dated Oct 24; Friday Oct 23 closes carried; Collabora CVE-2026-110447 due Oct 26.
 - "New" tags: UFC 336 New removed (in 1706 snapshot); New on Volkanovski top story, FW champions row, Oct 31 and Nov 7 cards.
+
+## Added 2026-10-24 (Saturday — clone ~6:04pm ET, AFTERNOON EDITION, MARKETS CLOSED FOR WEEKEND, final run of the window)
+- 🆕 MMA — UFC 333 BONUSES VERIFIED (Heavy, Adam Martin, updated 5:45 PM ET, fetched in full: https://heavy.com/sports/ufc/ufc-333-bonuses-revealed-following-event/; $100K winners corroborated by Forbes via Yahoo, Brian Mazique, fetched): Fight of the Night ($100K each) Yan & Dvalishvili; Performance of the Night ($100K) Volkanovski and Lone'er Kavanagh; $25K finish bonuses Pico, Reyes, Abdul Rakhman Yakhyaev, Magomedov, Steele.
+- ⚠ TRAPS in the Forbes/Yahoo piece: its bonus table lists Volkanovski "TKO, R1 4:54" (its own results table and every other source say R2 4:54 — R2 is correct) and Dawson–Aliev as UD 30-27 ×3 (UFC.com official: 29-27 ×3 after Aliev's point deduction). Neither printed.
+- 🆕 Forbes via Yahoo: Song Yadong (cageside) wants the next BW title shot; Sean O'Malley also called out Yan. Added to Around the Sport.
+- Spelling re-confirmed this run: "Abdul Rakhman Yakhyaev" (Heavy, Forbes).
+- CYBER: nothing dated Oct 24 found (search returned only old/undated pages; KEV search's latest alerts are Sept). Collabora CVE-2026-110447 due Oct 26 → 2 days left. MARKETS: closed; Friday Oct 23 closes carried unchanged.
+- "New" tags: prior removed (in 1738 snapshot); New only on the bonuses line and the Yan-next item.
