@@ -26171,3 +26171,8 @@ deleting and report how many days were removed.
 - Yan–Dvalishvili and Volkanovski–Evloev: NO result at ~3:45 PM ET (Sherdog official-result lines empty). Champions board unchanged — FW/BW may change; re-check next runs.
 - CYBER: no new KEV/news dated Oct 24 found (search surfaced only old govdelivery bulletins). Collabora due Oct 26 → 2 days left. MARKETS: closed; Friday Oct 23 closes carried unchanged.
 - "New" tags: only MMA main-card paragraph (rewritten to lead with Kavanagh/Volkov).
+
+## Added 2026-10-24 (Saturday — clone ~4:04pm ET, AFTERNOON EDITION (archive stamp 2026-10-24-1605), MARKETS CLOSED FOR WEEKEND)
+- MMA: Yan–Dvalishvili (BW title) and Volkanovski–Evloev (FW title) — NO official result at ~4:10 PM ET: Sherdog play-by-play (fetched) shows empty round scores and empty "Official Result" lines for both; CBS live page fetched was cached pre-fight; searches returned only previews. A Wikipedia snippet about "Dvalishvili def. Yan by UD" refers to their March 2023 first fight — NOT UFC 333; refused. Champions board unchanged — FW/BW may change; re-check next runs.
+- CYBER: no KEV alert dated Oct 24 found (search surfaced only older govdelivery bulletins). Collabora CVE-2026-110447 due Oct 26 → 2 days left. MARKETS: closed; Friday Oct 23 closes carried unchanged.
+- "New" tags: MMA main-card New removed (content already in 1536 snapshot); no New tags this edition.
