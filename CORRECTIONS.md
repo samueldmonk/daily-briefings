@@ -26120,3 +26120,8 @@ deleting and report how many days were removed.
 - 🆕 MMA (Sherdog play-by-play, Brian Knapp, Oct 24, fetched): OFFICIAL — Iasmin Lucindo def. Nicolle Caliari, UD (30-27, 30-27, 30-27); Kody Steele def. Noah Gugnon, TKO (punches) 3:54 R1. Oki vs. Santos in progress at ~11:05 AM ET (R1 Oki, R2 Santos on Sherdog cards — no result printed). Resolves the 10:34 entry's unverified search-summary Lucindo claim (now confirmed). Champions board unchanged; title fights on 2 PM ET main card — FW/BW belts may change, re-check next runs.
 - CYBER: no new items dated Oct 23–24 found. MARKETS: closed; Friday Oct 23 closes carried unchanged.
 - "New" tags: only MMA first-results paragraph.
+
+## Added 2026-10-24 (Saturday — clone ~11:34am ET, MIDDAY EDITION (archive stamp 2026-10-24-1135), MARKETS CLOSED FOR WEEKEND)
+- 🆕 MMA (Sherdog play-by-play, Brian Knapp, Oct 24, fetched): OFFICIAL — Daniel Santos def. Bolaji Oki, UD (29-28, 29-28, 29-28) (Oki entered 10-4, 2-3 UFC; Santos 14-3, 4-2 UFC per Sherdog). Malkoun vs. Vagaev and Chopurov vs. Thicknesse had no result posted at ~11:35 AM ET. Lucindo/Steele results stand. Champions board unchanged; FW/BW title fights on 2 PM ET main card — re-check next runs.
+- CYBER: no items dated Oct 24 found (search returned only spam/undated pages). Countdowns: Collabora CVE-2026-110447 due Oct 26 → 2 days left; Plex/SiteGuard overdue. MARKETS: closed; Friday Oct 23 closes carried unchanged.
+- "New" tags: only MMA early-prelims results paragraph (rewritten to lead with Santos–Oki).
