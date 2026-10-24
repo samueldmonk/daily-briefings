@@ -26115,3 +26115,8 @@ deleting and report how many days were removed.
 - MMA: Bleacher Report live blog (Tom Taylor, fetched) — 10:03 AM ET "prelims are officially underway", opener Lucindo vs. Caliari at 120.5-lb catchweight (Caliari missed weight; F4W, fetched: by 4.5 lb). ⚠ A search SUMMARY claimed "Lucindo def. Caliari by UD (30-27 x3)" but NO fetched page (BR, Yahoo/Uncrowned, F4W) showed any result — NOT printed. Re-check next run. Champions board unchanged; main card 2 PM ET.
 - CYBER: no items dated Oct 24 found. MARKETS: closed; Friday Oct 23 closes carried unchanged.
 - "New" tags: only MMA early-prelims-under-way paragraph (rewritten).
+
+## Added 2026-10-24 (Saturday — clone ~11:04am ET, MIDDAY EDITION, MARKETS CLOSED FOR WEEKEND)
+- 🆕 MMA (Sherdog play-by-play, Brian Knapp, Oct 24, fetched): OFFICIAL — Iasmin Lucindo def. Nicolle Caliari, UD (30-27, 30-27, 30-27); Kody Steele def. Noah Gugnon, TKO (punches) 3:54 R1. Oki vs. Santos in progress at ~11:05 AM ET (R1 Oki, R2 Santos on Sherdog cards — no result printed). Resolves the 10:34 entry's unverified search-summary Lucindo claim (now confirmed). Champions board unchanged; title fights on 2 PM ET main card — FW/BW belts may change, re-check next runs.
+- CYBER: no new items dated Oct 23–24 found. MARKETS: closed; Friday Oct 23 closes carried unchanged.
+- "New" tags: only MMA first-results paragraph.
