@@ -26156,3 +26156,11 @@ deleting and report how many days were removed.
 - 🆕 MMA (Athlon Sports, Prince Horton, Oct 23 5:46 PM EDT, fetched in full): hoped-for Makhachev–Carlos Prates WW title fight for UFC 336 (Jan 30 2027, Scotiabank Arena, Toronto) is off; Helwani on X Oct 23: "Date doesn't work for Makhachev anymore. Unclear why." Never officially announced; UFC 336 has no announced main event. Added to Around the Sport.
 - CYBER: no items dated Oct 24 found; KEV search surfaced only Sept alerts. MARKETS: closed; Friday Oct 23 closes carried unchanged.
 - "New" tags: only the UFC 336 Around-the-Sport item; lead-paragraph New removed (content already in 1405 snapshot).
+
+## Added 2026-10-24 (Saturday — clone ~3:04pm ET, AFTERNOON EDITION (archive stamp 2026-10-24-1505), MARKETS CLOSED FOR WEEKEND)
+- 🆕 MMA (Sherdog play-by-play, Brian Knapp, fetched): OFFICIAL — Aaron Pico def. Losene Keita, TKO (punches) 1:14 R1 (main-card opener; per Sherdog, Keita's first legitimate stoppage loss in 20 fights). Resolves the 2:34 entry's unverified Pico claim. Same page now confirms Yakhyaev def. Krylov TKO (knee and punches) 2:38 R1 and Reyes def. Murzakanov TKO (head kick and punches) 2:40 R1 — times now printed.
+- 🆕 UFC.com prelim results (E. Spencer Kyte, modified 13:20 ET, fetched): Dawson def. Aliev UD 29-27 x3 (Aliev docked a point); Thicknesse def. Chopurov SD — Thicknesse 29-28, 29-28; Chopurov 29-28 (Thicknesse's third straight win). Scores now printed.
+- ⚠ TRAP: Sherdog's play-by-play "Official Result" line reads "Asaf Chopurov def. Colby Thicknesse—Split Decision" — CONTRADICTS UFC.com (official), Cageside and SI, all of which have THICKNESSE winning. Sherdog line is an error (it also misspells "Grant Dwason"); refused.
+- Volkov vs. Kuniev in progress at ~3:10 PM ET (no official result); Kavanagh–Temirov, Yan–Dvalishvili, Volkanovski–Evloev pending. Champions board unchanged — FW/BW may change; re-check next runs.
+- CYBER: no new items dated Oct 24 found. MARKETS: closed; Friday Oct 23 closes carried unchanged.
+- "New" tags: only the MMA main-card paragraph; UFC 336 New removed (in 1435 snapshot).
