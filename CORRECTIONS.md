@@ -26110,3 +26110,8 @@ deleting and report how many days were removed.
 - CYBER: no items dated Oct 24 found. Search summaries surfaced CVE-2026-88771 (NetScaler) as "Oct 23" news, but sources show it is the Sept 27 disclosure (CTX697096; KEV Sept 27; CVSS 4.0 9.5 Citrix / 3.1 9.8 NVD) — NOT new; not added. "Oneonta school district ransomware" could not be corroborated — not printed. PwC/Everest is an unconfirmed claim — not printed.
 - MARKETS: closed; Friday Oct 23 closes from the prior entry carried unchanged.
 - "New" tags: all prior removed (already in 1014 snapshot); New only on MMA early-prelims paragraph.
+
+## Added 2026-10-24 (Saturday — clone ~10:34am ET, MORNING EDITION (archive stamp 2026-10-24-1035), MARKETS CLOSED FOR WEEKEND)
+- MMA: Bleacher Report live blog (Tom Taylor, fetched) — 10:03 AM ET "prelims are officially underway", opener Lucindo vs. Caliari at 120.5-lb catchweight (Caliari missed weight; F4W, fetched: by 4.5 lb). ⚠ A search SUMMARY claimed "Lucindo def. Caliari by UD (30-27 x3)" but NO fetched page (BR, Yahoo/Uncrowned, F4W) showed any result — NOT printed. Re-check next run. Champions board unchanged; main card 2 PM ET.
+- CYBER: no items dated Oct 24 found. MARKETS: closed; Friday Oct 23 closes carried unchanged.
+- "New" tags: only MMA early-prelims-under-way paragraph (rewritten).
