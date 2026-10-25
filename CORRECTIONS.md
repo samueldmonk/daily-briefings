@@ -26266,3 +26266,9 @@ deleting and report how many days were removed.
 - 🆕 MMA (ABC News/AAP, Oct 25 00:23 UTC, fetched in full): Volkanovski (38, 29-4) on retirement: "maybe we keep going"; promised wife a quick win (anniversary Wednesday); Evloev: "He's like good wine; older, stronger, better, he's truly a legend"; first stoppage win in six fights back to 2023; Thicknesse SD over Chopurov called a "big upset", Magomedov is "12th-ranked". Added as New Around-the-Sport item.
 - MARKETS: no Sunday futures report found (only a crypto newsletter + undated Investing.com snapshots — refused). Friday Oct 23 closes carried.
 - KEV countdowns unchanged (Collabora/Arista Oct 26 → 1 day left; Plex/Siemens Nov 3 → 9 days left). Champions board unchanged (re-confirmed: Volkanovski/Yan retained, ESPN + ABC).
+
+## Added 2026-10-25 (Sunday — clone ~12:03pm ET, MIDDAY EDITION (archive stamp 2026-10-25-1204), MARKETS CLOSED FOR WEEKEND)
+- Searches this run (US futures Oct 25, cyber/ransomware news Oct 25, UFC news after UFC 333, Volkanovski–Evloev reaction, CISA KEV Oct 2026, Fed/Big Tech week ahead) returned NOTHING new dated Oct 24–25 — only Indian Nifty pages, 2021–2025 cyber roundups, PRE-fight UFC 333 previews, Sept govdelivery KEV bulletins, and older-year week-ahead previews. All page content carried unchanged from verified entries above.
+- ⚠ TRAP: a search summary again framed UFC 333 results as "pending" (boxingnews page mislabeled 2024) — stale; Volkanovski and Yan RETAINED (verified entries above).
+- KEV countdowns unchanged (Collabora/Arista due Oct 26 → 1 day left; Plex/Siemens Nov 3 → 9 days left). Champions board unchanged.
+- "New" tags: Columbia S.C. ransomware and Volkanovski "maybe we keep going" New tags removed (both in 1134 snapshot); no New tags this edition.
