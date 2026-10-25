@@ -26260,3 +26260,9 @@ deleting and report how many days were removed.
 - Searches this run (US futures Oct 25, cyber news Oct 25, UFC 333 aftermath, actively exploited Oct 2026, Volkanovski–Gaethje superfight) returned NOTHING new dated Oct 24–25 — only Indian Nifty pages, 2020–2024 cyber roundups, and PRE-fight Volkanovski–Gaethje "send-off" pitch coverage (already reflected). All page content carried unchanged from verified entries above; static edition fallback set to Midday.
 - KEV countdowns unchanged (Collabora/Arista due Oct 26 → 1 day left; Plex/Siemens Nov 3 → 9 days left).
 - "New" tags: none this edition.
+
+## Added 2026-10-25 (Sunday — clone ~11:33am ET, MIDDAY EDITION (archive stamp 2026-10-25-1134), MARKETS CLOSED FOR WEEKEND)
+- 🆕 CYBER (WACH, Alyse Rhue, Oct 24 11:07 AM, fetched in full): City of Columbia, S.C. confirms incident discovered Tuesday was RANSOMWARE; disrupted MyColaSC, Animal Services, parks & rec reservations, GIS; police/fire/911/Columbia Water/Payment Center operational; SLED investigating, may work with FBI; NOT confirmed whether sensitive info compromised. Added as New card. "Oneonta" and "Richmond Public Schools" appeared only in a search summary — still NOT printed.
+- 🆕 MMA (ABC News/AAP, Oct 25 00:23 UTC, fetched in full): Volkanovski (38, 29-4) on retirement: "maybe we keep going"; promised wife a quick win (anniversary Wednesday); Evloev: "He's like good wine; older, stronger, better, he's truly a legend"; first stoppage win in six fights back to 2023; Thicknesse SD over Chopurov called a "big upset", Magomedov is "12th-ranked". Added as New Around-the-Sport item.
+- MARKETS: no Sunday futures report found (only a crypto newsletter + undated Investing.com snapshots — refused). Friday Oct 23 closes carried.
+- KEV countdowns unchanged (Collabora/Arista Oct 26 → 1 day left; Plex/Siemens Nov 3 → 9 days left). Champions board unchanged (re-confirmed: Volkanovski/Yan retained, ESPN + ABC).
