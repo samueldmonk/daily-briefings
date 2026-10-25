@@ -26231,3 +26231,9 @@ deleting and report how many days were removed.
 - 🆕 MMA (Heavy, Adam Martin, updated Oct 24 8:49 PM, fetched): Dana White on Volkanovski — "absolute stud… built different"; Volkanovski has won three straight. Heavy's article has a typo ("One of the most amazing things about Gaethje…" refers to Volkanovski) — not used.
 - CYBER: weekend — no new KEV alert after Oct 23 found (CISA search shows Oct 4/13/14/20/23 alerts only). Collabora & Arista due Oct 26 → 1 day left; Plex/Siemens Nov 3 → 9 days left.
 - "New" tags: all prior removed (in 0809 snapshot); New only on WS Mon. Oct. 26 radar item and MMA White-on-Volkanovski item.
+
+## Added 2026-10-25 (Sunday — clone ~9:03am ET, MORNING EDITION, MARKETS CLOSED FOR WEEKEND)
+- 🆕 MMA (Heavy, Adam Martin, updated Oct 25 1:14 AM, fetched in full: https://heavy.com/sports/ufc/movsar-evloev-issues-statement-ufc-333/): Evloev statement on X (9:36 PM, Oct 24): "Today wasn't my day… Congratulations to Volk. He was the better man today. Thank you to the UFC for giving me the opportunity to fight for the title…"; Evloev now 10-1 in UFC after 10 straight wins. Heavy suggests Yair Rodriguez or Youssef Zalal next (opinion — not printed).
+- ⚠ TRAP: BoxingNews headline "Pereira Defends Title With Evloev Finish At UFC 333" — WRONG; Volkanovski beat Evloev. Refused.
+- CYBER/MARKETS: nothing new dated Oct 24–25 found this run (CISA alert index still tops out at Oct 23). KEV countdowns unchanged (Collabora/Arista Oct 26 → 1 day left; Plex/Siemens Nov 3 → 9 days left). Friday Oct 23 closes carried.
+- "New" tags: prior removed (in 0836 snapshot); New only on MMA Evloev-statement item.
