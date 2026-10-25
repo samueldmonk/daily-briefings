@@ -26344,3 +26344,8 @@ deleting and report how many days were removed.
 - ⚠ TRAP: a search summary said UFC 335 is headlined by Oliveira vs Diego Lopes for the BMF title — not fetched/dated this run; NOT printed (page's verified upcoming cards unchanged).
 - KEV search surfaced only July 27 (CVE-2026-16812) and Sept 23 (CVE-2026-93952) VCO additions — consistent with the Oct 23 entry above calling CVE-2026-114625 the third exploited VCO flaw. Countdowns unchanged (Collabora/Arista due Oct 26 → 1 day left; Plex/Siemens Nov 3 → 9 days left).
 - "New" tags: Crime Stoppers New removed (in 1734 snapshot); no New tags this edition. Time fallbacks restamped to 6:05 PM ET.
+
+## Added 2026-10-25 (Sunday — clone ~6:33pm ET, AFTERNOON EDITION (archive stamp 2026-10-25-1834), MARKETS CLOSED, post-window run)
+- 🆕 MARKETS — SUNDAY-EVENING FUTURES (CNBC live blog https://www.cnbc.com/2026/10/25/stock-market-today-live-updates.html, via search snippets; direct fetch returned empty): futures rose Sunday evening "as traders try to recover from the S&P 500's losing week". Figures drifted between reads (S&P futures +0.3% then +0.4%; Dow +85 pts/0.2% then +143/0.3%; Nasdaq-100 +0.4% vs +0.6%) — page prints only "modestly higher, S&P futures up roughly 0.3%–0.4%". Same blog: fed funds futures ~90% hold at 3.75%–4%; Bank of America expects a quarter-point hike Wednesday. WS lead headline, Tape line and index card updated; New tag on the futures paragraph only.
+- ABC (AU) live blog claims oil "jumped 3 per cent to US$120/barrel" — not reconciled with a U.S. source/time; NOT printed.
+- CYBER/MMA: searches returned nothing new dated Oct 24–25; content carried. KEV countdowns unchanged (Collabora/Arista due Oct 26 → 1 day left; Plex/Siemens Nov 3 → 9 days left). Champions board unchanged.
