@@ -26325,3 +26325,8 @@ deleting and report how many days were removed.
 - ⚠ TRAP: a Gotrade (heygotrade.com) piece citing S&P futures 7,424.50 / Nasdaq-100 futures 27,902.25 / Dow futures 52,396.0 is UNDATED and its S&P level is ~200 pts below Friday's 7,623.68 close — refused. Sunday futures open 6 PM ET; none printed.
 - ⚠ TRAP (repeat): search summaries again said UFC 333 results unconfirmed — index lag; Volkanovski (TKO2 Evloev) and Yan (UD Dvalishvili) RETAINED per fetched entries above.
 - KEV countdowns unchanged (Collabora/Arista due Oct 26 → 1 day left; Plex/Siemens Nov 3 → 9 days left). Champions board unchanged. "New" tags: none.
+
+## Added 2026-10-25 (Sunday — clone ~5:03pm ET, AFTERNOON EDITION (archive stamp 2026-10-25-1704), MARKETS CLOSED FOR WEEKEND)
+- Searches this run (US stock futures Oct 25, cyber/ransomware news Oct 25, UFC news after UFC 333, Volkanovski–Evloev result, CISA KEV Oct 2026) returned NOTHING new dated Oct 24–25 — Indian Nifty pages (latest Oct 21), 2020–2024 ransomware stories, PRE-fight UFC 333 previews, Sept govdelivery KEV bulletins. All content carried unchanged from the fetched/sourced entries above; time fallbacks restamped to 5:04 PM ET.
+- ⚠ TRAP (repeat): search summaries again said UFC 333 results unconfirmed/"pending" — index lag; Volkanovski (TKO2 Evloev) and Yan (UD Dvalishvili) RETAINED per fetched ESPN/UFC.com/ABC entries above. Champions board unchanged.
+- KEV countdowns unchanged (Collabora/Arista due Oct 26 → 1 day left; Plex/Siemens Nov 3 → 9 days left). "New" tags: none.
