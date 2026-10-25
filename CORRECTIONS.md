@@ -26237,3 +26237,10 @@ deleting and report how many days were removed.
 - ⚠ TRAP: BoxingNews headline "Pereira Defends Title With Evloev Finish At UFC 333" — WRONG; Volkanovski beat Evloev. Refused.
 - CYBER/MARKETS: nothing new dated Oct 24–25 found this run (CISA alert index still tops out at Oct 23). KEV countdowns unchanged (Collabora/Arista Oct 26 → 1 day left; Plex/Siemens Nov 3 → 9 days left). Friday Oct 23 closes carried.
 - "New" tags: prior removed (in 0836 snapshot); New only on MMA Evloev-statement item.
+
+## Added 2026-10-25 (Sunday — clone ~9:33am ET, MORNING EDITION (archive stamp 2026-10-25-0934), MARKETS CLOSED FOR WEEKEND)
+- Searches this run (US futures, cyber news Oct 25, UFC 333 aftermath, Moicano–Nolan odds, Fed/Big Tech week ahead) returned NOTHING new dated Oct 24–25 beyond what is on file. All page content carried from verified entries above.
+- ⚠ TRAP: ESPN "Current and all-time UFC champions" page fetched this run serves a STALE 2023 snapshot (Jones HW, Pereira LHW, Edwards WW, Makhachev LW, O'Malley BW, Pantoja FLW, Grasso, Zhang). REFUSED — board stays as re-derived from UFC 333 and the authoritative board at top of this file.
+- Moicano–Nolan: no sportsbook odds in snippets (only a Combat Edge model 30/70 — not printed); records 21-7-1 / 11-1 appear only in a search summary — not printed. UFC.com odds already on page (Moicano −105 / Nolan −115) carried.
+- KEV countdowns unchanged (Collabora/Arista due Oct 26 → 1 day left; Plex/Siemens Nov 3 → 9 days left).
+- "New" tags: Evloev-statement New removed (in 0904 snapshot); no New tags this edition.
