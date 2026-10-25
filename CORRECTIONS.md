@@ -26314,3 +26314,8 @@ deleting and report how many days were removed.
 - PROCESS FIX: the 3:03pm run committed only archive snapshots — root pages stayed stamped "Midday Edition / 2:33 PM ET". This run republishes root pages restamped to Afternoon / 3:34 PM ET (content identical to the 1503 snapshot).
 - ⚠ TRAP (repeat): search summaries again called UFC 333 results "pending" — index lag; Volkanovski (TKO2 Evloev) and Yan (UD Dvalishvili) RETAINED.
 - KEV countdowns unchanged (Collabora/Arista due Oct 26 → 1 day left; Plex/Siemens Nov 3 → 9 days left). Champions board unchanged. "New" tags: none.
+
+## Added 2026-10-25 (Sunday — clone ~4:03pm ET, AFTERNOON EDITION (archive stamp 2026-10-25-1604), MARKETS CLOSED FOR WEEKEND)
+- UFC 333 RE-VERIFIED this run via search: UFC.com ("Featherweight Champion Alexander Volkanovski Defeats Movsar Evloev Via TKO At 4:54 Of Round 2"), ESPN headline "UFC 333 results: Alexander Volkanovski, Petr Yan win to retain titles", Yahoo Sports (Evloev 20-1; Volkanovski surpasses Aldo with nine FW title-fight wins). Champions board unchanged.
+- Market (US futures Oct 25 / week-ahead), cyber (Oct 25 news) and CISA KEV (Oct 2026) searches returned nothing new dated Oct 24–25 (Indian Nifty pages to Oct 21; KEV govdelivery bulletins latest Sept 21). Content carried unchanged; time fallbacks restamped to 4:04 PM ET.
+- KEV countdowns unchanged (Collabora/Arista due Oct 26 → 1 day left; Plex/Siemens Nov 3 → 9 days left). "New" tags: none.
