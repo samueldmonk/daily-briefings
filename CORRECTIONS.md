@@ -26289,3 +26289,10 @@ deleting and report how many days were removed.
 - Moicano–Nolan records (21-7-1 / 11-1) and "UFC Vegas 123 / Fight Night 292" naming appear only in a search SUMMARY this run — still NOT printed.
 - KEV countdowns unchanged (Collabora/Arista due Oct 26 → 1 day left; Plex/Siemens Nov 3 → 9 days left). Champions board unchanged.
 - "New" tags: Volkanovski "weighing the options" New removed (in 1304 snapshot); no New tags this edition.
+
+## Added 2026-10-25 (Sunday — clone ~2:03pm ET, MIDDAY EDITION (archive stamp 2026-10-25-1404), MARKETS CLOSED FOR WEEKEND)
+- Searches this run (US stock futures Oct 25, cyber/ransomware news Oct 25, UFC news after UFC 333, Volkanovski–Evloev reaction, CISA KEV Oct 2026, Fed/Big Tech week ahead) returned NOTHING new dated Oct 24–25 — only Indian Nifty pages, 2023–2025 cyber items, PRE-fight UFC 333 previews (MMASucka/LowKick), Sept govdelivery KEV bulletins, and July 2026 / Oct 2025 week-ahead previews. All page content carried unchanged from verified entries above; static time fallbacks restamped to 2:05 PM ET.
+- ⚠ TRAP (repeat): search summaries again said UFC 333 outcome "can't be confirmed" — index lag; Volkanovski (TKO2 Evloev) and Yan (UD Dvalishvili) RETAINED per fetched entries above. An MMASucka headline "Evloev echoes Volkanovski's retirement stipulation after UFC 333" was not fetched/dated — not printed.
+- Archive pruning now done by FILENAME date (>21 days), since clone mtimes are always fresh.
+- KEV countdowns unchanged (Collabora/Arista due Oct 26 → 1 day left; Plex/Siemens Nov 3 → 9 days left). Champions board unchanged.
+- "New" tags: none this edition.
