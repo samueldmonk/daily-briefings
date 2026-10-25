@@ -26255,3 +26255,8 @@ deleting and report how many days were removed.
 - Searches this run (US futures Oct 25, cyber news Oct 25, UFC 333 aftermath Oct 25, CISA KEV Oct 24) returned NOTHING new dated Oct 24–25 — only Indian Nifty pages, 2020–2024 cyber roundups, pre-fight UFC previews, and Sept govdelivery KEV bulletins. All page content carried unchanged from verified entries above.
 - KEV countdowns unchanged (Collabora/Arista due Oct 26 → 1 day left; Plex/Siemens Nov 3 → 9 days left).
 - "New" tags: none this edition.
+
+## Added 2026-10-25 (Sunday — clone ~11:03am ET, MIDDAY EDITION (archive stamp 2026-10-25-1104), MARKETS CLOSED FOR WEEKEND)
+- Searches this run (US futures Oct 25, cyber news Oct 25, UFC 333 aftermath, actively exploited Oct 2026, Volkanovski–Gaethje superfight) returned NOTHING new dated Oct 24–25 — only Indian Nifty pages, 2020–2024 cyber roundups, and PRE-fight Volkanovski–Gaethje "send-off" pitch coverage (already reflected). All page content carried unchanged from verified entries above; static edition fallback set to Midday.
+- KEV countdowns unchanged (Collabora/Arista due Oct 26 → 1 day left; Plex/Siemens Nov 3 → 9 days left).
+- "New" tags: none this edition.
