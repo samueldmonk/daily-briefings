@@ -26319,3 +26319,9 @@ deleting and report how many days were removed.
 - UFC 333 RE-VERIFIED this run via search: UFC.com ("Featherweight Champion Alexander Volkanovski Defeats Movsar Evloev Via TKO At 4:54 Of Round 2"), ESPN headline "UFC 333 results: Alexander Volkanovski, Petr Yan win to retain titles", Yahoo Sports (Evloev 20-1; Volkanovski surpasses Aldo with nine FW title-fight wins). Champions board unchanged.
 - Market (US futures Oct 25 / week-ahead), cyber (Oct 25 news) and CISA KEV (Oct 2026) searches returned nothing new dated Oct 24–25 (Indian Nifty pages to Oct 21; KEV govdelivery bulletins latest Sept 21). Content carried unchanged; time fallbacks restamped to 4:04 PM ET.
 - KEV countdowns unchanged (Collabora/Arista due Oct 26 → 1 day left; Plex/Siemens Nov 3 → 9 days left). "New" tags: none.
+
+## Added 2026-10-25 (Sunday — clone ~4:33pm ET, AFTERNOON EDITION (archive stamp 2026-10-25-1634), MARKETS CLOSED FOR WEEKEND)
+- Searches this run (US futures/Fed/Big Tech week ahead Oct 25, cyber/ransomware Oct 25, UFC news after UFC 333, UFC 333 results, Friday Oct 23 closes, CISA KEV Oct 2026) returned NOTHING new dated Oct 24–25 — index lag (2015–2025 AP recaps, PRE-fight UFC 333 previews, Sept govdelivery KEV bulletins). All content carried unchanged from the fetched/sourced entries above; time fallbacks restamped to 4:34 PM ET.
+- ⚠ TRAP: a Gotrade (heygotrade.com) piece citing S&P futures 7,424.50 / Nasdaq-100 futures 27,902.25 / Dow futures 52,396.0 is UNDATED and its S&P level is ~200 pts below Friday's 7,623.68 close — refused. Sunday futures open 6 PM ET; none printed.
+- ⚠ TRAP (repeat): search summaries again said UFC 333 results unconfirmed — index lag; Volkanovski (TKO2 Evloev) and Yan (UD Dvalishvili) RETAINED per fetched entries above.
+- KEV countdowns unchanged (Collabora/Arista due Oct 26 → 1 day left; Plex/Siemens Nov 3 → 9 days left). Champions board unchanged. "New" tags: none.
