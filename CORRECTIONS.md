@@ -26272,3 +26272,9 @@ deleting and report how many days were removed.
 - ⚠ TRAP: a search summary again framed UFC 333 results as "pending" (boxingnews page mislabeled 2024) — stale; Volkanovski and Yan RETAINED (verified entries above).
 - KEV countdowns unchanged (Collabora/Arista due Oct 26 → 1 day left; Plex/Siemens Nov 3 → 9 days left). Champions board unchanged.
 - "New" tags: Columbia S.C. ransomware and Volkanovski "maybe we keep going" New tags removed (both in 1134 snapshot); no New tags this edition.
+
+## Added 2026-10-25 (Sunday — clone ~12:33pm ET, MIDDAY EDITION (archive stamp 2026-10-25-1234), MARKETS CLOSED FOR WEEKEND)
+- Searches this run (US stock futures Oct 25, cyber/ransomware news Oct 25, UFC news after UFC 333, UFC 333 results, CISA KEV Oct 2026) returned NOTHING new dated Oct 24–25 — only Indian Nifty pages, 2021–2025 cyber roundups, PRE-fight UFC 333 previews, and Jul–Sep govdelivery KEV bulletins. All page content carried unchanged from verified entries above; only static time fallbacks restamped.
+- ⚠ TRAP (repeat): search summaries again said UFC 333 results "could not be found"/"pending" — index lag, NOT evidence; Volkanovski (TKO2 Evloev) and Yan (UD Dvalishvili) RETAINED per the fetched ESPN/Sherdog/ABC entries above.
+- KEV countdowns unchanged (Collabora/Arista due Oct 26 → 1 day left; Plex/Siemens Nov 3 → 9 days left). Champions board unchanged.
+- "New" tags: none this edition.
