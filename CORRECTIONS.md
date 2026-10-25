@@ -26244,3 +26244,9 @@ deleting and report how many days were removed.
 - Moicano–Nolan: no sportsbook odds in snippets (only a Combat Edge model 30/70 — not printed); records 21-7-1 / 11-1 appear only in a search summary — not printed. UFC.com odds already on page (Moicano −105 / Nolan −115) carried.
 - KEV countdowns unchanged (Collabora/Arista due Oct 26 → 1 day left; Plex/Siemens Nov 3 → 9 days left).
 - "New" tags: Evloev-statement New removed (in 0904 snapshot); no New tags this edition.
+
+## Added 2026-10-25 (Sunday — clone ~10:03am ET, MORNING EDITION, MARKETS CLOSED FOR WEEKEND)
+- Searches this run (US futures Oct 25, cyber news Oct 25, UFC news Oct 25, UFC 333 aftermath, CISA KEV Oct 2026) returned NOTHING new dated Oct 24–25 — only Indian-market pages, 2020–2024 cyber roundups, and PRE-fight UFC 333 previews. All page content carried unchanged from verified entries above.
+- ⚠ TRAP: LowKick/MMASucka "what's next" items surfaced in search are PRE-fight (Volkanovski naming Jean Silva / Aljamain Sterling as post-win options) — not printed as post-fight news.
+- KEV search still tops out at Sept govdelivery bulletins; Oct 23 Collabora/Arista (due Oct 26 → 1 day left) and Plex/Siemens (Nov 3 → 9 days left) countdowns unchanged.
+- "New" tags: none this edition.
