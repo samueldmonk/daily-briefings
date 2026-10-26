@@ -26373,3 +26373,9 @@ deleting and report how many days were removed.
 - ⚠ NOT PRINTED: search-summary-only Dow/Nasdaq intraday figures (Yahoo "Dow +0.3%, S&P +0.9%, Nasdaq +1.2%" ~11:34/12:00; CNBC "Dow +0.4%, S&P +1%, Nasdaq +1.3%", headline "Nasdaq jumps 1%") — no fetched page carried them with a time. Yahoo live-blog fetch returned a cached premarket version.
 - CYBER/MMA: no new verified items (UFC 336 Prates–Morales interim WW already carried). KEV countdowns unchanged (Collabora/Arista due TODAY Oct 26 → 0 days; Plex/Siemens Nov 3 → 8 days). Champions board unchanged.
 - "New" tags: all 1136-edition New tags removed; New only on the WS "Late morning" lead paragraph.
+
+## Added 2026-10-26 (Monday — clone ~12:35pm ET, MIDDAY EDITION (archive stamp 2026-10-26-1237), MARKET OPEN)
+- 🆕 MARKETS (Yahoo Finance live blog, Grace O'Donnell, updated 12:10 PM ET, fetched; market strip "As of 12:35:49 PM EDT"): S&P 500 +0.70%, Dow +0.22%, Nasdaq +0.94%, Russell 2000 +0.73%, VIX 18.34 (−5.71%), 10-yr 4.976% (−1.2 bp), crude Dec ~−0.34%. Live blog: Brent fell to $110; AAA gasoline $4.28/gal (−20c m/m); Tesla +6% on Barclays Overweight ($370→$450 PT, Dan Levy). Blog text "Dow +0.3%, S&P +0.9%, Nasdaq +1.2%" is from its 12:10 update — the 12:35 strip was printed as current.
+- 🆕 MARKETS (TheStreet, 12:31 PM ET, fetched): Midday Movers — S&P 500 +0.76%; laggards Fair Isaac −14.49%, Reddit −5.67%, Omnicom −4.59%. FICO and RDDT cards updated with times; Omnicom card New.
+- CYBER/MMA: searches returned nothing new beyond carried items (BleepingComputer PHP2Shell/AGENTS.md/Interpol Africa already on page). Bloody Elbow Oct 23 "Pereira picks Gane vs Hokit" seen only in a search summary — NOT printed. KEV countdowns unchanged (Collabora/Arista due TODAY Oct 26 → 0 days; Plex/Siemens Nov 3 → 8 days). Champions board unchanged.
+- "New" tags: Late-morning New removed (in 1234 snapshot); New on WS Midday paragraph + Omnicom card.
