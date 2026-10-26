@@ -26366,3 +26366,10 @@ deleting and report how many days were removed.
 - ⚠ NOT PRINTED: search-summary-only intraday figures (CNBC "Dow +272/0.5%, S&P +0.9%, Nasdaq +1.1%"; Yahoo "S&P 7,699.48 +0.99% ~11:03") — no fetched source/time this run. "10 of 11 sectors higher at 9:55" — unattributed summary, not printed.
 - CYBER/MMA: searches (cyber news Oct 26, CISA KEV Oct 26, UFC news Oct 26) returned nothing new; content carried. KEV countdowns: Collabora/Arista due TODAY Oct 26 → 0 days; Plex/Siemens Nov 3 → 8 days. Champions board unchanged.
 - "New" tags: removed from cyber PHP2Shell/AGENTS.md and WS premarket items (in 0952 snapshot); New on WS intraday paragraphs and Monday movers. Chart of the Day → NASDAQ:XP.
+
+## Added 2026-10-26 (Monday — clone ~11:38am ET, MIDDAY EDITION, MARKET OPEN)
+- 🆕 MARKETS (TheStreet live blog, Rob Lenihan, entry 11:22 AM ET, page modified 11:32 AM ET, fetched): "S&P 500 Check-In" — S&P 500 +0.97%, "up nearly one percent"; ~219 holdings up this quarter; stocks outside tech have fared better in recent weeks. Headline now "S&P 500 climbs as markets gear up for earnings, Fed decision".
+- 🆕 MARKETS (Yahoo Finance live blog via NewsBeep, fetched): Anthropic S-1 — $16.3B revenue in six months ended June vs $4.6B in all of 2025; $9B AI-infrastructure spend H1 vs $7.3B in 2025; net loss $80.7B through June, mostly accounting charges; ~1/5 of revenue from two customers; ticker ANT. EWZ −26% premarket — biggest one-day drop since 2000 if sustained (prior record −23%, March 2020).
+- ⚠ NOT PRINTED: search-summary-only Dow/Nasdaq intraday figures (Yahoo "Dow +0.3%, S&P +0.9%, Nasdaq +1.2%" ~11:34/12:00; CNBC "Dow +0.4%, S&P +1%, Nasdaq +1.3%", headline "Nasdaq jumps 1%") — no fetched page carried them with a time. Yahoo live-blog fetch returned a cached premarket version.
+- CYBER/MMA: no new verified items (UFC 336 Prates–Morales interim WW already carried). KEV countdowns unchanged (Collabora/Arista due TODAY Oct 26 → 0 days; Plex/Siemens Nov 3 → 8 days). Champions board unchanged.
+- "New" tags: all 1136-edition New tags removed; New only on the WS "Late morning" lead paragraph.
