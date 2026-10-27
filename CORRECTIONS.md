@@ -26427,3 +26427,9 @@ deleting and report how many days were removed.
 - ⚠ Boeing "falls 10%" (TheStreet headline) still NOT confirmed by any fetched page or BA-specific search — BA card kept as "+0.37% early" (7:58 AM).
 - CYBER/MMA: searches returned nothing new; PHP2Shell KEV due date still unconfirmed from CISA → no countdown. Collabora/Arista OVERDUE (due Oct 26); Plex/Siemens Nov 3 → 7 days. Champions board unchanged.
 - "New" tags: none carried from 1235; New on WS early-afternoon paragraph + SOFI/RCL updates + DELL card.
+
+## Added 2026-10-27 (Tuesday — clone ~1:31pm ET, MIDDAY EDITION (archive stamp 2026-10-27-1336), MARKET OPEN)
+- 🆕 MARKETS (TheStreet live blog, Lenihan/Weidner, modified 16:37 UTC, FETCHED this run): **Boeing −10% CONFIRMED** — 11:14 AM entry "Boeing sinks 10% after saying it will miss delivery target" (earnings miss + FY delivery-target cut; biggest drop since last April; lowest since Nov. 2025); 12:37 PM Midday Movers: XYL −11.9%, BA −9.72%, VLO −7.75%. 12:00 PM: S&P 500 +0.68% at 7,728.90 (+52.13), tech ~+2%. SUPERSEDES the "BA +0.37% early only" handling — BA card now −9.72%.
+- No index print newer than the Motley Fool ~1 PM strip was fetchable (Yahoo live blog = premarket cache). Search-summary-only "Yahoo 1:30:37 PM Dow 52,395.64 +0.07%, S&P 7,720.74 +0.57%" NOT printed.
+- CYBER/MMA: searches returned nothing new (Moicano–Nolan Oct 31 Meta APEX preview only; Combat Edge 70/30 is a model, not odds — not printed). KEV: Collabora/Arista OVERDUE (due Oct 26); Plex/Siemens Nov 3 → 7 days; PHP2Shell due date still unconfirmed from CISA → no countdown. Champions board unchanged.
+- "New" tags: 1305-edition New tags removed; New on WS noon-check paragraph + BA/XYL cards.
