@@ -26452,3 +26452,10 @@ deleting and report how many days were removed.
 - Motley Fool strip re-fetched = same ~2:35 PM cache (superseded). Search-summary "Dow 52,380.93 +0.04% at 3:03:40 PM" NOT printed (no fetched page).
 - CYBER/MMA: nothing new verified dated Oct 27 (AB InBev/Emperador claim still unverified; Frontline Education breach undated in results — not printed; Moicano–Nolan: only Combat Edge model 70/30 and Polymarket mention, no sportsbook odds — not printed). KEV: Collabora/Arista OVERDUE (due Oct 26); Plex/Siemens Nov 3 → 7 days; PHP2Shell due date still unconfirmed from CISA → no countdown. Champions board unchanged.
 - "New" tags: 1436-edition New removed (~2:35 PM paragraph); New on WS 2:43 PM paragraph + AAPL card.
+
+## Added 2026-10-27 (Tuesday — clone ~3:33pm ET, AFTERNOON EDITION (archive stamp 2026-10-27-1556), MARKET OPEN)
+- 🆕 MARKETS (Yahoo Finance live blog, FETCHED; strip "U.S. markets close in 47m", ^DJI widget "As of 3:13:54 PM EDT"): S&P 500 7,726.75 +49.98/+0.65%, Nasdaq 26,506.65 +337.27/+1.29%, Dow 52,410.58 +49.00/+0.09% (widget 52,412.57 +0.10%) — all reconcile to Monday closes. Russell 2000 +1.11%; VIX 17.70 −3.75%; 10-yr 4.99%; Dec WTI $99.87 −1.86%; gold $4,072.50 +0.84%; SOFI +14.18%; KO −1.26%. Lead now "as of ~3:13 PM ET", % moves only.
+- 🆕 TheStreet live blog (modified 18:52 UTC, FETCHED): 2:26 PM Russell 2000 +1.07% (S&P +0.56%, Nasdaq +1.12%); 1:52 PM WTI "just below $100/bbl".
+- ⚠ NOT PRINTED: search-summary-only "Yahoo ~3:31 PM Dow ~52,417 +0.1%" (no fetched strip at that time).
+- CYBER/MMA: searches returned nothing new dated Oct 27; KEV: Collabora/Arista OVERDUE (due Oct 26); Plex/Siemens Nov 3 → 7 days; PHP2Shell due date still unconfirmed from CISA → no countdown. Moicano–Nolan: still no sportsbook odds (Combat Edge 70/30 model only) — not printed. Champions board unchanged.
+- "New" tags: 1505-edition New removed (2:43 PM paragraph, AAPL card); New on WS 3:13 PM paragraph.
