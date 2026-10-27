@@ -26440,3 +26440,9 @@ deleting and report how many days were removed.
 - ⚠ CYBER TRAP: AnMed (SC/GA) malware/office closures surfaced in an Oct 27 ransomware search — the incident is from JULY 2026 (Jul 25–26), not new. NOT printed as current. AB InBev/Emperador, J.B. Hunt/Whitearmor, MISC/Rhysida, Cox Automotive/VinSolutions — search-summary/claims only, NOT printed.
 - CYBER/MMA: no new verified items; KEV: Collabora/Arista OVERDUE (due Oct 26); Plex/Siemens Nov 3 → 7 days; PHP2Shell due date still unconfirmed from CISA → no countdown. Moicano vs Nolan Oct 31 Meta APEX unchanged. Champions board unchanged.
 - "New" tags: 1336-edition New tags removed (noon-check paragraph, BA/XYL cards); New on WS 1:48 PM paragraph + ORCL card.
+
+## Added 2026-10-27 (Tuesday — clone ~2:34pm ET, MIDDAY EDITION (archive stamp 2026-10-27-1436), MARKET OPEN)
+- 🆕 MARKETS (Motley Fool midday page quote strip, FETCHED ~2:35 PM ET, 5-min cache): S&P 500 7,721.57 +0.58% (+44.80), Nasdaq Composite 26,467.75 +1.14% (+298.37), Dow 52,374.80 +0.03% (+13.22) — all three reconcile to Monday's closes (7,676.77 / 26,169.38 / 52,361.58). SOFI $16.44 +13.66% on same strip. Lead now "as of ~2:35 PM ET" with % moves only.
+- ⚠ NOT PRINTED (search-summary only): "Yahoo 2:09 PM S&P +0.52%, Nasdaq +1.09%, Dow +0.01%; Dow 52,369.19 at 2:33 PM"; "TheStreet 1:52 PM S&P up about 2%" — contradicts every other print (likely the tech-sector figure); refused. Yahoo live blog re-fetched = same 1:48:45 PM strip.
+- CYBER/MMA: searches returned nothing new dated Oct 27; no CISA KEV bulletin for Oct 27 found. KEV: Collabora/Arista OVERDUE (due Oct 26); Plex/Siemens Nov 3 → 7 days; PHP2Shell due date still unconfirmed from CISA → no countdown. Moicano vs Nolan Oct 31 Meta APEX (Paramount+, 8 PM ET main card) unchanged; Combat Edge 70/30 is a model, not odds. Champions board unchanged.
+- "New" tags: 1434-edition New tags removed (1:48 PM paragraph, ORCL card); New on WS ~2:35 PM paragraph.
