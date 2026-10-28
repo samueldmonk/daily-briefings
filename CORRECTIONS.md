@@ -26575,3 +26575,11 @@ deleting and report how many days were removed.
 - CYBER: no KEV alert dated Oct 28 found; no new dated incidents. Countdowns unchanged (Nov 10 → 13 days; Nov 3 → 6 days).
 - MMA: Moicano (21-7-1) vs Nolan (11-1), UFC Vegas 123, Oct 31, Meta APEX reconfirmed (search); still no main-event sportsbook line. Champions board unchanged.
 - "New" tags: 1406 New removed (Fed-decision paragraph); New on WS ~2:15 PM post-decision paragraph.
+
+## Added 2026-10-28 (Wednesday — clone ~3:04pm ET, AFTERNOON EDITION (archive stamp 2026-10-28-1505), WARSH PRESSER / LAST HOUR)
+- 🆕 MARKETS (Yahoo Finance live blog 130508769, O'Donnell, updated 11:48 AM PDT, FETCHED; strip "U.S. markets close in 59m" ≈ 3:01 PM ET): S&P 500 7,741.49 +18.89 +0.24%; Dow 52,460.77 +83.20 +0.16%; Nasdaq 26,510.13 +32.32 +0.12%; R2K 2,819.41 +0.02% — ALL reconcile to Tue closes. ^DJI widget stamped 3:01:14 PM EDT 52,423.44 +45.87 (+0.09%) — both printed with attribution. 10-yr 5.02; VIX 17.30 −1.26%; gold 4,058.70 −0.39%; Dec WTI 102.62 +2.72%; GOOG +1.73%, MSFT −0.29%. Lead "as of ~3 PM ET". Levels NOT printed in editorial.
+- 🆕 FED (same blog, Ines Ferré, FETCHED): Warsh announced FOMC change from next fall — eight meetings/yr stays "the right number" but in 2027 ONE meeting is strategy-only (no rate vote, no statement); 2028 expected 2 strategy + 6 policy meetings. ⚠ CNN snippet framed it as "rate-setting meetings eight→seven next year, six the following" — consistent; Yahoo's fuller wording printed. CNN/CNBC live pages fetched EMPTY.
+- ⚠ NOT PRINTED: Globe and Mail pre-decision levels (search summary only); ca.finance.yahoo 080642111 = 4:58 AM PDT cache (refused); Fed blog 161129201 = same 11:14 AM PDT/"close in 1h 45m" cache as last run.
+- CYBER: no KEV alert dated Oct 28 found; no new dated incidents verified (SonicWall SMA1000/bulletproof-hosting items undated — not printed). Countdowns unchanged (Nov 10 → 13 days; Nov 3 → 6 days).
+- MMA: Moicano (21-7-1) vs Nolan (11-1), Oct 31, Meta APEX, Paramount+ 8 PM ET reconfirmed (search). ⚠ A search summary listed "Randy Brown vs. Carlos Leal" as co-main — STALE (Leal withdrew; Jacobe Smith in, per standing Oct 28 entry); not printed. Champions board unchanged.
+- "New" tags: 1436 New removed (~2:15 PM paragraph); New on WS ~3 PM presser paragraph.
