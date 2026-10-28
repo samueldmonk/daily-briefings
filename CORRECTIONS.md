@@ -26559,3 +26559,11 @@ deleting and report how many days were removed.
 - CYBER: no CISA KEV alert dated Oct 28 found; no new verified incidents dated Oct 28. PHP2Shell due date still NOT printed. Countdowns unchanged (Node2Shell/PolyShell Nov 10 → 13 days; Plex/Siemens Nov 3 → 6 days).
 - MMA: Moicano vs Nolan Oct 31 Meta APEX reconfirmed (search); no sportsbook main-event line beyond those on page (Combat Edge 70/30 is a model; Hope–Marshall lines search-summary only — not printed). Champions board unchanged.
 - "New" tags: 1306-edition New removed (~1 PM paragraph); New on WS ~1:31 PM paragraph + GMAB/FFIV/LOGI cards.
+
+## Added 2026-10-28 (Wednesday — clone ~2:04pm ET, MIDDAY EDITION (archive stamp 2026-10-28-1406), FOMC DECISION)
+- 🆕 FED: Held at 3.75%–4% (CNBC live blog search snippet: "held steady on rates ... maintaining its target range of 3.75% to 4%"); 10-2 split vote (Yahoo Finance headlines "Fed votes to hold rates steady in 10-2 decision" / "holds interest rates steady in split vote"); two dissenters favored a quarter-point hike (Yahoo search summary). Dissenter NAMES (Cook, Hammack) seen only in a search summary — NOT printed. December hike odds ~85% per CME FedWatch (Yahoo/CNBC snippet). Warsh presser 2:30 PM ET. Fed press release page not fetchable (not in provenance).
+- 🆕 MARKETS (Yahoo live blog 130508769 FETCHED, strip "U.S. markets close in 2h", blog updated 10:12 AM PDT + "49 mins ago" ≈ 2:01 PM ET): S&P 500 7,733.90 +11.30 +0.15%; Dow 52,469.03 +91.46 +0.17%; Nasdaq 26,474.26 −3.55 −0.01%; R2K +0.12%; 10-yr 5.02; VIX 17.30 −1.25%; gold −0.54%; Dec WTI 102.78 +2.88% — reconcile to Tue closes (7,722.60 / 52,377.57). Levels NOT printed in editorial.
+- ⚠ NOT PRINTED: Kiplinger "Nasdaq +0.8% to 26,169 / S&P 7,676 / Dow 52,361" — that is MONDAY Oct 26's close, not today.
+- CYBER: no CISA KEV alert dated Oct 28 found; no new dated incidents. Countdowns unchanged (Nov 10 → 13 days; Nov 3 → 6 days).
+- MMA: Moicano (21-7-1) vs Nolan (11-1), UFC Vegas 123, Oct 31, Meta APEX, main card 8 PM ET reconfirmed. Champions board unchanged.
+- "New" tags: 1336-edition New removed (1:31 PM paragraph + GMAB/FFIV/LOGI cards); New on WS Fed-decision paragraph.
