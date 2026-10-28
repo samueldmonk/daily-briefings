@@ -26593,3 +26593,12 @@ deleting and report how many days were removed.
 - CYBER: no KEV alert dated Oct 28 found (search); no new dated incidents. Countdowns unchanged (Nov 10 → 13 days; Nov 3 → 6 days).
 - MMA: Moicano vs Nolan, UFC Vegas 123, Oct 31, Meta APEX, five rounds at lightweight, main card 8 PM ET reconfirmed (search). Champions board unchanged.
 - "New" tags: 1505 New removed (~3 PM presser paragraph); New on WS ~3:31 PM paragraph + ORCL card.
+
+## Added 2026-10-28 (Wednesday — clone ~4:04pm ET, AFTERNOON EDITION (archive stamp 2026-10-28-1606), POST-CLOSE, OFFICIAL CLOSE PRELIMINARY)
+- 🆕 MARKETS (Yahoo Finance live blog 130508769 → 185837696, updated 1:00 PM PDT, FETCHED; "U.S. markets closed" strip; ^DJI "At close: 4:02:28 PM EDT" 52,479.62 +102.05 +0.19%): S&P 500 7,744.28 +21.68 +0.28%; Dow 52,478.91 +101.34 +0.19%; Nasdaq 26,549.85 +72.04 +0.27%; R2K 2,823.00 +4.13 +0.15% — all reconcile to Tue closes. 10-yr 5.05 (+0.05); VIX 16.88 −3.65%; gold 4,078.10 +0.09%; Dec WTI 102.58 +2.68%. ORCL closed 144.34 +10.58% (4:00 PM), AH 144.80 +0.32% (4:02:22 PM). Printed as PRELIMINARY % moves only; ⚠ a search summary gave S&P 7,744.16 / Dow 52,476.35 (minor level variance) → levels NOT entered in Scorecard. NEXT RUN: confirm official closes with a second source (AP/TheStreet) and add the Wed column levels.
+- ⚠ TRAP: a search summary labeled "Reuters closing levels S&P 7,728.60 +0.08%, Dow 52,469.11, Nasdaq 26,434.50 −0.16%" — these are POST-FED INTRADAY (~2 PM) figures, NOT the close; refused.
+- 🆕 StockTitan live article (FETCHED, 3:00–3:01 PM ET board): VRT +17.3%, ENPH −17.1%, LCII +9.0% (Monomoy $101/sh non-binding cash offer; last $97.95), WEN confirmed Trian $7.35 proposal 2:44 PM, LOGI −12.1%, HOOD −3.5%, FFIV −19.8%, GMAB +29.9%. After the close: MSFT, NOW, CMG (~4:10 PM), CVNA; Ford also after close (Yahoo).
+- AFTER HOURS: no post-results MSFT/GOOGL moves verified as of ~4:05 PM ET — section says so. MSFT consensus (CNBC) seen only in a search summary — not printed.
+- CYBER: no KEV alert dated Oct 28 found; CyberWire 15/206 (Oracle EBS probing) fetched 404 → NOT printed. Content carried; countdowns unchanged (Nov 10 → 13 days; Nov 3 → 6 days).
+- MMA: Moicano (21-7-1) vs Nolan (11-1), UFC Vegas 123, Oct 31, Meta APEX, five rounds reconfirmed (search); Leal out vs Randy Brown. No sportsbook main-event line beyond page. Champions board unchanged.
+- "New" tags: 1538 New removed (~3:31 PM paragraph, ORCL card); New on WS close paragraph, LCII card, Wednesday after-hours note.
