@@ -26507,3 +26507,10 @@ deleting and report how many days were removed.
 - 🆕 MMA (MMA Junkie via Yahoo Sports, Oct 26, FETCHED): Moicano +105 / Nolan −125 — CONFLICTS with UFC.com −115/−105; both printed with attribution. Records Moicano 21-7-1, Nolan 11-1; co-main Randy Brown vs Jacobe Smith (13-0) after Carlos Leal withdrew.
 - ⚠ CYBER: BleepingComputer (Oct 27, fetched) says CISA ordered FCEB agencies to patch PHP2Shell (CVE-2026-109618/-109619) "by Thursday" (= Oct 29) under BOD 26-04; mlq.ai headline says Oct 29. CISA 10/26 alert page fetched EMPTY again → per same-week-deadline rule, due date still NOT printed. NEXT RUN: try to confirm on a CISA page.
 - "New" tags: 0936-edition New removed; New on WS open paragraph + WEN card, MMA MMA Junkie odds line.
+
+## Added 2026-10-28 (Wednesday — clone ~10:34am ET, MORNING EDITION (archive stamp 2026-10-28-1036), MID-MORNING)
+- 🆕 MARKETS (Investing.com, "Why is Wendy's stock surging today?", Louis Juricic, Oct 28 8:30 AM, FETCHED ~10:35 AM ET; page quote board): US 30 cash +0.12% (52,443.50), US 500 cash +0.08% (7,728.70), IXIC −0.01%, VIX 17.48, WTI $101.97 +2.07%, US 10Y 4.995%, 2Y 4.76%, 30Y 5.296%, WEN +15.88%. Lead now "as of ~10:35 AM ET" — early gains faded. Levels NOT printed in editorial (CFD levels).
+- 🆕 WEN: Trian Fund Management formal nonbinding $1.4B all-cash take-private at $7.35/sh (~20% premium); consortium Flynn Group, BlueFive Capital, Sixth Street Partners; +14.8% pre-open (Investing.com, fetched).
+- ⚠ NOT PRINTED: search-summary "Dow 52,478.46 +100.89 (+0.19%) as of 10:34 AM EDT" (Yahoo page fetched pre-open cache again); "Fed expected to keep rates in 3.75–4%" summary line; BoC 2.5% hike and "OpenAI to buy Google TPUs" (headlines only).
+- CYBER/MMA: searches returned nothing new dated Oct 28; content carried. PHP2Shell due date still NOT printed (no CISA page fetched). KEV countdowns: Node2Shell/PolyShell Nov 10 → 13 days; Plex/Siemens Nov 3 → 6 days. Champions board unchanged. Moicano vs Nolan Oct 31 Meta APEX reconfirmed (search).
+- "New" tags: 1006-edition New tags removed (incl. MMA odds line); New on WS ~10:35 AM paragraph + WEN card.
