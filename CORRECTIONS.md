@@ -26583,3 +26583,13 @@ deleting and report how many days were removed.
 - CYBER: no KEV alert dated Oct 28 found; no new dated incidents verified (SonicWall SMA1000/bulletproof-hosting items undated — not printed). Countdowns unchanged (Nov 10 → 13 days; Nov 3 → 6 days).
 - MMA: Moicano (21-7-1) vs Nolan (11-1), Oct 31, Meta APEX, Paramount+ 8 PM ET reconfirmed (search). ⚠ A search summary listed "Randy Brown vs. Carlos Leal" as co-main — STALE (Leal withdrew; Jacobe Smith in, per standing Oct 28 entry); not printed. Champions board unchanged.
 - "New" tags: 1436 New removed (~2:15 PM paragraph); New on WS ~3 PM presser paragraph.
+
+## Added 2026-10-28 (Wednesday — clone ~3:34pm ET, AFTERNOON EDITION (archive stamp 2026-10-28-1538), FINAL HALF HOUR)
+- 🆕 MARKETS (Yahoo Finance live blog 130508769 → canonical 185837696, O'Donnell, updated 12:10 PM PDT, FETCHED; strip "U.S. markets close in 29m" ≈ 3:31 PM ET): S&P 500 7,730.26 +7.66 +0.10%; Dow 52,440.21 +62.64 +0.12%; Nasdaq 26,460.30 −17.51 −0.07%; R2K 2,813.57 −0.19% — ALL reconcile to Tue closes (7,722.60 / 52,377.57 / 26,477.81). ^DJI widget stamped 3:31:58 PM EDT 52,455.96 +78.39 (+0.15%). 10-yr 5.05; VIX 17.09 −2.46%; gold 4,066.70 −0.19%; Dec WTI 102.70 +2.80%. Lead "as of ~3:30 PM ET". Levels NOT printed in editorial.
+- 🆕 ORCL +12.27% (146.55, stamped 3:31:58 PM EDT) on FY2030 revenue projection of at least $225B (>35% annualized growth from FY2026); capex peak FY27–28, decline FY29; positive FCF 2H FY28; FCF target >$30B FY29 (same blog, Ines Ferré). New mover card.
+- 🆕 Bond traders (Jared Blikre, same blog): ~85% chance of a 25 bp hike at the Dec. 9 meeting per Bloomberg data (about where it stood Tuesday); rate seen rising from ~3.9% to nearly 4.7% by Sept 2027.
+- 🆕 Warsh: "Politics played no role in the decision" (Yahoo Fed live blog 191946928, FETCHED); midterms "just six days away".
+- ⚠ NOT PRINTED: search-summary-only "Yahoo 27 min before close S&P 7,737.53 +0.19%" (not on the fetched page); CNBC Fed live page fetched EMPTY again.
+- CYBER: no KEV alert dated Oct 28 found (search); no new dated incidents. Countdowns unchanged (Nov 10 → 13 days; Nov 3 → 6 days).
+- MMA: Moicano vs Nolan, UFC Vegas 123, Oct 31, Meta APEX, five rounds at lightweight, main card 8 PM ET reconfirmed (search). Champions board unchanged.
+- "New" tags: 1505 New removed (~3 PM presser paragraph); New on WS ~3:31 PM paragraph + ORCL card.
