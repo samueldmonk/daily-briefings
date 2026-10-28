@@ -26616,3 +26616,10 @@ deleting and report how many days were removed.
 - ⚠ The Investing.com page's ticker chips (MSFT +0.22%, GOOGL +1.34%, NOW −3.00% etc.) are regular-session/stale chips, NOT after-hours — not printed. A search summary cited a 4:22 PM snapshot with NOW −16.5% to $125.34 — not fetched, not printed.
 - Chart of the Day → NYSE:NOW. CYBER/MMA: nothing new verified (no KEV alert dated Oct 28; Moicano vs Nolan Oct 31 unchanged). Countdowns unchanged. Champions board unchanged.
 - "New" tags: 1636 New removed; New on WS ~4:40 PM after-hours paragraph + NOW/KLAC/CVNA/TDOC/CMG/GOOGL cards.
+
+## Added 2026-10-28 (Wednesday — clone ~5:34pm ET, AFTERNOON EDITION (archive stamp 2026-10-28-1736), POST-CLOSE AFTER HOURS)
+- 🆕 NOW (PANews newsflash citing Investing.com "ServiceNow shares sink on earnings miss, weak Q4 revenue outlook", published 20:54 UTC Oct 28, FETCHED): Q3 revenue $4.11B vs $4.09B expected (slight beat); subscription revenue $3.99B +21% YoY; adj EPS $1.00 vs $1.02; Q4 guide below expectations; shares fell "as much as 14%" after hours; Bloomberg: outlook again raised AI-disrupting-software concerns. ⚠ CONFLICT: Investing.com roundup (4:40 PM) says −16%; both attributed on page, neither merged.
+- ⚠ NOT PRINTED: CNBC "Microsoft stock jumps 4%" page fetched EMPTY (headline seen in search only; MSFT +4% already sourced to Investing.com). Alphabet AH "−6.5% to −8.5%" range seen only in a search summary.
+- CYBER: no KEV alert dated Oct 28 found (search); Oct Patch Tuesday items in search summary only — not newly printed. Countdowns unchanged (Nov 10 → 13 days; Nov 3 → 6 days).
+- MMA: nothing new verified (search returned no dated Oct 28 items). Moicano vs Nolan, UFC Vegas 123, Oct 31 carried from standing entries. Champions board unchanged.
+- "New" tags: 1707 New removed; New on WS ServiceNow-detail paragraph + NOW card addendum.
