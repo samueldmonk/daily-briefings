@@ -26544,3 +26544,10 @@ deleting and report how many days were removed.
 - CYBER: no CISA KEV alert dated Oct 28 found (search returned only older bulletins). PHP2Shell due date still NOT printed. Countdowns unchanged (Node2Shell/PolyShell Nov 10 → 13 days; Plex/Siemens Nov 3 → 6 days).
 - MMA: Moicano vs Nolan, UFC Vegas 123 / Fight Night, Oct 31, Meta APEX, 12 fights, prelims 5 PM ET / main card 8 PM ET reconfirmed (search; Cageside Press/UFCalendar). No new results/odds. Champions board unchanged.
 - "New" tags: 1205-edition New removed (noon paragraph); no new verified items this edition, so no New tags.
+
+## Added 2026-10-28 (Wednesday — clone ~1:04pm ET, MIDDAY EDITION (archive stamp 2026-10-28-1306), EARLY AFTERNOON)
+- 🆕 MARKETS (Yahoo Finance live blog 130508769, O'Donnell, updated 9:15 AM PDT, FETCHED; strip "U.S. markets close in 2h 59m" ≈ 1:01 PM ET): S&P 500 7,742.61 +20.01 +0.26%; Dow 52,541.70 +164.13 +0.31%; Nasdaq 26,498.41 +20.60 +0.08%; R2K 2,819.40 +0.53 +0.02% — ALL reconcile to Tue closes. Dow quote stamped 1:00:49 PM EDT 52,547.56 +169.99 (+0.32%). 10-yr 5.03, VIX 17.35 (−0.97%), gold 4,052.60 (−0.54%), Dec WTI 103.52 (+3.62%); SKHY +13.22%, AVGO +1.78%. Lead now "as of ~1 PM ET". Levels NOT printed in editorial.
+- ⚠ NOT PRINTED: search-summary-only "12:38 PM Dow ~52,505 +0.24%" and "Nasdaq −0.13% at 26,442.18" (no fetched page/time); "CPI 3.7%" summary line.
+- CYBER: no CISA KEV alert dated Oct 28 found; BleepingComputer search returned only undated/older items (MSI/Money Message, ShinyHunters–Clop, SonicWall SMA1000 CVE-2026-15409/-15410 — NOT printed, unverified/undated). PHP2Shell due date still NOT printed. Countdowns unchanged (Node2Shell/PolyShell Nov 10 → 13 days; Plex/Siemens Nov 3 → 6 days).
+- MMA: Moicano (No. 12) vs Nolan (No. 14, 11-1), Oct 31, Meta APEX, 8 PM ET reconfirmed (search). Still no fresh main-event sportsbook line (Combat Edge 70/30 is a model; DraftKings Hope–Marshall line seen only in a summary — not printed). Champions board unchanged.
+- "New" tags: none carried from 1239; New on WS ~1 PM paragraph.
