@@ -26567,3 +26567,11 @@ deleting and report how many days were removed.
 - CYBER: no CISA KEV alert dated Oct 28 found; no new dated incidents. Countdowns unchanged (Nov 10 → 13 days; Nov 3 → 6 days).
 - MMA: Moicano (21-7-1) vs Nolan (11-1), UFC Vegas 123, Oct 31, Meta APEX, main card 8 PM ET reconfirmed. Champions board unchanged.
 - "New" tags: 1336-edition New removed (1:31 PM paragraph + GMAB/FFIV/LOGI cards); New on WS Fed-decision paragraph.
+
+## Added 2026-10-28 (Wednesday — clone ~2:34pm ET, MIDDAY EDITION (archive stamp 2026-10-28-1436), POST-FOMC / WARSH PRESSER)
+- 🆕 FED DISSENTERS NOW VERIFIED (Yahoo Finance Fed live blog 161129201 FETCHED, updated 11:14 AM PDT): **Fed Governor Lisa Cook and Cleveland Fed President Beth Hammack** dissented, preferring a quarter-point hike; vote 10-2 (was 12-0 in September); range 3.75%–4%. Statement changes: "raise"→"maintain"; growth "solid"→"strong"; guidance now "the accumulation of more information will help…"; "timelier"→"timely". Names now printed.
+- 🆕 MARKETS (same page strip "U.S. markets close in 1h 45m" ≈ 2:15 PM ET): S&P 500 7,726.06 +3.46 +0.04%; Dow 52,457.41 +79.84 +0.15%; Nasdaq 26,428.83 −48.98 −0.18%; R2K −0.04%; 10-yr 5.02; VIX 17.57 +0.29%; gold −0.62%; Dec WTI 103.04 +3.14% — reconcile to Tue closes (7,722.60 / 52,377.57 / 26,477.81). Levels NOT printed in editorial. Lead "as of ~2:15 PM ET".
+- ⚠ NOT PRINTED: market-moves blog 130508769 re-fetched = same "close in 2h" cache; CNBC Fed live page fetched EMPTY; no sourced post-presser reaction yet. YouTube "Warsh's first press conference turns hawkish" and Yahoo "Fed hikes 25 bp" blog are OLDER meetings — refused.
+- CYBER: no KEV alert dated Oct 28 found; no new dated incidents. Countdowns unchanged (Nov 10 → 13 days; Nov 3 → 6 days).
+- MMA: Moicano (21-7-1) vs Nolan (11-1), UFC Vegas 123, Oct 31, Meta APEX reconfirmed (search); still no main-event sportsbook line. Champions board unchanged.
+- "New" tags: 1406 New removed (Fed-decision paragraph); New on WS ~2:15 PM post-decision paragraph.
