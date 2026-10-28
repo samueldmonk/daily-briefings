@@ -26529,3 +26529,10 @@ deleting and report how many days were removed.
 - CYBER: CISA 10/26 alert page and mlq.ai fetched EMPTY → PHP2Shell due date still NOT printed. Oct 27 KEV adds (Adobe Commerce CVE-2026-48356, Brotli CVE-2026-111497) already on page. No Oct 28 KEV alert found. Countdowns unchanged (Nov 10 → 13 days; Nov 3 → 6 days).
 - MMA: Moicano vs Nolan Oct 31 Meta APEX reconfirmed (search; Leal out vs Randy Brown). No results/odds changes. Champions board unchanged.
 - "New" tags: 1106-edition New removed (11:05 paragraph, BSX, MU cards); New on WS ~11:35 AM paragraph.
+
+## Added 2026-10-28 (Wednesday — clone ~12:04pm ET, MIDDAY EDITION (archive stamp 2026-10-28-1205), MIDDAY)
+- 🆕 MARKETS (Yahoo Finance live blog 130508769, O'Donnell, updated 8:30 AM PDT, FETCHED — no longer serving the pre-open cache; strip "U.S. markets close in 4h 1m" ≈ 11:59 AM ET): S&P 500 7,739.20 +16.60 +0.21%; Dow 52,537.73 +160.16 +0.31%; Nasdaq 26,469.75 −8.06 −0.03%; R2K 2,819.50 +0.63 +0.02% — ALL reconcile to Tue closes. Dow quote stamped 12:00:26 PM EDT 52,537.30 +159.73 (+0.30%). 10-yr 5.03, VIX 17.22 (−1.71%), gold 4,054.50 (−0.49%), Dec WTI 103.40 (+3.50%); SKHY +12.30%, AVGO +1.17%, Samsung +9.01%. Ford consensus (Bloomberg via Yahoo): adj EPS $0.41, auto revenue $46.2B. Lead now "as of ~12 PM ET". Levels NOT printed in editorial.
+- ⚠ NOT PRINTED: search-summary opening figures (Nasdaq +0.24% at 26,541.61 / S&P +0.17% / Dow −0.08%) — no fetched page; Fed range "3.75%–4.00%" summary line.
+- CYBER: BleepingComputer homepage fetched — newest items Oct 27 (all already on page: Tailscale, ENGIE, Copenhagen, DreamHost, PHP2Shell). No Oct 28 KEV alert found. PHP2Shell due date still NOT printed. Countdowns unchanged (Nov 10 → 13 days; Nov 3 → 6 days).
+- MMA: Moicano (21-7-1) vs Nolan (11-1) Oct 31 Meta APEX, five rounds, reconfirmed (search). No changes. Champions board unchanged.
+- "New" tags: 1136-edition New removed (11:35 paragraph); New on WS ~12 PM paragraph.
