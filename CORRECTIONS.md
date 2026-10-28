@@ -26536,3 +26536,11 @@ deleting and report how many days were removed.
 - CYBER: BleepingComputer homepage fetched — newest items Oct 27 (all already on page: Tailscale, ENGIE, Copenhagen, DreamHost, PHP2Shell). No Oct 28 KEV alert found. PHP2Shell due date still NOT printed. Countdowns unchanged (Nov 10 → 13 days; Nov 3 → 6 days).
 - MMA: Moicano (21-7-1) vs Nolan (11-1) Oct 31 Meta APEX, five rounds, reconfirmed (search). No changes. Champions board unchanged.
 - "New" tags: 1136-edition New removed (11:35 paragraph); New on WS ~12 PM paragraph.
+
+## Added 2026-10-28 (Wednesday — clone ~12:38pm ET, MIDDAY EDITION (archive stamp 2026-10-28-1239), MIDDAY)
+- MARKETS: no intraday index print newer than the Yahoo ~11:59 AM ET strip (Dow +0.31%, S&P 500 +0.21%, Nasdaq −0.03%) could be FETCHED — Yahoo live blog 130508769 re-fetched = same 8:30 AM PDT update/~11:59 AM strip; lead kept at "as of ~12 PM ET".
+- ⚠ TRAPS refused: Yahoo ^GSPC quote page served a PREMARKET cache ("open in 5h 58m") with a Yahoo Scout blurb saying the S&P "rose 0.60% on October 28" — that is TUESDAY Oct 27's close (7,722.60), NOT Wednesday; refused. Yahoo Fed live blog = overnight cache (futures strip "open in 7h 40m"). 24/7 Wall St. market-explainer card is a 10:30 AM ET read (all +0.1%) and its header strip labeled "At close" (S&P 7,743.30 +0.20%, Dow 52,567.80 +0.27%) is untimed/mislabeled — NOT printed. Goodreturns live blog latest entries 8:23–8:26 PM IST = ~10:53 AM ET (older than page) — not printed; its "Brent back above $115" (Vested) not printed.
+- Investrade "Mid-Morning Look: October 28" fetched EMPTY.
+- CYBER: no CISA KEV alert dated Oct 28 found (search returned only older bulletins). PHP2Shell due date still NOT printed. Countdowns unchanged (Node2Shell/PolyShell Nov 10 → 13 days; Plex/Siemens Nov 3 → 6 days).
+- MMA: Moicano vs Nolan, UFC Vegas 123 / Fight Night, Oct 31, Meta APEX, 12 fights, prelims 5 PM ET / main card 8 PM ET reconfirmed (search; Cageside Press/UFCalendar). No new results/odds. Champions board unchanged.
+- "New" tags: 1205-edition New removed (noon paragraph); no new verified items this edition, so no New tags.
