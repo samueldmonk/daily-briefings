@@ -26499,3 +26499,11 @@ deleting and report how many days were removed.
 - ⚠ NOT PRINTED (search-summary only): "shortly after Wednesday's open Dow little changed, S&P +0.2% at 7,739.66, Dow 52,430.94, Nasdaq +0.3%" — no fetched page carried it. CNBC live page fetched empty. NEXT RUN: fetch a Wednesday open/intraday print.
 - CYBER/MMA: searches returned nothing new dated Oct 28; content carried. KEV countdowns unchanged (Node2Shell/PolyShell Nov 10 → 13 days; Plex/Siemens Nov 3 → 6 days; Collabora/Arista overdue; PHP2Shell due date still not printed). Champions board unchanged.
 - "New" tags: all 0907-edition New tags removed; New only on the WS ~8:36 AM paragraph.
+
+## Added 2026-10-28 (Wednesday — clone ~10:04am ET, MORNING EDITION (archive stamp 2026-10-28-1006), AFTER THE OPEN)
+- 🆕 MARKETS (Phemex News, 13:30 UTC = 9:30 AM ET, FETCHED): at the open Nasdaq Composite +0.43%, S&P 500 +0.24%, Dow −0.03%. Lead now "as of ~9:30 AM ET".
+- 🆕 MARKETS (Yahoo live blog 130508769, updated 6:05 AM PDT, FETCHED; strip "open in 23m" ≈ 9:07 AM ET): ES +0.18%, YM +0.01%, NQ +0.30%, 10-yr 4.999%, VIX 17.39, Dec WTI $102.11 +2.21%. Wendy's +15% premarket on WSJ report Trian offered $1.4B (now printed — supersedes the earlier 'search-summary only, not printed' note).
+- ⚠ NOT PRINTED: search-summary "Dow 52,423.59 +0.09% as of 10:03 AM" — the fetched Yahoo page served a pre-open cache. Rio Times levels are Tuesday's close (already in Scorecard).
+- 🆕 MMA (MMA Junkie via Yahoo Sports, Oct 26, FETCHED): Moicano +105 / Nolan −125 — CONFLICTS with UFC.com −115/−105; both printed with attribution. Records Moicano 21-7-1, Nolan 11-1; co-main Randy Brown vs Jacobe Smith (13-0) after Carlos Leal withdrew.
+- ⚠ CYBER: BleepingComputer (Oct 27, fetched) says CISA ordered FCEB agencies to patch PHP2Shell (CVE-2026-109618/-109619) "by Thursday" (= Oct 29) under BOD 26-04; mlq.ai headline says Oct 29. CISA 10/26 alert page fetched EMPTY again → per same-week-deadline rule, due date still NOT printed. NEXT RUN: try to confirm on a CISA page.
+- "New" tags: 0936-edition New removed; New on WS open paragraph + WEN card, MMA MMA Junkie odds line.
