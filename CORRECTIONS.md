@@ -26521,3 +26521,11 @@ deleting and report how many days were removed.
 - CYBER: CISA 10/26 alert page fetched EMPTY again → PHP2Shell due date still NOT printed. No CISA alert dated Oct 28 found. KEV countdowns unchanged (Node2Shell/PolyShell Nov 10 → 13 days; Plex/Siemens Nov 3 → 6 days).
 - MMA: no new verified items; Moicano vs Nolan Oct 31 Meta APEX reconfirmed (search); no new sportsbook odds. Champions board unchanged.
 - "New" tags: 1036-edition New removed (10:35 paragraph, WEN card); New on WS ~11:05 AM paragraph + BSX and MU cards.
+
+## Added 2026-10-28 (Wednesday — clone ~11:34am ET, MIDDAY EDITION (archive stamp 2026-10-28-1136), APPROACHING MIDDAY)
+- 🆕 MARKETS (Reuters via au.investing.com page, quote board FETCHED ~11:35 AM ET): Dow 52,532.17 +154.60 +0.30% (reconciles to Tue close 52,377.57), US 500 cash +0.19%, IXIC −0.03%, WTI 102.75 +2.85%, US 10Y 5.022%; SKHY +12.01%, VRT +13.09%, MU +4.57%, SOX +0.76%, BSX −6.10%, SPCX −2.53%, TSLA −1.35%, GOOGL +0.95%, MSFT −0.55%. Lead now "as of ~11:35 AM ET" — Dow/S&P firmer, Nasdaq flat. Levels NOT printed in editorial.
+- Corroborating search-summary (NOT fetched, not printed): Yahoo page stamped 11:33 AM EDT, Dow 52,519.76 +142.19 (+0.27%), S&P 500 7,736.66 +14.06 (+0.18%) — both reconcile. Yahoo live blog fetched pre-open cache again (refused).
+- Schwab Market Update (9:13 AM ET, re-FETCHED): FedWatch hike odds 9% — printed with attribution. AP early-session story (dailyunion.com, fetched) not used for the lead (early-session timing only).
+- CYBER: CISA 10/26 alert page and mlq.ai fetched EMPTY → PHP2Shell due date still NOT printed. Oct 27 KEV adds (Adobe Commerce CVE-2026-48356, Brotli CVE-2026-111497) already on page. No Oct 28 KEV alert found. Countdowns unchanged (Nov 10 → 13 days; Nov 3 → 6 days).
+- MMA: Moicano vs Nolan Oct 31 Meta APEX reconfirmed (search; Leal out vs Randy Brown). No results/odds changes. Champions board unchanged.
+- "New" tags: 1106-edition New removed (11:05 paragraph, BSX, MU cards); New on WS ~11:35 AM paragraph.
