@@ -26492,3 +26492,10 @@ deleting and report how many days were removed.
 - CYBER: CISA 10/26 alert page fetched EMPTY again → PHP2Shell due date still not printed. No CISA alert dated Oct 28 found. KEV countdowns: Node2Shell/PolyShell Nov 10 → 13 days; Plex/Siemens Nov 3 → 6 days; Collabora/Arista overdue.
 - MMA: no new verified items; Moicano vs Nolan Oct 31 Meta APEX — still no main-event sportsbook odds (Combat Edge 70/30 is a model). Champions board unchanged.
 - "New" tags: all 0837-edition New tags removed; New on WS strip-check/earnings-movers paragraph + VRT/ENPH/NXPI/SEDG cards.
+
+## Added 2026-10-28 (Wednesday — clone ~9:34am ET, MORNING EDITION (archive stamp 2026-10-28-0936), AT THE OPEN)
+- 🆕 MARKETS (Yahoo Finance live blog, O'Donnell, updated 4:58 AM PDT = 7:58 AM ET, FETCHED; strip "U.S. markets open in 54m" ≈ 8:36 AM ET): ES 7,776.75 +18.50/+0.24%, YM 52,590 +11/+0.02%, NQ +0.39%, RTY +0.07%, 10-yr 4.999%, VIX 17.42, gold −0.04%, Dec WTI $101.89 +1.99%. Dow futures recovered to flat from ~−0.2% earlier. Blinder "hawkish pause" (Schonberger, Yahoo). Lead now "as of ~8:36 AM ET".
+- ⚠ TRAP: Yahoo article "S&P 500, Nasdaq open higher as oil pulls back ahead of Fed decision" (p-500-nasdaq-open-higher-133355729) is TUESDAY Oct 27's Reuters open (Dow 52,277.49 −0.16%) — NOT Wednesday; refused.
+- ⚠ NOT PRINTED (search-summary only): "shortly after Wednesday's open Dow little changed, S&P +0.2% at 7,739.66, Dow 52,430.94, Nasdaq +0.3%" — no fetched page carried it. CNBC live page fetched empty. NEXT RUN: fetch a Wednesday open/intraday print.
+- CYBER/MMA: searches returned nothing new dated Oct 28; content carried. KEV countdowns unchanged (Node2Shell/PolyShell Nov 10 → 13 days; Plex/Siemens Nov 3 → 6 days; Collabora/Arista overdue; PHP2Shell due date still not printed). Champions board unchanged.
+- "New" tags: all 0907-edition New tags removed; New only on the WS ~8:36 AM paragraph.
