@@ -26716,3 +26716,8 @@ deleting and report how many days were removed.
 - 🆕 CYBER (THN homepage FETCHED): Canonical LXD/MicroCloud CVE-2026-112816 CVSS 10.0 (Nov 1), fixed versions released. TeamViewer CVE-2026-111585 CVSS 8.8, fixed 15.83 (THN Oct 30) — SUPERSEDES "CVSS not verified".
 - 🆕 MMA (MMA Mania via Yahoo Sports FETCHED): Moicano (now 21-8-1) and Farman Hasanov taken to hospital for precautionary CT scans after Vegas 123. Champions board unchanged (no title fights since UFC 333).
 - NOTE: gen_archive_sc.py broke (intro text changed); archive.html regenerated with a new script — also fixes a prior bug that filed Oct 12 snapshots under "Friday, 30 October".
+
+## Added 2026-11-02 (Monday — clone ~2:13pm ET, MIDDAY EDITION (archive stamp 2026-11-02-1415), MARKETS OPEN; refresh)
+- 🆕 MARKETS (Yahoo live blog FETCHED; strip "close in 1h 52m" ≈2:08 PM ET; ^DJI "As of 2:08:34 PM EST" 52,200.75 +0.83%): S&P 500 7,586.36 +6.29 +0.08%; Dow 52,198.62 +428.31 +0.83%; Nasdaq 25,396.47 −40.53 −0.16% (TURNED NEGATIVE); R2K 2,820.68 +0.31%; 10-yr 4.888 (−4.1bp); VIX 20.14 +3.71%; gold 3,964.20 +1.67%; BTC 76,807.53 −1.13%; Dec WTI 96.32 −7.49%. All reconcile with Fri closes. TheStreet blog (FETCHED) not updated past 12:55 PM.
+- CYBER/MMA: no new verifiable items surfaced by search this run; content carried from the 1255/1343 entries (sourced). Ivanti CVE-2026-111357 KEV due TODAY (Nov 2) → 0 days. Vegas 124 Cortes-Acosta vs Walker re-confirmed (MMASucka/Heavy/BoxingNews search); no odds found → none printed. thehackernews.com homepage not in fetch provenance this run.
+- "New" tags: removed from all carried items; only the "Nasdaq turns negative" card tagged New.
