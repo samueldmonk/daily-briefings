@@ -26876,3 +26876,10 @@ deleting and report how many days were removed.
 - ⚠ Yahoo live blog 140752043 and StockTitan live page could NOT be re-fetched this run (URLs not resurfaced by search → provenance block); the 2:02 PM Yahoo strip remains the latest verified index snapshot (from the 1406 entry above) and footer labels now mark Yahoo/StockTitan/AP/ISM as desk record.
 - CYBER/MMA: no new verifiable items (KEV search returned only older govdelivery bulletins; THN search returned no Nov 4 pages; UFC search spam; Vegas 124 Cortes-Acosta vs Walker, Nov 7 Meta APEX, Paramount+ re-confirmed via search). Champions board unchanged. Cyber footer "fetched this run" label for the THN WordPress item corrected to "fetched in the ~1:35 PM run — desk record".
 - New tags removed from all carried WS items; New only on the Block/SWK/ZBH card. Archive pruning now by filename date (>21 days before Nov 4 → before Oct 14).
+
+## Added 2026-11-04 (Wednesday — clone ~3:03pm ET, AFTERNOON EDITION (archive stamp 2026-11-04-1505), MARKETS OPEN)
+- 🆕 MARKETS: TheStreet live blog RE-FETCHED ("Updated on Nov 4, 2026 1:46 PM EST"): 1:46 PM Oil Watch — Brent down $10/bbl on the election results, trading below $100/bbl for the first time in weeks. Added as a New card + Brent row note (consistent with AP 12:13 PM "below $95").
+- No index snapshot later than the 2:02 PM Yahoo strip could be verified this run (StockTitan last updated 1:13 PM; sg.finance Yahoo live page fetched was the 3 AM PST futures version — stale; Benzinga page fetched EMPTY). Lead/Tape stay labelled "as of 2:02 PM ET". NOT printed: Benzinga "WTI −7.2% to $89.17" (search summary, untimed midday).
+- MMA: Heavy.com UFC Vegas 124 article FETCHED (updated Oct 29): Cortes-Acosta vs Walker main event Nov 7 Meta Apex confirmed; full card listed. A search summary claimed Heavy reported opening odds Cortes-Acosta −300 / Walker +247 — NOT in the fetched article text → odds NOT printed. Champions board unchanged.
+- CYBER: no new verifiable Nov 4 items (THN/KEV searches returned only older pages). Countdowns unchanged (same date).
+- New tag removed from the carried Block/SWK/ZBH card; New only on the Brent card.
