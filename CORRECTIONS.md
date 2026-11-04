@@ -26883,3 +26883,9 @@ deleting and report how many days were removed.
 - MMA: Heavy.com UFC Vegas 124 article FETCHED (updated Oct 29): Cortes-Acosta vs Walker main event Nov 7 Meta Apex confirmed; full card listed. A search summary claimed Heavy reported opening odds Cortes-Acosta −300 / Walker +247 — NOT in the fetched article text → odds NOT printed. Champions board unchanged.
 - CYBER: no new verifiable Nov 4 items (THN/KEV searches returned only older pages). Countdowns unchanged (same date).
 - New tag removed from the carried Block/SWK/ZBH card; New only on the Brent card.
+
+## Added 2026-11-04 (Wednesday — clone ~3:33pm ET, AFTERNOON EDITION (archive stamp 2026-11-04-1535), MARKETS OPEN, final half-hour)
+- 🆕 MARKETS: Yahoo Finance quote strip ~3:34 PM ET (search summary only — fetched Yahoo US/SG/CA live pages all returned stale earlier versions): Dow ~53,464 (~+3.2%), S&P 500 ~7,707 (~+1.8%), Nasdaq ~25,824 (~+1.8%); all reconcile with Tue closes (51,786.72 / 7,568.92 / 25,372.01). Yahoo SG 3:12 PM (search): Dow +3.06%, S&P +1.73%. CNBC (search): Dow on pace for best day since April 9, 2025. Printed as approx % with "via search" attribution; level only "near 53,464" for Dow. Lead/Tape/index card now "as of ~3:34 PM ET".
+- NOT printed: Yahoo CA strip crude −8.51% $87.91 (~12:32 PM, older than 2:02 PM read); oil 2:30 PM settlement still unverified (search returned no Nov 4 settle).
+- TheStreet blog re-fetched: no update after 1:46 PM. CYBER/MMA: no new verifiable items (KEV search returned undated bulletins; UFC search spam). Countdowns unchanged (WordPress CVE-2026-119977 due Nov 6). Champions board unchanged.
+- New tag removed from carried Brent card; New only on the ~3:34 PM lead paragraph.
