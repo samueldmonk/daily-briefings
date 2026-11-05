@@ -26975,3 +26975,11 @@ deleting and report how many days were removed.
 - After-hours: ABNB/MCHP/MNST/SPG/TEAM scheduled after close; NO after-hours moves verified. ⚠ Investing.com "Monster falls ~5% after hours, EPS $0.30 in line" has ambiguous date (likely an older year) → NOT printed. Atlassian "−17.21% / +35%" page ~91 days old → NOT printed.
 - 🆕 MMA: Austin Bashi (14-2) vs. Carlos Calderon (UFC debut, 14-3) at UFC Vegas 124 Nov 7 after Lucas Brennan tore his ACL (RotoWire Nov 3 citing Heavy's Marcel Dorff; AgentMMA Oct 26 — FETCHED). Dana White on Jim Rome: Topuria "will come back in early 2027. We're working on that." — no opponent/date (AgentMMA Nov 5, FETCHED). NOT printed (social-media item only): "Pereira vs. Pavlovich, UFC 335, Las Vegas, Dec 12". Champions board unchanged.
 - CYBER: no new verifiable items (no Nov 5 KEV alert found; latest CISA alert Nov 3 WordPress). Countdowns unchanged (same date).
+
+## Run log — added 2026-11-05 (Thursday, AFTERNOON EDITION, archive stamp 2026-11-05-1736, POST-CLOSE ~5:05 PM ET)
+- Closes re-confirmed this run: CNBC (S&P 500 −4.36% to 7,353.73; Nasdaq −5.52% to 24,315.00) + JournalArta (Dow 51,523.06, −3.44%). ⚠ Investing.com close wire shows S&P −4.29% / Nasdaq −5.42% / Dow −3.45% (likely pre-final print) → NOT used.
+- 🆕 AFTER-HOURS (Investing.com "After-Hours Movers: NET, TEAM, FIVN, ABNB, DKNG, AFRM, LRCX, MCHP, AAOI…", English ed. id 5005795): NET ≈+17% (Q3 rev $782.5M +39%, adj EPS $0.38 vs $0.34), TEAM ≈−16%, FIVN ≈−18%, DKNG ≈−18%, ABNB ≈+7%, MCHP ≈−6%, AAOI ≈−8%. ⚠ LRCX +4% only in French edition and other language editions show different % (MCHP ~−13.9%) → LRCX NOT printed; English figures used.
+- Rates: 2-yr ~4.47% (−11bp+), 30-yr ~5.26% (−2bp) per CNBC Nov 5 → replaced Monday-close rows.
+- 🆕 CYBER: Zyxel GS1900 CVE-2026-107441 (Zyxel CVSS 8.8; Binarly 9.8; 996 switches/48 countries; June CVE-2026-7273 fix missed it — SecurityWeek); GPUStack CVE-2026-102895 (CVSS 9.8, exploited vs v2.1.1, fix 2.2.2 — SecurityOnline). Neither confirmed in KEV → not in KEV list. WordPress KEV deadline Nov 6 re-confirmed (THN fetched).
+- MMA: Vegas 124 bet365 Cortes-Acosta −230 / Walker +190 (bet365 News, Nov 5). Champions board unchanged (ufcrankings.org Nov 3 consensus matches block above).
+- gen_archive.py replaced by outputs-side generator (archive regenerated from archive/ filenames).
