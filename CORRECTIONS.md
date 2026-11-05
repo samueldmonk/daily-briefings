@@ -26983,3 +26983,7 @@ deleting and report how many days were removed.
 - 🆕 CYBER: Zyxel GS1900 CVE-2026-107441 (Zyxel CVSS 8.8; Binarly 9.8; 996 switches/48 countries; June CVE-2026-7273 fix missed it — SecurityWeek); GPUStack CVE-2026-102895 (CVSS 9.8, exploited vs v2.1.1, fix 2.2.2 — SecurityOnline). Neither confirmed in KEV → not in KEV list. WordPress KEV deadline Nov 6 re-confirmed (THN fetched).
 - MMA: Vegas 124 bet365 Cortes-Acosta −230 / Walker +190 (bet365 News, Nov 5). Champions board unchanged (ufcrankings.org Nov 3 consensus matches block above).
 - gen_archive.py replaced by outputs-side generator (archive regenerated from archive/ filenames).
+
+## Run log — added 2026-11-05 (Thursday, AFTERNOON EDITION, archive stamp 2026-11-05-1804, POST-CLOSE ~6:03 PM ET — final run of the window)
+- No new verifiable items this run: searches for Nov 5 after-hours movers, Nov 5 KEV additions and UFC news returned only older/undated pages; the CNBC after-hours and JournalArta close URLs were not re-fetchable (not in this run's search provenance). Pages carried unchanged from the 1744 edition; every figure on them traces to the sourced 1702/1736 entries above (official Nov 5 closes, after-hours moves, Zyxel/GPUStack, Vegas 124 odds). Champions board unchanged. Countdowns unchanged (same date).
+- Archive pruning now by FILENAME date (≥ 2026-10-15 kept), since fresh clones reset mtimes and the find -mtime prune never fires.
