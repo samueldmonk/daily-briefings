@@ -26947,3 +26947,10 @@ deleting and report how many days were removed.
 - The FINANCIAL (re-fetched): BLS October jobs report Fri Nov 6 (consistent with page).
 - CYBER/MMA: no new verifiable items (KEV search returned only older govdelivery bulletins; UFC search spam). Countdowns unchanged (same date). Champions board unchanged.
 - New tags: WS 1:01 PM lead paragraph, SpaceX/Tesla card, VIX card only.
+
+## Added 2026-11-05 (Thursday — clone ~1:34pm ET, MIDDAY EDITION (archive stamp 2026-11-05-1336), MARKETS OPEN)
+- MARKETS: Yahoo live blog re-fetched = SAME 1:01:56 PM strip (S&P −4.02%, Dow −3.13%, Nasdaq −5.27%) → lead/Tape kept on the 1:01 PM read; no later verified index snapshot. AP via 41NBC (fetched) = same 11 a.m. text. CNBC/CNN/Benzinga/StockTitan/qz pages fetched EMPTY.
+- 🆕 Breitbart (John Carney, FETCHED, published 16:57 UTC = 11:57 AM ET): Nasdaq-100 fell as much as 6.24%; S&P sectors late-morning: tech ~−5.1%, cons. disc. ~−4%, energy ~+0.6%, staples ~+0.3%, only 2 of 11 higher; CoreWeave ~−14%, Nebius −17%, IREN −19%; NVDA/AVGO/ORCL ~−9%; iShares Semi ETF >−11%; TSLA/SPCX ~−10%; QCOM ~−13%; Ives: ~10% of planned US data centers "will not happen now", Texas ~25–30% of expected capacity. Investing.com (Louis Juricic, FETCHED, 11:28 AM): Nasdaq-100 as much as −6%, S&P as much as −3.8%; Vital Knowledge: "serious doubts about whether Anthropic can raise ~$100B at a $1.5T+ valuation by Thanksgiving"; Anthropic has not set formal offering terms.
+- NOT printed (search summary only): "Dow −1,605 / −3%", "S&P −3.9%", "Nasdaq −5.2% into correction", "SOX −11.2% steepest since March 2020", "QCOM −11.5% worst since March 2020", huggingnews "$2.7T wipeout".
+- CYBER/MMA: no new verifiable items (THN search returned old pages; Vegas 124 −200/+165 consensus again search-summary only → NOT printed). Countdowns unchanged (same date). Champions board unchanged.
+- New tags: WS intraday-lows/Anthropic lead paragraph, Anthropic IPO card, AI-compute-renters card, sector line only; carried New tags removed.
