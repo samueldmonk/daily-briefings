@@ -27107,3 +27107,9 @@ deleting and report how many days were removed.
 - NOT printed: 24/7 Wall St header strip (S&P 7,558.50 "+2.35%") — level and % don't reconcile with Friday close; untimestamped. Search-summary "12:55 PM Dow 52,367.31" superseded by fetched 1:55 strip.
 - ⚠ TRAP: a search summary (Rotoballer) claimed Volkanovski "lost to Evloev at UFC 333" — CONTRADICTS the verified record (Volkanovski TKO2 4:54 Evloev, retained; Forbes/AP). NOT used; champions board unchanged.
 - CYBER/MMA: no new verifiable items (searches returned archive pages); carried; New tags removed. Countdowns unchanged (same date).
+
+## Run log — added 2026-11-09 (Monday, MIDDAY EDITION, archive stamp 2026-11-09-1435, MARKETS OPEN ~2:35 PM ET)
+- 🆕 MARKETS: Yahoo live-blog quotes "as of 2:33:03 PM EST" (search-indexed; direct fetch still returned the cached ~1:54/1:55 PM strip): Dow 52,366.95 +1,081.22 +2.11%; S&P 500 7,545.37 +168.51 +2.28%; Nasdaq Comp 25,210.66 (≈+2.57% vs Nov 6 close 24,579.43); NVDA −5.73%. All reconcile with Nov 6 closes. Editorial uses % / points only (levels stay out of editorial). Gains a shade below the 1:55 read.
+- FIX: index.html Markets card headline was stale ("~1:37 PM … Nvidia −5.6%") while its summary said 1:55 — headline and summary must carry the SAME as-of time. Both now 2:33.
+- TheStreet live blog (fetched) still last updated 9:15 AM ET — nothing newer to add.
+- CYBER/MMA: searches returned no new dated items; carried unchanged (countdowns same date; champions board unchanged — no title fights since UFC 333). Space/HIMS "New" tags removed (present in 1406 edition).
