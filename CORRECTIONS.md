@@ -27250,3 +27250,11 @@ deleting and report how many days were removed.
 - NOT printed: search-summary "Dow +0.53% 52,507.99 as of 2:02:53 PM" / "S&P 7,643.11" (search summary only, not on the fetched page).
 - CYBER: KEV search found no Nov 11 CISA alert (latest Nov 10); no new dated items → carried unchanged (countdowns same date).
 - MMA: no new verifiable items (UFC 334 previews only). Champions board unchanged (no title fights since UFC 333). UFC 334 Nov 14 MSG countdown unchanged.
+
+## Run log — added 2026-11-11 (Wednesday, MIDDAY EDITION, archive stamp 2026-11-11-1436, MARKETS OPEN ~2:30 PM ET)
+- 🆕 MARKETS (Yahoo Nov 11 live blog FETCHED; strip "close in 1h 32m" ≈2:28 PM ET): S&P 500 7,624.04 +103.11 +1.37%; Dow 52,433.49 +201.60 +0.39%; Nasdaq Comp 25,527.22 +461.35 +1.84% (all reconcile exactly with Nov 10 closes 7,520.93 / 52,231.89 / 25,065.87) — GAINS PARED vs the ≈1:57 read. ^IXIC 2:29:06 PM 25,525.70 +1.83%; ^DJI 2:29:08 PM 52,433.77 +0.39%; R2K 2,846.34 +0.88%; VIX 17.63 −9.38%; gold 3,991.80 −0.95%; BTC 74,329.80 +1.29%; Dec WTI 87.01 +1.13%; ^TNX 4.998 (bonds closed). CRWV 60.56 +24.28% (2:29:07; Yahoo text "popped as much as 24%"); NVDA 175.13 +3.76% (2:29:08). SUPERSEDES the ≈1:57 read as current. Yahoo main text still reads Dow +0.5% / S&P +1.6% / Nasdaq +2.2% (stale wording) → strip used.
+- 🆕 TheStreet live blog (FETCHED, updated 1:24 PM ET): 12:38 PM — S&P +1.50% "sitting at day highs"; losers LULU −3.58%, CLX −3.55%, Brown-Forman −3.42% (headline also lists ABNB, ACN, MSFT). 1:18 PM — winners Coherent +18%, Monolithic Power +13.9%, Bloom +13%; 11 holdings up double digits, rest of top 20 at least +9%, "virtually all" in the AI trade.
+- 🆕 Yahoo (Jared Blikre, Chart of the Day): Anthropic asking up to $1.4T at top of $70–$78 range, counting every possible share; trading could start as soon as next week; SpaceX opened $150 in June, still below first trade.
+- NOT printed: search-summary Reuters "Dow +51.98 to 52,283.87 / S&P 7,614.73" (late-morning, superseded); sportsgrid "Harrison −200" (search summary only, conflicts with CBS −192 on page).
+- CYBER: no Nov 11 CISA KEV alert found (latest dated item in search Oct 27 bulletin; page's Nov 10 alert stands); no new dated items → carried unchanged.
+- MMA: no new verifiable items (UFC 334 previews only). Champions board unchanged (no title fights since UFC 333).
