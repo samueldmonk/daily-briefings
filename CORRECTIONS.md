@@ -27314,3 +27314,9 @@ deleting and report how many days were removed.
 - CNBC live-blog futures (untimed): Nasdaq-100 −1.2%, S&P 500 −0.6%, Dow −47 pts (−0.1%); AVGO and AMD ~+3% pre-market after the resignation.
 - Cyber: Huntress/SecurityWeek — ScreenConnect campaign Nov 11 via RMM+ extension (v1.0.31/1.0.32 blank access key): ≥6 MSPs, 288 hosts, 48 orgs, all within 90 minutes; SCKit toolkit; ConnectWise disabled five RMM+-family extensions across ~400 environments.
 - Fix logged: the 8:38 AM index.html MMA card wrongly carried the Wall Street summary; corrected this run — each index card must be pulled from its OWN page's summary.
+
+## Run log — added 2026-11-12 (Thursday, MORNING EDITION, archive stamp 2026-11-12-0938, ~9:40 AM ET, just after the open)
+- Yahoo Finance market strip ≈8:39 AM ET ("open in 51m"; Ines Ferré article): S&P fut −0.75%, Dow fut −0.39%, Nasdaq fut −1.37%, Russell fut −0.63%; 10-yr 5.05% (+0.05); VIX 18.97 (+8.46%); gold $3,914.60 (−2.15%); BTC $72,515.18 (−1.64%); WTI Dec $87.27 (+0.86% — REVERSED from −0.76% on the ≈8:08 strip). NVDA "sank as much as 9%" Thursday morning; CRWV −10% pre; INTC −2%, TSM −2%+, SNDK −5%, MU ~−4%; AMD +1%+, AVGO edged higher.
+- StockTitan ~8:06 AM ET board: LUNR +10.45% (record Q3 rev $269M, backlog $1.9B); AVEX +9.48% (2026 rev outlook $820–840M); NBIS −11.44%; TE −10.33%; CTVA −9.97%; YETI −8.55%; MSTR −6.05% (MSCI USA deletion as of Nov 30 close); BZ −15.07%. Note: StockTitan's NVDA "−7.66% at 8:06" PREDATES the 8:48 AM resignation announcement.
+- No verified regular-session opening print was found at build time (~9:40 AM ET); none published. CNBC live blog fetch failed (client error).
+- Cyber and MMA pages carried forward unchanged from the 9:07 edition (no new verified developments found this run); "New" tags removed since nothing changed vs. the prior snapshot.
