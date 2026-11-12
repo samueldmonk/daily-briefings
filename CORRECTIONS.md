@@ -27328,3 +27328,9 @@ deleting and report how many days were removed.
 - MMA: ESPN champions page FETCHED ~10:05 AM ET — all 11 belts match the board (ESPN Van 1 defence = known lag). No new verifiable items. Board unchanged (no title fights since UFC 333).
 - CYBER: no CISA KEV alert after Nov 10 found; no new dated incidents → carried unchanged (countdowns same date).
 - FIX: stray </span> in the Wall Street tldr removed.
+
+## Run log — added 2026-11-12 (Thursday, MORNING EDITION, archive stamp 2026-11-12-1056, MARKETS OPEN ~10:35 AM ET)
+- 🆕 MARKETS (Yahoo Nov 12 live blog FETCHED, updated 7:10 AM PST; strip "close in 5h 42m" ≈10:18 AM ET): S&P 500 7,588.28 −31.10 −0.41%; Dow 52,430.63 −55.86 −0.11%; Nasdaq Comp 25,306.18 −160.01 −0.63%; R2K 2,811.84 −34.42 −1.21% (all reconcile exactly with Nov 11 closes 7,619.38 / 52,486.49 / 25,466.19 / 2,846.26); ^DJI 10:18:03 AM 52,434.18 −0.10%; ^TNX 5.07 +0.07; VIX 18.53 +5.96%; gold 3,864.80 −3.39%; BTC 71,393.04 −3.41%; Dec WTI 86.88 +0.40%. NVDA 163.27 −6.02% (10:18:02 AM); Ines Ferré: "trimmed losses, falling roughly 7% after dropping 14% at the open"; market cap < $4T, ~−30% over past month. INTC chip −3.87%. SUPERSEDES the ≈9:42 AM read as current. Hollerith: S&P −0.3%/Nasdaq −0.6%/Dow flat at open; Cisco & AMAT report after the bell. CNBC live page fetch FAILED (client error).
+- ⚠ Yahoo text still says "WTI crude oil, the global benchmark, rose 1.5% to $94" — conflicts with its strip ($86.88 +0.40%) → NOT printed (unchanged ruling).
+- MMA: ESPN champions page FETCHED ~10:33 AM ET — all 11 belts match the board (ESPN Van 1 defence = known lag). No new verifiable items (UFC 334 previews only; AgentMMA "Leoa" = Nunes' handle, unchanged ruling).
+- CYBER: KEV search found no CISA alert after Nov 10; no new dated incidents → carried unchanged (countdowns same date). Prior "New" tags already absent; Wall Street New tags reset and applied only to the 10:18 read + Nvidia pares-losses paragraph.
