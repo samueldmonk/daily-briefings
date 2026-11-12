@@ -27364,3 +27364,11 @@ deleting and report how many days were removed.
 - 10-yr table row updated to 5.09% (+8 bp, O'Donnell ~noon ET) from the 5.07% ≈11:31 strip.
 - MMA: ESPN champions page FETCHED ~1:04 PM ET — all 11 belts match the board (Van 1 defence = known ESPN lag). No new items; Overeem-Manuwa New tag removed (carried from prior edition).
 - CYBER: KEV search found no CISA alert after Nov 10; no new dated incidents → carried unchanged (countdowns same date).
+
+## Run log — added 2026-11-12 (Thursday, MIDDAY EDITION, archive stamp 2026-11-12-1333, MARKETS OPEN ~1:35 PM ET)
+- MARKETS: no TIMED index read newer than the ≈12:51 PM ET Yahoo quotes found (US Yahoo live URL still cached at the ≈11:42 strip; SG mirror not in provenance this run; CNBC & Benzinga fetches FAILED; Fool page unchanged, published 12:45 PM ET). ≈12:51 PM read retained as current lead.
+- 🆕 FXEmpire (James Hyerczyk, updated 17:19 GMT, FETCHED): at 17:27 GMT = 12:27 PM ET S&P 500 7,643.37 +23.99 +0.31%; Nasdaq Comp 25,547.843 +81.654 +0.32%; Dow 52,717.57 +231.08 +0.44% (all reconcile with Nov 11 closes); early declines S&P −0.8% / Nasdaq −1.5%; AMD +4%, AVGO +5%; NVDA ~−4% after earlier double-digit drop; yields and oil rose after Trump Iran post. Printed as an earlier (12:27) read, % only. NOT printed: search-summary "Yahoo Dow 52,587.78 +101.29 as of 1:31 PM" and Benzinga "S&P 7,632 / Dow 52,658 +171" (pages not fetched).
+- MMA: ESPN champions page FETCHED ~1:33 PM ET — all 11 belts match the board (ESPN Van 1 defence = known lag). No new items.
+- CYBER: KEV search found no CISA alert after Nov 10; no new dated incidents → carried unchanged (countdowns same date).
+- Prior New tags (Midday movers) removed; only the FXEmpire paragraph tagged New.
+- NOTE: gen_archive_1600.py no longer matches archive.html's table/h3.day shell; this run regenerated archive.html with an equivalent script matching the current shell.
