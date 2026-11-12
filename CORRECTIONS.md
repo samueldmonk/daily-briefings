@@ -27372,3 +27372,9 @@ deleting and report how many days were removed.
 - CYBER: KEV search found no CISA alert after Nov 10; no new dated incidents → carried unchanged (countdowns same date).
 - Prior New tags (Midday movers) removed; only the FXEmpire paragraph tagged New.
 - NOTE: gen_archive_1600.py no longer matches archive.html's table/h3.day shell; this run regenerated archive.html with an equivalent script matching the current shell.
+
+## Run log — added 2026-11-12 (Thursday, MIDDAY EDITION, archive stamp 2026-11-12-1418, MARKETS OPEN ~2:20 PM ET)
+- 🆕 MARKETS (Yahoo Nov 12 live blog FETCHED, post updated 10:06 AM PST = 1:06 PM ET; strip "close in 2h 15m" ≈1:45 PM ET): S&P 500 7,617.75 −1.63 −0.02%; Dow 52,542.17 +55.68 +0.11% (^DJI 1:45:58 PM ET); Nasdaq Comp 25,432.34 −33.85 −0.13% (all reconcile with Nov 11 closes 7,619.38 / 52,486.49 / 25,466.19); R2K −0.92%; ^TNX 5.11 +0.11; VIX 17.70 +1.20%; gold 3,888.10 −2.81%; BTC 71,676.22 −3.68%; Dec WTI 88.10 +1.81%. Chips: NVDA −4.98%, INTC −0.94%. GAINS FADED vs the ≈12:51 read (S&P & Nasdaq back below Wed close). SUPERSEDES the ≈12:51 read as current. Yahoo body still says Brent "$94" (re Wednesday) → NOT printed. NOT printed: JournalArta "S&P 7,628.26 +0.12% midday" (search summary only), Yahoo trending headline on existing-home sales (headline only).
+- MMA: ESPN champions page FETCHED ~2:15 PM ET — all 11 belts match the board (ESPN Van 1 defence = known lag). No new verifiable items.
+- CYBER: KEV search found no CISA alert after Nov 10; search items (Chrome CVE-2026-125350, Outlook CVE-2026-124194, Vanderbilt, Xen Orchestra, Barracuda, Maersk) already on page; "five banks and a credit union" claim = aggregator only → NOT printed. Carried unchanged.
+- Prior New tag (FXEmpire paragraph) removed; only the ≈1:45 PM read tagged New.
