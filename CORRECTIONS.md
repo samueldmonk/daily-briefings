@@ -27386,3 +27386,9 @@ deleting and report how many days were removed.
 - MMA: ESPN champions page FETCHED ~2:38 PM ET — all 11 belts match the board (Gane HW, Ulberg LHW, Strickland MW, Makhachev WW, Gaethje LW, Volkanovski FW, Yan BW, Van FLW, Harrison WBW, Silva WFLW, Dern SW). No new items.
 - CYBER: KEV search found no CISA alert after Nov 10; carried unchanged (countdowns same date).
 - Prior New tag (≈1:45 PM read) removed; only the two new mover cards tagged New.
+
+## Run log — added 2026-11-12 (Thursday, AFTERNOON EDITION, archive stamp 2026-11-12-1522, MARKETS OPEN ~3:20 PM ET)
+- MARKETS: no TIMED index read newer than Yahoo's ≈1:45 PM ET strip could be FETCHED (US Yahoo live URL still cached at the ≈1:45 strip; SG mirror still at its 12:43 PM ET update; TheStreet Pro day page last entry 12:45 PM ET; Business Insider/Yahoo UK read is ≈10:15 AM ET; archyde, qz, JournalArta fetches FAILED; CNN & Detroit News robots-blocked; Yahoo ^GSPC quote page served a stale Nov 6 cache). ≈1:45 PM read retained as lead. NOT printed: search-summary "NVDA 164.25 −5.46% ~3:10 PM ET" and qz "S&P −0.8% / Nasdaq −1.5% / Dow +0.2% close" (pages not fetched; qz figures look like the early-session read).
+- MMA: ESPN champions page FETCHED ~3:15 PM ET — all 11 belts match the board (Gane HW, Ulberg LHW, Strickland MW, Makhachev WW, Gaethje LW, Volkanovski FW, Yan BW, Van FLW, Harrison WBW, Silva WFLW, Dern SW; ESPN Van 1 defence = known lag). No new items.
+- CYBER: KEV search found no CISA alert dated Nov 12; carried unchanged (countdowns same date).
+- Prior New tags (AP + Nvidia mover cards) removed — both were in the 1436 snapshot. Static edition pill set to Afternoon Edition.
