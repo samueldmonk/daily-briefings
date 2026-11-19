@@ -27490,3 +27490,10 @@ deleting and report how many days were removed.
 - MMA: ESPN champions page fetched ~2:00 PM ET — all 11 belts match the board; Van still 1 defence on ESPN (known lag, keep 2).
 - CYBER: no new CISA KEV alert for Nov 19 found (search returned no Nov 19 bulletin). Carried unchanged.
 - New tags: 1:32 PM paragraph and ANT-first-half-hour card tags stripped (in 1337 snapshot); only the headlines paragraph is New.
+
+## Run log — added 2026-11-19 (Thursday, MIDDAY EDITION, archive stamp 2026-11-19-1447, MARKETS OPEN ~2:45 PM ET)
+- MARKETS (Yahoo Finance Nov 19 live blog FETCHED ~2:45 PM ET; quote boxes "As of 2:33:38–2:33:39 PM EST"): Dow 49,400.65/49,401.42 −797.52/−796.75 (−1.59%), S&P 500 7,230.82 −92.81 (−1.27%; chip −1.28%), Nasdaq Composite 24,111.42 −318.46 (−1.30%; box −1.32%), Russell 2000 −1.69%, VIX 27.89 +13.56%, 10-yr 5.06 (−0.01), gold 3,676.60 −1.75%, WTI Dec 82.65 +0.41%, BTC 62,597.58 −0.11%. Levels kept OUT of editorial. Headline unchanged ("Dow drops 800 points…"). Search-only CNN "S&P −1.6% / Nasdaq −1.75% / Dow −918" (no timestamp) NOT published. 24/7 Wall St. midday card / Benzinga midday levels (search-only) NOT published.
+- ANT: $96.16 +15.85% as of 2:33:38 PM ET. Blikre "Anthropic's first two hours are kind of rough": nearly two hours in, 13% below first trade; of 20 big US IPOs since 2008 only Coupang worse; group avg ~+3.5%; SpaceX ~+14% at same stage; Figma +43%, Circle +27%; Facebook down <3%.
+- MMA: ESPN champions page fetched ~2:45 PM ET — all 11 belts match the board; Van still 1 defence on ESPN (known lag, keep 2).
+- CYBER: no new CISA KEV alert for Nov 19 found. Carried unchanged.
+- New tags: 2:15 PM headlines paragraph tag stripped (in 1443 snapshot); only the 2:33 PM paragraph is New.
