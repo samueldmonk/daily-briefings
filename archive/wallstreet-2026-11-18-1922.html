@@ -1,0 +1,86 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Closing Bell</title><style>
+:root{--bg:#0b0f14;--panel:#121821;--line:#1f2a36;--ink:#e8edf2;--mut:#8b97a5;--acc:#caa64a;--acc2:#e8c766;--up:#22c55e;--down:#ef4444;--warn:#f59e0b;--crit:#ef4444;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.6 -apple-system,Segoe UI,Inter,Roboto,sans-serif}
+.wrap{max-width:1080px;margin:0 auto;padding:22px 16px 60px}
+header.mast h1{margin:0;font-size:34px;letter-spacing:-.01em;font-family:Georgia,serif;}
+header.mast h1 span{color:var(--acc)}.tag{color:var(--mut);margin:2px 0 10px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}.pill{font-family:var(--mono);font-size:11px;letter-spacing:.08em;border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:4px 10px;color:var(--mut)}
+.pill.live{color:var(--up);border-color:#1f5134}.pill.live:before{content:"● ";}
+.tldr{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:10px;padding:11px 15px;margin:6px 0 2px;font-size:14.5px;line-height:1.5}
+.tldr b{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);margin-right:9px}
+.freshline{font-family:var(--mono);font-size:11px;color:var(--mut);margin:6px 0 12px}
+nav.tabs{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 18px}nav.tabs a{font-family:var(--mono);font-size:12px;text-decoration:none;color:var(--mut);border:1px solid var(--line);background:var(--panel);padding:7px 12px;border-radius:9px}
+nav.tabs a.on{color:var(--bg);background:var(--acc);border-color:var(--acc);font-weight:700}nav.tabs a:hover{color:var(--ink)}
+h2.sec{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--acc);margin:30px 0 10px;border-bottom:1px solid var(--line);padding-bottom:6px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.lead h3{margin:0 0 8px;font-size:22px;line-height:1.3;font-family:Georgia,serif;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px;transition:transform .15s,border-color .15s}.card:hover{transform:translateY(-3px);border-color:var(--acc)}
+.card h4{margin:0 0 6px;font-size:16px}.card p{margin:0;color:#c9d2db;font-size:14.5px}
+.t{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;padding:2px 7px;border-radius:6px;margin:0 6px 6px 0;background:#ffffff10;color:var(--acc2)}
+.t.new{background:#22c55e22;color:var(--up)}.t.red{background:#ef444422;color:var(--down)}.t.gold{background:#caa64a22;color:#e8c766}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}th{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+.tw{overflow-x:auto}.up{color:var(--up)}.down{color:var(--down)}.mut{color:var(--mut)}
+ul.b{margin:0;padding-left:18px}ul.b li{margin:6px 0}
+.callout{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--warn);border-radius:12px;padding:14px 16px}.callout.crit{border-left-color:var(--crit)}
+footer{margin-top:36px;border-top:1px solid var(--line);padding-top:14px;font-size:12.5px;color:var(--mut)}footer a{color:var(--acc2);word-break:break-all}footer ol{padding-left:18px}
+.note{font-family:var(--mono);font-size:11px;color:var(--mut);margin:8px 2px}
+.livebar{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px 8px 4px;margin-bottom:18px}.livebar-label{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--up);display:flex;align-items:center;gap:8px;padding:4px 8px 8px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--up);display:inline-block;animation:p 1.6s infinite}@keyframes p{50%{opacity:.3}}
+.tickers{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}.ticker{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:6px;min-height:90px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:12px}.stat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px}.stat b{display:block;font-size:24px;color:var(--acc)}.stat span{font-size:12.5px;color:var(--mut)}
+.banner{border-radius:12px;padding:12px 16px;background:#ef444418;border:1px solid #ef444455;font-size:14.5px}.banner b{font-family:var(--mono);letter-spacing:.14em;color:var(--down);margin-right:8px}
+.cd{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 16px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;align-items:center}.cd b{font-family:var(--mono);font-size:22px;color:var(--acc)}
+.dv{font-family:var(--mono);font-size:12px;color:#e8c766;margin-bottom:4px}
+.big{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}.big a{text-decoration:none;color:inherit}.big .card{padding:20px;min-height:220px}.big .k{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase}.big h3{margin:8px 0;font-size:24px}.go{display:inline-block;margin-top:12px;font-family:var(--mono);font-size:12px}
+</style></head><body><div class="wrap">
+<header class="mast"><h1>▲ The <span>Closing Bell</span></h1><div class="tag">Your daily Wall Street briefing</div><div class="meta"><span class="pill live">LIVE</span><span class="pill" id="edition">Afternoon Edition</span><span class="pill" id="datestamp">Wednesday, November 18, 2026</span><span class="pill">Updated <span id='updated'>7:30 PM ET</span></span></div></header>
+<div class="tldr"><b>The Tape</b> <span>The Dow fell 561 points (−1.11%) as health insurers sank on a Medicare audit proposal and Fed minutes leaned toward more rate hikes; the S&P 500 slipped 0.23% for a fifth straight loss while the Nasdaq rose 0.42%.</span></div><div class="freshline" id="freshline">Data as of ~7:30 PM ET · briefings refresh every 30 minutes, 8 AM–6 PM ET</div>
+<nav class="tabs"><a href="index.html">★ Front Page</a><a href="cyber-briefing.html">⛨ The Cyber Wire</a><a href="wallstreet-briefing.html" class="on">▲ The Closing Bell</a><a href="mma-briefing.html">⊘ The Octagon</a><a href="archive.html">🗄 Archive</a></nav>
+<div class="livebar"><div class="livebar-label"><span class="dot"></span> LIVE QUOTES</div>
+<script src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>{"symbols":[{"proName":"FOREXCOM:SPXUSD","title":"S&P 500"},{"proName":"FOREXCOM:NSXUSD","title":"Nasdaq 100"},{"proName":"FOREXCOM:DJI","title":"Dow 30"},{"proName":"NASDAQ:NVDA","title":"NVIDIA"},{"proName":"NYSE:UNH","title":"UnitedHealth"},{"proName":"NYSE:HUM","title":"Humana"},{"proName":"NYSE:TJX","title":"TJX"},{"proName":"NASDAQ:AMZN","title":"Amazon"},{"proName":"NASDAQ:PANW","title":"Palo Alto"},{"proName":"TVC:USOIL","title":"WTI Crude"},{"proName":"TVC:US10Y","title":"US 10Y"}],"colorTheme":"dark","isTransparent":true,"showSymbolLogo":true,"displayMode":"adaptive","locale":"en"}</script></div>
+<h2 class="sec">Live Index Quotes — updates in real time</h2>
+<div class="tickers"><div class="ticker"><script src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"FOREXCOM:SPXUSD","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div><div class="ticker"><script src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"FOREXCOM:NSXUSD","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div><div class="ticker"><script src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>{"symbol":"FOREXCOM:DJI","width":"100%","colorTheme":"dark","isTransparent":true,"locale":"en"}</script></div></div>
+<div class="note">Quotes stream live (some feeds ~15-min delayed). Editorial below reflects the latest edition; official closes are in the Weekly Scorecard.</div>
+<h2 class="sec">The Lead — official close, Wed Nov 18</h2>
+<div class="panel lead"><span class="t new">New</span><h3>Dow drops 561 points as insurers crater and Fed minutes turn hawkish; S&amp;P 500 slips below its 200-day average</h3>
+<p>The Dow Jones Industrial Average fell 1.11% and the S&amp;P 500 lost 0.23% — its fifth losing session in a row and its longest slide since June, per CNBC's live coverage cited by StockTitan — while the Nasdaq Composite rose 0.42%. The Motley Fool noted the S&amp;P 500 closed below its closely watched 200-day moving average.</p>
+<p>The Fed's October minutes showed almost all officials judged further rate rises would likely be appropriate; the Fed held its range at 3.75%–4% in October, with Lisa D. Cook and Beth M. Hammack preferring a quarter-point rise. Earlier in the day, Governor Christopher Waller told CNBC a half-point rise is probably needed at the December 8–9 meeting. The dollar hit a 19-month high (Motley Fool).</p>
+<p class="mut">Markets are closed; figures are the official 4:00 PM ET close. After-hours moves are listed separately below.</p></div>
+<h2 class="sec">Movers &amp; Drivers</h2><div class="grid">
+<div class="card"><span class="t new">New</span><span class="t red">Health care</span><h4>Humana −13% · UnitedHealth −10.2%</h4><p>A second day of steep falls after a federal proposal to expand Medicare Advantage audits and recover improper payments dating back to 2018. Elevance −7.63%, Centene −7.06% by the close (StockTitan).</p></div>
+<div class="card"><span class="t new">New</span><span class="t red">Chips</span><h4>Nvidia −2.89%</h4><p>Gave up a pre-market post-earnings gain for a fifth straight loss, the day after reporting Q3 revenue of $115.8B (+103% y/y) and guiding to about $130.0B for Q4 (StockTitan).</p></div>
+<div class="card"><span class="t new">New</span><span class="t">Retail</span><h4>TJX +8.05%</h4><p>Stronger-than-expected comparable sales and a raised full-year outlook ahead of the holidays (Motley Fool).</p></div>
+<div class="card"><span class="t new">New</span><span class="t">AI / IPO</span><h4>Amazon +3.82%; Anthropic prices IPO at $83</h4><p>Amazon rose on attention to its Anthropic stake (Motley Fool). Anthropic priced at $83 a share, above its $70–$78 range; CNN reports 980 million shares sold, raising $81.3B, with trading expected Thursday on the Nasdaq under "ANT" (Motley Fool).</p></div>
+<div class="card"><span class="t new">New</span><span class="t red">Energy</span><h4>Energy weakest sector; WTI −4%+</h4><p>Energy was down nearly 3% and WTI fell more than 4% to $82.19 as of 12:54 PM ET after a rise in U.S. crude and fuel stockpiles, per CNBC (via StockTitan). Gold fell 3.51% to $3,728.60 (Motley Fool).</p></div>
+</div>
+<h2 class="sec">Chart of the Day — Humana (NYSE:HUM), the session's biggest mover</h2>
+<div class="panel" style="padding:8px"><script src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>{"symbol":"NYSE:HUM","width":"100%","height":240,"locale":"en","dateRange":"1D","colorTheme":"dark","isTransparent":true,"autosize":false}</script></div>
+<h2 class="sec">Sector Heat — live</h2>
+<p class="mut" style="margin:0 0 8px">Editorial: industrials (+0.62%) and consumer discretionary (+0.39%) led; communication services fell 0.81% (Motley Fool) and energy was weakest (CNBC via StockTitan).</p>
+<div class="panel" style="padding:8px"><script src="https://s3.tradingview.com/external-embedding/embed-widget-stock-heatmap.js" async>{"dataSource":"SPX500","blockSize":"market_cap_basic","blockColor":"change","grouping":"sector","locale":"en","colorTheme":"dark","hasTopBar":false,"isDataSetEnabled":false,"isZoomEnabled":true,"hasSymbolTooltip":true,"isMonoSize":false,"width":"100%","height":420}</script></div>
+<h2 class="sec">The Calendar — live</h2>
+<div class="panel" style="padding:8px"><script src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>{"colorTheme":"dark","isTransparent":true,"width":"100%","height":420,"locale":"en","importanceFilter":"0,1","countryFilter":"us"}</script></div>
+<h2 class="sec">Live Market Headlines — updates in real time</h2>
+<div class="panel" style="padding:8px"><script src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>{"feedMode":"market","market":"stock","colorTheme":"dark","isTransparent":true,"displayMode":"regular","width":"100%","height":420,"locale":"en"}</script></div>
+<h2 class="sec">After-Hours Movers</h2><div class="grid">
+<div class="card"><span class="t new">New</span><span class="t">Cyber</span><h4>Palo Alto Networks +6.51% after hours</h4><p>As of 4:13 PM ET after reporting results, following a 9.90% regular-session gain. It also agreed to buy Applied Compute in an all-stock deal valued at $4.5B (StockTitan).</p></div></div>
+<h2 class="sec">Weekly Scorecard — official closes</h2><div class="panel tw"><table><tr><th>Index</th><th>Close Wed 11/18</th><th>Day change</th></tr>
+<tr><td>S&amp;P 500</td><td>7,323.63</td><td class="down">−16.90 (−0.23%)</td></tr>
+<tr><td>Dow Jones Industrial Average</td><td>50,198.17</td><td class="down">−561.25 (−1.11%)</td></tr>
+<tr><td>Nasdaq Composite</td><td>24,429.88</td><td class="up">+101.50 (+0.42%)</td></tr>
+<tr><td>Russell 2000</td><td class="mut">level not verified</td><td class="up">+0.52%</td></tr></table>
+<p class="note">Closes per Motley Fool quote strip; percentages corroborated by StockTitan/CNBC. Russell 2000 % via search summary of StockTitan coverage.</p></div>
+<h2 class="sec">Rates, Bonds &amp; Commodities</h2><div class="panel tw"><table><tr><th>Item</th><th>Latest</th><th>Note</th></tr>
+<tr><td>10-yr Treasury</td><td>5.10%</td><td>Eased 2 bp, near recent highs (Motley Fool)</td></tr>
+<tr><td>Fed funds target</td><td>3.75%–4.00%</td><td>Held in October; minutes lean to more hikes</td></tr>
+<tr><td>WTI crude</td><td>$82.19</td><td>−4%+ as of 12:54 PM ET (CNBC via StockTitan)</td></tr>
+<tr><td>Gold</td><td>$3,728.60</td><td>−3.51% (Motley Fool)</td></tr>
+<tr><td>Bitcoin</td><td>$62,592</td><td>−3.6% (Motley Fool quote strip)</td></tr>
+<tr><td>U.S. dollar</td><td>19-month high</td><td>On hawkish minutes (Motley Fool)</td></tr></table>
+<p class="note">2-yr and 30-yr yields not verified this run — omitted.</p></div>
+<h2 class="sec">On the Radar</h2><div class="panel"><ul class="b">
+<li><b>Thu Nov 19:</b> Anthropic expected to begin trading on the Nasdaq under "ANT" (Motley Fool).</li>
+<li><b>Thu Nov 19:</b> Walmart earnings — the next read on consumer health (Motley Fool).</li>
+<li><b>Dec 8–9:</b> FOMC meeting; Waller says a half-point rise is probably needed (CNBC via StockTitan).</li></ul></div>
+<footer><b>Sources (fetched this run)</b><ol><li><a href="https://www.stocktitan.net/articles/stock-market-today-live-november-18-2026">StockTitan — Stock Market Today Live, Nov 18 2026</a></li><li><a href="https://www.fool.com/coverage/stock-market-today/2026/11/18/stock-market-today-nov-18-s-and-p-500-breaks-key-support-as-fed-minutes-signal-more-rate-hikes-ahead/">Motley Fool — Stock Market Today, Nov. 18</a></li><li><a href="https://finance.yahoo.com/markets/live/stock-market-today-wednesday-november-18-dow-sp-500-nasdaq-nvidia-earnings-anthropic-ipo-143530588.html">Yahoo Finance live — Nov 18</a></li><li><a href="https://www.cnn.com/2026/11/18/investing/anthropic-ipo-price-stock">CNN — Anthropic IPO at $83</a></li><li><a href="https://www.fool.com/investing/2026/11/18/it-s-official-anthropic-prices-its-ipo-at-usd83-a-share-here-s-what-we-know-and-what-we-don-t/">Motley Fool — Anthropic prices IPO</a></li><li><a href="https://www.federalreserve.gov/monetarypolicy/fomcminutes20261028.htm">Federal Reserve — FOMC minutes Oct 28 2026</a></li></ol><p>For information only — not investment advice. Live widgets by TradingView; feeds may be delayed.</p></footer></div><script>(function(){try{var n=new Date();var et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',year:'numeric',month:'long',day:'numeric'}).format(n);var t=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(n);var h=parseInt(new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',hour12:false}).format(n),10);var ed=h<11?'Morning Edition':(h<15?'Midday Edition':'Afternoon Edition');document.getElementById('datestamp').textContent=et;document.getElementById('updated').textContent=t+' ET';document.getElementById('edition').textContent=ed;var fl=document.getElementById('freshline');if(fl)fl.textContent='Data as of '+t+' ET · briefings refresh every 30 minutes, 8 AM–6 PM ET';}catch(e){}})();</script></body></html>
