@@ -27476,3 +27476,11 @@ deleting and report how many days were removed.
 - MMA: ESPN champions page fetched ~12:45 PM ET — all 11 belts match the board; Van still 1 defence (known lag, keep 2). No Doha changes.
 - CYBER: no new CISA KEV alert for Nov 19 found; no new incidents. Carried unchanged.
 - New tags: Closing Bell ANT-open paragraph/card tags stripped (in 1205 snapshot); only the 12:31 PM sell-off paragraph and the chip-stocks card are New.
+
+## Run log — added 2026-11-19 (Thursday, MIDDAY EDITION, archive stamp 2026-11-19-1337, MARKETS OPEN ~1:35 PM ET)
+- MARKETS (Yahoo Finance Nov 19 live blog FETCHED ~1:35 PM ET; quote boxes "As of 1:32:55–1:32:59 PM EST"): Dow 49,401.25 −796.92 (−1.59%), Nasdaq Composite 24,110.25 −319.64 (−1.31%); quote strip: S&P 500 7,231.25 −92.38 (−1.26%; ticker chip shows −1.27%), Dow −1.58%, Nasdaq −1.29%, Russell 2000 −1.65%, VIX 28.07 +14.30%, 10-yr 5.05 (−0.02), gold 3,679.90 −1.66%, WTI Dec 83.25 +1.14%, BTC 63,132.50. Headline: "Dow drops 800 points, S&P 500 and Nasdaq tank as Anthropic stock surges in public debut". Levels kept OUT of editorial.
+- ANT: $97.33 +17.27% as of 1:32:59 PM ET. Yahoo (Jared Blikre): slid to ~$97 by minute 30, 13% below the $111.50 first trade; erased nearly $200B (13.1B implied shares); worst 30-minute start vs first trade of 21 big US IPOs since 2008 (Coupang closest ~13%; SpaceX +~10% at same point in June).
+- JournalArta midday snapshot (data 17:30 GMT = 12:30 PM ET): Dow −1.34%, S&P −0.75%, Nasdaq −0.48% — consistent-ish with Yahoo 12:31; its single-stock rows (UNH −10.21%) are Wednesday figures — NOT published.
+- MMA: ESPN champions page fetched ~1:35 PM ET — all 11 belts match the board; Van still 1 defence (known lag, keep 2). No Doha changes.
+- CYBER: no new CISA KEV alert for Nov 19 found; no new incidents. Carried unchanged.
+- New tags: 12:31 sell-off paragraph and chip-stocks card tags stripped (in 1250 snapshot); only the 1:32 PM paragraph and the ANT-first-half-hour card are New.
