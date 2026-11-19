@@ -27497,3 +27497,11 @@ deleting and report how many days were removed.
 - MMA: ESPN champions page fetched ~2:45 PM ET — all 11 belts match the board; Van still 1 defence on ESPN (known lag, keep 2).
 - CYBER: no new CISA KEV alert for Nov 19 found. Carried unchanged.
 - New tags: 2:15 PM headlines paragraph tag stripped (in 1443 snapshot); only the 2:33 PM paragraph is New.
+
+## Run log — added 2026-11-19 (Thursday, AFTERNOON EDITION, archive stamp 2026-11-19-1505, MARKETS OPEN ~3:05 PM ET)
+- MARKETS (Yahoo Finance Nov 19 live blog FETCHED ~3:05 PM ET; quote boxes "As of 3:03:45–3:03:47 PM EST", "markets close in 57m"): Dow 49,107.44/49,113.37 −1,090.73/−1,084.80 (−2.17%/−2.16%), S&P 500 7,177.06 −146.57 (−2.00%; chip −2.01%), Nasdaq Composite 23,886.45/23,888.26 −543.44/−541.63 (−2.22%), Russell 2000 −1.58%, VIX 27.06 +10.18%, 10-yr 5.06 (−0.01), gold 3,669.10 −1.95%, WTI Dec 82.74 +0.52%, BTC 62,174.10 −0.58%, SPCX −4.67%. Headline now "Dow drops 900 points…"; body text "Dow fell 1.8%, or over 900 points; S&P −1.7%; Nasdaq −1.9%" lags the 3:03 boxes — page uses the timestamped boxes. Levels kept OUT of editorial.
+- ANT: $95.31 +14.83% as of 3:03:45 PM ET. Ferré (Yahoo): retail sold single stocks to fund ANT, rotating out of AI names led by AMD as Nvidia buying stalled; AMD −7%, NVDA −2% in afternoon trading. Vanda Research: retail net buying $18.6M first 30 min (2nd among 2026 debuts behind SpaceX $25.6M); retail turnover $255M (>2x SpaceX); retail buy share 57.2% → 52.5%.
+- TRAP (again): search synthesis presented Nov 18 close (Dow 50,198.17) as a Nov 19 figure — never use. CNN "S&P −1.6% / Nasdaq −1.75% / Dow −918" (no timestamp) NOT published.
+- MMA: ESPN champions page fetched ~3:05 PM ET — all 11 belts match the board; Van still 1 defence on ESPN (known lag, keep 2). No Doha changes.
+- CYBER: no new CISA KEV alert for Nov 19 found; no new incidents. Carried unchanged.
+- New tags: 2:33 PM paragraph tag stripped (in 1447 snapshot); only the 3:03 PM paragraph and the retail-rotation card are New.
