@@ -27505,3 +27505,9 @@ deleting and report how many days were removed.
 - MMA: ESPN champions page fetched ~3:05 PM ET — all 11 belts match the board; Van still 1 defence on ESPN (known lag, keep 2). No Doha changes.
 - CYBER: no new CISA KEV alert for Nov 19 found; no new incidents. Carried unchanged.
 - New tags: 2:33 PM paragraph tag stripped (in 1447 snapshot); only the 3:03 PM paragraph and the retail-rotation card are New.
+
+## Run log — added 2026-11-19 (Thursday, AFTERNOON EDITION, archive stamp 2026-11-19-1534, MARKETS OPEN ~3:35 PM ET)
+- MARKETS: Yahoo Finance Nov 19 live blog re-fetched ~3:35 PM ET — still serving quote boxes "As of 3:03:45–3:03:47 PM EST" (Dow −1,090.73/−2.17%, Nasdaq −2.22%, ANT $95.31 +14.83%); kept as latest timestamped reading. NEW (search snippet only; SooLeader AP page fetch = client error): AP "US stocks tumble 2% toward their longest losing streak since 2024 despite Anthropic's strong IPO" — with an hour remaining S&P −1.8% heading for a 6th straight loss (longest in ~2.5 years), Dow −1,003 pts (−2%), Nasdaq −2%. Benzinga "S&P −0.9% to 7,255 / Dow −1.5% to 49,444" is an EARLIER midday snapshot — NOT published as current.
+- MMA: ESPN champions page fetched ~3:35 PM ET — all 11 belts match the board; Van still 1 defence on ESPN (known lag, keep 2).
+- CYBER: no new CISA KEV alert for Nov 19 found (latest govdelivery results undated/older); no new incidents. Carried unchanged.
+- New tags: 3:03 PM paragraph and retail-rotation card tags stripped (in 1505 snapshot); only the AP hour-to-go paragraph is New.
