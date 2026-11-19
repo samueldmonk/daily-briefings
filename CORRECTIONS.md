@@ -27484,3 +27484,9 @@ deleting and report how many days were removed.
 - MMA: ESPN champions page fetched ~1:35 PM ET — all 11 belts match the board; Van still 1 defence (known lag, keep 2). No Doha changes.
 - CYBER: no new CISA KEV alert for Nov 19 found; no new incidents. Carried unchanged.
 - New tags: 12:31 sell-off paragraph and chip-stocks card tags stripped (in 1250 snapshot); only the 1:32 PM paragraph and the ANT-first-half-hour card are New.
+
+## Run log — added 2026-11-19 (Thursday, MIDDAY EDITION, archive stamp 2026-11-19-1443, MARKETS OPEN ~2:15 PM ET)
+- MARKETS: Yahoo Finance Nov 19 live blog re-fetched — still serving quote boxes "As of 1:32:55–1:32:59 PM EST" (Dow −796.92/−1.59%, Nasdaq −1.31%, ANT $97.33 +17.27%); kept as latest verified reading. New this run (headline-only, via search titles): Bloomberg "US Stocks Drop for Sixth Day as Dow Jones Index Eyes Correction"; Benzinga "S&P 500 Slides, Anthropic Jumps 27%". Benzinga, Star Advertiser fetches = client error. TRAP: search syntheses again presented the Nov 18 close (Dow 50,198.17 −561.25) as Nov 19's close — never use. Search-only "Dow −1,022.85 (−2.03%) to 49,180.77 at 12:18 PM" NOT published (not fetched). The Private Banker and BNN/AP pages fetched were late-morning / 9:41 AM — stale, not used.
+- MMA: ESPN champions page fetched ~2:00 PM ET — all 11 belts match the board; Van still 1 defence on ESPN (known lag, keep 2).
+- CYBER: no new CISA KEV alert for Nov 19 found (search returned no Nov 19 bulletin). Carried unchanged.
+- New tags: 1:32 PM paragraph and ANT-first-half-hour card tags stripped (in 1337 snapshot); only the headlines paragraph is New.
