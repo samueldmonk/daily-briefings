@@ -27511,3 +27511,12 @@ deleting and report how many days were removed.
 - MMA: ESPN champions page fetched ~3:35 PM ET — all 11 belts match the board; Van still 1 defence on ESPN (known lag, keep 2).
 - CYBER: no new CISA KEV alert for Nov 19 found (latest govdelivery results undated/older); no new incidents. Carried unchanged.
 - New tags: 3:03 PM paragraph and retail-rotation card tags stripped (in 1505 snapshot); only the AP hour-to-go paragraph is New.
+
+## Run log — added 2026-11-19 (Thursday, AFTERNOON EDITION, archive stamp 2026-11-19-1606, JUST AFTER THE CLOSE ~4:05 PM ET)
+- MARKETS (Yahoo Finance Nov 19 live blog FETCHED ~4:05 PM ET; quote boxes "As of 3:33:36–3:33:38 PM EST", headline "Dow drops 1,000 points…"): Dow 49,162.82 −1,035.35 (−2.06%), Nasdaq Composite 23,898.48 −531.40 (−2.18%), S&P 500 chip −1.93%, SPCX −4.91%, ANT $95.10 +12.10 (+14.58%). Opening trade 108M shares (bigger than SpaceX's entire first minute). Levels kept OUT of editorial. OFFICIAL CLOSE NOT YET AVAILABLE at ~4:10 PM ET — Weekly Scorecard still ends Nov 18; next run must add the Nov 19 close only from a fetched closing report.
+- TRAP: search synthesis presented Reuters (Investing.com) "Dow −900.74 (−1.79%) to 49,298.08, S&P −1.54% to 7,211.12, Nasdaq −1.60% to 24,038.78" as closing figures — the article was PUBLISHED 2:57 PM ET (intraday), and 50,198.17 − 900.74 ≠ 49,298.08. NOT a close; not used. 247wallst undated "at close" snapshot NOT used.
+- AP (Stan Choe, fetched via Northern Virginia Daily, as of 1:43 PM ET): 85% of S&P 500 stocks fell; Williams-Sonoma −13.9% (revenue just below forecast); Walmart −1%; Micron +7.8% → −0.3%; CoreWeave +10.5% → −4.3%; Nvidia +4.7% → −1.4%; PANW +6%; Everpure +8.6% (revenue +51%); 10-yr 5.05% from 5.07%. AP cites "the sudden resignation of Jensen Huang as Nvidia's CEO" among recent AI-trade worries (published with AP attribution).
+- AFTER HOURS: no source yet for INTU/ROST/GAP/BBWI after-hours moves (searches returned only 2018–2025 articles) — section published with a "none confirmed" note.
+- MMA: ESPN champions page fetched ~4:07 PM ET — all 11 belts match the board; Van still 1 defence on ESPN (known lag, keep 2).
+- CYBER: no new CISA KEV alert for Nov 19 found; no new dated incidents. Carried unchanged.
+- New tags: AP hour-to-go paragraph tag stripped (in 1534 snapshot); only the 3:33 PM paragraph, the AP 1:43 PM detail paragraph and the Williams-Sonoma / Everpure cards are New.
