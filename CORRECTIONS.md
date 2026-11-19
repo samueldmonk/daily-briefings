@@ -27449,3 +27449,10 @@ deleting and report how many days were removed.
 - CYBER (new, supersedes "JPMorgan = software bug only"): JPMorgan said Thu Nov 19 some third-party service providers were targeted in a cyberattack, NOT connected to the outage; no service disruption; attackers may have accessed some customer names and email addresses; counts undisclosed (Yahoo Finance live blog, fetched). Do NOT link it to n0n's claim unless a source does. No new CISA KEV alert found for Nov 19.
 - MMA: ESPN champions page fetched ~10:55 AM ET — all 11 belts match the board; Van still 1 defence on ESPN (known lag, keep 2). No Doha changes found.
 - FETCH FAILURES: StockTitan Nov 19 live (client error), CNN live (robots), CNBC live blog (client error).
+
+## Run log — added 2026-11-19 (Thursday, MIDDAY EDITION, archive stamp 2026-11-19-1105, MARKETS OPEN ~11:05 AM ET)
+- MARKETS: no fresher index quote retrievable — Yahoo live blog still served the "As of 10:51:49 AM EST" strip; StockTitan live = client error again. A 24/7 Wall St. ticker strip (S&P 7,305.50 −0.30%, Dow 49,743.20 −0.94%, NDX +0.09%) had NO timestamp — NOT published. Its "Biggest Losers" widget showing AMD −10.46% is uncorroborated (and conflicts with AMD +2.9% premarket) — NOT published. Lead relabelled "latest verified reading".
+- ANTHROPIC: still no first trade found at ~11:05 AM ET; Yahoo IPO blog headline now "indications point to shares trading at $105". Search-only mentions of $102/$104 indications NOT published.
+- MMA (new): UFC released Virna Jandiroba — former title challenger, current No. 3 strawweight, off a decision loss to Tatiana Suarez (Nov 7, Las Vegas), 23-5, says she won't retire (ESPN, Brett Okamoto, Nov 18 2:08 PM ET, fetched in full). ESPN champions page fetched ~11:05 AM ET — all 11 belts match the board; Van still 1 defence (known lag, keep 2).
+- CYBER: no new CISA KEV alert for Nov 19 found. Carried unchanged.
+- New tags: all prior tags (cyber JPMorgan, MMA Doha, Closing Bell late-morning/ANT/rates) were in the 1057 snapshot — stripped. Only the Jandiroba bullet is tagged New.
