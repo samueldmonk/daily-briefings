@@ -27520,3 +27520,12 @@ deleting and report how many days were removed.
 - MMA: ESPN champions page fetched ~4:07 PM ET — all 11 belts match the board; Van still 1 defence on ESPN (known lag, keep 2).
 - CYBER: no new CISA KEV alert for Nov 19 found; no new dated incidents. Carried unchanged.
 - New tags: AP hour-to-go paragraph tag stripped (in 1534 snapshot); only the 3:33 PM paragraph, the AP 1:43 PM detail paragraph and the Williams-Sonoma / Everpure cards are New.
+
+## Run log — added 2026-11-26 (Thursday, manual MMA refresh, archive stamp 2026-11-26-1221, ~12:35 PM ET; first publish since Nov 19 4:06 PM — scheduler did not run Nov 19 evening → Nov 26)
+- 🆕 UFC QATAR (Nov 21, ABHA Arena, Doha) — UFC.com official scorecards + ESPN (Okamoto) FETCHED: **Navajo Stirling def. Jiří Procházka, KO (right hand) R2 4:58**; Stirling now 12-0 (7-0 UFC, 4 KOs); Procházka 32-7-1. Main card: Kevin Vallejos def. Aljamain Sterling UD (30-27, 30-27, 29-28); Dan Hooker def. Brian Ortega UD (30-27 x3) — **Ortega (16-6, 35) RETIRED**; Kyoji Horiguchi def. Asu Almabayev UD; Ikram Aliskerov def. Jared Cannonier UD (30-27 x3). Prelim: Amir Albazi sub (RNC) R3 4:34 Alessandro Costa (first win since June 2023).
+- BONUSES (UFC.com bonus coverage FETCHED): four $100,000 POTN — Stirling, Albazi, Diyar Nurgozhay (TKO R2 0:24 Alik Lorenz), John Mitchell (KO knee R1 3:50 Shoaib Yousaf, debut, 4 days' notice). No FOTN.
+- RANKINGS: Yardbarker (search only) says Stirling moved to No. 2 in official rankings — NOT published (not fetched). ESPN: "will likely crack the division's top 5" — published.
+- NEXT CARD: Dec 5, The Venue, Riyadh — **Israel Adesanya (24-6) vs. Sharabutdin Magomedov (17-1)**, five-round MW; co-main Ian Machado Garry vs. Yaroslav Amosov (Fightmag, Nov 8, FETCHED). TRAP: CBS/ESPN "Adesanya vs. Imavov, Riyadh" articles are from FEBRUARY 2025 — never use. Start time not verified.
+- AROUND: Manon Fiorot banned 3 months for anti-doping violation (ESPN headline).
+- CHAMPIONS: ESPN champions page fetched ~12:30 PM ET Nov 26 — all 11 match (Van still 1 defence = known lag, keep 2). No title fight in Doha.
+- NOT UPDATED this refresh: Cyber Wire and Closing Bell (still Nov 19 content); the scheduled run should refresh them.
