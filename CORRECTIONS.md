@@ -27553,3 +27553,10 @@ deleting and report how many days were removed.
 - MMA: ESPN champions page FETCHED ~2:05 PM ET — all 11 belts match the board (Van 1 defence = known lag, keep 2; Gane 1 defence). No new UFC items.
 - MARKETS: no session (Thanksgiving); Friday closes 1:00 PM ET. Editorial unchanged.
 - New tags: all prior "New" tags stripped (items were in the 1335 snapshot); only the CVE-2026-131914 items are New.
+
+## Run log — added 2026-11-26 (Thursday, MIDDAY EDITION, archive stamp 2026-11-26-1436, markets CLOSED for Thanksgiving)
+- 🆕 KEV DEADLINES VERIFIED (all FETCHED this run): **MONAI Label CVE-2026-133968 (CVSS 9.8, unauthenticated path traversal → file write/RCE) and N-able Mail Assure CVE-2026-134624 (CVSS 9.3, SSRF in LDAP sync check, authenticated API user): added Nov 23, due Nov 26, 2026** (THN Nov 24: https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html). **Drupal core CVE-2026-132165 "Fail2Install" (CVSS 9.8): added Nov 24, due Nov 27, 2026**; exploited on live sites as early as 2026-11-19 19:00 UTC (Drupal SA-CORE-2026-017 via THN); fixed in 11.4.13 / 11.3.22 / 10.6.22 (THN Nov 25: https://thehackernews.com/2026/11/drupal-fail2install-exploit-details.html). Earlier editions said "deadlines not verified" for these and listed Drupal as "not in KEV" / CVSS "not stated" — SUPERSEDED. Patch Priority now leads with the two due TODAY.
+- THN Nov 25 batch article re-FETCHED — Mitel/Danfoss/Juniper/Vates CVSS and Nov 28 / Dec 9 split unchanged. Optimizely KEV entry (Nov 24) deadline still not verified.
+- MMA: ESPN champions page FETCHED ~2:35 PM ET — all 11 belts match the board (Van 1 defence = known lag, keep 2). Cageside (Nov 7) re-fetched: Adesanya 24-6 vs Magomedov 17-1, Garry 17-2 vs Amosov 30-1, Dec 5, ANB Arena. No new UFC items.
+- MARKETS: no session (Thanksgiving); no Nov 25 closing story re-fetchable this run — editorial rests on the 1309 run log entries. Unchanged.
+- New tags: CVE-2026-131914 tags stripped (in 1405 snapshot); only MONAI/Mail Assure/Drupal items are New.
