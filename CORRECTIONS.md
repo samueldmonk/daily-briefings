@@ -27587,3 +27587,8 @@ deleting and report how many days were removed.
 - CYBER: searches for Nov 26 breaches / KEV additions returned nothing new (KEV search surfaced only Nov 9/10/18 batches already superseded on page). Content rests on the 1309/1405/1436/1506/1606 entries above. No New tags.
 - MARKETS: no session (Thanksgiving). AP Nov 25 closing-table search returned only 2025 items / other 2026 dates (KRMG URL not in provenance this run); editorial rests on the 1309/1506/1606 entries. Unchanged. Friday closes 1 PM ET.
 - PAGES: content unchanged from the 1640 edition (nothing new verified); republished as a fresh snapshot. KEV/MMA countdowns are JS-computed.
+
+## Run log — added 2026-11-26 (Thursday, AFTERNOON EDITION, archive stamp 2026-11-26-1734, markets CLOSED for Thanksgiving)
+- MMA: ESPN champions page FETCHED ~5:35 PM ET — all 11 belts match the board (Gane 1, Ulberg 0, Strickland 0, Makhachev 1, Gaethje 0, Volkanovski 2, Yan 1, Van 1 = known lag keep 2, Harrison 1, Silva 0, Dern 1). ESPN MMA rail: no items newer than Ulberg/Stirling (16h) and Smith charges (18h).
+- CYBER / MARKETS: searches returned no dated Nov 26, 2026 items (only 2024–2025 / mid-2026 results). No session (Thanksgiving); Friday closes 1 PM ET. Content rests on prior run-log entries; unchanged.
+- PAGES: content unchanged from the 1704 edition; republished as a fresh snapshot. No New tags.
