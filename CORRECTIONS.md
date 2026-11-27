@@ -27676,3 +27676,9 @@ deleting and report how many days were removed.
 - CYBER: no new verified Nov 27 items (Booba water-plant and hex.pm leads could not be confirmed at source — NOT published). Content unchanged.
 - MMA: ESPN champions page FETCHED ~1:35 PM ET — all 11 belts match (Van defences = known lag; keep 2). Octagon unchanged.
 - New tags: earlier WS New tags stripped (in 1305 snapshot); only the two close paragraphs in the Lead and the TSLA/SPCX/AMZN close card are New.
+
+## Run log — added 2026-11-27 (Friday, MIDDAY EDITION, archive stamp 2026-11-27-1405, ~2:05 PM ET, after the 1 PM ET early close)
+- MARKETS — official Black Friday closes RE-VERIFIED this run (FETCHED The Company Chronicle, Nov 27 1:35 PM ET, Yahoo data): S&P 500 7,297.49 (+1.60%), Dow 50,774.94 (+592, +1.18%), Nasdaq 24,129.50 (+2.30%), R2K 2,750.30 (+1.71%), VIX 24.01; Wed closes S&P 7,182.78 / Dow 50,182.95 / Nasdaq 23,585.80; TSLA +5.2% $400.00, SPCX +4.8% $133.59, AMZN +4.0% $254.12, HPQ +3.3% $32.17, NVDA +0.8% $150.49. Chronicle also cites Treasury 10-yr 4.85% on WEDNESDAY (not Friday) — rates row unchanged. JBizNews URL not fetchable this run (provenance). Investrade "all eleven sectors / best week since May 2025" snippet — page returned client error, NOT used. Content unchanged apart from stamps.
+- CYBER: search surfaced Air Force Cloud One breach and SAP incident — both already on page. No newer KEV batch found. Content unchanged.
+- MMA: ESPN champions page FETCHED ~2:05 PM ET — all 11 belts match (Van defences = known lag; keep 2). Octagon unchanged.
+- New tags: the three WS New tags from the 1336 edition stripped (those items are in the 1336 snapshot); no New items this edition.
