@@ -27706,3 +27706,9 @@ deleting and report how many days were removed.
 - CYBER: searches found nothing newer than page content (latest KEV batch found by search = Nov 18; page has Nov 25 batch). Unchanged.
 - MMA: ESPN champions page FETCHED ~4:05 PM ET — all 11 belts match the board (Gane 1, Ulberg 0, Strickland 0, Makhachev 1, Gaethje 0, Volkanovski 2, Yan 1, Van 1 = known lag keep 2, Harrison 1, Silva 0, Dern 1). Rail unchanged. Octagon unchanged.
 - New tags: the two WS New tags from 1536 stripped; only the AP closing-story Lead paragraph is New this edition.
+
+## Run log — added 2026-11-27 (Friday, AFTERNOON EDITION, archive stamp 2026-11-27-1635, ~4:35 PM ET, after the 1 PM ET early close)
+- MMA: ESPN champions page FETCHED ~4:35 PM ET — all 11 belts match the board (Gane 1, Ulberg 0, Strickland 0, Makhachev 1, Gaethje 0, Volkanovski 2, Yan 1, Van 1 = known lag keep 2, Harrison 1, Silva 0, Dern 1). Rail: nothing newer than Ulberg/Stirling (2d) and Smith charges (2d). Heavy opening odds Adesanya −205 / Magomedov +173 re-confirmed by search; Yardbarker/Sherdog +180 → +130 still UNDATED — NOT published. Octagon content unchanged; footer check-time and "re-fetched" note updated to Nov 27 ~4:35 PM ET.
+- MARKETS: AP (nvdaily) and StockAnalysis URLs NOT in provenance this run; searches returned only prior-year Black Friday items. Official Nov 27 closes on page rest on the 1336/1405/1435/1536/1606 entries above. Editorial unchanged.
+- CYBER: KEV search found nothing newer than the Nov 25 batch on page (latest search-dated batch = Nov 18). Unchanged.
+- New tags: the single WS New tag from 1606 (AP full closing story paragraph) stripped — it is in the 1606 snapshot. No New items this edition.
