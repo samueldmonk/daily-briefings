@@ -27736,3 +27736,10 @@ deleting and report how many days were removed.
 - MARKETS: close search returned only prior-year Black Friday items (Kiplinger/Reuters 2024–2025). Official Nov 27 closes on page rest on the 1336/1405/1435/1536/1606 entries. No sourced after-hours movers. Editorial unchanged.
 - CYBER: KEV search's newest dated batch = Nov 18 (Synology DSM / LiteLLM / Apache Axis / REDCap), older than the Nov 25 batch on page. Unchanged.
 - New tags: none.
+
+## Run log — added 2026-11-27 (Friday, AFTERNOON EDITION, archive stamp 2026-11-27-1905, ~7:05 PM ET, run fired after the 8 AM–6 PM window, after the 1 PM ET early close)
+- MMA: ESPN champions page FETCHED ~7:05 PM ET — all 11 belts match the board (Gane 1, Ulberg 0, Strickland 0, Makhachev 1, Gaethje 0, Volkanovski 2, Yan 1, Van 1 = known lag keep 2, Harrison 1, Silva 0, Dern 1). Rail: nothing newer than Ulberg/Stirling (2d) and Smith charges (2d). "UFC news Nov 27 2026" search: no dated items. Octagon unchanged; check-time updated.
+- MARKETS: close search returned only prior-year Black Friday items; AP (nvdaily) and StockAnalysis URLs NOT in provenance this run. Official Nov 27 closes on page rest on the 1336/1405/1435/1536/1606 entries. No sourced after-hours movers. Editorial unchanged.
+- CYBER: KEV search's newest dated batch = Nov 18, older than the Nov 25 batch on page; ransomware/breach search found nothing dated Nov 26–27. Unchanged.
+- Archive prune switched to a date-based 21-day cutoff (file mtimes reset on every clone, so find -mtime is a no-op).
+- New tags: none.
