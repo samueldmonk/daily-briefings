@@ -27755,3 +27755,9 @@ deleting and report how many days were removed.
 - MARKETS: weekend, no session. Lead relabelled "Weekend — latest close, Fri Nov 27"; note added that one November session remains (Mon Nov 30, per StockAnalysis.com Nov 27). Week-ahead search returned only prior-year items. Closes unchanged (rest on 1336/1405/1435/1536/1606 Nov 27 entries).
 - CYBER: searches found no verified items or KEV batch newer than page content (KEV search newest = Nov 18 batch). Date roll-forward: Drupal CVE-2026-132165 and Idunno CVE-2026-131914 moved to "Passed Nov 27"; Mitel MiCollab CVE-2026-133323 (CVSS 10.0) now leads Patch Priority as "Due TODAY" (Nov 28) with the rest of the Nov 25 eight; summary, banner and index card rewritten accordingly. Deadlines rest on the Nov 26 THN fetches.
 - New tags: none.
+
+## Run log — added 2026-11-28 (Saturday, MORNING EDITION, archive stamp 2026-11-28-0935, ~9:35 AM ET; markets CLOSED for the weekend)
+- MMA: ESPN champions page FETCHED ~9:35 AM ET — all 11 belts match the board (Gane 1, Ulberg 0, Strickland 0, Makhachev 1, Gaethje 0, Volkanovski 2, Yan 1, Van 1 = known lag keep 2, Harrison 1, Silva 0, Dern 1). Rail: newest items still Ulberg/Stirling (2d) and Smith charges dropped (2d). "UFC news Nov 28 2026" search: no dated items. Octagon content unchanged; check-time updated to ~9:35 AM ET.
+- MARKETS: weekend, no session. Week-ahead search returned only prior-year items. Closes and editorial unchanged (rest on the verified Nov 27 entries).
+- CYBER: KEV search's newest dated batch = Nov 18, older than the Nov 25 batch on page. No new verified items. Mitel MiCollab CVE-2026-133323 and the rest of the Nov 25 eight remain "Due TODAY" (Nov 28). Unchanged.
+- New tags: none.
