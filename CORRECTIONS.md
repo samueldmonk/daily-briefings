@@ -27799,3 +27799,9 @@ deleting and report how many days were removed.
 - MARKETS: weekend, no session. Week-ahead search (Nov 30 2026) returned only prior-year/undated items. Closes and editorial unchanged.
 - CYBER: KEV search newest dated batch = Nov 18, older than the Nov 25 batch on page; breach/ransomware search found nothing dated Nov 27–28 (newest BlackFog roundup Nov 5). No new verified items. Unchanged.
 - New tags: none.
+
+## Run log — added 2026-11-28 (Saturday, MIDDAY EDITION, archive stamp 2026-11-28-1405, ~2:05 PM ET; markets CLOSED for the weekend)
+- MMA: ESPN champions page FETCHED ~2:05 PM ET — all 11 belts match the board (Van shown at 1 defence = known lag, keep 2). Dec 5 Riyadh headliner Adesanya vs. Magomedov re-confirmed (ESPN Fightcenter id 600062700; Yardbarker). Searches for a Stirling–Procházka result returned only previews — KO stays sourced via the earlier entry in this file. No new items.
+- MARKETS: AP via Yahoo Finance re-fetched — Nov 27 closes S&P 500 7,297.49 (+114.71, +1.60%), Dow 50,774.94 (+591.99, +1.18%), Nasdaq 24,129.50 (+543.70, +2.31%); week S&P +5.6% (best since Apr 2025). A "-3.7% November" search did not resurface a source; figure stays per the Company Chronicle entry above (7,297.49 vs Oct close 7,580 ≈ -3.7%, consistent).
+- CYBER: Air Force Cloud One breach re-confirmed (CNBC/Reuters Nov 27; Military.com; Bloomberg). Nov 25 KEV batch (10 flaws, MiCollab CVE-2026-133323 CVSS 10.0, eight due Nov 28) re-confirmed via The Hacker News + its X post. No newer KEV batch or Nov 28-dated incident found.
+- New tags: none.
